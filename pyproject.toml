@@ -1,0 +1,23 @@
+[project]
+name = "biolean"
+version = "0.1.0"
+description = "PubMed abstracts -> ontology-grounded, referenced statements -> Lean 4 source for BioLean"
+requires-python = ">=3.12"
+dependencies = [
+    "anthropic>=1.0",
+    "pydantic>=2",
+    "duckdb",
+]
+
+[project.scripts]
+biolean = "biolean.cli:main"
+
+[dependency-groups]
+dev = ["pytest"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["biolean"]

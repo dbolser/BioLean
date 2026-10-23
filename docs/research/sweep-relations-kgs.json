@@ -1,0 +1,303 @@
+{
+  "angle": "Pre-extracted relation resources and biomedical knowledge graphs: what relations, identifiers, per-edge evidence/provenance, confidence model, scale, licence, format, liveness (as of 2026-10-23); which can seed a BioLean 'biolib' of weighted axioms.",
+  "projects": [
+    {
+      "name": "PubTator3 / BioREx (relation2pubtator3)",
+      "url": "https://ftp.ncbi.nlm.nih.gov/pub/lu/PubTator3/",
+      "status": "Alive. FTP files dated 2026-10-06; README dated 2023-09. relation2pubtator3.gz is 286 MB; BioCXML full dump 10 x 20 GB.",
+      "what_it_does": "NCBI (Lu lab) entity tagging (genes, chemicals, diseases, variants, species, cell lines) plus BioREx relation extraction over PubMed abstracts and PMC OA. relation2pubtator3 is 4 TSV columns: PMID, relation type, Type|ID, Type|ID. README lists Association, Positive_Correlation, Negative_Correlation, Co-treatment, Drug_interaction, Comparison, Conversion, Binding; the file itself uses short lowercase labels (local demo shows 'associate'), and the paper reports 12 types over 8 entity-pair classes (chem-chem, chem-disease, chem-gene, chem-variant, disease-gene, disease-variant, gene-gene, variant-variant). IDs are NCBI Gene, MeSH, dbSNP/tmVar HGVS, NCBI Taxonomy.",
+      "relevance_to_biolean": "Highest. Already on disk, ontology-grounded, per-PMID. But there is NO confidence score, NO sentence/offset, and NO direction or negation in the relation file. Weight must be built: count distinct PMIDs per triple, pull sentence text from BioCXML (which has the relation annotations with entity offsets), and treat each PMID as one weak opinion. 'associate' is the bulk and carries almost no mechanism.",
+      "reusable_assets": [
+        "relation2pubtator3.gz (triples x PMID)",
+        "BioCXML with offsets for re-reading evidence sentences",
+        "gene2pubtator3/chemical2pubtator3 etc. for co-mention baselines",
+        "PubTator3 API for weekly updates"
+      ],
+      "key_refs": [
+        "Wei et al. 2024 NAR, PubTator 3.0, PMC11223843 / arXiv 2401.11048",
+        "Lai et al. 2023 Bioinformatics, BioREx, PMC10896359",
+        "Zenodo 10839631 (code and models)"
+      ]
+    },
+    {
+      "name": "SemMedDB / SemRep",
+      "url": "https://lhncbc.nlm.nih.gov/ii/tools/SemRep_SemMedDB_SKR/SemMedDB_download.html",
+      "status": "Dead-ended. semmedVER43_R (2024) is the stated FINAL release: MEDLINE to 2024-05-08, 37.2M citations, 130.5M predications. NLM stopped maintaining SemRep/SemMedDB on 2024-12-31 and deleted older versions. UMLS/UTS licence required.",
+      "what_it_does": "Rule-based SemRep extracts subject-predicate-object predications (about 30 predicates: TREATS, CAUSES, INHIBITS, STIMULATES, INTERACTS_WITH, ASSOCIATED_WITH, PREDISPOSES, ISA, etc.) from all MEDLINE titles/abstracts. Arguments are UMLS CUIs. Each predication links to sentence text and PMID. 130.5M predication instances (final release). MySQL/CSV dumps.",
+      "relevance_to_biolean": "Medium-low. Richer predicate set than BioREx and sentence-level provenance, but precision is poor: Kilicoglu 2020 strict P=0.55 R=0.34 (relaxed P=0.69); random-sentence evaluation P=0.58; NER/normalisation is 27% of errors. UMLS CUIs need mapping to MONDO/HGNC/CHEBI. No per-predication confidence. Use only as a weak, frequency-thresholded prior, or as a predicate vocabulary.",
+      "reusable_assets": [
+        "PREDICATION + SENTENCE tables (sentence provenance)",
+        "predicate inventory as a candidate relation vocabulary",
+        "UMLS licence required"
+      ],
+      "key_refs": [
+        "Kilicoglu et al. 2020 BMC Bioinformatics 21:188, Broad-coverage biomedical relation extraction with SemRep, PMC7222583",
+        "Kilicoglu et al. 2012 Bioinformatics, SemMedDB",
+        "Rindflesch & Fiszman 2003 JBI",
+        "NLM SemMedDB download page (final-update and end-of-maintenance notice)"
+      ]
+    },
+    {
+      "name": "Open Targets Platform (26.06 local) - evidence and association scoring",
+      "url": "https://platform-docs.opentargets.org/evidence",
+      "status": "Alive, quarterly releases; 26.06 on disk. CC0.",
+      "what_it_does": "Target-disease evidence from ~20 sources, each evidence row scored 0-1 by source-specific rules (e.g. ClinGen Limited 0.01 / Moderate 0.5 / Strong 1; Gene2Phenotype similar; Reactome curated = 1; GWAS = L2G score >0.05; Europe PMC = weighted section/sentence/title co-occurrence, Kafkas 2017). Per source: sort evidence descending, harmonic sum sum(s_i / i^2), normalise by max theoretical sum (~1.644, pi^2/6); overall score = weighted harmonic sum across sources. Default source weights: Europe PMC 0.2, Expression Atlas 0.2, IMPC 0.2, Cancer Biomarkers 0.5, others 1. IDs: Ensembl gene, EFO/MONDO/HP disease, ChEMBL.",
+      "relevance_to_biolean": "High as a calibrated reference model and as a check. Its per-evidence score tables are an explicit, documented mapping from evidence category to number - the same job BioLean's ECO-to-opinion mapping must do. The harmonic sum is ad hoc (not probabilistic, no uncertainty mass), so it is a baseline to beat, not to copy. Europe PMC literature evidence gives per-PMID target-disease co-mention with sentence snippets - a second NER source to cross-check PubTator3.",
+      "reusable_assets": [
+        "evidence/ parquet per datasource (with literature PMIDs, sentence snippets for europepmc)",
+        "association_by_datasource_direct/indirect",
+        "score rule tables as a hand-calibrated prior"
+      ],
+      "key_refs": [
+        "https://platform-docs.opentargets.org/associations",
+        "Kafkas et al. 2017 J Biomed Semantics, Europe PMC text mining for Open Targets, PMC5461726",
+        "Ochoa et al. 2023 NAR, Open Targets Platform",
+        "Buniello et al. 2025 NAR, Open Targets Platform update"
+      ]
+    },
+    {
+      "name": "SIGNOR 4.0",
+      "url": "https://signor.uniroma2.it/",
+      "status": "Alive. SIGNOR 4.0 published NAR Jan 2026 (PMC12807704), adds PhosphoSIGNOR and text-mining-assisted curation. Server was unreachable from here on 2026-10-23 (ECONNREFUSED) - flaky hosting is a risk.",
+      "what_it_does": "Manually curated signed, directed causal interactions (up-regulates / down-regulates, with mechanism: phosphorylation, binding, transcriptional regulation, etc.), with residue/site, PMID, sentence, cell/tissue context. UniProt, ChEBI, SIGNOR complex/family IDs. ~40k+ causal relations. TSV / MITAB-like causalTAB. Licence: CC BY-NC 4.0 per semantic.farm registry (not confirmed on SIGNOR site). Download as causalTAB (MITAB 2.8). SIGNOR score combines 4 features: number of PMIDs, frequency in SIGNOR pathways, presence in Reactome human interactions, co-mention on UniProt pages.",
+      "relevance_to_biolean": "Very high. The closest thing to ready-made mechanistic axioms: signed, directed, mechanism-typed, with an evidence sentence and PMID per edge. Ideal seed for the 'activates/inhibits' axiom layer and for testing derivations against curated truth.",
+      "reusable_assets": [
+        "full causal TSV download with sentence and PMID",
+        "SIGNOR score per edge",
+        "complex/family/stimulus entity tables",
+        "PhosphoSIGNOR site-level data"
+      ],
+      "key_refs": [
+        "SIGNOR 4.0, NAR 2026, PMC12807704",
+        "Lo Surdo et al. 2023 NAR, SIGNOR 3.0",
+        "https://signor.uniroma2.it/score.php"
+      ]
+    },
+    {
+      "name": "BioGRID",
+      "url": "https://downloads.thebiogrid.org/",
+      "status": "Alive. Monthly 5.0.x releases; 5.0.258 (June 2026) = 2.32M non-redundant interactions from 88k publications. MIT licence.",
+      "what_it_does": "Curated physical and genetic interactions, chemical-protein associations, PTM sites, and ORCS CRISPR screens. Each row: Entrez/UniProt IDs, experimental system (e.g. Affinity Capture-MS, Two-hybrid, Synthetic Lethality), throughput (low/high), PMID, qualifications, sometimes score. Tab3, MITAB, PSI-XML.",
+      "relevance_to_biolean": "High for 'binds' and genetic-interaction facts. Experimental-system plus throughput gives a natural evidence-type mapping (to ECO / PSI-MI) for weighting. Physical interaction is not causal; do not promote to activation axioms.",
+      "reusable_assets": [
+        "BIOGRID-ALL tab3",
+        "experimental system vocabulary (maps to PSI-MI)",
+        "ORCS screen hits as observation-level evidence"
+      ],
+      "key_refs": [
+        "Oughtred et al. 2021 Protein Sci, PMC7737760",
+        "Stark et al. 2006 NAR",
+        "https://orcs.thebiogrid.org/News"
+      ]
+    },
+    {
+      "name": "Reactome",
+      "url": "https://reactome.org/download-data",
+      "status": "Alive. Quarterly releases, Zenodo archive since v89 (2024-06). Reactome Knowledgebase 2026 paper, NAR 2025 (doi 10.1093/nar/gkaf1223, unverified). Data CC0; DB dumps CC BY 4.0.",
+      "what_it_does": "Expert-curated reactions (inputs, outputs, catalysts, regulators) and pathways, with literatureReference PMIDs per reaction and an explicit flag for events inferred from other species (inferredFrom) vs. directly evidenced. UniProt, ChEBI, Ensembl, GO. Neo4j graph, MySQL, BioPAX, SBML, MITAB.",
+      "relevance_to_biolean": "High for mechanistic derivations: reactions are stoichiometric, typed, and compositional - closer to something Lean can check than any edge list. The inferred-vs-direct flag is a ready evidence tier. Also feeds GO-CAM (Reactome-to-GO-CAM conversions).",
+      "reusable_assets": [
+        "Neo4j graph dump",
+        "reaction-to-PMID mapping",
+        "inferredFrom flag",
+        "BioPAX/SBML exports"
+      ],
+      "key_refs": [
+        "https://reactome.org/license",
+        "Milacic et al. 2024 NAR, Reactome Knowledgebase 2024",
+        "Reactome Knowledgebase 2026, NAR 2025"
+      ]
+    },
+    {
+      "name": "GO-CAM (Gene Ontology Causal Activity Models)",
+      "url": "https://geneontology.org/docs/download-go-cams/",
+      "status": "Alive. GO knowledgebase in 2026 (NAR 54:D1779, doi 10.1093/nar/gkaf1292) reports >1500 pathway-level models (human, mouse, yeasts, fly); 2020 figure of 2838 counted all models. Monthly releases, GO-CAM JSON recommended, TTL deprecated, LinkML schema via gocam-py. CC BY 4.0.",
+      "what_it_does": "Links individual GO annotations into causal models: activity (MF) enabled_by gene product, part_of BP, occurs_in CC, and causal edges between activities (RO: directly positively regulates, provides input for, etc.). Every assertion (node and edge) carries ECO evidence code + reference (PMID) + contributor ORCID + date.",
+      "relevance_to_biolean": "Very high, and the best formal precedent. GO-CAM is already 'ontology-grounded statement + typed evidence + provenance' at edge level, with OWL semantics and a validation schema. BioLean can import GO-CAM edges as axioms and use their ECO codes to set opinion weights. Coverage is small (thousands of models), so it is a gold seed, not a bulk source.",
+      "reusable_assets": [
+        "GO-CAM JSON per model (Zenodo, monthly)",
+        "gocam-py LinkML schema",
+        "GO API /api/gocam-model/{id}",
+        "RO causal relation set"
+      ],
+      "key_refs": [
+        "Thomas et al. 2019 Nat Genet, GO-CAM, PMC7012280",
+        "GO Consortium 2026 NAR, doi 10.1093/nar/gkaf1292",
+        "https://geneontology.org/docs/gocam-overview/"
+      ]
+    },
+    {
+      "name": "ECO - Evidence and Conclusion Ontology",
+      "url": "https://www.evidenceontology.org/",
+      "status": "Alive (GitHub evidenceontology/evidenceontology, regular releases). CC0.",
+      "what_it_does": "Hierarchy of evidence types (experimental, author statement, computational, combinatorial; assertion method manual vs automatic). GO evidence codes (IDA, IMP, IPI, IEA, ISS, TAS, NAS...) map 1:1 to ECO terms. Used by GO, UniProt, GO-CAM, CIViC, Monarch.",
+      "relevance_to_biolean": "Core. ECO is the natural key for BioLean's evidence-type-to-opinion table: assign base (belief, uncertainty) per ECO class and inherit down the hierarchy. ECO says what kind of evidence, not how strong; strength must be set by BioLean (Open Targets score tables and GO's IEA filtering practice are useful priors).",
+      "reusable_assets": [
+        "eco.obo/owl",
+        "GO evidence code to ECO mapping file (gaf-eco-mapping.txt)",
+        "manual vs automatic assertion split"
+      ],
+      "key_refs": [
+        "Nadendla et al. 2022 NAR, ECO: the Evidence and Conclusion Ontology 2021 update",
+        "Giglio et al. 2019 NAR, ECO"
+      ]
+    },
+    {
+      "name": "Pathway Commons",
+      "url": "https://www.pathwaycommons.org/",
+      "status": "Low activity. Last major paper 2019/2020 NAR; releases v12-v14 era aggregated BioPAX, but no 2025-2026 release confirmed. Funding (U41HG006623) status unclear; paxtoolsr removed from Bioconductor. Treat as stale.",
+      "what_it_does": "Aggregates Reactome, PANTHER, HumanCyc, KEGG-free sources, PhosphoSitePlus etc. into BioPAX L3 and simplified SIF (controls-state-change-of, controls-expression-of, in-complex-with...).",
+      "relevance_to_biolean": "Low-medium. Useful SIF relation vocabulary, but provenance is source-database level; better to go to Reactome/SIGNOR directly.",
+      "reusable_assets": [
+        "SIF/extended SIF dumps",
+        "BioPAX L3 merged model"
+      ],
+      "key_refs": [
+        "Rodchenkov et al. 2020 NAR, Pathway Commons 2019 update, PMC7145667"
+      ]
+    },
+    {
+      "name": "Hetionet",
+      "url": "https://github.com/hetio/hetionet",
+      "status": "Frozen at v1.0 (2017). Original content CC0; per-edge licence attributes in JSON/Neo4j.",
+      "what_it_does": "47k nodes / 2.25M edges, 11 node types, 24 edge types, integrated from 29 sources; edges carry source and licence, some carry PMIDs or unbiased flag.",
+      "relevance_to_biolean": "Low as data (stale), useful as a lesson: per-edge licence and source attributes are cheap to carry and later essential.",
+      "reusable_assets": [
+        "metagraph design",
+        "per-edge licence pattern"
+      ],
+      "key_refs": [
+        "Himmelstein et al. 2017 eLife, Systematic integration of biomedical knowledge prioritizes drugs for repurposing"
+      ]
+    },
+    {
+      "name": "SPOKE",
+      "url": "https://spoke.rbvi.ucsf.edu/",
+      "status": "Alive-ish (UCSF Baranzini lab); 27M nodes / 53M edges / 41 sources per 2023 paper. Access via API/neighbourhood explorer; full dump not openly downloadable. Per-source licences.",
+      "what_it_does": "Large integrated precision-medicine KG feeding Translator.",
+      "relevance_to_biolean": "Low. Not openly dumpable; evidence is source-level.",
+      "reusable_assets": [
+        "source licence table"
+      ],
+      "key_refs": [
+        "Morris et al. 2023 Bioinformatics, The scalable precision medicine open knowledge engine (SPOKE)"
+      ]
+    },
+    {
+      "name": "PrimeKG (and PrimeKG-Plus)",
+      "url": "https://zitniklab.hms.harvard.edu/projects/PrimeKG/",
+      "status": "PrimeKG 2022 (data cut June 2021) on Harvard Dataverse; PrimeKG-Plus preprint July 2026 refreshes 20 sources to Dec 2025 and adds Open Targets, nSIDES, LLM-curated literature edges.",
+      "what_it_does": "17k diseases, 4.05M relations, 20 sources; CSV edge list.",
+      "relevance_to_biolean": "Low. Edges carry source name only, no per-edge evidence or confidence. Built for ML link prediction, not for weighing claims.",
+      "reusable_assets": [
+        "disease grouping (MONDO-based) and drug-indication edges"
+      ],
+      "key_refs": [
+        "Chandak et al. 2023 Sci Data, Building a knowledge graph to enable precision medicine",
+        "PrimeKG-Plus preprint 2026, doi 10.64898/2026.07.14.738415"
+      ]
+    },
+    {
+      "name": "ROBOKOP / ORION",
+      "url": "https://robokop.renci.org/",
+      "status": "Alive, funded (NIEHS U24ES035214). ORION pipeline builds Biolink-compliant KGX graphs; GitHub activity mostly to late 2024 (verify).",
+      "what_it_does": "Merged KG of ~30 sources normalised by Babel/Node Normalizer, with Biolink primary_knowledge_source, knowledge_level, agent_type per edge, and publications lists.",
+      "relevance_to_biolean": "Medium. Ready-made Biolink KGX with edge provenance; ORION parsers are reusable ingest code; Node Normalizer solves cross-ontology ID mapping.",
+      "reusable_assets": [
+        "ROBOKOP KG KGX dumps",
+        "ORION parsers",
+        "Node Normalizer / Babel equivalence cliques"
+      ],
+      "key_refs": [
+        "Bizon et al. 2019 J Chem Inf Model, ROBOKOP KG and KGB",
+        "https://github.com/RobokopU24"
+      ]
+    },
+    {
+      "name": "NCATS Biomedical Data Translator (Biolink Model, KGX, TRAPI)",
+      "url": "https://biolink.github.io/biolink-model/",
+      "status": "Alive. NCATS funded a Translator Performance Phase (NOT-TR-24-030; ~$8.5M/yr, up to 4 awards; e.g. Scripps award July 2025). No FY2026 notice found. Biolink Model 4.x and KGX actively maintained.",
+      "what_it_does": "Biolink: shared class/predicate schema with qualifiers (subject_aspect, object_direction, causal_mechanism). Edge-level provenance: primary_knowledge_source / aggregator_knowledge_source (infores CURIEs, required), knowledge_level (knowledge_assertion, logical_entailment, prediction, statistical_association, text_co_occurrence, observation, not_provided), agent_type (manual_agent, automated_agent, text_mining_agent, computational_model, ...), publications, has_evidence (ECO), supporting_text, p_value, etc. TRAPI wraps these as Attribute objects plus a retrieval-source chain. KGX = nodes/edges TSV or JSONL.",
+      "relevance_to_biolean": "High as the schema to align with. knowledge_level x agent_type is a coarse but standard two-axis evidence classification that maps cleanly onto subjective-logic base rates/uncertainty. Biolink predicates + qualifiers are a ready relation vocabulary for BioLean axioms. Lesson: TRAPI has no first-class confidence model; scores are ad hoc attributes.",
+      "reusable_assets": [
+        "biolink-model.yaml (predicates, qualifiers, enums)",
+        "infores catalogue",
+        "KGX format + kgx library",
+        "reasoner-validator"
+      ],
+      "key_refs": [
+        "Unni et al. 2022 Clin Transl Sci, Biolink Model",
+        "https://biolink.github.io/biolink-model/KnowledgeLevelEnum/",
+        "Fecho et al. 2022 Clin Transl Sci, Translator progress",
+        "NOT-TR-24-030, Translator Performance Phase funding notice"
+      ]
+    },
+    {
+      "name": "Monarch KG",
+      "url": "https://monarchinitiative.org/",
+      "status": "Alive, monthly releases (note: some pages flagged 'under review ... Administration directives' - download stability risk). Built with Koza/KGX.",
+      "what_it_does": "~0.86M nodes, 11.4M edges, 33 sources (gene-phenotype, disease-phenotype, orthology, GO, model organisms); Biolink-compliant, edges carry primary_knowledge_source, knowledge_level, agent_type, publications, has_evidence (ECO), and negation for some.",
+      "relevance_to_biolean": "Medium-high. Cleanest open Biolink KGX with ECO on edges; good source of phenotype and orthology axioms; Koza is reusable ingest code.",
+      "reusable_assets": [
+        "monarch-kg KGX tar / SQLite / Neo4j",
+        "Koza + koza-hub ingests"
+      ],
+      "key_refs": [
+        "Putman et al. 2024 NAR, The Monarch Initiative in 2024, PMC10767791",
+        "Koza/Koza-Hub, arXiv 2509.09096"
+      ]
+    },
+    {
+      "name": "DisGeNET (DISGENET)",
+      "url": "https://www.disgenet.com/",
+      "status": "Alive but commercialised (MedBioinformatics Solutions SL). Free academic licence by application; commercial licence required for any product use; no redistribution. Older CC BY-NC-SA dumps exist.",
+      "what_it_does": "Gene-disease and variant-disease associations from curated sources + text mining (BeFree), with GDA score (0-1, combining source type, number of sources, number of PMIDs), Evidence Index, Disease Specificity Index, Disease Pleiotropy Index, plus per-PMID sentences.",
+      "relevance_to_biolean": "Low-medium. Its GDA score is a worked example of evidence aggregation with source-type tiers, but licence blocks redistribution of a biolib. Use for comparison only.",
+      "reusable_assets": [
+        "GDA score formula as a design reference"
+      ],
+      "key_refs": [
+        "Piñero et al. 2020 NAR, The DisGeNET knowledge platform",
+        "https://www.disgenet.com/legal"
+      ]
+    },
+    {
+      "name": "Causal Biological Networks (CBN) and BEL / PyBEL",
+      "url": "https://github.com/pybel/cbn-bel",
+      "status": "BEL effectively dormant: Selventa dissolved 2016; OpenBEL under Linux Foundation, little activity; PyBEL last PyPI release 0.15.5 (2022-02). CBN (causalbionet.com, PMI/Philip Morris) ~120 curated networks, undocumented JGF; mirrored as BEL by pybel/cbn-bel. BEL Commons is a no-warranty prototype.",
+      "what_it_does": "BEL statements: subject-relation-object with functions (p(HGNC:X), act(p(...), ma(kin)), pmod(Ph, Ser, 15)), causal relations (increases, directlyIncreases, decreases, directlyDecreases, association...). Evidence model: each statement sits inside SET Citation = {PubMed, PMID}, SET Evidence = \"verbatim sentence\", and SET annotations (Species, Cell, Anatomy, Disease, ...) from controlled vocabularies; BEL 2 adds nanopub-style JSON. No confidence field in the language.",
+      "relevance_to_biolean": "High as design precedent, low as data. BEL is the closest prior art to BioLean's statement layer: compositional terms (activity, modification, complex) plus citation + verbatim evidence + context annotations per statement. Copy the grammar ideas (term functions, direct vs indirect causal relations); add what BEL lacked - formal semantics and a weight.",
+      "reusable_assets": [
+        "BEL 2.x spec and grammar",
+        "PyBEL parser and BEL->Biolink/INDRA converters",
+        "cbn-bel curated networks",
+        "Selventa small/large corpora (CC BY-NC-SA)"
+      ],
+      "key_refs": [
+        "Hoyt et al. 2018 Bioinformatics, PyBEL",
+        "Boué et al. 2015 Database, Causal Biological Network database, PMC4401337",
+        "Slater 2014 Drug Discov Today, Recent advances in modeling languages for pathway maps... (BEL)"
+      ]
+    }
+  ],
+  "key_lessons": [
+    "Almost no source gives a calibrated per-edge probability. Confidence is either absent (PubTator3, SemMedDB, PrimeKG), an evidence-type tier (ECO, BioGRID experimental system, Reactome inferred flag, Biolink knowledge_level/agent_type), or an ad hoc aggregate (Open Targets harmonic sum, SIGNOR score, DisGeNET GDA). BioLean has to own the evidence-to-opinion mapping; ECO class is the right key.",
+    "The atomic evidence unit worth keeping everywhere is (statement, PMID, evidence sentence, evidence type, asserting agent manual/automated). GO-CAM, SIGNOR, BEL and Biolink all converge on this; PubTator3's relation file drops the sentence, so recover it from BioCXML.",
+    "Count PMIDs, not mentions, and treat text-mined edges as many weak, correlated opinions (same lab, same review cascade) - plain cumulative fusion will overcount. Discount by agent_type and knowledge_level before fusing.",
+    "Text-mined precision is low: SemRep strict P about 0.55-0.69; BioREx better on benchmarks but 'associate' dominates and has no direction. Use text mining to propose axioms and curated sources (SIGNOR, Reactome, GO-CAM, BioGRID low-throughput) to anchor them.",
+    "Best seed for a biolib: GO-CAM (formal, ECO per edge) + SIGNOR (signed causal, sentence per edge) + Reactome (stoichiometric reactions) as the high-weight core; GOA GAF and BioGRID as the broad mid layer; PubTator3 and Open Targets literature as the low-weight long tail. All of these are CC0/CC BY/MIT except SIGNOR (reportedly CC BY-NC 4.0 - non-commercial, check) and DisGeNET (blocked). SemMedDB is frozen at 2024 and needs UMLS.",
+    "Align identifiers and predicates with Biolink + Node Normalizer rather than inventing them; KGX is the obvious interchange format for exporting a biolib.",
+    "BEL is the cautionary tale: a good statement language with evidence annotations died when its single commercial owner folded and it never had formal semantics or weights. BioLean's Lean semantics plus open data licences is the differentiator.",
+    "Liveness risk is real: SIGNOR server refused connections today; Monarch pages carry US-administration review notices; SemMedDB officially ended 2024; Pathway Commons stale. Snapshot what you depend on with version and date."
+  ],
+  "open_questions": [
+    "Exact current label set and counts in local relation2pubtator3 (README says 8 types, paper says 12, file uses short labels such as 'associate'). Run a cut -f2 | sort | uniq -c on the local copy (a full-disk find for the file OOM-killed this session; use the known path).",
+    "Does BioCXML expose a BioREx confidence or only the final label? If only the label, can BioREx be re-run locally to get logits for weighting?",
+    "SIGNOR licence (registry says CC BY-NC 4.0; confirm on site) and the exact SIGNOR score formula - site unreachable on 2026-10-23.",
+    "Is the final SemMedDB (2024, UMLS-gated, P~0.55-0.69) worth ingesting at all, or only its predicate vocabulary?",
+    "What base (belief, disbelief, uncertainty) should each ECO class get, and should it be learned by checking text-mined edges against curated sources (SIGNOR/GO-CAM as truth) on the local data?",
+    "How to model correlated evidence (one finding cited by many abstracts) in subjective-logic fusion - averaging vs cumulative fusion vs citation-graph de-duplication.",
+    "Should BioLean emit Biolink/KGX for export, and map Biolink qualifiers (object_direction, causal_mechanism) to Lean predicates one-to-one?",
+    "Translator programme status in 2026 and whether ROBOKOP/Monarch KGX dumps remain downloadable."
+  ]
+}

@@ -1,0 +1,48 @@
+[
+  {
+    "pmid": 28266779,
+    "year": 2017,
+    "quote": "In addition to reduced energy intake, likely mechanisms for semaglutide-induced weight loss included less appetite and food cravings, better control of eating and lower relative preference for fatty, energy-dense foods.",
+    "subject": {
+      "curie": "CHEBI:167574",
+      "label": "semaglutide",
+      "kind": "chemical",
+      "method": "exact_label",
+      "ambiguous": false
+    },
+    "relation": "increases_phenotype",
+    "object": {
+      "curie": "HP:0001824",
+      "label": "Weight loss",
+      "kind": "phenotype",
+      "method": "exact_label",
+      "ambiguous": false
+    },
+    "polarity": "supports",
+    "evidence_kind": "rct",
+    "hedged": true
+  },
+  {
+    "pmid": 34260945,
+    "year": 2021,
+    "quote": "Multiple GLP-1R agonists have entered into clinical trials, with some, such as semaglutide, progressing to approval.",
+    "subject": {
+      "curie": "CHEBI:167574",
+      "label": "semaglutide",
+      "kind": "chemical",
+      "method": "exact_label",
+      "ambiguous": false
+    },
+    "relation": "increases_activity",
+    "object": {
+      "curie": "UniProt:P43220",
+      "label": "GLP1R",
+      "kind": "protein",
+      "method": "exact_synonym",
+      "ambiguous": false
+    },
+    "polarity": "supports",
+    "evidence_kind": "in_vitro",
+    "hedged": false
+  }
+]

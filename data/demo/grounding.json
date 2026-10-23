@@ -1,0 +1,1037 @@
+[
+ {
+  "id": "CHEBI:167574",
+  "record_type": "ontology_chebi",
+  "label": "semaglutide",
+  "definition": "A polypeptide that contains a linear sequence of 31 amino acids joined together by peptide linkages. It is an agonist of glucagon-like peptide-1 receptors (GLP-1 AR) and used for the treatment of type 2 diabetes.",
+  "is_a": [
+   {
+    "id": "CHEBI:15841",
+    "label": "polypeptide"
+   },
+   {
+    "id": "CHEBI:46895",
+    "label": "lipopeptide"
+   },
+   {
+    "id": "CHEBI:50860",
+    "label": "organic molecular entity"
+   }
+  ],
+  "relationships": [
+   "RO:0000087 CHEBI:35469 ! has role antidepressant",
+   "RO:0000087 CHEBI:35526 ! has role hypoglycemic agent",
+   "RO:0000087 CHEBI:35554 ! has role cardiovascular drug",
+   "RO:0000087 CHEBI:48407 ! has role antiparkinson drug",
+   "RO:0000087 CHEBI:50507 ! has role appetite depressant",
+   "RO:0000087 CHEBI:63726 ! has role neuroprotective agent",
+   "RO:0000087 CHEBI:65023 ! has role anti-asthmatic agent",
+   "RO:0000087 CHEBI:71196 ! has role glucagon-like peptide-1 receptor agonist",
+   "RO:0000087 CHEBI:74518 ! has role anti-obesity agent"
+  ],
+  "xrefs": [
+   "cas:910463-68-2 {source=\"cas\"}",
+   "chemspider:34981134 {source=\"chemspider\"}",
+   "drugbank:DB13928 {source=\"drugbank\"}",
+   "kegg.drug:D10025 {source=\"kegg.drug\"}",
+   "pubmed:24608440 {source=\"pubmed\"}",
+   "pubmed:29431519 {source=\"pubmed\"}",
+   "pubmed:30000039 {source=\"pubmed\"}",
+   "pubmed:30741689 {source=\"pubmed\"}",
+   "pubmed:31305048 {source=\"pubmed\"}",
+   "pubmed:31486321 {source=\"pubmed\"}",
+   "pubmed:31770356 {source=\"pubmed\"}",
+   "pubmed:31801807 {source=\"pubmed\"}",
+   "pubmed:31952996 {source=\"pubmed\"}",
+   "pubmed:31975761 {source=\"pubmed\"}",
+   "pubmed:32232400 {source=\"pubmed\"}",
+   "pubmed:32476529 {source=\"pubmed\"}",
+   "pubmed:32890462 {source=\"pubmed\"}",
+   "pubmed:32921892 {source=\"pubmed\"}",
+   "pubmed:33074557 {source=\"pubmed\"}",
+   "pubmed:33108617 {source=\"pubmed\"}",
+   "pubmed:33159658 {source=\"pubmed\"}",
+   "pubmed:33179892 {source=\"pubmed\"}",
+   "pubmed:33185364 {source=\"pubmed\"}",
+   "pubmed:33222922 {source=\"pubmed\"}",
+   "pubmed:33257834 {source=\"pubmed\"}",
+   "pubmed:33354706 {source=\"pubmed\"}",
+   "pubmed:33363667 {source=\"pubmed\"}",
+   "pubmed:33417950 {source=\"pubmed\"}",
+   "pubmed:33439580 {source=\"pubmed\"}",
+   "pubmed:33439583 {source=\"pubmed\"}",
+   "pubmed:33447122 {source=\"pubmed\"}",
+   "pubmed:33565043 {source=\"pubmed\"}",
+   "pubmed:33567185 {source=\"pubmed\"}",
+   "pubmed:33591618 {source=\"pubmed\"}",
+   "pubmed:33615400 {source=\"pubmed\"}",
+   "pubmed:33627989 {source=\"pubmed\"}",
+   "pubmed:33627997 {source=\"pubmed\"}",
+   "pubmed:37541662 {source=\"pubmed\"}",
+   "pubmed:38639998 {source=\"pubmed\"}",
+   "pubmed:38673931 {source=\"pubmed\"}",
+   "pubmed:38685990 {source=\"pubmed\"}",
+   "pubmed:38938530 {source=\"pubmed\"}",
+   "pubmed:39056124 {source=\"pubmed\"}",
+   "pubmed:39763244 {source=\"pubmed\"}",
+   "pubmed:39848681 {source=\"pubmed\"}",
+   "pubmed:40009989 {source=\"pubmed\"}",
+   "pubmed:40353578 {source=\"pubmed\"}",
+   "wikipedia.en:Semaglutide {source=\"wikipedia.en\"}"
+  ],
+  "synonyms_note": "synonyms field in source is corrupt (every value is '\\1'); omitted"
+ },
+ {
+  "id": "CHEBI:71193",
+  "record_type": "ontology_chebi",
+  "label": "liraglutide",
+  "definition": "A lipopeptide that is an analogue of human GLP-1 in which the lysine residue at position 27 is replaced by arginine and a hexadecanoyl group attached to the remaining lysine via a glutamic acid spacer. Used as an adjunct to diet and exercise to improve glycemic control in adults with type 2 diabetes mellitus.",
+  "is_a": [
+   {
+    "id": "CHEBI:15841",
+    "label": "polypeptide"
+   },
+   {
+    "id": "CHEBI:46895",
+    "label": "lipopeptide"
+   },
+   {
+    "id": "CHEBI:50860",
+    "label": "organic molecular entity"
+   }
+  ],
+  "relationships": [
+   "RO:0000087 CHEBI:35469 ! has role antidepressant",
+   "RO:0000087 CHEBI:35476 ! has role antipsychotic agent",
+   "RO:0000087 CHEBI:35526 ! has role hypoglycemic agent",
+   "RO:0000087 CHEBI:35554 ! has role cardiovascular drug",
+   "RO:0000087 CHEBI:48407 ! has role antiparkinson drug",
+   "RO:0000087 CHEBI:63726 ! has role neuroprotective agent",
+   "RO:0000087 CHEBI:71196 ! has role glucagon-like peptide-1 receptor agonist",
+   "RO:0000087 CHEBI:74518 ! has role anti-obesity agent"
+  ],
+  "xrefs": [
+   "cas:204656-20-2 {source=\"cas\"}",
+   "drugbank:DB06655 {source=\"drugbank\"}",
+   "drugcentral:4164 {source=\"drugcentral\"}",
+   "kegg.drug:D06404 {source=\"kegg.drug\"}",
+   "patent:US2006160736 {source=\"patent\"}",
+   "patent:WO2008011518 {source=\"patent\"}",
+   "pubmed:21964769 {source=\"pubmed\"}",
+   "pubmed:22038829 {source=\"pubmed\"}",
+   "pubmed:22051096 {source=\"pubmed\"}",
+   "pubmed:22245694 {source=\"pubmed\"}",
+   "pubmed:22338093 {source=\"pubmed\"}",
+   "pubmed:22382611 {source=\"pubmed\"}",
+   "pubmed:22405264 {source=\"pubmed\"}",
+   "pubmed:22443187 {source=\"pubmed\"}",
+   "pubmed:22446097 {source=\"pubmed\"}",
+   "pubmed:22536087 {source=\"pubmed\"}",
+   "pubmed:22569791 {source=\"pubmed\"}",
+   "pubmed:22587909 {source=\"pubmed\"}",
+   "pubmed:22592020 {source=\"pubmed\"}",
+   "pubmed:22727533 {source=\"pubmed\"}",
+   "pubmed:22846777 {source=\"pubmed\"}",
+   "pubmed:22851600 {source=\"pubmed\"}",
+   "pubmed:22862847 {source=\"pubmed\"}",
+   "pubmed:22927782 {source=\"pubmed\"}",
+   "pubmed:22938097 {source=\"pubmed\"}",
+   "pubmed:22958381 {source=\"pubmed\"}",
+   "pubmed:22973968 {source=\"pubmed\"}",
+   "pubmed:22985213 {source=\"pubmed\"}",
+   "pubmed:23068961 {source=\"pubmed\"}",
+   "pubmed:23082308 {source=\"pubmed\"}",
+   "pubmed:23149376 {source=\"pubmed\"}",
+   "reaxys:10331362 {source=\"reaxys\"}",
+   "wikipedia.en:Liraglutide {source=\"wikipedia.en\"}"
+  ],
+  "synonyms_note": "synonyms field in source is corrupt (every value is '\\1'); omitted"
+ },
+ {
+  "id": "CHEBI:40237",
+  "record_type": "ontology_chebi",
+  "label": "sitagliptin",
+  "definition": "A  triazolopyrazine that exhibits  hypoglycemic activity.",
+  "is_a": [
+   {
+    "id": "CHEBI:35352",
+    "label": "organonitrogen compound"
+   },
+   {
+    "id": "CHEBI:36963",
+    "label": "organooxygen compound"
+   },
+   {
+    "id": "CHEBI:48277",
+    "label": "triazolopyrazine"
+   },
+   {
+    "id": "CHEBI:50860",
+    "label": "organic molecular entity"
+   },
+   {
+    "id": "CHEBI:83576",
+    "label": "trifluorobenzene"
+   }
+  ],
+  "relationships": [
+   "RO:0000087 CHEBI:22587 ! has role antiviral agent",
+   "RO:0000087 CHEBI:35526 ! has role hypoglycemic agent",
+   "RO:0000087 CHEBI:35554 ! has role cardiovascular drug",
+   "RO:0000087 CHEBI:35610 ! has role antineoplastic agent",
+   "RO:0000087 CHEBI:35703 ! has role xenobiotic",
+   "RO:0000087 CHEBI:35821 ! has role anticholesteremic drug",
+   "RO:0000087 CHEBI:48353 ! has role serine proteinase inhibitor",
+   "RO:0000087 CHEBI:50748 ! has role antipsoriatic",
+   "RO:0000087 CHEBI:64946 ! has role anti-HIV agent",
+   "RO:0000087 CHEBI:68612 ! has role EC 3.4.14.5 (dipeptidyl-peptidase IV) inhibitor",
+   "RO:0000087 CHEBI:74518 ! has role anti-obesity agent",
+   "RO:0000087 CHEBI:78298 ! has role environmental contaminant",
+   "RO:0018038 CHEBI:33706 ! has functional parent beta-amino acid"
+  ],
+  "xrefs": [
+   "cas:486460-32-6 {source=\"cas\"}",
+   "drugbank:DB01261 {source=\"drugbank\"}",
+   "drugcentral:2448 {source=\"drugcentral\"}",
+   "hmdb:HMDB0015390 {source=\"hmdb\"}",
+   "kegg.drug:D08516 {source=\"kegg.drug\"}",
+   "lincs.smallmolecule:LSM-5363 {source=\"lincs.smallmolecule\"}",
+   "pdb-ccd:715 {source=\"pdb-ccd\"}",
+   "pubmed:23286208 {source=\"pubmed\"}",
+   "pubmed:23331339 {source=\"pubmed\"}",
+   "pubmed:23432786 {source=\"pubmed\"}",
+   "pubmed:23489256 {source=\"pubmed\"}",
+   "pubmed:23927568 {source=\"pubmed\"}",
+   "pubmed:24039399 {source=\"pubmed\"}",
+   "pubmed:24041927 {source=\"pubmed\"}",
+   "reaxys:9962060 {source=\"reaxys\"}",
+   "wikipedia.en:Sitagliptin {source=\"wikipedia.en\"}"
+  ],
+  "synonyms_note": "synonyms field in source is corrupt (every value is '\\1'); omitted"
+ },
+ {
+  "id": "CHEBI:748790",
+  "record_type": "ontology_chebi",
+  "label": "exenatide",
+  "definition": null,
+  "is_a": [
+   {
+    "id": "CHEBI:15841",
+    "label": "polypeptide"
+   }
+  ],
+  "relationships": [
+   "RO:0000087 CHEBI:35526 ! has role hypoglycemic agent",
+   "RO:0000087 CHEBI:35554 ! has role cardiovascular drug",
+   "RO:0000087 CHEBI:48407 ! has role antiparkinson drug",
+   "RO:0000087 CHEBI:74518 ! has role anti-obesity agent"
+  ],
+  "xrefs": [
+   "pubmed:17339113 {source=\"pubmed\"}",
+   "pubmed:18412318 {source=\"pubmed\"}",
+   "pubmed:19243175 {source=\"pubmed\"}",
+   "pubmed:19702274 {source=\"pubmed\"}",
+   "pubmed:19827752 {source=\"pubmed\"}",
+   "pubmed:20576431 {source=\"pubmed\"}",
+   "pubmed:23743288 {source=\"pubmed\"}",
+   "pubmed:24308627 {source=\"pubmed\"}",
+   "pubmed:24384551 {source=\"pubmed\"}",
+   "pubmed:24900707 {source=\"pubmed\"}",
+   "pubmed:26948801 {source=\"pubmed\"}",
+   "pubmed:28448133 {source=\"pubmed\"}",
+   "pubmed:28917449 {source=\"pubmed\"}",
+   "pubmed:28988756 {source=\"pubmed\"}",
+   "pubmed:29673717 {source=\"pubmed\"}",
+   "pubmed:29879354 {source=\"pubmed\"}",
+   "pubmed:30878191 {source=\"pubmed\"}",
+   "pubmed:31471103 {source=\"pubmed\"}",
+   "pubmed:32354568 {source=\"pubmed\"}",
+   "pubmed:33449689 {source=\"pubmed\"}",
+   "pubmed:35647711 {source=\"pubmed\"}",
+   "pubmed:35984914 {source=\"pubmed\"}",
+   "pubmed:38691890 {source=\"pubmed\"}",
+   "pubmed:39254428 {source=\"pubmed\"}"
+  ],
+  "synonyms_note": "synonyms field in source is corrupt (every value is '\\1'); omitted"
+ },
+ {
+  "id": "CHEBI:194186",
+  "record_type": "ontology_chebi",
+  "label": "tirzepatide",
+  "definition": "A 39-amino acid linear polypeptide which is conjugated to a C20 fatty diacid moiety via a linker connected to lysine-20. It is a dual glucose-dependent insulinotropic polypeptide and glucagon-like peptide-1 agonist used for the management of type 2 diabetes mellitus.",
+  "is_a": [
+   {
+    "id": "CHEBI:15841",
+    "label": "polypeptide"
+   },
+   {
+    "id": "CHEBI:50860",
+    "label": "organic molecular entity"
+   }
+  ],
+  "relationships": [
+   "RO:0000087 CHEBI:194187 ! has role gastric inhibitory polypeptide receptor agonist",
+   "RO:0000087 CHEBI:35526 ! has role hypoglycemic agent",
+   "RO:0000087 CHEBI:64088 ! has role incretin mimetic",
+   "RO:0000087 CHEBI:71196 ! has role glucagon-like peptide-1 receptor agonist",
+   "RO:0000087 CHEBI:74518 ! has role anti-obesity agent"
+  ],
+  "xrefs": [
+   "cas:2023788-19-2 {source=\"cas\"}",
+   "drugbank:DB15171 {source=\"drugbank\"}",
+   "kegg.drug:D11360 {source=\"kegg.drug\"}",
+   "pubmed:30293770 {source=\"pubmed\"}",
+   "pubmed:34681215 {source=\"pubmed\"}",
+   "pubmed:34788445 {source=\"pubmed\"}",
+   "pubmed:35333651 {source=\"pubmed\"}",
+   "pubmed:35579691 {source=\"pubmed\"}",
+   "pubmed:35658024 {source=\"pubmed\"}",
+   "pubmed:35759552 {source=\"pubmed\"}",
+   "pubmed:35760842 {source=\"pubmed\"}",
+   "pubmed:35767712 {source=\"pubmed\"}",
+   "pubmed:35773392 {source=\"pubmed\"}",
+   "pubmed:35780672 {source=\"pubmed\"}",
+   "pubmed:35802842 {source=\"pubmed\"}",
+   "pubmed:35807558 {source=\"pubmed\"}",
+   "pubmed:35830001 {source=\"pubmed\"}",
+   "pubmed:35929468 {source=\"pubmed\"}",
+   "pubmed:35949358 {source=\"pubmed\"}",
+   "pubmed:35977865 {source=\"pubmed\"}",
+   "pubmed:35983423 {source=\"pubmed\"}",
+   "pubmed:36050763 {source=\"pubmed\"}",
+   "pubmed:36152638 {source=\"pubmed\"}",
+   "pubmed:36155186 {source=\"pubmed\"}",
+   "pubmed:36157450 {source=\"pubmed\"}",
+   "pubmed:36199834 {source=\"pubmed\"}",
+   "pubmed:36200219 {source=\"pubmed\"}",
+   "pubmed:36239652 {source=\"pubmed\"}",
+   "pubmed:36239653 {source=\"pubmed\"}",
+   "pubmed:36251836 {source=\"pubmed\"}",
+   "pubmed:36313764 {source=\"pubmed\"}",
+   "pubmed:36358930 {source=\"pubmed\"}",
+   "pubmed:36478180 {source=\"pubmed\"}",
+   "pubmed:36498958 {source=\"pubmed\"}",
+   "pubmed:36516422 {source=\"pubmed\"}",
+   "pubmed:36530219 {source=\"pubmed\"}",
+   "pubmed:36569320 {source=\"pubmed\"}",
+   "pubmed:36570276 {source=\"pubmed\"}",
+   "pubmed:36575627 {source=\"pubmed\"}",
+   "wikipedia.en:Tirzepatide {source=\"wikipedia.en\"}"
+  ],
+  "synonyms_note": "synonyms field in source is corrupt (every value is '\\1'); omitted"
+ },
+ {
+  "id": "CHEBI:80270",
+  "record_type": "ontology_chebi",
+  "label": "Glucagon-like peptide 1",
+  "definition": null,
+  "is_a": [
+   {
+    "id": "CHEBI:50860",
+    "label": "organic molecular entity"
+   }
+  ],
+  "relationships": [
+   "RO:0000087 CHEBI:35554 ! has role cardiovascular drug"
+  ],
+  "xrefs": [
+   "kegg.compound:C16048 {source=\"kegg.compound\"}"
+  ],
+  "synonyms_note": "synonyms field in source is corrupt (every value is '\\1'); omitted"
+ },
+ {
+  "id": "CHEBI:749689",
+  "record_type": "ontology_chebi",
+  "label": "glp-1",
+  "definition": null,
+  "is_a": [
+   {
+    "id": "CHEBI:15841",
+    "label": "polypeptide"
+   }
+  ],
+  "relationships": [
+   "RO:0000087 CHEBI:35526 ! has role hypoglycemic agent",
+   "RO:0000087 CHEBI:35554 ! has role cardiovascular drug",
+   "RO:0000087 CHEBI:74518 ! has role anti-obesity agent",
+   "RO:0000087 CHEBI:76916 ! has role hyperglycemic agent"
+  ],
+  "xrefs": [
+   "pubmed:20687610 {source=\"pubmed\"}"
+  ],
+  "synonyms_note": "synonyms field in source is corrupt (every value is '\\1'); omitted"
+ },
+ {
+  "id": "CHEBI:50507",
+  "record_type": "ontology_chebi",
+  "label": "appetite depressant",
+  "definition": "Any agent that is used to decrease appetite.",
+  "is_a": [
+   {
+    "id": "CHEBI:50780",
+    "label": "appetite regulator"
+   }
+  ],
+  "relationships": [],
+  "xrefs": [],
+  "synonyms_note": "synonyms field in source is corrupt (every value is '\\1'); omitted"
+ },
+ {
+  "id": "CHEBI:71196",
+  "record_type": "ontology_chebi",
+  "label": "glucagon-like peptide-1 receptor agonist",
+  "definition": "An agonist that binds to and activates glucagon-like peptide-1 (GLP-1) receptors.",
+  "is_a": [
+   {
+    "id": "CHEBI:70998",
+    "label": "G-protein-coupled receptor agonist"
+   }
+  ],
+  "relationships": [],
+  "xrefs": [
+   "wikipedia.en:GLP-1_receptor {source=\"wikipedia.en\"}"
+  ],
+  "synonyms_note": "synonyms field in source is corrupt (every value is '\\1'); omitted"
+ },
+ {
+  "id": "CHEBI:68612",
+  "record_type": "ontology_chebi",
+  "label": "EC 3.4.14.5 (dipeptidyl-peptidase IV) inhibitor",
+  "definition": "An EC 3.4.14.* (dipeptidyl- and tripeptidyl-peptidases) inhibitor that specifically inhibits dipeptidyl peptidase-4 (EC 3.4.14.5).",
+  "is_a": [
+   {
+    "id": "CHEBI:76788",
+    "label": "EC 3.4.14.* (dipeptidyl- and tripeptidyl-peptidases) inhibitor"
+   }
+  ],
+  "relationships": [],
+  "xrefs": [
+   "wikipedia.en:Dipeptidyl_peptidase-4_inhibitor {source=\"wikipedia.en\"}"
+  ],
+  "synonyms_note": "synonyms field in source is corrupt (every value is '\\1'); omitted"
+ },
+ {
+  "id": "CHEBI:64088",
+  "record_type": "ontology_chebi",
+  "label": "incretin mimetic",
+  "definition": "Any compound that mimics the action of incretins, gastrointestinal hormones that cause an increase in the amount of insulin released from the beta cells of the islets of Langerhans after eating, even before blood glucose levels become elevated.",
+  "is_a": [
+   {
+    "id": "CHEBI:24432",
+    "label": "biological role"
+   }
+  ],
+  "relationships": [],
+  "xrefs": [],
+  "synonyms_note": "synonyms field in source is corrupt (every value is '\\1'); omitted"
+ },
+ {
+  "id": "GO:0032099",
+  "record_type": "ontology_go",
+  "label": "negative regulation of appetite",
+  "definition": "Any process that reduces appetite.",
+  "is_a": [
+   {
+    "id": "GO:0032096",
+    "label": "negative regulation of response to food"
+   },
+   {
+    "id": "GO:0032098",
+    "label": "regulation of appetite"
+   }
+  ],
+  "relationships": [],
+  "xrefs": [],
+  "synonyms_note": "synonyms field in source is corrupt (every value is '\\1'); omitted"
+ },
+ {
+  "id": "GO:0032098",
+  "record_type": "ontology_go",
+  "label": "regulation of appetite",
+  "definition": "Any process which modulates appetite, the desire or physical craving for food.",
+  "is_a": [
+   {
+    "id": "GO:0065008",
+    "label": "regulation of biological quality"
+   }
+  ],
+  "relationships": [
+   "part_of GO:0031667 ! response to nutrient levels"
+  ],
+  "xrefs": [],
+  "synonyms_note": "synonyms field in source is corrupt (every value is '\\1'); omitted"
+ },
+ {
+  "id": "GO:0060259",
+  "record_type": "ontology_go",
+  "label": "regulation of feeding behavior",
+  "definition": "Any process that modulates the rate, frequency or extent of the behavior associated with the intake of food.",
+  "is_a": [
+   {
+    "id": "GO:0050795",
+    "label": "regulation of behavior"
+   }
+  ],
+  "relationships": [
+   "regulates GO:0007631 ! feeding behavior"
+  ],
+  "xrefs": [],
+  "synonyms_note": "synonyms field in source is corrupt (every value is '\\1'); omitted"
+ },
+ {
+  "id": "GO:0007631",
+  "record_type": "ontology_go",
+  "label": "feeding behavior",
+  "definition": "Behavior associated with the intake of food.",
+  "is_a": [
+   {
+    "id": "GO:0007610",
+    "label": "behavior"
+   }
+  ],
+  "relationships": [],
+  "xrefs": [
+   "Wikipedia:List_of_feeding_behaviours"
+  ],
+  "synonyms_note": "synonyms field in source is corrupt (every value is '\\1'); omitted"
+ },
+ {
+  "id": "GO:2000252",
+  "record_type": "ontology_go",
+  "label": "negative regulation of feeding behavior",
+  "definition": "Any process that stops, prevents or reduces the frequency, rate or extent of feeding behavior.",
+  "is_a": [
+   {
+    "id": "GO:0048521",
+    "label": "negative regulation of behavior"
+   },
+   {
+    "id": "GO:0060259",
+    "label": "regulation of feeding behavior"
+   }
+  ],
+  "relationships": [
+   "negatively_regulates GO:0007631 ! feeding behavior"
+  ],
+  "xrefs": [],
+  "synonyms_note": "synonyms field in source is corrupt (every value is '\\1'); omitted"
+ },
+ {
+  "id": "GO:1903999",
+  "record_type": "ontology_go",
+  "label": "negative regulation of eating behavior",
+  "definition": "Any process that stops, prevents or reduces the frequency, rate or extent of eating behavior.",
+  "is_a": [
+   {
+    "id": "GO:1903998",
+    "label": "regulation of eating behavior"
+   },
+   {
+    "id": "GO:2000252",
+    "label": "negative regulation of feeding behavior"
+   }
+  ],
+  "relationships": [
+   "negatively_regulates GO:0042755 ! eating behavior"
+  ],
+  "xrefs": [],
+  "synonyms_note": "synonyms field in source is corrupt (every value is '\\1'); omitted"
+ },
+ {
+  "id": "GO:0044508",
+  "record_type": "ontology_go",
+  "label": "glucagon-like peptide 1 receptor activity",
+  "definition": "Combining with glucagon-like peptide 1 and transmitting the signal across the membrane by activating an associated G-protein.",
+  "is_a": [
+   {
+    "id": "GO:0008528",
+    "label": "G protein-coupled peptide receptor activity"
+   }
+  ],
+  "relationships": [],
+  "xrefs": [],
+  "synonyms_note": "synonyms field in source is corrupt (every value is '\\1'); omitted"
+ },
+ {
+  "id": "GO:0004967",
+  "record_type": "ontology_go",
+  "label": "glucagon receptor activity",
+  "definition": "Combining with glucagon and transmitting the signal across the membrane by activating an associated G-protein; promotes the exchange of GDP for GTP on the alpha subunit of a heterotrimeric G-protein complex.",
+  "is_a": [
+   {
+    "id": "GO:0008528",
+    "label": "G protein-coupled peptide receptor activity"
+   }
+  ],
+  "relationships": [
+   "part_of GO:0071377 ! cellular response to glucagon stimulus"
+  ],
+  "xrefs": [
+   "Reactome:R-HSA-163625 \"Glucagon binds to Glucagon receptor\""
+  ],
+  "synonyms_note": "synonyms field in source is corrupt (every value is '\\1'); omitted"
+ },
+ {
+  "id": "GO:0035483",
+  "record_type": "ontology_go",
+  "label": "gastric emptying",
+  "definition": "The process in which the liquid and liquid-suspended solid contents of the stomach exit through the pylorus into the duodenum.",
+  "is_a": [
+   {
+    "id": "GO:0035482",
+    "label": "gastric motility"
+   }
+  ],
+  "relationships": [],
+  "xrefs": [],
+  "synonyms_note": "synonyms field in source is corrupt (every value is '\\1'); omitted"
+ },
+ {
+  "id": "GO:0120060",
+  "record_type": "ontology_go",
+  "label": "regulation of gastric emptying",
+  "definition": "Any process that modulates the frequency, rate or extent of any gastric emptying process, the process in which the liquid and liquid-suspended solid contents of the stomach exit through the pylorus into the duodenum.",
+  "is_a": [
+   {
+    "id": "GO:1905333",
+    "label": "regulation of gastric motility"
+   }
+  ],
+  "relationships": [
+   "regulates GO:0035483 ! gastric emptying"
+  ],
+  "xrefs": [],
+  "synonyms_note": "synonyms field in source is corrupt (every value is '\\1'); omitted"
+ },
+ {
+  "id": "GO:0120061",
+  "record_type": "ontology_go",
+  "label": "negative regulation of gastric emptying",
+  "definition": "Any process that decreases the frequency, rate or extent of any gastric emptying process, the process in which the liquid and liquid-suspended solid contents of the stomach exit through the pylorus into the duodenum.",
+  "is_a": [
+   {
+    "id": "GO:0060457",
+    "label": "negative regulation of digestive system process"
+   },
+   {
+    "id": "GO:0120060",
+    "label": "regulation of gastric emptying"
+   }
+  ],
+  "relationships": [
+   "negatively_regulates GO:0035483 ! gastric emptying"
+  ],
+  "xrefs": [],
+  "synonyms_note": "synonyms field in source is corrupt (every value is '\\1'); omitted"
+ },
+ {
+  "id": "GO:0008233",
+  "record_type": "ontology_go",
+  "label": "peptidase activity",
+  "definition": "Catalysis of the hydrolysis of a peptide bond. A peptide bond is a covalent bond formed when the carbon atom from the carboxyl group of one amino acid shares electrons with the nitrogen atom from the amino group of a second amino acid.",
+  "is_a": [
+   {
+    "id": "GO:0016787",
+    "label": "hydrolase activity"
+   },
+   {
+    "id": "GO:0140096",
+    "label": "catalytic activity, acting on a protein"
+   }
+  ],
+  "relationships": [],
+  "xrefs": [
+   "EC:3.4.-.-",
+   "Reactome:R-HSA-205112 \"gamma-secretase cleaves p75NTR, releasing NRIF and TRAF6\"",
+   "Reactome:R-HSA-3000243 \"Unknown lysosomal protease degrades CBLIF:RCbl to release Cbl\"",
+   "Reactome:R-HSA-3000263 \"TCN2:RCbl is degraded to release RCbl\"",
+   "Reactome:R-HSA-3065958 \"An unknown protease degrades ACACA\"",
+   "Reactome:R-HSA-3065959 \"An unknown protease degrades hCBXs\"",
+   "Reactome:R-HSA-3139027 \"Maturation of HIV Virion\"",
+   "Reactome:R-HSA-376149 \"Proteolytic processing of SLIT\"",
+   "Reactome:R-HSA-4167501 \"An unknown protease degrades ACACB\"",
+   "Reactome:R-HSA-448678 \"CTSG cleaves CASP1(1-404)\"",
+   "Reactome:R-HSA-5655483 \"USP1 autocleavage\"",
+   "Reactome:R-HSA-5684864 \"NAPSA, CTSH, PGA3-5 cleave pro-SFTPB\"",
+   "Reactome:R-HSA-5685902 \"NAPSA, CTSH, PGA3-5 cleave pro-SFTPC\"",
+   "Reactome:R-HSA-6803060 \"DCD(63-110) is processed to DCD(63-109)\"",
+   "Reactome:R-HSA-9935547 \"Lysosomal degradation of ubiqutinated CDH1\""
+  ],
+  "synonyms_note": "synonyms field in source is corrupt (every value is '\\1'); omitted"
+ },
+ {
+  "id": "GO:0008239",
+  "record_type": "ontology_go",
+  "label": "dipeptidyl-peptidase activity",
+  "definition": "Catalysis of the hydrolysis of N-terminal dipeptides from a polypeptide chain.",
+  "is_a": [
+   {
+    "id": "GO:0008238",
+    "label": "exopeptidase activity"
+   }
+  ],
+  "relationships": [],
+  "xrefs": [
+   "EC:3.4.14.1",
+   "EC:3.4.14.11",
+   "EC:3.4.14.2",
+   "EC:3.4.14.4",
+   "EC:3.4.14.5",
+   "MetaCyc:3.4.14.11-RXN",
+   "MetaCyc:3.4.14.4-RXN"
+  ],
+  "synonyms_note": "synonyms field in source is corrupt (every value is '\\1'); omitted"
+ },
+ {
+  "id": "GO:0070008",
+  "record_type": "ontology_go",
+  "label": "serine-type exopeptidase activity",
+  "definition": "Catalysis of the hydrolysis of a peptide bond not more than three residues from the N- or C-terminus of a polypeptide chain by a catalytic mechanism that involves a catalytic triad consisting of a serine nucleophile that is activated by a proton relay involving an acidic residue (e.g. aspartate or glutamate) and a basic residue (usually histidine).",
+  "is_a": [
+   {
+    "id": "GO:0008236",
+    "label": "serine-type peptidase activity"
+   },
+   {
+    "id": "GO:0008238",
+    "label": "exopeptidase activity"
+   }
+  ],
+  "relationships": [],
+  "xrefs": [],
+  "synonyms_note": "synonyms field in source is corrupt (every value is '\\1'); omitted"
+ },
+ {
+  "id": "GO:0005179",
+  "record_type": "ontology_go",
+  "label": "hormone activity",
+  "definition": "The action characteristic of a hormone, any substance formed in very small amounts in one specialized organ or group of cells and carried (sometimes in the bloodstream) to another organ or group of cells in the same organism, upon which it has a specific regulatory action. The term was originally applied to agents with a stimulatory physiological action in vertebrate animals (as opposed to a chalone, which has a depressant action). Usage is now extended to regulatory compounds in lower animals and plants, and to synthetic substances having comparable effects; all bind receptors and trigger some biological process.",
+  "is_a": [
+   {
+    "id": "GO:0048018",
+    "label": "receptor ligand activity"
+   }
+  ],
+  "relationships": [],
+  "xrefs": [],
+  "synonyms_note": "synonyms field in source is corrupt (every value is '\\1'); omitted"
+ },
+ {
+  "id": "HP:0002018",
+  "record_type": "ontology_hp",
+  "label": "Nausea",
+  "definition": "A sensation of unease in the stomach together with an urge to vomit.",
+  "is_a": [
+   {
+    "id": "HP:0002017",
+    "label": "Nausea and vomiting"
+   }
+  ],
+  "relationships": [],
+  "xrefs": [
+   "MEDDRA:10028813 \"Nausea\"",
+   "SNOMEDCT_US:422587007",
+   "UMLS:C0027497"
+  ],
+  "synonyms_note": "synonyms field in source is corrupt (every value is '\\1'); omitted"
+ },
+ {
+  "id": "HP:0004396",
+  "record_type": "ontology_hp",
+  "label": "Poor appetite",
+  "definition": "A reduced desire to eat.",
+  "is_a": [
+   {
+    "id": "HP:0011458",
+    "label": "Abdominal symptom"
+   }
+  ],
+  "relationships": [],
+  "xrefs": [
+   "SNOMEDCT_US:64379006",
+   "UMLS:C0232462"
+  ],
+  "synonyms_note": "synonyms field in source is corrupt (every value is '\\1'); omitted"
+ },
+ {
+  "id": "HP:0002591",
+  "record_type": "ontology_hp",
+  "label": "Polyphagia",
+  "definition": "A neurological anomaly with gross overeating associated with an abnormally strong desire or need to eat.",
+  "is_a": [
+   {
+    "id": "HP:0100738",
+    "label": "Abnormal eating behavior"
+   }
+  ],
+  "relationships": [],
+  "xrefs": [
+   "SNOMEDCT_US:267023007",
+   "SNOMEDCT_US:58424009",
+   "SNOMEDCT_US:72405004",
+   "UMLS:C0020505",
+   "UMLS:C0232461"
+  ],
+  "synonyms_note": "synonyms field in source is corrupt (every value is '\\1'); omitted"
+ },
+ {
+  "id": "HP:0033842",
+  "record_type": "ontology_hp",
+  "label": "Early satiety",
+  "definition": "The condition of being unable to eat a full meal because of a feeling of fullness (satiety), or or feeling very full after eating only a small amount of food.",
+  "is_a": [
+   {
+    "id": "HP:0011458",
+    "label": "Abdominal symptom"
+   }
+  ],
+  "relationships": [],
+  "xrefs": [],
+  "synonyms_note": "synonyms field in source is corrupt (every value is '\\1'); omitted"
+ },
+ {
+  "id": "HP:0001513",
+  "record_type": "ontology_hp",
+  "label": "Obesity",
+  "definition": "Accumulation of substantial excess body fat.",
+  "is_a": [
+   {
+    "id": "HP:0004324",
+    "label": "Increased body weight"
+   }
+  ],
+  "relationships": [],
+  "xrefs": [
+   "SNOMEDCT_US:414915002",
+   "SNOMEDCT_US:414916001",
+   "UMLS:C0028754"
+  ],
+  "synonyms_note": "synonyms field in source is corrupt (every value is '\\1'); omitted"
+ },
+ {
+  "id": "HP:0002017",
+  "record_type": "ontology_hp",
+  "label": "Nausea and vomiting",
+  "definition": "Nausea is a commonly encountered symptom that has been defined as an unpleasant painless subjective feeling that one will imminently vomit. Vomiting has been defined as the forceful expulsion of the contents of the stomach, duodenum, or jejunum through the oral cavity. While nausea and vomiting are often thought to exist on a temporal continuum, this is not always the case. There are situations when severe nausea may be present without emesis and less frequently, when emesis may be present without preceding nausea.",
+  "is_a": [
+   {
+    "id": "HP:0011458",
+    "label": "Abdominal symptom"
+   }
+  ],
+  "relationships": [],
+  "xrefs": [
+   "SNOMEDCT_US:16932000",
+   "UMLS:C0027498"
+  ],
+  "synonyms_note": "synonyms field in source is corrupt (every value is '\\1'); omitted"
+ },
+ {
+  "id": "MONDO:0011122",
+  "record_type": "ontology_mondo",
+  "label": "obesity disorder",
+  "definition": "A disorder involving an excessive amount of body fat.",
+  "is_a": [
+   {
+    "id": "MONDO:0003916 {source=\"DOID:9970\"}",
+    "label": null
+   }
+  ],
+  "relationships": [
+   "disease_has_feature HP:0001513 ! Obesity"
+  ],
+  "xrefs": [
+   "DOID:9970 {source=\"MONDO:equivalentTo\", source=\"EFO:0001073\"}",
+   "EFO:0001073 {source=\"MONDO:equivalentTo\", source=\"MONDO:EFO\"}",
+   "HP:0001513 {source=\"MONDO:otherHierarchy\"}",
+   "ICD9:278.0 {source=\"MONDO:equivalentTo\", source=\"MONDO:i2s\", source=\"EFO:0001073\"}",
+   "ICD9:278.00 {source=\"MONDO:equivalentTo\", source=\"MONDO:i2s\", source=\"DOID:9970\", source=\"EFO:0001073\"}",
+   "MEDGEN:18127 {source=\"MONDO:equivalentTo\", source=\"MONDO:MEDGEN\"}",
+   "NCIT:C3283 {source=\"MONDO:equivalentTo\", source=\"MONDO:otherHierarchy\", source=\"DOID:9970\", source=\"EFO:0001073\"}",
+   "Orphanet:521399 {source=\"MONDO:equivalentObsolete\"}",
+   "SCTID:414916001 {source=\"MONDO:equivalentTo\", source=\"DOID:9970\", source=\"EFO:0001073\"}",
+   "UMLS:C0028754 {source=\"MONDO:equivalentTo\", source=\"MONDO:MEDGEN\", source=\"MEDGEN:18127\"}"
+  ],
+  "synonyms_note": "synonyms field in source is corrupt (every value is '\\1'); omitted"
+ },
+ {
+  "id": "MONDO:0005148",
+  "record_type": "ontology_mondo",
+  "label": "type 2 diabetes mellitus",
+  "definition": "A type of diabetes mellitus that is characterized by insulin resistance or desensitization and increased blood glucose levels. This is a chronic disease that can develop gradually over the life of a patient and can be linked to both environmental factors and heredity.",
+  "is_a": [
+   {
+    "id": "MONDO:0005015 {source=\"DOID:9352\", source=\"EFO:0001360\", source=\"MESH:D003924\", source=\"NCIT:C26747\", source=\"icd11.foundation:119724091\"}",
+    "label": null
+   }
+  ],
+  "relationships": [
+   "disease_disrupts GO:0030073 ! insulin secretion",
+   "disease_disrupts GO:0044381 ! glucose import in response to insulin stimulus",
+   "disease_has_feature HP:0000855 ! Insulin resistance"
+  ],
+  "xrefs": [
+   "DOID:9352 {source=\"MONDO:equivalentTo\", source=\"EFO:0001360\"}",
+   "ICD10CM:E11 {source=\"https://orcid.org/0009-0001-6494-4831\", source=\"MONDO:equivalentTo\", source=\"https://orcid.org/0000-0002-5002-8648\", source=\"DOID:9352\"}",
+   "ICD10WHO:E11 {source=\"https://orcid.org/0000-0002-7941-5545\", source=\"MONDO:equivalentTo\", source=\"https://orcid.org/0000-0001-9439-5346\"}",
+   "icd11.foundation:119724091 {source=\"MONDO:equivalentTo\"}",
+   "MEDGEN:41523 {source=\"MONDO:equivalentTo\", source=\"MONDO:MEDGEN\"}",
+   "MESH:D003924 {source=\"MONDO:equivalentTo\", source=\"DOID:9352\", source=\"EFO:0001360\"}",
+   "NANDO:2200461 {source=\"MONDO:NANDO\", source=\"https://orcid.org/0000-0003-0011-764X\", source=\"https://orcid.org/0000-0002-0170-9172\"}",
+   "NCIT:C26747 {source=\"MONDO:equivalentTo\", source=\"DOID:9352\", source=\"EFO:0001360\"}",
+   "OMIM:125853 {source=\"MONDO:equivalentTo\", source=\"DOID:9352\", source=\"EFO:0001360\"}",
+   "SCTID:44054006 {source=\"MONDO:equivalentTo\", source=\"DOID:9352\", source=\"EFO:0001360\"}",
+   "UMLS:C0011860 {source=\"MEDGEN:41523\", source=\"MONDO:equivalentTo\", source=\"MONDO:MEDGEN\"}"
+  ],
+  "synonyms_note": "synonyms field in source is corrupt (every value is '\\1'); omitted"
+ },
+ {
+  "id": "P43220",
+  "record_type": "uniprot_human",
+  "label": "Glucagon-like peptide 1 receptor (GLP-1 receptor) (GLP-1-R) (GLP-1R)",
+  "entry_name": "GLP1R_HUMAN",
+  "gene_names": "GLP1R",
+  "function": "G protein-coupled receptor for glucagon-like peptide 1 (GLP-1) (PubMed:19861722, PubMed:26308095, PubMed:27196125, PubMed:28514449, PubMed:7517895, PubMed:8216285, PubMed:8405712). Ligand binding triggers activation of a signaling cascade that leads to the activation of adenylyl cyclase and increased intracellular cAMP levels (PubMed:19861722, PubMed:26308095, PubMed:27196125, PubMed:28514449, PubMed:7517895, PubMed:8216285, PubMed:8405712). Plays a role in regulating insulin secretion in response to GLP-1 (By similarity). {ECO:0000250|UniProtKB:O35659, ECO:0000269|PubMed:19861722, ECO:0000269|PubMed:26308095, ECO:0000269|PubMed:27196125, ECO:0000269|PubMed:28514449, ECO:0000269|PubMed:7517895, ECO:0000269|PubMed:8216285, ECO:0000269|PubMed:8405712}.",
+  "go_ids": [
+   "GO:0004888",
+   "GO:0004967",
+   "GO:0005886",
+   "GO:0007166",
+   "GO:0007189",
+   "GO:0007190",
+   "GO:0007204",
+   "GO:0007611",
+   "GO:0008016",
+   "GO:0016020",
+   "GO:0017046",
+   "GO:0044508",
+   "GO:0045777",
+   "GO:1990911"
+  ],
+  "go_terms": "membrane [GO:0016020]; plasma membrane [GO:0005886]; glucagon receptor activity [GO:0004967]; glucagon-like peptide 1 receptor activity [GO:0044508]; peptide hormone binding [GO:0017046]; transmembrane signaling receptor activity [GO:0004888]; activation of adenylate cyclase activity [GO:0007190]; adenylate cyclase-activating G protein-coupled receptor signaling pathway [GO:0007189]; cell surface receptor signaling pathway [GO:0007166]; learning or memory [GO:0007611]; positive regulation of blood pressure [GO:0045777]; positive regulation of cytosolic calcium ion concentration [GO:0007204]; regulation of heart contraction [GO:0008016]; response to psychosocial stress [GO:1990911]",
+  "drugbank": "DB09043;DB14806;DB09045;DB15650;DB01276;DB00040;DB16697;DB06655;DB09265;DB21631;DB18964;DB14817;DB18998;DB16043;DB01278;DB13928;DB14027;DB15171;"
+ },
+ {
+  "id": "P27487",
+  "record_type": "uniprot_human",
+  "label": "Dipeptidyl peptidase 4 (EC 3.4.14.5) (ADABP) (Adenosine deaminase complexing protein 2) (ADCP-2) (Dipeptidyl peptidase IV) (DPP IV) (T-cell activation antigen CD26) (TP103) (CD antigen CD26) [Cleaved into: Dipeptidyl peptidase 4 membrane form (Dipeptidyl peptidase IV membrane form); Dipeptidyl peptidase 4 soluble form (Dipeptidyl peptidase IV soluble form)]",
+  "entry_name": "DPP4_HUMAN",
+  "gene_names": "DPP4 ADCP2 CD26",
+  "function": "Cell surface glycoprotein receptor involved in the costimulatory signal essential for T-cell receptor (TCR)-mediated T-cell activation (PubMed:10900005, PubMed:10951221, PubMed:11772392, PubMed:17287217). Acts as a positive regulator of T-cell coactivation, by binding at least ADA, CAV1, IGF2R, and PTPRC (PubMed:10900005, PubMed:10951221, PubMed:11772392, PubMed:14691230). Its binding to CAV1 and CARD11 induces T-cell proliferation and NF-kappa-B activation in a T-cell receptor/CD3-dependent manner (PubMed:17287217). Its interaction with ADA also regulates lymphocyte-epithelial cell adhesion (PubMed:11772392). In association with FAP is involved in the pericellular proteolysis of the extracellular matrix (ECM), the migration and invasion of endothelial cells into the ECM (PubMed:10593948, PubMed:16651416). May be involved in the promotion of lymphatic endothelial cells adhesion, migration and tube formation (PubMed:18708048). When overexpressed, enhanced cell proliferation, a process inhibited by GPC3 (PubMed:17549790). Also acts as a serine exopeptidase with a dipeptidyl peptidase activity that regulates various physiological processes by cleaving peptides in the circulation, including many chemokines, mitogenic growth factors, neuropeptides and peptide hormones such as brain natriuretic peptide 32 (PubMed:10570924, PubMed:16254193). Removes N-terminal dipeptides sequentially from polypeptides having unsubstituted N-termini provided that the penultimate residue is proline (PubMed:10593948). {ECO:0000269|PubMed:10570924, ECO:0000269|PubMed:10593948, ECO:0000269|PubMed:10900005, ECO:0000269|PubMed:10951221, ECO:0000269|PubMed:11772392, ECO:0000269|PubMed:14691230, ECO:0000269|PubMed:16254193, ECO:0000269|PubMed:16651416, ECO:0000269|PubMed:17287217, ECO:0000269|PubMed:17549790, ECO:0000269|PubMed:18708048}.; FUNCTION: (Microbial infection) Acts as a receptor for human coronavirus MERS-CoV-2. {ECO:0000269|PubMed:23835475}.",
+  "go_ids": [
+   "GO:0001618",
+   "GO:0001666",
+   "GO:0002020",
+   "GO:0004177",
+   "GO:0004252",
+   "GO:0005102",
+   "GO:0005576",
+   "GO:0005765",
+   "GO:0005886",
+   "GO:0005925",
+   "GO:0006508",
+   "GO:0007155",
+   "GO:0008236",
+   "GO:0008239",
+   "GO:0008284",
+   "GO:0009986",
+   "GO:0010716",
+   "GO:0016020",
+   "GO:0016324",
+   "GO:0016486",
+   "GO:0019065",
+   "GO:0030027",
+   "GO:0030139",
+   "GO:0031258",
+   "GO:0031295",
+   "GO:0033632",
+   "GO:0042110",
+   "GO:0042802",
+   "GO:0042803",
+   "GO:0043542",
+   "GO:0045121",
+   "GO:0045499",
+   "GO:0046581",
+   "GO:0046718",
+   "GO:0046813",
+   "GO:0061025",
+   "GO:0070062",
+   "GO:0090024",
+   "GO:0120116"
+  ],
+  "go_terms": "apical plasma membrane [GO:0016324]; cell surface [GO:0009986]; endocytic vesicle [GO:0030139]; extracellular exosome [GO:0070062]; extracellular region [GO:0005576]; focal adhesion [GO:0005925]; intercellular canaliculus [GO:0046581]; lamellipodium [GO:0030027]; lamellipodium membrane [GO:0031258]; lysosomal membrane [GO:0005765]; membrane [GO:0016020]; membrane raft [GO:0045121]; plasma membrane [GO:0005886]; aminopeptidase activity [GO:0004177]; chemorepellent activity [GO:0045499]; dipeptidyl-peptidase activity [GO:0008239]; identical protein binding [GO:0042802]; protease binding [GO:0002020]; protein homodimerization activity [GO:0042803]; serine-type endopeptidase activity [GO:0004252]; serine-type peptidase activity [GO:0008236]; signaling receptor binding [GO:0005102]; virus receptor activity [GO:0001618]; cell adhesion [GO:0007155]; endothelial cell migration [GO:0043542]; glucagon processing [GO:0120116]; membrane fusion [GO:0061025]; negative regulation of extracellular matrix disassembly [GO:0010716]; negative regulation of neutrophil chemotaxis [GO:0090024]; peptide hormone processing [GO:0016486]; positive regulation of cell population proliferation [GO:0008284]; proteolysis [GO:0006508]; receptor-mediated endocytosis of virus by host cell [GO:0019065]; receptor-mediated virion attachment to host cell [GO:0046813]; regulation of cell-cell adhesion mediated by integrin [GO:0033632]; response to hypoxia [GO:0001666]; symbiont entry into host cell [GO:0046718]; T cell activation [GO:0042110]; T cell costimulation [GO:0031295]",
+  "drugbank": "DB07356;DB06880;DB07072;DB07465;DB08051;DB07081;DB07482;DB07193;DB08024;DB03253;DB07092;DB07135;DB06994;DB07067;DB06993;DB07154;DB08164;DB07015;DB07851;DB08445;DB07666;DB07830;DB07021;DB04578;DB04577;DB07412;DB08588;DB08743;DB01884;DB07181;DB07271;DB08672;DB03660;DB02004;DB08504;DB07239;DB08530;DB08044;DB06203;DB06011;DB12417;DB01076;DB06127;DB16134;DB04491;DB11723;DB12625;DB01276;DB15236;DB12412;DB08382;DB08882;DB06655;DB20789;DB07328;DB06939;DB07779;DB08429;DB11992;DB05001;DB14898;DB06335;DB13928;DB01261;DB11950;DB15323;DB04876;"
+ },
+ {
+  "id": "P01275",
+  "record_type": "uniprot_human",
+  "label": "Pro-glucagon [Cleaved into: Glicentin; Glicentin-related polypeptide (GRPP); Oxyntomodulin (OXM) (OXY); Glucagon; Glucagon-like peptide 1 (GLP-1) (Incretin hormone); Glucagon-like peptide 1(7-37) (GLP-1(7-37)); Glucagon-like peptide 1(7-36) (GLP-1(7-36)); Glucagon-like peptide 2 (GLP-2)]",
+  "entry_name": "GLUC_HUMAN",
+  "gene_names": "GCG",
+  "function": "[Glucagon]: Plays a key role in glucose metabolism and homeostasis. Regulates blood glucose by increasing gluconeogenesis and decreasing glycolysis. A counterregulatory hormone of insulin, raises plasma glucose levels in response to insulin-induced hypoglycemia. Plays an important role in initiating and maintaining hyperglycemic conditions in diabetes. Binds to and activates the glucagon receptor GCGR, which couples to the G(s) G protein and elevates intracellular cAMP, triggering downstream metabolic responses (PubMed:32193322). {ECO:0000269|PubMed:32193322, ECO:0000303|PubMed:10605628, ECO:0000303|PubMed:12626323}.; FUNCTION: [Glucagon-like peptide 1]: Potent stimulator of glucose-dependent insulin release (PubMed:22037645, PubMed:40446798). Also stimulates insulin release in response to IL6 (PubMed:22037645). Plays important roles on gastric motility and the suppression of plasma glucagon levels (PubMed:10605628, PubMed:14719035, PubMed:12554744). May be involved in the suppression of satiety and stimulation of glucose disposal in peripheral tissues, independent of the actions of insulin (PubMed:10605628, PubMed:14719035, PubMed:12554744). Has growth-promoting activities on intestinal epithelium (PubMed:10605628, PubMed:14719035, PubMed:12554744). May also regulate the hypothalamic pituitary axis (HPA) via effects on LH, TSH, CRH, oxytocin, and vasopressin secretion (PubMed:10605628, PubMed:14719035, PubMed:12554744). Increases islet mass through stimulation of islet neogenesis and pancreatic beta cell proliferation (PubMed:10605628, PubMed:14719035, PubMed:12554744). Inhibits beta cell apoptosis (PubMed:10605628, PubMed:14719035, PubMed:12554744). {ECO:0000269|PubMed:22037645, ECO:0000269|PubMed:40446798, ECO:0000303|PubMed:10605628, ECO:0000303|PubMed:12554744, ECO:0000303|PubMed:14719035}.; FUNCTION: [Glucagon-like peptide 2]: Stimulates intestinal growth and up-regulates villus height in the small intestine, concomitant with increased crypt cell proliferation and decreased enterocyte apoptosis. The gastrointestinal tract, from the stomach to the colon is the principal target for GLP-2 action. Plays a key role in nutrient homeostasis, enhancing nutrient assimilation through enhanced gastrointestinal function, as well as increasing nutrient disposal. Stimulates intestinal glucose transport and decreases mucosal permeability. {ECO:0000303|PubMed:10322410, ECO:0000303|PubMed:10605628, ECO:0000303|PubMed:12554744, ECO:0000303|PubMed:14719035}.; FUNCTION: [Oxyntomodulin]: Significantly reduces food intake. Inhibits gastric emptying in humans. Suppression of gastric emptying may lead to increased gastric distension, which may contribute to satiety by causing a sensation of fullness. {ECO:0000303|PubMed:10605628, ECO:0000303|PubMed:12554744}.; FUNCTION: [Glicentin]: May modulate gastric acid secretion and the gastro-pyloro-duodenal activity. May play an important role in intestinal mucosal growth in the early period of life. {ECO:0000303|PubMed:10605628, ECO:0000303|PubMed:12554744}.",
+  "go_ids": [
+   "GO:0005102",
+   "GO:0005179",
+   "GO:0005576",
+   "GO:0005615",
+   "GO:0005788",
+   "GO:0005886",
+   "GO:0007186",
+   "GO:0007188",
+   "GO:0007189",
+   "GO:0007631",
+   "GO:0014823",
+   "GO:0031769",
+   "GO:0032024",
+   "GO:0034774",
+   "GO:0035774",
+   "GO:0042593",
+   "GO:0042802",
+   "GO:0043066",
+   "GO:0048018",
+   "GO:0050796",
+   "GO:0070374",
+   "GO:0071377",
+   "GO:0090280"
+  ],
+  "go_terms": "endoplasmic reticulum lumen [GO:0005788]; extracellular region [GO:0005576]; extracellular space [GO:0005615]; plasma membrane [GO:0005886]; secretory granule lumen [GO:0034774]; glucagon receptor binding [GO:0031769]; hormone activity [GO:0005179]; identical protein binding [GO:0042802]; receptor ligand activity [GO:0048018]; signaling receptor binding [GO:0005102]; adenylate cyclase-activating G protein-coupled receptor signaling pathway [GO:0007189]; adenylate cyclase-modulating G protein-coupled receptor signaling pathway [GO:0007188]; cellular response to glucagon stimulus [GO:0071377]; feeding behavior [GO:0007631]; G protein-coupled receptor signaling pathway [GO:0007186]; glucose homeostasis [GO:0042593]; negative regulation of apoptotic process [GO:0043066]; positive regulation of calcium ion import [GO:0090280]; positive regulation of ERK1 and ERK2 cascade [GO:0070374]; positive regulation of insulin secretion [GO:0032024]; positive regulation of insulin secretion involved in cellular response to glucose stimulus [GO:0035774]; regulation of insulin secretion [GO:0050796]; response to activity [GO:0014823]",
+  "drugbank": "DB15194;"
+ },
+ {
+  "id": "P01189",
+  "record_type": "uniprot_human",
+  "label": "Pro-opiomelanocortin (POMC) (Corticotropin-lipotropin) [Cleaved into: NPP; Melanotropin gamma (Gamma-MSH); Potential peptide; Corticotropin (Adrenocorticotropic hormone) (ACTH); Melanocyte-stimulating hormone alpha (Alpha-MSH) (Melanotropin alpha); Corticotropin-like intermediary peptide (CLIP); Lipotropin beta (Beta-LPH); Lipotropin gamma (Gamma-LPH); Melanocyte-stimulating hormone beta (Beta-MSH) (Melanotropin beta); Beta-endorphin; Met-enkephalin]",
+  "entry_name": "COLI_HUMAN",
+  "gene_names": "POMC",
+  "function": "Precursor protein of pituitary hormones that are involved in diverse physiological processes, including the regulation of energy balance, stress response, immune function and skin pigmentation. {ECO:0000269|PubMed:10403794, ECO:0000269|PubMed:8392067, ECO:0000269|PubMed:8396929, ECO:0000269|PubMed:8463333, ECO:0000269|PubMed:8636348, ECO:0000269|PubMed:9620771}.; FUNCTION: [Corticotropin]: Functions as a ligand for the melanocortin receptors MC1R, MC2R, MC3R and MC5R (PubMed:8396929, PubMed:8463333, PubMed:8636348). Activation of MC1R increases melanogenesis in melanocytes found in the skin and hair (PubMed:9620771). Binding to MC2R stimulates the adrenal glands to secrete cortisol (PubMed:8636348). Contributes to the regulation of energy homeostasis through activation of MC3R (Probable). Involved in the regulation exocrine gland function through MC5R activation (By similarity). {ECO:0000250|UniProtKB:P01193, ECO:0000269|PubMed:8396929, ECO:0000269|PubMed:8463333, ECO:0000269|PubMed:8636348, ECO:0000269|PubMed:9620771, ECO:0000305|PubMed:8463333}.; FUNCTION: [Melanocyte-stimulating hormone alpha]: Serves as a ligand for the melanocortin receptors MC1R, MC3R, MC4R and MC5R (PubMed:8392067, PubMed:8396929, PubMed:8463333). Activation of MC1R promotes melanogenesis in melanocytes of the skin and hair (PubMed:10403794, PubMed:9620771). Contributes to the regulation of energy homeostasis through activation of MC3R (Probable). Through MC4R activation, functions as an anorexigenic peptide (PubMed:8392067). Promotes immunosuppression and involved in the regulation exocrine gland function through MC5R activation (By similarity). {ECO:0000250|UniProtKB:P01193, ECO:0000269|PubMed:10403794, ECO:0000269|PubMed:8392067, ECO:0000269|PubMed:8396929, ECO:0000269|PubMed:8463333, ECO:0000269|PubMed:9620771, ECO:0000305|PubMed:8463333}.; FUNCTION: [Melanocyte-stimulating hormone beta]: Functions as a ligand for the melanocortin receptors MC1R, MC3R, MC4R and MC5R (PubMed:8396929, PubMed:8463333). Activation of MC1R increases melanogenesis in melanocytes found in the skin and hair (Probable). Contributes to the regulation of energy homeostasis through activation of MC3R (Probable). Through MC4R activation, functions as an anorexigenic peptide (PubMed:8392067). Involved in the regulation exocrine gland function through MC5R activation (By similarity). {ECO:0000250|UniProtKB:P01193, ECO:0000269|PubMed:8392067, ECO:0000269|PubMed:8396929, ECO:0000269|PubMed:8463333, ECO:0000305|PubMed:8463333}.; FUNCTION: [Melanotropin gamma]: Functions as a ligand for the melanocortin receptors MC1R, MC3R, MC4R and MC5R (PubMed:8396929, PubMed:8463333). Activation of MC1R increases melanogenesis in melanocytes found in the skin and hair (Probable). Contributes to the regulation of energy homeostasis through activation of MC3R (Probable). Binds to MC4R with low potency (PubMed:8392067). Involved in the regulation exocrine gland function through MC5R activation (By similarity). {ECO:0000250|UniProtKB:P01193, ECO:0000269|PubMed:8392067, ECO:0000269|PubMed:8396929, ECO:0000269|PubMed:8463333, ECO:0000305|PubMed:8463333}.; FUNCTION: [Beta-endorphin]: Endogenous orexigenic opiate.; FUNCTION: [Met-enkephalin]: Endogenous opiate.",
+  "go_ids": [
+   "GO:0001664",
+   "GO:0005102",
+   "GO:0005179",
+   "GO:0005576",
+   "GO:0005615",
+   "GO:0005737",
+   "GO:0006091",
+   "GO:0007165",
+   "GO:0007218",
+   "GO:0007267",
+   "GO:0008217",
+   "GO:0019722",
+   "GO:0030141",
+   "GO:0031781",
+   "GO:0031782",
+   "GO:0032098",
+   "GO:0032720",
+   "GO:0033059",
+   "GO:0034774",
+   "GO:0045944",
+   "GO:0070996",
+   "GO:0106071",
+   "GO:0140668",
+   "GO:1990680",
+   "GO:2000852"
+  ],
+  "go_terms": "cytoplasm [GO:0005737]; extracellular region [GO:0005576]; extracellular space [GO:0005615]; secretory granule [GO:0030141]; secretory granule lumen [GO:0034774]; G protein-coupled receptor binding [GO:0001664]; hormone activity [GO:0005179]; signaling receptor binding [GO:0005102]; type 1 melanocortin receptor binding [GO:0070996]; type 3 melanocortin receptor binding [GO:0031781]; type 4 melanocortin receptor binding [GO:0031782]; calcium-mediated signaling [GO:0019722]; cell-cell signaling [GO:0007267]; cellular pigmentation [GO:0033059]; generation of precursor metabolites and energy [GO:0006091]; negative regulation of tumor necrosis factor production [GO:0032720]; neuropeptide signaling pathway [GO:0007218]; positive regulation of adenylate cyclase-activating G protein-coupled receptor signaling pathway [GO:0106071]; positive regulation of oxytocin production [GO:0140668]; positive regulation of transcription by RNA polymerase II [GO:0045944]; regulation of appetite [GO:0032098]; regulation of blood pressure [GO:0008217]; regulation of corticosterone secretion [GO:2000852]; response to melanocyte-stimulating hormone [GO:1990680]; signal transduction [GO:0007165]",
+  "drugbank": "DB01565;DB01497;DB00836;"
+ }
+]

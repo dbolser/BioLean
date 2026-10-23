@@ -1,0 +1,1885 @@
+[
+  {
+    "pmid": 9124501,
+    "statements": [
+      {
+        "quote": "At doses equated for producing comparable reductions in short-term food intake, GLP-1, but not leptin, generated a robust CTA.",
+        "subject": {
+          "mention": "GLP-1",
+          "kind": "protein"
+        },
+        "relation": "increases_phenotype",
+        "object": {
+          "mention": "conditioned taste aversion",
+          "kind": "phenotype"
+        },
+        "polarity": "supports",
+        "evidence_kind": "other",
+        "species": "rat",
+        "hedged": false
+      },
+      {
+        "quote": "At doses equated for producing comparable reductions in short-term food intake, GLP-1, but not leptin, generated a robust CTA.",
+        "subject": {
+          "mention": "leptin",
+          "kind": "protein"
+        },
+        "relation": "increases_phenotype",
+        "object": {
+          "mention": "conditioned taste aversion",
+          "kind": "phenotype"
+        },
+        "polarity": "refutes",
+        "evidence_kind": "other",
+        "species": "rat",
+        "hedged": false
+      },
+      {
+        "quote": "At doses equated for producing comparable reductions in short-term food intake, GLP-1, but not leptin, generated a robust CTA.",
+        "subject": {
+          "mention": "GLP-1",
+          "kind": "protein"
+        },
+        "relation": "decreases_phenotype",
+        "object": {
+          "mention": "food intake",
+          "kind": "phenotype"
+        },
+        "polarity": "supports",
+        "evidence_kind": "other",
+        "species": "rat",
+        "hedged": false
+      },
+      {
+        "quote": "Although leptin caused no aversion, this peptide was the only drug to cause relatively long-term reductions in food consumption (16 h) and body weight (24 h).",
+        "subject": {
+          "mention": "leptin",
+          "kind": "protein"
+        },
+        "relation": "decreases_phenotype",
+        "object": {
+          "mention": "food consumption",
+          "kind": "phenotype"
+        },
+        "polarity": "supports",
+        "evidence_kind": "other",
+        "species": "rat",
+        "hedged": false
+      },
+      {
+        "quote": "Although leptin caused no aversion, this peptide was the only drug to cause relatively long-term reductions in food consumption (16 h) and body weight (24 h).",
+        "subject": {
+          "mention": "leptin",
+          "kind": "protein"
+        },
+        "relation": "decreases_phenotype",
+        "object": {
+          "mention": "body weight",
+          "kind": "phenotype"
+        },
+        "polarity": "supports",
+        "evidence_kind": "other",
+        "species": "rat",
+        "hedged": false
+      },
+      {
+        "quote": "Hence, the results indicate that central GLP-1 produces aversive side effects, and it is argued that these nonspecific effects may explain the anorectic actions of GLP-1.",
+        "subject": {
+          "mention": "GLP-1",
+          "kind": "protein"
+        },
+        "relation": "increases_phenotype",
+        "object": {
+          "mention": "aversive side effects",
+          "kind": "phenotype"
+        },
+        "polarity": "supports",
+        "evidence_kind": "other",
+        "species": "rat",
+        "hedged": true
+      }
+    ]
+  },
+  {
+    "pmid": 9458894,
+    "statements": [
+      {
+        "quote": "Intracerebroventricular infusion of glucagon-like peptide-1-(7-36) amide (GLP-1) reduces feeding in rats, an effect that could be localized to the hypothalamic paraventricular nucleus (PVN).",
+        "subject": {
+          "mention": "GLP-1",
+          "kind": "protein"
+        },
+        "relation": "decreases_process",
+        "object": {
+          "mention": "feeding",
+          "kind": "process"
+        },
+        "polarity": "supports",
+        "evidence_kind": "other",
+        "species": "rat",
+        "hedged": false
+      },
+      {
+        "quote": "Intracerebroventricular GLP-1, however, may also induce conditioned taste aversion (CTA), thereby putting into question the specificity of the action of GLP-1 on feeding.",
+        "subject": {
+          "mention": "GLP-1",
+          "kind": "protein"
+        },
+        "relation": "increases_phenotype",
+        "object": {
+          "mention": "conditioned taste aversion",
+          "kind": "phenotype"
+        },
+        "polarity": "supports",
+        "evidence_kind": "other",
+        "species": "rat",
+        "hedged": true
+      },
+      {
+        "quote": "PVN infusion of GLP-1 (100 or 200 ng) did not support the induction of CTA and did not reliably alter locomotion, but did suppress feeding and drinking.",
+        "subject": {
+          "mention": "GLP-1",
+          "kind": "protein"
+        },
+        "relation": "increases_phenotype",
+        "object": {
+          "mention": "CTA",
+          "kind": "phenotype"
+        },
+        "polarity": "refutes",
+        "evidence_kind": "other",
+        "species": "rat",
+        "hedged": false
+      },
+      {
+        "quote": "PVN infusion of GLP-1 (100 or 200 ng) did not support the induction of CTA and did not reliably alter locomotion, but did suppress feeding and drinking.",
+        "subject": {
+          "mention": "GLP-1",
+          "kind": "protein"
+        },
+        "relation": "decreases_process",
+        "object": {
+          "mention": "locomotion",
+          "kind": "process"
+        },
+        "polarity": "refutes",
+        "evidence_kind": "other",
+        "species": "rat",
+        "hedged": false
+      },
+      {
+        "quote": "PVN infusion of GLP-1 (100 or 200 ng) did not support the induction of CTA and did not reliably alter locomotion, but did suppress feeding and drinking.",
+        "subject": {
+          "mention": "GLP-1",
+          "kind": "protein"
+        },
+        "relation": "decreases_process",
+        "object": {
+          "mention": "feeding",
+          "kind": "process"
+        },
+        "polarity": "supports",
+        "evidence_kind": "other",
+        "species": "rat",
+        "hedged": false
+      },
+      {
+        "quote": "PVN infusion of GLP-1 (100 or 200 ng) did not support the induction of CTA and did not reliably alter locomotion, but did suppress feeding and drinking.",
+        "subject": {
+          "mention": "GLP-1",
+          "kind": "protein"
+        },
+        "relation": "decreases_process",
+        "object": {
+          "mention": "drinking",
+          "kind": "process"
+        },
+        "polarity": "supports",
+        "evidence_kind": "other",
+        "species": "rat",
+        "hedged": false
+      },
+      {
+        "quote": "The present study suggests that GLP-1 infusions into the PVN reduce food and water intake without producing illness or disrupting locomotor behavior.",
+        "subject": {
+          "mention": "GLP-1",
+          "kind": "protein"
+        },
+        "relation": "decreases_process",
+        "object": {
+          "mention": "food intake",
+          "kind": "process"
+        },
+        "polarity": "supports",
+        "evidence_kind": "other",
+        "species": "rat",
+        "hedged": true
+      },
+      {
+        "quote": "These data, in conjunction with reports of increased feeding following antagonism of central GLP-1 receptors, support the notion that endogenous GLP-1, perhaps within the PVN, functions to suppress feeding in the rat.",
+        "subject": {
+          "mention": "GLP-1",
+          "kind": "protein"
+        },
+        "relation": "decreases_process",
+        "object": {
+          "mention": "feeding",
+          "kind": "process"
+        },
+        "polarity": "supports",
+        "evidence_kind": "other",
+        "species": "rat",
+        "hedged": true
+      }
+    ]
+  },
+  {
+    "pmid": 14514604,
+    "statements": [
+      {
+        "quote": "Glucagon-like peptide 1 (GLP-1) and glucose-dependent insulinotropic peptide (GIP) exert important effects on beta-cells to stimulate glucose-dependent insulin secretion.",
+        "subject": {
+          "mention": "GLP-1",
+          "kind": "protein"
+        },
+        "relation": "increases_process",
+        "object": {
+          "mention": "glucose-dependent insulin secretion",
+          "kind": "process"
+        },
+        "polarity": "supports",
+        "evidence_kind": "review",
+        "species": "unknown",
+        "hedged": false
+      },
+      {
+        "quote": "Glucagon-like peptide 1 (GLP-1) and glucose-dependent insulinotropic peptide (GIP) exert important effects on beta-cells to stimulate glucose-dependent insulin secretion.",
+        "subject": {
+          "mention": "GIP",
+          "kind": "protein"
+        },
+        "relation": "increases_process",
+        "object": {
+          "mention": "glucose-dependent insulin secretion",
+          "kind": "process"
+        },
+        "polarity": "supports",
+        "evidence_kind": "review",
+        "species": "unknown",
+        "hedged": false
+      },
+      {
+        "quote": "GLP-1, but not GIP, inhibits gastric emptying, glucagon secretion, and food intake.",
+        "subject": {
+          "mention": "GLP-1",
+          "kind": "protein"
+        },
+        "relation": "decreases_process",
+        "object": {
+          "mention": "gastric emptying",
+          "kind": "process"
+        },
+        "polarity": "supports",
+        "evidence_kind": "review",
+        "species": "unknown",
+        "hedged": false
+      },
+      {
+        "quote": "GLP-1, but not GIP, inhibits gastric emptying, glucagon secretion, and food intake.",
+        "subject": {
+          "mention": "GLP-1",
+          "kind": "protein"
+        },
+        "relation": "decreases_process",
+        "object": {
+          "mention": "glucagon secretion",
+          "kind": "process"
+        },
+        "polarity": "supports",
+        "evidence_kind": "review",
+        "species": "unknown",
+        "hedged": false
+      },
+      {
+        "quote": "GLP-1, but not GIP, inhibits gastric emptying, glucagon secretion, and food intake.",
+        "subject": {
+          "mention": "GLP-1",
+          "kind": "protein"
+        },
+        "relation": "decreases_phenotype",
+        "object": {
+          "mention": "food intake",
+          "kind": "phenotype"
+        },
+        "polarity": "supports",
+        "evidence_kind": "review",
+        "species": "unknown",
+        "hedged": false
+      },
+      {
+        "quote": "GLP-1, but not GIP, inhibits gastric emptying, glucagon secretion, and food intake.",
+        "subject": {
+          "mention": "GIP",
+          "kind": "protein"
+        },
+        "relation": "decreases_process",
+        "object": {
+          "mention": "gastric emptying",
+          "kind": "process"
+        },
+        "polarity": "refutes",
+        "evidence_kind": "review",
+        "species": "unknown",
+        "hedged": false
+      },
+      {
+        "quote": "However, native GLP-1 is rapidly degraded by DPP-IV after parenteral administration; hence, degradation-resistant, long-acting GLP-1 receptor (GLP-1R) agonists are preferable agents for the chronic treatment of human diabetes.",
+        "subject": {
+          "mention": "DPP-IV",
+          "kind": "protein"
+        },
+        "relation": "decreases_amount",
+        "object": {
+          "mention": "GLP-1",
+          "kind": "protein"
+        },
+        "polarity": "supports",
+        "evidence_kind": "review",
+        "species": "human",
+        "hedged": false
+      },
+      {
+        "quote": "Alternatively, inhibition of DPP-IV-mediated incretin degradation represents a complementary therapeutic approach, as orally available DPP-IV inhibitors have been shown to lower glucose in experimental diabetic models and human subjects with type 2 diabetes.",
+        "subject": {
+          "mention": "DPP-IV inhibitors",
+          "kind": "chemical"
+        },
+        "relation": "decreases_amount",
+        "object": {
+          "mention": "glucose",
+          "kind": "chemical"
+        },
+        "polarity": "supports",
+        "evidence_kind": "review",
+        "species": "human",
+        "hedged": false
+      }
+    ]
+  },
+  {
+    "pmid": 16385384,
+    "statements": [
+      {
+        "quote": "Mean plasma glucose levels at 6 h decreased from 12.4+/-1.1 (SAL) mmol/l to 10.4+/-1.1 (LSC), 8.6+/-0.6 (IB), 8.8+/-0.8 (IV) and 9.1+/-0.9 (HSC) mmol/l, p<0.0001.",
+        "subject": {
+          "mention": "GLP-1",
+          "kind": "protein"
+        },
+        "relation": "decreases_amount",
+        "object": {
+          "mention": "plasma glucose",
+          "kind": "chemical"
+        },
+        "polarity": "supports",
+        "evidence_kind": "rct",
+        "species": "human",
+        "hedged": false
+      },
+      {
+        "quote": "At approximately similar concentrations of intact GLP-1 (IV, IB, HSC), but with widely ranging metabolite concentrations, the effect on plasma glucose levels was equal, indicating that the presence of the metabolite does not antagonise the glucose-lowering effect of GLP-1.",
+        "subject": {
+          "mention": "metabolite",
+          "kind": "protein"
+        },
+        "relation": "increases_amount",
+        "object": {
+          "mention": "plasma glucose",
+          "kind": "chemical"
+        },
+        "polarity": "refutes",
+        "evidence_kind": "rct",
+        "species": "human",
+        "hedged": false
+      },
+      {
+        "quote": "Plasma levels of intact GLP-1 increased from 7+/-1 (SAL) to 17+/-3 (LSC), 61+/-7 (IB), 62+/-5 (IV) and 94+/-10 (9.6 s.c.) pmol/l, p<0.0001.",
+        "subject": {
+          "mention": "DPP-4 inhibitor",
+          "kind": "chemical"
+        },
+        "relation": "increases_amount",
+        "object": {
+          "mention": "GLP-1",
+          "kind": "protein"
+        },
+        "polarity": "supports",
+        "evidence_kind": "rct",
+        "species": "human",
+        "hedged": false
+      }
+    ]
+  },
+  {
+    "pmid": 16492694,
+    "statements": [
+      {
+        "quote": "GLP-1 0.3 and 0.9 slowed GE of solid (intragastric retention at t = 100 min; saline: 28 +/- 5%; GLP-1 0.3: 53 +/- 6%; GLP-1 0.9: 58 +/- 7%; P < 0.001) and liquid (time for 50% of the liquid to empty, saline: 28 +/- 2 min; GLP-1 0.3: 42 +/- 7 min; GLP-1 0.9: 50 +/- 9 min; P < 0.001).",
+        "subject": {
+          "mention": "GLP-1",
+          "kind": "protein"
+        },
+        "relation": "decreases_process",
+        "object": {
+          "mention": "gastric emptying",
+          "kind": "process"
+        },
+        "polarity": "supports",
+        "evidence_kind": "rct",
+        "species": "human",
+        "hedged": false
+      },
+      {
+        "quote": "Both doses of GLP-1 induced gastroparesis in about half the cohort and increased meal retention in the distal stomach (P < 0.05).",
+        "subject": {
+          "mention": "GLP-1",
+          "kind": "protein"
+        },
+        "relation": "increases_phenotype",
+        "object": {
+          "mention": "gastroparesis",
+          "kind": "disease"
+        },
+        "polarity": "supports",
+        "evidence_kind": "rct",
+        "species": "human",
+        "hedged": false
+      },
+      {
+        "quote": "Both doses of GLP-1 induced gastroparesis in about half the cohort and increased meal retention in the distal stomach (P < 0.05).",
+        "subject": {
+          "mention": "GLP-1",
+          "kind": "protein"
+        },
+        "relation": "increases_phenotype",
+        "object": {
+          "mention": "meal retention in the distal stomach",
+          "kind": "phenotype"
+        },
+        "polarity": "supports",
+        "evidence_kind": "rct",
+        "species": "human",
+        "hedged": false
+      },
+      {
+        "quote": "GLP-1 attenuated the rises in glucose, insulin, and glucose-dependent insulinotropic peptide (P < 0.05).",
+        "subject": {
+          "mention": "GLP-1",
+          "kind": "protein"
+        },
+        "relation": "decreases_amount",
+        "object": {
+          "mention": "glucose",
+          "kind": "chemical"
+        },
+        "polarity": "supports",
+        "evidence_kind": "rct",
+        "species": "human",
+        "hedged": false
+      },
+      {
+        "quote": "GLP-1 attenuated the rises in glucose, insulin, and glucose-dependent insulinotropic peptide (P < 0.05).",
+        "subject": {
+          "mention": "GLP-1",
+          "kind": "protein"
+        },
+        "relation": "decreases_amount",
+        "object": {
+          "mention": "insulin",
+          "kind": "protein"
+        },
+        "polarity": "supports",
+        "evidence_kind": "rct",
+        "species": "human",
+        "hedged": false
+      },
+      {
+        "quote": "GLP-1 attenuated the rises in glucose, insulin, and glucose-dependent insulinotropic peptide (P < 0.05).",
+        "subject": {
+          "mention": "GLP-1",
+          "kind": "protein"
+        },
+        "relation": "decreases_amount",
+        "object": {
+          "mention": "glucose-dependent insulinotropic peptide",
+          "kind": "protein"
+        },
+        "polarity": "supports",
+        "evidence_kind": "rct",
+        "species": "human",
+        "hedged": false
+      }
+    ]
+  },
+  {
+    "pmid": 16912128,
+    "statements": [
+      {
+        "quote": "Sitagliptin dose-dependently inhibited plasma DPP-4 activity over 24 h, enhanced active GLP-1 and GIP levels, increased insulin/C-peptide, decreased glucagon, and reduced glycemic excursion after OGTTs administered at 2 and 24 h after single oral 25- or 200-mg doses of sitagliptin.",
+        "subject": {
+          "mention": "sitagliptin",
+          "kind": "chemical"
+        },
+        "relation": "decreases_activity",
+        "object": {
+          "mention": "DPP-4",
+          "kind": "protein"
+        },
+        "polarity": "supports",
+        "evidence_kind": "rct",
+        "species": "human",
+        "hedged": false
+      },
+      {
+        "quote": "Sitagliptin dose-dependently inhibited plasma DPP-4 activity over 24 h, enhanced active GLP-1 and GIP levels, increased insulin/C-peptide, decreased glucagon, and reduced glycemic excursion after OGTTs administered at 2 and 24 h after single oral 25- or 200-mg doses of sitagliptin.",
+        "subject": {
+          "mention": "sitagliptin",
+          "kind": "chemical"
+        },
+        "relation": "increases_amount",
+        "object": {
+          "mention": "GLP-1",
+          "kind": "protein"
+        },
+        "polarity": "supports",
+        "evidence_kind": "rct",
+        "species": "human",
+        "hedged": false
+      },
+      {
+        "quote": "Sitagliptin dose-dependently inhibited plasma DPP-4 activity over 24 h, enhanced active GLP-1 and GIP levels, increased insulin/C-peptide, decreased glucagon, and reduced glycemic excursion after OGTTs administered at 2 and 24 h after single oral 25- or 200-mg doses of sitagliptin.",
+        "subject": {
+          "mention": "sitagliptin",
+          "kind": "chemical"
+        },
+        "relation": "increases_amount",
+        "object": {
+          "mention": "GIP",
+          "kind": "protein"
+        },
+        "polarity": "supports",
+        "evidence_kind": "rct",
+        "species": "human",
+        "hedged": false
+      },
+      {
+        "quote": "Sitagliptin dose-dependently inhibited plasma DPP-4 activity over 24 h, enhanced active GLP-1 and GIP levels, increased insulin/C-peptide, decreased glucagon, and reduced glycemic excursion after OGTTs administered at 2 and 24 h after single oral 25- or 200-mg doses of sitagliptin.",
+        "subject": {
+          "mention": "sitagliptin",
+          "kind": "chemical"
+        },
+        "relation": "increases_amount",
+        "object": {
+          "mention": "insulin",
+          "kind": "protein"
+        },
+        "polarity": "supports",
+        "evidence_kind": "rct",
+        "species": "human",
+        "hedged": false
+      },
+      {
+        "quote": "Sitagliptin dose-dependently inhibited plasma DPP-4 activity over 24 h, enhanced active GLP-1 and GIP levels, increased insulin/C-peptide, decreased glucagon, and reduced glycemic excursion after OGTTs administered at 2 and 24 h after single oral 25- or 200-mg doses of sitagliptin.",
+        "subject": {
+          "mention": "sitagliptin",
+          "kind": "chemical"
+        },
+        "relation": "increases_amount",
+        "object": {
+          "mention": "C-peptide",
+          "kind": "protein"
+        },
+        "polarity": "supports",
+        "evidence_kind": "rct",
+        "species": "human",
+        "hedged": false
+      },
+      {
+        "quote": "Sitagliptin dose-dependently inhibited plasma DPP-4 activity over 24 h, enhanced active GLP-1 and GIP levels, increased insulin/C-peptide, decreased glucagon, and reduced glycemic excursion after OGTTs administered at 2 and 24 h after single oral 25- or 200-mg doses of sitagliptin.",
+        "subject": {
+          "mention": "sitagliptin",
+          "kind": "chemical"
+        },
+        "relation": "decreases_amount",
+        "object": {
+          "mention": "glucagon",
+          "kind": "protein"
+        },
+        "polarity": "supports",
+        "evidence_kind": "rct",
+        "species": "human",
+        "hedged": false
+      },
+      {
+        "quote": "Sitagliptin dose-dependently inhibited plasma DPP-4 activity over 24 h, enhanced active GLP-1 and GIP levels, increased insulin/C-peptide, decreased glucagon, and reduced glycemic excursion after OGTTs administered at 2 and 24 h after single oral 25- or 200-mg doses of sitagliptin.",
+        "subject": {
+          "mention": "sitagliptin",
+          "kind": "chemical"
+        },
+        "relation": "decreases_phenotype",
+        "object": {
+          "mention": "glycemic excursion",
+          "kind": "phenotype"
+        },
+        "polarity": "supports",
+        "evidence_kind": "rct",
+        "species": "human",
+        "hedged": false
+      },
+      {
+        "quote": "Sitagliptin was generally well tolerated, with no hypoglycemic events.",
+        "subject": {
+          "mention": "sitagliptin",
+          "kind": "chemical"
+        },
+        "relation": "increases_phenotype",
+        "object": {
+          "mention": "hypoglycemic events",
+          "kind": "phenotype"
+        },
+        "polarity": "refutes",
+        "evidence_kind": "rct",
+        "species": "human",
+        "hedged": false
+      }
+    ]
+  },
+  {
+    "pmid": 17065340,
+    "statements": [
+      {
+        "quote": "Ghrelin (150 pmol x kg(-1) x min(-1)) stimulated food intake by 28% during the infusion period primarily by increasing meal frequency; doses of 15 and 50 pmol x kg(-1) x min(-1) had no effect.",
+        "subject": {
+          "mention": "Ghrelin",
+          "kind": "protein"
+        },
+        "relation": "increases_phenotype",
+        "object": {
+          "mention": "food intake",
+          "kind": "phenotype"
+        },
+        "polarity": "supports",
+        "evidence_kind": "other",
+        "species": "rat",
+        "hedged": false
+      },
+      {
+        "quote": "GLP-1 (15 pmol x kg(-1) x min(-1)) inhibited food intake by 35-54%; coinfusion of ghrelin at 50 and 150 pmol x kg(-1) x min(-1) attenuated this effect by 60 and 64%, respectively.",
+        "subject": {
+          "mention": "GLP-1",
+          "kind": "protein"
+        },
+        "relation": "decreases_phenotype",
+        "object": {
+          "mention": "food intake",
+          "kind": "phenotype"
+        },
+        "polarity": "supports",
+        "evidence_kind": "other",
+        "species": "rat",
+        "hedged": false
+      },
+      {
+        "quote": "PYY(3-36) (15 pmol x kg(-1) x min(-1)) inhibited food intake by 32%; ghrelin at 15 and 50 pmol x kg(-1) x min(-1) attenuated this effect by 54 and 74%, respectively.",
+        "subject": {
+          "mention": "PYY(3-36)",
+          "kind": "protein"
+        },
+        "relation": "decreases_phenotype",
+        "object": {
+          "mention": "food intake",
+          "kind": "phenotype"
+        },
+        "polarity": "supports",
+        "evidence_kind": "other",
+        "species": "rat",
+        "hedged": false
+      },
+      {
+        "quote": "Thus, intravenous infusion of ghrelin during the early dark period stimulates food intake in freely feeding rats by increasing meal frequency, and similar doses of ghrelin attenuate gastric emptying and feeding responses to GLP-1 and PYY(3-36).",
+        "subject": {
+          "mention": "ghrelin",
+          "kind": "protein"
+        },
+        "relation": "increases_phenotype",
+        "object": {
+          "mention": "meal frequency",
+          "kind": "phenotype"
+        },
+        "polarity": "supports",
+        "evidence_kind": "other",
+        "species": "rat",
+        "hedged": false
+      },
+      {
+        "quote": "Ghrelin stimulates, while glucagon-like peptide-1 (GLP-1) and peptide YY(3-36) [PYY(3-36)] inhibit, food intake and gastric emptying in rats.",
+        "subject": {
+          "mention": "GLP-1",
+          "kind": "protein"
+        },
+        "relation": "decreases_process",
+        "object": {
+          "mention": "gastric emptying",
+          "kind": "process"
+        },
+        "polarity": "supports",
+        "evidence_kind": "other",
+        "species": "rat",
+        "hedged": false
+      },
+      {
+        "quote": "Ghrelin stimulates, while glucagon-like peptide-1 (GLP-1) and peptide YY(3-36) [PYY(3-36)] inhibit, food intake and gastric emptying in rats.",
+        "subject": {
+          "mention": "PYY(3-36)",
+          "kind": "protein"
+        },
+        "relation": "decreases_process",
+        "object": {
+          "mention": "gastric emptying",
+          "kind": "process"
+        },
+        "polarity": "supports",
+        "evidence_kind": "other",
+        "species": "rat",
+        "hedged": false
+      },
+      {
+        "quote": "Ghrelin stimulates, while glucagon-like peptide-1 (GLP-1) and peptide YY(3-36) [PYY(3-36)] inhibit, food intake and gastric emptying in rats.",
+        "subject": {
+          "mention": "Ghrelin",
+          "kind": "protein"
+        },
+        "relation": "increases_process",
+        "object": {
+          "mention": "gastric emptying",
+          "kind": "process"
+        },
+        "polarity": "supports",
+        "evidence_kind": "other",
+        "species": "rat",
+        "hedged": false
+      },
+      {
+        "quote": "These results suggest that ghrelin may stimulate food intake in part by attenuating the inhibitory effects of GLP-1 and PYY(3-36) on gastric emptying and food intake.",
+        "subject": {
+          "mention": "ghrelin",
+          "kind": "protein"
+        },
+        "relation": "increases_phenotype",
+        "object": {
+          "mention": "food intake",
+          "kind": "phenotype"
+        },
+        "polarity": "supports",
+        "evidence_kind": "other",
+        "species": "rat",
+        "hedged": true
+      }
+    ]
+  },
+  {
+    "pmid": 17065340,
+    "statements": [
+      {
+        "quote": "Ghrelin (150 pmol x kg(-1) x min(-1)) stimulated food intake by 28% during the infusion period primarily by increasing meal frequency; doses of 15 and 50 pmol x kg(-1) x min(-1) had no effect.",
+        "subject": {
+          "mention": "Ghrelin",
+          "kind": "protein"
+        },
+        "relation": "increases_phenotype",
+        "object": {
+          "mention": "food intake",
+          "kind": "phenotype"
+        },
+        "polarity": "supports",
+        "evidence_kind": "other",
+        "species": "rat",
+        "hedged": false
+      },
+      {
+        "quote": "GLP-1 (15 pmol x kg(-1) x min(-1)) inhibited food intake by 35-54%; coinfusion of ghrelin at 50 and 150 pmol x kg(-1) x min(-1) attenuated this effect by 60 and 64%, respectively.",
+        "subject": {
+          "mention": "GLP-1",
+          "kind": "protein"
+        },
+        "relation": "decreases_phenotype",
+        "object": {
+          "mention": "food intake",
+          "kind": "phenotype"
+        },
+        "polarity": "supports",
+        "evidence_kind": "other",
+        "species": "rat",
+        "hedged": false
+      },
+      {
+        "quote": "PYY(3-36) (15 pmol x kg(-1) x min(-1)) inhibited food intake by 32%; ghrelin at 15 and 50 pmol x kg(-1) x min(-1) attenuated this effect by 54 and 74%, respectively.",
+        "subject": {
+          "mention": "PYY(3-36)",
+          "kind": "protein"
+        },
+        "relation": "decreases_phenotype",
+        "object": {
+          "mention": "food intake",
+          "kind": "phenotype"
+        },
+        "polarity": "supports",
+        "evidence_kind": "other",
+        "species": "rat",
+        "hedged": false
+      },
+      {
+        "quote": "Thus, intravenous infusion of ghrelin during the early dark period stimulates food intake in freely feeding rats by increasing meal frequency, and similar doses of ghrelin attenuate gastric emptying and feeding responses to GLP-1 and PYY(3-36).",
+        "subject": {
+          "mention": "ghrelin",
+          "kind": "protein"
+        },
+        "relation": "increases_phenotype",
+        "object": {
+          "mention": "meal frequency",
+          "kind": "phenotype"
+        },
+        "polarity": "supports",
+        "evidence_kind": "other",
+        "species": "rat",
+        "hedged": false
+      },
+      {
+        "quote": "Ghrelin stimulates, while glucagon-like peptide-1 (GLP-1) and peptide YY(3-36) [PYY(3-36)] inhibit, food intake and gastric emptying in rats.",
+        "subject": {
+          "mention": "GLP-1",
+          "kind": "protein"
+        },
+        "relation": "decreases_process",
+        "object": {
+          "mention": "gastric emptying",
+          "kind": "process"
+        },
+        "polarity": "supports",
+        "evidence_kind": "other",
+        "species": "rat",
+        "hedged": false
+      },
+      {
+        "quote": "Ghrelin stimulates, while glucagon-like peptide-1 (GLP-1) and peptide YY(3-36) [PYY(3-36)] inhibit, food intake and gastric emptying in rats.",
+        "subject": {
+          "mention": "PYY(3-36)",
+          "kind": "protein"
+        },
+        "relation": "decreases_process",
+        "object": {
+          "mention": "gastric emptying",
+          "kind": "process"
+        },
+        "polarity": "supports",
+        "evidence_kind": "other",
+        "species": "rat",
+        "hedged": false
+      },
+      {
+        "quote": "These results suggest that ghrelin may stimulate food intake in part by attenuating the inhibitory effects of GLP-1 and PYY(3-36) on gastric emptying and food intake.",
+        "subject": {
+          "mention": "ghrelin",
+          "kind": "protein"
+        },
+        "relation": "increases_phenotype",
+        "object": {
+          "mention": "food intake",
+          "kind": "phenotype"
+        },
+        "polarity": "supports",
+        "evidence_kind": "other",
+        "species": "rat",
+        "hedged": true
+      }
+    ]
+  },
+  {
+    "pmid": 17192459,
+    "statements": [
+      {
+        "quote": "Liraglutide or reversal to chow diet fully reversed weight and fat gains.",
+        "subject": {
+          "mention": "Liraglutide",
+          "kind": "chemical"
+        },
+        "relation": "decreases_phenotype",
+        "object": {
+          "mention": "weight",
+          "kind": "phenotype"
+        },
+        "polarity": "supports",
+        "evidence_kind": "mechanistic",
+        "species": "rat",
+        "hedged": false
+      },
+      {
+        "quote": "Liraglutide or reversal to chow diet fully reversed weight and fat gains.",
+        "subject": {
+          "mention": "Liraglutide",
+          "kind": "chemical"
+        },
+        "relation": "decreases_phenotype",
+        "object": {
+          "mention": "fat gains",
+          "kind": "phenotype"
+        },
+        "polarity": "supports",
+        "evidence_kind": "mechanistic",
+        "species": "rat",
+        "hedged": false
+      },
+      {
+        "quote": "Liraglutide was associated with decreased calorie intake and shifted food preference (increased chow/decreased candy consumption).",
+        "subject": {
+          "mention": "Liraglutide",
+          "kind": "chemical"
+        },
+        "relation": "decreases_phenotype",
+        "object": {
+          "mention": "calorie intake",
+          "kind": "phenotype"
+        },
+        "polarity": "supports",
+        "evidence_kind": "mechanistic",
+        "species": "rat",
+        "hedged": false
+      },
+      {
+        "quote": "Despite weight loss, liraglutide-treated rats did not decrease energy expenditure compared with candy-fed controls.",
+        "subject": {
+          "mention": "liraglutide",
+          "kind": "chemical"
+        },
+        "relation": "decreases_phenotype",
+        "object": {
+          "mention": "energy expenditure",
+          "kind": "phenotype"
+        },
+        "polarity": "refutes",
+        "evidence_kind": "mechanistic",
+        "species": "rat",
+        "hedged": false
+      },
+      {
+        "quote": "Vildagliptin affected neither weight, food intake, nor energy expenditure.",
+        "subject": {
+          "mention": "Vildagliptin",
+          "kind": "chemical"
+        },
+        "relation": "decreases_phenotype",
+        "object": {
+          "mention": "weight",
+          "kind": "phenotype"
+        },
+        "polarity": "refutes",
+        "evidence_kind": "mechanistic",
+        "species": "rat",
+        "hedged": false
+      },
+      {
+        "quote": "Vildagliptin affected neither weight, food intake, nor energy expenditure.",
+        "subject": {
+          "mention": "Vildagliptin",
+          "kind": "chemical"
+        },
+        "relation": "decreases_phenotype",
+        "object": {
+          "mention": "food intake",
+          "kind": "phenotype"
+        },
+        "polarity": "refutes",
+        "evidence_kind": "mechanistic",
+        "species": "rat",
+        "hedged": false
+      },
+      {
+        "quote": "Vildagliptin affected neither weight, food intake, nor energy expenditure.",
+        "subject": {
+          "mention": "Vildagliptin",
+          "kind": "chemical"
+        },
+        "relation": "decreases_phenotype",
+        "object": {
+          "mention": "energy expenditure",
+          "kind": "phenotype"
+        },
+        "polarity": "refutes",
+        "evidence_kind": "mechanistic",
+        "species": "rat",
+        "hedged": false
+      },
+      {
+        "quote": "OGTTs, histology, and blood analyses indirectly suggested that both drugs increased insulin sensitivity.",
+        "subject": {
+          "mention": "liraglutide",
+          "kind": "chemical"
+        },
+        "relation": "increases_phenotype",
+        "object": {
+          "mention": "insulin sensitivity",
+          "kind": "phenotype"
+        },
+        "polarity": "supports",
+        "evidence_kind": "mechanistic",
+        "species": "rat",
+        "hedged": true
+      },
+      {
+        "quote": "OGTTs, histology, and blood analyses indirectly suggested that both drugs increased insulin sensitivity.",
+        "subject": {
+          "mention": "vildagliptin",
+          "kind": "chemical"
+        },
+        "relation": "increases_phenotype",
+        "object": {
+          "mention": "insulin sensitivity",
+          "kind": "phenotype"
+        },
+        "polarity": "supports",
+        "evidence_kind": "mechanistic",
+        "species": "rat",
+        "hedged": true
+      },
+      {
+        "quote": "Liraglutide and vildagliptin inhibited obesity-associated increases in beta-cell mass.",
+        "subject": {
+          "mention": "Liraglutide",
+          "kind": "chemical"
+        },
+        "relation": "decreases_phenotype",
+        "object": {
+          "mention": "beta-cell mass",
+          "kind": "phenotype"
+        },
+        "polarity": "supports",
+        "evidence_kind": "mechanistic",
+        "species": "rat",
+        "hedged": false
+      },
+      {
+        "quote": "Liraglutide and vildagliptin inhibited obesity-associated increases in beta-cell mass.",
+        "subject": {
+          "mention": "vildagliptin",
+          "kind": "chemical"
+        },
+        "relation": "decreases_phenotype",
+        "object": {
+          "mention": "beta-cell mass",
+          "kind": "phenotype"
+        },
+        "polarity": "supports",
+        "evidence_kind": "mechanistic",
+        "species": "rat",
+        "hedged": false
+      }
+    ]
+  },
+  {
+    "pmid": 17379930,
+    "statements": [
+      {
+        "quote": "GLP-1 stimulates the production and secretion of insulin, the release of somatostatin, glucose utilisation by increasing insulin sensitivity and in animal studies also beta-cell function and expansion (proliferation).",
+        "subject": {
+          "mention": "GLP-1",
+          "kind": "protein"
+        },
+        "relation": "increases_process",
+        "object": {
+          "mention": "secretion of insulin",
+          "kind": "process"
+        },
+        "polarity": "supports",
+        "evidence_kind": "review",
+        "species": "unknown",
+        "hedged": false
+      },
+      {
+        "quote": "GLP-1 stimulates the production and secretion of insulin, the release of somatostatin, glucose utilisation by increasing insulin sensitivity and in animal studies also beta-cell function and expansion (proliferation).",
+        "subject": {
+          "mention": "GLP-1",
+          "kind": "protein"
+        },
+        "relation": "increases_process",
+        "object": {
+          "mention": "release of somatostatin",
+          "kind": "process"
+        },
+        "polarity": "supports",
+        "evidence_kind": "review",
+        "species": "unknown",
+        "hedged": false
+      },
+      {
+        "quote": "GLP-1 stimulates the production and secretion of insulin, the release of somatostatin, glucose utilisation by increasing insulin sensitivity and in animal studies also beta-cell function and expansion (proliferation).",
+        "subject": {
+          "mention": "GLP-1",
+          "kind": "protein"
+        },
+        "relation": "increases_phenotype",
+        "object": {
+          "mention": "insulin sensitivity",
+          "kind": "phenotype"
+        },
+        "polarity": "supports",
+        "evidence_kind": "review",
+        "species": "unknown",
+        "hedged": false
+      },
+      {
+        "quote": "GLP-1 stimulates the production and secretion of insulin, the release of somatostatin, glucose utilisation by increasing insulin sensitivity and in animal studies also beta-cell function and expansion (proliferation).",
+        "subject": {
+          "mention": "GLP-1",
+          "kind": "protein"
+        },
+        "relation": "increases_process",
+        "object": {
+          "mention": "beta-cell proliferation",
+          "kind": "process"
+        },
+        "polarity": "supports",
+        "evidence_kind": "review",
+        "species": "animal",
+        "hedged": false
+      },
+      {
+        "quote": "It inhibits glucagon release, gastric emptying, appetite and food intake via the central nervous system and in animal experiments also apoptosis of beta-cells.",
+        "subject": {
+          "mention": "GLP-1",
+          "kind": "protein"
+        },
+        "relation": "decreases_process",
+        "object": {
+          "mention": "glucagon release",
+          "kind": "process"
+        },
+        "polarity": "supports",
+        "evidence_kind": "review",
+        "species": "unknown",
+        "hedged": false
+      },
+      {
+        "quote": "It inhibits glucagon release, gastric emptying, appetite and food intake via the central nervous system and in animal experiments also apoptosis of beta-cells.",
+        "subject": {
+          "mention": "GLP-1",
+          "kind": "protein"
+        },
+        "relation": "decreases_process",
+        "object": {
+          "mention": "gastric emptying",
+          "kind": "process"
+        },
+        "polarity": "supports",
+        "evidence_kind": "review",
+        "species": "unknown",
+        "hedged": false
+      },
+      {
+        "quote": "It inhibits glucagon release, gastric emptying, appetite and food intake via the central nervous system and in animal experiments also apoptosis of beta-cells.",
+        "subject": {
+          "mention": "GLP-1",
+          "kind": "protein"
+        },
+        "relation": "decreases_phenotype",
+        "object": {
+          "mention": "appetite",
+          "kind": "phenotype"
+        },
+        "polarity": "supports",
+        "evidence_kind": "review",
+        "species": "unknown",
+        "hedged": false
+      },
+      {
+        "quote": "It inhibits glucagon release, gastric emptying, appetite and food intake via the central nervous system and in animal experiments also apoptosis of beta-cells.",
+        "subject": {
+          "mention": "GLP-1",
+          "kind": "protein"
+        },
+        "relation": "decreases_process",
+        "object": {
+          "mention": "apoptosis of beta-cells",
+          "kind": "process"
+        },
+        "polarity": "supports",
+        "evidence_kind": "review",
+        "species": "animal",
+        "hedged": false
+      },
+      {
+        "quote": "Clinical studies with exenatide and liraglutide as monotherapy show a significant increase in the postprandial insulin concentration as well as a smaller increase in the postprandial glucose values.",
+        "subject": {
+          "mention": "exenatide",
+          "kind": "chemical"
+        },
+        "relation": "increases_amount",
+        "object": {
+          "mention": "insulin",
+          "kind": "protein"
+        },
+        "polarity": "supports",
+        "evidence_kind": "review",
+        "species": "human",
+        "hedged": false
+      },
+      {
+        "quote": "Clinical studies with exenatide and liraglutide as monotherapy show a significant increase in the postprandial insulin concentration as well as a smaller increase in the postprandial glucose values.",
+        "subject": {
+          "mention": "liraglutide",
+          "kind": "chemical"
+        },
+        "relation": "increases_amount",
+        "object": {
+          "mention": "insulin",
+          "kind": "protein"
+        },
+        "polarity": "supports",
+        "evidence_kind": "review",
+        "species": "human",
+        "hedged": false
+      },
+      {
+        "quote": "The effect of exenatide on HbA1c is the same as adding a long-acting insulin analogue (glargine), but the increase in weight after adding insulin is not seen after exenatide, where even a small decrease in weight is found.",
+        "subject": {
+          "mention": "exenatide",
+          "kind": "chemical"
+        },
+        "relation": "decreases_phenotype",
+        "object": {
+          "mention": "weight",
+          "kind": "phenotype"
+        },
+        "polarity": "supports",
+        "evidence_kind": "review",
+        "species": "human",
+        "hedged": false
+      },
+      {
+        "quote": "The effect of exenatide on HbA1c is the same as adding a long-acting insulin analogue (glargine), but the increase in weight after adding insulin is not seen after exenatide, where even a small decrease in weight is found.",
+        "subject": {
+          "mention": "insulin",
+          "kind": "protein"
+        },
+        "relation": "increases_phenotype",
+        "object": {
+          "mention": "weight",
+          "kind": "phenotype"
+        },
+        "polarity": "supports",
+        "evidence_kind": "review",
+        "species": "human",
+        "hedged": false
+      }
+    ]
+  },
+  {
+    "pmid": 18628530,
+    "statements": [
+      {
+        "quote": "Three-year follow-up data on exenatide showed a sustained weight loss and glycosylated hemoglobin (HbA(1c)) reduction of 1%.",
+        "subject": {
+          "mention": "exenatide",
+          "kind": "chemical"
+        },
+        "relation": "decreases_phenotype",
+        "object": {
+          "mention": "body weight",
+          "kind": "phenotype"
+        },
+        "polarity": "supports",
+        "evidence_kind": "review",
+        "species": "human",
+        "hedged": false
+      },
+      {
+        "quote": "Three-year follow-up data on exenatide showed a sustained weight loss and glycosylated hemoglobin (HbA(1c)) reduction of 1%.",
+        "subject": {
+          "mention": "exenatide",
+          "kind": "chemical"
+        },
+        "relation": "decreases_amount",
+        "object": {
+          "mention": "HbA(1c)",
+          "kind": "protein"
+        },
+        "polarity": "supports",
+        "evidence_kind": "review",
+        "species": "human",
+        "hedged": false
+      },
+      {
+        "quote": "Nausea and vomiting are common.",
+        "subject": {
+          "mention": "exenatide",
+          "kind": "chemical"
+        },
+        "relation": "increases_phenotype",
+        "object": {
+          "mention": "nausea",
+          "kind": "phenotype"
+        },
+        "polarity": "supports",
+        "evidence_kind": "review",
+        "species": "human",
+        "hedged": false
+      },
+      {
+        "quote": "In 24-wk studies, sitagliptin reduces HbA(1c) by 0.6-0.8% as monotherapy, 1.8% as initial combination therapy with metformin, and 0.7% as add-on therapy to metformin.",
+        "subject": {
+          "mention": "sitagliptin",
+          "kind": "chemical"
+        },
+        "relation": "decreases_amount",
+        "object": {
+          "mention": "HbA(1c)",
+          "kind": "protein"
+        },
+        "polarity": "supports",
+        "evidence_kind": "review",
+        "species": "human",
+        "hedged": false
+      },
+      {
+        "quote": "Vildagliptin monotherapy lowered HbA(1c) by 1.0-1.4% after 24 wk.",
+        "subject": {
+          "mention": "Vildagliptin",
+          "kind": "chemical"
+        },
+        "relation": "decreases_amount",
+        "object": {
+          "mention": "HbA(1c)",
+          "kind": "protein"
+        },
+        "polarity": "supports",
+        "evidence_kind": "review",
+        "species": "human",
+        "hedged": false
+      },
+      {
+        "quote": "Exenatide and liraglutide cause weight loss, whereas sitagliptin and vildagliptin do not.",
+        "subject": {
+          "mention": "Exenatide",
+          "kind": "chemical"
+        },
+        "relation": "decreases_phenotype",
+        "object": {
+          "mention": "body weight",
+          "kind": "phenotype"
+        },
+        "polarity": "supports",
+        "evidence_kind": "review",
+        "species": "human",
+        "hedged": false
+      },
+      {
+        "quote": "Exenatide and liraglutide cause weight loss, whereas sitagliptin and vildagliptin do not.",
+        "subject": {
+          "mention": "liraglutide",
+          "kind": "chemical"
+        },
+        "relation": "decreases_phenotype",
+        "object": {
+          "mention": "body weight",
+          "kind": "phenotype"
+        },
+        "polarity": "supports",
+        "evidence_kind": "review",
+        "species": "human",
+        "hedged": false
+      },
+      {
+        "quote": "Exenatide and liraglutide cause weight loss, whereas sitagliptin and vildagliptin do not.",
+        "subject": {
+          "mention": "sitagliptin",
+          "kind": "chemical"
+        },
+        "relation": "decreases_phenotype",
+        "object": {
+          "mention": "body weight",
+          "kind": "phenotype"
+        },
+        "polarity": "refutes",
+        "evidence_kind": "review",
+        "species": "human",
+        "hedged": false
+      },
+      {
+        "quote": "Exenatide and liraglutide cause weight loss, whereas sitagliptin and vildagliptin do not.",
+        "subject": {
+          "mention": "vildagliptin",
+          "kind": "chemical"
+        },
+        "relation": "decreases_phenotype",
+        "object": {
+          "mention": "body weight",
+          "kind": "phenotype"
+        },
+        "polarity": "refutes",
+        "evidence_kind": "review",
+        "species": "human",
+        "hedged": false
+      }
+    ]
+  },
+  {
+    "pmid": 20194711,
+    "statements": [
+      {
+        "quote": "In T1DM, gastric emptying, food intake, and appetite were reduced equally during low GLP-1 and amylin infusion compared with the saline infusion (P < 0.05).",
+        "subject": {
+          "mention": "GLP-1",
+          "kind": "protein"
+        },
+        "relation": "decreases_process",
+        "object": {
+          "mention": "gastric emptying",
+          "kind": "process"
+        },
+        "polarity": "supports",
+        "evidence_kind": "rct",
+        "species": "human",
+        "hedged": false
+      },
+      {
+        "quote": "In T1DM, gastric emptying, food intake, and appetite were reduced equally during low GLP-1 and amylin infusion compared with the saline infusion (P < 0.05).",
+        "subject": {
+          "mention": "GLP-1",
+          "kind": "protein"
+        },
+        "relation": "decreases_phenotype",
+        "object": {
+          "mention": "food intake",
+          "kind": "phenotype"
+        },
+        "polarity": "supports",
+        "evidence_kind": "rct",
+        "species": "human",
+        "hedged": false
+      },
+      {
+        "quote": "In T1DM, gastric emptying, food intake, and appetite were reduced equally during low GLP-1 and amylin infusion compared with the saline infusion (P < 0.05).",
+        "subject": {
+          "mention": "GLP-1",
+          "kind": "protein"
+        },
+        "relation": "decreases_phenotype",
+        "object": {
+          "mention": "appetite",
+          "kind": "phenotype"
+        },
+        "polarity": "supports",
+        "evidence_kind": "rct",
+        "species": "human",
+        "hedged": false
+      },
+      {
+        "quote": "In T1DM, gastric emptying, food intake, and appetite were reduced equally during low GLP-1 and amylin infusion compared with the saline infusion (P < 0.05).",
+        "subject": {
+          "mention": "amylin",
+          "kind": "protein"
+        },
+        "relation": "decreases_process",
+        "object": {
+          "mention": "gastric emptying",
+          "kind": "process"
+        },
+        "polarity": "supports",
+        "evidence_kind": "rct",
+        "species": "human",
+        "hedged": false
+      },
+      {
+        "quote": "In T1DM, gastric emptying, food intake, and appetite were reduced equally during low GLP-1 and amylin infusion compared with the saline infusion (P < 0.05).",
+        "subject": {
+          "mention": "amylin",
+          "kind": "protein"
+        },
+        "relation": "decreases_phenotype",
+        "object": {
+          "mention": "food intake",
+          "kind": "phenotype"
+        },
+        "polarity": "supports",
+        "evidence_kind": "rct",
+        "species": "human",
+        "hedged": false
+      },
+      {
+        "quote": "In T1DM, gastric emptying, food intake, and appetite were reduced equally during low GLP-1 and amylin infusion compared with the saline infusion (P < 0.05).",
+        "subject": {
+          "mention": "amylin",
+          "kind": "protein"
+        },
+        "relation": "decreases_phenotype",
+        "object": {
+          "mention": "appetite",
+          "kind": "phenotype"
+        },
+        "polarity": "supports",
+        "evidence_kind": "rct",
+        "species": "human",
+        "hedged": false
+      },
+      {
+        "quote": "Postprandial glucagon responses were reduced in controls and T1DM during GLP-1 and amylin infusions (P < 0.05).",
+        "subject": {
+          "mention": "GLP-1",
+          "kind": "protein"
+        },
+        "relation": "decreases_amount",
+        "object": {
+          "mention": "glucagon",
+          "kind": "protein"
+        },
+        "polarity": "supports",
+        "evidence_kind": "rct",
+        "species": "human",
+        "hedged": false
+      },
+      {
+        "quote": "Postprandial glucagon responses were reduced in controls and T1DM during GLP-1 and amylin infusions (P < 0.05).",
+        "subject": {
+          "mention": "amylin",
+          "kind": "protein"
+        },
+        "relation": "decreases_amount",
+        "object": {
+          "mention": "glucagon",
+          "kind": "protein"
+        },
+        "polarity": "supports",
+        "evidence_kind": "rct",
+        "species": "human",
+        "hedged": false
+      },
+      {
+        "quote": "GLP-1 exerts its effect on gastric emptying, appetite, food intake, and glucagon secretion directly, although secretion of amylin may contribute to some of these effects in healthy control subjects.",
+        "subject": {
+          "mention": "GLP-1",
+          "kind": "protein"
+        },
+        "relation": "decreases_process",
+        "object": {
+          "mention": "glucagon secretion",
+          "kind": "process"
+        },
+        "polarity": "supports",
+        "evidence_kind": "rct",
+        "species": "human",
+        "hedged": false
+      }
+    ]
+  },
+  {
+    "pmid": 21994361,
+    "statements": [
+      {
+        "quote": "Central glucagon-like peptide 1 receptor (GLP-1R) stimulation suppresses food intake, and hindbrain GLP-1 neurons project to numerous feeding-relevant brain regions.",
+        "subject": {
+          "mention": "GLP-1R",
+          "kind": "protein"
+        },
+        "relation": "decreases_phenotype",
+        "object": {
+          "mention": "food intake",
+          "kind": "phenotype"
+        },
+        "polarity": "supports",
+        "evidence_kind": "other",
+        "species": "unknown",
+        "hedged": false
+      },
+      {
+        "quote": "When injected into the NAc core of rats at doses subthreshold for effect when administered to the lateral ventricle, GLP-1 significantly reduced food intake relative to vehicle at 1, 2, and 24 h posttreatment.",
+        "subject": {
+          "mention": "GLP-1",
+          "kind": "protein"
+        },
+        "relation": "decreases_phenotype",
+        "object": {
+          "mention": "food intake",
+          "kind": "phenotype"
+        },
+        "polarity": "supports",
+        "evidence_kind": "mechanistic",
+        "species": "rat",
+        "hedged": false
+      },
+      {
+        "quote": "The same doses had no effect when injected into the NAc shell.",
+        "subject": {
+          "mention": "GLP-1",
+          "kind": "protein"
+        },
+        "relation": "decreases_phenotype",
+        "object": {
+          "mention": "food intake",
+          "kind": "phenotype"
+        },
+        "polarity": "refutes",
+        "evidence_kind": "mechanistic",
+        "species": "rat",
+        "hedged": false
+      },
+      {
+        "quote": "NAc core treatment with ventricle-subthreshold doses of the GLP-1R antagonist exendin (9-39) caused significant hyperphagia at 2 h posttreatment, suggesting that endogenous stimulation of NAc core GLP-1Rs plays a role in limiting food intake.",
+        "subject": {
+          "mention": "exendin (9-39)",
+          "kind": "chemical"
+        },
+        "relation": "increases_phenotype",
+        "object": {
+          "mention": "hyperphagia",
+          "kind": "phenotype"
+        },
+        "polarity": "supports",
+        "evidence_kind": "mechanistic",
+        "species": "rat",
+        "hedged": false
+      },
+      {
+        "quote": "NAc core treatment with ventricle-subthreshold doses of the GLP-1R antagonist exendin (9-39) caused significant hyperphagia at 2 h posttreatment, suggesting that endogenous stimulation of NAc core GLP-1Rs plays a role in limiting food intake.",
+        "subject": {
+          "mention": "exendin (9-39)",
+          "kind": "chemical"
+        },
+        "relation": "decreases_activity",
+        "object": {
+          "mention": "GLP-1R",
+          "kind": "protein"
+        },
+        "polarity": "supports",
+        "evidence_kind": "mechanistic",
+        "species": "rat",
+        "hedged": false
+      },
+      {
+        "quote": "It has been suggested that GLP-1 can cause nausea, but we found that NAc core administration of GLP-1 did not cause a conditioned taste aversion to saccharin, suggesting that the anorexic effect of NAc core GLP-1 is not caused by malaise.",
+        "subject": {
+          "mention": "GLP-1",
+          "kind": "protein"
+        },
+        "relation": "increases_phenotype",
+        "object": {
+          "mention": "conditioned taste aversion",
+          "kind": "phenotype"
+        },
+        "polarity": "refutes",
+        "evidence_kind": "mechanistic",
+        "species": "rat",
+        "hedged": false
+      },
+      {
+        "quote": "Finally, we observed that NAc core injection of GLP-1 significantly increased c-Fos expression in the NAc core.",
+        "subject": {
+          "mention": "GLP-1",
+          "kind": "protein"
+        },
+        "relation": "increases_amount",
+        "object": {
+          "mention": "c-Fos",
+          "kind": "protein"
+        },
+        "polarity": "supports",
+        "evidence_kind": "mechanistic",
+        "species": "rat",
+        "hedged": false
+      }
+    ]
+  },
+  {
+    "pmid": 22040840,
+    "statements": [
+      {
+        "quote": "Subjects treated with exenatide lost an average of 2.49 ± 0.66 kg compared with a 0.43 ± 0.63 kg weight gain during placebo treatment.",
+        "subject": {
+          "mention": "exenatide",
+          "kind": "chemical"
+        },
+        "relation": "decreases_phenotype",
+        "object": {
+          "mention": "body weight",
+          "kind": "phenotype"
+        },
+        "polarity": "supports",
+        "evidence_kind": "rct",
+        "species": "human",
+        "hedged": false
+      },
+      {
+        "quote": "Waist circumference also decreased significantly with exenatide treatment.",
+        "subject": {
+          "mention": "exenatide",
+          "kind": "chemical"
+        },
+        "relation": "decreases_phenotype",
+        "object": {
+          "mention": "waist circumference",
+          "kind": "phenotype"
+        },
+        "polarity": "supports",
+        "evidence_kind": "rct",
+        "species": "human",
+        "hedged": false
+      },
+      {
+        "quote": "Subjects experienced more nausea during exenatide treatment compared with placebo, but the severity decreased over time and did not correlate with weight loss.",
+        "subject": {
+          "mention": "exenatide",
+          "kind": "chemical"
+        },
+        "relation": "increases_phenotype",
+        "object": {
+          "mention": "nausea",
+          "kind": "phenotype"
+        },
+        "polarity": "supports",
+        "evidence_kind": "rct",
+        "species": "human",
+        "hedged": false
+      },
+      {
+        "quote": "Short-term exenatide treatment was associated with modest weight loss and decreased waist circumference in a cohort of obese nondiabetic women.",
+        "subject": {
+          "mention": "exenatide",
+          "kind": "chemical"
+        },
+        "relation": "decreases_phenotype",
+        "object": {
+          "mention": "body weight",
+          "kind": "phenotype"
+        },
+        "polarity": "supports",
+        "evidence_kind": "rct",
+        "species": "human",
+        "hedged": false
+      }
+    ]
+  },
+  {
+    "pmid": 22227019,
+    "statements": [
+      {
+        "quote": "The FDA-approved glucagon-like-peptide-1 receptor (GLP-1R) agonists exendin-4 and liraglutide reduce food intake and body weight.",
+        "subject": {
+          "mention": "exendin-4",
+          "kind": "chemical"
+        },
+        "relation": "decreases_phenotype",
+        "object": {
+          "mention": "food intake",
+          "kind": "phenotype"
+        },
+        "polarity": "supports",
+        "evidence_kind": "other",
+        "species": "unknown",
+        "hedged": false
+      },
+      {
+        "quote": "The FDA-approved glucagon-like-peptide-1 receptor (GLP-1R) agonists exendin-4 and liraglutide reduce food intake and body weight.",
+        "subject": {
+          "mention": "liraglutide",
+          "kind": "chemical"
+        },
+        "relation": "decreases_phenotype",
+        "object": {
+          "mention": "body weight",
+          "kind": "phenotype"
+        },
+        "polarity": "supports",
+        "evidence_kind": "other",
+        "species": "unknown",
+        "hedged": false
+      },
+      {
+        "quote": "Using two established rodent models of nausea [conditioned taste avoidance (CTA) and pica (ingestion of nonnutritive substances)], results show that all peripheral doses of exendin-4 that suppress food intake also produce CTA, whereas one dose of liraglutide suppresses intake without producing CTA.",
+        "subject": {
+          "mention": "exendin-4",
+          "kind": "chemical"
+        },
+        "relation": "increases_phenotype",
+        "object": {
+          "mention": "CTA",
+          "kind": "phenotype"
+        },
+        "polarity": "supports",
+        "evidence_kind": "mechanistic",
+        "species": "rat",
+        "hedged": false
+      },
+      {
+        "quote": "Chronic (12 days) daily peripheral administration of exendin-4 produces a progressive increase in pica coupled with stable, sustained food intake and body weight suppression, whereas the pica response and food intake reduction by daily liraglutide are more transient.",
+        "subject": {
+          "mention": "exendin-4",
+          "kind": "chemical"
+        },
+        "relation": "increases_phenotype",
+        "object": {
+          "mention": "pica",
+          "kind": "phenotype"
+        },
+        "polarity": "supports",
+        "evidence_kind": "mechanistic",
+        "species": "rat",
+        "hedged": false
+      },
+      {
+        "quote": "Chronic (12 days) daily peripheral administration of exendin-4 produces a progressive increase in pica coupled with stable, sustained food intake and body weight suppression, whereas the pica response and food intake reduction by daily liraglutide are more transient.",
+        "subject": {
+          "mention": "exendin-4",
+          "kind": "chemical"
+        },
+        "relation": "decreases_phenotype",
+        "object": {
+          "mention": "body weight",
+          "kind": "phenotype"
+        },
+        "polarity": "supports",
+        "evidence_kind": "mechanistic",
+        "species": "rat",
+        "hedged": false
+      },
+      {
+        "quote": "Results demonstrate that the nausea response accompanying peripheral exendin-4 occurs via a vagal-independent pathway involving GLP-1R activation in the brain as the exendin-4-induced pica response is attenuated with CNS co-administration of the GLP-1R antagonist exendin-(9-39), but not by vagotomy.",
+        "subject": {
+          "mention": "exendin-(9-39)",
+          "kind": "chemical"
+        },
+        "relation": "decreases_phenotype",
+        "object": {
+          "mention": "pica",
+          "kind": "phenotype"
+        },
+        "polarity": "supports",
+        "evidence_kind": "mechanistic",
+        "species": "rat",
+        "hedged": false
+      },
+      {
+        "quote": "Direct administration of exendin-4 to the medial subnucleus of the nucleus tractus solitarius (mNTS), but not to the central nucleus of the amygdala, reduced food intake and produced a pica response, establishing the mNTS as a potential GLP-1R-expressing site mediating nausea responses associated with GLP-1R agonists.",
+        "subject": {
+          "mention": "exendin-4",
+          "kind": "chemical"
+        },
+        "relation": "decreases_phenotype",
+        "object": {
+          "mention": "food intake",
+          "kind": "phenotype"
+        },
+        "polarity": "supports",
+        "evidence_kind": "mechanistic",
+        "species": "rat",
+        "hedged": false
+      }
+    ]
+  }
+]

@@ -1,0 +1,2798 @@
+[
+ {
+  "id": "S1",
+  "statement": "Semaglutide is an agonist of the GLP-1 receptor (GLP1R): it binds and activates GLP1R.",
+  "subject": {
+   "label": "semaglutide",
+   "ids": [
+    "CHEBI:167574",
+    "MESH:D000099194"
+   ]
+  },
+  "relation": {
+   "label": "agonist of / activates",
+   "ids": [
+    "CHEBI:71196 (role: glucagon-like peptide-1 receptor agonist)",
+    "RO:0000087 has role"
+   ]
+  },
+  "object": {
+   "label": "GLP-1 receptor",
+   "ids": [
+    "UniProt:P43220",
+    "NCBIGene:2740",
+    "GO:0044508"
+   ]
+  },
+  "pubtator3_relation_count": 0,
+  "pubtator3_pairs": {
+   "Chemical|MESH:D000099194 -- Gene|2740": 0,
+   "Chemical|MESH:C000592913 -- Gene|2740": 0
+  },
+  "pubtator3_proxy_pairs": {
+   "Chemical|MESH:D000077270 -- Gene|2740": 710
+  },
+  "pubtator3_note": "PubTator3 has essentially no normalised semaglutide concept (1 row in whole file); exenatide-GLP1R rows shown as class-level proxy",
+  "candidate_pmid_count": 852,
+  "candidate_kinds": {
+   "review": 214,
+   "other": 216,
+   "mechanistic": 135,
+   "rct": 157,
+   "observational": 130
+  },
+  "candidate_directions": {
+   "supports": 852
+  },
+  "evidence": [
+   {
+    "pmid": 38095657,
+    "year": 2024,
+    "journal": "Diabetologia",
+    "title": "Dose-response effects on HbA1c and bodyweight reduction of survodutide, a dual glucagon/GLP-1 receptor agonist, compared with placebo and open-label semaglutide in people with type 2 diabetes: a randomised clinical trial.",
+    "quote": "Dose-response effects on HbA1c and bodyweight reduction of survodutide, a dual glucagon/GLP-1 receptor agonist, compared with placebo and open-label semaglutide in people with type 2 diabetes: a randomised clinical trial.",
+    "kind": "rct",
+    "direction": "supports",
+    "rule": "sema+agonist+GLP1R",
+    "score": 11,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 35427802,
+    "year": 2022,
+    "journal": "Clinics and research in hepatology and gastroenterology",
+    "title": "The mTORC1/AMPK pathway plays a role in the beneficial effects of semaglutide (GLP-1 receptor agonist) on the liver of obese mice.",
+    "quote": "The mTORC1/AMPK pathway plays a role in the beneficial effects of semaglutide (GLP-1 receptor agonist) on the liver of obese mice.",
+    "kind": "mechanistic",
+    "direction": "supports",
+    "rule": "sema+agonist+GLP1R",
+    "score": 10,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 40538007,
+    "year": 2025,
+    "journal": "Journal of gastroenterology and hepatology",
+    "title": "Mechanism of Semaglutide in MASLD Treatment: Where Is the Master Key?",
+    "quote": "BACKGROUND: Semaglutide, a glucagon-like peptide-1 receptor agonist (GLP-1 RA), is used for weight reduction and metabolic improvement.",
+    "kind": "review",
+    "direction": "supports",
+    "rule": "sema+agonist+GLP1R",
+    "score": 10,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 38182782,
+    "year": 2024,
+    "journal": "Nature medicine",
+    "title": "Association of semaglutide with risk of suicidal ideation in a real-world cohort.",
+    "quote": "Our findings do not support higher risks of suicidal ideation with semaglutide compared with non-GLP1R agonist anti-obesity or anti-diabetes medications.",
+    "kind": "observational",
+    "direction": "supports",
+    "rule": "sema+agonist+GLP1R",
+    "score": 9,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 31031702,
+    "year": 2019,
+    "journal": "Frontiers in endocrinology",
+    "title": "The Discovery and Development of Liraglutide and Semaglutide.",
+    "quote": "Reversible binding to albumin was used for the systemic protraction of liraglutide and semaglutide, with optimal fatty acid and linker combinations identified to maximize albumin binding while maintaining GLP-1 receptor (GLP-1R) potency.",
+    "kind": "other",
+    "direction": "supports",
+    "rule": "sema+agonist+GLP1R",
+    "score": 6,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 41168808,
+    "year": 2025,
+    "journal": "Addiction science & clinical practice",
+    "title": "Efficacy of the GLP-1 receptor agonist, semaglutide, in abstinence from illicit and nonprescribed opioids in an outpatient population with OUD: a randomized, double-blind, placebo-controlled clinical trial protocol.",
+    "quote": "Efficacy of the GLP-1 receptor agonist, semaglutide, in abstinence from illicit and nonprescribed opioids in an outpatient population with OUD: a randomized, double-blind, placebo-controlled clinical trial protocol.",
+    "kind": "rct",
+    "direction": "supports",
+    "rule": "sema+agonist+GLP1R",
+    "score": 11,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 36169111,
+    "year": 2022,
+    "journal": "Cell biochemistry and function",
+    "title": "Semaglutide (GLP-1 receptor agonist) stimulates browning on subcutaneous fat adipocytes and mitigates inflammation and endoplasmic reticulum stress in visceral fat adipocytes of obese mice.",
+    "quote": "Semaglutide (GLP-1 receptor agonist) stimulates browning on subcutaneous fat adipocytes and mitigates inflammation and endoplasmic reticulum stress in visceral fat adipocytes of obese mice.",
+    "kind": "mechanistic",
+    "direction": "supports",
+    "rule": "sema+agonist+GLP1R",
+    "score": 10,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 30101378,
+    "year": 2018,
+    "journal": "Endocrine",
+    "title": "The safety and efficacy of once-weekly glucagon-like peptide-1 receptor agonist semaglutide in patients with type 2 diabetes mellitus: a systemic review and meta-analysis.",
+    "quote": "The safety and efficacy of once-weekly glucagon-like peptide-1 receptor agonist semaglutide in patients with type 2 diabetes mellitus: a systemic review and meta-analysis.",
+    "kind": "review",
+    "direction": "supports",
+    "rule": "sema+agonist+GLP1R",
+    "score": 9,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 40788646,
+    "year": 2025,
+    "journal": "JAMA network open",
+    "title": "Semaglutide or Tirzepatide and Optic Nerve and Visual Pathway Disorders in Type 2 Diabetes.",
+    "quote": "Importance: Semaglutide and tirzepatide, the new generation of glucagon-like peptide-1 receptor agonist used to treat type 2 diabetes and obesity, were recently reported to be associated with increased risk of nonarteritic anterior ischemic optic neuropathy (NAION).",
+    "kind": "observational",
+    "direction": "supports",
+    "rule": "sema+agonist+GLP1R",
+    "score": 8,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 32232400,
+    "year": 2020,
+    "journal": "The Journal of clinical endocrinology and metabolism",
+    "title": "Semaglutide in Cystic Fibrosis-Related Diabetes.",
+    "quote": "The objective of this report is to demonstrate the effect of the addition of semaglutide, a glucagon-like peptide-1 receptor agonist (GLP-1RA), to basal insulin to control glycemia in one such patient.",
+    "kind": "other",
+    "direction": "supports",
+    "rule": "sema+agonist+GLP1R",
+    "score": 6,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 32333875,
+    "year": 2020,
+    "journal": "The lancet. Diabetes & endocrinology",
+    "title": "Dose-response, efficacy, and safety of oral semaglutide monotherapy in Japanese patients with type 2 diabetes (PIONEER 9): a 52-week, phase 2/3a, randomised, controlled trial.",
+    "quote": "PIONEER 9 aimed to assess the dose-response of oral semaglutide and to compare the efficacy and safety of oral semaglutide with placebo and a subcutaneous GLP-1 receptor agonist in a Japanese population.",
+    "kind": "rct",
+    "direction": "supports",
+    "rule": "sema+agonist+GLP1R",
+    "score": 10,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 37051656,
+    "year": 2023,
+    "journal": "Cell biochemistry and function",
+    "title": "The cardioprotective effect of human glucagon-like peptide-1 receptor agonist (semaglutide) on cisplatin-induced cardiotoxicity in rats: Targeting mitochondrial functions, dynamics, biogenesis, and redox status pathways.",
+    "quote": "Semaglutide is a human glucagon-like peptide-1 receptor agonist (GLP-1R), which is used primarily for the treatment of DM.",
+    "kind": "mechanistic",
+    "direction": "supports",
+    "rule": "sema+agonist+GLP1R",
+    "score": 9,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 31098942,
+    "year": 2019,
+    "journal": "Diabetes therapy : research, treatment and education of diabetes and related disorders",
+    "title": "Management of Patients with Type 2 Diabetes with Once-Weekly Semaglutide Versus Dulaglutide, Exenatide ER, Liraglutide and Lixisenatide: A Cost-Effectiveness Analysis in the Danish Setting.",
+    "quote": "The aim of the present study was to assess the long-term cost-effectiveness of semaglutide versus all available GLP-1 receptor agonists in Denmark, using a clinically orientated treatment approach.",
+    "kind": "review",
+    "direction": "supports",
+    "rule": "sema+agonist+GLP1R",
+    "score": 9,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 34900848,
+    "year": 2021,
+    "journal": "Journal of diabetes and metabolic disorders",
+    "title": "Efficacy and safety of semaglutide in glycemic control, body weight management, lipid profiles and other biomarkers among obese type 2 diabetes patients initiated or switched to semaglutide from other GLP-1 receptor agonists.",
+    "quote": "Efficacy and safety of semaglutide in glycemic control, body weight management, lipid profiles and other biomarkers among obese type 2 diabetes patients initiated or switched to semaglutide from other GLP-1 receptor agonists.",
+    "kind": "observational",
+    "direction": "supports",
+    "rule": "sema+agonist+GLP1R",
+    "score": 7,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 32372454,
+    "year": 2020,
+    "journal": "Diabetes, obesity & metabolism",
+    "title": "The effect of glucagon-like peptide-1 receptor agonists liraglutide and semaglutide on cardiovascular and renal outcomes across baseline blood pressure categories: Analysis of the LEADER and SUSTAIN 6 trials.",
+    "quote": "The effect of glucagon-like peptide-1 receptor agonists liraglutide and semaglutide on cardiovascular and renal outcomes across baseline blood pressure categories: Analysis of the LEADER and SUSTAIN 6 trials.",
+    "kind": "other",
+    "direction": "supports",
+    "rule": "sema+agonist+GLP1R",
+    "score": 6,
+    "pubtator3_relations": []
+   }
+  ]
+ },
+ {
+  "id": "S2",
+  "statement": "GLP1R activation in hypothalamic (arcuate POMC/CART) and brainstem neurons, with inhibition of NPY/AgRP neurons, reduces appetite and food intake.",
+  "subject": {
+   "label": "GLP-1 receptor signalling in hypothalamus/brainstem",
+   "ids": [
+    "UniProt:P43220",
+    "NCBIGene:2740",
+    "POMC UniProt:P01189 / NCBIGene:5443",
+    "CARTPT NCBIGene:9607",
+    "NPY NCBIGene:4852",
+    "AGRP NCBIGene:181"
+   ]
+  },
+  "relation": {
+   "label": "negatively regulates",
+   "ids": [
+    "GO:0032099 negative regulation of appetite",
+    "GO:2000252 negative regulation of feeding behavior"
+   ]
+  },
+  "object": {
+   "label": "appetite / feeding behaviour",
+   "ids": [
+    "GO:0007631",
+    "GO:0060259"
+   ]
+  },
+  "pubtator3_relation_count": 72,
+  "pubtator3_pairs": {
+   "Gene|2740 -- Gene|5443": 4,
+   "Gene|2740 -- Gene|9607": 2,
+   "Gene|2740 -- Gene|4852": 3,
+   "Gene|181 -- Gene|2740": 3,
+   "Gene|2641 -- Gene|5443": 56,
+   "Gene|2641 -- Gene|4852": 4,
+   "Gene|181 -- Gene|2641": 0
+  },
+  "pubtator3_proxy_pairs": null,
+  "pubtator3_note": null,
+  "candidate_pmid_count": 152,
+  "candidate_kinds": {
+   "other": 20,
+   "mechanistic": 114,
+   "review": 17,
+   "rct": 1
+  },
+  "candidate_directions": {
+   "supports": 152
+  },
+  "evidence": [
+   {
+    "pmid": 40223290,
+    "year": 2025,
+    "journal": "Endocrinology and metabolism (Seoul, Korea)",
+    "title": "Exendin-4(1-32)K-Capric Acid, a Glucagon-Like Peptide-1 Receptor Agonist, Suppresses Food Intake via Arcuate Pro-Opiomelanocortin Neurons.",
+    "quote": "Exendin-4(1-32)K-Capric Acid, a Glucagon-Like Peptide-1 Receptor Agonist, Suppresses Food Intake via Arcuate Pro-Opiomelanocortin Neurons.",
+    "kind": "mechanistic",
+    "direction": "supports",
+    "rule": "GLP1+POMC/CART/NPY/AgRP",
+    "score": 9,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 27219496,
+    "year": 2016,
+    "journal": "Endocrine practice : official journal of the American College of Endocrinology and the American Association of Clinical Endocrinologists",
+    "title": "AMERICAN ASSOCIATION OF CLINICAL ENDOCRINOLOGISTS AND AMERICAN COLLEGE OF ENDOCRINOLOGY COMPREHENSIVE CLINICAL PRACTICE GUIDELINES FOR MEDICAL CARE OF PATIENTS WITH OBESITY.",
+    "quote": "ABBREVIATIONS: A1C = hemoglobin A1c AACE = American Association of Clinical Endocrinologists ACE = American College of Endocrinology ACSM = American College of Sports Medicine ADA = American Diabetes Association ADAPT = Arthritis, Diet, and Activity Promotion Trial ADHD = attention-deficit hyperactivity disorder AHA = American Heart Association AHEAD = Action for Health in Diabetes AHI = apnea-hypopnea index ALT = alanine aminotransferase AMA = American Medical Association ARB = angiotensin receptor blocker ART = assisted reproductive technology AUC = area under the curve BDI = Beck Depression Inventory BED = binge eating disorder BEL = best evidence level BLOOM = Behavioral Modification and Lorcaserin for Overweight and Obesity Management BLOSSOM = Behavioral Modification and Lorcaserin Second Study for Obesity Management BMI = body mass index BP = blood pressure C-SSRS = Columbia Suicidality Severity Rating Scale CAD = coronary artery disease CARDIA = Coronary Artery Risk Development in Young Adults CBT = cognitive behavioral therapy CCO = Consensus Conference on Obesity CHF = congestive heart failure CHO = carbohydrate CI = confidence interval COR-I = Contrave Obesity Research I CPG = clinical practice guideline CV = cardiovascular CVD = cardiovascular disease DASH = Dietary Approaches to Stop Hypertension DBP = diastolic blood pressure DEXA = dual-energy X-ray absorptiometry DPP = Diabetes Prevention Program DSE = diabetes support and education EL = evidence level ED = erectile dysfunction ER = extended release EWL = excess weight loss FDA = Food and Drug Administration FDG = 18F-fluorodeoxyglucose GABA = gamma-aminobutyric acid GERD = gastroesophageal reflux disease GI = gastrointestinal GLP-1 = glucagon-like peptide 1 HADS = Hospital Anxiety and Depression Scale HDL-c = high-density lipoprotein cholesterol HR = hazard ratio HTN = hypertension HUNT = Nord-Tr\u00f8ndelag Health Study ICSI = intracytoplasmic sperm injection IFG = impaired fasting glucose IGT = impaired glucose tolerance ILI = intensive lifestyle intervention IVF = in vitro fertilization LAGB = laparoscopic adjustable gastric banding LDL-c = low-density lipoprotein cholesterol LES = lower esophageal sphincter LSG = laparoscopic sleeve gastrectomy LV = left ventricle LVH = left ventricular hypertrophy LVBG = laparoscopic vertical banded gastroplasty MACE = major adverse cardiovascular events MAOI = monoamine oxidase inhibitor MI = myocardial infarction MNRCT = meta-analysis of non-randomized prospective or case-controlled trials MRI = magnetic resonance imaging MUFA = monounsaturated fatty acid NAFLD = nonalcoholic fatty liver disease NASH = nonalcoholic steatohepatitis NES = night eating syndrome NHANES = National Health and Nutrition Examination Surveys NHLBI = National Heart, Lung, and Blood Institute NHS = Nurses' Health Study NICE = National Institute for Health and Care Excellence OA = osteoarthritis OGTT = oral glucose tolerance test OR = odds ratio OSA = obstructive sleep apnea PHQ-9 = Patient Health Questionnaire PCOS = polycystic ovary syndrome PCP = primary care physician POMC = pro-opiomelanocortin POWER = Practice-Based Opportunities for Weight Reduction PPI = proton pump inhibitor PRIDE = Program to Reduce Incontinence by Diet and Exercise PSA = prostate specific antigen QOL = quality of life RA = receptor agonist RCT = randomized controlled trial ROC = receiver operator characteristic RR = relative risk RYGB = Roux-en-Y gastric bypass SAD = sagittal abdominal diameter SBP = systolic blood pressure SCOUT = Sibutramine Cardiovascular Outcome Trial SG = sleeve gastrectomy SHBG = sex hormonebinding globulin SIEDY = Structured Interview on Erectile Dysfunction SNRI = serotonin-norepinephrine reuptake inhibitors SOS = Swedish Obese Subjects SS = surveillance study SSRI = selective serotonin reuptake inhibitors STORM = Sibutramine Trial on Obesity Reduction and Maintenance TCA = tricyclic antidepressant TONE = Trial of Nonpharmacologic Intervention in the Elderly TOS = The Obesity Society T2DM = type 2 diabetes mellitus UKPDS = United Kingdom Prospective Diabetes Study U.S = United States VAT = visceral adipose tissue VLDL = very low-density lipoprotein WC = waist circumference WHO = World Health Organization WHR = waist-hip ratio WHtR = waist-to-height ratio WMD = weighted mean difference WOMAC = Western Ontario and McMaster Universities osteoarthritis index XENDOS = XEnical in the Prevention of Diabetes in Obese Subjects.",
+    "kind": "review",
+    "direction": "supports",
+    "rule": "GLP1+POMC/CART/NPY/AgRP",
+    "score": 7,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 23462665,
+    "year": 2013,
+    "journal": "Diabetes care",
+    "title": "Exenatide-induced reduction in energy intake is associated with increase in hypothalamic connectivity.",
+    "quote": "OBJECTIVE: Glucagon-like peptide-1 receptor agonists such as exenatide are known to influence neural activity in the hypothalamus of animals and to reduce energy intake.",
+    "kind": "rct",
+    "direction": "supports",
+    "rule": "GLP1R+region+appetite",
+    "score": 6,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 19897637,
+    "year": 2010,
+    "journal": "Journal of animal science",
+    "title": "Effect of feed restriction and supplemental dietary fat on gut peptide and hypothalamic neuropeptide messenger ribonucleic acid concentrations in growing wethers.",
+    "quote": "We conclude that insulin, ghrelin, CCK, and GLP-1 may regulate DMI in sheep by regulating the hypothalamic gene expression of NPY, AgRP, and POMC.",
+    "kind": "other",
+    "direction": "supports",
+    "rule": "GLP1+POMC/CART/NPY/AgRP",
+    "score": 4,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 29752762,
+    "year": 2018,
+    "journal": "Journal of neuroendocrinology",
+    "title": "Feeding and GLP-1 receptor activation stabilize \u03b2-catenin in specific hypothalamic nuclei in male rats.",
+    "quote": "Feeding and GLP-1 receptor activation stabilize \u03b2-catenin in specific hypothalamic nuclei in male rats.",
+    "kind": "mechanistic",
+    "direction": "supports",
+    "rule": "GLP1R+region+appetite",
+    "score": 8,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 27450151,
+    "year": 2016,
+    "journal": "Molecular and cellular endocrinology",
+    "title": "The role of food intake regulating peptides in cardiovascular regulation.",
+    "quote": "Anorexigenic (food intake lowering) hormones such as leptin, glucagon-like peptide-1 and cholecystokinin cooperate with \u03b1-melanocyte-stimulating hormone, cocaine- and amphetamine-regulated peptide as well as prolactin-releasing peptide.",
+    "kind": "review",
+    "direction": "supports",
+    "rule": "GLP1+POMC/CART/NPY/AgRP",
+    "score": 7,
+    "pubtator3_relations": [
+     {
+      "relation": "associate",
+      "concept1": "Gene|2641",
+      "concept2": "Gene|5443"
+     }
+    ]
+   },
+   {
+    "pmid": 26851305,
+    "year": 2016,
+    "journal": "General and comparative endocrinology",
+    "title": "Dietary fatty acid composition affects food intake and gut-brain satiety signaling in Senegalese sole (Solea senegalensis, Kaup 1858) larvae and post-larvae.",
+    "quote": "These findings were developed further by analyzing mRNA levels of a range of putative anorexigenic (pyya, pyyb, glp1, cckl, cart1a, cart1b, cart2a, cart4, pomca, pomcb, crf) and orexigenic (gal, npy, agrp2) genes, to identify those which are significantly affected by feeding and/or dietary FA composition.",
+    "kind": "other",
+    "direction": "supports",
+    "rule": "GLP1+POMC/CART/NPY/AgRP",
+    "score": 4,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 32132220,
+    "year": 2020,
+    "journal": "Science translational medicine",
+    "title": "GABA neurons in the nucleus tractus solitarius express GLP-1 receptors and mediate anorectic effects of liraglutide in rats.",
+    "quote": "Fluorescence in situ hybridization identified Glp1r transcripts in NTS GABAergic neurons, which when inhibited using chemogenetics, attenuated the food intake- and body weight-reducing effects of liraglutide.",
+    "kind": "mechanistic",
+    "direction": "supports",
+    "rule": "GLP1R+region+appetite",
+    "score": 8,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 34715149,
+    "year": 2021,
+    "journal": "Neuroscience and biobehavioral reviews",
+    "title": "A novel approach to treating opioid use disorders: Dual agonists of glucagon-like peptide-1 receptors and neuropeptide Y2 receptors.",
+    "quote": "A novel approach to treating opioid use disorders: Dual agonists of glucagon-like peptide-1 receptors and neuropeptide Y2 receptors.",
+    "kind": "review",
+    "direction": "supports",
+    "rule": "GLP1+POMC/CART/NPY/AgRP",
+    "score": 7,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 31678371,
+    "year": 2020,
+    "journal": "Peptides",
+    "title": "Effects of short-term exercise on food intake and the expression of appetite-regulating factors in goldfish.",
+    "quote": "In this study, we examined the effects of short-term (30 min, at low and high water flow) exercise on food intake, glucose levels and the expressions of appetite regulators in goldfish hypothalamus (irisin, orexin, CART, leptin), intestine (CCK, PYY, proglucagon/GLP-1), muscle (irisin) and liver (leptin), of brain-derived neurotrophic factor (BDNF) in brain, interleukin-6 (IL6) in muscle and hypothalamus, and major metabolic enzymes, the glycolytic enzyme glucokinase (GCK) and its regulatory protein (GCKR) in liver, the lipolytic enzyme lipoprotein lipase in intestine and muscle, and trypsin in intestine.",
+    "kind": "other",
+    "direction": "supports",
+    "rule": "GLP1+POMC/CART/NPY/AgRP",
+    "score": 4,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 36309763,
+    "year": 2022,
+    "journal": "Cell & bioscience",
+    "title": "Activation of arcuate nucleus glucagon-like peptide-1 receptor-expressing neurons suppresses food intake.",
+    "quote": "The impact of GLP-1 signaling in the ARC GLP-1R-expressing neurons and the impact of activation of ARC GLP-1R on food intake was examined.",
+    "kind": "mechanistic",
+    "direction": "supports",
+    "rule": "GLP1R+region+appetite",
+    "score": 8,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 35943419,
+    "year": 2024,
+    "journal": "Critical reviews in food science and nutrition",
+    "title": "Consumption of sourdough bread and changes in the glycemic control and satiety: A systematic review.",
+    "quote": "The aim of this study was to carry out a systematic review of clinical trials followed by meta-analysis, to evaluate the effect of sourdough bread on glycemic control and appetite and satiety regulators such as leptin, ghrelin, GLP-1 (glucagon-like peptide-1), GLP-2 (glucagon-like peptide-2), NPY (neuropeptide Y), AgRP (agouti-related protein), PYY (peptide YY), and GIP (glucose-dependent insulinotropic polypeptide).",
+    "kind": "review",
+    "direction": "supports",
+    "rule": "GLP1+POMC/CART/NPY/AgRP",
+    "score": 7,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 33484717,
+    "year": 2021,
+    "journal": "General and comparative endocrinology",
+    "title": "Central serotonin participates in the anorexigenic effect of GLP-1 in rainbow trout (Oncorhynchus mykiss).",
+    "quote": "Our results show that GLP-1 induced a significant food intake inhibition, which agreed with the increased expression of anorexigenic neuropeptides pomc and cart in the hypothalamus.",
+    "kind": "other",
+    "direction": "supports",
+    "rule": "GLP1+POMC/CART/NPY/AgRP",
+    "score": 4,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 38935778,
+    "year": 2024,
+    "journal": "Science (New York, N.Y.)",
+    "title": "GLP-1 increases preingestive satiation via hypothalamic circuits in mice and humans.",
+    "quote": "Analysis of human and mouse brain samples pinpointed GLP-1 receptor (GLP-1R) neurons in the dorsomedial hypothalamus (DMH) as candidates for encoding preingestive satiation.",
+    "kind": "mechanistic",
+    "direction": "supports",
+    "rule": "GLP1R+region+appetite",
+    "score": 8,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 40367985,
+    "year": 2025,
+    "journal": "Diabetes & metabolism journal",
+    "title": "Glucagon-Like Peptide-1 and Hypothalamic Regulation of Satiation: Cognitive and Neural Insights from Human and Animal Studies.",
+    "quote": "We highlight the brain mechanisms of GLP-1RA-induced satiation and satiety, including cognitive impacts, with an emphasis on animal studies of hypothalamic glucagon-like peptide-1 receptor (GLP-1R) and GLP-1R-expressing neurons.",
+    "kind": "review",
+    "direction": "supports",
+    "rule": "GLP1R+region+appetite",
+    "score": 6,
+    "pubtator3_relations": []
+   }
+  ]
+ },
+ {
+  "id": "S3",
+  "statement": "GLP-1, a proglucagon (GCG)-derived peptide secreted by intestinal L-cells, is the endogenous agonist of GLP1R.",
+  "subject": {
+   "label": "GLP-1 (7-36 amide)",
+   "ids": [
+    "CHEBI:80270",
+    "UniProt:P01275 (pro-glucagon, cleaved into GLP-1)",
+    "NCBIGene:2641"
+   ]
+  },
+  "relation": {
+   "label": "endogenous agonist of",
+   "ids": [
+    "GO:0005179 hormone activity",
+    "GO:0044508 glucagon-like peptide 1 receptor activity"
+   ]
+  },
+  "object": {
+   "label": "GLP-1 receptor",
+   "ids": [
+    "UniProt:P43220",
+    "NCBIGene:2740"
+   ]
+  },
+  "pubtator3_relation_count": 585,
+  "pubtator3_pairs": {
+   "Gene|2641 -- Gene|2740": 585
+  },
+  "pubtator3_proxy_pairs": null,
+  "pubtator3_note": null,
+  "candidate_pmid_count": 1701,
+  "candidate_kinds": {
+   "other": 387,
+   "mechanistic": 1003,
+   "review": 235,
+   "rct": 56,
+   "observational": 20
+  },
+  "candidate_directions": {
+   "supports": 1701
+  },
+  "evidence": [
+   {
+    "pmid": 32174759,
+    "year": 2020,
+    "journal": "The journal of poultry science",
+    "title": "Chicken Intestinal L Cells and Glucagon-like Peptide-1 Secretion.",
+    "quote": "Intestinal L cells secrete GLP-1 in response to food ingestion.",
+    "kind": "review",
+    "direction": "supports",
+    "rule": "GLP1 from proglucagon/L-cell",
+    "score": 9,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 25412624,
+    "year": 2015,
+    "journal": "Diabetes",
+    "title": "Ghrelin Is a Novel Regulator of GLP-1 Secretion.",
+    "quote": "GLP-1 is a gastrointestinal L-cell hormone that enhances glucose-stimulated insulin secretion.",
+    "kind": "mechanistic",
+    "direction": "supports",
+    "rule": "GLP1 from proglucagon/L-cell",
+    "score": 8,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 26385462,
+    "year": 2015,
+    "journal": "Diabetologia",
+    "title": "Endogenous GLP-1 mediates postprandial reductions in activation in central reward and satiety areas in patients with type 2 diabetes.",
+    "quote": "We assessed CNS activation, defined as blood oxygen level dependent (BOLD) signal, in response to food pictures in obese patients with type 2 diabetes (n = 20) and healthy lean individuals (n = 20) using functional magnetic resonance imaging (fMRI). fMRI was performed in the fasted state and after meal intake on two occasions, once during infusion of the GLP-1 receptor antagonist exendin 9-39, which was administered to block actions of endogenous GLP-1, and on the other occasion during saline (placebo) infusion.",
+    "kind": "rct",
+    "direction": "supports",
+    "rule": "GLP1 endogenous ligand of GLP1R",
+    "score": 7,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 26469136,
+    "year": 2016,
+    "journal": "Endocrinology",
+    "title": "Neurotensin Is Coexpressed, Coreleased, and Acts Together With GLP-1 and PYY in Enteroendocrine Control of Metabolism.",
+    "quote": "Neurotensin Is Coexpressed, Coreleased, and Acts Together With GLP-1 and PYY in Enteroendocrine Control of Metabolism.",
+    "kind": "other",
+    "direction": "supports",
+    "rule": "GLP1 from proglucagon/L-cell",
+    "score": 6,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 26745255,
+    "year": 2016,
+    "journal": "The Journal of clinical endocrinology and metabolism",
+    "title": "Altered Plasma Levels of Glucagon, GLP-1 and Glicentin During OGTT in Adolescents With Obesity and Type 2 Diabetes.",
+    "quote": "During OGTT, adolescents with obesity have more products of pancreatically than intestinally cleaved proglucagon (ie, more glucagon and less GLP-1) in the plasma.",
+    "kind": "observational",
+    "direction": "supports",
+    "rule": "GLP1 from proglucagon/L-cell",
+    "score": 6,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 36193993,
+    "year": 2024,
+    "journal": "Critical reviews in food science and nutrition",
+    "title": "The role of dietary fibers in regulating appetite, an overview of mechanisms and weight consequences.",
+    "quote": "Fermentation of fibers produces short-chain fatty acids that also stimulates enteroendocrine cells to secrete GLP-1 and PYY.",
+    "kind": "review",
+    "direction": "supports",
+    "rule": "GLP1 from proglucagon/L-cell",
+    "score": 8,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 25700603,
+    "year": 2015,
+    "journal": "Molecular and cellular endocrinology",
+    "title": "Glucocorticoids decrease the production of glucagon-like peptide-1 at the transcriptional level in intestinal L-cells.",
+    "quote": "However, the direct effects of glucocorticoids on the GLP-1 production pathway in L cells remain unclear.",
+    "kind": "mechanistic",
+    "direction": "supports",
+    "rule": "GLP1 from proglucagon/L-cell",
+    "score": 8,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 26695864,
+    "year": 2016,
+    "journal": "The Journal of clinical endocrinology and metabolism",
+    "title": "Acute Effects of Linagliptin on Progenitor Cells, Monocyte Phenotypes, and Soluble Mediators in Type 2 Diabetes.",
+    "quote": "Linagliptin abated DPP-4 activity by greater than 50%, significantly increased active glucagon-like peptide-1 and stromal cell-derived factor-1\u03b1, and reduced monocyte chemotactic protein-1, CCL22, and IL-12.",
+    "kind": "rct",
+    "direction": "supports",
+    "rule": "GLP1 from proglucagon/L-cell",
+    "score": 7,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 2901341,
+    "year": 1988,
+    "journal": "Endocrinology",
+    "title": "Effect of truncated glucagon-like peptide-1 [proglucagon-(78-107) amide] on endocrine secretion from pig pancreas, antrum, and nonantral stomach.",
+    "quote": "Full-length GLP-1 [proglucagon-(72-107)] and GLP-2 [proglucagon-(126-159)] had no effect on hormone secretion from any of the perfused organs.",
+    "kind": "other",
+    "direction": "supports",
+    "rule": "GLP1 from proglucagon/L-cell",
+    "score": 5,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 25148821,
+    "year": 2015,
+    "journal": "Endocrine practice : official journal of the American College of Endocrinology and the American Association of Clinical Endocrinologists",
+    "title": "Adding Rapid-Acting Insulin or GLP-1 Receptor Agonist to Basal Insulin: Outcomes in a Community Setting.",
+    "quote": "CONCLUSIONS: Add-on therapy with a GLP-1 receptor agonist in T2DM patients receiving basal insulin was associated with fewer hospitalizations and lower total all-cause costs compared with add-on therapy using an RAI and could be considered as an alternative to an RAI in certain patients with T2DM who do not achieve effective glycemic control with basal insulin.",
+    "kind": "observational",
+    "direction": "supports",
+    "rule": "GLP1 endogenous ligand of GLP1R",
+    "score": 5,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 8033807,
+    "year": 1994,
+    "journal": "Endocrinology",
+    "title": "Incretin hormones regulate glucose-dependent insulin secretion in RIN 1046-38 cells: mechanisms of action.",
+    "quote": "GLP-1 acts by recruiting 1.5-fold more cells to secrete insulin as well as enhancing insulin secretion by individual cells.",
+    "kind": "review",
+    "direction": "supports",
+    "rule": "GLP1 from proglucagon/L-cell",
+    "score": 7,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 25853863,
+    "year": 2015,
+    "journal": "Clinical science (London, England : 1979)",
+    "title": "Glucocorticoids suppress GLP-1 secretion: possible contribution to their diabetogenic effects.",
+    "quote": "In the present study, we sought to determine whether GCs could exert direct effects on GLP-1-producing L-cells in terms of GLP-1 secretion and cell viability.",
+    "kind": "mechanistic",
+    "direction": "supports",
+    "rule": "GLP1 from proglucagon/L-cell",
+    "score": 8,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 26769912,
+    "year": 2016,
+    "journal": "The Journal of endocrinology",
+    "title": "Endogenous GLP1 and GLP1 analogue alter CNS responses to palatable food consumption.",
+    "quote": "Scans were performed on two occasions: during infusion of the GLP1 receptor antagonist exendin 9-39 (blocking actions of endogenous GLP1) and during placebo infusion.",
+    "kind": "rct",
+    "direction": "supports",
+    "rule": "GLP1 endogenous ligand of GLP1R",
+    "score": 7,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 14759551,
+    "year": 2004,
+    "journal": "Regulatory peptides",
+    "title": "Glucagon-like peptide-1 secretion is influenced by perfusate glucose concentration and by a feedback mechanism involving somatostatin in isolated perfused porcine ileum.",
+    "quote": "Glucagon-like peptide-1 (GLP-1) is released from intestinal L-cells in response to ingestion of meals.",
+    "kind": "other",
+    "direction": "supports",
+    "rule": "GLP1 from proglucagon/L-cell",
+    "score": 5,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 33950185,
+    "year": 2021,
+    "journal": "The Journal of clinical endocrinology and metabolism",
+    "title": "Elevation of Fasting GLP-1 Levels in Child and Adolescent Obesity: Friend or Foe?",
+    "quote": "However, it is important to note the differing biological effects of GLP-1 at physiological and pharmacological levels, which are evident in body weight reduction by GLP-1 receptor agonists and DPP-4 inhibitors.",
+    "kind": "observational",
+    "direction": "supports",
+    "rule": "GLP1 endogenous ligand of GLP1R",
+    "score": 5,
+    "pubtator3_relations": []
+   }
+  ]
+ },
+ {
+  "id": "S4",
+  "statement": "DPP4 degrades and inactivates GLP-1 by cleaving GLP-1(7-36) to GLP-1(9-36), giving active GLP-1 a plasma half-life of ~1-2 minutes.",
+  "subject": {
+   "label": "dipeptidyl peptidase 4",
+   "ids": [
+    "UniProt:P27487",
+    "NCBIGene:1803",
+    "GO:0008239 dipeptidyl-peptidase activity",
+    "GO:0008233 peptidase activity"
+   ]
+  },
+  "relation": {
+   "label": "cleaves / inactivates",
+   "ids": [
+    "GO:0008239"
+   ]
+  },
+  "object": {
+   "label": "GLP-1",
+   "ids": [
+    "CHEBI:80270",
+    "UniProt:P01275",
+    "NCBIGene:2641"
+   ]
+  },
+  "pubtator3_relation_count": 446,
+  "pubtator3_pairs": {
+   "Gene|1803 -- Gene|2641": 446
+  },
+  "pubtator3_proxy_pairs": null,
+  "pubtator3_note": null,
+  "candidate_pmid_count": 748,
+  "candidate_kinds": {
+   "mechanistic": 304,
+   "other": 235,
+   "review": 160,
+   "rct": 38,
+   "observational": 11
+  },
+  "candidate_directions": {
+   "supports": 748
+  },
+  "evidence": [
+   {
+    "pmid": 15765627,
+    "year": 2002,
+    "journal": "Treatments in endocrinology",
+    "title": "Harnessing the therapeutic potential of glucagon-like peptide-1: a critical review.",
+    "quote": "The importance of DPP-IV for glucose control is illustrated by the phenotype of rodents with genetic inactivation of DPP-IV which exhibit reduced glycemic excursion and increased levels of circulating GLP-1 in vivo.",
+    "kind": "review",
+    "direction": "supports",
+    "rule": "DPP4 degrades GLP1",
+    "score": 8,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 25648286,
+    "year": 2015,
+    "journal": "Research in veterinary science",
+    "title": "Effects of the glucagon-like peptide-1 (GLP-1) analogues exenatide, exenatide extended-release, and of the dipeptidylpeptidase-4 (DPP-4) inhibitor sitagliptin on glucose metabolism in healthy cats.",
+    "quote": "Effects of the glucagon-like peptide-1 (GLP-1) analogues exenatide, exenatide extended-release, and of the dipeptidylpeptidase-4 (DPP-4) inhibitor sitagliptin on glucose metabolism in healthy cats.",
+    "kind": "mechanistic",
+    "direction": "supports",
+    "rule": "DPP4 degrades GLP1",
+    "score": 8,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 16385384,
+    "year": 2006,
+    "journal": "Diabetologia",
+    "title": "The metabolite generated by dipeptidyl-peptidase 4 metabolism of glucagon-like peptide-1 has no influence on plasma glucose levels in patients with type 2 diabetes.",
+    "quote": "AIM/HYPOTHESIS: Glucagon-like peptide-1 (GLP-1) is metabolised by the enzyme dipeptidyl-peptidase 4 (DPP-4), generating a metabolite with potential antagonistic properties.",
+    "kind": "rct",
+    "direction": "supports",
+    "rule": "DPP4 degrades GLP1",
+    "score": 7,
+    "pubtator3_relations": [
+     {
+      "relation": "associate",
+      "concept1": "Gene|1803",
+      "concept2": "Gene|2641"
+     }
+    ]
+   },
+   {
+    "pmid": 9792533,
+    "year": 1998,
+    "journal": "Diabetes",
+    "title": "Inhibition of the activity of dipeptidyl-peptidase IV as a treatment for type 2 diabetes.",
+    "quote": "The actions of DPP-IV, other than degradation of GLP-1, particularly in the immune system are discussed, but it is concluded that side effects of inhibition therapy are likely to be mild.",
+    "kind": "other",
+    "direction": "supports",
+    "rule": "DPP4 degrades GLP1",
+    "score": 5,
+    "pubtator3_relations": [
+     {
+      "relation": "associate",
+      "concept1": "Gene|1803",
+      "concept2": "Gene|2641"
+     }
+    ]
+   },
+   {
+    "pmid": 29850829,
+    "year": 2018,
+    "journal": "The Journal of clinical endocrinology and metabolism",
+    "title": "High DPP-4 Concentrations in Adolescents Are Associated With Low Intact GLP-1.",
+    "quote": "Context: Dipeptidyl peptidase 4 (DPP-4) metabolizes glucagon-like peptide-1 (GLP-1), and increased DPP4 levels are associated with obesity and visceral adiposity in adults.",
+    "kind": "observational",
+    "direction": "supports",
+    "rule": "DPP4 degrades GLP1",
+    "score": 5,
+    "pubtator3_relations": [
+     {
+      "relation": "negative_correlate",
+      "concept1": "Gene|1803",
+      "concept2": "Gene|2641"
+     }
+    ]
+   },
+   {
+    "pmid": 25364668,
+    "year": 2014,
+    "journal": "Indian journal of endocrinology and metabolism",
+    "title": "Dipeptidyl peptidase-4 inhibitors: Novel mechanism of actions.",
+    "quote": "DPP-4I also increase the half-life of GLP-1 to some extent by inhibiting their quick degradation by DPP enzyme ubiquitously present in the body.",
+    "kind": "review",
+    "direction": "supports",
+    "rule": "DPP4 degrades GLP1",
+    "score": 8,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 31743041,
+    "year": 2020,
+    "journal": "American journal of physiology. Endocrinology and metabolism",
+    "title": "Rapid hepatic metabolism blunts the endocrine action of portally infused GLP-1 in male rats.",
+    "quote": "These experiments were repeated with pharmacologic DPP4 inhibition to determine the effect of GLP-1 metabolism in the jugular and portal venous beds.",
+    "kind": "mechanistic",
+    "direction": "supports",
+    "rule": "DPP4 degrades GLP1",
+    "score": 8,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 35796651,
+    "year": 2022,
+    "journal": "Diabetes",
+    "title": "Endogenous Glucose-Dependent Insulinotropic Polypeptide Contributes to Sitagliptin-Mediated Improvement in \u03b2-Cell Function in Patients With Type 2 Diabetes.",
+    "quote": "Dipeptidyl peptidase 4 (DPP-4) degrades the incretin hormones glucagon-like peptide 1 and glucose-dependent insulinotropic polypeptide (GIP).",
+    "kind": "rct",
+    "direction": "supports",
+    "rule": "DPP4 degrades GLP1",
+    "score": 7,
+    "pubtator3_relations": [
+     {
+      "relation": "negative_correlate",
+      "concept1": "Gene|1803",
+      "concept2": "Gene|2641"
+     }
+    ]
+   },
+   {
+    "pmid": 16025254,
+    "year": 2005,
+    "journal": "Diabetologia",
+    "title": "Neutral endopeptidase 24.11 and dipeptidyl peptidase IV are both mediators of the degradation of glucagon-like peptide 1 in the anaesthetised pig.",
+    "quote": "Neutral endopeptidase 24.11 and dipeptidyl peptidase IV are both mediators of the degradation of glucagon-like peptide 1 in the anaesthetised pig.",
+    "kind": "other",
+    "direction": "supports",
+    "rule": "DPP4 degrades GLP1",
+    "score": 5,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 31830073,
+    "year": 2019,
+    "journal": "PloS one",
+    "title": "Type 2 diabetes care: Improvement by standardization at a diabetes rehabilitation clinic. An observational report.",
+    "quote": "Analysis of clinical and metabolic outcome after 3 weeks shows that simple standardization of and better adherence to treatment recommendations improved (p<0.0001) glucose (HbA1c -0.4\u00b10.4%) and lipid metabolism (LDL/HDL ratio, -0.58\u00b10.03), permitting a 39% reduction in insulin dosage, omission of insulin in 36/232 patients and omission of oral antidiabetic drugs (OADs) other than metformin and DPP4-inhibitors, while the use of GLP-1 analogs doubled to 5.2%.",
+    "kind": "observational",
+    "direction": "supports",
+    "rule": "DPP4 degrades GLP1",
+    "score": 3,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 19780719,
+    "year": 2009,
+    "journal": "Clinical science (London, England : 1979)",
+    "title": "Inhibitor selectivity in the clinical application of dipeptidyl peptidase-4 inhibition.",
+    "quote": "DPP-4 inhibitors (alogliptin, saxagliptin, sitagliptin and vildagliptin) correct the GLP-1 deficiency by blocking this degradation, prolonging the incretin effect and enhancing glucose homoeostasis.",
+    "kind": "review",
+    "direction": "supports",
+    "rule": "DPP4 degrades GLP1",
+    "score": 7,
+    "pubtator3_relations": [
+     {
+      "relation": "negative_correlate",
+      "concept1": "Gene|1803",
+      "concept2": "Gene|2641"
+     }
+    ]
+   },
+   {
+    "pmid": 32998057,
+    "year": 2020,
+    "journal": "Peptides",
+    "title": "Dipeptidyl peptidase-4 and GLP-1 interplay in STC-1 and GLUTag cell lines.",
+    "quote": "Dipeptidyl peptidase-4 (DPP4), a serine peptidase, cleaves N-terminal dipeptides of GLP-1, rendering it inactive and responsible for its short half-life.",
+    "kind": "mechanistic",
+    "direction": "supports",
+    "rule": "DPP4 degrades GLP1",
+    "score": 8,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 39661009,
+    "year": 2024,
+    "journal": "European journal of sport science",
+    "title": "Combined training and hormones/enzymes with insulinotropic actions in individuals with overweight and type 2 diabetes mellitus: A randomized controlled trial.",
+    "quote": "The incretins (glucose-dependent insulinotropic polypeptide [GIP] and glucagon-like peptide-1 [GLP-1]), along with amylin/islet amyloid polypeptide (IAPP) and insulin-degrading enzyme (IDE), are hormones/enzymes that have been pharmacological targets, such as dipeptidyl peptidase-4 (DPP-4) inhibitors, due to their insulinotropic actions.",
+    "kind": "rct",
+    "direction": "supports",
+    "rule": "DPP4 degrades GLP1",
+    "score": 7,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 26048091,
+    "year": 2015,
+    "journal": "Peptides",
+    "title": "Important species differences regarding lymph contribution to gut hormone responses.",
+    "quote": "The lymph draining the intestine may transport high levels of GLP-1 to the systemic circulation before it is metabolized by DPP-4.",
+    "kind": "other",
+    "direction": "supports",
+    "rule": "DPP4 degrades GLP1",
+    "score": 5,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 32553713,
+    "year": 2020,
+    "journal": "Pharmacological research",
+    "title": "Antiproteinuric effect of DPP-IV inhibitors in diabetic and non-diabetic kidney diseases.",
+    "quote": "In addition to demonstrating efficacy in glycemic control through inhibition of GLP-1 degradation, DPP-4 inhibitors (DPP-4is) seem to demonstrate pleiotropic effects, which also make them interesting in both diabetic and non-diabetic nephropathies, especially for their capacity of reducing proteinuria.",
+    "kind": "observational",
+    "direction": "supports",
+    "rule": "DPP4 degrades GLP1",
+    "score": 3,
+    "pubtator3_relations": []
+   }
+  ]
+ },
+ {
+  "id": "S5",
+  "statement": "Sitagliptin inhibits DPP4.",
+  "subject": {
+   "label": "sitagliptin",
+   "ids": [
+    "CHEBI:40237",
+    "MESH:D000068900"
+   ]
+  },
+  "relation": {
+   "label": "inhibits",
+   "ids": [
+    "CHEBI:68612 (role: EC 3.4.14.5 (dipeptidyl-peptidase IV) inhibitor)"
+   ]
+  },
+  "object": {
+   "label": "dipeptidyl peptidase 4",
+   "ids": [
+    "UniProt:P27487",
+    "NCBIGene:1803"
+   ]
+  },
+  "pubtator3_relation_count": 654,
+  "pubtator3_pairs": {
+   "Chemical|MESH:D000068900 -- Gene|1803": 654
+  },
+  "pubtator3_proxy_pairs": null,
+  "pubtator3_note": null,
+  "candidate_pmid_count": 1175,
+  "candidate_kinds": {
+   "mechanistic": 414,
+   "rct": 250,
+   "other": 310,
+   "review": 140,
+   "observational": 61
+  },
+  "candidate_directions": {
+   "supports": 1175
+  },
+  "evidence": [
+   {
+    "pmid": 31294088,
+    "year": 2019,
+    "journal": "Endocrinology, diabetes & metabolism",
+    "title": "Exercise and the dipeptidyl-peptidase IV inhibitor sitagliptin do not improve beta-cell function and glucose homeostasis in long-lasting type 1 diabetes-A randomised open-label study.",
+    "quote": "Exercise and the dipeptidyl-peptidase IV inhibitor sitagliptin do not improve beta-cell function and glucose homeostasis in long-lasting type 1 diabetes-A randomised open-label study.",
+    "kind": "rct",
+    "direction": "supports",
+    "rule": "sitagliptin inhibits DPP4",
+    "score": 9,
+    "pubtator3_relations": [
+     {
+      "relation": "negative_correlate",
+      "concept1": "Chemical|MESH:D000068900",
+      "concept2": "Gene|1803"
+     }
+    ]
+   },
+   {
+    "pmid": 25648286,
+    "year": 2015,
+    "journal": "Research in veterinary science",
+    "title": "Effects of the glucagon-like peptide-1 (GLP-1) analogues exenatide, exenatide extended-release, and of the dipeptidylpeptidase-4 (DPP-4) inhibitor sitagliptin on glucose metabolism in healthy cats.",
+    "quote": "Effects of the glucagon-like peptide-1 (GLP-1) analogues exenatide, exenatide extended-release, and of the dipeptidylpeptidase-4 (DPP-4) inhibitor sitagliptin on glucose metabolism in healthy cats.",
+    "kind": "mechanistic",
+    "direction": "supports",
+    "rule": "sitagliptin inhibits DPP4",
+    "score": 8,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 26873580,
+    "year": 2016,
+    "journal": "Biomedical chromatography : BMC",
+    "title": "A concise review of the bioanalytical methods for the quantitation of sitagliptin, an important dipeptidyl peptidase-4 (DPP4) inhibitor, utilized for the characterization of the drug.",
+    "quote": "Sitagliptin is the first approved orally active, potent, selective and nonpeptidomimetic DPP4 inhibitor.",
+    "kind": "review",
+    "direction": "supports",
+    "rule": "sitagliptin inhibits DPP4",
+    "score": 7,
+    "pubtator3_relations": [
+     {
+      "relation": "negative_correlate",
+      "concept1": "Chemical|MESH:D000068900",
+      "concept2": "Gene|1803"
+     }
+    ]
+   },
+   {
+    "pmid": 23166419,
+    "year": 2012,
+    "journal": "Journal of Korean medical science",
+    "title": "The dipeptidyl peptidase-4 inhibitor sitagliptin improves vascular endothelial function in type 2 diabetes.",
+    "quote": "The dipeptidyl peptidase-4 inhibitor sitagliptin improves vascular endothelial function in type 2 diabetes.",
+    "kind": "observational",
+    "direction": "supports",
+    "rule": "sitagliptin inhibits DPP4",
+    "score": 6,
+    "pubtator3_relations": [
+     {
+      "relation": "negative_correlate",
+      "concept1": "Chemical|MESH:D000068900",
+      "concept2": "Gene|1803"
+     }
+    ]
+   },
+   {
+    "pmid": 28931178,
+    "year": 2018,
+    "journal": "Experimental and clinical endocrinology & diabetes : official journal, German Society of Endocrinology [and] German Diabetes Association",
+    "title": "The Oral Dipeptidyl-Peptidase-4 Inhibitor Sitagliptin Increases Circulating Levels Of Stromal-Derived Factor-1 Alpha.",
+    "quote": "The Oral Dipeptidyl-Peptidase-4 Inhibitor Sitagliptin Increases Circulating Levels Of Stromal-Derived Factor-1 Alpha.",
+    "kind": "other",
+    "direction": "supports",
+    "rule": "sitagliptin inhibits DPP4",
+    "score": 6,
+    "pubtator3_relations": [
+     {
+      "relation": "negative_correlate",
+      "concept1": "Chemical|MESH:D000068900",
+      "concept2": "Gene|1803"
+     }
+    ]
+   },
+   {
+    "pmid": 39271520,
+    "year": 2024,
+    "journal": "Diabetologia",
+    "title": "The DPP-4 inhibitor sitagliptin improves glycaemic control and early-stage diabetic nephropathy in adolescents with type 1 diabetes using the MiniMed 780G advanced hybrid closed-loop system: a randomised controlled trial.",
+    "quote": "The DPP-4 inhibitor sitagliptin improves glycaemic control and early-stage diabetic nephropathy in adolescents with type 1 diabetes using the MiniMed 780G advanced hybrid closed-loop system: a randomised controlled trial.",
+    "kind": "rct",
+    "direction": "supports",
+    "rule": "sitagliptin inhibits DPP4",
+    "score": 9,
+    "pubtator3_relations": [
+     {
+      "relation": "negative_correlate",
+      "concept1": "Chemical|MESH:D000068900",
+      "concept2": "Gene|1803"
+     }
+    ]
+   },
+   {
+    "pmid": 30815539,
+    "year": 2018,
+    "journal": "Endocrinology, diabetes & metabolism",
+    "title": "A comparative study of the binding properties, dipeptidyl peptidase-4 (DPP-4) inhibitory activity and glucose-lowering efficacy of the DPP-4 inhibitors alogliptin, linagliptin, saxagliptin, sitagliptin and vildagliptin in mice.",
+    "quote": "A comparative study of the binding properties, dipeptidyl peptidase-4 (DPP-4) inhibitory activity and glucose-lowering efficacy of the DPP-4 inhibitors alogliptin, linagliptin, saxagliptin, sitagliptin and vildagliptin in mice.",
+    "kind": "mechanistic",
+    "direction": "supports",
+    "rule": "sitagliptin inhibits DPP4",
+    "score": 8,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 27630212,
+    "year": 2017,
+    "journal": "Diabetes care",
+    "title": "Pancreatic Safety of Sitagliptin in the TECOS Study.",
+    "quote": "OBJECTIVE: We evaluated the incidence of acute pancreatitis and pancreatic cancer in patients with type 2 diabetes and cardiovascular disease who were treated with sitagliptin, a dipeptidyl peptidase-4 inhibitor (DPP-4i).",
+    "kind": "review",
+    "direction": "supports",
+    "rule": "sitagliptin inhibits DPP4",
+    "score": 7,
+    "pubtator3_relations": [
+     {
+      "relation": "negative_correlate",
+      "concept1": "Chemical|MESH:D000068900",
+      "concept2": "Gene|1803"
+     }
+    ]
+   },
+   {
+    "pmid": 25667364,
+    "year": 2015,
+    "journal": "Endocrine practice : official journal of the American College of Endocrinology and the American Association of Clinical Endocrinologists",
+    "title": "DPP-4 INHIBITOR THERAPY IN PATIENTS AFTER PANCREATIC TRANSPLANT.",
+    "quote": "Sitagliptin, a DPP-4 inhibitor, was a commonly used therapy for hyperglycemia after PT due to its wide availability and coverage.",
+    "kind": "observational",
+    "direction": "supports",
+    "rule": "sitagliptin inhibits DPP4",
+    "score": 6,
+    "pubtator3_relations": [
+     {
+      "relation": "negative_correlate",
+      "concept1": "Chemical|MESH:D000068900",
+      "concept2": "Gene|1803"
+     }
+    ]
+   },
+   {
+    "pmid": 41395508,
+    "year": 2025,
+    "journal": "Small science",
+    "title": "Sustained-Release Sitagliptin Microneedles for Scar Prevention via Fibroblast-to-Adipocyte Conversion.",
+    "quote": "In KMSCs, sitagliptin promotes adipogenesis by inhibiting DPP4-mediated IGF1 truncation, thereby enhancing IGF1 signaling.",
+    "kind": "other",
+    "direction": "supports",
+    "rule": "sitagliptin inhibits DPP4",
+    "score": 6,
+    "pubtator3_relations": [
+     {
+      "relation": "negative_correlate",
+      "concept1": "Chemical|MESH:D000068900",
+      "concept2": "Gene|1803"
+     }
+    ]
+   },
+   {
+    "pmid": 16912128,
+    "year": 2006,
+    "journal": "The Journal of clinical endocrinology and metabolism",
+    "title": "Effect of single oral doses of sitagliptin, a dipeptidyl peptidase-4 inhibitor, on incretin and plasma glucose levels after an oral glucose tolerance test in patients with type 2 diabetes.",
+    "quote": "RESULTS: Sitagliptin dose-dependently inhibited plasma DPP-4 activity over 24 h, enhanced active GLP-1 and GIP levels, increased insulin/C-peptide, decreased glucagon, and reduced glycemic excursion after OGTTs administered at 2 and 24 h after single oral 25- or 200-mg doses of sitagliptin.",
+    "kind": "rct",
+    "direction": "supports",
+    "rule": "sitagliptin inhibits DPP4",
+    "score": 8,
+    "pubtator3_relations": [
+     {
+      "relation": "negative_correlate",
+      "concept1": "Chemical|MESH:D000068900",
+      "concept2": "Gene|1803"
+     }
+    ]
+   },
+   {
+    "pmid": 34493714,
+    "year": 2021,
+    "journal": "Cell death discovery",
+    "title": "Dipeptidyl peptidase-4 (DPP4) inhibitor sitagliptin alleviates liver inflammation of diabetic mice by acting as a ROS scavenger and inhibiting the NF\u03baB pathway.",
+    "quote": "Sitagliptin is an inhibitor of dipeptidyl peptidase-4 (DPP4, also known as CD26), which is clinically used for DM treatment.",
+    "kind": "mechanistic",
+    "direction": "supports",
+    "rule": "sitagliptin inhibits DPP4",
+    "score": 8,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 29098166,
+    "year": 2017,
+    "journal": "Journal of diabetes research",
+    "title": "Renoprotective Effects of the Dipeptidyl Peptidase-4 Inhibitor Sitagliptin: A Review in Type 2 Diabetes.",
+    "quote": "Renoprotective Effects of the Dipeptidyl Peptidase-4 Inhibitor Sitagliptin: A Review in Type 2 Diabetes.",
+    "kind": "review",
+    "direction": "supports",
+    "rule": "sitagliptin inhibits DPP4",
+    "score": 7,
+    "pubtator3_relations": [
+     {
+      "relation": "negative_correlate",
+      "concept1": "Chemical|MESH:D000068900",
+      "concept2": "Gene|1803"
+     }
+    ]
+   },
+   {
+    "pmid": 26517136,
+    "year": 2015,
+    "journal": "Journal of pharmacy & pharmaceutical sciences : a publication of the Canadian Society for Pharmaceutical Sciences, Societe canadienne des sciences pharmaceutiques",
+    "title": "Retrospective and Prospective Human Intravenous and Oral Pharmacokinetic Projection of Dipeptidyl peptidase-IV Inhibitors Using Simple Allometric Principles - Case Studies of ABT-279, ABT-341, Alogliptin, Carmegliptin, Sitagliptin and Vildagliptin.",
+    "quote": "Retrospective and Prospective Human Intravenous and Oral Pharmacokinetic Projection of Dipeptidyl peptidase-IV Inhibitors Using Simple Allometric Principles - Case Studies of ABT-279, ABT-341, Alogliptin, Carmegliptin, Sitagliptin and Vildagliptin.",
+    "kind": "observational",
+    "direction": "supports",
+    "rule": "sitagliptin inhibits DPP4",
+    "score": 5,
+    "pubtator3_relations": [
+     {
+      "relation": "negative_correlate",
+      "concept1": "Chemical|MESH:D000068900",
+      "concept2": "Gene|1803"
+     }
+    ]
+   },
+   {
+    "pmid": 24809328,
+    "year": 2014,
+    "journal": "Cell biochemistry and biophysics",
+    "title": "Understanding the molecular dynamics of type-2 diabetes drug target DPP-4 and its interaction with Sitagliptin and inhibitor Diprotin-A.",
+    "quote": "Understanding the molecular dynamics of type-2 diabetes drug target DPP-4 and its interaction with Sitagliptin and inhibitor Diprotin-A.",
+    "kind": "other",
+    "direction": "supports",
+    "rule": "sitagliptin inhibits DPP4",
+    "score": 5,
+    "pubtator3_relations": [
+     {
+      "relation": "associate",
+      "concept1": "Chemical|MESH:D000068900",
+      "concept2": "Gene|1803"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "S6",
+  "statement": "GLP1R agonism delays gastric emptying, which increases satiety / fullness.",
+  "subject": {
+   "label": "GLP-1 receptor agonists",
+   "ids": [
+    "CHEBI:71196",
+    "UniProt:P43220"
+   ]
+  },
+  "relation": {
+   "label": "negatively regulates",
+   "ids": [
+    "GO:0120061 negative regulation of gastric emptying"
+   ]
+  },
+  "object": {
+   "label": "gastric emptying -> satiety",
+   "ids": [
+    "GO:0120060 regulation of gastric emptying",
+    "HP:0033842 Early satiety"
+   ]
+  },
+  "pubtator3_relation_count": 0,
+  "pubtator3_pairs": {},
+  "pubtator3_proxy_pairs": null,
+  "pubtator3_note": "gastric emptying is not a PubTator3 entity type (Gene/Chemical/Disease/Variant only)",
+  "candidate_pmid_count": 676,
+  "candidate_kinds": {
+   "other": 267,
+   "mechanistic": 94,
+   "rct": 120,
+   "review": 159,
+   "observational": 36
+  },
+  "candidate_directions": {
+   "supports": 676
+  },
+  "evidence": [
+   {
+    "pmid": 15125467,
+    "year": 2004,
+    "journal": "Scandinavian journal of gastroenterology",
+    "title": "Glucagon-like peptide-2 inhibits antral emptying in man, but is not as potent as glucagon-like peptide-1.",
+    "quote": "The aim of this study was to determine to what extent GLP-2 alone or together with GLP-1 inhibits gastric emptying and the sensation of hunger in man.",
+    "kind": "rct",
+    "direction": "supports",
+    "rule": "GE delay + satiety/weight",
+    "score": 9,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 26366173,
+    "year": 2015,
+    "journal": "International journal of endocrinology",
+    "title": "Multiple Factors Related to the Secretion of Glucagon-Like Peptide-1.",
+    "quote": "Additionally, glucagon-like peptide-1 delays gastric emptying and suppresses appetite.",
+    "kind": "review",
+    "direction": "supports",
+    "rule": "GE delay + satiety/weight",
+    "score": 9,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 17065340,
+    "year": 2006,
+    "journal": "Diabetes",
+    "title": "Ghrelin attenuates the inhibitory effects of glucagon-like peptide-1 and peptide YY(3-36) on food intake and gastric emptying in rats.",
+    "quote": "Ghrelin stimulates, while glucagon-like peptide-1 (GLP-1) and peptide YY(3-36) [PYY(3-36)] inhibit, food intake and gastric emptying in rats.",
+    "kind": "mechanistic",
+    "direction": "supports",
+    "rule": "GE delay + satiety/weight",
+    "score": 8,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 38534127,
+    "year": 2024,
+    "journal": "The American journal of gastroenterology",
+    "title": "Glucagon-Like Peptide-1 Receptor Agonists Increase Solid Gastric Residue Rates on Upper Endoscopy Especially in Patients With Complicated Diabetes: A Case-Control Study.",
+    "quote": "INTRODUCTION: Glucagon-like peptide-1 receptor agonists (GLP-1RAs) prescribed for weight loss and type 2 diabetes mellitus (T2DM) can delay gastric emptying, but risk factors and impact on procedure outcomes remain unclear.",
+    "kind": "observational",
+    "direction": "supports",
+    "rule": "GE delay + satiety/weight",
+    "score": 7,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 16716964,
+    "year": 2006,
+    "journal": "Scandinavian journal of gastroenterology",
+    "title": "Inhibitory effect of GLP-1 on gastric motility persists after vagal deafferentation in pigs.",
+    "quote": "GLP-1 inhibits gastric emptying and reduces postprandial gastric secretion and may play a physiological regulatory role in controlling appetite and energy intake in humans.",
+    "kind": "other",
+    "direction": "supports",
+    "rule": "GE delay + satiety/weight",
+    "score": 6,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 20194711,
+    "year": 2010,
+    "journal": "The Journal of clinical endocrinology and metabolism",
+    "title": "Do the actions of glucagon-like peptide-1 on gastric emptying, appetite, and food intake involve release of amylin in humans?",
+    "quote": "RESULTS: In T1DM, gastric emptying, food intake, and appetite were reduced equally during low GLP-1 and amylin infusion compared with the saline infusion (P < 0.05).",
+    "kind": "rct",
+    "direction": "supports",
+    "rule": "GE delay + satiety/weight",
+    "score": 9,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 29617641,
+    "year": 2018,
+    "journal": "Cell metabolism",
+    "title": "Mechanisms of Action and Therapeutic Application of Glucagon-like Peptide-1.",
+    "quote": "GLP-1 also inhibits gastric emptying and food intake, actions maximizing nutrient absorption while limiting weight gain.",
+    "kind": "review",
+    "direction": "supports",
+    "rule": "GE delay + satiety/weight",
+    "score": 9,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 18669601,
+    "year": 2008,
+    "journal": "Endocrinology",
+    "title": "The glucagon-like peptide-1 receptor agonist oxyntomodulin enhances beta-cell function but does not inhibit gastric emptying in mice.",
+    "quote": "Glucagon-like peptide-1 (GLP-1), a 30-amino-acid peptide regulates glucose homeostasis via control of insulin and glucagon secretion and by inhibition of gastric emptying and food intake.",
+    "kind": "mechanistic",
+    "direction": "supports",
+    "rule": "GE delay + satiety/weight",
+    "score": 8,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 40330499,
+    "year": 2025,
+    "journal": "International journal of endocrinology",
+    "title": "The Effect of Exenatide on Platelets Ratio Index and Fibrosis-4 Index in Obese Patients With Diabetes Mellitus.",
+    "quote": "Glucagon-like peptide-1 (GLP-1) agonists are particularly preferred as antidiabetic medications for obese patients with type 2 diabetes because they not only help with glycemic control but also promote weight loss by slowing gastric emptying.",
+    "kind": "observational",
+    "direction": "supports",
+    "rule": "GE delay + satiety/weight",
+    "score": 7,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 22945360,
+    "year": 2012,
+    "journal": "Nature reviews. Endocrinology",
+    "title": "GLP-1 receptor agonists for individualized treatment of type 2 diabetes mellitus.",
+    "quote": "Additional effects of GLP-1 include retardation of gastric emptying, suppression of appetite and, potentially, inhibition of \u03b2-cell apoptosis.",
+    "kind": "other",
+    "direction": "supports",
+    "rule": "GE delay + satiety/weight",
+    "score": 6,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 25784665,
+    "year": 2015,
+    "journal": "Diabetes care",
+    "title": "Hyperglycemia potentiates the slowing of gastric emptying induced by exogenous GLP-1.",
+    "quote": "Exogenous GLP-1 also slows gastric emptying, leading to diminished glycemic excursions.",
+    "kind": "rct",
+    "direction": "supports",
+    "rule": "GE delay",
+    "score": 9,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 29728598,
+    "year": 2018,
+    "journal": "Nature reviews. Endocrinology",
+    "title": "Glucagon-like peptide 1 in health and disease.",
+    "quote": "GLP1 also delays gastric emptying and increases satiety.",
+    "kind": "review",
+    "direction": "supports",
+    "rule": "GE delay + satiety/weight",
+    "score": 9,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 27569528,
+    "year": 2016,
+    "journal": "Molecular and cellular endocrinology",
+    "title": "Exendin-4 decreases ghrelin levels through mTOR signaling.",
+    "quote": "Exendin-4 (EX-4), a long-acting glucagon-like peptide-1 receptor (GLP-1R) agonist, regulates feeding behavior through its ability to inhibit gastric emptying.",
+    "kind": "mechanistic",
+    "direction": "supports",
+    "rule": "GE delay + satiety/weight",
+    "score": 8,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 16492694,
+    "year": 2006,
+    "journal": "The Journal of clinical endocrinology and metabolism",
+    "title": "Effects of intravenous glucagon-like peptide-1 on gastric emptying and intragastric distribution in healthy subjects: relationships with postprandial glycemic and insulinemic responses.",
+    "quote": "CONTEXT: The inhibitory action of glucagon-like peptide-1 (GLP-1) on gastric emptying (GE) is likely to be important in mediating its effects on postprandial glycemia, appetite, and gastrointestinal symptoms.",
+    "kind": "observational",
+    "direction": "supports",
+    "rule": "GE delay + satiety/weight",
+    "score": 6,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 26469136,
+    "year": 2016,
+    "journal": "Endocrinology",
+    "title": "Neurotensin Is Coexpressed, Coreleased, and Acts Together With GLP-1 and PYY in Enteroendocrine Control of Metabolism.",
+    "quote": "Importantly, neurotensin acts synergistically, ie, more than additively together with GLP-1 and PYY to decrease palatable food intake and inhibit gastric emptying, but affects glucose homeostasis in a more complex manner.",
+    "kind": "other",
+    "direction": "supports",
+    "rule": "GE delay + satiety/weight",
+    "score": 6,
+    "pubtator3_relations": []
+   }
+  ]
+ },
+ {
+  "id": "S7",
+  "statement": "Semaglutide reduces appetite, energy intake and body weight in humans.",
+  "subject": {
+   "label": "semaglutide",
+   "ids": [
+    "CHEBI:167574",
+    "MESH:D000099194"
+   ]
+  },
+  "relation": {
+   "label": "reduces",
+   "ids": [
+    "CHEBI:50507 (role: appetite depressant)",
+    "GO:0032099"
+   ]
+  },
+  "object": {
+   "label": "appetite / energy intake / body weight (obesity)",
+   "ids": [
+    "HP:0004396 Poor appetite",
+    "MONDO:0011122 obesity disorder",
+    "HP:0001513 Obesity"
+   ]
+  },
+  "pubtator3_relation_count": 0,
+  "pubtator3_pairs": {
+   "Chemical|MESH:D000099194 -- Disease|MESH:D009765": 0,
+   "Chemical|MESH:D000099194 -- Disease|MESH:D015431": 0
+  },
+  "pubtator3_proxy_pairs": null,
+  "pubtator3_note": "no semaglutide concept in PubTator3 relations",
+  "candidate_pmid_count": 959,
+  "candidate_kinds": {
+   "rct": 245,
+   "review": 260,
+   "other": 234,
+   "observational": 188,
+   "mechanistic": 32
+  },
+  "candidate_directions": {
+   "supports": 959
+  },
+  "evidence": [
+   {
+    "pmid": 30122305,
+    "year": 2018,
+    "journal": "Lancet (London, England)",
+    "title": "Efficacy and safety of semaglutide compared with liraglutide and placebo for weight loss in patients with obesity: a randomised, double-blind, placebo and active controlled, dose-ranging, phase 2 trial.",
+    "quote": "Mean bodyweight reductions for 0\u00b72 mg or more of semaglutide versus liraglutide were all significant (-13\u00b78% to -11\u00b72% vs -7\u00b78%).",
+    "kind": "rct",
+    "direction": "supports",
+    "rule": "sema reduces appetite/weight",
+    "score": 9,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 38599612,
+    "year": 2024,
+    "journal": "Experimental and clinical endocrinology & diabetes : official journal, German Society of Endocrinology [and] German Diabetes Association",
+    "title": "Efficacy and Safety of Once-Weekly Subcutaneous Semaglutide in Overweight or Obese Adults: A Systematic Review with Meta-Analysis.",
+    "quote": "CONCLUSION: This up-to-date systematic review highlights that once-weekly semaglutide treatment resulted in clinically important weight loss, becoming a promising adjuvant therapy for obesity.",
+    "kind": "review",
+    "direction": "supports",
+    "rule": "sema reduces appetite/weight",
+    "score": 9,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 38315575,
+    "year": 2024,
+    "journal": "Clinical science (London, England : 1979)",
+    "title": "Beneficial effects of simultaneously targeting calorie intake and calorie efficiency in diet-induced obese mice.",
+    "quote": "Semaglutide is an anti-diabetes and weight loss drug that decreases food intake, slows gastric emptying, and increases insulin secretion.",
+    "kind": "mechanistic",
+    "direction": "supports",
+    "rule": "sema reduces appetite/weight",
+    "score": 8,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 36857477,
+    "year": 2023,
+    "journal": "Diabetes care",
+    "title": "Tirzepatide Reduces Appetite, Energy Intake, and Fat Mass in People With Type 2 Diabetes.",
+    "quote": "Tirzepatide and semaglutide significantly reduced appetite versus placebo.",
+    "kind": "other",
+    "direction": "supports",
+    "rule": "sema reduces appetite/weight",
+    "score": 7,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 37593896,
+    "year": 2023,
+    "journal": "Obesity (Silver Spring, Md.)",
+    "title": "Medications and conditions associated with weight loss in patients prescribed semaglutide based on real-world data.",
+    "quote": "The aim of this study was to evaluate weight loss and the influence of clinical factors on semaglutide patients in real-world clinical practice.",
+    "kind": "observational",
+    "direction": "supports",
+    "rule": "sema reduces appetite/weight",
+    "score": 7,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 30865526,
+    "year": 2019,
+    "journal": "Endocrine practice : official journal of the American College of Endocrinology and the American Association of Clinical Endocrinologists",
+    "title": "GREATER COMBINED REDUCTIONS IN HbA1C \u22651.0% AND WEIGHT \u22655.0% WITH SEMAGLUTIDE VERSUS COMPARATORS IN TYPE 2 DIABETES.",
+    "quote": "In the global SUSTAIN clinical trial program, semaglutide demonstrated superior glycated hemoglobin (HbA1c) and body weight reductions versus comparators.",
+    "kind": "rct",
+    "direction": "supports",
+    "rule": "sema reduces appetite/weight",
+    "score": 9,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 39037780,
+    "year": 2024,
+    "journal": "JAMA",
+    "title": "Medications for Obesity: A Review.",
+    "quote": "Nutrient-stimulated hormone-based medications, such as liraglutide, semaglutide, and tirzepatide, mimic the actions of enteropancreatic hormones that modify central appetite regulation and provide multiple cardiometabolic weight-loss benefits.",
+    "kind": "review",
+    "direction": "supports",
+    "rule": "sema reduces appetite/weight",
+    "score": 9,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 40898674,
+    "year": 2025,
+    "journal": "Obesity (Silver Spring, Md.)",
+    "title": "Efficacy of Semaglutide as Adjuvant Treatment for Sleeve Gastrectomy: A Proof-of-Concept Study in Mice.",
+    "quote": "Food intake was only significantly decreased in the semaglutide group.",
+    "kind": "mechanistic",
+    "direction": "supports",
+    "rule": "sema reduces appetite/weight",
+    "score": 8,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 30938762,
+    "year": 2019,
+    "journal": "The Journal of clinical endocrinology and metabolism",
+    "title": "Reductions in Insulin Resistance are Mediated Primarily via Weight Loss in Subjects With Type 2 Diabetes on Semaglutide.",
+    "quote": "The effect on IR was primarily mediated by weight loss (70% to 80% and 34% to 94%, for semaglutide 0.5 mg and 1.0 mg, respectively, vs comparator).",
+    "kind": "other",
+    "direction": "supports",
+    "rule": "sema reduces appetite/weight",
+    "score": 6,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 37927153,
+    "year": 2024,
+    "journal": "Obesity (Silver Spring, Md.)",
+    "title": "Semaglutide 2.4 mg/wk for weight loss in patients with severe obesity and with or without a history of bariatric surgery.",
+    "quote": "RESULTS: Semaglutide treatment resulted in significant 9.1% weight loss in the BS+ group, with no significant difference in weight loss between the BS+ and BS- groups.",
+    "kind": "observational",
+    "direction": "supports",
+    "rule": "sema reduces appetite/weight",
+    "score": 7,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 31186120,
+    "year": 2019,
+    "journal": "Lancet (London, England)",
+    "title": "Oral semaglutide versus subcutaneous liraglutide and placebo in type 2 diabetes (PIONEER 4): a randomised, double-blind, phase 3a trial.",
+    "quote": "INTERPRETATION: Oral semaglutide was non-inferior to subcutaneous liraglutide and superior to placebo in decreasing HbA1c, and superior in decreasing bodyweight compared with both liraglutide and placebo at week 26.",
+    "kind": "rct",
+    "direction": "supports",
+    "rule": "sema reduces appetite/weight",
+    "score": 9,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 40184508,
+    "year": 2025,
+    "journal": "Endocrinology, diabetes & metabolism",
+    "title": "Tirzepatide Versus Semaglutide on Weight Loss in Type 2 Diabetes Patients: A Systematic Review and Meta-Analysis of Direct Comparative Studies.",
+    "quote": "This systematic review compares two prevalent GLP-1RAs, tirzepatide and semaglutide, with their weight loss effects and rates of adverse events (AEs).",
+    "kind": "review",
+    "direction": "supports",
+    "rule": "sema reduces appetite/weight",
+    "score": 9,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 41094027,
+    "year": 2026,
+    "journal": "Diabetologia",
+    "title": "Pre-stroke weight loss by glucagon-like peptide 1 receptor and neuropeptide Y receptor Y2 activation improves post-stroke functional recovery in male diabetic mouse models.",
+    "quote": "Weight loss was induced by 4-week administration of semaglutide and/or BI8271.",
+    "kind": "mechanistic",
+    "direction": "supports",
+    "rule": "sema reduces appetite/weight",
+    "score": 8,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 34622228,
+    "year": 2021,
+    "journal": "Cell reports. Medicine",
+    "title": "Levels of circulating semaglutide determine reductions in HbA1c and body weight in people with type 2 diabetes.",
+    "quote": "Increased body weight is the most important variable associated with reduced semaglutide exposure for both formulations.",
+    "kind": "other",
+    "direction": "supports",
+    "rule": "sema reduces appetite/weight",
+    "score": 6,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 38389719,
+    "year": 2024,
+    "journal": "JGH open : an open access journal of gastroenterology and hepatology",
+    "title": "Semaglutide improves metabolic dysfunction-associated steatohepatitis: A 10-year retrospective study.",
+    "quote": "We aim to assess the impact of semaglutide on MASH in relation to weight loss.",
+    "kind": "observational",
+    "direction": "supports",
+    "rule": "sema reduces appetite/weight",
+    "score": 7,
+    "pubtator3_relations": []
+   }
+  ]
+ },
+ {
+  "id": "S8",
+  "statement": "DPP4 inhibitors (e.g. sitagliptin) have little or no effect on appetite or body weight (weight-neutral), because they raise active GLP-1 only ~2-3 fold.",
+  "subject": {
+   "label": "DPP4 inhibitors / sitagliptin",
+   "ids": [
+    "CHEBI:68612",
+    "CHEBI:40237",
+    "MESH:D000068900"
+   ]
+  },
+  "relation": {
+   "label": "does not (substantially) reduce",
+   "ids": []
+  },
+  "object": {
+   "label": "appetite / body weight",
+   "ids": [
+    "GO:0007631",
+    "HP:0001513"
+   ]
+  },
+  "pubtator3_relation_count": 116,
+  "pubtator3_pairs": {
+   "Chemical|MESH:D000068900 -- Disease|MESH:D009765": 71,
+   "Chemical|MESH:D000068900 -- Disease|MESH:D015431": 44,
+   "Chemical|MESH:D000068900 -- Disease|MESH:D001835": 1
+  },
+  "pubtator3_proxy_pairs": null,
+  "pubtator3_note": null,
+  "candidate_pmid_count": 438,
+  "candidate_kinds": {
+   "mechanistic": 82,
+   "other": 133,
+   "review": 91,
+   "rct": 97,
+   "observational": 35
+  },
+  "candidate_directions": {
+   "contradicts": 229,
+   "supports": 209
+  },
+  "evidence": [
+   {
+    "pmid": 32308645,
+    "year": 2020,
+    "journal": "Frontiers in endocrinology",
+    "title": "GLP-1 Analogs and DPP-4 Inhibitors in Type 2 Diabetes Therapy: Review of Head-to-Head Clinical Trials.",
+    "quote": "These studies have generally demonstrated that the GLP-1 RA provided superior glycemic control and weight loss relative to the DPP-4 inhibitor.",
+    "kind": "review",
+    "direction": "contradicts",
+    "rule": "DPP4i reduces weight/appetite (contra)",
+    "score": 8,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 17192459,
+    "year": 2007,
+    "journal": "Diabetes",
+    "title": "Liraglutide, a long-acting glucagon-like peptide-1 analog, reduces body weight and food intake in obese candy-fed rats, whereas a dipeptidyl peptidase-IV inhibitor, vildagliptin, does not.",
+    "quote": "Liraglutide, a long-acting glucagon-like peptide-1 analog, reduces body weight and food intake in obese candy-fed rats, whereas a dipeptidyl peptidase-IV inhibitor, vildagliptin, does not.",
+    "kind": "mechanistic",
+    "direction": "supports",
+    "rule": "DPP4i weight/appetite neutral",
+    "score": 7,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 18628530,
+    "year": 2008,
+    "journal": "The Journal of clinical endocrinology and metabolism",
+    "title": "Incretin-based therapies in type 2 diabetes mellitus.",
+    "quote": "Exenatide and liraglutide cause weight loss, whereas sitagliptin and vildagliptin do not.",
+    "kind": "review",
+    "direction": "supports",
+    "rule": "DPP4i weight/appetite neutral",
+    "score": 7,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 24347054,
+    "year": 2014,
+    "journal": "American journal of physiology. Endocrinology and metabolism",
+    "title": "Dipeptidyl peptidase IV inhibitor lowers PPAR\u03b3 agonist-induced body weight gain by affecting food intake, fat mass, and beige/brown fat but not fluid retention.",
+    "quote": "Dipeptidyl peptidase IV inhibitor lowers PPAR\u03b3 agonist-induced body weight gain by affecting food intake, fat mass, and beige/brown fat but not fluid retention.",
+    "kind": "mechanistic",
+    "direction": "contradicts",
+    "rule": "DPP4i reduces weight/appetite (contra)",
+    "score": 7,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 25664602,
+    "year": 2015,
+    "journal": "The Journal of clinical endocrinology and metabolism",
+    "title": "Effect of vildagliptin on hepatic steatosis.",
+    "quote": "CONCLUSIONS: This study demonstrates that the dipeptidyl-peptidase-4 inhibitor vildagliptin brings about a clinically significant decrease in hepatic triglyceride levels during 6 months of therapy unrelated to change in body weight.",
+    "kind": "rct",
+    "direction": "contradicts",
+    "rule": "DPP4i reduces weight/appetite (contra)",
+    "score": 7,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 28550195,
+    "year": 2017,
+    "journal": "Diabetes care",
+    "title": "Dipeptidyl Peptidase 4 Inhibition Stimulates Distal Tubular Natriuresis and Increases in Circulating SDF-1\u03b11-67 in Patients With Type 2 Diabetes.",
+    "quote": "Because of the distal location of the natriuretic effect, DPP-4 inhibition does not affect tubuloglomerular feedback or impair renal hemodynamic function, findings relevant to using DPP-4 inhibitors for treating type 2 diabetes.",
+    "kind": "rct",
+    "direction": "supports",
+    "rule": "DPP4i weight/appetite neutral",
+    "score": 7,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 28595617,
+    "year": 2017,
+    "journal": "BMC endocrine disorders",
+    "title": "Quality measure and weight loss assessment in patients with type 2 diabetes mellitus treated with canagliflozin or dipeptidyl peptidase-4 inhibitors.",
+    "quote": "Quality measure and weight loss assessment in patients with type 2 diabetes mellitus treated with canagliflozin or dipeptidyl peptidase-4 inhibitors.",
+    "kind": "observational",
+    "direction": "contradicts",
+    "rule": "DPP4i reduces weight/appetite (contra)",
+    "score": 5,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 20046651,
+    "year": 2009,
+    "journal": "Journal of diabetes science and technology",
+    "title": "Treatment with sitagliptin or metformin does not increase body weight despite predicted reductions in urinary glucose excretion.",
+    "quote": "Weight loss observed in response to metformin and weight maintenance observed in response to dipeptidyl peptidase-4 inhibitors may result from an increase in satiety, energy expenditure, or both.",
+    "kind": "other",
+    "direction": "contradicts",
+    "rule": "DPP4i reduces weight/appetite (contra)",
+    "score": 4,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 23565471,
+    "year": 2012,
+    "journal": "Indian journal of endocrinology and metabolism",
+    "title": "Diabetes mellitus in the young: Gliptins or sulfonylurea after metformin?",
+    "quote": "RESULTS: Sitagliptin with metfromin and metfromin alone group fared better than the glimepiride group for glycemic control, lesser treatment failures, and less weight gain.",
+    "kind": "observational",
+    "direction": "supports",
+    "rule": "DPP4i weight/appetite neutral",
+    "score": 4,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 26051044,
+    "year": 2015,
+    "journal": "The lancet. Diabetes & endocrinology",
+    "title": "New forms of insulin and insulin therapies for the treatment of type 2 diabetes.",
+    "quote": "Availability of newer glucose-lowering drugs (such as glucagon-like peptide-1 receptor agonists, dipeptidyl peptidase-4 inhibitors, and sodium-glucose co-transporter-2 inhibitors) also offers the opportunity for combination treatment; the results of the first trials in this area of research suggest that such treatment might lead to use of reduced insulin doses, less weight gain, and fewer hypoglycaemic episodes than insulin treatment alone.",
+    "kind": "other",
+    "direction": "supports",
+    "rule": "DPP4i weight/appetite neutral",
+    "score": 4,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 26894277,
+    "year": 2016,
+    "journal": "Diabetologia",
+    "title": "Improved glucose regulation in type 2 diabetic patients with DPP-4 inhibitors: focus on alpha and beta cell function and lipid metabolism.",
+    "quote": "DPP-4 inhibitors reduce both fasting and postprandial plasma glucose levels, resulting in reduced HbA1c with low risk for hypoglycaemia and weight gain.",
+    "kind": "review",
+    "direction": "contradicts",
+    "rule": "DPP4i reduces weight/appetite (contra)",
+    "score": 7,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 23033273,
+    "year": 2012,
+    "journal": "Endocrinology",
+    "title": "Suppression of food intake by glucagon-like peptide-1 receptor agonists: relative potencies and role of dipeptidyl peptidase-4.",
+    "quote": "Despite 5-fold greater postprandial GLP-1 in these animals, vildagliptin did not affect food intake in Roux-en-Y gastric bypass rats.",
+    "kind": "mechanistic",
+    "direction": "supports",
+    "rule": "DPP4i weight/appetite neutral",
+    "score": 7,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 19444259,
+    "year": 2009,
+    "journal": "Nature reviews. Endocrinology",
+    "title": "Incretin-based therapies for type 2 diabetes mellitus.",
+    "quote": "These agents regulate glucose metabolism through multiple mechanisms, their use is associated with low rates of hypoglycemia, and they either do not affect body weight (dipeptidyl peptidase 4 inhibitors), or promote weight loss (glucagon-like peptide-1 receptor agonists).",
+    "kind": "review",
+    "direction": "supports",
+    "rule": "DPP4i weight/appetite neutral",
+    "score": 7,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 28292762,
+    "year": 2017,
+    "journal": "American journal of physiology. Endocrinology and metabolism",
+    "title": "GPR40 reduces food intake and body weight through GLP-1.",
+    "quote": "Chronic treatment with a GPR40 AgoPAM, in combination with a dipeptidyl peptidase IV inhibitor, synergistically decreased food intake and body weight in the mouse.",
+    "kind": "mechanistic",
+    "direction": "contradicts",
+    "rule": "DPP4i reduces weight/appetite (contra)",
+    "score": 6,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 28385659,
+    "year": 2017,
+    "journal": "The lancet. Diabetes & endocrinology",
+    "title": "Efficacy and safety of once-weekly semaglutide versus once-daily sitagliptin as an add-on to metformin, thiazolidinediones, or both, in patients with type 2 diabetes (SUSTAIN 2): a 56-week, double-blind, phase 3a, randomised trial.",
+    "quote": "INTERPRETATION: Once-weekly semaglutide was superior to sitagliptin at improving glycaemic control and reducing bodyweight in participants with type 2 diabetes on metformin, thiazolidinediones, or both, and had a similar safety profile to that of other GLP-1 receptor agonists.",
+    "kind": "rct",
+    "direction": "contradicts",
+    "rule": "DPP4i reduces weight/appetite (contra)",
+    "score": 7,
+    "pubtator3_relations": []
+   }
+  ]
+ },
+ {
+  "id": "S9a",
+  "statement": "Competing hypothesis: appetite/weight reduction with GLP-1RAs is partly or mostly due to nausea / visceral malaise / aversion.",
+  "subject": {
+   "label": "GLP-1 receptor agonists",
+   "ids": [
+    "CHEBI:71196"
+   ]
+  },
+  "relation": {
+   "label": "causes (aversive)",
+   "ids": []
+  },
+  "object": {
+   "label": "nausea -> reduced intake",
+   "ids": [
+    "HP:0002018 Nausea"
+   ]
+  },
+  "pubtator3_relation_count": 241,
+  "pubtator3_pairs": {
+   "Chemical|MESH:D000077270 -- Disease|MESH:D009325": 143,
+   "Disease|MESH:D009325 -- Gene|2740": 98
+  },
+  "pubtator3_proxy_pairs": null,
+  "pubtator3_note": null,
+  "candidate_pmid_count": 62,
+  "candidate_kinds": {
+   "mechanistic": 23,
+   "other": 8,
+   "review": 12,
+   "rct": 17,
+   "observational": 2
+  },
+  "candidate_directions": {
+   "nausea_hypothesis": 62
+  },
+  "evidence": [
+   {
+    "pmid": 26656289,
+    "year": 2016,
+    "journal": "The lancet. Diabetes & endocrinology",
+    "title": "Efficacy and safety of liraglutide for overweight adult patients with type 1 diabetes and insufficient glycaemic control (Lira-1): a randomised, double-blind, placebo-controlled trial.",
+    "quote": "Liraglutide was associated with more frequent nausea (29 [58%] patients with liraglutide vs five [10%] with placebo), dyspepsia (11 [22%] patients with liraglutide vs one [2%] with placebo), diarrhoea (ten [20%] patients with liraglutide vs one [2%] with placebo), decreased appetite (seven patients [14%] with liraglutide vs none with placebo), and vomiting (seven [14%] patients with liraglutide vs one [2%] with placebo).",
+    "kind": "rct",
+    "direction": "nausea_hypothesis",
+    "rule": "nausea/aversion mediates intake/weight",
+    "score": 7,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 37561012,
+    "year": 2023,
+    "journal": "The Journal of clinical endocrinology and metabolism",
+    "title": "Glucagon-Like Peptide 1 Analogues as Adjunctive Therapy for Patients With Type 1 Diabetes: An Updated Systematic Review and Meta-analysis.",
+    "quote": "Liraglutide dose was the greatest predictor of greater average weight loss and TDI decrease but was associated with higher odds of nausea (OR 6.5; 95% CI, 5.0-8.4) and ketosis (OR 1.8; 95% CI, 1.1-2.8).",
+    "kind": "review",
+    "direction": "nausea_hypothesis",
+    "rule": "nausea/aversion mediates intake/weight",
+    "score": 7,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 37729419,
+    "year": 2023,
+    "journal": "Science advances",
+    "title": "The locus coeruleus contributes to the anorectic, nausea, and autonomic physiological effects of glucagon-like peptide-1.",
+    "quote": "Increasing the therapeutic potential and reducing the side effects of U.S. Food and Drug Administration-approved glucagon-like peptide-1 receptor (GLP-1R) agonists used to treat obesity require complete characterization of the central mechanisms that mediate both the food intake-suppressive and illness-like effects of GLP-1R signaling.",
+    "kind": "mechanistic",
+    "direction": "nausea_hypothesis",
+    "rule": "nausea/aversion mediates intake/weight",
+    "score": 7,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 38390214,
+    "year": 2024,
+    "journal": "Frontiers in endocrinology",
+    "title": "Psychiatric adverse events associated with GLP-1 receptor agonists: a real-world pharmacovigilance study based on the FDA Adverse Event Reporting System database.",
+    "quote": "Moreover, eight categories of psychiatric AEs, namely, nervousness (ROR = 1.97, 95% CI = 1.85-2.11), stress (ROR = 1.28, 95% CI = 1.19-1.38), eating disorder (ROR = 1.57, 95% CI = 1.40-1.77), fear of injection (ROR = 1.96, 95% CI = 1.60-2.40), sleep disorder due to general medical condition-insomnia type (ROR = 2.01, 95% CI = 1.60-2.52), binge eating (ROR = 2.70, 95% CI = 1.75-4.16), fear of eating (ROR 3.35, 95% CI = 1.65-6.78), and self-induced vomiting (ROR = 3.77, 95% CI = 1.77-8.03), were defined as GLP-1 RA-related psychiatric AEs through disproportionality analysis.",
+    "kind": "observational",
+    "direction": "nausea_hypothesis",
+    "rule": "nausea/aversion mediates intake/weight",
+    "score": 5,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 26503455,
+    "year": 2016,
+    "journal": "Scandinavian journal of gastroenterology",
+    "title": "Peptide YY3-36 and glucagon-like peptide-1 in functional dyspepsia. Secretion and role in symptom generation.",
+    "quote": "Neither GLP-1 nor PYY3-36 secretion is altered in functional dyspepsia, but postprandial GLP-1 secretion seems to correlate with nausea and PYY3-36 to the sensation of fullness, and therefore, these hormones might be involved in symptom generation.",
+    "kind": "other",
+    "direction": "nausea_hypothesis",
+    "rule": "nausea/aversion mediates intake/weight",
+    "score": 4,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 26831302,
+    "year": 2016,
+    "journal": "Diabetologia",
+    "title": "GLP-1 receptors exist in the parietal cortex, hypothalamus and medulla of human brains and the GLP-1 analogue liraglutide alters brain activity related to highly desirable food cues in individuals with diabetes: a crossover, randomised, placebo-controlled trial.",
+    "quote": "Furthermore, we showed that increased ratings of hunger and appetite correlated with increased brain activation in response to highly desirable food cues while on liraglutide, while ratings of nausea correlated with decreased brain activation.",
+    "kind": "rct",
+    "direction": "nausea_hypothesis",
+    "rule": "nausea/aversion mediates intake/weight",
+    "score": 7,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 39764279,
+    "year": 2024,
+    "journal": "Journal of clinical & translational endocrinology",
+    "title": "Glucagon-like peptide1 receptor agonist treatment of cystic fibrosis-related diabetes complicated by obesity: A cases series and literature review.",
+    "quote": "Overall, GLP-1 RA was well tolerated in this case series; one individual discontinued the medication after two years of therapy due to poor appetite and nausea.",
+    "kind": "review",
+    "direction": "nausea_hypothesis",
+    "rule": "nausea/aversion mediates intake/weight",
+    "score": 7,
+    "pubtator3_relations": [
+     {
+      "relation": "stimulate",
+      "concept1": "Disease|MESH:D009325",
+      "concept2": "Gene|2740"
+     }
+    ]
+   },
+   {
+    "pmid": 26522737,
+    "year": 2016,
+    "journal": "Physiology & behavior",
+    "title": "Hindbrain GLP-1 receptor mediation of cisplatin-induced anorexia and nausea.",
+    "quote": "As the hindbrain glucagon-like peptide-1 (GLP-1) system contributes to energy balance and mediates aversive and stressful stimuli, here we examine the hypothesis that hindbrain GLP-1 signaling mediates aspects of chemotherapy-induced nausea and reductions in feeding behavior in rats.",
+    "kind": "mechanistic",
+    "direction": "nausea_hypothesis",
+    "rule": "nausea/aversion mediates intake/weight",
+    "score": 6,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 39343660,
+    "year": 2025,
+    "journal": "Surgery for obesity and related diseases : official journal of the American Society for Bariatric Surgery",
+    "title": "Evaluation of gastric content in fasting patient during semaglutide use: an observational study.",
+    "quote": "Semaglutide is also associated with increased gastrointestinal symptoms such as loss of appetite, early satiety, gastric fullness, and nausea.",
+    "kind": "observational",
+    "direction": "nausea_hypothesis",
+    "rule": "nausea/aversion mediates intake/weight",
+    "score": 3,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 34622228,
+    "year": 2021,
+    "journal": "Cell reports. Medicine",
+    "title": "Levels of circulating semaglutide determine reductions in HbA1c and body weight in people with type 2 diabetes.",
+    "quote": "We demonstrate that nearly identical exposure-response pharmacodynamic relationships are determined by plasma semaglutide levels achieved through oral versus injectable administration for changes in HbA1c, body weight, biomarkers of cardiovascular risk, and AEs such as nausea and vomiting.",
+    "kind": "other",
+    "direction": "nausea_hypothesis",
+    "rule": "nausea/aversion mediates intake/weight",
+    "score": 4,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 41525326,
+    "year": 2026,
+    "journal": "European journal of endocrinology",
+    "title": "Effects of GLP-1 Receptor Agonists on Copeptin in Euvolemic Participants.",
+    "quote": "Treatment-induced changes in copeptin were not significantly correlated with GLP-1-mediated reductions in blood pressure, BMI, or incidence of nausea.",
+    "kind": "rct",
+    "direction": "nausea_hypothesis",
+    "rule": "nausea/aversion mediates intake/weight",
+    "score": 7,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 17940423,
+    "year": 2007,
+    "journal": "Current opinion in endocrinology, diabetes, and obesity",
+    "title": "Glucagon-like peptide 1: continued advances, new targets and expanding promise as a model therapeutic.",
+    "quote": "Glucagon-like peptide 1 can reduce food intake, mediate toxic illness responses and control muscle and liver glucose disposal.",
+    "kind": "review",
+    "direction": "nausea_hypothesis",
+    "rule": "nausea/aversion mediates intake/weight",
+    "score": 6,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 28456436,
+    "year": 2017,
+    "journal": "Neuropeptides",
+    "title": "Centrally located GLP-1 receptors modulate gastric slow waves and cardiovascular function in ferrets consistent with the induction of nausea.",
+    "quote": "GLP-1 receptors are distributed widely in the brain, where they contribute to mechanisms of emesis, reduced appetite and aversion, but it is not known if these centrally located receptors also contribute to a modulation of gastric slow wave activity, which is linked causally to nausea.",
+    "kind": "mechanistic",
+    "direction": "nausea_hypothesis",
+    "rule": "nausea/aversion mediates intake/weight",
+    "score": 6,
+    "pubtator3_relations": [
+     {
+      "relation": "stimulate",
+      "concept1": "Disease|MESH:D009325",
+      "concept2": "Gene|2740"
+     },
+     {
+      "relation": "cause",
+      "concept1": "Chemical|MESH:D000077270",
+      "concept2": "Disease|MESH:D009325"
+     }
+    ]
+   },
+   {
+    "pmid": 38524636,
+    "year": 2024,
+    "journal": "Frontiers in endocrinology",
+    "title": "Semaglutide as a potential therapeutic alternative for HNF1B-MODY: a case study.",
+    "quote": "However, the semaglutide treatment was halted after 4 months due to side effects such as nausea, vomiting, and reduced appetite.",
+    "kind": "other",
+    "direction": "nausea_hypothesis",
+    "rule": "nausea/aversion mediates intake/weight",
+    "score": 4,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 20332351,
+    "year": 2010,
+    "journal": "Diabetes care",
+    "title": "Switching to once-daily liraglutide from twice-daily exenatide further improves glycemic control in patients with type 2 diabetes using oral agents.",
+    "quote": "RESULTS: Switching from exenatide to liraglutide further and significantly reduced A1C (0.32%), fasting plasma glucose (0.9 mmol/l), body weight (0.9 kg), and systolic blood pressure (3.8 mmHg) with minimal minor hypoglycemia (1.30 episodes/patient-year) or nausea (3.2%).",
+    "kind": "rct",
+    "direction": "nausea_hypothesis",
+    "rule": "nausea/aversion mediates intake/weight",
+    "score": 6,
+    "pubtator3_relations": [
+     {
+      "relation": "cause",
+      "concept1": "Chemical|MESH:D000077270",
+      "concept2": "Disease|MESH:D009325"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "S9b",
+  "statement": "Counter-hypothesis: GLP-1RA effects on intake/weight are largely independent of nausea, reflecting direct satiety signalling.",
+  "subject": {
+   "label": "GLP-1 receptor agonists",
+   "ids": [
+    "CHEBI:71196"
+   ]
+  },
+  "relation": {
+   "label": "reduces, independent of",
+   "ids": [
+    "GO:0032099"
+   ]
+  },
+  "object": {
+   "label": "appetite, independent of nausea",
+   "ids": [
+    "HP:0002018 Nausea",
+    "GO:0007631"
+   ]
+  },
+  "pubtator3_relation_count": 0,
+  "pubtator3_pairs": {},
+  "pubtator3_proxy_pairs": null,
+  "pubtator3_note": null,
+  "candidate_pmid_count": 14,
+  "candidate_kinds": {
+   "mechanistic": 8,
+   "other": 3,
+   "rct": 2,
+   "review": 1
+  },
+  "candidate_directions": {
+   "satiety_hypothesis": 14
+  },
+  "evidence": [
+   {
+    "pmid": 22040840,
+    "year": 2012,
+    "journal": "Diabetes care",
+    "title": "Short-term exenatide treatment leads to significant weight loss in a subset of obese women without diabetes.",
+    "quote": "Subjects experienced more nausea during exenatide treatment compared with placebo, but the severity decreased over time and did not correlate with weight loss.",
+    "kind": "rct",
+    "direction": "satiety_hypothesis",
+    "rule": "intake/weight effect independent of nausea",
+    "score": 6,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 10657518,
+    "year": 1999,
+    "journal": "Neuropeptides",
+    "title": "Glucagon-like peptide-1 (7-36) amide: a central regulator of satiety and interoceptive stress.",
+    "quote": "Thus, regionally distinct GLP-1 receptor populations in the CNS may be involved in satiety or malaise.",
+    "kind": "mechanistic",
+    "direction": "satiety_hypothesis",
+    "rule": "intake/weight effect independent of nausea",
+    "score": 5,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 27692857,
+    "year": 2017,
+    "journal": "Autonomic neuroscience : basic & clinical",
+    "title": "Insights into the central pathways involved in the emetic and behavioural responses to exendin-4 in the ferret.",
+    "quote": "Exendin-4-induced BIN and c-Fos activation of the amygdala are sensitive to exendin (9-39), whereas the suppression of food intake is not implicating separate control mechanisms for emesis and BIN.",
+    "kind": "review",
+    "direction": "satiety_hypothesis",
+    "rule": "intake/weight effect independent of nausea",
+    "score": 5,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 41091899,
+    "year": 2025,
+    "journal": "Canadian journal of psychiatry. Revue canadienne de psychiatrie",
+    "title": "GLP-1 Receptor Agonists as a Novel Solution for Antipsychotic-Induced Weight Gain in Severe and Persistent Mental Illness.",
+    "quote": "GLP-1 Receptor Agonists as a Novel Solution for Antipsychotic-Induced Weight Gain in Severe and Persistent Mental Illness.",
+    "kind": "other",
+    "direction": "satiety_hypothesis",
+    "rule": "intake/weight effect independent of nausea",
+    "score": 4,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 24362411,
+    "year": 2014,
+    "journal": "European journal of endocrinology",
+    "title": "Short-term combined treatment with liraglutide and metformin leads to significant weight loss in obese women with polycystic ovary syndrome and previous poor response to metformin.",
+    "quote": "Subjects treated with liraglutide experienced more nausea than those treated with metformin, but severity of nausea decreased over time and did not correlate with weight loss.",
+    "kind": "rct",
+    "direction": "satiety_hypothesis",
+    "rule": "intake/weight effect independent of nausea",
+    "score": 6,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 36912475,
+    "year": 2023,
+    "journal": "American journal of physiology. Regulatory, integrative and comparative physiology",
+    "title": "Neither GLP-1 receptors nor GFRAL neurons are required for aversive or anorectic response to DON (vomitoxin).",
+    "quote": "Thus, GLP-1 signaling and GFRAL signaling and neurons are not required for DON-induced visceral illness or anorexia.",
+    "kind": "mechanistic",
+    "direction": "satiety_hypothesis",
+    "rule": "intake/weight effect independent of nausea",
+    "score": 4,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 27613824,
+    "year": 2016,
+    "journal": "Physiological reports",
+    "title": "Contributions of upper gut hormones and motility to the energy intake-suppressant effects of intraduodenal nutrients in healthy, lean men - a pooled-data analysis.",
+    "quote": "In models based on all studies, or lipid studies, there were significant effects for amplitude of antral pressure waves, premeal glucagon-like peptide-1 (GLP-1) and time-to-peak GLP-1 concentrations, GLP-1 AUC and bloating scores (P < 0.05), and trends for basal pyloric pressure (BPP), amplitude of duodenal pressure waves, peak CCK concentrations, and hunger and nausea scores (0.05 < P \u2264 0.094), to be independent determinants of subsequent energy intake.",
+    "kind": "other",
+    "direction": "satiety_hypothesis",
+    "rule": "intake/weight effect independent of nausea",
+    "score": 2,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 37129617,
+    "year": 2023,
+    "journal": "Psychopharmacology",
+    "title": "Liraglutide attenuates nicotine self-administration as well as nicotine seeking and hyperphagia during withdrawal in male and female rats.",
+    "quote": "Repeated liraglutide attenuated withdrawal-induced hyperphagia and body weight gain in male and female rats at a dose that was not associated with malaise-like effects.",
+    "kind": "mechanistic",
+    "direction": "satiety_hypothesis",
+    "rule": "intake/weight effect independent of nausea",
+    "score": 4,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 12451146,
+    "year": 2002,
+    "journal": "The Journal of neuroscience : the official journal of the Society for Neuroscience",
+    "title": "The diverse roles of specific GLP-1 receptors in the control of food intake and the response to visceral illness.",
+    "quote": "The central hypothesis of the present work is that separate populations of GLP-1 receptors mediate the anorexia and taste aversion associated with GLP-1 administration.",
+    "kind": "other",
+    "direction": "satiety_hypothesis",
+    "rule": "intake/weight effect independent of nausea",
+    "score": 1,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 38106197,
+    "year": 2023,
+    "journal": "bioRxiv : the preprint server for biology",
+    "title": "Inhibition of the melanocortin-3 receptor (MC3R) causes generalized sensitization to anorectic agents.",
+    "quote": "The enhanced anorectic response in Mc3r -/- mice after administration of GLP1 analogs was also independent of the incretin effects and malaise induced by GLP1R analogs, suggesting that MC3R antagonists may have value in enhancing the dose-response range of obesity therapeutics.",
+    "kind": "mechanistic",
+    "direction": "satiety_hypothesis",
+    "rule": "intake/weight effect independent of nausea",
+    "score": 4,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 39007271,
+    "year": 2024,
+    "journal": "The Journal of clinical investigation",
+    "title": "Subthreshold activation of the melanocortin system causes generalized sensitization to anorectic agents in mice.",
+    "quote": "The enhanced anorectic response in Mc3r-/- mice after administration of GLP1 analogs was also independent of the incretin effects and malaise induced by GLP1 receptor (GLP1R) analogs, suggesting that MC3R antagonists or MC4R agonists may have value in enhancing the dose-response range of obesity therapeutics.",
+    "kind": "mechanistic",
+    "direction": "satiety_hypothesis",
+    "rule": "intake/weight effect independent of nausea",
+    "score": 4,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 39896596,
+    "year": 2025,
+    "journal": "bioRxiv : the preprint server for biology",
+    "title": "A single dorsal vagal complex circuit mediates the aversive and anorectic responses to GLP1R agonists.",
+    "quote": "It remains unclear whether brainstem Glp1r neurons contribute to the normal regulation of energy balance and whether GLP1RAs control appetite via circuits distinct from those that mediate aversive responses, however.",
+    "kind": "mechanistic",
+    "direction": "satiety_hypothesis",
+    "rule": "intake/weight effect independent of nausea",
+    "score": 4,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 21994361,
+    "year": 2011,
+    "journal": "The Journal of neuroscience : the official journal of the Society for Neuroscience",
+    "title": "Glucagon-like peptide 1 receptors in nucleus accumbens affect food intake.",
+    "quote": "It has been suggested that GLP-1 can cause nausea, but we found that NAc core administration of GLP-1 did not cause a conditioned taste aversion to saccharin, suggesting that the anorexic effect of NAc core GLP-1 is not caused by malaise.",
+    "kind": "mechanistic",
+    "direction": "satiety_hypothesis",
+    "rule": "intake/weight effect independent of nausea",
+    "score": 3,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 22227019,
+    "year": 2012,
+    "journal": "Neuropharmacology",
+    "title": "The role of nausea in food intake and body weight suppression by peripheral GLP-1 receptor agonists, exendin-4 and liraglutide.",
+    "quote": "Whether food intake suppression by exendin-4 and liraglutide occurs independently of nausea is unknown.",
+    "kind": "mechanistic",
+    "direction": "satiety_hypothesis",
+    "rule": "intake/weight effect independent of nausea",
+    "score": 3,
+    "pubtator3_relations": []
+   }
+  ]
+ },
+ {
+  "id": "S9c",
+  "statement": "Debate: semaglutide/liraglutide act centrally by crossing the blood-brain barrier into hypothalamic/brainstem parenchyma.",
+  "subject": {
+   "label": "semaglutide / liraglutide",
+   "ids": [
+    "CHEBI:167574",
+    "CHEBI:71193"
+   ]
+  },
+  "relation": {
+   "label": "crosses / does not cross",
+   "ids": []
+  },
+  "object": {
+   "label": "blood-brain barrier",
+   "ids": []
+  },
+  "pubtator3_relation_count": 0,
+  "pubtator3_pairs": {},
+  "pubtator3_proxy_pairs": null,
+  "pubtator3_note": null,
+  "candidate_pmid_count": 111,
+  "candidate_kinds": {
+   "mechanistic": 81,
+   "review": 16,
+   "rct": 7,
+   "other": 7
+  },
+  "candidate_directions": {
+   "supports": 111
+  },
+  "evidence": [
+   {
+    "pmid": 35687178,
+    "year": 2022,
+    "journal": "Diabetologia",
+    "title": "GLP-1 receptor nitration contributes to loss of brain pericyte function in a mouse model of diabetes.",
+    "quote": "GLP-1 receptor activation improves brain pericyte function resulting in restoration of vascular integrity and BBB functions in diabetes.",
+    "kind": "mechanistic",
+    "direction": "supports",
+    "rule": "BBB / brain access",
+    "score": 8,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 29329976,
+    "year": 2018,
+    "journal": "Peptides",
+    "title": "Therapeutic potential of spinal GLP-1 receptor signaling.",
+    "quote": "GLP-1 analogs have a long-acting effect and are able to pass the blood-brain barrier, which probably extends the therapeutic efficacy of GLP-1R activation.",
+    "kind": "review",
+    "direction": "supports",
+    "rule": "BBB / brain access",
+    "score": 7,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 36419409,
+    "year": 2022,
+    "journal": "Parkinson's disease",
+    "title": "DA5-CH and Semaglutide Protect against Neurodegeneration and Reduce \u03b1-Synuclein Levels in the 6-OHDA Parkinson's Disease Rat Model.",
+    "quote": "We have developed a dual GLP-1/GIP receptor agonist (DA5-CH) that can cross the blood-brain barrier (BBB) at a higher rate than semaglutide.",
+    "kind": "rct",
+    "direction": "supports",
+    "rule": "BBB / brain access",
+    "score": 6,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 32553160,
+    "year": 2020,
+    "journal": "Cell reports",
+    "title": "Corrination of a GLP-1 Receptor Agonist for Glycemic Control without Emesis.",
+    "quote": "Herein, we describe the creation of a GLP-1R agonist conjugate with modified brain penetrance that enhances GLP-1R-mediated glycemic control without inducing vomiting.",
+    "kind": "other",
+    "direction": "supports",
+    "rule": "BBB / brain access",
+    "score": 4,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 26659380,
+    "year": 2016,
+    "journal": "Journal of molecular neuroscience : MN",
+    "title": "Glucagon-Like Peptide-1 Strengthens the Barrier Integrity in Primary Cultures of Rat Brain Endothelial Cells Under Basal and Hyperglycemia Conditions.",
+    "quote": "GLP-1 analogs are approved for treatment of type 2 diabetes mellitus, and thus, we examined the effects of GLP-1 on hyperglycemia-induced BBB damage.",
+    "kind": "mechanistic",
+    "direction": "supports",
+    "rule": "BBB / brain access",
+    "score": 6,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 36035518,
+    "year": 2022,
+    "journal": "Diabetes, metabolic syndrome and obesity : targets and therapy",
+    "title": "The Relationship Between the Blood-Brain-Barrier and the Central Effects of Glucagon-Like Peptide-1 Receptor Agonists and Sodium-Glucose Cotransporter-2 Inhibitors.",
+    "quote": "Therefore, GLP-1RAs need to pass through the blood-brain barrier to exert their pharmacological effects.",
+    "kind": "review",
+    "direction": "supports",
+    "rule": "BBB / brain access",
+    "score": 7,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 40938528,
+    "year": 2025,
+    "journal": "CNS drugs",
+    "title": "Incretin Hormones GLP-1 and GIP Normalize Energy Utilization and Reduce Inflammation in the Brain in Alzheimer's Disease and Parkinson's Disease: From Repurposed GLP-1 Receptor Agonists to Novel Dual GLP-1/GIP Receptor Agonists as Potential Disease-Modifying Therapies.",
+    "quote": "Therefore, GLP-1 and GIP receptor agonists that can cross the BBB show promise as treatments for chronic neurodegenerative disorders.",
+    "kind": "rct",
+    "direction": "supports",
+    "rule": "BBB / brain access",
+    "score": 6,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 38075046,
+    "year": 2023,
+    "journal": "Frontiers in endocrinology",
+    "title": "Bile acid signalling and its role in anxiety disorders.",
+    "quote": "A rise in serum bile acid levels can promote the interaction between central FXR and TGR5 across the blood-brain barrier or activate intestinal FXR and TGR5 to release fibroblast growth factor 19 (FGF19) and glucagon-like peptide-1 (GLP-1), respectively, which in turn, transmit signals to the brain via these indirect pathways.",
+    "kind": "other",
+    "direction": "supports",
+    "rule": "BBB / brain access",
+    "score": 4,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 30688255,
+    "year": 2019,
+    "journal": "Neural regeneration research",
+    "title": "Repositioning of dipeptidyl peptidase-4 inhibitors and glucagon like peptide-1 agonists as potential neuroprotective agents.",
+    "quote": "Furthermore, investigations of glucagon like peptide-1 receptor agonists' neuroprotective effects on animal models will be considered carefully because they crossed the blood-brain barrier in previous studies, enabling their direct action on the central nervous system.",
+    "kind": "mechanistic",
+    "direction": "supports",
+    "rule": "BBB / brain access",
+    "score": 6,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 38381398,
+    "year": 2024,
+    "journal": "American journal of physiology. Endocrinology and metabolism",
+    "title": "Brain access of incretins and incretin receptor agonists to their central targets relevant for appetite suppression and weight loss.",
+    "quote": "GLP-1 receptor (GLP-1R) agonists with increased half-life and enhanced therapeutic benefit do not cross the blood-brain barrier, yet they manage to access discrete brain sites relevant to the regulation of energy homeostasis.",
+    "kind": "review",
+    "direction": "supports",
+    "rule": "BBB / brain access",
+    "score": 7,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 29235507,
+    "year": 2017,
+    "journal": "Scientific reports",
+    "title": "Blood-Brain Glucose Transfer in Alzheimer's disease: Effect of GLP-1 Analog Treatment.",
+    "quote": "The result is consistent with the claim that GLP-1 analog treatment restores glucose transport at the BBB.",
+    "kind": "rct",
+    "direction": "supports",
+    "rule": "BBB / brain access",
+    "score": 5,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 29274367,
+    "year": 2018,
+    "journal": "Neuropharmacology",
+    "title": "The effects of incretin hormones on cerebral glucose metabolism in health and disease.",
+    "quote": "Kinetic studies suggest blood-brain barrier (BBB) glucose transport as the key player in GLP-1 mediated effects on cerebral glucose metabolism.",
+    "kind": "other",
+    "direction": "supports",
+    "rule": "BBB / brain access",
+    "score": 2,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 31705913,
+    "year": 2020,
+    "journal": "Peptides",
+    "title": "GIP has neuroprotective effects in Alzheimer and Parkinson's disease models.",
+    "quote": "We have developed two dual GLP-1/GIP receptor agonist that have cell penetrating sequences added for better BBB penetration.",
+    "kind": "mechanistic",
+    "direction": "supports",
+    "rule": "BBB / brain access",
+    "score": 6,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 40671844,
+    "year": 2025,
+    "journal": "Health science reports",
+    "title": "Incretin-Based Therapies in Alzheimer's and Parkinson's Disease: Advancing Neuroprotection With Dual and Triple Agonists-A Review.",
+    "quote": "Dual agonists like DA-CH3, DA5-CH, and DA4-JC have proven superior in crossing the blood-brain barrier and offering improved neuroprotection in comparison with conventional GLP-1 agonists.",
+    "kind": "review",
+    "direction": "supports",
+    "rule": "BBB / brain access",
+    "score": 7,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 33433498,
+    "year": 2021,
+    "journal": "Neural regeneration research",
+    "title": "Glucagon-like peptide-1/glucose-dependent insulinotropic polypeptide dual receptor agonist DA-CH5 is superior to exendin-4 in protecting neurons in the 6-hydroxydopamine rat Parkinson model.",
+    "quote": "DA-CH5 is a novel GLP-1/GIP receptor unimolecular co-agonist with a novel peptide sequence added to cross the blood-brain barrier.",
+    "kind": "rct",
+    "direction": "supports",
+    "rule": "BBB / brain access",
+    "score": 5,
+    "pubtator3_relations": []
+   }
+  ]
+ },
+ {
+  "id": "S9d",
+  "statement": "Debate: semaglutide/liraglutide act via circumventricular organs (area postrema, median eminence) and vagal afferents rather than general BBB penetration.",
+  "subject": {
+   "label": "semaglutide / liraglutide / GLP-1",
+   "ids": [
+    "CHEBI:167574",
+    "CHEBI:71193",
+    "CHEBI:80270"
+   ]
+  },
+  "relation": {
+   "label": "acts via",
+   "ids": []
+  },
+  "object": {
+   "label": "circumventricular organs / vagal afferents",
+   "ids": []
+  },
+  "pubtator3_relation_count": 0,
+  "pubtator3_pairs": {},
+  "pubtator3_proxy_pairs": null,
+  "pubtator3_note": null,
+  "candidate_pmid_count": 198,
+  "candidate_kinds": {
+   "mechanistic": 146,
+   "other": 23,
+   "rct": 3,
+   "review": 26
+  },
+  "candidate_directions": {
+   "supports": 198
+  },
+  "evidence": [
+   {
+    "pmid": 34168616,
+    "year": 2021,
+    "journal": "Frontiers in endocrinology",
+    "title": "Gastrointestinal Distension by Pectin-Containing Carbonated Solution Suppresses Food Intake and Enhances Glucose Tolerance via GLP-1 Secretion and Vagal Afferent Activation.",
+    "quote": "These results demonstrate that gastrointestinal distension by ISF stimulates GLP-1 secretion and the vagal afferent signaling to the brain, thereby regulating feeding behavior and glucose tolerance.",
+    "kind": "mechanistic",
+    "direction": "supports",
+    "rule": "vagal / circumventricular route",
+    "score": 8,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 25833771,
+    "year": 2015,
+    "journal": "The Journal of nutrition",
+    "title": "Glucagon-like peptide 1 interacts with ghrelin and leptin to regulate glucose metabolism and food intake through vagal afferent neuron signaling.",
+    "quote": "Peripheral GLP-1 acts on VANs to inhibit food intake.",
+    "kind": "review",
+    "direction": "supports",
+    "rule": "vagal / circumventricular route",
+    "score": 7,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 23462665,
+    "year": 2013,
+    "journal": "Diabetes care",
+    "title": "Exenatide-induced reduction in energy intake is associated with increase in hypothalamic connectivity.",
+    "quote": "CONCLUSIONS: Our results demonstrate a central hypothalamic effect of peripherally administered exenatide that occurred only in the group that showed an exenatide-dependent anorexigenic effect.",
+    "kind": "rct",
+    "direction": "supports",
+    "rule": "vagal / circumventricular route",
+    "score": 6,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 12846732,
+    "year": 2003,
+    "journal": "Neurogastroenterology and motility",
+    "title": "Effects of glucagon-like peptide-1 and feeding on gastric volumes in diabetes mellitus with cardio-vagal dysfunction.",
+    "quote": "Effects of glucagon-like peptide-1 and feeding on gastric volumes in diabetes mellitus with cardio-vagal dysfunction.",
+    "kind": "other",
+    "direction": "supports",
+    "rule": "vagal / circumventricular route",
+    "score": 5,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 40622911,
+    "year": 2025,
+    "journal": "American journal of physiology. Endocrinology and metabolism",
+    "title": "Exendin-4 induced retching-like behavior mediated by postsynaptic effect via AMPA receptors in the area postrema of mice.",
+    "quote": "To elucidate the neural mechanisms underlying GLP-1-induced emesis, we investigated how GLP-1 signaling in the area postrema (AP) modulates retching-like behavior in mice.",
+    "kind": "mechanistic",
+    "direction": "supports",
+    "rule": "vagal / circumventricular route",
+    "score": 8,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 29687645,
+    "year": 2018,
+    "journal": "Obesity (Silver Spring, Md.)",
+    "title": "Gut Microbes and Health: A Focus on the Mechanisms Linking Microbes, Obesity, and Related Disorders.",
+    "quote": "For instance, the nervous routes are explored by examining the enteric nervous system, the vagus nerve, and the brain, as well as the endocrine routes (i.e., glucagon-like peptide-1, peptide YY, endocannabinoids) by which gut microbes communicate with the host.",
+    "kind": "review",
+    "direction": "supports",
+    "rule": "vagal / circumventricular route",
+    "score": 7,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 10193877,
+    "year": 1999,
+    "journal": "International journal of obesity and related metabolic disorders : journal of the International Association for the Study of Obesity",
+    "title": "Energy intake and appetite are suppressed by glucagon-like peptide-1 (GLP-1) in obese men.",
+    "quote": "BACKGROUND: Peripheral administration of glucagon-like peptide-1 (GLP-1) for four hours, to normal weight and obese humans, decreases food intake and suppresses appetite.",
+    "kind": "rct",
+    "direction": "supports",
+    "rule": "vagal / circumventricular route",
+    "score": 4,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 29317623,
+    "year": 2018,
+    "journal": "Nature communications",
+    "title": "GLP-1 release and vagal afferent activation mediate the beneficial metabolic and chronotherapeutic effects of D-allulose.",
+    "quote": "Our results identify D-allulose as prominent GLP-1 releaser that acts via vagal afferents to restrict feeding and hyperglycemia.",
+    "kind": "other",
+    "direction": "supports",
+    "rule": "vagal / circumventricular route",
+    "score": 5,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 9568683,
+    "year": 1998,
+    "journal": "Diabetes",
+    "title": "Glucagon-like peptide 1(7-36) amide's central inhibition of feeding and peripheral inhibition of drinking are abolished by neonatal monosodium glutamate treatment.",
+    "quote": "Thus it is evident that centrally acting GLP-1 modulates feeding and drinking behavior via neurones sensitive to MSG lesioning in the arcuate nucleus and circumventricular organs, respectively.",
+    "kind": "mechanistic",
+    "direction": "supports",
+    "rule": "vagal / circumventricular route",
+    "score": 7,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 31311066,
+    "year": 2019,
+    "journal": "Neurogastroenterology and motility",
+    "title": "GHSR-1 agonist sensitizes rat colonic intrinsic and extrinsic neurons to exendin-4: A role in the manifestation of postprandial gastrointestinal symptoms in irritable bowel syndrome?",
+    "quote": "Gut-brain signaling via GLP-1-mediated activation of vagal afferents was also potentiated by the GHSR-1 agonist.",
+    "kind": "review",
+    "direction": "supports",
+    "rule": "vagal / circumventricular route",
+    "score": 7,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 10999014,
+    "year": 1999,
+    "journal": "The British journal of nutrition",
+    "title": "No effect of glucagon-like peptide-1 on short-term satiety and energy intake in man.",
+    "quote": "The present study investigated the effect of peripheral GLP-1 infusion on gastric emptying and satiety in man.",
+    "kind": "rct",
+    "direction": "supports",
+    "rule": "vagal / circumventricular route",
+    "score": 4,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 29392854,
+    "year": 2018,
+    "journal": "Neurogastroenterology and motility",
+    "title": "Ghrelin secretion in humans - a role for the vagus nerve?",
+    "quote": "KEY RESULTS: We find that (i) ghrelin secretion is unchanged during indirect vagal stimulation as elicited by modified sham-feeding in vagotomized individuals and matched controls, (ii) ghrelin secretion is similarly suppressed after meal ingestion in vagotomized individuals and controls, and (iii) infusion of GLP-1 does not lower ghrelin levels.",
+    "kind": "other",
+    "direction": "supports",
+    "rule": "vagal / circumventricular route",
+    "score": 4,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 19074583,
+    "year": 2009,
+    "journal": "Endocrinology",
+    "title": "Evidence that intestinal glucagon-like peptide-1 plays a physiological role in satiety.",
+    "quote": "Thus, ip Ex9 appears to attenuate satiety via peripheral GLP-1-R blockade.",
+    "kind": "mechanistic",
+    "direction": "supports",
+    "rule": "vagal / circumventricular route",
+    "score": 7,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 40896289,
+    "year": 2025,
+    "journal": "Journal of translational internal medicine",
+    "title": "Current understanding and controversy on brain access of GLP-1 and GLP-1 receptor agonists.",
+    "quote": "We have then commented the view or opinion that peripheral GLP-1RAs may exert their brain functions via organ-organ communications without entering the brain.",
+    "kind": "review",
+    "direction": "supports",
+    "rule": "vagal / circumventricular route",
+    "score": 7,
+    "pubtator3_relations": []
+   },
+   {
+    "pmid": 33484717,
+    "year": 2021,
+    "journal": "General and comparative endocrinology",
+    "title": "Central serotonin participates in the anorexigenic effect of GLP-1 in rainbow trout (Oncorhynchus mykiss).",
+    "quote": "In this study, we investigated the role of the brain serotonergic system in the effects promoted by a peripheral GLP-1 injection on food intake in rainbow trout (Oncorhynchus mykiss).",
+    "kind": "other",
+    "direction": "supports",
+    "rule": "vagal / circumventricular route",
+    "score": 4,
+    "pubtator3_relations": []
+   }
+  ]
+ }
+]

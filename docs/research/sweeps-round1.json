@@ -1,0 +1,987 @@
+[
+ {
+  "angle": "LLM-based relation/claim extraction and grounding from biomedical text, 2023-2026",
+  "projects": [
+   {
+    "name": "PubTator3 / BioREx (+LinkBERT) \u2014 NCBI",
+    "url": "https://www.ncbi.nlm.nih.gov/research/pubtator3/ ; bulk: https://ftp.ncbi.nlm.nih.gov/pub/lu/PubTator3/",
+    "status": "active (weekly updates; API answered 2026-10-23; BioREx repo pushed 2025-05; bulk files dated 2026-10-06 already on Dan's disk)",
+    "what_it_does": "NCBI's PubMed-scale NER+normalization+relation extraction. Entities normalized to NCBI Gene, MeSH (chem/disease), dbSNP/HGVS, NCBI Taxonomy, Cellosaurus. Relations via BioREx (document-level, multi-sentence) with PubMedBERT swapped for LinkBERT: BioRED test F1 74.4 -> 79.6 (BioREx) -> 82.0 (LinkBERT). 12 relation types over 8 entity-pair types (Associate, Positive_Correlate, Negative_Correlate, Compare, Cotreat, Interact, Drug_Interact, Cause, Inhibit, Treat, Stimulate, Prevent). ~36M abstracts + 6M PMC full texts. It is the de facto NLM replacement for SemRep/SemMedDB, which NLM stopped maintaining on 2024-12-31 (final SemMedDB VER43, 130.5M predications, May 2024 data).",
+    "relevance_to_biolean": "This is the free, maintained baseline edge set for all 28.5M abstracts; no LLM pass can match its cost (zero) or its strict-schema F1 (0.82 vs <=0.31 for prompted frontier LLMs). Use it as the backbone graph and spend LLM budget only on what it lacks: hedging/negation, novelty-vs-background, nested statements, RO/GO-typed predicates, and the canonical-paper statements. Limits: mostly correlation-style predicates (direction only for Cause/Inhibit/Treat/Stimulate/Prevent), no negation, speculation or novelty flags in bulk output, ~74% of its errors are cross-sentence.",
+    "reusable_assets": "relation2pubtator3.gz (300 MB), gene2pubtator3.gz, disease2pubtator3.gz at /outsee4/data/public/PubTator3/2026-10-06 (symlinked from /home/danbolser/Work/IUK-IPF/data/sources/pubtator3). BioREx code+model (github.com/ncbi/BioREx). REST API with BioC JSON. Final SemMedDB dump still downloadable from lhncbc.nlm.nih.gov as a mature UMLS-CUI triple schema to borrow from.",
+    "key_refs": [
+     "PubTator 3.0: an AI-powered literature resource for unlocking biomedical knowledge, NAR 2024, PMC11223843, arXiv:2401.11048",
+     "BioREx: Improving biomedical relation extraction by leveraging heterogeneous datasets (Lai, Wei, Luo, Chen, Lu), J Biomed Inform 2023",
+     "LinkBERT: Pretraining Language Models with Document Links (Yasunaga et al.), ACL 2022; repo dormant since 2022-04",
+     "NLM SemRep/SemMedDB retirement notice: https://lhncbc.nlm.nih.gov/ii/tools/SemRep_SemMedDB_SKR/SemMedDB_download.html"
+    ]
+   },
+   {
+    "name": "BioRED benchmark family (BioRED corpus, BioCreative VIII track, directionality + novelty extension)",
+    "url": "https://ftp.ncbi.nlm.nih.gov/pub/lu/BioRED/ ; https://arxiv.org/abs/2501.14079",
+    "status": "active (directionality extension Jan 2025; track overview published Database 2024; JTIS follow-up 2025)",
+    "what_it_does": "Document-level gold standard for gene/disease/chemical/variant relations with a novelty flag (new finding vs cited background). BioCreative VIII (14 teams, 94 runs) best F1: with gold entities 77.2 pair / 59.0 type / 59.2 novelty / 44.6 all-correct; end-to-end from raw text 55.8 / 43.0 / 42.7 / 32.8. Lai et al. 2025 add subject/object direction (10,864 annotations, IAA 89.96%); their multi-task model gets 37.0 F1 on relation+direction+novelty and 42.7 on relation+novelty vs fine-tuned GPT-3.5 38.5 and fine-tuned Llama-3.2-11B 37.5; zero-shot GPT-4 42.9 on entity pairs only. Association/Bind are inherently undirected, chem-chem Cotreatment has 55 training pairs.",
+    "relevance_to_biolean": "These numbers set realistic expectations: entity-pair detection is ~0.8 F1, but the three things BioLean actually needs for proofs (relation type, direction of effect, is-this-new-evidence) are each ~0.4-0.6, and jointly ~0.35-0.45, for the best systems in 2025. Novelty is the closest existing label to 'how established' vs 'background restated' and is the right place to start an evidence-weight schema. The corpus is also the obvious dev/eval set for any BioLean extractor.",
+    "reusable_assets": "BioRED corpus (BioC JSON/XML), directionality-enriched corpus (Lai 2025), CodaLab competition 13377 evaluation scripts.",
+    "key_refs": [
+     "BioRED: a rich biomedical relation extraction dataset, Brief Bioinform 2022, PMID 35849818",
+     "The overview of the BioRED track at BioCreative VIII, Database 2024, doi:10.1093/database/baae069",
+     "Enhancing Biomedical Relation Extraction with Directionality (Lai, Wei, Tian, Leaman, Lu), arXiv:2501.14079, Jan 2025"
+    ]
+   },
+   {
+    "name": "Critic-based verification for LLM biomedical RE (Assi, Karabadji, Elati, Dhifli)",
+    "url": "https://ceur-ws.org/Vol-4258/paper1.pdf",
+    "status": "paper only (PromptEng 2026 workshop at WebConf, Dubai, June 2026); no released code found",
+    "what_it_does": "Measures frontier and local LLMs on 75 BioRED test abstracts, then adds a second 'critic' prompt that re-reads each extracted (s,p,o) against the text and labels it CORRECT / NEGATED / SPECULATIVE / INCORRECT. Few-shot + critic: Gemini 3 Pro P 0.383 R 0.257 F1 0.307 (best); Claude 4.5 Sonnet P 0.331 -> 0.741 after critic (92.6% false-positive reduction) but recall ~0.07; extended thinking lifts single-pass precision 33.1 -> 55.7%; Llama-3.2 local F1 0.114, ~10 s/doc. Zero-shot without critic: F1 0.064 with 1,089 false positives. All far below supervised (they cite 62.8; PubTator3's own model is 82.0).",
+    "relevance_to_biolean": "The most honest 2026 datapoint on what prompting alone buys you on a strict schema: precision can be bought (critic), recall cannot. For BioLean this argues for LLMs as high-precision annotators over a recall-oriented backbone (PubTator3), and for the critic's NEGATED/SPECULATIVE labels as a cheap, ready-made epistemic field for each statement. Note the 'precision floor' was schema misalignment, not reasoning: a tight Biolink/RO predicate list plus examples mattered more than model size.",
+    "reusable_assets": "Prompt designs (extraction + critic) printed in the paper; none otherwise.",
+    "key_refs": [
+     "Reasoning vs. Critic-Based Verification for Biomedical Relation Extraction with Large Language Models, CEUR-WS Vol-4258 paper 1, PromptEng 2026"
+    ]
+   },
+   {
+    "name": "OntoGPT / SPIRES (Monarch Initiative)",
+    "url": "https://github.com/monarch-initiative/ontogpt",
+    "status": "active (v1.2.0 released 2026-09-09; LiteLLM multi-provider; 'term validation after extraction' added; 69 open issues)",
+    "what_it_does": "Schema-driven zero-shot extraction: you write a LinkML schema with nested classes and ontology-valued slots; SPIRES recursively prompts the LLM to fill it, then grounds every value by ontology lookup (OAK) rather than trusting LLM-emitted IDs. Published eval (Database 2024): BC5CDR chemical-induces-disease F1 41.2 (GPT-3.5, chunked) / 43.8 (no chunking, stronger model) vs 57 for the best supervised 2015 system and 45.0 for BioGPT; grounding 97-98/100 correct GO and MONDO IDs via SPIRES vs 1-3/100 when the LLM emits IDs itself (GPT-4-turbo got 18/100 on MONDO and sometimes refused). Authors warn OpenAI-scale corpora may be prohibitively expensive.",
+    "relevance_to_biolean": "Closest existing tool to Dan's 'DNApol (GO function) copies (GO process) DNA (SO term)' idea: the schema can require subject/predicate/object slots whose ranges are GO/RO/SO/CHEBI, and grounding is done against the OBO terms Dan already has locally (6M terms). Nested schemas also fit 'mechanism' statements (drug -> target -> process -> phenotype) better than flat triples. Weakness: mid-pack relation F1, no evidence/hedging model, and it is a per-document tool, not a PubMed-scale pipeline.",
+    "reusable_assets": "ontogpt on PyPI (1.2.0), LinkML templates (incl. biological process, drug mechanism, chemical-to-disease), OAK grounding adapters; templates are plain YAML you can fork for a BioLean statement schema.",
+    "key_refs": [
+     "SPIRES: a method for populating knowledge bases using zero-shot learning (Caufield et al.), Database 2024, PMC10924283, arXiv:2304.02711"
+    ]
+   },
+   {
+    "name": "Gilda + LLM disambiguation (grounding stack: Gilda, scispaCy, BERN2, Ye & Mitchell 2025)",
+    "url": "https://github.com/gyorilab/gilda ; https://grounding.indra.bio ; https://aclanthology.org/2025.acl-short.25/",
+    "status": "Gilda active (1.6.1 on PyPI 2026-06-11, repo pushed 2026-06-29; web service answered a live POST today: semaglutide -> CHEBI:167574). scispaCy maintained (0.6.2, 2025-10). BERN2 dormant (repo last push 2024-03-28; demo site still serving).",
+    "what_it_does": "Gilda: lexical + ~1,000 learned disambiguation models over ~2M names from HGNC, UniProt, FamPlex, CHEBI, GO, DOID, EFO, HP, MeSH, Adeft; the grounder behind INDRA. Ye & Mitchell (ACL 2025 short) show that putting an LLM as the disambiguator after an alias-matching candidate generator gives a new SOTA on several biomedical EL sets, up to +16 accuracy points, no fine-tuning. Older head-to-head on BC5CDR (2023): BERN2 0.939/0.966 (disease/chem) vs GPT-4 retrieve-rank 0.901/0.947 vs scispaCy 0.853 chem. RELATE (2025) applies the same idea to predicates: SapBERT retrieval over Biolink predicates + LLM rerank, ChemProt 52% exact / 94% acc@10, explicit negation handling (found 77 negated assertions in 2,400 HEAL abstracts; 'fails to affect' type implicit negation is the hard residue).",
+    "relevance_to_biolean": "Settles the grounding design: never let the LLM invent identifiers; build a lexical index over the local OBO dump (Gilda-style, or Gilda itself, which already covers CHEBI/GO/HP/DOID/MeSH and ties into Dan's INDRA cache), then let an LLM pick among candidates. Do the same for predicates against RO/Biolink. Gilda's grounding.indra.bio is usable now; running Gilda locally on 112 cores is trivial. BERN2 should not be a dependency.",
+    "reusable_assets": "gilda (PyPI 1.6.1) and its resource build scripts; grounding.indra.bio REST (/ground, /ground_multi); scispaCy 0.6.2 UMLS/MeSH linkers; Ye & Mitchell code on GitHub (per paper); RELATE paper's Biolink predicate embedding approach (arXiv:2509.19057).",
+    "key_refs": [
+     "Gilda: biomedical entity text normalization with machine-learned disambiguation as a service (Gyori, Hoyt, Steppi), Bioinformatics Advances 2022, bioRxiv 10.1101/2021.09.10.459803",
+     "LLM as Entity Disambiguator for Biomedical Entity-Linking (Ye, Mitchell), ACL 2025 short, pp 301-312",
+     "RELATE: Relation Extraction in Biomedical Abstracts with LLMs and Ontology Constraints (Olasunkanmi et al.), arXiv:2509.19057, Sep 2025",
+     "Exploring the In-context Learning Ability of LLMs for Biomedical Concept Linking, arXiv:2307.01137 (BC5CDR comparison table)"
+    ]
+   },
+   {
+    "name": "iKraph (Insilicom / FSU; LitCoin NLP Challenge winner)",
+    "url": "https://github.com/myinsilicom/iKraph ; https://zenodo.org/records/14851275 ; https://www.biokde.com",
+    "status": "maintained (Nature Machine Intelligence 2025; repo last push 2025-04; Zenodo dump Feb 2025; data cutoff May 2023)",
+    "what_it_does": "PubMed-wide KG built with the pipeline that won LitCoin 2022 (RoBERTa-large/PubMedBERT ensembles, Ab3P, document-level RE; not LLM-based): 34M abstracts -> 10.7M entities, 30.8M relations, plus 40 databases and RNA-seq-derived edges; 12 entity types, 53 relation types. LitCoin scores: NER Jaccard 0.918, RE 0.633. A direction classifier (F1 0.924 CV; trained on 4,572 hand-labelled relations: 2,009 forward, 1,611 reverse, 952 undirected) turns correlations into a directed 'causal KG'. Novelty is a pipeline stage. Evidence aggregation by 'probabilistic semantic reasoning': P = 1 - prod(1 - p_mention) across abstracts; indirect paths scored by multiplying link probabilities; only the top relation type per pair kept. Journal/citation/date weighting is explicitly future work. Validated on COVID-19 repurposing (1,200 candidates; ~1/3 of early ones later supported).",
+    "relevance_to_biolean": "The nearest thing to Dan's 'weighted edges + inference over paths' that exists at PubMed scale, and it is downloadable. Its noisy-OR aggregation is a defensible first evidence score for a biolib lemma; its path-product rule is a (weak) prototype of 'proof weight'. Gaps BioLean can fill: contradiction is resolved by keeping one type per pair, no hedging, no source quality, no formal semantics. Species handling: entities are NCBI Gene IDs, so cross-species merging is on you.",
+    "reusable_assets": "Full KG on Zenodo (14851275), code on GitHub, biokde.com web UI for academics; licence of the data not stated in the paper (article is CC BY-NC-ND).",
+    "key_refs": [
+     "A comprehensive large-scale biomedical knowledge graph for AI-powered data-driven biomedical research (Zhang J et al.), Nature Machine Intelligence 2025, doi:10.1038/s42256-025-01014-w; bioRxiv v3 PMC10760044 (Mar 2025)"
+    ]
+   },
+   {
+    "name": "MedKGent (Zhang et al.; npj Digital Medicine)",
+    "url": "https://github.com/BladeDancer957/MedKGent ; https://huggingface.co/datasets/ShowerMaker/MedKGent-KG",
+    "status": "active (arXiv v3 Jul 2026; repo pushed 2026-06-19; Zenodo 10.5281/zenodo.20759287)",
+    "what_it_does": "The only LLM-driven, confidence-aware KG over a large PubMed slice I found: 10M+ abstracts (1975-2023) with self-hosted Qwen2.5-32B-Instruct on 48 L20 GPUs. Extractor Agent: 50 stochastic samples per abstract at T=0.7, confidence = frequency (floored to 0.05), drop <0.6. Constructor Agent: recurring triple reinforces edge via s = 1-(1-s)(1-s'), appends PMIDs and refreshes timestamp; conflicting relation for the same pair is adjudicated by the LLM using confidence and date. Entities and the 12-type relation vocabulary come from PubTator3. Output 156k entities / 2.97M triples. Eval: LLM judges on 1% (34,725 abstracts, 83,438 triples) 85.4% (GPT-4.1) / 88.1% (DeepSeek-v3) 'valid'; two PhD annotators on 1,000 abstracts / 2,767 triples >86% valid, ~90% for most types.",
+    "relevance_to_biolean": "A worked example of three BioLean requirements: per-statement confidence, provenance (PMIDs, time), and aggregation across papers (same noisy-OR as iKraph). Also a warning: 'validity ~90%' is LLM/human-judged plausibility, not benchmark F1, and the 50-sample self-consistency makes it ~50x the cost of a single pass (hence 10M not 36M abstracts). Conflict handling (LLM picks a winner) is exactly the ambiguity problem Dan wants to keep explicit rather than resolve.",
+    "reusable_assets": "KG with confidences, timestamps, PMIDs on Hugging Face; code on GitHub; prompts.",
+    "key_refs": [
+     "MedKGent: A Large Language Model Agent Framework for Constructing Temporally Evolving Medical Knowledge Graph, arXiv:2508.12393 (v3 Jul 2026), accepted npj Digital Medicine"
+    ]
+   },
+   {
+    "name": "BioRelFact \u2014 joint relation + epistemic commitment (Keese et al., DFKI; LREC 2026)",
+    "url": "https://aclanthology.org/2026.lrec-1.602/",
+    "status": "new (LREC 2026, pp 7592-7605); dataset described as public with code and prompts, but no repo located via GitHub search",
+    "what_it_does": "1,767 expert-annotated biomedical sentences with 9 relation types and 5 levels of epistemic commitment (fact to hypothesis). Eight LLMs evaluated: GPT-OSS-20B best (F1 77.3 relation, 65.3 commitment), GPT-4o 75.9/60.2, Qwen3-8B-Thinking 74.6/57.2; definition-based few-shot prompts best; domain-adapted models mixed (MedGemma-27B +3.6/+4.4, Aloe-7B -4.3/-3.5). Error analysis ties confusions to specific hedging cues.",
+    "relevance_to_biolean": "The one benchmark that directly measures the thing Dan flagged as the open problem: how strongly does the sentence commit to the claim. ~0.65 F1 on 5 levels with an open 20B model means an epistemic field is extractable today but noisy; collapsing to 3 levels (asserted / hedged / negated) will be more reliable. Use its level scheme as the per-statement 'assertion strength' input to an evidence weight.",
+    "reusable_assets": "Dataset + prompt templates (per paper); locate via the LREC PDF.",
+    "key_refs": [
+     "From Facts to Hypotheses: Joint Detection of Biomedical Relations and Epistemic Commitment Using LLMs (Keese, Gabryszak, Truong, Binder, Milosevic, Rheinl\u00e4nder, Thomas), LREC 2026"
+    ]
+   },
+   {
+    "name": "Scientific claim verification: SciFact / MultiVerS / SciFact-Open / SciClaims (+HealthVer, Check-COVID)",
+    "url": "https://github.com/allenai/scifact ; https://github.com/dwadden/multivers ; https://arxiv.org/abs/2503.18526",
+    "status": "Benchmarks dormant (scifact repo last push 2023-10, multivers 2023-08; SciFact test labels hidden). SciClaims active (expertailab/sciclaims-backend pushed 2026-08-25).",
+    "what_it_does": "Task: given an atomic claim and an abstract, label SUPPORT/REFUTE/NEI with rationale sentences. SciFact: 1.4k expert claims. MultiVerS (LongFormer, multitask) F1 ~0.73 on SciFact; fine-tuned DeBERTa-large beats zero-shot GPT-4 (0.79 label F1) in Verif.ai; GPT-4 with in-context examples within ~1 F1 of fine-tuned models (SDP 2024). SciFact-Open (500k abstracts) shows >=15 F1 drop when moving from the toy corpus to open retrieval. HealthVer 14k pairs, Check-COVID 1,504 claims (best F1 77.0 vs GPT-3.5 69.9). SciClaims (2025): end-to-end claim extraction + retrieval over 4.7M PubMed + verification with Llama 3 8B on one 24 GB GPU; zero-shot verification F1 0.679 on SciFact vs MultiVerS 0.730; claim-extraction quality 47% 'correct' (76% with refinement) by LLM judge; 8-12 s/document. A 2026 paper (PaperTrail) states no gold standard exists for exhaustive atomic-claim extraction from scientific text.",
+    "relevance_to_biolean": "This is the 'is statement X supported by paper Y' primitive BioLean needs when scoring a formal statement against the literature, and it is a different task from triple extraction: you can phrase a Lean proposition as a claim and verify it against retrieved abstracts (Dan has 8.4M embeddings for retrieval). Caveats: labels are 3-way with no strength, performance collapses on open corpora, and claim decomposition is the weak link (Reasoning-CV 2025 argues decomposition introduces errors). Use for scoring, not for bulk graph building.",
+    "reusable_assets": "SciFact, SciFact-Open, HealthVer, Check-COVID datasets; MultiVerS checkpoints; SciClaims code (expertailab) runs on a single 24 GB GPU.",
+    "key_refs": [
+     "Fact or Fiction: Verifying Scientific Claims (Wadden et al.), EMNLP 2020, arXiv:2004.14974",
+     "MultiVerS: Improving scientific claim verification with weak supervision and full-document context, NAACL 2022, arXiv:2112.01640",
+     "SciFact-Open: Towards open-domain scientific claim verification, EMNLP Findings 2022, arXiv:2210.13777",
+     "SciClaims: An End-to-End Generative System for Biomedical Claim Analysis, arXiv:2503.18526, Mar 2025",
+     "Check-COVID, ACL Findings 2023, arXiv:2305.18265; HealthVer, EMNLP Findings 2021",
+     "Reasoning-CV, arXiv:2505.12348, 2025"
+    ]
+   },
+   {
+    "name": "textToKnowledgeGraph (NDEx / Luna lab) + INDRA tkg processor",
+    "url": "https://github.com/ndexbio/llm-text-to-knowledge-graph ; https://indra.readthedocs.io/en/latest/modules/sources/tkg/index.html",
+    "status": "maintained (bioRxiv Jul 2025, ISMB 2025; repo pushed 2026-01-13; INDRA 1.24.0 Jul 2025 ships the processor; INDRA repo pushed 2026-06-30)",
+    "what_it_does": "Prompts an LLM to emit BEL statements (causal/correlative, with HGNC/CHEBI-grounded entities) from a PMC article; INDRA's TkgProcessor converts them via PyBEL into INDRA Statements and attaches confidence, source sentence, PMID/PMCID to Evidence objects. Ships a Cytoscape Web app and a computationally+manually reviewed extraction set meant for fine-tuning. I could not retrieve the accuracy tables (PMC captcha, bioRxiv rate-limit); older BEL-track baselines were 32% F1 full statements, 49% with gold entities (BioCreative VI).",
+    "relevance_to_biolean": "Shows the LLM -> typed statement -> INDRA Statement path already exists and lands in the format Dan's sibling project exports (INDRA Statement JSON, Biolink/KGX). INDRA Statements already carry Evidence with epistemics (negation, hypothesis, direct) and belief scores from its BeliefEngine, which is a ready-made, if crude, evidence-weighting layer. Treat as plumbing to copy, not as a validated extractor.",
+    "reusable_assets": "Python package + prompt; INDRA (PyPI 1.24.0) Statement/Evidence schema with 'epistemics' and 'belief'; INDRA bio_ontology 1.34 already cached in ~/.indra.",
+    "key_refs": [
+     "textToKnowledgeGraph: Generation of Molecular Interaction Knowledge Graphs Using LLMs for Exploration in Cytoscape (James, Churas, Pratt, Luna), bioRxiv 10.1101/2025.07.17.664328, PMC12330749",
+     "INDRA docs: indra.sources.tkg"
+    ]
+   }
+  ],
+  "key_lessons": [
+   "Fine-tuned encoders still beat prompted LLMs on strict relation schemas by a wide margin: PubTator3's BioREx+LinkBERT scores 82.0 F1 on BioRED, while frontier LLMs few-shot reach 0.11-0.31 F1 (Assi et al. 2026) and even fine-tuned GPT-3.5 (38.5) trails a specialised model (42.7) on relation+novelty (Lai et al. 2025). Use PubTator3's free relation2pubtator3 as the 28M-abstract backbone and spend LLM budget on the fields it lacks.",
+   "A second 'critic' pass is the cheapest precision lever: Claude 4.5 Sonnet went from 33.1% to 74.1% precision with a 92.6% false-positive cut on BioRED (Assi et al. 2026), and OntoGPT 1.2.0 added post-extraction term validation for the same reason. Recall did not improve; expect LLM annotation to be high-precision, low-recall.",
+   "Never let the model emit identifiers. Ungrounded GPT gave 1-3/100 correct GO/MONDO IDs; SPIRES with ontology lookup gave 97-98/100 (Caufield et al. 2024); an LLM used only as disambiguator over alias-match candidates adds up to +16 accuracy points (Ye & Mitchell, ACL 2025). Build a Gilda-style lexical index over the local 6M OBO terms and rerank with an LLM; do the same for predicates against RO/Biolink (RELATE 2025).",
+   "Both PubMed-scale weighted graphs that exist, iKraph (BERT-based, Nature MI 2025) and MedKGent (LLM-based, npj Digit Med 2026), aggregate evidence with the same noisy-OR, P = 1 - prod(1 - p_i), over mentions/papers, and both list source quality (journal, citations, date) as future work. This is the natural zero-order evidence score for a biolib lemma, and the obvious place for BioLean to add what they do not have: hedging, contradiction kept explicit, and formal semantics.",
+   "Hedging is extractable but noisy: 5-level epistemic commitment reaches 65.3 F1 with GPT-OSS-20B (BioRelFact, LREC 2026); the critic prompt's CORRECT/NEGATED/SPECULATIVE labels (Assi 2026) and RELATE's handling of implicit negation ('fails to affect') show the practical cut points. Store assertion strength as a first-class field, probably 3 levels, and feed it into the evidence weight.",
+   "Direction of effect and novelty are the hard labels, not entity pairs: BioCreative VIII best was 77 F1 for pairs but 59 for type, 59 for novelty and 45 for all together; direction annotation is reliable (IAA 90%) but the best model gets 37 F1 on relation+direction+novelty (Lai et al. 2025), and Association/Bind are inherently undirected. Dan's Ozempic chain needs 'inhibits', not 'associated with', so expect to hand-check direction for canonical statements.",
+   "Claim verification (SciFact-style SUPPORT/REFUTE/NEI) is a different and useful primitive: GPT-4 zero-shot ~0.79 label F1 and MultiVerS 0.73 on SciFact, but systems lose >=15 F1 on an open 500k-abstract corpus (SciFact-Open) and no gold standard exists for atomic-claim extraction (PaperTrail 2026). Use it to score a formal statement against retrieved abstracts (Dan has embeddings), not to build the graph.",
+   "Do not trust LLM-judged 'validity' as F1: judges were under 50% accurate on biomedical RE outputs until outputs were forced into a structured format (+15%) (Laskar et al., ACL 2025). MedKGent's ~90% validity and Assi's 0.31 F1 are measuring different things. BioLean's few hundred canonical papers should double as the human gold set.",
+   "Cost for 28.5M abstracts (about 400 input + ~500 output tokens each, cached schema prompt): Claude Haiku 5.5 at $0.10/$0.50 per MTok is roughly $9k list, ~$4.5k via the 50%-off Batch API; Sonnet 5.5 ~$165k/$83k; Opus 5.5 ~$330k/$165k; add ~1.5-2x for a critic pass. Open 8B weights on rented H100s ($2-4/GPU-h, ~4k tok/s measured) is ~1,000 GPU-hours, $2-5k; MedKGent's 32B model with 50-sample self-consistency took 48 GPUs and still stopped at 10M abstracts. The 112-core CPU box (~30 tok/s single stream for an 8B Q4 model) would take years for full PubMed but handles a few hundred canonical papers or a ~100k-abstract topic slice in days.",
+   "SemRep/SemMedDB, the classic triple source, was retired by NLM on 2024-12-31 (final dump 130M predications on May-2024 data); do not build on it, but its subject/predicate/object + UMLS CUI + sentence + PMID schema is still the most battle-tested shape for a referenced statement table."
+  ],
+  "open_questions": [
+   "Recall vs precision: a proof needs the edge to exist, a weight needs the edge to be right. Does BioLean take PubTator3's high-recall correlation edges and let the LLM only annotate (direction, hedging, predicate type), or extract fresh with an LLM and accept ~0.3 recall?",
+   "How to encode epistemic strength formally: 5 BioRelFact levels, 3 critic labels, or a probability from noisy-OR aggregation? None of the surveyed systems map 'speculative' to a number in a principled way, and MedKGent resolves conflicts by letting the LLM pick a winner, which is the opposite of what Dan wants.",
+   "Novelty vs background: BioRED's novelty flag separates new findings from restated background; should restated background count as evidence of consensus (more weight) or be excluded to avoid double counting? No existing pipeline decides this.",
+   "Species: PubTator3 and iKraph ground genes to species-specific NCBI Gene IDs and no surveyed extractor maps mouse Glp1r to human GLP1R; BioLean needs an explicit orthology/translation layer before cross-species proofs are allowed.",
+   "Predicate vocabulary: PubTator3's 12 relation types (mostly correlations) vs RO/Biolink/BEL vs Dan's GO-typed 'copies (GO process)'. Which vocabulary do the Lean statements use, and is the RO->Lean mapping done once by hand or per statement by LLM+lookup (RELATE got only 52% exact match on predicates)?",
+   "Abstracts vs full text: ~74% of BioRED errors are cross-sentence and the mechanistic detail Dan wants is usually in Results, but PMC OA is only ~6M articles and full text is ~10x the tokens. Where is the cut?",
+   "Evaluation set: no benchmark covers grounded subject + RO predicate + direction + hedging + evidence sentence jointly; building the few-hundred-paper canonical set as a gold standard first (before any bulk run) seems necessary. Who annotates, and against which inter-annotator agreement target (direction got 90%)?",
+   "Self-consistency vs cheaper confidence: MedKGent's 50 samples per abstract gives calibrated-ish confidence at 50x cost; logprobs, a single critic pass, or agreement between two cheap models are untested alternatives at scale.",
+   "Data licences: iKraph's KG licence is unstated, MedKGent's Hugging Face set and PubTator3 bulk are open; the final SemMedDB dump has UMLS licence constraints. Which can be redistributed inside a public biolib?"
+  ]
+ },
+ {
+  "angle": "Nanopublications, Knowlets, micropublications, and evidence provenance ontologies (Mons/Concept Web Alliance, nanopub ecosystem 2023-2026, cardinal assertions, super-pattern, micropublications/Domeo, SEPIO/VA-Spec, ECO/CIO, PROV-O/PROV-K, Hypothes.is, Open PHACTS)",
+  "projects": [
+   {
+    "name": "Nanopublication ecosystem (Knowledge Pixels: Nanopub Registry, Nanopub Query, Nanodash, nanopub-java, nanopub-py, trusty URIs, Knowledge Space trust model)",
+    "url": "https://nanopub.net/ ; https://monitor.knowledgepixels.com/ ; https://github.com/knowledgepixels/nanopub-registry",
+    "status": "active (2026). Registry/Query/Nanodash/nanopub-java all had commits on 2026-10-23; nanopub-py v2.2.2 released 2026-06-23; Knowledge Space spec v1.0 dated 2026-04-27. Company: Knowledge Pixels AG, Zurich (founded 2022, CEO Tobias Kuhn; advisors incl. Jan Velterop, Michel Dumontier), funded by BMV/acatech/NLnet, no visible revenue model.",
+    "what_it_does": "A nanopublication is a TriG named-graph bundle: assertion graph + provenance graph (PROV-O: prov:wasDerivedFrom, prov:wasAttributedTo) + pubinfo graph, identified by a content-hash 'trusty URI' (RA...) and RSA-signed. Second-generation infrastructure (2023-2026): Registry = key/value store + per-pubkey/per-type add-only lists with checksums, synced across 4 public instances (registry.knowledgepixels.com, nanodash.net, petapico.org, univie.ac.at); Query = RDF4J repos per type/pubkey with grlc-style named SPARQL queries; Nanodash = web UI with assertion templates and 'Spaces'. Trust model: a 'setting' nanopub names initial trusted agents; agents are added via endorsement chains (npx:approvesOf, npx:introduces) and get per-key quotas; trust scores recomputed every 10 min. Retraction/supersession are first-class (invalidation backlinks). Verified numbers on 2026-10-23: 95,503 signed nanopubs, 745 agents, 845 accounts in the new registry; the legacy nanopub-server network (np.knowledgepixels.com, server.np.dumontierlab.com) is still up with 10,946,717 nanopubs, of which ~95% are bulk DB dumps (DisGeNET 4.72M, neXtProt 4.01M, Human Protein Atlas 1.25M, WikiPathways 27k; NanoWeb table). A nanopub Agent Skill (knowledgepixels/nanopub-skill, SKILL.md for Claude Code/Codex etc.) wraps the nanopub-java CLI.",
+    "relevance_to_biolean": "The right container format for BioLean's 'formal, annotated, referenced statements': each literature-derived triple + PMID + ECO evidence type + annotator becomes one signed, immutable, hash-identified record; supersession/retraction model maps onto revising a biolib lemma. Dan can run his own Registry+Query via Docker Compose (localhost:9292/9393) and keep it private, or publish to the public network under one key (quota applies; registries refuse >1200 triples or >1MB per nanopub, so one statement per nanopub). Sceptical read: (1) the registry's trust model is about WHO may publish (endorsement chains), not about HOW TRUE a claim is; it gives BioLean nothing for evidence weighting. (2) There is no existing corpus of literature-derived formal biology claims to reuse: the 10.9M legacy nanopubs are DB re-serialisations, and the 95k signed ones are mostly templates, FAIR metadata, reviews and social-science claims (type list shows ECO_0000361, OBI, SIO, cito:supports/disputes, hycl#AIDA-Sentence, superpattern terms, but no gene/disease templates). (3) No reasoning layer at all; nanopubs are storage/attribution only.",
+    "reusable_assets": "Nanopublication/guidelines repo (modelling patterns, pushed 2026-04); nanopub-py (pip install nanopub; rdflib-based; sign/publish/retract, test server), nanopub-java CLI; Registry/Query docker-compose for a private instance; grlc query API; Nanodash assertion templates (ntemplate:AssertionTemplate) incl. super-pattern and AIDA; npx: vocabulary (introduces, approvesOf, retracts, supersedes); trustyuri-java; Knowledge Space spec (w3id.org/knowledge-space, v1.0 2026-04-27) as a vendor-neutral design doc.",
+    "key_refs": [
+     "Mons & Velterop, 'Nano-Publication in the e-science era', SWASD@ISWC 2009, CEUR Vol-523",
+     "Groth, Gibson, Velterop, 'The anatomy of a nanopublication', Information Services & Use 30:51-56, 2010, DOI 10.3233/ISU-2010-0613",
+     "Mons et al., 'The value of data', Nature Genetics 43:281-283, 2011, DOI 10.1038/ng0411-281",
+     "Kuhn & Dumontier, 'Trusty URIs', ESWC 2014, DOI 10.1007/978-3-319-07443-6_27",
+     "Kuhn et al., 'Decentralized provenance-aware publishing with nanopublications', PeerJ CS 2:e78, 2016, DOI 10.7717/peerj-cs.78",
+     "Kuhn et al., 'Nanopublications: a growing resource of provenance-centric scientific linked data', eScience 2018, arXiv:1809.06532",
+     "Fabris et al., 'Search, access, and explore life science nanopublications on the Web' (NanoWeb), PeerJ CS 7:e335, 2021, DOI 10.7717/peerj-cs.335",
+     "Kuhn, 'Knowledge Space' v1.0, 2026-04-27, https://w3id.org/knowledge-space/",
+     "Registry design doc: https://github.com/knowledgepixels/nanopub-registry/blob/main/design.md"
+    ]
+   },
+   {
+    "name": "Super-pattern and 'formalization papers' (Bucur, Kuhn, Ceolin, van Ossenbruggen; VU Amsterdam / CWI)",
+    "url": "https://peerj.com/articles/cs-1159 ; https://arxiv.org/abs/2109.12907",
+    "status": "maintained but quiet (2023). Field study published 2023-02-21; the superpattern vocabulary (w3id.org/linkflows/superpattern/terms/...) is live in the Nanopub Query type list in 2026 and a Nanodash template exists; no new papers found 2024-2026.",
+    "what_it_does": "Analysed the main claims of a cross-discipline sample of papers and found they do not fit plain RDF/OWL triples. Proposed a 5-slot template with a formal first-order semantics: CONTEXT class, SUBJECT class, QUALIFIER, RELATION, OBJECT class. Qualifiers have defined meanings: 'generally' = in at least 90% of instances, 'mostly', 'frequently', 'sometimes', 'can', 'never', 'always'; relations are a small closed set (causes, contributes to, enables, prevents, inhibits, requires, affects, is same as...). Example: 'in the context of rat brain endothelial cells, transient oxidative stress generally causes tight-junction disruption'. Each formalisation is itself a nanopublication linked to the paper it formalises. The 2023 field study ran a real special issue (Data Science, IOS Press) of 15 'formalization papers' by 18 authors, with submissions, reviews and decisions all as nanopubs; authors found it feasible but the UI technical. Also builds on Kuhn 2013 'AIDA sentences' (Atomic, Independent, Declarative, Absolute English sentences as a fallback for claims not yet formalisable) and meta-nanopubs expressing agreement/disagreement.",
+    "relevance_to_biolean": "The closest existing attempt at exactly Dan's step 1 ('annotate the statements in canonical publications with ontology terms'). It shows the triple 'DNApol copies DNA' is too weak: real claims need a context slot (cell type, organism, condition) and a quantified qualifier, and the qualifier semantics ('generally' = >=90%) is what makes an Ozempic-style chain (inhibits -> responsible for breakdown -> reduces hunger) evaluable. The closed relation set and class-based (not instance-based) subjects map cleanly onto Lean structures. Caveat: the formal semantics was defined but never executed by any reasoner; nobody chained super-pattern claims into derivations. Their qualifier set is also coarse for biology (no dose, no tissue specificity beyond context).",
+    "reusable_assets": "Superpattern OWL vocabulary and Nanodash template (w3id.org/linkflows/superpattern); the 15 published formalization nanopubs (searchable via Nanopub Query, type superpattern:*); hycl#AIDA-Sentence type; PeerJ paper CC-BY with full method; CWI PDF of the K-CAP paper.",
+    "key_refs": [
+     "Bucur, Kuhn, Ceolin, van Ossenbruggen, 'Expressing high-level scientific claims with formal semantics', K-CAP 2021, arXiv:2109.12907, DOI 10.1145/3460210.3493561",
+     "Bucur, Kuhn, Ceolin, van Ossenbruggen, 'Nanopublication-based semantic publishing and reviewing: a field study with formalization papers', PeerJ CS 9:e1159, 2023, DOI 10.7717/peerj-cs.1159, PMC10280262",
+     "Kuhn, Barbano, Nagy, Krauthammer, 'Broadening the scope of nanopublications', ESWC 2013, arXiv:1303.2446"
+    ]
+   },
+   {
+    "name": "Cardinal assertions (Gibson, van Dam, Schultes, Roos, Mons 2012) and Knowlets / WikiProteins / Concept Web Alliance / ConceptWiki (Mons 2008-2012)",
+    "url": "https://ceur-ws.org/Vol-952/paper_26.pdf ; https://doi.org/10.1186/gb-2008-9-5-r89",
+    "status": "dead as software (last activity ~2012; wikiprofessional.org and ConceptWiki gone, Knewco defunct, no GitHub). Ideas live on only in papers and in PROV-K 2025.",
+    "what_it_does": "Knowlets (Mons et al. 2008, Genome Biology): a 'concept profile' that records the relationship between two concepts ONCE and accumulates three weights as evidence grows: F (number of factual statements from curated DBs like UniProt/GO/IntAct), C (sentence co-occurrence count in PubMed), A (indirect association). >1M concept Knowlets built over UMLS/Swiss-Prot/GO; the point was that the 'concept space' grows minimally while the 'text space' explodes. WikiProteins was the community-annotation wiki on top (Bairoch, Ashburner, Jimmy Wales co-authors); never left beta. Cardinal assertions (Gibson et al., SWAT4LS 2012, position paper): 'the result of aggregating the evidence associated with identical assertions to produce a new measure that represents a consensus of that evidence', with two hard criteria: (1) it links to every component nanopublication, (2) 'the method of generating the overall confidence score should be clearly defined and linked to'. Cardinal assertions are themselves immutable nanopubs; new evidence produces a new edition, giving a versioned chain of the evidence state over time. Cites STRING combined scores and neXtProt gold/silver/bronze as the practical precedents. The W3C HCLS wiki classes 'textbook' cardinal assertions (e.g. 'malaria is caused by mosquitoes') as the broadly accepted universals.",
+    "relevance_to_biolean": "This IS Dan's KEY REQUIREMENT, stated in 2012 and never built: a biolib lemma is a cardinal assertion (consensus statement + evidence score + links to supporting nanopubs + the scoring method itself published and citable + versioned as evidence changes). Knowlets' F/C/A split is a ready-made decomposition for an evidence score: curated-DB facts (Dan's GOA/UniProt), text co-occurrence (PubTator3/Open Targets europepmc sentences), inferred association. Why it failed: it was a position paper with no implementation; Knowlets were proprietary (Knewco) and co-occurrence-based rather than claim-based. Nothing to install; everything to copy in design.",
+    "reusable_assets": "None as code. Extracted full texts are at /tmp/biolean-pdf/gibson2012.pdf.txt and /tmp/biolean-pdf/mons2008.pdf.txt (made with pypdf via uv).",
+    "key_refs": [
+     "Gibson, van Dam, Schultes, Roos, Mons, 'Towards computational evaluation of evidence for scientific assertions with nanopublications and cardinal assertions', SWAT4LS 2012, CEUR Vol-952 paper 26",
+     "Mons et al., 'Calling on a million minds for community annotation in WikiProteins', Genome Biology 9:R89, 2008, DOI 10.1186/gb-2008-9-5-r89",
+     "Mons et al., 'The value of data', Nature Genetics 2011, DOI 10.1038/ng0411-281",
+     "W3C HCLS Nanopublications subtask wiki: https://www.w3.org/wiki/HCLSIG/SWANSIOC/Nanopublications-Subtask"
+    ]
+   },
+   {
+    "name": "PROV-K / Provenance-Driven Nanopublications (Menotti, Marchesin, Giachelle, Silvello; University of Padova)",
+    "url": "https://doi.org/10.1007/s00799-025-00431-x ; https://github.com/mntlra/knowledgeProvenance ; https://prov-k.dei.unipd.it/ontology/",
+    "status": "active (2025). IRCDL Feb 2025 workshop paper (CEUR Vol-3937 paper 10) expanded to IJDL journal article 2025; PDF modified 2025-09-13.",
+    "what_it_does": "Extends the nanopub model with a fourth 'knowledge provenance' named graph for assertions that come from aggregating several sources (an IE system, a truth-discovery step). PROV-K is a PROV-O extension that represents each piece of evidence as supporting OR conflicting with the assertion, carries truth values/reliability scores, and defines trust relationships agent->agent and agent->proposition. Applied at scale: 197,511 gene-expression/cancer associations from CoreKB (CORE relation-extraction system) serialised as extended nanopubs and released on Zenodo; a second use case builds a trust network over 45,649 facts using three LLM agents as assessors and measures how well LLMs judge trustworthiness.",
+    "relevance_to_biolean": "The only implemented, recent (2025) version of the cardinal-assertion idea, and it handles the OPEN PROBLEM Dan named: conflicting evidence is represented explicitly in the same graph as supporting evidence, with per-source reliability, instead of being collapsed into one number. The TriG serialisation (Figure 1 of the paper) is a template for BioLean's aggregated-evidence layer. Also the only prior art for 'LLM as a trust agent' in this space, with an accuracy evaluation; useful as a warning and a baseline. Limits: PROV-K is a provenance vocabulary, not a scoring theory; their truth values come from CORE's own aggregation; the nanopubs live on the Padova server, not the public registry.",
+    "reusable_assets": "PROV-K OWL ontology (Zenodo + prov-k.dei.unipd.it/ontology); Python code for building extended nanopubs (github.com/mntlra/knowledgeProvenance); 197,511 CoreKB nanopubs and the 45k-fact LLM trust network on Zenodo; CoreKB itself (gda.dei.unipd.it). Extracted paper text: /tmp/biolean-pdf/provk.pdf.txt.",
+    "key_refs": [
+     "Menotti, Marchesin, Giachelle, Silvello, 'Provenance-Driven Nanopublications: Representing Source Lineage and Trust Networks for Multi-Source Assertions', Int J Digital Libraries 26, 2025, DOI 10.1007/s00799-025-00431-x",
+     "Menotti et al., 'Extending Nanopublications with Knowledge Provenance for Multi-Source Scientific Assertions', IRCDL 2025, CEUR Vol-3937 paper 10",
+     "PROV-O, W3C Recommendation 2013-04-30, https://www.w3.org/TR/prov-o/"
+    ]
+   },
+   {
+    "name": "SEPIO (Scientific Evidence and Provenance Information Ontology) -> SEPIO-LinkML -> GA4GH VA-Spec (Statement / Proposition / EvidenceLine)",
+    "url": "https://github.com/sepio-framework/sepio-linkml ; https://va-spec.ga4gh.org/ ; https://github.com/monarch-initiative/SEPIO-ontology",
+    "status": "active in its LinkML/GA4GH form (sepio-linkml pushed 2026-10-14; ga4gh/va-spec 1.1.0 released 2026-10-02). The OWL ontology on OBO Foundry is stale: last release 2023-06-13 and its README warns it is 'out of date' and to use the LinkML repo instead.",
+    "what_it_does": "Matt Brush's (Monarch/ClinGen) evidence model, now the backbone of GA4GH Variant Annotation spec. Core split: Proposition = 'an abstract entity representing a possible fact that is either true or false' (the thing you prove); Statement = 'a claim of truth made by a particular agent on a particular occasion' about a Proposition, with direction (supports / disputes / neutral), strength, score, negated, subjectClassification; EvidenceLine = 'an evidence-based argument that may support or refute a target proposition' with directionOfEvidenceProvided, strengthOfEvidenceProvided, scoreOfEvidenceProvided and hasEvidenceItems; Method and Agent for how/who. Shortcut slots hasEvidence / hasEvidenceOfTypes (ECO) when you skip evidence lines. Profiles (ClinGen-ACMG variant pathogenicity) show it used in production clinical curation. Biolink Model (which Dan's sibling project already exports) borrowed the same ideas: has_evidence (ECO), knowledge_level, agent_type on Associations.",
+    "relevance_to_biolean": "The cleanest existing data model for the thing BioLean must get right: keep the formal Proposition (a Lean term) separate from the many Statements/EvidenceLines about it, each with direction and strength, so competing hypotheses are just two Statements with opposite direction on one Proposition and 'how established' is a fold over EvidenceLines. ClinGen proves this works for real curation with weighted evidence (ACMG criteria strengths). Because it is LinkML, Dan gets Python dataclasses, JSON Schema and RDF for free (uv add linkml), and it round-trips to his existing KGX/Biolink export. Caveats: VA-Spec is variant-centric; the generic SEPIO LinkML core has no profiles yet and no stated maintainer/version on its docs page; strength/score are free-form, so the scoring function is still Dan's.",
+    "reusable_assets": "sepio-linkml schema (w3id.org/sepio-framework/sepio-linkml) with generated artefacts; GA4GH VA-Spec 1.1.0 (schema + Python reference implementation); ClinGen-ACMG SEPIO profile as a worked example of evidence-strength weighting; legacy SEPIO OWL (purl.obolibrary.org/obo/sepio.owl, 2023) already in Dan's OBO dump.",
+    "key_refs": [
+     "Brush, Shefchek, Haendel, 'SEPIO: a semantic model for the integration and analysis of scientific evidence', ICBO 2016",
+     "SEPIO-LinkML docs: https://sepio-framework.github.io/sepio-linkml/",
+     "GA4GH VA-Spec 1.1.0 (2026-10-02): https://va-spec.ga4gh.org/en/latest/ ; https://github.com/ga4gh/va-spec/releases",
+     "OBO Foundry SEPIO entry: https://obofoundry.org/ontology/sepio (release 2023-06-13)"
+    ]
+   },
+   {
+    "name": "ECO (Evidence & Conclusion Ontology) + ECO-CollecTF corpus + CIO (Confidence Information Ontology)",
+    "url": "https://www.evidenceontology.org/ ; https://github.com/evidenceontology/evidenceontology ; https://doi.org/10.5281/zenodo.4568935 ; https://github.com/BgeeDB/confidence-information-ontology",
+    "status": "ECO active (release v2026-07-10; prior releases 2026-05-15, 2025-04-30, 2024-07-19; CC0; NSF funding ended, maintained by UMD/IGS). ECO-CollecTF: one-off corpus 2021, archived. CIO: draft, dormant (last push 2025-02-03; paper 2015; near-zero adoption outside Bgee).",
+    "what_it_does": "ECO types evidence and assertion methods (~1,900 native terms; 3,340 classes incl. imports in 2025-04-30 release): e.g. ECO:0000269 experimental evidence used in manual assertion, ECO:0000315 mutant phenotype, ECO:0000250 sequence similarity, ECO:0007669 computational evidence used in automatic assertion. It is the formal version of GO evidence codes (official ECO<->GO mapping file) and is used verbatim in UniProt evidence tags, GOA GAFs, Monarch, Biolink has_evidence. ECO deliberately does NOT rank or weight evidence. ECO-CollecTF (Hobbs, Erill et al. 2021): 84 open-access papers, 2,565 sentence/sentence-pair annotations linking an experimental-evidence statement to a biological assertion, labelled with 146 ECO terms plus negation, ECO-selection confidence and ASSERTION STRENGTH ratings; >=3 curators per doc, Cohen's kappa 0.69; BRAT/BioC, CC BY-NC. CIO (Bastian, Chibucos, Gaudet, Giglio, Lewis, Orchard, Poux, Robinson-Rechavi et al. 2015) tried to standardise confidence: 'high/medium/low confidence from single evidence', 'congruent' vs 'conflicting' multiple evidence lines, 'has greater confidence than' relations, with evidence types from ECO. It stayed a draft.",
+    "relevance_to_biolean": "Dan already has ECO in his OBO dump and ECO codes on every GOA annotation and UniProt evidence tag, so evidence TYPE is free; the missing piece is a type->weight function, and the history says: ECO refused to define one, CIO tried a generic one and nobody adopted it, while resource-specific ones (STRING scores, neXtProt gold/silver/bronze, ClinGen ACMG strengths) are what people actually use. So BioLean should define its own explicit, published weighting over ECO types (plus replication count and source) rather than wait for a standard. ECO-CollecTF is the only existing corpus that does precisely Dan's step 1 (sentence-level annotation of 'statement + evidence type + strength' in papers) and is a ready test set and annotation-guideline template; note it annotates Results sections of full text, whereas Dan mostly has abstracts.",
+    "reusable_assets": "eco.owl / eco.obo (CC0, already local); ECO-to-GO evidence code mapping (evidenceontology.org); ECO-CollecTF corpus on Zenodo 10.5281/zenodo.4568935 (BRAT + BioC) with annotation guidelines; cio.owl (purl.obolibrary.org/obo/cio.owl) as a vocabulary of confidence levels and congruent/conflicting evidence-line classes.",
+    "key_refs": [
+     "Giglio et al., 'ECO, the Evidence & Conclusion Ontology: community standard for evidence information', NAR 47:D1186, 2019, DOI 10.1093/nar/gky1036, PMC6323956",
+     "Hobbs et al., 'ECO-CollecTF: A Corpus of Annotated Evidence-Based Assertions in Biomedical Manuscripts', Front Res Metr Anal 2021, DOI 10.3389/frma.2021.674205",
+     "Bastian et al., 'The Confidence Information Ontology: a step towards a standard for asserting confidence in annotations', Database 2015 bav043, DOI 10.1093/database/bav043, PMID 25957950"
+    ]
+   },
+   {
+    "name": "Micropublications ontology (Clark, Ciccarese, Goble) + Domeo / Annotation Ontology",
+    "url": "https://doi.org/10.1186/2041-1480-5-28",
+    "status": "dead (2014-2016). purl.org/mp/ returns 404 (via purl.archive.org); Domeo RRID SCR_004170 marked 'no longer in service' 2023-01-09; no maintained GitHub for the OWL. Ideas partly absorbed into W3C Web Annotation (2017) and SEPIO.",
+    "what_it_does": "An argumentation model for biomedical claims, explicitly 'intended to complement the more narrowly focused nanopublication model'. Minimal form: a Statement plus attribution. Maximal form: Claims supported by Data, Methods, Materials; Statements that mp:supports / mp:challenges other statements; Representations (quotes, figures) anchored in articles; qualifiers and formalisations of the same claim; discussion and disagreement as first-class objects. Grounded in Toulmin-style argumentation theory. Prototyped as a Domeo plugin and used by Schneider/Boyce (ISWC Linked Science 2014) to link drug-drug-interaction assertions to their supporting evidence sentences. The Harvard/MGH team also produced the Annotation Ontology (AO) that fed into W3C Open Annotation / Web Annotation Data Model.",
+    "relevance_to_biolean": "Supplies the piece nanopubs lack: claims arguing with other claims. For Dan's ambiguity problem, mp:supports/mp:challenges between Statements (with each Statement anchored to a text span + PMID) is the graph you need before any evidence score can be computed; the citation chain analysis in the paper (claims citing claims that cite nothing) is also a good argument for BioLean's 'referenced statements' rule. Dead as software, so take the model (Figures in the JBMS paper; OWL listing in the arXiv version), not the code. Hypothesis-style anchoring replaces Domeo.",
+    "reusable_assets": "None maintained. The OWL vocabulary and RDF examples are printed in the arXiv preprint 1305.3506 / PMC4530550 supplementary; Annotation Ontology at purl.org/ao/ (status uncertain); Domeo source (Apache 2.0) historical.",
+    "key_refs": [
+     "Clark, Ciccarese, Goble, 'Micropublications: a semantic model for claims, evidence, arguments and annotations in biomedical communications', J Biomed Semantics 5:28, 2014, DOI 10.1186/2041-1480-5-28, PMC4530550, arXiv:1305.3506",
+     "Ciccarese et al., 'Open semantic annotation of scientific publications using DOMEO', J Biomed Semantics 3(Suppl 1):S1, 2012, DOI 10.1186/2041-1480-3-S1-S1",
+     "Schneider, Ciccarese, Clark, Boyce, 'Using the Micropublications ontology and the Open Annotation Data Model to represent evidence within a drug-drug interaction knowledge base', Linked Science @ ISWC 2014"
+    ]
+   },
+   {
+    "name": "Hypothes.is (Anno PBC) + W3C Web Annotation Data Model + SciBot",
+    "url": "https://web.hypothes.is/ ; https://h.readthedocs.io/en/latest/api/ ; https://github.com/SciCrunch/scibot",
+    "status": "active (2026). hypothesis/h pushed 2026-10-21, client 2026-10-19; company became Anno PBC in 2022 ($14M seed incl. $2.5M from ITHAKA), CEO change to Joe Ferraro June 2024; free individual accounts, paid edu/enterprise. SciBot (SciCrunch RRID annotation bot) last push 2025-09-19. W3C Web Annotation Data Model is a stable Recommendation (2017-02-23).",
+    "what_it_does": "Browser/embedded annotation layer over any web page or PDF, storing annotations as W3C Web Annotation JSON (TextQuoteSelector exact/prefix/suffix + TextPositionSelector + document fingerprint/DOI), with public REST API v1 (search, read public annotations without auth, groups, tags). Publisher integrations (eLife replaced comments with it 2018; Elsevier, CUP, APA). SciBot: a Hypothesis-API bot that finds RRIDs in papers, resolves them against SciCrunch and posts machine annotations that curators correct, i.e. machine-first, human-verified entity annotation. No biology knowledge model of its own.",
+    "relevance_to_biolean": "Not a knowledge base, but the de-facto standard for ANCHORING a statement to the exact sentence in a paper. If BioLean's annotated statements carry a W3C Web Annotation selector (exact quote + PMID/DOI + offsets) they are portable, re-anchorable to full text later, and viewable in Hypothesis for review. SciBot is a working pattern for Dan's pipeline: LLM/NER proposes annotations, human curators accept or fix, and both states are recorded. Hypothesis public data is not a usable evidence source for biology (sparse, unstructured).",
+    "reusable_assets": "Hypothesis REST API v1 (no auth for public reads) and h/client source (BSD); W3C Web Annotation Data Model + Vocabulary (oa: namespace; TextQuoteSelector); SciBot Python code (SciCrunch/scibot) as a bot template; Hypothesis is also usable via the Nanodash-style approach of posting the annotation itself as a nanopub.",
+    "key_refs": [
+     "W3C Web Annotation Data Model, Recommendation 2017-02-23, https://www.w3.org/TR/annotation-model/",
+     "Hypothesis API docs: https://h.readthedocs.io/en/latest/api/",
+     "Hypothesis blog, 'SciBot: machine and human annotators working together', 2016, https://web.hypothes.is/?p=5815",
+     "Wikipedia 'Hypothes.is' (Anno PBC 2022; CEO change 2024)"
+    ]
+   },
+   {
+    "name": "Open PHACTS (Open Pharmacological Concepts Triple Store) and its nanopublication/evidence work",
+    "url": "https://www.openphacts.org/ (TLS certificate expired) ; https://github.com/openphacts",
+    "status": "dead. IMI project 2011-2016; Open PHACTS Foundation (UK company 08548291) dissolved 2025-02-18; RRID SCR_005050 marked 'no longer in service' Aug 2025; GitHub last push 2017. Its nanopublication guidelines survive in the community repo Nanopublication/guidelines (pushed 2026-04).",
+    "what_it_does": "EU/IMI drug-discovery data-integration platform (ChEMBL, DrugBank, UniProt, WikiPathways, DisGeNET...) with an API over a Virtuoso triple store. Contributions in this angle: the first widely used Nanopublication Guidelines (2013; PROV-O-based provenance graph, pav: for versioning, one assertion per nanopub); 'scientific lenses' (context-dependent identifier equivalence, e.g. treat stereoisomers as the same compound for one query and different for another) via the BridgeDb Identifier Mapping Service; DisGeNET and neXtProt nanopub exports done in its orbit; Gibson et al.'s cardinal-assertion paper came from the same Leiden group.",
+    "relevance_to_biolean": "Mostly a cautionary tale and a source of two durable ideas. (1) 'Scientific lenses' is the correct answer to identifier ambiguity in BioLean (CHEBI semaglutide vs its salts; gene vs protein vs ortholog): equivalence is a parameter of the query/proof, not a fact. (2) The Nanopublication Guidelines' PROV-O/pav pattern is what the current registry still expects. The platform itself, its API and the Foundation are gone; nothing to call.",
+    "reusable_assets": "Nanopublication/guidelines GitHub repo (active, 2026); Open PHACTS final report PDF (IHI) for the evidence-aggregation architecture; BridgeDb IMS (still maintained by Maastricht) for ID mapping with lenses; DisGeNET nanopub RDF (now behind MedBioinformatics commercial licence; legacy copies in the old nanopub servers).",
+    "key_refs": [
+     "Groth et al., 'API-centric Linked Data integration: The Open PHACTS Discovery Platform case study', J Web Semantics 29, 2014, DOI 10.1016/j.websem.2014.03.003",
+     "Batchelor et al., 'Scientific lenses to support multiple views over linked chemistry data', ISWC 2014, DOI 10.1007/978-3-319-11964-9_7",
+     "Queralt-Rosinach et al., 'Publishing DisGeNET as nanopublications', Semantic Web 7(5), 2016, DOI 10.3233/SW-150189",
+     "Companies House record 08548291 (dissolved 2025-02-18)"
+    ]
+   }
+  ],
+  "key_lessons": [
+   "Keep the Proposition separate from the Statements about it. SEPIO/GA4GH VA-Spec (1.1.0, Oct 2026) model a Proposition as the abstract possible-fact and each curator/paper/DB contribution as a Statement or EvidenceLine with direction (supports/disputes), strength and score. For BioLean that means the Lean term is the Proposition and 'how established' is a fold over EvidenceLines; competing hypotheses are just opposite-direction Statements on one Proposition, not two different facts.",
+   "Evidence type is solved; evidence weight is not, and nobody will solve it for you. ECO (release 2026-07-10) deliberately only types evidence and is already on every GOA/UniProt record Dan has; CIO (2015) tried a generic confidence scale and never got adopted; what people actually use are resource-specific functions (STRING combined score, neXtProt gold/silver/bronze, ClinGen ACMG strengths). BioLean should publish its own explicit ECO-type x replication x source weighting and, per Gibson et al. 2012, make the scoring method itself a citable, linked artefact.",
+   "The biolib lemma already has a name: cardinal assertion (Gibson, van Dam, Schultes, Roos, Mons, SWAT4LS 2012). Aggregate identical assertions into one consensus with an evidence value, link every component nanopub, link the method, treat it as immutable and issue new editions as evidence changes. It was never built between 2012 and PROV-K 2025, which is the gap BioLean fills.",
+   "Real claims need a context slot and a quantified qualifier. The super-pattern study (Bucur, Kuhn et al., K-CAP 2021; PeerJ CS 2023) found plain triples cannot carry main claims and used CONTEXT + SUBJECT + QUALIFIER ('generally' = >=90%, 'frequently', 'sometimes', 'never') + closed RELATION set + OBJECT. The Ozempic chain only evaluates if 'inhibits' and 'reduces hunger' carry qualifiers; adopt that template, and use AIDA sentences (Kuhn 2013) as the fallback for claims not yet formalisable.",
+   "Represent conflict explicitly instead of averaging it away. Micropublications (Clark, Ciccarese, Goble 2014) make mp:supports/mp:challenges first-class edges between statements; PROV-K (Menotti et al. 2025) stores supporting and conflicting evidence with per-source reliability in the same graph for 197k gene-cancer assertions; CIO distinguishes congruent from conflicting evidence lines. A proof system can then expose 'contested' as a state rather than a low score.",
+   "Registry trust is about agents, not claims. The 2025-26 Nanopub Registry computes trust from endorsement chains between signing keys and uses it for publishing quotas; it says nothing about whether an assertion is true. Reuse it for 'who may contribute to biolib', never as an evidence weight.",
+   "There is no reusable corpus of formal literature claims in biology. The legacy nanopub network's 10.9M nanopubs are ~95% DB re-serialisations (DisGeNET 4.7M, neXtProt 4.0M, HPA 1.25M); the new signed registry has 95,503 nanopubs, almost none biological. The only sentence-level 'statement + ECO evidence type + strength' corpus is ECO-CollecTF (84 papers, 2,565 annotations, Zenodo 2021), useful as a test set and guideline template. Dan's raw material (PubTator3 BioREx relations, Open Targets europepmc sentences, GOA PMID links) is already richer than anything in this angle.",
+   "Platforms die, standards-shaped files survive. Knowlets/ConceptWiki (2012), Domeo and purl.org/mp (2014-16), Open PHACTS (Foundation dissolved 2025-02-18) all vanished with funding; ECO, PROV-O, W3C Web Annotation and the nanopub guidelines (moved to a community repo) persisted. Store BioLean statements as plain TriG/parquet with content-hash IDs and PROV-O provenance, optionally mirrored to a self-hosted Nanopub Registry (Docker Compose, localhost:9292), rather than inside any one platform.",
+   "Anchor every statement to the exact text span. W3C Web Annotation selectors (TextQuoteSelector exact/prefix/suffix + PMID/DOI) as used by Hypothesis make annotations portable and re-anchorable to full text later; SciBot shows the workable loop of machine-proposed, human-verified annotations. Use the selector, not the Hypothesis service, as the dependency.",
+   "Identifier equivalence is a parameter, not a fact. Open PHACTS 'scientific lenses' let one query treat semaglutide and its salts (or gene/protein/ortholog) as equivalent and another not. BioLean proofs will need the same: which CHEBI/UniProt/HGNC equivalences a derivation assumed must be recorded with the proof."
+  ],
+  "open_questions": [
+   "Publish to the public Nanopub Registry (citability, interop, one signing key with quota) or run a private registry/plain TriG store with the same shape and publish only biolib-level cardinal assertions? The registry's per-key quota and 1200-triple/1MB limits suit one-statement-per-nanopub but not bulk imports of 1.28M GOA links.",
+   "How do super-pattern qualifiers ('generally' = >=90%, 'frequently', 'sometimes', 'never') map into Lean: a probabilistic/weighted logic, a threshold that promotes a Proposition to a classical Prop once its evidence score passes it, or both (dual encoding)?",
+   "What is the evidence-score function exactly, and is it itself a versioned nanopub? Candidates from this angle: Knowlet-style F (curated-DB facts, by ECO type) / C (text-mined sentence support, from PubTator3 and Open Targets europepmc) / A (inferred), combined per Gibson's criteria (method linked, components linked, new edition on change).",
+   "Should competing hypotheses be two Statements with opposite direction on one Proposition (SEPIO), an argument graph of mp:supports/mp:challenges between statements (micropublications), or PROV-K-style supporting/conflicting evidence inside one aggregated assertion? These give different proof semantics for 'contested'.",
+   "Dan has abstracts, not full text: is a TextQuoteSelector on the abstract sentence a sufficient anchor, and how should the ECO-CollecTF guidelines (written for Results sections) be adapted to abstract-level evidence statements?",
+   "PROV-K used LLMs as trust agents and measured their accuracy. Should LLM-derived statements enter BioLean's evidence pool at all, and if so with what ECO type (ECO:0007669 automatic assertion) and what prior weight, so they cannot inflate 'established' scores?",
+   "Which identifier lenses (CHEBI parent/salt/conjugate, UniProt isoform/ortholog, HGNC gene vs protein) must a proof record as assumptions, and can those be expressed as Lean typeclass instances rather than per-proof flags?"
+  ]
+ },
+ {
+  "angle": "Knowledge assembly from literature: INDRA, EMMAA and kin (Gyori lab)",
+  "projects": [
+   {
+    "name": "INDRA (Integrated Network and Dynamical Reasoning Assembler)",
+    "url": "https://github.com/gyorilab/indra",
+    "status": "active (release 1.24.0 2025-07-30; commits to 2026-06-30; 230 stars)",
+    "what_it_does": "Python library that turns reader output and curated DBs into typed Statements (Phosphorylation, Activation/Inhibition, IncreaseAmount/DecreaseAmount, Complex, Translocation, ActiveForm, Conversion, Gef/Gap...). Agents carry db_refs (HGNC, UP, FPLX, CHEBI, GO, MESH...). Each Statement has an Evidence list: source_api, pmid, sentence text, epistemics {direct, negated, hypothesis}, text_refs, and reader annotations (e.g. REACH rule name in found_by). Preassembler: combine_duplicates (by matches_key), combine_related (builds a refinement partial order using FamPlex/GO/CHEBI isa/partof; a Statement refines another if more specific on >=1 element and equal elsewhere), find_contradicts (polarity pairs only: Activation vs Inhibition, IncreaseAmount vs DecreaseAmount, Phosphorylation vs Dephosphorylation). BeliefEngine: per-source systematic error e_syst and random error e_rand; P(wrong) = product over sources of (e_syst_s + product over that source's evidences of e_rand_s); belief = 1 - P(wrong). Defaults: readers e_rand 0.3 / e_syst 0.05; curated DBs e_rand 0.01-0.2 / e_syst 0.01; GNBR e_syst 0.1. Hierarchy belief: a general Statement inherits evidence from all more-specific Statements that refine it; evidence never flows the other way. indra.belief.skl has trainable CountsScorer/HybridScorer. Assemblers in master: pysb (-> SBML, BNGL, Kappa via PySB), sbgn (PD), pybel, cx/cyjs (NDEx), sif, indranet, graph, english, html (curation UI), index_card, kami, tsv. No BioPAX assembler: BioPAX is input-only (pybiopax). No evidence any INDRA/EMMAA model was deposited to BioModels. Verified: the MSB 2023 paper (Bachman, Gyori, Sorger) processed 567,507 articles -> 5.9M raw reader Statements + 730k from DBs -> 2.9M after filtering -> ~900k unique; 63% single-evidence; 38% of Statements refine another; 19% of Statements have >=2 readers; single-mention precision by reader: RLIMS-P 80%, TRIPS 79%, MedScan 66%, REACH 48%, Sparser 36%; overall 73% of 1,800 curated Statements correct; random forest belief model AUPRC 0.942 vs 0.893 for counts-only.",
+    "relevance_to_biolean": "Closest existing thing to a 'baseline of formal, annotated, referenced statements'. Reuse directly: Statement JSON schema as the intermediate representation; the refinement partial order (subsumption via ontology) as the model for 'general claim is supported by specific claims'; the two-error belief model and the specific->general evidence-flow rule as the starting edge weight; find_contradicts as the detector of competing claims. Gaps for BioLean: statement vocabulary is molecular (no GO process / SO as first-class relation types; no 'copies', 'reduces hunger'); belief measures extraction reliability, not scientific consensus; refinement is an ontology lattice, not a proof; belief is never composed along multi-step paths (the authors call causal transitivity 'unresolved'). Note: ~/.indra/bio_ontology/1.34/bio_ontology.pkl (470 MB) is present but the indra package is not installed in system python; the pickle needs a matching INDRA version to load.",
+    "reusable_assets": "indra/resources/statements_schema.json (JSON Schema draft-06 for Statements/Evidence); default_belief_probs.json (per-source priors); source_info.json (36 sources typed reader/database); bio_ontology pickle (networkx graph of HGNC/UP/FPLX/CHEBI/GO/MESH/DOID/EFO/HP + xrefs); FamPlex family/complex ontology; indra.preassembler and indra.belief as importable code; indra.explanation.model_checker (signed/unsigned graph, PySB, PyBEL path search); PyPI package 'indra'.",
+    "key_refs": [
+     "Bachman JA, Gyori BM, Sorger PK. Automated assembly of molecular mechanisms at scale from text mining and curated databases. Mol Syst Biol 2023; DOI 10.15252/msb.202211325; PMC10167483",
+     "Gyori BM et al. From word models to executable models of signaling networks using automated assembly. Mol Syst Biol 2017; DOI 10.15252/msb.20177651; PMID 29175850",
+     "Todorov PV et al. INDRA-IPM: interactive pathway modeling using natural language with automated assembly. Bioinformatics 2019;35(21):4501; DOI 10.1093/bioinformatics/btz289",
+     "Docs: https://indra.readthedocs.io (modules/belief, modules/preassembler, modules/assemblers)"
+    ]
+   },
+   {
+    "name": "INDRA DB (knowledge back-end + REST API + curation)",
+    "url": "https://github.com/gyorilab/indra_db",
+    "status": "active (commits to 2026-07-09; API live at db.indra.bio, verified 2026-10-23)",
+    "what_it_does": "Postgres (AWS RDS) store of text content, raw reader output and preassembled Statements with belief. README: all of PubMed (~19M abstracts, ~29M titles), ~2.7M PMC full text, ~0.7M Elsevier full text; REACH and Sparser run daily, Eidos/ISI/MTI on new content, TRIPS on a subset; static content from MedScan, RLIMS-P, Geneways, GNBR, SemRep plus curated DBs (Pathway Commons, SIGNOR, BEL, BioGRID, PhosphoSite, TRRUST, CTD, DrugBank, OmniPath...). Belief for the whole corpus is recomputed in RAM from shallow metadata (indra_db/belief.py, MockStatement + SimpleScorer). Curation table: pa_hash (statement), source_hash (evidence), tag, free text, curator, date. Curation tag vocabulary in the web UI: correct, entity_boundaries, grounding, no_relation, wrong_relation, act_vs_amt, polarity, negative_result, hypothesis, agent_conditions, mod_site, other. Live test today: GET /statements/from_agents?subject=MEK&object=ERK&type=Phosphorylation returned belief 0.863 with REACH (PMC) and RLIMS-P evidence.",
+    "relevance_to_biolean": "The 12-tag curation taxonomy is a ready-made error ontology for BioLean's evidence layer; it encodes the MSB finding that most wrong extractions are technical (grounding, polarity, negation, hypothesis) rather than scientific disagreement. The REST API gives belief-scored, referenced Statements for any gene pair without running readers. Failure for BioLean: infrastructure is AWS-RDS-shaped and not packaged for self-hosting; no public releases/tags; no bulk dump endpoint found. Dan's sibling project already emits INDRA Statement JSON, so a local path exists.",
+    "reusable_assets": "REST API at https://db.indra.bio (statements/from_agents, from_hash, curation submit/list); INDRA client indra.sources.indra_db_rest; readonly schema (indra_db/schemas/readonly_schema.py) as a design reference for a statement store; curation tag list.",
+    "key_refs": [
+     "Service README: https://github.com/gyorilab/indra_db/blob/master/indra_db_service/README.md",
+     "Docs: https://indra-db.readthedocs.io",
+     "Bachman, Gyori, Sorger 2023 MSB (curation methods; 1,800 Statements / 6,022 mentions curated by two authors)"
+    ]
+   },
+   {
+    "name": "INDRA CoGEx + Biomedical Discovery Engine + indra_agent (MCP)",
+    "url": "https://github.com/gyorilab/indra_cogex",
+    "status": "active (CoGEx commits 2026-09-29; indra_agent 2026-08-28; discovery.indra.bio live; funded DARPA ASKEM / ARPA-H BDF HR00112220036)",
+    "what_it_does": "Neo4j knowledge graph: INDRA causal Statements (indra_rel edges with belief + evidence) plus non-causal context: INDRA ontology isa/partof, GO annotations, Bgee expression, CCLE mutations and drug sensitivity, ClinicalTrials.gov, ChEMBL indications, SIDER side effects, Reactome/WikiPathways membership, HPO phenotypes, DisGeNet, GWAS, PubMed MeSH annotations and citations, InterPro domains, DepMap codependency, NIH Reporter. Build = per-source processors -> CSV -> neo4j-admin bulk import. Web portal (discovery.indra.bio): gene-list / signed / continuous enrichment, kinase and metabolite analysis, source-target path analysis, GO/MeSH/publication/subnetwork explorers, clinical trial results, API docs. indra_agent: MCP server (9 composable tools, '20M+ nodes') hosted at https://discovery.indra.bio/mcp. No dedicated peer-reviewed CoGEx paper found (only a 2022 talk and docs).",
+    "relevance_to_biolean": "Shows how the lab now layers 'context' (GO, tissue, disease, trial) onto causal Statements, which is exactly the GO-process/SO-term annotation Dan wants. The processor pattern (one small class per source emitting typed nodes/edges) is a clean template for BioLean's ingestion of GOA, PubTator3, Open Targets. The MCP endpoint lets a Lean-side agent query INDRA knowledge without any infra. Failure for BioLean: Neo4j graph, no logic or proof layer; indra_rel edges need an INDRA DB dump as input, which is not public.",
+    "reusable_assets": "Public MCP server https://discovery.indra.bio/mcp; REST API (apidocs); indra_cogex.sources processors (code); indra_cogex.client query library; docs https://indra-cogex.readthedocs.io",
+    "key_refs": [
+     "Docs: https://indra-cogex.readthedocs.io",
+     "indra_agent README: https://github.com/gyorilab/indra_agent",
+     "Gyori 2022 talk abstract (KGC): https://www.knowledgegraph.tech/?p=10069"
+    ]
+   },
+   {
+    "name": "EMMAA (Ecosystem of Machine-maintained Models with Automated Analysis)",
+    "url": "https://github.com/gyorilab/emmaa",
+    "status": "dormant: last code commit 2024-07-19; model/test timestamps frozen at 2024-08-01 (checked covid19, rasmodel, aml via /latest/stats_date); dashboard emmaa.indra.bio still served (/health = pass); PyPI last release 1.9.0 (2020)",
+    "what_it_does": "Self-updating disease/pathway models built on INDRA. 17 models listed by /metadata/models (aml, brca, covid19, covid19_inflammasome, covid19_map, food_insecurity, luad, marm_model, ms, nf, paad, painmachine, prad, rasmachine, rasmodel, skcm, vitiligo). Daily: literature search -> readers -> INDRA assembly -> relevance filter -> model snapshot on S3 -> Lambda triggers Batch job -> tests -> dashboard. Testing: test = Statement linking a perturbation to a readout (from BEL Large/Small Corpus 'large_corpus_tests' or curated sets); applicable if both entities are in the model; the model is assembled to PySB, exported to a Kappa influence map (or signed/unsigned graph, PyBEL), and INDRA's ModelChecker searches for a path; PathResult codes: PATHS_FOUND, NO_PATHS_FOUND, SUBJECT_NOT_FOUND, OBJECT_NOT_FOUND, MAX_PATH_LENGTH_EXCEEDED, STATEMENT_TYPE_NOT_HANDLED. Pass = at least one path within max length; each result gets an English explanation. Registered user queries are re-run on every update. Curation endpoints feed back to INDRA DB. Funded by DARPA ASKE (HR00111990009). Only posters and milestone reports; no peer-reviewed EMMAA paper found.",
+    "relevance_to_biolean": "The nearest thing to 'prove a higher-level claim from literature statements': a claim is 'proved' by existence of a mechanistic path in a signed graph, with a plain-English witness. Lessons: (a) proof = bounded path search, no composition of belief along the path and no handling of alternative paths; (b) the project's own authors flag causal transitivity as unresolved, so long chains are weak evidence; (c) continuous self-updating died within months of funding ending. BioLean should treat the EMMAA path check as the degenerate case of a Lean proof (a chain of edge lemmas) and add explicit belief composition, which EMMAA never did.",
+    "reusable_assets": "Live JSON endpoints: /metadata/models, /metadata/model_info/<m>, /latest/stats_date/<m>, /latest/statements/<m> (frozen 2024-08-01 snapshots); indra.explanation.model_checker code; emmaa.model and emmaa.model_tests code; ASKE milestone reports describing design decisions (https://emmaa.readthedocs.io/en/latest/reports/).",
+    "key_refs": [
+     "EMMAA docs, architecture and analysis: https://emmaa.readthedocs.io/en/latest/architecture/analysis.html",
+     "Bachman JA, Gyori BM. EMMAA poster abstract, IMAG ML-MSM 2019 (DARPA ASKE)",
+     "ASKE Month 13 report (11 models, 8 fully machine-maintained): https://emmaa.readthedocs.io/en/latest/reports/month13_report.html"
+    ]
+   },
+   {
+    "name": "Gilda + grounding stack (Bioregistry, Adeft, SeMRA)",
+    "url": "https://github.com/gyorilab/gilda",
+    "status": "active (Gilda 1.6.1 2026-06-11; Bioregistry v0.15.2 2026-10-08; grounding.indra.bio live, verified today)",
+    "what_it_does": "Gilda: scored string matching over names/synonyms from INDRA's bio_ontology (HGNC, UniProt, FamPlex, CHEBI, GO, MeSH, DOID, EFO, HP), with machine-learned context disambiguation (Adeft models) and species prioritisation; Python package + REST. Verified: POST /ground 'semaglutide' -> CHEBI:167574 (score 0.78, via CHEBI name and MeSH synonym). Bioregistry: CURIE/prefix normalisation registry (CZI-funded). SeMRA (Hoyt, Karis, Gyori, Bioinformatics 2025): assembles 43.4M mappings from 127 sources over 445 resources into a graph and infers indirect mappings with confidence scores, Zenodo-archived.",
+    "relevance_to_biolean": "BioLean's annotation step ('DNApol' -> GO:0003887, 'DNA' -> SO:0000352) needs grounding with disambiguation; Gilda does this for molecular entities and GO, and is the same grounder INDRA readers' outputs are normalised with, so BioLean statements will be joinable to INDRA DB. SeMRA is a small worked example of the thing Dan wants: inference (transitive mapping chains) with a confidence attached to each inferred edge, with code and data. Gap: Gilda's coverage of SO, PATO, UBERON is limited (it is built from INDRA's bio_ontology), but Dan's 6.0M OBO terms can be loaded into Gilda's grounder format.",
+    "reusable_assets": "PyPI gilda; REST https://grounding.indra.bio; Gilda grounding-term TSV format for custom ontologies; Bioregistry JSON; SeMRA code https://github.com/biopragmatics/semra and mappings DB https://doi.org/10.5281/zenodo.11082038",
+    "key_refs": [
+     "Gyori BM, Hoyt CT, Steppi A. Gilda: biomedical entity text normalization with machine-learned disambiguation as a service. Bioinformatics Advances 2022;2(1):vbac034; DOI 10.1093/bioadv/vbac034; PMC9710686",
+     "Hoyt CT, Karis K, Gyori BM. Assembly and reasoning over semantic mappings at scale for biomedical data integration. Bioinformatics 2025;41(11):btaf542; DOI 10.1093/bioinformatics/btaf542; PMID 41021462",
+     "Hoyt CT et al. Unifying the identification of biomedical entities with the Bioregistry. Sci Data 2022; DOI 10.1038/s41597-022-01807-3"
+    ]
+   },
+   {
+    "name": "Reader ecosystem used by INDRA (REACH, Sparser, TRIPS/DRUM, MedScan, RLIMS-P, ISI/AMR, Eidos, TEES)",
+    "url": "https://github.com/clulab/reach",
+    "status": "REACH: maintained (build/test fixes to 2026-10-06 by Keith Alcock; last release v1.6.2 Jan 2021; research-only licence). Sparser: dormant (ddmcdonald/sparser, Lisp, last push 2025-02-12). TRIPS/DRUM: web service http://trips.ihmc.us/parser/cgi/drum answers (200), no visible development. MedScan: Elsevier commercial, static output only. RLIMS-P: iTextMine API live (200), phosphorylation only. ISI/AMR: dead (2018). Eidos: dormant (2024-02, World Modelers domain). TEES: dead (2019).",
+    "what_it_does": "Rule/grammar-based event extractors producing BioPAX-like events (phosphorylation, binding, regulation) with grounding to UniProt/CHEBI etc. REACH (Odin grammars, Scala) is the main daily reader in INDRA DB and the source of rule-name subtypes used for per-rule belief priors. Measured in the MSB 2023 curation: single-mention precision RLIMS-P 80%, TRIPS 79%, MedScan 66%, REACH 48%, Sparser 36%; REACH precision rose from 1 to 2 mentions (63%) then plateaued; 81.3% of relations seen by only one reader; mention-count correlations REACH-MedScan 0.63, REACH-Sparser 0.61, REACH-TRIPS 0.37, RLIMS-P vs anything <0.12. The lab's newer 'tkg' (textToKnowledgeGraph) source and 2026 PSB paper point to LLM-based readers replacing these.",
+    "relevance_to_biolean": "Do not plan to run these readers. They are 2015-2020 rule systems, hard to build (Scala/Lisp/Java), and the lab itself is moving to LLM extraction and LLM judging. What transfers is the evidence: reader agreement is rare and is a strong reliability signal, and per-reader error rates differ by 2x, so BioLean's evidence weights must be per-source and per-extraction-method, not global. Dan already has three independent extractors locally (PubTator3 BioREx, Open Targets EuropePMC, INDRA Statement export) to replicate the multi-reader-agreement feature.",
+    "reusable_assets": "REACH Docker/JAR and ApiServer (research use); INDRA processors for each reader's output format (indra.sources.reach/sparser/trips/medscan/rlimsp/isi/eidos/tees); PMC6156821 silver-standard REACH event corpus (old).",
+    "key_refs": [
+     "Valenzuela-Escarcega MA et al. Large-scale automated machine reading discovers new cancer-driving mechanisms. Database 2018; DOI 10.1093/database/bay098; PMC6156821",
+     "Bachman, Gyori, Sorger 2023 MSB Tables 2-4 (per-reader precision, overlap)",
+     "INDRA sources docs: https://indra.readthedocs.io/en/latest/modules/sources/index.html"
+    ]
+   },
+   {
+    "name": "indra-belief-model (LLM-as-curator belief scoring, 2026)",
+    "url": "https://github.com/gyorilab/indra-belief-model",
+    "status": "active, early (commits to 2026-09-02; 1 star; no release)",
+    "what_it_does": "Replaces/extends count-based belief with an LLM judgement per (Statement, Evidence) pair. Tier 1 deterministic grounding check via Gilda aliases (auto-reject MISMATCH and pseudogene hits). Tier 2: gemma-4-26b (Ollama/MLX) with a 'disconfirm-first' prompt that must write a defeating objection (negation, hedging, family-vs-member, direction reversal) before a verdict; 7 statement-type-adaptive contrastive pairs; extra relation-nature step for Complex claims. Output: closed-set {verdict, confidence} plus a calibrated sentence probability from a fitted direct-probe profile keyed by (model, prompt hash). README example: 'kinase-dead RSK1 was unable to phosphorylate YB-1' extracted as RPS6KA1 phosphorylates YBX1 -> judged incorrect.",
+    "relevance_to_biolean": "This is what the INDRA authors now do about the finding that most belief errors are technical. For BioLean it is a template for the 'is this sentence really evidence for this annotated statement' step, on a machine with 112 cores and no GPU (a 26B model is slow on CPU; a smaller model or an API would be needed). The calibration-profile idea (probabilities valid only for a fixed model+prompt) is a useful discipline for recording how an evidence weight was produced.",
+    "reusable_assets": "Code (prompts, contrastive example sets, calibration constants); ScoringRecord input format tied to INDRA Statement/Evidence.",
+    "key_refs": [
+     "README: https://github.com/gyorilab/indra-belief-model",
+     "Related: Jiang J, Radivojac P, Gyori BM. Literature-driven extraction and computational prediction of causal statements linking genetic variants to biological processes, pathways and phenotypes. PSB 2026"
+    ]
+   },
+   {
+    "name": "MIRA (meta-model templates) and INDRA World",
+    "url": "https://github.com/gyorilab/mira",
+    "status": "MIRA active (v0.10.1 2025-02-02; commits to 2026-10-06; DARPA ASKEM). INDRA World dormant (last push 2024-07-02).",
+    "what_it_does": "MIRA: ontology-grounded meta-model templates (JSON schema in mira/metamodel/schema.json) for dynamical systems, mainly epidemiology; each template is a typed process (e.g. NaturalConversion, ControlledConversion) over grounded Concepts; generates Petri nets, SBML, ODE code; ingests SBML from BioModels; domain knowledge graph services; MIRA-DB/epimodels.io stores ODE models extracted from literature. INDRA World: Eidos-based causal Influence statements for food security etc., with ontology-driven assembly and curation.",
+    "relevance_to_biolean": "MIRA is the lab's second attempt at a formal statement language, after INDRA Statements: typed templates with explicit semantics and a JSON schema, which is closer to what a Lean encoding needs than INDRA's class hierarchy. Worth reading the schema before designing BioLean's statement types. INDRA World matters only as evidence that the same assembly machinery was reused in a non-molecular domain. Neither does proof or belief composition.",
+    "reusable_assets": "mira/metamodel/schema.json; MIRA Python package; BioModels SBML ingestion code.",
+    "key_refs": [
+     "MIRA docs: https://miramodel.readthedocs.io",
+     "Mohbe R, Nanglo T, Karis K, Gyori BM. Literature-based extraction of compartmental epidemiology models with MIRA. epiDAMIK @ KDD 2026",
+     "INDRA World docs: https://indra-world.readthedocs.io"
+    ]
+   }
+  ],
+  "key_lessons": [
+   "Separate two kinds of 'how established': extraction reliability and scientific consensus. INDRA's belief (MSB 2023) is almost entirely the first; the authors found most wrong Statements come from grounding, polarity, negation and hypothesis errors, not from the literature disagreeing. BioLean needs both numbers on every edge.",
+   "Steal INDRA's statement model, not its readers: typed relation + grounded agents + an Evidence list with source, PMID, sentence and epistemics flags. The JSON Schema exists (indra/resources/statements_schema.json). Extend relation types to GO process / SO rather than inventing a new container.",
+   "Refinement as a partial order is the right primitive. INDRA builds a lattice from ontology isa/partof (38% of Statements refine another) and lets evidence flow only from specific to general. In Lean this is a subsumption relation plus a monotone evidence-aggregation lemma; INDRA already shows it scales to ~1M statements.",
+   "Use noisy-OR with per-source systematic + random error as the baseline weight (INDRA default_belief_probs.json: readers 0.3/0.05, curated DBs 0.01-0.2/0.01). A trained model beat it (AUPRC 0.942 vs 0.893) once ~1,800 curated statements existed, so plan a curation loop with INDRA's 12 error tags (correct, entity_boundaries, grounding, no_relation, wrong_relation, act_vs_amt, polarity, negative_result, hypothesis, agent_conditions, mod_site, other).",
+   "Independent extractors agreeing is the strongest cheap signal: 81% of INDRA relations came from one reader, pairwise correlations were 0.03-0.63, and multi-reader support predicted correctness. Dan has three independent extractions locally (PubTator3 BioREx, Open Targets EuropePMC, INDRA Statement export); count agreement as a feature.",
+   "EMMAA is the existing 'proof' engine and it is just bounded path search in a signed graph with an English witness (INDRA ModelChecker, codes PATHS_FOUND / NO_PATHS_FOUND / MAX_PATH_LENGTH_EXCEEDED). It never composes belief along the path or across alternative paths, and the authors say causal transitivity is unresolved. That gap is BioLean's contribution: a Lean proof of 'semaglutide reduces hunger' is a chain of edge lemmas whose belief is composed by explicit rules.",
+   "Contradictions: INDRA only detects polarity opposites (find_contradicts) and leaves resolution to 'context, functional data, or ensembles'. Nobody in this ecosystem has a formal treatment of competing hypotheses, so do not expect to import one.",
+   "Self-updating knowledge dies with its grant: EMMAA models froze on 2024-08-01, within months of DARPA ASKE ending, though the site still serves. BioLean should be a reproducible batch build from the local data, with versioned releases like mathlib, not a daily pipeline on AWS.",
+   "Export targets are a distraction for a proof project. INDRA offers PySB->SBML/BNGL/Kappa, SBGN-PD, PyBEL, CX and SIF, but no BioPAX export and no BioModels deposits; dynamical export needs hand-supplied rates. Lean is the target; keep INDRA Statement JSON as the exchange format and emit SBGN/SBML only for figures.",
+   "The grounding stack is alive and reusable: Gilda 1.6.1 (June 2026) grounds 'semaglutide' to CHEBI:167574 in one call; Bioregistry normalises CURIEs; SeMRA (Bioinformatics 2025) is a small existing example of inference over mappings with a confidence per inferred edge, including code.",
+   "The lab's 2026 direction is LLM-as-curator (indra-belief-model: gemma-4-26b judges each Statement/Evidence pair with a disconfirm-first prompt, with a calibration profile per model+prompt). Record provenance of every weight the same way, because weights from different judges are not comparable."
+  ],
+  "open_questions": [
+   "Can a bulk INDRA DB dump (preassembled Statements with belief and evidence) be obtained for local use, or must BioLean rebuild from the sibling project's INDRA Statement JSON export? Which readers/sources does that export actually contain?",
+   "How should belief compose in Lean along a proof: product along a path, noisy-OR across independent paths, and what counts as independent when two paths share a PMID? INDRA/EMMAA never answered this.",
+   "Which formal logic fits competing hypotheses with weights (Dempster-Shafer, probabilistic argumentation, paraconsistent)? INDRA offers only polarity-contradiction detection as input.",
+   "Is the INDRA Statement class hierarchy or MIRA's typed template schema the better starting point for a Lean inductive type of biological statements that must also cover GO processes and SO features?",
+   "How many curations exist in INDRA DB and can they be downloaded to bootstrap BioLean's evidence model and its error taxonomy?",
+   "Can an LLM judge like indra-belief-model run usefully on 112 CPU cores without a GPU, or should BioLean budget for an API model for the evidence-check step over a few hundred canonical papers?",
+   "Gilda is built from INDRA's bio_ontology (molecular + GO/MeSH/disease); how much work is it to load the 6.0M OBO terms (SO, PATO, UBERON, ECO) into Gilda's grounder format?",
+   "Should ECO (Evidence and Conclusion Ontology) codes, already attached to GOA annotations, be the evidence-type vocabulary for BioLean rather than INDRA's source_api strings?"
+  ]
+ },
+ {
+  "angle": "Logic programming, Datalog and ASP for biological knowledge; rule languages and ontology reasoning (incl. OWL-EL/RL over OBO, RO semantics, SPARQL endpoints, certified reasoning in Lean, and 2024-26 LLM+symbolic-verifier systems)",
+  "projects": [
+   {
+    "name": "CertifyingDatalog + Nemo (TU Dresden, Kr\u00f6tzsch group)",
+    "url": "https://github.com/knowsys/CertifyingDatalog",
+    "status": "active - CertifyingDatalog last commit 2026-10-22 (Lean toolchain v4.35.0, mathlib); Nemo v0.10.1 released 2026-08-01, commits 2026-10-18",
+    "what_it_does": "Nemo is a Rust Datalog engine (stratified negation, aggregates, existential rules, RDF/CSV/SPARQL input) with a CLI `--trace` / `--trace-all-idb-facts` option that exports derivation traces. CertifyingDatalog is a Lean 4 checker, formally verified against Datalog least-model and proof-theoretic semantics, that accepts those traces as JSON proof trees or DAGs and certifies each step. ITP 2025 paper: checking 1000 GALEN (EL ontology) conclusions took 0.2-0.4 s; DAG format keeps proofs small (4-10 MB) where trees blow up (313 MB on the exponential case). The repo's Examples/elReasoning encodes an EL consequence-based calculus as Nemo rules (el-calc.rls) and checks the resulting ontology-classification proofs in Lean; a companion DL 2025 paper (arXiv 2507.21851) does the same for three EL calculi and translates Nemo traces back into DL proofs.",
+    "relevance_to_biolean": "This is the 'Datalog engine finds the derivation, Lean checks it' architecture already built and verified: BioLean's literature statements become EDB facts, RO/GO rules become Nemo rules, Nemo answers 'semaglutide reduces hunger?' and emits a trace, Lean certifies it. Limits: the verified checker covers positive, function-free, safe Datalog only (Nemo's negation/existentials/aggregates are not certified); no weights (the checker verifies structure, so evidence scores must be recomputed by a separate Lean function over the certified tree); the Nemo->checker conversion scripts (inputCreatorNemo.py) target Nemo 0.7.1 trace format and must be retested against 0.10.x. Decidability: PTIME data complexity. Reuse this rather than writing a Lean Datalog checker from scratch.",
+    "reusable_assets": "Lean 4 library + executable (Apache-2.0/MIT); JSON proof-tree and ordered-DAG formats; Nemo CLI/Python/WASM bindings (Apache-2.0/MIT); EL-calculus-as-rules example (el-calc.rls) directly applicable to OBO ontologies",
+    "key_refs": [
+     "Tantow, Gerlach, Mennicke, Kr\u00f6tzsch. Verifying Datalog Reasoning with Lean. ITP 2025. DOI 10.4230/LIPIcs.ITP.2025.36",
+     "Alrabbaa, Borgwardt, Herrmann, Kr\u00f6tzsch. The Shape of EL Proofs: A Tale of Three Calculi. DL 2025. arXiv:2507.21851",
+     "Nemo repo https://github.com/knowsys/nemo ; Lean Reservoir entry https://reservoir.lean-lang.org/@knowsys/certifyingDatalog"
+    ]
+   },
+   {
+    "name": "Ubergraph + relation-graph + Whelk + ELK + ROBOT (OBO reasoning stack)",
+    "url": "https://github.com/INCATools/ubergraph",
+    "status": "active - Ubergraph commits 2026-10-02 and SPARQL endpoint answered a live aggregate query in 20 s on 2026-10-23; relation-graph v2.3.4 2026-03-13; Whelk v1.2.1 2024-09-30 (commit 2025-03); ELK 0.6.0 2024-05-25 (last commit 2024-07, maintained not active); ROBOT v1.9.11 2026-10-01",
+    "what_it_does": "Ubergraph merges 41 OBO ontologies (GO, CHEBI, MONDO, UBERON, CL, PATO, NCBITaxon, RO...), classifies with `robot reason -r ELK`, materialises all entailed existential relations with relation-graph (built on Whelk, an OWL EL+RL reasoner in Scala), and serves it from Blazegraph at https://ubergraph.apps.renci.org/sparql. Named graphs: `ontology` (asserted+classified axioms, labels, information-content scores), `redundant` (full closure), `nonredundant` (closure minus redundant edges). My probe of the nonredundant graph: 46,379 part_of (BFO:0000050), 2,909 regulates (RO:0002211), 2,567 positively regulates (RO:0002213), 3 causally upstream of (RO:0002411) class-level edges. Whelk paper: ELK classifies Ubergraph in 99 s vs Whelk 40 min, but Whelk answers 90M DL queries in <8 h where ELK would need >400 days; ELK 0.6.0 added proof-generation hooks (Protege proof plugins). ROBOT provides `reason`, `explain`, `relax`, `reduce`, `materialize`.",
+    "relevance_to_biolean": "BioLean should treat the OBO layer as a precomputed fact base, not run an OWL reasoner: download the nonredundant edge tables (integer-indexed edges.tsv + node-labels.tsv) and load into DuckDB/Nemo as EDB facts; ontology axioms carry weight 1 (definitional) while literature edges carry evidence weights. Expressiveness: OWL 2 EL (PTIME) for classes, RL for individuals; no confidences anywhere in the stack (information-content scores are frequency, not evidence). ROBOT `explain` gives justifications (sets of axioms), not proof trees - so for Lean checking, re-derive via Nemo's EL rules rather than importing ELK/Whelk output. Chris Mungall and Jim Balhoff are the people behind both this and GO-CAM.",
+    "reusable_assets": "SPARQL endpoint; N-Quads dump; Blazegraph .jnl; redundant/nonredundant edge-table archives (edges.tsv, node-labels.tsv, edge-labels.tsv, build-metadata.nt); relation-graph CLI (MIT, outputs RDF/OWL/TSV); Whelk library (BSD); ELK (Apache-2.0); ROBOT (BSD); grlc/YASGUI example queries; OAK (ontology-access-kit) has an Ubergraph adapter",
+    "key_refs": [
+     "Balhoff, Bayindir, Caron, Matentzoglu, Osumi-Sutherland, Mungall. Ubergraph: integrating OBO ontologies into a unified semantic graph. ICBO 2022. DOI 10.5281/zenodo.7249759",
+     "Balhoff et al. Whelk: An OWL EL+RL Reasoner Enabling New Use Cases. TGDK 2(2) 2024. DOI 10.4230/TGDK.2.2.7",
+     "Kazakov, Kr\u00f6tzsch, Siman\u010d\u00edk. The Incredible ELK. J. Autom. Reasoning 2014. DOI 10.1007/s10817-013-9296-3",
+     "Jackson et al. ROBOT: A Tool for Automating Ontology Workflows. BMC Bioinformatics 2019. DOI 10.1186/s12859-019-3002-3"
+    ]
+   },
+   {
+    "name": "Relation Ontology (RO) - OBO relations and their OWL semantics",
+    "url": "https://github.com/oborel/obo-relations",
+    "status": "active - release v2026-09-04, commits 2026-10-05; local copy at /home/danbolser/Work/IUK-IPF/data/sources/ontology/raw/ro.obo is release 2025-12-17",
+    "what_it_does": "The shared predicate vocabulary for OBO and GO-CAM. Local ro.obo: 704 typedefs, 45 transitive, 121 inverse pairs, 38 transitive_over, 102 holds_over_chain (sub-property chain) axioms, 0 equivalent_to_chain. Causal module: `causally upstream of` (RO:0002411, transitive), `regulates` (RO:0002211) and +/- variants, `directly positively regulates`, `enables` (RO:0002327), `acts upstream of` := enables o causally upstream of (RO:0002264), `involved in regulation of` := enables o regulates, `capable of regulating` := capable of o regulates, `has input/has output`, `provides input for`. Everything is within OWL 2 EL (regular property chains), so ELK/Whelk/Nemo-EL-rules handle it; no uncertainty or weights.",
+    "relevance_to_biolean": "RO is where BioLean's statement predicates should come from ('DNApol (enables GO:0003887) ... copies DNA' maps to enables / has input / has output, not a new verb). The 102 chain axioms are literally Horn rules and are the natural first contents of biolib: e.g. `enables(P,F) \u2227 causally_upstream_of(F,Q) \u2192 acts_upstream_of(P,Q)`, each provable as a Lean lemma once RO's OWL semantics are stated. Caveats: 704 relations with many near-synonyms is an ambiguity source (GO-CAM restricts itself to ~20); RO chains are one-directional entailments (sub-property), so you cannot decompose a coarse statement back into fine ones; RO says nothing about evidence - weights have to live on BioLean's instance-level edges, not on RO axioms.",
+    "reusable_assets": "ro.owl / ro.obo / ro.json (CC0) with property-chain, transitivity and inverse axioms; RO Core and Causal Relations modules; docs at https://oborel.github.io/obo-relations/ (property-chains, causal-relations pages); already on disk",
+    "key_refs": [
+     "Smith et al. Relations in biomedical ontologies. Genome Biology 2005. DOI 10.1186/gb-2005-6-5-r46",
+     "RO documentation: https://oborel.github.io/obo-relations/property-chains/ and /causal-relations/"
+    ]
+   },
+   {
+    "name": "GO-CAM / Noctua / Minerva / Arachne (Gene Ontology causal activity models)",
+    "url": "https://github.com/geneontology/noctua-models",
+    "status": "active models (noctua-models commit 2026-10-23; go-shapes commit 2026-10-08); Minerva server commits 2026-10-19 but last release v0.6.3 2024-11; Arachne reasoner dormant (last commit 2023-05, release v1.2.1 2020-01)",
+    "what_it_does": "GO-CAMs are OWL 2 ABoxes: each node is an OWL individual typed by a GO/CHEBI/UBERON class, edges are RO causal relations between molecular activities (`directly provides input for`, `directly positively regulates`, `causally upstream of`...), and every edge/annotation carries an ECO evidence code plus a reference (PMID). Minerva (OWL API + Blazegraph wrapper) is the server; Arachne (Scala Rete-based OWL RL rule engine) was built to give sub-second real-time inference inside Noctua; Whelk now also supports GO-CAM ABox reasoning in ROBOT/Protege. Models are published as Turtle in noctua-models, via the GO SPARQL endpoint (rdf.geneontology.org), the gocam-py LinkML schema/JSON, and the GO-CAM browser.",
+    "relevance_to_biolean": "The closest existing instance of Dan's 'formal, annotated, referenced statement': (activity_A, RO:directly_positively_regulates, activity_B, ECO:0000314, PMID:x). BioLean should adopt this shape (and ECO as the evidence-type axis for weighting) instead of inventing one, and can bootstrap its baseline from thousands of curated GO-CAMs plus the 1.28M GOA annotation->PMID links already on disk. What it lacks is exactly BioLean's goal: no weighting beyond ECO class, no aggregation of multiple references into a confidence, no higher-level derived claims, and reasoning is OWL RL materialisation (Arachne/Whelk) with no proof objects. Arachne's dormancy shows the GO stack converged on Whelk.",
+    "reusable_assets": "noctua-models Turtle files (CC BY); gocam-py LinkML schema + JSON; GO SPARQL endpoint; go-shapes ShEx schemas defining legal GO-CAM patterns; Arachne (BSD) and Minerva (BSD) code; ECO ontology (already among the 120 local OBO ontologies)",
+    "key_refs": [
+     "Thomas et al. Gene Ontology Causal Activity Modeling (GO-CAM) moves beyond GO annotations to structured descriptions of biological functions and systems. Nature Genetics 2019. DOI 10.1038/s41588-019-0500-1",
+     "Balhoff, Good, Carbon, Mungall. Arachne: an OWL RL Reasoner Applied to Gene Ontology Causal Activity Models. ICBO 2018. CEUR Vol-2180 paper-05",
+     "GO-CAM docs https://geneontology.org/docs/gocam-overview/"
+    ]
+   },
+   {
+    "name": "BioASP / clingo tools: iggy, caspo, meneco (+ plingo for probabilities)",
+    "url": "https://github.com/bioasp",
+    "status": "clingo active (v5.8.2 2026-08-14); caspo maintained (v4.0.3 2026-02-10, but CHANGES shows last scientific change 4.0.0 in 2020: Python 3 + clingo 5); iggy dormant (v2.2.0 2021-08, commit 2022-01); meneco dormant (v2.0.2 2022-04); plingo dormant (v1.1.0 2023-04, commit 2024-06)",
+    "what_it_does": "Potsdam/Rennes answer-set-programming tools for biological networks. iggy: sign-consistency between an influence graph (CIF) and observed up/down changes; reports minimal inconsistent cores, minimal repairs, and strong/weak predictions for unmeasured nodes. caspo: learns families of Boolean signalling models from phospho-proteomics data (reported 11,700 models compatible with one liver-cell dataset once error is allowed for), then designs discriminating experiments and intervention strategies. meneco: metabolic network gap-filling by minimal reaction additions. plingo adds LPMLN/ProbLog/P-log probabilistic semantics on top of clingo (weighted rules, MAP and marginal inference via optimisation/enumeration).",
+    "relevance_to_biolean": "ASP is the mature answer to Dan's open problem of competing hypotheses: a stable model is a consistent world, the set of answer sets is 'what the literature is consistent with', minimal inconsistent cores localise contradictions, and weak constraints/plingo weights rank worlds by evidence. Decidability: finite ground programs; NP (normal) / Sigma-2-P (disjunctive); clingo scales to millions of ground rules. The catch for Lean: ASP conclusions are non-monotonic, so there is no proof tree to certify - you can cheaply check in Lean that a given interpretation is a stable model (polynomial for normal programs), but not certify 'X holds in every answer set' without re-solving. Design implication: use ASP for hypothesis enumeration/repair, keep the certified Lean layer for the monotone (Datalog) part. The biology tools themselves are mostly unmaintained; the engine and the modelling patterns are what to take.",
+    "reusable_assets": "clingo (MIT) with Python API; plingo (MIT); ASP encodings for sign consistency and Boolean network learning (iggy GPL-3, caspo GPL-3); BioASP benchmark encodings at docs.potassco.org/benchmark-collection/benchmarks/bio-asp/",
+    "key_refs": [
+     "Videla et al. caspo: a toolbox for automated reasoning on the response of logical signaling networks families. Bioinformatics 2017. DOI 10.1093/bioinformatics/btw951",
+     "Thiele et al. Extended notions of sign consistency to relate experimental data to signaling and regulatory network topologies. BMC Bioinformatics 2015. DOI 10.1186/s12859-015-0733-7",
+     "Hahn, Janhunen, Kaminski, Romero, R\u00fchling, Schaub. plingo: A system for probabilistic reasoning in clingo based on LPMLN. TPLP 2024. DOI 10.1017/S1471068424000449",
+     "Gebser, Kaminski, Kaufmann, Schaub. Multi-shot ASP solving with clingo. TPLP 2019. DOI 10.1017/S1471068418000054"
+    ]
+   },
+   {
+    "name": "BioCham 4 (Inria Lifeware; Fages, Soliman)",
+    "url": "https://gitlab.inria.fr/lifeware/biocham",
+    "status": "active - tag 4.7.0 2026-04-14, last GitLab activity 2026-07-16; GPL-2.0+",
+    "what_it_does": "Modelling environment for chemical reaction networks written in SWI-Prolog with a Jupyter notebook front end (the public lifeware.inria.fr/biocham4 host refused connections on 2026-10-23; GitLab is reachable). Imports SBML/BioModels, simulates Boolean/ODE/stochastic semantics, checks CTL/LTL(R) temporal-logic properties against models ('formalizing experimental knowledge' as temporal formulas), infers kinetic parameters from temporal specs, and does static analysis of influence graphs. Twenty years of continuous development, tiny user base (1 GitLab star).",
+    "relevance_to_biolean": "Shows what 'formal biology' has meant so far: properties of a mechanistic model, checked by model checking, not statements about the literature with provenance. There are no evidence weights and no proof objects. For BioLean it is a possible downstream consumer (a derived claim like 'X inhibits hunger signalling' could be checked against a BioModels CRN) and a cautionary tale: a Prolog-only, model-level formal system stayed niche for two decades. Not a foundation to build on.",
+    "reusable_assets": "SWI-Prolog source (GPL-2+); CTL/LTL property libraries; SBML import; example notebooks",
+    "key_refs": [
+     "Calzone, Fages, Soliman. BIOCHAM: an environment for modeling biological systems and formalizing experimental knowledge. Bioinformatics 2006. DOI 10.1093/bioinformatics/btl172",
+     "Fages, Soliman. Abstract interpretation and types for systems biology. Theor. Comput. Sci. 2008. DOI 10.1016/j.tcs.2008.04.024"
+    ]
+   },
+   {
+    "name": "Weighted / probabilistic logic programming: ProbLog, PyReason, Scallop, semiring provenance",
+    "url": "https://github.com/ML-KULeuven/problog",
+    "status": "ProbLog active (v2.3.0 2026-09-09); PyReason active (v4.0.0b4 2026-10-19); Scallop maintained (release 0.2.4 2024-08, commits 2026-06); semiring-provenance theory is settled literature (2007, KR 2022)",
+    "what_it_does": "ProbLog: Prolog clauses with independent probabilities; query probability via knowledge compilation (BDD/SDD); its founding application (IJCAI 2007) was link discovery in Biomine, a probabilistic biological KG - so 'weighted edges in a bio KG under logic' is a 19-year-old idea. PyReason (ASU Lab V2): generalised annotated logic over graphs with [lower,upper] interval truth values, temporal steps, open-world reasoning and explainable inference traces; lists biological networks as a target. Scallop (PLDI 2023): Datalog with recursion/negation/aggregation whose engine is parameterised by a provenance semiring (max-min, top-k proofs, differentiable). Semiring provenance (Green-Karvounarakis-Tannen 2007) is the general theory: annotate facts, propagate through joins (product) and alternative derivations (sum); Viterbi semiring gives 'confidence of the best derivation'; Bourgaux et al. (KR 2022) fix the infinite-derivation problem under recursion.",
+    "relevance_to_biolean": "This is the canonical machinery for Dan's KEY REQUIREMENT. Define the evidence weight of a derived claim as a semiring value computed over its certified proof tree: product (or min) along a chain, sum (or max) across independent supports. Because CertifyingDatalog already hands Lean the proof tree, scoring is a pure Lean function over that tree - mathlib has the semiring algebra - and both structure and score are checked. Pitfalls learned here: ProbLog's independence assumption overcounts literature evidence (one experiment cited by 50 papers is not 50 supports), so BioLean needs a dedup/independence model before probabilities mean anything; inference in ProbLog is #P-hard (fine for hundreds of statements, not millions); PyReason's interval annotations are a cheap way to represent 'competing evidence' without full probability. Scallop's top-k-proofs semiring is a direct model for 'the k best-established derivations'.",
+    "reusable_assets": "ProbLog Python package (Apache-2.0); PyReason (BSD-2); Scallop (MIT, Rust+Python); provenance-semiring definitions from the papers",
+    "key_refs": [
+     "De Raedt, Kimmig, Toivonen. ProbLog: A Probabilistic Prolog and Its Application in Link Discovery. IJCAI 2007",
+     "Aditya, Mukherji, Balasubramanian, Chaudhary, Shakarian. PyReason: Software for Open World Temporal Logic. 2023. arXiv:2302.13482",
+     "Li, Huang, Naik. Scallop: A Language for Neurosymbolic Programming. PLDI 2023. DOI 10.1145/3591280",
+     "Green, Karvounarakis, Tannen. Provenance Semirings. PODS 2007. DOI 10.1145/1265530.1265535",
+     "Bourgaux, Bourhis, Peterfreund, Thomazo. Revisiting Semiring Provenance for Datalog. KR 2022. arXiv:2202.10766"
+    ]
+   },
+   {
+    "name": "LLM-proposer / symbolic-verifier systems for biomedical QA (KGARevion, AD-KG ASP verifier, MedRule-KG, OntoGPT/SPIRES, OntoURL)",
+    "url": "https://arxiv.org/abs/2410.04660",
+    "status": "active research, nothing production: KGARevion ICLR 2025; AD-KG ICLR 2026 workshop poster; MedRule-KG preprint 2025-11; OntoGPT maintained (Monarch, PyPI 1.x 2025); OntoURL benchmark 2025",
+    "what_it_does": "KGARevion (Zitnik lab): LLM generates candidate triples, a KG-completion-fine-tuned LLM reviews them against a biomedical KG, revises, answers; +5-10% accuracy on medical QA; verification is embedding/KG-lookup, not logic. AD-KG (Lewis & Zueco): LLM translates Alzheimer's text to typed predicates, ASP solver + temporal-logic checker verify; autoformalization entity F1 only 0.41, and the neuro-symbolic variant cuts inconsistency 81%->46% while lowering accuracy below plain chain-of-thought (86.7%). MedRule-KG: curated triples in prompt + deterministic rule checker after generation, -83% rule violations on 90 chemistry tasks. OntoGPT/SPIRES: LLM extraction into LinkML schemas grounded to OBO IDs - the practical tool for turning abstracts into ontology-term triples. OntoURL (57k questions, 40 ontologies): LLMs understand ontology terms but fail at ontological reasoning.",
+    "relevance_to_biolean": "Confirms the division of labour BioLean assumes - LLM proposes formal statements, a symbolic layer verifies - and shows where it breaks: autoformalization quality (F1 ~0.4 on biomedical text), not reasoning, is the bottleneck, and no system yet produces a checkable proof object or an evidence-weighted conclusion. BioLean's hand-annotated 'few hundred canonical publications' baseline sidesteps the extraction problem, and Lean certificates would be a real differentiator over KG-lookup verification. Use OntoGPT/SPIRES (plus the local PubTator3/BioREx relations) to draft candidate statements for human review, never as ground truth.",
+    "reusable_assets": "OntoGPT (BSD-3, PyPI) with SPIRES templates; KGARevion code (github.com/mims-harvard/KGARevion); OntoURL benchmark; PrimeKG used by several of these",
+    "key_refs": [
+     "Su et al. KGARevion: An AI Agent for Knowledge-Intensive Biomedical QA. ICLR 2025. arXiv:2410.04660",
+     "Lewis, Zueco. Autoformalizing Biomedical Text into Verified Knowledge Graph Reasoning: A Neuro-Symbolic Architecture for Alzheimer's Disease. ICLR 2026 Workshop on Logical Reasoning of LLMs",
+     "MedRule-KG: A Knowledge-Graph-Steered Scaffold for Reliable Mathematical and Biomedical Reasoning. 2025. arXiv:2511.12963",
+     "Caufield et al. Structured Prompt Interrogation and Recursive Extraction of Semantics (SPIRES). Bioinformatics 2024. DOI 10.1093/bioinformatics/btae104",
+     "OntoURL: A Benchmark for Evaluating LLMs on Symbolic Ontological Understanding, Reasoning and Learning. 2025. arXiv:2505.11031"
+    ]
+   },
+   {
+    "name": "Description logics formalised in Lean 4: Baobab and Moose (Hoehndorf lab, KAUST), VEL (Coq), K-Lean",
+    "url": "https://github.com/bio-ontology-research-group/baobab",
+    "status": "new - Baobab repo created 2026-05-31, pushed 2026-06-16, 1.9 MB Lean + Python; Moose accepted ISWC 2026 (code not linked from arXiv); VEL 2024 (Coq); K-Lean preprint 2026 (self-reported sorry-free)",
+    "what_it_does": "Baobab: SROIQ (OWL 2 DL) ontology + finite ABox compiled by a consequence-based calculus into an SDD circuit for neuro-symbolic learning; soundness of the compiler and the representation theorem are machine-checked in Lean 4. Moose: same group, EL++ saturation with closure clauses, proofs validated in Lean. VEL: formally verified EL++ reasoner in Coq that found flaws in the published completeness proof of the Baader 2005 algorithm. K-Lean (Heime-Jorgen/kenosian-lean4): 94 Lean 4 'contracts' about computational-biology formulas (eGFR bounds, enzyme kinetics) - formulas, not literature claims.",
+    "relevance_to_biolean": "The only existing Lean 4 formalisations of OWL/EL semantics come from a bio-ontology group, so BioLean may not need to formalise OBO semantics from scratch - but Baobab is a two-month-old paper artifact, not a library; evaluate before depending. VEL's result (textbook EL completeness proof was wrong) is a warning that 'obvious' ontology reasoning needs the Lean check. K-Lean shows the 'formal biology in Lean' name space is being populated with something very different (numerical contracts), which clarifies BioLean's distinct pitch: statements with provenance and evidence weights.",
+    "reusable_assets": "Baobab Lean sources (licence not checked); VEL Coq development; K-Lean repo",
+    "key_refs": [
+     "Mashkova, Mohammedsaleh, Zhapa-Camacho, Hoehndorf. Neuro-symbolic learning over OWL 2 DL via consequence-based compilation to differentiable circuits. NeSy 2026. arXiv:2608.17741",
+     "Mashkova et al. Moose: Latent concept learning with reasoning-shortcut awareness in EL++. ISWC 2026. arXiv:2608.12961",
+     "VEL: A Formally Verified Reasoner for OWL2 EL Profile. 2024. CEUR Vol-3828 paper22",
+     "K-Lean: Machine-Verified Formal Proofs for Computational Biology. Research Square rs-10086537 (preprint)"
+    ]
+   },
+   {
+    "name": "Dead lineage: Prolog bio knowledge bases (Blipkit, Thea) and full OWL-DL reasoners (HermiT, Pellet)",
+    "url": "https://github.com/cmungall/blipkit",
+    "status": "dead - Blipkit last commit 2016-08; Thea (OWL in Prolog) 2019-08; HermiT 2017-10 (last release 1.3.8, 2013); Pellet 2017-01; Openllet has 2025 commits but no release since 2019",
+    "what_it_does": "Blipkit was Mungall's SWI-Prolog deductive database over OBO/OWL ontologies, GO annotations and genomes (underpinning Obol); Thea loaded OWL into Prolog. HermiT and Pellet were the complete SROIQ (OWL 2 DL) tableau/hypertableau reasoners used in the 2008-2015 OBO era.",
+    "relevance_to_biolean": "Two lessons from what died. (1) The Prolog KB approach lost to 'data in standard formats + small replaceable reasoners': Mungall himself moved from Blipkit to OWL/ELK, then Whelk/relation-graph/Ubergraph. BioLean's statements should be a documented data format (TSV/LinkML/JSON) first and a Lean library second, or the library dies with its author. (2) Nobody in biology runs full OWL 2 DL any more; every live tool is EL(+RL) or Datalog. Staying inside EL/Horn expressivity is what keeps reasoning PTIME and Lean checking tractable; if a BioLean claim needs disjunction or negation, that is a signal to push it to the ASP layer, not to a DL reasoner.",
+    "reusable_assets": "none worth taking (Blipkit's OBO Prolog parsers are obsolete; HermiT jar still runs but unmaintained)",
+    "key_refs": [
+     "Mungall. Experiences Using Logic Programming in Bioinformatics. ICLP 2009. DOI 10.1007/978-3-642-02846-5_1",
+     "Vassiliadis, Wielemaker, Mungall. Processing OWL2 ontologies using Thea: An application of logic programming. OWLED 2009",
+     "Glimm, Horrocks, Motik, Stoilos, Wang. HermiT: An OWL 2 Reasoner. J. Autom. Reasoning 2014. DOI 10.1007/s10817-014-9305-1"
+    ]
+   }
+  ],
+  "key_lessons": [
+   "The 'Datalog finds, Lean checks' loop is already built and verified: Nemo `--trace` -> JSON proof DAG -> CertifyingDatalog (Lean 4, ITP 2025) certifies 1000 GALEN-ontology conclusions in ~0.3 s. Reuse it; the gap to fill is that it certifies positive Datalog only and carries no weights.",
+   "Treat OBO as a precomputed fact base, not something to reason over: Ubergraph's nonredundant edge tables (46k part_of, 2.9k regulates class edges...) load straight into DuckDB/Nemo. RO's 102 property-chain axioms (e.g. enables o causally_upstream_of -> acts_upstream_of) are Horn rules and are the natural first lemmas of biolib.",
+   "GO-CAM already has the statement shape Dan describes - (activity, RO relation, activity, ECO code, PMID) as OWL individuals - with thousands of curated models in Turtle. Adopt that shape and ECO as the evidence-type axis rather than inventing a schema; what GO-CAM lacks (aggregated confidence, derived higher-level claims, proof objects) is exactly BioLean's contribution.",
+   "Evidence weighting has a canonical formalism: semiring provenance (Green et al. 2007; Scallop; Bourgaux KR 2022 for recursion). The weight of a derived claim is a semiring value over its certified proof tree - product/min along a chain, sum/max over independent supports - so Lean can check structure and score together. ProbLog's Biomine experience warns that independent-probability semantics overcount correlated literature (one experiment, fifty citing papers).",
+   "Competing hypotheses are what ASP is for: caspo's 11,700 data-compatible models and iggy's minimal inconsistent cores show stable models as 'worlds the evidence allows' and repairs as 'what must be wrong'. But non-monotonic conclusions have no proof trees, so keep ASP (clingo/plingo) as a hypothesis-enumeration layer and certify only the monotone derivations in Lean.",
+   "The 2025-26 neuro-symbolic systems (KGARevion, AD-KG ASP verifier, MedRule-KG) all converge on LLM-proposes / symbolic-verifies, and all show autoformalization (entity F1 ~0.41 on Alzheimer's text) rather than reasoning as the bottleneck. A hand-annotated canonical baseline plus Lean certificates is a genuine differentiator; use OntoGPT/SPIRES and local PubTator3 relations only to draft candidates.",
+   "Biology abandoned full OWL 2 DL (HermiT/Pellet dead since 2017) for EL(+RL) and Datalog (ELK -> Whelk -> relation-graph -> Nemo). Stay inside Horn/EL expressivity: it is what keeps reasoning polynomial and Lean checking cheap; disjunction or negation is the cue to route a statement to the ASP layer.",
+   "Prolog-era bio knowledge bases (Blipkit, Thea) died with their authors while their data survived in standard formats. Make BioLean's statements a documented data format (TSV/LinkML/JSON with PMIDs and ECO) first and a Lean library second.",
+   "Lean 4 formalisations of EL++/SROIQ now exist from a bio-ontology group (Baobab, Moose, 2026) and VEL found an error in the textbook EL completeness proof - evidence both that OBO semantics can be stated in Lean and that it should be, but Baobab is a two-month-old paper artifact, so audit before depending on it."
+  ],
+  "open_questions": [
+   "Which semiring? Literature evidence is correlated (replications, reviews citing one experiment); independent-probability (ProbLog) overcounts and max-only (Viterbi) ignores replication. BioLean needs a dedup/independence model (per experiment? per lab? per ECO class?) before any score is meaningful - nobody in this angle has one.",
+   "Can a non-monotonic ASP conclusion get a Lean-checkable certificate? Checking that a given interpretation is a stable model is polynomial for normal programs, but 'X holds in every answer set' (cautious consequence) needs re-solving; is 'certified under this explicit world' acceptable for biolib claims?",
+   "CertifyingDatalog covers positive Datalog; Nemo's stratified negation, existential rules and aggregates are not certified. How much of RO/GO reasoning and of 'drug reduces hunger' style claims needs negation ('not degraded', 'absent in knockout')?",
+   "The Nemo->CertifyingDatalog conversion scripts target Nemo 0.7.1 trace output; Nemo is at 0.10.1. Does the trace format still convert, and will the Dresden group accept a BioLean use case?",
+   "RO has 704 relations with many near-synonyms; GO-CAM restricts to ~20. Which fixed subset should BioLean statements use, and how are ontology axioms (weight 1, definitional) kept distinct from empirical edges (weighted) in the same proof tree?",
+   "Does Ubergraph's build (41 ontologies, class-level) give enough instance-level material, or must BioLean materialise its own closure over UniProt/CHEBI individuals with relation-graph (--output-individuals) or Nemo EL rules?",
+   "Are Baobab's Lean sources (1.9 MB, June 2026) a usable library for OWL EL semantics in Lean, or paper-only code with no API stability? Nobody has reviewed them yet."
+  ]
+ },
+ {
+  "angle": "Reasoning under uncertainty and with conflicting evidence: formal frameworks (subjective logic, Dempster-Shafer, probabilistic logic programming, MLN/PSL, Bayesian/causal DAGs, argumentation and defeasible logic, clinical evidence grading, INDRA-style belief) \u2014 assessed as candidates for what sits under a Lean proof system whose axioms are weighted literature statements.",
+  "projects": [
+   {
+    "name": "INDRA Belief Engine (indra.belief)",
+    "url": "https://github.com/gyorilab/indra (docs: https://indra.readthedocs.io/en/latest/modules/belief/)",
+    "status": "active \u2014 PyPI indra 1.24.0 (2025-07-30), repo pushed 2026-06-30, BSD-2-Clause. Installed locally at ~/.cache/uv/.../indra 1.24.0.",
+    "what_it_does": "Assigns each Statement a probability that it is a *correct extraction*. SimpleScorer: for each source s, error term = e_syst[s] + prod(e_rand of each evidence from s); belief = 1 \u2212 product over sources. So many mentions from one reader saturate at 1\u2212e_syst, while a second independent source multiplies. Negative evidence: score = p_pos \u00d7 (1 \u2212 p_neg). Hierarchy: evidence from more-specific (refining) statements flows up to general ones, never down. Linked (inferred) statements get the product of their sources' beliefs. BayesianScorer re-estimates e_rand from curation counts (e_syst fixed 0.05). The 2023 MSB paper trained a Random Forest on 1,689 curated statements (features: per-reader mention counts, curated-DB overlap, sentence features); AUPRC 0.942, calibrated vs BioGRID membership. Actual default table on disk: e_rand reach/sparser/medscan/trips/rlimsp = 0.3, biopax 0.2, signor/ndex 0.049, phosphosite/biogrid 0.01; e_syst readers 0.05, curated DBs 0.01, gnbr 0.1.",
+    "relevance_to_biolean": "Directly reusable number type and code: the sibling project already exports INDRA Statement JSON, so every candidate axiom can arrive with a belief score and its evidence list. The independence-across-sources/saturation-within-source product is the simplest defensible fusion rule and is a one-line Lean definition. Two warnings: (1) INDRA belief is P(reader read the sentence right), not P(the biology is true) \u2014 BioLean needs a second layer for 'how established'; (2) the 2023 paper explicitly lists 'dealing with contradictions between Statements' and 'causal transitivity across multiple Statements' as unsolved \u2014 exactly BioLean's two hard problems.",
+    "reusable_assets": "indra.belief module (SimpleScorer, BayesianScorer, RF model loader), resources/default_belief_probs.json, curation corpus on Zenodo 10.5281/zenodo.7559353, refinement-graph machinery for hierarchical belief.",
+    "key_refs": [
+     "Bachman, Gyori, Sorger. Automated assembly of molecular mechanisms at scale from text mining and curated databases. Mol Syst Biol 2023. doi:10.15252/msb.202211325 PMID 37154091",
+     "Gyori et al. From word models to executable models of signaling networks using automated assembly. Mol Syst Biol 2017. doi:10.15252/msb.20177651"
+    ]
+   },
+   {
+    "name": "ACMG/AMP Bayesian framework + ClinGen gene-disease validity scoring (Tavtigian; Strande; SOP v12)",
+    "url": "https://clinicalgenome.org/curation-activities/gene-disease-validity/documents/",
+    "status": "active \u2014 ClinGen Gene-Disease Validity SOP Version 12 dated 2026-02-02; LR/points system being adopted into the ACMG/AMP v4 revision; R package acmgscaler on CRAN.",
+    "what_it_does": "Tavtigian 2018 turned the qualitative ACMG/AMP variant rules into a naive Bayes classifier: prior P(path)=0.10, each evidence category is a likelihood ratio (OddsPath) on an exponential scale, very strong 350 : strong 350^(1/2) : moderate 350^(1/4) : supporting 350^(1/8) \u2248 2.08; pathogenic and benign evidence multiply as odds; posterior thresholds Pathogenic >0.99, LP 0.90\u20130.99, VUS 0.10\u20130.90, LB/B below. Found 2 of 18 existing combining rules were inconsistent. Tavtigian 2020 re-expressed this as additive integer points = log_2.08(odds) (1/2/4/8). ClinGen gene-disease validity (Strande 2017, SOP v12): curators score genetic evidence (case-level variants, segregation, case-control; cap 12) and experimental evidence (function, functional alteration, models/rescue; cap 6), sum to 18; Limited 0.1\u20136, Moderate 7\u201311, Strong 12\u201318, Definitive = 12\u201318 AND replicated in independent publications over >3 years. Contradictory evidence yields Disputed/Refuted by expert panel judgement, not arithmetic.",
+    "relevance_to_biolean": "This is the only evidence-weighting scheme where a biology community already agreed on the numbers and the combination rule, and it is literally additive log-odds with per-category caps and a replication-over-time bonus \u2014 trivially encodable in Lean (Int points, min for caps, threshold functions) and auditable by biologists. Copy its shape for BioLean axioms: evidence-type \u2192 points, cap per type, sum \u2192 class, 'Definitive' requires independent replication. Also note what it does NOT formalise: conflict resolution is a human verdict ('Disputed'), which tells you where the formal system must hand off to argumentation.",
+    "reusable_assets": "SOP v12 PDF (point tables), ClinGen gene-validity curations downloadable (clinicalgenome.org, ~2,000+ gene-disease pairs with points per evidence item), acmgscaler R package for calibrating evidence to LR strengths.",
+    "key_refs": [
+     "Tavtigian et al. Modeling the ACMG/AMP variant classification guidelines as a Bayesian classification framework. Genet Med 2018. doi:10.1038/gim.2017.210 PMID 29300386",
+     "Tavtigian, Harrison, Boucher, Biesecker. Fitting a naturally scaled point system to the ACMG/AMP variant classification guidelines. Hum Mutat 2020. doi:10.1002/humu.24088 PMID 32720330",
+     "Strande et al. Evaluating the Clinical Validity of Gene-Disease Associations: An Evidence-Based Framework Developed by the Clinical Genome Resource. AJHG 2017. doi:10.1016/j.ajhg.2017.04.015"
+    ]
+   },
+   {
+    "name": "Subjective Logic (J\u00f8sang) \u2014 opinions, cumulative/averaging fusion, deduction",
+    "url": "https://pypi.org/project/subjective-logic/ ; https://github.com/propstore/doxa",
+    "status": "theory mature (book 2016); implementations toy-grade: subjective-logic 1.0.2 on PyPI (2025-07-27, 2 GitHub stars, MIT), doxa (first push 2026-10-19, 1 star). No widely used library exists.",
+    "what_it_does": "An opinion on a proposition is (belief b, disbelief d, uncertainty u, base rate a) with b+d+u=1; it is equivalent to a Beta(r+2a, s+2(1\u2212a)) distribution, i.e. positive/negative evidence counts. Cumulative fusion (independent evidence) just adds pseudo-counts and shrinks u; averaging fusion (same evidence, different interpreters) averages; belief-constraint fusion is Dempster-like. Deduction/abduction propagate opinions along conditionals; trust discounting scales an opinion by trust in its source. Contradiction is visible: two confident opposite opinions fuse to high b AND high d with low u (a 'dogmatic conflict'), distinct from 'no evidence' (u\u22481); probability collapses both to 0.5. Caveats: several multi-source operators are not associative, and van der Heijden et al. 2018 published corrections to the fusion operators \u2014 implement from the corrected forms.",
+    "relevance_to_biolean": "Best candidate for the *edge-weight type* if Dan wants 'nothing known' \u2260 'contested'. It is a record with one linear constraint plus rational-function operators, so a Lean structure with proofs of closure, commutativity and the (limited) associativity is realistic and small; and since cumulative fusion = adding (r,s) counts it stays interpretable as 'number of independent supporting/refuting papers'. You would write the ~300 lines yourself rather than depend on the 2-star packages. The 2025 'Subjective Logic Encodings' paper (Vasilakes, Zerva, Ananiadou) uses the same algebra to encode annotator disagreement \u2014 relevant to BioLean's manual annotation stage.",
+    "reusable_assets": "Formulas (J\u00f8sang 2016 book; corrected fusion in arXiv 1805.01388); small Python packages subjective-logic and doxa to check against; SLEncodings code github.com/jvasilakes/SLEncodings (2023).",
+    "key_refs": [
+     "J\u00f8sang. Subjective Logic: A Formalism for Reasoning Under Uncertainty. Springer 2016. doi:10.1007/978-3-319-42337-1",
+     "van der Heijden, Kopp, Kargl. Multi-Source Fusion Operations in Subjective Logic. arXiv:1805.01388 (2018)",
+     "Vasilakes, Zerva, Ananiadou. Subjective Logic Encodings. arXiv:2502.12225 (2025)"
+    ]
+   },
+   {
+    "name": "Dempster-Shafer theory / belief functions (evidencelib, pyds, Bel-Games Coq)",
+    "url": "https://evidencelib.readthedocs.io/ ; https://github.com/pPomCo/belgames",
+    "status": "theory mature (1967/1976); evidencelib 1.3.0 on PyPI 2026-10-09 (MIT, active); pyds archived 2021 (maintainer recommends probabilistic alternatives); R dst on CRAN; Bel-Games Coq library last push 2023-11 (dormant). No Lean or Isabelle formalisation found.",
+    "what_it_does": "Mass functions on the power set of a frame; belief = mass of subsets, plausibility = 1 \u2212 belief of complement. Dempster's rule combines independent sources by conjunction and renormalises away conflict mass \u2014 this is where it breaks under contradiction (Zadeh's paradox: two nearly-opposite confident sources yield a certain conclusion neither supports). Hence the zoo of alternatives (Yager, Dubois-Prade, PCR5/6, DSmT), all implemented in evidencelib. Bel-Games (ITP 2023) is the one mechanised development: belief functions with finite support in Coq/SSReflect, used for game theory, not combination rules. Dezert et al. 2018 showed Shafer's own conditioning proof in the 1976 book is wrong \u2014 an argument for mechanisation.",
+    "relevance_to_biolean": "For binary propositions ('X inhibits Y': yes/no) DS collapses to a subjective-logic opinion, so there is no gain over SL and you inherit the conflict-renormalisation problem. Where DS genuinely adds something is multi-hypothesis frames (which of 5 mechanisms?), but the 2^n blow-up and the unsettled choice of combination rule make it a poor foundation. Encoding in Lean is natural (Finset powerset, Finset.sum) but exponential frames stay symbolic only. Take: use DS vocabulary (belief vs plausibility bounds) as a way to *report* an interval, not as the core calculus.",
+    "reusable_assets": "evidencelib (Python; Dempster, conjunctive, disjunctive, Yager, Dubois-Prade, PCR1-6, discounting, DSmT); Bel-Games Coq sources (MIT) as a template for finite-support belief functions.",
+    "key_refs": [
+     "Pomeret-Coquot, Fargier, Martin-Dorel. Bel-Games: A Formal Theory of Games of Incomplete Information Based on Belief Functions in the Coq Proof Assistant. ITP 2023, LIPIcs 268. doi:10.4230/LIPIcs.ITP.2023.25",
+     "Dezert, Tchamova, Han. Total Belief Theorem and Conditional Belief Functions. 2018 (shows Shafer's 1976 conditioning proof incorrect)",
+     "Shafer. A Mathematical Theory of Evidence. Princeton 1976"
+    ]
+   },
+   {
+    "name": "ProbLog / DeepProbLog (KU Leuven) + verified weighted model counting in Lean 4 (CPOG)",
+    "url": "https://github.com/ML-KULeuven/problog ; https://github.com/rebryant/cpog",
+    "status": "ProbLog active (PyPI 2.3.0 2026-09-09, repo commits 2026-09-14, Apache-2.0); DeepProbLog active (PyPI 2.1.0 2026-09-07, repo 2026-09-29); CPOG Lean checker last push 2025-02 (research artefact, MIT). PRISM (Sato/Kameya) is effectively dead \u2014 no release traceable after 2.x.",
+    "what_it_does": "ProbLog = Prolog with independent probabilistic facts (distribution semantics). The probability of a query is the weighted model count of its proofs, computed by knowledge compilation (SDD / d-DNNF). Multiple derivations of the same fact combine automatically as noisy-OR, i.e. the same independent-evidence product INDRA uses. Conditioning via evidence/1; contradiction is not expressible \u2014 a fact and its negation with both probabilities cannot coexist, inconsistent evidence raises an error, and negation is stratified. DeepProbLog adds neural predicates. Separately, Bryant, Nawrocki, Avigad, Heule built in Lean 4 'the first formally verified toolchain for weighted and unweighted model counting': the D4 compiler emits a CPOG certificate, a Lean-verified checker validates it and evaluates the weighted count.",
+    "relevance_to_biolean": "ProbLog is the cleanest executable semantics for 'statements are weighted axioms, derive a weighted conclusion', and the Ozempic chain is a 3-line ProbLog program. But it cannot represent 'paper A says inhibits, paper B says no effect'. The deeper lesson is architectural: do not run probabilistic inference inside Lean; compute outside (ProbLog/D4) and have Lean check a certificate. CPOG is a proof-of-concept that this pattern already exists in Lean 4 for exactly the computation ProbLog performs. A BioLean 'proof carrying an evidence score' could be a Lean term + certified WMC.",
+    "reusable_assets": "problog Python package (SDD/d-DNNF inference, learning from interpretations), DeepProbLog, CPOG tooling and Lean 4 checker (rebryant/cpog).",
+    "key_refs": [
+     "De Raedt, Kimmig, Toivonen. ProbLog: A Probabilistic Prolog and its Application in Link Discovery. IJCAI 2007",
+     "Manhaeve et al. Neural probabilistic logic programming in DeepProbLog. Artif Intell 2021. doi:10.1016/j.artint.2021.103504",
+     "Bryant, Nawrocki, Avigad, Heule. Certified Knowledge Compilation with Application to Formally Verified Model Counting. arXiv:2501.12906 (2025; ext. of SAT 2023)"
+    ]
+   },
+   {
+    "name": "Scallop (provenance-semiring Datalog)",
+    "url": "https://github.com/scallop-lang/scallop",
+    "status": "active \u2014 repo pushed 2026-06-26, 520 stars, MIT, Rust + scallopy Python binding (build with maturin; the PyPI scallopy 0.1.0 from 2021 is stale).",
+    "what_it_does": "Datalog with recursion, aggregation, stratified negation, where every tuple carries a tag from a provenance semiring. Swapping the semiring changes the reasoning mode with the same program: unit (boolean), minmaxprob (weakest-link/strongest-path probability), top-k proofs (keeps the k best derivations as explanations), differentiable variants for training with PyTorch. Conjunction along a derivation = \u2297, alternative derivations = \u2295. No contradiction handling beyond stratified negation.",
+    "relevance_to_biolean": "The semiring abstraction is the right 'shape' for a biolib score: a proof term's evidence score is \u2297 along the derivation and \u2295 across alternative proofs, and you can defer the choice of algebra (log-odds sum, min, SL opinion) to a type-class parameter. Mathlib already has Semiring and ordered semirings, so a semiring-valued derivation relation is a natural Lean definition; top-k-proofs provenance is exactly 'show me the best-supported chain of papers for this claim'. Scallop itself is a research compiler, not infrastructure \u2014 take the idea, not the dependency.",
+    "reusable_assets": "Scallop compiler/interpreter, scallopy, provenance library (minmaxprob, topkproofs, diff variants).",
+    "key_refs": [
+     "Li, Huang, Naik. Scallop: A Language for Neurosymbolic Programming. PLDI / PACMPL 2023. doi:10.1145/3591280",
+     "Green, Karvounarakis, Tannen. Provenance Semirings. PODS 2007"
+    ]
+   },
+   {
+    "name": "Markov Logic Networks and Probabilistic Soft Logic (PSL)",
+    "url": "https://github.com/linqs/psl ; https://pypi.org/project/pslpython/",
+    "status": "MLN tooling dead: Alchemy and Tuffy unmaintained for >10 years, pracmln last release 2019-05. PSL maintained: pslpython 2.4.1 released 2026-10-06, Java core repo pushed 2024-06, Apache-2.0.",
+    "what_it_does": "MLN: weighted first-order clauses define a Markov random field over groundings; inference is #P-hard, approximated by MCMC/MaxWalkSAT. PSL: same idea with \u0141ukasiewicz t-norm relaxation to [0,1] truth values, making MAP inference a convex optimisation (hinge-loss MRF) that scales; weights are learned. Conflicting rules do not break anything \u2014 they trade off through weights, so contradiction is handled 'gracefully' by soft truth values. Applied to drug-target interaction (Fakhraei 2014; meta-path PSL 2023) and drug-drug interaction prediction.",
+    "relevance_to_biolean": "Fails as a foundation for BioLean: inference is a global optimisation with no proof objects, so there is nothing to reuse as a lemma and no derivation to show a biologist; adding one axiom can move every truth value. PSL's \u0141ukasiewicz semantics is formalisable (a small 2025 Lean project by Macovei encodes MV-algebras, 0 stars, not Mathlib) but the value of PSL is the solver, which is anti-proof. Possibly useful as an external oracle to *propose* weights or detect inconsistent axiom sets, not as the logic.",
+    "reusable_assets": "pslpython + PSL Java runtime; PSL biology example models (DTI, DDI) in linqs/psl-examples.",
+    "key_refs": [
+     "Bach, Broecheler, Huang, Getoor. Hinge-Loss Markov Random Fields and Probabilistic Soft Logic. JMLR 18 (2017)",
+     "Richardson, Domingos. Markov logic networks. Machine Learning 2006. doi:10.1007/s10994-006-5833-1",
+     "Meta-Path-based Probabilistic Soft Logic for Drug-Target Interaction Prediction. arXiv:2306.13770 (2023)"
+    ]
+   },
+   {
+    "name": "Bayesian networks and causal DAGs (pgmpy, pyAgrum; Causalean in Lean 4)",
+    "url": "https://github.com/pgmpy/pgmpy ; https://arxiv.org/abs/2607.22511 (CausalForge/Causalean)",
+    "status": "pgmpy 1.1.2 (2026-04-30, MIT) and pyAgrum 3.2.1 (2026-10-09) mature and active. Causalean: Lean 4 library of 7,035 declarations (causal models, do-calculus, potential outcomes) generated with LLM assistance, preprint July 2026, no independent reproduction yet; repo not resolvable via GitHub API at time of check. A Cubical Agda formalisation of d-separation soundness and do-calculus rules 1\u20133 (Sargsyan, arXiv 2606.20351, 2026) also exists.",
+    "what_it_does": "BNs combine evidence exactly via conditional probability tables and d-separation; causal DAGs add interventions (do-calculus). Conflicting observations simply lower posteriors \u2014 there is no notion of 'disputed'. Mathlib now has Markov kernels, Ionescu-Tulcea, and growing probability infrastructure, which is what Causalean builds on.",
+    "relevance_to_biolean": "BNs are the semantics a BioLean claim should be *checked against* (e.g. prove a bound on a derived belief given axiom beliefs and an independence structure), not the authoring format: literature supplies fragmentary conditional claims, never full CPTs. Causalean matters as proof that a large Lean 4 'applied' library over Mathlib's probability stack can be built fast, and as a warning: its own authors note Lean verifies that a theorem follows from its assumptions, not that the formal statement means the informal claim \u2014 the same gap BioLean will face between an annotated sentence and its ontology-term rendering.",
+    "reusable_assets": "pgmpy/pyAgrum for numerical checks; Mathlib Probability (kernels, conditional expectation); Causalean source if/when reproducible.",
+    "key_refs": [
+     "Tan, Syrgkanis. CausalForge: A Formally Grounded, Self-Improving Agentic Framework for Automated Research in Causal Inference (introduces Causalean). arXiv:2607.22511 (2026)",
+     "Sargsyan. A cubical formalisation of conditional independence, Bayesian conditioning, and Pearl's d-separation soundness. arXiv:2606.20351 (2026)",
+     "Pearl. Causality. 2nd ed. 2009"
+    ]
+   },
+   {
+    "name": "Argumentation frameworks and defeasible logic (Dung AF, ASPIC+, ABA, DeLP, Carneades; epistemic probabilistic AFs; Isabelle/HOL formalisation)",
+    "url": "https://tweetyproject.org/ ; https://github.com/aureleeNet/formalizations",
+    "status": "TweetyProject 1.31 released 2026-07-14 (Java, LGPL-3, active, repo pushed 2026-10-18). PyArg last push 2024-09 (dormant, MIT); pygarg 2024 (abstract AFs only); Carneades-4 last commit 2024-10 (dormant); SPINdle dormant. Isabelle/HOL formalisation of Dung semantics (Steen & Fuenmayor 2021) repo last push 2021-10. No Lean/Coq/Agda formalisation of argumentation found. ICCMA 2025 ran an ABA track.",
+    "what_it_does": "Dung AF: arguments + attack relation; semantics (grounded, complete, preferred, stable, ...) pick acceptable sets. Grounded extension is the least fixed point of the defence operator \u2014 unique and polynomial. ASPIC+ builds arguments from strict and defeasible rules with preferences, giving rebut/undercut/undermine attacks; ABA and DeLP are related structured systems. Hunter & Thimm's epistemic approach attaches probabilities to arguments under rationality constraints (if P(A)>0.5 and A attacks B then P(B)\u22640.5), subsuming Dung; epistemic graphs (2020) generalise to degrees of belief/disbelief. Hunter & Williams 2012 applied this to clinical trials: arguments for 'treatment X superior' from evidence tables, with meta-arguments that attack arguments based on weaker evidence. Steen & Fuenmayor encoded all standard semantics in Isabelle/HOL, verified Dung's fundamental lemma, showed a naive labelling lemma false by counter-model, and used Nitpick to compute extensions. Tweety implements all of this (arg.dung, arg.prob, arg.aspic, arg.aba, arg.delp, arg.weighted, arg.rankings, logics.pcl).",
+    "relevance_to_biolean": "This is the only family that treats contradiction as first-class: competing hypotheses are arguments, 'inhibits' vs 'no effect' is an attack, and 'better established' is a preference that decides which attack succeeds \u2014 exactly Dan's open problem, and exactly what ClinGen does by hand with 'Disputed'. Lean encoding is natural and small: an AF is a type with a relation; grounded semantics via Mathlib's Knaster\u2013Tarski (OrderHom.lfp); porting Steen & Fuenmayor is a well-scoped first Lean project and a good smoke test. ASPIC+ maps onto BioLean directly: strict rules = ontology axioms (RO, GO is_a), defeasible rules = literature statements, preferences = evidence scores. Weakness: combining argumentation with numeric weights (ranking semantics, epistemic probabilities) is an active research area with no consensus, and non-monotonicity means a BioLean theorem must be indexed by the corpus version.",
+    "reusable_assets": "TweetyProject (Java; all argumentation modules, probabilistic conditional logic with max-entropy); PyArg (Python ASPIC+ and AF solver/explainer); Steen & Fuenmayor Isabelle sources (template to port to Lean); Hunter & Williams evidence-table language.",
+    "key_refs": [
+     "Dung. On the acceptability of arguments and its fundamental role in nonmonotonic reasoning, logic programming and n-person games. Artif Intell 1995. doi:10.1016/0004-3702(94)00041-X",
+     "Modgil, Prakken. The ASPIC+ framework for structured argumentation: a tutorial. Argument & Computation 2014. doi:10.1080/19462166.2013.869766",
+     "Hunter, Thimm. Probabilistic Reasoning with Abstract Argumentation Frameworks. JAIR 59 (2017). doi:10.1613/jair.5393",
+     "Hunter, Polberg, Thimm. Epistemic graphs for representing and reasoning with positive and negative influences of arguments. Artif Intell 2020. doi:10.1016/j.artint.2020.103236",
+     "Hunter, Williams. Aggregating evidence about the positive and negative effects of treatments. Artif Intell Med 2012. doi:10.1016/j.artmed.2012.09.004",
+     "Steen, Fuenmayor. A Formalisation of Abstract Argumentation in Higher-Order Logic. arXiv:2110.09174 (2021), Isabelle/HOL sources github.com/aureleeNet/formalizations"
+    ]
+   },
+   {
+    "name": "Evidence-grading schemes as inference rules: GRADE, Oxford CEBM levels, GO evidence codes / ECO",
+    "url": "https://www.gradeworkinggroup.org/ ; https://evidenceontology.org/",
+    "status": "GRADE active (GRADE Ontology v1 of 89 terms 2024\u20132025; GRADErater official automation tool announced 2026); Oxford CEBM levels static since 2011; ECO active (OBO Foundry; Dan has it locally); GO evidence-code reliability literature 2008\u20132016.",
+    "what_it_does": "GRADE rates a body of evidence High/Moderate/Low/Very low by starting from study design and applying up/down-grades for risk of bias, inconsistency, indirectness, imprecision, publication bias \u2014 a judgement protocol, not a calculus. Automation attempts: URSE-automated reached 63% agreement with humans (\u03ba 0.44) on 115 Cochrane reviews; GRADE's own group concludes full automation is 'not opportune'; GRADErater codifies explicit decision rules. Oxford CEBM is a static study-design hierarchy. In molecular biology the native scheme is GO evidence codes mapped to ECO classes (IDA, IMP, IPI, TAS, IEA, ...). \u0160kunca et al. 2012 measured electronic (IEA) annotation reliability from GOA release-to-release changes and found it rivals non-experimental curated codes; the GO 'Pitfalls' review notes IDA is most direct, IMP/IGI derivative, IPI guilt-by-association for process terms, and that codes 'cannot be used directly to exclude low-confidence data'.",
+    "relevance_to_biolean": "GRADE/CEBM teach what not to do: don't try to mechanise judgement-heavy grading \u2014 use them only as labels on axioms. ECO is the asset: BioLean already has 1.28M GOA annotation\u2192PMID links each carrying an ECO code, so the cheapest workable weighting is an ECO-class \u2192 log-odds-points table in the ACMG style (IDA 4, IMP/IGI 2, IPI 1\u20132 by aspect, TAS 1, IEA calibrated from \u0160kunca-style reliability). That gives one scalar per edge today, from data on disk, with a clear upgrade path to subjective-logic opinions later.",
+    "reusable_assets": "ECO ontology (local), GOA GAF with evidence codes (local), \u0160kunca 2012 reliability estimates for IEA, GRADE Ontology term list (for annotating clinical statements), FHIR GRADE certainty profiles.",
+    "key_refs": [
+     "\u0160kunca, Altenhoff, Dessimoz. Quality of Computationally Inferred Gene Ontology Annotations. PLoS Comput Biol 2012. doi:10.1371/journal.pcbi.1002533",
+     "Gaudet, Dessimoz. Gene Ontology: Pitfalls, Biases, and Remedies. arXiv:1602.01875 (2016)",
+     "Whaley et al. GRADE Concept Paper 9: rationale and process for creating a GRADE ontology. J Clin Epidemiol 2025",
+     "Chibucos et al. Standardized description of scientific evidence using the Evidence Ontology (ECO). Database 2014"
+    ]
+   },
+   {
+    "name": "OpenCog PLN (Probabilistic Logic Networks) + Bio-AtomSpace",
+    "url": "https://github.com/opencog/pln ; https://arxiv.org/abs/2005.12535",
+    "status": "dormant \u2014 opencog/pln last push 2025-09 (16 stars); classic OpenCog superseded by Hyperon/MeTTa (trueagi-io, active 2026-02) where PLN is being re-implemented. Bio-AtomSpace papers 2015\u20132020.",
+    "what_it_does": "Uncertain term logic with truth values (strength s, confidence c), c = n/(n+k) from evidence count n and a 'personality parameter' k; indefinite (interval) truth values; inference rules (deduction, induction, abduction, revision) propagate them through a hypergraph. Bio-AtomSpace loaded GO, pathways and expression data and ran PLN to produce 'uncertain logical explanations' linking genes to GO categories and longevity. The 2020 paper describes results as preliminary and inference control as the open issue; a 2024 Goertzel paper compares PLN with NARS and finds similar s\u00d7c outputs under high uncertainty.",
+    "relevance_to_biolean": "The closest historical precedent to the BioLean vision \u2014 formalise biology over GO with uncertain truth values and derive higher-level claims \u2014 and it produced no reusable library after ~15 years. The failure modes are instructive: forward-chaining explosion with no inference control, truth values not tied to citable statements, and no proof objects for reuse. BioLean's distinguishing design decisions should be the opposite on all three: goal-directed proofs, every axiom is a referenced sentence, and reuse via proved lemmas (mathlib-style) rather than a growing hypergraph.",
+    "reusable_assets": "none of practical value; PLN book (Goertzel et al. 2008) for the truth-value algebra, which is essentially a subjective-logic opinion with a different confidence mapping.",
+    "key_refs": [
+     "Goertzel et al. Embedding Vector Differences Can Be Aligned With Uncertain Intensional Logic Differences (Bio-AtomSpace + PLN). arXiv:2005.12535 (2020)",
+     "Goertzel. PLN and NARS Often Yield Similar strength \u00d7 confidence Given Highly Uncertain Term Probabilities. arXiv:2412.19524 (2024)",
+     "Goertzel, Ikl\u00e9, Goertzel, Heljakka. Probabilistic Logic Networks. Springer 2008"
+    ]
+   }
+  ],
+  "key_lessons": [
+   "Separate 'probability the extraction is right' from 'probability the biology is true'. INDRA's belief (and its 0.942-AUPRC Random Forest) models only the first; the 2023 MSB paper lists contradictions and causal transitivity as unsolved. BioLean needs the second layer explicitly.",
+   "Every working fusion rule is the same move \u2014 assume independence across sources, saturate within a source: INDRA's 1 \u2212 \u03a0(e_syst + \u03a0 e_rand), ProbLog's noisy-OR over derivations, subjective-logic cumulative fusion (add Beta pseudo-counts), ACMG's sum of log-odds points. Pick one, state the independence assumption as a hypothesis, make it a Lean lemma.",
+   "The ACMG/ClinGen point system (Tavtigian 2018/2020, SOP v12 2026) is the only weighting scheme biologists already agreed numbers for, and it is additive integer log-odds with per-category caps and a replication-over-time bonus. Copy its shape; it is trivially formalisable and auditable.",
+   "Probability does not resolve contradiction: Dempster's rule renormalises it away (Zadeh paradox), ProbLog cannot express it, Bayesian nets just lower posteriors, PSL smears it into soft values. The frameworks that treat it as first-class are argumentation (ASPIC+, Hunter & Williams 2012 meta-arguments attacking weaker evidence) and ClinGen's human 'Disputed/Refuted'. A BioLean theorem should carry its set of undefeated attackers, not only a number.",
+   "Provenance semirings (Scallop; Green et al. 2007) are the right abstraction for a biolib score: \u2297 along a derivation, \u2295 across alternative derivations, with the algebra as a type-class parameter so log-odds, min (weakest link) and SL opinions are interchangeable. Mathlib already has semirings.",
+   "Compute outside, certify inside. The Lean 4 verified weighted-model-counting checker (Bryant, Nawrocki, Avigad, Heule 2025) does for D4/ProbLog-style inference exactly what BioLean should do for evidence arithmetic: external tool produces a certificate, Lean checks it. Do not try to run probabilistic inference in the kernel.",
+   "Mechanising this area is cheap and finds real errors: Steen & Fuenmayor's Isabelle encoding exposed a false labelling lemma; Dezert et al. showed Shafer's 1976 conditioning proof wrong. A Lean port of Dung AFs with grounded semantics via Mathlib's lfp is a small first project and a good smoke test for the whole programme.",
+   "Subjective-logic opinions (b,d,u) are the best edge-weight type if 'no evidence' must differ from 'conflicting evidence'; probability collapses both to 0.5. Libraries are toy-grade (2 stars), so write the ~300 lines yourself from the corrected operators (van der Heijden et al. 2018) and keep the Beta pseudo-count reading so biologists can interpret it.",
+   "Reject global joint inference (MLN/PSL) as the core: no proof objects, non-compositional (one new axiom moves every value), and MLN tooling is dead. At most use PSL as an external oracle for proposing weights or flagging inconsistent axiom sets.",
+   "OpenCog PLN/Bio-AtomSpace already tried 'uncertain logic over GO' for a decade and left nothing reusable; failures were forward-chaining explosion, truth values not tied to citations, and no reusable lemmas. BioLean's design should invert all three.",
+   "Judgement-heavy grading does not mechanise (URSE-automated 63% agreement, GRADE group says full automation 'not opportune'). Use GRADE/CEBM as labels, and use ECO \u2014 already on disk with 1.28M GOA\u2192PMID links \u2014 as the evidence-type vocabulary, mapped to ACMG-style points (\u0160kunca 2012 gives IEA reliability estimates)."
+  ],
+  "open_questions": [
+   "Which algebra for edge weights: scalar log-odds (ACMG-style), subjective-logic opinion (b,d,u), or DS mass? This decides whether 'unknown' and 'contested' are distinguishable and whether weights add or fuse.",
+   "Literature evidence is heavily non-independent (same lab, same assay, citation cascades, review-of-review). INDRA fudges this with per-source saturation; SL offers averaging vs cumulative fusion. Can dependence be estimated from PMIDs, author overlap, MeSH, or the Open Targets/PubTator co-mention data already on disk?",
+   "How does evidence compose along a chain (the Ozempic example)? Product of beliefs (INDRA linked statements) is only valid under independence; min (Scallop minmaxprob) is a weakest-link heuristic. Should Lean prove interval bounds rather than point values?",
+   "Argumentation is non-monotonic (a new paper can defeat a proof) but Lean is monotonic. Does a BioLean theorem become 'P, relative to corpus snapshot v' with the attacker set as an explicit hypothesis, and how is that kept honest as the corpus grows?",
+   "Most apparent contradictions are context differences (species, tissue, dose, timescale). Does context live in the statement (more ontology terms), in the weight, or in the attack relation (ASPIC+ undercutters)?",
+   "What exactly is proved when weights come from a trained model (INDRA RF) or a curator's judgement: only the arithmetic given the axiom weights, or also the derivation of the weights? Where is the trusted base?",
+   "Can ECO classes be calibrated to likelihood ratios the way ClinGen calibrated functional assays (PS3/BS3)? \u0160kunca gives reliability for IEA; nothing comparable exists for TAS, IMP, or text-mined relations.",
+   "Is porting Steen & Fuenmayor's Isabelle argumentation formalisation to Lean 4 (grounded semantics via Mathlib lfp) worth doing first as the proof-system skeleton, or should the skeleton be a semiring-valued derivation relation with argumentation added as the defeat layer?"
+  ]
+ },
+ {
+  "angle": "Formal methods and proof assistants applied to biology (Lean/Rocq/Isabelle/HOL/Maude, rule-based modelling, formal ontology, autoformalization of science, and how Lean/Mathlib practice maps onto an evidence-carrying \"biolib\")",
+  "projects": [
+   {
+    "name": "Pathway Logic (SRI, Maude)",
+    "url": "https://pl.csl.sri.com/",
+    "status": "dormant; site last dated 2017, last related paper HSB 2019 (Talcott et al. 'Fuzzy Matching in Symbolic Systems Biology'); site TLS certificate expired in 2026. Maude itself is active (Alpha165 Jul 2026, nightly Oct 2026).",
+    "what_it_does": "A rewriting-logic knowledge base of mammalian signalling, hand-curated from papers. Proteins, small molecules, locations and post-translational modifications are typed Maude terms; each literature-derived reaction is a rewrite rule carrying citation metadata. Maude's search and LTL model checker answer reachability questions; the Pathway Logic Assistant visualises subnets.",
+    "relevance_to_biolean": "The closest prior art to Dan's baseline: hundreds of formal, referenced statements curated from the literature into an executable logic. It proves the curation is feasible but also shows the failure mode: single-lab, niche engine, no community, so it stopped when funding did. No evidence weighting; rules were binary. Its typed-state design (entity + location + modification) is a good template for what a BioLean statement must carry beyond a bare ontology triple.",
+    "reusable_assets": "Curated STM/EGF signalling models and the PLA tool downloadable from pl.csl.sri.com (site certificate expired; use curl -k). Maude 3.x (GitHub maude-lang/Maude) is live and could re-run them.",
+    "key_refs": [
+     "Eker, Knapp, Laderoute, Lincoln, Talcott. Pathway Logic: executable models of biological networks. WRLA 2002, ENTCS 71.",
+     "Talcott. Pathway Logic. SFM 2008, LNCS 5016, pp. 21-53.",
+     "Talcott. The Pathway Logic Formal Modeling System (BIBM 2016 talk), pl.csl.sri.com/Presentations/pl-16bibmfm.key.pdf"
+    ]
+   },
+   {
+    "name": "Kappa (KaSim / KaSa / kappy)",
+    "url": "https://kappalanguage.org/",
+    "status": "maintained; stable v4.1.3.1 Oct 2024, nightly builds Apr 2026; kappy 4.1.x on PyPI",
+    "what_it_does": "Rule-based language for molecular systems: proteins are agents with sites, rules rewrite site-graphs, so a handful of rules describe combinatorially huge state spaces. KaSim does stochastic simulation; KaSa does static analysis (reachability invariants, contact maps) that is sound for all parameter values; causal 'stories' compress a trace into the minimal chain of events explaining an observable.",
+    "relevance_to_biolean": "Shows how to write mechanistic protein statements without enumerating states: a rule is 'X binds Y at site s if X is phosphorylated at t', which is what GO/SO-annotated triples need to grow into. KaSa is a worked example of a decision procedure over biological rules. Kappa 'stories' are proof-like explanations, close to what a BioLean proof of 'semaglutide reduces hunger' should look like. Fails for BioLean on provenance and evidence: rules have no citations or belief.",
+    "reusable_assets": "OCaml tools and Python kappy (MIT-style open source, github.com/Kappa-Dev/KappaTools); formal semantics in the manual; PySB can export to Kappa.",
+    "key_refs": [
+     "Danos, Laneve. Formal molecular biology. Theor. Comput. Sci. 325 (2004), DOI 10.1016/j.tcs.2004.03.065",
+     "Boutillier et al. The Kappa platform for rule-based modeling. Bioinformatics 34(13) 2018, DOI 10.1093/bioinformatics/bty272",
+     "Kappa Tools reference manual, tools.kappalanguage.org/docs/KaSim-manual-master/KaSim_manual.htm"
+    ]
+   },
+   {
+    "name": "BioNetGen (+ PySB, INDRA export)",
+    "url": "https://github.com/RuleWorld/bionetgen",
+    "status": "active; BioNetGen 2.9.3 released Apr 2025, regular releases 2023-2025",
+    "what_it_does": "Rule-based modelling language (BNGL) and simulators (ODE, SSA, NFsim). PySB builds BNGL programmatically from Python, and INDRA assembles PySB models directly from literature-extracted Statements, so there is already a working literature -> rules -> executable model path.",
+    "relevance_to_biolean": "The sibling project already exports INDRA Statement JSON; INDRA -> PySB -> BNGL/Kappa turns those into simulatable models today. BioLean should be the proof layer beside this pipeline, not a replacement: same INDRA Statements in, proofs about relational claims out, and BioNetGen/Kappa for dynamics. INDRA's belief engine is also the only widely used evidence-weighting scheme on literature statements and is the natural first scoring function.",
+    "reusable_assets": "BioNetGen (GPLv3), PyBioNetGen, PySB (BSD), INDRA PySB assembler; all pip-installable.",
+    "key_refs": [
+     "Harris et al. BioNetGen 2.2: advances in rule-based modeling. Bioinformatics 32(21) 2016, DOI 10.1093/bioinformatics/btw469, PMC5079481",
+     "Gyori et al. From word models to executable models of signaling networks using automated assembly. Mol Syst Biol 13:954 (2017), DOI 10.15252/msb.20177651"
+    ]
+   },
+   {
+    "name": "BIOCHAM (Inria Lifeware)",
+    "url": "https://gitlab.inria.fr/lifeware/biocham",
+    "status": "maintained; GitLab last activity 2026-07-16; latest paper Jan 2025 (CRN compilation pipeline). Public website lifeware.inria.fr was unreachable on 2026-10-23.",
+    "what_it_does": "Models reaction networks as transition systems; biological properties (from experiments) are written as CTL/LTL/FO-LTL(R) formulae; validation is model checking; parameter and even rule inference is constraint solving against the temporal specification. QFLTL gives a continuous 'satisfaction degree' of a model against a property, used for robustness.",
+    "relevance_to_biolean": "The strongest existing instance of 'formalize experimental knowledge as logical statements and check them'. Two ideas transfer directly: (1) each experimental observation is a formula, and a model is accepted only if it satisfies all of them; (2) satisfaction degree is a graded truth value for a claim, a precedent for Dan's evidence-weighted edges. BIOCHAM targets dynamics of one model, not a corpus of literature claims, and has no provenance layer.",
+    "reusable_assets": "BIOCHAM 4 sources (GPL) and Jupyter notebooks on Inria GitLab; SBML import; CTL/LTL checker; CRN compiler.",
+    "key_refs": [
+     "Calzone, Fages, Soliman. BIOCHAM: an environment for modeling biological systems and formalizing experimental knowledge. Bioinformatics 22(14) 2006, DOI 10.1093/bioinformatics/btl172",
+     "Fages, Hemery, Soliman. On BIOCHAM symbolic computation pipeline for compiling mathematical functions into biochemistry (2025)",
+     "Konur, Gheorghe, Krasnogor. Verifiable biology. J R Soc Interface 20(202):20230019 (2023), DOI 10.1098/rsif.2023.0019, PMC10169095 (review of 30+ model-checking tools for biology; no theorem provers in use; adoption mainly by computer scientists)"
+    ]
+   },
+   {
+    "name": "Zsyntax in HOL Light / HOL4 (Rashid, Hasan, Siddique, Tahar)",
+    "url": "https://doi.org/10.1371/journal.pone.0180179",
+    "status": "dormant; last paper 2017 (a 2021 synthetic-biology follow-up exists); code at save.seecs.nust.edu.pk/projects/sbiology/",
+    "what_it_does": "Zsyntax (Boniolo, D'Agostino, Di Fiore 2010) is a logic in which molecules are formulas and reactions are inference rules, so a pathway is literally a proof. Rashid et al. formalised its connectives (Z-interaction, Z-conjunction, Z-conditional) and inference rules in higher-order logic, added reaction kinetics (stoichiometry, flux vectors), and proved TP53 phosphorylation and a cancer-stem-cell death pathway as deductions.",
+    "relevance_to_biolean": "This is the direct ancestor of Dan's idea: 'pathway = proof from literature-stated reactions'. Zsyntax was explicitly designed with text mining in mind. Lesson learned there: interactive HOL proofs needed custom simplifiers and heavy manual guidance, and nobody followed. BioLean can restart this with Lean automation (simp/aesop/decide) and with ontology-typed atoms instead of free-text molecule names.",
+    "reusable_assets": "HOL Light ML scripts in the PLoS One supplement; a Haskell 'zsyntax' package exists (in nixpkgs) implementing the calculus.",
+    "key_refs": [
+     "Boniolo, D'Agostino, Di Fiore. Zsyntax: a formal language for molecular biology with projected applications in text mining and biological prediction. PLoS One 5(3):e9511 (2010), DOI 10.1371/journal.pone.0009511",
+     "Rashid, Hasan, Siddique, Tahar. Formal reasoning about systems biology using theorem proving. PLoS One 12(7):e0180179 (2017), DOI 10.1371/journal.pone.0180179"
+    ]
+   },
+   {
+    "name": "Coq/Rocq biology (De Maria, Felty et al.; Bertot/Richard)",
+    "url": "https://arxiv.org/abs/2505.05362",
+    "status": "active but tiny; latest 'Neuronal archetypes in Rocq' preprint May 2025; lineage back to 2009",
+    "what_it_does": "Three strands: (1) HyLL, a hybrid/modal linear logic encoded in Coq, used to prove temporal properties of a P53/Mdm2 model (2014); (2) Coq models of neurons and seven circuit archetypes with proofs of dynamic properties (2020-2025); (3) D\u00e9n\u00e8s, Lesage, Bertot, Richard (2009) proving Thomas's theorems on discrete gene-regulatory networks in Coq/ssreflect (a positive circuit is necessary for multistationarity, etc.).",
+    "relevance_to_biolean": "Ten years of proof-assistant biology produced only 'relatively simple examples' (authors' own words) because the targets were dynamics. The GRN-theorem strand is the exception: general structural theorems ('any network with behaviour B contains circuit C') are exactly the reusable, mathlib-style lemmas a biolib wants. Guidance: prove graph/relational claims, leave kinetics to model checkers.",
+    "reusable_assets": "Coq sources for the archetype work (uOttawa); the 2009 GRN proofs (Inria HAL inria-00504065).",
+    "key_refs": [
+     "De Maria, Despeyroux, Felty. A logical framework for systems biology. arXiv 1404.5439 (FMMB 2014)",
+     "Bahrami, Zucchini, De Maria, Felty. Modelling and verifying neuronal archetypes in Rocq. arXiv 2505.05362 (2025)",
+     "D\u00e9n\u00e8s, Lesage, Bertot, Richard. Formal proof of theorems on genetic regulatory networks. SYNASC 2009, HAL inria-00504065"
+    ]
+   },
+   {
+    "name": "crnt-lean and grn-lean (marpaia)",
+    "url": "https://github.com/marpaia/crnt-lean",
+    "status": "active but one-person; created Jun-Jul 2026, last push Jul 2026, 4 stars each; Lean 4.31 / Mathlib v4.31",
+    "what_it_does": "crnt-lean formalises Chemical Reaction Network Theory (species, complexes, stoichiometry, mass action, linkage classes, deficiency) plus missing Mathlib pieces (Brouwer, Gale-Nikaido, LaSalle). grn-lean builds on it: Hill-kinetic gene circuits read from LOICA's serialised networks, returning parameter-free 'structural certificates' (sensor monotone, switch has positive loop; oscillator left open). Both sorry-free with CI axiom audits.",
+    "relevance_to_biolean": "The best current example of biolib engineering practice in Lean: pinned toolchain, 'import X is sorry-free and introduces no axioms beyond Mathlib's [propext, Classical.choice, Quot.sound]', enforced by test/AxiomAudit.lean that pins #print axioms on headline results; decidable structural criteria that return exact certificates. Copy this skeleton. Content overlap with BioLean is small (it is maths of networks, not literature claims).",
+    "reusable_assets": "MIT-licensed Lean packages; AxiomAudit CI pattern; Lake setup against Mathlib.",
+    "key_refs": [
+     "README: github.com/marpaia/crnt-lean",
+     "README: github.com/marpaia/grn-lean (Lean 4 Formalization of Gene-Regulatory Circuits in the Hill-Kinetic ODE Perspective)"
+    ]
+   },
+   {
+    "name": "K-Lean (Kenosian) and VeriBiota (OmnisGenomics)",
+    "url": "https://kpp.kenosian.com/k-lean.html",
+    "status": "K-Lean: commercial, 2026, private repo 'available on request', unlicensed, claims unverifiable. VeriBiota: public Lean repo, created Nov 2025, pushed Aug 2026, 0 stars.",
+    "what_it_does": "K-Lean advertises 64-94 'contracts' (positivity/bound/monotonicity lemmas about equations such as Michaelis-Menten velocity, Gompertz hazard, mRNA half-life, Nussinov optimality) with a paid kernel-check service. VeriBiota is a Lean-written CLI that checks bioinformatics artifacts (alignment, edit scripts, VCF normalisation) and emits hashed provenance records; a few profiles have Lean proofs, others are schema checks only.",
+    "relevance_to_biolean": "Included only so nobody mistakes them for BioLean. Neither formalises literature claims or evidence; both prove properties of formulas/algorithms. K-Lean's own page says a seal does not establish that a result 'is scientifically correct'. Nothing reusable from K-Lean (closed). VeriBiota's provenance-record idea (hash + manifest per check) is a small pattern worth noting.",
+    "reusable_assets": "VeriBiota source on GitHub (license unstated in README). K-Lean: none.",
+    "key_refs": [
+     "K-Lean: Machine-Verified Formal Proofs for Computational Biology, Research Square preprint rs-10086537/v1",
+     "dev.to/omniscoder VeriBiota v0.2.1 post (Dec 2025); github.com/OmnisGenomics/VeriBiota"
+    ]
+   },
+   {
+    "name": "Physlib (ex HepLean / PhysLean) informal-to-formal pipeline",
+    "url": "https://github.com/HEPLean/PhysLean",
+    "status": "active; ~807 stars, 3,750 commits, Lean v4.35, merged with Lean-QuantumInfo in 2026; HepLean paper 2024, CPC 2025",
+    "what_it_does": "Community library digitalising physics into Lean 4 on top of Mathlib. Key machinery (Physlib/Meta): `informal_definition` and `informal_lemma` commands that create first-class declarations with a docstring (content + references), a `deps : List Lean.Name`, and a `tag`; 'semiformal' results (type stated, proof missing, adapted from Batteries' proof_wanted) tracked by an environment extension; TODO and Remark extensions; generated dependency graphs of informal vs formal results; a References section per file; two-tier review (Physlib curated, PhyslibAlpha fast-moving).",
+    "relevance_to_biolean": "This is the template for growing a biolib from a literature corpus. Most BioLean statements will begin as informal (text + PMIDs + ontology terms), some get types (semiformal), few get proofs; Physlib already has the Lean metaprogramming to make all three first-class and to graph their dependencies. The 'explicit assumption' habit (HepLean took FLT for n=3 as a hypothesis because Mathlib lacked it) is how literature claims should enter proofs.",
+    "reusable_assets": "Apache-2.0 Lean source: Physlib/Meta/Informal/{Basic,Post,SemiFormal}.lean, Meta/TODO, Meta/Remark, docs generator; contribution and review process documents.",
+    "key_refs": [
+     "Tooby-Smith. HepLean: Digitalising high energy physics. arXiv 2405.08863 (2024); Comput. Phys. Commun. (2025)",
+     "Physlib/Meta/Informal/Basic.lean (structures InformalDefinition/InformalLemma with deps and tag)"
+    ]
+   },
+   {
+    "name": "Josephson group (UMBC): Lean for chemical physics and scientific computing",
+    "url": "https://doi.org/10.1039/D3DD00077J",
+    "status": "active; Digital Discovery 2024, Molecular Physics 2025, AIChE 2024 talk, Simons Pivot Fellow 2025 (with Avigad), Amazon Research Award 2026 'Autoformalization for Scientific Computing in Lean'",
+    "what_it_does": "Formalised Langmuir and BET adsorption theory, Boyle's law and kinematics in Lean with every scientific premise an explicit hypothesis of the theorem; LeanLJ computes Lennard-Jones energies with proofs over R linked to executable Float code via typeclass polymorphism; a toy proof that the genetic code (4^3 codons -> 20 amino acids) is redundant and non-overlapping; now building LLM agents that extract equations from papers into verified Lean code.",
+    "relevance_to_biolean": "Two transferable techniques: (1) 'premises as named hypotheses' so a theorem's statement itself lists the scientific assumptions it rests on, complementing #print axioms; (2) typeclass-polymorphic definitions so the same biolib definition can be proved about and executed. Also the only group with funding to autoformalize science papers; worth watching or contacting.",
+    "reusable_assets": "Lean sources accompany the Digital Discovery and Molecular Physics papers (ATOMS lab GitHub); 'Lean for Scientists and Engineers 2024' lecture slides.",
+    "key_refs": [
+     "Bobbin, Sharlin, Feyzishendi, Dang, Wraback, Josephson. Formalizing chemical physics using the Lean theorem prover. Digital Discovery 3 (2024), DOI 10.1039/D3DD00077J; arXiv 2210.12150",
+     "Ugwuanyi, Jones, Velkey, Josephson. Benchmarking energy calculations using formal proofs. Molecular Physics (2025); arXiv 2505.09095",
+     "Logical proofs about the genetic code in Lean 4. AIChE Annual Meeting 2024 (abstract)"
+    ]
+   },
+   {
+    "name": "FormalScience / FormalPhysics (Meadows, Zhang, Freitas)",
+    "url": "https://arxiv.org/abs/2604.23002",
+    "status": "active; ACL 2026 long paper (pp. 23059-23077); code github.com/jmeadows17/formal-science pushed Jun 2026",
+    "what_it_does": "Domain-agnostic human-in-the-loop agentic pipeline for autoformalising scientific reasoning into Lean 4. One physics expert produced 200 Lean-formalised university physics problems in a month for about 50 USD. Benchmarks statement autoformalisation (best agent ~31% formal validity) and gives the first taxonomy of semantic drift: 'notational collapse' and 'abstraction elevation', i.e. Lean accepts a statement that quietly lost the science.",
+    "relevance_to_biolean": "Closest 2026 work to 'autoformalize a few hundred canonical publications'. Its central finding is the main risk for BioLean's annotation step: type-checking proves consistency, not fidelity to the paper. BioLean needs a fidelity check independent of Lean (e.g. ontology IDs resolve, relation is RO-valid, back-translation matches the sentence). Senior author Freitas is at the CRUK National Biomarker Centre, so a biomedical follow-up is plausible.",
+    "reusable_assets": "Open pipeline and UI (GitHub jmeadows17/formal-science); FormalPhysics dataset.",
+    "key_refs": [
+     "Meadows, Zhang, Freitas. FormalScience: Scalable human-in-the-loop autoformalisation of science with agentic code generation in Lean. ACL 2026 Long Papers; arXiv 2604.23002"
+    ]
+   },
+   {
+    "name": "VEL: formally verified OWL 2 EL reasoner (Coq)",
+    "url": "https://arxiv.org/abs/2412.08739",
+    "status": "preprint Dec 2024 (CEUR Vol-3828); code location not found; unknown activity since",
+    "what_it_does": "Mechanises the Baader-Brandt-Lutz EL++ classification algorithm in Coq with machine-checked soundness and completeness, extracted to OCaml. The mechanisation found two errors in the published completeness proof and required changing the algorithm.",
+    "relevance_to_biolean": "GO, CHEBI, MONDO, UBERON and RO property chains are (mostly) OWL 2 EL. BioLean's 'CHEBI:x is_a drug' and 'part_of' reasoning over 6M OBO terms should not be done by elaborating millions of Lean axioms; the VEL pattern (verified external reasoner, or certificates checked in Lean) is the scalable route. Also a warning that 'textbook' algorithms and claims break under mechanisation.",
+    "reusable_assets": "Coq development described in the paper (repository not located).",
+    "key_refs": [
+     "Ileri, Rangarajan, Cannell, McGinty. VEL: A formally verified reasoner for OWL2 EL profile. arXiv 2412.08739 (2024); CEUR-WS Vol-3828",
+     "Baader, Brandt, Lutz. Pushing the EL envelope. IJCAI 2005"
+    ]
+   },
+   {
+    "name": "BFO / RO formal axiomatisations",
+    "url": "https://bfo-ontology.github.io/fol.html",
+    "status": "maintained as ISO standard (ISO/IEC 21838-2:2021); Isabelle version is old (Bittner, pre-2010); no Coq/Lean/HOL port found",
+    "what_it_does": "BFO 2020 ships FOL and Common Logic (CLIF) axioms with consistency proofs plus OWL; an earlier Isabelle axiomatisation exists; 2019-2021 Applied Ontology papers used Isabelle/HOL to debug spacetime and UFO-A upper ontologies. RO (Relation Ontology) is OWL only, with property chains, no FOL file.",
+    "relevance_to_biolean": "Porting BFO's FOL to Lean is possible but low value: BioLean's statements live at the RO level (positively_regulates, has_function, part_of) not BFO's continuant/occurrent level. The useful lesson from the Isabelle work is that running an upper ontology through a prover finds inconsistent axioms; expect the same from RO chains once encoded.",
+    "reusable_assets": "BFO-2020 FOL/CLIF files (GitHub bfo-ontology), ISO text; RO OWL from OBO Foundry (already on disk).",
+    "key_refs": [
+     "ISO/IEC 21838-2:2021 Information technology \u2014 Top-level ontologies \u2014 Part 2: Basic Formal Ontology",
+     "BFO-2020 repository: github.com/BFO-ontology/BFO-2020 (FOL, CLIF, Prover9, OWL serialisations)",
+     "Formalizing UFO-A in Isabelle/HOL (2021 workshop paper, research.utwente.nl)"
+    ]
+   },
+   {
+    "name": "provenance-lean (Senellart): semiring provenance in Lean 4",
+    "url": "https://github.com/PierreSenellart/provenance-lean",
+    "status": "active; created May 2025, last push Oct 2026, v1.2.0, Lean 4.34 / Mathlib, MIT, 13 stars",
+    "what_it_does": "Formalises Green-Karvounarakis-Tannen provenance semirings (Boolean, polynomial 'which facts support this', why-, lineage, tropical, Viterbi max-product), m-semirings with monus, annotated relational algebra with difference and aggregation, ProvSQL's rewriting, and probabilistic query evaluation via Boolean circuits.",
+    "relevance_to_biolean": "The ready-made formal device for 'weigh edges by how established the evidence is'. Annotate each literature statement with a semiring element; derived claims inherit annotations compositionally; switch semirings to get different answers from the same proof structure (polynomial = full PMID support formula; Viterbi = belief of the best derivation; Boolean = plain truth). It is already a Lean 4 library with Mathlib typeclasses, so BioLean can depend on it rather than invent an ad hoc scoring scheme.",
+    "reusable_assets": "MIT Lean 4 package on Reservoir (@PierreSenellart/provenance); ProvSQL PostgreSQL extension for computing the same annotations over Dan's DuckDB/SQL-shaped data.",
+    "key_refs": [
+     "Green, Karvounarakis, Tannen. Provenance semirings. PODS 2007, DOI 10.1145/1265530.1265535",
+     "Reservoir package page: reservoir.lean-lang.org/@PierreSenellart/provenance (Lean 4.34, v1.2.0, Oct 2026)",
+     "Formally verified patent analysis via dependent type theory (arXiv 2604.18882, 2026): claims as DAGs, match strengths in a verified complete lattice, confidence propagated by proven-monotone functions; certifies the maths downstream of ML scores, not the scores"
+    ]
+   },
+   {
+    "name": "Lean 4 axiom-audit tooling (#print axioms, gonzalgo, Aesop, nanopub attestations)",
+    "url": "https://pypi.org/project/gonzalgo/",
+    "status": "active; Lean 4.35 (Oct 2026), Aesop pushed Oct 2026, gonzalgo 0.5.6 Sep 2026, Lean-artifact nanopublication example Jul 2026",
+    "what_it_does": "Verified locally on Lean 4.35.0: a theorem built from user `axiom`s lists exactly those axioms by name in `#print axioms`; `sorry` appears as `sorryAx`; `native_decide` adds an extra per-theorem axiom (trusts compiler, not kernel); `decide` adds none; two proofs of the same Prop are definitionally equal (proof irrelevance). gonzalgo walks axiom dependencies (`why`, `trust`, `impact`), flags native_decide, and runs as CI or MCP server. A knowledgepixels nanopublication (Jul 2026) records a Lean file's axiom audit with PROV attribution, showing nanopubs and Lean audits already being combined.",
+    "relevance_to_biolean": "Gives the canonical biolib design: every literature statement is a named Lean axiom (or informal_lemma) whose name/docstring carries PMID, ontology IDs and ECO evidence code; `#print axioms` on any proved claim is its complete evidence trail; a gonzalgo-style walker computes the evidence score outside the kernel. Because Prop is proof-irrelevant, scores cannot be attached to proofs themselves: either compute them over the axiom graph, or model claims as data (a `Supported p` record or semiring-annotated facts) and prove the aggregation laws. Ban or tier `native_decide`. Nanopublication wrapping of audits is the bridge to Dan's Knowlets memory.",
+    "reusable_assets": "gonzalgo (Apache-2.0, PyPI, GitHub Action, MCP); Aesop (leanprover-community); Lean `#print axioms`; knowledgepixels nanopub registry (CC0 example RA74EndCd...).",
+    "key_refs": [
+     "Lean 4 reference manual, #print axioms; Batteries `proof_wanted`",
+     "gonzalgo: where does a formal library spend its axioms? (PyPI, f-keys.com/gonzalgo, 2026)",
+     "Nanopublication RA74EndCdPO3d2g0ziTCnZmwsq2PsX-2UBl0ssY3d2OWU: 'Tarski.lean: compilation verification under Lean 4.32.0 and 4.24.0' (registry.knowledgepixels.com, 2026-07-29)"
+    ]
+   }
+  ],
+  "key_lessons": [
+   "Literature statements as named Lean axioms is the canonical encoding: `#print axioms` on any proved claim then lists exactly the PMID-tagged axioms it rests on (verified on Lean 4.35.0 in /tmp/biolean_probe). crnt-lean shows the CI pattern: an AxiomAudit.lean that pins #print axioms on headline results and fails the build on sorryAx or unexpected axioms.",
+   "Lean's Prop is proof-irrelevant (two proofs of the same statement are `rfl`-equal), so evidence scores cannot live on proofs. Either compute scores outside the kernel over the axiom dependency graph (gonzalgo-style), or make claims data: semiring-annotated facts as in provenance-lean, or a `Supported p` record (score, refs, proof), with Lean proving the aggregation is sound/monotone, as the 2026 patent-analysis Lean pipeline does with a verified lattice.",
+   "Use provenance semirings (Green et al. 2007; provenance-lean, Lean 4, MIT, active Oct 2026) as the evidence algebra: polynomial semiring gives the exact PMID-support formula for a derived claim, Viterbi gives best-derivation belief, Boolean gives plain truth. One proof structure, several scorings, and INDRA's belief engine becomes a special case rather than a bespoke rule.",
+   "Physlib's `informal_definition` / `informal_lemma` (docstring + references + `deps` + `tag`) and 'semiformal' (type stated, proof wanted) declarations are the right onboarding ladder for a corpus: most of biolib will be informal statements for years, and Physlib already has the metaprogramming to make them first-class and to draw informal-vs-formal dependency graphs.",
+   "Prove relational and structural claims, not dynamics. HyLL (2014), Zsyntax in HOL (2017) and the Rocq neuronal archetypes (2025) all stayed at 'relatively simple examples' because they proved temporal behaviour of models by hand. The Ozempic-style chain (inhibits, has_function, breakdown_of) is relational and Datalog/EL-shaped; leave kinetics to BIOCHAM/Kappa/BioNetGen.",
+   "Zsyntax (Boniolo et al. 2010; HOL formalisation Rashid et al. 2017) is the direct ancestor of 'pathway = proof from literature reactions' and was designed for text mining; its three connectives are a starting calculus. It died from manual-proof cost and lack of community, both of which Lean + Mathlib practice addresses.",
+   "Pathway Logic proves a literature-curated formal rule base of hundreds of referenced rules is feasible, and that it dies if it is single-lab and tied to a niche engine (site frozen since 2017 although Maude is alive in 2026). Its typed state (entity + location + modification) is richer than a bare ontology triple and is what a BioLean statement schema should carry.",
+   "BIOCHAM shows 'experimental knowledge as formulae, validation as checking' works in practice, and its QFLTL satisfaction degree is an existing graded-truth precedent. Konur et al.'s 2023 'Verifiable biology' review found 30+ model checkers and no theorem provers in use, all driven by computer scientists: biologist-facing usability, not logic, is the blocker.",
+   "Autoformalization of science is affordable but drifts: FormalScience (ACL 2026) got 200 Lean-formalised physics problems for ~50 USD with one expert, yet its main result is a taxonomy of semantic drift (notational collapse, abstraction elevation) where Lean accepts a statement that lost the science. BioLean's ontology-term annotation step needs a fidelity check independent of the type checker.",
+   "Do not elaborate 6M OBO terms as Lean axioms. GO/CHEBI/MONDO/RO are OWL 2 EL; VEL (Coq, 2024) shows a verified EL++ classifier is feasible and, tellingly, found two errors in the published algorithm's completeness proof. Compute the hierarchy externally and import certificates or a trimmed closure.",
+   "Treat `native_decide` as a lower trust tier: it adds a per-theorem axiom that trusts the compiler (verified locally; gonzalgo `trust` flags it). `decide`, `simp`, `omega` and Aesop (active, Oct 2026) stay kernel-checked and are the automation to lean on for RO-chain reasoning.",
+   "Josephson's two habits transfer directly: every scientific premise is an explicit named hypothesis in the theorem statement, and definitions are typeclass-polymorphic so the same biolib definition is proved over R and executed over Float. INDRA -> PySB -> BioNetGen/Kappa already exists for simulation, so BioLean should sit beside it as the proof layer consuming the same INDRA Statement JSON."
+  ],
+  "open_questions": [
+   "Competing hypotheses: no formal-methods-in-biology project represents them. Closest is Risk Agoras (dialectical argumentation for carcinogenicity, ~2000) and weighted bipolar argumentation frameworks (2025, non-bio). Is it enough to encode rival claims as two axioms with scores and detect conflict via the axiom graph, or does BioLean need a paraconsistent/argumentation layer?",
+   "Where does the evidence algebra live: inside Lean (provenance-lean semiring annotations, proofs about aggregation) or outside (gonzalgo-style walk over #print axioms)? Proof irrelevance forces a choice early and it shapes the whole schema.",
+   "Which fragment is decidable enough for `decide`/Aesop? RO chains over is_a/part_of/regulates look EL/Datalog-shaped, but 'is responsible for breakdown of hormone' mixes GO function, process and CHEBI roles; needs a worked example before committing a schema.",
+   "How to check fidelity of autoformalised triples (FormalScience's semantic drift) when the target is ontology IDs rather than equations: back-translation, ECO codes, PubTator3/BioREx agreement, or human curation of the few hundred canonical papers?",
+   "Ontology import strategy: trimmed Lean axioms for the terms actually used vs a verified external EL reasoner (VEL pattern) producing certificates; neither has been tried at OBO scale.",
+   "Whether Pathway Logic's curated signalling rules (if still downloadable) and INDRA Statements can be mechanically lifted into BioLean axioms, giving a non-trivial baseline before any new curation.",
+   "K-Lean is private/commercial and VeriBiota is a one-org tool; nothing reusable confirmed, but worth a one-line email to Kenosian only if their contracts turn out to overlap with planned biolib lemmas."
+  ]
+ }
+]

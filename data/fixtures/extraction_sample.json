@@ -1,0 +1,47 @@
+[
+  {
+    "_fixture": "HAND-WRITTEN stand-in for Claude output (biolean extract was not run against the API). Filled from the real abstract text.",
+    "pmid": 28266779,
+    "statements": [
+      {"quote": "After 12 weeks of treatment, ad libitum energy intake was substantially lower with semaglutide vs placebo with a corresponding loss of body weight observed with semaglutide.",
+       "subject": {"mention": "semaglutide", "kind": "chemical"}, "relation": "decreases_phenotype", "object": {"mention": "energy intake", "kind": "phenotype"},
+       "polarity": "supports", "evidence_kind": "rct", "species": "human", "hedged": false},
+      {"quote": "Semaglutide was associated with less hunger and food cravings, better control of eating and a lower preference for high-fat foods.",
+       "subject": {"mention": "semaglutide", "kind": "chemical"}, "relation": "decreases_phenotype", "object": {"mention": "hunger", "kind": "phenotype"},
+       "polarity": "supports", "evidence_kind": "rct", "species": "human", "hedged": false},
+      {"quote": "Resting metabolic rate, adjusted for lean body mass, did not differ between treatments.",
+       "subject": {"mention": "semaglutide", "kind": "chemical"}, "relation": "decreases_phenotype", "object": {"mention": "resting metabolic rate", "kind": "phenotype"},
+       "polarity": "refutes", "evidence_kind": "rct", "species": "human", "hedged": false},
+      {"quote": "Semaglutide led to a reduction from baseline in mean body weight of 5.0 kg, predominantly from body fat mass.",
+       "subject": {"mention": "semaglutide", "kind": "chemical"}, "relation": "decreases_phenotype", "object": {"mention": "body weight", "kind": "phenotype"},
+       "polarity": "supports", "evidence_kind": "rct", "species": "human", "hedged": false},
+      {"quote": "In addition to reduced energy intake, likely mechanisms for semaglutide-induced weight loss included less appetite and food cravings, better control of eating and lower relative preference for fatty, energy-dense foods.",
+       "subject": {"mention": "semaglutide", "kind": "chemical"}, "relation": "increases_phenotype", "object": {"mention": "weight loss", "kind": "phenotype"},
+       "polarity": "supports", "evidence_kind": "rct", "species": "human", "hedged": true}
+    ]
+  },
+  {
+    "_fixture": "HAND-WRITTEN stand-in for Claude output (biolean extract was not run against the API). Filled from the real abstract text.",
+    "pmid": 33184979,
+    "statements": [
+      {"quote": "Following a standard breakfast, total daily ad libitum energy intake was significantly lower (38.9%) with oral semaglutide versus placebo in 13 evaluable subjects (estimated treatment difference, -5096.0 kJ; 95% CI -7000.0, -3192.1; P = .0001).",
+       "subject": {"mention": "semaglutide", "kind": "chemical"}, "relation": "decreases_phenotype", "object": {"mention": "energy intake", "kind": "phenotype"},
+       "polarity": "supports", "evidence_kind": "rct", "species": "human", "hedged": false},
+      {"quote": "Overall, mean body weight decreased by 2.7 kg with oral semaglutide and 0.1 kg with placebo, mostly attributable to body fat mass loss.",
+       "subject": {"mention": "semaglutide", "kind": "chemical"}, "relation": "decreases_phenotype", "object": {"mention": "body weight", "kind": "phenotype"},
+       "polarity": "supports", "evidence_kind": "rct", "species": "human", "hedged": false},
+      {"quote": "After 12 weeks of treatment, ad libitum energy intake was lower with oral semaglutide versus placebo, resulting in reduced body fat mass, and was associated with increased satiety and fullness after a fat-rich breakfast, and improved eating control.",
+       "subject": {"mention": "semaglutide", "kind": "chemical"}, "relation": "increases_phenotype", "object": {"mention": "satiety", "kind": "phenotype"},
+       "polarity": "supports", "evidence_kind": "rct", "species": "human", "hedged": false}
+    ]
+  },
+  {
+    "_fixture": "HAND-WRITTEN stand-in for Claude output (biolean extract was not run against the API). Filled from the real abstract text.",
+    "pmid": 34260945,
+    "statements": [
+      {"quote": "Multiple GLP-1R agonists have entered into clinical trials, with some, such as semaglutide, progressing to approval.",
+       "subject": {"mention": "semaglutide", "kind": "chemical"}, "relation": "increases_activity", "object": {"mention": "GLP-1R", "kind": "protein"},
+       "polarity": "supports", "evidence_kind": "in_vitro", "species": "unknown", "hedged": false}
+    ]
+  }
+]

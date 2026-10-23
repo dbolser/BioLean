@@ -1,0 +1,600 @@
+[
+  {
+    "pmid": 9458894,
+    "year": 1998,
+    "quote": "PVN infusion of GLP-1 (100 or 200 ng) did not support the induction of CTA and did not reliably alter locomotion, but did suppress feeding and drinking.",
+    "subject": {
+      "curie": "UniProt:P0C6A0",
+      "label": "ZGLP1",
+      "kind": "protein",
+      "method": "exact_synonym",
+      "ambiguous": false
+    },
+    "relation": "decreases_process",
+    "object": {
+      "curie": "GO:0040011",
+      "label": "locomotion",
+      "kind": "process",
+      "method": "exact_label",
+      "ambiguous": false
+    },
+    "polarity": "refutes",
+    "evidence_kind": "other",
+    "hedged": false
+  },
+  {
+    "pmid": 14514604,
+    "year": 2003,
+    "quote": "GLP-1, but not GIP, inhibits gastric emptying, glucagon secretion, and food intake.",
+    "subject": {
+      "curie": "UniProt:P0C6A0",
+      "label": "ZGLP1",
+      "kind": "protein",
+      "method": "exact_synonym",
+      "ambiguous": false
+    },
+    "relation": "decreases_process",
+    "object": {
+      "curie": "GO:0035483",
+      "label": "gastric emptying",
+      "kind": "process",
+      "method": "exact_label",
+      "ambiguous": false
+    },
+    "polarity": "supports",
+    "evidence_kind": "review",
+    "hedged": false
+  },
+  {
+    "pmid": 14514604,
+    "year": 2003,
+    "quote": "GLP-1, but not GIP, inhibits gastric emptying, glucagon secretion, and food intake.",
+    "subject": {
+      "curie": "UniProt:P0C6A0",
+      "label": "ZGLP1",
+      "kind": "protein",
+      "method": "exact_synonym",
+      "ambiguous": false
+    },
+    "relation": "decreases_process",
+    "object": {
+      "curie": "GO:0070091",
+      "label": "glucagon secretion",
+      "kind": "process",
+      "method": "exact_label",
+      "ambiguous": false
+    },
+    "polarity": "supports",
+    "evidence_kind": "review",
+    "hedged": false
+  },
+  {
+    "pmid": 14514604,
+    "year": 2003,
+    "quote": "GLP-1, but not GIP, inhibits gastric emptying, glucagon secretion, and food intake.",
+    "subject": {
+      "curie": "UniProt:P09681",
+      "label": "GIP",
+      "kind": "protein",
+      "method": "exact_label",
+      "ambiguous": false
+    },
+    "relation": "decreases_process",
+    "object": {
+      "curie": "GO:0035483",
+      "label": "gastric emptying",
+      "kind": "process",
+      "method": "exact_label",
+      "ambiguous": false
+    },
+    "polarity": "refutes",
+    "evidence_kind": "review",
+    "hedged": false
+  },
+  {
+    "pmid": 16492694,
+    "year": 2006,
+    "quote": "GLP-1 0.3 and 0.9 slowed GE of solid (intragastric retention at t = 100 min; saline: 28 +/- 5%; GLP-1 0.3: 53 +/- 6%; GLP-1 0.9: 58 +/- 7%; P < 0.001) and liquid (time for 50% of the liquid to empty, saline: 28 +/- 2 min; GLP-1 0.3: 42 +/- 7 min; GLP-1 0.9: 50 +/- 9 min; P < 0.001).",
+    "subject": {
+      "curie": "UniProt:P0C6A0",
+      "label": "ZGLP1",
+      "kind": "protein",
+      "method": "exact_synonym",
+      "ambiguous": false
+    },
+    "relation": "decreases_process",
+    "object": {
+      "curie": "GO:0035483",
+      "label": "gastric emptying",
+      "kind": "process",
+      "method": "exact_label",
+      "ambiguous": false
+    },
+    "polarity": "supports",
+    "evidence_kind": "rct",
+    "hedged": false
+  },
+  {
+    "pmid": 16492694,
+    "year": 2006,
+    "quote": "Both doses of GLP-1 induced gastroparesis in about half the cohort and increased meal retention in the distal stomach (P < 0.05).",
+    "subject": {
+      "curie": "UniProt:P0C6A0",
+      "label": "ZGLP1",
+      "kind": "protein",
+      "method": "exact_synonym",
+      "ambiguous": false
+    },
+    "relation": "increases_phenotype",
+    "object": {
+      "curie": "MONDO:0006769",
+      "label": "gastroparesis",
+      "kind": "disease",
+      "method": "exact_label",
+      "ambiguous": false
+    },
+    "polarity": "supports",
+    "evidence_kind": "rct",
+    "hedged": false
+  },
+  {
+    "pmid": 16492694,
+    "year": 2006,
+    "quote": "GLP-1 attenuated the rises in glucose, insulin, and glucose-dependent insulinotropic peptide (P < 0.05).",
+    "subject": {
+      "curie": "UniProt:P0C6A0",
+      "label": "ZGLP1",
+      "kind": "protein",
+      "method": "exact_synonym",
+      "ambiguous": false
+    },
+    "relation": "decreases_amount",
+    "object": {
+      "curie": "CHEBI:17234",
+      "label": "glucose",
+      "kind": "chemical",
+      "method": "exact_label",
+      "ambiguous": false
+    },
+    "polarity": "supports",
+    "evidence_kind": "rct",
+    "hedged": false
+  },
+  {
+    "pmid": 16492694,
+    "year": 2006,
+    "quote": "GLP-1 attenuated the rises in glucose, insulin, and glucose-dependent insulinotropic peptide (P < 0.05).",
+    "subject": {
+      "curie": "UniProt:P0C6A0",
+      "label": "ZGLP1",
+      "kind": "protein",
+      "method": "exact_synonym",
+      "ambiguous": false
+    },
+    "relation": "decreases_amount",
+    "object": {
+      "curie": "UniProt:P01308",
+      "label": "INS",
+      "kind": "protein",
+      "method": "exact_synonym",
+      "ambiguous": false
+    },
+    "polarity": "supports",
+    "evidence_kind": "rct",
+    "hedged": false
+  },
+  {
+    "pmid": 16912128,
+    "year": 2006,
+    "quote": "Sitagliptin dose-dependently inhibited plasma DPP-4 activity over 24 h, enhanced active GLP-1 and GIP levels, increased insulin/C-peptide, decreased glucagon, and reduced glycemic excursion after OGTTs administered at 2 and 24 h after single oral 25- or 200-mg doses of sitagliptin.",
+    "subject": {
+      "curie": "CHEBI:40237",
+      "label": "sitagliptin",
+      "kind": "chemical",
+      "method": "exact_label",
+      "ambiguous": false
+    },
+    "relation": "increases_amount",
+    "object": {
+      "curie": "UniProt:P0C6A0",
+      "label": "ZGLP1",
+      "kind": "protein",
+      "method": "exact_synonym",
+      "ambiguous": false
+    },
+    "polarity": "supports",
+    "evidence_kind": "rct",
+    "hedged": false
+  },
+  {
+    "pmid": 16912128,
+    "year": 2006,
+    "quote": "Sitagliptin dose-dependently inhibited plasma DPP-4 activity over 24 h, enhanced active GLP-1 and GIP levels, increased insulin/C-peptide, decreased glucagon, and reduced glycemic excursion after OGTTs administered at 2 and 24 h after single oral 25- or 200-mg doses of sitagliptin.",
+    "subject": {
+      "curie": "CHEBI:40237",
+      "label": "sitagliptin",
+      "kind": "chemical",
+      "method": "exact_label",
+      "ambiguous": false
+    },
+    "relation": "increases_amount",
+    "object": {
+      "curie": "UniProt:P09681",
+      "label": "GIP",
+      "kind": "protein",
+      "method": "exact_label",
+      "ambiguous": false
+    },
+    "polarity": "supports",
+    "evidence_kind": "rct",
+    "hedged": false
+  },
+  {
+    "pmid": 16912128,
+    "year": 2006,
+    "quote": "Sitagliptin dose-dependently inhibited plasma DPP-4 activity over 24 h, enhanced active GLP-1 and GIP levels, increased insulin/C-peptide, decreased glucagon, and reduced glycemic excursion after OGTTs administered at 2 and 24 h after single oral 25- or 200-mg doses of sitagliptin.",
+    "subject": {
+      "curie": "CHEBI:40237",
+      "label": "sitagliptin",
+      "kind": "chemical",
+      "method": "exact_label",
+      "ambiguous": false
+    },
+    "relation": "increases_amount",
+    "object": {
+      "curie": "UniProt:P01308",
+      "label": "INS",
+      "kind": "protein",
+      "method": "exact_synonym",
+      "ambiguous": false
+    },
+    "polarity": "supports",
+    "evidence_kind": "rct",
+    "hedged": false
+  },
+  {
+    "pmid": 17065340,
+    "year": 2006,
+    "quote": "Ghrelin stimulates, while glucagon-like peptide-1 (GLP-1) and peptide YY(3-36) [PYY(3-36)] inhibit, food intake and gastric emptying in rats.",
+    "subject": {
+      "curie": "UniProt:P0C6A0",
+      "label": "ZGLP1",
+      "kind": "protein",
+      "method": "exact_synonym",
+      "ambiguous": false
+    },
+    "relation": "decreases_process",
+    "object": {
+      "curie": "GO:0035483",
+      "label": "gastric emptying",
+      "kind": "process",
+      "method": "exact_label",
+      "ambiguous": false
+    },
+    "polarity": "supports",
+    "evidence_kind": "other",
+    "hedged": false
+  },
+  {
+    "pmid": 17065340,
+    "year": 2006,
+    "quote": "Ghrelin stimulates, while glucagon-like peptide-1 (GLP-1) and peptide YY(3-36) [PYY(3-36)] inhibit, food intake and gastric emptying in rats.",
+    "subject": {
+      "curie": "UniProt:P0C6A0",
+      "label": "ZGLP1",
+      "kind": "protein",
+      "method": "exact_synonym",
+      "ambiguous": false
+    },
+    "relation": "decreases_process",
+    "object": {
+      "curie": "GO:0035483",
+      "label": "gastric emptying",
+      "kind": "process",
+      "method": "exact_label",
+      "ambiguous": false
+    },
+    "polarity": "supports",
+    "evidence_kind": "other",
+    "hedged": false
+  },
+  {
+    "pmid": 17192459,
+    "year": 2007,
+    "quote": "Liraglutide or reversal to chow diet fully reversed weight and fat gains.",
+    "subject": {
+      "curie": "CHEBI:71193",
+      "label": "liraglutide",
+      "kind": "chemical",
+      "method": "exact_label",
+      "ambiguous": false
+    },
+    "relation": "decreases_phenotype",
+    "object": {
+      "curie": "PATO:0000128",
+      "label": "weight",
+      "kind": "phenotype",
+      "method": "exact_label",
+      "ambiguous": false
+    },
+    "polarity": "supports",
+    "evidence_kind": "mechanistic",
+    "hedged": false
+  },
+  {
+    "pmid": 17192459,
+    "year": 2007,
+    "quote": "Vildagliptin affected neither weight, food intake, nor energy expenditure.",
+    "subject": {
+      "curie": "CHEBI:135285",
+      "label": "vildagliptin",
+      "kind": "chemical",
+      "method": "exact_label",
+      "ambiguous": false
+    },
+    "relation": "decreases_phenotype",
+    "object": {
+      "curie": "PATO:0000128",
+      "label": "weight",
+      "kind": "phenotype",
+      "method": "exact_label",
+      "ambiguous": false
+    },
+    "polarity": "refutes",
+    "evidence_kind": "mechanistic",
+    "hedged": false
+  },
+  {
+    "pmid": 17379930,
+    "year": 2007,
+    "quote": "It inhibits glucagon release, gastric emptying, appetite and food intake via the central nervous system and in animal experiments also apoptosis of beta-cells.",
+    "subject": {
+      "curie": "UniProt:P0C6A0",
+      "label": "ZGLP1",
+      "kind": "protein",
+      "method": "exact_synonym",
+      "ambiguous": false
+    },
+    "relation": "decreases_process",
+    "object": {
+      "curie": "GO:0035483",
+      "label": "gastric emptying",
+      "kind": "process",
+      "method": "exact_label",
+      "ambiguous": false
+    },
+    "polarity": "supports",
+    "evidence_kind": "review",
+    "hedged": false
+  },
+  {
+    "pmid": 17379930,
+    "year": 2007,
+    "quote": "Clinical studies with exenatide and liraglutide as monotherapy show a significant increase in the postprandial insulin concentration as well as a smaller increase in the postprandial glucose values.",
+    "subject": {
+      "curie": "CHEBI:748790",
+      "label": "exenatide",
+      "kind": "chemical",
+      "method": "exact_label",
+      "ambiguous": false
+    },
+    "relation": "increases_amount",
+    "object": {
+      "curie": "UniProt:P01308",
+      "label": "INS",
+      "kind": "protein",
+      "method": "exact_synonym",
+      "ambiguous": false
+    },
+    "polarity": "supports",
+    "evidence_kind": "review",
+    "hedged": false
+  },
+  {
+    "pmid": 17379930,
+    "year": 2007,
+    "quote": "Clinical studies with exenatide and liraglutide as monotherapy show a significant increase in the postprandial insulin concentration as well as a smaller increase in the postprandial glucose values.",
+    "subject": {
+      "curie": "CHEBI:71193",
+      "label": "liraglutide",
+      "kind": "chemical",
+      "method": "exact_label",
+      "ambiguous": false
+    },
+    "relation": "increases_amount",
+    "object": {
+      "curie": "UniProt:P01308",
+      "label": "INS",
+      "kind": "protein",
+      "method": "exact_synonym",
+      "ambiguous": false
+    },
+    "polarity": "supports",
+    "evidence_kind": "review",
+    "hedged": false
+  },
+  {
+    "pmid": 17379930,
+    "year": 2007,
+    "quote": "The effect of exenatide on HbA1c is the same as adding a long-acting insulin analogue (glargine), but the increase in weight after adding insulin is not seen after exenatide, where even a small decrease in weight is found.",
+    "subject": {
+      "curie": "CHEBI:748790",
+      "label": "exenatide",
+      "kind": "chemical",
+      "method": "exact_label",
+      "ambiguous": false
+    },
+    "relation": "decreases_phenotype",
+    "object": {
+      "curie": "PATO:0000128",
+      "label": "weight",
+      "kind": "phenotype",
+      "method": "exact_label",
+      "ambiguous": false
+    },
+    "polarity": "supports",
+    "evidence_kind": "review",
+    "hedged": false
+  },
+  {
+    "pmid": 17379930,
+    "year": 2007,
+    "quote": "The effect of exenatide on HbA1c is the same as adding a long-acting insulin analogue (glargine), but the increase in weight after adding insulin is not seen after exenatide, where even a small decrease in weight is found.",
+    "subject": {
+      "curie": "UniProt:P01308",
+      "label": "INS",
+      "kind": "protein",
+      "method": "exact_synonym",
+      "ambiguous": false
+    },
+    "relation": "increases_phenotype",
+    "object": {
+      "curie": "PATO:0000128",
+      "label": "weight",
+      "kind": "phenotype",
+      "method": "exact_label",
+      "ambiguous": false
+    },
+    "polarity": "supports",
+    "evidence_kind": "review",
+    "hedged": false
+  },
+  {
+    "pmid": 18628530,
+    "year": 2008,
+    "quote": "Nausea and vomiting are common.",
+    "subject": {
+      "curie": "CHEBI:748790",
+      "label": "exenatide",
+      "kind": "chemical",
+      "method": "exact_label",
+      "ambiguous": false
+    },
+    "relation": "increases_phenotype",
+    "object": {
+      "curie": "HP:0002018",
+      "label": "Nausea",
+      "kind": "phenotype",
+      "method": "exact_label",
+      "ambiguous": false
+    },
+    "polarity": "supports",
+    "evidence_kind": "review",
+    "hedged": false
+  },
+  {
+    "pmid": 20194711,
+    "year": 2010,
+    "quote": "In T1DM, gastric emptying, food intake, and appetite were reduced equally during low GLP-1 and amylin infusion compared with the saline infusion (P < 0.05).",
+    "subject": {
+      "curie": "UniProt:P0C6A0",
+      "label": "ZGLP1",
+      "kind": "protein",
+      "method": "exact_synonym",
+      "ambiguous": false
+    },
+    "relation": "decreases_process",
+    "object": {
+      "curie": "GO:0035483",
+      "label": "gastric emptying",
+      "kind": "process",
+      "method": "exact_label",
+      "ambiguous": false
+    },
+    "polarity": "supports",
+    "evidence_kind": "rct",
+    "hedged": false
+  },
+  {
+    "pmid": 20194711,
+    "year": 2010,
+    "quote": "In T1DM, gastric emptying, food intake, and appetite were reduced equally during low GLP-1 and amylin infusion compared with the saline infusion (P < 0.05).",
+    "subject": {
+      "curie": "UniProt:P10997",
+      "label": "IAPP",
+      "kind": "protein",
+      "method": "exact_synonym",
+      "ambiguous": false
+    },
+    "relation": "decreases_process",
+    "object": {
+      "curie": "GO:0035483",
+      "label": "gastric emptying",
+      "kind": "process",
+      "method": "exact_label",
+      "ambiguous": false
+    },
+    "polarity": "supports",
+    "evidence_kind": "rct",
+    "hedged": false
+  },
+  {
+    "pmid": 20194711,
+    "year": 2010,
+    "quote": "GLP-1 exerts its effect on gastric emptying, appetite, food intake, and glucagon secretion directly, although secretion of amylin may contribute to some of these effects in healthy control subjects.",
+    "subject": {
+      "curie": "UniProt:P0C6A0",
+      "label": "ZGLP1",
+      "kind": "protein",
+      "method": "exact_synonym",
+      "ambiguous": false
+    },
+    "relation": "decreases_process",
+    "object": {
+      "curie": "GO:0070091",
+      "label": "glucagon secretion",
+      "kind": "process",
+      "method": "exact_label",
+      "ambiguous": false
+    },
+    "polarity": "supports",
+    "evidence_kind": "rct",
+    "hedged": false
+  },
+  {
+    "pmid": 22040840,
+    "year": 2012,
+    "quote": "Subjects experienced more nausea during exenatide treatment compared with placebo, but the severity decreased over time and did not correlate with weight loss.",
+    "subject": {
+      "curie": "CHEBI:748790",
+      "label": "exenatide",
+      "kind": "chemical",
+      "method": "exact_label",
+      "ambiguous": false
+    },
+    "relation": "increases_phenotype",
+    "object": {
+      "curie": "HP:0002018",
+      "label": "Nausea",
+      "kind": "phenotype",
+      "method": "exact_label",
+      "ambiguous": false
+    },
+    "polarity": "supports",
+    "evidence_kind": "rct",
+    "hedged": false
+  },
+  {
+    "pmid": 22227019,
+    "year": 2012,
+    "quote": "Chronic (12 days) daily peripheral administration of exendin-4 produces a progressive increase in pica coupled with stable, sustained food intake and body weight suppression, whereas the pica response and food intake reduction by daily liraglutide are more transient.",
+    "subject": {
+      "curie": "CHEBI:64073",
+      "label": "exendin-4",
+      "kind": "chemical",
+      "method": "exact_label",
+      "ambiguous": false
+    },
+    "relation": "increases_phenotype",
+    "object": {
+      "curie": "HP:0011856",
+      "label": "Pica",
+      "kind": "phenotype",
+      "method": "exact_label",
+      "ambiguous": false
+    },
+    "polarity": "supports",
+    "evidence_kind": "mechanistic",
+    "hedged": false
+  }
+]
