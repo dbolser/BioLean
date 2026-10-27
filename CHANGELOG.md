@@ -2,7 +2,18 @@
 
 Findings and decisions, dated. Code history is in `git log`; this records what we learned.
 
-## 2026-10-27 (round 2: Sonnet, structured)
+## 2026-10-27 (RO fixes tested)
+- Fixing the seven RO chain axioms in a copy changes nothing under ELK or JFact: RO defines no class
+  with these properties, so the chains only fire on data. On test instances the wrong conclusions
+  vanish and the missing `provides_input_for` appears. UBERON carries 67 false "spatially coextensive"
+  entailments from row 79 under a full DL reasoner, and copies three of the bad chains itself.
+- The regulation fix needs care: RO_0002409 is also transitive (neg ∘ neg = neg again); the working
+  fix moves the three chains to RO_0002407 and drops transitivity, mirroring RO issue #182 (2017).
+  No open RO issue covers any of the seven; #818/#821 (2025) introduced the has_output ∘ has_input
+  chain and lost the inverse. Drafts in `docs/ro-issues.md`; regression in `docs/ro-fix-regression.md`.
+- Test correction: starts_with is RO_0002224 and ends_with RO_0002230; the pinning test now checks
+  the real blocked chain.
+
 - All 4,695 textbook claims re-annotated by Sonnet into structured subject/relation/object fields
   with a fixed blocker list; 1,906 judged expressible, 1,594 emitted, **1,591 compile (99.8%)**.
   Round 1's 132 rejections were mostly my parser guessing entity order from Haiku's Lean strings.

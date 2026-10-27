@@ -58,7 +58,8 @@ Last updated 2026-10-27 (night, after the M1 checks).
     `starts_with ∘ ends_with ⊑ immediately_preceded_by` makes a process preceded by its own part;
     `located_in ∘ inverse(located_in) ⊑ spatially_coextensive_with` makes two things in one room
     coextensive; three chains on `indirectly negatively regulates` give neg ∘ neg = neg, contradicting
-    RO's own neg ∘ neg = pos. 38 chains are blocked by default (`RO.chainsBlocked`).
+    RO's own neg ∘ neg = pos. 38 chains are blocked by default (`RO.chainsBlocked`). Fixing the seven changes nothing else
+    under a reasoner (`docs/ro-fix-regression.md`); issue drafts ready (`docs/ro-issues.md`).
 11. **Re-annotation, not heuristics, and Sonnet, not Haiku.** Measured expressibility after M1 is
     34 percent emitted and compiled (1,591 of 4,695), 41 percent counting context-needing and
     unsupported-ontology claims. Haiku's round gave 17 percent with a noisy parser; the construct-name

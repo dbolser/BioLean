@@ -25,7 +25,8 @@ example : inverseOK partOf hasPart = true := by decide
 example : inverseOK occursIn occursIn.flip = true := by decide
 
 -- blocked: faithful imports of RO axioms judged wrong (docs/m1-checks.md)
-example : chainOK ⟨.ro, 2223, false⟩ ⟨.ro, 2229, false⟩ ⟨.ro, 2087, false⟩ = false := by decide  -- starts_with ∘ ends_with ⊑ immediately_preceded_by
+example : chainOK ⟨.ro, 2224, false⟩ ⟨.ro, 2230, false⟩ ⟨.ro, 2087, false⟩ = false := by decide  -- starts_with ∘ ends_with ⊑ immediately_preceded_by (blocked)
+example : chainsBlocked.contains ([⟨.ro, 2224, false⟩, ⟨.ro, 2230, false⟩], ⟨.ro, 2087, false⟩) = true := by decide
 example : chainOK locatedIn locatedIn.flip ⟨.ro, 2379, false⟩ = false := by decide             -- located_in ∘ inv ⊑ spatially_coextensive
 example : chainOK ⟨.ro, 2630, false⟩ ⟨.ro, 2630, false⟩ ⟨.ro, 2409, false⟩ = false := by decide -- neg ∘ neg ⊑ indirectly neg
 example : chainOK hasOutput hasInput ⟨.ro, 2413, false⟩ = false := by decide                     -- has_output ∘ has_input ⊑ provides_input_for
