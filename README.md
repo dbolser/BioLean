@@ -8,7 +8,7 @@ higher-level claim. Lean checks the shape of the argument; a subjective-logic op
 (belief, disbelief, uncertainty) gives its strength. Named derivations form **biolib**,
 reused by new proofs like Mathlib lemmas.
 
-First question answered: *does semaglutide (Ozempic) reduce hunger?*
+First question answered: *Does semaglutide (Ozempic) reduce hunger?*
 See `BioLean/Examples/Ozempic.lean`.
 
 ## Layout
@@ -23,6 +23,8 @@ See `BioLean/Examples/Ozempic.lean`.
 | `scripts/demo/` | how `data/demo/` was built, one step per file |
 | `docs/related-work.md` | what exists, what is new, what to reuse |
 | `docs/design.md` | framework choice, demo walk-through, known gaps, scope |
+| `docs/case-studies.md`, `docs/formalisms/`, `docs/textbook-milestone.md` | worked examples, six-formalism survey, textbook measurement |
+| `STATUS.md`, `ROADMAP.md`, `CHANGELOG.md` | where we are, where next, what we learned when |
 
 ## Running
 
