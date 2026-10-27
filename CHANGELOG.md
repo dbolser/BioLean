@@ -2,6 +2,13 @@
 
 Findings and decisions, dated. Code history is in `git log`; this records what we learned.
 
+## 2026-10-27 (OLS tagger)
+- OLS text tagger (`POST /ols4/api/v2/tag_text`) tested with ASCII-normalised input: 1,102 hits vs
+  OAK's 1,485; 85 percent agreement with agents where it hits; 96 percent agreement with OAK where
+  both hit. Labels only, no synonyms, no plurals. Bug confirmed and written up: offsets are UTF-8 byte
+  offsets, not character offsets, so each curly quote shifts later matches by two. Keep OAK first.
+  (`docs/ols-tagger-trial.md`)
+
 ## 2026-10-27 (OAK trial)
 - Ontology Access Kit (oaklib) as local grounder, same 2,803 pairs as Gilda: 1,485 hits, agrees with
   the agents on 80 percent where both answer (Gilda 45). Cross-namespace disagreements fall from 691
