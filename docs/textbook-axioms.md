@@ -7,13 +7,13 @@ Source: `data/textbook/claims/*.json` (OpenStax *Concepts of Biology*). Checked 
 Random sample of 240 claims, 30 per chapter file (seed 42), drawn from the 2,173 claims that are kind=structural/definitional or use part_of / has_part / is_a / occurs_in / has_input / has_output / capable_of (bin=not_claim and entity-less rows excluded).
 
 | class | n | % |
-|---|---|---|
+| --- | --- | --- |
 | already_axiom | 36 | 15% |
 | definition_text_only | 62 | 26% |
 | not_in_ontology | 142 | 59% |
 
 | file | already_axiom | definition_text_only | not_in_ontology |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | cell-structure-and-function | 6 | 9 | 15 |
 | how-cells-obtain-energy | 4 | 8 | 18 |
 | photosynthesis | 3 | 10 | 17 |
