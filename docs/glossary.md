@@ -8,6 +8,10 @@ Maths and Lean words first, then our own.
 | word | what it concretely is here | plain reading |
 |---|---|---|
 | **proposition** | a sentence that is either true or false, e.g. "7/10 ≤ belief of d" | a yes/no question |
+| **premise** | a claim an argument starts from. In a `Derivation`, the sub-derivations fed to a rule; at the leaves, Statements | the "because" part |
+| **conclusion** | the claim a rule produces from its premises; the index `c` in `Derivation c` | the "therefore" part |
+| **rule** | a Derivation constructor: how premises of given shapes yield a conclusion of a given shape (`viaAmount`, `relChain`, ...) | one allowed move |
+| **instance (of a rule)** | the rule with concrete entities filled in, e.g. row 139 with gonad and steroid hormone | an example |
 | **proof** | a term whose type is the proposition; Lean's kernel checks it | a certificate that the question's answer is yes |
 | **theorem** | a named proposition with a proof, e.g. `semaglutide_reduces_hunger` | a checked fact |
 | **lemma** | a theorem whose job is to help prove other theorems | a stepping stone |
