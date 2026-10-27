@@ -15,6 +15,8 @@ Last updated 2026-10-27 (night, after the M1 checks).
 | RO imported as data: 642 relations, 164 property chains (126 enabled, 38 blocked after hand-check), 124 inverses, 45 transitive; release pinned | generated from ro.owl | `BioLean/RO.lean`, `scripts/ro/`, `docs/ro-chain-check.md` |
 | Derivation rules `relChain` (RO chains, transitivity, is_a laws), `relInv`, `notRelSub/Obj`, `clash` | built | `BioLean/Derivation.lean` |
 | Textbook example: produces, occurs_in lift, part_of transitivity, is_a inheritance, inherited negation | built, theorems check | `BioLean/Examples/Textbook.lean` |
+| The textbook as Lean: 702 claims emitted, 570 compile; 132 rejected with reasons | generated, outside the lib build | `BioLean/Lib/TextbookClaims/`, `docs/textbook-lean-check.md` |
+| RO pinning tests | built, pass | `BioLean/Tests/RO.lean` |
 | Statements with PMID evidence, swappable reliability table | built | `BioLean/Evidence.lean` |
 | Derivation (lit, viaActivity, viaAmount, both), axioms, verdicts, `Established` | built, `decide +kernel` | `BioLean/Derivation.lean` |
 | Demo: semaglutide reduces feeding, 12 statements, 66 verified quotes | built, theorems check | `BioLean/Examples/Ozempic.lean` |
@@ -75,6 +77,7 @@ Last updated 2026-10-27 (night, after the M1 checks).
 | structural claims | decided: generic `Claim.rel r a b`, typed by RO domain/range (M1) | done |
 | derivation rules for structure | decided: RO chains imported as data, `RO.chainOK` decides (M1) | done; hand-check pending |
 | weight of logical steps | decided: RO-chain steps use `Opinion.weakest` (min belief), after the chain-length experiment showed sound 12-step partonomies falling to 0.28 under product | done |
+| `Target.activity` on GO functions | 12 textbook claims about "enzymes" fail only because activity wants a protein | open, small |
 | caveated chains | 76 chains are sound only with a caveat; one fixed discount per caveated step was recommended and is not implemented | open |
 | evidence kinds | keep 8-way enum vs ECO codes with a reliability map | ECO |
 | coverage measure for generalize | clade fraction vs phylogenetic bracketing | bracketing |

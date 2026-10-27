@@ -2,6 +2,15 @@
 
 Findings and decisions, dated. Code history is in `git log`; this records what we learned.
 
+## 2026-10-27 (Lean-checking the book)
+- Every "now" textbook claim emitted as a Lean `Statement` and compiled: 811 binned, 702 emitted,
+  **570 compile**. Lean rejected 132: 115 target-shape errors, 19 RO domain/range violations
+  (14 are `capable_of` with a chemical object where `produces` was meant). `docs/textbook-lean-check.md`
+- Schema gap found by the compiler: `Target.activity` should also accept a GO molecular function
+  ("enzymes" grounds to GO:0003824). 67 claims blocked only by missing `Kind`s (SO, NCIT, EFO, OBA).
+- `BioLean/Tests/RO.lean` pins the RO chains, inverses, blocked chains and domain sorts we rely on.
+- Glossary: premise, conclusion, rule, instance.
+
 ## 2026-10-27 (M1 checks)
 - Chain-length experiment over GO and UBERON: longest part_of chains are depth 10 and 12 and
   biologically correct; product belief falls to 0.35 and 0.28. Decision: RO-chain steps are logical
