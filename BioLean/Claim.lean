@@ -47,8 +47,9 @@ end Sign
 
 /-- What an effect acts on. -/
 inductive Target
-  /-- The activity of a protein (a GO molecular function, implicitly). -/
-  | activity (p : Entity .protein)
+  /-- The activity of a protein, or a GO molecular function itself (the honest grounding for
+  "enzymes", "receptors", "channels" when no specific protein is named). -/
+  | activity {k : Kind} (p : Entity k) (h : k = .protein ∨ k = .function := by decide)
   /-- The abundance of a molecule (a chemical or a protein). -/
   | amount {k : Kind} (m : Entity k)
   /-- A biological process. -/
@@ -60,7 +61,7 @@ inductive Target
 
 instance : ToString Target where
   toString
-    | .activity p => s!"activity of {p}"
+    | .activity p _ => s!"activity of {p}"
     | .amount m => s!"amount of {m}"
     | .process p => s!"{p}"
     | .phenotype p => s!"{p}"

@@ -21,8 +21,9 @@ inductive Derivation : Claim → Type
   | lit (s : Statement) : Derivation s.claim
   /-- Chain through a protein's activity: `a →s₁ activity(b)` and `b →s₂ t` give
   `a →(s₁·s₂) t`. -/
-  | viaActivity {k : Kind} {a : Entity k} {b : Entity .protein} {s₁ s₂ : Sign} {t : Target}
-      (ab : Derivation (.effect a s₁ (.activity b)))
+  | viaActivity {k k' : Kind} {a : Entity k} {b : Entity k'} {s₁ s₂ : Sign} {t : Target}
+      {h : k' = .protein ∨ k' = .function}
+      (ab : Derivation (.effect a s₁ (.activity b h)))
       (bt : Derivation (.effect b s₂ t)) :
       Derivation (.effect a (s₁ * s₂) t)
   /-- Chain through a molecule's abundance: `a →s₁ amount(m)` and `m →s₂ t` give
@@ -167,15 +168,15 @@ def clash {k₁ k₂ : Kind} {a : Entity k₁} {b : Entity k₂} {r : Rel} {h : 
 /-! ### Theorems about derivations -/
 
 /-- A chained argument is never stronger than either of its steps. -/
-theorem opinion_viaActivity_le_left {k : Kind} {a : Entity k} {b : Entity .protein}
-    {s₁ s₂ : Sign} {t : Target}
-    (ab : Derivation (.effect a s₁ (.activity b))) (bt : Derivation (.effect b s₂ t)) :
+theorem opinion_viaActivity_le_left {k k' : Kind} {a : Entity k} {b : Entity k'}
+    {s₁ s₂ : Sign} {t : Target} {h : k' = .protein ∨ k' = .function}
+    (ab : Derivation (.effect a s₁ (.activity b h))) (bt : Derivation (.effect b s₂ t)) :
     (viaActivity ab bt).opinion.belief ≤ ab.opinion.belief :=
   Opinion.chain_belief_le_left _ _
 
-theorem opinion_viaActivity_le_right {k : Kind} {a : Entity k} {b : Entity .protein}
-    {s₁ s₂ : Sign} {t : Target}
-    (ab : Derivation (.effect a s₁ (.activity b))) (bt : Derivation (.effect b s₂ t)) :
+theorem opinion_viaActivity_le_right {k k' : Kind} {a : Entity k} {b : Entity k'}
+    {s₁ s₂ : Sign} {t : Target} {h : k' = .protein ∨ k' = .function}
+    (ab : Derivation (.effect a s₁ (.activity b h))) (bt : Derivation (.effect b s₂ t)) :
     (viaActivity ab bt).opinion.belief ≤ bt.opinion.belief :=
   Opinion.chain_belief_le_right _ _
 
@@ -186,9 +187,9 @@ theorem opinion_both_ge_of_chain {c : Claim} (d₁ d₂ : Derivation c)
   Opinion.belief_le_fuse_of_supports _ _ h
 
 /-- Chains carry no disbelief. -/
-theorem opinion_viaActivity_disbelief {k : Kind} {a : Entity k} {b : Entity .protein}
-    {s₁ s₂ : Sign} {t : Target}
-    (ab : Derivation (.effect a s₁ (.activity b))) (bt : Derivation (.effect b s₂ t)) :
+theorem opinion_viaActivity_disbelief {k k' : Kind} {a : Entity k} {b : Entity k'}
+    {s₁ s₂ : Sign} {t : Target} {h : k' = .protein ∨ k' = .function}
+    (ab : Derivation (.effect a s₁ (.activity b h))) (bt : Derivation (.effect b s₂ t)) :
     (viaActivity ab bt).opinion.disbelief = 0 := rfl
 
 theorem opinion_viaAmount_disbelief {k k' : Kind} {a : Entity k} {m : Entity k'}

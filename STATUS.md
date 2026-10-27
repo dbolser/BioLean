@@ -15,7 +15,7 @@ Last updated 2026-10-27 (night, after the M1 checks).
 | RO imported as data: 642 relations, 164 property chains (126 enabled, 38 blocked after hand-check), 124 inverses, 45 transitive; release pinned | generated from ro.owl | `BioLean/RO.lean`, `scripts/ro/`, `docs/ro-chain-check.md` |
 | Derivation rules `relChain` (RO chains, transitivity, is_a laws), `relInv`, `notRelSub/Obj`, `clash` | built | `BioLean/Derivation.lean` |
 | Textbook example: produces, occurs_in lift, part_of transitivity, is_a inheritance, inherited negation | built, theorems check | `BioLean/Examples/Textbook.lean` |
-| The textbook as Lean: 702 claims emitted, 570 compile; 132 rejected with reasons | generated, outside the lib build | `BioLean/Lib/TextbookClaims/`, `docs/textbook-lean-check.md` |
+| The textbook as Lean, round 2 (Sonnet, structured): 1,594 emitted, 1,591 compile | generated, outside the lib build | `BioLean/Lib/TextbookClaimsR2/`, `docs/textbook-lean-check.md` |
 | RO pinning tests | built, pass | `BioLean/Tests/RO.lean` |
 | Statements with PMID evidence, swappable reliability table | built | `BioLean/Evidence.lean` |
 | Derivation (lit, viaActivity, viaAmount, both), axioms, verdicts, `Established` | built, `decide +kernel` | `BioLean/Derivation.lean` |
@@ -59,9 +59,11 @@ Last updated 2026-10-27 (night, after the M1 checks).
     `located_in ∘ inverse(located_in) ⊑ spatially_coextensive_with` makes two things in one room
     coextensive; three chains on `indirectly negatively regulates` give neg ∘ neg = neg, contradicting
     RO's own neg ∘ neg = pos. 38 chains are blocked by default (`RO.chainsBlocked`).
-11. **Re-annotation, not heuristics.** Measured "now" after M1 is 17.3 percent of textbook claims
-    (from 8.8), 30 percent with context. The heuristic by construct name said 62.6: most claims have a
-    second blocker (compound sentences 696, ungrounded entities 669, quantities 558).
+11. **Re-annotation, not heuristics, and Sonnet, not Haiku.** Measured expressibility after M1 is
+    34 percent emitted and compiled (1,591 of 4,695), 41 percent counting context-needing and
+    unsupported-ontology claims. Haiku's round gave 17 percent with a noisy parser; the construct-name
+    heuristic said 63. Structured output compiles at 99.8 percent, so the compile rate now measures
+    the biology and the schema.
 12. **OAK beats Gilda as the local grounder.** 80 percent agreement with agents where both answer
     (Gilda 45), covers the OBO ontologies offline; neither handles paraphrase or plurals, so agents
     stay for the ~1,100 long-tail mentions.
@@ -80,7 +82,7 @@ Last updated 2026-10-27 (night, after the M1 checks).
 | structural claims | decided: generic `Claim.rel r a b`, typed by RO domain/range (M1) | done |
 | derivation rules for structure | decided: RO chains imported as data, `RO.chainOK` decides (M1) | done; hand-check pending |
 | weight of logical steps | decided: RO-chain steps use `Opinion.weakest` (min belief), after the chain-length experiment showed sound 12-step partonomies falling to 0.28 under product | done |
-| `Target.activity` on GO functions | 12 textbook claims about "enzymes" fail only because activity wants a protein | open, small |
+| `Target.disease` | one textbook claim (obesity causes T2D) needs a disease target | open, small |
 | caveated chains | 76 chains are sound only with a caveat; one fixed discount per caveated step was recommended and is not implemented | open |
 | evidence kinds | keep 8-way enum vs ECO codes with a reliability map | ECO |
 | coverage measure for generalize | clade fraction vs phylogenetic bracketing | bracketing |

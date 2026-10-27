@@ -53,3 +53,42 @@ exactly the kind the type checker is for.
 4. **A Lean test now pins the RO axioms we rely on** (`BioLean/Tests/RO.lean`): the chains the
    textbook derivations use, the inverses, the blocked chains staying blocked, and the domain/range
    sorts. An RO release that changes any of them breaks the build.
+
+## Round 2: Sonnet, structured output (2026-10-27, later)
+
+Round 1's parser had to guess which entity was subject and which was target from Haiku's free-form
+Lean strings, which produced most of the 132 rejections. Round 2 re-annotated all 4,695 claims with
+Sonnet into structured fields (subject CURIE, RO relation, object CURIE, sign, target, mediator,
+context, one of twelve fixed blockers), with OAK's candidate groundings supplied. The emitter
+(`scripts/textbook/emit_lean_m2.py`) does no string parsing. Modules: `BioLean/Lib/TextbookClaimsR2/`.
+
+| | round 1 (Haiku, strings) | round 2 (Sonnet, structured) |
+|---|---:|---:|
+| claims judged expressible | 811 | 1,906 (41%) |
+| emitted as Lean | 702 | 1,594 |
+| compiled | 570 (81%) | **1,591 (99.8%)** |
+| rejected by Lean | 132 | 3 |
+
+The 312 expressible-but-not-emitted claims are 190 that need a context (species or tissue, M2) and
+122 whose entities live in ontologies without a `Kind` (PO, ENVO, ECOCORE, NCIT, COB "organism").
+
+Before the schema fix, Lean rejected 22: 20 were `.activity` given a GO molecular function ("enzymes",
+"transporters", "receptors"). `Target.activity` now accepts a protein or a GO function, which also
+generalised `viaActivity`. The three that remain are real:
+
+| claim | Lean's objection | who is right |
+|---|---|---|
+| obesity causes type 2 diabetes | `.phenotype` given a MONDO disease | schema: no disease target yet |
+| neurotransmitter receptors are located on dendrites | `located_in` with a GO *function* as subject | Lean: an activity is not a thing with a location; needs the receptor protein or complex |
+| neurotransmitter binds to receptors | `binds` with a GO function as object | same |
+
+Constructors Sonnet used: rel 1,442, effect 416, notRel 42, mediatedBy 6. Relations: has part 362,
+part of 158, is_a 144, capable of 121, has output 108, located in 97, produces 93, has input 92,
+occurs in 75, happens during 51. Sonnet changed 138 CURIEs, usually against OAK's more generic
+suggestion. Confidence: high 1,542, medium 2,823, low 330.
+
+The 2,789 not expressible, by blocker: other 716, definition only 472, ungrounded entity 448,
+quantity 430, process description 382, compound sentence 377, context required 190, unsupported
+ontology 164, necessity 117, ordering 106, has quality 76, disjunction 30. Quantity (M3) and
+context (M2) are the two schema items; the rest are either the ontology layer (definitions,
+process descriptions) or text work (compound sentences, grounding).

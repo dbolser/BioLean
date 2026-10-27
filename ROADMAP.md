@@ -14,8 +14,9 @@ Add relational claims and the rules that move them.
 - **Status:** five representative derivations type-check (`BioLean/Examples/Textbook.lean`). 164 RO
   chains hand-checked, 38 blocked (`docs/m1-checks.md`). Measured re-annotation: 8.8 to 17.3 percent
   now, 30 percent with Context (`scripts/textbook/aggregate_m1.py`); the 62.6 heuristic was wrong.
-  Logical steps are weakest-link. Lean-checked the book: 570 of 702 emitted claims compile; the rejects are annotation errors and
-  one schema gap (`docs/textbook-lean-check.md`). RO pinning tests in place. Remaining: entities for
+  Logical steps are weakest-link. Lean-checked the book twice: round 2 (Sonnet, structured) emits 1,594 claims and 1,591 compile;
+  34 percent of the book is now Lean (`docs/textbook-lean-check.md`). `Target.activity` takes GO
+  functions. RO pinning tests in place. Remaining: entities for
   the other 19 structural derivations; structure-to-effect bridges; `Target.activity` on functions;
   `Kind.sequenceFeature`; compound-sentence splitting and grounding are the top blockers.
 

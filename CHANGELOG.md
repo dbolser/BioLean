@@ -2,6 +2,16 @@
 
 Findings and decisions, dated. Code history is in `git log`; this records what we learned.
 
+## 2026-10-27 (round 2: Sonnet, structured)
+- All 4,695 textbook claims re-annotated by Sonnet into structured subject/relation/object fields
+  with a fixed blocker list; 1,906 judged expressible, 1,594 emitted, **1,591 compile (99.8%)**.
+  Round 1's 132 rejections were mostly my parser guessing entity order from Haiku's Lean strings.
+- Schema: `Target.activity` now accepts a protein or a GO molecular function (20 of the 22
+  remaining rejections); `viaActivity` generalised. Remaining real rejections: no disease target;
+  GO functions used as located things (Lean is right).
+- Measured expressibility after M1 is 34 percent emitted and compiled, 41 percent with the
+  context and unsupported-ontology claims. (`docs/textbook-lean-check.md`)
+
 ## 2026-10-27 (OLS tagger)
 - OLS text tagger (`POST /ols4/api/v2/tag_text`) tested with ASCII-normalised input: 1,102 hits vs
   OAK's 1,485; 85 percent agreement with agents where it hits; 96 percent agreement with OAK where
