@@ -3,7 +3,7 @@
 Milestones, each with an exit test that already exists in the repo. Order is by what unlocks the
 most; dates are deliberately absent. Status lives in [STATUS.md](STATUS.md).
 
-## M1. Structural core (next)
+## M1. Structural core (built 2026-10-27; hand-check and re-bin remain)
 Add relational claims and the rules that move them.
 - `Claim.rel` over RO relations (is_a, part_of, has_part, located_in, occurs_in, capable_of,
   has_input, has_output, precedes), typed by RO domain and range.
@@ -11,6 +11,9 @@ Add relational claims and the rules that move them.
 - Bridges from structure to effect (`has_input m P ⊢ m →+ P`, `has_output P m ⊢ P →+ amount m`).
 - **Exit:** the 24 structure-blocked derivations in `docs/textbook-derivations.md` type-check;
   the textbook "now" bin rises from 8.8 percent to above 50 percent by re-binning.
+- **Status:** five representative derivations type-check (`BioLean/Examples/Textbook.lean`); the
+  other 19 need their entities written. Re-bin estimate by construct name: 8.8 to 62.6 percent
+  (`scripts/textbook/rebin_m1.py`), 74 percent with Context. Bridges to effects not yet added.
 
 ## M2. Context, hypotheses, rivals
 Merge the drafted Context extension and the argument layer.
