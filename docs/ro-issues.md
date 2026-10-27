@@ -1,4 +1,11 @@
-# Draft RO issues (not posted)
+# RO issues (posted 2026-10-27)
+
+- 'immediately preceded by' and 'immediately precedes' chains conclude that a process is preceded by its own part: https://github.com/oborel/obo-relations/issues/897
+- 'spatially coextensive with' chain concludes that two things in the same container are coextensive: https://github.com/oborel/obo-relations/issues/898
+- 'indirectly negatively regulates' chains compose two negative steps into a negative one: https://github.com/oborel/obo-relations/issues/899
+- 'provides input for' chain is missing an inverse: https://github.com/oborel/obo-relations/issues/900
+
+Drafts as posted follow.
 
 Draft issues for https://github.com/oborel/obo-relations, one per bad axiom family. Seven axioms, four issues: rows 14+16 share a cause, as do rows 87-89. Row numbers are from `docs/ro-chains.md`. Axioms are from RO release 2026-09-04 (`data/ro.owl`). All seven are still in `src/ontology/ro-edit.owl` on master as of 2026-10-27. Regression details: `docs/ro-fix-regression.md`.
 

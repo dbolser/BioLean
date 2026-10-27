@@ -2,6 +2,11 @@
 
 Findings and decisions, dated. Code history is in `git log`; this records what we learned.
 
+## 2026-10-27 (RO issues posted)
+- Four issues opened on oborel/obo-relations from Dan's account: #897 (immediately preceded by /
+  precedes chains), #898 (spatially coextensive chain), #899 (indirectly negatively regulates sign
+  chains and transitivity), #900 (provides input for missing inverse). `docs/ro-issues.md`
+
 ## 2026-10-27 (RO fixes tested)
 - Fixing the seven RO chain axioms in a copy changes nothing under ELK or JFact: RO defines no class
   with these properties, so the chains only fire on data. On test instances the wrong conclusions
