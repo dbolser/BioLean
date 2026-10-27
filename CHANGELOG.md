@@ -2,6 +2,22 @@
 
 Findings and decisions, dated. Code history is in `git log`; this records what we learned.
 
+## 2026-10-27 (M1 checks)
+- Chain-length experiment over GO and UBERON: longest part_of chains are depth 10 and 12 and
+  biologically correct; product belief falls to 0.35 and 0.28. Decision: RO-chain steps are logical
+  and use `Opinion.weakest` (min belief, zero disbelief). Textbook derivations now score 0.80.
+- 164 RO chains hand-checked by 8 Haiku agents and reviewed by Opus: 44 / 76 / 25 / 19 sound /
+  caveat / suspicious / wrong. Seven chains are faithful imports of RO axioms that look wrong
+  (rows 14, 16, 79, 87, 88, 89, 90 in `docs/ro-chains.md`); verified against ro.owl. 38 chains
+  blocked by default via `scripts/ro/blocked_chains.tsv`; the importer asserts they still match.
+- Measured re-annotation against the M1 schema (8 Haiku agents, 3,730 records): now 17.3 percent,
+  with context 30 percent. The construct-name heuristic (62.6) over-counted 3.6x. Top remaining
+  blockers: compound sentences, ungrounded entities, quantities. Relations used most: has_part 117,
+  is_a 67, produces 32, located_in 28, has_input 25.
+- Gilda trial on 2,803 (text, CURIE) pairs: 1,510 hits, 648 agree, 802 disagree of which 691 are
+  namespace-only. Verdict: use as a GO/ChEBI checker. (`docs/gilda-trial.md`)
+- Glossary written (`docs/glossary.md`). RO release pinned in the generated file (2026-09-04).
+
 ## 2026-10-27 (M1)
 - Built relational claims: `Claim.rel` / `Claim.notRel` over RO relations, with RO's rdfs:domain
   and range checked by `decide`. RO imported from ro.owl as Lean data (642 relations, 164 chains,

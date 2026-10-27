@@ -3,7 +3,7 @@
 Where BioLean stands, what we have learned, and what is open. Updated at milestones, not per
 commit. History of findings and decisions: [CHANGELOG.md](CHANGELOG.md). Direction: [ROADMAP.md](ROADMAP.md).
 
-Last updated 2026-10-27 (evening, after M1).
+Last updated 2026-10-27 (night, after the M1 checks).
 
 ## What exists
 
@@ -12,7 +12,7 @@ Last updated 2026-10-27 (evening, after M1).
 | Lean core: opinions over ℚ, fuse, chain, proved laws | built, `lake build` green | `BioLean/Belief.lean` |
 | Claim shape: signed effect, mediatedBy, five targets, eleven entity kinds | built | `BioLean/Claim.lean`, `Ontology.lean` |
 | Relational claims `Claim.rel` / `Claim.notRel` over RO, typed by RO domain and range | built (M1) | `BioLean/Rel.lean`, `Claim.lean` |
-| RO imported as data: 642 relations, 164 property chains, 124 inverses, 45 transitive | generated from ro.owl | `BioLean/RO.lean`, `scripts/ro/import_ro.py` |
+| RO imported as data: 642 relations, 164 property chains (126 enabled, 38 blocked after hand-check), 124 inverses, 45 transitive; release pinned | generated from ro.owl | `BioLean/RO.lean`, `scripts/ro/`, `docs/ro-chain-check.md` |
 | Derivation rules `relChain` (RO chains, transitivity, is_a laws), `relInv`, `notRelSub/Obj`, `clash` | built | `BioLean/Derivation.lean` |
 | Textbook example: produces, occurs_in lift, part_of transitivity, is_a inheritance, inherited negation | built, theorems check | `BioLean/Examples/Textbook.lean` |
 | Statements with PMID evidence, swappable reliability table | built | `BioLean/Evidence.lean` |
@@ -51,7 +51,20 @@ Last updated 2026-10-27 (evening, after M1).
    rule the derivation study called `occursInLift`. These are machine-readable and importable.
    RO's first-order-logic (CLIF) annotations are sparse (3 in the release) and unchecked; BFO 2020's
    full CLIF axiomatisation is the checked one.
-10. **Induction never closes.** `uncertainty_pos` is a type invariant, so a universal is never
+10. **RO has errors, and the import found them.** The hand-check of 164 chains gave 44 sound, 76
+    sound with caveat, 25 suspicious, 19 wrong. Seven are faithful imports of bad RO axioms:
+    `starts_with ∘ ends_with ⊑ immediately_preceded_by` makes a process preceded by its own part;
+    `located_in ∘ inverse(located_in) ⊑ spatially_coextensive_with` makes two things in one room
+    coextensive; three chains on `indirectly negatively regulates` give neg ∘ neg = neg, contradicting
+    RO's own neg ∘ neg = pos. 38 chains are blocked by default (`RO.chainsBlocked`).
+11. **Re-annotation, not heuristics.** Measured "now" after M1 is 17.3 percent of textbook claims
+    (from 8.8), 30 percent with context. The heuristic by construct name said 62.6: most claims have a
+    second blocker (compound sentences 696, ungrounded entities 669, quantities 558).
+12. **Gilda is a checker, not a grounder, for us.** It covers GO, ChEBI, UniProt, MeSH, HGNC; not
+    UBERON, CL, NCBITaxon, MONDO. 691 of 802 disagreements with the agents were namespace-only; on
+    same-namespace disagreements it picks the literal label where agents picked a context-specific
+    child. Use it to catch hallucinated GO/ChEBI ids.
+13. **Induction never closes.** `uncertainty_pos` is a type invariant, so a universal is never
     proved, only established. The coverage discount for `generalize` is a stated judgment; clade
     fraction is too harsh, phylogenetic bracketing is what biologists do.
 
@@ -61,7 +74,8 @@ Last updated 2026-10-27 (evening, after M1).
 |---|---|---|
 | structural claims | decided: generic `Claim.rel r a b`, typed by RO domain/range (M1) | done |
 | derivation rules for structure | decided: RO chains imported as data, `RO.chainOK` decides (M1) | done; hand-check pending |
-| weight of logical steps | a chain of two certain facts scores 0.72 (unsupported); should RO-chain steps be lossless? | open |
+| weight of logical steps | decided: RO-chain steps use `Opinion.weakest` (min belief), after the chain-length experiment showed sound 12-step partonomies falling to 0.28 under product | done |
+| caveated chains | 76 chains are sound only with a caveat; one fixed discount per caveated step was recommended and is not implemented | open |
 | evidence kinds | keep 8-way enum vs ECO codes with a reliability map | ECO |
 | coverage measure for generalize | clade fraction vs phylogenetic bracketing | bracketing |
 | base rate per claim | fixed 1/2 vs per-claim prior | per claim, source undecided |
