@@ -157,3 +157,84 @@ Ids drop the chapter prefix (molbio, photo, body, repro, inherit, energy).
 ## 7. What this says about the core
 
 The signed-effect core holds 8.8% of the textbook. Even with Context it holds 21%, so effects are a minority dialect of biology, not its grammar. The missing 79% is not exotic: is_a, part_of, quantity, location, function and order are 69% of it, and every one is a standard RO/OBO relation. GO and UBERON hold only 15% of these as axioms, so BioLean must state them as Claims itself, not defer to the ontologies. The derivation study gives the same answer from the other side: chaining works, but 24 of 52 proofs die because structural facts cannot be premises, and 13 more die because numbers cannot be. Next step: add structural `Claim` constructors and `Claim.quantity`, plus bridge rules (`inputPositive`, `outputPositive`, `inheritIsA`) into the existing chain rules. That buys more than any further work on effects.
+
+## 8. The story, with examples
+
+Written after the run, as the narrative a short paper would tell: "ontologising A-level biology".
+
+**The ontologies name everything.** 93 percent of entity mentions ground, and where an ontology
+fits, grounding is near total: GO 98.7, UBERON 99.3, CL 99.7, SO 99.7, ChEBI 97.3. The misses are
+nouns with no home ontology: "living things", "nutrients", "stiffness", "a sugary drink". The
+vocabulary of an introductory textbook is, to within a few percent, already a controlled
+vocabulary. That part of the problem is solved.
+
+**The ontologies state almost none of the relations.** Of 240 sampled structural and definitional
+claims, 15 percent are logical axioms in GO, UBERON, CL or ChEBI, and nearly all of those are
+UBERON partonomy (heart has atria, adrenal gland has cortex and medulla). GO:0015979
+photosynthesis has no logical axioms beyond "is_a metabolic process": no has_input carbon
+dioxide, no has_output oxygen, no occurs_in chloroplast. The textbook says all three in one
+sentence. Another 26 percent are stated only in the definition text, in English, where no reasoner
+reads them: "the Calvin cycle uses ATP and NADPH" is in GO's definition and in no axiom. So the
+textbook is mostly the ontology's own relations, written out in prose that the ontology never
+formalised. Canon is in the definitions, not the logic.
+
+**Signed effects are a dialect, not the grammar.** BioLean's `Claim.effect` holds 8.8 percent of
+the claims. Even restricted to kind=effect it holds only a third, because "the gonads produce
+steroid hormones" (`body:m45537-204`) and "photosynthesis produces sugar" (`photo:m45448-42`) are
+RO has_output, not a signed influence, and the verifiers split on how to bin them. The schema was
+built on pharmacology, where everything is an agent raising or lowering a target. Cell biology is
+mostly what is part of what, where it happens, and in what order.
+
+**The missing constructors are six ordinary relations.** is_a (882 claims: "a cell is the smallest
+unit of a living thing"), part_of and has_part (498: "the colon consists of ascending, transverse
+and descending colon"), quantity and comparison (422: "prokaryotic cells are smaller than
+eukaryotic cells"; "two carbons enter the TCA cycle per acetyl"), located_in and occurs_in (269:
+"epithelial cells cover the organs and body cavities"), capable_of (257: "epithelial cells protect
+the surface of the body"), and sequence (245: "the centrosome replicates before the cell
+divides"). Together they are 69 percent of what is missing. Nothing exotic appears until item 11,
+negation ("a prokaryotic cell lacks a nucleus", 85 claims).
+
+**The chain core is right, but starved.** Fifty-two textbook sentences follow from others. Four
+type-check in the current Lean, all hormone feedback loops:
+
+- "A rise in blood glucose after a meal triggers adjustments that lower blood glucose"
+  (`body:m45534-23`) = `viaAmount` of "glucose raises insulin" and "insulin lowers glucose";
+  positive times negative is negative.
+- "Blood calcium level is maintained homeostatically" (`body:m45534-5`) = `both` of the calcitonin
+  chain and the PTH chain, with no shared axioms.
+- "Hormone production and release are primarily controlled by negative feedback"
+  (`body:m45537-255`): thyroid hormone lowers TSH, TSH raises thyroid hormone, so thyroid hormone
+  lowers itself. One instance of a general law.
+
+Twenty-four of the 52 are blocked solely because structural claims are not Claim constructors;
+13 because there is no numeric claim with an arithmetic side goal, which Lean discharges by
+`norm_num`. Chemiosmosis (`energy:m45439-129`) is the `generalize` rule from case study 4 running
+over cellular component rather than taxon: ATP synthase makes ATP from a proton gradient in
+thylakoids and in mitochondria, so "across a membrane" with no component.
+
+**Proof catches the book overclaiming.** "More than one codon corresponds to a given amino acid"
+(`molbio:m45479-93`): 61 sense codons onto 20 amino acids gives, by pigeonhole, that *some* amino
+acid has several codons, not that a given one does. "A tortoiseshell cat has to be female"
+(`inherit:m45467-66`): the proof needs "males have one X", which the book's own XXY sentences
+(`-73` to `-75`) contradict. Fill the hole with the true premise and the theorem is "a
+tortoiseshell cat has two X chromosomes". Both are places where formalising a textbook sentence
+improves it.
+
+**Holes are hypotheses.** Eight sentences look derivable and are not. The smallest hole: "a sugary
+drink stimulates the pancreas to produce insulin" (`body:m45537-52`) needs only "a sugary drink
+raises blood glucose", which no sentence states; add it and the derivation type-checks today. The
+best ILP target: three sentences, high-secretion cells have abundant Golgi, muscle cells have many
+mitochondria, immature red cells are rich in ribosomes (`cell:m45432-155, -203, -189`), share one
+missing clause, `abundant(cell, organelle) ← capable_of(organelle, F) ∧ highDemand(cell, F)`. One
+induced rule explains three textbook sentences. Endosymbiosis (`cell:m45432-260`) is a different
+shape: the shared features of mitochondria and bacteria are predictions of the hypothesis, not
+premises for it, so the right machinery is `Statement.predictedBy` with a rival to compare against,
+not a derivation.
+
+**What a paper would claim.** An introductory biology textbook is (a) almost entirely groundable
+in existing open ontologies, (b) almost entirely *not* already formalised in them, and (c) 70
+percent expressible with six Relation Ontology predicates added to a signed-effect core, with
+(d) a measurable fraction of its sentences being theorems of the others, some of which the proofs
+sharpen. Every number here is recomputable from `data/textbook/claims/*.json` with
+`scripts/textbook/aggregate.py`; the derivations are in `docs/textbook-derivations.md`, the
+axiom check in `docs/textbook-axioms.md`.
