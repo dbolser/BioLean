@@ -2,6 +2,12 @@
 
 Findings and decisions, dated. Code history is in `git log`; this records what we learned.
 
+## 2026-10-27 (OAK trial)
+- Ontology Access Kit (oaklib) as local grounder, same 2,803 pairs as Gilda: 1,485 hits, agrees with
+  the agents on 80 percent where both answer (Gilda 45). Cross-namespace disagreements fall from 691
+  to 147. Still misses the ~1,100 paraphrases and plurals. Decision: OAK as the cheap first pass and
+  slip-catcher, agents for the rest. (`docs/oak-trial.md`)
+
 ## 2026-10-27 (Lean-checking the book)
 - Every "now" textbook claim emitted as a Lean `Statement` and compiled: 811 binned, 702 emitted,
   **570 compile**. Lean rejected 132: 115 target-shape errors, 19 RO domain/range violations

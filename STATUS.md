@@ -62,7 +62,10 @@ Last updated 2026-10-27 (night, after the M1 checks).
 11. **Re-annotation, not heuristics.** Measured "now" after M1 is 17.3 percent of textbook claims
     (from 8.8), 30 percent with context. The heuristic by construct name said 62.6: most claims have a
     second blocker (compound sentences 696, ungrounded entities 669, quantities 558).
-12. **Gilda is a checker, not a grounder, for us.** It covers GO, ChEBI, UniProt, MeSH, HGNC; not
+12. **OAK beats Gilda as the local grounder.** 80 percent agreement with agents where both answer
+    (Gilda 45), covers the OBO ontologies offline; neither handles paraphrase or plurals, so agents
+    stay for the ~1,100 long-tail mentions.
+12a. **Gilda is a checker, not a grounder, for us.** It covers GO, ChEBI, UniProt, MeSH, HGNC; not
     UBERON, CL, NCBITaxon, MONDO. 691 of 802 disagreements with the agents were namespace-only; on
     same-namespace disagreements it picks the literal label where agents picked a context-specific
     child. Use it to catch hallucinated GO/ChEBI ids.
