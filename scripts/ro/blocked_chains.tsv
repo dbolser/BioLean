@@ -1,0 +1,39 @@
+# row	r1	r2	r3	r3_id	reason   (from docs/m1-checks.md; importer checks labels match the current table)
+12	regulates	transports or maintains localization of	regulates transport of	RO_0002011	overreach or type mismatch
+14	starts with	ends with	immediately preceded by	RO_0002087	bad in RO
+15	starts during	obsolete preceded by	starts before	RO_0002089	obsolete relation
+16	ends with	starts with	immediately precedes	RO_0002090	bad in RO
+18	is neuron ∘ part of ∘ is anatomical entity	(3-chain)	has soma location	RO_0002100	overreach or type mismatch
+31	overlaps	in taxon	in taxon	RO_0002162	taxon transfer across organisms
+35	connects	in taxon	in taxon	RO_0002162	taxon transfer across organisms
+36	expressed in	in taxon	in taxon	RO_0002162	taxon transfer across organisms
+37	regulates	in taxon	in taxon	RO_0002162	taxon transfer across organisms
+38	has prototype	in taxon	in taxon	RO_0002162	taxon transfer across organisms
+39	capable of	in taxon	in taxon	RO_0002162	taxon transfer across organisms
+40	has developmental contribution from	in taxon	in taxon	RO_0002162	taxon transfer across organisms
+41	developmentally induced by	in taxon	in taxon	RO_0002162	taxon transfer across organisms
+42	results in developmental progression of	in taxon	in taxon	RO_0002162	taxon transfer across organisms
+44	existence overlaps	in taxon	in taxon	RO_0002162	taxon transfer across organisms
+45	produces	in taxon	in taxon	RO_0002162	taxon transfer across organisms
+46	produced by	in taxon	in taxon	RO_0002162	taxon transfer across organisms
+60	directly develops from	located in	develops in	RO_0002226	overreach or type mismatch
+79	located in	inverse(located in)	spatially coextensive with	RO_0002379	bad in RO
+82	causally upstream of	obsolete has direct output	obsolete has indirect output	RO_0002403	obsolete relation
+87	indirectly negatively regulates	directly negatively regulates	indirectly negatively regulates	RO_0002409	bad in RO
+88	directly negatively regulates	indirectly negatively regulates	indirectly negatively regulates	RO_0002409	bad in RO
+89	directly negatively regulates	directly negatively regulates	indirectly negatively regulates	RO_0002409	bad in RO
+90	has output	has input	provides input for	RO_0002413	bad in RO (missing inverse)
+95	involved in	positively regulates	involved in positive regulation of	RO_0002429	signed or direct claim from unsigned premises
+97	involved in	negatively regulates	involved in negative regulation of	RO_0002430	signed or direct claim from unsigned premises
+104	capable of ∘ is kinase activity ∘ has direct input	(3-chain)	phosphorylates	RO_0002447	capability turned into event
+105	enables ∘ regulates ∘ enabled by	(3-chain)	directly regulates activity of	RO_0002448	signed or direct claim from unsigned premises
+109	capable of ∘ is ubiquitination ∘ has direct input	(3-chain)	ubiquitinates	RO_0002480	capability turned into event
+114	part of	existence starts during or after	existence starts during or after	RO_0002496	continuant parts in existence-time chains
+116	existence starts during or after	part of	existence starts during or after	RO_0002496	continuant parts in existence-time chains
+120	part of	existence ends during or before	existence ends during or before	RO_0002497	continuant parts in existence-time chains
+122	existence ends during or before	part of	existence ends during or before	RO_0002497	continuant parts in existence-time chains
+142	disease causes dysfunction of	part of	disease causes dysfunction of	RO_0004025	overreach or type mismatch
+143	realized in response to	has input	realized in response to stimulus	RO_0004028	overreach or type mismatch
+150	characteristic of	is concretized as	generically depends on	RO_0010001	overreach or type mismatch
+158	capable of	has input	device utilizes material	RO_0017001	capability turned into event
+159	capable of ∘ is myristoyltransferase activity ∘ has direct input	(3-chain)	myristoylates	RO_0018002	capability turned into event

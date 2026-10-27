@@ -831,172 +831,177 @@ def transitive : List Rel := [
   ⟨.ro, 18034, false⟩
 ]
 
-/-- Property chains `(premises, conclusion)`; premises may include inverses. -/
+/-- Property chains `(premises, conclusion)` enabled for `chainOK`; premises may include inverses.
+38 chains judged unsafe by default are in `chainsBlocked` (see docs/m1-checks.md). -/
 def chains : List (List Rel × Rel) := [
-  ([⟨.bfo, 50, false⟩, ⟨.bfo, 62, false⟩], ⟨.bfo, 62, false⟩),  -- preceded by
-  ([⟨.ro, 2091, false⟩, ⟨.bfo, 62, false⟩], ⟨.bfo, 62, false⟩),  -- preceded by
-  ([⟨.ro, 2092, false⟩, ⟨.bfo, 62, false⟩], ⟨.bfo, 62, false⟩),  -- preceded by
-  ([⟨.bfo, 50, false⟩, ⟨.bfo, 63, false⟩], ⟨.bfo, 63, false⟩),  -- precedes
-  ([⟨.ro, 2092, false⟩, ⟨.bfo, 63, false⟩], ⟨.bfo, 63, false⟩),  -- precedes
-  ([⟨.bfo, 50, false⟩, ⟨.bfo, 66, false⟩], ⟨.bfo, 66, false⟩),  -- occurs in
-  ([⟨.bfo, 66, false⟩, ⟨.bfo, 50, false⟩], ⟨.bfo, 66, false⟩),  -- occurs in
-  ([⟨.bfo, 51, false⟩, ⟨.bfo, 55, false⟩, ⟨.ro, 52, false⟩], ⟨.ro, 57, false⟩),  -- has participant
-  ([⟨.bfo, 51, false⟩, ⟨.ro, 57, false⟩], ⟨.ro, 57, false⟩),  -- has participant
-  ([⟨.ro, 1025, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 1025, false⟩),  -- located in
-  ([⟨.ro, 2005, false⟩, ⟨.ro, 2380, false⟩], ⟨.ro, 2005, false⟩),  -- innervated by
-  ([⟨.ro, 2211, false⟩, ⟨.ro, 2313, false⟩], ⟨.ro, 2011, false⟩),  -- regulates transport of
-  ([⟨.ro, 2093, false⟩, ⟨.bfo, 62, false⟩], ⟨.ro, 2086, false⟩),  -- ends after
-  ([⟨.ro, 2224, false⟩, ⟨.ro, 2230, false⟩], ⟨.ro, 2087, false⟩),  -- immediately preceded by
-  ([⟨.ro, 2091, false⟩, ⟨.bfo, 60, false⟩], ⟨.ro, 2089, false⟩),  -- starts before
-  ([⟨.ro, 2230, false⟩, ⟨.ro, 2224, false⟩], ⟨.ro, 2090, false⟩),  -- immediately precedes
-  ([⟨.ro, 2100, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2100, false⟩),  -- has soma location
-  ([⟨.ro, 20104, false⟩, ⟨.bfo, 50, false⟩, ⟨.ro, 20105, false⟩], ⟨.ro, 2100, false⟩),  -- has soma location
-  ([⟨.ro, 2102, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2102, false⟩),  -- axon synapses in
-  ([⟨.ro, 2110, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2110, false⟩),  -- has postsynaptic terminal in
-  ([⟨.ro, 2113, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2113, false⟩),  -- has presynaptic terminal in
-  ([⟨.ro, 2121, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2121, false⟩),  -- dendrite synapsed in
-  ([⟨.ro, 2130, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2130, false⟩),  -- has synaptic terminal in
-  ([⟨.bfo, 50, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2131, false⟩),  -- overlaps
-  ([⟨.bfo, 51, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2131, false⟩),  -- overlaps
-  ([⟨.bfo, 51, false⟩, ⟨.ro, 2131, false⟩], ⟨.ro, 2131, false⟩),  -- overlaps
-  ([⟨.ro, 2131, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2131, false⟩),  -- overlaps
-  ([⟨.ro, 2134, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2134, false⟩),  -- innervates
-  ([⟨.ro, 2156, false⟩, ⟨.ro, 2157, false⟩], ⟨.ro, 2158, false⟩),  -- shares ancestor with
-  ([⟨.ro, 2005, false⟩, ⟨.ro, 2162, false⟩], ⟨.ro, 2162, false⟩),  -- in taxon
-  ([⟨.ro, 2131, false⟩, ⟨.ro, 2162, false⟩], ⟨.ro, 2162, false⟩),  -- in taxon
-  ([⟨.ro, 2134, false⟩, ⟨.ro, 2162, false⟩], ⟨.ro, 2162, false⟩),  -- in taxon
-  ([⟨.ro, 2150, false⟩, ⟨.ro, 2162, false⟩], ⟨.ro, 2162, false⟩),  -- in taxon
-  ([⟨.ro, 2170, false⟩, ⟨.ro, 2162, false⟩], ⟨.ro, 2162, false⟩),  -- in taxon
-  ([⟨.ro, 2176, false⟩, ⟨.ro, 2162, false⟩], ⟨.ro, 2162, false⟩),  -- in taxon
-  ([⟨.ro, 2206, false⟩, ⟨.ro, 2162, false⟩], ⟨.ro, 2162, false⟩),  -- in taxon
-  ([⟨.ro, 2211, false⟩, ⟨.ro, 2162, false⟩], ⟨.ro, 2162, false⟩),  -- in taxon
-  ([⟨.ro, 2214, false⟩, ⟨.ro, 2162, false⟩], ⟨.ro, 2162, false⟩),  -- in taxon
-  ([⟨.ro, 2215, false⟩, ⟨.ro, 2162, false⟩], ⟨.ro, 2162, false⟩),  -- in taxon
-  ([⟨.ro, 2254, false⟩, ⟨.ro, 2162, false⟩], ⟨.ro, 2162, false⟩),  -- in taxon
-  ([⟨.ro, 2256, false⟩, ⟨.ro, 2162, false⟩], ⟨.ro, 2162, false⟩),  -- in taxon
-  ([⟨.ro, 2295, false⟩, ⟨.ro, 2162, false⟩], ⟨.ro, 2162, false⟩),  -- in taxon
-  ([⟨.ro, 2387, false⟩, ⟨.ro, 2162, false⟩], ⟨.ro, 2162, false⟩),  -- in taxon
-  ([⟨.ro, 2490, false⟩, ⟨.ro, 2162, false⟩], ⟨.ro, 2162, false⟩),  -- in taxon
-  ([⟨.ro, 3000, false⟩, ⟨.ro, 2162, false⟩], ⟨.ro, 2162, false⟩),  -- in taxon
-  ([⟨.ro, 3001, false⟩, ⟨.ro, 2162, false⟩], ⟨.ro, 2162, false⟩),  -- in taxon
-  ([⟨.ro, 2176, true⟩, ⟨.ro, 2176, false⟩], ⟨.ro, 2170, false⟩),  -- connected to
-  ([⟨.ro, 2371, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2177, false⟩),  -- attached to part of
-  ([⟨.ro, 2512, false⟩, ⟨.ro, 2510, false⟩], ⟨.ro, 2204, false⟩),  -- gene product of
-  ([⟨.ro, 2511, false⟩, ⟨.ro, 2513, false⟩], ⟨.ro, 2205, false⟩),  -- has gene product
-  ([⟨.ro, 2206, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2206, false⟩),  -- expressed in
-  ([⟨.ro, 2211, false⟩, ⟨.ro, 2025, false⟩], ⟨.ro, 2211, false⟩),  -- regulates
-  ([⟨.ro, 2230, false⟩, ⟨.ro, 2211, false⟩], ⟨.ro, 2211, false⟩),  -- regulates
-  ([⟨.ro, 2578, false⟩, ⟨.ro, 2578, false⟩], ⟨.ro, 2211, false⟩),  -- regulates
-  ([⟨.ro, 2230, false⟩, ⟨.ro, 2212, false⟩], ⟨.ro, 2212, false⟩),  -- negatively regulates
-  ([⟨.ro, 2212, false⟩, ⟨.ro, 2212, false⟩], ⟨.ro, 2213, false⟩),  -- positively regulates
-  ([⟨.ro, 2230, false⟩, ⟨.ro, 2213, false⟩], ⟨.ro, 2213, false⟩),  -- positively regulates
-  ([⟨.ro, 2215, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2216, false⟩),  -- capable of part of
-  ([⟨.ro, 2207, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2225, false⟩),  -- develops from part of
-  ([⟨.ro, 2207, false⟩, ⟨.ro, 1025, false⟩], ⟨.ro, 2226, false⟩),  -- develops in
-  ([⟨.ro, 2224, false⟩, ⟨.bfo, 66, false⟩], ⟨.ro, 2231, false⟩),  -- has start location
-  ([⟨.ro, 2230, false⟩, ⟨.bfo, 66, false⟩], ⟨.ro, 2232, false⟩),  -- has end location
-  ([⟨.ro, 2224, false⟩, ⟨.ro, 2233, false⟩], ⟨.ro, 2233, false⟩),  -- has input
-  ([⟨.ro, 2230, false⟩, ⟨.ro, 2234, false⟩], ⟨.ro, 2234, false⟩),  -- has output
-  ([⟨.bfo, 51, false⟩, ⟨.ro, 2254, false⟩], ⟨.ro, 2254, false⟩),  -- has developmental contribution from
-  ([⟨.ro, 2203, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2255, false⟩),  -- developmentally contributes to
-  ([⟨.ro, 2327, false⟩, ⟨.ro, 2411, false⟩], ⟨.ro, 2263, false⟩),  -- acts upstream of
-  ([⟨.ro, 2327, false⟩, ⟨.ro, 2418, false⟩], ⟨.ro, 2264, false⟩),  -- acts upstream of or within
-  ([⟨.bfo, 50, false⟩, ⟨.ro, 2210, false⟩], ⟨.ro, 2287, false⟩),  -- part of developmental precursor of
-  ([⟨.ro, 52, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2314, false⟩),  -- characteristic of part of
-  ([⟨.ro, 2314, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2314, false⟩),  -- characteristic of part of
-  ([⟨.ro, 2327, false⟩, ⟨.bfo, 51, false⟩], ⟨.ro, 2327, false⟩),  -- enables
-  ([⟨.ro, 2327, false⟩, ⟨.ro, 2017, false⟩], ⟨.ro, 2327, false⟩),  -- enables
-  ([⟨.bfo, 50, false⟩, ⟨.ro, 2215, false⟩], ⟨.ro, 2329, false⟩),  -- part of structure that is capable of
-  ([⟨.ro, 2327, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2331, false⟩),  -- involved in
-  ([⟨.ro, 2331, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2331, false⟩),  -- involved in
-  ([⟨.ro, 2338, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2338, false⟩),  -- has target start location
-  ([⟨.ro, 2339, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2339, false⟩),  -- has target end location
-  ([⟨.ro, 1025, false⟩, ⟨.ro, 1025, true⟩], ⟨.ro, 2379, false⟩),  -- spatially coextensive with
-  ([⟨.ro, 2377, false⟩, ⟨.ro, 2381, false⟩], ⟨.ro, 2380, false⟩),  -- branching part of
-  ([⟨.ro, 2224, false⟩, ⟨.ro, 2400, false⟩], ⟨.ro, 2400, false⟩),  -- has direct input
-  ([⟨.ro, 2411, false⟩, ⟨.ro, 2402, false⟩], ⟨.ro, 2403, false⟩),  -- obsolete has indirect output
-  ([⟨.ro, 2407, false⟩, ⟨.ro, 2629, false⟩], ⟨.ro, 2407, false⟩),  -- indirectly positively regulates
-  ([⟨.ro, 2409, false⟩, ⟨.ro, 2409, false⟩], ⟨.ro, 2407, false⟩),  -- indirectly positively regulates
-  ([⟨.ro, 2629, false⟩, ⟨.ro, 2407, false⟩], ⟨.ro, 2407, false⟩),  -- indirectly positively regulates
-  ([⟨.ro, 2629, false⟩, ⟨.ro, 2629, false⟩], ⟨.ro, 2407, false⟩),  -- indirectly positively regulates
-  ([⟨.ro, 2409, false⟩, ⟨.ro, 2630, false⟩], ⟨.ro, 2409, false⟩),  -- indirectly negatively regulates
-  ([⟨.ro, 2630, false⟩, ⟨.ro, 2409, false⟩], ⟨.ro, 2409, false⟩),  -- indirectly negatively regulates
-  ([⟨.ro, 2630, false⟩, ⟨.ro, 2630, false⟩], ⟨.ro, 2409, false⟩),  -- indirectly negatively regulates
-  ([⟨.ro, 2234, false⟩, ⟨.ro, 2233, false⟩], ⟨.ro, 2413, false⟩),  -- provides input for
-  ([⟨.ro, 2418, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2418, false⟩),  -- causally upstream of or within
-  ([⟨.ro, 2327, false⟩, ⟨.ro, 2211, false⟩], ⟨.ro, 2428, false⟩),  -- involved in regulation of
-  ([⟨.ro, 2331, false⟩, ⟨.ro, 2211, false⟩], ⟨.ro, 2428, false⟩),  -- involved in regulation of
-  ([⟨.ro, 2327, false⟩, ⟨.ro, 2213, false⟩], ⟨.ro, 2429, false⟩),  -- involved in positive regulation of
-  ([⟨.ro, 2331, false⟩, ⟨.ro, 2213, false⟩], ⟨.ro, 2429, false⟩),  -- involved in positive regulation of
-  ([⟨.ro, 2327, false⟩, ⟨.ro, 2212, false⟩], ⟨.ro, 2430, false⟩),  -- involved in negative regulation of
-  ([⟨.ro, 2331, false⟩, ⟨.ro, 2212, false⟩], ⟨.ro, 2430, false⟩),  -- involved in negative regulation of
-  ([⟨.ro, 2327, false⟩, ⟨.bfo, 66, false⟩], ⟨.ro, 2432, false⟩),  -- is active in
-  ([⟨.ro, 2461, false⟩, ⟨.ro, 2465, false⟩, ⟨.ro, 2461, true⟩], ⟨.ro, 2440, false⟩),  -- symbiotically interacts with
-  ([⟨.ro, 2461, false⟩, ⟨.ro, 2466, false⟩, ⟨.ro, 2461, true⟩], ⟨.ro, 2441, false⟩),  -- commensually interacts with
-  ([⟨.ro, 2461, false⟩, ⟨.ro, 2467, false⟩, ⟨.ro, 2461, true⟩], ⟨.ro, 2442, false⟩),  -- mutualistically interacts with
-  ([⟨.ro, 2461, false⟩, ⟨.ro, 2468, false⟩, ⟨.ro, 2461, true⟩], ⟨.ro, 2443, false⟩),  -- interacts with via parasite-host interaction
-  ([⟨.ro, 2462, false⟩, ⟨.ro, 2468, false⟩, ⟨.ro, 2463, true⟩], ⟨.ro, 2444, false⟩),  -- parasite of
-  ([⟨.ro, 2215, false⟩, ⟨.ro, 2481, false⟩, ⟨.ro, 2400, false⟩], ⟨.ro, 2447, false⟩),  -- phosphorylates
-  ([⟨.ro, 2327, false⟩, ⟨.ro, 2211, false⟩, ⟨.ro, 2333, false⟩], ⟨.ro, 2448, false⟩),  -- directly regulates activity of
-  ([⟨.ro, 2327, false⟩, ⟨.ro, 2630, false⟩, ⟨.ro, 2333, false⟩], ⟨.ro, 2449, false⟩),  -- directly negatively regulates activity of
-  ([⟨.ro, 2327, false⟩, ⟨.ro, 2629, false⟩, ⟨.ro, 2333, false⟩], ⟨.ro, 2450, false⟩),  -- directly positively regulates activity of
-  ([⟨.bfo, 51, false⟩, ⟨.bfo, 66, false⟩], ⟨.ro, 2479, false⟩),  -- has part that occurs in
-  ([⟨.ro, 2215, false⟩, ⟨.ro, 2482, false⟩, ⟨.ro, 2400, false⟩], ⟨.ro, 2480, false⟩),  -- ubiquitinates
-  ([⟨.ro, 2488, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2488, false⟩),  -- existence starts during
-  ([⟨.ro, 2583, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2488, false⟩),  -- existence starts during
-  ([⟨.ro, 2492, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2492, false⟩),  -- existence ends during
-  ([⟨.ro, 2593, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2492, false⟩),  -- existence ends during
-  ([⟨.bfo, 50, false⟩, ⟨.ro, 2496, false⟩], ⟨.ro, 2496, false⟩),  -- existence starts during or after
-  ([⟨.ro, 2258, false⟩, ⟨.ro, 2496, false⟩], ⟨.ro, 2496, false⟩),  -- existence starts during or after
-  ([⟨.ro, 2496, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2496, false⟩),  -- existence starts during or after
-  ([⟨.ro, 2496, false⟩, ⟨.bfo, 62, false⟩], ⟨.ro, 2496, false⟩),  -- existence starts during or after
-  ([⟨.ro, 2496, false⟩, ⟨.ro, 2082, false⟩], ⟨.ro, 2496, false⟩),  -- existence starts during or after
-  ([⟨.ro, 2583, false⟩, ⟨.bfo, 62, false⟩, ⟨.ro, 2583, true⟩], ⟨.ro, 2496, false⟩),  -- existence starts during or after
-  ([⟨.bfo, 50, false⟩, ⟨.ro, 2497, false⟩], ⟨.ro, 2497, false⟩),  -- existence ends during or before
-  ([⟨.ro, 2286, false⟩, ⟨.ro, 2497, false⟩], ⟨.ro, 2497, false⟩),  -- existence ends during or before
-  ([⟨.ro, 2497, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2497, false⟩),  -- existence ends during or before
-  ([⟨.ro, 2497, false⟩, ⟨.bfo, 63, false⟩], ⟨.ro, 2497, false⟩),  -- existence ends during or before
-  ([⟨.ro, 2497, false⟩, ⟨.ro, 2082, false⟩], ⟨.ro, 2497, false⟩),  -- existence ends during or before
-  ([⟨.ro, 2593, false⟩, ⟨.bfo, 63, false⟩, ⟨.ro, 2593, true⟩], ⟨.ro, 2497, false⟩),  -- existence ends during or before
-  ([⟨.ro, 2507, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2509, false⟩),  -- determined by part of
-  ([⟨.ro, 2524, false⟩, ⟨.ro, 2525, false⟩], ⟨.ro, 2526, false⟩),  -- overlaps sequence of
-  ([⟨.ro, 2444, false⟩, ⟨.ro, 2444, false⟩], ⟨.ro, 2553, false⟩),  -- hyperparasite of
-  ([⟨.ro, 2445, false⟩, ⟨.ro, 2445, false⟩], ⟨.ro, 2554, false⟩),  -- hyperparasitized by
-  ([⟨.ro, 2327, false⟩, ⟨.ro, 2411, false⟩, ⟨.ro, 2233, false⟩], ⟨.ro, 2566, false⟩),  -- causally influences
-  ([⟨.ro, 2327, false⟩, ⟨.ro, 2411, false⟩, ⟨.ro, 2333, false⟩], ⟨.ro, 2566, false⟩),  -- causally influences
-  ([⟨.ro, 2234, false⟩, ⟨.ro, 12004, false⟩], ⟨.ro, 2578, false⟩),  -- directly regulates
-  ([⟨.bfo, 51, false⟩, ⟨.ro, 2215, false⟩], ⟨.ro, 2584, false⟩),  -- has part structure that is capable of
-  ([⟨.ro, 2215, false⟩, ⟨.ro, 2211, false⟩], ⟨.ro, 2596, false⟩),  -- capable of regulating
-  ([⟨.ro, 2215, false⟩, ⟨.ro, 2212, false⟩], ⟨.ro, 2597, false⟩),  -- capable of negatively regulating
-  ([⟨.ro, 2215, false⟩, ⟨.ro, 2213, false⟩], ⟨.ro, 2598, false⟩),  -- capable of positively regulating
-  ([⟨.ro, 2234, false⟩, ⟨.ro, 12005, false⟩], ⟨.ro, 2629, false⟩),  -- directly positively regulates
-  ([⟨.ro, 2234, false⟩, ⟨.ro, 12006, false⟩], ⟨.ro, 2630, false⟩),  -- directly negatively regulates
-  ([⟨.bfo, 66, true⟩, ⟨.ro, 2234, false⟩], ⟨.ro, 3000, false⟩),  -- produces
-  ([⟨.ro, 4024, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 4024, false⟩),  -- disease causes disruption of
-  ([⟨.ro, 4025, false⟩, ⟨.ro, 2215, false⟩], ⟨.ro, 4024, false⟩),  -- disease causes disruption of
-  ([⟨.ro, 4025, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 4025, false⟩),  -- disease causes dysfunction of
-  ([⟨.ro, 9501, false⟩, ⟨.ro, 2233, false⟩], ⟨.ro, 4028, false⟩),  -- realized in response to stimulus
-  ([⟨.ro, 2327, false⟩, ⟨.bfo, 51, false⟩], ⟨.ro, 4031, false⟩),  -- enables subfunction
-  ([⟨.ro, 2327, false⟩, ⟨.ro, 4047, false⟩], ⟨.ro, 4032, false⟩),  -- acts upstream of or within, positive effect
-  ([⟨.ro, 2327, false⟩, ⟨.ro, 4046, false⟩], ⟨.ro, 4033, false⟩),  -- acts upstream of or within, negative effect
-  ([⟨.ro, 2327, false⟩, ⟨.ro, 2304, false⟩], ⟨.ro, 4034, false⟩),  -- acts upstream of, positive effect
-  ([⟨.ro, 2327, false⟩, ⟨.ro, 2305, false⟩], ⟨.ro, 4035, false⟩),  -- acts upstream of, negative effect
-  ([⟨.bfo, 54, false⟩, ⟨.ro, 2404, false⟩], ⟨.ro, 9501, false⟩),  -- realized in response to
-  ([⟨.ro, 52, false⟩, ⟨.ro, 58, false⟩], ⟨.ro, 10001, false⟩),  -- generically depends on
-  ([⟨.ro, 59, false⟩, ⟨.ro, 53, false⟩], ⟨.ro, 10002, false⟩),  -- is carrier of
-  ([⟨.ro, 13001, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 13001, false⟩),  -- has synaptic IO in region
-  ([⟨.ro, 13002, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 13002, false⟩),  -- receives synaptic input in region
-  ([⟨.ro, 13003, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 13003, false⟩),  -- sends synaptic output to region
-  ([⟨.ro, 13007, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 13007, false⟩),  -- has sensory dendrite in
-  ([⟨.ro, 13010, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 13010, false⟩),  -- synapses restricted to region
-  ([⟨.ro, 15001, false⟩, ⟨.ro, 15003, false⟩], ⟨.ro, 15001, false⟩),  -- has exemplar data
-  ([⟨.ro, 2215, false⟩, ⟨.ro, 2233, false⟩], ⟨.ro, 17001, false⟩),  -- device utilizes material
-  ([⟨.ro, 2215, false⟩, ⟨.ro, 18001, false⟩, ⟨.ro, 2400, false⟩], ⟨.ro, 18002, false⟩),  -- myristoylates
-  ([⟨.ro, 2205, false⟩, ⟨.ro, 2327, false⟩], ⟨.ro, 18042, false⟩),  -- has gene product that enables
-  ([⟨.ro, 2211, false⟩, ⟨.ro, 19000, false⟩], ⟨.ro, 19000, false⟩),  -- regulates characteristic
-  ([⟨.ro, 2213, false⟩, ⟨.ro, 19001, false⟩], ⟨.ro, 19001, false⟩),  -- positively regulates characteristic
-  ([⟨.ro, 2212, false⟩, ⟨.ro, 19001, false⟩], ⟨.ro, 19002, false⟩),  -- negatively regulates characteristic
-  ([⟨.ro, 2213, false⟩, ⟨.ro, 19002, false⟩], ⟨.ro, 19002, false⟩)  -- negatively regulates characteristic
+  ([⟨.bfo, 50, false⟩, ⟨.bfo, 62, false⟩], ⟨.bfo, 62, false⟩),  -- 1: preceded by
+  ([⟨.ro, 2091, false⟩, ⟨.bfo, 62, false⟩], ⟨.bfo, 62, false⟩),  -- 2: preceded by
+  ([⟨.ro, 2092, false⟩, ⟨.bfo, 62, false⟩], ⟨.bfo, 62, false⟩),  -- 3: preceded by
+  ([⟨.bfo, 50, false⟩, ⟨.bfo, 63, false⟩], ⟨.bfo, 63, false⟩),  -- 4: precedes
+  ([⟨.ro, 2092, false⟩, ⟨.bfo, 63, false⟩], ⟨.bfo, 63, false⟩),  -- 5: precedes
+  ([⟨.bfo, 50, false⟩, ⟨.bfo, 66, false⟩], ⟨.bfo, 66, false⟩),  -- 6: occurs in
+  ([⟨.bfo, 66, false⟩, ⟨.bfo, 50, false⟩], ⟨.bfo, 66, false⟩),  -- 7: occurs in
+  ([⟨.bfo, 51, false⟩, ⟨.bfo, 55, false⟩, ⟨.ro, 52, false⟩], ⟨.ro, 57, false⟩),  -- 8: has participant
+  ([⟨.bfo, 51, false⟩, ⟨.ro, 57, false⟩], ⟨.ro, 57, false⟩),  -- 9: has participant
+  ([⟨.ro, 1025, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 1025, false⟩),  -- 10: located in
+  ([⟨.ro, 2005, false⟩, ⟨.ro, 2380, false⟩], ⟨.ro, 2005, false⟩),  -- 11: innervated by
+  ([⟨.ro, 2093, false⟩, ⟨.bfo, 62, false⟩], ⟨.ro, 2086, false⟩),  -- 13: ends after
+  ([⟨.ro, 2100, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2100, false⟩),  -- 17: has soma location
+  ([⟨.ro, 2102, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2102, false⟩),  -- 19: axon synapses in
+  ([⟨.ro, 2110, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2110, false⟩),  -- 20: has postsynaptic terminal in
+  ([⟨.ro, 2113, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2113, false⟩),  -- 21: has presynaptic terminal in
+  ([⟨.ro, 2121, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2121, false⟩),  -- 22: dendrite synapsed in
+  ([⟨.ro, 2130, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2130, false⟩),  -- 23: has synaptic terminal in
+  ([⟨.bfo, 50, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2131, false⟩),  -- 24: overlaps
+  ([⟨.bfo, 51, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2131, false⟩),  -- 25: overlaps
+  ([⟨.bfo, 51, false⟩, ⟨.ro, 2131, false⟩], ⟨.ro, 2131, false⟩),  -- 26: overlaps
+  ([⟨.ro, 2131, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2131, false⟩),  -- 27: overlaps
+  ([⟨.ro, 2134, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2134, false⟩),  -- 28: innervates
+  ([⟨.ro, 2156, false⟩, ⟨.ro, 2157, false⟩], ⟨.ro, 2158, false⟩),  -- 29: shares ancestor with
+  ([⟨.ro, 2005, false⟩, ⟨.ro, 2162, false⟩], ⟨.ro, 2162, false⟩),  -- 30: in taxon
+  ([⟨.ro, 2134, false⟩, ⟨.ro, 2162, false⟩], ⟨.ro, 2162, false⟩),  -- 32: in taxon
+  ([⟨.ro, 2150, false⟩, ⟨.ro, 2162, false⟩], ⟨.ro, 2162, false⟩),  -- 33: in taxon
+  ([⟨.ro, 2170, false⟩, ⟨.ro, 2162, false⟩], ⟨.ro, 2162, false⟩),  -- 34: in taxon
+  ([⟨.ro, 2387, false⟩, ⟨.ro, 2162, false⟩], ⟨.ro, 2162, false⟩),  -- 43: in taxon
+  ([⟨.ro, 2176, true⟩, ⟨.ro, 2176, false⟩], ⟨.ro, 2170, false⟩),  -- 47: connected to
+  ([⟨.ro, 2371, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2177, false⟩),  -- 48: attached to part of
+  ([⟨.ro, 2512, false⟩, ⟨.ro, 2510, false⟩], ⟨.ro, 2204, false⟩),  -- 49: gene product of
+  ([⟨.ro, 2511, false⟩, ⟨.ro, 2513, false⟩], ⟨.ro, 2205, false⟩),  -- 50: has gene product
+  ([⟨.ro, 2206, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2206, false⟩),  -- 51: expressed in
+  ([⟨.ro, 2211, false⟩, ⟨.ro, 2025, false⟩], ⟨.ro, 2211, false⟩),  -- 52: regulates
+  ([⟨.ro, 2230, false⟩, ⟨.ro, 2211, false⟩], ⟨.ro, 2211, false⟩),  -- 53: regulates
+  ([⟨.ro, 2578, false⟩, ⟨.ro, 2578, false⟩], ⟨.ro, 2211, false⟩),  -- 54: regulates
+  ([⟨.ro, 2230, false⟩, ⟨.ro, 2212, false⟩], ⟨.ro, 2212, false⟩),  -- 55: negatively regulates
+  ([⟨.ro, 2212, false⟩, ⟨.ro, 2212, false⟩], ⟨.ro, 2213, false⟩),  -- 56: positively regulates
+  ([⟨.ro, 2230, false⟩, ⟨.ro, 2213, false⟩], ⟨.ro, 2213, false⟩),  -- 57: positively regulates
+  ([⟨.ro, 2215, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2216, false⟩),  -- 58: capable of part of
+  ([⟨.ro, 2207, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2225, false⟩),  -- 59: develops from part of
+  ([⟨.ro, 2224, false⟩, ⟨.bfo, 66, false⟩], ⟨.ro, 2231, false⟩),  -- 61: has start location
+  ([⟨.ro, 2230, false⟩, ⟨.bfo, 66, false⟩], ⟨.ro, 2232, false⟩),  -- 62: has end location
+  ([⟨.ro, 2224, false⟩, ⟨.ro, 2233, false⟩], ⟨.ro, 2233, false⟩),  -- 63: has input
+  ([⟨.ro, 2230, false⟩, ⟨.ro, 2234, false⟩], ⟨.ro, 2234, false⟩),  -- 64: has output
+  ([⟨.bfo, 51, false⟩, ⟨.ro, 2254, false⟩], ⟨.ro, 2254, false⟩),  -- 65: has developmental contribution from
+  ([⟨.ro, 2203, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2255, false⟩),  -- 66: developmentally contributes to
+  ([⟨.ro, 2327, false⟩, ⟨.ro, 2411, false⟩], ⟨.ro, 2263, false⟩),  -- 67: acts upstream of
+  ([⟨.ro, 2327, false⟩, ⟨.ro, 2418, false⟩], ⟨.ro, 2264, false⟩),  -- 68: acts upstream of or within
+  ([⟨.bfo, 50, false⟩, ⟨.ro, 2210, false⟩], ⟨.ro, 2287, false⟩),  -- 69: part of developmental precursor of
+  ([⟨.ro, 52, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2314, false⟩),  -- 70: characteristic of part of
+  ([⟨.ro, 2314, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2314, false⟩),  -- 71: characteristic of part of
+  ([⟨.ro, 2327, false⟩, ⟨.bfo, 51, false⟩], ⟨.ro, 2327, false⟩),  -- 72: enables
+  ([⟨.ro, 2327, false⟩, ⟨.ro, 2017, false⟩], ⟨.ro, 2327, false⟩),  -- 73: enables
+  ([⟨.bfo, 50, false⟩, ⟨.ro, 2215, false⟩], ⟨.ro, 2329, false⟩),  -- 74: part of structure that is capable of
+  ([⟨.ro, 2327, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2331, false⟩),  -- 75: involved in
+  ([⟨.ro, 2331, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2331, false⟩),  -- 76: involved in
+  ([⟨.ro, 2338, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2338, false⟩),  -- 77: has target start location
+  ([⟨.ro, 2339, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2339, false⟩),  -- 78: has target end location
+  ([⟨.ro, 2377, false⟩, ⟨.ro, 2381, false⟩], ⟨.ro, 2380, false⟩),  -- 80: branching part of
+  ([⟨.ro, 2224, false⟩, ⟨.ro, 2400, false⟩], ⟨.ro, 2400, false⟩),  -- 81: has direct input
+  ([⟨.ro, 2407, false⟩, ⟨.ro, 2629, false⟩], ⟨.ro, 2407, false⟩),  -- 83: indirectly positively regulates
+  ([⟨.ro, 2409, false⟩, ⟨.ro, 2409, false⟩], ⟨.ro, 2407, false⟩),  -- 84: indirectly positively regulates
+  ([⟨.ro, 2629, false⟩, ⟨.ro, 2407, false⟩], ⟨.ro, 2407, false⟩),  -- 85: indirectly positively regulates
+  ([⟨.ro, 2629, false⟩, ⟨.ro, 2629, false⟩], ⟨.ro, 2407, false⟩),  -- 86: indirectly positively regulates
+  ([⟨.ro, 2418, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2418, false⟩),  -- 91: causally upstream of or within
+  ([⟨.ro, 2327, false⟩, ⟨.ro, 2211, false⟩], ⟨.ro, 2428, false⟩),  -- 92: involved in regulation of
+  ([⟨.ro, 2331, false⟩, ⟨.ro, 2211, false⟩], ⟨.ro, 2428, false⟩),  -- 93: involved in regulation of
+  ([⟨.ro, 2327, false⟩, ⟨.ro, 2213, false⟩], ⟨.ro, 2429, false⟩),  -- 94: involved in positive regulation of
+  ([⟨.ro, 2327, false⟩, ⟨.ro, 2212, false⟩], ⟨.ro, 2430, false⟩),  -- 96: involved in negative regulation of
+  ([⟨.ro, 2327, false⟩, ⟨.bfo, 66, false⟩], ⟨.ro, 2432, false⟩),  -- 98: is active in
+  ([⟨.ro, 2461, false⟩, ⟨.ro, 2465, false⟩, ⟨.ro, 2461, true⟩], ⟨.ro, 2440, false⟩),  -- 99: symbiotically interacts with
+  ([⟨.ro, 2461, false⟩, ⟨.ro, 2466, false⟩, ⟨.ro, 2461, true⟩], ⟨.ro, 2441, false⟩),  -- 100: commensually interacts with
+  ([⟨.ro, 2461, false⟩, ⟨.ro, 2467, false⟩, ⟨.ro, 2461, true⟩], ⟨.ro, 2442, false⟩),  -- 101: mutualistically interacts with
+  ([⟨.ro, 2461, false⟩, ⟨.ro, 2468, false⟩, ⟨.ro, 2461, true⟩], ⟨.ro, 2443, false⟩),  -- 102: interacts with via parasite-host interaction
+  ([⟨.ro, 2462, false⟩, ⟨.ro, 2468, false⟩, ⟨.ro, 2463, true⟩], ⟨.ro, 2444, false⟩),  -- 103: parasite of
+  ([⟨.ro, 2327, false⟩, ⟨.ro, 2630, false⟩, ⟨.ro, 2333, false⟩], ⟨.ro, 2449, false⟩),  -- 106: directly negatively regulates activity of
+  ([⟨.ro, 2327, false⟩, ⟨.ro, 2629, false⟩, ⟨.ro, 2333, false⟩], ⟨.ro, 2450, false⟩),  -- 107: directly positively regulates activity of
+  ([⟨.bfo, 51, false⟩, ⟨.bfo, 66, false⟩], ⟨.ro, 2479, false⟩),  -- 108: has part that occurs in
+  ([⟨.ro, 2488, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2488, false⟩),  -- 110: existence starts during
+  ([⟨.ro, 2583, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2488, false⟩),  -- 111: existence starts during
+  ([⟨.ro, 2492, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2492, false⟩),  -- 112: existence ends during
+  ([⟨.ro, 2593, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2492, false⟩),  -- 113: existence ends during
+  ([⟨.ro, 2258, false⟩, ⟨.ro, 2496, false⟩], ⟨.ro, 2496, false⟩),  -- 115: existence starts during or after
+  ([⟨.ro, 2496, false⟩, ⟨.bfo, 62, false⟩], ⟨.ro, 2496, false⟩),  -- 117: existence starts during or after
+  ([⟨.ro, 2496, false⟩, ⟨.ro, 2082, false⟩], ⟨.ro, 2496, false⟩),  -- 118: existence starts during or after
+  ([⟨.ro, 2583, false⟩, ⟨.bfo, 62, false⟩, ⟨.ro, 2583, true⟩], ⟨.ro, 2496, false⟩),  -- 119: existence starts during or after
+  ([⟨.ro, 2286, false⟩, ⟨.ro, 2497, false⟩], ⟨.ro, 2497, false⟩),  -- 121: existence ends during or before
+  ([⟨.ro, 2497, false⟩, ⟨.bfo, 63, false⟩], ⟨.ro, 2497, false⟩),  -- 123: existence ends during or before
+  ([⟨.ro, 2497, false⟩, ⟨.ro, 2082, false⟩], ⟨.ro, 2497, false⟩),  -- 124: existence ends during or before
+  ([⟨.ro, 2593, false⟩, ⟨.bfo, 63, false⟩, ⟨.ro, 2593, true⟩], ⟨.ro, 2497, false⟩),  -- 125: existence ends during or before
+  ([⟨.ro, 2507, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2509, false⟩),  -- 126: determined by part of
+  ([⟨.ro, 2524, false⟩, ⟨.ro, 2525, false⟩], ⟨.ro, 2526, false⟩),  -- 127: overlaps sequence of
+  ([⟨.ro, 2444, false⟩, ⟨.ro, 2444, false⟩], ⟨.ro, 2553, false⟩),  -- 128: hyperparasite of
+  ([⟨.ro, 2445, false⟩, ⟨.ro, 2445, false⟩], ⟨.ro, 2554, false⟩),  -- 129: hyperparasitized by
+  ([⟨.ro, 2327, false⟩, ⟨.ro, 2411, false⟩, ⟨.ro, 2233, false⟩], ⟨.ro, 2566, false⟩),  -- 130: causally influences
+  ([⟨.ro, 2327, false⟩, ⟨.ro, 2411, false⟩, ⟨.ro, 2333, false⟩], ⟨.ro, 2566, false⟩),  -- 131: causally influences
+  ([⟨.ro, 2234, false⟩, ⟨.ro, 12004, false⟩], ⟨.ro, 2578, false⟩),  -- 132: directly regulates
+  ([⟨.bfo, 51, false⟩, ⟨.ro, 2215, false⟩], ⟨.ro, 2584, false⟩),  -- 133: has part structure that is capable of
+  ([⟨.ro, 2215, false⟩, ⟨.ro, 2211, false⟩], ⟨.ro, 2596, false⟩),  -- 134: capable of regulating
+  ([⟨.ro, 2215, false⟩, ⟨.ro, 2212, false⟩], ⟨.ro, 2597, false⟩),  -- 135: capable of negatively regulating
+  ([⟨.ro, 2215, false⟩, ⟨.ro, 2213, false⟩], ⟨.ro, 2598, false⟩),  -- 136: capable of positively regulating
+  ([⟨.ro, 2234, false⟩, ⟨.ro, 12005, false⟩], ⟨.ro, 2629, false⟩),  -- 137: directly positively regulates
+  ([⟨.ro, 2234, false⟩, ⟨.ro, 12006, false⟩], ⟨.ro, 2630, false⟩),  -- 138: directly negatively regulates
+  ([⟨.bfo, 66, true⟩, ⟨.ro, 2234, false⟩], ⟨.ro, 3000, false⟩),  -- 139: produces
+  ([⟨.ro, 4024, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 4024, false⟩),  -- 140: disease causes disruption of
+  ([⟨.ro, 4025, false⟩, ⟨.ro, 2215, false⟩], ⟨.ro, 4024, false⟩),  -- 141: disease causes disruption of
+  ([⟨.ro, 2327, false⟩, ⟨.bfo, 51, false⟩], ⟨.ro, 4031, false⟩),  -- 144: enables subfunction
+  ([⟨.ro, 2327, false⟩, ⟨.ro, 4047, false⟩], ⟨.ro, 4032, false⟩),  -- 145: acts upstream of or within, positive effect
+  ([⟨.ro, 2327, false⟩, ⟨.ro, 4046, false⟩], ⟨.ro, 4033, false⟩),  -- 146: acts upstream of or within, negative effect
+  ([⟨.ro, 2327, false⟩, ⟨.ro, 2304, false⟩], ⟨.ro, 4034, false⟩),  -- 147: acts upstream of, positive effect
+  ([⟨.ro, 2327, false⟩, ⟨.ro, 2305, false⟩], ⟨.ro, 4035, false⟩),  -- 148: acts upstream of, negative effect
+  ([⟨.bfo, 54, false⟩, ⟨.ro, 2404, false⟩], ⟨.ro, 9501, false⟩),  -- 149: realized in response to
+  ([⟨.ro, 59, false⟩, ⟨.ro, 53, false⟩], ⟨.ro, 10002, false⟩),  -- 151: is carrier of
+  ([⟨.ro, 13001, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 13001, false⟩),  -- 152: has synaptic IO in region
+  ([⟨.ro, 13002, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 13002, false⟩),  -- 153: receives synaptic input in region
+  ([⟨.ro, 13003, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 13003, false⟩),  -- 154: sends synaptic output to region
+  ([⟨.ro, 13007, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 13007, false⟩),  -- 155: has sensory dendrite in
+  ([⟨.ro, 13010, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 13010, false⟩),  -- 156: synapses restricted to region
+  ([⟨.ro, 15001, false⟩, ⟨.ro, 15003, false⟩], ⟨.ro, 15001, false⟩),  -- 157: has exemplar data
+  ([⟨.ro, 2205, false⟩, ⟨.ro, 2327, false⟩], ⟨.ro, 18042, false⟩),  -- 160: has gene product that enables
+  ([⟨.ro, 2211, false⟩, ⟨.ro, 19000, false⟩], ⟨.ro, 19000, false⟩),  -- 161: regulates characteristic
+  ([⟨.ro, 2213, false⟩, ⟨.ro, 19001, false⟩], ⟨.ro, 19001, false⟩),  -- 162: positively regulates characteristic
+  ([⟨.ro, 2212, false⟩, ⟨.ro, 19001, false⟩], ⟨.ro, 19002, false⟩),  -- 163: negatively regulates characteristic
+  ([⟨.ro, 2213, false⟩, ⟨.ro, 19002, false⟩], ⟨.ro, 19002, false⟩)  -- 164: negatively regulates characteristic
+]
+
+/-- Chains imported from RO but switched off: faithful to RO yet unsound or overreaching. -/
+def chainsBlocked : List (List Rel × Rel) := [
+  ([⟨.ro, 2211, false⟩, ⟨.ro, 2313, false⟩], ⟨.ro, 2011, false⟩),  -- overreach or type mismatch; 12: regulates transport of
+  ([⟨.ro, 2224, false⟩, ⟨.ro, 2230, false⟩], ⟨.ro, 2087, false⟩),  -- bad in RO; 14: immediately preceded by
+  ([⟨.ro, 2091, false⟩, ⟨.bfo, 60, false⟩], ⟨.ro, 2089, false⟩),  -- obsolete relation; 15: starts before
+  ([⟨.ro, 2230, false⟩, ⟨.ro, 2224, false⟩], ⟨.ro, 2090, false⟩),  -- bad in RO; 16: immediately precedes
+  ([⟨.ro, 20104, false⟩, ⟨.bfo, 50, false⟩, ⟨.ro, 20105, false⟩], ⟨.ro, 2100, false⟩),  -- overreach or type mismatch; 18: has soma location
+  ([⟨.ro, 2131, false⟩, ⟨.ro, 2162, false⟩], ⟨.ro, 2162, false⟩),  -- taxon transfer across organisms; 31: in taxon
+  ([⟨.ro, 2176, false⟩, ⟨.ro, 2162, false⟩], ⟨.ro, 2162, false⟩),  -- taxon transfer across organisms; 35: in taxon
+  ([⟨.ro, 2206, false⟩, ⟨.ro, 2162, false⟩], ⟨.ro, 2162, false⟩),  -- taxon transfer across organisms; 36: in taxon
+  ([⟨.ro, 2211, false⟩, ⟨.ro, 2162, false⟩], ⟨.ro, 2162, false⟩),  -- taxon transfer across organisms; 37: in taxon
+  ([⟨.ro, 2214, false⟩, ⟨.ro, 2162, false⟩], ⟨.ro, 2162, false⟩),  -- taxon transfer across organisms; 38: in taxon
+  ([⟨.ro, 2215, false⟩, ⟨.ro, 2162, false⟩], ⟨.ro, 2162, false⟩),  -- taxon transfer across organisms; 39: in taxon
+  ([⟨.ro, 2254, false⟩, ⟨.ro, 2162, false⟩], ⟨.ro, 2162, false⟩),  -- taxon transfer across organisms; 40: in taxon
+  ([⟨.ro, 2256, false⟩, ⟨.ro, 2162, false⟩], ⟨.ro, 2162, false⟩),  -- taxon transfer across organisms; 41: in taxon
+  ([⟨.ro, 2295, false⟩, ⟨.ro, 2162, false⟩], ⟨.ro, 2162, false⟩),  -- taxon transfer across organisms; 42: in taxon
+  ([⟨.ro, 2490, false⟩, ⟨.ro, 2162, false⟩], ⟨.ro, 2162, false⟩),  -- taxon transfer across organisms; 44: in taxon
+  ([⟨.ro, 3000, false⟩, ⟨.ro, 2162, false⟩], ⟨.ro, 2162, false⟩),  -- taxon transfer across organisms; 45: in taxon
+  ([⟨.ro, 3001, false⟩, ⟨.ro, 2162, false⟩], ⟨.ro, 2162, false⟩),  -- taxon transfer across organisms; 46: in taxon
+  ([⟨.ro, 2207, false⟩, ⟨.ro, 1025, false⟩], ⟨.ro, 2226, false⟩),  -- overreach or type mismatch; 60: develops in
+  ([⟨.ro, 1025, false⟩, ⟨.ro, 1025, true⟩], ⟨.ro, 2379, false⟩),  -- bad in RO; 79: spatially coextensive with
+  ([⟨.ro, 2411, false⟩, ⟨.ro, 2402, false⟩], ⟨.ro, 2403, false⟩),  -- obsolete relation; 82: obsolete has indirect output
+  ([⟨.ro, 2409, false⟩, ⟨.ro, 2630, false⟩], ⟨.ro, 2409, false⟩),  -- bad in RO; 87: indirectly negatively regulates
+  ([⟨.ro, 2630, false⟩, ⟨.ro, 2409, false⟩], ⟨.ro, 2409, false⟩),  -- bad in RO; 88: indirectly negatively regulates
+  ([⟨.ro, 2630, false⟩, ⟨.ro, 2630, false⟩], ⟨.ro, 2409, false⟩),  -- bad in RO; 89: indirectly negatively regulates
+  ([⟨.ro, 2234, false⟩, ⟨.ro, 2233, false⟩], ⟨.ro, 2413, false⟩),  -- bad in RO (missing inverse); 90: provides input for
+  ([⟨.ro, 2331, false⟩, ⟨.ro, 2213, false⟩], ⟨.ro, 2429, false⟩),  -- signed or direct claim from unsigned premises; 95: involved in positive regulation of
+  ([⟨.ro, 2331, false⟩, ⟨.ro, 2212, false⟩], ⟨.ro, 2430, false⟩),  -- signed or direct claim from unsigned premises; 97: involved in negative regulation of
+  ([⟨.ro, 2215, false⟩, ⟨.ro, 2481, false⟩, ⟨.ro, 2400, false⟩], ⟨.ro, 2447, false⟩),  -- capability turned into event; 104: phosphorylates
+  ([⟨.ro, 2327, false⟩, ⟨.ro, 2211, false⟩, ⟨.ro, 2333, false⟩], ⟨.ro, 2448, false⟩),  -- signed or direct claim from unsigned premises; 105: directly regulates activity of
+  ([⟨.ro, 2215, false⟩, ⟨.ro, 2482, false⟩, ⟨.ro, 2400, false⟩], ⟨.ro, 2480, false⟩),  -- capability turned into event; 109: ubiquitinates
+  ([⟨.bfo, 50, false⟩, ⟨.ro, 2496, false⟩], ⟨.ro, 2496, false⟩),  -- continuant parts in existence-time chains; 114: existence starts during or after
+  ([⟨.ro, 2496, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2496, false⟩),  -- continuant parts in existence-time chains; 116: existence starts during or after
+  ([⟨.bfo, 50, false⟩, ⟨.ro, 2497, false⟩], ⟨.ro, 2497, false⟩),  -- continuant parts in existence-time chains; 120: existence ends during or before
+  ([⟨.ro, 2497, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 2497, false⟩),  -- continuant parts in existence-time chains; 122: existence ends during or before
+  ([⟨.ro, 4025, false⟩, ⟨.bfo, 50, false⟩], ⟨.ro, 4025, false⟩),  -- overreach or type mismatch; 142: disease causes dysfunction of
+  ([⟨.ro, 9501, false⟩, ⟨.ro, 2233, false⟩], ⟨.ro, 4028, false⟩),  -- overreach or type mismatch; 143: realized in response to stimulus
+  ([⟨.ro, 52, false⟩, ⟨.ro, 58, false⟩], ⟨.ro, 10001, false⟩),  -- overreach or type mismatch; 150: generically depends on
+  ([⟨.ro, 2215, false⟩, ⟨.ro, 2233, false⟩], ⟨.ro, 17001, false⟩),  -- capability turned into event; 158: device utilizes material
+  ([⟨.ro, 2215, false⟩, ⟨.ro, 18001, false⟩, ⟨.ro, 2400, false⟩], ⟨.ro, 18002, false⟩)  -- capability turned into event; 159: myristoylates
 ]
 
 /-- Coarse rdfs:domain / rdfs:range sorts. -/

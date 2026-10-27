@@ -35,7 +35,9 @@ inductive Derivation : Claim → Type
   | both {c : Claim} (d₁ d₂ : Derivation c) : Derivation c
   /-- Compose two relations along an RO axiom: a property chain `r₁ ∘ r₂ ⊑ r₃`, transitivity
   (`r ∘ r ⊑ r`), or the `is_a` laws (a subclass inherits its superclass's relations; a relation
-  to a subclass is a relation to the superclass). `RO.chainOK` decides which. -/
+  to a subclass is a relation to the superclass). `RO.chainOK` decides which. This is a logical
+  step, so its opinion is `Opinion.weakest`, not `chain`: the conclusion is as believed as the
+  weaker premise (decision recorded in CHANGELOG 2026-10-27, after the chain-length experiment). -/
   | relChain {k₁ k₂ k₃ : Kind} {a : Entity k₁} {b : Entity k₂} {c : Entity k₃} {r₁ r₂ r₃ : Rel}
       {h₁ : r₁.accepts k₁ k₂ = true} {h₂ : r₂.accepts k₂ k₃ = true}
       (ab : Derivation (.rel r₁ a b h₁)) (bc : Derivation (.rel r₂ b c h₂))
@@ -69,10 +71,10 @@ def opinion : {c : Claim} → Derivation c → Opinion
   | _, .viaActivity ab bt => ab.opinion.chain bt.opinion
   | _, .viaAmount am mt => am.opinion.chain mt.opinion
   | _, .both d₁ d₂ => d₁.opinion.fuse d₂.opinion
-  | _, .relChain ab bc .. => ab.opinion.chain bc.opinion
+  | _, .relChain ab bc .. => ab.opinion.weakest bc.opinion
   | _, .relInv ab .. => ab.opinion
-  | _, .notRelSub ab bc .. => ab.opinion.chain bc.opinion
-  | _, .notRelObj ac bc .. => ac.opinion.chain bc.opinion
+  | _, .notRelSub ab bc .. => ab.opinion.weakest bc.opinion
+  | _, .notRelObj ac bc .. => ac.opinion.weakest bc.opinion
 
 /-- The literature statements a derivation rests on, in order of first use. -/
 def axioms : {c : Claim} → Derivation c → List Statement

@@ -192,6 +192,29 @@ def ofReliability (r : ℚ) (h0 : 0 ≤ r) (h1 : r < 1) : Polarity → Opinion
   | .supports => ⟨r, 0, 1 - r, h0, le_rfl, by linarith, by ring⟩
   | .refutes => ⟨0, r, 1 - r, le_rfl, h0, by linarith, by ring⟩
 
+/-! ### Weakest link (logical steps) -/
+
+/-- Compose two opinions through a *logical* step, such as an RO property chain applied to two
+established relations: the conclusion is as believed as the weaker premise, and no less. Unlike
+`chain`, belief does not multiply, so a twelve-step partonomy is not penalised for being finely
+divided. Disbelief is zero, as for `chain`. -/
+def weakest (x y : Opinion) : Opinion where
+  belief := min x.belief y.belief
+  disbelief := 0
+  uncertainty := 1 - min x.belief y.belief
+  belief_nonneg := le_min x.belief_nonneg y.belief_nonneg
+  disbelief_nonneg := le_rfl
+  uncertainty_pos := by have := min_le_left x.belief y.belief; have := x.belief_lt_one; linarith
+  sum_eq_one := by ring
+
+theorem weakest_belief_le_left (x y : Opinion) : (weakest x y).belief ≤ x.belief := min_le_left _ _
+theorem weakest_belief_le_right (x y : Opinion) : (weakest x y).belief ≤ y.belief := min_le_right _ _
+theorem chain_le_weakest (x y : Opinion) : (chain x y).belief ≤ (weakest x y).belief := by
+  unfold chain weakest; simp only
+  rcases le_total x.belief y.belief with h | h
+  · rw [min_eq_left h]; nlinarith [x.belief_nonneg, y.belief_lt_one]
+  · rw [min_eq_right h]; nlinarith [y.belief_nonneg, x.belief_lt_one]
+
 /-! ### Printing -/
 
 /-- Fixed-point decimal rendering of a rational in `[0, 1]`, for reports. -/

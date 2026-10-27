@@ -49,18 +49,37 @@ lines[-1] = lines[-1].rstrip(',')
 lines += [']', '', '/-- owl:TransitiveProperty. -/', 'def transitive : List Rel := [']
 trans = [p for p in g.subjects(RDF.type, OWL.TransitiveProperty) if rel(p)]
 lines += [f'  {rel(p)},' for p in trans]; lines[-1] = lines[-1].rstrip(',')
-lines += [']', '', '/-- Property chains `(premises, conclusion)`; premises may include inverses. -/',
- 'def chains : List (List Rel × Rel) := [']
-n_ch = 0; skipped = 0
+import pathlib
+blocked = {}
+for ln in pathlib.Path('scripts/ro/blocked_chains.tsv').read_text().splitlines():
+    if ln.startswith('#') or not ln.strip(): continue
+    row, r1, r2, r3, rid, reason = ln.split('\t'); blocked[int(row)] = (r1, r2, r3, rid, reason)
+def lab_of(i):
+    if isinstance(i, rdflib.URIRef): return label(i)
+    return f'inverse({label(g.value(i, OWL.inverseOf))})'
+enabled, blocked_lines = [], []
+n_ch = 0; skipped = 0; row = 0
 for s, o in g.subject_objects(OWL.propertyChainAxiom):
     items = [rel(i) for i in Collection(g, o)]
     if rel(s) and all(items):
-        lines.append(f'  ([{", ".join(items)}], {rel(s)}),  -- {label(s)}'); n_ch += 1
+        row += 1; n_ch += 1
+        line = f'  ([{", ".join(items)}], {rel(s)}),  -- {row}: {label(s)}'
+        if row in blocked:
+            r1, r2, r3, rid, reason = blocked[row]
+            labs = [lab_of(i) for i in Collection(g, o)]
+            ok_ = (label(s) == r3) and (('∘' in r1) or (labs[0] == r1 and labs[-1] == r2))
+            assert ok_, f'blocked row {row} no longer matches table: {labs} {label(s)} vs {r1},{r2},{r3}'
+            blocked_lines.append(line.replace('  --', f'  -- {reason};'))
+        else: enabled.append(line)
     else: skipped += 1
-lines[-1] = lines[-1].replace('),  --', ')  --', 1) if lines[-1].endswith(label(s)) or True else lines[-1]
-# fix trailing comma on last chain line
-i = len(lines) - 1
-lines[i] = re.sub(r'\),(\s+--)', r')\1', lines[i])
+lines += [']', '', f'/-- Property chains `(premises, conclusion)` enabled for `chainOK`; premises may include inverses.',
+ f'{len(blocked_lines)} chains judged unsafe by default are in `chainsBlocked` (see docs/m1-checks.md). -/',
+ 'def chains : List (List Rel × Rel) := [']
+lines += enabled
+lines[-1] = re.sub(r'\),(\s+--)', r')\1', lines[-1])
+lines += [']', '', '/-- Chains imported from RO but switched off: faithful to RO yet unsound or overreaching. -/',
+ 'def chainsBlocked : List (List Rel × Rel) := [']
+lines += blocked_lines; lines[-1] = re.sub(r'\),(\s+--)', r')\1', lines[-1])
 lines += [']', '', '/-- Coarse rdfs:domain / rdfs:range sorts. -/', 'def domains : List (Rel × RelSort) := [']
 dom = []
 for s, o in g.subject_objects(RDFS.domain):
@@ -106,4 +125,4 @@ for s_, o in g.subject_objects(OWL.propertyChainAxiom):
 rows += ['', '## Transitive', '', ', '.join(label(p) for p in trans), '']
 import pathlib
 pathlib.Path('docs/ro-chains.md').write_text('\n'.join(rows))
-print(f'relations {len(props)}, inverses {n_inv}, transitive {len(trans)}, chains {n_ch} (skipped {skipped} with non-RO/BFO members), domains {len(dom)}, ranges {len(rng)}')
+print(f'relations {len(props)}, inverses {n_inv}, transitive {len(trans)}, chains {n_ch} ({len(blocked_lines)} blocked, {len(enabled)} enabled; skipped {skipped}), domains {len(dom)}, ranges {len(rng)}')
