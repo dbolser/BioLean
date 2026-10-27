@@ -20,6 +20,8 @@ inductive EvidenceKind
   | metaAnalysis
   | rct
   | curatedDb       -- a curated database assertion (UniProt, ChEBI role, GO annotation)
+  | textbook        -- a canonical textbook statement (consensus, not a primary result)
+  | ontologyAxiom   -- a logical axiom in an OBO ontology
   | mechanistic     -- in vivo / ex vivo mechanistic study
   | review
   | observational
@@ -55,6 +57,8 @@ instance EvidenceModel.standard : EvidenceModel where
     | .metaAnalysis => 9 / 10
     | .rct => 17 / 20
     | .curatedDb => 4 / 5
+    | .textbook => 4 / 5
+    | .ontologyAxiom => 9 / 10
     | .mechanistic => 7 / 10
     | .review => 3 / 5
     | .observational => 1 / 2
@@ -74,9 +78,10 @@ end Evidence
 
 namespace Statement
 
-/-- The evidence with repeated PMIDs removed: one paper is one piece of evidence. -/
+/-- The evidence with repeated PMIDs removed: one paper is one piece of evidence. PMID 0 marks
+non-paper evidence (textbooks, ontology axioms) and is never deduplicated. -/
 def distinctEvidence (s : Statement) : List Evidence :=
-  (s.evidence.foldl (fun acc e => if acc.any (·.pmid == e.pmid) then acc else acc ++ [e]) [])
+  (s.evidence.foldl (fun acc e => if e.pmid != 0 && acc.any (·.pmid == e.pmid) then acc else acc ++ [e]) [])
 
 /-- Fuse the evidence for a statement into one opinion. Fusion assumes the items are
 independent, so repeated PMIDs are dropped first. Shared findings cited by several

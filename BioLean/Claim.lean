@@ -1,4 +1,5 @@
 import BioLean.Ontology
+import BioLean.RO
 
 /-!
 # Claims
@@ -67,17 +68,48 @@ instance : ToString Target where
 
 instance : Repr Target := ⟨fun t _ => toString t⟩
 
+namespace Rel
+
+/-- Does relation `r` admit subject kind `k₁` and object kind `k₂`, by RO's rdfs:domain and
+rdfs:range? Relations with no declared domain or range accept anything. Inverses swap the two. -/
+def accepts (r : Rel) (k₁ k₂ : Kind) : Bool :=
+  let base := { r with inv := false }
+  let (d, g) := if r.inv then (RO.ranges, RO.domains) else (RO.domains, RO.ranges)
+  (match d.lookup base with | some s => s == k₁.sort | none => true) &&
+  (match g.lookup base with | some s => s == k₂.sort | none => true)
+
+def label (r : Rel) : String :=
+  let base := { r with inv := false }
+  let l := match RO.labels.lookup base with
+    | some l => l
+    | none => if r.ns == .rdfs then "is_a" else r.curie
+  if r.inv then s!"inverse({l})" else l
+
+instance : ToString Rel := ⟨label⟩
+
+end Rel
+
 /-- A formal claim. -/
 inductive Claim
   /-- `agent` has a `sign`ed effect on `target`. -/
   | effect {k : Kind} (agent : Entity k) (sign : Sign) (target : Target)
   /-- The `sign`ed effect of `agent` on `target` runs via `mediator`. -/
   | mediatedBy {k : Kind} (agent : Entity k) (sign : Sign) (target : Target) (mediator : Target)
+  /-- `a r b` for an RO relation `r`: part_of, occurs_in, has_output, is_a, ... The kinds must fit
+  RO's declared domain and range (`Rel.accepts`), checked by `decide` at construction. -/
+  | rel {k₁ k₂ : Kind} (r : Rel) (a : Entity k₁) (b : Entity k₂)
+      (h : r.accepts k₁ k₂ = true := by decide)
+  /-- `¬ (a r b)`: a genuine negation, e.g. "a prokaryotic cell has no nucleus as a part".
+  OWL EL cannot say this; CL fakes it with a `lacks_part` property. -/
+  | notRel {k₁ k₂ : Kind} (r : Rel) (a : Entity k₁) (b : Entity k₂)
+      (h : r.accepts k₁ k₂ = true := by decide)
 
 instance : ToString Claim where
   toString
     | .effect a s t => s!"{a} {s.arrow} {t}"
     | .mediatedBy a s t m => s!"{a} {s.arrow} {t}  via  {m}"
+    | .rel r a b _ => s!"{a} {r} {b}"
+    | .notRel r a b _ => s!"¬({a} {r} {b})"
 
 instance : Repr Claim := ⟨fun c _ => toString c⟩
 

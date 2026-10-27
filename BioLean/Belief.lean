@@ -57,6 +57,14 @@ def vacuous : Opinion :=
 def prob (o : Opinion) (a : ℚ := 1 / 2) : ℚ :=
   o.belief + a * o.uncertainty
 
+/-- The opinion about `¬c` given an opinion about `c`: belief and disbelief swap. -/
+def negate (o : Opinion) : Opinion :=
+  ⟨o.disbelief, o.belief, o.uncertainty, o.disbelief_nonneg, o.belief_nonneg, o.uncertainty_pos,
+    by have := o.sum_eq_one; linarith⟩
+
+@[simp] theorem negate_negate (o : Opinion) : o.negate.negate = o := by
+  cases o; rfl
+
 /-! ### Cumulative fusion -/
 
 /-- The denominator of cumulative fusion. -/

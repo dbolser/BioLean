@@ -1,3 +1,4 @@
+import BioLean.Rel
 /-!
 # Ontology-grounded entities
 
@@ -21,7 +22,14 @@ inductive Kind
   | disease    -- MONDO
   | anatomy    -- UBERON
   | cellType   -- CL
+  | component  -- GO cellular component
+  | taxon      -- NCBITaxon
   deriving DecidableEq, Repr
+
+/-- The BFO sort of a kind: processes and functions are occurrents, everything else a continuant. -/
+def Kind.sort : Kind → RelSort
+  | .process | .function => .occurrent
+  | _ => .continuant
 
 /-- A named, grounded thing of kind `k`. -/
 structure Entity (k : Kind) where
