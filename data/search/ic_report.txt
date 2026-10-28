@@ -1,0 +1,300 @@
+statements loaded: 1248  (rel 971, notRel 27, effect 250)
+depth 1: +770 facts (total 2018)
+depth 2: +538 facts (total 2556)
+depth 3: +242 facts (total 2798)
+depth 4: +1 facts (total 2799)
+
+asserted 1248, derived novel 1551; by rule {'relChain': 460, 'relTrans': 674, 'viaAmount': 73, 'isaInherit': 95, 'isaInheritEffect': 56, 'isaGeneralise': 185, 'viaActivity': 4, 'notRelSub': 4}
+clashes (rel and notRel both derived): 2
+neuron [CL:0000540] has part dendrite [GO:0030425]   [the-body-s-systems-m45539-50]
+¬neuron [CL:0000540] has part dendrite [GO:0030425]   [the-body-s-systems-m45539-54]
+
+neuron [CL:0000540] has part axon [GO:0030424]   [the-body-s-systems-m45539-323]
+¬neuron [CL:0000540] has part axon [GO:0030424]   [the-body-s-systems-m45539-109]
+
+novel by depth {1: 770, 2: 538, 3: 242, 4: 1}
+
+=== deepest novel facts (excluding plain inverses) ===
+digestive system [UBERON:0001007] has part structure that is capable of synthesize proteins [GO:0006412]   (relChain, b=0.80)
+  digestive system [UBERON:0001007] has part ribosomes [GO:0005840]   (relTrans, b=0.80)
+    digestive system [UBERON:0001007] has part organ [UBERON:0000062]   (isaInherit, b=0.80)
+      digestive system [UBERON:0001007] is_a organ system [UBERON:0000467]   [cell-structure-and-function-m45428-9]
+      organ system [UBERON:0000467] has part organ [UBERON:0000062]   [cell-structure-and-function-m45428-6]
+    organ [UBERON:0000062] has part ribosomes [GO:0005840]   (relTrans, b=0.80)
+      organ [UBERON:0000062] has part tissues [UBERON:0000479]   [cell-structure-and-function-m45428-5]
+      tissues [UBERON:0000479] has part ribosomes [GO:0005840]   (relTrans, b=0.80)
+        tissues [UBERON:0000479] has part cells [CL:0000000]   [cell-structure-and-function-m45428-4]
+        cells [CL:0000000] has part ribosomes [GO:0005840]   [cell-structure-and-function-m45429-11]
+  ribosomes [GO:0005840] capable of synthesize proteins [GO:0006412]   [cell-structure-and-function-m45429-12]
+
+body [UBERON:0000468] has part phosphorus atom [CHEBI:28659]   (relTrans, b=0.80)
+  body [UBERON:0000468] has part nucleotides [CHEBI:36976]   (relTrans, b=0.80)
+    body [UBERON:0000468] has part DNA [CHEBI:16991]   (relTrans, b=0.80)
+      body [UBERON:0000468] has part cells [CL:0000000]   [cell-structure-and-function-m45427-4]
+      cells [CL:0000000] has part DNA [CHEBI:16991]   [cell-structure-and-function-m45429-9]
+    DNA [CHEBI:16991] has part nucleotides [CHEBI:36976]   [molbio-m45473-14]
+  nucleotides [CHEBI:36976] has part phosphorus atom [CHEBI:28659]   (relTrans, b=0.80)
+    nucleotides [CHEBI:36976] has part phosphate group [CHEBI:32958]   [molbio-m45473-16]
+    phosphate group [CHEBI:32958] has part phosphorus atom [CHEBI:28659]   [molbio-m45473-164]
+
+body [UBERON:0000468] overlaps ribosomes [GO:0005840]   (relChain, b=0.80)
+  body [UBERON:0000468] has part ribosomal RNA [CHEBI:18111]   (relTrans, b=0.80)
+    body [UBERON:0000468] has part ribosomes [GO:0005840]   (relTrans, b=0.80)
+      body [UBERON:0000468] has part cells [CL:0000000]   [cell-structure-and-function-m45427-4]
+      cells [CL:0000000] has part ribosomes [GO:0005840]   [cell-structure-and-function-m45429-11]
+    ribosomes [GO:0005840] has part ribosomal RNA [CHEBI:18111]   [molbio-m45479-16]
+  ribosomal RNA [CHEBI:18111] part of ribosomes [GO:0005840]   [molbio-m45479-115]
+
+body [UBERON:0000468] overlaps mitotic spindle [GO:0072686]   (relChain, b=0.80)
+  body [UBERON:0000468] has part centrioles [GO:0005814]   (relTrans, b=0.80)
+    body [UBERON:0000468] has part centrosome [GO:0005813]   (relTrans, b=0.80)
+      body [UBERON:0000468] has part cells [CL:0000000]   [cell-structure-and-function-m45427-4]
+      cells [CL:0000000] has part centrosome [GO:0005813]   [cell-structure-and-function-m45432-318]
+    centrosome [GO:0005813] has part centrioles [GO:0005814]   [cell-structure-and-function-m45432-68]
+  centrioles [GO:0005814] overlaps mitotic spindle [GO:0072686]   (relChain, b=0.80)
+    centrioles [GO:0005814] has part microtubule [GO:0005874]   [cell-structure-and-function-m45432-70]
+    microtubule [GO:0005874] part of mitotic spindle [GO:0072686]   [reproduction-at-the-cellular-level-m45461-59]
+
+organ system [UBERON:0000467] overlaps endomembrane system [GO:0012505]   (relChain, b=0.80)
+  organ system [UBERON:0000467] has part tissues [UBERON:0000479]   (relTrans, b=0.80)
+    organ system [UBERON:0000467] has part organ [UBERON:0000062]   [cell-structure-and-function-m45428-6]
+    organ [UBERON:0000062] has part tissues [UBERON:0000479]   [cell-structure-and-function-m45428-5]
+  tissues [UBERON:0000479] overlaps endomembrane system [GO:0012505]   (relChain, b=0.80)
+    tissues [UBERON:0000479] has part plasma membrane [GO:0005886]   (relTrans, b=0.80)
+      tissues [UBERON:0000479] has part cells [CL:0000000]   [cell-structure-and-function-m45428-4]
+      cells [CL:0000000] has part plasma membrane [GO:0005886]   [cell-structure-and-function-m45429-5]
+    plasma membrane [GO:0005886] part of endomembrane system [GO:0012505]   [cell-structure-and-function-m45432-89]
+
+stomach [UBERON:0000945] overlaps endomembrane system [GO:0012505]   (relChain, b=0.80)
+  stomach [UBERON:0000945] has part tissues [UBERON:0000479]   (isaInherit, b=0.80)
+    stomach [UBERON:0000945] is_a organ [UBERON:0000062]   [cell-structure-and-function-m45428-8]
+    organ [UBERON:0000062] has part tissues [UBERON:0000479]   [cell-structure-and-function-m45428-5]
+  tissues [UBERON:0000479] overlaps endomembrane system [GO:0012505]   (relChain, b=0.80)
+    tissues [UBERON:0000479] has part plasma membrane [GO:0005886]   (relTrans, b=0.80)
+      tissues [UBERON:0000479] has part cells [CL:0000000]   [cell-structure-and-function-m45428-4]
+      cells [CL:0000000] has part plasma membrane [GO:0005886]   [cell-structure-and-function-m45429-5]
+    plasma membrane [GO:0005886] part of endomembrane system [GO:0012505]   [cell-structure-and-function-m45432-89]
+
+salivary glands [UBERON:0001044] overlaps endomembrane system [GO:0012505]   (relChain, b=0.80)
+  salivary glands [UBERON:0001044] has part tissues [UBERON:0000479]   (isaInherit, b=0.80)
+    salivary glands [UBERON:0001044] is_a organ [UBERON:0000062]   [the-body-s-systems-m45535-143]
+    organ [UBERON:0000062] has part tissues [UBERON:0000479]   [cell-structure-and-function-m45428-5]
+  tissues [UBERON:0000479] overlaps endomembrane system [GO:0012505]   (relChain, b=0.80)
+    tissues [UBERON:0000479] has part plasma membrane [GO:0005886]   (relTrans, b=0.80)
+      tissues [UBERON:0000479] has part cells [CL:0000000]   [cell-structure-and-function-m45428-4]
+      cells [CL:0000000] has part plasma membrane [GO:0005886]   [cell-structure-and-function-m45429-5]
+    plasma membrane [GO:0005886] part of endomembrane system [GO:0012505]   [cell-structure-and-function-m45432-89]
+
+gallbladder [UBERON:0002110] overlaps endomembrane system [GO:0012505]   (relChain, b=0.80)
+  gallbladder [UBERON:0002110] has part tissues [UBERON:0000479]   (isaInherit, b=0.80)
+    gallbladder [UBERON:0002110] is_a organ [UBERON:0000062]   [the-body-s-systems-m45535-152]
+    organ [UBERON:0000062] has part tissues [UBERON:0000479]   [cell-structure-and-function-m45428-5]
+  tissues [UBERON:0000479] overlaps endomembrane system [GO:0012505]   (relChain, b=0.80)
+    tissues [UBERON:0000479] has part plasma membrane [GO:0005886]   (relTrans, b=0.80)
+      tissues [UBERON:0000479] has part cells [CL:0000000]   [cell-structure-and-function-m45428-4]
+      cells [CL:0000000] has part plasma membrane [GO:0005886]   [cell-structure-and-function-m45429-5]
+    plasma membrane [GO:0005886] part of endomembrane system [GO:0012505]   [cell-structure-and-function-m45432-89]
+
+digestive system [UBERON:0001007] overlaps endomembrane system [GO:0012505]   (relChain, b=0.80)
+  digestive system [UBERON:0001007] has part tissues [UBERON:0000479]   (relTrans, b=0.80)
+    digestive system [UBERON:0001007] has part organ [UBERON:0000062]   (isaInherit, b=0.80)
+      digestive system [UBERON:0001007] is_a organ system [UBERON:0000467]   [cell-structure-and-function-m45428-9]
+      organ system [UBERON:0000467] has part organ [UBERON:0000062]   [cell-structure-and-function-m45428-6]
+    organ [UBERON:0000062] has part tissues [UBERON:0000479]   [cell-structure-and-function-m45428-5]
+  tissues [UBERON:0000479] overlaps endomembrane system [GO:0012505]   (relChain, b=0.80)
+    tissues [UBERON:0000479] has part plasma membrane [GO:0005886]   (relTrans, b=0.80)
+      tissues [UBERON:0000479] has part cells [CL:0000000]   [cell-structure-and-function-m45428-4]
+      cells [CL:0000000] has part plasma membrane [GO:0005886]   [cell-structure-and-function-m45429-5]
+    plasma membrane [GO:0005886] part of endomembrane system [GO:0012505]   [cell-structure-and-function-m45432-89]
+
+organ [UBERON:0000062] overlaps food [CHEBI:33290]   (relChain, b=0.80)
+  organ [UBERON:0000062] has part tissues [UBERON:0000479]   [cell-structure-and-function-m45428-5]
+  tissues [UBERON:0000479] overlaps food [CHEBI:33290]   (relChain, b=0.80)
+    tissues [UBERON:0000479] has part plasma membrane [GO:0005886]   (relTrans, b=0.80)
+      tissues [UBERON:0000479] has part cells [CL:0000000]   [cell-structure-and-function-m45428-4]
+      cells [CL:0000000] has part plasma membrane [GO:0005886]   [cell-structure-and-function-m45429-5]
+    plasma membrane [GO:0005886] overlaps food [CHEBI:33290]   (relChain, b=0.80)
+      plasma membrane [GO:0005886] has part sugars [CHEBI:16646]   [cell-structure-and-function-m45433-51]
+      sugars [CHEBI:16646] part of food [CHEBI:33290]   [the-body-s-systems-m45535-234]
+
+organ system [UBERON:0000467] overlaps food [CHEBI:33290]   (relChain, b=0.80)
+  organ system [UBERON:0000467] has part tissues [UBERON:0000479]   (relTrans, b=0.80)
+    organ system [UBERON:0000467] has part organ [UBERON:0000062]   [cell-structure-and-function-m45428-6]
+    organ [UBERON:0000062] has part tissues [UBERON:0000479]   [cell-structure-and-function-m45428-5]
+  tissues [UBERON:0000479] overlaps food [CHEBI:33290]   (relChain, b=0.80)
+    tissues [UBERON:0000479] has part plasma membrane [GO:0005886]   (relTrans, b=0.80)
+      tissues [UBERON:0000479] has part cells [CL:0000000]   [cell-structure-and-function-m45428-4]
+      cells [CL:0000000] has part plasma membrane [GO:0005886]   [cell-structure-and-function-m45429-5]
+    plasma membrane [GO:0005886] overlaps food [CHEBI:33290]   (relChain, b=0.80)
+      plasma membrane [GO:0005886] has part sugars [CHEBI:16646]   [cell-structure-and-function-m45433-51]
+      sugars [CHEBI:16646] part of food [CHEBI:33290]   [the-body-s-systems-m45535-234]
+
+stomach [UBERON:0000945] overlaps food [CHEBI:33290]   (relChain, b=0.80)
+  stomach [UBERON:0000945] has part tissues [UBERON:0000479]   (isaInherit, b=0.80)
+    stomach [UBERON:0000945] is_a organ [UBERON:0000062]   [cell-structure-and-function-m45428-8]
+    organ [UBERON:0000062] has part tissues [UBERON:0000479]   [cell-structure-and-function-m45428-5]
+  tissues [UBERON:0000479] overlaps food [CHEBI:33290]   (relChain, b=0.80)
+    tissues [UBERON:0000479] has part plasma membrane [GO:0005886]   (relTrans, b=0.80)
+      tissues [UBERON:0000479] has part cells [CL:0000000]   [cell-structure-and-function-m45428-4]
+      cells [CL:0000000] has part plasma membrane [GO:0005886]   [cell-structure-and-function-m45429-5]
+    plasma membrane [GO:0005886] overlaps food [CHEBI:33290]   (relChain, b=0.80)
+      plasma membrane [GO:0005886] has part sugars [CHEBI:16646]   [cell-structure-and-function-m45433-51]
+      sugars [CHEBI:16646] part of food [CHEBI:33290]   [the-body-s-systems-m45535-234]
+
+
+hubs excluded: ['ATP', 'Mitochondria', 'sugars', 'glycolytic process', 'chloroplast', 'photosynthesis', 'this transfer', 'brain', 'oxygen', 'light reactions of photosynthesis', 'neuron', 'RNA'] ...
+novel facts after dropping inverses-of-asserted and hub lifts: 1175; by rule {'relChain': 333, 'relTrans': 516, 'viaAmount': 56, 'isaInherit': 69, 'isaInheritEffect': 47, 'isaGeneralise': 146, 'viaActivity': 4, 'notRelSub': 4}
+
+=== information content (threshold 2.5) ===
+min-IC bin:         <1    <2    <3    <4    <5    <6    <7    <8    <9    9+ 1 end  none   all
+asserted            61    54   114   105   166   181   142    87    60    73   159    46  1248   median 5.04  mean 5.06
+derived (novel)    249   248   160   148   175   194   122    60    35    40   116     4  1551   median 3.48  mean 3.58
+
+--- top 25 derived by min IC (non-trivial) ---
+12.30  d1 viaActivity      neurotransmitters [CHEBI:25512] →+ amount(sodium [CHEBI:29101])
+12.30  d1 relTrans         ATP [CHEBI:15422] has part adenine [CHEBI:16708]
+12.30  d1 relTrans         chlorophyll a [CHEBI:18230] is_a pigment [CHEBI:26130]
+11.60  d1 isaInherit       ATP [CHEBI:15422] has part 2-deoxy-D-ribose [CHEBI:28816]
+11.60  d1 isaInherit       adenosine monophosphate (AMP) [CHEBI:16027] has part 2-deoxy-D-ribose [CHEBI:28816]
+11.60  d1 isaInherit       adenosine monophosphate (AMP) [CHEBI:16027] has part phosphate group [CHEBI:32958]
+11.60  d1 relChain         peptidoglycan [CHEBI:8005] overlaps food [CHEBI:33290]
+11.20  d2 relTrans         messenger RNA [CHEBI:33699] has part hydroxy group [CHEBI:43176]
+11.20  d1 notRelSub        ¬messenger RNA [CHEBI:33699] has part thymine [CHEBI:17821]
+11.20  d1 notRelSub        ¬messenger RNA [CHEBI:33699] has part 2-deoxy-D-ribose [CHEBI:28816]
+11.20  d1 relTrans         DNA [CHEBI:16991] has part 2-deoxy-D-ribose [CHEBI:28816]
+11.20  d1 relTrans         DNA [CHEBI:16991] has part phosphate group [CHEBI:32958]
+11.20  d1 isaInherit       messenger RNA [CHEBI:33699] has part cytosine [CHEBI:16040]
+11.20  d1 isaInherit       messenger RNA [CHEBI:33699] has part guanine [CHEBI:16235]
+11.20  d1 isaInherit       messenger RNA [CHEBI:33699] has part adenine [CHEBI:16708]
+11.20  d1 isaInherit       messenger RNA [CHEBI:33699] has part uracil [CHEBI:17568]
+11.20  d1 isaInherit       NAD+ [CHEBI:15846] derives from Vitamins [CHEBI:33229]
+10.91  d2 relTrans         adenosine monophosphate (AMP) [CHEBI:16027] has part phosphorus atom [CHEBI:28659]
+10.91  d2 relTrans         DNA [CHEBI:16991] has part phosphorus atom [CHEBI:28659]
+10.91  d1 relTrans         ATP [CHEBI:15422] has part phosphorus atom [CHEBI:28659]
+10.51  d2 isaGeneralise    NAD+ [CHEBI:15846] derives from nutrients [CHEBI:33284]
+10.51  d1 relTrans         peptidoglycan [CHEBI:8005] has part carbon atoms [CHEBI:27594]
+10.51  d1 relTrans         potassium [CHEBI:29103] is_a these molecules [CHEBI:23357]
+10.51  d1 relTrans         potassium [CHEBI:29103] is_a nutrients [CHEBI:33284]
+10.51  d1 isaGeneralise    Coenzymes [CHEBI:23354] derives from nutrients [CHEBI:33284]
+
+--- bottom 15 derived by min IC (trivial) ---
+ 0.00  d1 isaInherit       Animal cells [CL:0000548] has part nucleus [GO:0005634]
+ 0.00  d1 relTrans         Animal cells [CL:0000548] has part microtubule [GO:0005874]
+ 0.00  d1 isaInherit       Animal cells [CL:0000548] has part plasma membrane [GO:0005886]
+ 0.00  d1 isaInherit       Animal cells [CL:0000548] has part organelles [GO:0043226]
+ 0.00  d1 isaInherit       Animal cells [CL:0000548] has part membrane-bound organelle [GO:0043231]
+ 0.00  d1 relTrans         organ [UBERON:0000062] has part cells [CL:0000000]
+ 0.00  d1 isaInherit       muscle tissue [UBERON:0002385] has part cells [CL:0000000]
+ 0.00  d1 isaInherit       broken down [GO:0006007] occurs in cells [CL:0000000]
+ 0.00  d1 isaInherit       nucleotide-excision repair [GO:0006289] occurs in cells [CL:0000000]
+ 0.00  d1 isaInherit       mismatch repair [GO:0006298] occurs in cells [CL:0000000]
+ 0.00  d1 isaInherit       transfer RNA [CHEBI:17843] located in cells [CL:0000000]
+ 0.00  d1 isaInherit       messenger RNA [CHEBI:33699] located in cells [CL:0000000]
+ 0.00  d1 relChain         cells [CL:0000000] overlaps endomembrane system [GO:0012505]
+ 0.00  d1 relChain         cells [CL:0000000] has part structure that is capable of synthesize proteins [GO:0006412]
+ 0.00  d1 relChain         cells [CL:0000000] has part structure that is capable of transmembrane transport [GO:0055085]
+
+IC >= 2.5 keeps 837 of 1551; trivial (<2.5) 603; unjudged (an end has no IC, bound >= 2.5) 111
+of the 837 ends-min keepers, 606 also pass on the derivation bottleneck (min IC over every entity in the proof)
+hub list keeps 1175: of those IC-trivial 423, IC-kept 654, unjudged 98
+hub list removes 376: of those IC-kept 183, IC-trivial 180, unjudged 13
+hub terms with IC >= 2.5: 19 of 25; with no IC: 0
+hub terms (degree, IC): ATP (37, 12.3), brain (30, 2.0), cells (27, 0.0), plasma membrane (22, 2.3), nucleus (19, 2.2), chloroplast (19, 4.6), photosynthesis (17, 7.0), RNA (16, 7.8), prokaryotic cell (16, 6.7), sugars (15, 3.6), DNA (15, 11.2), oxygen (14, 11.2), Mitochondria (14, 4.1), ribosomes (14, 5.4), Calvin cycle (14, 10.1), this transfer (14, 7.5), mitotic nuclear division (14, 6.5), cytoplasm (13, 1.3), glucose (12, 9.2), glycolytic process (12, 7.4), light reactions of photosynthesis (12, 7.4), neuron (11, 1.4), synthesize proteins (11, 5.0), heart (11, 4.1), proteins (10, 7.0)
+
+=== random sample of interesting novel facts ===
+thick filament [GO:0032982] part of structure that is capable of locomotion [GO:0040011]   (relChain, b=0.80)
+  thick filament [GO:0032982] part of skeletal muscle [UBERON:0014892]   (relTrans, b=0.80)
+    thick filament [GO:0032982] part of sarcomere [GO:0030017]   [the-body-s-systems-m45538-249]
+    sarcomere [GO:0030017] part of skeletal muscle [UBERON:0014892]   (relTrans, b=0.80)
+      sarcomere [GO:0030017] part of skeletal muscle [UBERON:0001134]   [the-body-s-systems-m45538-318]
+      skeletal muscle [UBERON:0001134] part of skeletal muscle [UBERON:0014892]   [the-body-s-systems-m45538-215]
+  skeletal muscle [UBERON:0014892] capable of locomotion [GO:0040011]   [the-body-s-systems-m45538-217]
+
+prokaryotic cell [CL:0000520] overlaps food [CHEBI:33290]   (relChain, b=0.80)
+  prokaryotic cell [CL:0000520] has part peptidoglycan [CHEBI:8005]   (relTrans, b=0.80)
+    prokaryotic cell [CL:0000520] has part cell wall [GO:0005618]   [cell-structure-and-function-m45429-57]
+    cell wall [GO:0005618] has part peptidoglycan [CHEBI:8005]   [cell-structure-and-function-m45432-224]
+  peptidoglycan [CHEBI:8005] overlaps food [CHEBI:33290]   (relChain, b=0.80)
+    peptidoglycan [CHEBI:8005] has part sugars [CHEBI:16646]   [cell-structure-and-function-m45429-22]
+    sugars [CHEBI:16646] part of food [CHEBI:33290]   [the-body-s-systems-m45535-234]
+
+a process [GO:0006119] has part that occurs in inner layer [GO:0005743]   (relChain, b=0.80)
+  a process [GO:0006119] has part this transfer [GO:0022904]   [how-cells-obtain-energy-m45439-79]
+  this transfer [GO:0022904] occurs in inner layer [GO:0005743]   [how-cells-obtain-energy-m45439-34]
+
+macrophages [CL:0000235] →− process(digestion [GO:0007586])   (viaAmount, b=0.64)
+  macrophages [CL:0000235] →− amount(bacteria [NCBITaxon:2])   (isaInheritEffect, b=0.80)
+    macrophages [CL:0000235] is_a cells of the immune system [CL:0000738]   [cell-structure-and-function-m45432-168]
+    cells of the immune system [CL:0000738] →− amount(bacteria [NCBITaxon:2])   [cell-structure-and-function-m45427-11]
+  bacteria [NCBITaxon:2] →+ process(digestion [GO:0007586])   [the-body-s-systems-m45535-130]
+
+superior vena cava [UBERON:0001585] connected to inferior vena cava [UBERON:0001072]   (isaInherit, b=0.80)
+  superior vena cava [UBERON:0001585] is_a blood vessel [UBERON:0001981]   (relTrans, b=0.80)
+    superior vena cava [UBERON:0001585] is_a veins [UBERON:0001638]   [the-body-s-systems-m45536-239]
+    veins [UBERON:0001638] is_a blood vessel [UBERON:0001981]   [the-body-s-systems-m45536-244]
+  blood vessel [UBERON:0001981] connected to inferior vena cava [UBERON:0001072]   [the-body-s-systems-m45534-193]
+
+prometaphase [GO:0000236] overlaps mitotic phase [GO:0000087]   (relChain, b=0.80)
+  prometaphase [GO:0000236] part of mitotic nuclear division [GO:0140014]   [reproduction-at-the-cellular-level-m45461-208]
+  mitotic nuclear division [GO:0140014] part of mitotic phase [GO:0000087]   [reproduction-at-the-cellular-level-m45461-44]
+
+adrenal gland [UBERON:0002369] overlaps endocrine gland [UBERON:0002368]   (relChain, b=0.80)
+  adrenal gland [UBERON:0002369] has part adrenal medulla [UBERON:0001236]   [the-body-s-systems-m45537-144]
+  adrenal medulla [UBERON:0001236] part of endocrine gland [UBERON:0002368]   (isaGeneralise, b=0.80)
+    adrenal medulla [UBERON:0001236] part of adrenal gland [UBERON:0002369]   [the-body-s-systems-m45537-288]
+    adrenal gland [UBERON:0002369] is_a endocrine gland [UBERON:0002368]   [the-body-s-systems-m45537-23]
+
+this transfer [GO:0022904] →− process(broken down [GO:0006007])   (viaAmount, b=0.64)
+  this transfer [GO:0022904] →+ amount(ATP [CHEBI:15422])   [how-cells-obtain-energy-m45439-63]
+  ATP [CHEBI:15422] →− process(broken down [GO:0006007])   [how-cells-obtain-energy-m45437-244]
+
+stomach [UBERON:0000945] has part ribosomal RNA [CHEBI:18111]   (relTrans, b=0.80)
+  stomach [UBERON:0000945] has part tissues [UBERON:0000479]   (isaInherit, b=0.80)
+    stomach [UBERON:0000945] is_a organ [UBERON:0000062]   [cell-structure-and-function-m45428-8]
+    organ [UBERON:0000062] has part tissues [UBERON:0000479]   [cell-structure-and-function-m45428-5]
+  tissues [UBERON:0000479] has part ribosomal RNA [CHEBI:18111]   (relTrans, b=0.80)
+    tissues [UBERON:0000479] has part ribosomes [GO:0005840]   (relTrans, b=0.80)
+      tissues [UBERON:0000479] has part cells [CL:0000000]   [cell-structure-and-function-m45428-4]
+      cells [CL:0000000] has part ribosomes [GO:0005840]   [cell-structure-and-function-m45429-11]
+    ribosomes [GO:0005840] has part ribosomal RNA [CHEBI:18111]   [molbio-m45479-16]
+
+cytoplasmic contents are separated [GO:0000910] overlaps cell cycle [GO:0007049]   (relChain, b=0.80)
+  cytoplasmic contents are separated [GO:0000910] part of arise from [GO:0051301]   [reproduction-at-the-cellular-level-m45461-88]
+  arise from [GO:0051301] part of cell cycle [GO:0007049]   [reproduction-at-the-cellular-level-m45455-1]
+
+LDL [GO:0034362] →+ process(absorbs nutrients [GO:0050892])   (isaInheritEffect, b=0.80)
+  LDL [GO:0034362] is_a lipid [CHEBI:18059]   (relTrans, b=0.80)
+    LDL [GO:0034362] is_a cholesterol [CHEBI:16113]   [cell-structure-and-function-m45435-53]
+    cholesterol [CHEBI:16113] is_a lipid [CHEBI:18059]   [how-cells-obtain-energy-m45444-30]
+  lipid [CHEBI:18059] →+ process(absorbs nutrients [GO:0050892])   [the-body-s-systems-m45535-186]
+
+neuronal cell body [GO:0043025] has part structure that is capable of alcohol metabolism [GO:0006066]   (relChain, b=0.80)
+  neuronal cell body [GO:0043025] has part smooth endoplasmic reticulum [GO:0005790]   [the-body-s-systems-m45539-47]
+  smooth endoplasmic reticulum [GO:0005790] capable of alcohol metabolism [GO:0006066]   [cell-structure-and-function-m45432-139]
+
+a process [GO:0006119] has part protein complexes [GO:0098803]   (relTrans, b=0.80)
+  a process [GO:0006119] has part this transfer [GO:0022904]   [how-cells-obtain-energy-m45439-79]
+  this transfer [GO:0022904] has part protein complexes [GO:0098803]   [how-cells-obtain-energy-m45439-46]
+
+transfer RNA [CHEBI:17843] has part uracil [CHEBI:17568]   (isaInherit, b=0.80)
+  transfer RNA [CHEBI:17843] is_a RNA [CHEBI:33697]   [molbio-m45479-28]
+  RNA [CHEBI:33697] has part uracil [CHEBI:17568]   [molbio-m45473-61]
+
+DNA-templated transcription termination [GO:0006353] has output nucleic acids [CHEBI:33696]   (isaGeneralise, b=0.80)
+  DNA-templated transcription termination [GO:0006353] has output RNA [CHEBI:33697]   (isaGeneralise, b=0.80)
+    DNA-templated transcription termination [GO:0006353] has output messenger RNA [CHEBI:33699]   [molbio-m45476-64]
+    messenger RNA [CHEBI:33699] is_a RNA [CHEBI:33697]   [molbio-m45476-76]
+  RNA [CHEBI:33697] is_a nucleic acids [CHEBI:33696]   [molbio-m45473-47]
+
+
+=== path query: cancer nodes 2 -> energy-metabolism nodes 10 ===
+DNA repair genes [GO:0006281] →− phenotype(cancer [HP:0002664]) -> DNA repair genes [GO:0006281] occurs in cells [CL:0000000] -> metabolic reactions [GO:0008152] occurs in cells [CL:0000000]
+
+DNA repair genes [GO:0006281] →− phenotype(cancer [HP:0002664]) -> DNA repair genes [GO:0006281] occurs in cells [CL:0000000] -> cells [CL:0000000] capable of ATP biosynthetic process [GO:0006754]
+
+DNA repair genes [GO:0006281] →− phenotype(cancer [HP:0002664]) -> DNA repair genes [GO:0006281] occurs in cells [CL:0000000] -> cells [CL:0000000] has part cytoplasm [GO:0005737] -> glycolytic process [GO:0006096] occurs in cytoplasm [GO:0005737]
+
+DNA repair genes [GO:0006281] →− phenotype(cancer [HP:0002664]) -> DNA repair genes [GO:0006281] occurs in cells [CL:0000000] -> cells [CL:0000000] capable of endocytosis [GO:0006897] -> endocytosis [GO:0006897] has input ATP [CHEBI:15422]
+
+DNA repair genes [GO:0006281] →− phenotype(cancer [HP:0002664]) -> DNA repair genes [GO:0006281] occurs in cells [CL:0000000] -> cells [CL:0000000] has part DNA [CHEBI:16991] -> Mitochondria [GO:0005739] has part DNA [CHEBI:16991] -> ATP synthesis coupled proton transport [GO:0042776] occurs in Mitochondria [GO:0005739]
+

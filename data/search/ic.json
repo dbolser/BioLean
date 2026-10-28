@@ -1,0 +1,9799 @@
+{
+"definition": "IC = -log(subtree/N); subtree = the term plus its descendants over is_a+part_of (ic) or is_a (ic_isa); N = live terms in the ontology (GO: namespace)",
+"no_ic_for_prefixes": {
+"CHMO": 2,
+"COB": 1,
+"ECOCORE": 4,
+"EFO": 1,
+"ENVO": 8,
+"HP": 40,
+"MAXO": 2,
+"MONDO": 53,
+"NBO": 3,
+"NCBITaxon": 60,
+"NCIT": 49,
+"OBA": 3,
+"OBI": 3,
+"PATO": 59,
+"PO": 11,
+"PR": 29,
+"SO": 42,
+"UO": 1
+},
+"sources": {
+"CHEBI": "chebi_lite.obo chebi/256",
+"CL": "cl-basic.obo cl/releases/2026-06-08/cl-basic.owl",
+"GO": "go.obo releases/2026-07-26",
+"UBERON": "uberon.obo releases/2026-10-01"
+},
+"terms": {
+"CHEBI:10545": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:10545",
+"n": 219011,
+"name": "electron",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:12777": {
+"ic": 9.812,
+"ic_isa": 9.812,
+"id": "CHEBI:12777",
+"n": 219011,
+"name": "vitamin A",
+"subtree": 12,
+"subtree_isa": 12
+},
+"CHEBI:15343": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:15343",
+"n": 219011,
+"name": "acetaldehyde",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:15346": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:15346",
+"n": 219011,
+"name": "coenzyme A",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:15351": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:15351",
+"n": 219011,
+"name": "acetyl-CoA",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:15355": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:15355",
+"n": 219011,
+"name": "acetylcholine",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:15361": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:15361",
+"n": 219011,
+"name": "pyruvate",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:15365": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:15365",
+"n": 219011,
+"name": "acetylsalicylic acid",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:15377": {
+"ic": 10.351,
+"ic_isa": 10.351,
+"id": "CHEBI:15377",
+"n": 219011,
+"name": "water",
+"subtree": 7,
+"subtree_isa": 7
+},
+"CHEBI:15378": {
+"ic": 10.9106,
+"ic_isa": 10.9106,
+"id": "CHEBI:15378",
+"n": 219011,
+"name": "hydron",
+"subtree": 4,
+"subtree_isa": 4
+},
+"CHEBI:15379": {
+"ic": 11.1983,
+"ic_isa": 11.1983,
+"id": "CHEBI:15379",
+"n": 219011,
+"name": "dioxygen",
+"subtree": 3,
+"subtree_isa": 3
+},
+"CHEBI:15422": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:15422",
+"n": 219011,
+"name": "ATP",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:15841": {
+"ic": 5.7616,
+"ic_isa": 5.7616,
+"id": "CHEBI:15841",
+"n": 219011,
+"name": "polypeptide",
+"subtree": 689,
+"subtree_isa": 689
+},
+"CHEBI:15846": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:15846",
+"n": 219011,
+"name": "NAD(+)",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:15996": {
+"ic": 11.6037,
+"ic_isa": 11.6037,
+"id": "CHEBI:15996",
+"n": 219011,
+"name": "GTP",
+"subtree": 2,
+"subtree_isa": 2
+},
+"CHEBI:16027": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:16027",
+"n": 219011,
+"name": "adenosine 5'-monophosphate",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:16040": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:16040",
+"n": 219011,
+"name": "cytosine",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:16113": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:16113",
+"n": 219011,
+"name": "cholesterol",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:16134": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:16134",
+"n": 219011,
+"name": "ammonia",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:16136": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:16136",
+"n": 219011,
+"name": "hydrogen sulfide",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:16183": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:16183",
+"n": 219011,
+"name": "methane",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:16189": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:16189",
+"n": 219011,
+"name": "sulfate",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:16199": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:16199",
+"n": 219011,
+"name": "urea",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:16235": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:16235",
+"n": 219011,
+"name": "guanine",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:16236": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:16236",
+"n": 219011,
+"name": "ethanol",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:16238": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:16238",
+"n": 219011,
+"name": "FAD",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:16240": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:16240",
+"n": 219011,
+"name": "hydrogen peroxide",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:16247": {
+"ic": 3.4124,
+"ic_isa": 3.4124,
+"id": "CHEBI:16247",
+"n": 219011,
+"name": "phospholipid",
+"subtree": 7219,
+"subtree_isa": 7219
+},
+"CHEBI:16474": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:16474",
+"n": 219011,
+"name": "NADPH",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:16526": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:16526",
+"n": 219011,
+"name": "carbon dioxide",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:16646": {
+"ic": 3.6394,
+"ic_isa": 3.6394,
+"id": "CHEBI:16646",
+"n": 219011,
+"name": "carbohydrate",
+"subtree": 5753,
+"subtree_isa": 5753
+},
+"CHEBI:16670": {
+"ic": 2.6557,
+"ic_isa": 2.6557,
+"id": "CHEBI:16670",
+"n": 219011,
+"name": "peptide",
+"subtree": 15386,
+"subtree_isa": 15386
+},
+"CHEBI:16708": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:16708",
+"n": 219011,
+"name": "adenine",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:16710": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:16710",
+"n": 219011,
+"name": "D-ribulose 1,5-bisphosphate",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:167164": {
+"ic": 7.5433,
+"ic_isa": 7.5433,
+"id": "CHEBI:167164",
+"n": 219011,
+"name": "mineral nutrient",
+"subtree": 116,
+"subtree_isa": 116
+},
+"CHEBI:16761": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:16761",
+"n": 219011,
+"name": "ADP",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:16811": {
+"ic": 10.9106,
+"ic_isa": 10.9106,
+"id": "CHEBI:16811",
+"n": 219011,
+"name": "methionine",
+"subtree": 4,
+"subtree_isa": 4
+},
+"CHEBI:16908": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:16908",
+"n": 219011,
+"name": "NADH",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:16991": {
+"ic": 11.1983,
+"ic_isa": 11.1983,
+"id": "CHEBI:16991",
+"n": 219011,
+"name": "deoxyribonucleic acid",
+"subtree": 3,
+"subtree_isa": 3
+},
+"CHEBI:17026": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:17026",
+"n": 219011,
+"name": "progesterone",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:17029": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:17029",
+"n": 219011,
+"name": "chitin",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:17089": {
+"ic": 9.2058,
+"ic_isa": 9.2058,
+"id": "CHEBI:17089",
+"n": 219011,
+"name": "glycoprotein",
+"subtree": 22,
+"subtree_isa": 22
+},
+"CHEBI:17234": {
+"ic": 9.2058,
+"ic_isa": 9.2058,
+"id": "CHEBI:17234",
+"n": 219011,
+"name": "glucose",
+"subtree": 22,
+"subtree_isa": 22
+},
+"CHEBI:17306": {
+"ic": 11.1983,
+"ic_isa": 11.1983,
+"id": "CHEBI:17306",
+"n": 219011,
+"name": "maltose",
+"subtree": 3,
+"subtree_isa": 3
+},
+"CHEBI:17347": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:17347",
+"n": 219011,
+"name": "testosterone",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:17351": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:17351",
+"n": 219011,
+"name": "linoleic acid",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:17514": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:17514",
+"n": 219011,
+"name": "cyanide",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:17544": {
+"ic": 11.6037,
+"ic_isa": 11.6037,
+"id": "CHEBI:17544",
+"n": 219011,
+"name": "hydrogencarbonate",
+"subtree": 2,
+"subtree_isa": 2
+},
+"CHEBI:17568": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:17568",
+"n": 219011,
+"name": "uracil",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:17716": {
+"ic": 11.1983,
+"ic_isa": 11.1983,
+"id": "CHEBI:17716",
+"n": 219011,
+"name": "lactose",
+"subtree": 3,
+"subtree_isa": 3
+},
+"CHEBI:17754": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:17754",
+"n": 219011,
+"name": "glycerol",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:17794": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:17794",
+"n": 219011,
+"name": "3-phospho-D-glyceric acid",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:17821": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:17821",
+"n": 219011,
+"name": "thymine",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:17843": {
+"ic": 9.0388,
+"ic_isa": 9.0388,
+"id": "CHEBI:17843",
+"n": 219011,
+"name": "transfer RNA",
+"subtree": 26,
+"subtree_isa": 26
+},
+"CHEBI:17855": {
+"ic": 4.8215,
+"ic_isa": 4.8215,
+"id": "CHEBI:17855",
+"n": 219011,
+"name": "triglyceride",
+"subtree": 1764,
+"subtree_isa": 1764
+},
+"CHEBI:17877": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:17877",
+"n": 219011,
+"name": "FADH2",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:17992": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:17992",
+"n": 219011,
+"name": "sucrose",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:17996": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:17996",
+"n": 219011,
+"name": "chloride",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:18009": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:18009",
+"n": 219011,
+"name": "NADP(+)",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:18059": {
+"ic": 1.7042,
+"ic_isa": 1.7042,
+"id": "CHEBI:18059",
+"n": 219011,
+"name": "lipid",
+"subtree": 39843,
+"subtree_isa": 39843
+},
+"CHEBI:18111": {
+"ic": 11.6037,
+"ic_isa": 11.6037,
+"id": "CHEBI:18111",
+"n": 219011,
+"name": "ribosomal RNA",
+"subtree": 2,
+"subtree_isa": 2
+},
+"CHEBI:18154": {
+"ic": 4.798,
+"ic_isa": 4.798,
+"id": "CHEBI:18154",
+"n": 219011,
+"name": "polysaccharide",
+"subtree": 1806,
+"subtree_isa": 1806
+},
+"CHEBI:18230": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:18230",
+"n": 219011,
+"name": "chlorophyll a",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:18246": {
+"ic": 10.9106,
+"ic_isa": 10.9106,
+"id": "CHEBI:18246",
+"n": 219011,
+"name": "(1->4)-beta-D-glucan",
+"subtree": 4,
+"subtree_isa": 4
+},
+"CHEBI:18258": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:18258",
+"n": 219011,
+"name": "3,3',5-triiodo-L-thyronine",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:18282": {
+"ic": 9.5243,
+"ic_isa": 9.5243,
+"id": "CHEBI:18282",
+"n": 219011,
+"name": "nucleobase",
+"subtree": 16,
+"subtree_isa": 16
+},
+"CHEBI:18420": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:18420",
+"n": 219011,
+"name": "magnesium(2+)",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:22868": {
+"ic": 11.1983,
+"ic_isa": 11.1983,
+"id": "CHEBI:22868",
+"n": 219011,
+"name": "bile salt",
+"subtree": 3,
+"subtree_isa": 3
+},
+"CHEBI:23044": {
+"ic": 6.6765,
+"ic_isa": 6.6765,
+"id": "CHEBI:23044",
+"n": 219011,
+"name": "carotenoid",
+"subtree": 276,
+"subtree_isa": 276
+},
+"CHEBI:23354": {
+"ic": 11.6037,
+"ic_isa": 11.6037,
+"id": "CHEBI:23354",
+"n": 219011,
+"name": "coenzyme",
+"subtree": 2,
+"subtree_isa": 2
+},
+"CHEBI:23357": {
+"ic": 10.5051,
+"ic_isa": 10.5051,
+"id": "CHEBI:23357",
+"n": 219011,
+"name": "cofactor",
+"subtree": 6,
+"subtree_isa": 6
+},
+"CHEBI:23888": {
+"ic": 6.6444,
+"ic_isa": 6.6444,
+"id": "CHEBI:23888",
+"n": 219011,
+"name": "drug",
+"subtree": 285,
+"subtree_isa": 285
+},
+"CHEBI:23924": {
+"ic": 5.8916,
+"ic_isa": 5.8916,
+"id": "CHEBI:23924",
+"n": 219011,
+"name": "enzyme inhibitor",
+"subtree": 605,
+"subtree_isa": 605
+},
+"CHEBI:24020": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:24020",
+"n": 219011,
+"name": "fat-soluble vitamin (role)",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:24261": {
+"ic": 8.4467,
+"ic_isa": 8.4467,
+"id": "CHEBI:24261",
+"n": 219011,
+"name": "glucocorticoid",
+"subtree": 47,
+"subtree_isa": 47
+},
+"CHEBI:24621": {
+"ic": 9.4637,
+"ic_isa": 9.4637,
+"id": "CHEBI:24621",
+"n": 219011,
+"name": "hormone",
+"subtree": 17,
+"subtree_isa": 17
+},
+"CHEBI:24835": {
+"ic": 5.2296,
+"ic_isa": 5.2296,
+"id": "CHEBI:24835",
+"n": 219011,
+"name": "inorganic molecular entity",
+"subtree": 1173,
+"subtree_isa": 1173
+},
+"CHEBI:24859": {
+"ic": 11.1983,
+"ic_isa": 11.1983,
+"id": "CHEBI:24859",
+"n": 219011,
+"name": "iodine atom",
+"subtree": 3,
+"subtree_isa": 3
+},
+"CHEBI:24870": {
+"ic": 2.6744,
+"ic_isa": 2.6744,
+"id": "CHEBI:24870",
+"n": 219011,
+"name": "ion",
+"subtree": 15100,
+"subtree_isa": 15100
+},
+"CHEBI:24875": {
+"ic": 11.1983,
+"ic_isa": 11.1983,
+"id": "CHEBI:24875",
+"n": 219011,
+"name": "iron cation",
+"subtree": 3,
+"subtree_isa": 3
+},
+"CHEBI:25212": {
+"ic": 8.2025,
+"ic_isa": 8.2025,
+"id": "CHEBI:25212",
+"n": 219011,
+"name": "metabolite",
+"subtree": 60,
+"subtree_isa": 60
+},
+"CHEBI:25354": {
+"ic": 10.2174,
+"ic_isa": 10.2174,
+"id": "CHEBI:25354",
+"n": 219011,
+"name": "mineralocorticoid",
+"subtree": 8,
+"subtree_isa": 8
+},
+"CHEBI:25512": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:25512",
+"n": 219011,
+"name": "neurotransmitter",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:25805": {
+"ic": 10.5051,
+"ic_isa": 10.5051,
+"id": "CHEBI:25805",
+"n": 219011,
+"name": "oxygen atom",
+"subtree": 6,
+"subtree_isa": 6
+},
+"CHEBI:25944": {
+"ic": 8.0922,
+"ic_isa": 8.0922,
+"id": "CHEBI:25944",
+"n": 219011,
+"name": "pesticide",
+"subtree": 67,
+"subtree_isa": 67
+},
+"CHEBI:26020": {
+"ic": 3.0046,
+"ic_isa": 3.0046,
+"id": "CHEBI:26020",
+"n": 219011,
+"name": "phosphate",
+"subtree": 10854,
+"subtree_isa": 10854
+},
+"CHEBI:26130": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:26130",
+"n": 219011,
+"name": "biological pigment",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:26401": {
+"ic": 4.6806,
+"ic_isa": 4.6806,
+"id": "CHEBI:26401",
+"n": 219011,
+"name": "purines",
+"subtree": 2031,
+"subtree_isa": 2031
+},
+"CHEBI:26561": {
+"ic": 6.5865,
+"ic_isa": 6.5865,
+"id": "CHEBI:26561",
+"n": 219011,
+"name": "ribonucleotide",
+"subtree": 302,
+"subtree_isa": 302
+},
+"CHEBI:26764": {
+"ic": 6.408,
+"ic_isa": 6.408,
+"id": "CHEBI:26764",
+"n": 219011,
+"name": "steroid hormone",
+"subtree": 361,
+"subtree_isa": 361
+},
+"CHEBI:27026": {
+"ic": 9.9943,
+"ic_isa": 9.9943,
+"id": "CHEBI:27026",
+"n": 219011,
+"name": "toxin",
+"subtree": 10,
+"subtree_isa": 10
+},
+"CHEBI:27300": {
+"ic": 6.7096,
+"ic_isa": 6.7096,
+"id": "CHEBI:27300",
+"n": 219011,
+"name": "vitamin D",
+"subtree": 267,
+"subtree_isa": 267
+},
+"CHEBI:27432": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:27432",
+"n": 219011,
+"name": "alpha-linolenic acid",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:27470": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:27470",
+"n": 219011,
+"name": "folic acid",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:27584": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:27584",
+"n": 219011,
+"name": "aldosterone",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:27594": {
+"ic": 10.5051,
+"ic_isa": 10.5051,
+"id": "CHEBI:27594",
+"n": 219011,
+"name": "carbon atom",
+"subtree": 6,
+"subtree_isa": 6
+},
+"CHEBI:27888": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:27888",
+"n": 219011,
+"name": "chlorophyll b",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:28017": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:28017",
+"n": 219011,
+"name": "starch",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:28087": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:28087",
+"n": 219011,
+"name": "glycogen",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:28260": {
+"ic": 9.2524,
+"ic_isa": 9.2524,
+"id": "CHEBI:28260",
+"n": 219011,
+"name": "galactose",
+"subtree": 21,
+"subtree_isa": 21
+},
+"CHEBI:28358": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:28358",
+"n": 219011,
+"name": "rac-lactic acid",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:28384": {
+"ic": 8.9647,
+"ic_isa": 8.9647,
+"id": "CHEBI:28384",
+"n": 219011,
+"name": "vitamin K",
+"subtree": 28,
+"subtree_isa": 28
+},
+"CHEBI:28659": {
+"ic": 10.9106,
+"ic_isa": 10.9106,
+"id": "CHEBI:28659",
+"n": 219011,
+"name": "phosphorus atom",
+"subtree": 4,
+"subtree_isa": 4
+},
+"CHEBI:28757": {
+"ic": 9.3011,
+"ic_isa": 9.3011,
+"id": "CHEBI:28757",
+"n": 219011,
+"name": "fructose",
+"subtree": 20,
+"subtree_isa": 20
+},
+"CHEBI:28816": {
+"ic": 11.6037,
+"ic_isa": 11.6037,
+"id": "CHEBI:28816",
+"n": 219011,
+"name": "2-deoxy-D-ribose",
+"subtree": 2,
+"subtree_isa": 2
+},
+"CHEBI:28966": {
+"ic": 8.4467,
+"ic_isa": 8.4467,
+"id": "CHEBI:28966",
+"n": 219011,
+"name": "chlorophyll",
+"subtree": 47,
+"subtree_isa": 47
+},
+"CHEBI:29052": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:29052",
+"n": 219011,
+"name": "D-glyceraldehyde 3-phosphate",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:29073": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:29073",
+"n": 219011,
+"name": "L-ascorbic acid",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:29101": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:29101",
+"n": 219011,
+"name": "sodium(1+)",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:29103": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:29103",
+"n": 219011,
+"name": "potassium(1+)",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:29108": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:29108",
+"n": 219011,
+"name": "calcium(2+)",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:29287": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:29287",
+"n": 219011,
+"name": "gold atom",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:29356": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:29356",
+"n": 219011,
+"name": "oxide(2-)",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:30212": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:30212",
+"n": 219011,
+"name": "photon",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:30660": {
+"ic": 11.1983,
+"ic_isa": 11.1983,
+"id": "CHEBI:30660",
+"n": 219011,
+"name": "thyroxine",
+"subtree": 3,
+"subtree_isa": 3
+},
+"CHEBI:30879": {
+"ic": 3.5877,
+"ic_isa": 3.5877,
+"id": "CHEBI:30879",
+"n": 219011,
+"name": "alcohol",
+"subtree": 6058,
+"subtree_isa": 6058
+},
+"CHEBI:32816": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:32816",
+"n": 219011,
+"name": "pyruvic acid",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:32958": {
+"ic": 11.6037,
+"ic_isa": 11.6037,
+"id": "CHEBI:32958",
+"n": 219011,
+"name": "phosphate group",
+"subtree": 2,
+"subtree_isa": 2
+},
+"CHEBI:33229": {
+"ic": 11.1983,
+"ic_isa": 11.1983,
+"id": "CHEBI:33229",
+"n": 219011,
+"name": "vitamin (role)",
+"subtree": 3,
+"subtree_isa": 3
+},
+"CHEBI:33234": {
+"ic": 9.4637,
+"ic_isa": 9.4637,
+"id": "CHEBI:33234",
+"n": 219011,
+"name": "vitamin E",
+"subtree": 17,
+"subtree_isa": 17
+},
+"CHEBI:33284": {
+"ic": 10.5051,
+"ic_isa": 10.5051,
+"id": "CHEBI:33284",
+"n": 219011,
+"name": "nutrient",
+"subtree": 6,
+"subtree_isa": 6
+},
+"CHEBI:33290": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:33290",
+"n": 219011,
+"name": "food",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:33563": {
+"ic": 4.3907,
+"ic_isa": 4.3907,
+"id": "CHEBI:33563",
+"n": 219011,
+"name": "glycolipid",
+"subtree": 2714,
+"subtree_isa": 2714
+},
+"CHEBI:33568": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:33568",
+"n": 219011,
+"name": "adrenaline",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:33569": {
+"ic": 11.1983,
+"ic_isa": 11.1983,
+"id": "CHEBI:33569",
+"n": 219011,
+"name": "noradrenaline",
+"subtree": 3,
+"subtree_isa": 3
+},
+"CHEBI:33696": {
+"ic": 7.6818,
+"ic_isa": 7.6818,
+"id": "CHEBI:33696",
+"n": 219011,
+"name": "nucleic acid",
+"subtree": 101,
+"subtree_isa": 101
+},
+"CHEBI:33697": {
+"ic": 7.8082,
+"ic_isa": 7.8082,
+"id": "CHEBI:33697",
+"n": 219011,
+"name": "ribonucleic acid",
+"subtree": 89,
+"subtree_isa": 89
+},
+"CHEBI:33699": {
+"ic": 11.1983,
+"ic_isa": 11.1983,
+"id": "CHEBI:33699",
+"n": 219011,
+"name": "messenger RNA",
+"subtree": 3,
+"subtree_isa": 3
+},
+"CHEBI:33709": {
+"ic": 4.8757,
+"ic_isa": 4.8757,
+"id": "CHEBI:33709",
+"n": 219011,
+"name": "amino acid",
+"subtree": 1671,
+"subtree_isa": 1671
+},
+"CHEBI:33839": {
+"ic": 4.0297,
+"ic_isa": 4.0297,
+"id": "CHEBI:33839",
+"n": 219011,
+"name": "macromolecule",
+"subtree": 3894,
+"subtree_isa": 3894
+},
+"CHEBI:33942": {
+"ic": 9.3011,
+"ic_isa": 9.3011,
+"id": "CHEBI:33942",
+"n": 219011,
+"name": "ribose",
+"subtree": 20,
+"subtree_isa": 20
+},
+"CHEBI:34543": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:34543",
+"n": 219011,
+"name": "argipressin",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:35143": {
+"ic": 11.1983,
+"ic_isa": 11.1983,
+"id": "CHEBI:35143",
+"n": 219011,
+"name": "hemoglobin",
+"subtree": 3,
+"subtree_isa": 3
+},
+"CHEBI:35366": {
+"ic": 4.0284,
+"ic_isa": 4.0284,
+"id": "CHEBI:35366",
+"n": 219011,
+"name": "fatty acid",
+"subtree": 3899,
+"subtree_isa": 3899
+},
+"CHEBI:35381": {
+"ic": 5.6531,
+"ic_isa": 5.6531,
+"id": "CHEBI:35381",
+"n": 219011,
+"name": "monosaccharide",
+"subtree": 768,
+"subtree_isa": 768
+},
+"CHEBI:35469": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:35469",
+"n": 219011,
+"name": "antidepressant",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:35472": {
+"ic": 11.6037,
+"ic_isa": 11.6037,
+"id": "CHEBI:35472",
+"n": 219011,
+"name": "anti-inflammatory drug",
+"subtree": 2,
+"subtree_isa": 2
+},
+"CHEBI:35842": {
+"ic": 10.9106,
+"ic_isa": 10.9106,
+"id": "CHEBI:35842",
+"n": 219011,
+"name": "antirheumatic drug",
+"subtree": 4,
+"subtree_isa": 4
+},
+"CHEBI:36080": {
+"ic": 6.9936,
+"ic_isa": 6.9936,
+"id": "CHEBI:36080",
+"n": 219011,
+"name": "protein",
+"subtree": 201,
+"subtree_isa": 201
+},
+"CHEBI:36229": {
+"ic": 11.1983,
+"ic_isa": 11.1983,
+"id": "CHEBI:36229",
+"n": 219011,
+"name": "allolactose",
+"subtree": 3,
+"subtree_isa": 3
+},
+"CHEBI:36233": {
+"ic": 6.3307,
+"ic_isa": 6.3307,
+"id": "CHEBI:36233",
+"n": 219011,
+"name": "disaccharide",
+"subtree": 390,
+"subtree_isa": 390
+},
+"CHEBI:36914": {
+"ic": 6.4533,
+"ic_isa": 6.4533,
+"id": "CHEBI:36914",
+"n": 219011,
+"name": "inorganic ion",
+"subtree": 345,
+"subtree_isa": 345
+},
+"CHEBI:36976": {
+"ic": 5.8527,
+"ic_isa": 5.8527,
+"id": "CHEBI:36976",
+"n": 219011,
+"name": "nucleotide",
+"subtree": 629,
+"subtree_isa": 629
+},
+"CHEBI:37396": {
+"ic": 9.812,
+"ic_isa": 9.812,
+"id": "CHEBI:37396",
+"n": 219011,
+"name": "proteoglycan",
+"subtree": 12,
+"subtree_isa": 12
+},
+"CHEBI:37958": {
+"ic": 10.6874,
+"ic_isa": 10.6874,
+"id": "CHEBI:37958",
+"n": 219011,
+"name": "dye",
+"subtree": 5,
+"subtree_isa": 5
+},
+"CHEBI:3892": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:3892",
+"n": 219011,
+"name": "corticotropin",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:39026": {
+"ic": 11.1983,
+"ic_isa": 11.1983,
+"id": "CHEBI:39026",
+"n": 219011,
+"name": "low-density lipoprotein",
+"subtree": 3,
+"subtree_isa": 3
+},
+"CHEBI:39127": {
+"ic": 11.1983,
+"ic_isa": 11.1983,
+"id": "CHEBI:39127",
+"n": 219011,
+"name": "magnesium cation",
+"subtree": 3,
+"subtree_isa": 3
+},
+"CHEBI:39447": {
+"ic": 5.0357,
+"ic_isa": 5.0357,
+"id": "CHEBI:39447",
+"n": 219011,
+"name": "pyrimidines",
+"subtree": 1424,
+"subtree_isa": 1424
+},
+"CHEBI:40574": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:40574",
+"n": 219011,
+"name": "acetyl group",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:43176": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:43176",
+"n": 219011,
+"name": "hydroxy group",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:44185": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:44185",
+"n": 219011,
+"name": "methotrexate",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:4431": {
+"ic": 7.5607,
+"ic_isa": 7.5607,
+"id": "CHEBI:4431",
+"n": 219011,
+"name": "deoxyribonucleotide",
+"subtree": 114,
+"subtree_isa": 114
+},
+"CHEBI:46195": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:46195",
+"n": 219011,
+"name": "paracetamol",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:46662": {
+"ic": 7.0342,
+"ic_isa": 7.0342,
+"id": "CHEBI:46662",
+"n": 219011,
+"name": "mineral",
+"subtree": 193,
+"subtree_isa": 193
+},
+"CHEBI:46883": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:46883",
+"n": 219011,
+"name": "carboxy group",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:4705": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:4705",
+"n": 219011,
+"name": "double-stranded DNA",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:472552": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:472552",
+"n": 219011,
+"name": "5-bromo-2'-deoxyuridine",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:49637": {
+"ic": 10.9106,
+"ic_isa": 10.9106,
+"id": "CHEBI:49637",
+"n": 219011,
+"name": "hydrogen atom",
+"subtree": 4,
+"subtree_isa": 4
+},
+"CHEBI:50113": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:50113",
+"n": 219011,
+"name": "androgen",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:50114": {
+"ic": 10.9106,
+"ic_isa": 10.9106,
+"id": "CHEBI:50114",
+"n": 219011,
+"name": "estrogen",
+"subtree": 4,
+"subtree_isa": 4
+},
+"CHEBI:50858": {
+"ic": 6.4798,
+"ic_isa": 6.4798,
+"id": "CHEBI:50858",
+"n": 219011,
+"name": "corticosteroid",
+"subtree": 336,
+"subtree_isa": 336
+},
+"CHEBI:50860": {
+"ic": 0.0731,
+"ic_isa": 0.0731,
+"id": "CHEBI:50860",
+"n": 219011,
+"name": "organic molecular entity",
+"subtree": 203570,
+"subtree_isa": 203570
+},
+"CHEBI:59132": {
+"ic": 10.5051,
+"ic_isa": 10.5051,
+"id": "CHEBI:59132",
+"n": 219011,
+"name": "antigen",
+"subtree": 6,
+"subtree_isa": 6
+},
+"CHEBI:59549": {
+"ic": 8.1072,
+"ic_isa": 8.1072,
+"id": "CHEBI:59549",
+"n": 219011,
+"name": "essential fatty acid",
+"subtree": 66,
+"subtree_isa": 66
+},
+"CHEBI:60027": {
+"ic": 6.0763,
+"ic_isa": 6.0763,
+"id": "CHEBI:60027",
+"n": 219011,
+"name": "polymer",
+"subtree": 503,
+"subtree_isa": 503
+},
+"CHEBI:60311": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:60311",
+"n": 219011,
+"name": "thyroid hormone",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:64909": {
+"ic": 9.7319,
+"ic_isa": 9.7319,
+"id": "CHEBI:64909",
+"n": 219011,
+"name": "poison",
+"subtree": 13,
+"subtree_isa": 13
+},
+"CHEBI:72695": {
+"ic": 0.6488,
+"ic_isa": 0.6488,
+"id": "CHEBI:72695",
+"n": 219011,
+"name": "organic molecule",
+"subtree": 114470,
+"subtree_isa": 114470
+},
+"CHEBI:7872": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:7872",
+"n": 219011,
+"name": "oxytocin",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:7916": {
+"ic": 11.6037,
+"ic_isa": 11.6037,
+"id": "CHEBI:7916",
+"n": 219011,
+"name": "pantothenic acid",
+"subtree": 2,
+"subtree_isa": 2
+},
+"CHEBI:8005": {
+"ic": 11.6037,
+"ic_isa": 11.6037,
+"id": "CHEBI:8005",
+"n": 219011,
+"name": "peptidoglycan",
+"subtree": 2,
+"subtree_isa": 2
+},
+"CHEBI:81145": {
+"ic": 12.2969,
+"ic_isa": 12.2969,
+"id": "CHEBI:81145",
+"n": 219011,
+"name": "Thymine dimer",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CHEBI:87631": {
+"ic": 9.2058,
+"ic_isa": 9.2058,
+"id": "CHEBI:87631",
+"n": 219011,
+"name": "statin",
+"subtree": 22,
+"subtree_isa": 22
+},
+"CL:0000000": {
+"ic": 0.0024,
+"ic_isa": 0.003,
+"id": "CL:0000000",
+"n": 3335,
+"name": "cell",
+"subtree": 3327,
+"subtree_isa": 3325
+},
+"CL:0000019": {
+"ic": 6.1663,
+"ic_isa": 6.1663,
+"id": "CL:0000019",
+"n": 3335,
+"name": "sperm",
+"subtree": 7,
+"subtree_isa": 7
+},
+"CL:0000025": {
+"ic": 8.1122,
+"ic_isa": 8.1122,
+"id": "CL:0000025",
+"n": 3335,
+"name": "egg cell",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CL:0000034": {
+"ic": 3.4209,
+"ic_isa": 3.4209,
+"id": "CL:0000034",
+"n": 3335,
+"name": "stem cell",
+"subtree": 109,
+"subtree_isa": 109
+},
+"CL:0000057": {
+"ic": 3.4583,
+"ic_isa": 3.4583,
+"id": "CL:0000057",
+"n": 3335,
+"name": "fibroblast",
+"subtree": 105,
+"subtree_isa": 105
+},
+"CL:0000066": {
+"ic": 1.5427,
+"ic_isa": 1.5427,
+"id": "CL:0000066",
+"n": 3335,
+"name": "epithelial cell",
+"subtree": 713,
+"subtree_isa": 713
+},
+"CL:0000081": {
+"ic": 4.3746,
+"ic_isa": 4.3746,
+"id": "CL:0000081",
+"n": 3335,
+"name": "blood cell",
+"subtree": 42,
+"subtree_isa": 42
+},
+"CL:0000084": {
+"ic": 2.9647,
+"ic_isa": 2.9647,
+"id": "CL:0000084",
+"n": 3335,
+"name": "T cell",
+"subtree": 172,
+"subtree_isa": 172
+},
+"CL:0000099": {
+"ic": 2.9823,
+"ic_isa": 2.9823,
+"id": "CL:0000099",
+"n": 3335,
+"name": "interneuron",
+"subtree": 169,
+"subtree_isa": 169
+},
+"CL:0000100": {
+"ic": 4.5287,
+"ic_isa": 4.5287,
+"id": "CL:0000100",
+"n": 3335,
+"name": "motor neuron",
+"subtree": 36,
+"subtree_isa": 36
+},
+"CL:0000101": {
+"ic": 3.0753,
+"ic_isa": 3.0753,
+"id": "CL:0000101",
+"n": 3335,
+"name": "sensory neuron",
+"subtree": 154,
+"subtree_isa": 154
+},
+"CL:0000115": {
+"ic": 3.4209,
+"ic_isa": 3.4209,
+"id": "CL:0000115",
+"n": 3335,
+"name": "endothelial cell",
+"subtree": 109,
+"subtree_isa": 109
+},
+"CL:0000121": {
+"ic": 6.7259,
+"ic_isa": 6.7259,
+"id": "CL:0000121",
+"n": 3335,
+"name": "Purkinje cell",
+"subtree": 4,
+"subtree_isa": 4
+},
+"CL:0000125": {
+"ic": 3.0246,
+"ic_isa": 3.0753,
+"id": "CL:0000125",
+"n": 3335,
+"name": "glial cell",
+"subtree": 162,
+"subtree_isa": 154
+},
+"CL:0000136": {
+"ic": 5.6273,
+"ic_isa": 5.6273,
+"id": "CL:0000136",
+"n": 3335,
+"name": "adipocyte",
+"subtree": 12,
+"subtree_isa": 12
+},
+"CL:0000163": {
+"ic": 3.5689,
+"ic_isa": 3.5689,
+"id": "CL:0000163",
+"n": 3335,
+"name": "endocrine cell",
+"subtree": 94,
+"subtree_isa": 94
+},
+"CL:0000169": {
+"ic": 8.1122,
+"ic_isa": 8.1122,
+"id": "CL:0000169",
+"n": 3335,
+"name": "type B pancreatic cell",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CL:0000171": {
+"ic": 8.1122,
+"ic_isa": 8.1122,
+"id": "CL:0000171",
+"n": 3335,
+"name": "pancreatic A cell",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CL:0000182": {
+"ic": 6.7259,
+"ic_isa": 6.7259,
+"id": "CL:0000182",
+"n": 3335,
+"name": "hepatocyte",
+"subtree": 4,
+"subtree_isa": 4
+},
+"CL:0000187": {
+"ic": 3.1218,
+"ic_isa": 3.1355,
+"id": "CL:0000187",
+"n": 3335,
+"name": "muscle cell",
+"subtree": 147,
+"subtree_isa": 145
+},
+"CL:0000192": {
+"ic": 3.9378,
+"ic_isa": 3.9378,
+"id": "CL:0000192",
+"n": 3335,
+"name": "smooth muscle cell",
+"subtree": 65,
+"subtree_isa": 65
+},
+"CL:0000232": {
+"ic": 6.1663,
+"ic_isa": 6.1663,
+"id": "CL:0000232",
+"n": 3335,
+"name": "erythrocyte",
+"subtree": 7,
+"subtree_isa": 7
+},
+"CL:0000233": {
+"ic": 8.1122,
+"ic_isa": 8.1122,
+"id": "CL:0000233",
+"n": 3335,
+"name": "platelet",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CL:0000235": {
+"ic": 3.7815,
+"ic_isa": 3.7815,
+"id": "CL:0000235",
+"n": 3335,
+"name": "macrophage",
+"subtree": 76,
+"subtree_isa": 76
+},
+"CL:0000255": {
+"ic": 0.0545,
+"ic_isa": 0.0552,
+"id": "CL:0000255",
+"n": 3335,
+"name": "eukaryotic cell",
+"subtree": 3158,
+"subtree_isa": 3156
+},
+"CL:0000300": {
+"ic": 5.7143,
+"ic_isa": 5.7143,
+"id": "CL:0000300",
+"n": 3335,
+"name": "gamete",
+"subtree": 11,
+"subtree_isa": 11
+},
+"CL:0000362": {
+"ic": 4.7449,
+"ic_isa": 4.7449,
+"id": "CL:0000362",
+"n": 3335,
+"name": "epidermal cell",
+"subtree": 29,
+"subtree_isa": 29
+},
+"CL:0000413": {
+"ic": 5.3396,
+"ic_isa": 5.3396,
+"id": "CL:0000413",
+"n": 3335,
+"name": "haploid cell",
+"subtree": 16,
+"subtree_isa": 16
+},
+"CL:0000415": {
+"ic": 8.1122,
+"ic_isa": 8.1122,
+"id": "CL:0000415",
+"n": 3335,
+"name": "diploid cell",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CL:0000520": {
+"ic": 6.7259,
+"ic_isa": 6.7259,
+"id": "CL:0000520",
+"n": 3335,
+"name": "prokaryotic cell",
+"subtree": 4,
+"subtree_isa": 4
+},
+"CL:0000521": {
+"ic": 4.7449,
+"ic_isa": 4.7449,
+"id": "CL:0000521",
+"n": 3335,
+"name": "fungal cell",
+"subtree": 29,
+"subtree_isa": 29
+},
+"CL:0000540": {
+"ic": 1.392,
+"ic_isa": 1.392,
+"id": "CL:0000540",
+"n": 3335,
+"name": "neuron",
+"subtree": 829,
+"subtree_isa": 829
+},
+"CL:0000548": {
+"consider": [],
+"ic": 0.0024,
+"ic_isa": 0.003,
+"id": "CL:0000548",
+"n": 3335,
+"name": "obsolete animal cell",
+"obsolete": true,
+"replaced_by": [
+"CL:0000000"
+],
+"subtree": 3327,
+"subtree_isa": 3325,
+"via": "CL:0000000"
+},
+"CL:0000576": {
+"ic": 5.0212,
+"ic_isa": 5.0212,
+"id": "CL:0000576",
+"n": 3335,
+"name": "monocyte",
+"subtree": 22,
+"subtree_isa": 22
+},
+"CL:0000584": {
+"ic": 4.9767,
+"ic_isa": 4.9767,
+"id": "CL:0000584",
+"n": 3335,
+"name": "enterocyte",
+"subtree": 23,
+"subtree_isa": 23
+},
+"CL:0000586": {
+"ic": 4.6782,
+"ic_isa": 4.6782,
+"id": "CL:0000586",
+"n": 3335,
+"name": "germ cell",
+"subtree": 31,
+"subtree_isa": 31
+},
+"CL:0000596": {
+"ic": 6.7259,
+"ic_isa": 6.7259,
+"id": "CL:0000596",
+"n": 3335,
+"name": "sexual spore",
+"subtree": 4,
+"subtree_isa": 4
+},
+"CL:0000731": {
+"ic": 5.915,
+"ic_isa": 5.915,
+"id": "CL:0000731",
+"n": 3335,
+"name": "urothelial cell",
+"subtree": 9,
+"subtree_isa": 9
+},
+"CL:0000738": {
+"ic": 1.7613,
+"ic_isa": 1.7613,
+"id": "CL:0000738",
+"n": 3335,
+"name": "leukocyte",
+"subtree": 573,
+"subtree_isa": 573
+},
+"CL:0000746": {
+"ic": 4.2621,
+"ic_isa": 4.2621,
+"id": "CL:0000746",
+"n": 3335,
+"name": "cardiac muscle cell",
+"subtree": 47,
+"subtree_isa": 47
+},
+"CL:0000765": {
+"ic": 5.8096,
+"ic_isa": 5.8096,
+"id": "CL:0000765",
+"n": 3335,
+"name": "erythroblast",
+"subtree": 10,
+"subtree_isa": 10
+},
+"CL:0000775": {
+"ic": 6.1663,
+"ic_isa": 6.1663,
+"id": "CL:0000775",
+"n": 3335,
+"name": "neutrophil",
+"subtree": 7,
+"subtree_isa": 7
+},
+"CL:0000912": {
+"ic": 7.0136,
+"ic_isa": 7.0136,
+"id": "CL:0000912",
+"n": 3335,
+"name": "helper T cell",
+"subtree": 3,
+"subtree_isa": 3
+},
+"CL:0001035": {
+"ic": 4.3987,
+"ic_isa": 4.3987,
+"id": "CL:0001035",
+"n": 3335,
+"name": "bone cell",
+"subtree": 41,
+"subtree_isa": 41
+},
+"CL:0001063": {
+"ic": 7.0136,
+"ic_isa": 7.0136,
+"id": "CL:0001063",
+"n": 3335,
+"name": "neoplastic cell",
+"subtree": 3,
+"subtree_isa": 3
+},
+"CL:0001064": {
+"ic": 8.1122,
+"ic_isa": 8.1122,
+"id": "CL:0001064",
+"n": 3335,
+"name": "malignant cell",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CL:0002258": {
+"ic": 8.1122,
+"ic_isa": 8.1122,
+"id": "CL:0002258",
+"n": 3335,
+"name": "thyroid follicular cell",
+"subtree": 1,
+"subtree_isa": 1
+},
+"CL:0002321": {
+"ic": 4.5859,
+"ic_isa": 4.5859,
+"id": "CL:0002321",
+"n": 3335,
+"name": "embryonic cell (metazoa)",
+"subtree": 34,
+"subtree_isa": 34
+},
+"CL:0002371": {
+"consider": [],
+"ic": 0.0024,
+"ic_isa": 0.003,
+"id": "CL:0002371",
+"n": 3335,
+"name": "obsolete somatic cell",
+"obsolete": true,
+"replaced_by": [
+"CL:0000000"
+],
+"subtree": 3327,
+"subtree_isa": 3325,
+"via": "CL:0000000"
+},
+"CL:0002563": {
+"ic": 3.4775,
+"ic_isa": 3.4775,
+"id": "CL:0002563",
+"n": 3335,
+"name": "intestinal epithelial cell",
+"subtree": 103,
+"subtree_isa": 103
+},
+"CL:0008002": {
+"ic": 5.0212,
+"ic_isa": 5.1165,
+"id": "CL:0008002",
+"n": 3335,
+"name": "skeletal muscle fiber",
+"subtree": 22,
+"subtree_isa": 20
+},
+"CL:0010012": {
+"ic": 3.3501,
+"ic_isa": 3.3501,
+"id": "CL:0010012",
+"n": 3335,
+"name": "cerebral cortex neuron",
+"subtree": 117,
+"subtree_isa": 117
+},
+"CL:0010017": {
+"ic": 7.4191,
+"ic_isa": 7.4191,
+"id": "CL:0010017",
+"n": 3335,
+"name": "zygote",
+"subtree": 2,
+"subtree_isa": 2
+},
+"CL:1000082": {
+"ic": 7.4191,
+"ic_isa": 7.4191,
+"id": "CL:1000082",
+"n": 3335,
+"name": "stretch receptor cell",
+"subtree": 2,
+"subtree_isa": 2
+},
+"GO:0000003": {
+"consider": [],
+"ic": 3.4357,
+"ic_isa": 3.6696,
+"id": "GO:0000003",
+"n": 23974,
+"name": "obsolete reproduction",
+"obsolete": true,
+"replaced_by": [
+"GO:0022414"
+],
+"subtree": 772,
+"subtree_isa": 611,
+"via": "GO:0022414"
+},
+"GO:0000049": {
+"ic": 7.605,
+"ic_isa": 7.605,
+"id": "GO:0000049",
+"n": 10041,
+"name": "tRNA binding",
+"subtree": 5,
+"subtree_isa": 5
+},
+"GO:0000050": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0000050",
+"n": 23974,
+"name": "urea cycle",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0000075": {
+"ic": 6.6507,
+"ic_isa": 6.6835,
+"id": "GO:0000075",
+"n": 23974,
+"name": "cell cycle checkpoint signaling",
+"subtree": 31,
+"subtree_isa": 30
+},
+"GO:0000082": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0000082",
+"n": 23974,
+"name": "G1/S transition of mitotic cell cycle",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0000086": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0000086",
+"n": 23974,
+"name": "G2/M transition of mitotic cell cycle",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0000087": {
+"ic": 8.0053,
+"ic_isa": 9.3916,
+"id": "GO:0000087",
+"n": 23974,
+"name": "mitotic M phase",
+"subtree": 8,
+"subtree_isa": 2
+},
+"GO:0000088": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0000088",
+"n": 23974,
+"name": "mitotic prophase",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0000089": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0000089",
+"n": 23974,
+"name": "mitotic metaphase",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0000090": {
+"ic": 8.9861,
+"ic_isa": 8.9861,
+"id": "GO:0000090",
+"n": 23974,
+"name": "mitotic anaphase",
+"subtree": 3,
+"subtree_isa": 3
+},
+"GO:0000093": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0000093",
+"n": 23974,
+"name": "mitotic telophase",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0000236": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0000236",
+"n": 23974,
+"name": "mitotic prometaphase",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0000262": {
+"ic": 8.3131,
+"ic_isa": 8.3131,
+"id": "GO:0000262",
+"n": 4077,
+"name": "mitochondrial chromosome",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0000271": {
+"ic": 5.9904,
+"ic_isa": 6.0957,
+"id": "GO:0000271",
+"n": 23974,
+"name": "polysaccharide biosynthetic process",
+"subtree": 60,
+"subtree_isa": 54
+},
+"GO:0000278": {
+"ic": 5.2807,
+"ic_isa": 8.0053,
+"id": "GO:0000278",
+"n": 23974,
+"name": "mitotic cell cycle",
+"subtree": 122,
+"subtree_isa": 8
+},
+"GO:0000280": {
+"ic": 5.2889,
+"ic_isa": 7.4457,
+"id": "GO:0000280",
+"n": 23974,
+"name": "nuclear division",
+"subtree": 121,
+"subtree_isa": 14
+},
+"GO:0000325": {
+"ic": 6.1159,
+"ic_isa": 6.9268,
+"id": "GO:0000325",
+"n": 4077,
+"name": "plant-type vacuole",
+"subtree": 9,
+"subtree_isa": 4
+},
+"GO:0000339": {
+"ic": 7.605,
+"ic_isa": 7.605,
+"id": "GO:0000339",
+"n": 10041,
+"name": "RNA cap binding",
+"subtree": 5,
+"subtree_isa": 5
+},
+"GO:0000380": {
+"ic": 9.3916,
+"ic_isa": 9.3916,
+"id": "GO:0000380",
+"n": 23974,
+"name": "alternative mRNA splicing, via spliceosome",
+"subtree": 2,
+"subtree_isa": 2
+},
+"GO:0000398": {
+"ic": 6.9067,
+"ic_isa": 8.1388,
+"id": "GO:0000398",
+"n": 23974,
+"name": "mRNA splicing, via spliceosome",
+"subtree": 24,
+"subtree_isa": 7
+},
+"GO:0000428": {
+"ic": 5.1351,
+"ic_isa": 5.6741,
+"id": "GO:0000428",
+"n": 4077,
+"name": "DNA-directed RNA polymerase complex",
+"subtree": 24,
+"subtree_isa": 14
+},
+"GO:0000723": {
+"ic": 7.1403,
+"ic_isa": 7.3121,
+"id": "GO:0000723",
+"n": 23974,
+"name": "telomere maintenance",
+"subtree": 19,
+"subtree_isa": 16
+},
+"GO:0000775": {
+"ic": 5.2221,
+"ic_isa": 7.62,
+"id": "GO:0000775",
+"n": 4077,
+"name": "chromosome, centromeric region",
+"subtree": 22,
+"subtree_isa": 2
+},
+"GO:0000776": {
+"ic": 5.8282,
+"ic_isa": 8.3131,
+"id": "GO:0000776",
+"n": 4077,
+"name": "kinetochore",
+"subtree": 12,
+"subtree_isa": 1
+},
+"GO:0000781": {
+"ic": 6.0105,
+"ic_isa": 7.2145,
+"id": "GO:0000781",
+"n": 4077,
+"name": "chromosome, telomeric region",
+"subtree": 10,
+"subtree_isa": 3
+},
+"GO:0000785": {
+"ic": 3.8588,
+"ic_isa": 5.3687,
+"id": "GO:0000785",
+"n": 4077,
+"name": "chromatin",
+"subtree": 86,
+"subtree_isa": 19
+},
+"GO:0000786": {
+"ic": 7.2145,
+"ic_isa": 7.2145,
+"id": "GO:0000786",
+"n": 4077,
+"name": "nucleosome",
+"subtree": 3,
+"subtree_isa": 3
+},
+"GO:0000791": {
+"ic": 8.3131,
+"ic_isa": 8.3131,
+"id": "GO:0000791",
+"n": 4077,
+"name": "euchromatin",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0000792": {
+"ic": 5.6741,
+"ic_isa": 5.7482,
+"id": "GO:0000792",
+"n": 4077,
+"name": "heterochromatin",
+"subtree": 14,
+"subtree_isa": 13
+},
+"GO:0000793": {
+"ic": 4.9119,
+"ic_isa": 7.62,
+"id": "GO:0000793",
+"n": 4077,
+"name": "condensed chromosome",
+"subtree": 30,
+"subtree_isa": 2
+},
+"GO:0000803": {
+"ic": 5.7482,
+"ic_isa": 6.1159,
+"id": "GO:0000803",
+"n": 4077,
+"name": "sex chromosome",
+"subtree": 13,
+"subtree_isa": 9
+},
+"GO:0000805": {
+"ic": 7.2145,
+"ic_isa": 7.62,
+"id": "GO:0000805",
+"n": 4077,
+"name": "X chromosome",
+"subtree": 3,
+"subtree_isa": 2
+},
+"GO:0000910": {
+"ic": 5.9416,
+"ic_isa": 7.4457,
+"id": "GO:0000910",
+"n": 23974,
+"name": "cytokinesis",
+"subtree": 63,
+"subtree_isa": 14
+},
+"GO:0000917": {
+"ic": 8.4753,
+"ic_isa": 9.3916,
+"id": "GO:0000917",
+"n": 23974,
+"name": "division septum assembly",
+"subtree": 5,
+"subtree_isa": 2
+},
+"GO:0000922": {
+"ic": 6.5214,
+"ic_isa": 7.2145,
+"id": "GO:0000922",
+"n": 4077,
+"name": "spindle pole",
+"subtree": 6,
+"subtree_isa": 3
+},
+"GO:0000935": {
+"ic": 7.2145,
+"ic_isa": 7.2145,
+"id": "GO:0000935",
+"n": 4077,
+"name": "division septum",
+"subtree": 3,
+"subtree_isa": 3
+},
+"GO:0001217": {
+"ic": 7.8281,
+"ic_isa": 7.8281,
+"id": "GO:0001217",
+"n": 10041,
+"name": "DNA-binding transcription repressor activity",
+"subtree": 4,
+"subtree_isa": 4
+},
+"GO:0001508": {
+"ic": 6.2561,
+"ic_isa": 7.3767,
+"id": "GO:0001508",
+"n": 23974,
+"name": "action potential",
+"subtree": 46,
+"subtree_isa": 15
+},
+"GO:0001659": {
+"ic": 7.7821,
+"ic_isa": 7.8875,
+"id": "GO:0001659",
+"n": 23974,
+"name": "temperature homeostasis",
+"subtree": 10,
+"subtree_isa": 9
+},
+"GO:0001660": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0001660",
+"n": 23974,
+"name": "fever generation",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0001696": {
+"ic": 8.6984,
+"ic_isa": 8.6984,
+"id": "GO:0001696",
+"n": 23974,
+"name": "gastric acid secretion",
+"subtree": 4,
+"subtree_isa": 4
+},
+"GO:0001740": {
+"ic": 8.3131,
+"ic_isa": 8.3131,
+"id": "GO:0001740",
+"n": 4077,
+"name": "Barr body",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0002376": {
+"ic": 3.5715,
+"ic_isa": 3.7694,
+"id": "GO:0002376",
+"n": 23974,
+"name": "immune system process",
+"subtree": 674,
+"subtree_isa": 553
+},
+"GO:0002377": {
+"ic": 6.9067,
+"ic_isa": 8.9861,
+"id": "GO:0002377",
+"n": 23974,
+"name": "immunoglobulin production",
+"subtree": 24,
+"subtree_isa": 3
+},
+"GO:0003016": {
+"ic": 8.9861,
+"ic_isa": 8.9861,
+"id": "GO:0003016",
+"n": 23974,
+"name": "respiratory system process",
+"subtree": 3,
+"subtree_isa": 3
+},
+"GO:0003094": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0003094",
+"n": 23974,
+"name": "glomerular filtration",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0003341": {
+"ic": 7.6868,
+"ic_isa": 8.0053,
+"id": "GO:0003341",
+"n": 23974,
+"name": "cilium movement",
+"subtree": 11,
+"subtree_isa": 8
+},
+"GO:0003678": {
+"ic": 7.135,
+"ic_isa": 7.135,
+"id": "GO:0003678",
+"n": 10041,
+"name": "DNA helicase activity",
+"subtree": 8,
+"subtree_isa": 8
+},
+"GO:0003700": {
+"ic": 6.3812,
+"ic_isa": 6.3812,
+"id": "GO:0003700",
+"n": 10041,
+"name": "DNA-binding transcription factor activity",
+"subtree": 17,
+"subtree_isa": 17
+},
+"GO:0003720": {
+"ic": 8.5213,
+"ic_isa": 9.2144,
+"id": "GO:0003720",
+"n": 10041,
+"name": "telomerase activity",
+"subtree": 2,
+"subtree_isa": 1
+},
+"GO:0003729": {
+"ic": 4.8969,
+"ic_isa": 4.8969,
+"id": "GO:0003729",
+"n": 10041,
+"name": "mRNA binding",
+"subtree": 75,
+"subtree_isa": 75
+},
+"GO:0003743": {
+"ic": 8.1158,
+"ic_isa": 8.1158,
+"id": "GO:0003743",
+"n": 10041,
+"name": "translation initiation factor activity",
+"subtree": 3,
+"subtree_isa": 3
+},
+"GO:0003747": {
+"ic": 8.1158,
+"ic_isa": 8.1158,
+"id": "GO:0003747",
+"n": 10041,
+"name": "translation release factor activity",
+"subtree": 3,
+"subtree_isa": 3
+},
+"GO:0003774": {
+"ic": 6.8165,
+"ic_isa": 6.8165,
+"id": "GO:0003774",
+"n": 10041,
+"name": "cytoskeletal motor activity",
+"subtree": 11,
+"subtree_isa": 11
+},
+"GO:0003796": {
+"ic": 9.2144,
+"ic_isa": 9.2144,
+"id": "GO:0003796",
+"n": 10041,
+"name": "lysozyme activity",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0003824": {
+"ic": 0.4494,
+"ic_isa": 0.4496,
+"id": "GO:0003824",
+"n": 10041,
+"name": "catalytic activity",
+"subtree": 6406,
+"subtree_isa": 6405
+},
+"GO:0003887": {
+"ic": 9.2144,
+"ic_isa": 9.2144,
+"id": "GO:0003887",
+"n": 10041,
+"name": "DNA-directed DNA polymerase activity",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0003896": {
+"consider": [],
+"ic": 9.2144,
+"ic_isa": 9.2144,
+"id": "GO:0003896",
+"n": 10041,
+"name": "obsolete DNA primase activity",
+"obsolete": true,
+"replaced_by": [
+"GO:0003899"
+],
+"subtree": 1,
+"subtree_isa": 1,
+"via": "GO:0003899"
+},
+"GO:0003899": {
+"ic": 9.2144,
+"ic_isa": 9.2144,
+"id": "GO:0003899",
+"n": 10041,
+"name": "DNA-directed RNA polymerase activity",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0003909": {
+"ic": 8.1158,
+"ic_isa": 8.1158,
+"id": "GO:0003909",
+"n": 10041,
+"name": "DNA ligase activity",
+"subtree": 3,
+"subtree_isa": 3
+},
+"GO:0004022": {
+"ic": 6.5064,
+"ic_isa": 6.5064,
+"id": "GO:0004022",
+"n": 10041,
+"name": "alcohol dehydrogenase (NAD+) activity",
+"subtree": 15,
+"subtree_isa": 15
+},
+"GO:0004096": {
+"ic": 9.2144,
+"ic_isa": 9.2144,
+"id": "GO:0004096",
+"n": 10041,
+"name": "catalase activity",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0004129": {
+"ic": 9.2144,
+"ic_isa": 9.2144,
+"id": "GO:0004129",
+"n": 10041,
+"name": "cytochrome-c oxidase activity",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0004190": {
+"ic": 8.5213,
+"ic_isa": 8.5213,
+"id": "GO:0004190",
+"n": 10041,
+"name": "aspartic-type endopeptidase activity",
+"subtree": 2,
+"subtree_isa": 2
+},
+"GO:0004370": {
+"ic": 9.2144,
+"ic_isa": 9.2144,
+"id": "GO:0004370",
+"n": 10041,
+"name": "glycerol kinase activity",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0004457": {
+"ic": 7.0172,
+"ic_isa": 7.0172,
+"id": "GO:0004457",
+"n": 10041,
+"name": "lactate dehydrogenase activity",
+"subtree": 9,
+"subtree_isa": 9
+},
+"GO:0004556": {
+"ic": 9.2144,
+"ic_isa": 9.2144,
+"id": "GO:0004556",
+"n": 10041,
+"name": "alpha-amylase activity",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0004737": {
+"ic": 9.2144,
+"ic_isa": 9.2144,
+"id": "GO:0004737",
+"n": 10041,
+"name": "pyruvate decarboxylase activity",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0004806": {
+"ic": 8.5213,
+"ic_isa": 8.5213,
+"id": "GO:0004806",
+"n": 10041,
+"name": "triacylglycerol lipase activity",
+"subtree": 2,
+"subtree_isa": 2
+},
+"GO:0005041": {
+"ic": 9.2144,
+"ic_isa": 9.2144,
+"id": "GO:0005041",
+"n": 10041,
+"name": "low-density lipoprotein particle receptor activity",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0005215": {
+"ic": 2.2655,
+"ic_isa": 2.2655,
+"id": "GO:0005215",
+"n": 10041,
+"name": "transporter activity",
+"subtree": 1042,
+"subtree_isa": 1042
+},
+"GO:0005216": {
+"ic": 4.3316,
+"ic_isa": 4.3316,
+"id": "GO:0005216",
+"n": 10041,
+"name": "monoatomic ion channel activity",
+"subtree": 132,
+"subtree_isa": 132
+},
+"GO:0005244": {
+"ic": 5.6591,
+"ic_isa": 5.6591,
+"id": "GO:0005244",
+"n": 10041,
+"name": "voltage-gated monoatomic ion channel activity",
+"subtree": 35,
+"subtree_isa": 35
+},
+"GO:0005248": {
+"ic": 7.2685,
+"ic_isa": 7.2685,
+"id": "GO:0005248",
+"n": 10041,
+"name": "voltage-gated sodium channel activity",
+"subtree": 7,
+"subtree_isa": 7
+},
+"GO:0005249": {
+"ic": 6.5754,
+"ic_isa": 6.5754,
+"id": "GO:0005249",
+"n": 10041,
+"name": "voltage-gated potassium channel activity",
+"subtree": 14,
+"subtree_isa": 14
+},
+"GO:0005267": {
+"ic": 5.9563,
+"ic_isa": 5.9563,
+"id": "GO:0005267",
+"n": 10041,
+"name": "potassium channel activity",
+"subtree": 26,
+"subtree_isa": 26
+},
+"GO:0005391": {
+"ic": 9.2144,
+"ic_isa": 9.2144,
+"id": "GO:0005391",
+"n": 10041,
+"name": "P-type sodium:potassium-exchanging transporter activity",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0005488": {
+"ic": 1.758,
+"ic_isa": 1.758,
+"id": "GO:0005488",
+"n": 10041,
+"name": "binding",
+"subtree": 1731,
+"subtree_isa": 1731
+},
+"GO:0005525": {
+"ic": 9.2144,
+"ic_isa": 9.2144,
+"id": "GO:0005525",
+"n": 10041,
+"name": "GTP binding",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0005576": {
+"ic": 2.6927,
+"ic_isa": 8.3131,
+"id": "GO:0005576",
+"n": 4077,
+"name": "extracellular region",
+"subtree": 276,
+"subtree_isa": 1
+},
+"GO:0005581": {
+"ic": 4.7578,
+"ic_isa": 4.7578,
+"id": "GO:0005581",
+"n": 4077,
+"name": "collagen trimer",
+"subtree": 35,
+"subtree_isa": 35
+},
+"GO:0005618": {
+"ic": 4.5065,
+"ic_isa": 5.5405,
+"id": "GO:0005618",
+"n": 4077,
+"name": "cell wall",
+"subtree": 45,
+"subtree_isa": 16
+},
+"GO:0005634": {
+"ic": 2.1625,
+"ic_isa": 5.3174,
+"id": "GO:0005634",
+"n": 4077,
+"name": "nucleus",
+"subtree": 469,
+"subtree_isa": 20
+},
+"GO:0005635": {
+"ic": 4.9119,
+"ic_isa": 8.3131,
+"id": "GO:0005635",
+"n": 4077,
+"name": "nuclear envelope",
+"subtree": 30,
+"subtree_isa": 1
+},
+"GO:0005643": {
+"ic": 6.0105,
+"ic_isa": 8.3131,
+"id": "GO:0005643",
+"n": 4077,
+"name": "nuclear pore",
+"subtree": 10,
+"subtree_isa": 1
+},
+"GO:0005654": {
+"ic": 4.1235,
+"ic_isa": 8.3131,
+"id": "GO:0005654",
+"n": 4077,
+"name": "nucleoplasm",
+"subtree": 66,
+"subtree_isa": 1
+},
+"GO:0005657": {
+"ic": 4.8791,
+"ic_isa": 7.2145,
+"id": "GO:0005657",
+"n": 4077,
+"name": "replication fork",
+"subtree": 31,
+"subtree_isa": 3
+},
+"GO:0005694": {
+"ic": 2.995,
+"ic_isa": 5.4227,
+"id": "GO:0005694",
+"n": 4077,
+"name": "chromosome",
+"subtree": 204,
+"subtree_isa": 18
+},
+"GO:0005697": {
+"ic": 7.2145,
+"ic_isa": 7.62,
+"id": "GO:0005697",
+"n": 4077,
+"name": "telomerase holoenzyme complex",
+"subtree": 3,
+"subtree_isa": 2
+},
+"GO:0005712": {
+"ic": 8.3131,
+"ic_isa": 8.3131,
+"id": "GO:0005712",
+"n": 4077,
+"name": "chiasma",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0005730": {
+"ic": 5.0942,
+"ic_isa": 8.3131,
+"id": "GO:0005730",
+"n": 4077,
+"name": "nucleolus",
+"subtree": 25,
+"subtree_isa": 1
+},
+"GO:0005737": {
+"ic": 1.2717,
+"ic_isa": 4.9809,
+"id": "GO:0005737",
+"n": 4077,
+"name": "cytoplasm",
+"subtree": 1143,
+"subtree_isa": 28
+},
+"GO:0005739": {
+"ic": 4.0504,
+"ic_isa": 8.3131,
+"id": "GO:0005739",
+"n": 4077,
+"name": "mitochondrion",
+"subtree": 71,
+"subtree_isa": 1
+},
+"GO:0005743": {
+"ic": 5.1351,
+"ic_isa": 8.3131,
+"id": "GO:0005743",
+"n": 4077,
+"name": "mitochondrial inner membrane",
+"subtree": 24,
+"subtree_isa": 1
+},
+"GO:0005758": {
+"ic": 7.62,
+"ic_isa": 8.3131,
+"id": "GO:0005758",
+"n": 4077,
+"name": "mitochondrial intermembrane space",
+"subtree": 2,
+"subtree_isa": 1
+},
+"GO:0005759": {
+"ic": 5.4227,
+"ic_isa": 8.3131,
+"id": "GO:0005759",
+"n": 4077,
+"name": "mitochondrial matrix",
+"subtree": 18,
+"subtree_isa": 1
+},
+"GO:0005761": {
+"ic": 7.2145,
+"ic_isa": 8.3131,
+"id": "GO:0005761",
+"n": 4077,
+"name": "mitochondrial ribosome",
+"subtree": 3,
+"subtree_isa": 1
+},
+"GO:0005764": {
+"ic": 4.6496,
+"ic_isa": 5.9152,
+"id": "GO:0005764",
+"n": 4077,
+"name": "lysosome",
+"subtree": 39,
+"subtree_isa": 11
+},
+"GO:0005773": {
+"ic": 3.9437,
+"ic_isa": 5.0942,
+"id": "GO:0005773",
+"n": 4077,
+"name": "vacuole",
+"subtree": 79,
+"subtree_isa": 25
+},
+"GO:0005774": {
+"ic": 4.9458,
+"ic_isa": 5.6741,
+"id": "GO:0005774",
+"n": 4077,
+"name": "vacuolar membrane",
+"subtree": 29,
+"subtree_isa": 14
+},
+"GO:0005777": {
+"ic": 5.4799,
+"ic_isa": 6.0105,
+"id": "GO:0005777",
+"n": 4077,
+"name": "peroxisome",
+"subtree": 17,
+"subtree_isa": 10
+},
+"GO:0005778": {
+"ic": 6.9268,
+"ic_isa": 7.2145,
+"id": "GO:0005778",
+"n": 4077,
+"name": "peroxisomal membrane",
+"subtree": 4,
+"subtree_isa": 3
+},
+"GO:0005783": {
+"ic": 3.698,
+"ic_isa": 6.5214,
+"id": "GO:0005783",
+"n": 4077,
+"name": "endoplasmic reticulum",
+"subtree": 101,
+"subtree_isa": 6
+},
+"GO:0005788": {
+"ic": 6.0105,
+"ic_isa": 6.2337,
+"id": "GO:0005788",
+"n": 4077,
+"name": "endoplasmic reticulum lumen",
+"subtree": 10,
+"subtree_isa": 8
+},
+"GO:0005789": {
+"ic": 4.3058,
+"ic_isa": 6.2337,
+"id": "GO:0005789",
+"n": 4077,
+"name": "endoplasmic reticulum membrane",
+"subtree": 55,
+"subtree_isa": 8
+},
+"GO:0005790": {
+"ic": 6.1159,
+"ic_isa": 8.3131,
+"id": "GO:0005790",
+"n": 4077,
+"name": "smooth endoplasmic reticulum",
+"subtree": 9,
+"subtree_isa": 1
+},
+"GO:0005791": {
+"ic": 5.8282,
+"ic_isa": 8.3131,
+"id": "GO:0005791",
+"n": 4077,
+"name": "rough endoplasmic reticulum",
+"subtree": 12,
+"subtree_isa": 1
+},
+"GO:0005794": {
+"ic": 4.4213,
+"ic_isa": 7.62,
+"id": "GO:0005794",
+"n": 4077,
+"name": "Golgi apparatus",
+"subtree": 49,
+"subtree_isa": 2
+},
+"GO:0005796": {
+"ic": 7.2145,
+"ic_isa": 7.2145,
+"id": "GO:0005796",
+"n": 4077,
+"name": "Golgi lumen",
+"subtree": 3,
+"subtree_isa": 3
+},
+"GO:0005798": {
+"ic": 5.3687,
+"ic_isa": 6.7037,
+"id": "GO:0005798",
+"n": 4077,
+"name": "Golgi-associated vesicle",
+"subtree": 19,
+"subtree_isa": 5
+},
+"GO:0005801": {
+"ic": 6.7037,
+"ic_isa": 8.3131,
+"id": "GO:0005801",
+"n": 4077,
+"name": "cis-Golgi network",
+"subtree": 5,
+"subtree_isa": 1
+},
+"GO:0005802": {
+"ic": 6.9268,
+"ic_isa": 8.3131,
+"id": "GO:0005802",
+"n": 4077,
+"name": "trans-Golgi network",
+"subtree": 4,
+"subtree_isa": 1
+},
+"GO:0005813": {
+"ic": 6.5214,
+"ic_isa": 7.62,
+"id": "GO:0005813",
+"n": 4077,
+"name": "centrosome",
+"subtree": 6,
+"subtree_isa": 2
+},
+"GO:0005814": {
+"ic": 8.3131,
+"ic_isa": 8.3131,
+"id": "GO:0005814",
+"n": 4077,
+"name": "centriole",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0005815": {
+"ic": 4.5519,
+"ic_isa": 5.3174,
+"id": "GO:0005815",
+"n": 4077,
+"name": "microtubule organizing center",
+"subtree": 43,
+"subtree_isa": 20
+},
+"GO:0005819": {
+"ic": 5.1351,
+"ic_isa": 7.2145,
+"id": "GO:0005819",
+"n": 4077,
+"name": "spindle",
+"subtree": 24,
+"subtree_isa": 3
+},
+"GO:0005826": {
+"ic": 6.1159,
+"ic_isa": 6.7037,
+"id": "GO:0005826",
+"n": 4077,
+"name": "actomyosin contractile ring",
+"subtree": 9,
+"subtree_isa": 5
+},
+"GO:0005829": {
+"ic": 4.0091,
+"ic_isa": 7.2145,
+"id": "GO:0005829",
+"n": 4077,
+"name": "cytosol",
+"subtree": 74,
+"subtree_isa": 3
+},
+"GO:0005833": {
+"ic": 8.3131,
+"ic_isa": 8.3131,
+"id": "GO:0005833",
+"n": 4077,
+"name": "hemoglobin complex",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0005840": {
+"ic": 5.3687,
+"ic_isa": 6.5214,
+"id": "GO:0005840",
+"n": 4077,
+"name": "ribosome",
+"subtree": 19,
+"subtree_isa": 6
+},
+"GO:0005844": {
+"consider": [
+"GO:0005840"
+],
+"id": "GO:0005844",
+"name": "obsolete polysome",
+"obsolete": true,
+"replaced_by": []
+},
+"GO:0005856": {
+"ic": 2.606,
+"ic_isa": 4.5289,
+"id": "GO:0005856",
+"n": 4077,
+"name": "cytoskeleton",
+"subtree": 301,
+"subtree_isa": 44
+},
+"GO:0005859": {
+"ic": 8.3131,
+"ic_isa": 8.3131,
+"id": "GO:0005859",
+"n": 4077,
+"name": "muscle myosin complex",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0005874": {
+"ic": 4.8166,
+"ic_isa": 5.1776,
+"id": "GO:0005874",
+"n": 4077,
+"name": "microtubule",
+"subtree": 33,
+"subtree_isa": 23
+},
+"GO:0005876": {
+"ic": 6.0105,
+"ic_isa": 6.1159,
+"id": "GO:0005876",
+"n": 4077,
+"name": "spindle microtubule",
+"subtree": 10,
+"subtree_isa": 9
+},
+"GO:0005882": {
+"ic": 6.5214,
+"ic_isa": 6.5214,
+"id": "GO:0005882",
+"n": 4077,
+"name": "intermediate filament",
+"subtree": 6,
+"subtree_isa": 6
+},
+"GO:0005884": {
+"ic": 6.7037,
+"ic_isa": 7.2145,
+"id": "GO:0005884",
+"n": 4077,
+"name": "actin filament",
+"subtree": 5,
+"subtree_isa": 3
+},
+"GO:0005886": {
+"ic": 2.2824,
+"ic_isa": 6.7037,
+"id": "GO:0005886",
+"n": 4077,
+"name": "plasma membrane",
+"subtree": 416,
+"subtree_isa": 5
+},
+"GO:0005890": {
+"ic": 8.3131,
+"ic_isa": 8.3131,
+"id": "GO:0005890",
+"n": 4077,
+"name": "sodium:potassium-exchanging ATPase complex",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0005902": {
+"ic": 6.5214,
+"ic_isa": 7.2145,
+"id": "GO:0005902",
+"n": 4077,
+"name": "microvillus",
+"subtree": 6,
+"subtree_isa": 3
+},
+"GO:0005911": {
+"ic": 4.6496,
+"ic_isa": 4.9458,
+"id": "GO:0005911",
+"n": 4077,
+"name": "cell-cell junction",
+"subtree": 39,
+"subtree_isa": 29
+},
+"GO:0005921": {
+"ic": 7.62,
+"ic_isa": 8.3131,
+"id": "GO:0005921",
+"n": 4077,
+"name": "gap junction",
+"subtree": 2,
+"subtree_isa": 1
+},
+"GO:0005923": {
+"ic": 7.62,
+"ic_isa": 7.62,
+"id": "GO:0005923",
+"n": 4077,
+"name": "bicellular tight junction",
+"subtree": 2,
+"subtree_isa": 2
+},
+"GO:0005929": {
+"ic": 3.5595,
+"ic_isa": 5.3174,
+"id": "GO:0005929",
+"n": 4077,
+"name": "cilium",
+"subtree": 116,
+"subtree_isa": 20
+},
+"GO:0005930": {
+"ic": 4.5995,
+"ic_isa": 8.3131,
+"id": "GO:0005930",
+"n": 4077,
+"name": "axoneme",
+"subtree": 41,
+"subtree_isa": 1
+},
+"GO:0005978": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0005978",
+"n": 23974,
+"name": "glycogen biosynthetic process",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0005980": {
+"ic": 9.3916,
+"ic_isa": 9.3916,
+"id": "GO:0005980",
+"n": 23974,
+"name": "glycogen catabolic process",
+"subtree": 2,
+"subtree_isa": 2
+},
+"GO:0005983": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0005983",
+"n": 23974,
+"name": "starch catabolic process",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0005987": {
+"ic": 8.9861,
+"ic_isa": 8.9861,
+"id": "GO:0005987",
+"n": 23974,
+"name": "sucrose catabolic process",
+"subtree": 3,
+"subtree_isa": 3
+},
+"GO:0005988": {
+"ic": 8.9861,
+"ic_isa": 8.9861,
+"id": "GO:0005988",
+"n": 23974,
+"name": "lactose metabolic process",
+"subtree": 3,
+"subtree_isa": 3
+},
+"GO:0005990": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0005990",
+"n": 23974,
+"name": "lactose catabolic process",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0006001": {
+"ic": 9.3916,
+"ic_isa": 9.3916,
+"id": "GO:0006001",
+"n": 23974,
+"name": "fructose catabolic process",
+"subtree": 2,
+"subtree_isa": 2
+},
+"GO:0006007": {
+"ic": 8.293,
+"ic_isa": 8.293,
+"id": "GO:0006007",
+"n": 23974,
+"name": "glucose catabolic process",
+"subtree": 6,
+"subtree_isa": 6
+},
+"GO:0006066": {
+"ic": 4.6466,
+"ic_isa": 4.7048,
+"id": "GO:0006066",
+"n": 23974,
+"name": "alcohol metabolic process",
+"subtree": 230,
+"subtree_isa": 217
+},
+"GO:0006086": {
+"ic": 9.3916,
+"ic_isa": 10.0847,
+"id": "GO:0006086",
+"n": 23974,
+"name": "pyruvate decarboxylation to acetyl-CoA",
+"subtree": 2,
+"subtree_isa": 1
+},
+"GO:0006089": {
+"ic": 7.8875,
+"ic_isa": 7.8875,
+"id": "GO:0006089",
+"n": 23974,
+"name": "lactate metabolic process",
+"subtree": 9,
+"subtree_isa": 9
+},
+"GO:0006094": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0006094",
+"n": 23974,
+"name": "gluconeogenesis",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0006096": {
+"ic": 7.3767,
+"ic_isa": 7.5198,
+"id": "GO:0006096",
+"n": 23974,
+"name": "glycolytic process",
+"subtree": 15,
+"subtree_isa": 13
+},
+"GO:0006099": {
+"ic": 9.3916,
+"ic_isa": 10.0847,
+"id": "GO:0006099",
+"n": 23974,
+"name": "tricarboxylic acid cycle",
+"subtree": 2,
+"subtree_isa": 1
+},
+"GO:0006113": {
+"ic": 7.089,
+"ic_isa": 7.1403,
+"id": "GO:0006113",
+"n": 23974,
+"name": "fermentation",
+"subtree": 20,
+"subtree_isa": 19
+},
+"GO:0006119": {
+"ic": 7.6868,
+"ic_isa": 10.0847,
+"id": "GO:0006119",
+"n": 23974,
+"name": "oxidative phosphorylation",
+"subtree": 11,
+"subtree_isa": 1
+},
+"GO:0006260": {
+"ic": 5.678,
+"ic_isa": 7.3767,
+"id": "GO:0006260",
+"n": 23974,
+"name": "DNA replication",
+"subtree": 82,
+"subtree_isa": 15
+},
+"GO:0006265": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0006265",
+"n": 23974,
+"name": "DNA topological change",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0006269": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0006269",
+"n": 23974,
+"name": "DNA replication, synthesis of primer",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0006270": {
+"ic": 8.0053,
+"ic_isa": 8.293,
+"id": "GO:0006270",
+"n": 23974,
+"name": "DNA replication initiation",
+"subtree": 8,
+"subtree_isa": 6
+},
+"GO:0006272": {
+"ic": 9.3916,
+"ic_isa": 9.3916,
+"id": "GO:0006272",
+"n": 23974,
+"name": "leading strand elongation",
+"subtree": 2,
+"subtree_isa": 2
+},
+"GO:0006273": {
+"ic": 8.4753,
+"ic_isa": 9.3916,
+"id": "GO:0006273",
+"n": 23974,
+"name": "lagging strand elongation",
+"subtree": 5,
+"subtree_isa": 2
+},
+"GO:0006274": {
+"ic": 7.7821,
+"ic_isa": 7.8875,
+"id": "GO:0006274",
+"n": 23974,
+"name": "DNA replication termination",
+"subtree": 10,
+"subtree_isa": 9
+},
+"GO:0006281": {
+"ic": 5.7672,
+"ic_isa": 6.2781,
+"id": "GO:0006281",
+"n": 23974,
+"name": "DNA repair",
+"subtree": 75,
+"subtree_isa": 45
+},
+"GO:0006289": {
+"ic": 7.7821,
+"ic_isa": 8.4753,
+"id": "GO:0006289",
+"n": 23974,
+"name": "nucleotide-excision repair",
+"subtree": 10,
+"subtree_isa": 5
+},
+"GO:0006298": {
+"ic": 8.4753,
+"ic_isa": 8.4753,
+"id": "GO:0006298",
+"n": 23974,
+"name": "mismatch repair",
+"subtree": 5,
+"subtree_isa": 5
+},
+"GO:0006325": {
+"ic": 4.4114,
+"ic_isa": 5.9576,
+"id": "GO:0006325",
+"n": 23974,
+"name": "chromatin organization",
+"subtree": 291,
+"subtree_isa": 62
+},
+"GO:0006351": {
+"ic": 5.7672,
+"ic_isa": 6.7889,
+"id": "GO:0006351",
+"n": 23974,
+"name": "DNA-templated transcription",
+"subtree": 75,
+"subtree_isa": 27
+},
+"GO:0006352": {
+"ic": 7.1944,
+"ic_isa": 8.4753,
+"id": "GO:0006352",
+"n": 23974,
+"name": "DNA-templated transcription initiation",
+"subtree": 18,
+"subtree_isa": 5
+},
+"GO:0006353": {
+"ic": 7.7821,
+"ic_isa": 8.1388,
+"id": "GO:0006353",
+"n": 23974,
+"name": "DNA-templated transcription termination",
+"subtree": 10,
+"subtree_isa": 7
+},
+"GO:0006354": {
+"ic": 7.8875,
+"ic_isa": 8.4753,
+"id": "GO:0006354",
+"n": 23974,
+"name": "DNA-templated transcription elongation",
+"subtree": 9,
+"subtree_isa": 5
+},
+"GO:0006355": {
+"ic": 5.136,
+"ic_isa": 5.4696,
+"id": "GO:0006355",
+"n": 23974,
+"name": "regulation of DNA-templated transcription",
+"subtree": 141,
+"subtree_isa": 101
+},
+"GO:0006370": {
+"ic": 9.3916,
+"ic_isa": 10.0847,
+"id": "GO:0006370",
+"n": 23974,
+"name": "7-methylguanosine mRNA capping",
+"subtree": 2,
+"subtree_isa": 1
+},
+"GO:0006378": {
+"consider": [
+"GO:0006397",
+"GO:0097222",
+"GO:0180010"
+],
+"id": "GO:0006378",
+"name": "obsolete mRNA polyadenylation",
+"obsolete": true,
+"replaced_by": []
+},
+"GO:0006397": {
+"ic": 6.4738,
+"ic_isa": 7.1403,
+"id": "GO:0006397",
+"n": 23974,
+"name": "mRNA processing",
+"subtree": 37,
+"subtree_isa": 19
+},
+"GO:0006402": {
+"ic": 6.7889,
+"ic_isa": 6.8658,
+"id": "GO:0006402",
+"n": 23974,
+"name": "mRNA catabolic process",
+"subtree": 27,
+"subtree_isa": 25
+},
+"GO:0006406": {
+"ic": 8.9861,
+"ic_isa": 8.9861,
+"id": "GO:0006406",
+"n": 23974,
+"name": "mRNA export from nucleus",
+"subtree": 3,
+"subtree_isa": 3
+},
+"GO:0006412": {
+"ic": 5.0096,
+"ic_isa": 8.0053,
+"id": "GO:0006412",
+"n": 23974,
+"name": "translation",
+"subtree": 160,
+"subtree_isa": 8
+},
+"GO:0006413": {
+"ic": 7.2515,
+"ic_isa": 7.7821,
+"id": "GO:0006413",
+"n": 23974,
+"name": "translational initiation",
+"subtree": 17,
+"subtree_isa": 10
+},
+"GO:0006414": {
+"ic": 7.3121,
+"ic_isa": 7.3767,
+"id": "GO:0006414",
+"n": 23974,
+"name": "translational elongation",
+"subtree": 16,
+"subtree_isa": 15
+},
+"GO:0006415": {
+"ic": 8.1388,
+"ic_isa": 8.9861,
+"id": "GO:0006415",
+"n": 23974,
+"name": "translational termination",
+"subtree": 7,
+"subtree_isa": 3
+},
+"GO:0006417": {
+"ic": 5.2725,
+"ic_isa": 5.3311,
+"id": "GO:0006417",
+"n": 23974,
+"name": "regulation of translation",
+"subtree": 123,
+"subtree_isa": 116
+},
+"GO:0006418": {
+"ic": 6.3005,
+"ic_isa": 6.3005,
+"id": "GO:0006418",
+"n": 23974,
+"name": "tRNA aminoacylation for protein translation",
+"subtree": 44,
+"subtree_isa": 44
+},
+"GO:0006457": {
+"ic": 8.0053,
+"ic_isa": 8.293,
+"id": "GO:0006457",
+"n": 23974,
+"name": "protein folding",
+"subtree": 8,
+"subtree_isa": 6
+},
+"GO:0006508": {
+"ic": 6.2561,
+"ic_isa": 6.2561,
+"id": "GO:0006508",
+"n": 23974,
+"name": "proteolysis",
+"subtree": 46,
+"subtree_isa": 46
+},
+"GO:0006605": {
+"ic": 6.9492,
+"ic_isa": 7.3121,
+"id": "GO:0006605",
+"n": 23974,
+"name": "protein targeting",
+"subtree": 23,
+"subtree_isa": 16
+},
+"GO:0006633": {
+"ic": 6.4471,
+"ic_isa": 6.5294,
+"id": "GO:0006633",
+"n": 23974,
+"name": "fatty acid biosynthetic process",
+"subtree": 38,
+"subtree_isa": 35
+},
+"GO:0006635": {
+"ic": 8.9861,
+"ic_isa": 8.9861,
+"id": "GO:0006635",
+"n": 23974,
+"name": "fatty acid beta-oxidation",
+"subtree": 3,
+"subtree_isa": 3
+},
+"GO:0006695": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0006695",
+"n": 23974,
+"name": "cholesterol biosynthetic process",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0006754": {
+"ic": 8.293,
+"ic_isa": 8.4753,
+"id": "GO:0006754",
+"n": 23974,
+"name": "ATP biosynthetic process",
+"subtree": 6,
+"subtree_isa": 5
+},
+"GO:0006810": {
+"ic": 2.2288,
+"ic_isa": 2.8221,
+"id": "GO:0006810",
+"n": 23974,
+"name": "transport",
+"subtree": 2581,
+"subtree_isa": 1426
+},
+"GO:0006833": {
+"ic": 8.0053,
+"ic_isa": 8.293,
+"id": "GO:0006833",
+"n": 23974,
+"name": "water transport",
+"subtree": 8,
+"subtree_isa": 6
+},
+"GO:0006850": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0006850",
+"n": 23974,
+"name": "pyruvate import into mitochondria",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0006887": {
+"ic": 6.2781,
+"ic_isa": 6.6835,
+"id": "GO:0006887",
+"n": 23974,
+"name": "exocytosis",
+"subtree": 45,
+"subtree_isa": 30
+},
+"GO:0006897": {
+"ic": 5.9103,
+"ic_isa": 6.3005,
+"id": "GO:0006897",
+"n": 23974,
+"name": "endocytosis",
+"subtree": 65,
+"subtree_isa": 44
+},
+"GO:0006898": {
+"ic": 6.6507,
+"ic_isa": 6.7889,
+"id": "GO:0006898",
+"n": 23974,
+"name": "receptor-mediated endocytosis",
+"subtree": 31,
+"subtree_isa": 27
+},
+"GO:0006906": {
+"ic": 6.6507,
+"ic_isa": 6.6835,
+"id": "GO:0006906",
+"n": 23974,
+"name": "vesicle fusion",
+"subtree": 31,
+"subtree_isa": 30
+},
+"GO:0006907": {
+"ic": 8.6984,
+"ic_isa": 8.6984,
+"id": "GO:0006907",
+"n": 23974,
+"name": "pinocytosis",
+"subtree": 4,
+"subtree_isa": 4
+},
+"GO:0006909": {
+"ic": 7.3121,
+"ic_isa": 8.9861,
+"id": "GO:0006909",
+"n": 23974,
+"name": "phagocytosis",
+"subtree": 16,
+"subtree_isa": 3
+},
+"GO:0006913": {
+"ic": 6.7525,
+"ic_isa": 6.9067,
+"id": "GO:0006913",
+"n": 23974,
+"name": "nucleocytoplasmic transport",
+"subtree": 28,
+"subtree_isa": 24
+},
+"GO:0006936": {
+"ic": 6.0957,
+"ic_isa": 6.3471,
+"id": "GO:0006936",
+"n": 23974,
+"name": "muscle contraction",
+"subtree": 54,
+"subtree_isa": 42
+},
+"GO:0006939": {
+"ic": 6.7174,
+"ic_isa": 6.7174,
+"id": "GO:0006939",
+"n": 23974,
+"name": "smooth muscle contraction",
+"subtree": 29,
+"subtree_isa": 29
+},
+"GO:0006950": {
+"ic": 3.7029,
+"ic_isa": 4.1135,
+"id": "GO:0006950",
+"n": 23974,
+"name": "response to stress",
+"subtree": 591,
+"subtree_isa": 392
+},
+"GO:0006954": {
+"ic": 5.822,
+"ic_isa": 6.619,
+"id": "GO:0006954",
+"n": 23974,
+"name": "inflammatory response",
+"subtree": 71,
+"subtree_isa": 32
+},
+"GO:0006955": {
+"ic": 4.7472,
+"ic_isa": 5.4403,
+"id": "GO:0006955",
+"n": 23974,
+"name": "immune response",
+"subtree": 208,
+"subtree_isa": 104
+},
+"GO:0006974": {
+"ic": 5.5204,
+"ic_isa": 5.9258,
+"id": "GO:0006974",
+"n": 23974,
+"name": "DNA damage response",
+"subtree": 96,
+"subtree_isa": 64
+},
+"GO:0007049": {
+"ic": 4.0564,
+"ic_isa": 7.5198,
+"id": "GO:0007049",
+"n": 23974,
+"name": "cell cycle",
+"subtree": 415,
+"subtree_isa": 13
+},
+"GO:0007050": {
+"ic": 4.1498,
+"ic_isa": 4.1578,
+"id": "GO:0051726",
+"n": 23974,
+"name": "regulation of cell cycle",
+"subtree": 378,
+"subtree_isa": 375
+},
+"GO:0007059": {
+"ic": 5.6188,
+"ic_isa": 7.5998,
+"id": "GO:0007059",
+"n": 23974,
+"name": "chromosome segregation",
+"subtree": 87,
+"subtree_isa": 12
+},
+"GO:0007062": {
+"ic": 6.9492,
+"ic_isa": 7.5998,
+"id": "GO:0007062",
+"n": 23974,
+"name": "sister chromatid cohesion",
+"subtree": 23,
+"subtree_isa": 12
+},
+"GO:0007064": {
+"ic": 7.8875,
+"ic_isa": 8.6984,
+"id": "GO:0007064",
+"n": 23974,
+"name": "mitotic sister chromatid cohesion",
+"subtree": 9,
+"subtree_isa": 4
+},
+"GO:0007076": {
+"ic": 8.9861,
+"ic_isa": 8.9861,
+"id": "GO:0007076",
+"n": 23974,
+"name": "mitotic chromosome condensation",
+"subtree": 3,
+"subtree_isa": 3
+},
+"GO:0007077": {
+"ic": 8.9861,
+"ic_isa": 9.3916,
+"id": "GO:0007077",
+"n": 23974,
+"name": "mitotic nuclear membrane disassembly",
+"subtree": 3,
+"subtree_isa": 2
+},
+"GO:0007084": {
+"ic": 8.6984,
+"ic_isa": 10.0847,
+"id": "GO:0007084",
+"n": 23974,
+"name": "mitotic nuclear membrane reassembly",
+"subtree": 4,
+"subtree_isa": 1
+},
+"GO:0007095": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0007095",
+"n": 23974,
+"name": "mitotic G2 DNA damage checkpoint signaling",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0007127": {
+"ic": 6.2781,
+"ic_isa": 8.6984,
+"id": "GO:0007127",
+"n": 23974,
+"name": "meiosis I",
+"subtree": 45,
+"subtree_isa": 4
+},
+"GO:0007128": {
+"ic": 8.293,
+"ic_isa": 10.0847,
+"id": "GO:0007128",
+"n": 23974,
+"name": "meiotic prophase I",
+"subtree": 6,
+"subtree_isa": 1
+},
+"GO:0007129": {
+"ic": 8.1388,
+"ic_isa": 10.0847,
+"id": "GO:0007129",
+"n": 23974,
+"name": "homologous chromosome pairing at meiosis",
+"subtree": 7,
+"subtree_isa": 1
+},
+"GO:0007131": {
+"ic": 7.3767,
+"ic_isa": 10.0847,
+"id": "GO:0007131",
+"n": 23974,
+"name": "reciprocal meiotic recombination",
+"subtree": 15,
+"subtree_isa": 1
+},
+"GO:0007132": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0007132",
+"n": 23974,
+"name": "meiotic metaphase I",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0007133": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0007133",
+"n": 23974,
+"name": "meiotic anaphase I",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0007134": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0007134",
+"n": 23974,
+"name": "meiotic telophase I",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0007135": {
+"ic": 7.5998,
+"ic_isa": 8.9861,
+"id": "GO:0007135",
+"n": 23974,
+"name": "meiosis II",
+"subtree": 12,
+"subtree_isa": 3
+},
+"GO:0007136": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0007136",
+"n": 23974,
+"name": "meiotic prophase II",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0007137": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0007137",
+"n": 23974,
+"name": "meiotic metaphase II",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0007138": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0007138",
+"n": 23974,
+"name": "meiotic anaphase II",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0007139": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0007139",
+"n": 23974,
+"name": "meiotic telophase II",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0007154": {
+"ic": 2.988,
+"ic_isa": 5.2972,
+"id": "GO:0007154",
+"n": 23974,
+"name": "cell communication",
+"subtree": 1208,
+"subtree_isa": 120
+},
+"GO:0007155": {
+"ic": 5.5961,
+"ic_isa": 5.754,
+"id": "GO:0007155",
+"n": 23974,
+"name": "cell adhesion",
+"subtree": 89,
+"subtree_isa": 76
+},
+"GO:0007165": {
+"ic": 3.241,
+"ic_isa": 3.7876,
+"id": "GO:0007165",
+"n": 23974,
+"name": "signal transduction",
+"subtree": 938,
+"subtree_isa": 543
+},
+"GO:0007166": {
+"ic": 4.0833,
+"ic_isa": 4.6209,
+"id": "GO:0007166",
+"n": 23974,
+"name": "cell surface receptor signaling pathway",
+"subtree": 404,
+"subtree_isa": 236
+},
+"GO:0007269": {
+"ic": 6.5882,
+"ic_isa": 6.9067,
+"id": "GO:0007269",
+"n": 23974,
+"name": "neurotransmitter secretion",
+"subtree": 33,
+"subtree_isa": 24
+},
+"GO:0007275": {
+"ic": 2.0417,
+"ic_isa": 7.1403,
+"id": "GO:0007275",
+"n": 23974,
+"name": "multicellular organism development",
+"subtree": 3112,
+"subtree_isa": 19
+},
+"GO:0007276": {
+"ic": 4.9727,
+"ic_isa": 8.4753,
+"id": "GO:0007276",
+"n": 23974,
+"name": "gamete generation",
+"subtree": 166,
+"subtree_isa": 5
+},
+"GO:0007283": {
+"ic": 6.7174,
+"ic_isa": 10.0847,
+"id": "GO:0007283",
+"n": 23974,
+"name": "spermatogenesis",
+"subtree": 29,
+"subtree_isa": 1
+},
+"GO:0007399": {
+"ic": 3.2669,
+"ic_isa": 10.0847,
+"id": "GO:0007399",
+"n": 23974,
+"name": "nervous system development",
+"subtree": 914,
+"subtree_isa": 1
+},
+"GO:0007568": {
+"consider": [],
+"id": "GO:0007568",
+"name": "obsolete aging",
+"obsolete": true,
+"replaced_by": []
+},
+"GO:0007585": {
+"ic": 8.6984,
+"ic_isa": 10.0847,
+"id": "GO:0007585",
+"n": 23974,
+"name": "respiratory gaseous exchange by respiratory system",
+"subtree": 4,
+"subtree_isa": 1
+},
+"GO:0007586": {
+"ic": 6.5882,
+"ic_isa": 8.6984,
+"id": "GO:0007586",
+"n": 23974,
+"name": "digestion",
+"subtree": 33,
+"subtree_isa": 4
+},
+"GO:0007588": {
+"ic": 7.4457,
+"ic_isa": 7.7821,
+"id": "GO:0007588",
+"n": 23974,
+"name": "excretion",
+"subtree": 14,
+"subtree_isa": 10
+},
+"GO:0007596": {
+"ic": 8.0053,
+"ic_isa": 10.0847,
+"id": "GO:0007596",
+"n": 23974,
+"name": "blood coagulation",
+"subtree": 8,
+"subtree_isa": 1
+},
+"GO:0007600": {
+"ic": 5.678,
+"ic_isa": 6.4471,
+"id": "GO:0007600",
+"n": 23974,
+"name": "sensory perception",
+"subtree": 82,
+"subtree_isa": 38
+},
+"GO:0007601": {
+"ic": 9.3916,
+"ic_isa": 10.0847,
+"id": "GO:0007601",
+"n": 23974,
+"name": "visual perception",
+"subtree": 2,
+"subtree_isa": 1
+},
+"GO:0007605": {
+"ic": 8.9861,
+"ic_isa": 10.0847,
+"id": "GO:0007605",
+"n": 23974,
+"name": "sensory perception of sound",
+"subtree": 3,
+"subtree_isa": 1
+},
+"GO:0007608": {
+"ic": 8.4753,
+"ic_isa": 10.0847,
+"id": "GO:0007608",
+"n": 23974,
+"name": "sensory perception of smell",
+"subtree": 5,
+"subtree_isa": 1
+},
+"GO:0007610": {
+"ic": 5.0543,
+"ic_isa": 5.1289,
+"id": "GO:0007610",
+"n": 23974,
+"name": "behavior",
+"subtree": 153,
+"subtree_isa": 142
+},
+"GO:0007612": {
+"ic": 7.3767,
+"ic_isa": 7.3767,
+"id": "GO:0007612",
+"n": 23974,
+"name": "learning",
+"subtree": 15,
+"subtree_isa": 15
+},
+"GO:0007613": {
+"ic": 8.4753,
+"ic_isa": 8.4753,
+"id": "GO:0007613",
+"n": 23974,
+"name": "memory",
+"subtree": 5,
+"subtree_isa": 5
+},
+"GO:0007623": {
+"ic": 7.089,
+"ic_isa": 7.1403,
+"id": "GO:0007623",
+"n": 23974,
+"name": "circadian rhythm",
+"subtree": 20,
+"subtree_isa": 19
+},
+"GO:0007631": {
+"ic": 7.5998,
+"ic_isa": 7.5998,
+"id": "GO:0007631",
+"n": 23974,
+"name": "feeding behavior",
+"subtree": 12,
+"subtree_isa": 12
+},
+"GO:0008015": {
+"ic": 4.9489,
+"ic_isa": 8.9861,
+"id": "GO:0008015",
+"n": 23974,
+"name": "blood circulation",
+"subtree": 170,
+"subtree_isa": 3
+},
+"GO:0008021": {
+"ic": 6.2337,
+"ic_isa": 6.9268,
+"id": "GO:0008021",
+"n": 4077,
+"name": "synaptic vesicle",
+"subtree": 8,
+"subtree_isa": 4
+},
+"GO:0008037": {
+"ic": 6.7525,
+"ic_isa": 6.8266,
+"id": "GO:0008037",
+"n": 23974,
+"name": "cell recognition",
+"subtree": 28,
+"subtree_isa": 26
+},
+"GO:0008047": {
+"ic": 5.1369,
+"ic_isa": 5.1369,
+"id": "GO:0008047",
+"n": 10041,
+"name": "enzyme activator activity",
+"subtree": 59,
+"subtree_isa": 59
+},
+"GO:0008152": {
+"ic": 1.6328,
+"ic_isa": 1.7123,
+"id": "GO:0008152",
+"n": 23974,
+"name": "metabolic process",
+"subtree": 4684,
+"subtree_isa": 4326
+},
+"GO:0008219": {
+"ic": 5.0808,
+"ic_isa": 5.51,
+"id": "GO:0008219",
+"n": 23974,
+"name": "cell death",
+"subtree": 149,
+"subtree_isa": 97
+},
+"GO:0008283": {
+"ic": 4.9849,
+"ic_isa": 5.1219,
+"id": "GO:0008283",
+"n": 23974,
+"name": "cell population proliferation",
+"subtree": 164,
+"subtree_isa": 143
+},
+"GO:0008360": {
+"ic": 6.7889,
+"ic_isa": 6.7889,
+"id": "GO:0008360",
+"n": 23974,
+"name": "regulation of cell shape",
+"subtree": 27,
+"subtree_isa": 27
+},
+"GO:0008608": {
+"ic": 8.0053,
+"ic_isa": 8.0053,
+"id": "GO:0008608",
+"n": 23974,
+"name": "attachment of spindle microtubules to kinetochore",
+"subtree": 8,
+"subtree_isa": 8
+},
+"GO:0008610": {
+"ic": 4.5279,
+"ic_isa": 4.5999,
+"id": "GO:0008610",
+"n": 23974,
+"name": "lipid biosynthetic process",
+"subtree": 259,
+"subtree_isa": 241
+},
+"GO:0008652": {
+"ic": 6.1144,
+"ic_isa": 6.2561,
+"id": "GO:0008652",
+"n": 23974,
+"name": "amino acid biosynthetic process",
+"subtree": 53,
+"subtree_isa": 46
+},
+"GO:0008654": {
+"ic": 6.2346,
+"ic_isa": 6.3005,
+"id": "GO:0008654",
+"n": 23974,
+"name": "phospholipid biosynthetic process",
+"subtree": 47,
+"subtree_isa": 44
+},
+"GO:0009048": {
+"ic": 8.9861,
+"ic_isa": 8.9861,
+"id": "GO:0009048",
+"n": 23974,
+"name": "dosage compensation by inactivation of X chromosome",
+"subtree": 3,
+"subtree_isa": 3
+},
+"GO:0009055": {
+"ic": 7.2685,
+"ic_isa": 7.2685,
+"id": "GO:0009055",
+"n": 10041,
+"name": "electron transfer activity",
+"subtree": 7,
+"subtree_isa": 7
+},
+"GO:0009056": {
+"ic": 3.0681,
+"ic_isa": 3.1065,
+"id": "GO:0009056",
+"n": 23974,
+"name": "catabolic process",
+"subtree": 1115,
+"subtree_isa": 1073
+},
+"GO:0009057": {
+"ic": 4.8325,
+"ic_isa": 4.9029,
+"id": "GO:0009057",
+"n": 23974,
+"name": "macromolecule catabolic process",
+"subtree": 191,
+"subtree_isa": 178
+},
+"GO:0009058": {
+"ic": 2.4388,
+"ic_isa": 2.7668,
+"id": "GO:0009058",
+"n": 23974,
+"name": "biosynthetic process",
+"subtree": 2092,
+"subtree_isa": 1507
+},
+"GO:0009060": {
+"ic": 6.4212,
+"ic_isa": 7.3767,
+"id": "GO:0009060",
+"n": 23974,
+"name": "aerobic respiration",
+"subtree": 39,
+"subtree_isa": 15
+},
+"GO:0009061": {
+"ic": 8.0053,
+"ic_isa": 8.1388,
+"id": "GO:0009061",
+"n": 23974,
+"name": "anaerobic respiration",
+"subtree": 8,
+"subtree_isa": 7
+},
+"GO:0009063": {
+"ic": 6.3005,
+"ic_isa": 6.3471,
+"id": "GO:0009063",
+"n": 23974,
+"name": "amino acid catabolic process",
+"subtree": 44,
+"subtree_isa": 42
+},
+"GO:0009101": {
+"ic": 6.4471,
+"ic_isa": 6.5882,
+"id": "GO:0009101",
+"n": 23974,
+"name": "glycoprotein biosynthetic process",
+"subtree": 38,
+"subtree_isa": 33
+},
+"GO:0009165": {
+"ic": 5.3398,
+"ic_isa": 5.4403,
+"id": "GO:0009165",
+"n": 23974,
+"name": "nucleotide biosynthetic process",
+"subtree": 115,
+"subtree_isa": 104
+},
+"GO:0009277": {
+"ic": 5.8282,
+"ic_isa": 6.9268,
+"id": "GO:0009277",
+"n": 4077,
+"name": "fungal-type cell wall",
+"subtree": 12,
+"subtree_isa": 4
+},
+"GO:0009288": {
+"ic": 5.4227,
+"ic_isa": 7.62,
+"id": "GO:0009288",
+"n": 4077,
+"name": "bacterial-type flagellum",
+"subtree": 18,
+"subtree_isa": 2
+},
+"GO:0009289": {
+"ic": 6.5214,
+"ic_isa": 6.9268,
+"id": "GO:0009289",
+"n": 4077,
+"name": "pilus",
+"subtree": 6,
+"subtree_isa": 4
+},
+"GO:0009291": {
+"ic": 9.3916,
+"ic_isa": 9.3916,
+"id": "GO:0009291",
+"n": 23974,
+"name": "unidirectional conjugation",
+"subtree": 2,
+"subtree_isa": 2
+},
+"GO:0009295": {
+"ic": 5.7482,
+"ic_isa": 6.5214,
+"id": "GO:0009295",
+"n": 4077,
+"name": "nucleoid",
+"subtree": 13,
+"subtree_isa": 6
+},
+"GO:0009303": {
+"ic": 8.6984,
+"ic_isa": 8.6984,
+"id": "GO:0009303",
+"n": 23974,
+"name": "rRNA transcription",
+"subtree": 4,
+"subtree_isa": 4
+},
+"GO:0009306": {
+"ic": 6.9492,
+"ic_isa": 6.9492,
+"id": "GO:0009306",
+"n": 23974,
+"name": "protein secretion",
+"subtree": 23,
+"subtree_isa": 23
+},
+"GO:0009409": {
+"ic": 8.293,
+"ic_isa": 8.293,
+"id": "GO:0009409",
+"n": 23974,
+"name": "response to cold",
+"subtree": 6,
+"subtree_isa": 6
+},
+"GO:0009504": {
+"ic": 8.3131,
+"ic_isa": 8.3131,
+"id": "GO:0009504",
+"n": 4077,
+"name": "cell plate",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0009505": {
+"ic": 5.6741,
+"ic_isa": 7.2145,
+"id": "GO:0009505",
+"n": 4077,
+"name": "plant-type cell wall",
+"subtree": 14,
+"subtree_isa": 3
+},
+"GO:0009506": {
+"ic": 6.3672,
+"ic_isa": 7.2145,
+"id": "GO:0009506",
+"n": 4077,
+"name": "plasmodesma",
+"subtree": 7,
+"subtree_isa": 3
+},
+"GO:0009507": {
+"ic": 4.5754,
+"ic_isa": 8.3131,
+"id": "GO:0009507",
+"n": 4077,
+"name": "chloroplast",
+"subtree": 42,
+"subtree_isa": 1
+},
+"GO:0009508": {
+"ic": 7.62,
+"ic_isa": 7.62,
+"id": "GO:0009508",
+"n": 4077,
+"name": "plastid chromosome",
+"subtree": 2,
+"subtree_isa": 2
+},
+"GO:0009521": {
+"ic": 5.8282,
+"ic_isa": 6.3672,
+"id": "GO:0009521",
+"n": 4077,
+"name": "photosystem",
+"subtree": 12,
+"subtree_isa": 7
+},
+"GO:0009522": {
+"ic": 6.7037,
+"ic_isa": 7.2145,
+"id": "GO:0009522",
+"n": 4077,
+"name": "photosystem I",
+"subtree": 5,
+"subtree_isa": 3
+},
+"GO:0009523": {
+"ic": 6.5214,
+"ic_isa": 7.2145,
+"id": "GO:0009523",
+"n": 4077,
+"name": "photosystem II",
+"subtree": 6,
+"subtree_isa": 3
+},
+"GO:0009534": {
+"ic": 5.5405,
+"ic_isa": 7.2145,
+"id": "GO:0009534",
+"n": 4077,
+"name": "chloroplast thylakoid",
+"subtree": 16,
+"subtree_isa": 3
+},
+"GO:0009536": {
+"ic": 3.4848,
+"ic_isa": 5.7482,
+"id": "GO:0009536",
+"n": 4077,
+"name": "plastid",
+"subtree": 125,
+"subtree_isa": 13
+},
+"GO:0009542": {
+"ic": 7.62,
+"ic_isa": 8.3131,
+"id": "GO:0009542",
+"n": 4077,
+"name": "granum",
+"subtree": 2,
+"subtree_isa": 1
+},
+"GO:0009566": {
+"ic": 6.5294,
+"ic_isa": 8.6984,
+"id": "GO:0009566",
+"n": 23974,
+"name": "fertilization",
+"subtree": 35,
+"subtree_isa": 4
+},
+"GO:0009570": {
+"ic": 6.0105,
+"ic_isa": 8.3131,
+"id": "GO:0009570",
+"n": 4077,
+"name": "chloroplast stroma",
+"subtree": 10,
+"subtree_isa": 1
+},
+"GO:0009579": {
+"ic": 4.2878,
+"ic_isa": 6.1159,
+"id": "GO:0009579",
+"n": 4077,
+"name": "thylakoid",
+"subtree": 56,
+"subtree_isa": 9
+},
+"GO:0009605": {
+"ic": 4.1211,
+"ic_isa": 4.5794,
+"id": "GO:0009605",
+"n": 23974,
+"name": "response to external stimulus",
+"subtree": 389,
+"subtree_isa": 246
+},
+"GO:0009706": {
+"ic": 7.62,
+"ic_isa": 8.3131,
+"id": "GO:0009706",
+"n": 4077,
+"name": "chloroplast inner membrane",
+"subtree": 2,
+"subtree_isa": 1
+},
+"GO:0009707": {
+"ic": 7.2145,
+"ic_isa": 8.3131,
+"id": "GO:0009707",
+"n": 4077,
+"name": "chloroplast outer membrane",
+"subtree": 3,
+"subtree_isa": 1
+},
+"GO:0009760": {
+"ic": 8.6984,
+"ic_isa": 8.6984,
+"id": "GO:0009760",
+"n": 23974,
+"name": "C4 photosynthesis",
+"subtree": 4,
+"subtree_isa": 4
+},
+"GO:0009765": {
+"ic": 8.6984,
+"ic_isa": 8.9861,
+"id": "GO:0009765",
+"n": 23974,
+"name": "photosynthesis, light harvesting",
+"subtree": 4,
+"subtree_isa": 3
+},
+"GO:0009767": {
+"ic": 8.9861,
+"ic_isa": 8.9861,
+"id": "GO:0009767",
+"n": 23974,
+"name": "photosynthetic electron transport chain",
+"subtree": 3,
+"subtree_isa": 3
+},
+"GO:0009773": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0009773",
+"n": 23974,
+"name": "photosynthetic electron transport in photosystem I",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0009777": {
+"ic": 8.9861,
+"ic_isa": 8.9861,
+"id": "GO:0009777",
+"n": 23974,
+"name": "photosynthetic phosphorylation",
+"subtree": 3,
+"subtree_isa": 3
+},
+"GO:0009790": {
+"ic": 4.0735,
+"ic_isa": 8.293,
+"id": "GO:0009790",
+"n": 23974,
+"name": "embryo development",
+"subtree": 408,
+"subtree_isa": 6
+},
+"GO:0009832": {
+"ic": 7.5998,
+"ic_isa": 8.6984,
+"id": "GO:0009832",
+"n": 23974,
+"name": "plant-type cell wall biogenesis",
+"subtree": 12,
+"subtree_isa": 4
+},
+"GO:0009898": {
+"ic": 6.3672,
+"ic_isa": 6.9268,
+"id": "GO:0009898",
+"n": 4077,
+"name": "cytoplasmic side of plasma membrane",
+"subtree": 7,
+"subtree_isa": 4
+},
+"GO:0009920": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0009920",
+"n": 23974,
+"name": "cell plate formation involved in plant-type cell wall biogenesis",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0009986": {
+"ic": 5.6051,
+"ic_isa": 8.3131,
+"id": "GO:0009986",
+"n": 4077,
+"name": "cell surface",
+"subtree": 15,
+"subtree_isa": 1
+},
+"GO:0009987": {
+"ic": 0.6745,
+"ic_isa": 0.8829,
+"id": "GO:0009987",
+"n": 23974,
+"name": "cellular process",
+"subtree": 12213,
+"subtree_isa": 9915
+},
+"GO:0009992": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0009992",
+"n": 23974,
+"name": "intracellular water homeostasis",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0010148": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0010148",
+"n": 23974,
+"name": "transpiration",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0010242": {
+"ic": 9.2144,
+"ic_isa": 9.2144,
+"id": "GO:0010242",
+"n": 10041,
+"name": "oxygen evolving activity",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0010248": {
+"ic": 9.3916,
+"ic_isa": 10.0847,
+"id": "GO:0010248",
+"n": 23974,
+"name": "establishment or maintenance of transmembrane electrochemical gradient",
+"subtree": 2,
+"subtree_isa": 1
+},
+"GO:0010324": {
+"ic": 7.6868,
+"ic_isa": 7.8875,
+"id": "GO:0010324",
+"n": 23974,
+"name": "membrane invagination",
+"subtree": 11,
+"subtree_isa": 9
+},
+"GO:0010467": {
+"ic": 3.4986,
+"ic_isa": 5.108,
+"id": "GO:0010467",
+"n": 23974,
+"name": "gene expression",
+"subtree": 725,
+"subtree_isa": 145
+},
+"GO:0010468": {
+"ic": 3.3105,
+"ic_isa": 3.3989,
+"id": "GO:0010468",
+"n": 23974,
+"name": "regulation of gene expression",
+"subtree": 875,
+"subtree_isa": 801
+},
+"GO:0010608": {
+"ic": 4.8752,
+"ic_isa": 4.9548,
+"id": "GO:0010608",
+"n": 23974,
+"name": "post-transcriptional regulation of gene expression",
+"subtree": 183,
+"subtree_isa": 169
+},
+"GO:0010833": {
+"ic": 9.3916,
+"ic_isa": 9.3916,
+"id": "GO:0010833",
+"n": 23974,
+"name": "telomere maintenance via telomere lengthening",
+"subtree": 2,
+"subtree_isa": 2
+},
+"GO:0012505": {
+"ic": 2.4326,
+"ic_isa": 8.3131,
+"id": "GO:0012505",
+"n": 4077,
+"name": "endomembrane system",
+"subtree": 358,
+"subtree_isa": 1
+},
+"GO:0014704": {
+"ic": 7.62,
+"ic_isa": 8.3131,
+"id": "GO:0014704",
+"n": 4077,
+"name": "intercalated disc",
+"subtree": 2,
+"subtree_isa": 1
+},
+"GO:0015031": {
+"ic": 5.2095,
+"ic_isa": 5.3226,
+"id": "GO:0015031",
+"n": 23974,
+"name": "protein transport",
+"subtree": 131,
+"subtree_isa": 117
+},
+"GO:0015267": {
+"ic": 4.0669,
+"ic_isa": 4.0669,
+"id": "GO:0015267",
+"n": 10041,
+"name": "channel activity",
+"subtree": 172,
+"subtree_isa": 172
+},
+"GO:0015276": {
+"ic": 5.0097,
+"ic_isa": 5.0097,
+"id": "GO:0015276",
+"n": 10041,
+"name": "ligand-gated monoatomic ion channel activity",
+"subtree": 67,
+"subtree_isa": 67
+},
+"GO:0015291": {
+"ic": 3.6538,
+"ic_isa": 3.6538,
+"id": "GO:0015291",
+"n": 10041,
+"name": "secondary active transmembrane transporter activity",
+"subtree": 260,
+"subtree_isa": 260
+},
+"GO:0015297": {
+"ic": 4.7485,
+"ic_isa": 4.7485,
+"id": "GO:0015297",
+"n": 10041,
+"name": "antiporter activity",
+"subtree": 87,
+"subtree_isa": 87
+},
+"GO:0015399": {
+"ic": 4.4269,
+"ic_isa": 4.4269,
+"id": "GO:0015399",
+"n": 10041,
+"name": "primary active transmembrane transporter activity",
+"subtree": 120,
+"subtree_isa": 120
+},
+"GO:0015670": {
+"ic": 8.9861,
+"ic_isa": 9.3916,
+"id": "GO:0015670",
+"n": 23974,
+"name": "carbon dioxide transport",
+"subtree": 3,
+"subtree_isa": 2
+},
+"GO:0015671": {
+"ic": 9.3916,
+"ic_isa": 10.0847,
+"id": "GO:0015671",
+"n": 23974,
+"name": "oxygen transport",
+"subtree": 2,
+"subtree_isa": 1
+},
+"GO:0015727": {
+"ic": 8.293,
+"ic_isa": 8.6984,
+"id": "GO:0015727",
+"n": 23974,
+"name": "lactate transport",
+"subtree": 6,
+"subtree_isa": 4
+},
+"GO:0015767": {
+"ic": 8.6984,
+"ic_isa": 10.0847,
+"id": "GO:0015767",
+"n": 23974,
+"name": "lactose transport",
+"subtree": 4,
+"subtree_isa": 1
+},
+"GO:0015934": {
+"ic": 6.5214,
+"ic_isa": 6.5214,
+"id": "GO:0015934",
+"n": 4077,
+"name": "large ribosomal subunit",
+"subtree": 6,
+"subtree_isa": 6
+},
+"GO:0015935": {
+"ic": 6.5214,
+"ic_isa": 6.5214,
+"id": "GO:0015935",
+"n": 4077,
+"name": "small ribosomal subunit",
+"subtree": 6,
+"subtree_isa": 6
+},
+"GO:0015948": {
+"ic": 8.6984,
+"ic_isa": 8.6984,
+"id": "GO:0015948",
+"n": 23974,
+"name": "methanogenesis",
+"subtree": 4,
+"subtree_isa": 4
+},
+"GO:0015977": {
+"ic": 7.7821,
+"ic_isa": 7.8875,
+"id": "GO:0015977",
+"n": 23974,
+"name": "carbon fixation",
+"subtree": 10,
+"subtree_isa": 9
+},
+"GO:0015979": {
+"ic": 6.9937,
+"ic_isa": 10.0847,
+"id": "GO:0015979",
+"n": 23974,
+"name": "photosynthesis",
+"subtree": 22,
+"subtree_isa": 1
+},
+"GO:0015985": {
+"ic": 9.3916,
+"ic_isa": 9.3916,
+"id": "GO:0015985",
+"n": 23974,
+"name": "energy coupled proton transport, down electrochemical gradient",
+"subtree": 2,
+"subtree_isa": 2
+},
+"GO:0015986": {
+"ic": 8.6984,
+"ic_isa": 8.9861,
+"id": "GO:0015986",
+"n": 23974,
+"name": "proton motive force-driven ATP synthesis",
+"subtree": 4,
+"subtree_isa": 3
+},
+"GO:0015988": {
+"ic": 9.3916,
+"ic_isa": 9.3916,
+"id": "GO:0015988",
+"n": 23974,
+"name": "energy coupled proton transmembrane transport, against electrochemical gradient",
+"subtree": 2,
+"subtree_isa": 2
+},
+"GO:0016020": {
+"ic": 1.5152,
+"ic_isa": 2.9059,
+"id": "GO:0016020",
+"n": 4077,
+"name": "membrane",
+"subtree": 896,
+"subtree_isa": 223
+},
+"GO:0016042": {
+"ic": 5.0413,
+"ic_isa": 5.0478,
+"id": "GO:0016042",
+"n": 23974,
+"name": "lipid catabolic process",
+"subtree": 155,
+"subtree_isa": 154
+},
+"GO:0016049": {
+"ic": 6.3712,
+"ic_isa": 6.4471,
+"id": "GO:0016049",
+"n": 23974,
+"name": "cell growth",
+"subtree": 41,
+"subtree_isa": 38
+},
+"GO:0016051": {
+"ic": 5.3056,
+"ic_isa": 5.3398,
+"id": "GO:0016051",
+"n": 23974,
+"name": "carbohydrate biosynthetic process",
+"subtree": 119,
+"subtree_isa": 115
+},
+"GO:0016052": {
+"ic": 5.3226,
+"ic_isa": 5.3398,
+"id": "GO:0016052",
+"n": 23974,
+"name": "carbohydrate catabolic process",
+"subtree": 117,
+"subtree_isa": 115
+},
+"GO:0016192": {
+"ic": 4.6337,
+"ic_isa": 5.2725,
+"id": "GO:0016192",
+"n": 23974,
+"name": "vesicle-mediated transport",
+"subtree": 233,
+"subtree_isa": 123
+},
+"GO:0016459": {
+"ic": 5.2221,
+"ic_isa": 5.2221,
+"id": "GO:0016459",
+"n": 4077,
+"name": "myosin complex",
+"subtree": 22,
+"subtree_isa": 22
+},
+"GO:0016787": {
+"ic": 2.0567,
+"ic_isa": 2.0567,
+"id": "GO:0016787",
+"n": 10041,
+"name": "hydrolase activity",
+"subtree": 1284,
+"subtree_isa": 1284
+},
+"GO:0016887": {
+"ic": 9.2144,
+"ic_isa": 9.2144,
+"id": "GO:0016887",
+"n": 10041,
+"name": "ATP hydrolysis activity",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0016984": {
+"ic": 9.2144,
+"ic_isa": 9.2144,
+"id": "GO:0016984",
+"n": 10041,
+"name": "ribulose-bisphosphate carboxylase activity",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0019230": {
+"ic": 8.6984,
+"ic_isa": 8.6984,
+"id": "GO:0019230",
+"n": 23974,
+"name": "proprioception",
+"subtree": 4,
+"subtree_isa": 4
+},
+"GO:0019253": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0019253",
+"n": 23974,
+"name": "reductive pentose-phosphate cycle",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0019388": {
+"ic": 8.4753,
+"ic_isa": 8.4753,
+"id": "GO:0019388",
+"n": 23974,
+"name": "galactose catabolic process",
+"subtree": 5,
+"subtree_isa": 5
+},
+"GO:0019395": {
+"ic": 8.293,
+"ic_isa": 8.293,
+"id": "GO:0019395",
+"n": 23974,
+"name": "fatty acid oxidation",
+"subtree": 6,
+"subtree_isa": 6
+},
+"GO:0019420": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0019420",
+"n": 23974,
+"name": "dissimilatory sulfate reduction",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0019432": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0019432",
+"n": 23974,
+"name": "triglyceride biosynthetic process",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0019433": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0019433",
+"n": 23974,
+"name": "triglyceride catabolic process",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0019655": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0019655",
+"n": 23974,
+"name": "pyruvate fermentation to ethanol",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0019661": {
+"consider": [],
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0019661",
+"n": 23974,
+"name": "obsolete homolactic fermentation",
+"obsolete": true,
+"replaced_by": [
+"GO:0019244"
+],
+"subtree": 1,
+"subtree_isa": 1,
+"via": "GO:0019244"
+},
+"GO:0019684": {
+"ic": 7.4457,
+"ic_isa": 10.0847,
+"id": "GO:0019684",
+"n": 23974,
+"name": "photosynthesis, light reaction",
+"subtree": 14,
+"subtree_isa": 1
+},
+"GO:0019814": {
+"ic": 4.8791,
+"ic_isa": 4.8791,
+"id": "GO:0019814",
+"n": 4077,
+"name": "immunoglobulin complex",
+"subtree": 31,
+"subtree_isa": 31
+},
+"GO:0019835": {
+"ic": 7.7821,
+"ic_isa": 7.7821,
+"id": "GO:0019835",
+"n": 23974,
+"name": "cytolysis",
+"subtree": 10,
+"subtree_isa": 10
+},
+"GO:0019898": {
+"ic": 4.3058,
+"ic_isa": 4.5519,
+"id": "GO:0019898",
+"n": 4077,
+"name": "extrinsic component of membrane",
+"subtree": 55,
+"subtree_isa": 43
+},
+"GO:0019915": {
+"ic": 8.293,
+"ic_isa": 8.9861,
+"id": "GO:0019915",
+"n": 23974,
+"name": "lipid storage",
+"subtree": 6,
+"subtree_isa": 3
+},
+"GO:0019953": {
+"ic": 4.2126,
+"ic_isa": 8.9861,
+"id": "GO:0019953",
+"n": 23974,
+"name": "sexual reproduction",
+"subtree": 355,
+"subtree_isa": 3
+},
+"GO:0019954": {
+"ic": 6.619,
+"ic_isa": 6.9067,
+"id": "GO:0019954",
+"n": 23974,
+"name": "asexual reproduction",
+"subtree": 32,
+"subtree_isa": 24
+},
+"GO:0022008": {
+"ic": 3.998,
+"ic_isa": 8.6984,
+"id": "GO:0022008",
+"n": 23974,
+"name": "neurogenesis",
+"subtree": 440,
+"subtree_isa": 4
+},
+"GO:0022403": {
+"ic": 6.2346,
+"ic_isa": 6.2346,
+"id": "GO:0022403",
+"n": 23974,
+"name": "cell cycle phase",
+"subtree": 47,
+"subtree_isa": 47
+},
+"GO:0022616": {
+"ic": 7.5198,
+"ic_isa": 7.7821,
+"id": "GO:0022616",
+"n": 23974,
+"name": "DNA strand elongation",
+"subtree": 13,
+"subtree_isa": 10
+},
+"GO:0022803": {
+"ic": 4.0611,
+"ic_isa": 4.0611,
+"id": "GO:0022803",
+"n": 10041,
+"name": "passive transmembrane transporter activity",
+"subtree": 173,
+"subtree_isa": 173
+},
+"GO:0022804": {
+"ic": 3.1886,
+"ic_isa": 3.1886,
+"id": "GO:0022804",
+"n": 10041,
+"name": "active transmembrane transporter activity",
+"subtree": 414,
+"subtree_isa": 414
+},
+"GO:0022904": {
+"ic": 7.5198,
+"ic_isa": 7.5998,
+"id": "GO:0022904",
+"n": 23974,
+"name": "respiratory electron transport chain",
+"subtree": 13,
+"subtree_isa": 12
+},
+"GO:0030016": {
+"ic": 5.4227,
+"ic_isa": 7.2145,
+"id": "GO:0030016",
+"n": 4077,
+"name": "myofibril",
+"subtree": 18,
+"subtree_isa": 3
+},
+"GO:0030017": {
+"ic": 5.7482,
+"ic_isa": 8.3131,
+"id": "GO:0030017",
+"n": 4077,
+"name": "sarcomere",
+"subtree": 13,
+"subtree_isa": 1
+},
+"GO:0030057": {
+"ic": 6.9268,
+"ic_isa": 8.3131,
+"id": "GO:0030057",
+"n": 4077,
+"name": "desmosome",
+"subtree": 4,
+"subtree_isa": 1
+},
+"GO:0030061": {
+"ic": 8.3131,
+"ic_isa": 8.3131,
+"id": "GO:0030061",
+"n": 4077,
+"name": "mitochondrial crista",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0030133": {
+"ic": 4.5754,
+"ic_isa": 5.6051,
+"id": "GO:0030133",
+"n": 4077,
+"name": "transport vesicle",
+"subtree": 42,
+"subtree_isa": 15
+},
+"GO:0030139": {
+"ic": 4.7296,
+"ic_isa": 5.8282,
+"id": "GO:0030139",
+"n": 4077,
+"name": "endocytic vesicle",
+"subtree": 36,
+"subtree_isa": 12
+},
+"GO:0030154": {
+"ic": 2.8798,
+"ic_isa": 3.9172,
+"id": "GO:0030154",
+"n": 23974,
+"name": "cell differentiation",
+"subtree": 1346,
+"subtree_isa": 477
+},
+"GO:0030163": {
+"ic": 5.88,
+"ic_isa": 6.0594,
+"id": "GO:0030163",
+"n": 23974,
+"name": "protein catabolic process",
+"subtree": 67,
+"subtree_isa": 56
+},
+"GO:0030164": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0030164",
+"n": 23974,
+"name": "protein denaturation",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0030168": {
+"ic": 9.3916,
+"ic_isa": 10.0847,
+"id": "GO:0030168",
+"n": 23974,
+"name": "platelet activation",
+"subtree": 2,
+"subtree_isa": 1
+},
+"GO:0030218": {
+"ic": 7.5998,
+"ic_isa": 8.4753,
+"id": "GO:0030218",
+"n": 23974,
+"name": "erythrocyte differentiation",
+"subtree": 12,
+"subtree_isa": 5
+},
+"GO:0030244": {
+"ic": 8.9861,
+"ic_isa": 8.9861,
+"id": "GO:0030244",
+"n": 23974,
+"name": "cellulose biosynthetic process",
+"subtree": 3,
+"subtree_isa": 3
+},
+"GO:0030261": {
+"ic": 8.1388,
+"ic_isa": 8.1388,
+"id": "GO:0030261",
+"n": 23974,
+"name": "chromosome condensation",
+"subtree": 7,
+"subtree_isa": 7
+},
+"GO:0030301": {
+"ic": 7.6868,
+"ic_isa": 7.8875,
+"id": "GO:0030301",
+"n": 23974,
+"name": "cholesterol transport",
+"subtree": 11,
+"subtree_isa": 9
+},
+"GO:0030421": {
+"ic": 9.3916,
+"ic_isa": 10.0847,
+"id": "GO:0030421",
+"n": 23974,
+"name": "defecation",
+"subtree": 2,
+"subtree_isa": 1
+},
+"GO:0030424": {
+"ic": 4.2188,
+"ic_isa": 6.2337,
+"id": "GO:0030424",
+"n": 4077,
+"name": "axon",
+"subtree": 60,
+"subtree_isa": 8
+},
+"GO:0030425": {
+"ic": 4.6755,
+"ic_isa": 5.7482,
+"id": "GO:0030425",
+"n": 4077,
+"name": "dendrite",
+"subtree": 38,
+"subtree_isa": 13
+},
+"GO:0030431": {
+"ic": 8.6984,
+"ic_isa": 9.3916,
+"id": "GO:0030431",
+"n": 23974,
+"name": "sleep",
+"subtree": 4,
+"subtree_isa": 2
+},
+"GO:0030432": {
+"ic": 9.3916,
+"ic_isa": 9.3916,
+"id": "GO:0030432",
+"n": 23974,
+"name": "peristalsis",
+"subtree": 2,
+"subtree_isa": 2
+},
+"GO:0030594": {
+"ic": 6.0364,
+"ic_isa": 6.0364,
+"id": "GO:0030594",
+"n": 10041,
+"name": "neurotransmitter receptor activity",
+"subtree": 24,
+"subtree_isa": 24
+},
+"GO:0030849": {
+"ic": 8.3131,
+"ic_isa": 8.3131,
+"id": "GO:0030849",
+"n": 4077,
+"name": "autosome",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0031012": {
+"ic": 3.6687,
+"ic_isa": 5.1776,
+"id": "GO:0031012",
+"n": 4077,
+"name": "extracellular matrix",
+"subtree": 104,
+"subtree_isa": 23
+},
+"GO:0031468": {
+"ic": 8.0053,
+"ic_isa": 8.4753,
+"id": "GO:0031468",
+"n": 23974,
+"name": "nuclear membrane reassembly",
+"subtree": 8,
+"subtree_isa": 5
+},
+"GO:0031514": {
+"ic": 4.8791,
+"ic_isa": 5.6741,
+"id": "GO:0031514",
+"n": 4077,
+"name": "motile cilium",
+"subtree": 31,
+"subtree_isa": 14
+},
+"GO:0031577": {
+"ic": 8.0053,
+"ic_isa": 8.0053,
+"id": "GO:0031577",
+"n": 23974,
+"name": "spindle checkpoint signaling",
+"subtree": 8,
+"subtree_isa": 8
+},
+"GO:0031619": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0031619",
+"n": 23974,
+"name": "homologous chromosome orientation in meiotic metaphase I",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0031649": {
+"ic": 9.3916,
+"ic_isa": 9.3916,
+"id": "GO:0031649",
+"n": 23974,
+"name": "heat generation",
+"subtree": 2,
+"subtree_isa": 2
+},
+"GO:0031965": {
+"ic": 6.3672,
+"ic_isa": 7.2145,
+"id": "GO:0031965",
+"n": 4077,
+"name": "nuclear membrane",
+"subtree": 7,
+"subtree_isa": 3
+},
+"GO:0031966": {
+"ic": 4.7022,
+"ic_isa": 7.2145,
+"id": "GO:0031966",
+"n": 4077,
+"name": "mitochondrial membrane",
+"subtree": 37,
+"subtree_isa": 3
+},
+"GO:0031977": {
+"ic": 6.5214,
+"ic_isa": 6.5214,
+"id": "GO:0031977",
+"n": 4077,
+"name": "thylakoid lumen",
+"subtree": 6,
+"subtree_isa": 6
+},
+"GO:0031982": {
+"ic": 2.6398,
+"ic_isa": 3.5769,
+"id": "GO:0031982",
+"n": 4077,
+"name": "vesicle",
+"subtree": 291,
+"subtree_isa": 114
+},
+"GO:0031985": {
+"ic": 5.4799,
+"ic_isa": 6.9268,
+"id": "GO:0031985",
+"n": 4077,
+"name": "Golgi cisterna",
+"subtree": 17,
+"subtree_isa": 4
+},
+"GO:0032098": {
+"ic": 8.6984,
+"ic_isa": 8.6984,
+"id": "GO:0032098",
+"n": 23974,
+"name": "regulation of appetite",
+"subtree": 4,
+"subtree_isa": 4
+},
+"GO:0032153": {
+"ic": 4.9119,
+"ic_isa": 8.3131,
+"id": "GO:0032153",
+"n": 4077,
+"name": "cell division site",
+"subtree": 30,
+"subtree_isa": 1
+},
+"GO:0032154": {
+"ic": 7.2145,
+"ic_isa": 8.3131,
+"id": "GO:0032154",
+"n": 4077,
+"name": "cleavage furrow",
+"subtree": 3,
+"subtree_isa": 1
+},
+"GO:0032392": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0032392",
+"n": 23974,
+"name": "DNA geometric change",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0032502": {
+"ic": 1.7719,
+"ic_isa": 2.0664,
+"id": "GO:0032502",
+"n": 23974,
+"name": "developmental process",
+"subtree": 4076,
+"subtree_isa": 3036
+},
+"GO:0032870": {
+"ic": 5.3398,
+"ic_isa": 6.2135,
+"id": "GO:0032870",
+"n": 23974,
+"name": "cellular response to hormone stimulus",
+"subtree": 115,
+"subtree_isa": 48
+},
+"GO:0032964": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0032964",
+"n": 23974,
+"name": "collagen biosynthetic process",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0032982": {
+"ic": 7.2145,
+"ic_isa": 7.2145,
+"id": "GO:0032982",
+"n": 4077,
+"name": "myosin filament",
+"subtree": 3,
+"subtree_isa": 3
+},
+"GO:0032991": {
+"ic": 0.6716,
+"ic_isa": 0.6725,
+"id": "GO:0032991",
+"n": 4077,
+"name": "protein-containing complex",
+"subtree": 2083,
+"subtree_isa": 2081
+},
+"GO:0033268": {
+"ic": 8.3131,
+"ic_isa": 8.3131,
+"id": "GO:0033268",
+"n": 4077,
+"name": "node of Ranvier",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0033567": {
+"ic": 9.3916,
+"ic_isa": 9.3916,
+"id": "GO:0033567",
+"n": 23974,
+"name": "DNA replication, Okazaki fragment processing",
+"subtree": 2,
+"subtree_isa": 2
+},
+"GO:0034220": {
+"ic": 3.9006,
+"ic_isa": 5.5961,
+"id": "GO:0034220",
+"n": 23974,
+"name": "monoatomic ion transmembrane transport",
+"subtree": 485,
+"subtree_isa": 89
+},
+"GO:0034362": {
+"ic": 8.3131,
+"ic_isa": 8.3131,
+"id": "GO:0034362",
+"n": 4077,
+"name": "low-density lipoprotein particle",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0034702": {
+"ic": 4.5995,
+"ic_isa": 4.5995,
+"id": "GO:0034702",
+"n": 4077,
+"name": "monoatomic ion channel complex",
+"subtree": 41,
+"subtree_isa": 41
+},
+"GO:0035483": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0035483",
+"n": 23974,
+"name": "gastric emptying",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0036211": {
+"ic": 4.5318,
+"ic_isa": 4.5593,
+"id": "GO:0036211",
+"n": 23974,
+"name": "protein modification process",
+"subtree": 258,
+"subtree_isa": 251
+},
+"GO:0036376": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0036376",
+"n": 23974,
+"name": "sodium ion export across plasma membrane",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0036379": {
+"ic": 6.5214,
+"ic_isa": 7.2145,
+"id": "GO:0036379",
+"n": 4077,
+"name": "myofilament",
+"subtree": 6,
+"subtree_isa": 3
+},
+"GO:0038023": {
+"ic": 3.2483,
+"ic_isa": 3.2483,
+"id": "GO:0038023",
+"n": 10041,
+"name": "signaling receptor activity",
+"subtree": 390,
+"subtree_isa": 390
+},
+"GO:0040007": {
+"ic": 4.9142,
+"ic_isa": 5.1575,
+"id": "GO:0040007",
+"n": 23974,
+"name": "growth",
+"subtree": 176,
+"subtree_isa": 138
+},
+"GO:0040011": {
+"ic": 5.5204,
+"ic_isa": 5.5849,
+"id": "GO:0040011",
+"n": 23974,
+"name": "locomotion",
+"subtree": 96,
+"subtree_isa": 90
+},
+"GO:0040029": {
+"ic": 6.2781,
+"ic_isa": 6.3235,
+"id": "GO:0040029",
+"n": 23974,
+"name": "epigenetic regulation of gene expression",
+"subtree": 45,
+"subtree_isa": 43
+},
+"GO:0042254": {
+"ic": 5.7153,
+"ic_isa": 10.0847,
+"id": "GO:0042254",
+"n": 23974,
+"name": "ribosome biogenesis",
+"subtree": 79,
+"subtree_isa": 1
+},
+"GO:0042255": {
+"ic": 7.5998,
+"ic_isa": 8.9861,
+"id": "GO:0042255",
+"n": 23974,
+"name": "ribosome assembly",
+"subtree": 12,
+"subtree_isa": 3
+},
+"GO:0042310": {
+"ic": 7.8875,
+"ic_isa": 7.8875,
+"id": "GO:0042310",
+"n": 23974,
+"name": "vasoconstriction",
+"subtree": 9,
+"subtree_isa": 9
+},
+"GO:0042311": {
+"ic": 8.0053,
+"ic_isa": 8.1388,
+"id": "GO:0042311",
+"n": 23974,
+"name": "vasodilation",
+"subtree": 8,
+"subtree_isa": 7
+},
+"GO:0042371": {
+"ic": 9.3916,
+"ic_isa": 9.3916,
+"id": "GO:0042371",
+"n": 23974,
+"name": "vitamin K biosynthetic process",
+"subtree": 2,
+"subtree_isa": 2
+},
+"GO:0042383": {
+"ic": 7.2145,
+"ic_isa": 8.3131,
+"id": "GO:0042383",
+"n": 4077,
+"name": "sarcolemma",
+"subtree": 3,
+"subtree_isa": 1
+},
+"GO:0042391": {
+"ic": 5.0413,
+"ic_isa": 5.2484,
+"id": "GO:0042391",
+"n": 23974,
+"name": "regulation of membrane potential",
+"subtree": 155,
+"subtree_isa": 126
+},
+"GO:0042592": {
+"ic": 4.5395,
+"ic_isa": 4.8272,
+"id": "GO:0042592",
+"n": 23974,
+"name": "homeostatic process",
+"subtree": 256,
+"subtree_isa": 192
+},
+"GO:0042593": {
+"ic": 8.293,
+"ic_isa": 8.9861,
+"id": "GO:0042593",
+"n": 23974,
+"name": "glucose homeostasis",
+"subtree": 6,
+"subtree_isa": 3
+},
+"GO:0042596": {
+"ic": 9.3916,
+"ic_isa": 9.3916,
+"id": "GO:0042596",
+"n": 23974,
+"name": "fear response",
+"subtree": 2,
+"subtree_isa": 2
+},
+"GO:0042603": {
+"ic": 8.3131,
+"ic_isa": 8.3131,
+"id": "GO:0042603",
+"n": 4077,
+"name": "capsule",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0042651": {
+"ic": 5.0173,
+"ic_isa": 6.3672,
+"id": "GO:0042651",
+"n": 4077,
+"name": "thylakoid membrane",
+"subtree": 27,
+"subtree_isa": 7
+},
+"GO:0042744": {
+"ic": 9.3916,
+"ic_isa": 9.3916,
+"id": "GO:0042744",
+"n": 23974,
+"name": "hydrogen peroxide catabolic process",
+"subtree": 2,
+"subtree_isa": 2
+},
+"GO:0042755": {
+"ic": 8.9861,
+"ic_isa": 8.9861,
+"id": "GO:0042755",
+"n": 23974,
+"name": "eating behavior",
+"subtree": 3,
+"subtree_isa": 3
+},
+"GO:0042776": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0042776",
+"n": 23974,
+"name": "proton motive force-driven mitochondrial ATP synthesis",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0042807": {
+"ic": 8.3131,
+"ic_isa": 8.3131,
+"id": "GO:0042807",
+"n": 4077,
+"name": "central vacuole",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0043025": {
+"ic": 6.5214,
+"ic_isa": 8.3131,
+"id": "GO:0043025",
+"n": 4077,
+"name": "neuronal cell body",
+"subtree": 6,
+"subtree_isa": 1
+},
+"GO:0043083": {
+"ic": 8.3131,
+"ic_isa": 8.3131,
+"id": "GO:0043083",
+"n": 4077,
+"name": "synaptic cleft",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0043086": {
+"ic": 6.3958,
+"ic_isa": 6.4212,
+"id": "GO:0043086",
+"n": 23974,
+"name": "negative regulation of catalytic activity",
+"subtree": 40,
+"subtree_isa": 39
+},
+"GO:0043093": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0043093",
+"n": 23974,
+"name": "FtsZ-dependent cytokinesis",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0043137": {
+"ic": 9.3916,
+"ic_isa": 9.3916,
+"id": "GO:0043137",
+"n": 23974,
+"name": "DNA replication, removal of RNA primer",
+"subtree": 2,
+"subtree_isa": 2
+},
+"GO:0043209": {
+"ic": 6.5214,
+"ic_isa": 8.3131,
+"id": "GO:0043209",
+"n": 4077,
+"name": "myelin sheath",
+"subtree": 6,
+"subtree_isa": 1
+},
+"GO:0043226": {
+"ic": 0.7762,
+"ic_isa": 2.2705,
+"id": "GO:0043226",
+"n": 4077,
+"name": "organelle",
+"subtree": 1876,
+"subtree_isa": 421
+},
+"GO:0043227": {
+"ic": 1.103,
+"ic_isa": 2.8242,
+"id": "GO:0043227",
+"n": 4077,
+"name": "membrane-bounded organelle",
+"subtree": 1353,
+"subtree_isa": 242
+},
+"GO:0043231": {
+"ic": 1.2181,
+"ic_isa": 2.9708,
+"id": "GO:0043231",
+"n": 4077,
+"name": "intracellular membrane-bounded organelle",
+"subtree": 1206,
+"subtree_isa": 209
+},
+"GO:0043253": {
+"ic": 7.2145,
+"ic_isa": 8.3131,
+"id": "GO:0043253",
+"n": 4077,
+"name": "chloroplast ribosome",
+"subtree": 3,
+"subtree_isa": 1
+},
+"GO:0043679": {
+"ic": 5.1776,
+"ic_isa": 6.7037,
+"id": "GO:0043679",
+"n": 4077,
+"name": "axon terminus",
+"subtree": 23,
+"subtree_isa": 5
+},
+"GO:0043687": {
+"ic": 6.1335,
+"ic_isa": 6.1929,
+"id": "GO:0043687",
+"n": 23974,
+"name": "post-translational protein modification",
+"subtree": 52,
+"subtree_isa": 49
+},
+"GO:0044091": {
+"ic": 6.7889,
+"ic_isa": 8.293,
+"id": "GO:0044091",
+"n": 23974,
+"name": "membrane biogenesis",
+"subtree": 27,
+"subtree_isa": 6
+},
+"GO:0044241": {
+"ic": 9.3916,
+"ic_isa": 10.0847,
+"id": "GO:0044241",
+"n": 23974,
+"name": "lipid digestion",
+"subtree": 2,
+"subtree_isa": 1
+},
+"GO:0044245": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0044245",
+"n": 23974,
+"name": "polysaccharide digestion",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0044256": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0044256",
+"n": 23974,
+"name": "protein digestion",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0044391": {
+"ic": 5.7482,
+"ic_isa": 5.7482,
+"id": "GO:0044391",
+"n": 4077,
+"name": "ribosomal subunit",
+"subtree": 13,
+"subtree_isa": 13
+},
+"GO:0044403": {
+"ic": 4.2154,
+"ic_isa": 4.3546,
+"id": "GO:0044403",
+"n": 23974,
+"name": "biological process involved in symbiotic interaction",
+"subtree": 354,
+"subtree_isa": 308
+},
+"GO:0044557": {
+"ic": 8.6984,
+"ic_isa": 8.6984,
+"id": "GO:0044557",
+"n": 23974,
+"name": "relaxation of smooth muscle",
+"subtree": 4,
+"subtree_isa": 4
+},
+"GO:0044819": {
+"ic": 9.3916,
+"ic_isa": 9.3916,
+"id": "GO:0044819",
+"n": 23974,
+"name": "mitotic G1/S transition checkpoint signaling",
+"subtree": 2,
+"subtree_isa": 2
+},
+"GO:0044838": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0044838",
+"n": 23974,
+"name": "cell quiescence",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0045004": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0045004",
+"n": 23974,
+"name": "DNA replication proofreading",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0045023": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0045023",
+"n": 23974,
+"name": "G0 to G1 transition",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0045095": {
+"ic": 8.3131,
+"ic_isa": 8.3131,
+"id": "GO:0045095",
+"n": 4077,
+"name": "keratin filament",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0045143": {
+"ic": 7.089,
+"ic_isa": 10.0847,
+"id": "GO:0045143",
+"n": 23974,
+"name": "homologous chromosome segregation",
+"subtree": 20,
+"subtree_isa": 1
+},
+"GO:0045144": {
+"ic": 8.4753,
+"ic_isa": 10.0847,
+"id": "GO:0045144",
+"n": 23974,
+"name": "meiotic sister chromatid segregation",
+"subtree": 5,
+"subtree_isa": 1
+},
+"GO:0045202": {
+"ic": 3.3503,
+"ic_isa": 4.7022,
+"id": "GO:0045202",
+"n": 4077,
+"name": "synapse",
+"subtree": 143,
+"subtree_isa": 37
+},
+"GO:0045211": {
+"ic": 6.1159,
+"ic_isa": 8.3131,
+"id": "GO:0045211",
+"n": 4077,
+"name": "postsynaptic membrane",
+"subtree": 9,
+"subtree_isa": 1
+},
+"GO:0045259": {
+"ic": 8.3131,
+"ic_isa": 8.3131,
+"id": "GO:0045259",
+"n": 4077,
+"name": "proton-transporting ATP synthase complex",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0045277": {
+"ic": 8.3131,
+"ic_isa": 8.3131,
+"id": "GO:0045277",
+"n": 4077,
+"name": "respiratory chain complex IV",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0045333": {
+"ic": 6.1529,
+"ic_isa": 6.9492,
+"id": "GO:0045333",
+"n": 23974,
+"name": "cellular respiration",
+"subtree": 51,
+"subtree_isa": 23
+},
+"GO:0045335": {
+"ic": 5.6741,
+"ic_isa": 6.5214,
+"id": "GO:0045335",
+"n": 4077,
+"name": "phagocytic vesicle",
+"subtree": 14,
+"subtree_isa": 6
+},
+"GO:0045786": {
+"ic": 5.2019,
+"ic_isa": 5.2095,
+"id": "GO:0045786",
+"n": 23974,
+"name": "negative regulation of cell cycle",
+"subtree": 132,
+"subtree_isa": 131
+},
+"GO:0045787": {
+"ic": 5.3056,
+"ic_isa": 5.3056,
+"id": "GO:0045787",
+"n": 23974,
+"name": "positive regulation of cell cycle",
+"subtree": 119,
+"subtree_isa": 119
+},
+"GO:0046718": {
+"ic": 6.7525,
+"ic_isa": 8.1388,
+"id": "GO:0046718",
+"n": 23974,
+"name": "symbiont entry into host cell",
+"subtree": 28,
+"subtree_isa": 7
+},
+"GO:0046785": {
+"ic": 7.8875,
+"ic_isa": 10.0847,
+"id": "GO:0046785",
+"n": 23974,
+"name": "microtubule polymerization",
+"subtree": 9,
+"subtree_isa": 1
+},
+"GO:0046879": {
+"ic": 6.1529,
+"ic_isa": 6.1529,
+"id": "GO:0046879",
+"n": 23974,
+"name": "hormone secretion",
+"subtree": 51,
+"subtree_isa": 51
+},
+"GO:0046903": {
+"ic": 4.7965,
+"ic_isa": 4.843,
+"id": "GO:0046903",
+"n": 23974,
+"name": "secretion",
+"subtree": 198,
+"subtree_isa": 189
+},
+"GO:0046933": {
+"ic": 9.2144,
+"ic_isa": 9.2144,
+"id": "GO:0046933",
+"n": 10041,
+"name": "proton-transporting ATP synthase activity, rotational mechanism",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0048477": {
+"ic": 5.678,
+"ic_isa": 10.0847,
+"id": "GO:0048477",
+"n": 23974,
+"name": "oogenesis",
+"subtree": 82,
+"subtree_isa": 1
+},
+"GO:0048492": {
+"ic": 6.9268,
+"ic_isa": 6.9268,
+"id": "GO:0048492",
+"n": 4077,
+"name": "ribulose bisphosphate carboxylase complex",
+"subtree": 4,
+"subtree_isa": 4
+},
+"GO:0048589": {
+"ic": 5.1431,
+"ic_isa": 5.4213,
+"id": "GO:0048589",
+"n": 23974,
+"name": "developmental growth",
+"subtree": 140,
+"subtree_isa": 106
+},
+"GO:0048870": {
+"ic": 4.4322,
+"ic_isa": 4.5794,
+"id": "GO:0048870",
+"n": 23974,
+"name": "cell motility",
+"subtree": 285,
+"subtree_isa": 246
+},
+"GO:0050801": {
+"ic": 5.5204,
+"ic_isa": 5.8081,
+"id": "GO:0050801",
+"n": 23974,
+"name": "monoatomic ion homeostasis",
+"subtree": 96,
+"subtree_isa": 72
+},
+"GO:0050877": {
+"ic": 4.8117,
+"ic_isa": 5.4598,
+"id": "GO:0050877",
+"n": 23974,
+"name": "nervous system process",
+"subtree": 195,
+"subtree_isa": 102
+},
+"GO:0050884": {
+"ic": 8.4753,
+"ic_isa": 10.0847,
+"id": "GO:0050884",
+"n": 23974,
+"name": "neuromuscular process controlling posture",
+"subtree": 5,
+"subtree_isa": 1
+},
+"GO:0050885": {
+"ic": 8.6984,
+"ic_isa": 10.0847,
+"id": "GO:0050885",
+"n": 23974,
+"name": "neuromuscular process controlling balance",
+"subtree": 4,
+"subtree_isa": 1
+},
+"GO:0050890": {
+"ic": 6.7174,
+"ic_isa": 6.7174,
+"id": "GO:0050890",
+"n": 23974,
+"name": "cognition",
+"subtree": 29,
+"subtree_isa": 29
+},
+"GO:0050891": {
+"ic": 8.6984,
+"ic_isa": 9.3916,
+"id": "GO:0050891",
+"n": 23974,
+"name": "multicellular organismal-level water homeostasis",
+"subtree": 4,
+"subtree_isa": 2
+},
+"GO:0050892": {
+"ic": 8.0053,
+"ic_isa": 8.0053,
+"id": "GO:0050892",
+"n": 23974,
+"name": "intestinal absorption",
+"subtree": 8,
+"subtree_isa": 8
+},
+"GO:0050959": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0050959",
+"n": 23974,
+"name": "echolocation",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0050975": {
+"ic": 9.3916,
+"ic_isa": 10.0847,
+"id": "GO:0050975",
+"n": 23974,
+"name": "sensory perception of touch",
+"subtree": 2,
+"subtree_isa": 1
+},
+"GO:0051081": {
+"ic": 8.0053,
+"ic_isa": 8.1388,
+"id": "GO:0051081",
+"n": 23974,
+"name": "nuclear membrane disassembly",
+"subtree": 8,
+"subtree_isa": 7
+},
+"GO:0051225": {
+"ic": 7.1403,
+"ic_isa": 7.5198,
+"id": "GO:0051225",
+"n": 23974,
+"name": "spindle assembly",
+"subtree": 19,
+"subtree_isa": 13
+},
+"GO:0051228": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0051228",
+"n": 23974,
+"name": "mitotic spindle disassembly",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0051258": {
+"ic": 7.5198,
+"ic_isa": 8.4753,
+"id": "GO:0051258",
+"n": 23974,
+"name": "protein polymerization",
+"subtree": 13,
+"subtree_isa": 5
+},
+"GO:0051276": {
+"ic": 5.2484,
+"ic_isa": 5.728,
+"id": "GO:0051276",
+"n": 23974,
+"name": "chromosome organization",
+"subtree": 126,
+"subtree_isa": 78
+},
+"GO:0051298": {
+"ic": 8.9861,
+"ic_isa": 10.0847,
+"id": "GO:0051298",
+"n": 23974,
+"name": "centrosome duplication",
+"subtree": 3,
+"subtree_isa": 1
+},
+"GO:0051299": {
+"ic": 9.3916,
+"ic_isa": 9.3916,
+"id": "GO:0051299",
+"n": 23974,
+"name": "centrosome separation",
+"subtree": 2,
+"subtree_isa": 2
+},
+"GO:0051301": {
+"ic": 5.2889,
+"ic_isa": 6.1727,
+"id": "GO:0051301",
+"n": 23974,
+"name": "cell division",
+"subtree": 121,
+"subtree_isa": 50
+},
+"GO:0051306": {
+"ic": 9.3916,
+"ic_isa": 10.0847,
+"id": "GO:0051306",
+"n": 23974,
+"name": "mitotic sister chromatid separation",
+"subtree": 2,
+"subtree_isa": 1
+},
+"GO:0051310": {
+"ic": 7.089,
+"ic_isa": 8.4753,
+"id": "GO:0051310",
+"n": 23974,
+"name": "metaphase chromosome alignment",
+"subtree": 20,
+"subtree_isa": 5
+},
+"GO:0051311": {
+"ic": 7.8875,
+"ic_isa": 8.9861,
+"id": "GO:0051311",
+"n": 23974,
+"name": "meiotic metaphase chromosome alignment",
+"subtree": 9,
+"subtree_isa": 3
+},
+"GO:0051318": {
+"ic": 8.9861,
+"ic_isa": 8.9861,
+"id": "GO:0051318",
+"n": 23974,
+"name": "G1 phase",
+"subtree": 3,
+"subtree_isa": 3
+},
+"GO:0051319": {
+"ic": 8.9861,
+"ic_isa": 8.9861,
+"id": "GO:0051319",
+"n": 23974,
+"name": "G2 phase",
+"subtree": 3,
+"subtree_isa": 3
+},
+"GO:0051320": {
+"ic": 8.9861,
+"ic_isa": 8.9861,
+"id": "GO:0051320",
+"n": 23974,
+"name": "S phase",
+"subtree": 3,
+"subtree_isa": 3
+},
+"GO:0051321": {
+"ic": 5.0096,
+"ic_isa": 8.6984,
+"id": "GO:0051321",
+"n": 23974,
+"name": "meiotic cell cycle",
+"subtree": 160,
+"subtree_isa": 4
+},
+"GO:0051323": {
+"ic": 8.6984,
+"ic_isa": 8.9861,
+"id": "GO:0051323",
+"n": 23974,
+"name": "metaphase",
+"subtree": 4,
+"subtree_isa": 3
+},
+"GO:0051325": {
+"ic": 7.5198,
+"ic_isa": 8.6984,
+"id": "GO:0051325",
+"n": 23974,
+"name": "interphase",
+"subtree": 13,
+"subtree_isa": 4
+},
+"GO:0051328": {
+"ic": 8.4753,
+"ic_isa": 9.3916,
+"id": "GO:0051328",
+"n": 23974,
+"name": "meiotic interphase",
+"subtree": 5,
+"subtree_isa": 2
+},
+"GO:0051382": {
+"ic": 8.9861,
+"ic_isa": 10.0847,
+"id": "GO:0051382",
+"n": 23974,
+"name": "kinetochore assembly",
+"subtree": 3,
+"subtree_isa": 1
+},
+"GO:0051640": {
+"ic": 4.843,
+"ic_isa": 4.9849,
+"id": "GO:0051640",
+"n": 23974,
+"name": "organelle localization",
+"subtree": 189,
+"subtree_isa": 164
+},
+"GO:0051726": {
+"ic": 4.1498,
+"ic_isa": 4.1578,
+"id": "GO:0051726",
+"n": 23974,
+"name": "regulation of cell cycle",
+"subtree": 378,
+"subtree_isa": 375
+},
+"GO:0051899": {
+"ic": 7.0402,
+"ic_isa": 7.6868,
+"id": "GO:0051899",
+"n": 23974,
+"name": "membrane depolarization",
+"subtree": 21,
+"subtree_isa": 11
+},
+"GO:0055074": {
+"ic": 6.8658,
+"ic_isa": 7.2515,
+"id": "GO:0055074",
+"n": 23974,
+"name": "calcium ion homeostasis",
+"subtree": 25,
+"subtree_isa": 17
+},
+"GO:0055085": {
+"ic": 2.7931,
+"ic_isa": 3.9235,
+"id": "GO:0055085",
+"n": 23974,
+"name": "transmembrane transport",
+"subtree": 1468,
+"subtree_isa": 474
+},
+"GO:0060004": {
+"ic": 7.6868,
+"ic_isa": 7.6868,
+"id": "GO:0060004",
+"n": 23974,
+"name": "reflex",
+"subtree": 11,
+"subtree_isa": 11
+},
+"GO:0060047": {
+"ic": 7.5998,
+"ic_isa": 10.0847,
+"id": "GO:0060047",
+"n": 23974,
+"name": "heart contraction",
+"subtree": 12,
+"subtree_isa": 1
+},
+"GO:0060048": {
+"ic": 7.6868,
+"ic_isa": 10.0847,
+"id": "GO:0060048",
+"n": 23974,
+"name": "cardiac muscle contraction",
+"subtree": 11,
+"subtree_isa": 1
+},
+"GO:0060073": {
+"ic": 8.6984,
+"ic_isa": 10.0847,
+"id": "GO:0060073",
+"n": 23974,
+"name": "micturition",
+"subtree": 4,
+"subtree_isa": 1
+},
+"GO:0060075": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0060075",
+"n": 23974,
+"name": "regulation of resting membrane potential",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0060361": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0060361",
+"n": 23974,
+"name": "flight",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0061025": {
+"ic": 6.3235,
+"ic_isa": 6.3958,
+"id": "GO:0061025",
+"n": 23974,
+"name": "membrane fusion",
+"subtree": 43,
+"subtree_isa": 40
+},
+"GO:0061337": {
+"ic": 6.0594,
+"ic_isa": 8.9861,
+"id": "GO:0061337",
+"n": 23974,
+"name": "cardiac conduction",
+"subtree": 56,
+"subtree_isa": 3
+},
+"GO:0061744": {
+"ic": 9.3916,
+"ic_isa": 9.3916,
+"id": "GO:0061744",
+"n": 23974,
+"name": "motor behavior",
+"subtree": 2,
+"subtree_isa": 2
+},
+"GO:0070090": {
+"ic": 8.3131,
+"ic_isa": 8.3131,
+"id": "GO:0070090",
+"n": 4077,
+"name": "metaphase plate",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0070254": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0070254",
+"n": 23974,
+"name": "mucus secretion",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0070293": {
+"ic": 8.0053,
+"ic_isa": 8.0053,
+"id": "GO:0070293",
+"n": 23974,
+"name": "renal absorption",
+"subtree": 8,
+"subtree_isa": 8
+},
+"GO:0070295": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0070295",
+"n": 23974,
+"name": "renal water absorption",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0070992": {
+"ic": 7.2145,
+"ic_isa": 7.2145,
+"id": "GO:0070992",
+"n": 4077,
+"name": "translation initiation complex",
+"subtree": 3,
+"subtree_isa": 3
+},
+"GO:0071625": {
+"ic": 8.9861,
+"ic_isa": 8.9861,
+"id": "GO:0071625",
+"n": 23974,
+"name": "vocalization behavior",
+"subtree": 3,
+"subtree_isa": 3
+},
+"GO:0071944": {
+"ic": 2.1106,
+"ic_isa": 8.3131,
+"id": "GO:0071944",
+"n": 4077,
+"name": "cell periphery",
+"subtree": 494,
+"subtree_isa": 1
+},
+"GO:0072686": {
+"ic": 6.1159,
+"ic_isa": 8.3131,
+"id": "GO:0072686",
+"n": 4077,
+"name": "mitotic spindle",
+"subtree": 9,
+"subtree_isa": 1
+},
+"GO:0072687": {
+"ic": 6.9268,
+"ic_isa": 8.3131,
+"id": "GO:0072687",
+"n": 4077,
+"name": "meiotic spindle",
+"subtree": 4,
+"subtree_isa": 1
+},
+"GO:0086009": {
+"ic": 7.2515,
+"ic_isa": 7.5998,
+"id": "GO:0086009",
+"n": 23974,
+"name": "membrane repolarization",
+"subtree": 17,
+"subtree_isa": 12
+},
+"GO:0090174": {
+"ic": 6.4738,
+"ic_isa": 6.5012,
+"id": "GO:0090174",
+"n": 23974,
+"name": "organelle membrane fusion",
+"subtree": 37,
+"subtree_isa": 36
+},
+"GO:0090307": {
+"ic": 8.293,
+"ic_isa": 9.3916,
+"id": "GO:0090307",
+"n": 23974,
+"name": "mitotic spindle assembly",
+"subtree": 6,
+"subtree_isa": 2
+},
+"GO:0090332": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0090332",
+"n": 23974,
+"name": "stomatal closure",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0090382": {
+"ic": 7.8875,
+"ic_isa": 9.3916,
+"id": "GO:0090382",
+"n": 23974,
+"name": "phagosome maturation",
+"subtree": 9,
+"subtree_isa": 2
+},
+"GO:0090385": {
+"ic": 9.3916,
+"ic_isa": 9.3916,
+"id": "GO:0090385",
+"n": 23974,
+"name": "phagosome-lysosome fusion",
+"subtree": 2,
+"subtree_isa": 2
+},
+"GO:0097195": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0097195",
+"n": 23974,
+"name": "pilomotor reflex",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0097254": {
+"ic": 8.293,
+"ic_isa": 8.293,
+"id": "GO:0097254",
+"n": 23974,
+"name": "renal tubular secretion",
+"subtree": 6,
+"subtree_isa": 6
+},
+"GO:0097623": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0097623",
+"n": 23974,
+"name": "potassium ion export across plasma membrane",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0098554": {
+"ic": 7.2145,
+"ic_isa": 7.2145,
+"id": "GO:0098554",
+"n": 4077,
+"name": "cytoplasmic side of endoplasmic reticulum membrane",
+"subtree": 3,
+"subtree_isa": 3
+},
+"GO:0098657": {
+"ic": 4.8536,
+"ic_isa": 5.1149,
+"id": "GO:0098657",
+"n": 23974,
+"name": "import into cell",
+"subtree": 187,
+"subtree_isa": 144
+},
+"GO:0098708": {
+"ic": 9.3916,
+"ic_isa": 9.3916,
+"id": "GO:0098708",
+"n": 23974,
+"name": "D-glucose import across plasma membrane",
+"subtree": 2,
+"subtree_isa": 2
+},
+"GO:0098719": {
+"ic": 9.3916,
+"ic_isa": 10.0847,
+"id": "GO:0098719",
+"n": 23974,
+"name": "sodium ion import across plasma membrane",
+"subtree": 2,
+"subtree_isa": 1
+},
+"GO:0098754": {
+"ic": 5.6421,
+"ic_isa": 6.3005,
+"id": "GO:0098754",
+"n": 23974,
+"name": "detoxification",
+"subtree": 85,
+"subtree_isa": 44
+},
+"GO:0098768": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0098768",
+"n": 23974,
+"name": "meiotic prometaphase I",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0098796": {
+"ic": 2.0142,
+"ic_isa": 2.0142,
+"id": "GO:0098796",
+"n": 4077,
+"name": "membrane protein complex",
+"subtree": 544,
+"subtree_isa": 544
+},
+"GO:0098803": {
+"ic": 6.1159,
+"ic_isa": 6.1159,
+"id": "GO:0098803",
+"n": 4077,
+"name": "respiratory chain complex",
+"subtree": 9,
+"subtree_isa": 9
+},
+"GO:0099500": {
+"ic": 8.9861,
+"ic_isa": 8.9861,
+"id": "GO:0099500",
+"n": 23974,
+"name": "vesicle fusion to plasma membrane",
+"subtree": 3,
+"subtree_isa": 3
+},
+"GO:0099503": {
+"ic": 4.079,
+"ic_isa": 4.9119,
+"id": "GO:0099503",
+"n": 4077,
+"name": "secretory vesicle",
+"subtree": 69,
+"subtree_isa": 30
+},
+"GO:0120178": {
+"ic": 7.7821,
+"ic_isa": 7.7821,
+"id": "GO:0120178",
+"n": 23974,
+"name": "steroid hormone biosynthetic process",
+"subtree": 10,
+"subtree_isa": 10
+},
+"GO:0140013": {
+"ic": 5.6659,
+"ic_isa": 7.7821,
+"id": "GO:0140013",
+"n": 23974,
+"name": "meiotic nuclear division",
+"subtree": 83,
+"subtree_isa": 10
+},
+"GO:0140014": {
+"ic": 6.5012,
+"ic_isa": 9.3916,
+"id": "GO:0140014",
+"n": 23974,
+"name": "mitotic nuclear division",
+"subtree": 36,
+"subtree_isa": 2
+},
+"GO:0140352": {
+"ic": 4.8536,
+"ic_isa": 4.9029,
+"id": "GO:0140352",
+"n": 23974,
+"name": "export from cell",
+"subtree": 187,
+"subtree_isa": 178
+},
+"GO:0160184": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0160184",
+"n": 23974,
+"name": "paracellular transport",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0160269": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0160269",
+"n": 23974,
+"name": "sweat secretion",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:0160307": {
+"ic": 5.0033,
+"ic_isa": 10.0847,
+"id": "GO:0160307",
+"n": 23974,
+"name": "protein biosynthetic process",
+"subtree": 161,
+"subtree_isa": 1
+},
+"GO:0180010": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:0180010",
+"n": 23974,
+"name": "co-transcriptional mRNA 3'-end processing, cleavage and polyadenylation pathway",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:1902600": {
+"ic": 5.3842,
+"ic_isa": 8.1388,
+"id": "GO:1902600",
+"n": 23974,
+"name": "proton transmembrane transport",
+"subtree": 110,
+"subtree_isa": 7
+},
+"GO:1903457": {
+"ic": 8.9861,
+"ic_isa": 8.9861,
+"id": "GO:1903457",
+"n": 23974,
+"name": "lactate catabolic process",
+"subtree": 3,
+"subtree_isa": 3
+},
+"GO:1990573": {
+"ic": 10.0847,
+"ic_isa": 10.0847,
+"id": "GO:1990573",
+"n": 23974,
+"name": "potassium ion import across plasma membrane",
+"subtree": 1,
+"subtree_isa": 1
+},
+"GO:1990748": {
+"ic": 6.1929,
+"ic_isa": 7.3121,
+"id": "GO:1990748",
+"n": 23974,
+"name": "cellular detoxification",
+"subtree": 49,
+"subtree_isa": 16
+},
+"UBERON:0000002": {
+"ic": 6.7286,
+"ic_isa": 9.6189,
+"id": "UBERON:0000002",
+"n": 15047,
+"name": "uterine cervix",
+"subtree": 18,
+"subtree_isa": 1
+},
+"UBERON:0000004": {
+"ic": 4.6422,
+"ic_isa": 9.6189,
+"id": "UBERON:0000004",
+"n": 15047,
+"name": "nose",
+"subtree": 145,
+"subtree_isa": 1
+},
+"UBERON:0000006": {
+"ic": 9.6189,
+"ic_isa": 9.6189,
+"id": "UBERON:0000006",
+"n": 15047,
+"name": "islet of Langerhans",
+"subtree": 1,
+"subtree_isa": 1
+},
+"UBERON:0000007": {
+"ic": 6.7857,
+"ic_isa": 9.6189,
+"id": "UBERON:0000007",
+"n": 15047,
+"name": "pituitary gland",
+"subtree": 17,
+"subtree_isa": 1
+},
+"UBERON:0000010": {
+"ic": 3.6735,
+"ic_isa": 9.6189,
+"id": "UBERON:0000010",
+"n": 15047,
+"name": "peripheral nervous system",
+"subtree": 382,
+"subtree_isa": 1
+},
+"UBERON:0000011": {
+"ic": 6.5744,
+"ic_isa": 9.6189,
+"id": "UBERON:0000011",
+"n": 15047,
+"name": "parasympathetic nervous system",
+"subtree": 21,
+"subtree_isa": 1
+},
+"UBERON:0000012": {
+"ic": 5.7903,
+"ic_isa": 9.6189,
+"id": "UBERON:0000012",
+"n": 15047,
+"name": "somatic nervous system",
+"subtree": 46,
+"subtree_isa": 1
+},
+"UBERON:0000013": {
+"ic": 5.9554,
+"ic_isa": 9.6189,
+"id": "UBERON:0000013",
+"n": 15047,
+"name": "sympathetic nervous system",
+"subtree": 39,
+"subtree_isa": 1
+},
+"UBERON:0000020": {
+"ic": 2.8843,
+"ic_isa": 5.3994,
+"id": "UBERON:0000020",
+"n": 15047,
+"name": "sense organ",
+"subtree": 841,
+"subtree_isa": 68
+},
+"UBERON:0000022": {
+"ic": 6.1224,
+"ic_isa": 6.5744,
+"id": "UBERON:0000022",
+"n": 15047,
+"name": "feather",
+"subtree": 33,
+"subtree_isa": 21
+},
+"UBERON:0000033": {
+"ic": 1.9337,
+"ic_isa": 8.0095,
+"id": "UBERON:0000033",
+"n": 15047,
+"name": "head",
+"subtree": 2176,
+"subtree_isa": 5
+},
+"UBERON:0000043": {
+"ic": 6.4409,
+"ic_isa": 6.9109,
+"id": "UBERON:0000043",
+"n": 15047,
+"name": "tendon",
+"subtree": 24,
+"subtree_isa": 15
+},
+"UBERON:0000045": {
+"ic": 4.7987,
+"ic_isa": 4.8915,
+"id": "UBERON:0000045",
+"n": 15047,
+"name": "ganglion",
+"subtree": 124,
+"subtree_isa": 113
+},
+"UBERON:0000056": {
+"ic": 6.2177,
+"ic_isa": 8.5203,
+"id": "UBERON:0000056",
+"n": 15047,
+"name": "ureter",
+"subtree": 30,
+"subtree_isa": 3
+},
+"UBERON:0000057": {
+"ic": 5.6486,
+"ic_isa": 8.5203,
+"id": "UBERON:0000057",
+"n": 15047,
+"name": "urethra",
+"subtree": 53,
+"subtree_isa": 3
+},
+"UBERON:0000058": {
+"ic": 4.55,
+"ic_isa": 5.0756,
+"id": "UBERON:0000058",
+"n": 15047,
+"name": "duct",
+"subtree": 159,
+"subtree_isa": 94
+},
+"UBERON:0000059": {
+"ic": 4.7063,
+"ic_isa": 9.6189,
+"id": "UBERON:0000059",
+"n": 15047,
+"name": "large intestine",
+"subtree": 136,
+"subtree_isa": 1
+},
+"UBERON:0000062": {
+"ic": 0.322,
+"ic_isa": 1.4821,
+"id": "UBERON:0000062",
+"n": 15047,
+"name": "organ",
+"subtree": 10904,
+"subtree_isa": 3418
+},
+"UBERON:0000065": {
+"ic": 3.7301,
+"ic_isa": 9.6189,
+"id": "UBERON:0000065",
+"n": 15047,
+"name": "respiratory tract",
+"subtree": 361,
+"subtree_isa": 1
+},
+"UBERON:0000074": {
+"ic": 6.2177,
+"ic_isa": 8.2326,
+"id": "UBERON:0000074",
+"n": 15047,
+"name": "renal glomerulus",
+"subtree": 30,
+"subtree_isa": 4
+},
+"UBERON:0000160": {
+"ic": 4.0895,
+"ic_isa": 9.6189,
+"id": "UBERON:0000160",
+"n": 15047,
+"name": "intestine",
+"subtree": 252,
+"subtree_isa": 1
+},
+"UBERON:0000165": {
+"ic": 2.8725,
+"ic_isa": 9.6189,
+"id": "UBERON:0000165",
+"n": 15047,
+"name": "mouth",
+"subtree": 851,
+"subtree_isa": 1
+},
+"UBERON:0000167": {
+"ic": 9.6189,
+"ic_isa": 9.6189,
+"id": "UBERON:0000167",
+"n": 15047,
+"name": "oral cavity",
+"subtree": 1,
+"subtree_isa": 1
+},
+"UBERON:0000178": {
+"ic": 7.5395,
+"ic_isa": 7.8272,
+"id": "UBERON:0000178",
+"n": 15047,
+"name": "blood",
+"subtree": 8,
+"subtree_isa": 6
+},
+"UBERON:0000211": {
+"ic": 4.7906,
+"ic_isa": 5.0038,
+"id": "UBERON:0000211",
+"n": 15047,
+"name": "ligament",
+"subtree": 125,
+"subtree_isa": 101
+},
+"UBERON:0000310": {
+"ic": 5.9554,
+"ic_isa": 8.9258,
+"id": "UBERON:0000310",
+"n": 15047,
+"name": "breast",
+"subtree": 39,
+"subtree_isa": 2
+},
+"UBERON:0000326": {
+"ic": 9.6189,
+"ic_isa": 9.6189,
+"id": "UBERON:0000326",
+"n": 15047,
+"name": "pancreatic juice",
+"subtree": 1,
+"subtree_isa": 1
+},
+"UBERON:0000341": {
+"ic": 8.2326,
+"ic_isa": 9.6189,
+"id": "UBERON:0000341",
+"n": 15047,
+"name": "throat",
+"subtree": 4,
+"subtree_isa": 1
+},
+"UBERON:0000344": {
+"ic": 3.8168,
+"ic_isa": 4.7591,
+"id": "UBERON:0000344",
+"n": 15047,
+"name": "mucosa",
+"subtree": 331,
+"subtree_isa": 129
+},
+"UBERON:0000349": {
+"ic": 4.3511,
+"ic_isa": 9.6189,
+"id": "UBERON:0000349",
+"n": 15047,
+"name": "limbic system",
+"subtree": 194,
+"subtree_isa": 1
+},
+"UBERON:0000362": {
+"ic": 6.0636,
+"ic_isa": 9.6189,
+"id": "UBERON:0000362",
+"n": 15047,
+"name": "renal medulla",
+"subtree": 35,
+"subtree_isa": 1
+},
+"UBERON:0000376": {
+"ic": 5.2882,
+"ic_isa": 9.6189,
+"id": "UBERON:0000376",
+"n": 15047,
+"name": "hindlimb stylopod",
+"subtree": 76,
+"subtree_isa": 1
+},
+"UBERON:0000388": {
+"ic": 8.5203,
+"ic_isa": 9.6189,
+"id": "UBERON:0000388",
+"n": 15047,
+"name": "epiglottis",
+"subtree": 3,
+"subtree_isa": 1
+},
+"UBERON:0000451": {
+"ic": 6.9799,
+"ic_isa": 9.6189,
+"id": "UBERON:0000451",
+"n": 15047,
+"name": "prefrontal cortex",
+"subtree": 14,
+"subtree_isa": 1
+},
+"UBERON:0000467": {
+"ic": 0.0041,
+"ic_isa": 5.4293,
+"id": "UBERON:0000467",
+"n": 15047,
+"name": "anatomical system",
+"subtree": 14986,
+"subtree_isa": 66
+},
+"UBERON:0000468": {
+"ic": 0.0041,
+"ic_isa": 5.9554,
+"id": "UBERON:0000468",
+"n": 15047,
+"name": "multicellular organism",
+"subtree": 14986,
+"subtree_isa": 39
+},
+"UBERON:0000473": {
+"ic": 6.6232,
+"ic_isa": 8.5203,
+"id": "UBERON:0000473",
+"n": 15047,
+"name": "testis",
+"subtree": 20,
+"subtree_isa": 3
+},
+"UBERON:0000479": {
+"ic": 1.712,
+"ic_isa": 2.0027,
+"id": "UBERON:0000479",
+"n": 15047,
+"name": "tissue",
+"subtree": 2716,
+"subtree_isa": 2031
+},
+"UBERON:0000483": {
+"ic": 2.4419,
+"ic_isa": 3.0537,
+"id": "UBERON:0000483",
+"n": 15047,
+"name": "epithelium",
+"subtree": 1309,
+"subtree_isa": 710
+},
+"UBERON:0000569": {
+"ic": 9.6189,
+"ic_isa": 9.6189,
+"id": "UBERON:0000569",
+"n": 15047,
+"name": "ileocecal valve",
+"subtree": 1,
+"subtree_isa": 1
+},
+"UBERON:0000910": {
+"ic": 9.6189,
+"ic_isa": 9.6189,
+"id": "UBERON:0000910",
+"n": 15047,
+"name": "chyme",
+"subtree": 1,
+"subtree_isa": 1
+},
+"UBERON:0000912": {
+"ic": 7.5395,
+"ic_isa": 7.5395,
+"id": "UBERON:0000912",
+"n": 15047,
+"name": "mucus",
+"subtree": 8,
+"subtree_isa": 8
+},
+"UBERON:0000913": {
+"ic": 9.6189,
+"ic_isa": 9.6189,
+"id": "UBERON:0000913",
+"n": 15047,
+"name": "interstitial fluid",
+"subtree": 1,
+"subtree_isa": 1
+},
+"UBERON:0000922": {
+"ic": 2.6953,
+"ic_isa": 7.134,
+"id": "UBERON:0000922",
+"n": 15047,
+"name": "embryo",
+"subtree": 1016,
+"subtree_isa": 12
+},
+"UBERON:0000934": {
+"ic": 9.6189,
+"ic_isa": 9.6189,
+"id": "UBERON:0000934",
+"n": 15047,
+"name": "ventral nerve cord",
+"subtree": 1,
+"subtree_isa": 1
+},
+"UBERON:0000945": {
+"ic": 5.1763,
+"ic_isa": 8.2326,
+"id": "UBERON:0000945",
+"n": 15047,
+"name": "stomach",
+"subtree": 85,
+"subtree_isa": 4
+},
+"UBERON:0000946": {
+"ic": 6.1849,
+"ic_isa": 7.221,
+"id": "UBERON:0000946",
+"n": 15047,
+"name": "cardiac valve",
+"subtree": 31,
+"subtree_isa": 11
+},
+"UBERON:0000947": {
+"ic": 5.0756,
+"ic_isa": 7.673,
+"id": "UBERON:0000947",
+"n": 15047,
+"name": "aorta",
+"subtree": 94,
+"subtree_isa": 7
+},
+"UBERON:0000948": {
+"ic": 4.0935,
+"ic_isa": 9.6189,
+"id": "UBERON:0000948",
+"n": 15047,
+"name": "heart",
+"subtree": 251,
+"subtree_isa": 1
+},
+"UBERON:0000949": {
+"ic": 4.3357,
+"ic_isa": 9.6189,
+"id": "UBERON:0000949",
+"n": 15047,
+"name": "endocrine system",
+"subtree": 197,
+"subtree_isa": 1
+},
+"UBERON:0000955": {
+"ic": 2.0261,
+"ic_isa": 8.0095,
+"id": "UBERON:0000955",
+"n": 15047,
+"name": "brain",
+"subtree": 1984,
+"subtree_isa": 5
+},
+"UBERON:0000956": {
+"ic": 3.4747,
+"ic_isa": 9.6189,
+"id": "UBERON:0000956",
+"n": 15047,
+"name": "cerebral cortex",
+"subtree": 466,
+"subtree_isa": 1
+},
+"UBERON:0000966": {
+"ic": 5.6116,
+"ic_isa": 9.6189,
+"id": "UBERON:0000966",
+"n": 15047,
+"name": "retina",
+"subtree": 55,
+"subtree_isa": 1
+},
+"UBERON:0000970": {
+"ic": 3.8695,
+"ic_isa": 6.9109,
+"id": "UBERON:0000970",
+"n": 15047,
+"name": "eye",
+"subtree": 314,
+"subtree_isa": 15
+},
+"UBERON:0000974": {
+"ic": 4.1015,
+"ic_isa": 9.6189,
+"id": "UBERON:0000974",
+"n": 15047,
+"name": "neck",
+"subtree": 249,
+"subtree_isa": 1
+},
+"UBERON:0000975": {
+"ic": 6.6232,
+"ic_isa": 9.6189,
+"id": "UBERON:0000975",
+"n": 15047,
+"name": "sternum",
+"subtree": 20,
+"subtree_isa": 1
+},
+"UBERON:0000976": {
+"ic": 5.4758,
+"ic_isa": 9.6189,
+"id": "UBERON:0000976",
+"n": 15047,
+"name": "humerus",
+"subtree": 63,
+"subtree_isa": 1
+},
+"UBERON:0000978": {
+"ic": 4.2253,
+"ic_isa": 9.6189,
+"id": "UBERON:0000978",
+"n": 15047,
+"name": "leg",
+"subtree": 220,
+"subtree_isa": 1
+},
+"UBERON:0000979": {
+"ic": 6.5744,
+"ic_isa": 9.6189,
+"id": "UBERON:0000979",
+"n": 15047,
+"name": "tibia",
+"subtree": 21,
+"subtree_isa": 1
+},
+"UBERON:0000981": {
+"ic": 5.7688,
+"ic_isa": 9.6189,
+"id": "UBERON:0000981",
+"n": 15047,
+"name": "femur",
+"subtree": 47,
+"subtree_isa": 1
+},
+"UBERON:0000982": {
+"ic": 3.9085,
+"ic_isa": 4.1425,
+"id": "UBERON:0000982",
+"n": 15047,
+"name": "skeletal joint",
+"subtree": 302,
+"subtree_isa": 239
+},
+"UBERON:0000989": {
+"ic": 6.0636,
+"ic_isa": 9.6189,
+"id": "UBERON:0000989",
+"n": 15047,
+"name": "penis",
+"subtree": 35,
+"subtree_isa": 1
+},
+"UBERON:0000991": {
+"ic": 5.3285,
+"ic_isa": 7.3163,
+"id": "UBERON:0000991",
+"n": 15047,
+"name": "gonad",
+"subtree": 73,
+"subtree_isa": 10
+},
+"UBERON:0000992": {
+"ic": 5.8577,
+"ic_isa": 8.2326,
+"id": "UBERON:0000992",
+"n": 15047,
+"name": "ovary",
+"subtree": 43,
+"subtree_isa": 4
+},
+"UBERON:0000995": {
+"ic": 5.6116,
+"ic_isa": 7.8272,
+"id": "UBERON:0000995",
+"n": 15047,
+"name": "uterus",
+"subtree": 55,
+"subtree_isa": 6
+},
+"UBERON:0000996": {
+"ic": 6.4409,
+"ic_isa": 8.5203,
+"id": "UBERON:0000996",
+"n": 15047,
+"name": "vagina",
+"subtree": 24,
+"subtree_isa": 3
+},
+"UBERON:0001004": {
+"ic": 3.1252,
+"ic_isa": 8.9258,
+"id": "UBERON:0001004",
+"n": 15047,
+"name": "respiratory system",
+"subtree": 661,
+"subtree_isa": 2
+},
+"UBERON:0001007": {
+"ic": 2.193,
+"ic_isa": 8.9258,
+"id": "UBERON:0001007",
+"n": 15047,
+"name": "digestive system",
+"subtree": 1679,
+"subtree_isa": 2
+},
+"UBERON:0001008": {
+"ic": 3.5186,
+"ic_isa": 9.6189,
+"id": "UBERON:0001008",
+"n": 15047,
+"name": "renal system",
+"subtree": 446,
+"subtree_isa": 1
+},
+"UBERON:0001009": {
+"ic": 2.2544,
+"ic_isa": 7.8272,
+"id": "UBERON:0001009",
+"n": 15047,
+"name": "circulatory system",
+"subtree": 1579,
+"subtree_isa": 6
+},
+"UBERON:0001013": {
+"ic": 5.7688,
+"ic_isa": 5.8123,
+"id": "UBERON:0001013",
+"n": 15047,
+"name": "adipose tissue",
+"subtree": 47,
+"subtree_isa": 45
+},
+"UBERON:0001015": {
+"ic": 2.7002,
+"ic_isa": 5.6677,
+"id": "UBERON:0001015",
+"n": 15047,
+"name": "musculature",
+"subtree": 1011,
+"subtree_isa": 52
+},
+"UBERON:0001016": {
+"ic": 1.6223,
+"ic_isa": 8.5203,
+"id": "UBERON:0001016",
+"n": 15047,
+"name": "nervous system",
+"subtree": 2971,
+"subtree_isa": 3
+},
+"UBERON:0001017": {
+"ic": 1.8787,
+"ic_isa": 8.5203,
+"id": "UBERON:0001017",
+"n": 15047,
+"name": "central nervous system",
+"subtree": 2299,
+"subtree_isa": 3
+},
+"UBERON:0001021": {
+"ic": 4.1136,
+"ic_isa": 4.3719,
+"id": "UBERON:0001021",
+"n": 15047,
+"name": "nerve",
+"subtree": 246,
+"subtree_isa": 190
+},
+"UBERON:0001037": {
+"ic": 5.7688,
+"ic_isa": 5.9301,
+"id": "UBERON:0001037",
+"n": 15047,
+"name": "strand of hair",
+"subtree": 47,
+"subtree_isa": 40
+},
+"UBERON:0001043": {
+"ic": 5.9554,
+"ic_isa": 9.6189,
+"id": "UBERON:0001043",
+"n": 15047,
+"name": "esophagus",
+"subtree": 39,
+"subtree_isa": 1
+},
+"UBERON:0001044": {
+"ic": 5.7688,
+"ic_isa": 6.8463,
+"id": "UBERON:0001044",
+"n": 15047,
+"name": "saliva-secreting gland",
+"subtree": 47,
+"subtree_isa": 16
+},
+"UBERON:0001052": {
+"ic": 6.8463,
+"ic_isa": 9.6189,
+"id": "UBERON:0001052",
+"n": 15047,
+"name": "rectum",
+"subtree": 16,
+"subtree_isa": 1
+},
+"UBERON:0001066": {
+"ic": 6.9109,
+"ic_isa": 7.054,
+"id": "UBERON:0001066",
+"n": 15047,
+"name": "intervertebral disk",
+"subtree": 15,
+"subtree_isa": 13
+},
+"UBERON:0001072": {
+"ic": 8.5203,
+"ic_isa": 9.6189,
+"id": "UBERON:0001072",
+"n": 15047,
+"name": "inferior vena cava",
+"subtree": 3,
+"subtree_isa": 1
+},
+"UBERON:0001088": {
+"ic": 9.6189,
+"ic_isa": 9.6189,
+"id": "UBERON:0001088",
+"n": 15047,
+"name": "urine",
+"subtree": 1,
+"subtree_isa": 1
+},
+"UBERON:0001089": {
+"ic": 8.0095,
+"ic_isa": 8.0095,
+"id": "UBERON:0001089",
+"n": 15047,
+"name": "sweat",
+"subtree": 5,
+"subtree_isa": 5
+},
+"UBERON:0001090": {
+"ic": 9.6189,
+"ic_isa": 9.6189,
+"id": "UBERON:0001090",
+"n": 15047,
+"name": "synovial fluid",
+"subtree": 1,
+"subtree_isa": 1
+},
+"UBERON:0001091": {
+"ic": 3.8759,
+"ic_isa": 4.239,
+"id": "UBERON:0001091",
+"n": 15047,
+"name": "calcareous tooth",
+"subtree": 312,
+"subtree_isa": 217
+},
+"UBERON:0001103": {
+"ic": 6.7286,
+"ic_isa": 9.6189,
+"id": "UBERON:0001103",
+"n": 15047,
+"name": "diaphragm",
+"subtree": 18,
+"subtree_isa": 1
+},
+"UBERON:0001105": {
+"ic": 7.3163,
+"ic_isa": 8.5203,
+"id": "UBERON:0001105",
+"n": 15047,
+"name": "clavicle bone",
+"subtree": 10,
+"subtree_isa": 3
+},
+"UBERON:0001130": {
+"ic": 3.6077,
+"ic_isa": 9.6189,
+"id": "UBERON:0001130",
+"n": 15047,
+"name": "vertebral column",
+"subtree": 408,
+"subtree_isa": 1
+},
+"UBERON:0001132": {
+"ic": 7.5395,
+"ic_isa": 8.5203,
+"id": "UBERON:0001132",
+"n": 15047,
+"name": "parathyroid gland",
+"subtree": 8,
+"subtree_isa": 3
+},
+"UBERON:0001133": {
+"ic": 5.8577,
+"ic_isa": 6.0636,
+"id": "UBERON:0001133",
+"n": 15047,
+"name": "cardiac muscle tissue",
+"subtree": 43,
+"subtree_isa": 35
+},
+"UBERON:0001134": {
+"ic": 4.7063,
+"ic_isa": 4.9461,
+"id": "UBERON:0001134",
+"n": 15047,
+"name": "skeletal muscle tissue",
+"subtree": 136,
+"subtree_isa": 107
+},
+"UBERON:0001135": {
+"ic": 4.9745,
+"ic_isa": 5.1303,
+"id": "UBERON:0001135",
+"n": 15047,
+"name": "smooth muscle tissue",
+"subtree": 104,
+"subtree_isa": 89
+},
+"UBERON:0001140": {
+"ic": 8.5203,
+"ic_isa": 8.5203,
+"id": "UBERON:0001140",
+"n": 15047,
+"name": "renal vein",
+"subtree": 3,
+"subtree_isa": 3
+},
+"UBERON:0001153": {
+"ic": 7.5395,
+"ic_isa": 9.6189,
+"id": "UBERON:0001153",
+"n": 15047,
+"name": "caecum",
+"subtree": 8,
+"subtree_isa": 1
+},
+"UBERON:0001154": {
+"ic": 6.5744,
+"ic_isa": 9.6189,
+"id": "UBERON:0001154",
+"n": 15047,
+"name": "vermiform appendix",
+"subtree": 21,
+"subtree_isa": 1
+},
+"UBERON:0001155": {
+"ic": 5.5585,
+"ic_isa": 9.6189,
+"id": "UBERON:0001155",
+"n": 15047,
+"name": "colon",
+"subtree": 58,
+"subtree_isa": 1
+},
+"UBERON:0001156": {
+"ic": 8.0095,
+"ic_isa": 9.6189,
+"id": "UBERON:0001156",
+"n": 15047,
+"name": "ascending colon",
+"subtree": 5,
+"subtree_isa": 1
+},
+"UBERON:0001157": {
+"ic": 8.0095,
+"ic_isa": 9.6189,
+"id": "UBERON:0001157",
+"n": 15047,
+"name": "transverse colon",
+"subtree": 5,
+"subtree_isa": 1
+},
+"UBERON:0001158": {
+"ic": 8.0095,
+"ic_isa": 9.6189,
+"id": "UBERON:0001158",
+"n": 15047,
+"name": "descending colon",
+"subtree": 5,
+"subtree_isa": 1
+},
+"UBERON:0001159": {
+"ic": 7.8272,
+"ic_isa": 9.6189,
+"id": "UBERON:0001159",
+"n": 15047,
+"name": "sigmoid colon",
+"subtree": 6,
+"subtree_isa": 1
+},
+"UBERON:0001184": {
+"ic": 6.9799,
+"ic_isa": 7.4217,
+"id": "UBERON:0001184",
+"n": 15047,
+"name": "renal artery",
+"subtree": 14,
+"subtree_isa": 9
+},
+"UBERON:0001199": {
+"ic": 6.2516,
+"ic_isa": 7.3163,
+"id": "UBERON:0001199",
+"n": 15047,
+"name": "mucosa of stomach",
+"subtree": 29,
+"subtree_isa": 10
+},
+"UBERON:0001202": {
+"ic": 9.6189,
+"ic_isa": 9.6189,
+"id": "UBERON:0001202",
+"n": 15047,
+"name": "pyloric sphincter",
+"subtree": 1,
+"subtree_isa": 1
+},
+"UBERON:0001213": {
+"ic": 6.6745,
+"ic_isa": 8.2326,
+"id": "UBERON:0001213",
+"n": 15047,
+"name": "intestinal villus",
+"subtree": 19,
+"subtree_isa": 4
+},
+"UBERON:0001224": {
+"ic": 6.7857,
+"ic_isa": 8.2326,
+"id": "UBERON:0001224",
+"n": 15047,
+"name": "renal pelvis",
+"subtree": 17,
+"subtree_isa": 4
+},
+"UBERON:0001225": {
+"ic": 5.1303,
+"ic_isa": 8.5203,
+"id": "UBERON:0001225",
+"n": 15047,
+"name": "cortex of kidney",
+"subtree": 89,
+"subtree_isa": 3
+},
+"UBERON:0001235": {
+"ic": 7.4217,
+"ic_isa": 8.5203,
+"id": "UBERON:0001235",
+"n": 15047,
+"name": "adrenal cortex",
+"subtree": 9,
+"subtree_isa": 3
+},
+"UBERON:0001236": {
+"ic": 8.5203,
+"ic_isa": 8.5203,
+"id": "UBERON:0001236",
+"n": 15047,
+"name": "adrenal medulla",
+"subtree": 3,
+"subtree_isa": 3
+},
+"UBERON:0001244": {
+"ic": 9.6189,
+"ic_isa": 9.6189,
+"id": "UBERON:0001244",
+"n": 15047,
+"name": "internal anal sphincter",
+"subtree": 1,
+"subtree_isa": 1
+},
+"UBERON:0001245": {
+"ic": 9.6189,
+"ic_isa": 9.6189,
+"id": "UBERON:0001245",
+"n": 15047,
+"name": "anus",
+"subtree": 1,
+"subtree_isa": 1
+},
+"UBERON:0001255": {
+"ic": 6.0636,
+"ic_isa": 9.6189,
+"id": "UBERON:0001255",
+"n": 15047,
+"name": "urinary bladder",
+"subtree": 35,
+"subtree_isa": 1
+},
+"UBERON:0001264": {
+"ic": 6.0636,
+"ic_isa": 9.6189,
+"id": "UBERON:0001264",
+"n": 15047,
+"name": "pancreas",
+"subtree": 35,
+"subtree_isa": 1
+},
+"UBERON:0001272": {
+"ic": 5.0756,
+"ic_isa": 9.6189,
+"id": "UBERON:0001272",
+"n": 15047,
+"name": "innominate bone",
+"subtree": 94,
+"subtree_isa": 1
+},
+"UBERON:0001285": {
+"ic": 4.699,
+"ic_isa": 7.5395,
+"id": "UBERON:0001285",
+"n": 15047,
+"name": "nephron",
+"subtree": 137,
+"subtree_isa": 8
+},
+"UBERON:0001350": {
+"ic": 8.9258,
+"ic_isa": 9.6189,
+"id": "UBERON:0001350",
+"n": 15047,
+"name": "coccyx",
+"subtree": 2,
+"subtree_isa": 1
+},
+"UBERON:0001359": {
+"ic": 9.6189,
+"ic_isa": 9.6189,
+"id": "UBERON:0001359",
+"n": 15047,
+"name": "cerebrospinal fluid",
+"subtree": 1,
+"subtree_isa": 1
+},
+"UBERON:0001367": {
+"ic": 9.6189,
+"ic_isa": 9.6189,
+"id": "UBERON:0001367",
+"n": 15047,
+"name": "external anal sphincter",
+"subtree": 1,
+"subtree_isa": 1
+},
+"UBERON:0001384": {
+"ic": 8.0095,
+"ic_isa": 9.6189,
+"id": "UBERON:0001384",
+"n": 15047,
+"name": "primary motor cortex",
+"subtree": 5,
+"subtree_isa": 1
+},
+"UBERON:0001434": {
+"ic": 1.3078,
+"ic_isa": 9.6189,
+"id": "UBERON:0001434",
+"n": 15047,
+"name": "skeletal system",
+"subtree": 4069,
+"subtree_isa": 1
+},
+"UBERON:0001460": {
+"ic": 4.3357,
+"ic_isa": 9.6189,
+"id": "UBERON:0001460",
+"n": 15047,
+"name": "arm",
+"subtree": 197,
+"subtree_isa": 1
+},
+"UBERON:0001474": {
+"ic": 1.8866,
+"ic_isa": 2.7709,
+"id": "UBERON:0001474",
+"n": 15047,
+"name": "bone element",
+"subtree": 2281,
+"subtree_isa": 942
+},
+"UBERON:0001484": {
+"ic": 8.2326,
+"ic_isa": 8.2326,
+"id": "UBERON:0001484",
+"n": 15047,
+"name": "articular capsule",
+"subtree": 4,
+"subtree_isa": 4
+},
+"UBERON:0001485": {
+"ic": 7.054,
+"ic_isa": 8.9258,
+"id": "UBERON:0001485",
+"n": 15047,
+"name": "knee joint",
+"subtree": 13,
+"subtree_isa": 2
+},
+"UBERON:0001486": {
+"ic": 7.221,
+"ic_isa": 9.6189,
+"id": "UBERON:0001486",
+"n": 15047,
+"name": "hip joint",
+"subtree": 11,
+"subtree_isa": 1
+},
+"UBERON:0001490": {
+"ic": 7.8272,
+"ic_isa": 9.6189,
+"id": "UBERON:0001490",
+"n": 15047,
+"name": "elbow joint",
+"subtree": 6,
+"subtree_isa": 1
+},
+"UBERON:0001555": {
+"ic": 2.2885,
+"ic_isa": 9.6189,
+"id": "UBERON:0001555",
+"n": 15047,
+"name": "digestive tract",
+"subtree": 1526,
+"subtree_isa": 1
+},
+"UBERON:0001577": {
+"ic": 6.4834,
+"ic_isa": 6.4834,
+"id": "UBERON:0001577",
+"n": 15047,
+"name": "facial muscle",
+"subtree": 23,
+"subtree_isa": 23
+},
+"UBERON:0001585": {
+"ic": 8.5203,
+"ic_isa": 9.6189,
+"id": "UBERON:0001585",
+"n": 15047,
+"name": "anterior vena cava",
+"subtree": 3,
+"subtree_isa": 1
+},
+"UBERON:0001630": {
+"ic": 2.9121,
+"ic_isa": 3.1957,
+"id": "UBERON:0001630",
+"n": 15047,
+"name": "muscle organ",
+"subtree": 818,
+"subtree_isa": 616
+},
+"UBERON:0001637": {
+"ic": 3.4769,
+"ic_isa": 3.5299,
+"id": "UBERON:0001637",
+"n": 15047,
+"name": "artery",
+"subtree": 465,
+"subtree_isa": 441
+},
+"UBERON:0001638": {
+"ic": 3.6325,
+"ic_isa": 3.7301,
+"id": "UBERON:0001638",
+"n": 15047,
+"name": "vein",
+"subtree": 398,
+"subtree_isa": 361
+},
+"UBERON:0001684": {
+"ic": 6.1224,
+"ic_isa": 9.6189,
+"id": "UBERON:0001684",
+"n": 15047,
+"name": "mandible",
+"subtree": 33,
+"subtree_isa": 1
+},
+"UBERON:0001685": {
+"ic": 7.8272,
+"ic_isa": 9.6189,
+"id": "UBERON:0001685",
+"n": 15047,
+"name": "hyoid bone",
+"subtree": 6,
+"subtree_isa": 1
+},
+"UBERON:0001686": {
+"ic": 6.4834,
+"ic_isa": 8.0095,
+"id": "UBERON:0001686",
+"n": 15047,
+"name": "auditory ossicle bone",
+"subtree": 23,
+"subtree_isa": 5
+},
+"UBERON:0001687": {
+"ic": 8.9258,
+"ic_isa": 9.6189,
+"id": "UBERON:0001687",
+"n": 15047,
+"name": "stapes bone",
+"subtree": 2,
+"subtree_isa": 1
+},
+"UBERON:0001688": {
+"ic": 8.9258,
+"ic_isa": 9.6189,
+"id": "UBERON:0001688",
+"n": 15047,
+"name": "incus bone",
+"subtree": 2,
+"subtree_isa": 1
+},
+"UBERON:0001689": {
+"ic": 7.5395,
+"ic_isa": 9.6189,
+"id": "UBERON:0001689",
+"n": 15047,
+"name": "malleus bone",
+"subtree": 8,
+"subtree_isa": 1
+},
+"UBERON:0001690": {
+"ic": 3.9629,
+"ic_isa": 8.5203,
+"id": "UBERON:0001690",
+"n": 15047,
+"name": "ear",
+"subtree": 286,
+"subtree_isa": 3
+},
+"UBERON:0001705": {
+"ic": 6.4834,
+"ic_isa": 6.9799,
+"id": "UBERON:0001705",
+"n": 15047,
+"name": "nail",
+"subtree": 23,
+"subtree_isa": 14
+},
+"UBERON:0001707": {
+"ic": 7.4217,
+"ic_isa": 7.8272,
+"id": "UBERON:0001707",
+"n": 15047,
+"name": "nasal cavity",
+"subtree": 9,
+"subtree_isa": 6
+},
+"UBERON:0001723": {
+"ic": 5.5081,
+"ic_isa": 9.6189,
+"id": "UBERON:0001723",
+"n": 15047,
+"name": "tongue",
+"subtree": 61,
+"subtree_isa": 1
+},
+"UBERON:0001737": {
+"ic": 5.3423,
+"ic_isa": 9.6189,
+"id": "UBERON:0001737",
+"n": 15047,
+"name": "larynx",
+"subtree": 72,
+"subtree_isa": 1
+},
+"UBERON:0001756": {
+"ic": 5.2882,
+"ic_isa": 9.6189,
+"id": "UBERON:0001756",
+"n": 15047,
+"name": "middle ear",
+"subtree": 76,
+"subtree_isa": 1
+},
+"UBERON:0001780": {
+"ic": 6.7286,
+"ic_isa": 7.4217,
+"id": "UBERON:0001780",
+"n": 15047,
+"name": "spinal nerve",
+"subtree": 18,
+"subtree_isa": 9
+},
+"UBERON:0001785": {
+"ic": 4.9276,
+"ic_isa": 5.9813,
+"id": "UBERON:0001785",
+"n": 15047,
+"name": "cranial nerve",
+"subtree": 109,
+"subtree_isa": 38
+},
+"UBERON:0001806": {
+"ic": 6.7857,
+"ic_isa": 6.7857,
+"id": "UBERON:0001806",
+"n": 15047,
+"name": "sympathetic ganglion",
+"subtree": 17,
+"subtree_isa": 17
+},
+"UBERON:0001820": {
+"ic": 7.134,
+"ic_isa": 7.4217,
+"id": "UBERON:0001820",
+"n": 15047,
+"name": "sweat gland",
+"subtree": 12,
+"subtree_isa": 9
+},
+"UBERON:0001836": {
+"ic": 9.6189,
+"ic_isa": 9.6189,
+"id": "UBERON:0001836",
+"n": 15047,
+"name": "saliva",
+"subtree": 1,
+"subtree_isa": 1
+},
+"UBERON:0001844": {
+"ic": 6.7286,
+"ic_isa": 9.6189,
+"id": "UBERON:0001844",
+"n": 15047,
+"name": "cochlea",
+"subtree": 18,
+"subtree_isa": 1
+},
+"UBERON:0001847": {
+"ic": 9.6189,
+"ic_isa": 9.6189,
+"id": "UBERON:0001847",
+"n": 15047,
+"name": "lobule of pinna",
+"subtree": 1,
+"subtree_isa": 1
+},
+"UBERON:0001869": {
+"ic": 3.0397,
+"ic_isa": 8.5203,
+"id": "UBERON:0001869",
+"n": 15047,
+"name": "cerebral hemisphere",
+"subtree": 720,
+"subtree_isa": 3
+},
+"UBERON:0001871": {
+"ic": 5.1763,
+"ic_isa": 8.5203,
+"id": "UBERON:0001871",
+"n": 15047,
+"name": "temporal lobe",
+"subtree": 85,
+"subtree_isa": 3
+},
+"UBERON:0001872": {
+"ic": 6.0926,
+"ic_isa": 8.5203,
+"id": "UBERON:0001872",
+"n": 15047,
+"name": "parietal lobe",
+"subtree": 34,
+"subtree_isa": 3
+},
+"UBERON:0001876": {
+"ic": 6.4001,
+"ic_isa": 9.6189,
+"id": "UBERON:0001876",
+"n": 15047,
+"name": "amygdala",
+"subtree": 25,
+"subtree_isa": 1
+},
+"UBERON:0001897": {
+"ic": 4.7514,
+"ic_isa": 9.6189,
+"id": "UBERON:0001897",
+"n": 15047,
+"name": "dorsal plus ventral thalamus",
+"subtree": 130,
+"subtree_isa": 1
+},
+"UBERON:0001898": {
+"ic": 4.9004,
+"ic_isa": 9.6189,
+"id": "UBERON:0001898",
+"n": 15047,
+"name": "hypothalamus",
+"subtree": 112,
+"subtree_isa": 1
+},
+"UBERON:0001905": {
+"ic": 8.0095,
+"ic_isa": 9.6189,
+"id": "UBERON:0001905",
+"n": 15047,
+"name": "pineal body",
+"subtree": 5,
+"subtree_isa": 1
+},
+"UBERON:0001911": {
+"ic": 5.8813,
+"ic_isa": 8.0095,
+"id": "UBERON:0001911",
+"n": 15047,
+"name": "mammary gland",
+"subtree": 42,
+"subtree_isa": 5
+},
+"UBERON:0001913": {
+"ic": 9.6189,
+"ic_isa": 9.6189,
+"id": "UBERON:0001913",
+"n": 15047,
+"name": "milk",
+"subtree": 1,
+"subtree_isa": 1
+},
+"UBERON:0001969": {
+"ic": 8.9258,
+"ic_isa": 9.6189,
+"id": "UBERON:0001969",
+"n": 15047,
+"name": "blood plasma",
+"subtree": 2,
+"subtree_isa": 1
+},
+"UBERON:0001970": {
+"ic": 9.6189,
+"ic_isa": 9.6189,
+"id": "UBERON:0001970",
+"n": 15047,
+"name": "bile",
+"subtree": 1,
+"subtree_isa": 1
+},
+"UBERON:0001971": {
+"ic": 9.6189,
+"ic_isa": 9.6189,
+"id": "UBERON:0001971",
+"n": 15047,
+"name": "gastric juice",
+"subtree": 1,
+"subtree_isa": 1
+},
+"UBERON:0001979": {
+"ic": 6.6745,
+"ic_isa": 6.7286,
+"id": "UBERON:0001979",
+"n": 15047,
+"name": "venule",
+"subtree": 19,
+"subtree_isa": 18
+},
+"UBERON:0001980": {
+"ic": 6.6745,
+"ic_isa": 6.9109,
+"id": "UBERON:0001980",
+"n": 15047,
+"name": "arteriole",
+"subtree": 19,
+"subtree_isa": 15
+},
+"UBERON:0001981": {
+"ic": 2.6567,
+"ic_isa": 2.7551,
+"id": "UBERON:0001981",
+"n": 15047,
+"name": "blood vessel",
+"subtree": 1056,
+"subtree_isa": 957
+},
+"UBERON:0001982": {
+"ic": 6.0926,
+"ic_isa": 6.3231,
+"id": "UBERON:0001982",
+"n": 15047,
+"name": "capillary",
+"subtree": 34,
+"subtree_isa": 27
+},
+"UBERON:0001988": {
+"ic": 8.9258,
+"ic_isa": 8.9258,
+"id": "UBERON:0001988",
+"n": 15047,
+"name": "feces",
+"subtree": 2,
+"subtree_isa": 2
+},
+"UBERON:0001995": {
+"ic": 7.3163,
+"ic_isa": 7.3163,
+"id": "UBERON:0001995",
+"n": 15047,
+"name": "fibrocartilage",
+"subtree": 10,
+"subtree_isa": 10
+},
+"UBERON:0002012": {
+"ic": 8.0095,
+"ic_isa": 8.5203,
+"id": "UBERON:0002012",
+"n": 15047,
+"name": "pulmonary artery",
+"subtree": 5,
+"subtree_isa": 3
+},
+"UBERON:0002020": {
+"ic": 2.4465,
+"ic_isa": 4.7591,
+"id": "UBERON:0002020",
+"n": 15047,
+"name": "gray matter",
+"subtree": 1303,
+"subtree_isa": 129
+},
+"UBERON:0002021": {
+"ic": 5.2369,
+"ic_isa": 8.5203,
+"id": "UBERON:0002021",
+"n": 15047,
+"name": "occipital lobe",
+"subtree": 80,
+"subtree_isa": 3
+},
+"UBERON:0002033": {
+"ic": 8.9258,
+"ic_isa": 8.9258,
+"id": "UBERON:0002033",
+"n": 15047,
+"name": "arrector muscle of hair",
+"subtree": 2,
+"subtree_isa": 2
+},
+"UBERON:0002037": {
+"ic": 4.7137,
+"ic_isa": 9.6189,
+"id": "UBERON:0002037",
+"n": 15047,
+"name": "cerebellum",
+"subtree": 135,
+"subtree_isa": 1
+},
+"UBERON:0002046": {
+"ic": 6.9109,
+"ic_isa": 9.6189,
+"id": "UBERON:0002046",
+"n": 15047,
+"name": "thyroid gland",
+"subtree": 15,
+"subtree_isa": 1
+},
+"UBERON:0002048": {
+"ic": 4.5375,
+"ic_isa": 8.5203,
+"id": "UBERON:0002048",
+"n": 15047,
+"name": "lung",
+"subtree": 161,
+"subtree_isa": 3
+},
+"UBERON:0002075": {
+"ic": 3.1466,
+"ic_isa": 5.7903,
+"id": "UBERON:0002075",
+"n": 15047,
+"name": "viscus",
+"subtree": 647,
+"subtree_isa": 46
+},
+"UBERON:0002078": {
+"ic": 6.6745,
+"ic_isa": 9.6189,
+"id": "UBERON:0002078",
+"n": 15047,
+"name": "right cardiac atrium",
+"subtree": 19,
+"subtree_isa": 1
+},
+"UBERON:0002079": {
+"ic": 6.9109,
+"ic_isa": 9.6189,
+"id": "UBERON:0002079",
+"n": 15047,
+"name": "left cardiac atrium",
+"subtree": 15,
+"subtree_isa": 1
+},
+"UBERON:0002080": {
+"ic": 6.6745,
+"ic_isa": 9.6189,
+"id": "UBERON:0002080",
+"n": 15047,
+"name": "heart right ventricle",
+"subtree": 19,
+"subtree_isa": 1
+},
+"UBERON:0002081": {
+"ic": 5.7271,
+"ic_isa": 8.5203,
+"id": "UBERON:0002081",
+"n": 15047,
+"name": "cardiac atrium",
+"subtree": 49,
+"subtree_isa": 3
+},
+"UBERON:0002082": {
+"ic": 5.3994,
+"ic_isa": 8.5203,
+"id": "UBERON:0002082",
+"n": 15047,
+"name": "cardiac ventricle",
+"subtree": 68,
+"subtree_isa": 3
+},
+"UBERON:0002084": {
+"ic": 6.5744,
+"ic_isa": 9.6189,
+"id": "UBERON:0002084",
+"n": 15047,
+"name": "heart left ventricle",
+"subtree": 21,
+"subtree_isa": 1
+},
+"UBERON:0002091": {
+"ic": 2.5164,
+"ic_isa": 9.6189,
+"id": "UBERON:0002091",
+"n": 15047,
+"name": "appendicular skeleton",
+"subtree": 1215,
+"subtree_isa": 1
+},
+"UBERON:0002097": {
+"ic": 3.7783,
+"ic_isa": 9.6189,
+"id": "UBERON:0002097",
+"n": 15047,
+"name": "skin of body",
+"subtree": 344,
+"subtree_isa": 1
+},
+"UBERON:0002101": {
+"ic": 2.3084,
+"ic_isa": 7.4217,
+"id": "UBERON:0002101",
+"n": 15047,
+"name": "limb",
+"subtree": 1496,
+"subtree_isa": 9
+},
+"UBERON:0002102": {
+"ic": 3.2006,
+"ic_isa": 8.2326,
+"id": "UBERON:0002102",
+"n": 15047,
+"name": "forelimb",
+"subtree": 613,
+"subtree_isa": 4
+},
+"UBERON:0002103": {
+"ic": 3.1222,
+"ic_isa": 8.2326,
+"id": "UBERON:0002103",
+"n": 15047,
+"name": "hindlimb",
+"subtree": 663,
+"subtree_isa": 4
+},
+"UBERON:0002104": {
+"ic": 3.761,
+"ic_isa": 9.6189,
+"id": "UBERON:0002104",
+"n": 15047,
+"name": "visual system",
+"subtree": 350,
+"subtree_isa": 1
+},
+"UBERON:0002106": {
+"ic": 5.9813,
+"ic_isa": 9.6189,
+"id": "UBERON:0002106",
+"n": 15047,
+"name": "spleen",
+"subtree": 38,
+"subtree_isa": 1
+},
+"UBERON:0002107": {
+"ic": 5.3014,
+"ic_isa": 9.6189,
+"id": "UBERON:0002107",
+"n": 15047,
+"name": "liver",
+"subtree": 75,
+"subtree_isa": 1
+},
+"UBERON:0002108": {
+"ic": 5.2122,
+"ic_isa": 9.6189,
+"id": "UBERON:0002108",
+"n": 15047,
+"name": "small intestine",
+"subtree": 82,
+"subtree_isa": 1
+},
+"UBERON:0002110": {
+"ic": 7.221,
+"ic_isa": 9.6189,
+"id": "UBERON:0002110",
+"n": 15047,
+"name": "gallbladder",
+"subtree": 11,
+"subtree_isa": 1
+},
+"UBERON:0002113": {
+"ic": 3.932,
+"ic_isa": 7.673,
+"id": "UBERON:0002113",
+"n": 15047,
+"name": "kidney",
+"subtree": 295,
+"subtree_isa": 7
+},
+"UBERON:0002114": {
+"ic": 6.3231,
+"ic_isa": 9.6189,
+"id": "UBERON:0002114",
+"n": 15047,
+"name": "duodenum",
+"subtree": 27,
+"subtree_isa": 1
+},
+"UBERON:0002115": {
+"ic": 7.134,
+"ic_isa": 9.6189,
+"id": "UBERON:0002115",
+"n": 15047,
+"name": "jejunum",
+"subtree": 12,
+"subtree_isa": 1
+},
+"UBERON:0002116": {
+"ic": 7.3163,
+"ic_isa": 9.6189,
+"id": "UBERON:0002116",
+"n": 15047,
+"name": "ileum",
+"subtree": 10,
+"subtree_isa": 1
+},
+"UBERON:0002134": {
+"ic": 8.2326,
+"ic_isa": 9.6189,
+"id": "UBERON:0002134",
+"n": 15047,
+"name": "tricuspid valve",
+"subtree": 4,
+"subtree_isa": 1
+},
+"UBERON:0002135": {
+"ic": 7.673,
+"ic_isa": 9.6189,
+"id": "UBERON:0002135",
+"n": 15047,
+"name": "mitral valve",
+"subtree": 7,
+"subtree_isa": 1
+},
+"UBERON:0002137": {
+"ic": 8.2326,
+"ic_isa": 9.6189,
+"id": "UBERON:0002137",
+"n": 15047,
+"name": "aortic valve",
+"subtree": 4,
+"subtree_isa": 1
+},
+"UBERON:0002146": {
+"ic": 8.2326,
+"ic_isa": 9.6189,
+"id": "UBERON:0002146",
+"n": 15047,
+"name": "pulmonary valve",
+"subtree": 4,
+"subtree_isa": 1
+},
+"UBERON:0002169": {
+"ic": 9.6189,
+"ic_isa": 9.6189,
+"id": "UBERON:0002169",
+"n": 15047,
+"name": "alveolar sac",
+"subtree": 1,
+"subtree_isa": 1
+},
+"UBERON:0002173": {
+"ic": 8.5203,
+"ic_isa": 8.5203,
+"id": "UBERON:0002173",
+"n": 15047,
+"name": "pulmonary alveolar duct",
+"subtree": 3,
+"subtree_isa": 3
+},
+"UBERON:0002182": {
+"ic": 6.7286,
+"ic_isa": 8.2326,
+"id": "UBERON:0002182",
+"n": 15047,
+"name": "main bronchus",
+"subtree": 18,
+"subtree_isa": 4
+},
+"UBERON:0002185": {
+"ic": 5.3014,
+"ic_isa": 6.4001,
+"id": "UBERON:0002185",
+"n": 15047,
+"name": "bronchus",
+"subtree": 75,
+"subtree_isa": 25
+},
+"UBERON:0002186": {
+"ic": 6.2177,
+"ic_isa": 6.7857,
+"id": "UBERON:0002186",
+"n": 15047,
+"name": "bronchiole",
+"subtree": 30,
+"subtree_isa": 17
+},
+"UBERON:0002188": {
+"ic": 7.8272,
+"ic_isa": 8.5203,
+"id": "UBERON:0002188",
+"n": 15047,
+"name": "respiratory bronchiole",
+"subtree": 6,
+"subtree_isa": 3
+},
+"UBERON:0002190": {
+"ic": 7.8272,
+"ic_isa": 8.2326,
+"id": "UBERON:0002190",
+"n": 15047,
+"name": "subcutaneous adipose tissue",
+"subtree": 6,
+"subtree_isa": 4
+},
+"UBERON:0002196": {
+"ic": 7.5395,
+"ic_isa": 9.6189,
+"id": "UBERON:0002196",
+"n": 15047,
+"name": "adenohypophysis",
+"subtree": 8,
+"subtree_isa": 1
+},
+"UBERON:0002198": {
+"ic": 7.8272,
+"ic_isa": 9.6189,
+"id": "UBERON:0002198",
+"n": 15047,
+"name": "neurohypophysis",
+"subtree": 6,
+"subtree_isa": 1
+},
+"UBERON:0002204": {
+"ic": 1.2963,
+"ic_isa": 9.6189,
+"id": "UBERON:0002204",
+"n": 15047,
+"name": "musculoskeletal system",
+"subtree": 4116,
+"subtree_isa": 1
+},
+"UBERON:0002209": {
+"ic": 5.2001,
+"ic_isa": 5.4918,
+"id": "UBERON:0002209",
+"n": 15047,
+"name": "fibrous joint",
+"subtree": 83,
+"subtree_isa": 62
+},
+"UBERON:0002213": {
+"ic": 6.008,
+"ic_isa": 6.7286,
+"id": "UBERON:0002213",
+"n": 15047,
+"name": "cartilaginous joint",
+"subtree": 37,
+"subtree_isa": 18
+},
+"UBERON:0002217": {
+"ic": 4.6631,
+"ic_isa": 5.0138,
+"id": "UBERON:0002217",
+"n": 15047,
+"name": "synovial joint",
+"subtree": 142,
+"subtree_isa": 100
+},
+"UBERON:0002224": {
+"ic": 7.673,
+"ic_isa": 7.8272,
+"id": "UBERON:0002224",
+"n": 15047,
+"name": "thoracic cavity",
+"subtree": 7,
+"subtree_isa": 6
+},
+"UBERON:0002228": {
+"ic": 5.3423,
+"ic_isa": 6.2516,
+"id": "UBERON:0002228",
+"n": 15047,
+"name": "rib",
+"subtree": 72,
+"subtree_isa": 29
+},
+"UBERON:0002236": {
+"ic": 8.9258,
+"ic_isa": 8.9258,
+"id": "UBERON:0002236",
+"n": 15047,
+"name": "costal cartilage",
+"subtree": 2,
+"subtree_isa": 2
+},
+"UBERON:0002240": {
+"ic": 4.495,
+"ic_isa": 9.6189,
+"id": "UBERON:0002240",
+"n": 15047,
+"name": "spinal cord",
+"subtree": 168,
+"subtree_isa": 1
+},
+"UBERON:0002264": {
+"ic": 6.4834,
+"ic_isa": 9.6189,
+"id": "UBERON:0002264",
+"n": 15047,
+"name": "olfactory bulb",
+"subtree": 23,
+"subtree_isa": 1
+},
+"UBERON:0002298": {
+"ic": 3.7871,
+"ic_isa": 9.6189,
+"id": "UBERON:0002298",
+"n": 15047,
+"name": "brainstem",
+"subtree": 341,
+"subtree_isa": 1
+},
+"UBERON:0002299": {
+"ic": 6.9799,
+"ic_isa": 8.5203,
+"id": "UBERON:0002299",
+"n": 15047,
+"name": "alveolus of lung",
+"subtree": 14,
+"subtree_isa": 3
+},
+"UBERON:0002316": {
+"ic": 3.832,
+"ic_isa": 4.9461,
+"id": "UBERON:0002316",
+"n": 15047,
+"name": "white matter",
+"subtree": 326,
+"subtree_isa": 107
+},
+"UBERON:0002323": {
+"ic": 6.6232,
+"ic_isa": 8.9258,
+"id": "UBERON:0002323",
+"n": 15047,
+"name": "coelemic cavity lumen",
+"subtree": 20,
+"subtree_isa": 2
+},
+"UBERON:0002336": {
+"ic": 7.4217,
+"ic_isa": 9.6189,
+"id": "UBERON:0002336",
+"n": 15047,
+"name": "corpus callosum",
+"subtree": 9,
+"subtree_isa": 1
+},
+"UBERON:0002347": {
+"ic": 5.3848,
+"ic_isa": 7.054,
+"id": "UBERON:0002347",
+"n": 15047,
+"name": "thoracic vertebra",
+"subtree": 69,
+"subtree_isa": 13
+},
+"UBERON:0002351": {
+"ic": 9.6189,
+"ic_isa": 9.6189,
+"id": "UBERON:0002351",
+"n": 15047,
+"name": "sinoatrial node",
+"subtree": 1,
+"subtree_isa": 1
+},
+"UBERON:0002352": {
+"ic": 9.6189,
+"ic_isa": 9.6189,
+"id": "UBERON:0002352",
+"n": 15047,
+"name": "atrioventricular node",
+"subtree": 1,
+"subtree_isa": 1
+},
+"UBERON:0002360": {
+"ic": 5.8577,
+"ic_isa": 6.1224,
+"id": "UBERON:0002360",
+"n": 15047,
+"name": "meninx",
+"subtree": 43,
+"subtree_isa": 33
+},
+"UBERON:0002361": {
+"ic": 7.5395,
+"ic_isa": 7.5395,
+"id": "UBERON:0002361",
+"n": 15047,
+"name": "pia mater",
+"subtree": 8,
+"subtree_isa": 8
+},
+"UBERON:0002362": {
+"ic": 7.221,
+"ic_isa": 7.5395,
+"id": "UBERON:0002362",
+"n": 15047,
+"name": "arachnoid mater",
+"subtree": 11,
+"subtree_isa": 8
+},
+"UBERON:0002363": {
+"ic": 6.9109,
+"ic_isa": 7.5395,
+"id": "UBERON:0002363",
+"n": 15047,
+"name": "dura mater",
+"subtree": 15,
+"subtree_isa": 8
+},
+"UBERON:0002365": {
+"ic": 3.9525,
+"ic_isa": 4.9004,
+"id": "UBERON:0002365",
+"n": 15047,
+"name": "exocrine gland",
+"subtree": 289,
+"subtree_isa": 112
+},
+"UBERON:0002368": {
+"ic": 4.426,
+"ic_isa": 6.008,
+"id": "UBERON:0002368",
+"n": 15047,
+"name": "endocrine gland",
+"subtree": 180,
+"subtree_isa": 37
+},
+"UBERON:0002369": {
+"ic": 6.5744,
+"ic_isa": 8.5203,
+"id": "UBERON:0002369",
+"n": 15047,
+"name": "adrenal gland",
+"subtree": 21,
+"subtree_isa": 3
+},
+"UBERON:0002370": {
+"ic": 6.7286,
+"ic_isa": 8.0095,
+"id": "UBERON:0002370",
+"n": 15047,
+"name": "thymus",
+"subtree": 18,
+"subtree_isa": 5
+},
+"UBERON:0002371": {
+"ic": 7.4217,
+"ic_isa": 7.673,
+"id": "UBERON:0002371",
+"n": 15047,
+"name": "bone marrow",
+"subtree": 9,
+"subtree_isa": 7
+},
+"UBERON:0002384": {
+"ic": 3.6709,
+"ic_isa": 3.8537,
+"id": "UBERON:0002384",
+"n": 15047,
+"name": "connective tissue",
+"subtree": 383,
+"subtree_isa": 319
+},
+"UBERON:0002385": {
+"ic": 3.9052,
+"ic_isa": 4.0975,
+"id": "UBERON:0002385",
+"n": 15047,
+"name": "muscle tissue",
+"subtree": 303,
+"subtree_isa": 250
+},
+"UBERON:0002386": {
+"ic": 5.2122,
+"ic_isa": 9.6189,
+"id": "UBERON:0002386",
+"n": 15047,
+"name": "forelimb zeugopod",
+"subtree": 82,
+"subtree_isa": 1
+},
+"UBERON:0002387": {
+"ic": 3.7081,
+"ic_isa": 8.9258,
+"id": "UBERON:0002387",
+"n": 15047,
+"name": "pes",
+"subtree": 369,
+"subtree_isa": 2
+},
+"UBERON:0002394": {
+"ic": 6.0354,
+"ic_isa": 6.7857,
+"id": "UBERON:0002394",
+"n": 15047,
+"name": "bile duct",
+"subtree": 36,
+"subtree_isa": 17
+},
+"UBERON:0002398": {
+"ic": 3.7328,
+"ic_isa": 8.9258,
+"id": "UBERON:0002398",
+"n": 15047,
+"name": "manus",
+"subtree": 360,
+"subtree_isa": 2
+},
+"UBERON:0002405": {
+"ic": 3.5299,
+"ic_isa": 9.6189,
+"id": "UBERON:0002405",
+"n": 15047,
+"name": "immune system",
+"subtree": 441,
+"subtree_isa": 1
+},
+"UBERON:0002410": {
+"ic": 5.0442,
+"ic_isa": 9.6189,
+"id": "UBERON:0002410",
+"n": 15047,
+"name": "autonomic nervous system",
+"subtree": 97,
+"subtree_isa": 1
+},
+"UBERON:0002412": {
+"ic": 3.86,
+"ic_isa": 5.6871,
+"id": "UBERON:0002412",
+"n": 15047,
+"name": "vertebra",
+"subtree": 317,
+"subtree_isa": 51
+},
+"UBERON:0002413": {
+"ic": 6.0636,
+"ic_isa": 7.673,
+"id": "UBERON:0002413",
+"n": 15047,
+"name": "cervical vertebra",
+"subtree": 35,
+"subtree_isa": 7
+},
+"UBERON:0002414": {
+"ic": 6.3608,
+"ic_isa": 7.8272,
+"id": "UBERON:0002414",
+"n": 15047,
+"name": "lumbar vertebra",
+"subtree": 26,
+"subtree_isa": 6
+},
+"UBERON:0002415": {
+"ic": 5.9554,
+"ic_isa": 8.9258,
+"id": "UBERON:0002415",
+"n": 15047,
+"name": "tail",
+"subtree": 39,
+"subtree_isa": 2
+},
+"UBERON:0002418": {
+"ic": 5.2001,
+"ic_isa": 5.2751,
+"id": "UBERON:0002418",
+"n": 15047,
+"name": "cartilage tissue",
+"subtree": 83,
+"subtree_isa": 77
+},
+"UBERON:0002420": {
+"ic": 5.2751,
+"ic_isa": 8.5203,
+"id": "UBERON:0002420",
+"n": 15047,
+"name": "basal ganglion",
+"subtree": 77,
+"subtree_isa": 3
+},
+"UBERON:0002421": {
+"ic": 4.8653,
+"ic_isa": 9.6189,
+"id": "UBERON:0002421",
+"n": 15047,
+"name": "hippocampal formation",
+"subtree": 116,
+"subtree_isa": 1
+},
+"UBERON:0002428": {
+"ic": 3.369,
+"ic_isa": 4.3008,
+"id": "UBERON:0002428",
+"n": 15047,
+"name": "limb bone",
+"subtree": 518,
+"subtree_isa": 204
+},
+"UBERON:0002446": {
+"ic": 9.6189,
+"ic_isa": 9.6189,
+"id": "UBERON:0002446",
+"n": 15047,
+"name": "patella",
+"subtree": 1,
+"subtree_isa": 1
+},
+"UBERON:0003126": {
+"ic": 6.2867,
+"ic_isa": 9.6189,
+"id": "UBERON:0003126",
+"n": 15047,
+"name": "trachea",
+"subtree": 28,
+"subtree_isa": 1
+},
+"UBERON:0003129": {
+"ic": 2.9622,
+"ic_isa": 9.6189,
+"id": "UBERON:0003129",
+"n": 15047,
+"name": "skull",
+"subtree": 778,
+"subtree_isa": 1
+},
+"UBERON:0003252": {
+"ic": 5.0756,
+"ic_isa": 9.6189,
+"id": "UBERON:0003252",
+"n": 15047,
+"name": "thoracic rib cage",
+"subtree": 94,
+"subtree_isa": 1
+},
+"UBERON:0003462": {
+"ic": 3.956,
+"ic_isa": 5.0038,
+"id": "UBERON:0003462",
+"n": 15047,
+"name": "facial bone",
+"subtree": 288,
+"subtree_isa": 101
+},
+"UBERON:0003681": {
+"ic": 6.7857,
+"ic_isa": 7.8272,
+"id": "UBERON:0003681",
+"n": 15047,
+"name": "masticatory muscle",
+"subtree": 17,
+"subtree_isa": 6
+},
+"UBERON:0003690": {
+"ic": 6.8463,
+"ic_isa": 9.6189,
+"id": "UBERON:0003690",
+"n": 15047,
+"name": "fused sacrum",
+"subtree": 16,
+"subtree_isa": 1
+},
+"UBERON:0003699": {
+"ic": 9.6189,
+"ic_isa": 9.6189,
+"id": "UBERON:0003699",
+"n": 15047,
+"name": "pubic symphysis",
+"subtree": 1,
+"subtree_isa": 1
+},
+"UBERON:0003714": {
+"ic": 9.6189,
+"ic_isa": 9.6189,
+"id": "UBERON:0003714",
+"n": 15047,
+"name": "neural tissue",
+"subtree": 1,
+"subtree_isa": 1
+},
+"UBERON:0003823": {
+"ic": 5.0442,
+"ic_isa": 9.6189,
+"id": "UBERON:0003823",
+"n": 15047,
+"name": "hindlimb zeugopod",
+"subtree": 97,
+"subtree_isa": 1
+},
+"UBERON:0003889": {
+"ic": 5.2495,
+"ic_isa": 8.5203,
+"id": "UBERON:0003889",
+"n": 15047,
+"name": "fallopian tube",
+"subtree": 79,
+"subtree_isa": 3
+},
+"UBERON:0004086": {
+"ic": 5.5414,
+"ic_isa": 7.3163,
+"id": "UBERON:0004086",
+"n": 15047,
+"name": "brain ventricle",
+"subtree": 59,
+"subtree_isa": 10
+},
+"UBERON:0004288": {
+"ic": 1.6716,
+"ic_isa": 9.6189,
+"id": "UBERON:0004288",
+"n": 15047,
+"name": "skeleton",
+"subtree": 2828,
+"subtree_isa": 1
+},
+"UBERON:0004452": {
+"ic": 5.3704,
+"ic_isa": 9.6189,
+"id": "UBERON:0004452",
+"n": 15047,
+"name": "carpal region",
+"subtree": 70,
+"subtree_isa": 1
+},
+"UBERON:0004550": {
+"ic": 9.6189,
+"ic_isa": 9.6189,
+"id": "UBERON:0004550",
+"n": 15047,
+"name": "gastroesophageal sphincter",
+"subtree": 1,
+"subtree_isa": 1
+},
+"UBERON:0004590": {
+"ic": 6.4001,
+"ic_isa": 6.4409,
+"id": "UBERON:0004590",
+"n": 15047,
+"name": "sphincter muscle",
+"subtree": 25,
+"subtree_isa": 24
+},
+"UBERON:0004766": {
+"ic": 4.4714,
+"ic_isa": 5.5936,
+"id": "UBERON:0004766",
+"n": 15047,
+"name": "cranial bone",
+"subtree": 172,
+"subtree_isa": 56
+},
+"UBERON:0004916": {
+"ic": 8.5203,
+"ic_isa": 8.5203,
+"id": "UBERON:0004916",
+"n": 15047,
+"name": "anal sphincter",
+"subtree": 3,
+"subtree_isa": 3
+},
+"UBERON:0005053": {
+"ic": 8.2326,
+"ic_isa": 8.2326,
+"id": "UBERON:0005053",
+"n": 15047,
+"name": "primary nerve cord",
+"subtree": 4,
+"subtree_isa": 4
+},
+"UBERON:0005843": {
+"ic": 6.6745,
+"ic_isa": 9.6189,
+"id": "UBERON:0005843",
+"n": 15047,
+"name": "sacral spinal cord",
+"subtree": 19,
+"subtree_isa": 1
+},
+"UBERON:0005944": {
+"ic": 3.5141,
+"ic_isa": 9.6189,
+"id": "UBERON:0005944",
+"n": 15047,
+"name": "axial skeleton plus cranial skeleton",
+"subtree": 448,
+"subtree_isa": 1
+},
+"UBERON:0006134": {
+"ic": 6.7857,
+"ic_isa": 6.9109,
+"id": "UBERON:0006134",
+"n": 15047,
+"name": "nerve fiber",
+"subtree": 17,
+"subtree_isa": 15
+},
+"UBERON:0006314": {
+"ic": 5.6299,
+"ic_isa": 5.6299,
+"id": "UBERON:0006314",
+"n": 15047,
+"name": "bodily fluid",
+"subtree": 54,
+"subtree_isa": 54
+},
+"UBERON:0006562": {
+"ic": 4.994,
+"ic_isa": 8.2326,
+"id": "UBERON:0006562",
+"n": 15047,
+"name": "pharynx",
+"subtree": 102,
+"subtree_isa": 4
+},
+"UBERON:0006611": {
+"ic": 9.6189,
+"ic_isa": 9.6189,
+"id": "UBERON:0006611",
+"n": 15047,
+"name": "exoskeleton",
+"subtree": 1,
+"subtree_isa": 1
+},
+"UBERON:0006675": {
+"ic": 8.5203,
+"ic_isa": 8.5203,
+"id": "UBERON:0006675",
+"n": 15047,
+"name": "venous valve",
+"subtree": 3,
+"subtree_isa": 3
+},
+"UBERON:0006692": {
+"ic": 7.5395,
+"ic_isa": 9.6189,
+"id": "UBERON:0006692",
+"n": 15047,
+"name": "vertebral canal",
+"subtree": 8,
+"subtree_isa": 1
+},
+"UBERON:0006849": {
+"ic": 5.9054,
+"ic_isa": 9.6189,
+"id": "UBERON:0006849",
+"n": 15047,
+"name": "scapula",
+"subtree": 41,
+"subtree_isa": 1
+},
+"UBERON:0006911": {
+"ic": 9.6189,
+"ic_isa": 9.6189,
+"id": "UBERON:0006911",
+"n": 15047,
+"name": "digestive system secreted substance",
+"subtree": 1,
+"subtree_isa": 1
+},
+"UBERON:0007831": {
+"ic": 4.5755,
+"ic_isa": 8.0095,
+"id": "UBERON:0007831",
+"n": 15047,
+"name": "pectoral girdle skeleton",
+"subtree": 155,
+"subtree_isa": 5
+},
+"UBERON:0007832": {
+"ic": 4.7063,
+"ic_isa": 8.0095,
+"id": "UBERON:0007832",
+"n": 15047,
+"name": "pelvic girdle skeleton",
+"subtree": 136,
+"subtree_isa": 5
+},
+"UBERON:0008930": {
+"ic": 7.221,
+"ic_isa": 8.5203,
+"id": "UBERON:0008930",
+"n": 15047,
+"name": "somatosensory cortex",
+"subtree": 11,
+"subtree_isa": 3
+},
+"UBERON:0009773": {
+"ic": 5.3563,
+"ic_isa": 5.7688,
+"id": "UBERON:0009773",
+"n": 15047,
+"name": "renal tubule",
+"subtree": 71,
+"subtree_isa": 47
+},
+"UBERON:0010166": {
+"ic": 7.5395,
+"ic_isa": 9.6189,
+"id": "UBERON:0010166",
+"n": 15047,
+"name": "coat of hair",
+"subtree": 8,
+"subtree_isa": 1
+},
+"UBERON:0010362": {
+"ic": 7.054,
+"ic_isa": 9.6189,
+"id": "UBERON:0010362",
+"n": 15047,
+"name": "endoskeleton",
+"subtree": 13,
+"subtree_isa": 1
+},
+"UBERON:0012113": {
+"ic": 9.6189,
+"ic_isa": 9.6189,
+"id": "UBERON:0012113",
+"n": 15047,
+"name": "bolus of food",
+"subtree": 1,
+"subtree_isa": 1
+},
+"UBERON:0013141": {
+"ic": 8.9258,
+"ic_isa": 8.9258,
+"id": "UBERON:0013141",
+"n": 15047,
+"name": "capillary bed",
+"subtree": 2,
+"subtree_isa": 2
+},
+"UBERON:0013411": {
+"ic": 9.6189,
+"ic_isa": 9.6189,
+"id": "UBERON:0013411",
+"n": 15047,
+"name": "cranial cavity",
+"subtree": 1,
+"subtree_isa": 1
+},
+"UBERON:0013765": {
+"ic": 2.7032,
+"ic_isa": 3.8078,
+"id": "UBERON:0013765",
+"n": 15047,
+"name": "digestive system element",
+"subtree": 1008,
+"subtree_isa": 334
+},
+"UBERON:0014892": {
+"ic": 3.1237,
+"ic_isa": 3.4556,
+"id": "UBERON:0014892",
+"n": 15047,
+"name": "skeletal muscle organ, vertebrate",
+"subtree": 662,
+"subtree_isa": 475
+},
+"UBERON:0016525": {
+"ic": 4.874,
+"ic_isa": 9.6189,
+"id": "UBERON:0016525",
+"n": 15047,
+"name": "frontal lobe",
+"subtree": 115,
+"subtree_isa": 1
+},
+"UBERON:0016526": {
+"ic": 3.6028,
+"ic_isa": 6.7286,
+"id": "UBERON:0016526",
+"n": 15047,
+"name": "lobe of cerebral hemisphere",
+"subtree": 410,
+"subtree_isa": 18
+},
+"UBERON:0016884": {
+"ic": 7.8272,
+"ic_isa": 8.5203,
+"id": "UBERON:0016884",
+"n": 15047,
+"name": "shoulder joint",
+"subtree": 6,
+"subtree_isa": 3
+},
+"UBERON:8450002": {
+"ic": 3.5075,
+"ic_isa": 8.9258,
+"id": "UBERON:8450002",
+"n": 15047,
+"name": "excretory system",
+"subtree": 451,
+"subtree_isa": 2
+}
+}
+}

@@ -2,6 +2,26 @@
 
 Findings and decisions, dated. Code history is in `git log`; this records what we learned.
 
+## 2026-10-28 (overnight: information content and concept drift)
+- Information content as the triviality filter (`docs/ic-triviality.md`, `scripts/ontology/ic.py`,
+  `closure.py --ic`): IC = -log(subtree/N) from GO, UBERON, CL and ChEBI (ChEBI fetched in 6 s), over
+  is_a plus part_of (is_a alone scores "multicellular organism" 5.96). Score of a fact = min IC of its
+  two ends. Threshold 2.5 keeps 837 of 1,551 derived facts, 603 trivial, 111 unjudged (NCBITaxon, PR,
+  MONDO, ... not loaded). Of the hub list's 1,175 survivors 423 are IC-trivial, and it removes 183
+  facts IC calls non-trivial. The hub list is also nondeterministic (1,159 to 1,187 survivors by hash seed).
+- IC finds specific facts, not true ones. The top of the list is ChEBI chemistry (leaf IC saturates at
+  12.3) and effect chains through loosely linked entities; 5 of the 23 kept facts in a 42-fact hand
+  sample were wrong or dubious. `isaInherit` hands "blood vessel connected to IVC" to the superior vena cava: the
+  existential-read-as-universal flaw again. Min IC over the whole derivation did better on the same
+  42 labels but 42 labels is too few to choose.
+- Concept drift (`docs/concept-drift.md`, `scripts/ontology/concept_drift.py`): the textbook uses 559 GO
+  CURIEs (not ~1,000). Live in GO of Dec 2004 / Dec 2009 / Dec 2014 / Jan 2020: 77% / 92% / 97% / 99%
+  (statements fully expressible: 906 / 1,080 / 1,136 / 1,168 of 1,171). 33% of the 2005 terms have a
+  different name today; of those with the same name 63% have different definition text. 7 retired terms
+  are still in use (6 obsolete, 1 merged), all live in 2020. `creation_date` is back-filled for older
+  terms (16 of 59 contradict the snapshots), so it is not a mint date. Lipid raft GO:0045121 kept its
+  id and changed name, parent (4 times) and definition between 2004 and 2008.
+
 ## 2026-10-28 (overnight: argument layer)
 - Built: `EvidenceKind.hypothesis` (weight 0), `Claim.noEffect` (a measured null), `opinionAt year`
   on Statement and Derivation (one recursion, `opinionWith`, behind both), and `Rivalry`: belief in

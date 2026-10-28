@@ -4,10 +4,16 @@ Facts:   rel(r, a, b) / notRel(r, a, b) / effect(a, sign, target, b)
 Rules:   RO chains (enabled), transitivity, is_a laws, inverses, viaAmount, viaActivity, notRelSub/Obj
 Every derived fact keeps its shortest derivation (rule, premises). Belief: weakest-link for relational
 steps, product for effect chains. Output: data/search/closure.json and a printed summary.
-Usage: closure.py <claims_m2_dir> <go.obo> [max_depth]"""
+Usage: closure.py <claims_m2_dir> <go.obo> [max_depth] [--ic[=T]]
+--ic ranks and filters by information content instead of the hub list: score(fact) = min IC of its subject and
+object, read from data/search/ic.json (build it with scripts/ontology/ic.py); keeps score >= T (default IC_MIN).
+Writes closure_ic.json and derivations_ic.json beside the defaults, and prints the comparison with the hub list."""
 import json, glob, re, sys, collections, pathlib, itertools
 from fractions import Fraction as F
-src, go_obo = sys.argv[1], sys.argv[2]; MAXD = int(sys.argv[3]) if len(sys.argv) > 3 else 4
+IC_MIN = 2.5   # suggested threshold, see docs/ic-triviality.md
+IC = next((a for a in sys.argv if a.startswith('--ic')), None); IC_T = float(IC.split('=')[1]) if IC and '=' in IC else IC_MIN
+args = [a for a in sys.argv[1:] if not a.startswith('--ic')]
+src, go_obo = args[0], args[1]; MAXD = int(args[2]) if len(args) > 2 else 4
 sys.path.insert(0, 'scripts/textbook')
 # --- reuse kind logic from the emitter
 go_ns = {}; cur = None
@@ -169,6 +175,35 @@ def interesting(k):
 inter = [k for k in novel if interesting(k)]
 print(f"\nhubs excluded: {[labels_e.get(h, h) for h in list(hubs)[:12]]} ...")
 print(f"novel facts after dropping inverses-of-asserted and hub lifts: {len(inter)}; by rule {dict(collections.Counter(facts[k]['deriv'][0] for k in inter))}")
+# --- --ic: score = min IC over subject and object; a conclusion about "cell" or "organism" scores near 0.
+# Scored only when both ends have an IC (GO, UBERON, CL, ChEBI); one scored end gives an upper bound, enough to call a fact trivial.
+if IC:
+    ic_tab = json.load(open('data/search/ic.json'))['terms']; ic = {c: v['ic'] for c, v in ic_tab.items() if 'ic' in v}
+    ends = lambda k: (k[3], k[4]) if k[0] == 'effect' else (k[2], k[3])
+    bound = lambda k: min((ic[c] for c in ends(k) if c in ic), default=None)
+    score = lambda k: bound(k) if all(c in ic for c in ends(k)) else None
+    name = lambda c: labels_e.get(c) or (ic_tab.get(c) or {}).get('name') or c
+    def used(k): return set(ends(k)).union(*[used(p) for p in facts[k]['deriv'][1:] if isinstance(p, tuple)])   # every entity in the derivation
+    pathmin = lambda k: min((ic[c] for c in used(k) if c in ic), default=None)   # bottleneck: the most generic entity the proof passes through
+    def hist(keys):
+        sc = sorted(x for x in map(score, keys) if x is not None); n = len(keys); part = sum(1 for k in keys if score(k) is None and bound(k) is not None)
+        return ' '.join(f"{sum(1 for x in sc if min(int(x), 9) == b):5d}" for b in range(10)) + f" {part:5d} {n - len(sc) - part:5d} {n:5d}   median {sc[len(sc)//2]:.2f}  mean {sum(sc)/len(sc):.2f}"
+    print(f"\n=== information content (threshold {IC_T}) ===\nmin-IC bin:      " + ' '.join(f"{b:>5}" for b in ['<1', '<2', '<3', '<4', '<5', '<6', '<7', '<8', '<9', '9+', '1 end', 'none']) + '   all')
+    print('asserted        ', hist(list(asserted))); print('derived (novel) ', hist(list(novel)))
+    fmt = lambda k: f"{score(k):5.2f}  d{facts[k]['depth']} {facts[k]['deriv'][0]:<16} {show(k)}"
+    scored = sorted((k for k in novel if score(k) is not None), key=lambda k: (-score(k), -facts[k]['depth'], str(k)))
+    print('\n--- top 25 derived by min IC (non-trivial) ---'); [print(fmt(k)) for k in scored[:25]]
+    print('\n--- bottom 15 derived by min IC (trivial) ---'); [print(fmt(k)) for k in scored[-15:]]
+    inter_hub = set(inter); kept = [k for k in scored if score(k) >= IC_T]; ics = set(kept)
+    low = lambda k: bound(k) is not None and bound(k) < IC_T; unjudged = lambda k: not low(k) and score(k) is None
+    print(f"\nIC >= {IC_T} keeps {len(kept)} of {len(novel)}; trivial (<{IC_T}) {sum(low(k) for k in novel)}; unjudged (an end has no IC, bound >= {IC_T}) {sum(unjudged(k) for k in novel)}")
+    print(f"of the {len(kept)} ends-min keepers, {sum(1 for k in kept if pathmin(k) >= IC_T)} also pass on the derivation bottleneck (min IC over every entity in the proof)")
+    print(f"hub list keeps {len(inter_hub)}: of those IC-trivial {sum(low(k) for k in inter_hub)}, IC-kept {len(inter_hub & ics)}, unjudged {sum(unjudged(k) for k in inter_hub)}")
+    print(f"hub list removes {len(novel) - len(inter_hub)}: of those IC-kept {len(ics - inter_hub)}, IC-trivial {sum(low(k) for k in novel if k not in inter_hub)}, unjudged {sum(unjudged(k) for k in novel if k not in inter_hub)}")
+    print(f"hub terms with IC >= {IC_T}: {sum(1 for h in hubs if ic.get(h, 0) >= IC_T)} of {len(hubs)}; with no IC: {sum(1 for h in hubs if h not in ic)}")
+    print('hub terms (degree, IC):', ', '.join(f"{name(h)} ({(indeg + outdeg)[h]}, {ic[h]:.1f})" if h in ic else f"{name(h)} ({(indeg + outdeg)[h]}, -)" for h in sorted(hubs, key=lambda h: (-(indeg + outdeg)[h], h))))
+    json.dump({'threshold': IC_T, 'facts': [{'fact': show(k), 'score': round(score(k), 3), 'path_min': round(pathmin(k), 3), 'depth': facts[k]['depth'], 'rule': facts[k]['deriv'][0], 'hub_survivor': k in inter_hub} for k in scored]}, open('data/search/closure_ic.json', 'w'), indent=0)
+    inter = kept
 import random; random.seed(7)
 sample = random.sample(inter, min(15, len(inter)))
 print("\n=== random sample of interesting novel facts ===")
@@ -182,7 +217,7 @@ def deriv_struct(k):
     out = {'rule': d[0], 'premises': prem, 'fact': show(k), 'key': [list(x) if isinstance(x, tuple) else x for x in k]}
     if d[0] == 'relInv': out['to_rel'] = list(k[1])
     return out
-json.dump([deriv_struct(k) for k in sorted(inter, key=lambda k: (facts[k]['depth'], str(k)))[:400]], open('data/search/derivations.json', 'w'), indent=0)
+json.dump([deriv_struct(k) for k in sorted(inter, key=(lambda k: (-score(k), str(k))) if IC else (lambda k: (facts[k]['depth'], str(k))))[:400]], open('data/search/derivations_ic.json' if IC else 'data/search/derivations.json', 'w'), indent=0)
 
 # --- path query: Dan's question, "cancer is a disease of energy metabolism"
 G = collections.defaultdict(list)
