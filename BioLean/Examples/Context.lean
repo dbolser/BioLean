@@ -26,7 +26,7 @@ def hasQuality     : Rel := ⟨.ro, 86, false⟩
 def developsFrom   : Rel := ⟨.ro, 2202, false⟩
 def adjacentTo     : Rel := ⟨.ro, 2220, false⟩
 
--- Taxa not in the pinned table (`BioLean/Taxa.lean`): `transport` refuses them
+-- Taxa used only here (known to `Taxa` through the imported NCBITaxon closure)
 def ecoli    : Entity .taxon := ⟨"NCBITaxon:562", "Escherichia coli"⟩
 def cow      : Entity .taxon := ⟨"NCBITaxon:9913", "Bos taurus"⟩
 def halobact : Entity .taxon := ⟨"NCBITaxon:2242", "Halobacterium salinarum"⟩  -- unverified

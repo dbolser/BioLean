@@ -13,6 +13,7 @@ Last updated 2026-10-28 (after M3).
 | Claim shape: signed effect, mediatedBy, five targets, eleven entity kinds | built | `BioLean/Claim.lean`, `Ontology.lean` |
 | Relational claims `Claim.rel` / `Claim.notRel` over RO, typed by RO domain and range | built (M1) | `BioLean/Rel.lean`, `Claim.lean` |
 | RO imported as data: 642 relations, 164 property chains (126 enabled, 38 blocked after hand-check), 124 inverses, 45 transitive; release pinned | generated from ro.owl | `BioLean/RO.lean`, `scripts/ro/`, `docs/ro-chain-check.md` |
+| Ontology is_a imported as data: ancestor closure of the 1,158 used GO, UBERON, CL, ChEBI and NCBITaxon CURIEs (of 1,493 used), 2,911 terms and 4,060 edges, NCBITaxon via OLS4; search tree for fast `decide`; 9 retired used terms | generated | `BioLean/Ontology/IsA.lean`, `scripts/ontology/import_isa.py`, `Tests/IsA.lean` |
 | Derivation rules `relChain` (RO chains, transitivity, is_a laws), `relInv`, `notRelSub/Obj`, `clash` | built | `BioLean/Derivation.lean` |
 | Textbook example: produces, occurs_in lift, part_of transitivity, is_a inheritance, inherited negation | built, theorems check | `BioLean/Examples/Textbook.lean` |
 | The textbook as Lean, round 2 (Sonnet, structured): 1,594 emitted, 1,591 compile | generated, outside the lib build | `BioLean/Lib/TextbookClaimsR2/`, `docs/textbook-lean-check.md` |

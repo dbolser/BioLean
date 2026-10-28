@@ -2,6 +2,28 @@
 
 Findings and decisions, dated. Code history is in `git log`; this records what we learned.
 
+## 2026-10-28 (overnight: ontology is_a import)
+- Built `scripts/ontology/collect_entities.py` and `import_isa.py`, emitting `BioLean/Ontology/IsA.lean`.
+  Biolib uses 1,493 CURIEs (1,004 in Lean, 1,453 in the M2 claims); 1,158 are in the five imported
+  ontologies (GO 562, UBERON 297, ChEBI 182, NCBITaxon 61, CL 56). Their is_a ancestor closure is 2,911
+  terms and 4,060 direct edges (longest chain 39), well under the 8,000 cap, so nothing was trimmed. Every
+  used term was found. NCBITaxon came from OLS4 (283 calls, cached, release 2026-07-12). PATO, MONDO, NCIT,
+  HP, SO, PR and others (335 CURIEs) are not imported.
+- 9 used terms are retired: 6 GO and 2 CL obsolete, 1 GO alt_id. Six have `replaced_by`; polysome
+  (GO:0005844) and mRNA polyadenylation (GO:0006378) only say `consider`; aging (GO:0007568) says nothing.
+  They are in `Ontology.retired` and are not `known`.
+- Speed decided the shape. A flat edge list cost 10 s in the kernel for mouse is_a Mammalia, and
+  elaborator `decide` on ten such queries did not finish in ten minutes. The terms now sit in a
+  balanced search tree keyed on (ontology, id): 60 ms for that query, 0.4 s for a false query from AMP
+  (417 paths to the ChEBI root), under 0.5 s for `Taxa.siblings` on curie strings with plain `decide`. Trap:
+  `isA` written as `a == b || match fuel with ...` hung elaborator `decide` on a code from `Curie.encode`;
+  matching on fuel first fixed it. Nothing needs `native_decide`.
+- `Taxa` keeps its API over the import and the hand table is gone; Context tests pass unchanged. E. coli,
+  cow and Halobacterium are now known taxa (the last was marked unverified; its CURIE checks out).
+- Seen in passing: `areaPostrema` in `Lib/Entities.lean` is UBERON:0002163, the inferior cerebellar
+  peduncle; area postrema is UBERON:0002162. A label lint would be noisy: 479 of 1,017 literals differ
+  from the ontology label, nearly all textbook surface forms.
+
 ## 2026-10-28 (overnight: hole search)
 - Built `scripts/search/holes.py`, the first step of hypothesis generation by inverse entailment. For each
   of the 1,223 textbook statements that follow from nothing else, every closure rule is run backwards with

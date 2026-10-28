@@ -118,7 +118,8 @@ inductive Derivation : Claim → Type
   /-- Transport an effect from taxon `T₁` to a sibling taxon `T₂` (mouse to human), the rest of
   the context `c` unchanged. Never free: it needs an `Evidence` item of kind `.crossSpecies`,
   listed in `axioms`, and the opinion is discounted by it (`chain`). Siblings means neither is_a
-  the other in `Taxa.edges`, so mouse to Mammalia (a generalisation) is refused. -/
+  the other in the imported NCBITaxon hierarchy (`Taxa.siblings`), so mouse to Mammalia (a
+  generalisation) is refused. -/
   | transport {k : Kind} {a : Entity k} {s : Sign} {t : Target} (c : Ctx) {T₁ : Entity .taxon}
       (T₂ : Entity .taxon) (d : Derivation (.effect (a.inCtx { c with taxon := some T₁ }) s t))
       (e : Evidence) (hk : e.kind = .crossSpecies := by decide)

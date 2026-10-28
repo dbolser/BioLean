@@ -1,11 +1,12 @@
 import BioLean.Ontology
+import BioLean.Ontology.IsA
 
 /-!
-# A pinned taxon is_a table
+# Taxa
 
-A small hand table of NCBITaxon lineages (abridged: intermediate ranks are skipped), enough for
-`Derivation.transport` to tell siblings from ancestors and for `Statement.taxonConsistent`. Import
-the NCBITaxon is_a data, as `RO.lean` does for RO, when more taxa are needed.
+Named NCBITaxon constants, and is_a between taxa read from the imported NCBITaxon hierarchy
+(`BioLean/Ontology/IsA.lean`: every taxon biolib uses, with all its ancestors, from OLS4). Enough for
+`Derivation.transport` to tell siblings from ancestors and for `Statement.taxonConsistent`.
 -/
 
 namespace BioLean.Taxa
@@ -23,22 +24,18 @@ def human         : Entity .taxon := ⟨"NCBITaxon:9606", "Homo sapiens"⟩
 def mouse         : Entity .taxon := ⟨"NCBITaxon:10090", "Mus musculus"⟩
 def rat           : Entity .taxon := ⟨"NCBITaxon:10116", "Rattus norvegicus"⟩
 
-/-- `(child, parent)` edges. -/
-def edges : List (Entity .taxon × Entity .taxon) := [
-  (bacteria, cellularOrganisms), (archaea, cellularOrganisms), (eukaryota, cellularOrganisms),
-  (viridiplantae, eukaryota), (fungi, eukaryota), (metazoa, eukaryota),
-  (vertebrata, metazoa), (mammalia, vertebrata),
-  (human, mammalia), (mouse, mammalia), (rat, mammalia)]
+/-- The ontology code of NCBITaxon. -/
+def code : Nat := 4
+theorem code_eq : Curie.prefixes.idxOf? "NCBITaxon" = some code := by decide
 
-/-- Reflexive-transitive is_a over `edges`, by curie. -/
-def isA (a b : String) (fuel : Nat := edges.length) : Bool :=
-  a == b || match fuel with
-    | 0 => false
-    | n + 1 => edges.any fun (c, p) => c.curie == a && isA p.curie b n
+/-- Reflexive-transitive is_a between taxon curies, over the imported hierarchy. -/
+def isA (a b : String) : Bool := Ontology.isACurie a b
 
-/-- Is the taxon in the table? Refined taxa (aged mouse) are not. -/
+/-- Is the taxon in the imported NCBITaxon closure? Refined taxa (aged mouse) are not. -/
 def known (t : Entity .taxon) : Bool :=
-  t == cellularOrganisms || edges.any (·.1 == t)
+  match Curie.encode t.curie with
+  | some c => c.1 == code && Ontology.known c
+  | none => false
 
 /-- Two known taxa, neither is_a the other: mouse and human, not mouse and Mammalia. Unknown or
 refined taxa are never siblings, so `transport` fails safe. -/

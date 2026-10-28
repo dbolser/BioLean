@@ -37,7 +37,7 @@ example : glucose.inCtx { taxon := mouse, condition := some (.organism aged) } â
 -- range check: in_taxon needs a continuant filler
 #check_failure glucose.refine inTaxon glycolysis
 
--- the taxon table
+-- the taxon hierarchy (imported from NCBITaxon)
 example : siblings mouse human = true := by decide
 example : siblings bacteria archaea = true := by decide
 example : siblings mouse mammalia = false := by decide        -- generalisation, not transport
