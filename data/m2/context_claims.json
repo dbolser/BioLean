@@ -1,0 +1,6419 @@
+{
+ "all": [
+  {
+   "id": "cell-structure-and-function-m45429-21",
+   "claim": "The bacterial cell wall is made of peptidoglycan",
+   "source": "Unlike Archaea and eukaryotes, bacteria have a cell wall made of peptidoglycan, comprised of sugars and amino acids, and many have a polysaccharide capsule ().",
+   "ctor": "rel",
+   "subject": "GO:0005618",
+   "relation": "has part",
+   "object": "CHEBI:8005",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:2"
+   },
+   "entities": [
+    {
+     "text": "cell wall",
+     "curie": "GO:0005618"
+    },
+    {
+     "text": "peptidoglycan",
+     "curie": "CHEBI:8005"
+    }
+   ]
+  },
+  {
+   "id": "cell-structure-and-function-m45432-16",
+   "claim": "Plasma membranes of absorptive cells are folded into microvilli",
+   "source": "The plasma membranes of cells that specialize in absorption are folded into fingerlike projections called microvilli (singular = microvillus).",
+   "ctor": "rel",
+   "subject": "GO:0005902",
+   "relation": "part of",
+   "object": "GO:0005886",
+   "sign": null,
+   "target": null,
+   "context": {
+    "cellType": "CL:0000584"
+   },
+   "entities": [
+    {
+     "text": "plasma membrane",
+     "curie": "GO:0005886"
+    },
+    {
+     "text": "microvilli",
+     "curie": "GO:0005902"
+    },
+    {
+     "text": "cells that specialize in absorption",
+     "curie": "CL:0000584"
+    }
+   ]
+  },
+  {
+   "id": "cell-structure-and-function-m45432-24",
+   "claim": "The immune response to gluten damages microvilli",
+   "source": "The immune response damages microvilli, and thus, afflicted individuals cannot absorb nutrients.",
+   "ctor": "effect",
+   "subject": "GO:0006955",
+   "relation": null,
+   "object": "GO:0005902",
+   "sign": "neg",
+   "target": "amount",
+   "context": {
+    "condition": "celiac disease"
+   },
+   "entities": [
+    {
+     "text": "immune response",
+     "curie": "GO:0006955"
+    },
+    {
+     "text": "microvilli",
+     "curie": "GO:0005902"
+    }
+   ]
+  },
+  {
+   "id": "cell-structure-and-function-m45432-25",
+   "claim": "Loss of microvilli prevents nutrient absorption in celiac patients",
+   "source": "The immune response damages microvilli, and thus, afflicted individuals cannot absorb nutrients.",
+   "ctor": "effect",
+   "subject": "GO:0005902",
+   "relation": null,
+   "object": "GO:0050892",
+   "sign": "pos",
+   "target": "process",
+   "context": {
+    "condition": "celiac disease"
+   },
+   "entities": [
+    {
+     "text": "microvilli",
+     "curie": "GO:0005902"
+    },
+    {
+     "text": "absorb nutrients",
+     "curie": "GO:0050892"
+    }
+   ]
+  },
+  {
+   "id": "cell-structure-and-function-m45432-67",
+   "claim": "The centrosome functions as a microtubule-organizing center",
+   "source": "The centrosome is a region near the nucleus of animal cells that functions as a microtubule-organizing center.",
+   "ctor": "rel",
+   "subject": "GO:0005813",
+   "relation": "is_a",
+   "object": "GO:0005815",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:33208"
+   },
+   "entities": [
+    {
+     "text": "centrosome",
+     "curie": "GO:0005813"
+    },
+    {
+     "text": "microtubule-organizing center",
+     "curie": "GO:0005815"
+    }
+   ]
+  },
+  {
+   "id": "cell-structure-and-function-m45432-75",
+   "claim": "Plant cells lack centrioles",
+   "source": "However, the exact function of the centrioles in cell division is not clear, since cells that have the centrioles removed can still divide, and plant cells, which lack centrioles, are capable of cell division.",
+   "ctor": "notRel",
+   "subject": "CL:0000000",
+   "relation": "has part",
+   "object": "GO:0005814",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:33090"
+   },
+   "entities": [
+    {
+     "text": "centrioles",
+     "curie": "GO:0005814"
+    }
+   ]
+  },
+  {
+   "id": "cell-structure-and-function-m45432-76",
+   "claim": "Plant cells are capable of cell division",
+   "source": "However, the exact function of the centrioles in cell division is not clear, since cells that have the centrioles removed can still divide, and plant cells, which lack centrioles, are capable of cell division.",
+   "ctor": "rel",
+   "subject": "CL:0000000",
+   "relation": "capable of",
+   "object": "GO:0051301",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:33090"
+   },
+   "entities": [
+    {
+     "text": "cell division",
+     "curie": "GO:0051301"
+    }
+   ]
+  },
+  {
+   "id": "cell-structure-and-function-m45432-158",
+   "claim": "In plant cells, the Golgi synthesises polysaccharides",
+   "source": "In plant cells, the Golgi has an additional role of synthesizing polysaccharides, some of which are incorporated into the cell wall and some of which are used in other parts of the cell.",
+   "ctor": "rel",
+   "subject": "GO:0005794",
+   "relation": "capable of",
+   "object": "GO:0000271",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:33090"
+   },
+   "entities": [
+    {
+     "text": "Golgi apparatus",
+     "curie": "GO:0005794"
+    },
+    {
+     "text": "polysaccharides",
+     "curie": "CHEBI:18154"
+    },
+    {
+     "text": "polysaccharide biosynthetic process",
+     "curie": "GO:0000271"
+    }
+   ]
+  },
+  {
+   "id": "cell-structure-and-function-m45432-159",
+   "claim": "Some Golgi-made polysaccharides are incorporated into the plant cell wall",
+   "source": "In plant cells, the Golgi has an additional role of synthesizing polysaccharides, some of which are incorporated into the cell wall and some of which are used in other parts of the cell.",
+   "ctor": "rel",
+   "subject": "CHEBI:18154",
+   "relation": "part of",
+   "object": "GO:0009505",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:33090"
+   },
+   "entities": [
+    {
+     "text": "polysaccharides",
+     "curie": "CHEBI:18154"
+    },
+    {
+     "text": "plant cell wall",
+     "curie": "GO:0009505"
+    }
+   ]
+  },
+  {
+   "id": "cell-structure-and-function-m45432-161",
+   "claim": "Digestive enzymes within lysosomes break down proteins, polysaccharides, lipids, nucleic acids and worn-out organelles",
+   "source": "In animal cells, the lysosomes are the cell\u2019s \u201cgarbage disposal.\u201d Digestive enzymes within the lysosomes aid the breakdown of proteins, polysaccharides, lipids, nucleic acids, and even worn-out organelles.",
+   "ctor": "effect",
+   "subject": "GO:0016787",
+   "relation": null,
+   "object": "CHEBI:36080",
+   "sign": "neg",
+   "target": "amount",
+   "context": {
+    "taxon": "NCBITaxon:33208"
+   },
+   "entities": [
+    {
+     "text": "Digestive enzymes",
+     "curie": "GO:0016787"
+    },
+    {
+     "text": "lysosomes",
+     "curie": "GO:0005764"
+    },
+    {
+     "text": "proteins",
+     "curie": "CHEBI:36080"
+    },
+    {
+     "text": "polysaccharides",
+     "curie": "CHEBI:18154"
+    },
+    {
+     "text": "lipids",
+     "curie": "CHEBI:18059"
+    },
+    {
+     "text": "nucleic acids",
+     "curie": "CHEBI:33696"
+    },
+    {
+     "text": "organelles",
+     "curie": "GO:0043226"
+    }
+   ]
+  },
+  {
+   "id": "cell-structure-and-function-m45432-162",
+   "claim": "In single-celled eukaryotes, lysosomes digest ingested food",
+   "source": "In single-celled eukaryotes, lysosomes are important for digestion of the food they ingest and the recycling of organelles.",
+   "ctor": "rel",
+   "subject": "GO:0005764",
+   "relation": "capable of",
+   "object": "GO:0007586",
+   "sign": null,
+   "target": null,
+   "context": {
+    "condition": "single-celled eukaryotes"
+   },
+   "entities": [
+    {
+     "text": "lysosomes",
+     "curie": "GO:0005764"
+    },
+    {
+     "text": "digestion",
+     "curie": "GO:0007586"
+    }
+   ]
+  },
+  {
+   "id": "cell-structure-and-function-m45432-163",
+   "claim": "In single-celled eukaryotes, lysosomes recycle organelles",
+   "source": "In single-celled eukaryotes, lysosomes are important for digestion of the food they ingest and the recycling of organelles.",
+   "ctor": "rel",
+   "subject": "GO:0005764",
+   "relation": "capable of",
+   "object": "GO:0009057",
+   "sign": null,
+   "target": null,
+   "context": {
+    "condition": "single-celled eukaryotes"
+   },
+   "entities": [
+    {
+     "text": "lysosomes",
+     "curie": "GO:0005764"
+    },
+    {
+     "text": "organelles",
+     "curie": "GO:0043226"
+    },
+    {
+     "text": "macromolecule catabolic process",
+     "curie": "GO:0009057"
+    }
+   ]
+  },
+  {
+   "id": "cell-structure-and-function-m45432-179",
+   "claim": "Enzymes within plant vacuoles break down macromolecules",
+   "source": "Additionally, enzymes within plant vacuoles can break down macromolecules.",
+   "ctor": "rel",
+   "subject": "GO:0000325",
+   "relation": "capable of",
+   "object": "GO:0009057",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:33090"
+   },
+   "entities": [
+    {
+     "text": "plant vacuoles",
+     "curie": "GO:0000325"
+    },
+    {
+     "text": "macromolecule catabolic process",
+     "curie": "GO:0009057"
+    }
+   ]
+  },
+  {
+   "id": "cell-structure-and-function-m45432-209",
+   "claim": "Alcohol is detoxified by peroxisomes in liver cells",
+   "source": "Alcohol is detoxified by peroxisomes in liver cells.",
+   "ctor": "effect",
+   "subject": "GO:0005777",
+   "relation": null,
+   "object": "CHEBI:16236",
+   "sign": "neg",
+   "target": "amount",
+   "context": {
+    "cellType": "CL:0000182"
+   },
+   "entities": [
+    {
+     "text": "Alcohol",
+     "curie": "CHEBI:16236"
+    },
+    {
+     "text": "peroxisome",
+     "curie": "GO:0005777"
+    },
+    {
+     "text": "liver cells",
+     "curie": "CL:0000182"
+    }
+   ]
+  },
+  {
+   "id": "cell-structure-and-function-m45432-216",
+   "claim": "Plant cells lack centrioles, centrosomes and lysosomes",
+   "source": "Animal cells have centrioles, centrosomes (discussed under the cytoskeleton), and lysosomes, whereas plant cells do not.",
+   "ctor": "notRel",
+   "subject": "CL:0000000",
+   "relation": "has part",
+   "object": "GO:0005814",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:33090"
+   },
+   "entities": [
+    {
+     "text": "centriole",
+     "curie": "GO:0005814"
+    },
+    {
+     "text": "centrosome",
+     "curie": "GO:0005813"
+    },
+    {
+     "text": "lysosome",
+     "curie": "GO:0005764"
+    }
+   ]
+  },
+  {
+   "id": "cell-structure-and-function-m45432-217",
+   "claim": "Plant cells have a cell wall, chloroplasts, plasmodesmata, plastids and a large central vacuole",
+   "source": "Plant cells have a cell wall, chloroplasts, plasmodesmata, and plastids used for storage, and a large central vacuole, whereas animal cells do not.",
+   "ctor": "rel",
+   "subject": "CL:0000000",
+   "relation": "has part",
+   "object": "GO:0009505",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:33090"
+   },
+   "entities": [
+    {
+     "text": "plant cell wall",
+     "curie": "GO:0009505"
+    },
+    {
+     "text": "chloroplasts",
+     "curie": "GO:0009507"
+    },
+    {
+     "text": "plasmodesmata",
+     "curie": "GO:0009506"
+    },
+    {
+     "text": "plastids",
+     "curie": "GO:0009536"
+    },
+    {
+     "text": "central vacuole",
+     "curie": "GO:0000325"
+    }
+   ]
+  },
+  {
+   "id": "cell-structure-and-function-m45432-219",
+   "claim": "The plant cell wall is external to the plasma membrane",
+   "source": "In b, the diagram of a plant cell, you see a structure external to the plasma membrane called the cell wall.",
+   "ctor": "rel",
+   "subject": "GO:0009505",
+   "relation": "adjacent to",
+   "object": "GO:0005886",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:33090"
+   },
+   "entities": [
+    {
+     "text": "plant cell wall",
+     "curie": "GO:0009505"
+    },
+    {
+     "text": "plasma membrane",
+     "curie": "GO:0005886"
+    }
+   ]
+  },
+  {
+   "id": "cell-structure-and-function-m45432-225",
+   "claim": "The major organic molecule in the plant cell wall is cellulose",
+   "source": "While the chief component of prokaryotic cell walls is peptidoglycan, the major organic molecule in the plant cell wall is cellulose, a polysaccharide made up of long, straight chains of glucose units.",
+   "ctor": "rel",
+   "subject": "GO:0009505",
+   "relation": "has part",
+   "object": "CHEBI:18246",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:33090"
+   },
+   "entities": [
+    {
+     "text": "plant cell wall",
+     "curie": "GO:0009505"
+    },
+    {
+     "text": "cellulose",
+     "curie": "CHEBI:18246"
+    }
+   ]
+  },
+  {
+   "id": "cell-structure-and-function-m45432-252",
+   "claim": "Vitamin K-producing microbes live inside the human gut",
+   "source": "Microbes that produce vitamin K live inside the human gut.",
+   "ctor": "rel",
+   "subject": "NCBITaxon:2",
+   "relation": "located in",
+   "object": "UBERON:0000160",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:9606"
+   },
+   "entities": [
+    {
+     "text": "Microbes",
+     "curie": "NCBITaxon:2"
+    },
+    {
+     "text": "vitamin K",
+     "curie": "CHEBI:28384"
+    },
+    {
+     "text": "gut",
+     "curie": "UBERON:0000160"
+    }
+   ]
+  },
+  {
+   "id": "cell-structure-and-function-m45432-253",
+   "claim": "Gut microbes produce vitamin K",
+   "source": "Microbes that produce vitamin K live inside the human gut.",
+   "ctor": "rel",
+   "subject": "NCBITaxon:2",
+   "relation": "produces",
+   "object": "CHEBI:28384",
+   "sign": null,
+   "target": null,
+   "context": {
+    "anatomy": "UBERON:0000160"
+   },
+   "entities": [
+    {
+     "text": "Microbes",
+     "curie": "NCBITaxon:2"
+    },
+    {
+     "text": "vitamin K",
+     "curie": "CHEBI:28384"
+    },
+    {
+     "text": "vitamin K biosynthetic process",
+     "curie": "GO:0042371"
+    }
+   ]
+  },
+  {
+   "id": "cell-structure-and-function-m45432-266",
+   "claim": "In plant cells, the liquid inside the central vacuole provides turgor pressure",
+   "source": "In plant cells, the liquid inside the central vacuole provides turgor pressure, which is the outward pressure caused by the fluid inside the cell.",
+   "ctor": "effect",
+   "subject": "GO:0042807",
+   "relation": null,
+   "object": "PATO:0001620",
+   "sign": "pos",
+   "target": "phenotype",
+   "context": {
+    "taxon": "NCBITaxon:33090"
+   },
+   "entities": [
+    {
+     "text": "central vacuole",
+     "curie": "GO:0000325"
+    },
+    {
+     "text": "turgor pressure",
+     "curie": "PATO:0001620"
+    }
+   ]
+  },
+  {
+   "id": "cell-structure-and-function-m45432-273",
+   "claim": "The central vacuole stores proteins in developing seed cells",
+   "source": "The central vacuole also functions to store proteins in developing seed cells.",
+   "ctor": "rel",
+   "subject": "CHEBI:36080",
+   "relation": "located in",
+   "object": "GO:0042807",
+   "sign": null,
+   "target": null,
+   "context": {
+    "condition": "developing seed cells"
+   },
+   "entities": [
+    {
+     "text": "central vacuole",
+     "curie": "GO:0000325"
+    },
+    {
+     "text": "proteins",
+     "curie": "CHEBI:36080"
+    },
+    {
+     "text": "seed",
+     "curie": "PO:0009010"
+    }
+   ]
+  },
+  {
+   "id": "cell-structure-and-function-m45432-274",
+   "claim": "Most animal cells release materials into the extracellular space",
+   "source": "Most animal cells release materials into the extracellular space.",
+   "ctor": "rel",
+   "subject": "CL:0000000",
+   "relation": "capable of",
+   "object": "GO:0046903",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:33208"
+   },
+   "entities": [
+    {
+     "text": "extracellular space",
+     "curie": "GO:0005576"
+    },
+    {
+     "text": "secretion",
+     "curie": "GO:0046903"
+    }
+   ]
+  },
+  {
+   "id": "cell-structure-and-function-m45432-280",
+   "claim": "Damaged cells lining a blood vessel display tissue factor",
+   "source": "When the cells lining a blood vessel are damaged, they display a protein receptor called tissue factor.",
+   "ctor": "effect",
+   "subject": "CL:0000115",
+   "relation": null,
+   "object": "PR:000001940",
+   "sign": "pos",
+   "target": "amount",
+   "context": {
+    "anatomy": "UBERON:0001981",
+    "condition": "cells are damaged"
+   },
+   "entities": [
+    {
+     "text": "cells lining a blood vessel",
+     "curie": "CL:0000115"
+    },
+    {
+     "text": "tissue factor",
+     "curie": "PR:000001940"
+    },
+    {
+     "text": "blood vessel",
+     "curie": "UBERON:0001981"
+    }
+   ]
+  },
+  {
+   "id": "cell-structure-and-function-m45432-290",
+   "claim": "Plasmodesmata connect the cytoplasm of adjacent plant cells",
+   "source": "Plasmodesmata are numerous channels that pass between the cell walls of adjacent plant cells, connecting their cytoplasm and enabling signal molecules and nutrients to be transported from cell to cell (a).",
+   "ctor": "rel",
+   "subject": "GO:0009506",
+   "relation": "connected to",
+   "object": "GO:0005737",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:33090"
+   },
+   "entities": [
+    {
+     "text": "plasmodesma",
+     "curie": "GO:0009506"
+    },
+    {
+     "text": "cytoplasm",
+     "curie": "GO:0005737"
+    }
+   ]
+  },
+  {
+   "id": "cell-structure-and-function-m45432-291",
+   "claim": "Plasmodesmata enable signal molecules and nutrients to be transported from cell to cell",
+   "source": "Plasmodesmata are numerous channels that pass between the cell walls of adjacent plant cells, connecting their cytoplasm and enabling signal molecules and nutrients to be transported from cell to cell (a).",
+   "ctor": "effect",
+   "subject": "GO:0009506",
+   "relation": null,
+   "object": "GO:0006810",
+   "sign": "pos",
+   "target": "process",
+   "context": {
+    "taxon": "NCBITaxon:33090"
+   },
+   "entities": [
+    {
+     "text": "plasmodesma",
+     "curie": "GO:0009506"
+    },
+    {
+     "text": "transport",
+     "curie": "GO:0006810"
+    }
+   ]
+  },
+  {
+   "id": "cell-structure-and-function-m45432-317",
+   "claim": "In plant cells, vacuoles help break down macromolecules",
+   "source": "In plant cells, vacuoles also help break down macromolecules.",
+   "ctor": "rel",
+   "subject": "GO:0000325",
+   "relation": "capable of",
+   "object": "GO:0009057",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:33090"
+   },
+   "entities": [
+    {
+     "text": "vacuoles",
+     "curie": "GO:0000325"
+    },
+    {
+     "text": "macromolecule catabolic process",
+     "curie": "GO:0009057"
+    }
+   ]
+  },
+  {
+   "id": "cell-structure-and-function-m45432-321",
+   "claim": "Lysosomes are the digestive organelles of animal cells",
+   "source": "Lysosomes are the digestive organelles of animal cells.",
+   "ctor": "rel",
+   "subject": "GO:0005764",
+   "relation": "part of",
+   "object": "CL:0000000",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:33208"
+   },
+   "entities": [
+    {
+     "text": "Lysosomes",
+     "curie": "GO:0005764"
+    }
+   ]
+  },
+  {
+   "id": "cell-structure-and-function-m45432-326",
+   "claim": "Central vacuole expansion enlarges the plant cell without producing more cytoplasm",
+   "source": "The central vacuole expands, enlarging the cell without the need to produce more cytoplasm.",
+   "ctor": "effect",
+   "subject": "GO:0042807",
+   "relation": null,
+   "object": "GO:0016049",
+   "sign": "pos",
+   "target": "process",
+   "context": {
+    "taxon": "NCBITaxon:33090"
+   },
+   "entities": [
+    {
+     "text": "central vacuole",
+     "curie": "GO:0000325"
+    },
+    {
+     "text": "cell growth",
+     "curie": "GO:0016049"
+    },
+    {
+     "text": "cytoplasm",
+     "curie": "GO:0005737"
+    }
+   ]
+  },
+  {
+   "id": "cell-structure-and-function-m45432-338",
+   "claim": "Animal cells communicate through their extracellular matrices",
+   "source": "Animal cells communicate through their extracellular matrices and are connected to each other by tight junctions, desmosomes, and gap junctions.",
+   "ctor": "effect",
+   "subject": "GO:0031012",
+   "relation": null,
+   "object": "GO:0007154",
+   "sign": "pos",
+   "target": "process",
+   "context": {
+    "taxon": "NCBITaxon:33208"
+   },
+   "entities": [
+    {
+     "text": "extracellular matrix",
+     "curie": "GO:0031012"
+    },
+    {
+     "text": "cell communication",
+     "curie": "GO:0007154"
+    }
+   ]
+  },
+  {
+   "id": "cell-structure-and-function-m45432-340",
+   "claim": "Plant cells are connected and communicate via plasmodesmata",
+   "source": "Plant cells are connected and communicate with each other by plasmodesmata.",
+   "ctor": "rel",
+   "subject": "CL:0000000",
+   "relation": "has part",
+   "object": "GO:0009506",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:33090"
+   },
+   "entities": [
+    {
+     "text": "plasmodesma",
+     "curie": "GO:0009506"
+    },
+    {
+     "text": "cell communication",
+     "curie": "GO:0007154"
+    }
+   ]
+  },
+  {
+   "id": "cell-structure-and-function-m45433-36",
+   "claim": "In animal cells, the plasma membrane contains cholesterol",
+   "source": "The plasma membrane is made up primarily of a bilayer of phospholipids with embedded proteins, carbohydrates, glycolipids, and glycoproteins, and, in animal cells, cholesterol.",
+   "ctor": "rel",
+   "subject": "GO:0005886",
+   "relation": "has part",
+   "object": "CHEBI:16113",
+   "sign": null,
+   "target": null,
+   "context": {},
+   "entities": [
+    {
+     "text": "plasma membrane",
+     "curie": "GO:0005886"
+    },
+    {
+     "text": "cholesterol",
+     "curie": "CHEBI:16113"
+    }
+   ]
+  },
+  {
+   "id": "cell-structure-and-function-m45433-58",
+   "claim": "HIV penetrates some cells of the central nervous system",
+   "source": "For example, HIV is able to penetrate the plasma membranes of specific kinds of white blood cells called T-helper cells and monocytes, as well as some cells of the central nervous system.",
+   "ctor": "rel",
+   "subject": "NCBITaxon:12721",
+   "relation": "capable of",
+   "object": "GO:0046718",
+   "sign": null,
+   "target": null,
+   "context": {
+    "anatomy": "UBERON:0001017"
+   },
+   "entities": [
+    {
+     "text": "HIV",
+     "curie": "NCBITaxon:12721"
+    },
+    {
+     "text": "central nervous system",
+     "curie": "UBERON:0001017"
+    },
+    {
+     "text": "symbiont entry into host cell",
+     "curie": "GO:0046718"
+    }
+   ]
+  },
+  {
+   "id": "cell-structure-and-function-m45434-70",
+   "claim": "In a hypotonic solution water enters the cell",
+   "source": "In a hypotonic solution, such as tap water, the extracellular fluid has a lower concentration of solutes than the fluid inside the cell, and water enters the cell.",
+   "ctor": "rel",
+   "subject": "GO:0098657",
+   "relation": "has participant",
+   "object": "CHEBI:15377",
+   "sign": null,
+   "target": null,
+   "context": {
+    "condition": "hypotonic solution"
+   },
+   "entities": [
+    {
+     "text": "water",
+     "curie": "CHEBI:15377"
+    },
+    {
+     "text": "cell",
+     "curie": "CL:0000000"
+    },
+    {
+     "text": "import into cell",
+     "curie": "GO:0006833"
+    }
+   ]
+  },
+  {
+   "id": "cell-structure-and-function-m45434-72",
+   "claim": "In a hypotonic solution water follows its gradient and enters the cell",
+   "source": "In this situation, water will follow its concentration gradient and enter the cell.",
+   "ctor": "rel",
+   "subject": "GO:0006833",
+   "relation": "has participant",
+   "object": "CHEBI:15377",
+   "sign": null,
+   "target": null,
+   "context": {
+    "condition": "hypotonic solution"
+   },
+   "entities": [
+    {
+     "text": "water",
+     "curie": "CHEBI:15377"
+    },
+    {
+     "text": "cell",
+     "curie": "CL:0000000"
+    },
+    {
+     "text": "water transport",
+     "curie": "GO:0006833"
+    }
+   ]
+  },
+  {
+   "id": "cell-structure-and-function-m45434-75",
+   "claim": "In a hypertonic solution water leaves the cell",
+   "source": "Because the cell has a lower concentration of solutes, the water will leave the cell.",
+   "ctor": "rel",
+   "subject": "GO:0006833",
+   "relation": "has participant",
+   "object": "CHEBI:15377",
+   "sign": null,
+   "target": null,
+   "context": {
+    "condition": "hypertonic solution"
+   },
+   "entities": [
+    {
+     "text": "water",
+     "curie": "CHEBI:15377"
+    },
+    {
+     "text": "cell",
+     "curie": "CL:0000000"
+    },
+    {
+     "text": "water transport",
+     "curie": "GO:0006833"
+    }
+   ]
+  },
+  {
+   "id": "cell-structure-and-function-m45434-90",
+   "claim": "Water always enters a plant cell if water is available",
+   "source": "In fact, the cytoplasm in plants is always slightly hypertonic compared to the cellular environment, and water will always enter a cell if water is available.",
+   "ctor": "rel",
+   "subject": "GO:0006833",
+   "relation": "has participant",
+   "object": "CHEBI:15377",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:33090"
+   },
+   "entities": [
+    {
+     "text": "water",
+     "curie": "CHEBI:15377"
+    },
+    {
+     "text": "water transport",
+     "curie": "GO:0006833"
+    }
+   ]
+  },
+  {
+   "id": "how-cells-obtain-energy-m45436-7",
+   "claim": "Muscle proteins are built from dietary amino acids",
+   "source": "For example, the large proteins that make up muscles are built from smaller molecules imported from dietary amino acids.",
+   "ctor": "rel",
+   "subject": "CHEBI:36080",
+   "relation": "derives from",
+   "object": "CHEBI:33709",
+   "sign": null,
+   "target": null,
+   "context": {
+    "anatomy": "UBERON:0002385"
+   },
+   "entities": [
+    {
+     "text": "large proteins",
+     "curie": "CHEBI:36080"
+    },
+    {
+     "text": "dietary amino acids",
+     "curie": "CHEBI:33709"
+    },
+    {
+     "text": "muscles",
+     "curie": "UBERON:0002385"
+    }
+   ]
+  },
+  {
+   "id": "how-cells-obtain-energy-m45437-11",
+   "claim": "Photosynthesizing organisms (plants) produce sugars",
+   "source": "For the most part, photosynthesizing organisms like plants produce these sugars.",
+   "ctor": "rel",
+   "subject": "GO:0015979",
+   "relation": "has output",
+   "object": "CHEBI:16646",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:33090"
+   },
+   "entities": [
+    {
+     "text": "plants",
+     "curie": "NCBITaxon:33090"
+    },
+    {
+     "text": "photosynthesizing",
+     "curie": "GO:0015979"
+    },
+    {
+     "text": "sugars",
+     "curie": "CHEBI:16646"
+    }
+   ]
+  },
+  {
+   "id": "how-cells-obtain-energy-m45437-59",
+   "claim": "Plants convert the energy of sunlight to chemical energy stored in organic molecules",
+   "source": "Plants perform one of the most biologically useful energy transformations on earth: that of converting the energy of sunlight to chemical energy stored within organic molecules ().",
+   "ctor": "rel",
+   "subject": "NCBITaxon:33090",
+   "relation": "capable of",
+   "object": "GO:0015979",
+   "sign": null,
+   "target": null,
+   "context": {},
+   "entities": [
+    {
+     "text": "Viridiplantae",
+     "curie": "NCBITaxon:33090"
+    },
+    {
+     "text": "converting the energy of sunlight to chemical energy",
+     "curie": "GO:0015979"
+    },
+    {
+     "text": "organic molecules",
+     "curie": "CHEBI:50860"
+    }
+   ]
+  },
+  {
+   "id": "how-cells-obtain-energy-m45438-42",
+   "claim": "Mature mammalian red blood cells are capable only of glycolysis",
+   "source": "For example, mature mammalian red blood cells are only capable of glycolysis, which is their sole source of ATP.",
+   "ctor": "rel",
+   "subject": "CL:0000232",
+   "relation": "capable of",
+   "object": "GO:0006096",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:40674"
+   },
+   "entities": [
+    {
+     "text": "mature mammalian red blood cells",
+     "curie": "CL:0000232"
+    },
+    {
+     "text": "glycolytic process",
+     "curie": "GO:0006096"
+    },
+    {
+     "text": "mammalian",
+     "curie": "NCBITaxon:40674"
+    }
+   ]
+  },
+  {
+   "id": "how-cells-obtain-energy-m45438-43",
+   "claim": "Glycolysis is the sole source of ATP in mammalian red blood cells",
+   "source": "For example, mature mammalian red blood cells are only capable of glycolysis, which is their sole source of ATP.",
+   "ctor": "effect",
+   "subject": "GO:0006096",
+   "relation": null,
+   "object": "CHEBI:15422",
+   "sign": "pos",
+   "target": "amount",
+   "context": {
+    "taxon": "NCBITaxon:40674",
+    "cellType": "CL:0000232"
+   },
+   "entities": [
+    {
+     "text": "glycolytic process",
+     "curie": "GO:0006096"
+    },
+    {
+     "text": "ATP",
+     "curie": "CHEBI:15422"
+    },
+    {
+     "text": "red blood cells",
+     "curie": "CL:0000232"
+    },
+    {
+     "text": "Mammalia",
+     "curie": "NCBITaxon:40674"
+    }
+   ]
+  },
+  {
+   "id": "how-cells-obtain-energy-m45438-44",
+   "claim": "If glycolysis is interrupted, red blood cells die",
+   "source": "If glycolysis is interrupted, these cells would eventually die.",
+   "ctor": "effect",
+   "subject": "GO:0006096",
+   "relation": null,
+   "object": "GO:0008219",
+   "sign": "neg",
+   "target": "process",
+   "context": {
+    "cellType": "CL:0000232"
+   },
+   "entities": [
+    {
+     "text": "glycolytic process",
+     "curie": "GO:0006096"
+    },
+    {
+     "text": "these cells",
+     "curie": "CL:0000232"
+    },
+    {
+     "text": "die",
+     "curie": "GO:0008219"
+    }
+   ]
+  },
+  {
+   "id": "how-cells-obtain-energy-m45439-1",
+   "claim": "In eukaryotic cells pyruvate from glycolysis is transported into mitochondria",
+   "source": "In eukaryotic cells, the pyruvate molecules produced at the end of glycolysis are transported into mitochondria, which are sites of cellular respiration.",
+   "ctor": "rel",
+   "subject": "GO:0006850",
+   "relation": "has input",
+   "object": "CHEBI:15361",
+   "sign": null,
+   "target": null,
+   "context": {
+    "cellType": "CL:0000255"
+   },
+   "entities": [
+    {
+     "text": "eukaryotic cells",
+     "curie": "CL:0000255"
+    },
+    {
+     "text": "pyruvate",
+     "curie": "CHEBI:15361"
+    },
+    {
+     "text": "glycolytic process",
+     "curie": "GO:0006096"
+    },
+    {
+     "text": "mitochondria",
+     "curie": "GO:0005739"
+    },
+    {
+     "text": "transported into mitochondria",
+     "curie": "GO:0006850"
+    }
+   ]
+  },
+  {
+   "id": "how-cells-obtain-energy-m45439-10",
+   "claim": "In eukaryotic cells the citric acid cycle takes place in the mitochondrial matrix",
+   "source": "Like the conversion of pyruvate to acetyl CoA, the citric acid cycle in eukaryotic cells takes place in the matrix of the mitochondria.",
+   "ctor": "rel",
+   "subject": "GO:0006099",
+   "relation": "occurs in",
+   "object": "GO:0005759",
+   "sign": null,
+   "target": null,
+   "context": {
+    "cellType": "CL:0000255"
+   },
+   "entities": [
+    {
+     "text": "citric acid cycle",
+     "curie": "GO:0006099"
+    },
+    {
+     "text": "matrix of the mitochondria",
+     "curie": "GO:0005759"
+    },
+    {
+     "text": "eukaryotic cells",
+     "curie": "CL:0000255"
+    }
+   ]
+  },
+  {
+   "id": "how-cells-obtain-energy-m45439-35",
+   "claim": "In prokaryotes electron transport occurs on the inner part of the cell membrane",
+   "source": "These reactions take place in specialized protein complexes located in the inner membrane of the mitochondria of eukaryotic organisms and on the inner part of the cell membrane of prokaryotic organisms.",
+   "ctor": "rel",
+   "subject": "GO:0022904",
+   "relation": "occurs in",
+   "object": "GO:0005886",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:2"
+   },
+   "entities": [
+    {
+     "text": "These reactions",
+     "curie": "GO:0022904"
+    },
+    {
+     "text": "cell membrane",
+     "curie": "GO:0005886"
+    },
+    {
+     "text": "prokaryotic organisms",
+     "curie": "CL:0000520"
+    }
+   ]
+  },
+  {
+   "id": "how-cells-obtain-energy-m45439-48",
+   "claim": "The electron transport chain is in the plasma membrane of prokaryotes",
+   "source": "The electron transport chain is present in multiple copies in the inner mitochondrial membrane of eukaryotes and in the plasma membrane of prokaryotes.",
+   "ctor": "rel",
+   "subject": "GO:0022904",
+   "relation": "occurs in",
+   "object": "GO:0005886",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:2"
+   },
+   "entities": [
+    {
+     "text": "respiratory electron transport chain",
+     "curie": "GO:0022904"
+    },
+    {
+     "text": "plasma membrane",
+     "curie": "GO:0005886"
+    },
+    {
+     "text": "prokaryotes",
+     "curie": "CL:0000520"
+    }
+   ]
+  },
+  {
+   "id": "how-cells-obtain-energy-m45439-86",
+   "claim": "NAD+ is the electron transporter in the liver",
+   "source": "NAD+ is used as the electron transporter in the liver and FAD+ in the brain, so ATP yield depends on the tissue being considered.",
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "context": {},
+   "entities": [
+    {
+     "text": "NAD+",
+     "curie": "CHEBI:15846"
+    },
+    {
+     "text": "liver",
+     "curie": "UBERON:0002107"
+    },
+    {
+     "text": "Mammalia",
+     "curie": "NCBITaxon:40674"
+    }
+   ]
+  },
+  {
+   "id": "how-cells-obtain-energy-m45439-87",
+   "claim": "FAD is the electron transporter in the brain",
+   "source": "NAD+ is used as the electron transporter in the liver and FAD+ in the brain, so ATP yield depends on the tissue being considered.",
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "context": {},
+   "entities": [
+    {
+     "text": "FAD+",
+     "curie": "CHEBI:16238"
+    },
+    {
+     "text": "brain",
+     "curie": "UBERON:0000955"
+    }
+   ]
+  },
+  {
+   "id": "how-cells-obtain-energy-m45440-11",
+   "claim": "Lactic acid fermentation occurs routinely in mammalian red blood cells",
+   "source": "This occurs routinely in mammalian red blood cells and in skeletal muscle that has insufficient oxygen supply to allow aerobic respiration to continue (that is, in muscles used to the point of fatigue).",
+   "ctor": "rel",
+   "subject": "GO:0019661",
+   "relation": "occurs in",
+   "object": "CL:0000232",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:40674",
+    "cellType": "CL:0000232"
+   },
+   "entities": [
+    {
+     "text": "This",
+     "curie": "GO:0019661"
+    },
+    {
+     "text": "mammalian red blood cells",
+     "curie": "CL:0000232"
+    },
+    {
+     "text": "Mammalia",
+     "curie": "NCBITaxon:40674"
+    }
+   ]
+  },
+  {
+   "id": "how-cells-obtain-energy-m45440-12",
+   "claim": "Lactic acid fermentation occurs in skeletal muscle with insufficient oxygen (fatigue)",
+   "source": "This occurs routinely in mammalian red blood cells and in skeletal muscle that has insufficient oxygen supply to allow aerobic respiration to continue (that is, in muscles used to the point of fatigue).",
+   "ctor": "rel",
+   "subject": "GO:0019661",
+   "relation": "occurs in",
+   "object": "UBERON:0001134",
+   "sign": null,
+   "target": null,
+   "context": {
+    "anatomy": "UBERON:0001134",
+    "condition": "insufficient oxygen"
+   },
+   "entities": [
+    {
+     "text": "This",
+     "curie": "GO:0019661"
+    },
+    {
+     "text": "skeletal muscle",
+     "curie": "UBERON:0001134"
+    },
+    {
+     "text": "oxygen",
+     "curie": "CHEBI:15379"
+    }
+   ]
+  },
+  {
+   "id": "how-cells-obtain-energy-m45440-47",
+   "claim": "Oxygen kills obligate anaerobes on exposure",
+   "source": "Oxygen is a poison to these microorganisms and kills them upon exposure.",
+   "ctor": "effect",
+   "subject": "CHEBI:15379",
+   "relation": null,
+   "object": "GO:0008219",
+   "sign": "pos",
+   "target": "process",
+   "context": {
+    "taxon": "NCBITaxon:1485"
+   },
+   "entities": [
+    {
+     "text": "Oxygen",
+     "curie": "CHEBI:15379"
+    },
+    {
+     "text": "these microorganisms",
+     "curie": "NCBITaxon:1485"
+    },
+    {
+     "text": "kills",
+     "curie": "GO:0008219"
+    }
+   ]
+  },
+  {
+   "id": "how-cells-obtain-energy-m45444-13",
+   "claim": "Muscle glycogen allows ATP production for longer during exercise",
+   "source": "The presence of glycogen in muscle cells as a source of glucose allows ATP to be produced for a longer time during exercise.",
+   "ctor": "effect",
+   "subject": "CHEBI:28087",
+   "relation": null,
+   "object": "CHEBI:15422",
+   "sign": "pos",
+   "target": "amount",
+   "context": {
+    "cellType": "CL:0000187"
+   },
+   "entities": [
+    {
+     "text": "glycogen",
+     "curie": "CHEBI:28087"
+    },
+    {
+     "text": "muscle cells",
+     "curie": "CL:0000187"
+    },
+    {
+     "text": "glucose",
+     "curie": "CHEBI:17234"
+    },
+    {
+     "text": "ATP",
+     "curie": "CHEBI:15422"
+    }
+   ]
+  },
+  {
+   "id": "how-cells-obtain-energy-m45444-26",
+   "claim": "In mammals the liver synthesizes urea from two ammonia molecules and one CO2",
+   "source": "In mammals, the liver synthesizes urea from two ammonia molecules and a carbon dioxide molecule.",
+   "ctor": "rel",
+   "subject": "GO:0000050",
+   "relation": "has output",
+   "object": "CHEBI:16199",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:40674",
+    "anatomy": "UBERON:0002107"
+   },
+   "entities": [
+    {
+     "text": "mammals",
+     "curie": "NCBITaxon:40674"
+    },
+    {
+     "text": "liver",
+     "curie": "UBERON:0002107"
+    },
+    {
+     "text": "urea",
+     "curie": "CHEBI:16199"
+    },
+    {
+     "text": "ammonia",
+     "curie": "CHEBI:16134"
+    },
+    {
+     "text": "carbon dioxide",
+     "curie": "CHEBI:16526"
+    },
+    {
+     "text": "urea cycle",
+     "curie": "GO:0000050"
+    }
+   ]
+  },
+  {
+   "id": "molbio-m45473-76",
+   "claim": "The prokaryotic chromosome is located in the nucleoid, a region of the cytoplasm",
+   "source": "Most prokaryotes contain a single, circular chromosome that is found in an area in the cytoplasm called the nucleoid.",
+   "ctor": "rel",
+   "subject": "GO:0005694",
+   "relation": "located in",
+   "object": "GO:0009295",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:2"
+   },
+   "entities": [
+    {
+     "text": "chromosome",
+     "curie": "GO:0005694"
+    },
+    {
+     "text": "nucleoid",
+     "curie": "GO:0009295"
+    },
+    {
+     "text": "cytoplasm",
+     "curie": "GO:0005737"
+    }
+   ]
+  },
+  {
+   "id": "molbio-m45473-84",
+   "claim": "Eukaryotes package their DNA inside the nucleus",
+   "source": "Eukaryotes, whose chromosomes each consist of a linear DNA molecule, employ a different type of packing strategy to fit their DNA inside the nucleus .",
+   "ctor": "rel",
+   "subject": "CHEBI:16991",
+   "relation": "located in",
+   "object": "GO:0005634",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:2759"
+   },
+   "entities": [
+    {
+     "text": "deoxyribonucleic acid",
+     "curie": "CHEBI:16991"
+    },
+    {
+     "text": "nucleus",
+     "curie": "GO:0005634"
+    }
+   ]
+  },
+  {
+   "id": "molbio-m45473-134",
+   "claim": "In eukaryotes, double-stranded DNA is packaged into chromosomes",
+   "source": "Eukaryotes contain double-stranded linear DNA molecules packaged into chromosomes.",
+   "ctor": "rel",
+   "subject": "CHEBI:16991",
+   "relation": "part of",
+   "object": "GO:0005694",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:2759"
+   },
+   "entities": [
+    {
+     "text": "deoxyribonucleic acid",
+     "curie": "CHEBI:16991"
+    },
+    {
+     "text": "chromosome",
+     "curie": "GO:0005694"
+    }
+   ]
+  },
+  {
+   "id": "molbio-m45475-65",
+   "claim": "Telomerase is active in germ cells",
+   "source": "Telomerase is typically found to be active in germ cells, adult stem cells, and some cancer cells.",
+   "ctor": "rel",
+   "subject": "GO:0005697",
+   "relation": "capable of",
+   "object": "GO:0000723",
+   "sign": null,
+   "target": null,
+   "context": {
+    "cellType": "CL:0000586"
+   },
+   "entities": [
+    {
+     "text": "Telomerase",
+     "curie": "GO:0003720"
+    },
+    {
+     "text": "germ cell",
+     "curie": "CL:0000586"
+    },
+    {
+     "text": "telomere maintenance",
+     "curie": "GO:0000723"
+    }
+   ]
+  },
+  {
+   "id": "molbio-m45475-66",
+   "claim": "Telomerase is active in adult stem cells",
+   "source": "Telomerase is typically found to be active in germ cells, adult stem cells, and some cancer cells.",
+   "ctor": "rel",
+   "subject": "GO:0005697",
+   "relation": "capable of",
+   "object": "GO:0000723",
+   "sign": null,
+   "target": null,
+   "context": {
+    "cellType": "CL:0000034"
+   },
+   "entities": [
+    {
+     "text": "Telomerase",
+     "curie": "GO:0003720"
+    },
+    {
+     "text": "adult stem cells",
+     "curie": "CL:0000034"
+    },
+    {
+     "text": "telomere maintenance",
+     "curie": "GO:0000723"
+    }
+   ]
+  },
+  {
+   "id": "molbio-m45475-67",
+   "claim": "Telomerase is active in some cancer cells",
+   "source": "Telomerase is typically found to be active in germ cells, adult stem cells, and some cancer cells.",
+   "ctor": "rel",
+   "subject": "GO:0005697",
+   "relation": "capable of",
+   "object": "GO:0000723",
+   "sign": null,
+   "target": null,
+   "context": {
+    "cellType": "CL:0001064",
+    "condition": "some cancer cells"
+   },
+   "entities": [
+    {
+     "text": "Telomerase",
+     "curie": "GO:0003720"
+    },
+    {
+     "text": "cancer cells",
+     "curie": "MONDO:0004992"
+    },
+    {
+     "text": "telomere maintenance",
+     "curie": "GO:0000723"
+    }
+   ]
+  },
+  {
+   "id": "molbio-m45475-69",
+   "claim": "Telomerase is present in human cells",
+   "source": "Later research using HeLa cells (obtained from Henrietta Lacks) confirmed that telomerase is present in human cells.",
+   "ctor": "rel",
+   "subject": "GO:0005697",
+   "relation": "located in",
+   "object": "CL:0000000",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:9606"
+   },
+   "entities": [
+    {
+     "text": "telomerase",
+     "curie": "GO:0005697"
+    },
+    {
+     "text": "human cells",
+     "curie": "NCBITaxon:9606"
+    }
+   ]
+  },
+  {
+   "id": "molbio-m45475-71",
+   "claim": "Telomerase is not active in adult somatic cells",
+   "source": "Telomerase is not active in adult somatic cells.",
+   "ctor": "notRel",
+   "subject": "GO:0005697",
+   "relation": "capable of",
+   "object": "GO:0000723",
+   "sign": null,
+   "target": null,
+   "context": {
+    "cellType": "CL:0002371"
+   },
+   "entities": [
+    {
+     "text": "Telomerase",
+     "curie": "GO:0003720"
+    },
+    {
+     "text": "adult somatic cells",
+     "curie": "CL:0002371"
+    },
+    {
+     "text": "telomere maintenance",
+     "curie": "GO:0000723"
+    }
+   ]
+  },
+  {
+   "id": "molbio-m45475-77",
+   "claim": "Telomerase-deficient mice have tissue atrophy",
+   "source": "Telomerase-deficient mice were used in these studies; these mice have tissue atrophy, stem-cell depletion, organ system failure, and impaired tissue injury responses.",
+   "ctor": "effect",
+   "subject": "GO:0003720",
+   "relation": null,
+   "object": "PATO:0001623",
+   "sign": "neg",
+   "target": "phenotype",
+   "context": {
+    "taxon": "NCBITaxon:10090",
+    "condition": "telomerase-deficient (loss of function)"
+   },
+   "entities": [
+    {
+     "text": "Telomerase-deficient",
+     "curie": "GO:0003720"
+    },
+    {
+     "text": "Mus musculus",
+     "curie": "NCBITaxon:10090"
+    },
+    {
+     "text": "tissue atrophy",
+     "curie": "PATO:0001623"
+    },
+    {
+     "text": "tissue",
+     "curie": "UBERON:0000479"
+    }
+   ]
+  },
+  {
+   "id": "molbio-m45475-83",
+   "claim": "Telomerase reactivation in telomerase-deficient mice reversed neurodegeneration",
+   "source": "Telomerase reactivation in these mice caused extension of telomeres, reduced DNA damage, reversed neurodegeneration, and improved functioning of the testes, spleen, and intestines.",
+   "ctor": "effect",
+   "subject": "GO:0003720",
+   "relation": null,
+   "object": "HP:0002180",
+   "sign": "neg",
+   "target": "phenotype",
+   "context": {
+    "taxon": "NCBITaxon:10090",
+    "condition": "telomerase reactivation in telomerase-deficient mice"
+   },
+   "entities": [
+    {
+     "text": "Telomerase reactivation",
+     "curie": "GO:0003720"
+    },
+    {
+     "text": "Neurodegeneration",
+     "curie": "HP:0002180"
+    },
+    {
+     "text": "Mus musculus",
+     "curie": "NCBITaxon:10090"
+    }
+   ]
+  },
+  {
+   "id": "molbio-m45475-115",
+   "claim": "An unrepaired thymine dimer leads to a mutation",
+   "source": "If the dimer is not removed and repaired it will lead to a mutation.",
+   "ctor": "effect",
+   "subject": "CHEBI:81145",
+   "relation": null,
+   "object": "SO:0001059",
+   "sign": "pos",
+   "target": "amount",
+   "context": {
+    "condition": "unrepaired"
+   },
+   "entities": [
+    {
+     "text": "Thymine dimer",
+     "curie": "CHEBI:81145"
+    },
+    {
+     "text": "sequence_alteration",
+     "curie": "SO:0001059"
+    }
+   ]
+  },
+  {
+   "id": "molbio-m45475-116",
+   "claim": "People with defective nucleotide excision repair genes have extreme sensitivity to sunlight",
+   "source": "Individuals with flaws in their nucleotide excision repair genes show extreme sensitivity to sunlight and develop skin cancers early in life.",
+   "ctor": "effect",
+   "subject": "GO:0006289",
+   "relation": null,
+   "object": "HP:0000992",
+   "sign": "neg",
+   "target": "phenotype",
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "condition": "defective NER genes"
+   },
+   "entities": [
+    {
+     "text": "nucleotide-excision repair",
+     "curie": "GO:0006289"
+    },
+    {
+     "text": "sensitivity to sunlight",
+     "curie": "HP:0000992"
+    }
+   ]
+  },
+  {
+   "id": "molbio-m45475-117",
+   "claim": "People with defective nucleotide excision repair genes develop skin cancers early in life",
+   "source": "Individuals with flaws in their nucleotide excision repair genes show extreme sensitivity to sunlight and develop skin cancers early in life.",
+   "ctor": "effect",
+   "subject": "GO:0006289",
+   "relation": null,
+   "object": "HP:0008069",
+   "sign": "neg",
+   "target": "phenotype",
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "condition": "defective NER genes; early onset"
+   },
+   "entities": [
+    {
+     "text": "skin cancers",
+     "curie": "HP:0008069"
+    }
+   ]
+  },
+  {
+   "id": "molbio-m45476-15",
+   "claim": "In eukaryotes transcription occurs in the nucleus",
+   "source": "With the genes bound in the nucleus, transcription occurs in the nucleus of the cell and the mRNA transcript must be transported to the cytoplasm.",
+   "ctor": "rel",
+   "subject": "GO:0006351",
+   "relation": "occurs in",
+   "object": "GO:0005634",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:2759"
+   },
+   "entities": [
+    {
+     "text": "DNA-templated transcription",
+     "curie": "GO:0006351"
+    },
+    {
+     "text": "nucleus",
+     "curie": "GO:0005634"
+    }
+   ]
+  },
+  {
+   "id": "molbio-m45476-20",
+   "claim": "In prokaryotes transcription occurs in the cytoplasm",
+   "source": "The prokaryotes, which include bacteria and archaea, lack membrane-bound nuclei and other organelles, and transcription occurs in the cytoplasm of the cell.",
+   "ctor": "rel",
+   "subject": "GO:0006351",
+   "relation": "occurs in",
+   "object": "GO:0005737",
+   "sign": null,
+   "target": null,
+   "context": {
+    "cellType": "CL:0000520"
+   },
+   "entities": [
+    {
+     "text": "DNA-templated transcription",
+     "curie": "GO:0006351"
+    },
+    {
+     "text": "cytoplasm",
+     "curie": "GO:0005737"
+    }
+   ]
+  },
+  {
+   "id": "molbio-m45476-70",
+   "claim": "Eukaryotic mRNAs undergo splicing",
+   "source": "Eukaryotic mRNAs also undergo splicing, in which introns are removed and exons are reconnected with single-nucleotide accuracy.",
+   "ctor": "rel",
+   "subject": "GO:0000398",
+   "relation": "has input",
+   "object": "CHEBI:33699",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:2759"
+   },
+   "entities": [
+    {
+     "text": "messenger RNA",
+     "curie": "CHEBI:33699"
+    },
+    {
+     "text": "mRNA splicing, via spliceosome",
+     "curie": "GO:0000398"
+    }
+   ]
+  },
+  {
+   "id": "molbio-m45479-18",
+   "claim": "In eukaryotes rRNA synthesis occurs in the nucleolus",
+   "source": "In eukaryotes, the nucleolus is completely specialized for the synthesis and assembly of rRNAs.",
+   "ctor": "rel",
+   "subject": "GO:0009303",
+   "relation": "occurs in",
+   "object": "GO:0005730",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:2759"
+   },
+   "entities": [
+    {
+     "text": "rRNA transcription",
+     "curie": "GO:0009303"
+    },
+    {
+     "text": "nucleolus",
+     "curie": "GO:0005730"
+    },
+    {
+     "text": "ribosomal RNA",
+     "curie": "CHEBI:18111"
+    }
+   ]
+  },
+  {
+   "id": "molbio-m45479-19",
+   "claim": "In eukaryotes rRNA assembly (ribosome biogenesis) occurs in the nucleolus",
+   "source": "In eukaryotes, the nucleolus is completely specialized for the synthesis and assembly of rRNAs.",
+   "ctor": "rel",
+   "subject": "GO:0042254",
+   "relation": "occurs in",
+   "object": "GO:0005730",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:2759"
+   },
+   "entities": [
+    {
+     "text": "ribosome biogenesis",
+     "curie": "GO:0042254"
+    },
+    {
+     "text": "nucleolus",
+     "curie": "GO:0005730"
+    }
+   ]
+  },
+  {
+   "id": "molbio-m45479-20",
+   "claim": "In prokaryotes ribosomes are located in the cytoplasm",
+   "source": "Ribosomes are located in the cytoplasm in prokaryotes and in the cytoplasm and endoplasmic reticulum of eukaryotes.",
+   "ctor": "rel",
+   "subject": "GO:0005840",
+   "relation": "located in",
+   "object": "GO:0005737",
+   "sign": null,
+   "target": null,
+   "context": {
+    "cellType": "CL:0000520"
+   },
+   "entities": [
+    {
+     "text": "ribosome",
+     "curie": "GO:0005840"
+    },
+    {
+     "text": "cytoplasm",
+     "curie": "GO:0005737"
+    }
+   ]
+  },
+  {
+   "id": "molbio-m45479-21",
+   "claim": "In eukaryotes ribosomes are located in the cytoplasm",
+   "source": "Ribosomes are located in the cytoplasm in prokaryotes and in the cytoplasm and endoplasmic reticulum of eukaryotes.",
+   "ctor": "rel",
+   "subject": "GO:0005840",
+   "relation": "located in",
+   "object": "GO:0005737",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:2759"
+   },
+   "entities": [
+    {
+     "text": "ribosome",
+     "curie": "GO:0005840"
+    },
+    {
+     "text": "cytoplasm",
+     "curie": "GO:0005737"
+    }
+   ]
+  },
+  {
+   "id": "molbio-m45479-22",
+   "claim": "In eukaryotes ribosomes are located on the endoplasmic reticulum",
+   "source": "Ribosomes are located in the cytoplasm in prokaryotes and in the cytoplasm and endoplasmic reticulum of eukaryotes.",
+   "ctor": "rel",
+   "subject": "GO:0005840",
+   "relation": "located in",
+   "object": "GO:0005783",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:2759"
+   },
+   "entities": [
+    {
+     "text": "ribosome",
+     "curie": "GO:0005840"
+    },
+    {
+     "text": "endoplasmic reticulum",
+     "curie": "GO:0005783"
+    }
+   ]
+  },
+  {
+   "id": "molbio-m45479-59",
+   "claim": "In E. coli the initiation complex includes the small ribosomal subunit",
+   "source": "In E. coli, this complex involves the small ribosome subunit, the mRNA template, three initiation factors, and a special initiator tRNA.",
+   "ctor": "rel",
+   "subject": "GO:0070992",
+   "relation": "has part",
+   "object": "GO:0015935",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:562"
+   },
+   "entities": [
+    {
+     "text": "small ribosomal subunit",
+     "curie": "GO:0015935"
+    }
+   ]
+  },
+  {
+   "id": "molbio-m45479-60",
+   "claim": "In E. coli the initiation complex includes the mRNA template",
+   "source": "In E. coli, this complex involves the small ribosome subunit, the mRNA template, three initiation factors, and a special initiator tRNA.",
+   "ctor": "rel",
+   "subject": "GO:0070992",
+   "relation": "has part",
+   "object": "CHEBI:33699",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:562"
+   },
+   "entities": [
+    {
+     "text": "messenger RNA",
+     "curie": "CHEBI:33699"
+    }
+   ]
+  },
+  {
+   "id": "molbio-m45480-30",
+   "claim": "Lactose is a food source for E. coli",
+   "source": "The lac operon is a stretch of DNA with three adjacent genes that code for proteins that participate in the absorption and metabolism of lactose, a food source for E. coli.",
+   "ctor": "rel",
+   "subject": "GO:0005990",
+   "relation": "has input",
+   "object": "CHEBI:17716",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:562"
+   },
+   "entities": [
+    {
+     "text": "lactose",
+     "curie": "CHEBI:17716"
+    },
+    {
+     "text": "Escherichia coli",
+     "curie": "NCBITaxon:562"
+    },
+    {
+     "text": "lactose catabolic process",
+     "curie": "GO:0005990"
+    }
+   ]
+  },
+  {
+   "id": "molbio-m45480-33",
+   "claim": "When lactose is present the bacterium can metabolize lactose",
+   "source": "When lactose is present, the genes are transcribed and the bacterium is able to use the lactose as a food source.",
+   "ctor": "effect",
+   "subject": "CHEBI:17716",
+   "relation": null,
+   "object": "GO:0005990",
+   "sign": "pos",
+   "target": "process",
+   "context": {
+    "taxon": "NCBITaxon:562"
+   },
+   "entities": [
+    {
+     "text": "lactose",
+     "curie": "CHEBI:17716"
+    },
+    {
+     "text": "lactose catabolic process",
+     "curie": "GO:0005990"
+    }
+   ]
+  },
+  {
+   "id": "molbio-m45480-38",
+   "claim": "The lac repressor prevents RNA polymerase from binding to the promoter",
+   "source": "When there is no lactose present, a protein known as a repressor binds to the operator and prevents RNA polymerase from binding to the promoter, except in rare cases.",
+   "ctor": "effect",
+   "subject": "PR:000023070",
+   "relation": null,
+   "object": "GO:0006352",
+   "sign": "neg",
+   "target": "process",
+   "context": {
+    "taxon": "NCBITaxon:562"
+   },
+   "entities": [
+    {
+     "text": "repressor",
+     "curie": "PR:000023070"
+    },
+    {
+     "text": "RNA polymerase",
+     "curie": "GO:0000428"
+    },
+    {
+     "text": "promoter",
+     "curie": "SO:0000167"
+    },
+    {
+     "text": "DNA-templated transcription initiation",
+     "curie": "GO:0006352"
+    }
+   ]
+  },
+  {
+   "id": "molbio-m45480-40",
+   "claim": "When lactose is present, an end product of lactose metabolism binds the repressor protein",
+   "source": "When lactose is present, an end product of lactose metabolism binds to the repressor protein and prevents it from binding to the operator.",
+   "ctor": "rel",
+   "subject": "CHEBI:36229",
+   "relation": "molecularly interacts with",
+   "object": "PR:000023070",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:562"
+   },
+   "entities": [
+    {
+     "text": "end product of lactose metabolism",
+     "curie": "CHEBI:36229"
+    },
+    {
+     "text": "repressor protein",
+     "curie": "PR:000023070"
+    },
+    {
+     "text": "lactose metabolic process",
+     "curie": "GO:0005988"
+    }
+   ]
+  },
+  {
+   "id": "molbio-m45480-41",
+   "claim": "The lactose metabolite prevents the repressor from binding the operator",
+   "source": "When lactose is present, an end product of lactose metabolism binds to the repressor protein and prevents it from binding to the operator.",
+   "ctor": "effect",
+   "subject": "CHEBI:36229",
+   "relation": null,
+   "object": "PR:000023070",
+   "sign": "neg",
+   "target": "activity",
+   "context": {
+    "taxon": "NCBITaxon:562"
+   },
+   "entities": [
+    {
+     "text": "end product of lactose metabolism",
+     "curie": "CHEBI:36229"
+    },
+    {
+     "text": "repressor protein",
+     "curie": "PR:000023070"
+    },
+    {
+     "text": "operator",
+     "curie": "SO:0000057"
+    },
+    {
+     "text": "DNA-binding transcription repressor activity",
+     "curie": "GO:0001217"
+    }
+   ]
+  },
+  {
+   "id": "molbio-m45480-46",
+   "claim": "In eukaryotic cells DNA is contained inside the nucleus",
+   "source": "Recall that in eukaryotic cells, the DNA is contained inside the cell\u2019s nucleus and it is transcribed into mRNA there.",
+   "ctor": "rel",
+   "subject": "CHEBI:16991",
+   "relation": "located in",
+   "object": "GO:0005634",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:2759",
+    "cellType": "CL:0000255"
+   },
+   "entities": [
+    {
+     "text": "deoxyribonucleic acid",
+     "curie": "CHEBI:16991"
+    },
+    {
+     "text": "nucleus",
+     "curie": "GO:0005634"
+    },
+    {
+     "text": "eukaryotic cell",
+     "curie": "CL:0000255"
+    }
+   ]
+  },
+  {
+   "id": "molbio-m45480-47",
+   "claim": "In eukaryotic cells DNA is transcribed into mRNA in the nucleus",
+   "source": "Recall that in eukaryotic cells, the DNA is contained inside the cell\u2019s nucleus and it is transcribed into mRNA there.",
+   "ctor": "rel",
+   "subject": "GO:0006351",
+   "relation": "occurs in",
+   "object": "GO:0005634",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:2759"
+   },
+   "entities": [
+    {
+     "text": "DNA-templated transcription",
+     "curie": "GO:0006351"
+    },
+    {
+     "text": "nucleus",
+     "curie": "GO:0005634"
+    },
+    {
+     "text": "messenger RNA",
+     "curie": "CHEBI:33699"
+    }
+   ]
+  },
+  {
+   "id": "molbio-m45480-48",
+   "claim": "In eukaryotes newly synthesized mRNA is transported from the nucleus to the cytoplasm",
+   "source": "The newly synthesized mRNA is then transported out of the nucleus into the cytoplasm, where ribosomes translate the mRNA into protein.",
+   "ctor": "rel",
+   "subject": "GO:0006406",
+   "relation": "has input",
+   "object": "CHEBI:33699",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:2759"
+   },
+   "entities": [
+    {
+     "text": "messenger RNA",
+     "curie": "CHEBI:33699"
+    },
+    {
+     "text": "mRNA export from nucleus",
+     "curie": "GO:0006406"
+    },
+    {
+     "text": "nucleus",
+     "curie": "GO:0005634"
+    },
+    {
+     "text": "cytoplasm",
+     "curie": "GO:0005737"
+    }
+   ]
+  },
+  {
+   "id": "molbio-m45480-49",
+   "claim": "In the cytoplasm ribosomes translate the mRNA into protein",
+   "source": "The newly synthesized mRNA is then transported out of the nucleus into the cytoplasm, where ribosomes translate the mRNA into protein.",
+   "ctor": "rel",
+   "subject": "GO:0006412",
+   "relation": "occurs in",
+   "object": "GO:0005737",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:2759"
+   },
+   "entities": [
+    {
+     "text": "ribosome",
+     "curie": "GO:0005840"
+    },
+    {
+     "text": "translation",
+     "curie": "GO:0006412"
+    },
+    {
+     "text": "messenger RNA",
+     "curie": "CHEBI:33699"
+    },
+    {
+     "text": "protein",
+     "curie": "CHEBI:36080"
+    },
+    {
+     "text": "cytoplasm",
+     "curie": "GO:0005737"
+    }
+   ]
+  },
+  {
+   "id": "molbio-m45480-61",
+   "claim": "Alternative RNA splicing allows different protein products to be produced from one gene",
+   "source": "Alternative RNA splicing is a mechanism that allows different protein products to be produced from one gene when different combinations of introns (and sometimes exons) are removed from the transcript .",
+   "ctor": "rel",
+   "subject": "GO:0000380",
+   "relation": "has output",
+   "object": "CHEBI:36080",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:2759"
+   },
+   "entities": [
+    {
+     "text": "alternative mRNA splicing, via spliceosome",
+     "curie": "GO:0000380"
+    },
+    {
+     "text": "protein",
+     "curie": "CHEBI:36080"
+    },
+    {
+     "text": "gene",
+     "curie": "SO:0000704"
+    }
+   ]
+  },
+  {
+   "id": "molbio-m45480-85",
+   "claim": "In eukaryotic cells transcription occurs in the nucleus",
+   "source": "In eukaryotic cells, transcription occurs in the nucleus and is separate from the translation that occurs in the cytoplasm.",
+   "ctor": "rel",
+   "subject": "GO:0006351",
+   "relation": "occurs in",
+   "object": "GO:0005634",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:2759"
+   },
+   "entities": [
+    {
+     "text": "DNA-templated transcription",
+     "curie": "GO:0006351"
+    },
+    {
+     "text": "nucleus",
+     "curie": "GO:0005634"
+    }
+   ]
+  },
+  {
+   "id": "molbio-m45480-86",
+   "claim": "In eukaryotic cells translation occurs in the cytoplasm",
+   "source": "In eukaryotic cells, transcription occurs in the nucleus and is separate from the translation that occurs in the cytoplasm.",
+   "ctor": "rel",
+   "subject": "GO:0006412",
+   "relation": "occurs in",
+   "object": "GO:0005737",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:2759"
+   },
+   "entities": [
+    {
+     "text": "translation",
+     "curie": "GO:0006412"
+    },
+    {
+     "text": "cytoplasm",
+     "curie": "GO:0005737"
+    }
+   ]
+  },
+  {
+   "id": "photosynthesis-m45448-63",
+   "claim": "in autotrophic eukaryotes, photosynthesis takes place inside the chloroplast",
+   "source": "In all autotrophic eukaryotes, photosynthesis takes place inside an organelle called a chloroplast.",
+   "ctor": "rel",
+   "subject": "GO:0015979",
+   "relation": "occurs in",
+   "object": "GO:0009507",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:2759"
+   },
+   "entities": [
+    {
+     "text": "photosynthesis",
+     "curie": "GO:0015979"
+    },
+    {
+     "text": "chloroplast",
+     "curie": "GO:0009507"
+    }
+   ]
+  },
+  {
+   "id": "photosynthesis-m45448-84",
+   "claim": "hot dry conditions cause plants to close their stomata",
+   "source": "On a hot, dry day, plants close their stomata to conserve water.",
+   "ctor": "rel",
+   "subject": "NCBITaxon:33090",
+   "relation": "capable of",
+   "object": "GO:0090332",
+   "sign": null,
+   "target": null,
+   "context": {
+    "condition": "hot, dry day"
+   },
+   "entities": [
+    {
+     "text": "plants",
+     "curie": "NCBITaxon:33090"
+    },
+    {
+     "text": "close their stomata",
+     "curie": "GO:0090332"
+    }
+   ]
+  },
+  {
+   "id": "photosynthesis-m45448-115",
+   "claim": "photosynthesis takes place in chloroplasts",
+   "source": "Eukaryotic autotrophs, such as plants and algae, have organelles called chloroplasts in which photosynthesis takes place.",
+   "ctor": "rel",
+   "subject": "GO:0015979",
+   "relation": "occurs in",
+   "object": "GO:0009507",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:2759"
+   },
+   "entities": [
+    {
+     "text": "photosynthesis",
+     "curie": "GO:0015979"
+    },
+    {
+     "text": "chloroplast",
+     "curie": "GO:0009507"
+    }
+   ]
+  },
+  {
+   "id": "photosynthesis-m45448-116",
+   "claim": "hot dry conditions cause plants to close their stomata",
+   "source": "On a hot, dry day, plants close their stomata to conserve water.",
+   "ctor": "rel",
+   "subject": "NCBITaxon:33090",
+   "relation": "capable of",
+   "object": "GO:0090332",
+   "sign": null,
+   "target": null,
+   "context": {
+    "condition": "hot, dry day"
+   },
+   "entities": [
+    {
+     "text": "plants",
+     "curie": "NCBITaxon:33090"
+    },
+    {
+     "text": "close their stomata",
+     "curie": "GO:0090332"
+    }
+   ]
+  },
+  {
+   "id": "photosynthesis-m45448-119",
+   "claim": "stomatal closure lowers carbon dioxide levels inside the leaf",
+   "source": "Levels of carbon dioxide (a reactant) will fall, and levels of oxygen (a product) will rise.",
+   "ctor": "effect",
+   "subject": "GO:0090332",
+   "relation": null,
+   "object": "CHEBI:16526",
+   "sign": "neg",
+   "target": "amount",
+   "context": {
+    "anatomy": "PO:0025034"
+   },
+   "entities": [
+    {
+     "text": "close their stomata",
+     "curie": "GO:0090332"
+    },
+    {
+     "text": "carbon dioxide",
+     "curie": "CHEBI:16526"
+    }
+   ]
+  },
+  {
+   "id": "photosynthesis-m45448-120",
+   "claim": "stomatal closure raises oxygen levels inside the leaf",
+   "source": "Levels of carbon dioxide (a reactant) will fall, and levels of oxygen (a product) will rise.",
+   "ctor": "effect",
+   "subject": "GO:0090332",
+   "relation": null,
+   "object": "CHEBI:15379",
+   "sign": "pos",
+   "target": "amount",
+   "context": {
+    "anatomy": "PO:0025034"
+   },
+   "entities": [
+    {
+     "text": "close their stomata",
+     "curie": "GO:0090332"
+    },
+    {
+     "text": "oxygen",
+     "curie": "CHEBI:15379"
+    }
+   ]
+  },
+  {
+   "id": "photosynthesis-m45452-60",
+   "claim": "water splitting forms hydrogen ions in the thylakoid space",
+   "source": "This splitting releases an electron and results in the formation of oxygen (O2) and hydrogen ions (H+) in the thylakoid space.",
+   "ctor": "rel",
+   "subject": "GO:0010242",
+   "relation": "has output",
+   "object": "CHEBI:15378",
+   "sign": null,
+   "target": null,
+   "context": {
+    "anatomy": "GO:0031977"
+   },
+   "entities": [
+    {
+     "text": "splitting of water",
+     "curie": "GO:0010242"
+    },
+    {
+     "text": "hydrogen ions",
+     "curie": "CHEBI:15378"
+    },
+    {
+     "text": "thylakoid space",
+     "curie": "GO:0031977"
+    }
+   ]
+  },
+  {
+   "id": "photosynthesis-m45452-90",
+   "claim": "in the mitochondrion ATP synthase generates ATP from ADP",
+   "source": "This same protein generated ATP from ADP in the mitochondrion.",
+   "ctor": "rel",
+   "subject": "GO:0045259",
+   "relation": "produces",
+   "object": "CHEBI:15422",
+   "sign": null,
+   "target": null,
+   "context": {
+    "anatomy": "GO:0005739"
+   },
+   "entities": [
+    {
+     "text": "ATP synthase",
+     "curie": "GO:0045259"
+    },
+    {
+     "text": "ATP",
+     "curie": "CHEBI:15422"
+    },
+    {
+     "text": "ADP",
+     "curie": "CHEBI:16761"
+    },
+    {
+     "text": "mitochondrion",
+     "curie": "GO:0005739"
+    }
+   ]
+  },
+  {
+   "id": "photosynthesis-m45453-82",
+   "claim": "photosynthesis builds carbohydrates in chloroplasts",
+   "source": "Photosynthesis absorbs energy to build carbohydrates in chloroplasts, and aerobic cellular respiration releases energy by using oxygen to break down carbohydrates.",
+   "ctor": "rel",
+   "subject": "GO:0015979",
+   "relation": "has output",
+   "object": "CHEBI:16646",
+   "sign": null,
+   "target": null,
+   "context": {
+    "anatomy": "GO:0009507"
+   },
+   "entities": [
+    {
+     "text": "photosynthesis",
+     "curie": "GO:0015979"
+    },
+    {
+     "text": "carbohydrate molecules",
+     "curie": "CHEBI:16646"
+    },
+    {
+     "text": "chloroplast",
+     "curie": "GO:0009507"
+    }
+   ]
+  },
+  {
+   "id": "reproduction-at-the-cellular-level-m45454-3",
+   "claim": "Repeated cell division produces a multicellular human from the zygote.",
+   "source": "Trillions of cell divisions subsequently occur in a controlled manner to produce a complex, multicellular human.",
+   "ctor": "rel",
+   "subject": "GO:0051301",
+   "relation": "has output",
+   "object": "UBERON:0000468",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:9606"
+   },
+   "entities": [
+    {
+     "text": "cell divisions",
+     "curie": "GO:0051301"
+    },
+    {
+     "text": "multicellular human",
+     "curie": "UBERON:0000468"
+    }
+   ]
+  },
+  {
+   "id": "reproduction-at-the-cellular-level-m45455-9",
+   "claim": "The nucleoid is the region of a prokaryotic cell containing the genome.",
+   "source": "The region in the cell containing this genetic material is called a nucleoid.",
+   "ctor": "rel",
+   "subject": "SO:0001026",
+   "relation": "located in",
+   "object": "GO:0009295",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCIT:C14263"
+   },
+   "entities": [
+    {
+     "text": "nucleoid",
+     "curie": "GO:0009295"
+    },
+    {
+     "text": "cell",
+     "curie": "CL:0000000"
+    },
+    {
+     "text": "genetic material",
+     "curie": "SO:0001026"
+    }
+   ]
+  },
+  {
+   "id": "reproduction-at-the-cellular-level-m45455-13",
+   "claim": "The eukaryotic genome comprises several linear double-stranded DNA molecules.",
+   "source": "In eukaryotes, the genome comprises several double-stranded, linear DNA molecules () bound with proteins to form complexes called chromosomes.",
+   "ctor": "rel",
+   "subject": "SO:0001026",
+   "relation": "has part",
+   "object": "SO:0000957",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:2759"
+   },
+   "entities": [
+    {
+     "text": "genome",
+     "curie": "SO:0001026"
+    },
+    {
+     "text": "linear DNA molecules",
+     "curie": "SO:0000957"
+    },
+    {
+     "text": "eukaryotes",
+     "curie": "NCBITaxon:2759"
+    }
+   ]
+  },
+  {
+   "id": "reproduction-at-the-cellular-level-m45455-16",
+   "claim": "Chromosomes are located in the nucleus of eukaryotic cells.",
+   "source": "Each species of eukaryote has a characteristic number of chromosomes in the nuclei of its cells.",
+   "ctor": "rel",
+   "subject": "GO:0005694",
+   "relation": "located in",
+   "object": "GO:0005634",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:2759"
+   },
+   "entities": [
+    {
+     "text": "chromosomes",
+     "curie": "GO:0005694"
+    },
+    {
+     "text": "nuclei",
+     "curie": "GO:0005634"
+    }
+   ]
+  },
+  {
+   "id": "reproduction-at-the-cellular-level-m45455-45",
+   "claim": "Eukaryotic chromosomes are surrounded by a nuclear membrane.",
+   "source": "Prokaryotes have a single loop chromosome, whereas eukaryotes have multiple, linear chromosomes surrounded by a nuclear membrane.",
+   "ctor": "rel",
+   "subject": "GO:0005635",
+   "relation": "surrounds",
+   "object": "GO:0005694",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:2759"
+   },
+   "entities": [
+    {
+     "text": "chromosomes",
+     "curie": "GO:0005694"
+    },
+    {
+     "text": "nuclear membrane",
+     "curie": "GO:0005635"
+    }
+   ]
+  },
+  {
+   "id": "reproduction-at-the-cellular-level-m45461-33",
+   "claim": "Centrioles are absent from the centrosomes of many eukaryotic species, such as plants and most fungi.",
+   "source": "Centrioles are not present in the centrosomes of many eukaryotic species, such as plants and most fungi.",
+   "ctor": "notRel",
+   "subject": "GO:0005813",
+   "relation": "has part",
+   "object": "GO:0005814",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:33090"
+   },
+   "entities": [
+    {
+     "text": "Centrioles",
+     "curie": "GO:0005814"
+    },
+    {
+     "text": "centrosomes",
+     "curie": "GO:0005813"
+    },
+    {
+     "text": "plants",
+     "curie": "NCBITaxon:33090"
+    },
+    {
+     "text": "fungi",
+     "curie": "NCBITaxon:4751"
+    }
+   ]
+  },
+  {
+   "id": "reproduction-at-the-cellular-level-m45461-92",
+   "claim": "In cells without cell walls, cytokinesis begins after the onset of anaphase.",
+   "source": "In cells such as animal cells that lack cell walls, cytokinesis begins following the onset of anaphase.",
+   "ctor": "rel",
+   "subject": "GO:0000910",
+   "relation": "preceded by",
+   "object": "GO:0000090",
+   "sign": null,
+   "target": null,
+   "context": {
+    "cellType": "CL:0000548"
+   },
+   "entities": [
+    {
+     "text": "cytokinesis",
+     "curie": "GO:0000910"
+    },
+    {
+     "text": "anaphase",
+     "curie": "GO:0000090"
+    },
+    {
+     "text": "animal cells",
+     "curie": "CL:0000548"
+    }
+   ]
+  },
+  {
+   "id": "reproduction-at-the-cellular-level-m45461-93",
+   "claim": "The contractile ring is composed of actin filaments.",
+   "source": "A contractile ring composed of actin filaments forms just inside the plasma membrane at the former metaphase plate.",
+   "ctor": "rel",
+   "subject": "GO:0005826",
+   "relation": "has part",
+   "object": "GO:0005884",
+   "sign": null,
+   "target": null,
+   "context": {
+    "cellType": "CL:0000548"
+   },
+   "entities": [
+    {
+     "text": "contractile ring",
+     "curie": "GO:0005826"
+    },
+    {
+     "text": "actin filaments",
+     "curie": "GO:0005884"
+    }
+   ]
+  },
+  {
+   "id": "reproduction-at-the-cellular-level-m45461-99",
+   "claim": "A cleavage furrow cannot form in plant cells because of their rigid cell walls.",
+   "source": "In plant cells, a cleavage furrow is not possible because of the rigid cell walls surrounding the plasma membrane.",
+   "ctor": "effect",
+   "subject": "GO:0005618",
+   "relation": null,
+   "object": "GO:0032154",
+   "sign": "neg",
+   "target": "site",
+   "context": {
+    "cellType": "PO:0009002"
+   },
+   "entities": [
+    {
+     "text": "plant cells",
+     "curie": "PO:0009002"
+    },
+    {
+     "text": "cleavage furrow",
+     "curie": "GO:0032154"
+    },
+    {
+     "text": "cell walls",
+     "curie": "GO:0005618"
+    },
+    {
+     "text": "plasma membrane",
+     "curie": "GO:0005886"
+    }
+   ]
+  },
+  {
+   "id": "reproduction-at-the-cellular-level-m45461-100",
+   "claim": "In plant cells the plasma membrane is surrounded by a rigid cell wall.",
+   "source": "In plant cells, a cleavage furrow is not possible because of the rigid cell walls surrounding the plasma membrane.",
+   "ctor": "rel",
+   "subject": "GO:0005618",
+   "relation": "surrounds",
+   "object": "GO:0005886",
+   "sign": null,
+   "target": null,
+   "context": {
+    "cellType": "PO:0009002"
+   },
+   "entities": [
+    {
+     "text": "plasma membrane",
+     "curie": "GO:0005886"
+    },
+    {
+     "text": "cell walls",
+     "curie": "GO:0005618"
+    },
+    {
+     "text": "plant cells",
+     "curie": "PO:0009002"
+    }
+   ]
+  },
+  {
+   "id": "reproduction-at-the-cellular-level-m45461-140",
+   "claim": "A cell that fails the G1 checkpoint requirements is not released into S phase.",
+   "source": "A cell that does not meet all the requirements will not be released into the S phase.",
+   "ctor": "effect",
+   "subject": "GO:0044819",
+   "relation": null,
+   "object": "GO:0000082",
+   "sign": "neg",
+   "target": "process",
+   "context": {
+    "condition": "checkpoint requirements not met"
+   },
+   "entities": [
+    {
+     "text": "G1 checkpoint",
+     "curie": "GO:0044819"
+    },
+    {
+     "text": "S phase",
+     "curie": "GO:0051320"
+    },
+    {
+     "text": "G1/S transition",
+     "curie": "GO:0000082"
+    }
+   ]
+  },
+  {
+   "id": "reproduction-at-the-cellular-level-m45461-141",
+   "claim": "The G2 checkpoint blocks entry to the mitotic phase if certain conditions are not met.",
+   "source": "The G2 checkpoint bars the entry to the mitotic phase if certain conditions are not met.",
+   "ctor": "effect",
+   "subject": "GO:0007095",
+   "relation": null,
+   "object": "GO:0000086",
+   "sign": "neg",
+   "target": "process",
+   "context": {
+    "condition": "certain conditions not met"
+   },
+   "entities": [
+    {
+     "text": "G2 checkpoint",
+     "curie": "GO:0007095"
+    },
+    {
+     "text": "mitotic phase",
+     "curie": "GO:0000087"
+    },
+    {
+     "text": "G2/M transition",
+     "curie": "GO:0000086"
+    }
+   ]
+  },
+  {
+   "id": "reproduction-at-the-cellular-level-m45461-154",
+   "claim": "In eukaryotes the cell cycle includes a long preparatory period called interphase.",
+   "source": "In eukaryotes, the cell cycle consists of a long preparatory period, called interphase.",
+   "ctor": "rel",
+   "subject": "GO:0051325",
+   "relation": "part of",
+   "object": "GO:0007049",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:2759"
+   },
+   "entities": [
+    {
+     "text": "eukaryotes",
+     "curie": "NCBITaxon:2759"
+    },
+    {
+     "text": "cell cycle",
+     "curie": "GO:0007049"
+    },
+    {
+     "text": "interphase",
+     "curie": "GO:0051325"
+    }
+   ]
+  },
+  {
+   "id": "reproduction-at-the-cellular-level-m45461-174",
+   "claim": "In animal cells a ring of actin fibers forms around the cell periphery at the former metaphase plate.",
+   "source": "In animal cells, a ring of actin fibers is formed around the periphery of the cell at the former metaphase plate.",
+   "ctor": "rel",
+   "subject": "GO:0005826",
+   "relation": "located in",
+   "object": "GO:0071944",
+   "sign": null,
+   "target": null,
+   "context": {
+    "cellType": "CL:0000548"
+   },
+   "entities": [
+    {
+     "text": "animal cells",
+     "curie": "CL:0000548"
+    },
+    {
+     "text": "ring of actin fibers",
+     "curie": "GO:0005826"
+    },
+    {
+     "text": "periphery of the cell",
+     "curie": "GO:0071944"
+    },
+    {
+     "text": "metaphase plate",
+     "curie": "GO:0070090"
+    }
+   ]
+  },
+  {
+   "id": "reproduction-at-the-cellular-level-m45461-178",
+   "claim": "In plant cells a cell plate forms in the center of the cell at the former metaphase plate.",
+   "source": "Instead, a cell plate is formed in the center of the cell at the former metaphase plate.",
+   "ctor": "rel",
+   "subject": "GO:0009504",
+   "relation": "located in",
+   "object": "GO:0070090",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:33090"
+   },
+   "entities": [
+    {
+     "text": "cell plate",
+     "curie": "GO:0009504"
+    },
+    {
+     "text": "cell",
+     "curie": "CL:0000000"
+    },
+    {
+     "text": "metaphase plate",
+     "curie": "GO:0070090"
+    },
+    {
+     "text": "plant cell",
+     "curie": "PO:0009002"
+    }
+   ]
+  },
+  {
+   "id": "reproduction-at-the-cellular-level-m45461-179",
+   "claim": "The cell plate is formed from Golgi vesicles.",
+   "source": "The cell plate is formed from Golgi vesicles that contain enzymes, proteins, and glucose.",
+   "ctor": "rel",
+   "subject": "GO:0009504",
+   "relation": "derives from",
+   "object": "GO:0005798",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:33090"
+   },
+   "entities": [
+    {
+     "text": "cell plate",
+     "curie": "GO:0009504"
+    },
+    {
+     "text": "Golgi vesicles",
+     "curie": "GO:0005798"
+    }
+   ]
+  },
+  {
+   "id": "reproduction-at-the-cellular-level-m45461-190",
+   "claim": "Centrioles are located at the center of each animal cell centrosome.",
+   "source": "centriole: a paired rod-like structure constructed of microtubules at the center of each animal cell centrosome",
+   "ctor": "rel",
+   "subject": "GO:0005814",
+   "relation": "located in",
+   "object": "GO:0005813",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:33208"
+   },
+   "entities": [
+    {
+     "text": "centriole",
+     "curie": "GO:0005814"
+    },
+    {
+     "text": "animal cell",
+     "curie": "CL:0000548"
+    },
+    {
+     "text": "centrosome",
+     "curie": "GO:0005813"
+    }
+   ]
+  },
+  {
+   "id": "reproduction-at-the-cellular-level-m45462-44",
+   "claim": "When DNA damage cannot be repaired, p53 activates genes that initiate cell death.",
+   "source": "The p53 protein activates other genes whose products halt the cell cycle (allowing time for DNA repair), activates genes whose products participate in DNA repair, or activates genes that initiate cell death when DNA dama",
+   "ctor": "effect",
+   "subject": "PR:000003035",
+   "relation": null,
+   "object": "GO:0008219",
+   "sign": "pos",
+   "target": "process",
+   "context": {
+    "condition": "DNA damage cannot be repaired"
+   },
+   "entities": [
+    {
+     "text": "p53",
+     "curie": "PR:000003035"
+    },
+    {
+     "text": "genes",
+     "curie": "SO:0000704"
+    },
+    {
+     "text": "cell death",
+     "curie": "GO:0008219"
+    },
+    {
+     "text": "DNA damage",
+     "curie": "NCIT:C16507"
+    }
+   ]
+  },
+  {
+   "id": "reproduction-at-the-cellular-level-m45462-53",
+   "claim": "Inhibiting folic acid uptake by tumor cells reduces their growth.",
+   "source": "Several scientists showed that inhibiting folic acid uptake by tumor cells resulted in reduced growth.",
+   "ctor": "effect",
+   "subject": "CHEBI:27470",
+   "relation": null,
+   "object": "GO:0008283",
+   "sign": "pos",
+   "target": "process",
+   "context": {
+    "cellType": "CL:0001063",
+    "condition": "uptake of folic acid by tumor cells"
+   },
+   "entities": [
+    {
+     "text": "folic acid",
+     "curie": "CHEBI:27470"
+    },
+    {
+     "text": "tumor cells",
+     "curie": "CL:0001063"
+    },
+    {
+     "text": "growth",
+     "curie": "GO:0008283"
+    }
+   ]
+  },
+  {
+   "id": "reproduction-at-the-cellular-level-m45463-12",
+   "claim": "Binary fission is the cell division process of prokaryotes.",
+   "source": "The cell division process of prokaryotes, called binary fission, is a less complicated and much quicker process than cell division in eukaryotes.",
+   "ctor": "rel",
+   "subject": "GO:0043093",
+   "relation": "is_a",
+   "object": "GO:0051301",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:2"
+   },
+   "entities": [
+    {
+     "text": "binary fission",
+     "curie": "GO:0043093"
+    },
+    {
+     "text": "cell division",
+     "curie": "GO:0051301"
+    },
+    {
+     "text": "prokaryotes",
+     "curie": "NCIT:C14263"
+    }
+   ]
+  },
+  {
+   "id": "reproduction-at-the-cellular-level-m45463-16",
+   "claim": "The bacterial chromosome is not enclosed in a nucleus.",
+   "source": "The single, circular DNA chromosome of bacteria is not enclosed in a nucleus, but instead occupies a specific location, the nucleoid, within the cell.",
+   "ctor": "notRel",
+   "subject": "SO:0000958",
+   "relation": "located in",
+   "object": "GO:0005634",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:2"
+   },
+   "entities": [
+    {
+     "text": "circular DNA chromosome",
+     "curie": "SO:0000958"
+    },
+    {
+     "text": "bacteria",
+     "curie": "NCBITaxon:2"
+    },
+    {
+     "text": "nucleus",
+     "curie": "GO:0005634"
+    }
+   ]
+  },
+  {
+   "id": "reproduction-at-the-cellular-level-m45463-17",
+   "claim": "The bacterial chromosome occupies a specific location in the cell called the nucleoid.",
+   "source": "The single, circular DNA chromosome of bacteria is not enclosed in a nucleus, but instead occupies a specific location, the nucleoid, within the cell.",
+   "ctor": "rel",
+   "subject": "SO:0000958",
+   "relation": "located in",
+   "object": "GO:0009295",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:2"
+   },
+   "entities": [
+    {
+     "text": "circular DNA chromosome",
+     "curie": "SO:0000958"
+    },
+    {
+     "text": "nucleoid",
+     "curie": "GO:0009295"
+    },
+    {
+     "text": "cell",
+     "curie": "CL:0000000"
+    }
+   ]
+  },
+  {
+   "id": "reproduction-at-the-cellular-level-m45463-66",
+   "claim": "Binary fission is the process of prokaryotic cell division.",
+   "source": "binary fission: the process of prokaryotic cell division",
+   "ctor": "rel",
+   "subject": "GO:0043093",
+   "relation": "is_a",
+   "object": "GO:0051301",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:2"
+   },
+   "entities": [
+    {
+     "text": "binary fission",
+     "curie": "GO:0043093"
+    },
+    {
+     "text": "cell division",
+     "curie": "GO:0051301"
+    },
+    {
+     "text": "prokaryote",
+     "curie": "NCIT:C14263"
+    }
+   ]
+  },
+  {
+   "id": "reproduction-at-the-cellular-level-m45463-67",
+   "claim": "FtsZ is a tubulin-like protein component of the prokaryotic cytoskeleton.",
+   "source": "FtsZ: a tubulin-like protein component of the prokaryotic cytoskeleton that is important in prokaryotic cytokinesis (name origin: Filamenting temperature-sensitive mutant Z)",
+   "ctor": "rel",
+   "subject": "PR:000022726",
+   "relation": "part of",
+   "object": "GO:0005856",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:2"
+   },
+   "entities": [
+    {
+     "text": "FtsZ",
+     "curie": "PR:000022726"
+    },
+    {
+     "text": "tubulin",
+     "curie": "PR:000028799"
+    },
+    {
+     "text": "cytoskeleton",
+     "curie": "GO:0005856"
+    },
+    {
+     "text": "prokaryote",
+     "curie": "NCIT:C14263"
+    }
+   ]
+  },
+  {
+   "id": "reproduction-at-the-cellular-level-m45463-68",
+   "claim": "FtsZ is important in prokaryotic cytokinesis.",
+   "source": "FtsZ: a tubulin-like protein component of the prokaryotic cytoskeleton that is important in prokaryotic cytokinesis (name origin: Filamenting temperature-sensitive mutant Z)",
+   "ctor": "effect",
+   "subject": "PR:000022726",
+   "relation": null,
+   "object": "GO:0043093",
+   "sign": "pos",
+   "target": "process",
+   "context": {
+    "taxon": "NCBITaxon:2"
+   },
+   "entities": [
+    {
+     "text": "FtsZ",
+     "curie": "PR:000022726"
+    },
+    {
+     "text": "prokaryotic cytokinesis",
+     "curie": "GO:0043093"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45534-59",
+   "claim": "Vasodilation brings more blood and heat to the body surface",
+   "source": "Vasodilation, the opening up of arteries to the skin by relaxation of their smooth muscles, brings more blood and heat to the body surface, facilitating radiation and evaporative heat loss, cooling the body.",
+   "ctor": "effect",
+   "subject": "GO:0042311",
+   "relation": null,
+   "object": "UBERON:0000178",
+   "sign": "pos",
+   "target": "amount",
+   "context": {
+    "anatomy": "UBERON:0002097"
+   },
+   "entities": [
+    {
+     "text": "Vasodilation",
+     "curie": "GO:0042311"
+    },
+    {
+     "text": "blood",
+     "curie": "UBERON:0000178"
+    },
+    {
+     "text": "body surface",
+     "curie": "UBERON:0002097"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45535-176",
+   "claim": "Fats are stored under the skin of mammals",
+   "source": "Fats are stored under the skin of mammals for insulation and energy reserves.",
+   "ctor": "rel",
+   "subject": "CHEBI:18059",
+   "relation": "located in",
+   "object": "UBERON:0002190",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:40674"
+   },
+   "entities": [
+    {
+     "text": "Fats",
+     "curie": "CHEBI:18059"
+    },
+    {
+     "text": "skin of body",
+     "curie": "UBERON:0002097"
+    },
+    {
+     "text": "mammals",
+     "curie": "NCBITaxon:40674"
+    },
+    {
+     "text": "subcutaneous adipose tissue",
+     "curie": "UBERON:0002190"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45535-213",
+   "claim": "When glycogen stores are full, glucose is converted into fatty acids",
+   "source": "When glycogen stores are full, additional glucose is converted into fatty acids.",
+   "ctor": "rel",
+   "subject": "GO:0006633",
+   "relation": "has output",
+   "object": "CHEBI:35366",
+   "sign": null,
+   "target": null,
+   "context": {
+    "condition": "when glycogen stores are full"
+   },
+   "entities": [
+    {
+     "text": "glycogen stores",
+     "curie": "CHEBI:28087"
+    },
+    {
+     "text": "glucose",
+     "curie": "CHEBI:17234"
+    },
+    {
+     "text": "fatty acids",
+     "curie": "CHEBI:35366"
+    },
+    {
+     "text": "fatty acid biosynthetic process",
+     "curie": "GO:0006633"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45535-230",
+   "claim": "Pepsin digests protein in the stomach",
+   "source": "The enzyme pepsin digests protein in the stomach.",
+   "ctor": "effect",
+   "subject": "PR:000031143",
+   "relation": null,
+   "object": "CHEBI:36080",
+   "sign": "neg",
+   "target": "amount",
+   "context": {
+    "anatomy": "UBERON:0000945"
+   },
+   "entities": [
+    {
+     "text": "pepsin A-3",
+     "curie": "PR:000031143"
+    },
+    {
+     "text": "protein",
+     "curie": "CHEBI:36080"
+    },
+    {
+     "text": "stomach",
+     "curie": "UBERON:0000945"
+    },
+    {
+     "text": "protein digestion",
+     "curie": "GO:0044256"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45535-237",
+   "claim": "Excess food intake is stored as glycogen in liver and muscle cells",
+   "source": "Food intake in more than necessary amounts is stored as glycogen in the liver and muscle cells, and in adipose tissue.",
+   "ctor": "effect",
+   "subject": "CHEBI:33290",
+   "relation": null,
+   "object": "CHEBI:28087",
+   "sign": "pos",
+   "target": "amount",
+   "context": {
+    "anatomy": "UBERON:0002107",
+    "condition": "excess food intake"
+   },
+   "entities": [
+    {
+     "text": "Food intake",
+     "curie": "CHEBI:33290"
+    },
+    {
+     "text": "glycogen",
+     "curie": "CHEBI:28087"
+    },
+    {
+     "text": "liver",
+     "curie": "UBERON:0002107"
+    },
+    {
+     "text": "muscle cells",
+     "curie": "UBERON:0002385"
+    },
+    {
+     "text": "glycogen biosynthetic process",
+     "curie": "GO:0005978"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45535-238",
+   "claim": "Excess food intake is stored in adipose tissue",
+   "source": "Food intake in more than necessary amounts is stored as glycogen in the liver and muscle cells, and in adipose tissue.",
+   "ctor": "effect",
+   "subject": "CHEBI:33290",
+   "relation": null,
+   "object": "GO:0019915",
+   "sign": "pos",
+   "target": "process",
+   "context": {
+    "anatomy": "UBERON:0001013",
+    "condition": "excess food intake"
+   },
+   "entities": [
+    {
+     "text": "Food intake",
+     "curie": "CHEBI:33290"
+    },
+    {
+     "text": "adipose tissue",
+     "curie": "UBERON:0001013"
+    },
+    {
+     "text": "lipid storage",
+     "curie": "GO:0019915"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45536-2",
+   "claim": "The human circulatory system is a network of blood vessels reaching all parts of the body",
+   "source": "The human circulatory system has a complex network of blood vessels that reach all parts of the body.",
+   "ctor": "rel",
+   "subject": "UBERON:0001009",
+   "relation": "has part",
+   "object": "UBERON:0001981",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:9606"
+   },
+   "entities": [
+    {
+     "text": "human circulatory system",
+     "curie": "UBERON:0001009"
+    },
+    {
+     "text": "blood vessels",
+     "curie": "UBERON:0001981"
+    },
+    {
+     "text": "multicellular organism",
+     "curie": "UBERON:0000468"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45536-10",
+   "claim": "In humans, other mammals and birds, blood absorbs oxygen in the lungs",
+   "source": "In humans, other mammals, and birds, blood absorbs oxygen and releases carbon dioxide in the lungs.",
+   "ctor": "effect",
+   "subject": "UBERON:0000178",
+   "relation": null,
+   "object": "CHEBI:15379",
+   "sign": "pos",
+   "target": "amount",
+   "context": {
+    "taxon": "NCBITaxon:40674",
+    "anatomy": "UBERON:0002048",
+    "condition": "also humans and birds"
+   },
+   "entities": [
+    {
+     "text": "humans",
+     "curie": "NCBITaxon:9606"
+    },
+    {
+     "text": "mammals",
+     "curie": "NCBITaxon:40674"
+    },
+    {
+     "text": "birds",
+     "curie": "NCBITaxon:8782"
+    },
+    {
+     "text": "blood",
+     "curie": "UBERON:0000178"
+    },
+    {
+     "text": "oxygen",
+     "curie": "CHEBI:15379"
+    },
+    {
+     "text": "lungs",
+     "curie": "UBERON:0002048"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45536-11",
+   "claim": "In humans, other mammals and birds, blood releases carbon dioxide in the lungs",
+   "source": "In humans, other mammals, and birds, blood absorbs oxygen and releases carbon dioxide in the lungs.",
+   "ctor": "effect",
+   "subject": "UBERON:0000178",
+   "relation": null,
+   "object": "CHEBI:16526",
+   "sign": "neg",
+   "target": "amount",
+   "context": {
+    "taxon": "NCBITaxon:40674",
+    "anatomy": "UBERON:0002048",
+    "condition": "also humans and birds"
+   },
+   "entities": [
+    {
+     "text": "humans",
+     "curie": "NCBITaxon:9606"
+    },
+    {
+     "text": "mammals",
+     "curie": "NCBITaxon:40674"
+    },
+    {
+     "text": "birds",
+     "curie": "NCBITaxon:8782"
+    },
+    {
+     "text": "blood",
+     "curie": "UBERON:0000178"
+    },
+    {
+     "text": "carbon dioxide",
+     "curie": "CHEBI:16526"
+    },
+    {
+     "text": "lungs",
+     "curie": "UBERON:0002048"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45536-60",
+   "claim": "Parasympathetic input causes bronchial muscle contraction",
+   "source": "Bronchi are innervated by nerves of both the parasympathetic and sympathetic nervous systems that control muscle contraction (parasympathetic) or relaxation (sympathetic) in the bronchi and bronchioles, depending on the ",
+   "ctor": "effect",
+   "subject": "UBERON:0000011",
+   "relation": null,
+   "object": "GO:0006939",
+   "sign": "pos",
+   "target": "process",
+   "context": {
+    "anatomy": "UBERON:0002185"
+   },
+   "entities": [
+    {
+     "text": "parasympathetic",
+     "curie": "UBERON:0000011"
+    },
+    {
+     "text": "bronchi",
+     "curie": "UBERON:0002185"
+    },
+    {
+     "text": "muscle contraction",
+     "curie": "GO:0006939"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45536-61",
+   "claim": "Sympathetic input causes bronchial muscle relaxation",
+   "source": "Bronchi are innervated by nerves of both the parasympathetic and sympathetic nervous systems that control muscle contraction (parasympathetic) or relaxation (sympathetic) in the bronchi and bronchioles, depending on the ",
+   "ctor": "effect",
+   "subject": "UBERON:0000013",
+   "relation": null,
+   "object": "GO:0044557",
+   "sign": "pos",
+   "target": "process",
+   "context": {
+    "anatomy": "UBERON:0002185"
+   },
+   "entities": [
+    {
+     "text": "sympathetic",
+     "curie": "UBERON:0000013"
+    },
+    {
+     "text": "bronchi",
+     "curie": "UBERON:0002185"
+    },
+    {
+     "text": "relaxation",
+     "curie": "GO:0044557"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45536-88",
+   "claim": "In open circulatory systems the circulatory fluid bathes the internal organs directly",
+   "source": "Open circulatory systems are found in invertebrate animals in which the circulatory fluid bathes the internal organs directly even though it may be moved about with a pumping heart.",
+   "ctor": "rel",
+   "subject": "UBERON:0006314",
+   "relation": "adjacent to",
+   "object": "UBERON:0000062",
+   "sign": null,
+   "target": null,
+   "context": {
+    "condition": "open circulatory system"
+   },
+   "entities": [
+    {
+     "text": "circulatory fluid",
+     "curie": "UBERON:0006314"
+    },
+    {
+     "text": "internal organs",
+     "curie": "UBERON:0000062"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45536-96",
+   "claim": "The human heart is divided into two atria and two ventricles",
+   "source": "In humans, the heart is about the size of a clenched fist; it is divided into four chambers: two atria and two ventricles.",
+   "ctor": "rel",
+   "subject": "UBERON:0000948",
+   "relation": "has part",
+   "object": "UBERON:0002081",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:9606"
+   },
+   "entities": [
+    {
+     "text": "heart",
+     "curie": "UBERON:0000948"
+    },
+    {
+     "text": "atria",
+     "curie": "UBERON:0002081"
+    },
+    {
+     "text": "ventricles",
+     "curie": "UBERON:0002082"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45536-130",
+   "claim": "The signal causes the atria to contract",
+   "source": "The electrochemical signal moves from there across the atria causing them to contract.",
+   "ctor": "effect",
+   "subject": "GO:0061337",
+   "relation": null,
+   "object": "GO:0060048",
+   "sign": "pos",
+   "target": "process",
+   "context": {
+    "anatomy": "UBERON:0002081"
+   },
+   "entities": [
+    {
+     "text": "electrochemical signal",
+     "curie": "GO:0061337"
+    },
+    {
+     "text": "atria",
+     "curie": "UBERON:0002081"
+    },
+    {
+     "text": "contract",
+     "curie": "GO:0060048"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45536-135",
+   "claim": "The signal causes the ventricles to contract",
+   "source": "The signal then causes the ventricles to contract.",
+   "ctor": "effect",
+   "subject": "GO:0061337",
+   "relation": null,
+   "object": "GO:0060048",
+   "sign": "pos",
+   "target": "process",
+   "context": {
+    "anatomy": "UBERON:0002082"
+   },
+   "entities": [
+    {
+     "text": "signal",
+     "curie": "GO:0061337"
+    },
+    {
+     "text": "ventricles",
+     "curie": "UBERON:0002082"
+    },
+    {
+     "text": "contract",
+     "curie": "GO:0060048"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45536-175",
+   "claim": "Animal respiratory systems facilitate gas exchange",
+   "source": "Animal respiratory systems are designed to facilitate gas exchange.",
+   "ctor": "rel",
+   "subject": "UBERON:0001004",
+   "relation": "capable of",
+   "object": "GO:0007585",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:33208"
+   },
+   "entities": [
+    {
+     "text": "Animal respiratory systems",
+     "curie": "UBERON:0001004"
+    },
+    {
+     "text": "respiratory gaseous exchange by respiratory system",
+     "curie": "GO:0007585"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45536-190",
+   "claim": "The electrochemical signal causes the two atria to contract in unison",
+   "source": "The electrochemical signal causes the two atria to contract in unison; then the signal causes the ventricles to contract.",
+   "ctor": "effect",
+   "subject": "GO:0061337",
+   "relation": null,
+   "object": "GO:0060048",
+   "sign": "pos",
+   "target": "process",
+   "context": {
+    "anatomy": "UBERON:0002081"
+   },
+   "entities": [
+    {
+     "text": "electrochemical signal",
+     "curie": "GO:0061337"
+    },
+    {
+     "text": "atria",
+     "curie": "UBERON:0002081"
+    },
+    {
+     "text": "contract",
+     "curie": "GO:0060048"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45536-212",
+   "claim": "An electrical signal triggers atrial cardiac muscle cells to contract",
+   "source": "The heart receives an electrical signal triggering the cardiac muscle cells in the atria to contract.",
+   "ctor": "effect",
+   "subject": "GO:0061337",
+   "relation": null,
+   "object": "GO:0060048",
+   "sign": "pos",
+   "target": "process",
+   "context": {
+    "anatomy": "UBERON:0002081",
+    "cellType": "CL:0000746"
+   },
+   "entities": [
+    {
+     "text": "heart",
+     "curie": "UBERON:0000948"
+    },
+    {
+     "text": "electrical signal",
+     "curie": "GO:0061337"
+    },
+    {
+     "text": "cardiac muscle cells",
+     "curie": "CL:0000746"
+    },
+    {
+     "text": "atria",
+     "curie": "UBERON:0002081"
+    },
+    {
+     "text": "contract",
+     "curie": "GO:0060048"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45537-53",
+   "claim": "Insulin decreases blood-glucose levels",
+   "source": "They are then given a sugary drink, which stimulates the pancreas to produce insulin to decrease blood-glucose levels.",
+   "ctor": "effect",
+   "subject": "PR:000009054",
+   "relation": null,
+   "object": "CHEBI:17234",
+   "sign": "neg",
+   "target": "amount",
+   "context": {
+    "anatomy": "UBERON:0000178"
+   },
+   "entities": [
+    {
+     "text": "insulin",
+     "curie": "PR:000009054"
+    },
+    {
+     "text": "glucose",
+     "curie": "CHEBI:17234"
+    },
+    {
+     "text": "blood",
+     "curie": "UBERON:0000178"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45537-129",
+   "claim": "Thyroid-stimulating hormone stimulates release of T3 and T4 by the thyroid",
+   "source": "T3 and T4 are released by the thyroid in response to thyroid-stimulating hormone produced by the anterior pituitary, and both T3 and T4 have the effect of stimulating metabolic activity in the body and increasing energy ",
+   "ctor": "effect",
+   "subject": "PR:P01222",
+   "relation": null,
+   "object": "CHEBI:18258",
+   "sign": "pos",
+   "target": "amount",
+   "context": {
+    "anatomy": "UBERON:0002046"
+   },
+   "entities": [
+    {
+     "text": "thyroid-stimulating hormone",
+     "curie": "PR:P01222"
+    },
+    {
+     "text": "thyroid gland",
+     "curie": "UBERON:0002046"
+    },
+    {
+     "text": "triiodothyronine",
+     "curie": "CHEBI:18258"
+    },
+    {
+     "text": "thyroxine",
+     "curie": "CHEBI:30660"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45537-134",
+   "claim": "Rising blood calcium concentration stimulates calcitonin release",
+   "source": "Calcitonin is released in response to rising calcium ion concentrations in the blood and has the effect of reducing those levels.",
+   "ctor": "effect",
+   "subject": "CHEBI:29108",
+   "relation": null,
+   "object": "PR:P01258",
+   "sign": "pos",
+   "target": "amount",
+   "context": {
+    "anatomy": "UBERON:0000178"
+   },
+   "entities": [
+    {
+     "text": "calcium ion",
+     "curie": "CHEBI:29108"
+    },
+    {
+     "text": "blood",
+     "curie": "UBERON:0000178"
+    },
+    {
+     "text": "calcitonin",
+     "curie": "PR:P01258"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45537-135",
+   "claim": "Calcitonin reduces blood calcium concentration",
+   "source": "Calcitonin is released in response to rising calcium ion concentrations in the blood and has the effect of reducing those levels.",
+   "ctor": "effect",
+   "subject": "PR:P01258",
+   "relation": null,
+   "object": "CHEBI:29108",
+   "sign": "neg",
+   "target": "amount",
+   "context": {
+    "anatomy": "UBERON:0000178"
+   },
+   "entities": [
+    {
+     "text": "calcitonin",
+     "curie": "PR:P01258"
+    },
+    {
+     "text": "calcium ion",
+     "curie": "CHEBI:29108"
+    },
+    {
+     "text": "blood",
+     "curie": "UBERON:0000178"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45537-140",
+   "claim": "Parathyroid hormone increases blood calcium concentration",
+   "source": "Parathyroid hormone increases blood calcium concentrations when calcium ion levels fall below normal.",
+   "ctor": "effect",
+   "subject": "PR:000013429",
+   "relation": null,
+   "object": "CHEBI:29108",
+   "sign": "pos",
+   "target": "amount",
+   "context": {
+    "anatomy": "UBERON:0000178"
+   },
+   "entities": [
+    {
+     "text": "parathyroid hormone",
+     "curie": "PR:000013429"
+    },
+    {
+     "text": "calcium ion",
+     "curie": "CHEBI:29108"
+    },
+    {
+     "text": "blood",
+     "curie": "UBERON:0000178"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45537-141",
+   "claim": "Low blood calcium stimulates parathyroid hormone release",
+   "source": "Parathyroid hormone increases blood calcium concentrations when calcium ion levels fall below normal.",
+   "ctor": "effect",
+   "subject": "CHEBI:29108",
+   "relation": null,
+   "object": "PR:000013429",
+   "sign": "neg",
+   "target": "amount",
+   "context": {
+    "anatomy": "UBERON:0000178"
+   },
+   "entities": [
+    {
+     "text": "calcium ion",
+     "curie": "CHEBI:29108"
+    },
+    {
+     "text": "parathyroid hormone",
+     "curie": "PR:000013429"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45537-153",
+   "claim": "A decrease in blood sodium concentration stimulates aldosterone release from the adrenal cortex",
+   "source": "Aldosterone release from the adrenal cortex is stimulated by a decrease in blood concentrations of sodium ions, blood volume, or blood pressure, or by an increase in blood potassium levels.",
+   "ctor": "effect",
+   "subject": "CHEBI:29101",
+   "relation": null,
+   "object": "CHEBI:27584",
+   "sign": "neg",
+   "target": "amount",
+   "context": {
+    "anatomy": "UBERON:0000178"
+   },
+   "entities": [
+    {
+     "text": "sodium ion",
+     "curie": "CHEBI:29101"
+    },
+    {
+     "text": "blood",
+     "curie": "UBERON:0000178"
+    },
+    {
+     "text": "aldosterone",
+     "curie": "CHEBI:27584"
+    },
+    {
+     "text": "adrenal cortex",
+     "curie": "UBERON:0001235"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45537-156",
+   "claim": "An increase in blood potassium stimulates aldosterone release",
+   "source": "Aldosterone release from the adrenal cortex is stimulated by a decrease in blood concentrations of sodium ions, blood volume, or blood pressure, or by an increase in blood potassium levels.",
+   "ctor": "effect",
+   "subject": "CHEBI:29103",
+   "relation": null,
+   "object": "CHEBI:27584",
+   "sign": "pos",
+   "target": "amount",
+   "context": {
+    "anatomy": "UBERON:0000178"
+   },
+   "entities": [
+    {
+     "text": "potassium ion",
+     "curie": "CHEBI:29103"
+    },
+    {
+     "text": "blood",
+     "curie": "UBERON:0000178"
+    },
+    {
+     "text": "aldosterone",
+     "curie": "CHEBI:27584"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45537-181",
+   "claim": "Epinephrine and norepinephrine increase blood-glucose levels",
+   "source": "The responses include increased heart rate, breathing rate, cardiac muscle contractions, and blood-glucose levels.",
+   "ctor": "effect",
+   "subject": "CHEBI:33568",
+   "relation": null,
+   "object": "CHEBI:17234",
+   "sign": "pos",
+   "target": "amount",
+   "context": {
+    "anatomy": "UBERON:0000178"
+   },
+   "entities": [
+    {
+     "text": "epinephrine",
+     "curie": "CHEBI:33568"
+    },
+    {
+     "text": "norepinephrine",
+     "curie": "CHEBI:33569"
+    },
+    {
+     "text": "glucose",
+     "curie": "CHEBI:17234"
+    },
+    {
+     "text": "blood",
+     "curie": "UBERON:0000178"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45537-182",
+   "claim": "Epinephrine and norepinephrine accelerate glucose breakdown in skeletal muscle",
+   "source": "They also accelerate the breakdown of glucose in skeletal muscles and stored fats in adipose tissue, and redirect blood flow toward skeletal muscles and away from skin and viscera.",
+   "ctor": "effect",
+   "subject": "CHEBI:33568",
+   "relation": null,
+   "object": "GO:0006096",
+   "sign": "pos",
+   "target": "process",
+   "context": {
+    "anatomy": "UBERON:0014892"
+   },
+   "entities": [
+    {
+     "text": "epinephrine",
+     "curie": "CHEBI:33568"
+    },
+    {
+     "text": "norepinephrine",
+     "curie": "CHEBI:33569"
+    },
+    {
+     "text": "glycolysis",
+     "curie": "GO:0006096"
+    },
+    {
+     "text": "skeletal muscle",
+     "curie": "UBERON:0014892"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45537-183",
+   "claim": "Epinephrine and norepinephrine accelerate breakdown of stored fat in adipose tissue",
+   "source": "They also accelerate the breakdown of glucose in skeletal muscles and stored fats in adipose tissue, and redirect blood flow toward skeletal muscles and away from skin and viscera.",
+   "ctor": "effect",
+   "subject": "CHEBI:33568",
+   "relation": null,
+   "object": "GO:0016042",
+   "sign": "pos",
+   "target": "process",
+   "context": {
+    "anatomy": "UBERON:0001013"
+   },
+   "entities": [
+    {
+     "text": "epinephrine",
+     "curie": "CHEBI:33568"
+    },
+    {
+     "text": "norepinephrine",
+     "curie": "CHEBI:33569"
+    },
+    {
+     "text": "lipid catabolism",
+     "curie": "GO:0016042"
+    },
+    {
+     "text": "adipose tissue",
+     "curie": "UBERON:0001013"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45537-199",
+   "claim": "Declining blood glucose stimulates glucagon release from alpha cells",
+   "source": "Alpha cells release glucagon as blood-glucose levels decline.",
+   "ctor": "effect",
+   "subject": "CHEBI:17234",
+   "relation": null,
+   "object": "PR:P01275",
+   "sign": "neg",
+   "target": "amount",
+   "context": {
+    "anatomy": "UBERON:0000178",
+    "cellType": "CL:0000171"
+   },
+   "entities": [
+    {
+     "text": "glucose",
+     "curie": "CHEBI:17234"
+    },
+    {
+     "text": "blood",
+     "curie": "UBERON:0000178"
+    },
+    {
+     "text": "pancreatic alpha cell",
+     "curie": "CL:0000171"
+    },
+    {
+     "text": "glucagon",
+     "curie": "PR:P01275"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45537-200",
+   "claim": "Rising blood glucose stimulates insulin release from beta cells",
+   "source": "When blood-glucose levels rise, beta cells release insulin.",
+   "ctor": "effect",
+   "subject": "CHEBI:17234",
+   "relation": null,
+   "object": "PR:000009054",
+   "sign": "pos",
+   "target": "amount",
+   "context": {
+    "anatomy": "UBERON:0000178",
+    "cellType": "CL:0000169"
+   },
+   "entities": [
+    {
+     "text": "glucose",
+     "curie": "CHEBI:17234"
+    },
+    {
+     "text": "blood",
+     "curie": "UBERON:0000178"
+    },
+    {
+     "text": "pancreatic beta cell",
+     "curie": "CL:0000169"
+    },
+    {
+     "text": "insulin",
+     "curie": "PR:000009054"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45537-201",
+   "claim": "Glucagon causes release of glucose from the liver into the blood",
+   "source": "Glucagon causes the release of glucose to the blood from the liver, and insulin facilitates the uptake of glucose by the body\u2019s cells.",
+   "ctor": "effect",
+   "subject": "PR:P01275",
+   "relation": null,
+   "object": "CHEBI:17234",
+   "sign": "pos",
+   "target": "amount",
+   "context": {
+    "anatomy": "UBERON:0000178"
+   },
+   "entities": [
+    {
+     "text": "glucagon",
+     "curie": "PR:P01275"
+    },
+    {
+     "text": "glucose",
+     "curie": "CHEBI:17234"
+    },
+    {
+     "text": "liver",
+     "curie": "UBERON:0002107"
+    },
+    {
+     "text": "blood",
+     "curie": "UBERON:0000178"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45537-229",
+   "claim": "The atrial hormone reduces blood Na+ concentration",
+   "source": "It causes a reduction in blood volume and blood pressure, and reduces the concentration of Na+ in the blood.",
+   "ctor": "effect",
+   "subject": "PR:P01160",
+   "relation": null,
+   "object": "CHEBI:29101",
+   "sign": "neg",
+   "target": "amount",
+   "context": {
+    "anatomy": "UBERON:0000178"
+   },
+   "entities": [
+    {
+     "text": "atrial natriuretic peptide",
+     "curie": "PR:P01160"
+    },
+    {
+     "text": "sodium ion",
+     "curie": "CHEBI:29101"
+    },
+    {
+     "text": "blood",
+     "curie": "UBERON:0000178"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45537-240",
+   "claim": "EPO triggers red blood cell formation in the bone marrow",
+   "source": "EPO triggers the formation of red blood cells in the bone marrow.",
+   "ctor": "effect",
+   "subject": "PR:000007141",
+   "relation": null,
+   "object": "GO:0030218",
+   "sign": "pos",
+   "target": "process",
+   "context": {
+    "anatomy": "UBERON:0002371"
+   },
+   "entities": [
+    {
+     "text": "erythropoietin",
+     "curie": "PR:000007141"
+    },
+    {
+     "text": "erythrocyte",
+     "curie": "CL:0000232"
+    },
+    {
+     "text": "erythropoiesis",
+     "curie": "GO:0030218"
+    },
+    {
+     "text": "bone marrow",
+     "curie": "UBERON:0002371"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45537-257",
+   "claim": "The anterior pituitary signals the thyroid to release thyroid hormones",
+   "source": "For example, the anterior pituitary signals the thyroid to release thyroid hormones.",
+   "ctor": "effect",
+   "subject": "UBERON:0002196",
+   "relation": null,
+   "object": "CHEBI:60311",
+   "sign": "pos",
+   "target": "amount",
+   "context": {
+    "anatomy": "UBERON:0002046"
+   },
+   "entities": [
+    {
+     "text": "anterior pituitary",
+     "curie": "UBERON:0002196"
+    },
+    {
+     "text": "thyroid gland",
+     "curie": "UBERON:0002046"
+    },
+    {
+     "text": "thyroid hormone",
+     "curie": "CHEBI:60311"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45537-259",
+   "claim": "The anterior pituitary stimulates the thyroid gland to release T3 and T4",
+   "source": "The anterior pituitary stimulates the thyroid gland to release thyroid hormones T3 and T4.",
+   "ctor": "effect",
+   "subject": "UBERON:0002196",
+   "relation": null,
+   "object": "CHEBI:18258",
+   "sign": "pos",
+   "target": "amount",
+   "context": {
+    "anatomy": "UBERON:0002046"
+   },
+   "entities": [
+    {
+     "text": "anterior pituitary",
+     "curie": "UBERON:0002196"
+    },
+    {
+     "text": "thyroid gland",
+     "curie": "UBERON:0002046"
+    },
+    {
+     "text": "triiodothyronine",
+     "curie": "CHEBI:18258"
+    },
+    {
+     "text": "thyroxine",
+     "curie": "CHEBI:30660"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45537-301",
+   "claim": "Atrial natriuretic peptide reduces blood Na+ concentration",
+   "source": "The heart produces the hormone atrial natriuretic peptide, which functions to reduce blood volume, pressure, and Na+ concentration.",
+   "ctor": "effect",
+   "subject": "PR:P01160",
+   "relation": null,
+   "object": "CHEBI:29101",
+   "sign": "neg",
+   "target": "amount",
+   "context": {
+    "anatomy": "UBERON:0000178"
+   },
+   "entities": [
+    {
+     "text": "atrial natriuretic peptide",
+     "curie": "PR:P01160"
+    },
+    {
+     "text": "sodium ion",
+     "curie": "CHEBI:29101"
+    },
+    {
+     "text": "blood",
+     "curie": "UBERON:0000178"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45537-334",
+   "claim": "Increasing blood glucose causes the pancreas to release insulin",
+   "source": "When blood-glucose levels are increasing, the pancreas releases insulin, which stimulates uptake of glucose by cells.",
+   "ctor": "effect",
+   "subject": "CHEBI:17234",
+   "relation": null,
+   "object": "PR:000009054",
+   "sign": "pos",
+   "target": "amount",
+   "context": {
+    "anatomy": "UBERON:0000178"
+   },
+   "entities": [
+    {
+     "text": "glucose",
+     "curie": "CHEBI:17234"
+    },
+    {
+     "text": "blood",
+     "curie": "UBERON:0000178"
+    },
+    {
+     "text": "pancreas",
+     "curie": "UBERON:0001264"
+    },
+    {
+     "text": "insulin",
+     "curie": "PR:000009054"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45537-336",
+   "claim": "Decreasing blood glucose causes the pancreas to release glucagon",
+   "source": "When blood-glucose levels are decreasing, the pancreas releases glucagon, which stimulates the release of stored glucose by the liver to the bloodstream.",
+   "ctor": "effect",
+   "subject": "CHEBI:17234",
+   "relation": null,
+   "object": "PR:P01275",
+   "sign": "neg",
+   "target": "amount",
+   "context": {
+    "anatomy": "UBERON:0000178"
+   },
+   "entities": [
+    {
+     "text": "glucose",
+     "curie": "CHEBI:17234"
+    },
+    {
+     "text": "blood",
+     "curie": "UBERON:0000178"
+    },
+    {
+     "text": "pancreas",
+     "curie": "UBERON:0001264"
+    },
+    {
+     "text": "glucagon",
+     "curie": "PR:P01275"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45537-337",
+   "claim": "Glucagon stimulates release of stored glucose from the liver into the bloodstream",
+   "source": "When blood-glucose levels are decreasing, the pancreas releases glucagon, which stimulates the release of stored glucose by the liver to the bloodstream.",
+   "ctor": "effect",
+   "subject": "PR:P01275",
+   "relation": null,
+   "object": "CHEBI:17234",
+   "sign": "pos",
+   "target": "amount",
+   "context": {
+    "anatomy": "UBERON:0000178"
+   },
+   "entities": [
+    {
+     "text": "glucagon",
+     "curie": "PR:P01275"
+    },
+    {
+     "text": "glucose",
+     "curie": "CHEBI:17234"
+    },
+    {
+     "text": "liver",
+     "curie": "UBERON:0002107"
+    },
+    {
+     "text": "blood",
+     "curie": "UBERON:0000178"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45538-197",
+   "claim": "Medications relieve pain in rheumatoid arthritis",
+   "source": "If joint damage is more extensive, medications can be used to relieve pain and decrease inflammation.",
+   "ctor": "effect",
+   "subject": "CHEBI:23888",
+   "relation": null,
+   "object": "HP:0012531",
+   "sign": "neg",
+   "target": "phenotype",
+   "context": {
+    "condition": "rheumatoid arthritis"
+   },
+   "entities": [
+    {
+     "text": "pain",
+     "curie": "HP:0012531"
+    },
+    {
+     "text": "rheumatoid arthritis",
+     "curie": "MONDO:0008383"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45538-198",
+   "claim": "Medications decrease inflammation in rheumatoid arthritis",
+   "source": "If joint damage is more extensive, medications can be used to relieve pain and decrease inflammation.",
+   "ctor": "effect",
+   "subject": "CHEBI:23888",
+   "relation": null,
+   "object": "GO:0006954",
+   "sign": "neg",
+   "target": "process",
+   "context": {
+    "condition": "rheumatoid arthritis"
+   },
+   "entities": [
+    {
+     "text": "inflammatory response",
+     "curie": "GO:0006954"
+    },
+    {
+     "text": "rheumatoid arthritis",
+     "curie": "MONDO:0008383"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45538-265",
+   "claim": "The human skeleton is an endoskeleton",
+   "source": "The human skeleton is an endoskeleton that is composed of the axial and appendicular skeleton.",
+   "ctor": "rel",
+   "subject": "UBERON:0004288",
+   "relation": "is_a",
+   "object": "UBERON:0010362",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:9606"
+   },
+   "entities": [
+    {
+     "text": "skeleton",
+     "curie": "UBERON:0004288"
+    },
+    {
+     "text": "endoskeleton",
+     "curie": "UBERON:0010362"
+    },
+    {
+     "text": "Homo sapiens",
+     "curie": "NCBITaxon:9606"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45539-28",
+   "claim": "The vertebrate PNS is made up of peripheral sensory and motor nerves",
+   "source": "While there is great diversity among different vertebrate nervous systems, they all share a basic structure: a CNS that contains a brain and spinal cord and a PNS made up of peripheral sensory and motor nerves.",
+   "ctor": "rel",
+   "subject": "UBERON:0000010",
+   "relation": "has part",
+   "object": "UBERON:0001021",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:7742"
+   },
+   "entities": [
+    {
+     "text": "Vertebrata",
+     "curie": "NCBITaxon:7742"
+    },
+    {
+     "text": "peripheral nervous system",
+     "curie": "UBERON:0000010"
+    },
+    {
+     "text": "nerve",
+     "curie": "UBERON:0001021"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45539-124",
+   "claim": "Songbirds produce new neurons while learning songs",
+   "source": "Neurogenesis was first discovered in songbirds that produce new neurons while learning songs.",
+   "ctor": "effect",
+   "subject": "GO:0007612",
+   "relation": null,
+   "object": "GO:0022008",
+   "sign": "pos",
+   "target": "process",
+   "context": {
+    "taxon": "NCBITaxon:9126"
+   },
+   "entities": [
+    {
+     "text": "Passeriformes",
+     "curie": "NCBITaxon:9126"
+    },
+    {
+     "text": "neurogenesis",
+     "curie": "GO:0022008"
+    },
+    {
+     "text": "learning",
+     "curie": "GO:0007612"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45539-126",
+   "claim": "In mammals, new neurons play an important role in learning",
+   "source": "For mammals, new neurons also play an important role in learning: about 1,000 new neurons develop in the hippocampus (a brain structure involved in learning and memory) each day.",
+   "ctor": "effect",
+   "subject": "CL:0000540",
+   "relation": null,
+   "object": "GO:0007612",
+   "sign": "pos",
+   "target": "process",
+   "context": {
+    "taxon": "NCBITaxon:40674"
+   },
+   "entities": [
+    {
+     "text": "Mammalia",
+     "curie": "NCBITaxon:40674"
+    },
+    {
+     "text": "neuron",
+     "curie": "CL:0000540"
+    },
+    {
+     "text": "learning",
+     "curie": "GO:0007612"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45539-132",
+   "claim": "Some antidepressant medications promote neurogenesis in the hippocampus",
+   "source": "Interestingly, both exercise and some antidepressant medications also promote neurogenesis in the hippocampus.",
+   "ctor": "effect",
+   "subject": "CHEBI:35469",
+   "relation": null,
+   "object": "GO:0022008",
+   "sign": "pos",
+   "target": "process",
+   "context": {
+    "anatomy": "UBERON:0002421"
+   },
+   "entities": [
+    {
+     "text": "antidepressant",
+     "curie": "CHEBI:35469"
+    },
+    {
+     "text": "neurogenesis",
+     "curie": "GO:0022008"
+    },
+    {
+     "text": "hippocampus",
+     "curie": "UBERON:0002421"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45539-133",
+   "claim": "Stress reduces neurogenesis in the hippocampus",
+   "source": "Stress has the opposite effect.",
+   "ctor": "effect",
+   "subject": "GO:0006950",
+   "relation": null,
+   "object": "GO:0022008",
+   "sign": "neg",
+   "target": "process",
+   "context": {
+    "anatomy": "UBERON:0002421"
+   },
+   "entities": [
+    {
+     "text": "response to stress",
+     "curie": "GO:0006950"
+    },
+    {
+     "text": "neurogenesis",
+     "curie": "GO:0022008"
+    },
+    {
+     "text": "hippocampus",
+     "curie": "UBERON:0002421"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45539-271",
+   "claim": "Axons make up the white matter of the spinal cord",
+   "source": "Axons make up the \u201cwhite matter\u201d and neuron and glia cell bodies (and interneurons) make up the \u201cgray matter.\u201d",
+   "ctor": "rel",
+   "subject": "GO:0030424",
+   "relation": "part of",
+   "object": "UBERON:0002316",
+   "sign": null,
+   "target": null,
+   "context": {
+    "anatomy": "UBERON:0002240"
+   },
+   "entities": [
+    {
+     "text": "axon",
+     "curie": "GO:0030424"
+    },
+    {
+     "text": "white matter",
+     "curie": "UBERON:0002316"
+    },
+    {
+     "text": "spinal cord",
+     "curie": "UBERON:0002240"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45539-373",
+   "claim": "Sympathetic activation decreases blood flow to the skin",
+   "source": "Activation of the sympathetic nervous system increases heart rate and blood pressure and decreases digestion and blood flow to the skin.",
+   "ctor": "effect",
+   "subject": "UBERON:0000013",
+   "relation": null,
+   "object": "GO:0008015",
+   "sign": "neg",
+   "target": "process",
+   "context": {
+    "anatomy": "UBERON:0002097"
+   },
+   "entities": [
+    {
+     "text": "sympathetic nervous system",
+     "curie": "UBERON:0000013"
+    },
+    {
+     "text": "blood circulation",
+     "curie": "GO:0008015"
+    },
+    {
+     "text": "skin",
+     "curie": "UBERON:0002097"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45539-377",
+   "claim": "Parasympathetic activation increases blood flow to the skin",
+   "source": "Activation of the parasympathetic nervous system decreases heart rate and blood pressure and increases digestion and blood flow to the skin.",
+   "ctor": "effect",
+   "subject": "UBERON:0000011",
+   "relation": null,
+   "object": "GO:0008015",
+   "sign": "pos",
+   "target": "process",
+   "context": {
+    "anatomy": "UBERON:0002097"
+   },
+   "entities": [
+    {
+     "text": "parasympathetic nervous system",
+     "curie": "UBERON:0000011"
+    },
+    {
+     "text": "blood circulation",
+     "curie": "GO:0008015"
+    },
+    {
+     "text": "skin",
+     "curie": "UBERON:0002097"
+    }
+   ]
+  },
+  {
+   "id": "the-cellular-basis-of-inheritance-m45465-68",
+   "claim": "Gametes are produced from diploid germ cells",
+   "source": "The gametes are produced from diploid germ cells, a special cell line that only produces gametes.",
+   "ctor": "rel",
+   "subject": "CL:0000300",
+   "relation": "develops from",
+   "object": "CL:0000586",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:33208"
+   },
+   "entities": [
+    {
+     "text": "gamete",
+     "curie": "CL:0000300"
+    },
+    {
+     "text": "germ cell",
+     "curie": "CL:0000586"
+    },
+    {
+     "text": "diploid",
+     "curie": "PATO:0001394"
+    }
+   ]
+  },
+  {
+   "id": "the-cellular-basis-of-inheritance-m45465-70",
+   "claim": "Once formed, haploid gametes lose the ability to divide",
+   "source": "Once the haploid gametes are formed, they lose the ability to divide again.",
+   "ctor": "notRel",
+   "subject": "CL:0000300",
+   "relation": "capable of",
+   "object": "GO:0051301",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:33208"
+   },
+   "entities": [
+    {
+     "text": "gamete",
+     "curie": "CL:0000300"
+    },
+    {
+     "text": "cell division",
+     "curie": "GO:0051301"
+    }
+   ]
+  },
+  {
+   "id": "the-cellular-basis-of-inheritance-m45465-82",
+   "claim": "In plants, meiosis is not involved in gamete production",
+   "source": "Meiosis is not involved in the production of gametes in this case, as the organism that produces gametes is already haploid.",
+   "ctor": "notRel",
+   "subject": "GO:0007276",
+   "relation": "has part",
+   "object": "GO:0051321",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:3193"
+   },
+   "entities": [
+    {
+     "text": "meiosis",
+     "curie": "GO:0051321"
+    },
+    {
+     "text": "gamete generation",
+     "curie": "GO:0007276"
+    },
+    {
+     "text": "plants",
+     "curie": "NCBITaxon:3193"
+    }
+   ]
+  },
+  {
+   "id": "the-cellular-basis-of-inheritance-m45466-103",
+   "claim": "In some organisms nuclear envelopes form around the chromatids in telophase I",
+   "source": "In some organisms, the chromosomes decondense and nuclear envelopes form around the chromatids in telophase I.",
+   "ctor": "rel",
+   "subject": "GO:0031468",
+   "relation": "happens during",
+   "object": "GO:0007134",
+   "sign": null,
+   "target": null,
+   "context": {},
+   "entities": [
+    {
+     "text": "nuclear envelope reformation",
+     "curie": "GO:0031468"
+    },
+    {
+     "text": "telophase I",
+     "curie": "GO:0007134"
+    }
+   ]
+  },
+  {
+   "id": "the-cellular-basis-of-inheritance-m45466-106",
+   "claim": "In animals and some fungi cytokinesis separates cell contents by a cleavage furrow",
+   "source": "In nearly all species, cytokinesis separates the cell contents by either a cleavage furrow (in animals and some fungi), or a cell plate that will ultimately lead to formation of cell walls that separate the two daughter ",
+   "ctor": "rel",
+   "subject": "GO:0000910",
+   "relation": "has part",
+   "object": "GO:0032154",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:33208"
+   },
+   "entities": [
+    {
+     "text": "cytokinesis",
+     "curie": "GO:0000910"
+    },
+    {
+     "text": "cleavage furrow",
+     "curie": "GO:0032154"
+    },
+    {
+     "text": "animals",
+     "curie": "NCBITaxon:33208"
+    },
+    {
+     "text": "fungi",
+     "curie": "NCBITaxon:4751"
+    }
+   ]
+  },
+  {
+   "id": "the-cellular-basis-of-inheritance-m45466-107",
+   "claim": "In plants cytokinesis uses a cell plate that leads to cell walls separating the daughter cells",
+   "source": "In nearly all species, cytokinesis separates the cell contents by either a cleavage furrow (in animals and some fungi), or a cell plate that will ultimately lead to formation of cell walls that separate the two daughter ",
+   "ctor": "rel",
+   "subject": "GO:0000910",
+   "relation": "has part",
+   "object": "GO:0009504",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:3193"
+   },
+   "entities": [
+    {
+     "text": "cytokinesis",
+     "curie": "GO:0000910"
+    },
+    {
+     "text": "cell plate",
+     "curie": "GO:0009504"
+    },
+    {
+     "text": "cell wall",
+     "curie": "GO:0005618"
+    },
+    {
+     "text": "plants",
+     "curie": "NCBITaxon:3193"
+    }
+   ]
+  },
+  {
+   "id": "the-cellular-basis-of-inheritance-m45466-119",
+   "claim": "In prophase II chromosomes condense again if they decondensed in telophase I",
+   "source": "In prophase II, if the chromosomes decondensed in telophase I, they condense again.",
+   "ctor": "rel",
+   "subject": "GO:0030261",
+   "relation": "happens during",
+   "object": "GO:0007136",
+   "sign": null,
+   "target": null,
+   "context": {
+    "condition": "chromosomes decondensed in telophase I"
+   },
+   "entities": [
+    {
+     "text": "prophase II",
+     "curie": "GO:0007136"
+    },
+    {
+     "text": "chromosome condensation",
+     "curie": "GO:0030261"
+    }
+   ]
+  },
+  {
+   "id": "the-cellular-basis-of-inheritance-m45466-120",
+   "claim": "In prophase II nuclear envelopes, if formed, fragment into vesicles",
+   "source": "If nuclear envelopes were formed, they fragment into vesicles.",
+   "ctor": "rel",
+   "subject": "GO:0051081",
+   "relation": "happens during",
+   "object": "GO:0007136",
+   "sign": null,
+   "target": null,
+   "context": {
+    "condition": "only if nuclear envelopes formed"
+   },
+   "entities": [
+    {
+     "text": "prophase II",
+     "curie": "GO:0007136"
+    },
+    {
+     "text": "nuclear envelope",
+     "curie": "GO:0005635"
+    },
+    {
+     "text": "nuclear envelope breakdown",
+     "curie": "GO:0051081"
+    }
+   ]
+  },
+  {
+   "id": "the-cellular-basis-of-inheritance-m45466-164",
+   "claim": "Mitotic cells may be involved in asexual reproduction in some organisms",
+   "source": "They may even be involved in asexual reproduction in some organisms.",
+   "ctor": "rel",
+   "subject": "GO:0140014",
+   "relation": "part of",
+   "object": "GO:0019954",
+   "sign": null,
+   "target": null,
+   "context": {
+    "condition": "some organisms; mitotic cells may be involved"
+   },
+   "entities": [
+    {
+     "text": "mitosis",
+     "curie": "GO:0140014"
+    },
+    {
+     "text": "asexual reproduction",
+     "curie": "GO:0019954"
+    }
+   ]
+  },
+  {
+   "id": "the-cellular-basis-of-inheritance-m45466-165",
+   "claim": "In a diploid-dominant organism such as an animal, meiotic cells participate only in sexual reproduction",
+   "source": "Cells produced by meiosis in a diploid-dominant organism such as an animal will only participate in sexual reproduction.",
+   "ctor": "rel",
+   "subject": "GO:0051321",
+   "relation": "part of",
+   "object": "GO:0019953",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:33208"
+   },
+   "entities": [
+    {
+     "text": "meiosis",
+     "curie": "GO:0051321"
+    },
+    {
+     "text": "sexual reproduction",
+     "curie": "GO:0019953"
+    },
+    {
+     "text": "animals",
+     "curie": "NCBITaxon:33208"
+    }
+   ]
+  },
+  {
+   "id": "the-cellular-basis-of-inheritance-m45467-41",
+   "claim": "Monosomic human zygotes missing an autosome invariably fail to develop to birth",
+   "source": "Monosomic human zygotes missing any one copy of an autosome invariably fail to develop to birth because they have only one copy of essential genes.",
+   "ctor": "effect",
+   "subject": "MONDO:0020639",
+   "relation": null,
+   "object": "PATO:0000718",
+   "sign": "pos",
+   "target": "phenotype",
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "cellType": "CL:0010017",
+    "condition": "zygote missing an autosome"
+   },
+   "entities": [
+    {
+     "text": "monosomy",
+     "curie": "MONDO:0020639"
+    },
+    {
+     "text": "autosome",
+     "curie": "GO:0030849"
+    },
+    {
+     "text": "zygote",
+     "curie": "CL:0010017"
+    },
+    {
+     "text": "lethal",
+     "curie": "PATO:0000718"
+    }
+   ]
+  },
+  {
+   "id": "the-cellular-basis-of-inheritance-m45467-58",
+   "claim": "In early female mammalian embryos one X chromosome in each cell inactivates by condensing into a Barr body",
+   "source": "Early in development, when female mammalian embryos consist of just a few thousand cells, one X chromosome in each cell inactivates by condensing into a structure called a Barr body.",
+   "ctor": "rel",
+   "subject": "GO:0009048",
+   "relation": "has output",
+   "object": "GO:0001740",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:40674",
+    "condition": "early female embryos"
+   },
+   "entities": [
+    {
+     "text": "X inactivation",
+     "curie": "GO:0009048"
+    },
+    {
+     "text": "X chromosome",
+     "curie": "GO:0000805"
+    },
+    {
+     "text": "Barr body",
+     "curie": "GO:0001740"
+    },
+    {
+     "text": "mammals",
+     "curie": "NCBITaxon:40674"
+    },
+    {
+     "text": "female",
+     "curie": "PATO:0000383"
+    }
+   ]
+  },
+  {
+   "id": "the-cellular-basis-of-inheritance-m45467-63",
+   "claim": "In tortoiseshell cats X inactivation is observed as coat-color variegation",
+   "source": "In so-called \u201ctortoiseshell\u201d cats, X inactivation is observed as coat-color variegation ().",
+   "ctor": "effect",
+   "subject": "GO:0009048",
+   "relation": null,
+   "object": "PATO:0001533",
+   "sign": "pos",
+   "target": "phenotype",
+   "context": {
+    "taxon": "NCBITaxon:9685",
+    "condition": "tortoiseshell cats"
+   },
+   "entities": [
+    {
+     "text": "cat",
+     "curie": "NCBITaxon:9685"
+    },
+    {
+     "text": "X inactivation",
+     "curie": "GO:0009048"
+    },
+    {
+     "text": "coat-color variegation",
+     "curie": "PATO:0001533"
+    }
+   ]
+  },
+  {
+   "id": "the-cellular-basis-of-inheritance-m45467-80",
+   "claim": "Fertilization of an abnormal diploid egg with a normal haploid sperm yields a triploid zygote",
+   "source": "For instance, fertilization of an abnormal diploid egg with a normal haploid sperm would yield a triploid zygote.",
+   "ctor": "rel",
+   "subject": "GO:0009566",
+   "relation": "has output",
+   "object": "CL:0010017",
+   "sign": null,
+   "target": null,
+   "context": {
+    "condition": "abnormal diploid egg fertilized by normal haploid sperm gives triploid zygote"
+   },
+   "entities": [
+    {
+     "text": "fertilization",
+     "curie": "GO:0009566"
+    },
+    {
+     "text": "egg",
+     "curie": "CL:0000025"
+    },
+    {
+     "text": "sperm",
+     "curie": "CL:0000019"
+    },
+    {
+     "text": "zygote",
+     "curie": "CL:0010017"
+    },
+    {
+     "text": "triploid",
+     "curie": "PATO:0001381"
+    }
+   ]
+  },
+  {
+   "id": "the-cellular-basis-of-inheritance-m45467-83",
+   "claim": "Triploid animals are sterile",
+   "source": "Triploid animals are sterile because meiosis cannot proceed normally with an odd number of chromosome sets.",
+   "ctor": "effect",
+   "subject": "PATO:0001381",
+   "relation": null,
+   "object": "PATO:0000956",
+   "sign": "pos",
+   "target": "phenotype",
+   "context": {
+    "taxon": "NCBITaxon:33208"
+   },
+   "entities": [
+    {
+     "text": "triploid",
+     "curie": "PATO:0001381"
+    },
+    {
+     "text": "sterile",
+     "curie": "PATO:0000956"
+    },
+    {
+     "text": "animals",
+     "curie": "NCBITaxon:33208"
+    }
+   ]
+  },
+  {
+   "id": "the-cellular-basis-of-inheritance-m45467-86",
+   "claim": "Polyploid plants tend to be larger and more robust than euploids of their species",
+   "source": "In contrast, polyploidy is very common in the plant kingdom, and polyploid plants tend to be larger and more robust than euploids of their species.",
+   "ctor": "effect",
+   "subject": "PATO:0001377",
+   "relation": null,
+   "object": "PATO:0000586",
+   "sign": "pos",
+   "target": "phenotype",
+   "context": {
+    "taxon": "NCBITaxon:3193"
+   },
+   "entities": [
+    {
+     "text": "polyploid",
+     "curie": "PATO:0001377"
+    },
+    {
+     "text": "plants",
+     "curie": "NCBITaxon:3193"
+    },
+    {
+     "text": "larger",
+     "curie": "PATO:0000586"
+    },
+    {
+     "text": "euploid",
+     "curie": "PATO:0001393"
+    }
+   ]
+  }
+ ],
+ "sample40": [
+  {
+   "id": "molbio-m45475-69",
+   "claim": "Telomerase is present in human cells",
+   "source": "Later research using HeLa cells (obtained from Henrietta Lacks) confirmed that telomerase is present in human cells.",
+   "ctor": "rel",
+   "subject": "GO:0005697",
+   "relation": "located in",
+   "object": "CL:0000000",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:9606"
+   },
+   "entities": [
+    {
+     "text": "telomerase",
+     "curie": "GO:0005697"
+    },
+    {
+     "text": "human cells",
+     "curie": "NCBITaxon:9606"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45537-183",
+   "claim": "Epinephrine and norepinephrine accelerate breakdown of stored fat in adipose tissue",
+   "source": "They also accelerate the breakdown of glucose in skeletal muscles and stored fats in adipose tissue, and redirect blood flow toward skeletal muscles and away from skin and viscera.",
+   "ctor": "effect",
+   "subject": "CHEBI:33568",
+   "relation": null,
+   "object": "GO:0016042",
+   "sign": "pos",
+   "target": "process",
+   "context": {
+    "anatomy": "UBERON:0001013"
+   },
+   "entities": [
+    {
+     "text": "epinephrine",
+     "curie": "CHEBI:33568"
+    },
+    {
+     "text": "norepinephrine",
+     "curie": "CHEBI:33569"
+    },
+    {
+     "text": "lipid catabolism",
+     "curie": "GO:0016042"
+    },
+    {
+     "text": "adipose tissue",
+     "curie": "UBERON:0001013"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45536-190",
+   "claim": "The electrochemical signal causes the two atria to contract in unison",
+   "source": "The electrochemical signal causes the two atria to contract in unison; then the signal causes the ventricles to contract.",
+   "ctor": "effect",
+   "subject": "GO:0061337",
+   "relation": null,
+   "object": "GO:0060048",
+   "sign": "pos",
+   "target": "process",
+   "context": {
+    "anatomy": "UBERON:0002081"
+   },
+   "entities": [
+    {
+     "text": "electrochemical signal",
+     "curie": "GO:0061337"
+    },
+    {
+     "text": "atria",
+     "curie": "UBERON:0002081"
+    },
+    {
+     "text": "contract",
+     "curie": "GO:0060048"
+    }
+   ]
+  },
+  {
+   "id": "cell-structure-and-function-m45434-70",
+   "claim": "In a hypotonic solution water enters the cell",
+   "source": "In a hypotonic solution, such as tap water, the extracellular fluid has a lower concentration of solutes than the fluid inside the cell, and water enters the cell.",
+   "ctor": "rel",
+   "subject": "GO:0098657",
+   "relation": "has participant",
+   "object": "CHEBI:15377",
+   "sign": null,
+   "target": null,
+   "context": {
+    "condition": "hypotonic solution"
+   },
+   "entities": [
+    {
+     "text": "water",
+     "curie": "CHEBI:15377"
+    },
+    {
+     "text": "cell",
+     "curie": "CL:0000000"
+    },
+    {
+     "text": "import into cell",
+     "curie": "GO:0006833"
+    }
+   ]
+  },
+  {
+   "id": "photosynthesis-m45448-120",
+   "claim": "stomatal closure raises oxygen levels inside the leaf",
+   "source": "Levels of carbon dioxide (a reactant) will fall, and levels of oxygen (a product) will rise.",
+   "ctor": "effect",
+   "subject": "GO:0090332",
+   "relation": null,
+   "object": "CHEBI:15379",
+   "sign": "pos",
+   "target": "amount",
+   "context": {
+    "anatomy": "PO:0025034"
+   },
+   "entities": [
+    {
+     "text": "close their stomata",
+     "curie": "GO:0090332"
+    },
+    {
+     "text": "oxygen",
+     "curie": "CHEBI:15379"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45537-201",
+   "claim": "Glucagon causes release of glucose from the liver into the blood",
+   "source": "Glucagon causes the release of glucose to the blood from the liver, and insulin facilitates the uptake of glucose by the body\u2019s cells.",
+   "ctor": "effect",
+   "subject": "PR:P01275",
+   "relation": null,
+   "object": "CHEBI:17234",
+   "sign": "pos",
+   "target": "amount",
+   "context": {
+    "anatomy": "UBERON:0000178"
+   },
+   "entities": [
+    {
+     "text": "glucagon",
+     "curie": "PR:P01275"
+    },
+    {
+     "text": "glucose",
+     "curie": "CHEBI:17234"
+    },
+    {
+     "text": "liver",
+     "curie": "UBERON:0002107"
+    },
+    {
+     "text": "blood",
+     "curie": "UBERON:0000178"
+    }
+   ]
+  },
+  {
+   "id": "reproduction-at-the-cellular-level-m45463-67",
+   "claim": "FtsZ is a tubulin-like protein component of the prokaryotic cytoskeleton.",
+   "source": "FtsZ: a tubulin-like protein component of the prokaryotic cytoskeleton that is important in prokaryotic cytokinesis (name origin: Filamenting temperature-sensitive mutant Z)",
+   "ctor": "rel",
+   "subject": "PR:000022726",
+   "relation": "part of",
+   "object": "GO:0005856",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:2"
+   },
+   "entities": [
+    {
+     "text": "FtsZ",
+     "curie": "PR:000022726"
+    },
+    {
+     "text": "tubulin",
+     "curie": "PR:000028799"
+    },
+    {
+     "text": "cytoskeleton",
+     "curie": "GO:0005856"
+    },
+    {
+     "text": "prokaryote",
+     "curie": "NCIT:C14263"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45537-334",
+   "claim": "Increasing blood glucose causes the pancreas to release insulin",
+   "source": "When blood-glucose levels are increasing, the pancreas releases insulin, which stimulates uptake of glucose by cells.",
+   "ctor": "effect",
+   "subject": "CHEBI:17234",
+   "relation": null,
+   "object": "PR:000009054",
+   "sign": "pos",
+   "target": "amount",
+   "context": {
+    "anatomy": "UBERON:0000178"
+   },
+   "entities": [
+    {
+     "text": "glucose",
+     "curie": "CHEBI:17234"
+    },
+    {
+     "text": "blood",
+     "curie": "UBERON:0000178"
+    },
+    {
+     "text": "pancreas",
+     "curie": "UBERON:0001264"
+    },
+    {
+     "text": "insulin",
+     "curie": "PR:000009054"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45537-156",
+   "claim": "An increase in blood potassium stimulates aldosterone release",
+   "source": "Aldosterone release from the adrenal cortex is stimulated by a decrease in blood concentrations of sodium ions, blood volume, or blood pressure, or by an increase in blood potassium levels.",
+   "ctor": "effect",
+   "subject": "CHEBI:29103",
+   "relation": null,
+   "object": "CHEBI:27584",
+   "sign": "pos",
+   "target": "amount",
+   "context": {
+    "anatomy": "UBERON:0000178"
+   },
+   "entities": [
+    {
+     "text": "potassium ion",
+     "curie": "CHEBI:29103"
+    },
+    {
+     "text": "blood",
+     "curie": "UBERON:0000178"
+    },
+    {
+     "text": "aldosterone",
+     "curie": "CHEBI:27584"
+    }
+   ]
+  },
+  {
+   "id": "cell-structure-and-function-m45432-219",
+   "claim": "The plant cell wall is external to the plasma membrane",
+   "source": "In b, the diagram of a plant cell, you see a structure external to the plasma membrane called the cell wall.",
+   "ctor": "rel",
+   "subject": "GO:0009505",
+   "relation": "adjacent to",
+   "object": "GO:0005886",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:33090"
+   },
+   "entities": [
+    {
+     "text": "plant cell wall",
+     "curie": "GO:0009505"
+    },
+    {
+     "text": "plasma membrane",
+     "curie": "GO:0005886"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45537-229",
+   "claim": "The atrial hormone reduces blood Na+ concentration",
+   "source": "It causes a reduction in blood volume and blood pressure, and reduces the concentration of Na+ in the blood.",
+   "ctor": "effect",
+   "subject": "PR:P01160",
+   "relation": null,
+   "object": "CHEBI:29101",
+   "sign": "neg",
+   "target": "amount",
+   "context": {
+    "anatomy": "UBERON:0000178"
+   },
+   "entities": [
+    {
+     "text": "atrial natriuretic peptide",
+     "curie": "PR:P01160"
+    },
+    {
+     "text": "sodium ion",
+     "curie": "CHEBI:29101"
+    },
+    {
+     "text": "blood",
+     "curie": "UBERON:0000178"
+    }
+   ]
+  },
+  {
+   "id": "cell-structure-and-function-m45432-25",
+   "claim": "Loss of microvilli prevents nutrient absorption in celiac patients",
+   "source": "The immune response damages microvilli, and thus, afflicted individuals cannot absorb nutrients.",
+   "ctor": "effect",
+   "subject": "GO:0005902",
+   "relation": null,
+   "object": "GO:0050892",
+   "sign": "pos",
+   "target": "process",
+   "context": {
+    "condition": "celiac disease"
+   },
+   "entities": [
+    {
+     "text": "microvilli",
+     "curie": "GO:0005902"
+    },
+    {
+     "text": "absorb nutrients",
+     "curie": "GO:0050892"
+    }
+   ]
+  },
+  {
+   "id": "reproduction-at-the-cellular-level-m45463-66",
+   "claim": "Binary fission is the process of prokaryotic cell division.",
+   "source": "binary fission: the process of prokaryotic cell division",
+   "ctor": "rel",
+   "subject": "GO:0043093",
+   "relation": "is_a",
+   "object": "GO:0051301",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:2"
+   },
+   "entities": [
+    {
+     "text": "binary fission",
+     "curie": "GO:0043093"
+    },
+    {
+     "text": "cell division",
+     "curie": "GO:0051301"
+    },
+    {
+     "text": "prokaryote",
+     "curie": "NCIT:C14263"
+    }
+   ]
+  },
+  {
+   "id": "molbio-m45475-117",
+   "claim": "People with defective nucleotide excision repair genes develop skin cancers early in life",
+   "source": "Individuals with flaws in their nucleotide excision repair genes show extreme sensitivity to sunlight and develop skin cancers early in life.",
+   "ctor": "effect",
+   "subject": "GO:0006289",
+   "relation": null,
+   "object": "HP:0008069",
+   "sign": "neg",
+   "target": "phenotype",
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "condition": "defective NER genes; early onset"
+   },
+   "entities": [
+    {
+     "text": "skin cancers",
+     "curie": "HP:0008069"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45537-53",
+   "claim": "Insulin decreases blood-glucose levels",
+   "source": "They are then given a sugary drink, which stimulates the pancreas to produce insulin to decrease blood-glucose levels.",
+   "ctor": "effect",
+   "subject": "PR:000009054",
+   "relation": null,
+   "object": "CHEBI:17234",
+   "sign": "neg",
+   "target": "amount",
+   "context": {
+    "anatomy": "UBERON:0000178"
+   },
+   "entities": [
+    {
+     "text": "insulin",
+     "curie": "PR:000009054"
+    },
+    {
+     "text": "glucose",
+     "curie": "CHEBI:17234"
+    },
+    {
+     "text": "blood",
+     "curie": "UBERON:0000178"
+    }
+   ]
+  },
+  {
+   "id": "molbio-m45475-67",
+   "claim": "Telomerase is active in some cancer cells",
+   "source": "Telomerase is typically found to be active in germ cells, adult stem cells, and some cancer cells.",
+   "ctor": "rel",
+   "subject": "GO:0005697",
+   "relation": "capable of",
+   "object": "GO:0000723",
+   "sign": null,
+   "target": null,
+   "context": {
+    "cellType": "CL:0001064",
+    "condition": "some cancer cells"
+   },
+   "entities": [
+    {
+     "text": "Telomerase",
+     "curie": "GO:0003720"
+    },
+    {
+     "text": "cancer cells",
+     "curie": "MONDO:0004992"
+    },
+    {
+     "text": "telomere maintenance",
+     "curie": "GO:0000723"
+    }
+   ]
+  },
+  {
+   "id": "how-cells-obtain-energy-m45440-11",
+   "claim": "Lactic acid fermentation occurs routinely in mammalian red blood cells",
+   "source": "This occurs routinely in mammalian red blood cells and in skeletal muscle that has insufficient oxygen supply to allow aerobic respiration to continue (that is, in muscles used to the point of fatigue).",
+   "ctor": "rel",
+   "subject": "GO:0019661",
+   "relation": "occurs in",
+   "object": "CL:0000232",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:40674",
+    "cellType": "CL:0000232"
+   },
+   "entities": [
+    {
+     "text": "This",
+     "curie": "GO:0019661"
+    },
+    {
+     "text": "mammalian red blood cells",
+     "curie": "CL:0000232"
+    },
+    {
+     "text": "Mammalia",
+     "curie": "NCBITaxon:40674"
+    }
+   ]
+  },
+  {
+   "id": "the-cellular-basis-of-inheritance-m45466-103",
+   "claim": "In some organisms nuclear envelopes form around the chromatids in telophase I",
+   "source": "In some organisms, the chromosomes decondense and nuclear envelopes form around the chromatids in telophase I.",
+   "ctor": "rel",
+   "subject": "GO:0031468",
+   "relation": "happens during",
+   "object": "GO:0007134",
+   "sign": null,
+   "target": null,
+   "context": {},
+   "entities": [
+    {
+     "text": "nuclear envelope reformation",
+     "curie": "GO:0031468"
+    },
+    {
+     "text": "telophase I",
+     "curie": "GO:0007134"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45536-175",
+   "claim": "Animal respiratory systems facilitate gas exchange",
+   "source": "Animal respiratory systems are designed to facilitate gas exchange.",
+   "ctor": "rel",
+   "subject": "UBERON:0001004",
+   "relation": "capable of",
+   "object": "GO:0007585",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:33208"
+   },
+   "entities": [
+    {
+     "text": "Animal respiratory systems",
+     "curie": "UBERON:0001004"
+    },
+    {
+     "text": "respiratory gaseous exchange by respiratory system",
+     "curie": "GO:0007585"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45536-212",
+   "claim": "An electrical signal triggers atrial cardiac muscle cells to contract",
+   "source": "The heart receives an electrical signal triggering the cardiac muscle cells in the atria to contract.",
+   "ctor": "effect",
+   "subject": "GO:0061337",
+   "relation": null,
+   "object": "GO:0060048",
+   "sign": "pos",
+   "target": "process",
+   "context": {
+    "anatomy": "UBERON:0002081",
+    "cellType": "CL:0000746"
+   },
+   "entities": [
+    {
+     "text": "heart",
+     "curie": "UBERON:0000948"
+    },
+    {
+     "text": "electrical signal",
+     "curie": "GO:0061337"
+    },
+    {
+     "text": "cardiac muscle cells",
+     "curie": "CL:0000746"
+    },
+    {
+     "text": "atria",
+     "curie": "UBERON:0002081"
+    },
+    {
+     "text": "contract",
+     "curie": "GO:0060048"
+    }
+   ]
+  },
+  {
+   "id": "the-cellular-basis-of-inheritance-m45466-165",
+   "claim": "In a diploid-dominant organism such as an animal, meiotic cells participate only in sexual reproduction",
+   "source": "Cells produced by meiosis in a diploid-dominant organism such as an animal will only participate in sexual reproduction.",
+   "ctor": "rel",
+   "subject": "GO:0051321",
+   "relation": "part of",
+   "object": "GO:0019953",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:33208"
+   },
+   "entities": [
+    {
+     "text": "meiosis",
+     "curie": "GO:0051321"
+    },
+    {
+     "text": "sexual reproduction",
+     "curie": "GO:0019953"
+    },
+    {
+     "text": "animals",
+     "curie": "NCBITaxon:33208"
+    }
+   ]
+  },
+  {
+   "id": "reproduction-at-the-cellular-level-m45455-16",
+   "claim": "Chromosomes are located in the nucleus of eukaryotic cells.",
+   "source": "Each species of eukaryote has a characteristic number of chromosomes in the nuclei of its cells.",
+   "ctor": "rel",
+   "subject": "GO:0005694",
+   "relation": "located in",
+   "object": "GO:0005634",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:2759"
+   },
+   "entities": [
+    {
+     "text": "chromosomes",
+     "curie": "GO:0005694"
+    },
+    {
+     "text": "nuclei",
+     "curie": "GO:0005634"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45538-197",
+   "claim": "Medications relieve pain in rheumatoid arthritis",
+   "source": "If joint damage is more extensive, medications can be used to relieve pain and decrease inflammation.",
+   "ctor": "effect",
+   "subject": "CHEBI:23888",
+   "relation": null,
+   "object": "HP:0012531",
+   "sign": "neg",
+   "target": "phenotype",
+   "context": {
+    "condition": "rheumatoid arthritis"
+   },
+   "entities": [
+    {
+     "text": "pain",
+     "curie": "HP:0012531"
+    },
+    {
+     "text": "rheumatoid arthritis",
+     "curie": "MONDO:0008383"
+    }
+   ]
+  },
+  {
+   "id": "how-cells-obtain-energy-m45437-11",
+   "claim": "Photosynthesizing organisms (plants) produce sugars",
+   "source": "For the most part, photosynthesizing organisms like plants produce these sugars.",
+   "ctor": "rel",
+   "subject": "GO:0015979",
+   "relation": "has output",
+   "object": "CHEBI:16646",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:33090"
+   },
+   "entities": [
+    {
+     "text": "plants",
+     "curie": "NCBITaxon:33090"
+    },
+    {
+     "text": "photosynthesizing",
+     "curie": "GO:0015979"
+    },
+    {
+     "text": "sugars",
+     "curie": "CHEBI:16646"
+    }
+   ]
+  },
+  {
+   "id": "the-cellular-basis-of-inheritance-m45465-68",
+   "claim": "Gametes are produced from diploid germ cells",
+   "source": "The gametes are produced from diploid germ cells, a special cell line that only produces gametes.",
+   "ctor": "rel",
+   "subject": "CL:0000300",
+   "relation": "develops from",
+   "object": "CL:0000586",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:33208"
+   },
+   "entities": [
+    {
+     "text": "gamete",
+     "curie": "CL:0000300"
+    },
+    {
+     "text": "germ cell",
+     "curie": "CL:0000586"
+    },
+    {
+     "text": "diploid",
+     "curie": "PATO:0001394"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45537-337",
+   "claim": "Glucagon stimulates release of stored glucose from the liver into the bloodstream",
+   "source": "When blood-glucose levels are decreasing, the pancreas releases glucagon, which stimulates the release of stored glucose by the liver to the bloodstream.",
+   "ctor": "effect",
+   "subject": "PR:P01275",
+   "relation": null,
+   "object": "CHEBI:17234",
+   "sign": "pos",
+   "target": "amount",
+   "context": {
+    "anatomy": "UBERON:0000178"
+   },
+   "entities": [
+    {
+     "text": "glucagon",
+     "curie": "PR:P01275"
+    },
+    {
+     "text": "glucose",
+     "curie": "CHEBI:17234"
+    },
+    {
+     "text": "liver",
+     "curie": "UBERON:0002107"
+    },
+    {
+     "text": "blood",
+     "curie": "UBERON:0000178"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45539-28",
+   "claim": "The vertebrate PNS is made up of peripheral sensory and motor nerves",
+   "source": "While there is great diversity among different vertebrate nervous systems, they all share a basic structure: a CNS that contains a brain and spinal cord and a PNS made up of peripheral sensory and motor nerves.",
+   "ctor": "rel",
+   "subject": "UBERON:0000010",
+   "relation": "has part",
+   "object": "UBERON:0001021",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:7742"
+   },
+   "entities": [
+    {
+     "text": "Vertebrata",
+     "curie": "NCBITaxon:7742"
+    },
+    {
+     "text": "peripheral nervous system",
+     "curie": "UBERON:0000010"
+    },
+    {
+     "text": "nerve",
+     "curie": "UBERON:0001021"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45536-61",
+   "claim": "Sympathetic input causes bronchial muscle relaxation",
+   "source": "Bronchi are innervated by nerves of both the parasympathetic and sympathetic nervous systems that control muscle contraction (parasympathetic) or relaxation (sympathetic) in the bronchi and bronchioles, depending on the ",
+   "ctor": "effect",
+   "subject": "UBERON:0000013",
+   "relation": null,
+   "object": "GO:0044557",
+   "sign": "pos",
+   "target": "process",
+   "context": {
+    "anatomy": "UBERON:0002185"
+   },
+   "entities": [
+    {
+     "text": "sympathetic",
+     "curie": "UBERON:0000013"
+    },
+    {
+     "text": "bronchi",
+     "curie": "UBERON:0002185"
+    },
+    {
+     "text": "relaxation",
+     "curie": "GO:0044557"
+    }
+   ]
+  },
+  {
+   "id": "reproduction-at-the-cellular-level-m45455-9",
+   "claim": "The nucleoid is the region of a prokaryotic cell containing the genome.",
+   "source": "The region in the cell containing this genetic material is called a nucleoid.",
+   "ctor": "rel",
+   "subject": "SO:0001026",
+   "relation": "located in",
+   "object": "GO:0009295",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCIT:C14263"
+   },
+   "entities": [
+    {
+     "text": "nucleoid",
+     "curie": "GO:0009295"
+    },
+    {
+     "text": "cell",
+     "curie": "CL:0000000"
+    },
+    {
+     "text": "genetic material",
+     "curie": "SO:0001026"
+    }
+   ]
+  },
+  {
+   "id": "the-cellular-basis-of-inheritance-m45466-106",
+   "claim": "In animals and some fungi cytokinesis separates cell contents by a cleavage furrow",
+   "source": "In nearly all species, cytokinesis separates the cell contents by either a cleavage furrow (in animals and some fungi), or a cell plate that will ultimately lead to formation of cell walls that separate the two daughter ",
+   "ctor": "rel",
+   "subject": "GO:0000910",
+   "relation": "has part",
+   "object": "GO:0032154",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:33208"
+   },
+   "entities": [
+    {
+     "text": "cytokinesis",
+     "curie": "GO:0000910"
+    },
+    {
+     "text": "cleavage furrow",
+     "curie": "GO:0032154"
+    },
+    {
+     "text": "animals",
+     "curie": "NCBITaxon:33208"
+    },
+    {
+     "text": "fungi",
+     "curie": "NCBITaxon:4751"
+    }
+   ]
+  },
+  {
+   "id": "the-cellular-basis-of-inheritance-m45466-119",
+   "claim": "In prophase II chromosomes condense again if they decondensed in telophase I",
+   "source": "In prophase II, if the chromosomes decondensed in telophase I, they condense again.",
+   "ctor": "rel",
+   "subject": "GO:0030261",
+   "relation": "happens during",
+   "object": "GO:0007136",
+   "sign": null,
+   "target": null,
+   "context": {
+    "condition": "chromosomes decondensed in telophase I"
+   },
+   "entities": [
+    {
+     "text": "prophase II",
+     "curie": "GO:0007136"
+    },
+    {
+     "text": "chromosome condensation",
+     "curie": "GO:0030261"
+    }
+   ]
+  },
+  {
+   "id": "how-cells-obtain-energy-m45438-42",
+   "claim": "Mature mammalian red blood cells are capable only of glycolysis",
+   "source": "For example, mature mammalian red blood cells are only capable of glycolysis, which is their sole source of ATP.",
+   "ctor": "rel",
+   "subject": "CL:0000232",
+   "relation": "capable of",
+   "object": "GO:0006096",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:40674"
+   },
+   "entities": [
+    {
+     "text": "mature mammalian red blood cells",
+     "curie": "CL:0000232"
+    },
+    {
+     "text": "glycolytic process",
+     "curie": "GO:0006096"
+    },
+    {
+     "text": "mammalian",
+     "curie": "NCBITaxon:40674"
+    }
+   ]
+  },
+  {
+   "id": "the-cellular-basis-of-inheritance-m45467-83",
+   "claim": "Triploid animals are sterile",
+   "source": "Triploid animals are sterile because meiosis cannot proceed normally with an odd number of chromosome sets.",
+   "ctor": "effect",
+   "subject": "PATO:0001381",
+   "relation": null,
+   "object": "PATO:0000956",
+   "sign": "pos",
+   "target": "phenotype",
+   "context": {
+    "taxon": "NCBITaxon:33208"
+   },
+   "entities": [
+    {
+     "text": "triploid",
+     "curie": "PATO:0001381"
+    },
+    {
+     "text": "sterile",
+     "curie": "PATO:0000956"
+    },
+    {
+     "text": "animals",
+     "curie": "NCBITaxon:33208"
+    }
+   ]
+  },
+  {
+   "id": "cell-structure-and-function-m45432-162",
+   "claim": "In single-celled eukaryotes, lysosomes digest ingested food",
+   "source": "In single-celled eukaryotes, lysosomes are important for digestion of the food they ingest and the recycling of organelles.",
+   "ctor": "rel",
+   "subject": "GO:0005764",
+   "relation": "capable of",
+   "object": "GO:0007586",
+   "sign": null,
+   "target": null,
+   "context": {
+    "condition": "single-celled eukaryotes"
+   },
+   "entities": [
+    {
+     "text": "lysosomes",
+     "curie": "GO:0005764"
+    },
+    {
+     "text": "digestion",
+     "curie": "GO:0007586"
+    }
+   ]
+  },
+  {
+   "id": "molbio-m45480-30",
+   "claim": "Lactose is a food source for E. coli",
+   "source": "The lac operon is a stretch of DNA with three adjacent genes that code for proteins that participate in the absorption and metabolism of lactose, a food source for E. coli.",
+   "ctor": "rel",
+   "subject": "GO:0005990",
+   "relation": "has input",
+   "object": "CHEBI:17716",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:562"
+   },
+   "entities": [
+    {
+     "text": "lactose",
+     "curie": "CHEBI:17716"
+    },
+    {
+     "text": "Escherichia coli",
+     "curie": "NCBITaxon:562"
+    },
+    {
+     "text": "lactose catabolic process",
+     "curie": "GO:0005990"
+    }
+   ]
+  },
+  {
+   "id": "cell-structure-and-function-m45432-158",
+   "claim": "In plant cells, the Golgi synthesises polysaccharides",
+   "source": "In plant cells, the Golgi has an additional role of synthesizing polysaccharides, some of which are incorporated into the cell wall and some of which are used in other parts of the cell.",
+   "ctor": "rel",
+   "subject": "GO:0005794",
+   "relation": "capable of",
+   "object": "GO:0000271",
+   "sign": null,
+   "target": null,
+   "context": {
+    "taxon": "NCBITaxon:33090"
+   },
+   "entities": [
+    {
+     "text": "Golgi apparatus",
+     "curie": "GO:0005794"
+    },
+    {
+     "text": "polysaccharides",
+     "curie": "CHEBI:18154"
+    },
+    {
+     "text": "polysaccharide biosynthetic process",
+     "curie": "GO:0000271"
+    }
+   ]
+  },
+  {
+   "id": "molbio-m45476-20",
+   "claim": "In prokaryotes transcription occurs in the cytoplasm",
+   "source": "The prokaryotes, which include bacteria and archaea, lack membrane-bound nuclei and other organelles, and transcription occurs in the cytoplasm of the cell.",
+   "ctor": "rel",
+   "subject": "GO:0006351",
+   "relation": "occurs in",
+   "object": "GO:0005737",
+   "sign": null,
+   "target": null,
+   "context": {
+    "cellType": "CL:0000520"
+   },
+   "entities": [
+    {
+     "text": "DNA-templated transcription",
+     "curie": "GO:0006351"
+    },
+    {
+     "text": "cytoplasm",
+     "curie": "GO:0005737"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45539-132",
+   "claim": "Some antidepressant medications promote neurogenesis in the hippocampus",
+   "source": "Interestingly, both exercise and some antidepressant medications also promote neurogenesis in the hippocampus.",
+   "ctor": "effect",
+   "subject": "CHEBI:35469",
+   "relation": null,
+   "object": "GO:0022008",
+   "sign": "pos",
+   "target": "process",
+   "context": {
+    "anatomy": "UBERON:0002421"
+   },
+   "entities": [
+    {
+     "text": "antidepressant",
+     "curie": "CHEBI:35469"
+    },
+    {
+     "text": "neurogenesis",
+     "curie": "GO:0022008"
+    },
+    {
+     "text": "hippocampus",
+     "curie": "UBERON:0002421"
+    }
+   ]
+  },
+  {
+   "id": "the-body-s-systems-m45537-336",
+   "claim": "Decreasing blood glucose causes the pancreas to release glucagon",
+   "source": "When blood-glucose levels are decreasing, the pancreas releases glucagon, which stimulates the release of stored glucose by the liver to the bloodstream.",
+   "ctor": "effect",
+   "subject": "CHEBI:17234",
+   "relation": null,
+   "object": "PR:P01275",
+   "sign": "neg",
+   "target": "amount",
+   "context": {
+    "anatomy": "UBERON:0000178"
+   },
+   "entities": [
+    {
+     "text": "glucose",
+     "curie": "CHEBI:17234"
+    },
+    {
+     "text": "blood",
+     "curie": "UBERON:0000178"
+    },
+    {
+     "text": "pancreas",
+     "curie": "UBERON:0001264"
+    },
+    {
+     "text": "glucagon",
+     "curie": "PR:P01275"
+    }
+   ]
+  },
+  {
+   "id": "reproduction-at-the-cellular-level-m45461-141",
+   "claim": "The G2 checkpoint blocks entry to the mitotic phase if certain conditions are not met.",
+   "source": "The G2 checkpoint bars the entry to the mitotic phase if certain conditions are not met.",
+   "ctor": "effect",
+   "subject": "GO:0007095",
+   "relation": null,
+   "object": "GO:0000086",
+   "sign": "neg",
+   "target": "process",
+   "context": {
+    "condition": "certain conditions not met"
+   },
+   "entities": [
+    {
+     "text": "G2 checkpoint",
+     "curie": "GO:0007095"
+    },
+    {
+     "text": "mitotic phase",
+     "curie": "GO:0000087"
+    },
+    {
+     "text": "G2/M transition",
+     "curie": "GO:0000086"
+    }
+   ]
+  }
+ ]
+}
