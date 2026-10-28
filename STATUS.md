@@ -20,6 +20,10 @@ Last updated 2026-10-28 (after M3).
 | RO pinning tests | built, pass | `BioLean/Tests/RO.lean` |
 | Context (M2): entity refinement, `Ctx`/`inCtx`, transport between sibling taxa, protocol on Evidence; S1-S5 pass | built | `BioLean/Context.lean`, `Taxa.lean`, `Examples/Context.lean`, `Tests/Context.lean` |
 | Argument layer (M2): `hypothesis` kind, `noEffect`, `opinionAt` by year, `Rivalry`; chemiosmotic timeline as theorems | built | `BioLean/Rivalry.lean`, `Examples/Chemiosmosis.lean` |
+| Argument layer: hypothesis kind, noEffect, opinionAt, Rivalry; chemiosmotic history as theorems | built | `BioLean/Rivalry.lean`, `Examples/Chemiosmosis.lean` |
+| Generalise (M4): coverage over real NCBITaxon, bracketing and clade fraction; transcription case | built | `BioLean/Coverage.lean`, `Examples/Transcription.lean` |
+| Ontology is_a closure for every used CURIE, ten ontologies, as a Lean search tree | generated | `BioLean/Ontology/IsA.lean`, `scripts/ontology/` |
+| Round 3 textbook claims (quantity, context): 351 compile; textbook 40.7 percent in Lean | generated | `BioLean/Lib/TextbookClaimsR3/` |
 | Quantity (M3): counts, cardinalities, intervals, yields, some/most; 6 arithmetic rules; 7 theorems | built | `BioLean/Examples/Quantity.lean` |
 | Closure search over the textbook; 60 derived facts certified | built | `scripts/search/`, `BioLean/Examples/Closure.lean`, `docs/closure-search.md` |
 | Statements with PMID evidence, swappable reliability table | built | `BioLean/Evidence.lean` |

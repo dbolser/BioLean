@@ -140,3 +140,80 @@ All four phase-1 tasks completed, built green together, and were committed (92dc
 | Add an `opposes` relation? | Not yet. RO has none; opposite-sign effects on a shared target already express antagonism per effector. Revisit if phase 2 shows many "opposes" sentences. | yes |
 | Guards on effect rules (parthood is not causation; shared cause; feedback loop) | Agreed as the three guards to add before more effect search; queued after phase 3. | n/a |
 | IsA data as a tree, retired terms unknown, import PATO/MONDO/HP/SO/PR | Tree yes; retired terms stay unknown (three have no replacement); import the five more (phase 3). | yes |
+
+## 5. Morning report
+
+Everything below is committed and pushed; every build (core, BioLeanLib, TextbookR2, TextbookR3)
+is green at HEAD. Nine agents ran across three phases; none hit a limit after the plan was written.
+Read the CHANGELOG entries headed "overnight" for the per-task detail, and `docs/textbook-lean-check.md`
+round 3, `docs/ic-triviality.md`, `docs/concept-drift.md`, `docs/holes.md`, and the three new Lean
+example files (`Chemiosmosis`, `Transcription`, round-3 claims) for the results themselves.
+
+### Milestones
+
+| milestone | state this morning |
+|---|---|
+| M2 context, hypotheses, rivals | **done.** Entity refinement built yesterday; tonight added `hypothesis` (weight 0), `noEffect`, `opinionAt year`, `Rivalry`. The chemiosmotic history is theorems: both rivals contested in 1965; chemiosmotic established 0.806 and chemical intermediate refuted 0.818 in 1974; the one-claim reading never established in any year, proved for all years. |
+| M3 quantity | built yesterday; tonight 620 quantity and context claims re-annotated with it: 425 got a constructor, 356 emitted, **351 compile**. The textbook is now **1,909 of 4,695 claims in Lean (40.7 percent)**, from 33.9. |
+| M4 generalise | **built.** `generalize` over instances in sibling taxa, coverage from the real NCBITaxon hierarchy, two measures. Proved: a generalisation's belief never exceeds its coverage. Transcription in cellular organisms: five model organisms reach 0.63 under bracketing; adding Euglena, Paramecium and Halobacterium gives 0.97 and *established*. A retrovirus instance cannot enter the generalisation (compile failure, right reason). |
+| M5 ontologies as biolib | **started.** The is_a ancestor closure of every CURIE biolib uses, from ten ontologies (GO, UBERON, CL, ChEBI, NCBITaxon, PATO, MONDO, HP, SO, PR): 3,548 terms, 4,857 edges, as a Lean search tree; `decide` in 60 ms. The hand-pinned taxon table is gone. |
+| M8 search | the hole search exists (ILP step one); the closure reruns in one command with the IC filter as default. |
+
+### Findings worth your attention, in order
+
+1. **Clade fraction cannot establish a universal; bracketing can, and it points at the gaps.** With
+   eight instances across all six major lineages, clade fraction reaches 0.18, because it measures
+   how mammal-heavy our vocabulary is (30 of 44 known cellular leaves are animals). Bracketing went
+   from 0.63 to 0.97 when the unsampled lineages (Discoba, Sar, Archaea) got one instance each.
+   Your instinct was right. Two honest flaws: "known children" come from our own vocabulary, not
+   from NCBI (Eukaryota has 4 here, 18 in NCBI), so bracketing is generous; and it has a cliff
+   (mouse plus human give Metazoa coverage 0 because Porifera is unsampled).
+2. **A rivalry decides losers, never winners.** Proved (`Rivalry.belief_le`): no rival's belief
+   rises above what its own evidence gives. Chemiosmosis wins in 1974 only because the chemical-
+   intermediate reports are re-read as support for a rival that the experiments then refute.
+   Entering each experiment on both rivals partly double-counts; multinomial opinions are the
+   principled fix (M6).
+3. **Concept drift is real and measurable.** 77 percent of the textbook's GO terms existed in GO
+   in 2005, 99 percent in 2020. "Cell division" did not exist in GO at the end of 2004; "mitotic
+   nuclear division", which 17 statements use, was minted in 2017. A third of the 2005 terms have
+   since been renamed. Nine statements rest on retired terms. Versioning policy confirmed: entities
+   carry their release, statements their year.
+4. **Information content beats the hub list and exposes an annotation habit.** The IC filter keeps
+   881 of 1,606 derived facts at threshold 2.5. The hub list was wrong 36 percent of the time and
+   nondeterministic; it is now opt-in. IC ranks specificity, not truth: ChEBI leaves dominate.
+5. **The hole search did not rediscover the eight hand-found holes, and the reason is the
+   finding.** Every one sits exactly where the formal vocabulary stops (proportion, precondition,
+   compound sentence), or needs rule induction rather than a missing fact (organelle abundance).
+   The best hypothesis it did find: one "opposes" relation between the sympathetic and
+   parasympathetic systems would make six textbook sentences theorems.
+6. **Round 3 found what M3 still lacks, from the data:** approximate and range counts (nine records
+   lean on a PATO workaround), open-ended measures ("over 6 m"), counts with a relation (trachea to
+   two bronchi), superlatives, rates of change, and comparisons between two contexts of one entity
+   (K+ inside versus outside). Five Lean rejections were UBERON life stages put in `Ctx.stage`,
+   which only takes GO processes: a schema gap, not an emitter bug.
+7. **Loading the refinement axioms into the closure finds annotation errors.** A scratch run with
+   "e ⊓ ∃r.f is_a e" edges raised derived facts to 2,190 and clashes to 5; one clash is a real
+   round-2 error ("animal cells have a centrosome" annotated as true of every cell). Not yet
+   committed as default.
+8. **Three identifier errors found and fixed or flagged:** area postrema in the Ozempic entities was
+   the inferior cerebellar peduncle (fixed); PR:000009054 labelled "insulin" is preproinsulin; CL
+   "somatic cell" is obsolete with a replacement that loses its meaning (kept, flagged).
+
+### Decisions for you (the agents' questions, with my provisional answers)
+
+| question | provisional answer |
+|---|---|
+| Keep "constructor plus blocker" as a sound weakening (57 records, +56 statements)? | Yes. The blocker names what was dropped; a weakened true claim is still a claim. Emitter to include them. |
+| Prokaryote as Bacteria (drops Archaea) or cellular organisms (drops the restriction)? | Bacteria, as the annotators chose. "Cellular organisms" would make "ETC in the plasma membrane" false of eukaryotes. Archaea are lost and should be said so. |
+| Bracketing: count children from real NCBI, not our vocabulary? | Yes, that is the honest version; it will lower the numbers and that is correct. Soften the cliff by recursing to the deepest bracketed split. |
+| Load refinement-axiom edges into the closure by default? | Yes; it found a real error. |
+| `Ctx.stage` for UBERON life stages; open-ended measure; count range; count with relation; second context slot? | Yes to the first three (small, data-driven). The second context slot and "damaged state of the subject" wait for more cases. |
+| Obsolete CL "somatic cell" | Replace with "diploid cell" CL:0000415 where meant; fix `Examples/Quantity.lean` to match. |
+| Emitter site placement (site refines the target for amount/process/activity, else the subject) | Accept as the convention; document it. |
+
+### What did not happen
+
+Nothing was pushed to GitHub by agents; I pushed after verifying each phase's build. No
+literature work, no weight calibration, no rule induction. The attribution trailer on agent
+commits names the model that did the work (Sonnet 5.5, Opus 5.5) rather than Fable 5.1; I left
+those as they are, since they are accurate.

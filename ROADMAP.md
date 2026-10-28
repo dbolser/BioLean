@@ -42,13 +42,13 @@ arithmetic side goals discharged by `decide`/`norm_num` when the term is built.
   tetrad entity), T30, T33 bijection. The 430 textbook claims binned `quantity` have not been
   re-annotated against the new constructors yet.
 
-## M4. Generalisation and canon
+## M4. Generalisation and canon (generalize built 2026-10-28; canonical kind and promotion remain)
 `generalize` with a coverage function over NCBITaxon/UBERON/CL; `canonical` evidence kind;
 promotion threshold for biolib.
 - **Exit:** "DNA is transcribed to RNA in cellular organisms" established from five instances;
   the retroviral exception stops at the context boundary.
 
-## M5. Ontologies as biolib
+## M5. Ontologies as biolib (is_a closure imported 2026-10-28; axioms and consistency checks remain)
 Import GO, UBERON, CL axioms as zero-PMID statements with provenance "ontology axiom"; compute
 over them.
 - Consistency checks: partonomy plus developmental processes (the "grow a plant" test on PO);
