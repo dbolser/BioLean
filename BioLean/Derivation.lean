@@ -44,11 +44,10 @@ inductive Derivation : Claim → Type
       (ab : Derivation (.rel r₁ a b h₁)) (bc : Derivation (.rel r₂ b c h₂))
       (ok : RO.chainOK r₁ r₂ r₃ = true := by decide) (h₃ : r₃.accepts k₁ k₃ = true := by decide) :
       Derivation (.rel r₃ a c h₃)
-  /-- Read a relation backwards: `a r b` gives `b r⁻¹ a`, or `b r' a` for RO's declared inverse. -/
-  | relInv {k₁ k₂ : Kind} {a : Entity k₁} {b : Entity k₂} {r : Rel} {h : r.accepts k₁ k₂ = true}
-      (ab : Derivation (.rel r a b h)) (r' : Rel)
-      (ok : RO.inverseOK r r' = true := by decide) (h' : r'.accepts k₂ k₁ = true := by decide) :
-      Derivation (.rel r' b a h')
+  -- There is deliberately no `relInv` rule. Claims are class-level existentials ("every a has some
+  -- b"), and the inverse of an existential does not follow: every nuclear membrane has some
+  -- phospholipid, but not every phospholipid is part of a nuclear membrane. State the inverse
+  -- direction as its own claim when the source asserts it (`Rel.flip`). Found by the closure search.
   /-- A subclass inherits a negation: `a is_a b` and `¬(b r c)` give `¬(a r c)`. -/
   | notRelSub {k₁ k₂ k₃ : Kind} {a : Entity k₁} {b : Entity k₂} {c : Entity k₃} {r : Rel}
       {h₁ : Rel.isA.accepts k₁ k₂ = true} {h₂ : r.accepts k₂ k₃ = true}
@@ -73,7 +72,6 @@ def opinion : {c : Claim} → Derivation c → Opinion
   | _, .viaAmount am mt => am.opinion.chain mt.opinion
   | _, .both d₁ d₂ => d₁.opinion.fuse d₂.opinion
   | _, .relChain ab bc .. => ab.opinion.weakest bc.opinion
-  | _, .relInv ab .. => ab.opinion
   | _, .notRelSub ab bc .. => ab.opinion.weakest bc.opinion
   | _, .notRelObj ac bc .. => ac.opinion.weakest bc.opinion
 
@@ -84,7 +82,6 @@ def axioms : {c : Claim} → Derivation c → List Statement
   | _, .viaAmount am mt => am.axioms ++ mt.axioms
   | _, .both d₁ d₂ => d₁.axioms ++ d₂.axioms
   | _, .relChain ab bc .. => ab.axioms ++ bc.axioms
-  | _, .relInv ab .. => ab.axioms
   | _, .notRelSub ab bc .. => ab.axioms ++ bc.axioms
   | _, .notRelObj ac bc .. => ac.axioms ++ bc.axioms
 
@@ -135,8 +132,6 @@ partial def render {c : Claim} (d : Derivation c) (indent : String := "") : Stri
   | .relChain ab bc .. =>
       s!"{indent}{d.opinion} RO chain ⊢ {d.claim}\n" ++
         render ab (indent ++ "  ") ++ "\n" ++ render bc (indent ++ "  ")
-  | .relInv ab .. =>
-      s!"{indent}{d.opinion} inverse ⊢ {d.claim}\n" ++ render ab (indent ++ "  ")
   | .notRelSub ab bc .. =>
       s!"{indent}{d.opinion} is_a inherits ¬ ⊢ {d.claim}\n" ++
         render ab (indent ++ "  ") ++ "\n" ++ render bc (indent ++ "  ")

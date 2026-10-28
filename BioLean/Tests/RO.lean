@@ -18,9 +18,11 @@ example : chainOK partOf partOf partOf = true := by decide                   -- 
 example : chainOK isA isA isA = true := by decide
 example : chainOK isA hasPart hasPart = true := by decide                    -- subclass inherits
 example : chainOK hasPart isA hasPart = true := by decide                    -- relation to subclass
+example : chainOK isA isA.flip isA.flip = false := by decide                 -- the class hierarchy does not inherit itself (closure search found this)
+example : chainOK isA.flip isA isA.flip = false := by decide
 example : chainOK partOf precededBy precededBy = true := by decide           -- row 1
 
--- inverses
+-- declared inverses (data only; there is no relInv derivation rule, see Derivation.lean)
 example : inverseOK partOf hasPart = true := by decide
 example : inverseOK occursIn occursIn.flip = true := by decide
 

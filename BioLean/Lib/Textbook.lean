@@ -19,9 +19,12 @@ def ax (note : String) : Evidence := { pmid := 0, year := 2026, kind := .ontolog
 
 /-! ### produces: `inverse(occurs_in) ∘ has_output ⊑ produces` (RO:0003000) -/
 
+/-- Stated in the direction the sentence asserts: every gonad hosts steroidogenesis. The forward
+reading "every steroidogenesis occurs in a gonad" would be false (adrenal cortex), and it cannot be
+inverted into this one: inverses of class-level claims are not derivable. -/
 def S_steroid_in_gonad : Statement where
   id := "body:m45537-204a"; text := "steroid hormone synthesis takes place in the gonads"
-  claim := .rel occursIn steroidogenesis gonad
+  claim := .rel occursIn.flip gonad steroidogenesis
   evidence := [tb "The gonads produce steroid hormones (OpenStax 16.4)"]
 
 def S_steroid_output : Statement where
@@ -31,7 +34,7 @@ def S_steroid_output : Statement where
 
 /-- The textbook sentence "the gonads produce steroid hormones", as a theorem. -/
 def gonad_produces_steroid : Derivation (.rel produces gonad steroidHormone) :=
-  .relChain (.relInv (.lit S_steroid_in_gonad) occursIn.flip) (.lit S_steroid_output)
+  .relChain (.lit S_steroid_in_gonad) (.lit S_steroid_output)
 
 /-! ### occurs_in lifts along part_of: `occurs_in ∘ part_of ⊑ occurs_in` -/
 

@@ -1279,8 +1279,9 @@ def ranges : List (Rel × RelSort) := [
 def chainOK (r₁ r₂ r₃ : Rel) : Bool :=
   chains.contains ([r₁, r₂], r₃)
   || (r₁ == r₂ && r₂ == r₃ && (transitive.contains r₃ || r₃ == Rel.isA))
-  || (r₁ == Rel.isA && r₂ == r₃)   -- subclass inherits the superclass relation
-  || (r₂ == Rel.isA && r₁ == r₃)   -- a relation to a subclass is one to the superclass
+  -- the is_a laws hold for RO object properties (existential restrictions), never for is_a itself or its inverse
+  || (r₁ == Rel.isA && r₂ == r₃ && r₃ != Rel.isA && r₃ != Rel.isA.flip)   -- subclass inherits the superclass relation
+  || (r₂ == Rel.isA && r₁ == r₃ && r₁ != Rel.isA && r₁ != Rel.isA.flip)   -- a relation to a subclass is one to the superclass
 
 /-- Is `r'` the inverse of `r`: by flag, or by RO's declared owl:inverseOf (either direction)? -/
 def inverseOK (r r' : Rel) : Bool :=
