@@ -1,7 +1,10 @@
 """Import the is_a ancestor closure of every CURIE biolib uses and emit it as numeric Lean data.
 
-GO, UBERON, CL and ChEBI come from OBO files (asserted is_a lines of the released, reasoned files); NCBITaxon
-from the OLS4 API, one request per closure term, cached in data/ontology/ncbitaxon_cache.json (the full file is 2 GB).
+GO, UBERON, CL, ChEBI, PATO, MONDO, HP, SO and PR come from OBO files (asserted is_a lines of the released, reasoned
+files; PR is pro_reasoned.obo, 200 MB, about a minute to fetch and parse); NCBITaxon from the OLS4 API, one request per
+closure term, cached in data/ontology/ncbitaxon_cache.json (the full file is 2 GB). PR terms named by a UniProt accession
+(PR:P01275) have no numeric code, so they are left out and their numeric ancestors seeded instead; is_a links to terms
+outside the closure (another ontology's terms) are dropped.
 Seeds are the used CURIEs (data/ontology/used_curies.json, from collect_entities.py) plus the replacements of retired
 ones. The closure is every seed and every is_a ancestor of a seed; the edges are the direct is_a links among them.
 Writes data/ontology/isa.json (terms with label, GO namespace, parents; retired used terms; missing ones) and
@@ -14,24 +17,27 @@ import obo
 OBO_DIR = sys.argv[1] if len(sys.argv) > 1 else '/tmp/obo'
 USED, CACHE, OUT_JSON, OUT_LEAN = ('data/ontology/used_curies.json', 'data/ontology/ncbitaxon_cache.json',
                                    'data/ontology/isa.json', 'BioLean/Ontology/IsA.lean')
-FILES = {'GO': 'go.obo', 'UBERON': 'uberon.obo', 'CL': 'cl-basic.obo', 'CHEBI': 'chebi_lite.obo'}
+FILES = {'GO': 'go.obo', 'UBERON': 'uberon.obo', 'CL': 'cl-basic.obo', 'CHEBI': 'chebi_lite.obo', 'PATO': 'pato.obo',
+         'MONDO': 'mondo.obo', 'HP': 'hp.obo', 'SO': 'so.obo', 'PR': 'pr.obo'}
 URLS = {'chebi_lite.obo': 'http://purl.obolibrary.org/obo/chebi/chebi_lite.obo'}
 # Ontology codes, fixed: append, never reorder (the codes are in the Lean data).
 PREFIXES = ['GO', 'UBERON', 'CL', 'CHEBI', 'NCBITaxon', 'PR', 'HP', 'PATO', 'MONDO', 'SO', 'BFO', 'CARO', 'PO',
             'NCIT', 'ENVO', 'OBA', 'OBI', 'CHMO', 'NBO', 'MAXO', 'COB', 'UO', 'EFO', 'ECOCORE', 'RO', 'CP']
 used = json.load(open(USED))
 prefix = lambda c: c.split(':', 1)[0]
-terms, retired, missing, versions = {}, {}, [], {}   # terms: curie -> {label, namespace?, parents}
+terms, retired, missing, versions, unencodable = {}, {}, [], {}, set()   # terms: curie -> {label, namespace?, parents}
 
 
 def close(seeds, lookup):
-    """Add the is_a ancestor closure of `seeds` to `terms`; `lookup(curie)` gives a term record or None."""
+    """Add the is_a ancestor closure of `seeds` to `terms`; `lookup(curie)` gives a term record or None. A term with
+    no numeric code is passed through: left out, its parents followed."""
     stack = list(seeds)
     while stack:
         c = stack.pop()
-        if c in terms: continue
+        if c in terms or c in unencodable: continue
         t = lookup(c)
         if t is None: missing.append(c); continue
+        if not c.partition(':')[2].isdigit(): unencodable.add(c); stack += t['parents']; continue  # PR:P01275
         terms[c] = t
         stack += t['parents']
 
@@ -104,6 +110,8 @@ versions['NCBITaxon'] = f'OLS4 API ncbitaxon {cache["version"]}'
 def code(c):
     p, _, n = c.partition(':')
     return (PREFIXES.index(p), int(n)) if p in PREFIXES and n.isdigit() else None
+dropped = sorted({(c, p) for c, t in terms.items() for p in t['parents'] if p not in terms})
+for t in terms.values(): t['parents'] = [p for p in t['parents'] if p in terms]
 bad = sorted(c for c in terms if code(c) is None)
 assert not bad, f'closure terms with no numeric code (add the prefix to PREFIXES?): {bad[:20]}'
 assert len({code(c) for c in terms}) == len(terms), 'two curies share a code'
@@ -115,22 +123,26 @@ def d(c): # longest is_a path up from c
 max_depth = max(map(d, terms))
 
 json.dump({'versions': versions, 'prefixes': PREFIXES, 'terms': dict(sorted(terms.items())),
-           'retired': dict(sorted(retired.items())), 'missing': sorted(set(missing))},
+           'retired': dict(sorted(retired.items())), 'missing': sorted(set(missing)),
+           'unencodable': sorted(unencodable), 'dropped_edges': dropped},
           open(OUT_JSON, 'w'), indent=0)
 
 lean_str = lambda s: s.replace('\\', '\\\\').replace('"', '\\"')
 pair = lambda k: f'⟨{k[0]}, {k[1]}⟩'
 by_pre = collections.Counter(prefix(c) for c in terms)
-rows = sorted((code(c), t['label'], [code(p) for p in t['parents']]) for c, t in terms.items())
+kids = collections.defaultdict(list)
+for c, t in terms.items():
+    for p in t['parents']: kids[p].append(c)
+rows = sorted((code(c), t['label'], [code(p) for p in t['parents']], sorted(map(code, kids[c]))) for c, t in terms.items())
 
 
 def tree(rows, ind):
     """A balanced search tree literal over sorted rows, one node per line."""
     if not rows: return '.leaf'
     m = len(rows) // 2
-    k, lab, ps = rows[m]
+    k, lab, ps, cs = rows[m]
     sub = lambda r: tree(r, ind + '  ') if len(r) == 0 else f'({tree(r, ind + "  ")})'
-    return (f'.node {pair(k)} "{lean_str(lab)}" [{", ".join(map(pair, ps))}]\n'
+    return (f'.node {pair(k)} "{lean_str(lab)}" [{", ".join(map(pair, ps))}] [{", ".join(map(pair, cs))}]\n'
             f'{ind}  {sub(rows[:m])}\n{ind}  {sub(rows[m + 1:])}')
 
 
@@ -141,7 +153,8 @@ L = ['/-! # Ontology is_a, imported as data', '',
      'Sources: ' + '; '.join(f'{p} {v}' for p, v in versions.items()) + '.',
      'Terms per ontology: ' + ', '.join(f'{p} {n}' for p, n in by_pre.most_common()) + '.', '',
      'A CURIE is a `Code`, (ontology, local id), and the terms sit in a balanced search tree keyed on it, so',
-     '`decide` follows an is_a step in a dozen number comparisons rather than a scan of every edge. -/', '',
+     '`decide` follows an is_a step in a dozen number comparisons rather than a scan of every edge. Each term',
+     'also lists its direct children, so walking down (`children`, coverage of a clade) is as cheap as up. -/', '',
      'namespace BioLean', '', '/-- A CURIE as (ontology, local id): `GO:0006096` is `⟨0, 6096⟩`. -/',
      'abbrev Code := Nat × Nat', '', 'namespace Curie', '',
      '/-- Ontology prefixes; the code of a prefix is its index. -/',
@@ -162,20 +175,22 @@ end Curie
 
 namespace Ontology
 
-/-- A binary search tree of terms, ordered on `Code` lexicographically: key, label, direct is_a parents. -/
+/-- A binary search tree of terms, ordered on `Code` lexicographically: key, label, direct is_a parents,
+direct is_a children (among the imported terms). -/
 inductive Tree where
   | leaf
-  | node (key : Code) (label : String) (parents : List Code) (l r : Tree)
+  | node (key : Code) (label : String) (parents children : List Code) (l r : Tree)
 
-def Tree.find? (a : Code) : Tree → Option (String × List Code)
+def Tree.find? (a : Code) : Tree → Option (String × List Code × List Code)
   | .leaf => none
-  | .node k lab ps l r =>
+  | .node k lab ps cs l r =>
     if a.1 < k.1 || (a.1 == k.1 && a.2 < k.2) then l.find? a
-    else if a == k then some (lab, ps) else r.find? a
+    else if a == k then some (lab, ps, cs) else r.find? a
 
+/-- Key, label and parents of every term, in key order. -/
 def Tree.toList : Tree → List (Code × String × List Code)
   | .leaf => []
-  | .node k lab ps l r => l.toList ++ (k, lab, ps) :: r.toList
+  | .node k lab ps _ l r => l.toList ++ (k, lab, ps) :: r.toList
 ''',
      'set_option maxRecDepth 100000 in', '/-- The closure. -/', f'def tree : Tree :=\n  {tree(rows, "")}', '']
 rt = [(c, r) for c, r in sorted(retired.items()) if code(c)]
@@ -192,7 +207,11 @@ def labels : List (Code × String) := tree.toList.map fun (c, lab, _) => (c, lab
 
 def label? (a : Code) : Option String := (tree.find? a).map (·.1)
 
-def parents (a : Code) : List Code := ((tree.find? a).map (·.2)).getD []
+def parents (a : Code) : List Code := ((tree.find? a).map (·.2.1)).getD []
+
+/-- Direct is_a children among the imported terms. Only used terms and their ancestors are imported,
+so this under-counts the ontology's real children. -/
+def children (a : Code) : List Code := ((tree.find? a).map (·.2.2)).getD []
 
 /-- Is the term in the imported closure? -/
 def known (a : Code) : Bool := (tree.find? a).isSome
@@ -223,3 +242,5 @@ print(f'terms {len(terms)}, edges {len(edges)}, max depth {max_depth}; by prefix
 print(f'retired used terms {len(retired)}:')
 for c, r in sorted(retired.items()): print(f'  {c} {r["why"]}: replaced_by {r["replaced_by"]}, consider {r["consider"]}')
 print(f'missing (not in source) {len(set(missing))}: {sorted(set(missing))}')
+print(f'terms with no numeric code, left out (parents followed) {len(unencodable)}: {sorted(unencodable)}')
+print(f'is_a links out of the closure, dropped {len(dropped)}: {dropped[:10]}')

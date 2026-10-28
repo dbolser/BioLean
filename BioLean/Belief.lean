@@ -224,6 +224,41 @@ theorem chain_le_weakest (x y : Opinion) : (chain x y).belief ≤ (weakest x y).
   · rw [min_eq_left h]; nlinarith [x.belief_nonneg, y.belief_lt_one]
   · rw [min_eq_right h]; nlinarith [y.belief_nonneg, x.belief_lt_one]
 
+/-! ### Discounting -/
+
+/-- Scale an opinion by a weight `w ∈ [0, 1]`: belief and disbelief both shrink by `w`, and the
+mass they lose becomes uncertainty. This is Jøsang's trust discount with a dogmatic trust opinion
+`(w, 0, 1 - w)`; `generalize` uses it with taxonomic coverage as the weight. -/
+def discount (o : Opinion) (w : ℚ) (h0 : 0 ≤ w) (h1 : w ≤ 1) : Opinion where
+  belief := w * o.belief
+  disbelief := w * o.disbelief
+  uncertainty := 1 - w * o.belief - w * o.disbelief
+  belief_nonneg := mul_nonneg h0 o.belief_nonneg
+  disbelief_nonneg := mul_nonneg h0 o.disbelief_nonneg
+  uncertainty_pos := by
+    have := o.sum_eq_one; have := o.uncertainty_pos; have := o.belief_nonneg; have := o.disbelief_nonneg
+    nlinarith
+  sum_eq_one := by ring
+
+theorem discount_belief_le (o : Opinion) (w : ℚ) (h0 : 0 ≤ w) (h1 : w ≤ 1) :
+    (o.discount w h0 h1).belief ≤ o.belief := by
+  simp only [discount]; nlinarith [o.belief_nonneg]
+
+theorem discount_disbelief_le (o : Opinion) (w : ℚ) (h0 : 0 ≤ w) (h1 : w ≤ 1) :
+    (o.discount w h0 h1).disbelief ≤ o.disbelief := by
+  simp only [discount]; nlinarith [o.disbelief_nonneg]
+
+/-- Discounting never removes ignorance. -/
+theorem uncertainty_le_discount (o : Opinion) (w : ℚ) (h0 : 0 ≤ w) (h1 : w ≤ 1) :
+    o.uncertainty ≤ (o.discount w h0 h1).uncertainty := by
+  simp only [discount]; nlinarith [o.sum_eq_one, o.belief_nonneg, o.disbelief_nonneg]
+
+@[simp] theorem discount_one (o : Opinion) : o.discount 1 zero_le_one le_rfl = o := by
+  ext <;> simp [discount]; linarith [o.sum_eq_one]
+
+@[simp] theorem discount_zero (o : Opinion) : o.discount 0 le_rfl zero_le_one = vacuous := by
+  ext <;> simp [discount, vacuous]
+
 /-! ### Printing -/
 
 /-- Fixed-point decimal rendering of a rational in `[0, 1]`, for reports. -/

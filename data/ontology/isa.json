@@ -4,6 +4,11 @@
 "UBERON": "uberon.obo releases/2026-10-01",
 "CL": "cl-basic.obo cl/releases/2026-06-08/cl-basic.owl",
 "CHEBI": "chebi_lite.obo chebi/256",
+"PATO": "pato.obo releases/2026-10-01/pato.obo",
+"MONDO": "mondo.obo releases/2026-10-06",
+"HP": "hp.obo hp/releases/2026-09-01",
+"SO": "so.obo 2026-08-07",
+"PR": "pr.obo 73.1",
 "NCBITaxon": "OLS4 API ncbitaxon 2026-07-12"
 },
 "prefixes": [
@@ -47,6 +52,24 @@
 },
 "BFO:0000004": {
 "label": "independent continuant",
+"parents": [
+"BFO:0000002"
+]
+},
+"BFO:0000016": {
+"label": "disposition",
+"parents": [
+"BFO:0000017"
+]
+},
+"BFO:0000017": {
+"label": "realizable entity",
+"parents": [
+"BFO:0000020"
+]
+},
+"BFO:0000020": {
+"label": "specifically dependent continuant",
 "parents": [
 "BFO:0000002"
 ]
@@ -5552,6 +5575,10 @@
 "CL:0000228"
 ]
 },
+"COB:0000013": {
+"label": "molecule",
+"parents": []
+},
 "GO:0000049": {
 "label": "tRNA binding",
 "parents": [
@@ -5909,6 +5936,13 @@
 "label": "RNA 5'-end processing",
 "parents": [
 "GO:0006396"
+],
+"namespace": "biological_process"
+},
+"GO:0001171": {
+"label": "reverse transcription",
+"parents": [
+"GO:0006278"
 ],
 "namespace": "biological_process"
 },
@@ -7122,6 +7156,13 @@
 ],
 "namespace": "biological_process"
 },
+"GO:0006278": {
+"label": "RNA-templated DNA biosynthetic process",
+"parents": [
+"GO:0071897"
+],
+"namespace": "biological_process"
+},
 "GO:0006281": {
 "label": "DNA repair",
 "parents": [
@@ -7605,6 +7646,14 @@
 "label": "nucleocytoplasmic transport",
 "parents": [
 "GO:0051169"
+],
+"namespace": "biological_process"
+},
+"GO:0006914": {
+"label": "autophagy",
+"parents": [
+"GO:0009056",
+"GO:0061919"
 ],
 "namespace": "biological_process"
 },
@@ -8920,6 +8969,13 @@
 ],
 "namespace": "biological_process"
 },
+"GO:0009791": {
+"label": "post-embryonic development",
+"parents": [
+"GO:0032501"
+],
+"namespace": "biological_process"
+},
 "GO:0009832": {
 "label": "plant-type cell wall biogenesis",
 "parents": [
@@ -9434,6 +9490,13 @@
 "GO:0110165"
 ],
 "namespace": "cellular_component"
+},
+"GO:0016037": {
+"label": "light absorption",
+"parents": [
+"GO:0009987"
+],
+"namespace": "biological_process"
 },
 "GO:0016042": {
 "label": "lipid catabolic process",
@@ -11016,6 +11079,14 @@
 ],
 "namespace": "biological_process"
 },
+"GO:0036089": {
+"label": "cleavage furrow formation",
+"parents": [
+"GO:0032506",
+"GO:0099024"
+],
+"namespace": "biological_process"
+},
 "GO:0036094": {
 "label": "small molecule binding",
 "parents": [
@@ -12122,6 +12193,15 @@
 ],
 "namespace": "biological_process"
 },
+"GO:0048316": {
+"label": "seed development",
+"parents": [
+"GO:0009791",
+"GO:0048608",
+"GO:0160109"
+],
+"namespace": "biological_process"
+},
 "GO:0048468": {
 "label": "cell development",
 "parents": [
@@ -12186,6 +12266,14 @@
 "label": "developmental growth",
 "parents": [
 "GO:0040007"
+],
+"namespace": "biological_process"
+},
+"GO:0048608": {
+"label": "reproductive structure development",
+"parents": [
+"GO:0003006",
+"GO:0048856"
 ],
 "namespace": "biological_process"
 },
@@ -12857,6 +12945,13 @@
 ],
 "namespace": "molecular_function"
 },
+"GO:0061919": {
+"label": "process utilizing autophagic mechanism",
+"parents": [
+"GO:0009987"
+],
+"namespace": "biological_process"
+},
 "GO:0061982": {
 "label": "meiosis I cell cycle process",
 "parents": [
@@ -13104,6 +13199,14 @@
 "label": "cellular component organization or biogenesis",
 "parents": [
 "GO:0009987"
+],
+"namespace": "biological_process"
+},
+"GO:0071897": {
+"label": "DNA biosynthetic process",
+"parents": [
+"GO:0006259",
+"GO:0141187"
 ],
 "namespace": "biological_process"
 },
@@ -13575,6 +13678,13 @@
 ],
 "namespace": "cellular_component"
 },
+"GO:0099024": {
+"label": "plasma membrane invagination",
+"parents": [
+"GO:0010324"
+],
+"namespace": "biological_process"
+},
 "GO:0099080": {
 "label": "supramolecular complex",
 "parents": [
@@ -13863,6 +13973,13 @@
 },
 "GO:0160108": {
 "label": "animal gross anatomical part developmental process",
+"parents": [
+"GO:0048856"
+],
+"namespace": "biological_process"
+},
+"GO:0160109": {
+"label": "plant gross anatomical part developmental process",
 "parents": [
 "GO:0048856"
 ],
@@ -14240,6 +14357,2492 @@
 "GO:0051252"
 ],
 "namespace": "biological_process"
+},
+"HP:0000001": {
+"label": "All",
+"parents": []
+},
+"HP:0000002": {
+"label": "Abnormality of body height",
+"parents": [
+"HP:0001507"
+]
+},
+"HP:0000032": {
+"label": "Abnormal male external genitalia morphology",
+"parents": [
+"HP:0000811",
+"HP:0010461"
+]
+},
+"HP:0000035": {
+"label": "Abnormal testis morphology",
+"parents": [
+"HP:0000032"
+]
+},
+"HP:0000050": {
+"label": "Hypoplastic male external genitalia",
+"parents": [
+"HP:0000032",
+"HP:0003241"
+]
+},
+"HP:0000078": {
+"label": "Abnormality of the genital system",
+"parents": [
+"HP:0000119"
+]
+},
+"HP:0000080": {
+"label": "Abnormality of reproductive system physiology",
+"parents": [
+"HP:0000078"
+]
+},
+"HP:0000118": {
+"label": "Phenotypic abnormality",
+"parents": [
+"HP:0000001"
+]
+},
+"HP:0000119": {
+"label": "Abnormality of the genitourinary system",
+"parents": [
+"HP:0000118"
+]
+},
+"HP:0000144": {
+"label": "Decreased fertility",
+"parents": [
+"HP:0000080"
+]
+},
+"HP:0000152": {
+"label": "Abnormality of head or neck",
+"parents": [
+"HP:0000118"
+]
+},
+"HP:0000234": {
+"label": "Abnormality of the head",
+"parents": [
+"HP:0000152"
+]
+},
+"HP:0000271": {
+"label": "Abnormality of the face",
+"parents": [
+"HP:0000234"
+]
+},
+"HP:0000356": {
+"label": "Abnormality of the outer ear",
+"parents": [
+"HP:0031703"
+]
+},
+"HP:0000363": {
+"label": "Abnormal earlobe morphology",
+"parents": [
+"HP:0000377"
+]
+},
+"HP:0000364": {
+"label": "Hearing abnormality",
+"parents": [
+"HP:0031704"
+]
+},
+"HP:0000365": {
+"label": "Hearing impairment",
+"parents": [
+"HP:0000364"
+]
+},
+"HP:0000377": {
+"label": "Abnormal pinna morphology",
+"parents": [
+"HP:0000356"
+]
+},
+"HP:0000464": {
+"label": "Abnormality of the neck",
+"parents": [
+"HP:0000152"
+]
+},
+"HP:0000465": {
+"label": "Webbed neck",
+"parents": [
+"HP:0025668"
+]
+},
+"HP:0000478": {
+"label": "Abnormality of the eye",
+"parents": [
+"HP:0000118"
+]
+},
+"HP:0000504": {
+"label": "Abnormality of vision",
+"parents": [
+"HP:0012373"
+]
+},
+"HP:0000505": {
+"label": "Visual impairment",
+"parents": [
+"HP:0000504"
+]
+},
+"HP:0000572": {
+"label": "Visual loss",
+"parents": [
+"HP:0000505"
+]
+},
+"HP:0000598": {
+"label": "Abnormality of the ear",
+"parents": [
+"HP:0000118"
+]
+},
+"HP:0000707": {
+"label": "Abnormality of the nervous system",
+"parents": [
+"HP:0000118"
+]
+},
+"HP:0000769": {
+"label": "Abnormality of the breast",
+"parents": [
+"HP:0000118"
+]
+},
+"HP:0000771": {
+"label": "Gynecomastia",
+"parents": [
+"HP:0031093"
+]
+},
+"HP:0000789": {
+"label": "Infertility",
+"parents": [
+"HP:0000144"
+]
+},
+"HP:0000811": {
+"label": "Abnormal external genitalia morphology",
+"parents": [
+"HP:0012243"
+]
+},
+"HP:0000855": {
+"label": "Insulin resistance",
+"parents": [
+"HP:0011014"
+]
+},
+"HP:0000868": {
+"label": "Decreased fertility in females",
+"parents": [
+"HP:0000144"
+]
+},
+"HP:0000924": {
+"label": "Abnormality of the skeletal system",
+"parents": [
+"HP:0033127"
+]
+},
+"HP:0000951": {
+"label": "Abnormality of the skin",
+"parents": [
+"HP:0001574"
+]
+},
+"HP:0000969": {
+"label": "Edema",
+"parents": [
+"HP:0011032"
+]
+},
+"HP:0000992": {
+"label": "Cutaneous photosensitivity",
+"parents": [
+"HP:0011354"
+]
+},
+"HP:0001249": {
+"label": "Intellectual disability",
+"parents": [
+"HP:0011446",
+"HP:0012759"
+]
+},
+"HP:0001263": {
+"label": "Global developmental delay",
+"parents": [
+"HP:0012758"
+]
+},
+"HP:0001297": {
+"label": "Stroke",
+"parents": [
+"HP:0100659"
+]
+},
+"HP:0001324": {
+"label": "Muscle weakness",
+"parents": [
+"HP:0011804"
+]
+},
+"HP:0001337": {
+"label": "Tremor",
+"parents": [
+"HP:0004305"
+]
+},
+"HP:0001367": {
+"label": "Abnormal joint morphology",
+"parents": [
+"HP:0011842"
+]
+},
+"HP:0001369": {
+"label": "Arthritis",
+"parents": [
+"HP:0001367"
+]
+},
+"HP:0001376": {
+"label": "Limitation of joint mobility",
+"parents": [
+"HP:0011729"
+]
+},
+"HP:0001386": {
+"label": "Joint swelling",
+"parents": [
+"HP:0000969",
+"HP:0001367"
+]
+},
+"HP:0001387": {
+"label": "Joint stiffness",
+"parents": [
+"HP:0001376"
+]
+},
+"HP:0001507": {
+"label": "Growth abnormality",
+"parents": [
+"HP:0000118"
+]
+},
+"HP:0001510": {
+"label": "Growth delay",
+"parents": [
+"HP:0001507"
+]
+},
+"HP:0001513": {
+"label": "Obesity",
+"parents": [
+"HP:0004324"
+]
+},
+"HP:0001574": {
+"label": "Abnormality of the integument",
+"parents": [
+"HP:0000118"
+]
+},
+"HP:0001595": {
+"label": "Abnormal hair morphology",
+"parents": [
+"HP:0011138"
+]
+},
+"HP:0001608": {
+"label": "Abnormality of the voice",
+"parents": [
+"HP:0000118"
+]
+},
+"HP:0001626": {
+"label": "Abnormality of the cardiovascular system",
+"parents": [
+"HP:0000118"
+]
+},
+"HP:0001627": {
+"label": "Abnormal heart morphology",
+"parents": [
+"HP:0030680"
+]
+},
+"HP:0001871": {
+"label": "Abnormality of blood and blood-forming tissues",
+"parents": [
+"HP:0000118"
+]
+},
+"HP:0001892": {
+"label": "Abnormal bleeding",
+"parents": [
+"HP:0001871"
+]
+},
+"HP:0001939": {
+"label": "Abnormality of metabolism/homeostasis",
+"parents": [
+"HP:0000118"
+]
+},
+"HP:0001941": {
+"label": "Acidosis",
+"parents": [
+"HP:0004360"
+]
+},
+"HP:0001945": {
+"label": "Fever",
+"parents": [
+"HP:0004370"
+]
+},
+"HP:0001952": {
+"label": "Glucose intolerance",
+"parents": [
+"HP:0011014"
+]
+},
+"HP:0001999": {
+"label": "Abnormal facial shape",
+"parents": [
+"HP:0000271"
+]
+},
+"HP:0002011": {
+"label": "Morphological central nervous system abnormality",
+"parents": [
+"HP:0012639"
+]
+},
+"HP:0002013": {
+"label": "Vomiting",
+"parents": [
+"HP:0002017"
+]
+},
+"HP:0002014": {
+"label": "Diarrhea",
+"parents": [
+"HP:0011458"
+]
+},
+"HP:0002017": {
+"label": "Nausea and vomiting",
+"parents": [
+"HP:0011458"
+]
+},
+"HP:0002018": {
+"label": "Nausea",
+"parents": [
+"HP:0002017"
+]
+},
+"HP:0002020": {
+"label": "Gastroesophageal reflux",
+"parents": [
+"HP:0025270"
+]
+},
+"HP:0002027": {
+"label": "Abdominal pain",
+"parents": [
+"HP:0011458",
+"HP:0012531"
+]
+},
+"HP:0002180": {
+"label": "Neurodegeneration",
+"parents": [
+"HP:0007367"
+]
+},
+"HP:0002231": {
+"label": "Sparse body hair",
+"parents": [
+"HP:0008070"
+]
+},
+"HP:0002311": {
+"label": "Incoordination",
+"parents": [
+"HP:0011443"
+]
+},
+"HP:0002401": {
+"label": "Stroke-like episode",
+"parents": [
+"HP:0001297"
+]
+},
+"HP:0002597": {
+"label": "Abnormality of the vasculature",
+"parents": [
+"HP:0001626"
+]
+},
+"HP:0002664": {
+"label": "Neoplasm",
+"parents": [
+"HP:0000118"
+]
+},
+"HP:0003011": {
+"label": "Abnormality of the musculature",
+"parents": [
+"HP:0033127"
+]
+},
+"HP:0003128": {
+"label": "Lactic acidosis",
+"parents": [
+"HP:0001941"
+]
+},
+"HP:0003241": {
+"label": "External genital hypoplasia",
+"parents": [
+"HP:0000811"
+]
+},
+"HP:0003552": {
+"label": "Muscle stiffness",
+"parents": [
+"HP:0011804"
+]
+},
+"HP:0003581": {
+"label": "Adult onset",
+"parents": [
+"HP:0003674"
+]
+},
+"HP:0003674": {
+"label": "Onset",
+"parents": [
+"HP:0031797"
+]
+},
+"HP:0003750": {
+"label": "Increased muscle fatiguability",
+"parents": [
+"HP:0011804"
+]
+},
+"HP:0004305": {
+"label": "Involuntary movements",
+"parents": [
+"HP:0011442",
+"HP:0100022"
+]
+},
+"HP:0004322": {
+"label": "Short stature",
+"parents": [
+"HP:0000002",
+"HP:0001510"
+]
+},
+"HP:0004323": {
+"label": "Abnormality of body weight",
+"parents": [
+"HP:0001507"
+]
+},
+"HP:0004324": {
+"label": "Increased body weight",
+"parents": [
+"HP:0004323"
+]
+},
+"HP:0004360": {
+"label": "Abnormality of acid-base homeostasis",
+"parents": [
+"HP:0012337"
+]
+},
+"HP:0004370": {
+"label": "Abnormality of temperature regulation",
+"parents": [
+"HP:0012337"
+]
+},
+"HP:0004395": {
+"label": "Malnutrition",
+"parents": [
+"HP:0011458"
+]
+},
+"HP:0004396": {
+"label": "Poor appetite",
+"parents": [
+"HP:0011458"
+]
+},
+"HP:0007367": {
+"label": "Atrophy/Degeneration affecting the central nervous system",
+"parents": [
+"HP:0002011"
+]
+},
+"HP:0008069": {
+"label": "Neoplasm of the skin",
+"parents": [
+"HP:0000951",
+"HP:0011793"
+]
+},
+"HP:0008070": {
+"label": "Sparse hair",
+"parents": [
+"HP:0011362"
+]
+},
+"HP:0008734": {
+"label": "Decreased testicular size",
+"parents": [
+"HP:0000050",
+"HP:0010468"
+]
+},
+"HP:0009020": {
+"label": "Exercise-induced muscle fatigue",
+"parents": [
+"HP:0003750"
+]
+},
+"HP:0009907": {
+"label": "Attached earlobe",
+"parents": [
+"HP:0000363"
+]
+},
+"HP:0010461": {
+"label": "Abnormality of the male genitalia",
+"parents": [
+"HP:0012243"
+]
+},
+"HP:0010468": {
+"label": "Aplasia/Hypoplasia of the testes",
+"parents": [
+"HP:0045058"
+]
+},
+"HP:0011014": {
+"label": "Abnormal glucose homeostasis",
+"parents": [
+"HP:0012337"
+]
+},
+"HP:0011024": {
+"label": "Abnormality of the gastrointestinal tract",
+"parents": [
+"HP:0025031"
+]
+},
+"HP:0011032": {
+"label": "Abnormality of fluid regulation",
+"parents": [
+"HP:0012337"
+]
+},
+"HP:0011121": {
+"label": "Abnormal skin morphology",
+"parents": [
+"HP:0000951"
+]
+},
+"HP:0011138": {
+"label": "Abnormal skin adnexa morphology",
+"parents": [
+"HP:0001574"
+]
+},
+"HP:0011354": {
+"label": "Generalized abnormality of skin",
+"parents": [
+"HP:0011121"
+]
+},
+"HP:0011362": {
+"label": "Abnormal hair quantity",
+"parents": [
+"HP:0001595"
+]
+},
+"HP:0011442": {
+"label": "Abnormal central motor function",
+"parents": [
+"HP:0012638"
+]
+},
+"HP:0011443": {
+"label": "Abnormality of coordination",
+"parents": [
+"HP:0011442"
+]
+},
+"HP:0011446": {
+"label": "Abnormality of mental function",
+"parents": [
+"HP:0012638"
+]
+},
+"HP:0011458": {
+"label": "Abdominal symptom",
+"parents": [
+"HP:0025032"
+]
+},
+"HP:0011463": {
+"label": "Childhood onset",
+"parents": [
+"HP:0410280"
+]
+},
+"HP:0011729": {
+"label": "Abnormality of joint mobility",
+"parents": [
+"HP:0034430"
+]
+},
+"HP:0011793": {
+"label": "Neoplasm by anatomical site",
+"parents": [
+"HP:0002664"
+]
+},
+"HP:0011804": {
+"label": "Abnormal muscle physiology",
+"parents": [
+"HP:0003011"
+]
+},
+"HP:0011842": {
+"label": "Abnormal skeletal morphology",
+"parents": [
+"HP:0000924"
+]
+},
+"HP:0011843": {
+"label": "Abnormal musculoskeletal physiology",
+"parents": [
+"HP:0033127"
+]
+},
+"HP:0012243": {
+"label": "Abnormal reproductive system morphology",
+"parents": [
+"HP:0000078"
+]
+},
+"HP:0012337": {
+"label": "Abnormal homeostasis",
+"parents": [
+"HP:0001939"
+]
+},
+"HP:0012373": {
+"label": "Abnormal eye physiology",
+"parents": [
+"HP:0000478"
+]
+},
+"HP:0012443": {
+"label": "Abnormal brain morphology",
+"parents": [
+"HP:0002011"
+]
+},
+"HP:0012531": {
+"label": "Pain",
+"parents": [
+"HP:0025142"
+]
+},
+"HP:0012638": {
+"label": "Abnormal nervous system physiology",
+"parents": [
+"HP:0000707"
+]
+},
+"HP:0012639": {
+"label": "Abnormal nervous system morphology",
+"parents": [
+"HP:0000707"
+]
+},
+"HP:0012719": {
+"label": "Functional abnormality of the gastrointestinal tract",
+"parents": [
+"HP:0011024",
+"HP:0025032"
+]
+},
+"HP:0012758": {
+"label": "Neurodevelopmental delay",
+"parents": [
+"HP:0012759"
+]
+},
+"HP:0012759": {
+"label": "Neurodevelopmental abnormality",
+"parents": [
+"HP:0012638"
+]
+},
+"HP:0012823": {
+"label": "Clinical modifier",
+"parents": [
+"HP:0000001"
+]
+},
+"HP:0025015": {
+"label": "Abnormal vascular morphology",
+"parents": [
+"HP:0002597",
+"HP:0030680"
+]
+},
+"HP:0025031": {
+"label": "Abnormality of the digestive system",
+"parents": [
+"HP:0000118"
+]
+},
+"HP:0025032": {
+"label": "Abnormality of digestive system physiology",
+"parents": [
+"HP:0025031"
+]
+},
+"HP:0025142": {
+"label": "Constitutional symptom",
+"parents": [
+"HP:0000118"
+]
+},
+"HP:0025270": {
+"label": "Abnormal esophagus physiology",
+"parents": [
+"HP:0012719"
+]
+},
+"HP:0025429": {
+"label": "Abnormal cry",
+"parents": [
+"HP:0001608"
+]
+},
+"HP:0025430": {
+"label": "High-pitched cry",
+"parents": [
+"HP:0025429"
+]
+},
+"HP:0025668": {
+"label": "Abnormal neck morphology",
+"parents": [
+"HP:0000464"
+]
+},
+"HP:0030680": {
+"label": "Abnormal cardiovascular system morphology",
+"parents": [
+"HP:0001626"
+]
+},
+"HP:0031093": {
+"label": "Abnormal breast morphology",
+"parents": [
+"HP:0000769"
+]
+},
+"HP:0031703": {
+"label": "Abnormal ear morphology",
+"parents": [
+"HP:0000598"
+]
+},
+"HP:0031704": {
+"label": "Abnormal ear physiology",
+"parents": [
+"HP:0000598"
+]
+},
+"HP:0031797": {
+"label": "Clinical course",
+"parents": [
+"HP:0012823"
+]
+},
+"HP:0032443": {
+"label": "Past medical history",
+"parents": [
+"HP:0000001"
+]
+},
+"HP:0033127": {
+"label": "Abnormality of the musculoskeletal system",
+"parents": [
+"HP:0000118"
+]
+},
+"HP:0033842": {
+"label": "Early satiety",
+"parents": [
+"HP:0011458"
+]
+},
+"HP:0034430": {
+"label": "Abnormal joint physiology",
+"parents": [
+"HP:0011843"
+]
+},
+"HP:0040270": {
+"label": "Impaired glucose tolerance",
+"parents": [
+"HP:0001952"
+]
+},
+"HP:0045058": {
+"label": "Abnormality of the testis size",
+"parents": [
+"HP:0000035"
+]
+},
+"HP:0100022": {
+"label": "Abnormality of movement",
+"parents": [
+"HP:0012638"
+]
+},
+"HP:0100659": {
+"label": "Abnormal cerebral vascular morphology",
+"parents": [
+"HP:0012443",
+"HP:0025015"
+]
+},
+"HP:0410280": {
+"label": "Pediatric onset",
+"parents": [
+"HP:0003674"
+]
+},
+"HP:6000023": {
+"label": "Lack of sufficient daily physical activity",
+"parents": [
+"HP:0032443"
+]
+},
+"MONDO:0000001": {
+"label": "disease",
+"parents": [
+"BFO:0000016"
+]
+},
+"MONDO:0000004": {
+"label": "adrenocortical insufficiency",
+"parents": [
+"MONDO:0002816"
+]
+},
+"MONDO:0000270": {
+"label": "lower respiratory tract disorder",
+"parents": [
+"MONDO:0005087"
+]
+},
+"MONDO:0000376": {
+"label": "respiratory system cancer",
+"parents": [
+"MONDO:0004992",
+"MONDO:0005087"
+]
+},
+"MONDO:0000569": {
+"label": "autoimmune disorder of endocrine system",
+"parents": [
+"MONDO:0005151",
+"MONDO:0007179"
+]
+},
+"MONDO:0000588": {
+"label": "autoimmune disorder of gastrointestinal tract",
+"parents": [
+"MONDO:0004335",
+"MONDO:0007179"
+]
+},
+"MONDO:0000589": {
+"label": "autoimmune disorder of musculoskeletal system",
+"parents": [
+"MONDO:0002081",
+"MONDO:0007179"
+]
+},
+"MONDO:0000621": {
+"label": "immune system cancer",
+"parents": [
+"MONDO:0004992",
+"MONDO:0005046"
+]
+},
+"MONDO:0000637": {
+"label": "musculoskeletal system cancer",
+"parents": [
+"MONDO:0002081",
+"MONDO:0004992"
+]
+},
+"MONDO:0000653": {
+"label": "integumentary system cancer",
+"parents": [
+"MONDO:0002051",
+"MONDO:0004992"
+]
+},
+"MONDO:0000761": {
+"label": "syndrome caused by partial chromosomal deletion",
+"parents": [
+"MONDO:0019040"
+]
+},
+"MONDO:0000812": {
+"label": "vertebral column disorder",
+"parents": [
+"MONDO:0005172"
+]
+},
+"MONDO:0001104": {
+"label": "toxic diffuse goiter",
+"parents": [
+"MONDO:0004425",
+"MONDO:0005397"
+]
+},
+"MONDO:0001106": {
+"label": "kidney failure",
+"parents": [
+"MONDO:0005240"
+]
+},
+"MONDO:0001336": {
+"label": "familial hyperlipidemia",
+"parents": [
+"MONDO:0002525",
+"MONDO:0021187"
+]
+},
+"MONDO:0001416": {
+"label": "female reproductive organ cancer",
+"parents": [
+"MONDO:0002149",
+"MONDO:0021148"
+]
+},
+"MONDO:0001627": {
+"label": "dementia",
+"parents": [
+"MONDO:0002039"
+]
+},
+"MONDO:0001889": {
+"label": "ovarian dysfunction",
+"parents": [
+"MONDO:0005558"
+]
+},
+"MONDO:0001933": {
+"label": "endocrine pancreas disorder",
+"parents": [
+"MONDO:0002356"
+]
+},
+"MONDO:0001967": {
+"label": "gonadal dysgenesis",
+"parents": [
+"MONDO:0002146"
+]
+},
+"MONDO:0002022": {
+"label": "disorder of orbital region",
+"parents": [
+"MONDO:7770006"
+]
+},
+"MONDO:0002025": {
+"label": "psychiatric disorder",
+"parents": [
+"MONDO:7770007"
+]
+},
+"MONDO:0002039": {
+"label": "cognitive disorder",
+"parents": [
+"MONDO:0002025"
+]
+},
+"MONDO:0002049": {
+"label": "thrombocytopenia",
+"parents": [
+"MONDO:0002245"
+]
+},
+"MONDO:0002051": {
+"label": "integumentary system disorder",
+"parents": [
+"MONDO:7770006"
+]
+},
+"MONDO:0002081": {
+"label": "musculoskeletal system disorder",
+"parents": [
+"MONDO:7770006"
+]
+},
+"MONDO:0002082": {
+"label": "endocrine gland neoplasm",
+"parents": [
+"MONDO:0005070",
+"MONDO:0005151"
+]
+},
+"MONDO:0002118": {
+"label": "urinary system disorder",
+"parents": [
+"MONDO:7770006"
+]
+},
+"MONDO:0002129": {
+"label": "bone cancer",
+"parents": [
+"MONDO:0000637",
+"MONDO:0019060"
+]
+},
+"MONDO:0002145": {
+"label": "disorder of sexual differentiation",
+"parents": [
+"MONDO:0002259",
+"MONDO:0019755"
+]
+},
+"MONDO:0002146": {
+"label": "hypogonadism",
+"parents": [
+"MONDO:0002259"
+]
+},
+"MONDO:0002149": {
+"label": "reproductive system cancer",
+"parents": [
+"MONDO:0004992",
+"MONDO:0006054"
+]
+},
+"MONDO:0002150": {
+"label": "hypothalamic disorder",
+"parents": [
+"MONDO:0003081"
+]
+},
+"MONDO:0002178": {
+"label": "placenta cancer",
+"parents": [
+"MONDO:0002715",
+"MONDO:0021218"
+]
+},
+"MONDO:0002245": {
+"label": "blood platelet disease",
+"parents": [
+"MONDO:0005570"
+]
+},
+"MONDO:0002254": {
+"label": "syndromic disease",
+"parents": [
+"MONDO:7770006"
+]
+},
+"MONDO:0002256": {
+"label": "cervix disorder",
+"parents": [
+"MONDO:0002654"
+]
+},
+"MONDO:0002259": {
+"label": "gonadal disorder",
+"parents": [
+"MONDO:0005039",
+"MONDO:0005151"
+]
+},
+"MONDO:0002263": {
+"label": "female reproductive system disorder",
+"parents": [
+"MONDO:0005039"
+]
+},
+"MONDO:0002280": {
+"label": "anemia",
+"parents": [
+"MONDO:0005570"
+]
+},
+"MONDO:0002320": {
+"label": "congenital nervous system disorder",
+"parents": [
+"MONDO:0005071"
+]
+},
+"MONDO:0002334": {
+"label": "hematopoietic and lymphoid system neoplasm",
+"parents": [
+"MONDO:0005070",
+"MONDO:0005570"
+]
+},
+"MONDO:0002356": {
+"label": "pancreas disorder",
+"parents": [
+"MONDO:0004335",
+"MONDO:0005151"
+]
+},
+"MONDO:0002516": {
+"label": "digestive system cancer",
+"parents": [
+"MONDO:0004335",
+"MONDO:0004992",
+"MONDO:0021223"
+]
+},
+"MONDO:0002525": {
+"label": "inherited lipid metabolism disorder",
+"parents": [
+"MONDO:0019052"
+]
+},
+"MONDO:0002531": {
+"label": "skin neoplasm",
+"parents": [
+"MONDO:0005070",
+"MONDO:0005093"
+]
+},
+"MONDO:0002602": {
+"label": "central nervous system disorder",
+"parents": [
+"MONDO:0005071"
+]
+},
+"MONDO:0002614": {
+"label": "bone inflammation disease",
+"parents": [
+"MONDO:0005381"
+]
+},
+"MONDO:0002654": {
+"label": "uterine disorder",
+"parents": [
+"MONDO:0002263"
+]
+},
+"MONDO:0002657": {
+"label": "breast disorder",
+"parents": [
+"MONDO:7770006"
+]
+},
+"MONDO:0002715": {
+"label": "uterine cancer",
+"parents": [
+"MONDO:0001416",
+"MONDO:0021353"
+]
+},
+"MONDO:0002720": {
+"label": "sella turcica neoplasm",
+"parents": [
+"MONDO:0002785"
+]
+},
+"MONDO:0002785": {
+"label": "skull base neoplasm",
+"parents": [
+"MONDO:0024653"
+]
+},
+"MONDO:0002816": {
+"label": "adrenal cortex disorder",
+"parents": [
+"MONDO:0005495"
+]
+},
+"MONDO:0002898": {
+"label": "skin cancer",
+"parents": [
+"MONDO:0000653",
+"MONDO:0002531"
+]
+},
+"MONDO:0002908": {
+"label": "glucose metabolism disease",
+"parents": [
+"MONDO:0005066"
+]
+},
+"MONDO:0002974": {
+"label": "cervical cancer",
+"parents": [
+"MONDO:0002715",
+"MONDO:0021230"
+]
+},
+"MONDO:0003081": {
+"label": "thalamic disorder",
+"parents": [
+"MONDO:0005560"
+]
+},
+"MONDO:0003225": {
+"label": "bone marrow disorder",
+"parents": [
+"MONDO:0005046",
+"MONDO:0005172",
+"MONDO:0005570"
+]
+},
+"MONDO:0003240": {
+"label": "thyroid gland disorder",
+"parents": [
+"MONDO:0005151"
+]
+},
+"MONDO:0003274": {
+"label": "thoracic cancer",
+"parents": [
+"MONDO:0004992",
+"MONDO:0021350"
+]
+},
+"MONDO:0003381": {
+"label": "pituitary gland disorder",
+"parents": [
+"MONDO:0005039",
+"MONDO:0005151",
+"MONDO:0005560"
+]
+},
+"MONDO:0003429": {
+"label": "functioning pituitary gland adenoma",
+"parents": [
+"MONDO:0003604",
+"MONDO:0006373"
+]
+},
+"MONDO:0003604": {
+"label": "functioning pituitary gland neoplasm",
+"parents": [
+"MONDO:0017611",
+"MONDO:0021120"
+]
+},
+"MONDO:0003847": {
+"label": "hereditary disease",
+"parents": [
+"MONDO:7770009"
+]
+},
+"MONDO:0003900": {
+"label": "connective tissue disorder",
+"parents": [
+"MONDO:7770006"
+]
+},
+"MONDO:0003937": {
+"label": "spondylitis",
+"parents": [
+"MONDO:0021166",
+"MONDO:0045002"
+]
+},
+"MONDO:0004126": {
+"label": "thyroiditis",
+"parents": [
+"MONDO:0003240",
+"MONDO:0021166"
+]
+},
+"MONDO:0004335": {
+"label": "digestive system disorder",
+"parents": [
+"MONDO:7770006"
+]
+},
+"MONDO:0004425": {
+"label": "hyperthyroidism",
+"parents": [
+"MONDO:0003240"
+]
+},
+"MONDO:0004643": {
+"label": "myeloid leukemia",
+"parents": [
+"MONDO:0005059",
+"MONDO:0020076"
+]
+},
+"MONDO:0004972": {
+"label": "adenoma",
+"parents": [
+"MONDO:0005626"
+]
+},
+"MONDO:0004975": {
+"label": "Alzheimer disease",
+"parents": [
+"MONDO:0001627",
+"MONDO:0005574"
+]
+},
+"MONDO:0004992": {
+"label": "cancer",
+"parents": [
+"MONDO:0005070"
+]
+},
+"MONDO:0004995": {
+"label": "cardiovascular disorder",
+"parents": [
+"MONDO:7770006"
+]
+},
+"MONDO:0005015": {
+"label": "diabetes mellitus",
+"parents": [
+"MONDO:0001933",
+"MONDO:0002908"
+]
+},
+"MONDO:0005020": {
+"label": "intestinal disorder",
+"parents": [
+"MONDO:0004335"
+]
+},
+"MONDO:0005027": {
+"label": "epilepsy",
+"parents": [
+"MONDO:0005560"
+]
+},
+"MONDO:0005039": {
+"label": "reproductive system disorder",
+"parents": [
+"MONDO:7770006"
+]
+},
+"MONDO:0005046": {
+"label": "immune system disorder",
+"parents": [
+"MONDO:7770006"
+]
+},
+"MONDO:0005047": {
+"label": "infertility disorder",
+"parents": [
+"MONDO:0005039"
+]
+},
+"MONDO:0005059": {
+"label": "leukemia",
+"parents": [
+"MONDO:0044881"
+]
+},
+"MONDO:0005066": {
+"label": "metabolic disease",
+"parents": [
+"MONDO:7770007"
+]
+},
+"MONDO:0005068": {
+"label": "myocardial infarction",
+"parents": [
+"MONDO:0024643"
+]
+},
+"MONDO:0005070": {
+"label": "neoplasm",
+"parents": [
+"MONDO:0023370"
+]
+},
+"MONDO:0005071": {
+"label": "nervous system disorder",
+"parents": [
+"MONDO:7770006"
+]
+},
+"MONDO:0005084": {
+"label": "mental disorder",
+"parents": [
+"MONDO:0002025",
+"MONDO:0005560"
+]
+},
+"MONDO:0005087": {
+"label": "respiratory system disorder",
+"parents": [
+"MONDO:7770006"
+]
+},
+"MONDO:0005090": {
+"label": "schizophrenia",
+"parents": [
+"MONDO:0005485"
+]
+},
+"MONDO:0005093": {
+"label": "skin disorder",
+"parents": [
+"MONDO:0002051"
+]
+},
+"MONDO:0005095": {
+"label": "spondyloarthropathy",
+"parents": [
+"MONDO:0005046",
+"MONDO:0006816"
+]
+},
+"MONDO:0005098": {
+"label": "stroke disorder",
+"parents": [
+"MONDO:0011057"
+]
+},
+"MONDO:0005130": {
+"label": "celiac disease",
+"parents": [
+"MONDO:0000588",
+"MONDO:0003847",
+"MONDO:0020598",
+"MONDO:0024635"
+]
+},
+"MONDO:0005148": {
+"label": "type 2 diabetes mellitus",
+"parents": [
+"MONDO:0005015"
+]
+},
+"MONDO:0005151": {
+"label": "endocrine system disorder",
+"parents": [
+"MONDO:7770006"
+]
+},
+"MONDO:0005170": {
+"label": "myeloid neoplasm",
+"parents": [
+"MONDO:0044881"
+]
+},
+"MONDO:0005172": {
+"label": "skeletal system disorder",
+"parents": [
+"MONDO:0002081"
+]
+},
+"MONDO:0005240": {
+"label": "kidney disorder",
+"parents": [
+"MONDO:0002118"
+]
+},
+"MONDO:0005267": {
+"label": "heart disorder",
+"parents": [
+"MONDO:0004995"
+]
+},
+"MONDO:0005275": {
+"label": "lung disorder",
+"parents": [
+"MONDO:0000270"
+]
+},
+"MONDO:0005283": {
+"label": "retinal disorder",
+"parents": [
+"MONDO:0005071",
+"MONDO:0005328"
+]
+},
+"MONDO:0005306": {
+"label": "ankylosing spondylitis",
+"parents": [
+"MONDO:0003937",
+"MONDO:0005095",
+"MONDO:0008383",
+"MONDO:0037847"
+]
+},
+"MONDO:0005328": {
+"label": "eye disorder",
+"parents": [
+"MONDO:0002022",
+"MONDO:0024458"
+]
+},
+"MONDO:0005335": {
+"label": "colorectal neoplasm",
+"parents": [
+"MONDO:0021118",
+"MONDO:0024634"
+]
+},
+"MONDO:0005364": {
+"label": "Graves disease",
+"parents": [
+"MONDO:0001104",
+"MONDO:0005623",
+"MONDO:1060200"
+]
+},
+"MONDO:0005374": {
+"label": "bone marrow neoplasm",
+"parents": [
+"MONDO:0002334",
+"MONDO:0003225"
+]
+},
+"MONDO:0005381": {
+"label": "bone disorder",
+"parents": [
+"MONDO:0005172"
+]
+},
+"MONDO:0005385": {
+"label": "vascular disorder",
+"parents": [
+"MONDO:0004995"
+]
+},
+"MONDO:0005387": {
+"label": "primary ovarian failure",
+"parents": [
+"MONDO:0001889"
+]
+},
+"MONDO:0005397": {
+"label": "goiter",
+"parents": [
+"MONDO:0003240"
+]
+},
+"MONDO:0005439": {
+"label": "familial hypercholesterolemia",
+"parents": [
+"MONDO:0001336",
+"MONDO:0037748"
+]
+},
+"MONDO:0005485": {
+"label": "psychotic disorder",
+"parents": [
+"MONDO:0002039",
+"MONDO:0005084"
+]
+},
+"MONDO:0005495": {
+"label": "adrenal gland disorder",
+"parents": [
+"MONDO:0005151"
+]
+},
+"MONDO:0005550": {
+"label": "infectious disease",
+"parents": [
+"MONDO:7770010"
+]
+},
+"MONDO:0005554": {
+"label": "rheumatic disorder",
+"parents": [
+"MONDO:0003900"
+]
+},
+"MONDO:0005558": {
+"label": "ovarian disorder",
+"parents": [
+"MONDO:0002259",
+"MONDO:0002263"
+]
+},
+"MONDO:0005559": {
+"label": "neurodegenerative disease",
+"parents": [
+"MONDO:0002602"
+]
+},
+"MONDO:0005560": {
+"label": "brain disorder",
+"parents": [
+"MONDO:0002602"
+]
+},
+"MONDO:0005570": {
+"label": "hematologic disorder",
+"parents": [
+"MONDO:7770006"
+]
+},
+"MONDO:0005574": {
+"label": "tauopathy",
+"parents": [
+"MONDO:0005559",
+"MONDO:7770011"
+]
+},
+"MONDO:0005575": {
+"label": "colorectal cancer",
+"parents": [
+"MONDO:0005335",
+"MONDO:0005814"
+]
+},
+"MONDO:0005578": {
+"label": "arthritic joint disease",
+"parents": [
+"MONDO:0002614",
+"MONDO:0006816",
+"MONDO:0021166"
+]
+},
+"MONDO:0005586": {
+"label": "head and neck neoplasm",
+"parents": [
+"MONDO:0005070"
+]
+},
+"MONDO:0005623": {
+"label": "autoimmune thyroid disease",
+"parents": [
+"MONDO:0000569",
+"MONDO:0004126"
+]
+},
+"MONDO:0005626": {
+"label": "epithelial neoplasm",
+"parents": [
+"MONDO:0005070"
+]
+},
+"MONDO:0005814": {
+"label": "intestinal cancer",
+"parents": [
+"MONDO:0002516",
+"MONDO:0021118"
+]
+},
+"MONDO:0005917": {
+"label": "placenta disorder",
+"parents": [
+"MONDO:0002654",
+"MONDO:0024575"
+]
+},
+"MONDO:0006054": {
+"label": "reproductive system neoplasm",
+"parents": [
+"MONDO:0005039",
+"MONDO:0005070"
+]
+},
+"MONDO:0006130": {
+"label": "central nervous system neoplasm",
+"parents": [
+"MONDO:0002602",
+"MONDO:0021248"
+]
+},
+"MONDO:0006373": {
+"label": "pituitary gland adenoma",
+"parents": [
+"MONDO:0004972",
+"MONDO:0017611"
+]
+},
+"MONDO:0006793": {
+"label": "hyperpituitarism",
+"parents": [
+"MONDO:0024468"
+]
+},
+"MONDO:0006799": {
+"label": "hypothalamic neoplasm",
+"parents": [
+"MONDO:0002150",
+"MONDO:0021211"
+]
+},
+"MONDO:0006816": {
+"label": "arthropathy",
+"parents": [
+"MONDO:0005172"
+]
+},
+"MONDO:0006823": {
+"label": "Klinefelter syndrome",
+"parents": [
+"MONDO:0017975",
+"MONDO:0700027",
+"MONDO:0700065"
+]
+},
+"MONDO:0006909": {
+"label": "pituitary dwarfism",
+"parents": [
+"MONDO:0005495"
+]
+},
+"MONDO:0006920": {
+"label": "prediabetes syndrome",
+"parents": [
+"MONDO:0002908"
+]
+},
+"MONDO:0007179": {
+"label": "autoimmune disease",
+"parents": [
+"MONDO:0005046"
+]
+},
+"MONDO:0007254": {
+"label": "breast cancer",
+"parents": [
+"MONDO:0003274",
+"MONDO:0021100"
+]
+},
+"MONDO:0007404": {
+"label": "Cri-du-chat syndrome",
+"parents": [
+"MONDO:0002254",
+"MONDO:0016887"
+]
+},
+"MONDO:0007838": {
+"label": "Jacobsen syndrome",
+"parents": [
+"MONDO:0002254",
+"MONDO:0016910",
+"MONDO:0018795"
+]
+},
+"MONDO:0008383": {
+"label": "rheumatoid arthritis",
+"parents": [
+"MONDO:0000589",
+"MONDO:0005554",
+"MONDO:0005578"
+]
+},
+"MONDO:0008608": {
+"label": "Down syndrome",
+"parents": [
+"MONDO:0700124"
+]
+},
+"MONDO:0008903": {
+"label": "lung cancer",
+"parents": [
+"MONDO:0000376",
+"MONDO:0003274",
+"MONDO:0021117"
+]
+},
+"MONDO:0009050": {
+"label": "Cushing disease due to pituitary adenoma",
+"parents": [
+"MONDO:0003429",
+"MONDO:0017824",
+"MONDO:0020528",
+"MONDO:0021227"
+]
+},
+"MONDO:0011057": {
+"label": "cerebrovascular disorder",
+"parents": [
+"MONDO:0005560",
+"MONDO:0043218"
+]
+},
+"MONDO:0011996": {
+"label": "chronic myeloid leukemia",
+"parents": [
+"MONDO:0004643",
+"MONDO:0023603"
+]
+},
+"MONDO:0015128": {
+"label": "primary adrenal insufficiency",
+"parents": [
+"MONDO:0000004"
+]
+},
+"MONDO:0015129": {
+"label": "chronic primary adrenal insufficiency",
+"parents": [
+"MONDO:0015128"
+]
+},
+"MONDO:0015514": {
+"label": "hereditary endocrine growth disease",
+"parents": [
+"MONDO:0005151"
+]
+},
+"MONDO:0015756": {
+"label": "myeloid hemopathy",
+"parents": [
+"MONDO:0002334"
+]
+},
+"MONDO:0016870": {
+"label": "partial deletion of chromosome 5",
+"parents": [
+"MONDO:0000761",
+"MONDO:0700012"
+]
+},
+"MONDO:0016876": {
+"label": "partial deletion of chromosome 11",
+"parents": [
+"MONDO:0000761",
+"MONDO:0700018"
+]
+},
+"MONDO:0016887": {
+"label": "partial deletion of the short arm of chromosome 5",
+"parents": [
+"MONDO:0016870"
+]
+},
+"MONDO:0016910": {
+"label": "partial deletion of the long arm of chromosome 11",
+"parents": [
+"MONDO:0016876"
+]
+},
+"MONDO:0017611": {
+"label": "pituitary tumor",
+"parents": [
+"MONDO:0002082",
+"MONDO:0002720",
+"MONDO:0003381",
+"MONDO:0006054",
+"MONDO:0006799"
+]
+},
+"MONDO:0017824": {
+"label": "familial isolated pituitary adenoma",
+"parents": [
+"MONDO:0006373",
+"MONDO:0023603",
+"MONDO:0100545"
+]
+},
+"MONDO:0017975": {
+"label": "sex chromosome disorder of sex development",
+"parents": [
+"MONDO:0002145"
+]
+},
+"MONDO:0018066": {
+"label": "trisomy X",
+"parents": [
+"MONDO:0002254",
+"MONDO:0019852",
+"MONDO:0700027",
+"MONDO:0700065"
+]
+},
+"MONDO:0018068": {
+"label": "trisomy 13",
+"parents": [
+"MONDO:0002254",
+"MONDO:0020247",
+"MONDO:0700020",
+"MONDO:0700065"
+]
+},
+"MONDO:0018071": {
+"label": "trisomy 18",
+"parents": [
+"MONDO:0002254",
+"MONDO:0700065",
+"MONDO:0700125"
+]
+},
+"MONDO:0018754": {
+"label": "cyanide poisoning",
+"parents": [
+"MONDO:0029000"
+]
+},
+"MONDO:0018795": {
+"label": "syndromic constitutional thrombocytopenia",
+"parents": [
+"MONDO:0100241"
+]
+},
+"MONDO:0018912": {
+"label": "Cushing syndrome",
+"parents": [
+"MONDO:0002254"
+]
+},
+"MONDO:0019040": {
+"label": "chromosomal disorder",
+"parents": [
+"MONDO:7770009"
+]
+},
+"MONDO:0019052": {
+"label": "inborn errors of metabolism",
+"parents": [
+"MONDO:0003847",
+"MONDO:0005066"
+]
+},
+"MONDO:0019060": {
+"label": "bone neoplasm",
+"parents": [
+"MONDO:0005381",
+"MONDO:0021581"
+]
+},
+"MONDO:0019499": {
+"label": "Turner syndrome",
+"parents": [
+"MONDO:0001967",
+"MONDO:0002254",
+"MONDO:0017975",
+"MONDO:0019852"
+]
+},
+"MONDO:0019755": {
+"label": "developmental defect during embryogenesis",
+"parents": [
+"MONDO:0021147"
+]
+},
+"MONDO:0019852": {
+"label": "inherited primary ovarian failure",
+"parents": [
+"MONDO:0003847",
+"MONDO:0005387",
+"MONDO:0015514",
+"MONDO:0021124"
+]
+},
+"MONDO:0019927": {
+"label": "growth hormone-producing pituitary gland neoplasm",
+"parents": [
+"MONDO:0005626",
+"MONDO:0017611"
+]
+},
+"MONDO:0019933": {
+"label": "acromegaly",
+"parents": [
+"MONDO:0006793"
+]
+},
+"MONDO:0020049": {
+"label": "autosomal anomaly",
+"parents": [
+"MONDO:0019040"
+]
+},
+"MONDO:0020058": {
+"label": "gonosome anomaly",
+"parents": [
+"MONDO:0019040"
+]
+},
+"MONDO:0020076": {
+"label": "myeloproliferative neoplasm",
+"parents": [
+"MONDO:0005170",
+"MONDO:0015756",
+"MONDO:0021138"
+]
+},
+"MONDO:0020246": {
+"label": "inherited vitreoretinopathy",
+"parents": [
+"MONDO:0005283",
+"MONDO:0100545"
+]
+},
+"MONDO:0020247": {
+"label": "congenital vitreoretinal dysplasia",
+"parents": [
+"MONDO:0002320",
+"MONDO:0020246"
+]
+},
+"MONDO:0020479": {
+"label": "pituitary gigantism",
+"parents": [
+"MONDO:0006793",
+"MONDO:0019927"
+]
+},
+"MONDO:0020528": {
+"label": "ACTH-dependent Cushing syndrome",
+"parents": [
+"MONDO:0006793",
+"MONDO:0957431"
+]
+},
+"MONDO:0020598": {
+"label": "malabsorption syndrome",
+"parents": [
+"MONDO:0005020"
+]
+},
+"MONDO:0020639": {
+"label": "monosomy",
+"parents": [
+"MONDO:0700064"
+]
+},
+"MONDO:0020641": {
+"label": "respiratory tract neoplasm",
+"parents": [
+"MONDO:0005070",
+"MONDO:0005087"
+]
+},
+"MONDO:0021100": {
+"label": "breast neoplasm",
+"parents": [
+"MONDO:0002657",
+"MONDO:0021350"
+]
+},
+"MONDO:0021117": {
+"label": "lung neoplasm",
+"parents": [
+"MONDO:0005275",
+"MONDO:0020641",
+"MONDO:0021350"
+]
+},
+"MONDO:0021118": {
+"label": "intestinal neoplasm",
+"parents": [
+"MONDO:0005020",
+"MONDO:0021223"
+]
+},
+"MONDO:0021120": {
+"label": "functioning endocrine neoplasm",
+"parents": [
+"MONDO:0002082"
+]
+},
+"MONDO:0021124": {
+"label": "female infertility",
+"parents": [
+"MONDO:0002263",
+"MONDO:0005047"
+]
+},
+"MONDO:0021138": {
+"label": "bone marrow cancer",
+"parents": [
+"MONDO:0000621",
+"MONDO:0002129",
+"MONDO:0005374"
+]
+},
+"MONDO:0021147": {
+"label": "disorder of development or morphogenesis",
+"parents": [
+"MONDO:7770007"
+]
+},
+"MONDO:0021148": {
+"label": "female reproductive system neoplasm",
+"parents": [
+"MONDO:0002263",
+"MONDO:0006054"
+]
+},
+"MONDO:0021166": {
+"label": "inflammatory disease",
+"parents": [
+"MONDO:7770007"
+]
+},
+"MONDO:0021187": {
+"label": "hyperlipidemia",
+"parents": [
+"MONDO:0005066"
+]
+},
+"MONDO:0021211": {
+"label": "brain neoplasm",
+"parents": [
+"MONDO:0005560",
+"MONDO:0006130"
+]
+},
+"MONDO:0021218": {
+"label": "placenta neoplasm",
+"parents": [
+"MONDO:0005917",
+"MONDO:0021353"
+]
+},
+"MONDO:0021223": {
+"label": "digestive system neoplasm",
+"parents": [
+"MONDO:0005070"
+]
+},
+"MONDO:0021227": {
+"label": "adrenal gland neoplasm",
+"parents": [
+"MONDO:0002082",
+"MONDO:0005495"
+]
+},
+"MONDO:0021230": {
+"label": "uterine cervix neoplasm",
+"parents": [
+"MONDO:0002256",
+"MONDO:0021353"
+]
+},
+"MONDO:0021248": {
+"label": "nervous system neoplasm",
+"parents": [
+"MONDO:0005070",
+"MONDO:0005071"
+]
+},
+"MONDO:0021350": {
+"label": "neoplasm of thorax",
+"parents": [
+"MONDO:0005070"
+]
+},
+"MONDO:0021353": {
+"label": "tumor of uterus",
+"parents": [
+"MONDO:0002654",
+"MONDO:0021148"
+]
+},
+"MONDO:0021581": {
+"label": "connective tissue neoplasm",
+"parents": [
+"MONDO:0003900",
+"MONDO:0005070"
+]
+},
+"MONDO:0022759": {
+"label": "trisomy 22",
+"parents": [
+"MONDO:0700026",
+"MONDO:0700065"
+]
+},
+"MONDO:0023370": {
+"label": "neoplastic disease or syndrome",
+"parents": [
+"MONDO:0045024"
+]
+},
+"MONDO:0023603": {
+"label": "hereditary disorder of connective tissue",
+"parents": [
+"MONDO:0003847",
+"MONDO:0003900"
+]
+},
+"MONDO:0024458": {
+"label": "disorder of visual system",
+"parents": [
+"MONDO:7770006"
+]
+},
+"MONDO:0024468": {
+"label": "anterior pituitary gland disorder",
+"parents": [
+"MONDO:0003381"
+]
+},
+"MONDO:0024575": {
+"label": "pregnancy disorder",
+"parents": [
+"MONDO:0700003"
+]
+},
+"MONDO:0024634": {
+"label": "large intestine disorder",
+"parents": [
+"MONDO:0005020"
+]
+},
+"MONDO:0024635": {
+"label": "small intestine disorder",
+"parents": [
+"MONDO:0005020"
+]
+},
+"MONDO:0024643": {
+"label": "myocardial disorder",
+"parents": [
+"MONDO:0005267"
+]
+},
+"MONDO:0024653": {
+"label": "skull neoplasm",
+"parents": [
+"MONDO:0005586",
+"MONDO:0019060",
+"MONDO:0024654"
+]
+},
+"MONDO:0024654": {
+"label": "skull disorder",
+"parents": [
+"MONDO:0005381"
+]
+},
+"MONDO:0029000": {
+"label": "poisoning",
+"parents": [
+"MONDO:7770010"
+]
+},
+"MONDO:0037748": {
+"label": "hyperlipoproteinemia",
+"parents": [
+"MONDO:0005066"
+]
+},
+"MONDO:0037847": {
+"label": "vertebral joint disorder",
+"parents": [
+"MONDO:0000812",
+"MONDO:0006816"
+]
+},
+"MONDO:0043218": {
+"label": "neurovascular disorder",
+"parents": [
+"MONDO:0005071",
+"MONDO:0005385"
+]
+},
+"MONDO:0044881": {
+"label": "hematopoietic and lymphoid cell neoplasm",
+"parents": [
+"MONDO:0002334"
+]
+},
+"MONDO:0044970": {
+"label": "mitochondrial disease",
+"parents": [
+"MONDO:7770007"
+]
+},
+"MONDO:0045002": {
+"label": "vertebral disorder",
+"parents": [
+"MONDO:0000812"
+]
+},
+"MONDO:0045024": {
+"label": "cancer or benign tumor",
+"parents": [
+"MONDO:7770008"
+]
+},
+"MONDO:0100241": {
+"label": "inherited thrombocytopenia",
+"parents": [
+"MONDO:0002049",
+"MONDO:0003847"
+]
+},
+"MONDO:0100480": {
+"label": "autoimmune primary adrenal insufficiency",
+"parents": [
+"MONDO:0015129"
+]
+},
+"MONDO:0100545": {
+"label": "hereditary neurological disease",
+"parents": [
+"MONDO:0003847",
+"MONDO:0005071"
+]
+},
+"MONDO:0700003": {
+"label": "obstetric disorder",
+"parents": [
+"MONDO:7770007"
+]
+},
+"MONDO:0700012": {
+"label": "chromosome 5 disorder",
+"parents": [
+"MONDO:0020049"
+]
+},
+"MONDO:0700018": {
+"label": "chromosome 11 disorder",
+"parents": [
+"MONDO:0020049"
+]
+},
+"MONDO:0700020": {
+"label": "chromosome 13 disorder",
+"parents": [
+"MONDO:0020049"
+]
+},
+"MONDO:0700026": {
+"label": "chromosome 22 disorder",
+"parents": [
+"MONDO:0020049"
+]
+},
+"MONDO:0700027": {
+"label": "chromosome X disorder",
+"parents": [
+"MONDO:0020058"
+]
+},
+"MONDO:0700064": {
+"label": "aneuploidy",
+"parents": [
+"MONDO:0019040"
+]
+},
+"MONDO:0700065": {
+"label": "trisomy",
+"parents": [
+"MONDO:0700064"
+]
+},
+"MONDO:0700096": {
+"label": "human disease",
+"parents": [
+"MONDO:0000001"
+]
+},
+"MONDO:0700124": {
+"label": "chromosome 21 disorder",
+"parents": [
+"MONDO:0020049"
+]
+},
+"MONDO:0700125": {
+"label": "chromosome 18 disorder",
+"parents": [
+"MONDO:0020049"
+]
+},
+"MONDO:0700126": {
+"label": "trisomy 21",
+"parents": [
+"MONDO:0008608",
+"MONDO:0700065"
+]
+},
+"MONDO:0957431": {
+"label": "endogenous Cushing syndrome",
+"parents": [
+"MONDO:0005495",
+"MONDO:0018912"
+]
+},
+"MONDO:1060200": {
+"label": "primary hyperthyroidism",
+"parents": [
+"MONDO:0004425"
+]
+},
+"MONDO:7770006": {
+"label": "disease by body system or component",
+"parents": [
+"MONDO:0700096"
+]
+},
+"MONDO:7770007": {
+"label": "disease by developmental or physiological process",
+"parents": [
+"MONDO:0700096"
+]
+},
+"MONDO:7770008": {
+"label": "disease by etiologic mechanism",
+"parents": [
+"MONDO:0700096"
+]
+},
+"MONDO:7770009": {
+"label": "disease of genetic or genomic mechanism",
+"parents": [
+"MONDO:7770008"
+]
+},
+"MONDO:7770010": {
+"label": "disease of primarily extrinsic mechanism",
+"parents": [
+"MONDO:7770008"
+]
+},
+"MONDO:7770011": {
+"label": "disease by molecular mechanism",
+"parents": [
+"MONDO:7770007"
+]
 },
 "NCBITaxon:1": {
 "label": "root",
@@ -15007,6 +17610,24 @@
 "NCBITaxon:4479"
 ]
 },
+"NCBITaxon:3699": {
+"label": "Brassicales",
+"parents": [
+"NCBITaxon:91836"
+]
+},
+"NCBITaxon:3700": {
+"label": "Brassicaceae",
+"parents": [
+"NCBITaxon:3699"
+]
+},
+"NCBITaxon:3701": {
+"label": "Arabidopsis",
+"parents": [
+"NCBITaxon:980083"
+]
+},
 "NCBITaxon:3701028": {
 "label": "Altocrustacea",
 "parents": [
@@ -15047,6 +17668,12 @@
 "label": "Panorpida",
 "parents": [
 "NCBITaxon:3701062"
+]
+},
+"NCBITaxon:3702": {
+"label": "Arabidopsis thaliana",
+"parents": [
+"NCBITaxon:3701"
 ]
 },
 "NCBITaxon:376913": {
@@ -15475,6 +18102,12 @@
 "NCBITaxon:1437201"
 ]
 },
+"NCBITaxon:71275": {
+"label": "rosids",
+"parents": [
+"NCBITaxon:1437201"
+]
+},
 "NCBITaxon:7147": {
 "label": "Diptera",
 "parents": [
@@ -15697,6 +18330,12 @@
 "NCBITaxon:71240"
 ]
 },
+"NCBITaxon:91836": {
+"label": "malvids",
+"parents": [
+"NCBITaxon:71275"
+]
+},
 "NCBITaxon:91882": {
 "label": "campanulids",
 "parents": [
@@ -15865,6 +18504,12 @@
 "NCBITaxon:9722"
 ]
 },
+"NCBITaxon:980083": {
+"label": "Camelineae",
+"parents": [
+"NCBITaxon:3700"
+]
+},
 "NCBITaxon:9831": {
 "label": "Hippopotamidae",
 "parents": [
@@ -15935,6 +18580,1375 @@
 "label": "Rodentia",
 "parents": [
 "NCBITaxon:314147"
+]
+},
+"PATO:0000001": {
+"label": "characteristic",
+"parents": []
+},
+"PATO:0000014": {
+"label": "color",
+"parents": [
+"PATO:0000051",
+"PATO:0001300"
+]
+},
+"PATO:0000019": {
+"label": "color pattern",
+"parents": [
+"PATO:0000060"
+]
+},
+"PATO:0000025": {
+"label": "composition",
+"parents": [
+"PATO:0000141"
+]
+},
+"PATO:0000033": {
+"label": "concentration of",
+"parents": [
+"PATO:0000070"
+]
+},
+"PATO:0000044": {
+"label": "frequency",
+"parents": [
+"PATO:0050000"
+]
+},
+"PATO:0000047": {
+"label": "biological sex",
+"parents": [
+"PATO:0001995"
+]
+},
+"PATO:0000051": {
+"label": "morphology",
+"parents": [
+"PATO:0001241"
+]
+},
+"PATO:0000052": {
+"label": "shape",
+"parents": [
+"PATO:0000051"
+]
+},
+"PATO:0000060": {
+"label": "spatial pattern",
+"parents": [
+"PATO:0000051"
+]
+},
+"PATO:0000070": {
+"label": "amount",
+"parents": [
+"PATO:0001241"
+]
+},
+"PATO:0000117": {
+"label": "size",
+"parents": [
+"PATO:0000051"
+]
+},
+"PATO:0000122": {
+"label": "length",
+"parents": [
+"PATO:0001708"
+]
+},
+"PATO:0000133": {
+"label": "orientation",
+"parents": [
+"PATO:0000140"
+]
+},
+"PATO:0000140": {
+"label": "position",
+"parents": [
+"PATO:0001241"
+]
+},
+"PATO:0000141": {
+"label": "structure",
+"parents": [
+"PATO:0000051"
+]
+},
+"PATO:0000146": {
+"label": "temperature",
+"parents": [
+"PATO:0001241"
+]
+},
+"PATO:0000161": {
+"label": "rate",
+"parents": [
+"PATO:0002062"
+]
+},
+"PATO:0000169": {
+"label": "viability",
+"parents": [
+"PATO:0001995"
+]
+},
+"PATO:0000274": {
+"label": "fertility",
+"parents": [
+"PATO:0001434"
+]
+},
+"PATO:0000320": {
+"label": "green",
+"parents": [
+"PATO:0000014"
+]
+},
+"PATO:0000383": {
+"label": "female",
+"parents": [
+"PATO:0001894"
+]
+},
+"PATO:0000384": {
+"label": "male",
+"parents": [
+"PATO:0001894"
+]
+},
+"PATO:0000411": {
+"label": "circular",
+"parents": [
+"PATO:0000947"
+]
+},
+"PATO:0000467": {
+"label": "present",
+"parents": [
+"PATO:0000070"
+]
+},
+"PATO:0000470": {
+"label": "increased amount",
+"parents": [
+"PATO:0000467",
+"PATO:0002305"
+]
+},
+"PATO:0000574": {
+"label": "decreased length",
+"parents": [
+"PATO:0000122",
+"PATO:0000587"
+]
+},
+"PATO:0000586": {
+"label": "increased size",
+"parents": [
+"PATO:0000117",
+"PATO:0002305"
+]
+},
+"PATO:0000587": {
+"label": "decreased size",
+"parents": [
+"PATO:0000117",
+"PATO:0002303"
+]
+},
+"PATO:0000616": {
+"label": "asymmetrical",
+"parents": [
+"PATO:0000965"
+]
+},
+"PATO:0000718": {
+"label": "lethal (sensu genetics)",
+"parents": [
+"PATO:0000169"
+]
+},
+"PATO:0000719": {
+"label": "viable",
+"parents": [
+"PATO:0000169"
+]
+},
+"PATO:0000915": {
+"label": "thickness",
+"parents": [
+"PATO:0001708"
+]
+},
+"PATO:0000918": {
+"label": "volume",
+"parents": [
+"PATO:0001710"
+]
+},
+"PATO:0000921": {
+"label": "width",
+"parents": [
+"PATO:0001708"
+]
+},
+"PATO:0000947": {
+"label": "elliptic",
+"parents": [
+"PATO:0002318"
+]
+},
+"PATO:0000956": {
+"label": "sterile",
+"parents": [
+"PATO:0000274"
+]
+},
+"PATO:0000965": {
+"label": "symmetry",
+"parents": [
+"PATO:0000060"
+]
+},
+"PATO:0000970": {
+"label": "permeability",
+"parents": [
+"PATO:0000141"
+]
+},
+"PATO:0001020": {
+"label": "damage",
+"parents": [
+"PATO:0000141"
+]
+},
+"PATO:0001021": {
+"label": "energy",
+"parents": [
+"PATO:0001241"
+]
+},
+"PATO:0001025": {
+"label": "pressure",
+"parents": [
+"PATO:0001241"
+]
+},
+"PATO:0001029": {
+"label": "efficiency",
+"parents": [
+"PATO:0001241"
+]
+},
+"PATO:0001031": {
+"label": "elasticity",
+"parents": [
+"PATO:0001241"
+]
+},
+"PATO:0001167": {
+"label": "damaged",
+"parents": [
+"PATO:0001020"
+]
+},
+"PATO:0001199": {
+"label": "linear",
+"parents": [
+"PATO:0000052"
+]
+},
+"PATO:0001236": {
+"label": "process characteristic",
+"parents": [
+"PATO:0000001"
+]
+},
+"PATO:0001241": {
+"label": "physical object characteristic",
+"parents": [
+"PATO:0000001"
+]
+},
+"PATO:0001242": {
+"label": "wavelength",
+"parents": [
+"PATO:0001241"
+]
+},
+"PATO:0001300": {
+"label": "optical quality",
+"parents": [
+"PATO:0070060"
+]
+},
+"PATO:0001309": {
+"label": "duration",
+"parents": [
+"PATO:0002062"
+]
+},
+"PATO:0001323": {
+"label": "area",
+"parents": [
+"PATO:0001709"
+]
+},
+"PATO:0001334": {
+"label": "diameter",
+"parents": [
+"PATO:0001708"
+]
+},
+"PATO:0001374": {
+"label": "ploidy",
+"parents": [
+"PATO:0001396"
+]
+},
+"PATO:0001375": {
+"label": "haploid",
+"parents": [
+"PATO:0001393"
+]
+},
+"PATO:0001377": {
+"label": "polyploid",
+"parents": [
+"PATO:0001393"
+]
+},
+"PATO:0001381": {
+"label": "triploid",
+"parents": [
+"PATO:0001377"
+]
+},
+"PATO:0001385": {
+"label": "aneuploid",
+"parents": [
+"PATO:0001374"
+]
+},
+"PATO:0001393": {
+"label": "euploid",
+"parents": [
+"PATO:0001374"
+]
+},
+"PATO:0001394": {
+"label": "diploid",
+"parents": [
+"PATO:0001393"
+]
+},
+"PATO:0001396": {
+"label": "cellular quality",
+"parents": [
+"PATO:0070044"
+]
+},
+"PATO:0001410": {
+"label": "striated",
+"parents": [
+"PATO:0000052"
+]
+},
+"PATO:0001422": {
+"label": "dead",
+"parents": [
+"PATO:0000169"
+]
+},
+"PATO:0001428": {
+"label": "medium acidity",
+"parents": [
+"PATO:0001842"
+]
+},
+"PATO:0001434": {
+"label": "reproductive quality",
+"parents": [
+"PATO:0001995"
+]
+},
+"PATO:0001462": {
+"label": "membrane potential",
+"parents": [
+"PATO:0001464"
+]
+},
+"PATO:0001464": {
+"label": "electric potential",
+"parents": [
+"PATO:0001241"
+]
+},
+"PATO:0001485": {
+"label": "condensed",
+"parents": [
+"PATO:0000141"
+]
+},
+"PATO:0001502": {
+"label": "complexity",
+"parents": [
+"PATO:0000141"
+]
+},
+"PATO:0001533": {
+"label": "multi-colored",
+"parents": [
+"PATO:0000019"
+]
+},
+"PATO:0001543": {
+"label": "flexibility",
+"parents": [
+"PATO:0001546"
+]
+},
+"PATO:0001545": {
+"label": "inflexible",
+"parents": [
+"PATO:0001543"
+]
+},
+"PATO:0001546": {
+"label": "quality of a solid",
+"parents": [
+"PATO:0002198"
+]
+},
+"PATO:0001555": {
+"label": "has number of",
+"parents": [
+"PATO:0000070"
+]
+},
+"PATO:0001620": {
+"label": "turgor",
+"parents": [
+"PATO:0000141"
+]
+},
+"PATO:0001623": {
+"label": "atrophied",
+"parents": [
+"PATO:0000587"
+]
+},
+"PATO:0001655": {
+"label": "osmolarity",
+"parents": [
+"PATO:0000033"
+]
+},
+"PATO:0001656": {
+"label": "decreased osmolarity",
+"parents": [
+"PATO:0001655",
+"PATO:0001997"
+]
+},
+"PATO:0001657": {
+"label": "increased osmolarity",
+"parents": [
+"PATO:0000470",
+"PATO:0001655"
+]
+},
+"PATO:0001708": {
+"label": "1-D extent",
+"parents": [
+"PATO:0000117"
+]
+},
+"PATO:0001709": {
+"label": "2-D extent",
+"parents": [
+"PATO:0000117"
+]
+},
+"PATO:0001710": {
+"label": "3-D extent",
+"parents": [
+"PATO:0000117"
+]
+},
+"PATO:0001800": {
+"label": "water composition",
+"parents": [
+"PATO:0000025"
+]
+},
+"PATO:0001801": {
+"label": "decreased water composition",
+"parents": [
+"PATO:0001800",
+"PATO:0002303"
+]
+},
+"PATO:0001842": {
+"label": "acidity",
+"parents": [
+"PATO:0000033"
+]
+},
+"PATO:0001851": {
+"label": "swollen",
+"parents": [
+"PATO:0000141"
+]
+},
+"PATO:0001884": {
+"label": "hydrophobicity",
+"parents": [
+"PATO:0001241"
+]
+},
+"PATO:0001885": {
+"label": "hydrophobic",
+"parents": [
+"PATO:0001884"
+]
+},
+"PATO:0001886": {
+"label": "hydrophilicity",
+"parents": [
+"PATO:0001241"
+]
+},
+"PATO:0001887": {
+"label": "hydrophilic",
+"parents": [
+"PATO:0001886"
+]
+},
+"PATO:0001889": {
+"label": "scalloped",
+"parents": [
+"PATO:0001976"
+]
+},
+"PATO:0001894": {
+"label": "phenotypic sex",
+"parents": [
+"PATO:0000047"
+]
+},
+"PATO:0001976": {
+"label": "serration",
+"parents": [
+"PATO:0002267"
+]
+},
+"PATO:0001992": {
+"label": "cellularity",
+"parents": [
+"PATO:0001995"
+]
+},
+"PATO:0001994": {
+"label": "unicellular",
+"parents": [
+"PATO:0001992"
+]
+},
+"PATO:0001995": {
+"label": "organismal quality",
+"parents": [
+"PATO:0001241"
+]
+},
+"PATO:0001997": {
+"label": "decreased amount",
+"parents": [
+"PATO:0000467",
+"PATO:0002303"
+]
+},
+"PATO:0002006": {
+"label": "2-D shape",
+"parents": [
+"PATO:0000052"
+]
+},
+"PATO:0002062": {
+"label": "physical quality of a process",
+"parents": [
+"PATO:0001236"
+]
+},
+"PATO:0002165": {
+"label": "drooping",
+"parents": [
+"PATO:0000052"
+]
+},
+"PATO:0002198": {
+"label": "quality of a substance",
+"parents": [
+"PATO:0001241"
+]
+},
+"PATO:0002267": {
+"label": "edge shape",
+"parents": [
+"PATO:0000052"
+]
+},
+"PATO:0002303": {
+"label": "decreased object quality",
+"parents": [
+"PATO:0001241"
+]
+},
+"PATO:0002305": {
+"label": "increased object quality",
+"parents": [
+"PATO:0001241"
+]
+},
+"PATO:0002318": {
+"label": "superelliptic",
+"parents": [
+"PATO:0002006"
+]
+},
+"PATO:0002460": {
+"label": "shriveled",
+"parents": [
+"PATO:0000141"
+]
+},
+"PATO:0002461": {
+"label": "wilty",
+"parents": [
+"PATO:0002165"
+]
+},
+"PATO:0010006": {
+"label": "cell morphology",
+"parents": [
+"PATO:0000051"
+]
+},
+"PATO:0015026": {
+"label": "stability",
+"parents": [
+"PATO:0000141"
+]
+},
+"PATO:0050000": {
+"label": "rate of occurence",
+"parents": [
+"PATO:0000161"
+]
+},
+"PATO:0070044": {
+"label": "anatomical structure quality",
+"parents": [
+"PATO:0001241"
+]
+},
+"PATO:0070060": {
+"label": "quality of interaction of a substance with electromagnetic radiation",
+"parents": [
+"PATO:0002198"
+]
+},
+"PR:000000001": {
+"label": "protein",
+"parents": [
+"PR:000018263"
+]
+},
+"PR:000001327": {
+"label": "cadherin",
+"parents": [
+"PR:000000001"
+]
+},
+"PR:000001940": {
+"label": "tissue factor",
+"parents": [
+"PR:000000001"
+]
+},
+"PR:000003035": {
+"label": "cellular tumor antigen p53",
+"parents": [
+"PR:000000001"
+]
+},
+"PR:000003674": {
+"label": "actin, alpha skeletal muscle",
+"parents": [
+"PR:000000001"
+]
+},
+"PR:000005274": {
+"label": "cyclin-dependent kinase inhibitor 1",
+"parents": [
+"PR:000000001"
+]
+},
+"PR:000007141": {
+"label": "erythropoietin",
+"parents": [
+"PR:000000001"
+]
+},
+"PR:000007682": {
+"label": "follitropin subunit beta",
+"parents": [
+"PR:000044813"
+]
+},
+"PR:000007891": {
+"label": "pro-glucagon",
+"parents": [
+"PR:000000001"
+]
+},
+"PR:000007968": {
+"label": "somatotropin",
+"parents": [
+"PR:000029968"
+]
+},
+"PR:000008636": {
+"label": "3-hydroxy-3-methylglutaryl-coenzyme A reductase",
+"parents": [
+"PR:000000001"
+]
+},
+"PR:000009054": {
+"label": "preproinsulin",
+"parents": [
+"PR:000045358"
+]
+},
+"PR:000009758": {
+"label": "leptin",
+"parents": [
+"PR:000000001"
+]
+},
+"PR:000009783": {
+"label": "lutropin subunit beta",
+"parents": [
+"PR:000044813"
+]
+},
+"PR:000010013": {
+"label": "lysozyme C",
+"parents": [
+"PR:000000001"
+]
+},
+"PR:000011374": {
+"label": "atrial natriuretic factor",
+"parents": [
+"PR:000000001"
+]
+},
+"PR:000013246": {
+"label": "prolactin",
+"parents": [
+"PR:000029968"
+]
+},
+"PR:000013427": {
+"label": "prostaglandin G/H synthase 1",
+"parents": [
+"PR:000000001"
+]
+},
+"PR:000013429": {
+"label": "parathyroid hormone",
+"parents": [
+"PR:000000001"
+]
+},
+"PR:000013436": {
+"label": "prothymosin alpha",
+"parents": [
+"PR:000000001"
+]
+},
+"PR:000013773": {
+"label": "retinoblastoma-associated protein",
+"parents": [
+"PR:000000001"
+]
+},
+"PR:000016724": {
+"label": "thyrotropin subunit beta",
+"parents": [
+"PR:000044813"
+]
+},
+"PR:000018263": {
+"label": "amino acid chain",
+"parents": [
+"COB:0000013"
+]
+},
+"PR:000022726": {
+"label": "cell division protein FtsZ",
+"parents": [
+"PR:000000001"
+]
+},
+"PR:000023070": {
+"label": "lactose operon repressor",
+"parents": [
+"PR:000000001"
+]
+},
+"PR:000027222": {
+"label": "CALCA gene translation product",
+"parents": [
+"PR:000000001"
+]
+},
+"PR:000028799": {
+"label": "tubulin",
+"parents": [
+"PR:000000001"
+]
+},
+"PR:000029067": {
+"label": "Homo sapiens protein",
+"parents": [
+"PR:000036194"
+]
+},
+"PR:000029968": {
+"label": "somatotropin hormone family member",
+"parents": [
+"PR:000000001"
+]
+},
+"PR:000030026": {
+"label": "CALCA gene translation product (human)",
+"parents": [
+"PR:000027222",
+"PR:000029067"
+]
+},
+"PR:000031143": {
+"label": "pepsin A-3",
+"parents": [
+"PR:000000001"
+]
+},
+"PR:000036194": {
+"label": "eukaryotic protein",
+"parents": [
+"PR:000000001"
+]
+},
+"PR:000037015": {
+"label": "alpha-amylase 1",
+"parents": [
+"PR:000000001"
+]
+},
+"PR:000041244": {
+"label": "histone",
+"parents": [
+"PR:000000001"
+]
+},
+"PR:000044813": {
+"label": "glycoprotein hormone beta chain",
+"parents": [
+"PR:000000001"
+]
+},
+"PR:000045358": {
+"label": "insulin family protein",
+"parents": [
+"PR:000000001"
+]
+},
+"SO:0000001": {
+"label": "region",
+"parents": [
+"SO:0000110"
+]
+},
+"SO:0000002": {
+"label": "sequence_secondary_structure",
+"parents": [
+"SO:0001411"
+]
+},
+"SO:0000028": {
+"label": "base_pair",
+"parents": [
+"SO:0000002"
+]
+},
+"SO:0000057": {
+"label": "operator",
+"parents": [
+"SO:0001055"
+]
+},
+"SO:0000105": {
+"label": "chromosome_arm",
+"parents": [
+"SO:0000830"
+]
+},
+"SO:0000110": {
+"label": "sequence_feature",
+"parents": []
+},
+"SO:0000112": {
+"label": "primer",
+"parents": [
+"SO:0000441"
+]
+},
+"SO:0000141": {
+"label": "terminator",
+"parents": [
+"SO:0001055"
+]
+},
+"SO:0000147": {
+"label": "exon",
+"parents": [
+"SO:0000833"
+]
+},
+"SO:0000155": {
+"label": "plasmid",
+"parents": [
+"SO:0001235"
+]
+},
+"SO:0000162": {
+"label": "splice_site",
+"parents": [
+"SO:0000835"
+]
+},
+"SO:0000167": {
+"label": "promoter",
+"parents": [
+"SO:0000842",
+"SO:0001055"
+]
+},
+"SO:0000178": {
+"label": "operon",
+"parents": [
+"SO:0005855"
+]
+},
+"SO:0000185": {
+"label": "primary_transcript",
+"parents": [
+"SO:0000673"
+]
+},
+"SO:0000188": {
+"label": "intron",
+"parents": [
+"SO:0000835"
+]
+},
+"SO:0000199": {
+"label": "translocation",
+"parents": [
+"SO:0001785"
+]
+},
+"SO:0000233": {
+"label": "mature_transcript",
+"parents": [
+"SO:0000673"
+]
+},
+"SO:0000240": {
+"label": "chromosome_variation",
+"parents": [
+"SO:0001507"
+]
+},
+"SO:0000252": {
+"label": "rRNA",
+"parents": [
+"SO:0000655"
+]
+},
+"SO:0000296": {
+"label": "origin_of_replication",
+"parents": [
+"SO:0001411"
+]
+},
+"SO:0000318": {
+"label": "start_codon",
+"parents": [
+"SO:0000360"
+]
+},
+"SO:0000319": {
+"label": "stop_codon",
+"parents": [
+"SO:0000360"
+]
+},
+"SO:0000340": {
+"label": "chromosome",
+"parents": [
+"SO:0001235"
+]
+},
+"SO:0000341": {
+"label": "chromosome_band",
+"parents": [
+"SO:0000830"
+]
+},
+"SO:0000360": {
+"label": "codon",
+"parents": [
+"SO:0000851"
+]
+},
+"SO:0000441": {
+"label": "ss_oligo",
+"parents": [
+"SO:0000696"
+]
+},
+"SO:0000581": {
+"label": "cap",
+"parents": [
+"SO:0001411"
+]
+},
+"SO:0000610": {
+"label": "polyA_sequence",
+"parents": [
+"SO:0001411"
+]
+},
+"SO:0000624": {
+"label": "telomere",
+"parents": [
+"SO:0000628"
+]
+},
+"SO:0000628": {
+"label": "chromosomal_structural_element",
+"parents": [
+"SO:0000830"
+]
+},
+"SO:0000655": {
+"label": "ncRNA",
+"parents": [
+"SO:0000233"
+]
+},
+"SO:0000657": {
+"label": "repeat_region",
+"parents": [
+"SO:0001411"
+]
+},
+"SO:0000667": {
+"label": "insertion",
+"parents": [
+"SO:0001059",
+"SO:0001411"
+]
+},
+"SO:0000673": {
+"label": "transcript",
+"parents": [
+"SO:0000831"
+]
+},
+"SO:0000695": {
+"label": "reagent",
+"parents": [
+"SO:0001409"
+]
+},
+"SO:0000696": {
+"label": "oligo",
+"parents": [
+"SO:0000695"
+]
+},
+"SO:0000699": {
+"label": "junction",
+"parents": [
+"SO:0000110"
+]
+},
+"SO:0000704": {
+"label": "gene",
+"parents": [
+"SO:0001411"
+]
+},
+"SO:0000717": {
+"label": "reading_frame",
+"parents": [
+"SO:0001410"
+]
+},
+"SO:0000830": {
+"label": "chromosome_part",
+"parents": [
+"SO:0001411"
+]
+},
+"SO:0000831": {
+"label": "gene_member_region",
+"parents": [
+"SO:0001411"
+]
+},
+"SO:0000833": {
+"label": "transcript_region",
+"parents": [
+"SO:0001411"
+]
+},
+"SO:0000834": {
+"label": "mature_transcript_region",
+"parents": [
+"SO:0000833"
+]
+},
+"SO:0000835": {
+"label": "primary_transcript_region",
+"parents": [
+"SO:0000833"
+]
+},
+"SO:0000836": {
+"label": "mRNA_region",
+"parents": [
+"SO:0000834"
+]
+},
+"SO:0000842": {
+"label": "gene_component_region",
+"parents": [
+"SO:0001411"
+]
+},
+"SO:0000851": {
+"label": "CDS_region",
+"parents": [
+"SO:0000836"
+]
+},
+"SO:0000954": {
+"label": "DNA_chromosome",
+"parents": [
+"SO:0000340"
+]
+},
+"SO:0000955": {
+"label": "double_stranded_DNA_chromosome",
+"parents": [
+"SO:0000954"
+]
+},
+"SO:0000957": {
+"label": "linear_double_stranded_DNA_chromosome",
+"parents": [
+"SO:0000955"
+]
+},
+"SO:0000958": {
+"label": "circular_double_stranded_DNA_chromosome",
+"parents": [
+"SO:0000955"
+]
+},
+"SO:0001021": {
+"label": "chromosome_breakpoint",
+"parents": [
+"SO:0000699"
+]
+},
+"SO:0001023": {
+"label": "allele",
+"parents": [
+"SO:0001507"
+]
+},
+"SO:0001026": {
+"label": "genome",
+"parents": [
+"SO:0001260"
+]
+},
+"SO:0001055": {
+"label": "transcriptional_cis_regulatory_region",
+"parents": [
+"SO:0005836"
+]
+},
+"SO:0001059": {
+"label": "sequence_alteration",
+"parents": [
+"SO:0002072"
+]
+},
+"SO:0001172": {
+"label": "tRNA_region",
+"parents": [
+"SO:0000834"
+]
+},
+"SO:0001174": {
+"label": "anticodon",
+"parents": [
+"SO:0001172"
+]
+},
+"SO:0001235": {
+"label": "replicon",
+"parents": [
+"SO:0001411"
+]
+},
+"SO:0001260": {
+"label": "sequence_collection",
+"parents": []
+},
+"SO:0001409": {
+"label": "biomaterial_region",
+"parents": [
+"SO:0000001"
+]
+},
+"SO:0001410": {
+"label": "experimental_feature",
+"parents": [
+"SO:0000001"
+]
+},
+"SO:0001411": {
+"label": "biological_region",
+"parents": [
+"SO:0000001"
+]
+},
+"SO:0001496": {
+"label": "telomeric_repeat",
+"parents": [
+"SO:0000657"
+]
+},
+"SO:0001507": {
+"label": "variant_collection",
+"parents": [
+"SO:0001260"
+]
+},
+"SO:0001785": {
+"label": "structural_alteration",
+"parents": [
+"SO:0001059"
+]
+},
+"SO:0001985": {
+"label": "Okazaki_fragment",
+"parents": [
+"SO:0001411"
+]
+},
+"SO:0002072": {
+"label": "sequence_comparison",
+"parents": [
+"SO:0000110"
+]
+},
+"SO:0005836": {
+"label": "regulatory_region",
+"parents": [
+"SO:0000831"
+]
+},
+"SO:0005855": {
+"label": "gene_group",
+"parents": [
+"SO:0001411"
+]
+},
+"SO:1000028": {
+"label": "intrachromosomal_mutation",
+"parents": [
+"SO:1000183"
+]
+},
+"SO:1000029": {
+"label": "chromosomal_deletion",
+"parents": [
+"SO:1000028"
+]
+},
+"SO:1000030": {
+"label": "chromosomal_inversion",
+"parents": [
+"SO:1000028"
+]
+},
+"SO:1000031": {
+"label": "interchromosomal_mutation",
+"parents": [
+"SO:1000183"
+]
+},
+"SO:1000035": {
+"label": "duplication",
+"parents": [
+"SO:0000667"
+]
+},
+"SO:1000037": {
+"label": "chromosomal_duplication",
+"parents": [
+"SO:1000183"
+]
+},
+"SO:1000044": {
+"label": "chromosomal_translocation",
+"parents": [
+"SO:0000199",
+"SO:1000031"
+]
+},
+"SO:1000048": {
+"label": "reciprocal_chromosomal_translocation",
+"parents": [
+"SO:1000044"
+]
+},
+"SO:1000183": {
+"label": "chromosome_structure_variation",
+"parents": [
+"SO:0000240"
 ]
 },
 "UBERON:0000001": {
@@ -16753,6 +20767,13 @@
 "UBERON:0015212"
 ]
 },
+"UBERON:0001118": {
+"label": "lobe of thyroid gland",
+"parents": [
+"UBERON:0009912",
+"UBERON:0015212"
+]
+},
 "UBERON:0001130": {
 "label": "vertebral column",
 "parents": [
@@ -17568,11 +21589,10 @@
 "UBERON:0005623"
 ]
 },
-"UBERON:0002163": {
-"label": "inferior cerebellar peduncle",
+"UBERON:0002162": {
+"label": "area postrema",
 "parents": [
-"UBERON:0007416",
-"UBERON:0014649"
+"UBERON:0010135"
 ]
 },
 "UBERON:0002169": {
@@ -18182,12 +22202,6 @@
 "label": "brain gray matter",
 "parents": [
 "UBERON:0002020"
-]
-},
-"UBERON:0003544": {
-"label": "brain white matter",
-"parents": [
-"UBERON:0002316"
 ]
 },
 "UBERON:0003606": {
@@ -18914,19 +22928,6 @@
 "UBERON:0002020"
 ]
 },
-"UBERON:0007416": {
-"label": "cerebellar peduncle",
-"parents": [
-"UBERON:0007417",
-"UBERON:0014891"
-]
-},
-"UBERON:0007417": {
-"label": "peduncle of neuraxis",
-"parents": [
-"UBERON:0002316"
-]
-},
 "UBERON:0007499": {
 "label": "epithelial sac",
 "parents": [
@@ -19113,6 +23114,12 @@
 "UBERON:0015021"
 ]
 },
+"UBERON:0009054": {
+"label": "open circulatory system",
+"parents": [
+"UBERON:0001009"
+]
+},
 "UBERON:0009564": {
 "label": "distal limb integumentary appendage",
 "parents": [
@@ -19137,6 +23144,12 @@
 "label": "sac",
 "parents": [
 "UBERON:0000061"
+]
+},
+"UBERON:0009912": {
+"label": "anatomical lobe",
+"parents": [
+"UBERON:0000063"
 ]
 },
 "UBERON:0010000": {
@@ -19175,6 +23188,12 @@
 "parents": [
 "UBERON:0005408",
 "UBERON:0010133"
+]
+},
+"UBERON:0010135": {
+"label": "sensory circumventricular organ",
+"parents": [
+"UBERON:0005408"
 ]
 },
 "UBERON:0010164": {
@@ -19486,19 +23505,6 @@
 "UBERON:0001981"
 ]
 },
-"UBERON:0014649": {
-"label": "white matter of medulla oblongata",
-"parents": [
-"UBERON:0014891",
-"UBERON:0019262"
-]
-},
-"UBERON:0014891": {
-"label": "brainstem white matter",
-"parents": [
-"UBERON:0003544"
-]
-},
 "UBERON:0014892": {
 "label": "skeletal muscle organ, vertebrate",
 "parents": [
@@ -19672,18 +23678,6 @@
 "parents": [
 "UBERON:0000489",
 "UBERON:0009856"
-]
-},
-"UBERON:0019258": {
-"label": "white matter of hindbrain",
-"parents": [
-"UBERON:0003544"
-]
-},
-"UBERON:0019262": {
-"label": "white matter of myelencephalon",
-"parents": [
-"UBERON:0019258"
 ]
 },
 "UBERON:0019264": {
@@ -19885,5 +23879,17 @@
 "consider": []
 }
 },
-"missing": []
+"missing": [],
+"unencodable": [
+"PR:P01160",
+"PR:P01222",
+"PR:P01229",
+"PR:P01258",
+"PR:P01275",
+"PR:P06454",
+"PR:P23219",
+"PR:P23219-1",
+"PR:P68133"
+],
+"dropped_edges": []
 }

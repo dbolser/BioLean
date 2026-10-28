@@ -39,7 +39,7 @@ def earlySatiety : Entity .phenotype := ⟨"HP:0033842", "early satiety"⟩
 /-! ### Anatomy (UBERON) -/
 
 def hypothalamus : Entity .anatomy := ⟨"UBERON:0001898", "hypothalamus"⟩
-def areaPostrema : Entity .anatomy := ⟨"UBERON:0002163", "area postrema"⟩
+def areaPostrema : Entity .anatomy := ⟨"UBERON:0002162", "area postrema"⟩
 def vagusNerve : Entity .anatomy := ⟨"UBERON:0001759", "vagus nerve"⟩
 
 end BioLean.Lib

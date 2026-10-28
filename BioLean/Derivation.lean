@@ -1,4 +1,5 @@
 import BioLean.Evidence
+import BioLean.Coverage
 
 /-!
 # Derivations
@@ -15,6 +16,17 @@ the biological analogue of `#print axioms`.
 -/
 
 namespace BioLean
+
+/-- A claim with its subject left out: what `generalize` holds fixed while it widens the subject's
+taxon. `p.claim a` puts the subject back. -/
+inductive Predicate (k : Kind)
+  | effect (s : Sign) (t : Target)
+  | rel {k' : Kind} (r : Rel) (b : Entity k') (h : r.accepts k k' = true := by decide)
+
+/-- The claim `p` makes of subject `a`. -/
+def Predicate.claim {k : Kind} : Predicate k → Entity k → Claim
+  | .effect s t, a => .effect a s t
+  | .rel r b h, a => .rel r a b h
 
 inductive Derivation : Claim → Type
   /-- A literature statement, taken as an axiom. -/
@@ -101,7 +113,8 @@ inductive Derivation : Claim → Type
       Derivation (.notRel r a b h₃)
   -- Context as refinement (M2, `BioLean/Context.lean`). A mouse claim and a human claim have
   -- different subjects, so they never fuse. Specialisation is free through the is_a laws and
-  -- `Entity.refineAxiom`; generalisation (dropping or widening a context) has no rule.
+  -- `Entity.refineAxiom`; widening the taxon is `generalize`, discounted by coverage (M4);
+  -- dropping any other part of a context has no rule.
   /-- Refinement is monotone in its filler: `f is_a g` gives `(e ⊓ ∃r.f) is_a (e ⊓ ∃r.g)`. Mouse
   is_a Eukaryota, so a mouse chromosome is a eukaryotic chromosome. Sound for any `r`. -/
   | refineMono {k k' : Kind} {e : Entity k} {r : Rel} {f g : Entity k'}
@@ -125,6 +138,16 @@ inductive Derivation : Claim → Type
       (e : Evidence) (hk : e.kind = .crossSpecies := by decide)
       (hs : Taxa.siblings T₁ T₂ = true := by decide) :
       Derivation (.effect (a.inCtx { c with taxon := some T₂ }) s t)
+  /-- Generalise to a clade (M4): one predicate `p` of `a` in context `c` with taxon `Tᵢ`, for
+  distinct `Tᵢ` each is_a `T`, gives `p` of `a` with taxon `T`. Induction, so never free: the fused
+  instance opinions are discounted by how well the `Tᵢ` cover `T` in the imported taxonomy (`m`,
+  `BioLean/Coverage.lean`), and a taxon outside `T` (a virus, for cellular organisms) is refused
+  by `h`. The instances are a function on the positions of `taxa`: `fun | 0 => d₀ | 1 => d₁`. -/
+  | generalize {k : Kind} {a : Entity k} (p : Predicate k) (c : Ctx) (T : Entity .taxon)
+      (m : Coverage.Measure) (taxa : List (Entity .taxon))
+      (d : (i : Fin taxa.length) → Derivation (p.claim (a.inCtx { c with taxon := some taxa[i] })))
+      (h : Coverage.admissible T taxa = true := by decide) :
+      Derivation (p.claim (a.inCtx { c with taxon := some T }))
 
 namespace Derivation
 
@@ -154,6 +177,9 @@ def opinionWith (lit : Statement → Opinion) (ev : Evidence → Opinion) :
   | _, .refineMono fg .. => fg.opinionWith lit ev
   | _, .isaInheritEffect ab bt => (ab.opinionWith lit ev).weakest (bt.opinionWith lit ev)
   | _, .transport _ _ d e .. => (d.opinionWith lit ev).chain (ev e)
+  | _, .generalize _ _ T m taxa d _ =>
+      (((List.finRange taxa.length).map fun i => (d i).opinionWith lit ev).foldl Opinion.fuse .vacuous).discount
+        (m.eval T taxa) (m.eval_nonneg T taxa) (m.eval_le_one T taxa)
 
 /-- The strength of a derivation. -/
 def opinion {c : Claim} (d : Derivation c) : Opinion := d.opinionWith Statement.opinion Evidence.opinion
@@ -184,6 +210,7 @@ def axioms : {c : Claim} → Derivation c → List Statement
   | _, .transport (a := a) (s := s) (t := t) c T₂ d e .. =>
       d.axioms ++ [{ id := s!"transport:{T₂.curie}", text := e.note,
                      claim := .effect (a.inCtx { c with taxon := some T₂ }) s t, evidence := [e] }]
+  | _, .generalize _ _ _ _ taxa d _ => (List.finRange taxa.length).flatMap fun i => (d i).axioms
 
 /-- Every PMID cited anywhere in the derivation, without repeats. -/
 def pmids {c : Claim} (d : Derivation c) : List Nat :=
@@ -250,6 +277,9 @@ partial def render {c : Claim} (d : Derivation c) (indent : String := "") : Stri
   | .refineMono fg .. => node "refinement monotone" [render fg (indent ++ "  ")]
   | .isaInheritEffect ab bt => node "is_a inherits effect" [render ab (indent ++ "  "), render bt (indent ++ "  ")]
   | .transport _ T₂ d' e .. => node s!"transport to {T₂.label} (PMID {e.pmid}, {repr e.kind})" [render d' (indent ++ "  ")]
+  | .generalize _ _ T m taxa d' _ =>
+      node s!"generalise to {T.label}, {m} coverage {(m.eval T taxa).toDecimal} from {taxa.length} taxa"
+        ((List.finRange taxa.length).map fun i => render (d' i) (indent ++ "  "))
 
 /-- Statements used more than once in a derivation. `fuse` assumes independence, so a
 shared axiom means the strength is over-stated. -/
@@ -303,6 +333,18 @@ theorem opinion_viaAmount_disbelief {k k' : Kind} {a : Entity k} {m : Entity k'}
     {s₁ s₂ : Sign} {t : Target}
     (am : Derivation (.effect a s₁ (.amount m))) (mt : Derivation (.effect m s₂ t)) :
     (viaAmount am mt).opinion.disbelief = 0 := rfl
+
+/-- A generalisation is never more believed than its coverage: induction from a sample covering
+half the clade gives belief at most ½, however strong the instances. -/
+theorem opinion_generalize_le_coverage {k : Kind} {a : Entity k} (p : Predicate k) (c : Ctx)
+    (T : Entity .taxon) (m : Coverage.Measure) (taxa : List (Entity .taxon))
+    (d : (i : Fin taxa.length) → Derivation (p.claim (a.inCtx { c with taxon := some taxa[i] })))
+    (h : Coverage.admissible T taxa = true) :
+    (generalize p c T m taxa d h).opinion.belief ≤ m.eval T taxa := by
+  simp only [opinion, opinionWith, Opinion.discount]
+  have := m.eval_nonneg T taxa
+  nlinarith [Opinion.belief_le_one (((List.finRange taxa.length).map fun i =>
+    (d i).opinionWith Statement.opinion Evidence.opinion).foldl Opinion.fuse .vacuous)]
 
 end Derivation
 end BioLean

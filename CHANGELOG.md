@@ -2,6 +2,25 @@
 
 Findings and decisions, dated. Code history is in `git log`; this records what we learned.
 
+## 2026-10-28 (overnight: M4 generalise with real taxonomy)
+- Built `Derivation.generalize` (M4): instances of one `Predicate` of `a.inCtx {taxon := Tᵢ}`, distinct `Tᵢ` all
+  is_a `T`, give it at `T`. Opinion: the instances fused, then `Opinion.discount` (new, Jøsang trust discount) by a
+  coverage measure from `BioLean/Coverage.lean`: bracketing (needs two children of `T` sampled) or clade fraction
+  (known leaves). Proved: belief never exceeds coverage. A Retroviridae instance is refused for cellular organisms.
+- Transcription in Lean (`Examples/Transcription.lean`), instances from QuickGO annotation counts. Five model
+  organisms: cellular organisms 0.634 by bracketing (2 of 3 children), 0.108 by clade fraction (5 of 44 leaves).
+  Eukaryota by bracketing is 0.470, NOT the 0.7 expected: Discoba and Sar are known children nobody sampled.
+  Adding Euglena, Paramecium and Halobacterium gives 0.969 (established); clade fraction only reaches 0.176.
+  Bracketing has a cliff: Metazoa from mouse and human is 0, both sit under Eumetazoa.
+- Known children and leaves are the ancestor closure of used taxa, not NCBI: Eukaryota has 4 here, 18 named clades in
+  NCBI (OLS4); Opisthokonta 2 here, 6 in NCBI. So bracketing is generous. Clade fraction mostly measures how
+  mammal-heavy biolib's vocabulary is (30 of 44 cellular leaves are animals).
+- Imported PATO, MONDO, HP, SO and PR (full pro_reasoned.obo, 200 MB, under a minute), plus round 3's new curies:
+  2,911 to 3,548 terms, 4,060 to 4,857 edges. Each term now lists its children; IsA.lean compiles in 33 s, was 19.
+  Count proofs 3.4 s and 6.2 s; is_a queries still under a second. Nine PR ids are UniProt accessions with no
+  numeric code, left out. PR says PR:000009054 is preproinsulin, not insulin (Examples/Context.lean).
+- Fixed area postrema: UBERON:0002162, not 0002163 (inferior cerebellar peduncle).
+
 ## 2026-10-28 (overnight: round 3 emit, compile and closure rerun)
 - Built `scripts/textbook/emit_lean_m3.py` and lean_lib `TextbookR3` (`BioLean/Lib/TextbookClaimsR3/`, 134 new
   entities). Of the 620 round-3 records, 356 were emitted and 351 compiled (98.6%). The 57 records that have a
