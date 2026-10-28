@@ -1,0 +1,5542 @@
+[
+ {
+  "id": "how-cells-obtain-energy-m45436-7",
+  "module": "m45436",
+  "source": "For example, the large proteins that make up muscles are built from smaller molecules imported from dietary amino acids.",
+  "claim": "Muscle proteins are built from dietary amino acids",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "derives_from",
+  "entities": [
+   {
+    "text": "large proteins",
+    "curie": "CHEBI:36080",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "dietary amino acids",
+    "curie": "CHEBI:33709",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "muscles",
+    "curie": "UBERON:0002385",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "derives_from",
+  "context": {},
+  "lean": "-- proposed: Claim.derivesFrom protein amino_acid",
+  "bin_m1": "missing_construct",
+  "lean_m1": "derivation (made from)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "CHEBI:36080",
+   "relation": "derives from",
+   "object": "CHEBI:33709",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0002385",
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "CHEBI:36080",
+   "relation": "derives from",
+   "object": "CHEBI:33709",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0002385",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45437-11",
+  "module": "m45437",
+  "source": "For the most part, photosynthesizing organisms like plants produce these sugars.",
+  "claim": "Photosynthesizing organisms (plants) produce sugars",
+  "kind": "process_description",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "plants",
+    "curie": "NCBITaxon:33090",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "photosynthesizing",
+    "curie": "GO:0015979",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "sugars",
+    "curie": "CHEBI:16646",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "increases amount of",
+  "context": {
+   "taxon": "NCBITaxon:33090"
+  },
+  "lean": "Claim.inContext {taxa := [plants]} (Claim.effect photosynthesis .pos (.amount carbohydrate))",
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0015979",
+   "relation": "has output",
+   "object": "CHEBI:16646",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0015979",
+   "relation": "has output",
+   "object": "CHEBI:16646",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "proportion",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45437-25",
+  "module": "m45437",
+  "source": "Both of these reactions involve many steps.",
+  "claim": "Photosynthesis and aerobic respiration each involve many steps",
+  "kind": "process_description",
+  "bin": "missing_construct",
+  "missing_construct": "sequence/ordering",
+  "entities": [
+   {
+    "text": "photosynthesis",
+    "curie": "GO:0015979",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "aerobic respiration",
+    "curie": "GO:0009060",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_part",
+  "context": {},
+  "lean": "-- proposed: Claim.hasPart process (steps)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "sequence/ordering",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "sequence_or_ordering",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45437-59",
+  "module": "m45437",
+  "source": "Plants perform one of the most biologically useful energy transformations on earth: that of converting the energy of sunlight to chemical energy stored within organic molecules ().",
+  "claim": "Plants convert the energy of sunlight to chemical energy stored in organic molecules",
+  "kind": "process_description",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "Viridiplantae",
+    "curie": "NCBITaxon:33090",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "converting the energy of sunlight to chemical energy",
+    "curie": "GO:0015979",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "organic molecules",
+    "curie": "CHEBI:50860",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "converts",
+  "context": {
+   "taxon": "NCBITaxon:33090"
+  },
+  "lean": "Claim.inContext {taxa := [plants]} (Claim.effect photosynthesis .pos (.amount organic_molecule))",
+  "m2": {
+   "ctor": "rel",
+   "subject": "NCBITaxon:33090",
+   "relation": "capable of",
+   "object": "GO:0015979",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "low"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "NCBITaxon:33090",
+   "relation": "capable of",
+   "object": "GO:0015979",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45437-134",
+  "module": "m45437",
+  "source": "Most enzymes are proteins and perform the critical task of lowering the activation energies of chemical reactions inside the cell.",
+  "claim": "Most enzymes are proteins",
+  "kind": "definitional",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "enzymes",
+    "curie": "GO:0003824",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "proteins",
+    "curie": "CHEBI:36080",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "is_a (most)",
+  "context": {},
+  "lean": "-- ontology layer with proportion; \"most\" not expressible",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": "most",
+   "subject": "GO:0003824",
+   "relation": "is_a",
+   "object": "CHEBI:36080",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "low"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45437-136",
+  "module": "m45437",
+  "source": "Most of the reactions critical to a living cell happen too slowly at normal temperatures to be of any use to the cell.",
+  "claim": "Most reactions critical to a cell happen too slowly at normal temperatures to be useful without catalysis",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "living cell",
+    "curie": "CL:0000000",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "reactions",
+    "curie": null,
+    "ontology": "other",
+    "verified": false
+   }
+  ],
+  "relation": "has_rate",
+  "context": {},
+  "lean": "-- proposed: Claim.quantity reaction rate (too slow)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "has_quality",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45437-145",
+  "module": "m45437",
+  "source": "There may be one or more substrates, depending on the particular chemical reaction.",
+  "claim": "A reaction may have one or more substrates",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "substrates",
+    "curie": null,
+    "ontology": "other",
+    "verified": false
+   }
+  ],
+  "relation": "has_input (count)",
+  "context": {},
+  "lean": "-- proposed: Claim.hasInput reaction substrate (n >= 1)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "ungrounded_entity",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45437-195",
+  "module": "m45437",
+  "source": "Most allosterically regulated enzymes are made up of more than one polypeptide, meaning that they have more than one protein subunit.",
+  "claim": "Most allosterically regulated enzymes have more than one polypeptide subunit",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "has_part",
+  "entities": [
+   {
+    "text": "allosterically regulated enzymes",
+    "curie": "GO:0003824",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "polypeptide",
+    "curie": "CHEBI:15841",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "has_part",
+  "context": {},
+  "lean": "-- proposed: Claim.hasPart enzyme subunit (n>1); \"most\" not expressible",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "ungrounded_entity",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45437-248",
+  "module": "m45437",
+  "source": "Thus, when relative levels of ADP are high compared to ATP, the cell is triggered to produce more ATP through sugar catabolism.",
+  "claim": "High ADP relative to ATP triggers more ATP production through sugar catabolism",
+  "kind": "effect",
+  "bin": "now",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "ADP",
+    "curie": "CHEBI:16761",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "ATP",
+    "curie": "CHEBI:15422",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "sugar catabolism",
+    "curie": "GO:0006007",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "increases",
+  "context": {},
+  "lean": "Claim.mediatedBy ADP .pos (.amount ATP) (.process glucose_catabolism)  -- ratio ADP:ATP not expressible",
+  "m2": {
+   "ctor": "effect",
+   "subject": "CHEBI:16761",
+   "relation": null,
+   "object": "GO:0006007",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "low"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "CHEBI:16761",
+   "relation": null,
+   "object": "GO:0006007",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "proportion",
+   "curie_changes": [],
+   "confidence": "low"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45437-285",
+  "module": "m45437",
+  "source": "Most vitamins and minerals act as cofactors and coenzymes for enzyme action.",
+  "claim": "Most vitamins and minerals act as cofactors and coenzymes for enzyme action",
+  "kind": "definitional",
+  "bin": "missing_construct",
+  "missing_construct": "is_a (ontology layer)",
+  "entities": [
+   {
+    "text": "vitamins",
+    "curie": "CHEBI:33229",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "minerals",
+    "curie": "CHEBI:167164",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "cofactors",
+    "curie": "CHEBI:23357",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "coenzymes",
+    "curie": "CHEBI:23354",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "is_a",
+  "context": {},
+  "lean": "-- ontology layer; \"most\" not expressible",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": "most",
+   "subject": "CHEBI:33229",
+   "relation": "is_a",
+   "object": "CHEBI:23357",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "compound_sentence",
+   "curie_changes": [],
+   "confidence": "low"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45438-7",
+  "module": "m45438",
+  "source": "ATP is used to power the majority of energy-requiring cellular reactions.",
+  "claim": "ATP powers the majority of energy-requiring cellular reactions",
+  "kind": "other",
+  "bin": "missing_construct",
+  "missing_construct": "has_input",
+  "entities": [
+   {
+    "text": "ATP",
+    "curie": "CHEBI:15422",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "energy-requiring cellular reactions",
+    "curie": "GO:0009987",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_input",
+  "context": {},
+  "lean": "-- proposed: Claim.hasInput cellular_process ATP (majority)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "ungrounded_entity",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45438-8",
+  "module": "m45438",
+  "source": "A living cell cannot store significant amounts of free energy.",
+  "claim": "A living cell cannot store significant amounts of free energy",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "negation",
+  "entities": [
+   {
+    "text": "living cell",
+    "curie": "CL:0000000",
+    "ontology": "CL",
+    "verified": true
+   }
+  ],
+  "relation": "cannot store",
+  "context": {},
+  "lean": "-- proposed: negated capacity claim",
+  "bin_m1": "missing_construct",
+  "lean_m1": "no RO relation",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "proportion",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45438-30",
+  "module": "m45438",
+  "source": "You have read that nearly all of the energy used by living things comes to them in the bonds of the sugar, glucose.",
+  "claim": "Nearly all energy used by living things comes from the bonds of glucose",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "glucose",
+    "curie": "CHEBI:17234",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "living things",
+    "curie": "NCBITaxon:131567",
+    "ontology": "NCBITaxon",
+    "verified": true
+   }
+  ],
+  "relation": "source_of",
+  "context": {},
+  "lean": "-- proposed: Claim.derivesFrom energy glucose (nearly all)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "proportion",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45438-35",
+  "module": "m45438",
+  "source": "Glycolysis begins with the six-carbon, ring-shaped structure of a single glucose molecule and ends with two molecules of a three-carbon sugar called pyruvate in a multi-step process with several intermediate molecules.",
+  "claim": "Glycolysis ends with two molecules of pyruvate",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "has_output",
+  "entities": [
+   {
+    "text": "glycolytic process",
+    "curie": "GO:0006096",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "pyruvate",
+    "curie": "CHEBI:15361",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "has_output",
+  "context": {},
+  "lean": "-- proposed: Claim.hasOutput glycolysis pyruvate (2)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0006096",
+   "relation": "has output",
+   "object": "CHEBI:15361",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "produces",
+   "quant": null,
+   "subject": "GO:0006096",
+   "relation": null,
+   "object": "CHEBI:15361",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 2,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45438-38",
+  "module": "m45438",
+  "source": "Glycolysis consists of two distinct phases.",
+  "claim": "Glycolysis consists of two distinct phases",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "has_part",
+  "entities": [
+   {
+    "text": "glycolytic process",
+    "curie": "GO:0006096",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_part",
+  "context": {},
+  "lean": "-- proposed: Claim.hasPart glycolysis phase1; phase2",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "ungrounded_entity",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45438-41",
+  "module": "m45438",
+  "source": "If the cell cannot catabolize the pyruvate molecules further, it will harvest only two ATP molecules from one molecule of glucose.",
+  "claim": "If pyruvate is not catabolized further, the cell harvests only two ATP per glucose",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "pyruvate",
+    "curie": "CHEBI:15361",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "ATP",
+    "curie": "CHEBI:15422",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "glucose",
+    "curie": "CHEBI:17234",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "yields",
+  "context": {},
+  "lean": "-- proposed: Claim.quantity (ATP per glucose = 2) under condition",
+  "bin_m1": "missing_construct",
+  "lean_m1": "conditional",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "yield",
+   "quant": null,
+   "subject": "GO:0006096",
+   "relation": null,
+   "object": "CHEBI:15422",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 2,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "precondition",
+   "curie_changes": [
+    {
+     "text": "harvests only two ATP from one glucose",
+     "from": null,
+     "to": "GO:0006096",
+     "why": "the process that stops at pyruvate is glycolysis (OLS4 verified)"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45438-42",
+  "module": "m45438",
+  "source": "For example, mature mammalian red blood cells are only capable of glycolysis, which is their sole source of ATP.",
+  "claim": "Mature mammalian red blood cells are capable only of glycolysis",
+  "kind": "other",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "mature mammalian red blood cells",
+    "curie": "CL:0000232",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "glycolytic process",
+    "curie": "GO:0006096",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "mammalian",
+    "curie": "NCBITaxon:40674",
+    "ontology": "NCBITaxon",
+    "verified": true
+   }
+  ],
+  "relation": "sole_process",
+  "context": {
+   "taxon": "NCBITaxon:40674",
+   "cellType": "CL:0000232"
+  },
+  "lean": "-- needs exclusivity (\"only\"); context cellType erythrocyte, taxon Mammalia",
+  "m2": {
+   "ctor": "rel",
+   "subject": "CL:0000232",
+   "relation": "capable of",
+   "object": "GO:0006096",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:40674",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "CL:0000232",
+   "relation": "capable of",
+   "object": "GO:0006096",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:40674",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "exclusivity",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45438-43",
+  "module": "m45438",
+  "source": "For example, mature mammalian red blood cells are only capable of glycolysis, which is their sole source of ATP.",
+  "claim": "Glycolysis is the sole source of ATP in mammalian red blood cells",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "glycolytic process",
+    "curie": "GO:0006096",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "ATP",
+    "curie": "CHEBI:15422",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "red blood cells",
+    "curie": "CL:0000232",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "Mammalia",
+    "curie": "NCBITaxon:40674",
+    "ontology": "NCBITaxon",
+    "verified": true
+   }
+  ],
+  "relation": "increases amount of",
+  "context": {
+   "taxon": "NCBITaxon:40674",
+   "cellType": "CL:0000232"
+  },
+  "lean": "Claim.inContext {taxa := [mammal], cellType := erythrocyte} (Claim.effect glycolysis .pos (.amount ATP))",
+  "m2": {
+   "ctor": "effect",
+   "subject": "GO:0006096",
+   "relation": null,
+   "object": "CHEBI:15422",
+   "sign": "pos",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:40674",
+    "anatomy": null,
+    "cellType": "CL:0000232",
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "GO:0006096",
+   "relation": null,
+   "object": "CHEBI:15422",
+   "sign": "pos",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:40674",
+    "anatomy": null,
+    "cellType": "CL:0000232",
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "exclusivity",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45438-44",
+  "module": "m45438",
+  "source": "If glycolysis is interrupted, these cells would eventually die.",
+  "claim": "If glycolysis is interrupted, red blood cells die",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "glycolytic process",
+    "curie": "GO:0006096",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "these cells",
+    "curie": "CL:0000232",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "die",
+    "curie": "GO:0008219",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "prevents",
+  "context": {
+   "cellType": "CL:0000232"
+  },
+  "lean": "Claim.inContext {cellType := erythrocyte} (Claim.effect glycolysis .neg (.process cell_death))",
+  "m2": {
+   "ctor": "effect",
+   "subject": "GO:0006096",
+   "relation": null,
+   "object": "GO:0008219",
+   "sign": "neg",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": "CL:0000232",
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "GO:0006096",
+   "relation": null,
+   "object": "GO:0008219",
+   "sign": "neg",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:40674",
+    "anatomy": null,
+    "cellType": "CL:0000232",
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "necessity",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45438-52",
+  "module": "m45438",
+  "source": "Glycolysis consists of two parts: The first part prepares the six-carbon ring of glucose for separation into two three-carbon sugars.",
+  "claim": "Glycolysis consists of two parts",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "has_part",
+  "entities": [
+   {
+    "text": "glycolytic process",
+    "curie": "GO:0006096",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_part",
+  "context": {},
+  "lean": "-- proposed: Claim.hasPart",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "ungrounded_entity",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45438-56",
+  "module": "m45438",
+  "source": "Two ATP molecules are invested in the first half and four ATP molecules are formed during the second half.",
+  "claim": "Two ATP are invested in the first half of glycolysis",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "ATP",
+    "curie": "CHEBI:15422",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "glycolytic process",
+    "curie": "GO:0006096",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_input (2)",
+  "context": {},
+  "lean": "-- proposed: Claim.quantity glycolysis ATP_in 2",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0006096",
+   "relation": "has input",
+   "object": "CHEBI:15422",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "consumes",
+   "quant": null,
+   "subject": "GO:0006096",
+   "relation": null,
+   "object": "CHEBI:15422",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 2,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45438-57",
+  "module": "m45438",
+  "source": "Two ATP molecules are invested in the first half and four ATP molecules are formed during the second half.",
+  "claim": "Four ATP are formed in the second half of glycolysis",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "ATP",
+    "curie": "CHEBI:15422",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "glycolytic process",
+    "curie": "GO:0006096",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_output (4)",
+  "context": {},
+  "lean": "-- proposed: Claim.quantity glycolysis ATP_out 4",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0006096",
+   "relation": "has output",
+   "object": "CHEBI:15422",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "produces",
+   "quant": null,
+   "subject": "GO:0006096",
+   "relation": null,
+   "object": "CHEBI:15422",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 4,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45438-58",
+  "module": "m45438",
+  "source": "This produces a net gain of two ATP molecules per molecule of glucose for the cell.",
+  "claim": "Glycolysis yields a net gain of two ATP per glucose",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "glycolytic process",
+    "curie": "GO:0006096",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "ATP",
+    "curie": "CHEBI:15422",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "glucose",
+    "curie": "CHEBI:17234",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "net_yield (2)",
+  "context": {},
+  "lean": "-- proposed: Evidence.quantity (\"ATP per glucose\", 2, \"count\") attached to Claim.effect glycolysis .pos (.amount ATP)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0006096",
+   "relation": "has output",
+   "object": "CHEBI:15422",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "yield",
+   "quant": null,
+   "subject": "GO:0006096",
+   "relation": null,
+   "object": "CHEBI:15422",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 2,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45439-1",
+  "module": "m45439",
+  "source": "In eukaryotic cells, the pyruvate molecules produced at the end of glycolysis are transported into mitochondria, which are sites of cellular respiration.",
+  "claim": "In eukaryotic cells pyruvate from glycolysis is transported into mitochondria",
+  "kind": "process_description",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "eukaryotic cells",
+    "curie": "CL:0000255",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "pyruvate",
+    "curie": "CHEBI:15361",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "glycolytic process",
+    "curie": "GO:0006096",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "mitochondria",
+    "curie": "GO:0005739",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "transported into mitochondria",
+    "curie": "GO:0006850",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "transported_to",
+  "context": {
+   "taxon": "NCBITaxon:2759"
+  },
+  "lean": "Claim.inContext {taxa := [eukaryote]} (pyruvate_mito_transport)  -- a bare process, no effect to state",
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0006850",
+   "relation": "has input",
+   "object": "CHEBI:15361",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": "CL:0000255",
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0006850",
+   "relation": "has input",
+   "object": "CHEBI:15361",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:2759",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45439-10",
+  "module": "m45439",
+  "source": "Like the conversion of pyruvate to acetyl CoA, the citric acid cycle in eukaryotic cells takes place in the matrix of the mitochondria.",
+  "claim": "In eukaryotic cells the citric acid cycle takes place in the mitochondrial matrix",
+  "kind": "structural",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "citric acid cycle",
+    "curie": "GO:0006099",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "matrix of the mitochondria",
+    "curie": "GO:0005759",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "eukaryotic cells",
+    "curie": "CL:0000255",
+    "ontology": "CL",
+    "verified": true
+   }
+  ],
+  "relation": "occurs_in",
+  "context": {
+   "taxon": "NCBITaxon:2759"
+  },
+  "lean": "-- occurs_in; context eukaryote, component mito_matrix",
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0006099",
+   "relation": "occurs in",
+   "object": "GO:0005759",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": "CL:0000255",
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0006099",
+   "relation": "occurs in",
+   "object": "GO:0005759",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:2759",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45439-14",
+  "module": "m45439",
+  "source": "The eight steps of the cycle are a series of chemical reactions that produces two carbon dioxide molecules, one ATP molecule (or an equivalent), and reduced forms (NADH and FADH2) of NAD+ and FAD+, important coenzymes in the cell.",
+  "claim": "The citric acid cycle has eight steps",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "the cycle",
+    "curie": "GO:0006099",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_part (8)",
+  "context": {},
+  "lean": "-- proposed: Claim.hasPart TCA steps (8)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "ungrounded_entity",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45439-15",
+  "module": "m45439",
+  "source": "The eight steps of the cycle are a series of chemical reactions that produces two carbon dioxide molecules, one ATP molecule (or an equivalent), and reduced forms (NADH and FADH2) of NAD+ and FAD+, important coenzymes in the cell.",
+  "claim": "Each turn of the citric acid cycle produces two CO2",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "tricarboxylic acid cycle",
+    "curie": "GO:0006099",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "carbon dioxide",
+    "curie": "CHEBI:16526",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "has_output (2)",
+  "context": {},
+  "lean": "Claim.effect TCA .pos (.amount CO2)  -- count lost",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0006099",
+   "relation": "has output",
+   "object": "CHEBI:16526",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "produces",
+   "quant": null,
+   "subject": "GO:0006099",
+   "relation": null,
+   "object": "CHEBI:16526",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 2,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45439-16",
+  "module": "m45439",
+  "source": "The eight steps of the cycle are a series of chemical reactions that produces two carbon dioxide molecules, one ATP molecule (or an equivalent), and reduced forms (NADH and FADH2) of NAD+ and FAD+, important coenzymes in the cell.",
+  "claim": "Each turn produces one ATP (or equivalent)",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "tricarboxylic acid cycle",
+    "curie": "GO:0006099",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "ATP",
+    "curie": "CHEBI:15422",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "has_output (1)",
+  "context": {},
+  "lean": "Claim.effect TCA .pos (.amount ATP)  -- count lost",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0006099",
+   "relation": "has output",
+   "object": "CHEBI:15422",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "produces",
+   "quant": null,
+   "subject": "GO:0006099",
+   "relation": null,
+   "object": "CHEBI:15422",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 1,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "disjunction",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45439-21",
+  "module": "m45439",
+  "source": "Two carbon atoms come into the citric acid cycle from each acetyl group.",
+  "claim": "Two carbon atoms enter the citric acid cycle from each acetyl group",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "tricarboxylic acid cycle",
+    "curie": "GO:0006099",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "acetyl group",
+    "curie": "CHEBI:40574",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "has_input (2 C)",
+  "context": {},
+  "lean": "-- proposed: Claim.quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0006099",
+   "relation": "has input",
+   "object": "CHEBI:40574",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "CHEBI:40574",
+   "relation": null,
+   "object": "CHEBI:27594",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 2,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "Two carbon atoms",
+     "from": null,
+     "to": "CHEBI:27594",
+     "why": "carbon atom, the part counted in each acetyl group (OLS4 verified)"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45439-22",
+  "module": "m45439",
+  "source": "Two carbon dioxide molecules are released on each turn of the cycle; however, these do not contain the same carbon atoms contributed by the acetyl group on that turn of the pathway.",
+  "claim": "Two CO2 are released per turn of the cycle",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "tricarboxylic acid cycle",
+    "curie": "GO:0006099",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "carbon dioxide",
+    "curie": "CHEBI:16526",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "has_output (2)",
+  "context": {},
+  "lean": "-- proposed: Claim.quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0006099",
+   "relation": "has output",
+   "object": "CHEBI:16526",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "produces",
+   "quant": null,
+   "subject": "GO:0006099",
+   "relation": null,
+   "object": "CHEBI:16526",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 2,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45439-24",
+  "module": "m45439",
+  "source": "The two acetyl-carbon atoms will eventually be released on later turns of the cycle; in this way, all six carbon atoms from the original glucose molecule will be eventually released as carbon dioxide.",
+  "claim": "All six carbons of glucose are eventually released as CO2",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "glucose",
+    "curie": "CHEBI:17234",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "carbon dioxide",
+    "curie": "CHEBI:16526",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "derives_from (6 C)",
+  "context": {},
+  "lean": "-- proposed: Claim.derivesFrom CO2 glucose (6)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "produces",
+   "quant": null,
+   "subject": "GO:0009060",
+   "relation": null,
+   "object": "CHEBI:16526",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 6,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "eventually released as CO2",
+     "from": null,
+     "to": "GO:0009060",
+     "why": "the process whose run turns one glucose into six CO2 is aerobic respiration (OLS4 verified)"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45439-25",
+  "module": "m45439",
+  "source": "It takes two turns of the cycle to process the equivalent of one glucose molecule.",
+  "claim": "Two turns of the cycle process one glucose equivalent",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "tricarboxylic acid cycle",
+    "curie": "GO:0006099",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "glucose",
+    "curie": "CHEBI:17234",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "turns_per_glucose (2)",
+  "context": {},
+  "lean": "-- proposed: Claim.quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45439-26",
+  "module": "m45439",
+  "source": "Each turn of the cycle forms three high-energy NADH molecules and one high-energy FADH2 molecule.",
+  "claim": "Each turn forms three NADH and one FADH2",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "tricarboxylic acid cycle",
+    "curie": "GO:0006099",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "NADH",
+    "curie": "CHEBI:16908",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "FADH2",
+    "curie": "CHEBI:17877",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "has_output (3,1)",
+  "context": {},
+  "lean": "-- proposed: Claim.quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0006099",
+   "relation": "has output",
+   "object": "CHEBI:16908",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "produces",
+   "quant": null,
+   "subject": "GO:0006099",
+   "relation": null,
+   "object": "CHEBI:16908",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 3,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "compound_sentence",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45439-28",
+  "module": "m45439",
+  "source": "One ATP (or an equivalent) is also made in each cycle.",
+  "claim": "One ATP (or equivalent) is made per cycle",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "ATP",
+    "curie": "CHEBI:15422",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "tricarboxylic acid cycle",
+    "curie": "GO:0006099",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_output (1)",
+  "context": {},
+  "lean": "-- proposed: Claim.quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0006099",
+   "relation": "has output",
+   "object": "CHEBI:15422",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "produces",
+   "quant": null,
+   "subject": "GO:0006099",
+   "relation": null,
+   "object": "CHEBI:15422",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 1,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "disjunction",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45439-32",
+  "module": "m45439",
+  "source": "Most of the ATP generated during the aerobic catabolism of glucose, however, is not generated directly from these pathways.",
+  "claim": "Most ATP from aerobic glucose catabolism is not generated directly by glycolysis or the TCA cycle",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "ATP",
+    "curie": "CHEBI:15422",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "aerobic catabolism of glucose",
+    "curie": "GO:0006007",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "glycolytic process",
+    "curie": "GO:0006096",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "tricarboxylic acid cycle",
+    "curie": "GO:0006099",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "proportion",
+  "context": {},
+  "lean": "-- proposed: Claim.quantity (fraction)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "proportion",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45439-33",
+  "module": "m45439",
+  "source": "Rather, it derives from a process that begins with passing electrons through a series of chemical reactions to a final electron acceptor, oxygen.",
+  "claim": "Most ATP derives from a process that passes electrons through reactions to oxygen as final acceptor",
+  "kind": "process_description",
+  "bin": "missing_construct",
+  "missing_construct": "sequence/ordering",
+  "entities": [
+   {
+    "text": "ATP",
+    "curie": "CHEBI:15422",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "a process",
+    "curie": "GO:0006119",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "electrons",
+    "curie": "CHEBI:10545",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "oxygen",
+    "curie": "CHEBI:15379",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "derives_from",
+  "context": {},
+  "lean": "Claim.effect oxphos .pos (.amount ATP)  -- \"final electron acceptor\" role lost",
+  "bin_m1": "missing_construct",
+  "lean_m1": "derivation (made from)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0006119",
+   "relation": "has output",
+   "object": "CHEBI:15422",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0006119",
+   "relation": "has output",
+   "object": "CHEBI:15422",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "proportion",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45439-35",
+  "module": "m45439",
+  "source": "These reactions take place in specialized protein complexes located in the inner membrane of the mitochondria of eukaryotic organisms and on the inner part of the cell membrane of prokaryotic organisms.",
+  "claim": "In prokaryotes electron transport occurs on the inner part of the cell membrane",
+  "kind": "structural",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "These reactions",
+    "curie": "GO:0022904",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "cell membrane",
+    "curie": "GO:0005886",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "prokaryotic organisms",
+    "curie": "CL:0000520",
+    "ontology": "CL",
+    "verified": true
+   }
+  ],
+  "relation": "occurs_in",
+  "context": {
+   "cellType": "CL:0000520"
+  },
+  "lean": "-- occurs_in with taxon + component context",
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0022904",
+   "relation": "occurs in",
+   "object": "GO:0005886",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:2",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [
+    {
+     "text": "prokaryotic organisms",
+     "from": "CL:0000520",
+     "to": "NCBITaxon:2",
+     "why": "context is a taxon, not a cell type; NCBITaxon:2 (Bacteria) carries the synonym prokaryotes"
+    }
+   ],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0022904",
+   "relation": "occurs in",
+   "object": "GO:0005886",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:2",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "prokaryotic organisms",
+     "from": "CL:0000520",
+     "to": "NCBITaxon:2",
+     "why": "a cell type used as a taxon proxy; Bacteria (Archaea would be NCBITaxon:2157; NCBITaxon:131567 would drop the restriction)"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45439-40",
+  "module": "m45439",
+  "source": "The electron transport chain (a) is the last component of aerobic respiration and is the only part of metabolism that uses atmospheric oxygen.",
+  "claim": "The electron transport chain is the only part of metabolism that uses atmospheric oxygen",
+  "kind": "other",
+  "bin": "missing_construct",
+  "missing_construct": "has_input",
+  "entities": [
+   {
+    "text": "respiratory electron transport chain",
+    "curie": "GO:0022904",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "atmospheric oxygen",
+    "curie": "CHEBI:15379",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "metabolism",
+    "curie": "GO:0008152",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_input (only)",
+  "context": {},
+  "lean": "-- proposed: Claim.hasInput ETC O2 + exclusivity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0022904",
+   "relation": "has input",
+   "object": "CHEBI:15379",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0022904",
+   "relation": "has input",
+   "object": "CHEBI:15379",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "exclusivity",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45439-46",
+  "module": "m45439",
+  "source": "There are four complexes composed of proteins, labeled I through IV in c, and the aggregation of these four complexes, together with associated mobile, accessory electron carriers, is called the electron transport chain.",
+  "claim": "The electron transport chain is four protein complexes (I-IV) plus mobile accessory electron carriers",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "has_part",
+  "entities": [
+   {
+    "text": "four complexes composed of proteins",
+    "curie": "GO:0098803",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "electron transport chain",
+    "curie": "GO:0022904",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_part (4)",
+  "context": {},
+  "lean": "-- proposed: Claim.hasPart ETC complex_I..IV",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0022904",
+   "relation": "has part",
+   "object": "GO:0098803",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "GO:0022904",
+   "relation": null,
+   "object": "GO:0098803",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 4,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45439-48",
+  "module": "m45439",
+  "source": "The electron transport chain is present in multiple copies in the inner mitochondrial membrane of eukaryotes and in the plasma membrane of prokaryotes.",
+  "claim": "The electron transport chain is in the plasma membrane of prokaryotes",
+  "kind": "structural",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "respiratory electron transport chain",
+    "curie": "GO:0022904",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "plasma membrane",
+    "curie": "GO:0005886",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "prokaryotes",
+    "curie": "CL:0000520",
+    "ontology": "CL",
+    "verified": true
+   }
+  ],
+  "relation": "located_in",
+  "context": {
+   "cellType": "CL:0000520"
+  },
+  "lean": "-- located_in with context",
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0022904",
+   "relation": "occurs in",
+   "object": "GO:0005886",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:2",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [
+    {
+     "text": "prokaryotes",
+     "from": "CL:0000520",
+     "to": "NCBITaxon:2",
+     "why": "context is a taxon; NCBITaxon:2 carries the synonym prokaryotes"
+    }
+   ],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0022904",
+   "relation": "occurs in",
+   "object": "GO:0005886",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:2",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "prokaryotes",
+     "from": "CL:0000520",
+     "to": "NCBITaxon:2",
+     "why": "a cell type used as a taxon proxy; Bacteria (Archaea would be NCBITaxon:2157; NCBITaxon:131567 would drop the restriction)"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45439-57",
+  "module": "m45439",
+  "source": "As they are passed from one complex to another (there are a total of four), the electrons lose energy, and some of that energy is used to pump hydrogen ions from the mitochondrial matrix into the intermembrane space.",
+  "claim": "There are four complexes in the chain",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "respiratory electron transport chain",
+    "curie": "GO:0022904",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "complex",
+    "curie": "GO:0098803",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_part (4)",
+  "context": {},
+  "lean": "-- proposed",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0022904",
+   "relation": "has part",
+   "object": "GO:0098803",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "GO:0022904",
+   "relation": null,
+   "object": "GO:0098803",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 4,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45439-74",
+  "module": "m45439",
+  "source": "Chemiosmosis (c) is used to generate 90 percent of the ATP made during aerobic glucose catabolism.",
+  "claim": "Chemiosmosis generates 90 percent of the ATP made during aerobic glucose catabolism",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "Chemiosmosis",
+    "curie": "GO:0015986",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "ATP",
+    "curie": "CHEBI:15422",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "aerobic glucose catabolism",
+    "curie": "GO:0006007",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "proportion (0.9)",
+  "context": {},
+  "lean": "-- proposed: Evidence.quantity (\"fraction of ATP\", 0.9, \"ratio\")",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0015986",
+   "relation": "has output",
+   "object": "CHEBI:15422",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0015986",
+   "relation": "has output",
+   "object": "CHEBI:15422",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "proportion",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45439-80",
+  "module": "m45439",
+  "source": "The number of ATP molecules generated from the catabolism of glucose varies.",
+  "claim": "The number of ATP generated from glucose catabolism varies",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "variation",
+  "entities": [
+   {
+    "text": "ATP",
+    "curie": "CHEBI:15422",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "glucose catabolic process",
+    "curie": "GO:0006007",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "varies",
+  "context": {},
+  "lean": "-- proposed: Claim.quantity with range",
+  "bin_m1": "missing_construct",
+  "lean_m1": "variation",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45439-81",
+  "module": "m45439",
+  "source": "For example, the number of hydrogen ions that the electron transport chain complexes can pump through the membrane varies between species.",
+  "claim": "The number of hydrogen ions the ETC complexes pump varies between species",
+  "kind": "quantitative",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "electron transport chain complexes",
+    "curie": "GO:0022904",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "hydrogen ions",
+    "curie": "CHEBI:15378",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "varies_by_taxon",
+  "context": {},
+  "lean": "-- quantity varying with taxon context; needs quantity + variation",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45439-82",
+  "module": "m45439",
+  "source": "Another source of variance stems from the shuttle of electrons across the mitochondrial membrane.",
+  "claim": "Electron shuttling across the mitochondrial membrane is another source of variance in ATP yield",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "variation",
+  "entities": [
+   {
+    "text": "electrons",
+    "curie": "CHEBI:10545",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "mitochondrial membrane",
+    "curie": "GO:0005743",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "ATP",
+    "curie": "CHEBI:15422",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "affects yield",
+  "context": {},
+  "lean": "-- proposed",
+  "bin_m1": "missing_construct",
+  "lean_m1": "variation",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45439-85",
+  "module": "m45439",
+  "source": "Fewer ATP molecules are generated when FAD+ acts as a carrier.",
+  "claim": "Fewer ATP are generated when FAD acts as the carrier",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "comparative",
+  "entities": [
+   {
+    "text": "FAD+",
+    "curie": "CHEBI:16238",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "ATP",
+    "curie": "CHEBI:15422",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "less than",
+  "context": {},
+  "lean": "-- proposed: Claim.comparative ...  (was: Claim.effect FAD .neg (.amount ATP))",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45439-86",
+  "module": "m45439",
+  "source": "NAD+ is used as the electron transporter in the liver and FAD+ in the brain, so ATP yield depends on the tissue being considered.",
+  "claim": "NAD+ is the electron transporter in the liver",
+  "kind": "structural",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "NAD+",
+    "curie": "CHEBI:15846",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "liver",
+    "curie": "UBERON:0002107",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "Mammalia",
+    "curie": "NCBITaxon:40674",
+    "ontology": "NCBITaxon",
+    "verified": true
+   }
+  ],
+  "relation": "used_in",
+  "context": {
+   "anatomy": "UBERON:0002107"
+  },
+  "lean": "Claim.inContext {anatomy := liver} (Claim.effect NAD .pos (.process ETC))",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "low"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "CHEBI:15846",
+   "relation": "has function",
+   "object": "GO:0009055",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:40674",
+    "anatomy": "UBERON:0002107",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "electron transporter",
+     "from": null,
+     "to": "GO:0009055",
+     "why": "the function NAD+ and FAD serve: electron transfer activity (OLS4 verified)"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45439-87",
+  "module": "m45439",
+  "source": "NAD+ is used as the electron transporter in the liver and FAD+ in the brain, so ATP yield depends on the tissue being considered.",
+  "claim": "FAD is the electron transporter in the brain",
+  "kind": "structural",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "FAD+",
+    "curie": "CHEBI:16238",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "brain",
+    "curie": "UBERON:0000955",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "used_in",
+  "context": {
+   "anatomy": "UBERON:0000955"
+  },
+  "lean": "Claim.inContext {anatomy := brain} (Claim.effect FAD .pos (.process ETC))",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "low"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "CHEBI:16238",
+   "relation": "has function",
+   "object": "GO:0009055",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:40674",
+    "anatomy": "UBERON:0000955",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "electron transporter",
+     "from": null,
+     "to": "GO:0009055",
+     "why": "the function NAD+ and FAD serve: electron transfer activity (OLS4 verified)"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45439-88",
+  "module": "m45439",
+  "source": "NAD+ is used as the electron transporter in the liver and FAD+ in the brain, so ATP yield depends on the tissue being considered.",
+  "claim": "ATP yield depends on the tissue",
+  "kind": "quantitative",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "ATP",
+    "curie": "CHEBI:15422",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "varies_by_tissue",
+  "context": {},
+  "lean": "-- quantity varying with anatomy context",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45439-93",
+  "module": "m45439",
+  "source": "Overall, in living systems, these pathways of glucose catabolism extract about 34 percent of the energy contained in glucose.",
+  "claim": "Glucose catabolism extracts about 34 percent of the energy in glucose",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "pathways of glucose catabolism",
+    "curie": "GO:0006007",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "glucose",
+    "curie": "CHEBI:17234",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "efficiency (0.34)",
+  "context": {},
+  "lean": "-- proposed: Evidence.quantity (\"efficiency\", 0.34, \"ratio\")",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "measure",
+   "quant": null,
+   "subject": "GO:0006007",
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": 0.34,
+   "hi": 0.34,
+   "unit": "fraction",
+   "quality": "PATO:0001029",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45439-99",
+  "module": "m45439",
+  "source": "Most affected people are diagnosed in childhood, although there are some adult-onset diseases.",
+  "claim": "Most mitochondrial disease patients are diagnosed in childhood; some diseases are adult-onset",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "mitochondrial",
+    "curie": "MONDO:0044970",
+    "ontology": "MONDO",
+    "verified": true
+   },
+   {
+    "text": "childhood",
+    "curie": "HP:0011463",
+    "ontology": "HP",
+    "verified": true
+   },
+   {
+    "text": "adult-onset",
+    "curie": "HP:0003581",
+    "ontology": "HP",
+    "verified": true
+   }
+  ],
+  "relation": "onset",
+  "context": {},
+  "lean": "-- proposed: Claim.quantity (proportion) with stage",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "MONDO:0044970",
+   "relation": "has phenotype",
+   "object": "HP:0011463",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "low"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": "most",
+   "subject": "MONDO:0044970",
+   "relation": "has phenotype",
+   "object": "HP:0011463",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "compound_sentence",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45439-104",
+  "module": "m45439",
+  "source": "One molecule of ATP (or an equivalent) is produced per each turn of the cycle.",
+  "claim": "One ATP (or equivalent) is produced per turn of the cycle",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "ATP",
+    "curie": "CHEBI:15422",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "tricarboxylic acid cycle",
+    "curie": "GO:0006099",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_output (1)",
+  "context": {},
+  "lean": "-- proposed: Claim.quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0006099",
+   "relation": "has output",
+   "object": "CHEBI:15422",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "produces",
+   "quant": null,
+   "subject": "GO:0006099",
+   "relation": null,
+   "object": "CHEBI:15422",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 1,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "disjunction",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45439-106",
+  "module": "m45439",
+  "source": "The electrons are passed through a series of chemical reactions, with a small amount of free energy used at three points to transport hydrogen ions across the membrane.",
+  "claim": "Electrons pass through a series of reactions, with free energy used at three points to transport hydrogen ions across the membrane",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "electrons",
+    "curie": "CHEBI:10545",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "hydrogen ions",
+    "curie": "CHEBI:15378",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "proton transmembrane transport",
+    "curie": "GO:1902600",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "respiratory electron transport chain",
+    "curie": "GO:0022904",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_part (3 pumping points)",
+  "context": {},
+  "lean": "-- proposed: ordered steps + count",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "GO:0022904",
+   "relation": null,
+   "object": "GO:1902600",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 3,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45439-123",
+  "module": "m45439",
+  "source": "The oxygen we inhale is the final electron acceptor in the electron transport chain and allows aerobic respiration to proceed, which is the most efficient pathway for harvesting energy in the form of ATP from food molecules.",
+  "claim": "Aerobic respiration is the most efficient pathway for harvesting ATP from food",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "aerobic respiration",
+    "curie": "GO:0009060",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "ATP",
+    "curie": "CHEBI:15422",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "most_efficient",
+  "context": {},
+  "lean": "-- comparative/superlative quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "has_quality",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45440-11",
+  "module": "m45440",
+  "source": "This occurs routinely in mammalian red blood cells and in skeletal muscle that has insufficient oxygen supply to allow aerobic respiration to continue (that is, in muscles used to the point of fatigue).",
+  "claim": "Lactic acid fermentation occurs routinely in mammalian red blood cells",
+  "kind": "structural",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "This",
+    "curie": "GO:0019661",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "mammalian red blood cells",
+    "curie": "CL:0000232",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "Mammalia",
+    "curie": "NCBITaxon:40674",
+    "ontology": "NCBITaxon",
+    "verified": true
+   }
+  ],
+  "relation": "occurs_in",
+  "context": {
+   "taxon": "NCBITaxon:40674",
+   "cellType": "CL:0000232"
+  },
+  "lean": "-- occurs_in; context Mammalia, erythrocyte",
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0019661",
+   "relation": "occurs in",
+   "object": "CL:0000232",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:40674",
+    "anatomy": null,
+    "cellType": "CL:0000232",
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0019244",
+   "relation": "occurs in",
+   "object": "CL:0000232",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:40674",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "lactic acid fermentation",
+     "from": "GO:0019661",
+     "to": "GO:0019244",
+     "why": "GO:0019661 is obsolete in GO; GO gives GO:0019244 as its replacement"
+    }
+   ],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45440-12",
+  "module": "m45440",
+  "source": "This occurs routinely in mammalian red blood cells and in skeletal muscle that has insufficient oxygen supply to allow aerobic respiration to continue (that is, in muscles used to the point of fatigue).",
+  "claim": "Lactic acid fermentation occurs in skeletal muscle with insufficient oxygen (fatigue)",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "This",
+    "curie": "GO:0019661",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "skeletal muscle",
+    "curie": "UBERON:0001134",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "oxygen",
+    "curie": "CHEBI:15379",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "occurs_in",
+  "context": {
+   "anatomy": "UBERON:0001134",
+   "condition": "hypoxia"
+  },
+  "lean": "Claim.inContext {anatomy := skeletal_muscle} (Claim.effect O2 .neg (.process lactate_fermentation))",
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0019661",
+   "relation": "occurs in",
+   "object": "UBERON:0001134",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0001134",
+    "cellType": null,
+    "condition": "insufficient oxygen"
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0019244",
+   "relation": "occurs in",
+   "object": "UBERON:0001134",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": {
+     "kind": "environment",
+     "curie": "EFO:0009444",
+     "text": "insufficient oxygen supply (hypoxia)"
+    }
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "lactic acid fermentation",
+     "from": "GO:0019661",
+     "to": "GO:0019244",
+     "why": "GO:0019661 is obsolete in GO; GO gives GO:0019244 as its replacement"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45440-35",
+  "module": "m45440",
+  "source": "Ethanol above 12 percent is toxic to yeast, so natural levels of alcohol in wine occur at a maximum of 12 percent.",
+  "claim": "Ethanol above 12 percent is toxic to yeast",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "Ethanol",
+    "curie": "CHEBI:16236",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "Saccharomyces cerevisiae",
+    "curie": "NCBITaxon:4932",
+    "ontology": "NCBITaxon",
+    "verified": true
+   }
+  ],
+  "relation": "kills",
+  "context": {
+   "taxon": "NCBITaxon:4932",
+   "condition": "ethanol >12%"
+  },
+  "lean": "Claim.inContext {taxa := [yeast], dose := \">12%\"} (Claim.effect ethanol .pos (.process cell_death))",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "precondition",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45440-36",
+  "module": "m45440",
+  "source": "Ethanol above 12 percent is toxic to yeast, so natural levels of alcohol in wine occur at a maximum of 12 percent.",
+  "claim": "Natural alcohol levels in wine max out at 12 percent",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "alcohol",
+    "curie": "CHEBI:16236",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "max (0.12)",
+  "context": {},
+  "lean": "-- proposed: Evidence.quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "measure",
+   "quant": null,
+   "subject": "CHEBI:16236",
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": 0,
+   "hi": 0.12,
+   "unit": "fraction",
+   "quality": "PATO:0000033",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": {
+     "kind": "environment",
+     "curie": "NCIT:C66822",
+     "text": "wine"
+    }
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "low"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45440-41",
+  "module": "m45440",
+  "source": "Similarly, sulfate-reducing bacteria and Archaea, most of which are anaerobic (), reduce sulfate to hydrogen sulfide to regenerate NAD+ from NADH.",
+  "claim": "Most sulfate reducers are anaerobic",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "sulfate-reducing bacteria",
+    "curie": "NCBITaxon:2",
+    "ontology": "NCBITaxon",
+    "verified": true
+   }
+  ],
+  "relation": "is_a (most)",
+  "context": {},
+  "lean": "-- proportion not expressible",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "ungrounded_entity",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45440-47",
+  "module": "m45440",
+  "source": "Oxygen is a poison to these microorganisms and kills them upon exposure.",
+  "claim": "Oxygen kills obligate anaerobes on exposure",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "Oxygen",
+    "curie": "CHEBI:15379",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "these microorganisms",
+    "curie": "NCBITaxon:1485",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "kills",
+    "curie": "GO:0008219",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "causes",
+  "context": {
+   "taxon": "NCBITaxon:1485"
+  },
+  "lean": "Claim.inContext {taxa := [clostridium]} (Claim.effect O2 .pos (.process cell_death))",
+  "m2": {
+   "ctor": "effect",
+   "subject": "CHEBI:15379",
+   "relation": null,
+   "object": "GO:0008219",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:1485",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "CHEBI:15379",
+   "relation": null,
+   "object": "GO:0008219",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:1485",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45440-48",
+  "module": "m45440",
+  "source": "It should be noted that most forms of fermentation produce gas (an exception is lactic acid fermentation which, in most cases, does not result in gas production).",
+  "claim": "Most forms of fermentation produce gas",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "fermentation",
+    "curie": "GO:0006113",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_output (most)",
+  "context": {},
+  "lean": "-- proposed: hasOutput gas with proportion",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "ungrounded_entity",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45440-54",
+  "module": "m45440",
+  "source": "Most organisms will use some form of fermentation to accomplish the regeneration of NAD+, ensuring the continuation of glycolysis.",
+  "claim": "Most organisms use some form of fermentation to regenerate NAD+ and continue glycolysis",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "fermentation",
+    "curie": "GO:0006113",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "NAD+",
+    "curie": "CHEBI:15846",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "glycolytic process",
+    "curie": "GO:0006096",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "organisms",
+    "curie": "NCBITaxon:131567",
+    "ontology": "NCBITaxon",
+    "verified": true
+   }
+  ],
+  "relation": "occurs_in (most)",
+  "context": {},
+  "lean": "-- proportion",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "NCBITaxon:131567",
+   "relation": "capable of",
+   "object": "GO:0006113",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": "most",
+   "subject": "NCBITaxon:131567",
+   "relation": "capable of",
+   "object": "GO:0006113",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45440-71",
+  "module": "m45440",
+  "source": "Without oxygen, oxidative phosphorylation and the citric acid cycle stop, so ATP is no longer generated through this mechanism, which extracts the greatest amount of energy from a sugar molecule.",
+  "claim": "Oxidative phosphorylation extracts the most energy from a sugar molecule",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "this mechanism",
+    "curie": "GO:0006119",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "sugar molecule",
+    "curie": "CHEBI:16646",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "most_efficient",
+  "context": {},
+  "lean": "-- superlative",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "has_quality",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45444-13",
+  "module": "m45444",
+  "source": "The presence of glycogen in muscle cells as a source of glucose allows ATP to be produced for a longer time during exercise.",
+  "claim": "Muscle glycogen allows ATP production for longer during exercise",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "glycogen",
+    "curie": "CHEBI:28087",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "muscle cells",
+    "curie": "CL:0000187",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "glucose",
+    "curie": "CHEBI:17234",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "ATP",
+    "curie": "CHEBI:15422",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "increases",
+  "context": {
+   "cellType": "CL:0000187",
+   "condition": "exercise"
+  },
+  "lean": "Claim.inContext {cellType := muscle_cell, exposures := [exercise]} (Claim.effect glycogen .pos (.amount ATP))",
+  "m2": {
+   "ctor": "effect",
+   "subject": "CHEBI:28087",
+   "relation": null,
+   "object": "CHEBI:15422",
+   "sign": "pos",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": "CL:0000187",
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "CHEBI:28087",
+   "relation": null,
+   "object": "CHEBI:15422",
+   "sign": "pos",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": "CL:0000187",
+    "component": null,
+    "stage": null,
+    "condition": {
+     "kind": "organism",
+     "curie": "EFO:0000483",
+     "text": "exercise"
+    }
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "low"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45444-20",
+  "module": "m45444",
+  "source": "The catabolism of fructose, galactose and glucose produces the same number of ATP molecules.",
+  "claim": "Catabolism of fructose, galactose and glucose produces the same number of ATP",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "equality/identity",
+  "entities": [
+   {
+    "text": "catabolism of fructose",
+    "curie": "GO:0006001",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "galactose",
+    "curie": "GO:0019388",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "glucose",
+    "curie": "GO:0006007",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "ATP",
+    "curie": "CHEBI:15422",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "equal_yield",
+  "context": {},
+  "lean": "-- proposed: Claim.quantity equality",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45444-22",
+  "module": "m45444",
+  "source": "Most of the time, amino acids are recycled into new proteins.",
+  "claim": "Most of the time amino acids are recycled into new proteins",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "amino acids",
+    "curie": "CHEBI:33709",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "new proteins",
+    "curie": "CHEBI:36080",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "protein biosynthetic process",
+    "curie": "GO:0006412",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_input (mostly)",
+  "context": {},
+  "lean": "-- proportion",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": "most",
+   "subject": "CHEBI:33709",
+   "relation": "input of",
+   "object": "GO:0006412",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45444-26",
+  "module": "m45444",
+  "source": "In mammals, the liver synthesizes urea from two ammonia molecules and a carbon dioxide molecule.",
+  "claim": "In mammals the liver synthesizes urea from two ammonia molecules and one CO2",
+  "kind": "process_description",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "mammals",
+    "curie": "NCBITaxon:40674",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "liver",
+    "curie": "UBERON:0002107",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "urea",
+    "curie": "CHEBI:16199",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "ammonia",
+    "curie": "CHEBI:16134",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "carbon dioxide",
+    "curie": "CHEBI:16526",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "urea cycle",
+    "curie": "GO:0000050",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_input / has_output",
+  "context": {
+   "taxon": "NCBITaxon:40674",
+   "anatomy": "UBERON:0002107"
+  },
+  "lean": "Claim.inContext {taxa := [mammal], anatomy := liver} (Claim.effect urea_cycle .pos (.amount urea))",
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0000050",
+   "relation": "has output",
+   "object": "CHEBI:16199",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:40674",
+    "anatomy": "UBERON:0002107",
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "consumes",
+   "quant": null,
+   "subject": "GO:0000050",
+   "relation": null,
+   "object": "CHEBI:16134",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 2,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:40674",
+    "anatomy": "UBERON:0002107",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "compound_sentence",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45444-27",
+  "module": "m45444",
+  "source": "Thus, urea is the principal waste product in mammals from the nitrogen originating in amino acids, and it leaves the body in urine.",
+  "claim": "Urea is the principal nitrogen waste product in mammals",
+  "kind": "definitional",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "urea",
+    "curie": "CHEBI:16199",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "mammals",
+    "curie": "NCBITaxon:40674",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "amino acids",
+    "curie": "CHEBI:33709",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "is_a",
+  "context": {
+   "taxon": "NCBITaxon:40674"
+  },
+  "lean": "-- ontology layer with taxon context",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "proportion",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45444-37",
+  "module": "m45444",
+  "source": "Triglycerides store about twice as much energy as carbohydrates.",
+  "claim": "Triglycerides store about twice as much energy as carbohydrates",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "Triglycerides",
+    "curie": "CHEBI:17855",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "carbohydrates",
+    "curie": "CHEBI:16646",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "ratio (2x)",
+  "context": {},
+  "lean": "-- proposed: Evidence.quantity (\"energy density ratio\", 2, \"ratio\")",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "proportion",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45444-39",
+  "module": "m45444",
+  "source": "Animals can make most of the fatty acids they need.",
+  "claim": "Animals can make most of the fatty acids they need",
+  "kind": "other",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "Metazoa",
+    "curie": "NCBITaxon:33208",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "fatty acids",
+    "curie": "CHEBI:35366",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "fatty acid biosynthetic process",
+    "curie": "GO:0006633",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "capable_of",
+  "context": {
+   "taxon": "NCBITaxon:33208"
+  },
+  "lean": "-- taxon-level capability; \"most\" not expressible",
+  "m2": {
+   "ctor": "rel",
+   "subject": "NCBITaxon:33208",
+   "relation": "capable of",
+   "object": "GO:0006633",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "NCBITaxon:33208",
+   "relation": "capable of",
+   "object": "GO:0006633",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "proportion",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ }
+]

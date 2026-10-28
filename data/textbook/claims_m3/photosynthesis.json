@@ -1,0 +1,2195 @@
+[
+ {
+  "id": "photosynthesis-m45448-3",
+  "module": "m45448",
+  "source": "Each cell runs on the chemical energy found mainly in carbohydrate molecules (food), and the majority of these molecules are produced by one process: photosynthesis.",
+  "claim": "most carbohydrate molecules are produced by photosynthesis",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantifier/negation",
+  "entities": [
+   {
+    "text": "photosynthesis",
+    "curie": "GO:0015979",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "carbohydrate molecules",
+    "curie": "CHEBI:16646",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "increases amount of",
+  "context": {},
+  "lean": "-- \"most\" carbohydrate is from photosynthesis: needs a quantifier; Claim.effect photosynthesis .pos (.amount carbohydrate) loses it",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantifier (most)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0015979",
+   "relation": "has output",
+   "object": "CHEBI:16646",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": "most",
+   "subject": "CHEBI:16646",
+   "relation": "output of",
+   "object": "GO:0015979",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "photosynthesis-m45448-9",
+  "module": "m45448",
+  "source": "Therefore, directly or indirectly, the process of photosynthesis provides most of the energy required by living things on earth.",
+  "claim": "photosynthesis provides most of the energy used by living things",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "photosynthesis",
+    "curie": "GO:0015979",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "organisms",
+    "curie": null,
+    "ontology": null,
+    "verified": false
+   }
+  ],
+  "relation": "provides (proportion)",
+  "context": {},
+  "lean": "Claim.provides photosynthesis energy (proportion := most) -- not in schema",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity (most)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "proportion",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "photosynthesis-m45448-50",
+  "module": "m45448",
+  "source": "After the process is complete, photosynthesis releases oxygen and produces carbohydrate molecules, most commonly glucose.",
+  "claim": "glucose is the most common carbohydrate product of photosynthesis",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "photosynthesis",
+    "curie": "GO:0015979",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "glucose",
+    "curie": "CHEBI:17234",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "has_output (most common)",
+  "context": {},
+  "lean": "Claim.hasOutput photosynthesis glucose (rank := mostCommon) -- not in schema",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity (most common)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0015979",
+   "relation": "has output",
+   "object": "CHEBI:17234",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0015979",
+   "relation": "has output",
+   "object": "CHEBI:17234",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "proportion",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "photosynthesis-m45448-63",
+  "module": "m45448",
+  "source": "In all autotrophic eukaryotes, photosynthesis takes place inside an organelle called a chloroplast.",
+  "claim": "in autotrophic eukaryotes, photosynthesis takes place inside the chloroplast",
+  "kind": "process_description",
+  "bin": "missing_construct",
+  "missing_construct": "occurs_in",
+  "entities": [
+   {
+    "text": "photosynthesis",
+    "curie": "GO:0015979",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "chloroplast",
+    "curie": "GO:0009507",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "occurs_in",
+  "context": {
+   "taxon": "NCBITaxon:2759"
+  },
+  "lean": "Claim.inContext {taxa := [eukaryota]} (Claim.occursIn photosynthesis chloroplast) -- occursIn not in schema",
+  "bin_m1": "with_context",
+  "lean_m1": "context (species: autotrophic eukaryotes)",
+  "rel_m1": "occurs in",
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0015979",
+   "relation": "occurs in",
+   "object": "GO:0009507",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:2759",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0015979",
+   "relation": "occurs in",
+   "object": "GO:0009507",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:2759",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "photosynthesis-m45448-80",
+  "module": "m45448",
+  "source": "Not all cells of a leaf carry out photosynthesis.",
+  "claim": "some leaf cells do not carry out photosynthesis",
+  "kind": "other",
+  "bin": "missing_construct",
+  "missing_construct": "quantifier/negation",
+  "entities": [
+   {
+    "text": "cells",
+    "curie": "CL:0000000",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "leaves",
+    "curie": "PO:0025034",
+    "ontology": "other",
+    "verified": true
+   },
+   {
+    "text": "photosynthesis",
+    "curie": "GO:0015979",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "not capable_of (some)",
+  "context": {
+   "taxon": "NCBITaxon:33090"
+  },
+  "lean": "∃ c ∈ leafCells, ¬ Claim.capableOf c photosynthesis -- not in schema",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantifier (some)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "notRel",
+   "quant": "some",
+   "subject": "CL:0000000",
+   "relation": "capable of",
+   "object": "GO:0015979",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": "PO:0025034",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "photosynthesis-m45448-84",
+  "module": "m45448",
+  "source": "On a hot, dry day, plants close their stomata to conserve water.",
+  "claim": "hot dry conditions cause plants to close their stomata",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "plants",
+    "curie": "NCBITaxon:33090",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "close their stomata",
+    "curie": "GO:0090332",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "increases",
+  "context": {
+   "taxon": "NCBITaxon:33090",
+   "condition": "hot, dry"
+  },
+  "lean": "Claim.inContext {taxa := [plants], exposures := [heatDrought]} (Claim.effect heatDrought .pos (.process stomatalClosure))",
+  "m2": {
+   "ctor": "rel",
+   "subject": "NCBITaxon:33090",
+   "relation": "capable of",
+   "object": "GO:0090332",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": "hot, dry day"
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "NCBITaxon:33090",
+   "relation": "capable of",
+   "object": "GO:0090332",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": {
+     "kind": "environment",
+     "curie": "BLN:hot_dry_day",
+     "text": "hot, dry day"
+    }
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "photosynthesis-m45448-115",
+  "module": "m45448",
+  "source": "Eukaryotic autotrophs, such as plants and algae, have organelles called chloroplasts in which photosynthesis takes place.",
+  "claim": "photosynthesis takes place in chloroplasts",
+  "kind": "process_description",
+  "bin": "missing_construct",
+  "missing_construct": "occurs_in",
+  "entities": [
+   {
+    "text": "photosynthesis",
+    "curie": "GO:0015979",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "chloroplast",
+    "curie": "GO:0009507",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "occurs_in",
+  "context": {},
+  "lean": "Claim.occursIn photosynthesis chloroplast -- not in schema",
+  "bin_m1": "now",
+  "lean_m1": "Claim.rel Rel.occursIn photosynthesis chloroplast",
+  "rel_m1": "occurs in",
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0015979",
+   "relation": "occurs in",
+   "object": "GO:0009507",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:2759",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0015979",
+   "relation": "occurs in",
+   "object": "GO:0009507",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:2759",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "photosynthesis-m45448-116",
+  "module": "m45448",
+  "source": "On a hot, dry day, plants close their stomata to conserve water.",
+  "claim": "hot dry conditions cause plants to close their stomata",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "plants",
+    "curie": "NCBITaxon:33090",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "close their stomata",
+    "curie": "GO:0090332",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "increases",
+  "context": {
+   "taxon": "NCBITaxon:33090",
+   "condition": "hot, dry"
+  },
+  "lean": "Claim.inContext {taxa := [plants], exposures := [heatDrought]} (Claim.effect heatDrought .pos (.process stomatalClosure))",
+  "m2": {
+   "ctor": "rel",
+   "subject": "NCBITaxon:33090",
+   "relation": "capable of",
+   "object": "GO:0090332",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": "hot, dry day"
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "NCBITaxon:33090",
+   "relation": "capable of",
+   "object": "GO:0090332",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": {
+     "kind": "environment",
+     "curie": "BLN:hot_dry_day",
+     "text": "hot, dry day"
+    }
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "photosynthesis-m45448-119",
+  "module": "m45448",
+  "source": "Levels of carbon dioxide (a reactant) will fall, and levels of oxygen (a product) will rise.",
+  "claim": "stomatal closure lowers carbon dioxide levels inside the leaf",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "close their stomata",
+    "curie": "GO:0090332",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "carbon dioxide",
+    "curie": "CHEBI:16526",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "decreases amount of",
+  "context": {
+   "anatomy": "PO:0025034"
+  },
+  "lean": "Claim.inContext {anatomy := leaf} (Claim.effect stomatalClosure .neg (.amount CO2))",
+  "m2": {
+   "ctor": "effect",
+   "subject": "GO:0090332",
+   "relation": null,
+   "object": "CHEBI:16526",
+   "sign": "neg",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "PO:0025034",
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "GO:0090332",
+   "relation": null,
+   "object": "CHEBI:16526",
+   "sign": "neg",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "PO:0025034",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "photosynthesis-m45448-120",
+  "module": "m45448",
+  "source": "Levels of carbon dioxide (a reactant) will fall, and levels of oxygen (a product) will rise.",
+  "claim": "stomatal closure raises oxygen levels inside the leaf",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "close their stomata",
+    "curie": "GO:0090332",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "oxygen",
+    "curie": "CHEBI:15379",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "increases amount of",
+  "context": {
+   "anatomy": "PO:0025034"
+  },
+  "lean": "Claim.inContext {anatomy := leaf} (Claim.effect stomatalClosure .pos (.amount dioxygen))",
+  "m2": {
+   "ctor": "effect",
+   "subject": "GO:0090332",
+   "relation": null,
+   "object": "CHEBI:15379",
+   "sign": "pos",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "PO:0025034",
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "GO:0090332",
+   "relation": null,
+   "object": "CHEBI:15379",
+   "sign": "pos",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "PO:0025034",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "photosynthesis-m45452-6",
+  "module": "m45452",
+  "source": "However, autotrophs only use a specific component of sunlight ().",
+  "claim": "autotrophs use only a specific part of the solar spectrum for photosynthesis",
+  "kind": "other",
+  "bin": "missing_construct",
+  "missing_construct": "quantifier/negation",
+  "entities": [
+   {
+    "text": "autotroph",
+    "curie": "ECOCORE:00000023",
+    "ontology": "other",
+    "verified": true
+   },
+   {
+    "text": "sunlight",
+    "curie": "ENVO:01001862",
+    "ontology": "other",
+    "verified": true
+   },
+   {
+    "text": "photosynthesis",
+    "curie": "GO:0015979",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_input (only)",
+  "context": {},
+  "lean": "Claim.hasInput photosynthesis (subset sunlight) -- not in schema",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantifier (only)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "exclusivity",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "photosynthesis-m45452-52",
+  "module": "m45452",
+  "source": "A pigment molecule in the photosystem absorbs one photon, a quantity or “packet” of light energy, at a time.",
+  "claim": "a pigment molecule absorbs one photon at a time",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "pigment",
+    "curie": "CHEBI:26130",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "photon",
+    "curie": "CHEBI:30212",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "photosystem",
+    "curie": "GO:0009521",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "absorbs (1 per event)",
+  "context": {},
+  "lean": "Claim.hasInput lightHarvesting photon (n := 1) -- not in schema",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity (one at a time)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "consumes",
+   "quant": null,
+   "subject": "GO:0016037",
+   "relation": null,
+   "object": "CHEBI:30212",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 1,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": "GO:0009521",
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "absorbs",
+     "from": null,
+     "to": "GO:0016037",
+     "why": "the process of a pigment absorbing a photon: light absorption (OLS4 verified)"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "photosynthesis-m45452-60",
+  "module": "m45452",
+  "source": "This splitting releases an electron and results in the formation of oxygen (O2) and hydrogen ions (H+) in the thylakoid space.",
+  "claim": "water splitting forms hydrogen ions in the thylakoid space",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "splitting of water",
+    "curie": "GO:0010242",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "hydrogen ions",
+    "curie": "CHEBI:15378",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "thylakoid space",
+    "curie": "GO:0031977",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "increases amount of",
+  "context": {
+   "anatomy": null,
+   "condition": "GO:0031977"
+  },
+  "lean": "Claim.inContext {component := thylakoidLumen} (Claim.effect waterSplitting .pos (.amount hydron))",
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0010242",
+   "relation": "has output",
+   "object": "CHEBI:15378",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "GO:0031977",
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0010242",
+   "relation": "has output",
+   "object": "CHEBI:15378",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": "GO:0031977",
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "photosynthesis-m45452-61",
+  "module": "m45452",
+  "source": "Technically, each breaking of a water molecule releases a pair of electrons, and therefore can replace two donated electrons.",
+  "claim": "splitting one water molecule releases two electrons",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "water",
+    "curie": "CHEBI:15377",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "electron",
+    "curie": "CHEBI:10545",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "splitting of water",
+    "curie": "GO:0010242",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_output (n := 2)",
+  "context": {},
+  "lean": "Claim.hasOutput waterSplitting electron (n := 2) -- not in schema",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity (two)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "unsupported_ontology",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "photosynthesis-m45452-66",
+  "module": "m45452",
+  "source": "In eukaryotes and some prokaryotes, two photosystems exist.",
+  "claim": "eukaryotes and some prokaryotes have two photosystems",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "has_part",
+  "entities": [
+   {
+    "text": "eukaryotes",
+    "curie": "NCBITaxon:2759",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "prokaryotes",
+    "curie": "CL:0000520",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "photosystem",
+    "curie": "GO:0009521",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_part (n := 2)",
+  "context": {
+   "taxon": "NCBITaxon:2759"
+  },
+  "lean": "Claim.hasPart photosyntheticEukaryote photosystem (n := 2) -- not in schema",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantifier (some)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "cardinality",
+   "quant": null,
+   "subject": "GO:0009521",
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 2,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:2759",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "compound_sentence",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "photosynthesis-m45452-90",
+  "module": "m45452",
+  "source": "This same protein generated ATP from ADP in the mitochondrion.",
+  "claim": "in the mitochondrion ATP synthase generates ATP from ADP",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "ATP synthase",
+    "curie": "GO:0045259",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "ATP",
+    "curie": "CHEBI:15422",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "ADP",
+    "curie": "CHEBI:16761",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "mitochondrion",
+    "curie": "GO:0005739",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "increases amount of",
+  "context": {
+   "condition": "GO:0005739"
+  },
+  "lean": "Claim.inContext {component := mitochondrion} (Claim.effect ATPsynthase .pos (.amount ATP))",
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0045259",
+   "relation": "produces",
+   "object": "CHEBI:15422",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "GO:0005739",
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0045259",
+   "relation": "produces",
+   "object": "CHEBI:15422",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": "GO:0005739",
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "photosynthesis-m45452-102",
+  "module": "m45452",
+  "source": "The most common and abundant pigment is chlorophyll a.",
+  "claim": "chlorophyll a is the most common and abundant photosynthetic pigment",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "comparison",
+  "entities": [
+   {
+    "text": "chlorophyll a",
+    "curie": "CHEBI:18230",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "pigment",
+    "curie": "CHEBI:26130",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "most abundant",
+  "context": {},
+  "lean": "Claim.ranks chlorophyllA pigments abundance -- not in schema",
+  "bin_m1": "missing_construct",
+  "lean_m1": "comparison (most abundant)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "CHEBI:18230",
+   "relation": "is_a",
+   "object": "CHEBI:26130",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "proportion",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "photosynthesis-m45453-21",
+  "module": "m45453",
+  "source": "RuBP has five atoms of carbon and a phosphate group on each end.",
+  "claim": "RuBP has five carbon atoms",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "RuBP",
+    "curie": "CHEBI:16710",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "carbon atoms",
+    "curie": "CHEBI:27594",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "has_part (n := 5)",
+  "context": {},
+  "lean": "Claim.hasPart RuBP carbon (n := 5) -- not in schema",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity (five)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "CHEBI:16710",
+   "relation": null,
+   "object": "CHEBI:27594",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 5,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "photosynthesis-m45453-22",
+  "module": "m45453",
+  "source": "RuBP has five atoms of carbon and a phosphate group on each end.",
+  "claim": "RuBP has a phosphate group at each end",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "has_part",
+  "entities": [
+   {
+    "text": "RuBP",
+    "curie": "CHEBI:16710",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "phosphate group",
+    "curie": "CHEBI:26020",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "has_part (n := 2)",
+  "context": {},
+  "lean": "Claim.hasPart RuBP phosphate (n := 2) -- not in schema",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity (two, each end)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "CHEBI:16710",
+   "relation": null,
+   "object": "CHEBI:26020",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 2,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "photosynthesis-m45453-36",
+  "module": "m45453",
+  "source": "Because the carbohydrate molecule has six carbon atoms, it takes six turns of the Calvin cycle to make one carbohydrate molecule (one for each carbon dioxide molecule fixed).",
+  "claim": "six turns of the Calvin cycle are needed to make one six-carbon carbohydrate",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "Calvin cycle",
+    "curie": "GO:0019253",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "carbohydrate molecules",
+    "curie": "CHEBI:16646",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "glucose",
+    "curie": "CHEBI:17234",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "turns per product (n := 6)",
+  "context": {},
+  "lean": "Claim.stoichiometry calvinCycle glucose (turns := 6) -- not in schema",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity (six turns)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "photosynthesis-m45453-37",
+  "module": "m45453",
+  "source": "Because the carbohydrate molecule has six carbon atoms, it takes six turns of the Calvin cycle to make one carbohydrate molecule (one for each carbon dioxide molecule fixed).",
+  "claim": "each turn of the Calvin cycle fixes one carbon dioxide molecule",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "Calvin cycle",
+    "curie": "GO:0019253",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "carbon dioxide",
+    "curie": "CHEBI:16526",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "has_input (n := 1 per turn)",
+  "context": {},
+  "lean": "Claim.stoichiometry calvinCycle CO2 (perTurn := 1) -- not in schema",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity (one per turn)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "consumes",
+   "quant": null,
+   "subject": "GO:0019253",
+   "relation": null,
+   "object": "CHEBI:16526",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 1,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "photosynthesis-m45453-40",
+  "module": "m45453",
+  "source": "In summary, it takes six turns of the Calvin cycle to fix six carbon atoms from CO2.",
+  "claim": "six turns of the Calvin cycle fix six carbon atoms",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "Calvin cycle",
+    "curie": "GO:0019253",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "carbon atoms",
+    "curie": "CHEBI:27594",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "carbon dioxide",
+    "curie": "CHEBI:16526",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "fixes (n := 6 per 6 turns)",
+  "context": {},
+  "lean": "Claim.stoichiometry calvinCycle carbon (turns := 6, n := 6) -- not in schema",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity (six turns)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "consumes",
+   "quant": null,
+   "subject": "GO:0019253",
+   "relation": null,
+   "object": "CHEBI:27594",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 1,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "photosynthesis-m45453-41",
+  "module": "m45453",
+  "source": "These six turns require energy input from 12 ATP molecules and 12 NADPH molecules in the reduction step and 6 ATP molecules in the regeneration step.",
+  "claim": "six turns of the Calvin cycle use 12 ATP in the reduction step",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "Calvin cycle",
+    "curie": "GO:0019253",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "ATP",
+    "curie": "CHEBI:15422",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "has_input (n := 12)",
+  "context": {},
+  "lean": "Claim.stoichiometry reduction ATP (n := 12 per 6 turns) -- not in schema",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity (12 ATP)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "ungrounded_entity",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "photosynthesis-m45453-42",
+  "module": "m45453",
+  "source": "These six turns require energy input from 12 ATP molecules and 12 NADPH molecules in the reduction step and 6 ATP molecules in the regeneration step.",
+  "claim": "six turns of the Calvin cycle use 12 NADPH in the reduction step",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "Calvin cycle",
+    "curie": "GO:0019253",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "NADPH",
+    "curie": "CHEBI:16474",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "has_input (n := 12)",
+  "context": {},
+  "lean": "Claim.stoichiometry reduction NADPH (n := 12 per 6 turns) -- not in schema",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity (12 NADPH)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "ungrounded_entity",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "photosynthesis-m45453-43",
+  "module": "m45453",
+  "source": "These six turns require energy input from 12 ATP molecules and 12 NADPH molecules in the reduction step and 6 ATP molecules in the regeneration step.",
+  "claim": "six turns of the Calvin cycle use 6 ATP in the regeneration step",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "Calvin cycle",
+    "curie": "GO:0019253",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "ATP",
+    "curie": "CHEBI:15422",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "RuBP",
+    "curie": "CHEBI:16710",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "has_input (n := 6)",
+  "context": {},
+  "lean": "Claim.stoichiometry RuBPregeneration ATP (n := 6 per 6 turns) -- not in schema",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity (6 ATP)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "ungrounded_entity",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "photosynthesis-m45453-55",
+  "module": "m45453",
+  "source": "Two adaptations have evolved in such plants.",
+  "claim": "dry-climate plants have two photosynthetic adaptations",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "plants",
+    "curie": "NCBITaxon:33090",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "photosynthesis",
+    "curie": "GO:0015979",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_adaptation (n := 2)",
+  "context": {
+   "taxon": "NCBITaxon:33090",
+   "condition": "dry climate"
+  },
+  "lean": "Claim.count adaptations dryClimatePlants 2 -- not in schema",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity (two)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "ungrounded_entity",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "photosynthesis-m45453-69",
+  "module": "m45453",
+  "source": "Although energy can be stored in molecules like ATP, carbohydrates are much more stable and efficient reservoirs for chemical energy.",
+  "claim": "carbohydrates are more stable and efficient energy stores than ATP",
+  "kind": "other",
+  "bin": "missing_construct",
+  "missing_construct": "comparison",
+  "entities": [
+   {
+    "text": "carbohydrate molecules",
+    "curie": "CHEBI:16646",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "ATP",
+    "curie": "CHEBI:15422",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "more stable than",
+  "context": {},
+  "lean": "Claim.compare carbohydrate ATP stability -- not in schema",
+  "bin_m1": "missing_construct",
+  "lean_m1": "comparison (more stable)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "less",
+   "quant": null,
+   "subject": "CHEBI:15422",
+   "relation": null,
+   "object": "CHEBI:16646",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": "PATO:0015026",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "photosynthesis-m45453-82",
+  "module": "m45453",
+  "source": "Photosynthesis absorbs energy to build carbohydrates in chloroplasts, and aerobic cellular respiration releases energy by using oxygen to break down carbohydrates.",
+  "claim": "photosynthesis builds carbohydrates in chloroplasts",
+  "kind": "process_description",
+  "bin": "missing_construct",
+  "missing_construct": "occurs_in",
+  "entities": [
+   {
+    "text": "photosynthesis",
+    "curie": "GO:0015979",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "carbohydrate molecules",
+    "curie": "CHEBI:16646",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "chloroplast",
+    "curie": "GO:0009507",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "increases amount of",
+  "context": {},
+  "lean": "-- occurs_in photosynthesis chloroplast (Claim.effect photosynthesis .pos (.amount carbohydrate) drops the location)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "compound (two relations)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0015979",
+   "relation": "has output",
+   "object": "CHEBI:16646",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "GO:0009507",
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0015979",
+   "relation": "has output",
+   "object": "CHEBI:16646",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": "GO:0009507",
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ }
+]

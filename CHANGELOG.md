@@ -2,6 +2,33 @@
 
 Findings and decisions, dated. Code history is in `git log`; this records what we learned.
 
+## 2026-10-28 (overnight: round 3 annotation, quantity and context, cells, photosynthesis, energy)
+- Re-annotated the 204 records of `cell-structure-and-function` (106), `photosynthesis` (28) and `how-cells-obtain-energy`
+  (70) that M2 blocked as `quantity` (141) or `context_required` (63). Output `data/textbook/claims_m3/<chapter>.json`,
+  each record with an `m3` field. 133 now have a constructor (65 percent: 70 of 141 quantity, 63 of 63 context); 71 stay
+  `none`. By constructor: rel 63, effect 15, less 12, count 12, measure 10, produces 9, consumes 5, notRel 3, cardinality
+  2, yield 2. Quantifiers: most 13, some 5. Context used: taxon 51 (Viridiplantae 20), condition 13, anatomy 11, cellType
+  9, component 8, stage 1. 30 curie_changes in 30 records. Confidence: high 83, medium 109, low 12.
+- 32 of the 133 keep a blocker beside the constructor: the sentence was encoded as a sound weakening and the blocker names
+  what was dropped (proportion 11, compound 10, exclusivity 4, disjunction 3, precondition 2, necessity 1, other 1). The
+  71 `none`: other 20, proportion 18, ungrounded entity 12, has_quality 10, precondition 5, necessity 3, exclusivity,
+  sequence and unsupported ontology 1 each.
+- Gaps the data found, beyond the earlier list. (1) Two contexts in one claim again: "ribosomes are smaller in
+  prokaryotic cells", K+ and Na+ inside versus outside a cell. (2) Steps of a process have no GO term (Calvin reduction
+  and regeneration steps, the two halves of glycolysis), so "12 ATP in the reduction step" cannot be scoped; "six turns
+  make one glucose" is a ratio of runs, not an integer per run. (3) `produces` takes a process, and water splitting is
+  only a GO function (GO:0010242), so that record stays `none`. (4) A superlative with no comparator named in the
+  sentence ("thinnest", "most prominent") is `less` only when the neighbouring sentences name the other class.
+- Judgement calls. Per-turn counts were divided by hand in three records (centriole 9 triplets = 27 microtubules, 6
+  carbons in six turns = 1 per turn, 6 carbons of glucose = 6 CO2): arithmetic the book implies, not states. "Prokaryotic"
+  as a taxon became Bacteria (3 records): NCBITaxon:131567 would drop the restriction and make "the electron transport
+  chain is in the plasma membrane" false of eukaryotes. Hypotonic and hypertonic became environments with PATO decreased
+  and increased osmolarity; "hot, dry day" has no single term (`BLN:hot_dry_day`). A damaged cell is filed as an organism
+  condition (PATO:0001167) because there are only two kinds.
+- Traps. CL:0002371 somatic cell is obsolete and kept in 2 records, as before. GO:0019661 lactic acid fermentation is
+  obsolete; GO:0019244 used. The OLS4 id search returns hits from other ontologies (CL:0002371 resolved in AEO and BCGO),
+  so a CURIE check has to match the home ontology. The first OLS4 call of a session timed out; later ones were fine.
+
 ## 2026-10-28 (overnight: round 3 annotation, quantity and context, molecular biology and inheritance)
 - Re-annotated the 198 records of `molecular-biology` (106) and `the-cellular-basis-of-inheritance` (92) that M2 blocked as
   `quantity` (147) or `context_required` (51). Output `data/textbook/claims_m3/<chapter>.json`, each record with an `m3`

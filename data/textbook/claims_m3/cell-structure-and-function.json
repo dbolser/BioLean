@@ -1,0 +1,8503 @@
+[
+ {
+  "id": "cell-structure-and-function-m45428-16",
+  "module": "m45428",
+  "source": "With few exceptions, individual cells are too small to be seen with the naked eye, so scientists use microscopes to study them.",
+  "claim": "Most individual cells are too small to be seen with the naked eye",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "cells",
+    "curie": "CL:0000000",
+    "ontology": "CL",
+    "verified": true
+   }
+  ],
+  "relation": "has_quality",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "quantifier",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "quantity",
+   "confidence": "high",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "curie_changes": []
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "has_quality",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45428-20",
+  "module": "m45428",
+  "source": "To give you a sense of the size of a cell, a typical human red blood cell is about eight millionths of a meter or eight micrometers (abbreviated as µm) in diameter; the head of a pin is about two thousandths of a meter (millimeters, or mm) in diameter.",
+  "claim": "A typical human red blood cell is about 8 micrometres in diameter",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "human red blood cell",
+    "curie": "CL:0000232",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "diameter",
+    "curie": "PATO:0001334",
+    "ontology": "PATO",
+    "verified": true
+   }
+  ],
+  "relation": "has_quantity",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "-- Evidence.quantity (\"diameter\", 8, \"um\") exists only on evidence, not as a claim",
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "quantity",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "quantity",
+   "confidence": "high",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "curie_changes": []
+  },
+  "m3": {
+   "ctor": "measure",
+   "quant": "most",
+   "subject": "CL:0000232",
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": 8,
+   "hi": 8,
+   "unit": "µm",
+   "quality": "PATO:0001334",
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45428-77",
+  "module": "m45428",
+  "source": "Most cells are so small that they cannot be viewed with the naked eye.",
+  "claim": "Most cells cannot be viewed with the naked eye",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "cells",
+    "curie": "CL:0000000",
+    "ontology": "CL",
+    "verified": true
+   }
+  ],
+  "relation": "has_quality",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "quantifier",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "quantity",
+   "confidence": "high",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "curie_changes": []
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "has_quality",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45429-21",
+  "module": "m45429",
+  "source": "Unlike Archaea and eukaryotes, bacteria have a cell wall made of peptidoglycan, comprised of sugars and amino acids, and many have a polysaccharide capsule ().",
+  "claim": "The bacterial cell wall is made of peptidoglycan",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "made_of",
+  "entities": [
+   {
+    "text": "cell wall",
+    "curie": "GO:0005618",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "peptidoglycan",
+    "curie": "CHEBI:8005",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "made_of",
+  "context": {
+   "taxon": "NCBITaxon:2"
+  },
+  "lean": null,
+  "bin_m1": "with_context",
+  "rel_m1": "has part",
+  "lean_m1": "context: bacteria",
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0005618",
+   "relation": "has part",
+   "object": "CHEBI:8005",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "context_required",
+   "confidence": "medium",
+   "context": {
+    "taxon": "NCBITaxon:2",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "curie_changes": []
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0005618",
+   "relation": "has part",
+   "object": "CHEBI:8005",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:2",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45429-44",
+  "module": "m45429",
+  "source": "At 0.1–5.0 µm in diameter, prokaryotic cells are significantly smaller than eukaryotic cells, which have diameters ranging from 10–100 µm ().",
+  "claim": "Prokaryotic cells are 0.1-5.0 um in diameter",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "prokaryotic cells",
+    "curie": "CL:0000520",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "diameter",
+    "curie": "PATO:0001334",
+    "ontology": "PATO",
+    "verified": true
+   }
+  ],
+  "relation": "has_quantity",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "quantity",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "quantity",
+   "confidence": "high",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "curie_changes": []
+  },
+  "m3": {
+   "ctor": "measure",
+   "quant": null,
+   "subject": "CL:0000520",
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": 0.1,
+   "hi": 5.0,
+   "unit": "µm",
+   "quality": "PATO:0001334",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45429-45",
+  "module": "m45429",
+  "source": "At 0.1–5.0 µm in diameter, prokaryotic cells are significantly smaller than eukaryotic cells, which have diameters ranging from 10–100 µm ().",
+  "claim": "Eukaryotic cells are 10-100 um in diameter",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "eukaryotic cells",
+    "curie": "CL:0000255",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "diameter",
+    "curie": "PATO:0001334",
+    "ontology": "PATO",
+    "verified": true
+   }
+  ],
+  "relation": "has_quantity",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "quantity",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "quantity",
+   "confidence": "high",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "curie_changes": []
+  },
+  "m3": {
+   "ctor": "measure",
+   "quant": null,
+   "subject": "CL:0000255",
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": 10,
+   "hi": 100,
+   "unit": "µm",
+   "quality": "PATO:0001334",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45429-46",
+  "module": "m45429",
+  "source": "At 0.1–5.0 µm in diameter, prokaryotic cells are significantly smaller than eukaryotic cells, which have diameters ranging from 10–100 µm ().",
+  "claim": "Prokaryotic cells are smaller than eukaryotic cells",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "comparison",
+  "entities": [
+   {
+    "text": "prokaryotic cells",
+    "curie": "CL:0000520",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "eukaryotic cells",
+    "curie": "CL:0000255",
+    "ontology": "CL",
+    "verified": true
+   }
+  ],
+  "relation": "smaller_than",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "comparison",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "quantity",
+   "confidence": "high",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "curie_changes": []
+  },
+  "m3": {
+   "ctor": "less",
+   "quant": null,
+   "subject": "CL:0000520",
+   "relation": null,
+   "object": "CL:0000255",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": "PATO:0001334",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45429-51",
+  "module": "m45429",
+  "source": "In general, cell size is limited because volume increases much more quickly than does cell surface area.",
+  "claim": "Cell size is limited because volume increases faster than surface area",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity (scaling)",
+  "entities": [
+   {
+    "text": "cell size",
+    "curie": "PATO:0000117",
+    "ontology": "PATO",
+    "verified": true
+   }
+  ],
+  "relation": "limited_by",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "quantity",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "quantity",
+   "confidence": "high",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "curie_changes": []
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45429-52",
+  "module": "m45429",
+  "source": "As a cell becomes larger, it becomes more and more difficult for the cell to acquire sufficient materials to support the processes inside the cell, because the relative size of the surface area across which materials must be transported declines.",
+  "claim": "As a cell becomes larger, acquiring sufficient materials becomes more difficult because relative surface area declines",
+  "kind": "effect",
+  "bin": "missing_construct",
+  "missing_construct": "quantity (scaling)",
+  "entities": [
+   {
+    "text": "cell",
+    "curie": "CL:0000000",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "cell size",
+    "curie": "PATO:0000117",
+    "ontology": "PATO",
+    "verified": true
+   }
+  ],
+  "relation": "decreases",
+  "context": {},
+  "lean": "Claim.effect cellSize .neg (Target.process uptake) -- agent is a quality",
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "quantity",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "quantity",
+   "confidence": "high",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "curie_changes": []
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45429-61",
+  "module": "m45429",
+  "source": "Prokaryotic cells range in diameter from 0.1–5.0 µm.",
+  "claim": "Prokaryotic cells are 0.1-5.0 um in diameter",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "Prokaryotic cells",
+    "curie": "CL:0000520",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "diameter",
+    "curie": "PATO:0001334",
+    "ontology": "PATO",
+    "verified": true
+   }
+  ],
+  "relation": "has_quantity",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "quantity",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "quantity",
+   "confidence": "high",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "curie_changes": []
+  },
+  "m3": {
+   "ctor": "measure",
+   "quant": null,
+   "subject": "CL:0000520",
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": 0.1,
+   "hi": 5.0,
+   "unit": "µm",
+   "quality": "PATO:0001334",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45429-63",
+  "module": "m45429",
+  "source": "Like a prokaryotic cell, a eukaryotic cell has a plasma membrane, cytoplasm, and ribosomes, but a eukaryotic cell is typically larger than a prokaryotic cell, has a true nucleus (meaning its DNA is surrounded by a membrane), and has other membrane-bound organelles that allow for compartmentalization of functions.",
+  "claim": "A eukaryotic cell is typically larger than a prokaryotic cell",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "comparison",
+  "entities": [
+   {
+    "text": "eukaryotic cell",
+    "curie": "CL:0000255",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "prokaryotic cell",
+    "curie": "CL:0000520",
+    "ontology": "CL",
+    "verified": true
+   }
+  ],
+  "relation": "larger_than",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "comparison",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "quantity",
+   "confidence": "high",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "curie_changes": []
+  },
+  "m3": {
+   "ctor": "less",
+   "quant": "most",
+   "subject": "CL:0000520",
+   "relation": null,
+   "object": "CL:0000255",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": "PATO:0000117",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45429-66",
+  "module": "m45429",
+  "source": "Eukaryotic cells tend to be 10 to 100 times the size of prokaryotic cells.",
+  "claim": "Eukaryotic cells are 10 to 100 times the size of prokaryotic cells",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "Eukaryotic cells",
+    "curie": "CL:0000255",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "prokaryotic cells",
+    "curie": "CL:0000520",
+    "ontology": "CL",
+    "verified": true
+   }
+  ],
+  "relation": "ratio",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "quantity",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "quantity",
+   "confidence": "high",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "curie_changes": []
+  },
+  "m3": {
+   "ctor": "less",
+   "quant": "most",
+   "subject": "CL:0000520",
+   "relation": null,
+   "object": "CL:0000255",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": "PATO:0000117",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "proportion",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45429-73",
+  "module": "m45429",
+  "source": "Prokaryotes have a single large chromosome that is not surrounded by a nuclear membrane.",
+  "claim": "Prokaryotes have a single large chromosome",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "has_part",
+  "entities": [
+   {
+    "text": "Prokaryotes",
+    "curie": "CL:0000520",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "chromosome",
+    "curie": "GO:0005694",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_part",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "quantity",
+  "m2": {
+   "ctor": "rel",
+   "subject": "CL:0000520",
+   "relation": "has part",
+   "object": "GO:0005694",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "quantity",
+   "confidence": "medium",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "curie_changes": []
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "CL:0000520",
+   "relation": null,
+   "object": "GO:0005694",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 1,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-1",
+  "module": "m45432",
+  "source": "At this point, it should be clear that eukaryotic cells have a more complex structure than do prokaryotic cells.",
+  "claim": "Eukaryotic cells have a more complex structure than prokaryotic cells",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "comparison",
+  "entities": [
+   {
+    "text": "eukaryotic cell",
+    "curie": "CL:0000255",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "prokaryotic cell",
+    "curie": "CL:0000520",
+    "ontology": "CL",
+    "verified": true
+   }
+  ],
+  "relation": "more_complex_than",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "comparison",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "quantity",
+   "confidence": "high",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "curie_changes": []
+  },
+  "m3": {
+   "ctor": "less",
+   "quant": null,
+   "subject": "CL:0000520",
+   "relation": null,
+   "object": "CL:0000255",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": "PATO:0001502",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-16",
+  "module": "m45432",
+  "source": "The plasma membranes of cells that specialize in absorption are folded into fingerlike projections called microvilli (singular = microvillus).",
+  "claim": "Plasma membranes of absorptive cells are folded into microvilli",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "has_part",
+  "entities": [
+   {
+    "text": "plasma membrane",
+    "curie": "GO:0005886",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "microvilli",
+    "curie": "GO:0005902",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "cells that specialize in absorption",
+    "curie": "CL:0000584",
+    "ontology": "CL",
+    "verified": true
+   }
+  ],
+  "relation": "has_part",
+  "context": {},
+  "lean": null,
+  "bin_m1": "with_context",
+  "rel_m1": "has part",
+  "lean_m1": "context: absorptive cell",
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0005902",
+   "relation": "part of",
+   "object": "GO:0005886",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "context_required",
+   "confidence": "medium",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": "CL:0000584",
+    "condition": null
+   },
+   "curie_changes": []
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0005902",
+   "relation": "part of",
+   "object": "GO:0005886",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": "CL:0000584",
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-24",
+  "module": "m45432",
+  "source": "The immune response damages microvilli, and thus, afflicted individuals cannot absorb nutrients.",
+  "claim": "The immune response to gluten damages microvilli",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "immune response",
+    "curie": "GO:0006955",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "microvilli",
+    "curie": "GO:0005902",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "decreases amount of",
+  "context": {
+   "condition": "MONDO:0005130"
+  },
+  "lean": "Claim.inContext {disease := celiac} (Claim.effect immuneResponse .neg (Target.amount microvillus)) -- microvillus needs Kind.component",
+  "m2": {
+   "ctor": "effect",
+   "subject": "GO:0006955",
+   "relation": null,
+   "object": "GO:0005902",
+   "sign": "neg",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "context_required",
+   "confidence": "medium",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": "celiac disease"
+   },
+   "curie_changes": []
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "GO:0006955",
+   "relation": null,
+   "object": "GO:0005902",
+   "sign": "neg",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": {
+     "kind": "organism",
+     "curie": "MONDO:0005130",
+     "text": "celiac disease"
+    }
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-25",
+  "module": "m45432",
+  "source": "The immune response damages microvilli, and thus, afflicted individuals cannot absorb nutrients.",
+  "claim": "Loss of microvilli prevents nutrient absorption in celiac patients",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "microvilli",
+    "curie": "GO:0005902",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "absorb nutrients",
+    "curie": "GO:0050892",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "decreases",
+  "context": {
+   "condition": "MONDO:0005130"
+  },
+  "lean": "Claim.inContext {disease := celiac} (Claim.effect microvillus .pos (Target.process intestinalAbsorption))",
+  "m2": {
+   "ctor": "effect",
+   "subject": "GO:0005902",
+   "relation": null,
+   "object": "GO:0050892",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "context_required",
+   "confidence": "medium",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": "celiac disease"
+   },
+   "curie_changes": []
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "GO:0005902",
+   "relation": null,
+   "object": "GO:0050892",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": {
+     "kind": "organism",
+     "curie": "MONDO:0005130",
+     "text": "celiac disease"
+    }
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-32",
+  "module": "m45432",
+  "source": "Even though the cytoplasm consists of 70 to 80 percent water, it has a semi-solid consistency, which comes from the proteins within it.",
+  "claim": "The cytoplasm is 70 to 80 percent water",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "cytoplasm",
+    "curie": "GO:0005737",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "water",
+    "curie": "CHEBI:15377",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "has_quantity",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "quantity",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "quantity",
+   "confidence": "high",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "curie_changes": []
+  },
+  "m3": {
+   "ctor": "measure",
+   "quant": null,
+   "subject": "CHEBI:15377",
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": 0.7,
+   "hi": 0.8,
+   "unit": "fraction",
+   "quality": "PATO:0000033",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": "GO:0005737",
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-50",
+  "module": "m45432",
+  "source": "Microfilaments are the thinnest of the cytoskeletal fibers and function in moving cellular components, for example, during cell division.",
+  "claim": "Microfilaments are the thinnest cytoskeletal fibers",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "comparison",
+  "entities": [
+   {
+    "text": "microfilaments",
+    "curie": "GO:0005884",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "intermediate filament",
+    "curie": "GO:0005882",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "microtubule",
+    "curie": "GO:0005874",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_quantity",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "superlative",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "quantity",
+   "confidence": "high",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "curie_changes": []
+  },
+  "m3": {
+   "ctor": "less",
+   "quant": null,
+   "subject": "GO:0005884",
+   "relation": null,
+   "object": "GO:0005882",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": "PATO:0001334",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-53",
+  "module": "m45432",
+  "source": "These components are also common in muscle cells and are responsible for muscle cell contraction.",
+  "claim": "Microfilaments are common in muscle cells",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "located_in",
+  "entities": [
+   {
+    "text": "microfilaments",
+    "curie": "GO:0005884",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "muscle cells",
+    "curie": "CL:0000187",
+    "ontology": "CL",
+    "verified": true
+   }
+  ],
+  "relation": "located_in",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "quantifier",
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0005884",
+   "relation": "located in",
+   "object": "CL:0000187",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "quantity",
+   "confidence": "medium",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "curie_changes": []
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "CL:0000187",
+   "relation": "has part",
+   "object": "GO:0005884",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "proportion",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-55",
+  "module": "m45432",
+  "source": "Intermediate filaments are of intermediate diameter and have structural functions, such as maintaining the shape of the cell and anchoring organelles.",
+  "claim": "Intermediate filaments are of intermediate diameter",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "comparison",
+  "entities": [
+   {
+    "text": "intermediate filament",
+    "curie": "GO:0005882",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "diameter",
+    "curie": "PATO:0001334",
+    "ontology": "PATO",
+    "verified": true
+   }
+  ],
+  "relation": "has_quantity",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "quantity",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "quantity",
+   "confidence": "high",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "curie_changes": []
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "has_quality",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-60",
+  "module": "m45432",
+  "source": "Microtubules are the thickest of the cytoskeletal fibers.",
+  "claim": "Microtubules are the thickest cytoskeletal fibers",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "comparison",
+  "entities": [
+   {
+    "text": "microtubule",
+    "curie": "GO:0005874",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "cytoskeleton",
+    "curie": "GO:0005856",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_quantity",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "comparison",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "quantity",
+   "confidence": "high",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "curie_changes": []
+  },
+  "m3": {
+   "ctor": "less",
+   "quant": null,
+   "subject": "GO:0005882",
+   "relation": null,
+   "object": "GO:0005874",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": "PATO:0001334",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "other cytoskeletal fibers",
+     "from": null,
+     "to": "GO:0005882",
+     "why": "comparison class of \"thickest\" is the other fibers, named in the neighbouring sentences; intermediate filaments stand for them"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-65",
+  "module": "m45432",
+  "source": "In cilia and flagella, the microtubules are organized as a circle of nine double microtubules on the outside and two microtubules in the center.",
+  "claim": "In cilia and flagella, microtubules are arranged as nine outer doublets and two central microtubules",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "cilium",
+    "curie": "GO:0005929",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "flagellum",
+    "curie": "GO:0031514",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "microtubule",
+    "curie": "GO:0005874",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "axoneme",
+    "curie": "GO:0005930",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_quantity",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "quantity",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "quantity",
+   "confidence": "high",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "curie_changes": []
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "GO:0005930",
+   "relation": null,
+   "object": "GO:0097545",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 9,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "compound_sentence",
+   "curie_changes": [
+    {
+     "text": "nine double microtubules",
+     "from": null,
+     "to": "GO:0097545",
+     "why": "axonemal doublet microtubule (OLS4 verified); the two central microtubules are a second count"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-67",
+  "module": "m45432",
+  "source": "The centrosome is a region near the nucleus of animal cells that functions as a microtubule-organizing center.",
+  "claim": "The centrosome functions as a microtubule-organizing center",
+  "kind": "other",
+  "bin": "missing_construct",
+  "missing_construct": "capable_of",
+  "entities": [
+   {
+    "text": "centrosome",
+    "curie": "GO:0005813",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "microtubule-organizing center",
+    "curie": "GO:0005815",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "capable_of",
+  "context": {
+   "taxon": "NCBITaxon:33208"
+  },
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "role (functions as)",
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0005813",
+   "relation": "is_a",
+   "object": "GO:0005815",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "context_required",
+   "confidence": "medium",
+   "context": {
+    "taxon": "NCBITaxon:33208",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "curie_changes": []
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0005813",
+   "relation": "is_a",
+   "object": "GO:0005815",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33208",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-70",
+  "module": "m45432",
+  "source": "Each centriole is a cylinder of nine triplets of microtubules.",
+  "claim": "Each centriole is a cylinder of nine triplets of microtubules",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "made_of",
+  "entities": [
+   {
+    "text": "centriole",
+    "curie": "GO:0005814",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "microtubule",
+    "curie": "GO:0005874",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "made_of",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "quantity",
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0005814",
+   "relation": "has part",
+   "object": "GO:0005874",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "quantity",
+   "confidence": "medium",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "curie_changes": []
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "GO:0005814",
+   "relation": null,
+   "object": "GO:0005874",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 27,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-75",
+  "module": "m45432",
+  "source": "However, the exact function of the centrioles in cell division is not clear, since cells that have the centrioles removed can still divide, and plant cells, which lack centrioles, are capable of cell division.",
+  "claim": "Plant cells lack centrioles",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "negation (lacks)",
+  "entities": [
+   {
+    "text": "plant cell",
+    "curie": null,
+    "ontology": "other",
+    "verified": false
+   },
+   {
+    "text": "centrioles",
+    "curie": "GO:0005814",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "lacks_part",
+  "context": {
+   "taxon": "NCBITaxon:33090"
+  },
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "ungrounded entity",
+  "m2": {
+   "ctor": "notRel",
+   "subject": "CL:0000000",
+   "relation": "has part",
+   "object": "GO:0005814",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "context_required",
+   "confidence": "medium",
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "curie_changes": [
+    {
+     "text": "plant cell",
+     "from": null,
+     "to": "CL:0000000",
+     "why": "no plant cell in allowed ontologies; generic cell + plant taxon context"
+    }
+   ]
+  },
+  "m3": {
+   "ctor": "notRel",
+   "quant": null,
+   "subject": "CL:0000000",
+   "relation": "has part",
+   "object": "GO:0005814",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "plant cell",
+     "from": null,
+     "to": "CL:0000000",
+     "why": "no cell type for \"plant cell\"; the bare class cell, with the plant taxon as context"
+    }
+   ],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-76",
+  "module": "m45432",
+  "source": "However, the exact function of the centrioles in cell division is not clear, since cells that have the centrioles removed can still divide, and plant cells, which lack centrioles, are capable of cell division.",
+  "claim": "Plant cells are capable of cell division",
+  "kind": "other",
+  "bin": "missing_construct",
+  "missing_construct": "capable_of",
+  "entities": [
+   {
+    "text": "plant cell",
+    "curie": null,
+    "ontology": "other",
+    "verified": false
+   },
+   {
+    "text": "cell division",
+    "curie": "GO:0051301",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "capable_of",
+  "context": {
+   "taxon": "NCBITaxon:33090"
+  },
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "ungrounded entity",
+  "m2": {
+   "ctor": "rel",
+   "subject": "CL:0000000",
+   "relation": "capable of",
+   "object": "GO:0051301",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "context_required",
+   "confidence": "medium",
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "curie_changes": [
+    {
+     "text": "plant cell",
+     "from": null,
+     "to": "CL:0000000",
+     "why": "generic cell + plant taxon context"
+    }
+   ]
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "CL:0000000",
+   "relation": "capable of",
+   "object": "GO:0051301",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "plant cell",
+     "from": null,
+     "to": "CL:0000000",
+     "why": "no cell type for \"plant cell\"; the bare class cell, with the plant taxon as context"
+    }
+   ],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-79",
+  "module": "m45432",
+  "source": "When present, the cell has just one flagellum or a few flagella.",
+  "claim": "A flagellated cell has one or a few flagella",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "cell",
+    "curie": "CL:0000000",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "flagellum",
+    "curie": "GO:0031514",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_quantity",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "quantity",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "quantity",
+   "confidence": "high",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "curie_changes": []
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "precondition",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-80",
+  "module": "m45432",
+  "source": "When cilia (singular = cilium) are present, however, they are many in number and extend along the entire surface of the plasma membrane.",
+  "claim": "Cilia, when present, are many and extend along the entire surface of the plasma membrane",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "cilium",
+    "curie": "GO:0005929",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "plasma membrane",
+    "curie": "GO:0005886",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_quantity",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "quantity",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "quantity",
+   "confidence": "high",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "curie_changes": []
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "precondition",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-90",
+  "module": "m45432",
+  "source": "Typically, the nucleus is the most prominent organelle in a cell ().",
+  "claim": "The nucleus is typically the most prominent organelle in a cell",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "comparison",
+  "entities": [
+   {
+    "text": "nucleus",
+    "curie": "GO:0005634",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "cell",
+    "curie": "CL:0000000",
+    "ontology": "CL",
+    "verified": true
+   }
+  ],
+  "relation": "has_quantity",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "superlative",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "quantity",
+   "confidence": "high",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "curie_changes": []
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "has_quality",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-105",
+  "module": "m45432",
+  "source": "Every species has a specific number of chromosomes in the nucleus of its body cells.",
+  "claim": "Every species has a specific number of chromosomes in its body cells",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "chromosomes",
+    "curie": "GO:0005694",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "nucleus",
+    "curie": "GO:0005634",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_quantity",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "quantity",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "quantity",
+   "confidence": "high",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "curie_changes": []
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-106",
+  "module": "m45432",
+  "source": "For example, in humans, the chromosome number is 46, whereas in fruit flies, the chromosome number is eight.",
+  "claim": "Humans have 46 chromosomes",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "humans",
+    "curie": "NCBITaxon:9606",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "chromosome",
+    "curie": "GO:0005694",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_quantity",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "quantity",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "quantity",
+   "confidence": "high",
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "curie_changes": []
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "CL:0002371",
+   "relation": null,
+   "object": "GO:0005694",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 46,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "body cells",
+     "from": null,
+     "to": "CL:0002371",
+     "why": "somatic cell, as in Examples/Quantity.lean; obsolete in CL (replaced_by CL:0000000 \"cell\", which would lose the meaning), so kept"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-107",
+  "module": "m45432",
+  "source": "For example, in humans, the chromosome number is 46, whereas in fruit flies, the chromosome number is eight.",
+  "claim": "Fruit flies have 8 chromosomes",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "fruit flies",
+    "curie": "NCBITaxon:7227",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "chromosome",
+    "curie": "GO:0005694",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_quantity",
+  "context": {
+   "taxon": "NCBITaxon:7227"
+  },
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "quantity",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "quantity",
+   "confidence": "high",
+   "context": {
+    "taxon": "NCBITaxon:7227",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "curie_changes": []
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "CL:0002371",
+   "relation": null,
+   "object": "GO:0005694",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 8,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:7227",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "body cells",
+     "from": null,
+     "to": "CL:0002371",
+     "why": "somatic cell, as in Examples/Quantity.lean; obsolete in CL (replaced_by CL:0000000 \"cell\", which would lose the meaning), so kept"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-132",
+  "module": "m45432",
+  "source": "Since the RER is engaged in modifying proteins that will be secreted from the cell, it is abundant in cells that secrete proteins, such as the liver.",
+  "claim": "RER is abundant in cells that secrete proteins, such as liver cells",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "protein secretion",
+    "curie": "GO:0009306",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "rough endoplasmic reticulum",
+    "curie": "GO:0005791",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "liver",
+    "curie": "UBERON:0002107",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "increases amount of",
+  "context": {
+   "anatomy": "UBERON:0002107"
+  },
+  "lean": "Claim.inContext {anatomy := liver} (Claim.effect proteinSecretion .pos (Target.amount rer)) -- correlation stated as association",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "quantity",
+   "confidence": "high",
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0002107",
+    "cellType": null,
+    "condition": null
+   },
+   "curie_changes": []
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "proportion",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-134",
+  "module": "m45432",
+  "source": "The smooth endoplasmic reticulum (SER) is continuous with the RER but has few or no ribosomes on its cytoplasmic surface (see ).",
+  "claim": "The smooth ER has few or no ribosomes on its cytoplasmic surface",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "negation (lacks)",
+  "entities": [
+   {
+    "text": "smooth endoplasmic reticulum",
+    "curie": "GO:0005790",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "ribosomes",
+    "curie": "GO:0005840",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "lacks_part",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "quantifier",
+  "m2": {
+   "ctor": "notRel",
+   "subject": "GO:0005790",
+   "relation": "has part",
+   "object": "GO:0005840",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "quantity",
+   "confidence": "low",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "curie_changes": []
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "proportion",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-149",
+  "module": "m45432",
+  "source": "The most frequent modification is the addition of short chains of sugar molecules.",
+  "claim": "The most frequent Golgi modification is the addition of short sugar chains",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity (frequency)",
+  "entities": [
+   {
+    "text": "addition of short chains of sugar",
+    "curie": "GO:0009101",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "Golgi apparatus",
+    "curie": "GO:0005794",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_quantity",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "quantity",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "quantity",
+   "confidence": "high",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "curie_changes": []
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "proportion",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-155",
+  "module": "m45432",
+  "source": "Cells that engage in a great deal of secretory activity (such as cells of the salivary glands that secrete digestive enzymes or cells of the immune system that secrete antibodies) have an abundant number of Golgi.",
+  "claim": "Cells with high secretory activity have abundant Golgi",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "secretory activity",
+    "curie": "GO:0046903",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "Golgi apparatus",
+    "curie": "GO:0005794",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "increases amount of",
+  "context": {},
+  "lean": "Claim.effect secretion .pos (Target.amount golgi) -- golgi needs Kind.component",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "quantity",
+   "confidence": "high",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "curie_changes": []
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "proportion",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-158",
+  "module": "m45432",
+  "source": "In plant cells, the Golgi has an additional role of synthesizing polysaccharides, some of which are incorporated into the cell wall and some of which are used in other parts of the cell.",
+  "claim": "In plant cells, the Golgi synthesises polysaccharides",
+  "kind": "other",
+  "bin": "missing_construct",
+  "missing_construct": "capable_of",
+  "entities": [
+   {
+    "text": "Golgi apparatus",
+    "curie": "GO:0005794",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "polysaccharides",
+    "curie": "CHEBI:18154",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "polysaccharide biosynthetic process",
+    "curie": "GO:0000271",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "capable_of",
+  "context": {
+   "taxon": "NCBITaxon:33090"
+  },
+  "lean": null,
+  "bin_m1": "with_context",
+  "rel_m1": "capable of",
+  "lean_m1": "context: plant cell",
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0005794",
+   "relation": "capable of",
+   "object": "GO:0000271",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "context_required",
+   "confidence": "medium",
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "curie_changes": []
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0005794",
+   "relation": "capable of",
+   "object": "GO:0000271",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-159",
+  "module": "m45432",
+  "source": "In plant cells, the Golgi has an additional role of synthesizing polysaccharides, some of which are incorporated into the cell wall and some of which are used in other parts of the cell.",
+  "claim": "Some Golgi-made polysaccharides are incorporated into the plant cell wall",
+  "kind": "process_description",
+  "bin": "missing_construct",
+  "missing_construct": "has_output",
+  "entities": [
+   {
+    "text": "polysaccharides",
+    "curie": "CHEBI:18154",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "plant cell wall",
+    "curie": "GO:0009505",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_output",
+  "context": {
+   "taxon": "NCBITaxon:33090"
+  },
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "quantifier",
+  "m2": {
+   "ctor": "rel",
+   "subject": "CHEBI:18154",
+   "relation": "part of",
+   "object": "GO:0009505",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "context_required",
+   "confidence": "medium",
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "curie_changes": []
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": "some",
+   "subject": "CHEBI:18154",
+   "relation": "part of",
+   "object": "GO:0009505",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-161",
+  "module": "m45432",
+  "source": "In animal cells, the lysosomes are the cell’s “garbage disposal.” Digestive enzymes within the lysosomes aid the breakdown of proteins, polysaccharides, lipids, nucleic acids, and even worn-out organelles.",
+  "claim": "Digestive enzymes within lysosomes break down proteins, polysaccharides, lipids, nucleic acids and worn-out organelles",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "Digestive enzymes",
+    "curie": "GO:0016787",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "lysosomes",
+    "curie": "GO:0005764",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "proteins",
+    "curie": "CHEBI:36080",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "polysaccharides",
+    "curie": "CHEBI:18154",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "lipids",
+    "curie": "CHEBI:18059",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "nucleic acids",
+    "curie": "CHEBI:33696",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "organelles",
+    "curie": "GO:0043226",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "decreases amount of",
+  "context": {
+   "taxon": "NCBITaxon:33208"
+  },
+  "lean": "Claim.inContext {component := lysosome} (Claim.effect hydrolase .neg (Target.amount protein))",
+  "m2": {
+   "ctor": "effect",
+   "subject": "GO:0016787",
+   "relation": null,
+   "object": "CHEBI:36080",
+   "sign": "neg",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "context_required",
+   "confidence": "medium",
+   "context": {
+    "taxon": "NCBITaxon:33208",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "curie_changes": []
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "GO:0016787",
+   "relation": null,
+   "object": "CHEBI:36080",
+   "sign": "neg",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33208",
+    "anatomy": null,
+    "cellType": null,
+    "component": "GO:0005764",
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "compound_sentence",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-162",
+  "module": "m45432",
+  "source": "In single-celled eukaryotes, lysosomes are important for digestion of the food they ingest and the recycling of organelles.",
+  "claim": "In single-celled eukaryotes, lysosomes digest ingested food",
+  "kind": "other",
+  "bin": "missing_construct",
+  "missing_construct": "capable_of",
+  "entities": [
+   {
+    "text": "lysosomes",
+    "curie": "GO:0005764",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "digestion",
+    "curie": "GO:0007586",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "capable_of",
+  "context": {},
+  "lean": null,
+  "bin_m1": "with_context",
+  "rel_m1": "capable of",
+  "lean_m1": "context: single-celled eukaryote",
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0005764",
+   "relation": "capable of",
+   "object": "GO:0007586",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "context_required",
+   "confidence": "medium",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": "single-celled eukaryotes"
+   },
+   "curie_changes": []
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0005764",
+   "relation": "capable of",
+   "object": "GO:0007586",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:2759",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": {
+     "kind": "organism",
+     "curie": "PATO:0001994",
+     "text": "single-celled"
+    }
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-163",
+  "module": "m45432",
+  "source": "In single-celled eukaryotes, lysosomes are important for digestion of the food they ingest and the recycling of organelles.",
+  "claim": "In single-celled eukaryotes, lysosomes recycle organelles",
+  "kind": "other",
+  "bin": "missing_construct",
+  "missing_construct": "capable_of",
+  "entities": [
+   {
+    "text": "lysosomes",
+    "curie": "GO:0005764",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "organelles",
+    "curie": "GO:0043226",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "macromolecule catabolic process",
+    "curie": "GO:0009057",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "capable_of",
+  "context": {},
+  "lean": null,
+  "bin_m1": "with_context",
+  "rel_m1": "capable of",
+  "lean_m1": "context: single-celled eukaryote",
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0005764",
+   "relation": "capable of",
+   "object": "GO:0009057",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "context_required",
+   "confidence": "medium",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": "single-celled eukaryotes"
+   },
+   "curie_changes": []
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0005764",
+   "relation": "capable of",
+   "object": "GO:0006914",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:2759",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": {
+     "kind": "organism",
+     "curie": "PATO:0001994",
+     "text": "single-celled"
+    }
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "recycling of organelles",
+     "from": "GO:0009057",
+     "to": "GO:0006914",
+     "why": "organelles are not macromolecules; autophagy is the lysosomal recycling of organelles (OLS4 verified)"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-164",
+  "module": "m45432",
+  "source": "These enzymes are active at a much lower pH (more acidic) than those located in the cytoplasm.",
+  "claim": "Lysosomal enzymes are active at a much lower pH than cytoplasmic enzymes",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "comparison",
+  "entities": [
+   {
+    "text": "lysosome",
+    "curie": "GO:0005764",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "cytoplasm",
+    "curie": "GO:0005737",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "acidic",
+    "curie": "PATO:0001842",
+    "ontology": "PATO",
+    "verified": true
+   }
+  ],
+  "relation": "has_quantity",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "comparison",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "quantity",
+   "confidence": "high",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "curie_changes": []
+  },
+  "m3": {
+   "ctor": "less",
+   "quant": null,
+   "subject": "GO:0005737",
+   "relation": null,
+   "object": "GO:0005764",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": "PATO:0001842",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "low"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-165",
+  "module": "m45432",
+  "source": "Many reactions that take place in the cytoplasm could not occur at a low pH, thus the advantage of compartmentalizing the eukaryotic cell into organelles is apparent.",
+  "claim": "Many cytoplasmic reactions could not occur at low pH",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "necessity (requires)",
+  "entities": [
+   {
+    "text": "cytoplasm",
+    "curie": "GO:0005737",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "acidity",
+    "curie": "PATO:0001842",
+    "ontology": "PATO",
+    "verified": true
+   }
+  ],
+  "relation": "has_quantity",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "quantifier",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "quantity",
+   "confidence": "high",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "curie_changes": []
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "necessity",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-176",
+  "module": "m45432",
+  "source": "Vacuoles are somewhat larger than vesicles, and the membrane of a vacuole does not fuse with the membranes of other cellular components.",
+  "claim": "Vacuoles are somewhat larger than vesicles",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "comparison",
+  "entities": [
+   {
+    "text": "vacuole",
+    "curie": "GO:0005773",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "vesicle",
+    "curie": "GO:0031982",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_quantity",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "comparison",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "quantity",
+   "confidence": "high",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "curie_changes": []
+  },
+  "m3": {
+   "ctor": "less",
+   "quant": "most",
+   "subject": "GO:0031982",
+   "relation": null,
+   "object": "GO:0005773",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": "PATO:0000117",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-179",
+  "module": "m45432",
+  "source": "Additionally, enzymes within plant vacuoles can break down macromolecules.",
+  "claim": "Enzymes within plant vacuoles break down macromolecules",
+  "kind": "other",
+  "bin": "missing_construct",
+  "missing_construct": "capable_of",
+  "entities": [
+   {
+    "text": "plant vacuoles",
+    "curie": "GO:0000325",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "macromolecule catabolic process",
+    "curie": "GO:0009057",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "capable_of",
+  "context": {
+   "taxon": "NCBITaxon:33090"
+  },
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "ungrounded entity",
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0000325",
+   "relation": "capable of",
+   "object": "GO:0009057",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "context_required",
+   "confidence": "medium",
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "curie_changes": []
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0000325",
+   "relation": "capable of",
+   "object": "GO:0009057",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-187",
+  "module": "m45432",
+  "source": "Because protein synthesis is essential for all cells, ribosomes are found in practically every cell, although they are smaller in prokaryotic cells.",
+  "claim": "Ribosomes are found in practically every cell",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "located_in",
+  "entities": [
+   {
+    "text": "ribosome",
+    "curie": "GO:0005840",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "cell",
+    "curie": "CL:0000000",
+    "ontology": "CL",
+    "verified": true
+   }
+  ],
+  "relation": "located_in",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "quantifier",
+  "m2": {
+   "ctor": "rel",
+   "subject": "CL:0000000",
+   "relation": "has part",
+   "object": "GO:0005840",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "quantity",
+   "confidence": "medium",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "curie_changes": []
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": "most",
+   "subject": "CL:0000000",
+   "relation": "has part",
+   "object": "GO:0005840",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-188",
+  "module": "m45432",
+  "source": "Because protein synthesis is essential for all cells, ribosomes are found in practically every cell, although they are smaller in prokaryotic cells.",
+  "claim": "Ribosomes are smaller in prokaryotic cells",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "comparison",
+  "entities": [
+   {
+    "text": "ribosome",
+    "curie": "GO:0005840",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "prokaryotic cell",
+    "curie": "CL:0000520",
+    "ontology": "CL",
+    "verified": true
+   }
+  ],
+  "relation": "has_quantity",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "comparison",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "quantity",
+   "confidence": "high",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "curie_changes": []
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-189",
+  "module": "m45432",
+  "source": "They are particularly abundant in immature red blood cells for the synthesis of hemoglobin, which functions in the transport of oxygen throughout the body.",
+  "claim": "Ribosomes are particularly abundant in immature red blood cells",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "immature red blood cells",
+    "curie": "CL:0000765",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "ribosome",
+    "curie": "GO:0005840",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "increases amount of",
+  "context": {
+   "cellType": "CL:0000765"
+  },
+  "lean": "-- abundance in a cell type: Claim.inContext {cellType := erythroblast} (amount ribosome high) has no 'high' constructor",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "quantity",
+   "confidence": "high",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "curie_changes": []
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "proportion",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-203",
+  "module": "m45432",
+  "source": "In keeping with our theme of form following function, it is important to point out that muscle cells have a very high concentration of mitochondria because muscle cells need a lot of energy to contract.",
+  "claim": "Muscle cells have a very high concentration of mitochondria",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "muscle cells",
+    "curie": "CL:0000187",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "mitochondrion",
+    "curie": "GO:0005739",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "increases amount of",
+  "context": {
+   "cellType": "CL:0000187"
+  },
+  "lean": "Claim.inContext {cellType := muscleCell} (amount mitochondrion high) -- no 'high' constructor",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "quantity",
+   "confidence": "high",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "curie_changes": []
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "proportion",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-209",
+  "module": "m45432",
+  "source": "Alcohol is detoxified by peroxisomes in liver cells.",
+  "claim": "Alcohol is detoxified by peroxisomes in liver cells",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "Alcohol",
+    "curie": "CHEBI:16236",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "peroxisome",
+    "curie": "GO:0005777",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "liver cells",
+    "curie": "CL:0000182",
+    "ontology": "CL",
+    "verified": true
+   }
+  ],
+  "relation": "decreases amount of",
+  "context": {
+   "cellType": "CL:0000182"
+  },
+  "lean": "Claim.inContext {cellType := hepatocyte} (Claim.effect peroxisome .neg (Target.amount ethanol)) -- Kind.component",
+  "m2": {
+   "ctor": "effect",
+   "subject": "GO:0005777",
+   "relation": null,
+   "object": "CHEBI:16236",
+   "sign": "neg",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "context_required",
+   "confidence": "medium",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": "CL:0000182",
+    "condition": null
+   },
+   "curie_changes": []
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "GO:0005777",
+   "relation": null,
+   "object": "CHEBI:16236",
+   "sign": "neg",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": "CL:0000182",
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-216",
+  "module": "m45432",
+  "source": "Animal cells have centrioles, centrosomes (discussed under the cytoskeleton), and lysosomes, whereas plant cells do not.",
+  "claim": "Plant cells lack centrioles, centrosomes and lysosomes",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "negation (lacks)",
+  "entities": [
+   {
+    "text": "plant cell",
+    "curie": null,
+    "ontology": "other",
+    "verified": false
+   },
+   {
+    "text": "centriole",
+    "curie": "GO:0005814",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "centrosome",
+    "curie": "GO:0005813",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "lysosome",
+    "curie": "GO:0005764",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "lacks_part",
+  "context": {
+   "taxon": "NCBITaxon:33090"
+  },
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "conjunction",
+  "m2": {
+   "ctor": "notRel",
+   "subject": "CL:0000000",
+   "relation": "has part",
+   "object": "GO:0005814",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "context_required",
+   "confidence": "medium",
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "curie_changes": [
+    {
+     "text": "plant cell",
+     "from": null,
+     "to": "CL:0000000",
+     "why": "generic cell + plant taxon context"
+    }
+   ]
+  },
+  "m3": {
+   "ctor": "notRel",
+   "quant": null,
+   "subject": "CL:0000000",
+   "relation": "has part",
+   "object": "GO:0005814",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "compound_sentence",
+   "curie_changes": [
+    {
+     "text": "plant cell",
+     "from": null,
+     "to": "CL:0000000",
+     "why": "no cell type for \"plant cell\"; the bare class cell, with the plant taxon as context"
+    }
+   ],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-217",
+  "module": "m45432",
+  "source": "Plant cells have a cell wall, chloroplasts, plasmodesmata, and plastids used for storage, and a large central vacuole, whereas animal cells do not.",
+  "claim": "Plant cells have a cell wall, chloroplasts, plasmodesmata, plastids and a large central vacuole",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "has_part",
+  "entities": [
+   {
+    "text": "plant cell",
+    "curie": null,
+    "ontology": "other",
+    "verified": false
+   },
+   {
+    "text": "plant cell wall",
+    "curie": "GO:0009505",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "chloroplasts",
+    "curie": "GO:0009507",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "plasmodesmata",
+    "curie": "GO:0009506",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "plastids",
+    "curie": "GO:0009536",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "central vacuole",
+    "curie": "GO:0000325",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_part",
+  "context": {
+   "taxon": "NCBITaxon:33090"
+  },
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "conjunction",
+  "m2": {
+   "ctor": "rel",
+   "subject": "CL:0000000",
+   "relation": "has part",
+   "object": "GO:0009505",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "context_required",
+   "confidence": "medium",
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "curie_changes": [
+    {
+     "text": "plant cell",
+     "from": null,
+     "to": "CL:0000000",
+     "why": "generic cell + plant taxon context"
+    }
+   ]
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "CL:0000000",
+   "relation": "has part",
+   "object": "GO:0009505",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "compound_sentence",
+   "curie_changes": [
+    {
+     "text": "plant cell",
+     "from": null,
+     "to": "CL:0000000",
+     "why": "no cell type for \"plant cell\"; the bare class cell, with the plant taxon as context"
+    }
+   ],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-219",
+  "module": "m45432",
+  "source": "In b, the diagram of a plant cell, you see a structure external to the plasma membrane called the cell wall.",
+  "claim": "The plant cell wall is external to the plasma membrane",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "located_in",
+  "entities": [
+   {
+    "text": "plant cell wall",
+    "curie": "GO:0009505",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "plasma membrane",
+    "curie": "GO:0005886",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "located_in",
+  "context": {
+   "taxon": "NCBITaxon:33090"
+  },
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "relation (external to)",
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0009505",
+   "relation": "adjacent to",
+   "object": "GO:0005886",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "context_required",
+   "confidence": "medium",
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "curie_changes": []
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0009505",
+   "relation": "adjacent to",
+   "object": "GO:0005886",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-225",
+  "module": "m45432",
+  "source": "While the chief component of prokaryotic cell walls is peptidoglycan, the major organic molecule in the plant cell wall is cellulose, a polysaccharide made up of long, straight chains of glucose units.",
+  "claim": "The major organic molecule in the plant cell wall is cellulose",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "made_of",
+  "entities": [
+   {
+    "text": "plant cell wall",
+    "curie": "GO:0009505",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "cellulose",
+    "curie": "CHEBI:18246",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "made_of",
+  "context": {
+   "taxon": "NCBITaxon:33090"
+  },
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "superlative",
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0009505",
+   "relation": "has part",
+   "object": "CHEBI:18246",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "blocker": "context_required",
+   "confidence": "medium",
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "curie_changes": []
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0009505",
+   "relation": "has part",
+   "object": "CHEBI:18246",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "proportion",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-252",
+  "module": "m45432",
+  "source": "Microbes that produce vitamin K live inside the human gut.",
+  "claim": "Vitamin K-producing microbes live inside the human gut",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "located_in",
+  "entities": [
+   {
+    "text": "Microbes",
+    "curie": "NCBITaxon:2",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "vitamin K",
+    "curie": "CHEBI:28384",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "gut",
+    "curie": "UBERON:0000160",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "located_in",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "qualifier",
+  "m2": {
+   "ctor": "rel",
+   "subject": "NCBITaxon:2",
+   "relation": "located in",
+   "object": "UBERON:0000160",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "UBERON:0000160",
+   "relation": "location of",
+   "object": "NCBITaxon:2",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-253",
+  "module": "m45432",
+  "source": "Microbes that produce vitamin K live inside the human gut.",
+  "claim": "Gut microbes produce vitamin K",
+  "kind": "other",
+  "bin": "missing_construct",
+  "missing_construct": "capable_of",
+  "entities": [
+   {
+    "text": "Microbes",
+    "curie": "NCBITaxon:2",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "vitamin K",
+    "curie": "CHEBI:28384",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "vitamin K biosynthetic process",
+    "curie": "GO:0042371",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "capable_of",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": null,
+  "bin_m1": "with_context",
+  "rel_m1": "capable of",
+  "lean_m1": "context: human gut",
+  "m2": {
+   "ctor": "rel",
+   "subject": "NCBITaxon:2",
+   "relation": "produces",
+   "object": "CHEBI:28384",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000160",
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": "some",
+   "subject": "NCBITaxon:2",
+   "relation": "produces",
+   "object": "CHEBI:28384",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000160",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-256",
+  "module": "m45432",
+  "source": "Scientists have long noticed that bacteria, mitochondria, and chloroplasts are similar in size and have other similar features.",
+  "claim": "Bacteria, mitochondria and chloroplasts are similar in size",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "comparison",
+  "entities": [
+   {
+    "text": "bacteria",
+    "curie": "NCBITaxon:2",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "mitochondrion",
+    "curie": "GO:0005739",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "chloroplast",
+    "curie": "GO:0009507",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_quantity",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "comparison",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "has_quality",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-264",
+  "module": "m45432",
+  "source": "If you look at , you will see that plant cells each have a large, central vacuole that occupies most of the cell.",
+  "claim": "Plant cells have a large central vacuole that occupies most of the cell",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "plant cell",
+    "curie": null,
+    "ontology": "other",
+    "verified": false
+   },
+   {
+    "text": "central vacuole",
+    "curie": "GO:0000325",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_quantity",
+  "context": {
+   "taxon": "NCBITaxon:33090"
+  },
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "ungrounded entity",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "proportion",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-266",
+  "module": "m45432",
+  "source": "In plant cells, the liquid inside the central vacuole provides turgor pressure, which is the outward pressure caused by the fluid inside the cell.",
+  "claim": "In plant cells, the liquid inside the central vacuole provides turgor pressure",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "central vacuole",
+    "curie": "GO:0000325",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "turgor pressure",
+    "curie": "PATO:0001620",
+    "ontology": "PATO",
+    "verified": true
+   }
+  ],
+  "relation": "increases",
+  "context": {
+   "taxon": "NCBITaxon:33090"
+  },
+  "lean": "Claim.inContext {taxa := [plants]} (Claim.effect centralVacuole .pos (Target.phenotype turgor)) -- Kind.component",
+  "m2": {
+   "ctor": "effect",
+   "subject": "GO:0042807",
+   "relation": null,
+   "object": "PATO:0001620",
+   "sign": "pos",
+   "target": "phenotype",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [
+    {
+     "text": "central vacuole",
+     "from": "GO:0000325",
+     "to": "GO:0042807",
+     "why": "OAK: sentence is about the plant central vacuole, GO has a specific term"
+    }
+   ],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "GO:0042807",
+   "relation": null,
+   "object": "PATO:0001620",
+   "sign": "pos",
+   "target": "phenotype",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "central vacuole",
+     "from": "GO:0000325",
+     "to": "GO:0042807",
+     "why": "GO:0042807 is \"central vacuole\"; GO:0000325 is the broader plant-type vacuole"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-269",
+  "module": "m45432",
+  "source": "That is because as the water concentration in the soil becomes lower than the water concentration in the plant, water moves out of the central vacuoles and cytoplasm and into the soil.",
+  "claim": "When soil water concentration is lower than the plant's, water moves out of the central vacuoles and cytoplasm into the soil",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "water concentration in the soil",
+    "curie": null,
+    "ontology": "other",
+    "verified": false
+   },
+   {
+    "text": "water",
+    "curie": "CHEBI:15377",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "central vacuole",
+    "curie": "GO:0000325",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "cytoplasm",
+    "curie": "GO:0005737",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "decreases amount of",
+  "context": {
+   "taxon": "NCBITaxon:33090"
+  },
+  "lean": "Claim.inContext {taxa := [plants], exposures := [drySoil]} (Claim.effect drySoil .neg (Target.amount water)) -- needs Kind.exposure",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "precondition",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-273",
+  "module": "m45432",
+  "source": "The central vacuole also functions to store proteins in developing seed cells.",
+  "claim": "The central vacuole stores proteins in developing seed cells",
+  "kind": "other",
+  "bin": "missing_construct",
+  "missing_construct": "capable_of",
+  "entities": [
+   {
+    "text": "central vacuole",
+    "curie": "GO:0000325",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "proteins",
+    "curie": "CHEBI:36080",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "seed",
+    "curie": "PO:0009010",
+    "ontology": "other",
+    "verified": false
+   }
+  ],
+  "relation": "capable_of",
+  "context": {
+   "taxon": "NCBITaxon:33090"
+  },
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "qualifier",
+  "m2": {
+   "ctor": "rel",
+   "subject": "CHEBI:36080",
+   "relation": "located in",
+   "object": "GO:0042807",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": "developing seed cells"
+   },
+   "blocker": "context_required",
+   "curie_changes": [
+    {
+     "text": "central vacuole",
+     "from": "GO:0000325",
+     "to": "GO:0042807",
+     "why": "OAK: sentence is about the plant central vacuole, GO has a specific term"
+    }
+   ],
+   "confidence": "low"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "CHEBI:36080",
+   "relation": "located in",
+   "object": "GO:0042807",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": "PO:0009010",
+    "cellType": null,
+    "component": null,
+    "stage": "GO:0048316",
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "central vacuole",
+     "from": "GO:0000325",
+     "to": "GO:0042807",
+     "why": "GO:0042807 is \"central vacuole\"; GO:0000325 is the broader plant-type vacuole"
+    }
+   ],
+   "confidence": "low"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-274",
+  "module": "m45432",
+  "source": "Most animal cells release materials into the extracellular space.",
+  "claim": "Most animal cells release materials into the extracellular space",
+  "kind": "other",
+  "bin": "missing_construct",
+  "missing_construct": "capable_of",
+  "entities": [
+   {
+    "text": "animal cell",
+    "curie": null,
+    "ontology": "other",
+    "verified": false
+   },
+   {
+    "text": "extracellular space",
+    "curie": "GO:0005576",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "secretion",
+    "curie": "GO:0046903",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "capable_of",
+  "context": {
+   "taxon": "NCBITaxon:33208"
+  },
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "quantifier",
+  "m2": {
+   "ctor": "rel",
+   "subject": "CL:0000000",
+   "relation": "capable of",
+   "object": "GO:0046903",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:33208",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [
+    {
+     "text": "animal cell",
+     "from": null,
+     "to": "CL:0000000",
+     "why": "generic cell with taxon Metazoa context (CL animal cell is obsolete)"
+    }
+   ],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": "most",
+   "subject": "CL:0000000",
+   "relation": "capable of",
+   "object": "GO:0046903",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33208",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "animal cell",
+     "from": null,
+     "to": "CL:0000000",
+     "why": "no cell type for \"animal cell\"; the bare class cell, with the animal taxon as context"
+    }
+   ],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-280",
+  "module": "m45432",
+  "source": "When the cells lining a blood vessel are damaged, they display a protein receptor called tissue factor.",
+  "claim": "Damaged cells lining a blood vessel display tissue factor",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "cells lining a blood vessel",
+    "curie": "CL:0000115",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "tissue factor",
+    "curie": "PR:000001940",
+    "ontology": "PR",
+    "verified": true
+   },
+   {
+    "text": "blood vessel",
+    "curie": "UBERON:0001981",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "increases amount of",
+  "context": {
+   "condition": "damaged endothelium"
+  },
+  "lean": "Claim.inContext {condition := vesselDamage} (Claim.effect endothelialCell .pos (Target.amount tissueFactor)) -- agent is a damaged state, not an entity",
+  "m2": {
+   "ctor": "effect",
+   "subject": "CL:0000115",
+   "relation": null,
+   "object": "PR:000001940",
+   "sign": "pos",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0001981",
+    "cellType": null,
+    "condition": "cells are damaged"
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "CL:0000115",
+   "relation": "cell expresses",
+   "object": "PR:000001940",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0001981",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": {
+     "kind": "organism",
+     "curie": "PATO:0001167",
+     "text": "damaged"
+    }
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "low"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-290",
+  "module": "m45432",
+  "source": "Plasmodesmata are numerous channels that pass between the cell walls of adjacent plant cells, connecting their cytoplasm and enabling signal molecules and nutrients to be transported from cell to cell (a).",
+  "claim": "Plasmodesmata connect the cytoplasm of adjacent plant cells",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "connects",
+  "entities": [
+   {
+    "text": "plasmodesma",
+    "curie": "GO:0009506",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "cytoplasm",
+    "curie": "GO:0005737",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "connects",
+  "context": {
+   "taxon": "NCBITaxon:33090"
+  },
+  "lean": null,
+  "bin_m1": "with_context",
+  "rel_m1": "connects",
+  "lean_m1": "context: plant cell",
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0009506",
+   "relation": "connected to",
+   "object": "GO:0005737",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0009506",
+   "relation": "connected to",
+   "object": "GO:0005737",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-291",
+  "module": "m45432",
+  "source": "Plasmodesmata are numerous channels that pass between the cell walls of adjacent plant cells, connecting their cytoplasm and enabling signal molecules and nutrients to be transported from cell to cell (a).",
+  "claim": "Plasmodesmata enable signal molecules and nutrients to be transported from cell to cell",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "plasmodesma",
+    "curie": "GO:0009506",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "transport",
+    "curie": "GO:0006810",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "increases",
+  "context": {
+   "taxon": "NCBITaxon:33090"
+  },
+  "lean": "Claim.inContext {taxa := [plants]} (Claim.effect plasmodesma .pos (Target.process intercellularTransport)) -- Kind.component",
+  "m2": {
+   "ctor": "effect",
+   "subject": "GO:0009506",
+   "relation": null,
+   "object": "GO:0006810",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "GO:0009506",
+   "relation": null,
+   "object": "GO:0006810",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-306",
+  "module": "m45432",
+  "source": "Like a prokaryotic cell, a eukaryotic cell has a plasma membrane, cytoplasm, and ribosomes, but a eukaryotic cell is typically larger than a prokaryotic cell, has a true nucleus (meaning its DNA is surrounded by a membrane), and has other membrane-bound organelles that allow for compartmentalization of functions.",
+  "claim": "A eukaryotic cell is typically larger than a prokaryotic cell",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "comparison",
+  "entities": [
+   {
+    "text": "eukaryotic cell",
+    "curie": "CL:0000255",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "prokaryotic cell",
+    "curie": "CL:0000520",
+    "ontology": "CL",
+    "verified": true
+   }
+  ],
+  "relation": "has_quantity",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "comparison",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "less",
+   "quant": "most",
+   "subject": "CL:0000520",
+   "relation": null,
+   "object": "CL:0000255",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": "PATO:0000117",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-317",
+  "module": "m45432",
+  "source": "In plant cells, vacuoles also help break down macromolecules.",
+  "claim": "In plant cells, vacuoles help break down macromolecules",
+  "kind": "other",
+  "bin": "missing_construct",
+  "missing_construct": "capable_of",
+  "entities": [
+   {
+    "text": "vacuoles",
+    "curie": "GO:0000325",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "macromolecule catabolic process",
+    "curie": "GO:0009057",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "capable_of",
+  "context": {
+   "taxon": "NCBITaxon:33090"
+  },
+  "lean": null,
+  "bin_m1": "now",
+  "rel_m1": "capable of",
+  "lean_m1": "Claim.rel Rel.capableOf vacuoles macromoleculeCatabolicProcess",
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0000325",
+   "relation": "capable of",
+   "object": "GO:0009057",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0000325",
+   "relation": "capable of",
+   "object": "GO:0009057",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-319",
+  "module": "m45432",
+  "source": "The centrosome has two bodies, the centrioles, with an unknown role in cell division.",
+  "claim": "The centrosome has two centrioles",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "has_part",
+  "entities": [
+   {
+    "text": "centrosome",
+    "curie": "GO:0005813",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "centrioles",
+    "curie": "GO:0005814",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_part",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "quantity",
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0005813",
+   "relation": "has part",
+   "object": "GO:0005814",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "GO:0005813",
+   "relation": null,
+   "object": "GO:0005814",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 2,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-321",
+  "module": "m45432",
+  "source": "Lysosomes are the digestive organelles of animal cells.",
+  "claim": "Lysosomes are the digestive organelles of animal cells",
+  "kind": "definitional",
+  "bin": "missing_construct",
+  "missing_construct": "is_a",
+  "entities": [
+   {
+    "text": "Lysosomes",
+    "curie": "GO:0005764",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "animal cell",
+    "curie": null,
+    "ontology": "other",
+    "verified": false
+   }
+  ],
+  "relation": "is_a",
+  "context": {
+   "taxon": "NCBITaxon:33208"
+  },
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "ungrounded entity",
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0005764",
+   "relation": "part of",
+   "object": "CL:0000000",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:33208",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [
+    {
+     "text": "animal cell",
+     "from": null,
+     "to": "CL:0000000",
+     "why": "generic cell with taxon Metazoa context (CL animal cell is obsolete)"
+    }
+   ],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0005764",
+   "relation": "part of",
+   "object": "CL:0000000",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33208",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "animal cell",
+     "from": null,
+     "to": "CL:0000000",
+     "why": "no cell type for \"animal cell\"; the bare class cell, with the animal taxon as context"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-326",
+  "module": "m45432",
+  "source": "The central vacuole expands, enlarging the cell without the need to produce more cytoplasm.",
+  "claim": "Central vacuole expansion enlarges the plant cell without producing more cytoplasm",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "central vacuole",
+    "curie": "GO:0000325",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "cell growth",
+    "curie": "GO:0016049",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "cytoplasm",
+    "curie": "GO:0005737",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "increases",
+  "context": {
+   "taxon": "NCBITaxon:33090"
+  },
+  "lean": "Claim.inContext {taxa := [plants]} (Claim.effect centralVacuole .pos (Target.process cellGrowth)) -- Kind.component",
+  "m2": {
+   "ctor": "effect",
+   "subject": "GO:0042807",
+   "relation": null,
+   "object": "GO:0016049",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [
+    {
+     "text": "central vacuole",
+     "from": "GO:0000325",
+     "to": "GO:0042807",
+     "why": "OAK: sentence is about the plant central vacuole, GO has a specific term"
+    }
+   ],
+   "confidence": "low"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "GO:0042807",
+   "relation": null,
+   "object": "GO:0016049",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "compound_sentence",
+   "curie_changes": [
+    {
+     "text": "central vacuole",
+     "from": "GO:0000325",
+     "to": "GO:0042807",
+     "why": "GO:0042807 is \"central vacuole\"; GO:0000325 is the broader plant-type vacuole"
+    }
+   ],
+   "confidence": "low"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-329",
+  "module": "m45432",
+  "source": "The cytoskeleton has three different types of protein elements.",
+  "claim": "The cytoskeleton has three types of protein elements",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "has_part",
+  "entities": [
+   {
+    "text": "cytoskeleton",
+    "curie": "GO:0005856",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_part",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "quantity",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "cardinality",
+   "quant": null,
+   "subject": "GO:0099513",
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 3,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "types of protein elements",
+     "from": null,
+     "to": "GO:0099513",
+     "why": "polymeric cytoskeletal fiber: the class whose three kinds are microfilament, intermediate filament, microtubule (OLS4 verified)"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-338",
+  "module": "m45432",
+  "source": "Animal cells communicate through their extracellular matrices and are connected to each other by tight junctions, desmosomes, and gap junctions.",
+  "claim": "Animal cells communicate through their extracellular matrices",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "animal cell",
+    "curie": null,
+    "ontology": "other",
+    "verified": false
+   },
+   {
+    "text": "extracellular matrix",
+    "curie": "GO:0031012",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "cell communication",
+    "curie": "GO:0007154",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "increases",
+  "context": {
+   "taxon": "NCBITaxon:33208"
+  },
+  "lean": "Claim.effect ecm .pos (Target.process cellCommunication) -- Kind.component",
+  "m2": {
+   "ctor": "effect",
+   "subject": "GO:0031012",
+   "relation": null,
+   "object": "GO:0007154",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:33208",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "GO:0031012",
+   "relation": null,
+   "object": "GO:0007154",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33208",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-340",
+  "module": "m45432",
+  "source": "Plant cells are connected and communicate with each other by plasmodesmata.",
+  "claim": "Plant cells are connected and communicate via plasmodesmata",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "connects",
+  "entities": [
+   {
+    "text": "plant cell",
+    "curie": null,
+    "ontology": "other",
+    "verified": false
+   },
+   {
+    "text": "plasmodesma",
+    "curie": "GO:0009506",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "cell communication",
+    "curie": "GO:0007154",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "connected_by",
+  "context": {
+   "taxon": "NCBITaxon:33090"
+  },
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "ungrounded entity",
+  "m2": {
+   "ctor": "rel",
+   "subject": "CL:0000000",
+   "relation": "has part",
+   "object": "GO:0009506",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [
+    {
+     "text": "plant cell",
+     "from": null,
+     "to": "CL:0000000",
+     "why": "generic cell with taxon Viridiplantae context (PO not supported)"
+    }
+   ],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "CL:0000000",
+   "relation": "has part",
+   "object": "GO:0009506",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "plant cell",
+     "from": null,
+     "to": "CL:0000000",
+     "why": "no cell type for \"plant cell\"; the bare class cell, with the plant taxon as context"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-353",
+  "module": "m45432",
+  "source": "At the level of the cell, in tissues involved in secretory functions, such as the salivary glands, the cells have abundant Golgi.",
+  "claim": "Secretory tissues such as salivary glands have cells with abundant Golgi",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "salivary glands",
+    "curie": "UBERON:0001044",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "Golgi apparatus",
+    "curie": "GO:0005794",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "secretion",
+    "curie": "GO:0046903",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "increases amount of",
+  "context": {
+   "anatomy": "UBERON:0001044"
+  },
+  "lean": "Claim.inContext {anatomy := salivaryGland} (amount golgi high) -- no 'high' constructor",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "proportion",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45433-13",
+  "module": "m45433",
+  "source": "Each receptor is structured to bind with a specific substance.",
+  "claim": "Each receptor binds a specific substance",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "specificity",
+  "entities": [
+   {
+    "text": "receptor",
+    "curie": "GO:0038023",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_quantity",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "specificity",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45433-31",
+  "module": "m45433",
+  "source": "Plasma membranes range from 5–10 nm thick.",
+  "claim": "Plasma membranes are 5-10 nm thick",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "plasma membrane",
+    "curie": "GO:0005886",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "thickness",
+    "curie": "PATO:0000915",
+    "ontology": "PATO",
+    "verified": true
+   }
+  ],
+  "relation": "has_quantity",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "quantity",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "measure",
+   "quant": null,
+   "subject": "GO:0005886",
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": 5,
+   "hi": 10,
+   "unit": "nm",
+   "quality": "PATO:0000915",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45433-32",
+  "module": "m45433",
+  "source": "As a comparison, human red blood cells, visible via light microscopy, are approximately 8 µm thick, or approximately 1,000 times thicker than a plasma membrane.",
+  "claim": "Human red blood cells are about 8 um thick",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "red blood cells",
+    "curie": "CL:0000232",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "thickness",
+    "curie": "PATO:0000915",
+    "ontology": "PATO",
+    "verified": true
+   }
+  ],
+  "relation": "has_quantity",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "quantity",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "measure",
+   "quant": null,
+   "subject": "CL:0000232",
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": 8,
+   "hi": 8,
+   "unit": "µm",
+   "quality": "PATO:0000915",
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45433-33",
+  "module": "m45433",
+  "source": "As a comparison, human red blood cells, visible via light microscopy, are approximately 8 µm thick, or approximately 1,000 times thicker than a plasma membrane.",
+  "claim": "Red blood cells are about 1000 times thicker than a plasma membrane",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "comparison",
+  "entities": [
+   {
+    "text": "red blood cells",
+    "curie": "CL:0000232",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "plasma membrane",
+    "curie": "GO:0005886",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_quantity",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "comparison",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "less",
+   "quant": null,
+   "subject": "GO:0005886",
+   "relation": null,
+   "object": "CL:0000232",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": "PATO:0000915",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "proportion",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45433-36",
+  "module": "m45433",
+  "source": "The plasma membrane is made up primarily of a bilayer of phospholipids with embedded proteins, carbohydrates, glycolipids, and glycoproteins, and, in animal cells, cholesterol.",
+  "claim": "In animal cells, the plasma membrane contains cholesterol",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "has_part",
+  "entities": [
+   {
+    "text": "plasma membrane",
+    "curie": "GO:0005886",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "cholesterol",
+    "curie": "CHEBI:16113",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "animal cell",
+    "curie": null,
+    "ontology": "other",
+    "verified": false
+   }
+  ],
+  "relation": "has_part",
+  "context": {
+   "taxon": "NCBITaxon:33208"
+  },
+  "lean": null,
+  "bin_m1": "with_context",
+  "rel_m1": "has part",
+  "lean_m1": "context: animal cell",
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0005886",
+   "relation": "has part",
+   "object": "CHEBI:16113",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0005886",
+   "relation": "has part",
+   "object": "CHEBI:16113",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33208",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45433-40",
+  "module": "m45433",
+  "source": "In other words, cholesterol acts as antifreeze in the cell membrane and is more abundant in animals that live in cold climates.",
+  "claim": "Cholesterol is more abundant in membranes of animals that live in cold climates",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "cholesterol",
+    "curie": "CHEBI:16113",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "animals",
+    "curie": "NCBITaxon:33208",
+    "ontology": "NCBITaxon",
+    "verified": true
+   }
+  ],
+  "relation": "increases amount of",
+  "context": {
+   "taxon": "NCBITaxon:33208"
+  },
+  "lean": "Claim.inContext {taxa := [animals], exposures := [coldClimate]} (Claim.effect cold .pos (Target.amount cholesterol)) -- needs Kind.exposure",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "proportion",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45433-54",
+  "module": "m45433",
+  "source": "These carbohydrate chains may consist of 2–60 monosaccharide units and may be either straight or branched.",
+  "claim": "Membrane carbohydrate chains consist of 2-60 monosaccharide units and may be straight or branched",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "carbohydrates",
+    "curie": "CHEBI:16646",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "monosaccharide",
+    "curie": "CHEBI:35381",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "has_quantity",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "quantity",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "measure",
+   "quant": null,
+   "subject": "CHEBI:16646",
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": 2,
+   "hi": 60,
+   "unit": "monosaccharide units",
+   "quality": "PATO:0000122",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": "GO:0005886",
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "low"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45433-58",
+  "module": "m45433",
+  "source": "For example, HIV is able to penetrate the plasma membranes of specific kinds of white blood cells called T-helper cells and monocytes, as well as some cells of the central nervous system.",
+  "claim": "HIV penetrates some cells of the central nervous system",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "HIV",
+    "curie": "NCBITaxon:12721",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "central nervous system",
+    "curie": "UBERON:0001017",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "symbiont entry into host cell",
+    "curie": "GO:0046718",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "increases",
+  "context": {
+   "anatomy": "UBERON:0001017"
+  },
+  "lean": "Claim.inContext {anatomy := cns} (Claim.effect hiv .pos (Target.process entryIntoHostCell)) -- Kind.taxon",
+  "m2": {
+   "ctor": "rel",
+   "subject": "NCBITaxon:12721",
+   "relation": "capable of",
+   "object": "GO:0046718",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0001017",
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "low"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "NCBITaxon:12721",
+   "relation": "capable of",
+   "object": "GO:0046718",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0001017",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "low"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45433-66",
+  "module": "m45433",
+  "source": "Unfortunately, these sites on HIV are encoded by genes that change quickly, making the production of an effective vaccine against the virus very difficult.",
+  "claim": "HIV surface sites are encoded by genes that change quickly",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity (rate)",
+  "entities": [
+   {
+    "text": "HIV",
+    "curie": "NCBITaxon:12721",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "genes",
+    "curie": "SO:0000704",
+    "ontology": "SO",
+    "verified": true
+   },
+   {
+    "text": "mutation rate",
+    "curie": null,
+    "ontology": "other",
+    "verified": false
+   }
+  ],
+  "relation": "has_quality",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "quantity",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "has_quality",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45433-73",
+  "module": "m45433",
+  "source": "Some of these proteins serve to transport materials into or out of the cell.",
+  "claim": "Some membrane proteins transport materials into or out of the cell",
+  "kind": "other",
+  "bin": "missing_construct",
+  "missing_construct": "capable_of",
+  "entities": [
+   {
+    "text": "proteins",
+    "curie": "CHEBI:36080",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "transmembrane transport",
+    "curie": "GO:0055085",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "transporter activity",
+    "curie": "GO:0005215",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "capable_of",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "quantifier",
+  "m2": {
+   "ctor": "rel",
+   "subject": "CHEBI:36080",
+   "relation": "capable of",
+   "object": "GO:0055085",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": "some",
+   "subject": "CHEBI:36080",
+   "relation": "capable of",
+   "object": "GO:0055085",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": "GO:0005886",
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45434-4",
+  "module": "m45434",
+  "source": "Some cells require larger amounts of specific substances than do other cells; they must have a way of obtaining these materials from the extracellular fluids.",
+  "claim": "Some cells require larger amounts of specific substances than other cells",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "comparison",
+  "entities": [
+   {
+    "text": "cell",
+    "curie": "CL:0000000",
+    "ontology": "CL",
+    "verified": true
+   }
+  ],
+  "relation": "has_quantity",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "quantifier",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45434-7",
+  "module": "m45434",
+  "source": "Most cells expend most of their energy, in the form of adenosine triphosphate (ATP), to create and maintain an uneven distribution of ions on the opposite sides of their membranes.",
+  "claim": "Most cells expend most of their ATP to create and maintain an uneven ion distribution across their membranes",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "cell",
+    "curie": "CL:0000000",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "ATP",
+    "curie": "CHEBI:15422",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "ions",
+    "curie": "CHEBI:24870",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "plasma membrane",
+    "curie": "GO:0005886",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "ion transmembrane transport",
+    "curie": "GO:0034220",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "increases",
+  "context": {},
+  "lean": "Claim.effect atp .pos (Target.gradient ion plasmaMembrane) -- Target.gradient proposed",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "proportion",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45434-39",
+  "module": "m45434",
+  "source": "Each separate substance in a medium, such as the extracellular fluid, has its own concentration gradient, independent of the concentration gradients of other materials.",
+  "claim": "Each substance in a medium has its own concentration gradient independent of others",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "property/quality",
+  "entities": [
+   {
+    "text": "concentration gradient",
+    "curie": null,
+    "ontology": "other",
+    "verified": false
+   },
+   {
+    "text": "extracellular fluid",
+    "curie": "GO:0005576",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_quantity",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "quantifier",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45434-40",
+  "module": "m45434",
+  "source": "Additionally, each substance will diffuse according to that gradient.",
+  "claim": "Each substance diffuses according to its own gradient",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "property/quality",
+  "entities": [
+   {
+    "text": "diffusion",
+    "curie": null,
+    "ontology": "other",
+    "verified": false
+   },
+   {
+    "text": "concentration gradient",
+    "curie": null,
+    "ontology": "other",
+    "verified": false
+   }
+  ],
+  "relation": "has_quantity",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "quantifier",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45434-44",
+  "module": "m45434",
+  "source": "However, the substances that undergo facilitated transport would otherwise not diffuse easily or quickly across the plasma membrane.",
+  "claim": "Substances that undergo facilitated transport would not otherwise diffuse easily across the plasma membrane",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "counterfactual",
+  "entities": [
+   {
+    "text": "facilitated transport",
+    "curie": "GO:0022803",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "plasma membrane",
+    "curie": "GO:0005886",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_quantity",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "counterfactual",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "necessity",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45434-51",
+  "module": "m45434",
+  "source": "Osmosis is the movement of free water molecules through a semipermeable membrane according to the water's concentration gradient across the membrane, which is inversely proportional to the solute's concentration.",
+  "claim": "Water concentration is inversely proportional to solute concentration",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity (proportionality)",
+  "entities": [
+   {
+    "text": "water",
+    "curie": "CHEBI:15377",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "solute",
+    "curie": null,
+    "ontology": "other",
+    "verified": false
+   }
+  ],
+  "relation": "has_quantity",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "quantity",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "proportion",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45434-52",
+  "module": "m45434",
+  "source": "Whereas diffusion transports material across membranes and within cells, osmosis transports only water across a membrane and the membrane limits the diffusion of solutes in the water.",
+  "claim": "Osmosis transports only water across a membrane, whereas diffusion transports material across membranes and within cells",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "comparison",
+  "entities": [
+   {
+    "text": "osmosis",
+    "curie": "GO:0006833",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "diffusion",
+    "curie": null,
+    "ontology": "other",
+    "verified": false
+   },
+   {
+    "text": "water",
+    "curie": "CHEBI:15377",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "has_quantity",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "comparison",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0006833",
+   "relation": "has participant",
+   "object": "CHEBI:15377",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "exclusivity",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45434-57",
+  "module": "m45434",
+  "source": "If the volume of the water is the same, but the concentrations of solute are different, then there are also different concentrations of water (the solvent) on either side of the membrane.",
+  "claim": "Water concentration differs on either side of a membrane when solute concentrations differ",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity (proportionality)",
+  "entities": [
+   {
+    "text": "water",
+    "curie": "CHEBI:15377",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "solute",
+    "curie": null,
+    "ontology": "other",
+    "verified": false
+   },
+   {
+    "text": "membrane",
+    "curie": "GO:0016020",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "inversely proportional to",
+  "context": {},
+  "lean": "-- quantity (proportionality), no constructor: amount water ∝ 1/amount solute",
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "quantity",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "precondition",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45434-70",
+  "module": "m45434",
+  "source": "In a hypotonic solution, such as tap water, the extracellular fluid has a lower concentration of solutes than the fluid inside the cell, and water enters the cell.",
+  "claim": "In a hypotonic solution water enters the cell",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "hypotonic solution",
+    "curie": null,
+    "ontology": "other",
+    "verified": false
+   },
+   {
+    "text": "water",
+    "curie": "CHEBI:15377",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "cell",
+    "curie": "CL:0000000",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "import into cell",
+    "curie": "GO:0006833",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "increases",
+  "context": {
+   "condition": "hypotonic medium"
+  },
+  "lean": "Claim.inContext {exposures := [hypotonicMedium]} (Claim.effect hypotonicMedium .pos (Target.process waterImport)) -- needs Kind.exposure",
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0098657",
+   "relation": "has participant",
+   "object": "CHEBI:15377",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": "hypotonic solution"
+   },
+   "blocker": "context_required",
+   "curie_changes": [
+    {
+     "text": "import into cell",
+     "from": "GO:0006833",
+     "to": "GO:0098657",
+     "why": "OAK: import into cell, not water transport"
+    }
+   ],
+   "confidence": "low"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0098657",
+   "relation": "has participant",
+   "object": "CHEBI:15377",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": "CL:0000000",
+    "component": null,
+    "stage": null,
+    "condition": {
+     "kind": "environment",
+     "curie": "PATO:0001656",
+     "text": "hypotonic solution"
+    }
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "import into cell",
+     "from": "GO:0006833",
+     "to": "GO:0098657",
+     "why": "the text says water enters the cell; GO:0098657 is import into cell, GO:0006833 is water transport"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45434-72",
+  "module": "m45434",
+  "source": "In this situation, water will follow its concentration gradient and enter the cell.",
+  "claim": "In a hypotonic solution water follows its gradient and enters the cell",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "water",
+    "curie": "CHEBI:15377",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "cell",
+    "curie": "CL:0000000",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "water transport",
+    "curie": "GO:0006833",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "increases",
+  "context": {
+   "condition": "hypotonic medium"
+  },
+  "lean": "Claim.inContext {exposures := [hypotonicMedium]} (Claim.effect hypotonicMedium .pos (Target.process waterImport))",
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0006833",
+   "relation": "has participant",
+   "object": "CHEBI:15377",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": "hypotonic solution"
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "low"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0098657",
+   "relation": "has participant",
+   "object": "CHEBI:15377",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": "CL:0000000",
+    "component": null,
+    "stage": null,
+    "condition": {
+     "kind": "environment",
+     "curie": "PATO:0001656",
+     "text": "hypotonic solution"
+    }
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "import into cell",
+     "from": "GO:0006833",
+     "to": "GO:0098657",
+     "why": "the text says water enters the cell; GO:0098657 is import into cell, GO:0006833 is water transport"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45434-75",
+  "module": "m45434",
+  "source": "Because the cell has a lower concentration of solutes, the water will leave the cell.",
+  "claim": "In a hypertonic solution water leaves the cell",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "hypertonic",
+    "curie": null,
+    "ontology": "other",
+    "verified": false
+   },
+   {
+    "text": "water",
+    "curie": "CHEBI:15377",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "cell",
+    "curie": "CL:0000000",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "water transport",
+    "curie": "GO:0006833",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "decreases amount of",
+  "context": {
+   "condition": "hypertonic medium"
+  },
+  "lean": "Claim.inContext {exposures := [hypertonicMedium]} (Claim.effect hypertonicMedium .neg (Target.amount intracellularWater))",
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0006833",
+   "relation": "has participant",
+   "object": "CHEBI:15377",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": "hypertonic solution"
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "low"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0140352",
+   "relation": "has participant",
+   "object": "CHEBI:15377",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": "CL:0000000",
+    "component": null,
+    "stage": null,
+    "condition": {
+     "kind": "environment",
+     "curie": "PATO:0001657",
+     "text": "hypertonic solution"
+    }
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "water leaves the cell",
+     "from": "GO:0006833",
+     "to": "GO:0140352",
+     "why": "direction matters: water leaving is export from cell (OLS4 verified)"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45434-89",
+  "module": "m45434",
+  "source": "In fact, the cytoplasm in plants is always slightly hypertonic compared to the cellular environment, and water will always enter a cell if water is available.",
+  "claim": "Plant cytoplasm is always slightly hypertonic relative to the cellular environment",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "comparison",
+  "entities": [
+   {
+    "text": "cytoplasm",
+    "curie": "GO:0005737",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "hypertonic",
+    "curie": null,
+    "ontology": "other",
+    "verified": false
+   }
+  ],
+  "relation": "has_quantity",
+  "context": {
+   "taxon": "NCBITaxon:33090"
+  },
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "comparison",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45434-90",
+  "module": "m45434",
+  "source": "In fact, the cytoplasm in plants is always slightly hypertonic compared to the cellular environment, and water will always enter a cell if water is available.",
+  "claim": "Water always enters a plant cell if water is available",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "water",
+    "curie": "CHEBI:15377",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "plant cell",
+    "curie": null,
+    "ontology": "other",
+    "verified": false
+   },
+   {
+    "text": "water transport",
+    "curie": "GO:0006833",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "increases",
+  "context": {
+   "taxon": "NCBITaxon:33090"
+  },
+  "lean": "Claim.inContext {taxa := [plants]} (Claim.effect water .pos (Target.process waterImport))",
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0006833",
+   "relation": "has participant",
+   "object": "CHEBI:15377",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "low"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0098657",
+   "relation": "has participant",
+   "object": "CHEBI:15377",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": "CL:0000000",
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "precondition",
+   "curie_changes": [
+    {
+     "text": "import into cell",
+     "from": "GO:0006833",
+     "to": "GO:0098657",
+     "why": "the text says water enters the cell; GO:0098657 is import into cell, GO:0006833 is water transport"
+    }
+   ],
+   "confidence": "low"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45434-96",
+  "module": "m45434",
+  "source": "The passive forms of transport, diffusion and osmosis, move material of small molecular weight.",
+  "claim": "Diffusion and osmosis move material of small molecular weight",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "property/quality",
+  "entities": [
+   {
+    "text": "diffusion",
+    "curie": null,
+    "ontology": "other",
+    "verified": false
+   },
+   {
+    "text": "osmosis",
+    "curie": "GO:0006833",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_quantity",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "conjunction",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "has_quality",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45434-98",
+  "module": "m45434",
+  "source": "In solutions of more than one substance, each type of molecule diffuses according to its own concentration gradient.",
+  "claim": "In mixed solutions each molecule type diffuses according to its own gradient",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "property/quality",
+  "entities": [
+   {
+    "text": "diffusion",
+    "curie": null,
+    "ontology": "other",
+    "verified": false
+   },
+   {
+    "text": "concentration gradient",
+    "curie": null,
+    "ontology": "other",
+    "verified": false
+   }
+  ],
+  "relation": "has_quantity",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "quantifier",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45435-3",
+  "module": "m45435",
+  "source": "Some active transport mechanisms move small-molecular weight material, such as ions, through the membrane.",
+  "claim": "Some active transport mechanisms move small molecules such as ions through the membrane",
+  "kind": "other",
+  "bin": "missing_construct",
+  "missing_construct": "capable_of",
+  "entities": [
+   {
+    "text": "active transport",
+    "curie": "GO:0022804",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "ions",
+    "curie": "CHEBI:24870",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "plasma membrane",
+    "curie": "GO:0005886",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "ion transmembrane transport",
+    "curie": "GO:0034220",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "capable_of",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "quantifier",
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0022804",
+   "relation": "involved in",
+   "object": "GO:0034220",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": "some",
+   "subject": "GO:0022804",
+   "relation": "involved in",
+   "object": "GO:0034220",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45435-10",
+  "module": "m45435",
+  "source": "The interior of living cells is electrically negative with respect to the extracellular fluid in which they are bathed; at the same time, cells have higher concentrations of potassium (K+) and lower concentrations of sodium (Na+) than does the extracellular fluid.",
+  "claim": "The interior of living cells is electrically negative relative to the extracellular fluid",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity (sign)",
+  "entities": [
+   {
+    "text": "cell",
+    "curie": "CL:0000000",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "extracellular fluid",
+    "curie": "GO:0005576",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "membrane potential",
+    "curie": null,
+    "ontology": "other",
+    "verified": false
+   }
+  ],
+  "relation": "has_quantity",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "quantity",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "less",
+   "quant": null,
+   "subject": "CL:0000000",
+   "relation": null,
+   "object": "GO:0005576",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": "PATO:0001464",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45435-11",
+  "module": "m45435",
+  "source": "The interior of living cells is electrically negative with respect to the extracellular fluid in which they are bathed; at the same time, cells have higher concentrations of potassium (K+) and lower concentrations of sodium (Na+) than does the extracellular fluid.",
+  "claim": "Cells have higher potassium concentration than the extracellular fluid",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "comparison",
+  "entities": [
+   {
+    "text": "potassium",
+    "curie": "CHEBI:29103",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "cell",
+    "curie": "CL:0000000",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "extracellular fluid",
+    "curie": "GO:0005576",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_quantity",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "comparison",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45435-12",
+  "module": "m45435",
+  "source": "The interior of living cells is electrically negative with respect to the extracellular fluid in which they are bathed; at the same time, cells have higher concentrations of potassium (K+) and lower concentrations of sodium (Na+) than does the extracellular fluid.",
+  "claim": "Cells have lower sodium concentration than the extracellular fluid",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "comparison",
+  "entities": [
+   {
+    "text": "sodium",
+    "curie": "CHEBI:29101",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "cell",
+    "curie": "CL:0000000",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "extracellular fluid",
+    "curie": "GO:0005576",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_quantity",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "comparison",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45435-25",
+  "module": "m45435",
+  "source": "Much of a cell’s supply of metabolic energy may be spent maintaining these processes.",
+  "claim": "Much of a cell's metabolic energy is spent maintaining active transport",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity (proportion)",
+  "entities": [
+   {
+    "text": "ATP",
+    "curie": "CHEBI:15422",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "active transport",
+    "curie": "GO:0022804",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_quantity",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "quantity",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "proportion",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45435-65",
+  "module": "m45435",
+  "source": "Living cells need certain substances in concentrations greater than they exist in the extracellular space.",
+  "claim": "Living cells need certain substances at concentrations greater than in the extracellular space",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "comparison",
+  "entities": [
+   {
+    "text": "cell",
+    "curie": "CL:0000000",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "extracellular region",
+    "curie": "GO:0005576",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_quantity",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "rel_m1": null,
+  "lean_m1": "comparison",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "necessity",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ }
+]
