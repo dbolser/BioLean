@@ -1,0 +1,262 @@
+{
+"rel|is_a|GO:0009060|GO:0045333": [
+"true but unstated",
+"GO has it. The textbook says \"this reaction\" for aerobic respiration, so one is_a edge makes three input/output sentences theorems."
+],
+"effect|neg|amount|UBERON:0000011|UBERON:0000013": [
+"plausible biology",
+"The two branches oppose each other at three effectors (heart rate, blood pressure, digestion). The content is right, the typing is not: nervous systems have no \"amount\". It wants a symmetric \"opposes\" relation."
+],
+"effect|neg|amount|UBERON:0000013|UBERON:0000011": [
+"plausible biology",
+"Mirror of the row above. Antagonism is symmetric, so the pair should be one fact, not two directed edges."
+],
+"rel|has part|GO:0043226|GO:0005886": [
+"artefact of a rule caveat",
+"Transitivity through an arbitrary intermediate: the plasma membrane is not part of an organelle. \"Cells have a plasma membrane\" is a direct axiom."
+],
+"rel|is_a|CL:0000520|CL:0000000": [
+"true but unstated",
+"CL has it. The book states cell properties once for \"cell\" and again for \"prokaryotic cell\"; this edge makes the second set theorems."
+],
+"rel|has part|CHEBI:18111|CHEBI:16991": [
+"artefact of a rule caveat",
+"Transitivity through an arbitrary intermediate (rRNA, ribosome, polypeptide ... none of which has DNA). Five alternatives, all false."
+],
+"rel|has part|CHEBI:18282|CHEBI:32958": [
+"artefact of a rule caveat",
+"Siblings treated as nested: the base and the phosphate are both parts of the nucleotide, neither is part of the other."
+],
+"rel|has part|CHEBI:32958|CHEBI:18282": [
+"artefact of a rule caveat",
+"Same as the row above, mirrored."
+],
+"rel|part of|GO:0009767|GO:0019684": [
+"true but unstated",
+"GO has it: the photosynthetic electron transport chain is part of the light reactions."
+],
+"rel|happens during|GO:0007129|GO:0007131": [
+"artefact of a rule caveat",
+"Reversed. Pairing is a precondition of recombination, so it does not happen during it."
+],
+"rel|happens during|GO:0007131|GO:0007129": [
+"plausible biology",
+"Crossing over takes place while the homologues are paired, in prophase I."
+],
+"rel|ends with|GO:0015979|GO:0019253": [
+"true but unstated",
+"The Calvin cycle is the last stage of photosynthesis, so the sugar output of the whole is the output of its final stage."
+],
+"rel|ends with|GO:0019253|GO:0015979": [
+"artefact of a rule caveat",
+"Mirror of the row above. The chain rule has no notion of which of two stages is the whole."
+],
+"rel|has part|CHEBI:26561|CHEBI:15422": [
+"artefact of a rule caveat",
+"Inverted is_a: ATP is a ribonucleotide, it is not a part of one. The book states the property of the class, the tool needs it for the instance."
+],
+"rel|happens during|GO:0007127|GO:0007128": [
+"artefact of a rule caveat",
+"Reversed: prophase I happens during meiosis I, not the other way round."
+],
+"rel|happens during|GO:0007128|GO:0007127": [
+"true but unstated",
+"Prophase I is a stage of meiosis I. GO has it as part_of."
+],
+"rel|occurs in|GO:0015979|GO:0009570": [
+"plausible biology",
+"Only the carbon-fixing half takes place in the stroma, so this is true for the Calvin cycle and loose for photosynthesis as a whole."
+],
+"rel|part of|GO:0140014|GO:0000910": [
+"artefact of a rule caveat",
+"Mitosis and cytokinesis are siblings, both parts of the M phase."
+],
+"rel|has part|CHEBI:36976|CHEBI:26561": [
+"artefact of a rule caveat",
+"Inverted is_a: a ribonucleotide is a nucleotide, not a part of one. The right form of this hole is the next row."
+],
+"rel|is_a|CHEBI:26561|CHEBI:36976": [
+"true but unstated",
+"ChEBI has it. Lets the RNA-nucleotide sentences follow from the DNA-nucleotide ones."
+],
+"effect|neg|process|CHEBI:35472|GO:0006954": [
+"true but unstated",
+"True by definition of the class, and a genuine induction: aspirin and corticosteroids lower inflammation, so the class does."
+],
+"rel|is_a|CL:0000300|CL:0000413": [
+"true but unstated",
+"CL has it: a gamete is a haploid cell."
+],
+"rel|is_a|GO:0019253|GO:0016051": [
+"true but unstated",
+"GO has it: the Calvin cycle is a carbohydrate biosynthetic process."
+],
+"rel|interacts with|CHEBI:26401|CHEBI:16040": [
+"artefact of a rule caveat",
+"Class-level reading: \"purines interact with cytosine\" would make adenine pair with C. The sentence is about specific pairs (A-T, G-C)."
+],
+"rel|interacts with|CHEBI:26401|CHEBI:17821": [
+"artefact of a rule caveat",
+"Same as the row above."
+],
+"rel|has part|GO:0009507|GO:0009542": [
+"true but unstated",
+"A chloroplast has grana (GO: granum is part of the chloroplast thylakoid)."
+],
+"rel|part of|GO:0009507|GO:0042651": [
+"artefact of a rule caveat",
+"Reversed part_of: the thylakoid membrane is part of the chloroplast."
+],
+"rel|has part|GO:0042603|GO:0005618": [
+"artefact of a rule caveat",
+"Siblings treated as nested: capsule and cell wall are both layers of the bacterium."
+],
+"rel|has part|GO:0005618|GO:0042603": [
+"artefact of a rule caveat",
+"Same as the row above, mirrored."
+],
+"rel|is_a|GO:0009505|GO:0005618": [
+"true but unstated",
+"GO has it: the plant cell wall is a cell wall. Also completes an effect sentence, so two rules agree on the hole."
+],
+"rel|has part|GO:0005840|GO:0005618": [
+"artefact of a rule caveat",
+"Transitivity through an arbitrary intermediate (ribosome, subunits, organelle: none has a cell wall)."
+],
+"rel|part of|UBERON:0000349|UBERON:0001871": [
+"artefact of a rule caveat",
+"Arbitrary intermediate: the limbic system is not part of the temporal lobe (the amygdala is)."
+],
+"rel|has part|GO:0009534|GO:0009579": [
+"artefact of grounding",
+"GO has a general \"thylakoid\" and a \"chloroplast thylakoid\"; the sentences were grounded to either, so one piece of content is split across two facts. The is_a hole below is the repair."
+],
+"rel|is_a|GO:0009534|GO:0009579": [
+"true but unstated",
+"GO has it. Repairs a split in the grounding (the same structure grounded to two terms)."
+],
+"rel|occurs in|GO:0015979|GO:0009579": [
+"plausible biology",
+"The light reactions occur in the thylakoid; loose for photosynthesis as a whole."
+],
+"rel|has part|GO:0009579|GO:0009534": [
+"artefact of grounding",
+"Same grounding split as two rows above, other direction."
+],
+"rel|part of|GO:0007049|GO:0000087": [
+"artefact of a rule caveat",
+"Reversed: the M phase is part of the cell cycle."
+],
+"rel|is_a|CHEBI:17234|CHEBI:16646": [
+"true but unstated",
+"ChEBI has it: glucose is a carbohydrate."
+],
+"rel|part of|UBERON:0000956|UBERON:0000349": [
+"artefact of a rule caveat",
+"Arbitrary intermediate. The limbic system contains cortical areas; the cortex as a whole is not part of it."
+],
+"rel|has part|GO:0005694|GO:0043025": [
+"artefact of a rule caveat",
+"Arbitrary intermediate. The neuronal cell body contains DNA, but a chromosome does not contain a cell body."
+],
+"effect|pos|amount|UBERON:0000013|CHEBI:33568": [
+"true but unstated",
+"Sympathetic activation releases adrenaline from the adrenal medulla. Completes \"the sympathetic system raises heart rate\" through adrenaline."
+],
+"effect|neg|process|PR:000009054|GO:0005980": [
+"true but unstated",
+"Insulin suppresses glycogen breakdown. Completes \"glucose lowers glycogen catabolism\" through insulin; the book gives both halves of the loop but not this edge."
+],
+"effect|pos|amount|PR:000003035|GO:0000075": [
+"plausible biology",
+"p53 activates checkpoint signalling. The same hole exists for p21 and RB1: the book says what each does to the cell cycle and never that they work through checkpoints. \"Amount of a process\" is the wrong type."
+],
+"effect|pos|phenotype|PR:P23219-1|HP:0001945": [
+"true but unstated",
+"Cyclooxygenase makes the prostaglandins that raise fever. Completes \"paracetamol lowers fever\" through its COX inhibition; the mechanism step the G6 case looks like."
+],
+"effect|neg|amount|GO:0005041|CHEBI:16113": [
+"true but unstated",
+"LDL receptors clear cholesterol-carrying LDL. Completes \"familial hypercholesterolemia raises cholesterol\" through its LDL receptor defect."
+],
+"effect|neg|activity|CHEBI:16113|GO:0005041": [
+"artefact of a rule caveat",
+"Wrong direction of cause: the book says the receptor defect raises cholesterol, this hole has cholesterol lowering the receptor (true only as SREBP feedback, which is a different claim)."
+],
+"effect|pos|activity|CHEBI:16113|PR:000008636": [
+"artefact of a rule caveat",
+"Wrong direction and wrong sign: the statin hits the enzyme, which makes cholesterol; cholesterol feeds back negatively on the enzyme."
+],
+"effect|pos|activity|GO:0005249|GO:0005248": [
+"artefact of a rule caveat",
+"Common cause read as a chain: depolarisation opens both channels. Neither raises the other."
+],
+"effect|neg|amount|GO:0006281|CHEBI:81145": [
+"true but unstated",
+"DNA repair removes thymine dimers. A class-level generalisation of the nucleotide-excision-repair sentence."
+],
+"effect|pos|amount|MONDO:0003847|CHEBI:16113": [
+"artefact of a rule caveat",
+"Over-general: claims every genetic disease raises cholesterol. isaInheritEffect has the hole at the class, the sentence is at the subclass."
+],
+"effect|pos|amount|CHEBI:17514|CHEBI:15422": [
+"artefact of a rule caveat",
+"Wrong sign through a feedback node: cyanide lowers ATP. The chain passes through \"ATP inhibits ATP synthesis\", a self-inhibiting loop."
+],
+"effect|neg|amount|CHEBI:15422|CHEBI:16761": [
+"artefact of a rule caveat",
+"Wrong sign (spending ATP makes ADP). The book gives ATP and ADP as opposite regulators of glucose catabolism; the chain rule explains one by the other."
+],
+"effect|pos|amount|GO:0005884|GO:0005856": [
+"artefact of a rule caveat",
+"Parthood read as causation: actin filaments are part of the cytoskeleton, so they share its functions. Needs a part-of rule for effects."
+],
+"effect|pos|activity|PATO:0001462|GO:0005391": [
+"artefact of a rule caveat",
+"Reversed cause: the pump builds the membrane potential. The sentence is about the electrical gradient pulling K+ in by diffusion, which is not pumping."
+],
+"rel|precedes|GO:0051320|GO:0140014": [
+"true but unstated",
+"S phase precedes mitosis. Completes \"DNA replication precedes mitosis\" through DNA replication being part of S phase."
+],
+"rel|ends with|GO:0045333|GO:0022904": [
+"true but unstated",
+"Cellular respiration ends with the electron transport chain, whose output is the water."
+],
+"rel|enables|GO:0048492|GO:0019253": [
+"true but unstated",
+"RuBisCO enables the Calvin cycle (as well as carbon fixation, which is a part of it)."
+],
+"rel|has participant|GO:0006270|CHEBI:36080": [
+"true but unstated",
+"Replication initiation involves proteins (helicase, primase)."
+],
+"rel|produces|UBERON:0002368|PR:000009054": [
+"artefact of a rule caveat",
+"Over-general: not every endocrine gland produces insulin. 12 other \"endocrine gland produces X\" holes have the same shape."
+],
+"rel|produces|UBERON:0001235|CHEBI:27584": [
+"true but unstated",
+"The adrenal cortex produces aldosterone (a mineralocorticoid)."
+],
+"rel|produces|UBERON:0000991|CHEBI:17347": [
+"true but unstated",
+"Gonads produce testosterone; the sentence is about the testis."
+],
+"rel|has part|CL:0000520|GO:0042383": [
+"artefact of a rule caveat",
+"Specialisation to an arbitrary subclass: the tool offers every subclass of \"plasma membrane\" that appears in the corpus, and sarcolemma (muscle cells only) is one. Most such holes are false for the subject."
+],
+"rel|occurs in|GO:0006281|GO:0030057": [
+"artefact of a rule caveat",
+"Arbitrary intermediate: DNA repair occurs in the cell, a desmosome is part of the cell, but nothing says repair occurs in the desmosome."
+],
+"notRel|has part|CHEBI:33696|CHEBI:28816": [
+"artefact of a rule caveat",
+"False: DNA is a nucleic acid and has deoxyribose. A negative cannot be generalised upwards; notRelSub only runs downwards."
+],
+"rel|derives from|GO:0043226|NCBITaxon:1117": [
+"artefact of a rule caveat",
+"Over-general version of the endosymbiosis sentence (chloroplasts derive from cyanobacteria): organelles in general do not, only mitochondria and plastids. Shows why G3 needs a hypothesis and a rival, not a lift."
+]
+}

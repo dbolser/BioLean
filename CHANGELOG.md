@@ -2,6 +2,27 @@
 
 Findings and decisions, dated. Code history is in `git log`; this records what we learned.
 
+## 2026-10-28 (overnight: hole search)
+- Built `scripts/search/holes.py`, the first step of hypothesis generation by inverse entailment. For each
+  of the 1,223 textbook statements that follow from nothing else, every closure rule is run backwards with
+  one premise known; the other premise is then fully determined, and is a hole. 6,735 holes; 2,172 after
+  screening (RO sorts, `is_a` across kinds, GO/UBERON/CL/ChEBI refutation, obsolete terms, relation
+  patterns never seen in the book); 842 hypotheses once alternatives are grouped. Output
+  `data/search/holes.json` and `docs/holes.md` (top 40 judged by hand, with notes).
+- The tool did not rediscover G1 or G6, nor any of the eight holes found by hand. Six sit in sentences
+  blocked by a missing constructor (quantity, necessity, context, compound, ontology), G3 half, and G6 was
+  grounded as "glucose raises insulin" so the drink never appears. G1 needs a rule, not a fact. With the
+  drink grounded as sucrose the search does propose "sucrose raises the amount of glucose". The hand-found
+  holes live exactly where the formal vocabulary stops, which makes phase 2 the way to reach them.
+- Top 40 judged: 13 true but unstated (95 holes in all are confirmed by an ontology), 5 plausible biology,
+  20 artefacts of a rule (chain rules have no direction, arbitrary intermediates, class-level overshoot),
+  2 of grounding. Best finds: sympathetic and parasympathetic antagonism (the schema needs a symmetric
+  "opposes"), LDL receptors lower cholesterol, cyclooxygenase raises fever, "anti-inflammatory drug lowers
+  inflammation" as a real induction, p53 acting through checkpoint signalling.
+- Side finding: four obsolete ontology terms in the grounding (CL animal cell, GO reproduction, DNA primase
+  activity, homolactic fermentation), and thylakoid grounded to two terms. Sentences completed rewards
+  coincidence; only the ontology check is a plausibility signal.
+
 ## 2026-10-28 (overnight: information content and concept drift)
 - Information content as the triviality filter (`docs/ic-triviality.md`, `scripts/ontology/ic.py`,
   `closure.py --ic`): IC = -log(subtree/N) from GO, UBERON, CL and ChEBI (ChEBI fetched in 6 s), over
