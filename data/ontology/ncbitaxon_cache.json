@@ -1,9 +1,103 @@
 {
+"children": {
+"NCBITaxon:131567": [
+"NCBITaxon:2",
+"NCBITaxon:2157",
+"NCBITaxon:2759"
+],
+"NCBITaxon:2": [
+"NCBITaxon:1783272",
+"NCBITaxon:2323",
+"NCBITaxon:2698788",
+"NCBITaxon:2954143",
+"NCBITaxon:3031715",
+"NCBITaxon:3039322",
+"NCBITaxon:3039652",
+"NCBITaxon:3071909",
+"NCBITaxon:3232315",
+"NCBITaxon:3379134",
+"NCBITaxon:3384189",
+"NCBITaxon:3384194",
+"NCBITaxon:48479",
+"NCBITaxon:49928",
+"NCBITaxon:68525"
+],
+"NCBITaxon:2157": [
+"NCBITaxon:1783275",
+"NCBITaxon:1783276",
+"NCBITaxon:1935183",
+"NCBITaxon:29294",
+"NCBITaxon:3366610",
+"NCBITaxon:48510",
+"NCBITaxon:93506"
+],
+"NCBITaxon:2759": [
+"NCBITaxon:1401294",
+"NCBITaxon:2489521",
+"NCBITaxon:2598132",
+"NCBITaxon:2608109",
+"NCBITaxon:2608240",
+"NCBITaxon:2611341",
+"NCBITaxon:2611352",
+"NCBITaxon:2683617",
+"NCBITaxon:2686027",
+"NCBITaxon:2698737",
+"NCBITaxon:2763",
+"NCBITaxon:3004206",
+"NCBITaxon:3027",
+"NCBITaxon:33090",
+"NCBITaxon:33154",
+"NCBITaxon:3694374",
+"NCBITaxon:38254",
+"NCBITaxon:42452",
+"NCBITaxon:554296",
+"NCBITaxon:554915",
+"NCBITaxon:61964"
+],
+"NCBITaxon:33090": [
+"NCBITaxon:144313",
+"NCBITaxon:144314",
+"NCBITaxon:2806169",
+"NCBITaxon:3041",
+"NCBITaxon:35493"
+],
+"NCBITaxon:33154": [
+"NCBITaxon:127916",
+"NCBITaxon:2006544",
+"NCBITaxon:2686024",
+"NCBITaxon:2687318",
+"NCBITaxon:28009",
+"NCBITaxon:33208",
+"NCBITaxon:42461",
+"NCBITaxon:4751",
+"NCBITaxon:610163"
+],
+"NCBITaxon:33208": [
+"NCBITaxon:1767183",
+"NCBITaxon:212041",
+"NCBITaxon:6040",
+"NCBITaxon:6072"
+],
+"NCBITaxon:40674": [
+"NCBITaxon:1002697",
+"NCBITaxon:1092586",
+"NCBITaxon:32525",
+"NCBITaxon:9254"
+]
+},
 "terms": {
 "NCBITaxon:1": {
 "label": "root",
 "obsolete": false,
 "parents": [],
+"replaced_by": []
+},
+"NCBITaxon:1002697": {
+"label": "unclassified Mammalia",
+"obsolete": false,
+"parents": [
+"NCBITaxon:40674"
+],
 "replaced_by": []
 },
 "NCBITaxon:10066": {
@@ -83,6 +177,14 @@
 "obsolete": false,
 "parents": [
 "NCBITaxon:911341"
+],
+"replaced_by": []
+},
+"NCBITaxon:1092586": {
+"label": "environmental samples <mammals>",
+"obsolete": false,
+"parents": [
+"NCBITaxon:40674"
 ],
 "replaced_by": []
 },
@@ -190,6 +292,14 @@
 ],
 "replaced_by": []
 },
+"NCBITaxon:127916": {
+"label": "Ichthyosporea",
+"obsolete": false,
+"parents": [
+"NCBITaxon:33154"
+],
+"replaced_by": []
+},
 "NCBITaxon:131221": {
 "label": "Streptophytina",
 "obsolete": false,
@@ -230,6 +340,14 @@
 ],
 "replaced_by": []
 },
+"NCBITaxon:1401294": {
+"label": "Breviatea",
+"obsolete": false,
+"parents": [
+"NCBITaxon:2759"
+],
+"replaced_by": []
+},
 "NCBITaxon:1437010": {
 "label": "Boreoeutheria",
 "obsolete": false,
@@ -267,6 +385,22 @@
 "obsolete": false,
 "parents": [
 "NCBITaxon:91827"
+],
+"replaced_by": []
+},
+"NCBITaxon:144313": {
+"label": "unclassified Viridiplantae",
+"obsolete": false,
+"parents": [
+"NCBITaxon:33090"
+],
+"replaced_by": []
+},
+"NCBITaxon:144314": {
+"label": "environmental samples <green plants,kingdom Viridiplantae>",
+"obsolete": false,
+"parents": [
+"NCBITaxon:33090"
 ],
 "replaced_by": []
 },
@@ -334,11 +468,35 @@
 ],
 "replaced_by": []
 },
+"NCBITaxon:1767183": {
+"label": "unclassified Metazoa",
+"obsolete": false,
+"parents": [
+"NCBITaxon:33208"
+],
+"replaced_by": []
+},
 "NCBITaxon:1783272": {
 "label": "Bacillati",
 "obsolete": false,
 "parents": [
 "NCBITaxon:2"
+],
+"replaced_by": []
+},
+"NCBITaxon:1783275": {
+"label": "Thermoproteati",
+"obsolete": false,
+"parents": [
+"NCBITaxon:2157"
+],
+"replaced_by": []
+},
+"NCBITaxon:1783276": {
+"label": "Nanobdellati",
+"obsolete": false,
+"parents": [
+"NCBITaxon:2157"
 ],
 "replaced_by": []
 },
@@ -382,6 +540,14 @@
 ],
 "replaced_by": []
 },
+"NCBITaxon:1935183": {
+"label": "Promethearchaeati",
+"obsolete": false,
+"parents": [
+"NCBITaxon:2157"
+],
+"replaced_by": []
+},
 "NCBITaxon:1963758": {
 "label": "Myomorpha",
 "obsolete": false,
@@ -414,11 +580,27 @@
 ],
 "replaced_by": []
 },
+"NCBITaxon:2006544": {
+"label": "unclassified Opisthokonta",
+"obsolete": false,
+"parents": [
+"NCBITaxon:33154"
+],
+"replaced_by": []
+},
 "NCBITaxon:207598": {
 "label": "Homininae",
 "obsolete": false,
 "parents": [
 "NCBITaxon:9604"
+],
+"replaced_by": []
+},
+"NCBITaxon:212041": {
+"label": "environmental samples <animals,kingdom Metazoa>",
+"obsolete": false,
+"parents": [
+"NCBITaxon:33208"
 ],
 "replaced_by": []
 },
@@ -486,6 +668,22 @@
 ],
 "replaced_by": []
 },
+"NCBITaxon:2323": {
+"label": "Bacteria incertae sedis",
+"obsolete": false,
+"parents": [
+"NCBITaxon:2"
+],
+"replaced_by": []
+},
+"NCBITaxon:2489521": {
+"label": "Hemimastigophora",
+"obsolete": false,
+"parents": [
+"NCBITaxon:2759"
+],
+"replaced_by": []
+},
 "NCBITaxon:2559587": {
 "label": "Riboviria",
 "obsolete": false,
@@ -502,11 +700,43 @@
 ],
 "replaced_by": []
 },
+"NCBITaxon:2598132": {
+"label": "Rhodelphea",
+"obsolete": false,
+"parents": [
+"NCBITaxon:2759"
+],
+"replaced_by": []
+},
 "NCBITaxon:2607030": {
 "label": "Strisores",
 "obsolete": false,
 "parents": [
 "NCBITaxon:3078114"
+],
+"replaced_by": []
+},
+"NCBITaxon:2608109": {
+"label": "Haptista",
+"obsolete": false,
+"parents": [
+"NCBITaxon:2759"
+],
+"replaced_by": []
+},
+"NCBITaxon:2608240": {
+"label": "CRuMs",
+"obsolete": false,
+"parents": [
+"NCBITaxon:2759"
+],
+"replaced_by": []
+},
+"NCBITaxon:2611341": {
+"label": "Metamonada",
+"obsolete": false,
+"parents": [
+"NCBITaxon:2759"
 ],
 "replaced_by": []
 },
@@ -534,6 +764,38 @@
 ],
 "replaced_by": []
 },
+"NCBITaxon:2683617": {
+"label": "Eukaryota incertae sedis",
+"obsolete": false,
+"parents": [
+"NCBITaxon:2759"
+],
+"replaced_by": []
+},
+"NCBITaxon:2686024": {
+"label": "Rotosphaerida",
+"obsolete": false,
+"parents": [
+"NCBITaxon:33154"
+],
+"replaced_by": []
+},
+"NCBITaxon:2686027": {
+"label": "Ancyromonadida",
+"obsolete": false,
+"parents": [
+"NCBITaxon:2759"
+],
+"replaced_by": []
+},
+"NCBITaxon:2687318": {
+"label": "Filasterea",
+"obsolete": false,
+"parents": [
+"NCBITaxon:33154"
+],
+"replaced_by": []
+},
 "NCBITaxon:2697495": {
 "label": "Spiralia",
 "obsolete": false,
@@ -547,6 +809,14 @@
 "obsolete": false,
 "parents": [
 "NCBITaxon:2759"
+],
+"replaced_by": []
+},
+"NCBITaxon:2698788": {
+"label": "Candidatus Krumholzibacteriota",
+"obsolete": false,
+"parents": [
+"NCBITaxon:2"
 ],
 "replaced_by": []
 },
@@ -598,6 +868,30 @@
 ],
 "replaced_by": []
 },
+"NCBITaxon:2763": {
+"label": "Rhodophyta",
+"obsolete": false,
+"parents": [
+"NCBITaxon:2759"
+],
+"replaced_by": []
+},
+"NCBITaxon:28009": {
+"label": "Choanoflagellata",
+"obsolete": false,
+"parents": [
+"NCBITaxon:33154"
+],
+"replaced_by": []
+},
+"NCBITaxon:2806169": {
+"label": "Prasinodermophyta",
+"obsolete": false,
+"parents": [
+"NCBITaxon:33090"
+],
+"replaced_by": []
+},
 "NCBITaxon:2821352": {
 "label": "Conifers I",
 "obsolete": false,
@@ -622,6 +916,46 @@
 ],
 "replaced_by": []
 },
+"NCBITaxon:29294": {
+"label": "Archaea incertae sedis",
+"obsolete": false,
+"parents": [
+"NCBITaxon:2157"
+],
+"replaced_by": []
+},
+"NCBITaxon:2954143": {
+"label": "Candidatus Tharpellota",
+"obsolete": false,
+"parents": [
+"NCBITaxon:2"
+],
+"replaced_by": []
+},
+"NCBITaxon:3004206": {
+"label": "Provora",
+"obsolete": false,
+"parents": [
+"NCBITaxon:2759"
+],
+"replaced_by": []
+},
+"NCBITaxon:3027": {
+"label": "Cryptophyceae",
+"obsolete": false,
+"parents": [
+"NCBITaxon:2759"
+],
+"replaced_by": []
+},
+"NCBITaxon:3031715": {
+"label": "Candidatus Deferrimicrobiota",
+"obsolete": false,
+"parents": [
+"NCBITaxon:2"
+],
+"replaced_by": []
+},
 "NCBITaxon:3035": {
 "label": "Euglenida",
 "obsolete": false,
@@ -635,6 +969,38 @@
 "obsolete": false,
 "parents": [
 "NCBITaxon:1131320"
+],
+"replaced_by": []
+},
+"NCBITaxon:3039322": {
+"label": "Candidatus Lernaellota",
+"obsolete": false,
+"parents": [
+"NCBITaxon:2"
+],
+"replaced_by": []
+},
+"NCBITaxon:3039652": {
+"label": "Candidatus Hinthialibacterota",
+"obsolete": false,
+"parents": [
+"NCBITaxon:2"
+],
+"replaced_by": []
+},
+"NCBITaxon:3041": {
+"label": "Chlorophyta",
+"obsolete": false,
+"parents": [
+"NCBITaxon:33090"
+],
+"replaced_by": []
+},
+"NCBITaxon:3071909": {
+"label": "Candidatus Moduliflexota",
+"obsolete": false,
+"parents": [
+"NCBITaxon:2"
 ],
 "replaced_by": []
 },
@@ -731,6 +1097,14 @@
 "obsolete": false,
 "parents": [
 "NCBITaxon:186802"
+],
+"replaced_by": []
+},
+"NCBITaxon:3232315": {
+"label": "Candidatus Effluviviacota",
+"obsolete": false,
+"parents": [
+"NCBITaxon:2"
 ],
 "replaced_by": []
 },
@@ -966,6 +1340,22 @@
 ],
 "replaced_by": []
 },
+"NCBITaxon:3384189": {
+"label": "Fusobacteriati",
+"obsolete": false,
+"parents": [
+"NCBITaxon:2"
+],
+"replaced_by": []
+},
+"NCBITaxon:3384194": {
+"label": "Thermotogati",
+"obsolete": false,
+"parents": [
+"NCBITaxon:2"
+],
+"replaced_by": []
+},
 "NCBITaxon:3398": {
 "label": "Magnoliopsida",
 "obsolete": false,
@@ -1019,6 +1409,14 @@
 "obsolete": false,
 "parents": [
 "NCBITaxon:4479"
+],
+"replaced_by": []
+},
+"NCBITaxon:3694374": {
+"label": "Malawimonada",
+"obsolete": false,
+"parents": [
+"NCBITaxon:2759"
 ],
 "replaced_by": []
 },
@@ -1142,6 +1540,14 @@
 ],
 "replaced_by": []
 },
+"NCBITaxon:38254": {
+"label": "Glaucocystophyceae",
+"obsolete": false,
+"parents": [
+"NCBITaxon:2759"
+],
+"replaced_by": []
+},
 "NCBITaxon:38820": {
 "label": "Poales",
 "obsolete": false,
@@ -1179,6 +1585,22 @@
 "obsolete": false,
 "parents": [
 "NCBITaxon:4209"
+],
+"replaced_by": []
+},
+"NCBITaxon:42452": {
+"label": "unclassified eukaryotes",
+"obsolete": false,
+"parents": [
+"NCBITaxon:2759"
+],
+"replaced_by": []
+},
+"NCBITaxon:42461": {
+"label": "Opisthokonta incertae sedis",
+"obsolete": false,
+"parents": [
+"NCBITaxon:33154"
 ],
 "replaced_by": []
 },
@@ -1366,6 +1788,22 @@
 ],
 "replaced_by": []
 },
+"NCBITaxon:48479": {
+"label": "environmental samples <bacteria,domain Bacteria>",
+"obsolete": false,
+"parents": [
+"NCBITaxon:2"
+],
+"replaced_by": []
+},
+"NCBITaxon:48510": {
+"label": "environmental samples <archaea,domain Archaea>",
+"obsolete": false,
+"parents": [
+"NCBITaxon:2157"
+],
+"replaced_by": []
+},
 "NCBITaxon:4890": {
 "label": "Ascomycota",
 "obsolete": false,
@@ -1422,6 +1860,14 @@
 ],
 "replaced_by": []
 },
+"NCBITaxon:49928": {
+"label": "unclassified Bacteria",
+"obsolete": false,
+"parents": [
+"NCBITaxon:2"
+],
+"replaced_by": []
+},
 "NCBITaxon:50557": {
 "label": "Insecta",
 "obsolete": false,
@@ -1435,6 +1881,22 @@
 "obsolete": false,
 "parents": [
 "NCBITaxon:91347"
+],
+"replaced_by": []
+},
+"NCBITaxon:554296": {
+"label": "Apusozoa",
+"obsolete": false,
+"parents": [
+"NCBITaxon:2759"
+],
+"replaced_by": []
+},
+"NCBITaxon:554915": {
+"label": "Amoebozoa",
+"obsolete": false,
+"parents": [
+"NCBITaxon:2759"
 ],
 "replaced_by": []
 },
@@ -1526,11 +1988,27 @@
 ],
 "replaced_by": []
 },
+"NCBITaxon:610163": {
+"label": "environmental samples <eukaryotes,clade Opisthokonta>",
+"obsolete": false,
+"parents": [
+"NCBITaxon:33154"
+],
+"replaced_by": []
+},
 "NCBITaxon:6157": {
 "label": "Platyhelminthes",
 "obsolete": false,
 "parents": [
 "NCBITaxon:1206795"
+],
+"replaced_by": []
+},
+"NCBITaxon:61964": {
+"label": "environmental samples <eukaryotes,domain Eukaryota>",
+"obsolete": false,
+"parents": [
+"NCBITaxon:2759"
 ],
 "replaced_by": []
 },
@@ -1643,6 +2121,14 @@
 "obsolete": false,
 "parents": [
 "NCBITaxon:6692"
+],
+"replaced_by": []
+},
+"NCBITaxon:68525": {
+"label": "delta/epsilon subdivisions",
+"obsolete": false,
+"parents": [
+"NCBITaxon:2"
 ],
 "replaced_by": []
 },
@@ -2022,11 +2508,27 @@
 ],
 "replaced_by": []
 },
+"NCBITaxon:9254": {
+"label": "Prototheria",
+"obsolete": false,
+"parents": [
+"NCBITaxon:40674"
+],
+"replaced_by": []
+},
 "NCBITaxon:9347": {
 "label": "Eutheria",
 "obsolete": false,
 "parents": [
 "NCBITaxon:32525"
+],
+"replaced_by": []
+},
+"NCBITaxon:93506": {
+"label": "unclassified Archaea",
+"obsolete": false,
+"parents": [
+"NCBITaxon:2157"
 ],
 "replaced_by": []
 },

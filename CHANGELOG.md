@@ -2,6 +2,26 @@
 
 Findings and decisions, dated. Code history is in `git log`; this records what we learned.
 
+## 2026-10-29 (overnight: bracketing from real NCBI children)
+- Coverage now counts a target clade's real NCBI children. `import_isa.py` fetches the direct children of eight
+  targets (cellular organisms, Eukaryota, Opisthokonta, Metazoa, Bacteria, Archaea, Viridiplantae, Mammalia) from
+  OLS4, cached, and imports them. Bins are left out: labels containing "unclassified", "environmental samples",
+  "incertae sedis" or "candidat". Eukaryota now has 18 children (was 4 known), Opisthokonta 6 (was 2), Bacteria 5
+  (its 7 "Candidatus" phyla binned). 3,548 to 3,575 terms, 4,857 to 4,884 edges; IsA.lean still compiles in 33 s.
+- Bracketing now recurses into a lone sampled child, scaled by that child's share (1 / #children). Proved for both
+  measures: coverage lies in [0, 1] and never falls as the sample grows (`Measure.eval_mono`). A sample inside one
+  child never exceeds 1 / #children (`bracketing_single`).
+- Transcription, five model organisms, bracketing: cellular organisms 0.634 (unchanged, 2 of 3 children), Eukaryota
+  0.104 (was 0.470; 2 of 18), Opisthokonta 0.307 (was 0.923 and established; 2 of 6), Metazoa 0.0017 (was 0, the
+  cliff). With all eight: cellular organisms 0.969, established (unchanged); Eukaryota from six 0.213 (was over 0.7).
+  Clade fraction: 0.067, 0.062, 0.076; with eight 0.109 and 0.096.
+- Bracketing establishes a clade (4/5) only once about four fifths of its children are sampled: 3 of 3, 5 or 6 of 6,
+  15 of 18.
+- New flaw, proved (`cellular_above_eukaryota`): bracketing is not monotone in the target. With all eight instances,
+  cellular organisms (0.97) beats Eukaryota (0.21), which it entails, because a sampled child counts as covered
+  however thinly it is sampled. Below the targets, children are still biolib's, so the Metazoa slope (1/512) is
+  generous.
+
 ## 2026-10-29 (overnight: M3/M2 schema gaps and sound weakenings)
 - `Ctx.lifeStage` (UBERON stage, `Kind.anatomy`) beside `Ctx.stage` (GO process). Continuants take it by
   `existence_overlaps` (RO:0002490, the weakest of RO's "physical entity to stage" relations), processes by

@@ -6,7 +6,8 @@ framework. For each: the question, what the framework had to express, the **deci
 **limits** it hit (not fixable inside the framework; must be stated as assumptions).
 
 Numbers below come from `scripts/case_studies/*.py`, which mirror `Opinion.fuse` in
-`BioLean/Belief.lean`. Case 1 is built and checked in Lean; cases 2 to 4 are sketches.
+`BioLean/Belief.lean`. Case 1 is built and checked in Lean; cases 2 to 4 were sketches when written
+(case 4 is now built too, with its Lean numbers at the end of its section).
 
 ## 1. Semaglutide reduces feeding (built: `BioLean/Examples/Ozempic.lean`)
 
@@ -66,7 +67,7 @@ with different strains, ages, diets and durations, one human RCT.
   mechanism's conservation. Pearl and Bareinboim's transportability gives the conditions, but
   filling the selection diagram needs knowledge the literature rarely states.
 
-## 4. DNA is transcribed to RNA: how canon bubbles up (`transcription_generalize.py`)
+## 4. DNA is transcribed to RNA: how canon bubbles up (built: `BioLean/Examples/Transcription.lean`; sketch `transcription_generalize.py`)
 
 Question: how do thousands of instance results become one textbook statement in biolib? Shape: a
 `generalize` rule taking instance derivations in specific contexts to the claim at a wide context
@@ -89,12 +90,41 @@ Question: how do thousands of instance results become one textbook statement in 
   Third: promotion to biolib is a threshold on belief *and* coverage, after which `axioms` stops
   expanding, like a Mathlib lemma.
 - **Gaps.** `Context`, `generalize`, a coverage function over NCBITaxon and UBERON/CL, a
-  `canonical` evidence kind. None exists yet.
+  `canonical` evidence kind. The first three are built for NCBITaxon (`Ctx`, `Derivation.generalize`,
+  `BioLean/Coverage.lean`); UBERON/CL coverage and the `canonical` kind are not.
 - **Limits.** Induction. No finite set of instances proves a universal; `uncertainty_pos` makes
   this a type invariant, so a universal is never proved, only established. The coverage discount is
   a stated judgment, not a theorem. Exceptions are handled by context, not by weight: retroviral
   reverse transcription refutes "information flows only DNA → RNA → protein" and does not touch
   "DNA is transcribed to RNA in cellular organisms", because viruses lie outside the context.
+
+**Built in Lean** (`BioLean/Examples/Transcription.lean`, 2026-10-29). Each instance is one curated-
+database item (QuickGO annotation counts), belief 0.8. Children are NCBI's (bins such as
+"unclassified" left out), leaves are biolib's. Bracketing recurses into a lone sampled child,
+scaled by that child's share. Every number is a theorem or `#eval` in the file.
+
+| target | sampled | children covered / NCBI | bracketing | b | leaves covered / known | clade fraction | b |
+|---|---:|---|---:|---:|---|---:|---:|
+| *five model organisms* | | | | | | | |
+| cellular organisms | 5 | 2 / 3 | 2/3 | 0.63 | 5 / 71 | 5/71 | 0.07 |
+| Eukaryota | 4 | 2 / 18 | 1/9 | 0.10 | 4 / 60 | 1/15 | 0.06 |
+| Opisthokonta | 3 | 2 / 6 | 1/3 | 0.31 | 3 / 36 | 1/12 | 0.08 |
+| Metazoa | 2 | 1 / 2 | 1/512 | 0.002 | 2 / 31 | 2/31 | 0.06 |
+| *plus Euglena, Paramecium, Halobacterium* | | | | | | | |
+| cellular organisms | 8 | 3 / 3 | 1 | 0.97 | 8 / 71 | 8/71 | 0.11 |
+| Eukaryota | 6 | 4 / 18 | 2/9 | 0.21 | 6 / 60 | 1/10 | 0.10 |
+
+What it says: bracketing establishes a universal (belief 4/5) only once about four fifths of the
+clade's NCBI children hold a sample, since the fused belief is always below 1. That means all 3 for
+cellular organisms, 5 of 6 for Opisthokonta (with at least six instances), and 15 of 18 for
+Eukaryota. Five model organisms touch 2 of Eukaryota's 18 lineages, so they say almost nothing about
+eukaryotes as a whole (0.10). Adding Euglena and Paramecium only doubles that (0.21). Samples inside
+a single child can never establish anything: they get at most one share (`bracketing_single`).
+Recursing into that child turns the old cliff into a steep slope: mouse plus human gave Metazoa 0,
+and now give 1/512. A sharp edge remains at the top level, where a sampled child counts as covered
+however thinly it is sampled. So with all eight instances, "in cellular organisms" is established
+(0.97) while "in Eukaryota", which it entails, sits at 0.21 (`cellular_above_eukaryota`). Clade
+fraction stays near 0.1 throughout, because 31 of biolib's 71 known cellular leaves are animals.
 
 ## Consolidated
 

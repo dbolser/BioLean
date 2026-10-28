@@ -2,11 +2,13 @@
 
 GO, UBERON, CL, ChEBI, PATO, MONDO, HP, SO and PR come from OBO files (asserted is_a lines of the released, reasoned
 files; PR is pro_reasoned.obo, 200 MB, about a minute to fetch and parse); NCBITaxon from the OLS4 API, one request per
-closure term, cached in data/ontology/ncbitaxon_cache.json (the full file is 2 GB). PR terms named by a UniProt accession
-(PR:P01275) have no numeric code, so they are left out and their numeric ancestors seeded instead; is_a links to terms
-outside the closure (another ontology's terms) are dropped.
+closure term, cached in data/ontology/ncbitaxon_cache.json (the full file is 2 GB), plus the direct NCBI children of the
+generalisation targets (TARGETS), so coverage counts a clade's real children rather than biolib's. PR terms named by a
+UniProt accession (PR:P01275) have no numeric code, so they are left out and their numeric ancestors seeded instead; is_a
+links to terms outside the closure (another ontology's terms) are dropped.
 Seeds are the used CURIEs (data/ontology/used_curies.json, from collect_entities.py) plus the replacements of retired
-ones. The closure is every seed and every is_a ancestor of a seed; the edges are the direct is_a links among them.
+ones, and the targets' children. The closure is every seed and every is_a ancestor of a seed; the edges are the direct is_a
+links among them.
 Writes data/ontology/isa.json (terms with label, GO namespace, parents; retired used terms; missing ones) and
 BioLean/Ontology/IsA.lean. Standard library only (and `obo.py`).
 Usage: uv run python scripts/ontology/import_isa.py [obo_dir]   (default /tmp/obo; missing OBO files are downloaded)"""
@@ -23,6 +25,14 @@ URLS = {'chebi_lite.obo': 'http://purl.obolibrary.org/obo/chebi/chebi_lite.obo'}
 # Ontology codes, fixed: append, never reorder (the codes are in the Lean data).
 PREFIXES = ['GO', 'UBERON', 'CL', 'CHEBI', 'NCBITaxon', 'PR', 'HP', 'PATO', 'MONDO', 'SO', 'BFO', 'CARO', 'PO',
             'NCIT', 'ENVO', 'OBA', 'OBI', 'CHMO', 'NBO', 'MAXO', 'COB', 'UO', 'EFO', 'ECOCORE', 'RO', 'CP']
+# Generalisation targets (M4 coverage): their direct NCBI children are imported, so `children` of a target in Lean is
+# NCBI's list. Children that are bins rather than clades are left out: labels containing "unclassified", "environmental
+# samples", "incertae sedis" or "candidat" (candidate phyla; under Bacteria now the provisional "Candidatus" phyla of
+# uncultured lineages). Below the targets, children are still only the used terms and their ancestors.
+TARGETS = ['NCBITaxon:131567', 'NCBITaxon:2759', 'NCBITaxon:33154', 'NCBITaxon:33208', 'NCBITaxon:2', 'NCBITaxon:2157',
+           'NCBITaxon:33090', 'NCBITaxon:40674']  # cellular organisms, Eukaryota, Opisthokonta, Metazoa, Bacteria,
+                                                  # Archaea, Viridiplantae, Mammalia
+BINS = ('unclassified', 'environmental samples', 'incertae sedis', 'candidat')
 used = json.load(open(USED))
 prefix = lambda c: c.split(':', 1)[0]
 terms, retired, missing, versions, unencodable = {}, {}, [], {}, set()   # terms: curie -> {label, namespace?, parents}
@@ -75,21 +85,39 @@ IRI = 'http://purl.obolibrary.org/obo/'
 curie_of = lambda iri: iri.removeprefix(IRI).replace('_', ':', 1)
 
 
+quote_iri = lambda c: urllib.parse.quote(urllib.parse.quote(IRI + c.replace(':', '_'), safe=''), safe='')
+
+
+def record(d):
+    """The cache record of an OLS4 entity: label, obsolete, replaced_by, hierarchical parents."""
+    rb = d.get('term_replaced_by') or []
+    return {'label': (d.get('label') or [''])[0], 'obsolete': bool(d.get('isObsolete')),
+            'replaced_by': [curie_of(x) for x in (rb if isinstance(rb, list) else [rb])],
+            'parents': sorted(curie_of(p) for p in d.get('hierarchicalParent') or [])}
+
+
 def taxon(c):
     seen = cache['terms']
     if c not in seen:
-        iri = IRI + c.replace(':', '_')
-        try:
-            d = json.load(obo.request(OLS + urllib.parse.quote(urllib.parse.quote(iri, safe=''), safe='')))
-            rb = d.get('term_replaced_by') or []
-            seen[c] = {'label': (d.get('label') or [''])[0], 'obsolete': bool(d.get('isObsolete')),
-                       'replaced_by': [curie_of(x) for x in (rb if isinstance(rb, list) else [rb])],
-                       'parents': sorted(curie_of(p) for p in d.get('hierarchicalParent') or [])}
+        try: seen[c] = record(json.load(obo.request(OLS + quote_iri(c))))
         except urllib.error.HTTPError as e:
             if e.code != 404: raise
             seen[c] = None
         json.dump(cache, open(CACHE, 'w'), indent=0, sort_keys=True)
         time.sleep(0.05)
+    return seen[c]
+
+
+def children(c):
+    """The direct NCBI children of `c` (OLS4 hierarchicalChildren, one page); each child is cached as a term too."""
+    seen = cache.setdefault('children', {})
+    if c not in seen:
+        url = OLS.replace('/entities/', '/classes/') + quote_iri(c) + '/hierarchicalChildren?size=1000'
+        d = json.load(obo.request(url))
+        assert d['totalPages'] <= 1, f'{c}: more than one page of children'
+        for e in d['elements']: cache['terms'][curie_of(e['iri'])] = record(e)
+        seen[c] = sorted(curie_of(e['iri']) for e in d['elements'])
+        json.dump(cache, open(CACHE, 'w'), indent=0, sort_keys=True)
     return seen[c]
 
 
@@ -104,6 +132,13 @@ def taxon_term(c):
     return None if t is None or t['obsolete'] else {'label': t['label'], 'parents': t['parents']}
 n0 = len(terms); close(seeds, taxon_term)
 print(f'NCBITaxon: closure +{len(terms) - n0} terms via OLS4', file=sys.stderr)
+binned = {}   # target -> children left out as bins
+for t in TARGETS:
+    kids = children(t)
+    binned[t] = [k for k in kids if any(b in cache['terms'][k]['label'].lower() for b in BINS)]
+    n0 = len(terms); close([k for k in kids if k not in binned[t]], taxon_term)
+    print(f'{t} {taxon(t)["label"]}: {len(kids)} NCBI children, {len(binned[t])} bins left out, '
+          f'+{len(terms) - n0} terms', file=sys.stderr)
 versions['NCBITaxon'] = f'OLS4 API ncbitaxon {cache["version"]}'
 
 # encode, check, summarise
@@ -124,7 +159,7 @@ max_depth = max(map(d, terms))
 
 json.dump({'versions': versions, 'prefixes': PREFIXES, 'terms': dict(sorted(terms.items())),
            'retired': dict(sorted(retired.items())), 'missing': sorted(set(missing)),
-           'unencodable': sorted(unencodable), 'dropped_edges': dropped},
+           'unencodable': sorted(unencodable), 'dropped_edges': dropped, 'targets': TARGETS, 'binned_children': binned},
           open(OUT_JSON, 'w'), indent=0)
 
 lean_str = lambda s: s.replace('\\', '\\\\').replace('"', '\\"')
@@ -148,8 +183,9 @@ def tree(rows, ind):
 
 L = ['/-! # Ontology is_a, imported as data', '',
      'Generated by `scripts/ontology/import_isa.py`. Do not edit. The is_a ancestor closure of every CURIE biolib uses',
-     f'(Entity literals in `BioLean/` and the M2 textbook claims): {len(terms)} terms, {len(edges)} direct is_a edges, longest',
-     f'chain {max_depth}. Only used terms and their ancestors are present, so `known` is false for anything else.',
+     '(Entity literals in `BioLean/` and the M2 textbook claims) and of the direct NCBI children of the generalisation',
+     f'targets (`targets`): {len(terms)} terms, {len(edges)} direct is_a edges, longest chain {max_depth}. Only these are',
+     'present, so `known` is false for anything else.',
      'Sources: ' + '; '.join(f'{p} {v}' for p, v in versions.items()) + '.',
      'Terms per ontology: ' + ', '.join(f'{p} {n}' for p, n in by_pre.most_common()) + '.', '',
      'A CURIE is a `Code`, (ontology, local id), and the terms sit in a balanced search tree keyed on it, so',
@@ -199,7 +235,10 @@ L += ['/-- Used terms their ontology has retired: obsolete, or merged into anoth
       'def retired : List (Code × List Code) := [']
 L += [f'  ({pair(code(c))}, [{", ".join(pair(code(x)) for x in r["replaced_by"])}]),  -- {c} {r["why"]}' for c, r in rt]
 L[-1] = re.sub(r'\),(\s+--)', r')\1', L[-1])
-L += [']', '', f'/-- The longest is_a chain; fuel for `isA`. -/', f'def maxDepth : Nat := {max_depth}', '',
+L += [']', '', '/-- The generalisation targets: taxa whose `children` are all of their NCBI children, bins (unclassified,',
+      'environmental samples, incertae sedis, candidate phyla) left out. -/',
+      'def targets : List Code := [' + ', '.join(pair(code(t)) for t in TARGETS) + ']', '',
+      f'/-- The longest is_a chain; fuel for `isA`. -/', f'def maxDepth : Nat := {max_depth}', '',
 '''/-- Direct is_a edges `(term, parent)`. -/
 def edges : List (Code × Code) := tree.toList.flatMap fun (c, _, ps) => ps.map (c, ·)
 
@@ -209,8 +248,8 @@ def label? (a : Code) : Option String := (tree.find? a).map (·.1)
 
 def parents (a : Code) : List Code := ((tree.find? a).map (·.2.1)).getD []
 
-/-- Direct is_a children among the imported terms. Only used terms and their ancestors are imported,
-so this under-counts the ontology's real children. -/
+/-- Direct is_a children among the imported terms. For a taxon in `targets` these are its NCBI
+children; elsewhere only used terms and their ancestors are imported, so this under-counts. -/
 def children (a : Code) : List Code := ((tree.find? a).map (·.2.2)).getD []
 
 /-- Is the term in the imported closure? -/

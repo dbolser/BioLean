@@ -64,8 +64,8 @@ example : retired.lookup (0, 7050) = some [(0, 51726)] := by decide    -- alt_id
 example : known (0, 7050) = false := by decide                           -- retired ids are not terms
 
 -- the size of the import, pinned
-theorem terms_count : labels.length = 3548 := by decide +kernel
-theorem edges_count : edges.length = 4857 := by decide +kernel
+theorem terms_count : labels.length = 3575 := by decide +kernel
+theorem edges_count : edges.length = 4884 := by decide +kernel
 -- the search tree is ordered (every term is found) and the closure is closed (every parent is a term)
 #guard labels.all fun (c, _) => known c
 #guard edges.all fun (_, p) => known p
@@ -73,6 +73,10 @@ theorem edges_count : edges.length = 4857 := by decide +kernel
 #guard edges.all fun (c, p) => (children p).contains c
 #guard (labels.map fun (c, _) => (children c).length).sum == edges.length
 example : children (4, 131567) = [(4, 2), (4, 2157), (4, 2759)] := by decide +kernel  -- Bacteria, Archaea, Eukaryota
+-- the generalisation targets carry all their NCBI children, bins left out: Eukaryota 18 of 21
+#guard targets.all known
+#guard (targets.map (children · |>.length)) == [3, 18, 6, 2, 5, 4, 3, 2]
+#guard !(children (4, 2759)).contains (4, 42452)                       -- unclassified eukaryotes
 #guard retired.all fun (c, rs) => !known c && rs.all known
 
 end BioLean.IsA.Tests
