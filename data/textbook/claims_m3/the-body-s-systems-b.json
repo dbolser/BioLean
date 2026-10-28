@@ -5716,6 +5716,81 @@
   }
  },
  {
+  "id": "the-body-s-systems-m45539-54",
+  "module": "m45539",
+  "source": "Although some neurons do not have any dendrites, most have one or many dendrites.",
+  "claim": "Some neurons have no dendrites",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "negation",
+  "entities": [
+   {
+    "text": "neuron",
+    "curie": "CL:0000540",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "dendrite",
+    "curie": "GO:0030425",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "lacks_part",
+  "context": {},
+  "lean": "Claim.lacksPart someNeuron dendrite  -- missing: negation",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "notRel",
+   "subject": "CL:0000540",
+   "relation": "has part",
+   "object": "GO:0030425",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "notRel",
+   "quant": "some",
+   "subject": "CL:0000540",
+   "relation": "has part",
+   "object": "GO:0030425",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
   "id": "the-body-s-systems-m45539-62",
   "module": "m45539",
   "source": "A neuron at rest is negatively charged: the inside of a cell is approximately 70 millivolts more negative than the outside (–70 mV).",
@@ -6446,6 +6521,81 @@
     }
    ],
    "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45539-109",
+  "module": "m45539",
+  "source": "Neurons usually have one or two axons, but some neurons do not contain any axons.",
+  "claim": "Some neurons contain no axons",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "negation",
+  "entities": [
+   {
+    "text": "neuron",
+    "curie": "CL:0000540",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "axon",
+    "curie": "GO:0030424",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "lacks_part",
+  "context": {},
+  "lean": "Claim.lacksPart someNeuron axon  -- missing: negation",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "notRel",
+   "subject": "CL:0000540",
+   "relation": "has part",
+   "object": "GO:0030424",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "notRel",
+   "quant": "some",
+   "subject": "CL:0000540",
+   "relation": "has part",
+   "object": "GO:0030424",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
   }
  },
  {

@@ -7,7 +7,25 @@
 "path_min": 4.332,
 "depth": 2,
 "rule": "viaAmount",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "ATP \u2293 part of (red blood cells) [CHEBI:15422&BFO:0000050=(CL:0000232)] has part adenine [CHEBI:16708]",
+"score": 12.297,
+"path_min": 12.297,
+"depth": 2,
+"rule": "relTrans",
 "hub_survivor": true
+},
+{
+"fact": "sodium ion \u2293 located in (blood) [CHEBI:29101&RO:0001025=(UBERON:0000178)] \u2192\u2212 amount(aldosterone \u2293 located in (blood) [CHEBI:27584&RO:0001025=(UBERON:0000178)])",
+"score": 12.297,
+"path_min": 12.297,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "neurotransmitters [CHEBI:25512] \u2192+ amount(sodium [CHEBI:29101])",
@@ -15,6 +33,15 @@
 "path_min": 4.332,
 "depth": 1,
 "rule": "viaActivity",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "ATP \u2293 part of (red blood cells) [CHEBI:15422&BFO:0000050=(CL:0000232)] has part adenosine monophosphate (AMP) [CHEBI:16027]",
+"score": 12.297,
+"path_min": 12.297,
+"depth": 1,
+"rule": "isaInherit",
 "hub_survivor": true
 },
 {
@@ -26,11 +53,43 @@
 "hub_survivor": false
 },
 {
-"fact": "chlorophyll a [CHEBI:18230] is_a pigment [CHEBI:26130]",
+"fact": "NAD+ \u2293 located in (liver) \u2293 in taxon (Mammalia) [CHEBI:15846&RO:0001025=(UBERON:0002107)&RO:0002162=(NCBITaxon:40674)] is_a NAD+ [CHEBI:15846]",
 "score": 12.297,
-"path_min": 8.447,
+"path_min": 12.297,
 "depth": 1,
 "rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "FAD+ \u2293 located in (brain) \u2293 in taxon (NCBITaxon:40674) [CHEBI:16238&RO:0001025=(UBERON:0000955)&RO:0002162=(NCBITaxon:40674)] is_a FAD+ [CHEBI:16238]",
+"score": 12.297,
+"path_min": 12.297,
+"depth": 1,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "ATP \u2293 part of (red blood cells) [CHEBI:15422&BFO:0000050=(CL:0000232)] has part 2-deoxy-D-ribose [CHEBI:28816]",
+"score": 11.604,
+"path_min": 5.853,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "NAD+ \u2293 located in (liver) \u2293 in taxon (Mammalia) [CHEBI:15846&RO:0001025=(UBERON:0002107)&RO:0002162=(NCBITaxon:40674)] is_a Coenzymes [CHEBI:23354]",
+"score": 11.604,
+"path_min": 11.604,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "ATP \u2293 part of (red blood cells) [CHEBI:15422&BFO:0000050=(CL:0000232)] has part phosphate group [CHEBI:32958]",
+"score": 11.604,
+"path_min": 11.604,
+"depth": 1,
+"rule": "isaInherit",
 "hub_survivor": true
 },
 {
@@ -58,11 +117,35 @@
 "hub_survivor": true
 },
 {
+"fact": "CHEBI:15846&RO:0001025=(UBERON:0002107) [CHEBI:15846&RO:0001025=(UBERON:0002107)] is_a Coenzymes [CHEBI:23354]",
+"score": 11.604,
+"path_min": 11.604,
+"depth": 1,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
 "fact": "peptidoglycan [CHEBI:8005] overlaps food [CHEBI:33290]",
 "score": 11.604,
 "path_min": 3.639,
 "depth": 1,
 "rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "deoxyribonucleic acid \u2293 in taxon (NCBITaxon:2759) [CHEBI:16991&RO:0002162=(NCBITaxon:2759)] has part 2-deoxy-D-ribose [CHEBI:28816]",
+"score": 11.198,
+"path_min": 5.853,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "deoxyribonucleic acid \u2293 in taxon (NCBITaxon:2759) [CHEBI:16991&RO:0002162=(NCBITaxon:2759)] has part phosphate group [CHEBI:32958]",
+"score": 11.198,
+"path_min": 5.853,
+"depth": 2,
+"rule": "relTrans",
 "hub_survivor": true
 },
 {
@@ -72,6 +155,22 @@
 "depth": 2,
 "rule": "relTrans",
 "hub_survivor": false
+},
+{
+"fact": "NAD+ \u2293 located in (liver) \u2293 in taxon (Mammalia) [CHEBI:15846&RO:0001025=(UBERON:0002107)&RO:0002162=(NCBITaxon:40674)] derives from Vitamins [CHEBI:33229]",
+"score": 11.198,
+"path_min": 11.198,
+"depth": 2,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "CHEBI:15846&RO:0001025=(UBERON:0002107) [CHEBI:15846&RO:0001025=(UBERON:0002107)] derives from Vitamins [CHEBI:33229]",
+"score": 11.198,
+"path_min": 11.198,
+"depth": 2,
+"rule": "isaInherit",
+"hub_survivor": true
 },
 {
 "fact": "\u00acmessenger RNA [CHEBI:33699] has part thymine [CHEBI:17821]",
@@ -138,6 +237,14 @@
 "hub_survivor": false
 },
 {
+"fact": "end product of lactose metabolism \u2293 surrounded by (lactose is present) \u2293 in taxon (NCBITaxon:562) [CHEBI:36229&RO:0002219=(CHEBI:17716)&RO:0002162=(NCBITaxon:562)] is_a end product of lactose metabolism [CHEBI:36229]",
+"score": 11.198,
+"path_min": 11.198,
+"depth": 1,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
 "fact": "NAD+ [CHEBI:15846] derives from Vitamins [CHEBI:33229]",
 "score": 11.198,
 "path_min": 11.198,
@@ -146,7 +253,23 @@
 "hub_survivor": true
 },
 {
+"fact": "ATP \u2293 part of (red blood cells) [CHEBI:15422&BFO:0000050=(CL:0000232)] has part phosphorus atom [CHEBI:28659]",
+"score": 10.911,
+"path_min": 5.853,
+"depth": 2,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
 "fact": "adenosine monophosphate (AMP) [CHEBI:16027] has part phosphorus atom [CHEBI:28659]",
+"score": 10.911,
+"path_min": 5.853,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "deoxyribonucleic acid \u2293 in taxon (NCBITaxon:2759) [CHEBI:16991&RO:0002162=(NCBITaxon:2759)] has part phosphorus atom [CHEBI:28659]",
 "score": 10.911,
 "path_min": 5.853,
 "depth": 2,
@@ -168,6 +291,22 @@
 "depth": 1,
 "rule": "relTrans",
 "hub_survivor": false
+},
+{
+"fact": "NAD+ \u2293 located in (liver) \u2293 in taxon (Mammalia) [CHEBI:15846&RO:0001025=(UBERON:0002107)&RO:0002162=(NCBITaxon:40674)] derives from nutrients [CHEBI:33284]",
+"score": 10.505,
+"path_min": 10.505,
+"depth": 3,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "CHEBI:15846&RO:0001025=(UBERON:0002107) [CHEBI:15846&RO:0001025=(UBERON:0002107)] derives from nutrients [CHEBI:33284]",
+"score": 10.505,
+"path_min": 10.505,
+"depth": 2,
+"rule": "isaInherit",
+"hub_survivor": true
 },
 {
 "fact": "NAD+ [CHEBI:15846] derives from nutrients [CHEBI:33284]",
@@ -210,6 +349,47 @@
 "hub_survivor": true
 },
 {
+"fact": "aldosterone \u2293 located in (blood) [CHEBI:27584&RO:0001025=(UBERON:0000178)] is_a mineralocorticoid [CHEBI:25354]",
+"score": 10.217,
+"path_min": 10.217,
+"depth": 1,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "ATP \u2293 part of (red blood cells) [CHEBI:15422&BFO:0000050=(CL:0000232)] \u2192+ process(glycogen biosynthetic process [GO:0005978])",
+"score": 10.085,
+"path_min": 10.085,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "deoxyribonucleic acid \u2293 in taxon (NCBITaxon:2759) [CHEBI:16991&RO:0002162=(NCBITaxon:2759)] located in saliva [UBERON:0001836]",
+"score": 9.619,
+"path_min": 9.619,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "ATP \u2293 part of (red blood cells) [CHEBI:15422&BFO:0000050=(CL:0000232)] has part nitrogenous base [CHEBI:18282]",
+"score": 9.524,
+"path_min": 5.853,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "deoxyribonucleic acid \u2293 in taxon (NCBITaxon:2759) [CHEBI:16991&RO:0002162=(NCBITaxon:2759)] has part nitrogenous base [CHEBI:18282]",
+"score": 9.524,
+"path_min": 5.853,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
 "fact": "ATP [CHEBI:15422] has part nitrogenous base [CHEBI:18282]",
 "score": 9.524,
 "path_min": 5.853,
@@ -234,6 +414,46 @@
 "hub_survivor": false
 },
 {
+"fact": "citric acid cycle \u2293 in taxon (NCBITaxon:2759) [GO:0006099&RO:0002162=(NCBITaxon:2759)] has input acetyl group [CHEBI:40574]",
+"score": 9.392,
+"path_min": 9.392,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "citric acid cycle \u2293 in taxon (NCBITaxon:2759) [GO:0006099&RO:0002162=(NCBITaxon:2759)] has output high-energy electrons [CHEBI:10545]",
+"score": 9.392,
+"path_min": 9.392,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "citric acid cycle \u2293 in taxon (NCBITaxon:2759) [GO:0006099&RO:0002162=(NCBITaxon:2759)] has output ATP [CHEBI:15422]",
+"score": 9.392,
+"path_min": 9.392,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "citric acid cycle \u2293 in taxon (NCBITaxon:2759) [GO:0006099&RO:0002162=(NCBITaxon:2759)] has output carbon dioxide [CHEBI:16526]",
+"score": 9.392,
+"path_min": 9.392,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "citric acid cycle \u2293 in taxon (NCBITaxon:2759) [GO:0006099&RO:0002162=(NCBITaxon:2759)] has output nicotinamide-adenine dinucleotide (NADH) [CHEBI:16908]",
+"score": 9.392,
+"path_min": 9.392,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
 "fact": "messenger RNA [CHEBI:33699] has part ribose [CHEBI:33942]",
 "score": 9.301,
 "path_min": 7.808,
@@ -242,12 +462,84 @@
 "hub_survivor": false
 },
 {
+"fact": "splitting of water \u2293 occurs in (thylakoid space) [GO:0010242&BFO:0000066=(GO:0031977)] has output high-energy electrons [CHEBI:10545]",
+"score": 9.214,
+"path_min": 9.214,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "splitting of water \u2293 occurs in (thylakoid space) [GO:0010242&BFO:0000066=(GO:0031977)] has output oxygen [CHEBI:15379]",
+"score": 9.214,
+"path_min": 9.214,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "glucose [CHEBI:17234] \u2192\u2212 process(glucose import [GO:0098708])",
+"score": 9.206,
+"path_min": 9.206,
+"depth": 3,
+"rule": "viaAmount",
+"hub_survivor": false,
+"flags": [
+"feedback"
+]
+},
+{
+"fact": "glucose [CHEBI:17234] \u2192+ amount(glucose \u2293 located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])",
+"score": 9.206,
+"path_min": 9.206,
+"depth": 3,
+"rule": "viaAmount",
+"hub_survivor": false,
+"flags": [
+"feedback"
+]
+},
+{
+"fact": "glucose \u2293 located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] \u2192+ process(glucose import [GO:0098708])",
+"score": 9.206,
+"path_min": 9.206,
+"depth": 2,
+"rule": "viaAmount",
+"hub_survivor": true,
+"flags": [
+"feedback"
+]
+},
+{
+"fact": "glucose [CHEBI:17234] \u2192+ process(glycogen catabolic process [GO:0005980])",
+"score": 9.206,
+"path_min": 9.206,
+"depth": 2,
+"rule": "viaAmount",
+"hub_survivor": false,
+"flags": [
+"feedback"
+]
+},
+{
 "fact": "glucose [CHEBI:17234] \u2192\u2212 amount(glucose \u2293 located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])",
 "score": 9.206,
 "path_min": 9.206,
 "depth": 1,
 "rule": "viaAmount",
-"hub_survivor": false
+"hub_survivor": false,
+"flags": [
+"feedback"
+]
+},
+{
+"fact": "glucose \u2293 located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] \u2192\u2212 process(glycogen catabolic process [GO:0005980])",
+"score": 9.206,
+"path_min": 9.206,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "statins [CHEBI:87631] \u2192\u2212 process(synthesizes cholesterol [GO:0006695])",
@@ -255,7 +547,8 @@
 "path_min": 9.206,
 "depth": 1,
 "rule": "viaActivity",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "glucose [CHEBI:17234] \u2192+ process(glucose import [GO:0098708])",
@@ -263,6 +556,15 @@
 "path_min": 9.206,
 "depth": 1,
 "rule": "viaAmount",
+"hub_survivor": false,
+"flags": []
+},
+{
+"fact": "glycogen \u2293 located in (liver) [CHEBI:28087&RO:0001025=(UBERON:0002107)] has part glucose [CHEBI:17234]",
+"score": 9.206,
+"path_min": 9.206,
+"depth": 1,
+"rule": "isaInherit",
 "hub_survivor": false
 },
 {
@@ -343,7 +645,8 @@
 "path_min": 1.704,
 "depth": 1,
 "rule": "isaInheritEffect",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "food intake [GO:0042755] \u2192+ process(sense of satiety or fullness [GO:0032098])",
@@ -351,7 +654,8 @@
 "path_min": 8.698,
 "depth": 1,
 "rule": "viaAmount",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "chlorophyll a [CHEBI:18230] capable of absorb light [GO:0009765]",
@@ -378,12 +682,31 @@
 "hub_survivor": false
 },
 {
+"fact": "Telomerase reactivation \u2293 in taxon (Mus musculus \u2293 has modifier (telomerase-deficient)) [GO:0003720&RO:0002162=(NCBITaxon:10090&RO:0002573=(BLN:telomerase_deficient))] \u2192+ process(adds bases to the end of the DNA strand [GO:0010833])",
+"score": 8.521,
+"path_min": 8.521,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "Telomerase-deficient \u2293 in taxon (Mus musculus) [GO:0003720&RO:0002162=(NCBITaxon:10090)] \u2192+ process(adds bases to the end of the DNA strand [GO:0010833])",
+"score": 8.521,
+"path_min": 8.521,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
+},
+{
 "fact": "inferior vena cava [UBERON:0001072] \u2192\u2212 amount(carbon dioxide [CHEBI:16526])",
 "score": 8.52,
 "path_min": 2.657,
 "depth": 2,
 "rule": "isaInheritEffect",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "superior vena cava [UBERON:0001585] \u2192\u2212 amount(carbon dioxide [CHEBI:16526])",
@@ -391,7 +714,8 @@
 "path_min": 2.657,
 "depth": 2,
 "rule": "isaInheritEffect",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "inferior vena cava [UBERON:0001072] \u2192+ amount(oxygen [CHEBI:15379])",
@@ -399,7 +723,8 @@
 "path_min": 2.657,
 "depth": 2,
 "rule": "isaInheritEffect",
-"hub_survivor": false
+"hub_survivor": false,
+"flags": []
 },
 {
 "fact": "superior vena cava [UBERON:0001585] \u2192+ amount(oxygen [CHEBI:15379])",
@@ -407,7 +732,8 @@
 "path_min": 2.657,
 "depth": 2,
 "rule": "isaInheritEffect",
-"hub_survivor": false
+"hub_survivor": false,
+"flags": []
 },
 {
 "fact": "superior vena cava [UBERON:0001585] connected to inferior vena cava [UBERON:0001072]",
@@ -447,7 +773,35 @@
 "path_min": 1.704,
 "depth": 2,
 "rule": "isaInheritEffect",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "ATP synthase \u2293 located in (mitochondrion) [GO:0045259&RO:0001025=(GO:0005739)] \u2192+ process(glycogen biosynthetic process [GO:0005978])",
+"score": 8.313,
+"path_min": 8.313,
+"depth": 2,
+"rule": "viaAmount",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "ATP synthase \u2293 located in (mitochondrion) [GO:0045259&RO:0001025=(GO:0005739)] \u2192+ amount(ATP [CHEBI:15422])",
+"score": 8.313,
+"path_min": 8.313,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": false,
+"flags": []
+},
+{
+"fact": "central vacuole \u2293 in taxon (NCBITaxon:33090) [GO:0042807&RO:0002162=(NCBITaxon:33090)] \u2192+ process(cellular water homeostasis [GO:0009992])",
+"score": 8.313,
+"path_min": 8.313,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "ATP synthase [GO:0045259] \u2192+ process(glycogen biosynthetic process [GO:0005978])",
@@ -455,7 +809,46 @@
 "path_min": 8.313,
 "depth": 1,
 "rule": "viaAmount",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "ATP synthase \u2293 located in (mitochondrion) [GO:0045259&RO:0001025=(GO:0005739)] \u2192\u2212 process(broken down [GO:0006007])",
+"score": 8.293,
+"path_min": 8.293,
+"depth": 2,
+"rule": "viaAmount",
+"hub_survivor": true,
+"flags": [
+"feedback"
+]
+},
+{
+"fact": "ATP synthase \u2293 located in (mitochondrion) [GO:0045259&RO:0001025=(GO:0005739)] \u2192\u2212 process(ATP biosynthetic process [GO:0006754])",
+"score": 8.293,
+"path_min": 8.293,
+"depth": 2,
+"rule": "viaAmount",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "ATP \u2293 part of (red blood cells) [CHEBI:15422&BFO:0000050=(CL:0000232)] \u2192\u2212 process(broken down [GO:0006007])",
+"score": 8.293,
+"path_min": 8.293,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "ATP \u2293 part of (red blood cells) [CHEBI:15422&BFO:0000050=(CL:0000232)] \u2192\u2212 process(ATP biosynthetic process [GO:0006754])",
+"score": 8.293,
+"path_min": 8.293,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "broken down [GO:0006007] \u2192\u2212 process(ATP biosynthetic process [GO:0006754])",
@@ -463,7 +856,10 @@
 "path_min": 8.293,
 "depth": 1,
 "rule": "viaAmount",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": [
+"feedback"
+]
 },
 {
 "fact": "ATP synthase [GO:0045259] \u2192\u2212 process(broken down [GO:0006007])",
@@ -471,7 +867,10 @@
 "path_min": 8.293,
 "depth": 1,
 "rule": "viaAmount",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": [
+"feedback"
+]
 },
 {
 "fact": "ATP synthase [GO:0045259] \u2192\u2212 process(ATP biosynthetic process [GO:0006754])",
@@ -479,7 +878,8 @@
 "path_min": 8.293,
 "depth": 1,
 "rule": "viaAmount",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "broken down [GO:0006007] \u2192+ process(glycogen biosynthetic process [GO:0005978])",
@@ -487,7 +887,10 @@
 "path_min": 8.293,
 "depth": 1,
 "rule": "viaAmount",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": [
+"feedback"
+]
 },
 {
 "fact": "LDL [GO:0034362] \u2192+ process(absorbs nutrients [GO:0050892])",
@@ -495,7 +898,8 @@
 "path_min": 1.704,
 "depth": 2,
 "rule": "isaInheritEffect",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "reabsorption [GO:0070293] \u2192\u2212 process(glycogen biosynthetic process [GO:0005978])",
@@ -503,7 +907,8 @@
 "path_min": 8.005,
 "depth": 1,
 "rule": "viaAmount",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "cholesterol [CHEBI:16113] \u2192+ process(absorbs nutrients [GO:0050892])",
@@ -511,7 +916,8 @@
 "path_min": 1.704,
 "depth": 1,
 "rule": "isaInheritEffect",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "reabsorption [GO:0070293] \u2192+ process(broken down [GO:0006007])",
@@ -519,7 +925,10 @@
 "path_min": 8.005,
 "depth": 1,
 "rule": "viaAmount",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": [
+"feedback"
+]
 },
 {
 "fact": "reabsorption [GO:0070293] \u2192+ process(ATP biosynthetic process [GO:0006754])",
@@ -527,7 +936,8 @@
 "path_min": 8.005,
 "depth": 1,
 "rule": "viaAmount",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "prophase [GO:0000088] part of mitotic phase [GO:0000087]",
@@ -666,6 +1076,15 @@
 "hub_survivor": false
 },
 {
+"fact": "nucleotide-excision repair \u2293 in taxon (NCBITaxon:9606) [GO:0006289&RO:0002162=(NCBITaxon:9606)] \u2192\u2212 amount(Thymine dimer [CHEBI:81145])",
+"score": 7.782,
+"path_min": 7.782,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
+},
+{
 "fact": "DNA-templated transcription termination [GO:0006353] has output RNA [CHEBI:33697]",
 "score": 7.782,
 "path_min": 7.782,
@@ -679,7 +1098,8 @@
 "path_min": 2.657,
 "depth": 2,
 "rule": "isaInheritEffect",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "superior vena cava [UBERON:0001585] \u2192+ process(a process [GO:0006119])",
@@ -687,7 +1107,8 @@
 "path_min": 2.657,
 "depth": 2,
 "rule": "isaInheritEffect",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "a process [GO:0006119] \u2192\u2212 process(broken down [GO:0006007])",
@@ -695,7 +1116,10 @@
 "path_min": 7.687,
 "depth": 1,
 "rule": "viaAmount",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": [
+"feedback"
+]
 },
 {
 "fact": "a process [GO:0006119] \u2192\u2212 process(ATP biosynthetic process [GO:0006754])",
@@ -703,7 +1127,35 @@
 "path_min": 7.687,
 "depth": 1,
 "rule": "viaAmount",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "oxygen \u2293 located in (PO:0025034) [CHEBI:15379&RO:0001025=(PO:0025034)] \u2192+ process(a process [GO:0006119])",
+"score": 7.687,
+"path_min": 7.687,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "oxygen \u2293 located in (lungs) [CHEBI:15379&RO:0001025=(UBERON:0002048)] \u2192+ process(a process [GO:0006119])",
+"score": 7.687,
+"path_min": 7.687,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "Oxygen \u2293 in taxon (these microorganisms) [CHEBI:15379&RO:0002162=(NCBITaxon:1485)] \u2192+ process(a process [GO:0006119])",
+"score": 7.687,
+"path_min": 7.687,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "a process [GO:0006119] \u2192+ process(glycogen biosynthetic process [GO:0005978])",
@@ -711,6 +1163,15 @@
 "path_min": 7.687,
 "depth": 1,
 "rule": "viaAmount",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "contract \u2293 occurs in (atria) \u2293 occurs in (cardiac muscle cells) [GO:0060048&BFO:0000066=(UBERON:0002081)&BFO:0000066=(CL:0000746)] is_a contract [GO:0060048]",
+"score": 7.687,
+"path_min": 7.687,
+"depth": 1,
+"rule": "relTrans",
 "hub_survivor": true
 },
 {
@@ -791,7 +1252,8 @@
 "path_min": 2.657,
 "depth": 3,
 "rule": "viaAmount",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "superior vena cava [UBERON:0001585] \u2192\u2212 process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])",
@@ -799,7 +1261,35 @@
 "path_min": 2.657,
 "depth": 3,
 "rule": "viaAmount",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "oxygen \u2293 located in (PO:0025034) [CHEBI:15379&RO:0001025=(PO:0025034)] \u2192\u2212 process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])",
+"score": 7.6,
+"path_min": 7.6,
+"depth": 2,
+"rule": "viaAmount",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "oxygen \u2293 located in (lungs) [CHEBI:15379&RO:0001025=(UBERON:0002048)] \u2192\u2212 process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])",
+"score": 7.6,
+"path_min": 7.6,
+"depth": 2,
+"rule": "viaAmount",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "Oxygen \u2293 in taxon (these microorganisms) [CHEBI:15379&RO:0002162=(NCBITaxon:1485)] \u2192\u2212 process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])",
+"score": 7.6,
+"path_min": 7.6,
+"depth": 2,
+"rule": "viaAmount",
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "oxygen [CHEBI:15379] \u2192\u2212 process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])",
@@ -807,7 +1297,54 @@
 "path_min": 7.6,
 "depth": 1,
 "rule": "viaAmount",
-"hub_survivor": false
+"hub_survivor": false,
+"flags": []
+},
+{
+"fact": "cell plate \u2293 in taxon (plant cell) [GO:0009504&RO:0002162=(NCBITaxon:33090)] \u2192+ process(cell wall biogenesis [GO:0009832])",
+"score": 7.6,
+"path_min": 7.6,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "deoxyribonucleic acid \u2293 in taxon (NCBITaxon:2759) [CHEBI:16991&RO:0002162=(NCBITaxon:2759)] located in blood [UBERON:0000178]",
+"score": 7.54,
+"path_min": 7.54,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "These reactions \u2293 in taxon (prokaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2)] \u2192\u2212 process(broken down [GO:0006007])",
+"score": 7.52,
+"path_min": 7.52,
+"depth": 2,
+"rule": "viaAmount",
+"hub_survivor": true,
+"flags": [
+"feedback"
+]
+},
+{
+"fact": "These reactions \u2293 in taxon (prokaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2)] \u2192\u2212 process(ATP biosynthetic process [GO:0006754])",
+"score": 7.52,
+"path_min": 7.52,
+"depth": 2,
+"rule": "viaAmount",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "These reactions \u2293 in taxon (prokaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2)] \u2192+ process(glycogen biosynthetic process [GO:0005978])",
+"score": 7.52,
+"path_min": 7.52,
+"depth": 2,
+"rule": "viaAmount",
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "inferior vena cava [UBERON:0001072] \u2192+ process(this transfer [GO:0022904])",
@@ -815,7 +1352,8 @@
 "path_min": 2.657,
 "depth": 2,
 "rule": "isaInheritEffect",
-"hub_survivor": false
+"hub_survivor": false,
+"flags": []
 },
 {
 "fact": "superior vena cava [UBERON:0001585] \u2192+ process(this transfer [GO:0022904])",
@@ -823,7 +1361,8 @@
 "path_min": 2.657,
 "depth": 2,
 "rule": "isaInheritEffect",
-"hub_survivor": false
+"hub_survivor": false,
+"flags": []
 },
 {
 "fact": "S phase [GO:0051320] overlaps interphase [GO:0051325]",
@@ -834,12 +1373,23 @@
 "hub_survivor": true
 },
 {
+"fact": "interphase \u2293 in taxon (eukaryotes) [GO:0051325&RO:0002162=(NCBITaxon:2759)] overlaps interphase [GO:0051325]",
+"score": 7.52,
+"path_min": 7.52,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
 "fact": "this transfer [GO:0022904] \u2192\u2212 process(broken down [GO:0006007])",
 "score": 7.52,
 "path_min": 7.52,
 "depth": 1,
 "rule": "viaAmount",
-"hub_survivor": false
+"hub_survivor": false,
+"flags": [
+"feedback"
+]
 },
 {
 "fact": "this transfer [GO:0022904] \u2192\u2212 process(ATP biosynthetic process [GO:0006754])",
@@ -847,7 +1397,53 @@
 "path_min": 7.52,
 "depth": 1,
 "rule": "viaAmount",
-"hub_survivor": false
+"hub_survivor": false,
+"flags": []
+},
+{
+"fact": "These reactions \u2293 in taxon (prokaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2)] \u2192+ amount(ATP [CHEBI:15422])",
+"score": 7.52,
+"path_min": 7.52,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": false,
+"flags": []
+},
+{
+"fact": "oxygen \u2293 located in (PO:0025034) [CHEBI:15379&RO:0001025=(PO:0025034)] \u2192+ process(this transfer [GO:0022904])",
+"score": 7.52,
+"path_min": 7.52,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": false,
+"flags": []
+},
+{
+"fact": "oxygen \u2293 located in (lungs) [CHEBI:15379&RO:0001025=(UBERON:0002048)] \u2192+ process(this transfer [GO:0022904])",
+"score": 7.52,
+"path_min": 7.52,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": false,
+"flags": []
+},
+{
+"fact": "Oxygen \u2293 in taxon (these microorganisms) [CHEBI:15379&RO:0002162=(NCBITaxon:1485)] \u2192+ process(this transfer [GO:0022904])",
+"score": 7.52,
+"path_min": 7.52,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": false,
+"flags": []
+},
+{
+"fact": "These reactions \u2293 in taxon (prokaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2)] \u2192+ process(H+ gradient [GO:0010248])",
+"score": 7.52,
+"path_min": 7.52,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "this transfer [GO:0022904] \u2192+ process(glycogen biosynthetic process [GO:0005978])",
@@ -855,7 +1451,40 @@
 "path_min": 7.52,
 "depth": 1,
 "rule": "viaAmount",
+"hub_survivor": false,
+"flags": []
+},
+{
+"fact": "interphase \u2293 in taxon (eukaryotes) [GO:0051325&RO:0002162=(NCBITaxon:2759)] has part G1 [GO:0051318]",
+"score": 7.52,
+"path_min": 7.52,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "These reactions \u2293 in taxon (prokaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2)] has input high-energy electrons [CHEBI:10545]",
+"score": 7.52,
+"path_min": 7.52,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "These reactions \u2293 in taxon (prokaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2)] has input oxygen [CHEBI:15379]",
+"score": 7.52,
+"path_min": 7.52,
+"depth": 1,
+"rule": "isaInherit",
 "hub_survivor": false
+},
+{
+"fact": "These reactions \u2293 in taxon (prokaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2)] has output water [CHEBI:15377]",
+"score": 7.52,
+"path_min": 7.52,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
 },
 {
 "fact": "adrenal cortex [UBERON:0001235] produces anti-inflammatory drug [CHEBI:35472]",
@@ -866,12 +1495,73 @@
 "hub_survivor": true
 },
 {
+"fact": "glycolysis \u2293 occurs in (skeletal muscle) [GO:0006096&BFO:0000066=(UBERON:0014892)] \u2192\u2212 process(broken down [GO:0006007])",
+"score": 7.377,
+"path_min": 7.377,
+"depth": 2,
+"rule": "viaAmount",
+"hub_survivor": true,
+"flags": [
+"feedback"
+]
+},
+{
+"fact": "glycolysis \u2293 occurs in (skeletal muscle) [GO:0006096&BFO:0000066=(UBERON:0014892)] \u2192\u2212 process(ATP biosynthetic process [GO:0006754])",
+"score": 7.377,
+"path_min": 7.377,
+"depth": 2,
+"rule": "viaAmount",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "glycolytic process \u2293 in taxon (Mammalia) [GO:0006096&RO:0002162=(NCBITaxon:40674)] \u2192\u2212 process(broken down [GO:0006007])",
+"score": 7.377,
+"path_min": 7.377,
+"depth": 2,
+"rule": "viaAmount",
+"hub_survivor": true,
+"flags": [
+"feedback"
+]
+},
+{
+"fact": "glycolytic process \u2293 in taxon (Mammalia) [GO:0006096&RO:0002162=(NCBITaxon:40674)] \u2192\u2212 process(ATP biosynthetic process [GO:0006754])",
+"score": 7.377,
+"path_min": 7.377,
+"depth": 2,
+"rule": "viaAmount",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "glycolysis \u2293 occurs in (skeletal muscle) [GO:0006096&BFO:0000066=(UBERON:0014892)] \u2192+ process(glycogen biosynthetic process [GO:0005978])",
+"score": 7.377,
+"path_min": 7.377,
+"depth": 2,
+"rule": "viaAmount",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "glycolytic process \u2293 in taxon (Mammalia) [GO:0006096&RO:0002162=(NCBITaxon:40674)] \u2192+ process(glycogen biosynthetic process [GO:0005978])",
+"score": 7.377,
+"path_min": 7.377,
+"depth": 2,
+"rule": "viaAmount",
+"hub_survivor": true,
+"flags": []
+},
+{
 "fact": "glycolytic process [GO:0006096] \u2192\u2212 process(broken down [GO:0006007])",
 "score": 7.377,
 "path_min": 7.377,
 "depth": 1,
 "rule": "viaAmount",
-"hub_survivor": false
+"hub_survivor": false,
+"flags": [
+"feedback"
+]
 },
 {
 "fact": "glycolytic process [GO:0006096] \u2192\u2212 process(ATP biosynthetic process [GO:0006754])",
@@ -879,7 +1569,26 @@
 "path_min": 7.377,
 "depth": 1,
 "rule": "viaAmount",
-"hub_survivor": false
+"hub_survivor": false,
+"flags": []
+},
+{
+"fact": "glycolysis \u2293 occurs in (skeletal muscle) [GO:0006096&BFO:0000066=(UBERON:0014892)] \u2192+ amount(ATP [CHEBI:15422])",
+"score": 7.377,
+"path_min": 7.377,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": false,
+"flags": []
+},
+{
+"fact": "glycolytic process \u2293 in taxon (Mammalia) [GO:0006096&RO:0002162=(NCBITaxon:40674)] \u2192+ amount(ATP [CHEBI:15422])",
+"score": 7.377,
+"path_min": 7.377,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": false,
+"flags": []
 },
 {
 "fact": "glycolytic process [GO:0006096] \u2192+ process(glycogen biosynthetic process [GO:0005978])",
@@ -887,6 +1596,103 @@
 "path_min": 7.377,
 "depth": 1,
 "rule": "viaAmount",
+"hub_survivor": false,
+"flags": []
+},
+{
+"fact": "glycolysis \u2293 occurs in (skeletal muscle) [GO:0006096&BFO:0000066=(UBERON:0014892)] part of broken down [GO:0006007]",
+"score": 7.377,
+"path_min": 7.377,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "glycolytic process \u2293 in taxon (Mammalia) [GO:0006096&RO:0002162=(NCBITaxon:40674)] part of broken down [GO:0006007]",
+"score": 7.377,
+"path_min": 7.377,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "glycolysis \u2293 occurs in (skeletal muscle) [GO:0006096&BFO:0000066=(UBERON:0014892)] has input ATP [CHEBI:15422]",
+"score": 7.377,
+"path_min": 7.377,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "glycolysis \u2293 occurs in (skeletal muscle) [GO:0006096&BFO:0000066=(UBERON:0014892)] has input glucose [CHEBI:17234]",
+"score": 7.377,
+"path_min": 7.377,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "glycolysis \u2293 occurs in (skeletal muscle) [GO:0006096&BFO:0000066=(UBERON:0014892)] has input glycerol [CHEBI:17754]",
+"score": 7.377,
+"path_min": 7.377,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "glycolytic process \u2293 in taxon (Mammalia) [GO:0006096&RO:0002162=(NCBITaxon:40674)] has input ATP [CHEBI:15422]",
+"score": 7.377,
+"path_min": 7.377,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "glycolytic process \u2293 in taxon (Mammalia) [GO:0006096&RO:0002162=(NCBITaxon:40674)] has input glucose [CHEBI:17234]",
+"score": 7.377,
+"path_min": 7.377,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "glycolytic process \u2293 in taxon (Mammalia) [GO:0006096&RO:0002162=(NCBITaxon:40674)] has input glycerol [CHEBI:17754]",
+"score": 7.377,
+"path_min": 7.377,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "glycolysis \u2293 occurs in (skeletal muscle) [GO:0006096&BFO:0000066=(UBERON:0014892)] has output pyruvate [CHEBI:15361]",
+"score": 7.377,
+"path_min": 7.377,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "glycolysis \u2293 occurs in (skeletal muscle) [GO:0006096&BFO:0000066=(UBERON:0014892)] has output ATP [CHEBI:15422]",
+"score": 7.377,
+"path_min": 7.377,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "glycolytic process \u2293 in taxon (Mammalia) [GO:0006096&RO:0002162=(NCBITaxon:40674)] has output pyruvate [CHEBI:15361]",
+"score": 7.377,
+"path_min": 7.377,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "glycolytic process \u2293 in taxon (Mammalia) [GO:0006096&RO:0002162=(NCBITaxon:40674)] has output ATP [CHEBI:15422]",
+"score": 7.377,
+"path_min": 7.377,
+"depth": 1,
+"rule": "isaInherit",
 "hub_survivor": false
 },
 {
@@ -903,7 +1709,8 @@
 "path_min": 7.269,
 "depth": 1,
 "rule": "viaAmount",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "gallbladder [UBERON:0002110] has part ribosomal RNA [CHEBI:18111]",
@@ -1010,6 +1817,62 @@
 "hub_survivor": true
 },
 {
+"fact": "Telomerase \u2293 part of (adult somatic cells) \u2293 existence overlaps (adult) [GO:0005697&BFO:0000050=(CL:0002371)&RO:0002490=(UBERON:0000113)] has part hydroxy group [CHEBI:43176]",
+"score": 7.215,
+"path_min": 7.215,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "Telomerase \u2293 part of (adult somatic cells) \u2293 existence overlaps (adult) [GO:0005697&BFO:0000050=(CL:0002371)&RO:0002490=(UBERON:0000113)] overlaps nucleic acids [CHEBI:33696]",
+"score": 7.215,
+"path_min": 7.215,
+"depth": 3,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "Telomerase \u2293 part of (adult somatic cells) \u2293 existence overlaps (adult) [GO:0005697&BFO:0000050=(CL:0002371)&RO:0002490=(UBERON:0000113)] overlaps RNA [CHEBI:33697]",
+"score": 7.215,
+"path_min": 7.215,
+"depth": 3,
+"rule": "relChain",
+"hub_survivor": false
+},
+{
+"fact": "GO:0005697&BFO:0000050=(CL:0002371) [GO:0005697&BFO:0000050=(CL:0002371)] overlaps nucleic acids [CHEBI:33696]",
+"score": 7.215,
+"path_min": 7.215,
+"depth": 3,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "GO:0005697&BFO:0000050=(CL:0002371) [GO:0005697&BFO:0000050=(CL:0002371)] overlaps RNA [CHEBI:33697]",
+"score": 7.215,
+"path_min": 7.215,
+"depth": 3,
+"rule": "relChain",
+"hub_survivor": false
+},
+{
+"fact": "telomerase \u2293 in taxon (human cells) [GO:0005697&RO:0002162=(NCBITaxon:9606)] overlaps nucleic acids [CHEBI:33696]",
+"score": 7.215,
+"path_min": 7.215,
+"depth": 3,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "telomerase \u2293 in taxon (human cells) [GO:0005697&RO:0002162=(NCBITaxon:9606)] overlaps RNA [CHEBI:33697]",
+"score": 7.215,
+"path_min": 7.215,
+"depth": 3,
+"rule": "relChain",
+"hub_survivor": false
+},
+{
 "fact": "translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] overlaps nucleic acids [CHEBI:33696]",
 "score": 7.215,
 "path_min": 7.215,
@@ -1053,6 +1916,174 @@
 "fact": "nucleosome [GO:0000786] has part phosphate group [CHEBI:32958]",
 "score": 7.215,
 "path_min": 5.853,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "Telomerase \u2293 part of (adult somatic cells) \u2293 existence overlaps (adult) [GO:0005697&BFO:0000050=(CL:0002371)&RO:0002490=(UBERON:0000113)] has part cytosine [CHEBI:16040]",
+"score": 7.215,
+"path_min": 7.215,
+"depth": 2,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "Telomerase \u2293 part of (adult somatic cells) \u2293 existence overlaps (adult) [GO:0005697&BFO:0000050=(CL:0002371)&RO:0002490=(UBERON:0000113)] has part guanine [CHEBI:16235]",
+"score": 7.215,
+"path_min": 7.215,
+"depth": 2,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "Telomerase \u2293 part of (adult somatic cells) \u2293 existence overlaps (adult) [GO:0005697&BFO:0000050=(CL:0002371)&RO:0002490=(UBERON:0000113)] has part adenine [CHEBI:16708]",
+"score": 7.215,
+"path_min": 7.215,
+"depth": 2,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "Telomerase \u2293 part of (adult somatic cells) \u2293 existence overlaps (adult) [GO:0005697&BFO:0000050=(CL:0002371)&RO:0002490=(UBERON:0000113)] has part uracil [CHEBI:17568]",
+"score": 7.215,
+"path_min": 7.215,
+"depth": 2,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "Telomerase \u2293 part of (adult somatic cells) \u2293 existence overlaps (adult) [GO:0005697&BFO:0000050=(CL:0002371)&RO:0002490=(UBERON:0000113)] has part nucleic acids [CHEBI:33696]",
+"score": 7.215,
+"path_min": 7.215,
+"depth": 2,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "Telomerase \u2293 part of (adult somatic cells) \u2293 existence overlaps (adult) [GO:0005697&BFO:0000050=(CL:0002371)&RO:0002490=(UBERON:0000113)] has part RNA [CHEBI:33697]",
+"score": 7.215,
+"path_min": 7.215,
+"depth": 2,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "Telomerase \u2293 part of (adult somatic cells) \u2293 existence overlaps (adult) [GO:0005697&BFO:0000050=(CL:0002371)&RO:0002490=(UBERON:0000113)] has part ribose [CHEBI:33942]",
+"score": 7.215,
+"path_min": 7.215,
+"depth": 2,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "GO:0005697&BFO:0000050=(CL:0002371) [GO:0005697&BFO:0000050=(CL:0002371)] has part cytosine [CHEBI:16040]",
+"score": 7.215,
+"path_min": 7.215,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "GO:0005697&BFO:0000050=(CL:0002371) [GO:0005697&BFO:0000050=(CL:0002371)] has part guanine [CHEBI:16235]",
+"score": 7.215,
+"path_min": 7.215,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "GO:0005697&BFO:0000050=(CL:0002371) [GO:0005697&BFO:0000050=(CL:0002371)] has part adenine [CHEBI:16708]",
+"score": 7.215,
+"path_min": 7.215,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "GO:0005697&BFO:0000050=(CL:0002371) [GO:0005697&BFO:0000050=(CL:0002371)] has part uracil [CHEBI:17568]",
+"score": 7.215,
+"path_min": 7.215,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "GO:0005697&BFO:0000050=(CL:0002371) [GO:0005697&BFO:0000050=(CL:0002371)] has part nucleic acids [CHEBI:33696]",
+"score": 7.215,
+"path_min": 7.215,
+"depth": 2,
+"rule": "isaGeneralise",
+"hub_survivor": true
+},
+{
+"fact": "GO:0005697&BFO:0000050=(CL:0002371) [GO:0005697&BFO:0000050=(CL:0002371)] has part ribose [CHEBI:33942]",
+"score": 7.215,
+"path_min": 7.215,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "GO:0005697&BFO:0000050=(CL:0002371) [GO:0005697&BFO:0000050=(CL:0002371)] has part hydroxy group [CHEBI:43176]",
+"score": 7.215,
+"path_min": 7.215,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "telomerase \u2293 in taxon (human cells) [GO:0005697&RO:0002162=(NCBITaxon:9606)] has part cytosine [CHEBI:16040]",
+"score": 7.215,
+"path_min": 7.215,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "telomerase \u2293 in taxon (human cells) [GO:0005697&RO:0002162=(NCBITaxon:9606)] has part guanine [CHEBI:16235]",
+"score": 7.215,
+"path_min": 7.215,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "telomerase \u2293 in taxon (human cells) [GO:0005697&RO:0002162=(NCBITaxon:9606)] has part adenine [CHEBI:16708]",
+"score": 7.215,
+"path_min": 7.215,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "telomerase \u2293 in taxon (human cells) [GO:0005697&RO:0002162=(NCBITaxon:9606)] has part uracil [CHEBI:17568]",
+"score": 7.215,
+"path_min": 7.215,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "telomerase \u2293 in taxon (human cells) [GO:0005697&RO:0002162=(NCBITaxon:9606)] has part nucleic acids [CHEBI:33696]",
+"score": 7.215,
+"path_min": 7.215,
+"depth": 2,
+"rule": "isaGeneralise",
+"hub_survivor": true
+},
+{
+"fact": "telomerase \u2293 in taxon (human cells) [GO:0005697&RO:0002162=(NCBITaxon:9606)] has part ribose [CHEBI:33942]",
+"score": 7.215,
+"path_min": 7.215,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "telomerase \u2293 in taxon (human cells) [GO:0005697&RO:0002162=(NCBITaxon:9606)] has part hydroxy group [CHEBI:43176]",
+"score": 7.215,
+"path_min": 7.215,
 "depth": 2,
 "rule": "relTrans",
 "hub_survivor": true
@@ -1154,6 +2185,22 @@
 "hub_survivor": true
 },
 {
+"fact": "GO:0005697&BFO:0000050=(CL:0002371) [GO:0005697&BFO:0000050=(CL:0002371)] has part RNA [CHEBI:33697]",
+"score": 7.215,
+"path_min": 7.215,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "telomerase \u2293 in taxon (human cells) [GO:0005697&RO:0002162=(NCBITaxon:9606)] has part RNA [CHEBI:33697]",
+"score": 7.215,
+"path_min": 7.215,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
 "fact": "telomerase [GO:0005697] has part cytosine [CHEBI:16040]",
 "score": 7.215,
 "path_min": 7.215,
@@ -1210,12 +2257,41 @@
 "hub_survivor": false
 },
 {
+"fact": "Telomerase \u2293 part of (adult somatic cells) \u2293 existence overlaps (adult) [GO:0005697&BFO:0000050=(CL:0002371)&RO:0002490=(UBERON:0000113)] is_a telomerase [GO:0005697]",
+"score": 7.215,
+"path_min": 7.215,
+"depth": 1,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "Telomerase reactivation \u2293 in taxon (Mus musculus \u2293 has modifier (telomerase-deficient)) [GO:0003720&RO:0002162=(NCBITaxon:10090&RO:0002573=(BLN:telomerase_deficient))] \u2192+ process(telomere maintenance [GO:0000723])",
+"score": 7.14,
+"path_min": 7.14,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "Telomerase-deficient \u2293 in taxon (Mus musculus) [GO:0003720&RO:0002162=(NCBITaxon:10090)] \u2192+ process(telomere maintenance [GO:0000723])",
+"score": 7.14,
+"path_min": 7.14,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
+},
+{
 "fact": "membrane depolarization [GO:0051899] \u2192\u2212 amount(aldosterone \u2293 located in (blood) [CHEBI:27584&RO:0001025=(UBERON:0000178)])",
 "score": 7.04,
 "path_min": 7.04,
 "depth": 2,
 "rule": "viaAmount",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": [
+"feedback"
+]
 },
 {
 "fact": "neurotransmitters [CHEBI:25512] \u2192+ process(membrane depolarization [GO:0051899])",
@@ -1223,7 +2299,10 @@
 "path_min": 4.332,
 "depth": 2,
 "rule": "viaAmount",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": [
+"feedback"
+]
 },
 {
 "fact": "membrane depolarization [GO:0051899] \u2192+ amount(sodium [CHEBI:29101])",
@@ -1231,7 +2310,19 @@
 "path_min": 7.04,
 "depth": 1,
 "rule": "viaActivity",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": [
+"feedback"
+]
+},
+{
+"fact": "sodium ion \u2293 located in (blood) [CHEBI:29101&RO:0001025=(UBERON:0000178)] \u2192+ process(membrane depolarization [GO:0051899])",
+"score": 7.04,
+"path_min": 7.04,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "voltage-gated sodium channel activity [GO:0005248] \u2192+ process(membrane depolarization [GO:0051899])",
@@ -1239,7 +2330,130 @@
 "path_min": 7.04,
 "depth": 1,
 "rule": "viaAmount",
+"hub_survivor": true,
+"flags": [
+"feedback"
+]
+},
+{
+"fact": "photosynthesis \u2293 occurs in (chloroplast) [GO:0015979&BFO:0000066=(GO:0009507)] has part carbon fixation [GO:0015977]",
+"score": 6.994,
+"path_min": 6.994,
+"depth": 2,
+"rule": "relTrans",
 "hub_survivor": true
+},
+{
+"fact": "photosynthesis \u2293 in taxon (NCBITaxon:2759) [GO:0015979&RO:0002162=(NCBITaxon:2759)] has part carbon fixation [GO:0015977]",
+"score": 6.994,
+"path_min": 6.994,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "photosynthesizing \u2293 in taxon (plants) [GO:0015979&RO:0002162=(NCBITaxon:33090)] has part carbon fixation [GO:0015977]",
+"score": 6.994,
+"path_min": 6.994,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "photosynthesis \u2293 occurs in (chloroplast) [GO:0015979&BFO:0000066=(GO:0009507)] overlaps photosynthesis [GO:0015979]",
+"score": 6.994,
+"path_min": 6.994,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": false
+},
+{
+"fact": "photosynthesis \u2293 in taxon (NCBITaxon:2759) [GO:0015979&RO:0002162=(NCBITaxon:2759)] overlaps photosynthesis [GO:0015979]",
+"score": 6.994,
+"path_min": 6.994,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": false
+},
+{
+"fact": "photosynthesizing \u2293 in taxon (plants) [GO:0015979&RO:0002162=(NCBITaxon:33090)] overlaps photosynthesis [GO:0015979]",
+"score": 6.994,
+"path_min": 6.994,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": false
+},
+{
+"fact": "photosynthesis \u2293 occurs in (chloroplast) [GO:0015979&BFO:0000066=(GO:0009507)] has participant pigment [CHEBI:26130]",
+"score": 6.994,
+"path_min": 6.994,
+"depth": 2,
+"rule": "isaGeneralise",
+"hub_survivor": true
+},
+{
+"fact": "photosynthesis \u2293 in taxon (NCBITaxon:2759) [GO:0015979&RO:0002162=(NCBITaxon:2759)] has participant pigment [CHEBI:26130]",
+"score": 6.994,
+"path_min": 6.994,
+"depth": 2,
+"rule": "isaGeneralise",
+"hub_survivor": true
+},
+{
+"fact": "photosynthesizing \u2293 in taxon (plants) [GO:0015979&RO:0002162=(NCBITaxon:33090)] has participant pigment [CHEBI:26130]",
+"score": 6.994,
+"path_min": 6.994,
+"depth": 2,
+"rule": "isaGeneralise",
+"hub_survivor": true
+},
+{
+"fact": "photosynthesis \u2293 occurs in (chloroplast) [GO:0015979&BFO:0000066=(GO:0009507)] has part Calvin cycle [GO:0019253]",
+"score": 6.994,
+"path_min": 6.994,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "photosynthesis \u2293 occurs in (chloroplast) [GO:0015979&BFO:0000066=(GO:0009507)] has part light reactions of photosynthesis [GO:0019684]",
+"score": 6.994,
+"path_min": 6.994,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "photosynthesis \u2293 in taxon (NCBITaxon:2759) [GO:0015979&RO:0002162=(NCBITaxon:2759)] has part Calvin cycle [GO:0019253]",
+"score": 6.994,
+"path_min": 6.994,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "photosynthesis \u2293 in taxon (NCBITaxon:2759) [GO:0015979&RO:0002162=(NCBITaxon:2759)] has part light reactions of photosynthesis [GO:0019684]",
+"score": 6.994,
+"path_min": 6.994,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "photosynthesizing \u2293 in taxon (plants) [GO:0015979&RO:0002162=(NCBITaxon:33090)] has part Calvin cycle [GO:0019253]",
+"score": 6.994,
+"path_min": 6.994,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "photosynthesizing \u2293 in taxon (plants) [GO:0015979&RO:0002162=(NCBITaxon:33090)] has part light reactions of photosynthesis [GO:0019684]",
+"score": 6.994,
+"path_min": 6.994,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
 },
 {
 "fact": "photosynthesis [GO:0015979] has part carbon fixation [GO:0015977]",
@@ -1266,6 +2480,102 @@
 "hub_survivor": false
 },
 {
+"fact": "photosynthesis \u2293 occurs in (chloroplast) [GO:0015979&BFO:0000066=(GO:0009507)] has input water [CHEBI:15377]",
+"score": 6.994,
+"path_min": 6.994,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "photosynthesis \u2293 occurs in (chloroplast) [GO:0015979&BFO:0000066=(GO:0009507)] has input carbon dioxide [CHEBI:16526]",
+"score": 6.994,
+"path_min": 6.994,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "photosynthesis \u2293 in taxon (NCBITaxon:2759) [GO:0015979&RO:0002162=(NCBITaxon:2759)] has input water [CHEBI:15377]",
+"score": 6.994,
+"path_min": 6.994,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "photosynthesis \u2293 in taxon (NCBITaxon:2759) [GO:0015979&RO:0002162=(NCBITaxon:2759)] has input carbon dioxide [CHEBI:16526]",
+"score": 6.994,
+"path_min": 6.994,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "photosynthesizing \u2293 in taxon (plants) [GO:0015979&RO:0002162=(NCBITaxon:33090)] has input water [CHEBI:15377]",
+"score": 6.994,
+"path_min": 6.994,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "photosynthesizing \u2293 in taxon (plants) [GO:0015979&RO:0002162=(NCBITaxon:33090)] has input carbon dioxide [CHEBI:16526]",
+"score": 6.994,
+"path_min": 6.994,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "photosynthesis \u2293 occurs in (chloroplast) [GO:0015979&BFO:0000066=(GO:0009507)] has output oxygen [CHEBI:15379]",
+"score": 6.994,
+"path_min": 6.994,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "photosynthesis \u2293 occurs in (chloroplast) [GO:0015979&BFO:0000066=(GO:0009507)] has output glucose [CHEBI:17234]",
+"score": 6.994,
+"path_min": 6.994,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "photosynthesis \u2293 in taxon (NCBITaxon:2759) [GO:0015979&RO:0002162=(NCBITaxon:2759)] has output oxygen [CHEBI:15379]",
+"score": 6.994,
+"path_min": 6.994,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "photosynthesis \u2293 in taxon (NCBITaxon:2759) [GO:0015979&RO:0002162=(NCBITaxon:2759)] has output glucose [CHEBI:17234]",
+"score": 6.994,
+"path_min": 6.994,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "photosynthesizing \u2293 in taxon (plants) [GO:0015979&RO:0002162=(NCBITaxon:33090)] has output oxygen [CHEBI:15379]",
+"score": 6.994,
+"path_min": 6.994,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "photosynthesizing \u2293 in taxon (plants) [GO:0015979&RO:0002162=(NCBITaxon:33090)] has output glucose [CHEBI:17234]",
+"score": 6.994,
+"path_min": 6.994,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
 "fact": "chlorophyll a [CHEBI:18230] involved in photosynthesis [GO:0015979]",
 "score": 6.994,
 "path_min": 6.994,
@@ -1280,6 +2590,30 @@
 "depth": 1,
 "rule": "isaInherit",
 "hub_survivor": false
+},
+{
+"fact": "photosynthesis \u2293 occurs in (chloroplast) [GO:0015979&BFO:0000066=(GO:0009507)] has participant chlorophyll [CHEBI:28966]",
+"score": 6.994,
+"path_min": 6.994,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "photosynthesis \u2293 in taxon (NCBITaxon:2759) [GO:0015979&RO:0002162=(NCBITaxon:2759)] has participant chlorophyll [CHEBI:28966]",
+"score": 6.994,
+"path_min": 6.994,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "photosynthesizing \u2293 in taxon (plants) [GO:0015979&RO:0002162=(NCBITaxon:33090)] has participant chlorophyll [CHEBI:28966]",
+"score": 6.994,
+"path_min": 6.994,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
 },
 {
 "fact": "photosynthesis [GO:0015979] has participant pigment [CHEBI:26130]",
@@ -1298,11 +2632,97 @@
 "hub_survivor": true
 },
 {
+"fact": "proteins \u2293 located in (seed) \u2293 happens during (GO:0048316) \u2293 in taxon (NCBITaxon:33090) [CHEBI:36080&RO:0001025=(PO:0009010)&RO:0002092=(GO:0048316)&RO:0002162=(NCBITaxon:33090)] \u2192+ process(supercoiled structure [GO:0006265])",
+"score": 6.994,
+"path_min": 6.994,
+"depth": 2,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "CHEBI:36080&RO:0001025=(PO:0009010)&RO:0002092=(GO:0048316) [CHEBI:36080&RO:0001025=(PO:0009010)&RO:0002092=(GO:0048316)] \u2192+ process(supercoiled structure [GO:0006265])",
+"score": 6.994,
+"path_min": 6.994,
+"depth": 2,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "proteins \u2293 located in (seed) \u2293 happens during (GO:0048316) \u2293 in taxon (NCBITaxon:33090) [CHEBI:36080&RO:0001025=(PO:0009010)&RO:0002092=(GO:0048316)&RO:0002162=(NCBITaxon:33090)] is_a proteins [CHEBI:36080]",
+"score": 6.994,
+"path_min": 6.994,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "proteins \u2293 located in (lysosomes) [CHEBI:36080&RO:0001025=(GO:0005764)] \u2192+ process(supercoiled structure [GO:0006265])",
+"score": 6.994,
+"path_min": 6.994,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "CHEBI:36080&RO:0001025=(PO:0009010) [CHEBI:36080&RO:0001025=(PO:0009010)] \u2192+ process(supercoiled structure [GO:0006265])",
+"score": 6.994,
+"path_min": 6.994,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "protein \u2293 located in (stomach) [CHEBI:36080&RO:0001025=(UBERON:0000945)] \u2192+ process(supercoiled structure [GO:0006265])",
+"score": 6.994,
+"path_min": 6.994,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "large proteins \u2293 located in (muscles) [CHEBI:36080&RO:0001025=(UBERON:0002385)] \u2192+ process(supercoiled structure [GO:0006265])",
+"score": 6.994,
+"path_min": 6.994,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "Food intake \u2293 in taxon (cellular organisms \u2293 has modifier (food intake in more than necessary amounts)) [CHEBI:33290&RO:0002162=(NCBITaxon:131567&RO:0002573=(BLN:excess_food_intake))] has part proteins [CHEBI:36080]",
+"score": 6.994,
+"path_min": 6.994,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
 "fact": "sarcolemma [GO:0042383] has part proteins [CHEBI:36080]",
 "score": 6.994,
 "path_min": 2.282,
 "depth": 1,
 "rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "proteins \u2293 located in (seed) \u2293 happens during (GO:0048316) \u2293 in taxon (NCBITaxon:33090) [CHEBI:36080&RO:0001025=(PO:0009010)&RO:0002092=(GO:0048316)&RO:0002162=(NCBITaxon:33090)] is_a CHEBI:36080&RO:0001025=(PO:0009010) [CHEBI:36080&RO:0001025=(PO:0009010)]",
+"score": 6.994,
+"path_min": 6.994,
+"depth": 1,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "CHEBI:36080&RO:0001025=(PO:0009010)&RO:0002092=(GO:0048316) [CHEBI:36080&RO:0001025=(PO:0009010)&RO:0002092=(GO:0048316)] is_a proteins [CHEBI:36080]",
+"score": 6.994,
+"path_min": 6.994,
+"depth": 1,
+"rule": "relTrans",
 "hub_survivor": true
 },
 {
@@ -1351,7 +2771,8 @@
 "path_min": 6.521,
 "depth": 1,
 "rule": "isaInheritEffect",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "sarcolemma [GO:0042383] \u2192+ process(cell recognition [GO:0008037])",
@@ -1359,7 +2780,8 @@
 "path_min": 2.282,
 "depth": 1,
 "rule": "isaInheritEffect",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "respiratory bronchioles [UBERON:0002188] connected to main bronchus [UBERON:0002182]",
@@ -1407,6 +2829,14 @@
 "path_min": 5.853,
 "depth": 2,
 "rule": "relTrans",
+"hub_survivor": false
+},
+{
+"fact": "deoxyribonucleic acid \u2293 in taxon (NCBITaxon:2759) [CHEBI:16991&RO:0002162=(NCBITaxon:2759)] located in prokaryotic cell [CL:0000520]",
+"score": 6.726,
+"path_min": 5.748,
+"depth": 2,
+"rule": "relChain",
 "hub_survivor": false
 },
 {
@@ -1495,7 +2925,8 @@
 "path_min": 0.322,
 "depth": 1,
 "rule": "isaInheritEffect",
-"hub_survivor": false
+"hub_survivor": false,
+"flags": []
 },
 {
 "fact": "ribonucleotide [CHEBI:26561] overlaps nucleic acids [CHEBI:33696]",
@@ -1650,6 +3081,14 @@
 "hub_survivor": false
 },
 {
+"fact": "centrosome \u2293 in taxon (NCBITaxon:33208) [GO:0005813&RO:0002162=(NCBITaxon:33208)] has part centrioles [GO:0005814]",
+"score": 6.521,
+"path_min": 6.521,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
 "fact": "neuronal cell body [GO:0043025] has part DNA [CHEBI:16991]",
 "score": 6.521,
 "path_min": 4.05,
@@ -1735,7 +3174,8 @@
 "path_min": 2.657,
 "depth": 2,
 "rule": "isaInheritEffect",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "superior vena cava [UBERON:0001585] \u2192+ process(this reaction [GO:0009060])",
@@ -1743,7 +3183,8 @@
 "path_min": 2.657,
 "depth": 2,
 "rule": "isaInheritEffect",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "this reaction [GO:0009060] \u2192\u2212 process(broken down [GO:0006007])",
@@ -1751,7 +3192,10 @@
 "path_min": 6.421,
 "depth": 1,
 "rule": "viaAmount",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": [
+"feedback"
+]
 },
 {
 "fact": "this reaction [GO:0009060] \u2192\u2212 process(ATP biosynthetic process [GO:0006754])",
@@ -1759,7 +3203,35 @@
 "path_min": 6.421,
 "depth": 1,
 "rule": "viaAmount",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "oxygen \u2293 located in (PO:0025034) [CHEBI:15379&RO:0001025=(PO:0025034)] \u2192+ process(this reaction [GO:0009060])",
+"score": 6.421,
+"path_min": 6.421,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "oxygen \u2293 located in (lungs) [CHEBI:15379&RO:0001025=(UBERON:0002048)] \u2192+ process(this reaction [GO:0009060])",
+"score": 6.421,
+"path_min": 6.421,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "Oxygen \u2293 in taxon (these microorganisms) [CHEBI:15379&RO:0002162=(NCBITaxon:1485)] \u2192+ process(this reaction [GO:0009060])",
+"score": 6.421,
+"path_min": 6.421,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "this reaction [GO:0009060] \u2192+ process(glycogen biosynthetic process [GO:0005978])",
@@ -1767,6 +3239,15 @@
 "path_min": 6.421,
 "depth": 1,
 "rule": "viaAmount",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "These reactions \u2293 in taxon (prokaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2)] part of this reaction [GO:0009060]",
+"score": 6.421,
+"path_min": 6.421,
+"depth": 1,
+"rule": "isaInherit",
 "hub_survivor": true
 },
 {
@@ -1815,6 +3296,14 @@
 "path_min": 4.351,
 "depth": 1,
 "rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "interphase \u2293 in taxon (eukaryotes) [GO:0051325&RO:0002162=(NCBITaxon:2759)] has part growth [GO:0016049]",
+"score": 6.371,
+"path_min": 6.371,
+"depth": 2,
+"rule": "relTrans",
 "hub_survivor": true
 },
 {
@@ -1903,7 +3392,44 @@
 "path_min": 1.761,
 "depth": 2,
 "rule": "viaAmount",
-"hub_survivor": false
+"hub_survivor": false,
+"flags": []
+},
+{
+"fact": "mature mammalian red blood cells \u2293 in taxon (mammalian) [CL:0000232&RO:0002162=(NCBITaxon:40674)] capable of carry oxygen [GO:0015671]",
+"score": 6.166,
+"path_min": 6.166,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "mature mammalian red blood cells \u2293 in taxon (mammalian) [CL:0000232&RO:0002162=(NCBITaxon:40674)] capable of part of broken down [GO:0006007]",
+"score": 6.166,
+"path_min": 6.166,
+"depth": 1,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "glucose [CHEBI:17234] \u2192\u2212 process(cellular respiration [GO:0045333])",
+"score": 6.153,
+"path_min": 6.153,
+"depth": 2,
+"rule": "viaAmount",
+"hub_survivor": false,
+"flags": [
+"feedback"
+]
+},
+{
+"fact": "glucose \u2293 located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] \u2192+ process(cellular respiration [GO:0045333])",
+"score": 6.153,
+"path_min": 6.153,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "neuronal cell body [GO:0043025] has part structure that is capable of cellular respiration [GO:0045333]",
@@ -1922,7 +3448,23 @@
 "hub_survivor": true
 },
 {
+"fact": "centrosome \u2293 in taxon (NCBITaxon:33208) [GO:0005813&RO:0002162=(NCBITaxon:33208)] overlaps mitotic spindle [GO:0072686]",
+"score": 6.116,
+"path_min": 4.817,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
 "fact": "centrosome [GO:0005813] overlaps mitotic spindle [GO:0072686]",
+"score": 6.116,
+"path_min": 4.817,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "centriole \u2293 in taxon (animal cell) [GO:0005814&RO:0002162=(NCBITaxon:33208)] overlaps mitotic spindle [GO:0072686]",
 "score": 6.116,
 "path_min": 4.817,
 "depth": 2,
@@ -1938,6 +3480,22 @@
 "hub_survivor": true
 },
 {
+"fact": "These reactions \u2293 in taxon (prokaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2)] has part protein complexes [GO:0098803]",
+"score": 6.116,
+"path_min": 6.116,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "calcium ion \u2293 located in (blood) [CHEBI:29108&RO:0001025=(UBERON:0000178)] located in smooth endoplasmic reticulum [GO:0005790]",
+"score": 6.116,
+"path_min": 6.116,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
 "fact": "centrioles [GO:0005814] overlaps mitotic spindle [GO:0072686]",
 "score": 6.116,
 "path_min": 4.817,
@@ -1946,12 +3504,58 @@
 "hub_survivor": true
 },
 {
+"fact": "glycolysis \u2293 occurs in (skeletal muscle) [GO:0006096&BFO:0000066=(UBERON:0014892)] \u2192+ process(muscle cell contraction [GO:0006936])",
+"score": 6.096,
+"path_min": 6.096,
+"depth": 2,
+"rule": "viaAmount",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "glycolytic process \u2293 in taxon (Mammalia) [GO:0006096&RO:0002162=(NCBITaxon:40674)] \u2192+ process(muscle cell contraction [GO:0006936])",
+"score": 6.096,
+"path_min": 6.096,
+"depth": 2,
+"rule": "viaAmount",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "These reactions \u2293 in taxon (prokaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2)] \u2192+ process(muscle cell contraction [GO:0006936])",
+"score": 6.096,
+"path_min": 6.096,
+"depth": 2,
+"rule": "viaAmount",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "ATP synthase \u2293 located in (mitochondrion) [GO:0045259&RO:0001025=(GO:0005739)] \u2192+ process(muscle cell contraction [GO:0006936])",
+"score": 6.096,
+"path_min": 6.096,
+"depth": 2,
+"rule": "viaAmount",
+"hub_survivor": true,
+"flags": []
+},
+{
 "fact": "reabsorption [GO:0070293] \u2192\u2212 process(muscle cell contraction [GO:0006936])",
 "score": 6.096,
 "path_min": 6.096,
 "depth": 1,
 "rule": "viaAmount",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "ATP \u2293 part of (red blood cells) [CHEBI:15422&BFO:0000050=(CL:0000232)] \u2192+ process(muscle cell contraction [GO:0006936])",
+"score": 6.096,
+"path_min": 6.096,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "broken down [GO:0006007] \u2192+ process(muscle cell contraction [GO:0006936])",
@@ -1959,7 +3563,10 @@
 "path_min": 6.096,
 "depth": 1,
 "rule": "viaAmount",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": [
+"feedback"
+]
 },
 {
 "fact": "glycolytic process [GO:0006096] \u2192+ process(muscle cell contraction [GO:0006936])",
@@ -1967,7 +3574,8 @@
 "path_min": 6.096,
 "depth": 1,
 "rule": "viaAmount",
-"hub_survivor": false
+"hub_survivor": false,
+"flags": []
 },
 {
 "fact": "a process [GO:0006119] \u2192+ process(muscle cell contraction [GO:0006936])",
@@ -1975,7 +3583,8 @@
 "path_min": 6.096,
 "depth": 1,
 "rule": "viaAmount",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "this reaction [GO:0009060] \u2192+ process(muscle cell contraction [GO:0006936])",
@@ -1983,7 +3592,8 @@
 "path_min": 6.096,
 "depth": 1,
 "rule": "viaAmount",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "this transfer [GO:0022904] \u2192+ process(muscle cell contraction [GO:0006936])",
@@ -1991,7 +3601,8 @@
 "path_min": 6.096,
 "depth": 1,
 "rule": "viaAmount",
-"hub_survivor": false
+"hub_survivor": false,
+"flags": []
 },
 {
 "fact": "ATP synthase [GO:0045259] \u2192+ process(muscle cell contraction [GO:0006936])",
@@ -1999,7 +3610,8 @@
 "path_min": 6.096,
 "depth": 1,
 "rule": "viaAmount",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "capillaries [UBERON:0001982] \u2192\u2212 process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])",
@@ -2007,7 +3619,8 @@
 "path_min": 2.657,
 "depth": 2,
 "rule": "viaAmount",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "capillaries [UBERON:0001982] \u2192+ process(a process [GO:0006119])",
@@ -2015,7 +3628,8 @@
 "path_min": 2.657,
 "depth": 2,
 "rule": "viaAmount",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "capillaries [UBERON:0001982] \u2192+ process(this reaction [GO:0009060])",
@@ -2023,7 +3637,8 @@
 "path_min": 2.657,
 "depth": 2,
 "rule": "viaAmount",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "capillaries [UBERON:0001982] \u2192+ process(this transfer [GO:0022904])",
@@ -2031,7 +3646,8 @@
 "path_min": 2.657,
 "depth": 2,
 "rule": "viaAmount",
-"hub_survivor": false
+"hub_survivor": false,
+"flags": []
 },
 {
 "fact": "capillaries [UBERON:0001982] \u2192\u2212 amount(carbon dioxide [CHEBI:16526])",
@@ -2039,7 +3655,8 @@
 "path_min": 2.657,
 "depth": 1,
 "rule": "isaInheritEffect",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "capillaries [UBERON:0001982] \u2192+ amount(oxygen [CHEBI:15379])",
@@ -2047,7 +3664,8 @@
 "path_min": 2.657,
 "depth": 1,
 "rule": "isaInheritEffect",
-"hub_survivor": false
+"hub_survivor": false,
+"flags": []
 },
 {
 "fact": "capillaries [UBERON:0001982] connected to inferior vena cava [UBERON:0001072]",
@@ -2066,11 +3684,59 @@
 "hub_survivor": true
 },
 {
+"fact": "Telomerase \u2293 part of (adult somatic cells) \u2293 existence overlaps (adult) [GO:0005697&BFO:0000050=(CL:0002371)&RO:0002490=(UBERON:0000113)] overlaps polymer [CHEBI:60027]",
+"score": 6.076,
+"path_min": 6.076,
+"depth": 3,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "GO:0005697&BFO:0000050=(CL:0002371) [GO:0005697&BFO:0000050=(CL:0002371)] overlaps polymer [CHEBI:60027]",
+"score": 6.076,
+"path_min": 6.076,
+"depth": 3,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "telomerase \u2293 in taxon (human cells) [GO:0005697&RO:0002162=(NCBITaxon:9606)] overlaps polymer [CHEBI:60027]",
+"score": 6.076,
+"path_min": 6.076,
+"depth": 3,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
 "fact": "translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] overlaps polymer [CHEBI:60027]",
 "score": 6.076,
 "path_min": 6.076,
 "depth": 3,
 "rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "Telomerase \u2293 part of (adult somatic cells) \u2293 existence overlaps (adult) [GO:0005697&BFO:0000050=(CL:0002371)&RO:0002490=(UBERON:0000113)] has part polymer [CHEBI:60027]",
+"score": 6.076,
+"path_min": 6.076,
+"depth": 2,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "GO:0005697&BFO:0000050=(CL:0002371) [GO:0005697&BFO:0000050=(CL:0002371)] has part polymer [CHEBI:60027]",
+"score": 6.076,
+"path_min": 6.076,
+"depth": 2,
+"rule": "isaGeneralise",
+"hub_survivor": true
+},
+{
+"fact": "telomerase \u2293 in taxon (human cells) [GO:0005697&RO:0002162=(NCBITaxon:9606)] has part polymer [CHEBI:60027]",
+"score": 6.076,
+"path_min": 6.076,
+"depth": 2,
+"rule": "isaGeneralise",
 "hub_survivor": true
 },
 {
@@ -2218,6 +3884,14 @@
 "hub_survivor": true
 },
 {
+"fact": "deoxyribonucleic acid \u2293 in taxon (NCBITaxon:2759) [CHEBI:16991&RO:0002162=(NCBITaxon:2759)] is_a polymer [CHEBI:60027]",
+"score": 6.076,
+"path_min": 6.076,
+"depth": 1,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
 "fact": "transfer RNA [CHEBI:17843] is_a polymer [CHEBI:60027]",
 "score": 6.076,
 "path_min": 6.076,
@@ -2250,6 +3924,30 @@
 "hub_survivor": true
 },
 {
+"fact": "photosynthesis \u2293 occurs in (chloroplast) [GO:0015979&BFO:0000066=(GO:0009507)] has part that occurs in stroma [GO:0009570]",
+"score": 6.011,
+"path_min": 6.011,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "photosynthesis \u2293 in taxon (NCBITaxon:2759) [GO:0015979&RO:0002162=(NCBITaxon:2759)] has part that occurs in stroma [GO:0009570]",
+"score": 6.011,
+"path_min": 6.011,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "photosynthesizing \u2293 in taxon (plants) [GO:0015979&RO:0002162=(NCBITaxon:33090)] has part that occurs in stroma [GO:0009570]",
+"score": 6.011,
+"path_min": 6.011,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
 "fact": "stroma [GO:0009570] part of structure that is capable of photosynthesis [GO:0015979]",
 "score": 6.011,
 "path_min": 4.575,
@@ -2272,6 +3970,38 @@
 "depth": 1,
 "rule": "relChain",
 "hub_survivor": false
+},
+{
+"fact": "cytokinesis \u2293 in taxon (plants) [GO:0000910&RO:0002162=(NCBITaxon:3193)] part of mitotic phase [GO:0000087]",
+"score": 5.942,
+"path_min": 5.942,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "cytokinesis \u2293 in taxon (animal cells) [GO:0000910&RO:0002162=(NCBITaxon:33208)] part of mitotic phase [GO:0000087]",
+"score": 5.942,
+"path_min": 5.942,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "cytokinesis \u2293 in taxon (plants) [GO:0000910&RO:0002162=(NCBITaxon:3193)] happens during mitotic phase [GO:0000087]",
+"score": 5.942,
+"path_min": 5.942,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "cytokinesis \u2293 in taxon (animal cells) [GO:0000910&RO:0002162=(NCBITaxon:33208)] happens during mitotic phase [GO:0000087]",
+"score": 5.942,
+"path_min": 5.942,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
 },
 {
 "fact": "gallbladder [UBERON:0002110] has part structure that is capable of endocytosis [GO:0006897]",
@@ -2306,11 +4036,35 @@
 "hub_survivor": true
 },
 {
+"fact": "ATP \u2293 part of (red blood cells) [CHEBI:15422&BFO:0000050=(CL:0000232)] has part nucleotides [CHEBI:36976]",
+"score": 5.853,
+"path_min": 5.853,
+"depth": 2,
+"rule": "isaGeneralise",
+"hub_survivor": true
+},
+{
 "fact": "neuronal cell body [GO:0043025] has part nucleotides [CHEBI:36976]",
 "score": 5.853,
 "path_min": 4.05,
 "depth": 2,
 "rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "glycolysis \u2293 occurs in (skeletal muscle) [GO:0006096&BFO:0000066=(UBERON:0014892)] has input nucleotides [CHEBI:36976]",
+"score": 5.853,
+"path_min": 5.853,
+"depth": 2,
+"rule": "isaGeneralise",
+"hub_survivor": true
+},
+{
+"fact": "glycolytic process \u2293 in taxon (Mammalia) [GO:0006096&RO:0002162=(NCBITaxon:40674)] has input nucleotides [CHEBI:36976]",
+"score": 5.853,
+"path_min": 5.853,
+"depth": 2,
+"rule": "isaGeneralise",
 "hub_survivor": true
 },
 {
@@ -2338,12 +4092,44 @@
 "hub_survivor": true
 },
 {
+"fact": "glycolysis \u2293 occurs in (skeletal muscle) [GO:0006096&BFO:0000066=(UBERON:0014892)] has output nucleotides [CHEBI:36976]",
+"score": 5.853,
+"path_min": 5.853,
+"depth": 2,
+"rule": "isaGeneralise",
+"hub_survivor": true
+},
+{
+"fact": "glycolytic process \u2293 in taxon (Mammalia) [GO:0006096&RO:0002162=(NCBITaxon:40674)] has output nucleotides [CHEBI:36976]",
+"score": 5.853,
+"path_min": 5.853,
+"depth": 2,
+"rule": "isaGeneralise",
+"hub_survivor": true
+},
+{
+"fact": "citric acid cycle \u2293 in taxon (NCBITaxon:2759) [GO:0006099&RO:0002162=(NCBITaxon:2759)] has output nucleotides [CHEBI:36976]",
+"score": 5.853,
+"path_min": 5.853,
+"depth": 2,
+"rule": "isaGeneralise",
+"hub_survivor": true
+},
+{
 "fact": "ATP [CHEBI:15422] has part nucleotides [CHEBI:36976]",
 "score": 5.853,
 "path_min": 5.853,
 "depth": 1,
 "rule": "isaGeneralise",
 "hub_survivor": false
+},
+{
+"fact": "deoxyribonucleic acid \u2293 in taxon (NCBITaxon:2759) [CHEBI:16991&RO:0002162=(NCBITaxon:2759)] has part nucleotides [CHEBI:36976]",
+"score": 5.853,
+"path_min": 5.853,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
 },
 {
 "fact": "nucleotides [CHEBI:36976] has part phosphorus atom [CHEBI:28659]",
@@ -2363,6 +4149,14 @@
 },
 {
 "fact": "nucleosome [GO:0000786] has part nucleotides [CHEBI:36976]",
+"score": 5.853,
+"path_min": 5.853,
+"depth": 1,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "ATP \u2293 part of (red blood cells) [CHEBI:15422&BFO:0000050=(CL:0000232)] is_a nucleotides [CHEBI:36976]",
 "score": 5.853,
 "path_min": 5.853,
 "depth": 1,
@@ -2551,7 +4345,8 @@
 "path_min": 5.822,
 "depth": 1,
 "rule": "isaInheritEffect",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "salivary glands [UBERON:0001044] has part ribosomal RNA [CHEBI:18111]",
@@ -2743,7 +4538,8 @@
 "path_min": 0.322,
 "depth": 1,
 "rule": "isaInheritEffect",
-"hub_survivor": false
+"hub_survivor": false,
+"flags": []
 },
 {
 "fact": "testosterone [CHEBI:17347] \u2192+ site(strand of hair [UBERON:0001037])",
@@ -2751,6 +4547,79 @@
 "path_min": 5.769,
 "depth": 1,
 "rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "deoxyribonucleic acid \u2293 in taxon (NCBITaxon:2759) [CHEBI:16991&RO:0002162=(NCBITaxon:2759)] located in strand of hair [UBERON:0001037]",
+"score": 5.769,
+"path_min": 5.769,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "DNA-templated transcription \u2293 in taxon (prokaryotes, which include bacteria and archaea) [GO:0006351&RO:0002162=(NCBITaxon:2)] has input polymer [CHEBI:60027]",
+"score": 5.767,
+"path_min": 5.767,
+"depth": 2,
+"rule": "isaGeneralise",
+"hub_survivor": true
+},
+{
+"fact": "DNA-templated transcription \u2293 in taxon (NCBITaxon:2759) [GO:0006351&RO:0002162=(NCBITaxon:2759)] has input polymer [CHEBI:60027]",
+"score": 5.767,
+"path_min": 5.767,
+"depth": 2,
+"rule": "isaGeneralise",
+"hub_survivor": true
+},
+{
+"fact": "DNA-templated transcription \u2293 in taxon (prokaryotes, which include bacteria and archaea) [GO:0006351&RO:0002162=(NCBITaxon:2)] has output nucleic acids [CHEBI:33696]",
+"score": 5.767,
+"path_min": 5.767,
+"depth": 2,
+"rule": "isaGeneralise",
+"hub_survivor": true
+},
+{
+"fact": "DNA-templated transcription \u2293 in taxon (prokaryotes, which include bacteria and archaea) [GO:0006351&RO:0002162=(NCBITaxon:2)] has output RNA [CHEBI:33697]",
+"score": 5.767,
+"path_min": 5.767,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": false
+},
+{
+"fact": "DNA-templated transcription \u2293 in taxon (prokaryotes, which include bacteria and archaea) [GO:0006351&RO:0002162=(NCBITaxon:2)] has output polymer [CHEBI:60027]",
+"score": 5.767,
+"path_min": 5.767,
+"depth": 2,
+"rule": "isaGeneralise",
+"hub_survivor": true
+},
+{
+"fact": "DNA-templated transcription \u2293 in taxon (NCBITaxon:2759) [GO:0006351&RO:0002162=(NCBITaxon:2759)] has output nucleic acids [CHEBI:33696]",
+"score": 5.767,
+"path_min": 5.767,
+"depth": 2,
+"rule": "isaGeneralise",
+"hub_survivor": true
+},
+{
+"fact": "DNA-templated transcription \u2293 in taxon (NCBITaxon:2759) [GO:0006351&RO:0002162=(NCBITaxon:2759)] has output RNA [CHEBI:33697]",
+"score": 5.767,
+"path_min": 5.767,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": false
+},
+{
+"fact": "DNA-templated transcription \u2293 in taxon (NCBITaxon:2759) [GO:0006351&RO:0002162=(NCBITaxon:2759)] has output polymer [CHEBI:60027]",
+"score": 5.767,
+"path_min": 5.767,
+"depth": 2,
+"rule": "isaGeneralise",
 "hub_survivor": true
 },
 {
@@ -2770,12 +4639,84 @@
 "hub_survivor": true
 },
 {
+"fact": "nucleotide-excision repair \u2293 in taxon (NCBITaxon:9606) [GO:0006289&RO:0002162=(NCBITaxon:9606)] is_a DNA repair genes [GO:0006281]",
+"score": 5.767,
+"path_min": 5.767,
+"depth": 1,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "DNA-templated transcription \u2293 in taxon (prokaryotes, which include bacteria and archaea) [GO:0006351&RO:0002162=(NCBITaxon:2)] ends with DNA-templated transcription termination [GO:0006353]",
+"score": 5.767,
+"path_min": 5.767,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "DNA-templated transcription \u2293 in taxon (NCBITaxon:2759) [GO:0006351&RO:0002162=(NCBITaxon:2759)] ends with DNA-templated transcription termination [GO:0006353]",
+"score": 5.767,
+"path_min": 5.767,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "DNA-templated transcription \u2293 in taxon (prokaryotes, which include bacteria and archaea) [GO:0006351&RO:0002162=(NCBITaxon:2)] has input DNA [CHEBI:16991]",
+"score": 5.767,
+"path_min": 5.767,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "DNA-templated transcription \u2293 in taxon (prokaryotes, which include bacteria and archaea) [GO:0006351&RO:0002162=(NCBITaxon:2)] has input nucleotides [CHEBI:36976]",
+"score": 5.767,
+"path_min": 5.767,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "DNA-templated transcription \u2293 in taxon (NCBITaxon:2759) [GO:0006351&RO:0002162=(NCBITaxon:2759)] has input DNA [CHEBI:16991]",
+"score": 5.767,
+"path_min": 5.767,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "DNA-templated transcription \u2293 in taxon (NCBITaxon:2759) [GO:0006351&RO:0002162=(NCBITaxon:2759)] has input nucleotides [CHEBI:36976]",
+"score": 5.767,
+"path_min": 5.767,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
 "fact": "DNA-templated transcription [GO:0006351] has input polymer [CHEBI:60027]",
 "score": 5.767,
 "path_min": 5.767,
 "depth": 1,
 "rule": "isaGeneralise",
 "hub_survivor": true
+},
+{
+"fact": "DNA-templated transcription \u2293 in taxon (prokaryotes, which include bacteria and archaea) [GO:0006351&RO:0002162=(NCBITaxon:2)] has output messenger RNA [CHEBI:33699]",
+"score": 5.767,
+"path_min": 5.767,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "DNA-templated transcription \u2293 in taxon (NCBITaxon:2759) [GO:0006351&RO:0002162=(NCBITaxon:2759)] has output messenger RNA [CHEBI:33699]",
+"score": 5.767,
+"path_min": 5.767,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
 },
 {
 "fact": "DNA-templated transcription [GO:0006351] has output RNA [CHEBI:33697]",
@@ -2823,6 +4764,14 @@
 "path_min": 5.369,
 "depth": 1,
 "rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "deoxyribonucleic acid \u2293 in taxon (NCBITaxon:2759) [CHEBI:16991&RO:0002162=(NCBITaxon:2759)] located in nucleoid [GO:0009295]",
+"score": 5.748,
+"path_min": 5.748,
+"depth": 1,
+"rule": "isaInherit",
 "hub_survivor": true
 },
 {
@@ -2874,6 +4823,40 @@
 "hub_survivor": true
 },
 {
+"fact": "plant cell wall \u2293 in taxon (NCBITaxon:33090) [GO:0009505&RO:0002162=(NCBITaxon:33090)] \u2192+ process(maintain its shape [GO:0008360])",
+"score": 5.674,
+"path_min": 5.674,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "glycolysis \u2293 occurs in (skeletal muscle) [GO:0006096&BFO:0000066=(UBERON:0014892)] has input simple sugars [CHEBI:35381]",
+"score": 5.653,
+"path_min": 5.653,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "glycolytic process \u2293 in taxon (Mammalia) [GO:0006096&RO:0002162=(NCBITaxon:40674)] has input simple sugars [CHEBI:35381]",
+"score": 5.653,
+"path_min": 5.653,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "centriole \u2293 in taxon (animal cell) [GO:0005814&RO:0002162=(NCBITaxon:33208)] \u2192+ process(chromosome segregation [GO:0007059])",
+"score": 5.619,
+"path_min": 5.619,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
+},
+{
 "fact": "thick filament [GO:0032982] part of structure that is capable of locomotion [GO:0040011]",
 "score": 5.52,
 "path_min": 3.124,
@@ -2911,7 +4894,8 @@
 "path_min": 3.189,
 "depth": 1,
 "rule": "viaActivity",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "thick filament [GO:0032982] part of myofibril [GO:0030016]",
@@ -2928,6 +4912,15 @@
 "depth": 1,
 "rule": "relChain",
 "hub_survivor": true
+},
+{
+"fact": "These reactions \u2293 in taxon (prokaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2)] \u2192+ process(proton transmembrane transport [GO:1902600])",
+"score": 5.384,
+"path_min": 5.384,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "neuronal cell body [GO:0043025] overlaps ribosomes [GO:0005840]",
@@ -2986,12 +4979,148 @@
 "hub_survivor": false
 },
 {
+"fact": "ribosome \u2293 in taxon (prokaryote) [GO:0005840&RO:0002162=(NCBITaxon:2)] overlaps ribosomes [GO:0005840]",
+"score": 5.369,
+"path_min": 5.369,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": false
+},
+{
+"fact": "ribosome \u2293 in taxon (NCBITaxon:2759) [GO:0005840&RO:0002162=(NCBITaxon:2759)] overlaps ribosomes [GO:0005840]",
+"score": 5.369,
+"path_min": 5.369,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": false
+},
+{
+"fact": "ribosome \u2293 in taxon (prokaryote) [GO:0005840&RO:0002162=(NCBITaxon:2)] has part polypeptide [CHEBI:15841]",
+"score": 5.369,
+"path_min": 5.369,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "ribosome \u2293 in taxon (prokaryote) [GO:0005840&RO:0002162=(NCBITaxon:2)] has part ribosomal RNA [CHEBI:18111]",
+"score": 5.369,
+"path_min": 5.369,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "ribosome \u2293 in taxon (prokaryote) [GO:0005840&RO:0002162=(NCBITaxon:2)] has part large subunit [GO:0015934]",
+"score": 5.369,
+"path_min": 5.369,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "ribosome \u2293 in taxon (prokaryote) [GO:0005840&RO:0002162=(NCBITaxon:2)] has part small subunit [GO:0015935]",
+"score": 5.369,
+"path_min": 5.369,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "ribosome \u2293 in taxon (NCBITaxon:2759) [GO:0005840&RO:0002162=(NCBITaxon:2759)] has part polypeptide [CHEBI:15841]",
+"score": 5.369,
+"path_min": 5.369,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "ribosome \u2293 in taxon (NCBITaxon:2759) [GO:0005840&RO:0002162=(NCBITaxon:2759)] has part ribosomal RNA [CHEBI:18111]",
+"score": 5.369,
+"path_min": 5.369,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "ribosome \u2293 in taxon (NCBITaxon:2759) [GO:0005840&RO:0002162=(NCBITaxon:2759)] has part large subunit [GO:0015934]",
+"score": 5.369,
+"path_min": 5.369,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "ribosome \u2293 in taxon (NCBITaxon:2759) [GO:0005840&RO:0002162=(NCBITaxon:2759)] has part small subunit [GO:0015935]",
+"score": 5.369,
+"path_min": 5.369,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
 "fact": "neuronal cell body [GO:0043025] has part ribosomes [GO:0005840]",
 "score": 5.369,
 "path_min": 4.05,
 "depth": 1,
 "rule": "relTrans",
 "hub_survivor": false
+},
+{
+"fact": "ribosome \u2293 in taxon (prokaryote) [GO:0005840&RO:0002162=(NCBITaxon:2)] attached to rough endoplasmic reticulum [GO:0005791]",
+"score": 5.369,
+"path_min": 5.369,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "ribosome \u2293 in taxon (NCBITaxon:2759) [GO:0005840&RO:0002162=(NCBITaxon:2759)] attached to rough endoplasmic reticulum [GO:0005791]",
+"score": 5.369,
+"path_min": 5.369,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "cytokinesis \u2293 in taxon (plants) [GO:0000910&RO:0002162=(NCBITaxon:3193)] has output haploid cell [CL:0000413]",
+"score": 5.34,
+"path_min": 5.34,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "cytokinesis \u2293 in taxon (animal cells) [GO:0000910&RO:0002162=(NCBITaxon:33208)] has output haploid cell [CL:0000413]",
+"score": 5.34,
+"path_min": 5.34,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "photosynthesis \u2293 occurs in (chloroplast) [GO:0015979&BFO:0000066=(GO:0009507)] has part carbohydrate biosynthetic process [GO:0016051]",
+"score": 5.306,
+"path_min": 5.306,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "photosynthesis \u2293 in taxon (NCBITaxon:2759) [GO:0015979&RO:0002162=(NCBITaxon:2759)] has part carbohydrate biosynthetic process [GO:0016051]",
+"score": 5.306,
+"path_min": 5.306,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "photosynthesizing \u2293 in taxon (plants) [GO:0015979&RO:0002162=(NCBITaxon:33090)] has part carbohydrate biosynthetic process [GO:0016051]",
+"score": 5.306,
+"path_min": 5.306,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
 },
 {
 "fact": "photosynthesis [GO:0015979] has part carbohydrate biosynthetic process [GO:0016051]",
@@ -3018,12 +5147,29 @@
 "hub_survivor": true
 },
 {
+"fact": "glycogen \u2293 located in (liver) [CHEBI:28087&RO:0001025=(UBERON:0002107)] located in liver [UBERON:0002107]",
+"score": 5.301,
+"path_min": 5.301,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
 "fact": "mitotic nuclear division [GO:0140014] overlaps nuclear division [GO:0000280]",
 "score": 5.289,
 "path_min": 5.289,
 "depth": 2,
 "rule": "relChain",
 "hub_survivor": false
+},
+{
+"fact": "centriole \u2293 in taxon (animal cell) [GO:0005814&RO:0002162=(NCBITaxon:33208)] \u2192+ process(arise from [GO:0051301])",
+"score": 5.289,
+"path_min": 5.289,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": false,
+"flags": []
 },
 {
 "fact": "prophase [GO:0000088] part of nuclear division [GO:0000280]",
@@ -3066,6 +5212,22 @@
 "hub_survivor": true
 },
 {
+"fact": "cytokinesis \u2293 in taxon (plants) [GO:0000910&RO:0002162=(NCBITaxon:3193)] part of arise from [GO:0051301]",
+"score": 5.289,
+"path_min": 5.289,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "cytokinesis \u2293 in taxon (animal cells) [GO:0000910&RO:0002162=(NCBITaxon:33208)] part of arise from [GO:0051301]",
+"score": 5.289,
+"path_min": 5.289,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
 "fact": "meiosis I [GO:0007127] part of arise from [GO:0051301]",
 "score": 5.289,
 "path_min": 5.01,
@@ -3087,6 +5249,14 @@
 "path_min": 5.289,
 "depth": 1,
 "rule": "isaGeneralise",
+"hub_survivor": true
+},
+{
+"fact": "cell divisions \u2293 in taxon (NCBITaxon:9606) [GO:0051301&RO:0002162=(NCBITaxon:9606)] happens during mitotic phase [GO:0000087]",
+"score": 5.289,
+"path_min": 5.289,
+"depth": 1,
+"rule": "isaInherit",
 "hub_survivor": true
 },
 {
@@ -3191,6 +5361,14 @@
 "path_min": 5.212,
 "depth": 1,
 "rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "microvilli \u2293 in taxon (NCBITaxon:9606 \u2293 has modifier (celiac disease)) [GO:0005902&RO:0002162=(NCBITaxon:9606&RO:0002573=(MONDO:0005130))] part of structure that is capable of protein transport [GO:0015031]",
+"score": 5.21,
+"path_min": 2.282,
+"depth": 3,
+"rule": "relChain",
 "hub_survivor": true
 },
 {
@@ -3447,7 +5625,8 @@
 "path_min": 0.322,
 "depth": 1,
 "rule": "isaInheritEffect",
-"hub_survivor": false
+"hub_survivor": false,
+"flags": []
 },
 {
 "fact": "temporal lobe [UBERON:0001871] has part structure that is capable of learning [GO:0007612]",
@@ -3463,6 +5642,14 @@
 "path_min": 4.865,
 "depth": 1,
 "rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "These reactions \u2293 in taxon (prokaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2)] occurs in inner layer [GO:0005743]",
+"score": 5.135,
+"path_min": 5.135,
+"depth": 1,
+"rule": "isaInherit",
 "hub_survivor": true
 },
 {
@@ -3490,12 +5677,60 @@
 "hub_survivor": true
 },
 {
+"fact": "glycolysis \u2293 occurs in (skeletal muscle) [GO:0006096&BFO:0000066=(UBERON:0014892)] \u2192\u2212 process(cell death [GO:0008219])",
+"score": 5.081,
+"path_min": 5.081,
+"depth": 2,
+"rule": "viaAmount",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "glycolytic process \u2293 in taxon (Mammalia) [GO:0006096&RO:0002162=(NCBITaxon:40674)] \u2192\u2212 process(cell death [GO:0008219])",
+"score": 5.081,
+"path_min": 5.081,
+"depth": 2,
+"rule": "viaAmount",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "These reactions \u2293 in taxon (prokaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2)] \u2192\u2212 process(cell death [GO:0008219])",
+"score": 5.081,
+"path_min": 5.081,
+"depth": 2,
+"rule": "viaAmount",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "ATP synthase \u2293 located in (mitochondrion) [GO:0045259&RO:0001025=(GO:0005739)] \u2192\u2212 process(cell death [GO:0008219])",
+"score": 5.081,
+"path_min": 5.081,
+"depth": 2,
+"rule": "viaAmount",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "ATP \u2293 part of (red blood cells) [CHEBI:15422&BFO:0000050=(CL:0000232)] \u2192\u2212 process(cell death [GO:0008219])",
+"score": 5.081,
+"path_min": 5.081,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
+},
+{
 "fact": "broken down [GO:0006007] \u2192\u2212 process(cell death [GO:0008219])",
 "score": 5.081,
 "path_min": 5.081,
 "depth": 1,
 "rule": "viaAmount",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": [
+"feedback"
+]
 },
 {
 "fact": "glycolytic process [GO:0006096] \u2192\u2212 process(cell death [GO:0008219])",
@@ -3503,7 +5738,8 @@
 "path_min": 5.081,
 "depth": 1,
 "rule": "viaAmount",
-"hub_survivor": false
+"hub_survivor": false,
+"flags": []
 },
 {
 "fact": "a process [GO:0006119] \u2192\u2212 process(cell death [GO:0008219])",
@@ -3511,7 +5747,8 @@
 "path_min": 5.081,
 "depth": 1,
 "rule": "viaAmount",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "this reaction [GO:0009060] \u2192\u2212 process(cell death [GO:0008219])",
@@ -3519,7 +5756,8 @@
 "path_min": 5.081,
 "depth": 1,
 "rule": "viaAmount",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "this transfer [GO:0022904] \u2192\u2212 process(cell death [GO:0008219])",
@@ -3527,7 +5765,8 @@
 "path_min": 5.081,
 "depth": 1,
 "rule": "viaAmount",
-"hub_survivor": false
+"hub_survivor": false,
+"flags": []
 },
 {
 "fact": "sarcolemma [GO:0042383] \u2192\u2212 process(cell death [GO:0008219])",
@@ -3535,7 +5774,8 @@
 "path_min": 2.282,
 "depth": 1,
 "rule": "isaInheritEffect",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "ATP synthase [GO:0045259] \u2192\u2212 process(cell death [GO:0008219])",
@@ -3543,7 +5783,8 @@
 "path_min": 5.081,
 "depth": 1,
 "rule": "viaAmount",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "reabsorption [GO:0070293] \u2192+ process(cell death [GO:0008219])",
@@ -3551,7 +5792,8 @@
 "path_min": 5.081,
 "depth": 1,
 "rule": "viaAmount",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "aorta [UBERON:0000947] \u2192\u2212 process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])",
@@ -3559,7 +5801,8 @@
 "path_min": 2.657,
 "depth": 3,
 "rule": "viaAmount",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "aorta [UBERON:0000947] \u2192\u2212 amount(carbon dioxide [CHEBI:16526])",
@@ -3567,7 +5810,8 @@
 "path_min": 2.657,
 "depth": 2,
 "rule": "isaInheritEffect",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "aorta [UBERON:0000947] \u2192+ amount(oxygen [CHEBI:15379])",
@@ -3575,7 +5819,8 @@
 "path_min": 2.657,
 "depth": 2,
 "rule": "isaInheritEffect",
-"hub_survivor": false
+"hub_survivor": false,
+"flags": []
 },
 {
 "fact": "aorta [UBERON:0000947] \u2192+ process(a process [GO:0006119])",
@@ -3583,7 +5828,8 @@
 "path_min": 2.657,
 "depth": 2,
 "rule": "isaInheritEffect",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "aorta [UBERON:0000947] \u2192+ process(this reaction [GO:0009060])",
@@ -3591,7 +5837,8 @@
 "path_min": 2.657,
 "depth": 2,
 "rule": "isaInheritEffect",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "aorta [UBERON:0000947] \u2192+ process(this transfer [GO:0022904])",
@@ -3599,7 +5846,8 @@
 "path_min": 2.657,
 "depth": 2,
 "rule": "isaInheritEffect",
-"hub_survivor": false
+"hub_survivor": false,
+"flags": []
 },
 {
 "fact": "aorta [UBERON:0000947] connected to inferior vena cava [UBERON:0001072]",
@@ -3642,6 +5890,14 @@
 "hub_survivor": true
 },
 {
+"fact": "Telomerase \u2293 part of (adult somatic cells) \u2293 existence overlaps (adult) [GO:0005697&BFO:0000050=(CL:0002371)&RO:0002490=(UBERON:0000113)] has part pyrimidines [CHEBI:39447]",
+"score": 5.036,
+"path_min": 5.036,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
 "fact": "transfer RNA [CHEBI:17843] has part pyrimidines [CHEBI:39447]",
 "score": 5.036,
 "path_min": 5.036,
@@ -3656,6 +5912,22 @@
 "depth": 2,
 "rule": "isaGeneralise",
 "hub_survivor": false
+},
+{
+"fact": "GO:0005697&BFO:0000050=(CL:0002371) [GO:0005697&BFO:0000050=(CL:0002371)] has part pyrimidines [CHEBI:39447]",
+"score": 5.036,
+"path_min": 5.036,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "telomerase \u2293 in taxon (human cells) [GO:0005697&RO:0002162=(NCBITaxon:9606)] has part pyrimidines [CHEBI:39447]",
+"score": 5.036,
+"path_min": 5.036,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
 },
 {
 "fact": "telomerase [GO:0005697] has part pyrimidines [CHEBI:39447]",
@@ -3730,6 +6002,30 @@
 "hub_survivor": true
 },
 {
+"fact": "photosynthesis \u2293 occurs in (chloroplast) [GO:0015979&BFO:0000066=(GO:0009507)] has part that occurs in thylakoid membrane [GO:0042651]",
+"score": 5.017,
+"path_min": 5.017,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "photosynthesis \u2293 in taxon (NCBITaxon:2759) [GO:0015979&RO:0002162=(NCBITaxon:2759)] has part that occurs in thylakoid membrane [GO:0042651]",
+"score": 5.017,
+"path_min": 5.017,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "photosynthesizing \u2293 in taxon (plants) [GO:0015979&RO:0002162=(NCBITaxon:33090)] has part that occurs in thylakoid membrane [GO:0042651]",
+"score": 5.017,
+"path_min": 5.017,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
 "fact": "chlorophyll a [CHEBI:18230] located in thylakoid membrane [GO:0042651]",
 "score": 5.017,
 "path_min": 5.017,
@@ -3739,6 +6035,14 @@
 },
 {
 "fact": "chlorophyll b [CHEBI:27888] located in thylakoid membrane [GO:0042651]",
+"score": 5.017,
+"path_min": 5.017,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "ATP synthase \u2293 located in (mitochondrion) [GO:0045259&RO:0001025=(GO:0005739)] located in thylakoid membrane [GO:0042651]",
 "score": 5.017,
 "path_min": 5.017,
 "depth": 1,
@@ -3759,7 +6063,8 @@
 "path_min": 5.01,
 "depth": 1,
 "rule": "viaAmount",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "ligand-gated ion channel activity [GO:0015276] \u2192+ process(membrane depolarization [GO:0051899])",
@@ -3767,7 +6072,10 @@
 "path_min": 5.01,
 "depth": 1,
 "rule": "viaAmount",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": [
+"feedback"
+]
 },
 {
 "fact": "stomach [UBERON:0000945] has part structure that is capable of synthesize proteins [GO:0006412]",
@@ -3791,6 +6099,38 @@
 "path_min": 0.002,
 "depth": 3,
 "rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "meiosis \u2293 in taxon (animals) [GO:0051321&RO:0002162=(NCBITaxon:33208)] happens during mitotic phase [GO:0000087]",
+"score": 5.01,
+"path_min": 5.01,
+"depth": 2,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "translation \u2293 in taxon (NCBITaxon:2759) [GO:0006412&RO:0002162=(NCBITaxon:2759)] has input nucleic acids [CHEBI:33696]",
+"score": 5.01,
+"path_min": 5.01,
+"depth": 2,
+"rule": "isaGeneralise",
+"hub_survivor": true
+},
+{
+"fact": "translation \u2293 in taxon (NCBITaxon:2759) [GO:0006412&RO:0002162=(NCBITaxon:2759)] has input RNA [CHEBI:33697]",
+"score": 5.01,
+"path_min": 5.01,
+"depth": 2,
+"rule": "isaGeneralise",
+"hub_survivor": false
+},
+{
+"fact": "translation \u2293 in taxon (NCBITaxon:2759) [GO:0006412&RO:0002162=(NCBITaxon:2759)] has input polymer [CHEBI:60027]",
+"score": 5.01,
+"path_min": 5.01,
+"depth": 2,
+"rule": "isaGeneralise",
 "hub_survivor": true
 },
 {
@@ -3818,7 +6158,63 @@
 "hub_survivor": true
 },
 {
+"fact": "meiosis \u2293 in taxon (animals) [GO:0051321&RO:0002162=(NCBITaxon:33208)] is_a arise from [GO:0051301]",
+"score": 5.01,
+"path_min": 5.01,
+"depth": 1,
+"rule": "relTrans",
+"hub_survivor": false
+},
+{
 "fact": "meiotic cell cycle [GO:0051321] happens during mitotic phase [GO:0000087]",
+"score": 5.01,
+"path_min": 5.01,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "ribosome \u2293 in taxon (prokaryote) [GO:0005840&RO:0002162=(NCBITaxon:2)] capable of synthesize proteins [GO:0006412]",
+"score": 5.01,
+"path_min": 5.01,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "ribosome \u2293 in taxon (NCBITaxon:2759) [GO:0005840&RO:0002162=(NCBITaxon:2759)] capable of synthesize proteins [GO:0006412]",
+"score": 5.01,
+"path_min": 5.01,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "translation \u2293 in taxon (NCBITaxon:2759) [GO:0006412&RO:0002162=(NCBITaxon:2759)] has input transfer RNA [CHEBI:17843]",
+"score": 5.01,
+"path_min": 5.01,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "translation \u2293 in taxon (NCBITaxon:2759) [GO:0006412&RO:0002162=(NCBITaxon:2759)] has input ribosomal RNA [CHEBI:18111]",
+"score": 5.01,
+"path_min": 5.01,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "translation \u2293 in taxon (NCBITaxon:2759) [GO:0006412&RO:0002162=(NCBITaxon:2759)] has input messenger RNA [CHEBI:33699]",
+"score": 5.01,
+"path_min": 5.01,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "translation \u2293 in taxon (NCBITaxon:2759) [GO:0006412&RO:0002162=(NCBITaxon:2759)] has input ribosomes [GO:0005840]",
 "score": 5.01,
 "path_min": 5.01,
 "depth": 1,
@@ -3832,6 +6228,38 @@
 "depth": 1,
 "rule": "isaGeneralise",
 "hub_survivor": false
+},
+{
+"fact": "translation \u2293 in taxon (NCBITaxon:2759) [GO:0006412&RO:0002162=(NCBITaxon:2759)] has output polypeptide [CHEBI:15841]",
+"score": 5.01,
+"path_min": 5.01,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "translation \u2293 in taxon (NCBITaxon:2759) [GO:0006412&RO:0002162=(NCBITaxon:2759)] has output proteins [CHEBI:36080]",
+"score": 5.01,
+"path_min": 5.01,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "meiosis \u2293 in taxon (animals) [GO:0051321&RO:0002162=(NCBITaxon:33208)] has output gametes [CL:0000300]",
+"score": 5.01,
+"path_min": 5.01,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "meiosis \u2293 in taxon (animals) [GO:0051321&RO:0002162=(NCBITaxon:33208)] has output haploid cell [CL:0000413]",
+"score": 5.01,
+"path_min": 5.01,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
 },
 {
 "fact": "ribosomal RNA [CHEBI:18111] part of structure that is capable of synthesize proteins [GO:0006412]",
@@ -3882,12 +6310,49 @@
 "hub_survivor": true
 },
 {
+"fact": "contract \u2293 occurs in (atria) \u2293 occurs in (cardiac muscle cells) [GO:0060048&BFO:0000066=(UBERON:0002081)&BFO:0000066=(CL:0000746)] \u2192+ process(blood flow [GO:0008015])",
+"score": 4.949,
+"path_min": 4.949,
+"depth": 2,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "contract \u2293 occurs in (atria) [GO:0060048&BFO:0000066=(UBERON:0002081)] \u2192+ process(blood flow [GO:0008015])",
+"score": 4.949,
+"path_min": 4.949,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "contract \u2293 occurs in (ventricles) [GO:0060048&BFO:0000066=(UBERON:0002082)] \u2192+ process(blood flow [GO:0008015])",
+"score": 4.949,
+"path_min": 4.949,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "meiosis \u2293 in taxon (animals) [GO:0051321&RO:0002162=(NCBITaxon:33208)] \u2192+ process(growth [GO:0040007])",
+"score": 4.914,
+"path_min": 4.914,
+"depth": 2,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
+},
+{
 "fact": "testosterone [CHEBI:17347] \u2192+ process(growth [GO:0040007])",
 "score": 4.914,
 "path_min": 4.914,
 "depth": 1,
 "rule": "isaInheritEffect",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "binary fission \u2293 in taxon (prokaryote) [GO:0043093&RO:0002162=(NCBITaxon:2)] \u2192+ process(growth [GO:0040007])",
@@ -3895,7 +6360,17 @@
 "path_min": 4.914,
 "depth": 1,
 "rule": "isaInheritEffect",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "cell divisions \u2293 in taxon (NCBITaxon:9606) [GO:0051301&RO:0002162=(NCBITaxon:9606)] \u2192+ process(growth [GO:0040007])",
+"score": 4.914,
+"path_min": 4.914,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "meiotic cell cycle [GO:0051321] \u2192+ process(growth [GO:0040007])",
@@ -3903,7 +6378,16 @@
 "path_min": 4.914,
 "depth": 1,
 "rule": "isaInheritEffect",
-"hub_survivor": false
+"hub_survivor": false,
+"flags": []
+},
+{
+"fact": "nuclear membrane \u2293 in taxon (NCBITaxon:2759) [GO:0005635&RO:0002162=(NCBITaxon:2759)] has part pores [GO:0005643]",
+"score": 4.912,
+"path_min": 4.912,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
 },
 {
 "fact": "flagellum [GO:0031514] overlaps mitotic spindle [GO:0072686]",
@@ -3954,6 +6438,22 @@
 "hub_survivor": true
 },
 {
+"fact": "ribosome \u2293 in taxon (prokaryote) [GO:0005840&RO:0002162=(NCBITaxon:2)] has part amino acids [CHEBI:33709]",
+"score": 4.876,
+"path_min": 4.876,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "ribosome \u2293 in taxon (NCBITaxon:2759) [GO:0005840&RO:0002162=(NCBITaxon:2759)] has part amino acids [CHEBI:33709]",
+"score": 4.876,
+"path_min": 4.876,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
 "fact": "neuronal cell body [GO:0043025] has part amino acids [CHEBI:33709]",
 "score": 4.876,
 "path_min": 4.05,
@@ -3968,6 +6468,14 @@
 "depth": 1,
 "rule": "relTrans",
 "hub_survivor": false
+},
+{
+"fact": "alternative mRNA splicing, via spliceosome \u2293 in taxon (NCBITaxon:2759) [GO:0000380&RO:0002162=(NCBITaxon:2759)] is_a post-transcriptional regulation of gene expression [GO:0010608]",
+"score": 4.875,
+"path_min": 4.875,
+"depth": 1,
+"rule": "relTrans",
+"hub_survivor": true
 },
 {
 "fact": "frontal lobe [UBERON:0016525] has part structure that is capable of olfaction [GO:0007608]",
@@ -3994,12 +6502,37 @@
 "hub_survivor": true
 },
 {
+"fact": "import into cell \u2293 occurs in (CL:0000000) \u2293 in taxon (NCBITaxon:33090) [GO:0098657&BFO:0000066=(CL:0000000)&RO:0002162=(NCBITaxon:33090)] is_a import into cell [GO:0098657]",
+"score": 4.854,
+"path_min": 4.854,
+"depth": 1,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "import into cell \u2293 occurs in (cell) \u2293 surrounded by (hypotonic solution) [GO:0098657&BFO:0000066=(CL:0000000)&RO:0002219=(PATO:0001656)] is_a import into cell [GO:0098657]",
+"score": 4.854,
+"path_min": 4.854,
+"depth": 1,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "water leaves the cell \u2293 occurs in (cell) \u2293 surrounded by (hypertonic solution) [GO:0140352&BFO:0000066=(CL:0000000)&RO:0002219=(PATO:0001657)] is_a water leaves the cell [GO:0140352]",
+"score": 4.854,
+"path_min": 4.854,
+"depth": 1,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
 "fact": "Keratin [GO:0045095] \u2192+ process(organelle localization [GO:0051640])",
 "score": 4.843,
 "path_min": 4.843,
 "depth": 1,
 "rule": "isaInheritEffect",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "stomach [UBERON:0000945] has part microtubule [GO:0005874]",
@@ -4026,11 +6559,27 @@
 "hub_survivor": true
 },
 {
+"fact": "centrosome \u2293 in taxon (NCBITaxon:33208) [GO:0005813&RO:0002162=(NCBITaxon:33208)] has part microtubule [GO:0005874]",
+"score": 4.817,
+"path_min": 4.817,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
 "fact": "centrosome [GO:0005813] has part microtubule [GO:0005874]",
 "score": 4.817,
 "path_min": 4.817,
 "depth": 1,
 "rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "centriole \u2293 in taxon (animal cell) [GO:0005814&RO:0002162=(NCBITaxon:33208)] has part microtubule [GO:0005874]",
+"score": 4.817,
+"path_min": 4.817,
+"depth": 1,
+"rule": "isaInherit",
 "hub_survivor": true
 },
 {
@@ -4258,6 +6807,14 @@
 "hub_survivor": false
 },
 {
+"fact": "plant cell wall \u2293 in taxon (NCBITaxon:33090) [GO:0009505&RO:0002162=(NCBITaxon:33090)] has part polysaccharide [CHEBI:18154]",
+"score": 4.798,
+"path_min": 4.798,
+"depth": 1,
+"rule": "isaGeneralise",
+"hub_survivor": true
+},
+{
 "fact": "plant cell wall [GO:0009505] has part polysaccharide [CHEBI:18154]",
 "score": 4.798,
 "path_min": 4.798,
@@ -4330,6 +6887,22 @@
 "hub_survivor": true
 },
 {
+"fact": "Telomerase \u2293 part of (adult somatic cells) \u2293 existence overlaps (adult) [GO:0005697&BFO:0000050=(CL:0002371)&RO:0002490=(UBERON:0000113)] has part purines [CHEBI:26401]",
+"score": 4.681,
+"path_min": 4.681,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "ATP \u2293 part of (red blood cells) [CHEBI:15422&BFO:0000050=(CL:0000232)] has part purines [CHEBI:26401]",
+"score": 4.681,
+"path_min": 4.681,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
 "fact": "ATP [CHEBI:15422] has part purines [CHEBI:26401]",
 "score": 4.681,
 "path_min": 4.681,
@@ -4352,6 +6925,22 @@
 "depth": 2,
 "rule": "isaGeneralise",
 "hub_survivor": false
+},
+{
+"fact": "GO:0005697&BFO:0000050=(CL:0002371) [GO:0005697&BFO:0000050=(CL:0002371)] has part purines [CHEBI:26401]",
+"score": 4.681,
+"path_min": 4.681,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "telomerase \u2293 in taxon (human cells) [GO:0005697&RO:0002162=(NCBITaxon:9606)] has part purines [CHEBI:26401]",
+"score": 4.681,
+"path_min": 4.681,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
 },
 {
 "fact": "telomerase [GO:0005697] has part purines [CHEBI:26401]",
@@ -4482,6 +7071,30 @@
 "hub_survivor": true
 },
 {
+"fact": "photosynthesis \u2293 occurs in (chloroplast) [GO:0015979&BFO:0000066=(GO:0009507)] has part that occurs in chloroplast [GO:0009507]",
+"score": 4.575,
+"path_min": 4.575,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": false
+},
+{
+"fact": "photosynthesis \u2293 in taxon (NCBITaxon:2759) [GO:0015979&RO:0002162=(NCBITaxon:2759)] has part that occurs in chloroplast [GO:0009507]",
+"score": 4.575,
+"path_min": 4.575,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": false
+},
+{
+"fact": "photosynthesizing \u2293 in taxon (plants) [GO:0015979&RO:0002162=(NCBITaxon:33090)] has part that occurs in chloroplast [GO:0009507]",
+"score": 4.575,
+"path_min": 4.575,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": false
+},
+{
 "fact": "Calvin cycle [GO:0019253] has part that occurs in chloroplast [GO:0009507]",
 "score": 4.575,
 "path_min": 4.575,
@@ -4495,6 +7108,22 @@
 "path_min": 4.575,
 "depth": 1,
 "rule": "isaGeneralise",
+"hub_survivor": false
+},
+{
+"fact": "photosynthesis \u2293 occurs in (chloroplast) [GO:0015979&BFO:0000066=(GO:0009507)] occurs in chloroplast [GO:0009507]",
+"score": 4.575,
+"path_min": 4.575,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "photosynthesizing \u2293 in taxon (plants) [GO:0015979&RO:0002162=(NCBITaxon:33090)] occurs in chloroplast [GO:0009507]",
+"score": 4.575,
+"path_min": 4.575,
+"depth": 1,
+"rule": "isaInherit",
 "hub_survivor": false
 },
 {
@@ -4567,7 +7196,8 @@
 "path_min": 0.322,
 "depth": 1,
 "rule": "isaInheritEffect",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "salivary glands [UBERON:0001044] \u2192+ process(homeostatic process [GO:0042592])",
@@ -4575,7 +7205,8 @@
 "path_min": 0.322,
 "depth": 1,
 "rule": "isaInheritEffect",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "gallbladder [UBERON:0002110] \u2192+ process(homeostatic process [GO:0042592])",
@@ -4583,7 +7214,8 @@
 "path_min": 0.322,
 "depth": 1,
 "rule": "isaInheritEffect",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "lungs [UBERON:0002048] \u2192\u2212 process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])",
@@ -4591,7 +7223,8 @@
 "path_min": 4.537,
 "depth": 2,
 "rule": "viaAmount",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "lungs [UBERON:0002048] \u2192+ process(a process [GO:0006119])",
@@ -4599,7 +7232,8 @@
 "path_min": 4.537,
 "depth": 1,
 "rule": "viaAmount",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "lungs [UBERON:0002048] \u2192+ process(this reaction [GO:0009060])",
@@ -4607,7 +7241,8 @@
 "path_min": 4.537,
 "depth": 1,
 "rule": "viaAmount",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "lungs [UBERON:0002048] \u2192+ process(this transfer [GO:0022904])",
@@ -4615,7 +7250,8 @@
 "path_min": 4.537,
 "depth": 1,
 "rule": "viaAmount",
-"hub_survivor": false
+"hub_survivor": false,
+"flags": []
 },
 {
 "fact": "Gas exchange [GO:0007585] occurs in lungs [UBERON:0002048]",
@@ -4666,7 +7302,31 @@
 "hub_survivor": true
 },
 {
+"fact": "cell wall \u2293 in taxon (NCBITaxon:2) [GO:0005618&RO:0002162=(NCBITaxon:2)] has part polysaccharide [CHEBI:18154]",
+"score": 4.506,
+"path_min": 4.506,
+"depth": 2,
+"rule": "isaGeneralise",
+"hub_survivor": true
+},
+{
 "fact": "cell wall \u2293 in taxon (NCBITaxon:2) [GO:0005618&RO:0002162=(NCBITaxon:2)] has part carbon atoms [CHEBI:27594]",
+"score": 4.506,
+"path_min": 3.639,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "cell walls \u2293 in taxon (plant cells) [GO:0005618&RO:0002162=(NCBITaxon:33090)] has part polysaccharide [CHEBI:18154]",
+"score": 4.506,
+"path_min": 4.506,
+"depth": 2,
+"rule": "isaGeneralise",
+"hub_survivor": true
+},
+{
+"fact": "cell walls \u2293 in taxon (plant cells) [GO:0005618&RO:0002162=(NCBITaxon:33090)] has part carbon atoms [CHEBI:27594]",
 "score": 4.506,
 "path_min": 3.639,
 "depth": 2,
@@ -4690,11 +7350,79 @@
 "hub_survivor": true
 },
 {
+"fact": "cell walls \u2293 in taxon (plant cells) [GO:0005618&RO:0002162=(NCBITaxon:33090)] overlaps food [CHEBI:33290]",
+"score": 4.506,
+"path_min": 3.639,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
 "fact": "cell wall [GO:0005618] overlaps food [CHEBI:33290]",
 "score": 4.506,
 "path_min": 3.639,
 "depth": 2,
 "rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "cell wall \u2293 in taxon (NCBITaxon:2) [GO:0005618&RO:0002162=(NCBITaxon:2)] \u2192\u2212 process(cell lysis [GO:0019835])",
+"score": 4.506,
+"path_min": 4.506,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "cell walls \u2293 in taxon (plant cells) [GO:0005618&RO:0002162=(NCBITaxon:33090)] \u2192\u2212 process(cell lysis [GO:0019835])",
+"score": 4.506,
+"path_min": 4.506,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "cell wall \u2293 in taxon (NCBITaxon:2) [GO:0005618&RO:0002162=(NCBITaxon:2)] \u2192+ process(maintain its shape [GO:0008360])",
+"score": 4.506,
+"path_min": 4.506,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "cell walls \u2293 in taxon (plant cells) [GO:0005618&RO:0002162=(NCBITaxon:33090)] \u2192+ process(maintain its shape [GO:0008360])",
+"score": 4.506,
+"path_min": 4.506,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "cell wall \u2293 in taxon (NCBITaxon:2) [GO:0005618&RO:0002162=(NCBITaxon:2)] has part cellulose [CHEBI:18246]",
+"score": 4.506,
+"path_min": 4.506,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "cell walls \u2293 in taxon (plant cells) [GO:0005618&RO:0002162=(NCBITaxon:33090)] has part cellulose [CHEBI:18246]",
+"score": 4.506,
+"path_min": 4.506,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "cell walls \u2293 in taxon (plant cells) [GO:0005618&RO:0002162=(NCBITaxon:33090)] has part peptidoglycan [CHEBI:8005]",
+"score": 4.506,
+"path_min": 4.506,
+"depth": 1,
+"rule": "isaInherit",
 "hub_survivor": true
 },
 {
@@ -4791,7 +7519,8 @@
 "path_min": 4.332,
 "depth": 1,
 "rule": "viaAmount",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "ion channel activity [GO:0005216] \u2192+ process(membrane depolarization [GO:0051899])",
@@ -4799,6 +7528,33 @@
 "path_min": 4.332,
 "depth": 1,
 "rule": "viaAmount",
+"hub_survivor": true,
+"flags": [
+"feedback"
+]
+},
+{
+"fact": "photosynthesis \u2293 occurs in (chloroplast) [GO:0015979&BFO:0000066=(GO:0009507)] has part that occurs in thylakoids [GO:0009579]",
+"score": 4.288,
+"path_min": 4.288,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "photosynthesis \u2293 in taxon (NCBITaxon:2759) [GO:0015979&RO:0002162=(NCBITaxon:2759)] has part that occurs in thylakoids [GO:0009579]",
+"score": 4.288,
+"path_min": 4.288,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "photosynthesizing \u2293 in taxon (plants) [GO:0015979&RO:0002162=(NCBITaxon:33090)] has part that occurs in thylakoids [GO:0009579]",
+"score": 4.288,
+"path_min": 4.288,
+"depth": 2,
+"rule": "relChain",
 "hub_survivor": true
 },
 {
@@ -4826,11 +7582,27 @@
 "hub_survivor": true
 },
 {
+"fact": "axon \u2293 located in (spinal cord) [GO:0030424&RO:0001025=(UBERON:0002240)] has part node of Ranvier [GO:0033268]",
+"score": 4.219,
+"path_min": 4.219,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
 "fact": "ganglion [UBERON:0000045] has part axon [GO:0030424]",
 "score": 4.219,
 "path_min": 1.392,
 "depth": 1,
 "rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "axon \u2293 located in (spinal cord) [GO:0030424&RO:0001025=(UBERON:0002240)] surrounded by myelin sheath [GO:0043209]",
+"score": 4.219,
+"path_min": 4.219,
+"depth": 1,
+"rule": "isaInherit",
 "hub_survivor": true
 },
 {
@@ -4874,6 +7646,22 @@
 "hub_survivor": true
 },
 {
+"fact": "gamete \u2293 in taxon (animals) [CL:0000300&RO:0002162=(NCBITaxon:33208)] participates in sexual reproduction [GO:0019953]",
+"score": 4.213,
+"path_min": 4.213,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "haploid cell \u2293 in taxon (animals) [CL:0000413&RO:0002162=(NCBITaxon:33208)] participates in sexual reproduction [GO:0019953]",
+"score": 4.213,
+"path_min": 4.213,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
 "fact": "parathyroid gland [UBERON:0001132] located in neck [UBERON:0000974]",
 "score": 4.101,
 "path_min": 4.101,
@@ -4906,6 +7694,22 @@
 "hub_survivor": true
 },
 {
+"fact": "cytokinesis \u2293 in taxon (plants) [GO:0000910&RO:0002162=(NCBITaxon:3193)] part of cell cycle [GO:0007049]",
+"score": 4.056,
+"path_min": 4.056,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "cytokinesis \u2293 in taxon (animal cells) [GO:0000910&RO:0002162=(NCBITaxon:33208)] part of cell cycle [GO:0007049]",
+"score": 4.056,
+"path_min": 4.056,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
 "fact": "DNA replication [GO:0006260] part of cell cycle [GO:0007049]",
 "score": 4.056,
 "path_min": 4.056,
@@ -4930,11 +7734,35 @@
 "hub_survivor": true
 },
 {
+"fact": "meiosis \u2293 in taxon (animals) [GO:0051321&RO:0002162=(NCBITaxon:33208)] part of cell cycle [GO:0007049]",
+"score": 4.056,
+"path_min": 4.056,
+"depth": 2,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
 "fact": "cell cycle [GO:0007049] has part growth [GO:0016049]",
 "score": 4.056,
 "path_min": 4.056,
 "depth": 2,
 "rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "cytokinesis \u2293 in taxon (plants) [GO:0000910&RO:0002162=(NCBITaxon:3193)] overlaps cell cycle [GO:0007049]",
+"score": 4.056,
+"path_min": 4.056,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "cytokinesis \u2293 in taxon (animal cells) [GO:0000910&RO:0002162=(NCBITaxon:33208)] overlaps cell cycle [GO:0007049]",
+"score": 4.056,
+"path_min": 4.056,
+"depth": 2,
+"rule": "relChain",
 "hub_survivor": true
 },
 {
@@ -4963,6 +7791,14 @@
 },
 {
 "fact": "meiosis II [GO:0007135] overlaps cell cycle [GO:0007049]",
+"score": 4.056,
+"path_min": 4.056,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "interphase \u2293 in taxon (eukaryotes) [GO:0051325&RO:0002162=(NCBITaxon:2759)] overlaps cell cycle [GO:0007049]",
 "score": 4.056,
 "path_min": 4.056,
 "depth": 2,
@@ -5035,6 +7871,14 @@
 },
 {
 "fact": "binary fission \u2293 in taxon (prokaryote) [GO:0043093&RO:0002162=(NCBITaxon:2)] part of cell cycle [GO:0007049]",
+"score": 4.056,
+"path_min": 4.056,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "cell divisions \u2293 in taxon (NCBITaxon:9606) [GO:0051301&RO:0002162=(NCBITaxon:9606)] part of cell cycle [GO:0007049]",
 "score": 4.056,
 "path_min": 4.056,
 "depth": 1,
@@ -5266,6 +8110,14 @@
 "hub_survivor": false
 },
 {
+"fact": "These reactions \u2293 in taxon (prokaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2)] occurs in Mitochondria [GO:0005739]",
+"score": 4.05,
+"path_min": 4.05,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
 "fact": "cytochrome c oxidase [GO:0045277] occurs in Mitochondria [GO:0005739]",
 "score": 4.05,
 "path_min": 4.05,
@@ -5328,6 +8180,14 @@
 "depth": 2,
 "rule": "relTrans",
 "hub_survivor": false
+},
+{
+"fact": "nuclear membrane \u2293 in taxon (NCBITaxon:2759) [GO:0005635&RO:0002162=(NCBITaxon:2759)] has part fatty acid [CHEBI:35366]",
+"score": 4.028,
+"path_min": 3.412,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
 },
 {
 "fact": "sarcolemma [GO:0042383] has part fatty acid [CHEBI:35366]",
@@ -5679,7 +8539,8 @@
 "path_min": 1.761,
 "depth": 2,
 "rule": "viaAmount",
-"hub_survivor": false
+"hub_survivor": false,
+"flags": []
 },
 {
 "fact": "macrophages [CL:0000235] capable of secretion [GO:0046903]",
@@ -5710,6 +8571,38 @@
 "score": 3.698,
 "path_min": 3.698,
 "depth": 1,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "peripheral nervous system \u2293 in taxon (Vertebrata) [UBERON:0000010&RO:0002162=(NCBITaxon:7742)] overlaps autonomic nervous system [UBERON:0002410]",
+"score": 3.674,
+"path_min": 3.674,
+"depth": 3,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "peripheral nervous system \u2293 in taxon (Vertebrata) [UBERON:0000010&RO:0002162=(NCBITaxon:7742)] has part structure that is capable of response to stress [GO:0006950]",
+"score": 3.674,
+"path_min": 3.674,
+"depth": 3,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "peripheral nervous system \u2293 in taxon (Vertebrata) [UBERON:0000010&RO:0002162=(NCBITaxon:7742)] has part sympathetic nervous system [UBERON:0000013]",
+"score": 3.674,
+"path_min": 3.674,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "peripheral nervous system \u2293 in taxon (Vertebrata) [UBERON:0000010&RO:0002162=(NCBITaxon:7742)] overlaps peripheral nervous system [UBERON:0000010]",
+"score": 3.674,
+"path_min": 3.674,
+"depth": 2,
 "rule": "relChain",
 "hub_survivor": true
 },
@@ -5754,6 +8647,14 @@
 "hub_survivor": true
 },
 {
+"fact": "peripheral nervous system \u2293 in taxon (Vertebrata) [UBERON:0000010&RO:0002162=(NCBITaxon:7742)] has part autonomic nervous system [UBERON:0002410]",
+"score": 3.674,
+"path_min": 3.674,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
 "fact": "peripheral nervous system [UBERON:0000010] has part sympathetic nervous system [UBERON:0000013]",
 "score": 3.674,
 "path_min": 3.674,
@@ -5775,6 +8676,31 @@
 "path_min": 3.674,
 "depth": 1,
 "rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "extracellular matrix \u2293 in taxon (NCBITaxon:33208) [GO:0031012&RO:0002162=(NCBITaxon:33208)] overlaps connective tissue [UBERON:0002384]",
+"score": 3.669,
+"path_min": 3.669,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "extracellular matrix \u2293 in taxon (NCBITaxon:33208) [GO:0031012&RO:0002162=(NCBITaxon:33208)] \u2192+ process(attach to surfaces [GO:0007155])",
+"score": 3.669,
+"path_min": 3.669,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "extracellular matrix \u2293 in taxon (NCBITaxon:33208) [GO:0031012&RO:0002162=(NCBITaxon:33208)] has part collagen [GO:0005581]",
+"score": 3.669,
+"path_min": 3.669,
+"depth": 1,
+"rule": "isaInherit",
 "hub_survivor": true
 },
 {
@@ -5806,6 +8732,14 @@
 "score": 3.639,
 "path_min": 0.002,
 "depth": 3,
+"rule": "relTrans",
+"hub_survivor": false
+},
+{
+"fact": "cell walls \u2293 in taxon (plant cells) [GO:0005618&RO:0002162=(NCBITaxon:33090)] has part sugars [CHEBI:16646]",
+"score": 3.639,
+"path_min": 3.639,
+"depth": 2,
 "rule": "relTrans",
 "hub_survivor": false
 },
@@ -5850,12 +8784,21 @@
 "hub_survivor": false
 },
 {
+"fact": "photosynthesis \u2293 in taxon (NCBITaxon:2759) [GO:0015979&RO:0002162=(NCBITaxon:2759)] has output sugars [CHEBI:16646]",
+"score": 3.639,
+"path_min": 3.639,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
 "fact": "veins [UBERON:0001638] \u2192\u2212 process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])",
 "score": 3.632,
 "path_min": 2.657,
 "depth": 2,
 "rule": "viaAmount",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "veins [UBERON:0001638] \u2192+ process(a process [GO:0006119])",
@@ -5863,7 +8806,8 @@
 "path_min": 2.657,
 "depth": 2,
 "rule": "viaAmount",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "veins [UBERON:0001638] \u2192+ process(this reaction [GO:0009060])",
@@ -5871,7 +8815,8 @@
 "path_min": 2.657,
 "depth": 2,
 "rule": "viaAmount",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "veins [UBERON:0001638] \u2192+ process(this transfer [GO:0022904])",
@@ -5879,7 +8824,8 @@
 "path_min": 2.657,
 "depth": 2,
 "rule": "viaAmount",
-"hub_survivor": false
+"hub_survivor": false,
+"flags": []
 },
 {
 "fact": "aorta [UBERON:0000947] connected to veins [UBERON:0001638]",
@@ -5919,7 +8865,8 @@
 "path_min": 2.657,
 "depth": 1,
 "rule": "isaInheritEffect",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "veins [UBERON:0001638] \u2192+ amount(oxygen [CHEBI:15379])",
@@ -5927,7 +8874,8 @@
 "path_min": 2.657,
 "depth": 1,
 "rule": "isaInheritEffect",
-"hub_survivor": false
+"hub_survivor": false,
+"flags": []
 },
 {
 "fact": "renal vein [UBERON:0001140] connected to veins [UBERON:0001638]",
@@ -5959,6 +8907,14 @@
 "path_min": 3.477,
 "depth": 1,
 "rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "Alcohol \u2293 part of (liver cells) [CHEBI:16236&BFO:0000050=(CL:0000182)] is_a alcohol [CHEBI:30879]",
+"score": 3.588,
+"path_min": 3.588,
+"depth": 1,
+"rule": "relTrans",
 "hub_survivor": true
 },
 {
@@ -6066,6 +9022,15 @@
 "hub_survivor": true
 },
 {
+"fact": "X inactivation \u2293 in taxon (cat \u2293 has modifier (tortoiseshell cat)) [GO:0009048&RO:0002162=(NCBITaxon:9685&RO:0002573=(BLN:tortoiseshell))] \u2192\u2212 process(gene expression [GO:0010467])",
+"score": 3.499,
+"path_min": 3.499,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
+},
+{
 "fact": "gene expression [GO:0010467] has output nucleic acids [CHEBI:33696]",
 "score": 3.499,
 "path_min": 3.499,
@@ -6087,7 +9052,8 @@
 "path_min": 2.657,
 "depth": 2,
 "rule": "viaAmount",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "arteries [UBERON:0001637] \u2192+ process(a process [GO:0006119])",
@@ -6095,7 +9061,8 @@
 "path_min": 2.657,
 "depth": 2,
 "rule": "viaAmount",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "arteries [UBERON:0001637] \u2192+ process(this reaction [GO:0009060])",
@@ -6103,7 +9070,8 @@
 "path_min": 2.657,
 "depth": 2,
 "rule": "viaAmount",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "arteries [UBERON:0001637] \u2192+ process(this transfer [GO:0022904])",
@@ -6111,7 +9079,8 @@
 "path_min": 2.657,
 "depth": 2,
 "rule": "viaAmount",
-"hub_survivor": false
+"hub_survivor": false,
+"flags": []
 },
 {
 "fact": "inferior vena cava [UBERON:0001072] connected to arteries [UBERON:0001637]",
@@ -6159,7 +9128,8 @@
 "path_min": 2.657,
 "depth": 1,
 "rule": "isaInheritEffect",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "arteries [UBERON:0001637] \u2192+ amount(oxygen [CHEBI:15379])",
@@ -6167,7 +9137,8 @@
 "path_min": 2.657,
 "depth": 1,
 "rule": "isaInheritEffect",
-"hub_survivor": false
+"hub_survivor": false,
+"flags": []
 },
 {
 "fact": "arteries [UBERON:0001637] connected to aorta [UBERON:0000947]",
@@ -6242,6 +9213,14 @@
 "hub_survivor": true
 },
 {
+"fact": "cells lining a blood vessel \u2293 located in (blood vessel) \u2293 in taxon (cellular organisms \u2293 has modifier (damaged)) [CL:0000115&RO:0001025=(UBERON:0001981)&RO:0002162=(NCBITaxon:131567&RO:0002573=(PATO:0001167))] is_a cells lining a blood vessel [CL:0000115]",
+"score": 3.421,
+"path_min": 3.421,
+"depth": 1,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
 "fact": "stomach [UBERON:0000945] has part phospholipid [CHEBI:16247]",
 "score": 3.412,
 "path_min": 0.002,
@@ -6279,7 +9258,8 @@
 "path_min": 1.704,
 "depth": 1,
 "rule": "isaInheritEffect",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "phospholipid [CHEBI:16247] \u2192+ process(absorbs nutrients [GO:0050892])",
@@ -6287,7 +9267,8 @@
 "path_min": 1.704,
 "depth": 1,
 "rule": "isaInheritEffect",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "prokaryotic cell [CL:0000520] has part phospholipid [CHEBI:16247]",
@@ -6296,6 +9277,14 @@
 "depth": 1,
 "rule": "relTrans",
 "hub_survivor": false
+},
+{
+"fact": "nuclear membrane \u2293 in taxon (NCBITaxon:2759) [GO:0005635&RO:0002162=(NCBITaxon:2759)] has part phospholipid [CHEBI:16247]",
+"score": 3.412,
+"path_min": 3.412,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
 },
 {
 "fact": "sarcolemma [GO:0042383] has part phospholipid [CHEBI:16247]",
@@ -6338,12 +9327,58 @@
 "hub_survivor": true
 },
 {
+"fact": "Animal respiratory systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0001004&RO:0002162=(NCBITaxon:33208)] \u2192\u2212 process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])",
+"score": 3.125,
+"path_min": 3.125,
+"depth": 2,
+"rule": "viaAmount",
+"hub_survivor": true,
+"flags": []
+},
+{
 "fact": "respiratory system [UBERON:0001004] \u2192\u2212 process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])",
 "score": 3.125,
 "path_min": 3.125,
 "depth": 2,
 "rule": "viaAmount",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "Animal respiratory systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0001004&RO:0002162=(NCBITaxon:33208)] \u2192+ process(a process [GO:0006119])",
+"score": 3.125,
+"path_min": 3.125,
+"depth": 2,
+"rule": "viaAmount",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "Animal respiratory systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0001004&RO:0002162=(NCBITaxon:33208)] \u2192+ process(this reaction [GO:0009060])",
+"score": 3.125,
+"path_min": 3.125,
+"depth": 2,
+"rule": "viaAmount",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "Animal respiratory systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0001004&RO:0002162=(NCBITaxon:33208)] \u2192+ process(this transfer [GO:0022904])",
+"score": 3.125,
+"path_min": 3.125,
+"depth": 2,
+"rule": "viaAmount",
+"hub_survivor": false,
+"flags": []
+},
+{
+"fact": "Animal respiratory systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0001004&RO:0002162=(NCBITaxon:33208)] \u2192+ amount(oxygen [CHEBI:15379])",
+"score": 3.125,
+"path_min": 3.125,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": false,
+"flags": []
 },
 {
 "fact": "respiratory system [UBERON:0001004] \u2192+ process(a process [GO:0006119])",
@@ -6351,7 +9386,8 @@
 "path_min": 3.125,
 "depth": 1,
 "rule": "viaAmount",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "respiratory system [UBERON:0001004] \u2192+ process(this reaction [GO:0009060])",
@@ -6359,7 +9395,8 @@
 "path_min": 3.125,
 "depth": 1,
 "rule": "viaAmount",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "respiratory system [UBERON:0001004] \u2192+ process(this transfer [GO:0022904])",
@@ -6367,7 +9404,8 @@
 "path_min": 3.125,
 "depth": 1,
 "rule": "viaAmount",
-"hub_survivor": false
+"hub_survivor": false,
+"flags": []
 },
 {
 "fact": "skeletal muscle fiber [CL:0008002] overlaps skeletal muscle [UBERON:0014892]",
@@ -6474,6 +9512,14 @@
 "hub_survivor": true
 },
 {
+"fact": "muscle cells [CL:0000187] has part structure that is capable of arise from [GO:0051301]",
+"score": 3.122,
+"path_min": 3.122,
+"depth": 1,
+"rule": "relChain",
+"hub_survivor": false
+},
+{
 "fact": "amygdala [UBERON:0001876] part of cerebral hemisphere [UBERON:0001869]",
 "score": 3.04,
 "path_min": 3.04,
@@ -6570,6 +9616,102 @@
 "hub_survivor": true
 },
 {
+"fact": "chromosome \u2293 in taxon (prokaryote) [GO:0005694&RO:0002162=(NCBITaxon:2)] has part phosphorus atom [CHEBI:28659]",
+"score": 2.995,
+"path_min": 2.995,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "chromosomes \u2293 in taxon (NCBITaxon:2759) [GO:0005694&RO:0002162=(NCBITaxon:2759)] has part phosphorus atom [CHEBI:28659]",
+"score": 2.995,
+"path_min": 2.995,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "chromosome \u2293 in taxon (prokaryote) [GO:0005694&RO:0002162=(NCBITaxon:2)] has part nitrogenous base [CHEBI:18282]",
+"score": 2.995,
+"path_min": 2.995,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "chromosome \u2293 in taxon (prokaryote) [GO:0005694&RO:0002162=(NCBITaxon:2)] has part 2-deoxy-D-ribose [CHEBI:28816]",
+"score": 2.995,
+"path_min": 2.995,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "chromosome \u2293 in taxon (prokaryote) [GO:0005694&RO:0002162=(NCBITaxon:2)] has part phosphate group [CHEBI:32958]",
+"score": 2.995,
+"path_min": 2.995,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "chromosome \u2293 in taxon (prokaryote) [GO:0005694&RO:0002162=(NCBITaxon:2)] has part nucleotides [CHEBI:36976]",
+"score": 2.995,
+"path_min": 2.995,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "chromosome \u2293 in taxon (prokaryote) [GO:0005694&RO:0002162=(NCBITaxon:2)] has part polymer [CHEBI:60027]",
+"score": 2.995,
+"path_min": 2.995,
+"depth": 2,
+"rule": "isaGeneralise",
+"hub_survivor": true
+},
+{
+"fact": "chromosomes \u2293 in taxon (NCBITaxon:2759) [GO:0005694&RO:0002162=(NCBITaxon:2759)] has part nitrogenous base [CHEBI:18282]",
+"score": 2.995,
+"path_min": 2.995,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "chromosomes \u2293 in taxon (NCBITaxon:2759) [GO:0005694&RO:0002162=(NCBITaxon:2759)] has part 2-deoxy-D-ribose [CHEBI:28816]",
+"score": 2.995,
+"path_min": 2.995,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "chromosomes \u2293 in taxon (NCBITaxon:2759) [GO:0005694&RO:0002162=(NCBITaxon:2759)] has part phosphate group [CHEBI:32958]",
+"score": 2.995,
+"path_min": 2.995,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "chromosomes \u2293 in taxon (NCBITaxon:2759) [GO:0005694&RO:0002162=(NCBITaxon:2759)] has part nucleotides [CHEBI:36976]",
+"score": 2.995,
+"path_min": 2.995,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "chromosomes \u2293 in taxon (NCBITaxon:2759) [GO:0005694&RO:0002162=(NCBITaxon:2759)] has part polymer [CHEBI:60027]",
+"score": 2.995,
+"path_min": 2.995,
+"depth": 2,
+"rule": "isaGeneralise",
+"hub_survivor": true
+},
+{
 "fact": "chromosome [GO:0005694] has part nitrogenous base [CHEBI:18282]",
 "score": 2.995,
 "path_min": 2.995,
@@ -6626,6 +9768,22 @@
 "hub_survivor": true
 },
 {
+"fact": "chromosome \u2293 in taxon (prokaryote) [GO:0005694&RO:0002162=(NCBITaxon:2)] overlaps chromosome [GO:0005694]",
+"score": 2.995,
+"path_min": 2.995,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "chromosomes \u2293 in taxon (NCBITaxon:2759) [GO:0005694&RO:0002162=(NCBITaxon:2759)] overlaps chromosome [GO:0005694]",
+"score": 2.995,
+"path_min": 2.995,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
 "fact": "neuronal cell body [GO:0043025] overlaps chromosome [GO:0005694]",
 "score": 2.995,
 "path_min": 2.163,
@@ -6639,6 +9797,54 @@
 "path_min": 1.392,
 "depth": 2,
 "rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "\u00acchromosome \u2293 in taxon (prokaryote) [GO:0005694&RO:0002162=(NCBITaxon:2)] surrounded by nuclear membrane [GO:0005635]",
+"score": 2.995,
+"path_min": 2.995,
+"depth": 1,
+"rule": "notRelSub",
+"hub_survivor": true
+},
+{
+"fact": "\u00acchromosomes \u2293 in taxon (NCBITaxon:2759) [GO:0005694&RO:0002162=(NCBITaxon:2759)] surrounded by nuclear membrane [GO:0005635]",
+"score": 2.995,
+"path_min": 2.995,
+"depth": 1,
+"rule": "notRelSub",
+"hub_survivor": true
+},
+{
+"fact": "chromosome \u2293 in taxon (prokaryote) [GO:0005694&RO:0002162=(NCBITaxon:2)] has part DNA [CHEBI:16991]",
+"score": 2.995,
+"path_min": 2.995,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "chromosome \u2293 in taxon (prokaryote) [GO:0005694&RO:0002162=(NCBITaxon:2)] has part chromatin [GO:0000785]",
+"score": 2.995,
+"path_min": 2.995,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "chromosomes \u2293 in taxon (NCBITaxon:2759) [GO:0005694&RO:0002162=(NCBITaxon:2759)] has part DNA [CHEBI:16991]",
+"score": 2.995,
+"path_min": 2.995,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "chromosomes \u2293 in taxon (NCBITaxon:2759) [GO:0005694&RO:0002162=(NCBITaxon:2759)] has part chromatin [GO:0000785]",
+"score": 2.995,
+"path_min": 2.995,
+"depth": 1,
+"rule": "isaInherit",
 "hub_survivor": true
 },
 {
@@ -6698,6 +9904,22 @@
 "hub_survivor": true
 },
 {
+"fact": "muscle organ [UBERON:0001630] has part structure that is capable of arise from [GO:0051301]",
+"score": 2.912,
+"path_min": 2.912,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": false
+},
+{
+"fact": "muscle organ [UBERON:0001630] has part microfilaments [GO:0005884]",
+"score": 2.912,
+"path_min": 2.912,
+"depth": 1,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
 "fact": "muscle organ [UBERON:0001630] has part myofilament [GO:0036379]",
 "score": 2.912,
 "path_min": 2.912,
@@ -6730,6 +9952,14 @@
 "hub_survivor": true
 },
 {
+"fact": "microvilli \u2293 in taxon (NCBITaxon:9606 \u2293 has modifier (celiac disease)) [GO:0005902&RO:0002162=(NCBITaxon:9606&RO:0002573=(MONDO:0005130))] part of structure that is capable of transmembrane transport [GO:0055085]",
+"score": 2.793,
+"path_min": 2.282,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
 "fact": "muscle tissue [UBERON:0002385] has part structure that is capable of transmembrane transport [GO:0055085]",
 "score": 2.793,
 "path_min": 0.002,
@@ -6743,7 +9973,8 @@
 "path_min": 2.282,
 "depth": 1,
 "rule": "isaInheritEffect",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "sarcolemma [GO:0042383] capable of transmembrane transport [GO:0055085]",
@@ -6847,7 +10078,8 @@
 "path_min": 2.657,
 "depth": 2,
 "rule": "viaAmount",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "renal vein [UBERON:0001140] connected to blood vessel [UBERON:0001981]",
@@ -6895,7 +10127,8 @@
 "path_min": 2.657,
 "depth": 1,
 "rule": "viaAmount",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "blood vessel [UBERON:0001981] \u2192+ process(this reaction [GO:0009060])",
@@ -6903,7 +10136,8 @@
 "path_min": 2.657,
 "depth": 1,
 "rule": "viaAmount",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "blood vessel [UBERON:0001981] \u2192+ process(this transfer [GO:0022904])",
@@ -6911,7 +10145,8 @@
 "path_min": 2.657,
 "depth": 1,
 "rule": "viaAmount",
-"hub_survivor": false
+"hub_survivor": false,
+"flags": []
 },
 {
 "fact": "capillary beds [UBERON:0013141] has part blood vessel [UBERON:0001981]",
@@ -6919,6 +10154,14 @@
 "path_min": 2.657,
 "depth": 1,
 "rule": "isaGeneralise",
+"hub_survivor": true
+},
+{
+"fact": "blood circulation \u2293 occurs in (skin) [GO:0008015&BFO:0000066=(UBERON:0002097)] occurs in blood vessel [UBERON:0001981]",
+"score": 2.657,
+"path_min": 2.657,
+"depth": 1,
+"rule": "isaInherit",
 "hub_survivor": true
 },
 {
@@ -7066,6 +10309,14 @@
 "hub_survivor": true
 },
 {
+"fact": "citric acid cycle \u2293 in taxon (NCBITaxon:2759) [GO:0006099&RO:0002162=(NCBITaxon:2759)] is_a anabolism [GO:0009058]",
+"score": 2.439,
+"path_min": 2.439,
+"depth": 1,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
 "fact": "stomach [UBERON:0000945] overlaps endomembrane system [GO:0012505]",
 "score": 2.433,
 "path_min": 0.002,
@@ -7090,11 +10341,27 @@
 "hub_survivor": true
 },
 {
+"fact": "microvilli \u2293 in taxon (NCBITaxon:9606 \u2293 has modifier (celiac disease)) [GO:0005902&RO:0002162=(NCBITaxon:9606&RO:0002573=(MONDO:0005130))] part of endomembrane system [GO:0012505]",
+"score": 2.433,
+"path_min": 2.282,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
 "fact": "endomembrane system [GO:0012505] has part fatty acid [CHEBI:35366]",
 "score": 2.433,
 "path_min": 2.433,
 "depth": 2,
 "rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "microvilli \u2293 in taxon (NCBITaxon:9606 \u2293 has modifier (celiac disease)) [GO:0005902&RO:0002162=(NCBITaxon:9606&RO:0002573=(MONDO:0005130))] overlaps endomembrane system [GO:0012505]",
+"score": 2.433,
+"path_min": 2.282,
+"depth": 2,
+"rule": "relChain",
 "hub_survivor": true
 },
 {
@@ -7242,6 +10509,22 @@
 "hub_survivor": true
 },
 {
+"fact": "plasma membrane \u2293 in taxon (NCBITaxon:33208) [GO:0005886&RO:0002162=(NCBITaxon:33208)] has part carbon atoms [CHEBI:27594]",
+"score": 2.282,
+"path_min": 2.282,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "plasma membrane \u2293 in taxon (NCBITaxon:33208) [GO:0005886&RO:0002162=(NCBITaxon:33208)] has part fatty acid [CHEBI:35366]",
+"score": 2.282,
+"path_min": 2.282,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
 "fact": "stomach [UBERON:0000945] has part plasma membrane [GO:0005886]",
 "score": 2.282,
 "path_min": 0.002,
@@ -7274,12 +10557,95 @@
 "hub_survivor": false
 },
 {
+"fact": "plasma membrane \u2293 in taxon (NCBITaxon:33208) [GO:0005886&RO:0002162=(NCBITaxon:33208)] overlaps food [CHEBI:33290]",
+"score": 2.282,
+"path_min": 2.282,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
 "fact": "small intestine [UBERON:0002108] overlaps plasma membrane [GO:0005886]",
 "score": 2.282,
 "path_min": 2.282,
 "depth": 2,
 "rule": "relChain",
 "hub_survivor": false
+},
+{
+"fact": "plasma membrane \u2293 in taxon (NCBITaxon:33208) [GO:0005886&RO:0002162=(NCBITaxon:33208)] part of structure that is capable of protein transport [GO:0015031]",
+"score": 2.282,
+"path_min": 2.282,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "plasma membrane \u2293 in taxon (NCBITaxon:33208) [GO:0005886&RO:0002162=(NCBITaxon:33208)] \u2192\u2212 process(cell death [GO:0008219])",
+"score": 2.282,
+"path_min": 2.282,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "plasma membrane \u2293 in taxon (NCBITaxon:33208) [GO:0005886&RO:0002162=(NCBITaxon:33208)] \u2192\u2212 process(transmembrane transport [GO:0055085])",
+"score": 2.282,
+"path_min": 2.282,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "plasma membrane \u2293 in taxon (NCBITaxon:33208) [GO:0005886&RO:0002162=(NCBITaxon:33208)] \u2192+ process(cell recognition [GO:0008037])",
+"score": 2.282,
+"path_min": 2.282,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "plasma membrane \u2293 in taxon (NCBITaxon:33208) [GO:0005886&RO:0002162=(NCBITaxon:33208)] part of endomembrane system [GO:0012505]",
+"score": 2.282,
+"path_min": 2.282,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "microvilli \u2293 in taxon (NCBITaxon:9606 \u2293 has modifier (celiac disease)) [GO:0005902&RO:0002162=(NCBITaxon:9606&RO:0002573=(MONDO:0005130))] part of plasma membrane [GO:0005886]",
+"score": 2.282,
+"path_min": 2.282,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "plasma membrane \u2293 in taxon (NCBITaxon:33208) [GO:0005886&RO:0002162=(NCBITaxon:33208)] has part phospholipid [CHEBI:16247]",
+"score": 2.282,
+"path_min": 2.282,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "plasma membrane \u2293 in taxon (NCBITaxon:33208) [GO:0005886&RO:0002162=(NCBITaxon:33208)] has part sugars [CHEBI:16646]",
+"score": 2.282,
+"path_min": 2.282,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "plasma membrane \u2293 in taxon (NCBITaxon:33208) [GO:0005886&RO:0002162=(NCBITaxon:33208)] has part proteins [CHEBI:36080]",
+"score": 2.282,
+"path_min": 2.282,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
 },
 {
 "fact": "plasma membrane [GO:0005886] has part carbon atoms [CHEBI:27594]",
@@ -7314,6 +10680,22 @@
 "hub_survivor": false
 },
 {
+"fact": "plasma membrane \u2293 in taxon (NCBITaxon:33208) [GO:0005886&RO:0002162=(NCBITaxon:33208)] capable of transmembrane transport [GO:0055085]",
+"score": 2.282,
+"path_min": 2.282,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "plasma membrane \u2293 in taxon (NCBITaxon:33208) [GO:0005886&RO:0002162=(NCBITaxon:33208)] enables active transport [GO:0022804]",
+"score": 2.282,
+"path_min": 2.282,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
 "fact": "plasma membrane [GO:0005886] part of structure that is capable of protein transport [GO:0015031]",
 "score": 2.282,
 "path_min": 2.282,
@@ -7328,6 +10710,46 @@
 "depth": 1,
 "rule": "isaGeneralise",
 "hub_survivor": false
+},
+{
+"fact": "plasma membrane \u2293 in taxon (NCBITaxon:33208) [GO:0005886&RO:0002162=(NCBITaxon:33208)] has function receptors [GO:0038023]",
+"score": 2.282,
+"path_min": 2.282,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "human circulatory system \u2293 in taxon (NCBITaxon:9606) [UBERON:0001009&RO:0002162=(NCBITaxon:9606)] has part arteries [UBERON:0001637]",
+"score": 2.254,
+"path_min": 2.254,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "blood circulation \u2293 occurs in (skin) [GO:0008015&BFO:0000066=(UBERON:0002097)] occurs in circulatory system [UBERON:0001009]",
+"score": 2.254,
+"path_min": 2.254,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "human circulatory system \u2293 in taxon (NCBITaxon:9606) [UBERON:0001009&RO:0002162=(NCBITaxon:9606)] capable of maintain body temperature [GO:0001659]",
+"score": 2.254,
+"path_min": 2.254,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "human circulatory system \u2293 in taxon (NCBITaxon:9606) [UBERON:0001009&RO:0002162=(NCBITaxon:9606)] capable of Gas exchange [GO:0007585]",
+"score": 2.254,
+"path_min": 2.254,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
 },
 {
 "fact": "digestive system [UBERON:0001007] has part structure that is capable of synthesize proteins [GO:0006412]",
@@ -7639,7 +11061,8 @@
 "path_min": 0.004,
 "depth": 1,
 "rule": "isaInheritEffect",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "digestive system [UBERON:0001007] \u2192+ process(homeostatic process [GO:0042592])",
@@ -7647,7 +11070,16 @@
 "path_min": 0.004,
 "depth": 1,
 "rule": "isaInheritEffect",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "nuclear membrane \u2293 in taxon (NCBITaxon:2759) [GO:0005635&RO:0002162=(NCBITaxon:2759)] part of nucleus [GO:0005634]",
+"score": 2.163,
+"path_min": 2.163,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
 },
 {
 "fact": "ganglion [UBERON:0000045] has part nucleus [GO:0005634]",
@@ -7655,6 +11087,14 @@
 "path_min": 1.392,
 "depth": 1,
 "rule": "relTrans",
+"hub_survivor": false
+},
+{
+"fact": "DNA-templated transcription \u2293 in taxon (prokaryotes, which include bacteria and archaea) [GO:0006351&RO:0002162=(NCBITaxon:2)] occurs in nucleus [GO:0005634]",
+"score": 2.163,
+"path_min": 2.163,
+"depth": 1,
+"rule": "isaInherit",
 "hub_survivor": false
 },
 {
@@ -7682,6 +11122,14 @@
 "hub_survivor": false
 },
 {
+"fact": "chromosome \u2293 in taxon (prokaryote) [GO:0005694&RO:0002162=(NCBITaxon:2)] located in nucleus [GO:0005634]",
+"score": 2.163,
+"path_min": 2.163,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
 "fact": "nucleus [GO:0005634] overlaps chromosome [GO:0005694]",
 "score": 2.163,
 "path_min": 2.163,
@@ -7695,6 +11143,22 @@
 "path_min": 2.163,
 "depth": 1,
 "rule": "relChain",
+"hub_survivor": false
+},
+{
+"fact": "meiosis \u2293 in taxon (animals) [GO:0051321&RO:0002162=(NCBITaxon:33208)] has input nucleus [GO:0005634]",
+"score": 2.163,
+"path_min": 2.163,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "meiosis \u2293 in taxon (animals) [GO:0051321&RO:0002162=(NCBITaxon:33208)] has output nucleus [GO:0005634]",
+"score": 2.163,
+"path_min": 2.163,
+"depth": 1,
+"rule": "isaInherit",
 "hub_survivor": false
 },
 {
@@ -7855,6 +11319,14 @@
 "path_min": 2.014,
 "depth": 1,
 "rule": "isaGeneralise",
+"hub_survivor": true
+},
+{
+"fact": "ATP synthase \u2293 located in (mitochondrion) [GO:0045259&RO:0001025=(GO:0005739)] is_a integral membrane protein [GO:0098796]",
+"score": 2.014,
+"path_min": 2.014,
+"depth": 1,
+"rule": "relTrans",
 "hub_survivor": true
 },
 {
@@ -8258,12 +11730,21 @@
 "hub_survivor": true
 },
 {
+"fact": "peripheral nervous system \u2293 in taxon (Vertebrata) [UBERON:0000010&RO:0002162=(NCBITaxon:7742)] connected to central nervous system [UBERON:0001017]",
+"score": 1.879,
+"path_min": 1.879,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
 "fact": "cells of the immune system [CL:0000738] \u2192\u2212 process(digestion [GO:0007586])",
 "score": 1.761,
 "path_min": 1.761,
 "depth": 1,
 "rule": "viaAmount",
-"hub_survivor": false
+"hub_survivor": false,
+"flags": []
 },
 {
 "fact": "tissues [UBERON:0000479] has part phosphorus atom [CHEBI:28659]",
@@ -8658,6 +12139,14 @@
 "hub_survivor": false
 },
 {
+"fact": "nuclear membrane \u2293 in taxon (NCBITaxon:2759) [GO:0005635&RO:0002162=(NCBITaxon:2759)] has part lipid [CHEBI:18059]",
+"score": 1.704,
+"path_min": 1.704,
+"depth": 2,
+"rule": "isaGeneralise",
+"hub_survivor": true
+},
+{
 "fact": "endomembrane system [GO:0012505] has part lipid [CHEBI:18059]",
 "score": 1.704,
 "path_min": 1.704,
@@ -8680,6 +12169,24 @@
 "depth": 2,
 "rule": "relTrans",
 "hub_survivor": true
+},
+{
+"fact": "Fats \u2293 in taxon (mammals) [CHEBI:18059&RO:0002162=(NCBITaxon:40674)] \u2192+ process(sense of satiety or fullness [GO:0032098])",
+"score": 1.704,
+"path_min": 1.704,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "Fats \u2293 in taxon (mammals) [CHEBI:18059&RO:0002162=(NCBITaxon:40674)] \u2192+ process(absorbs nutrients [GO:0050892])",
+"score": 1.704,
+"path_min": 1.704,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "nuclear membrane [GO:0005635] has part lipid [CHEBI:18059]",
@@ -8738,11 +12245,115 @@
 "hub_survivor": true
 },
 {
+"fact": "skeleton \u2293 in taxon (Homo sapiens) [UBERON:0004288&RO:0002162=(NCBITaxon:9606)] has part bone [UBERON:0001474]",
+"score": 1.672,
+"path_min": 1.672,
+"depth": 3,
+"rule": "isaGeneralise",
+"hub_survivor": true
+},
+{
+"fact": "skeleton \u2293 in taxon (Homo sapiens) [UBERON:0004288&RO:0002162=(NCBITaxon:9606)] overlaps rib cage [UBERON:0003252]",
+"score": 1.672,
+"path_min": 1.672,
+"depth": 3,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
 "fact": "skeleton [UBERON:0004288] overlaps rib cage [UBERON:0003252]",
 "score": 1.672,
 "path_min": 1.672,
 "depth": 3,
 "rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "skeleton \u2293 in taxon (Homo sapiens) [UBERON:0004288&RO:0002162=(NCBITaxon:9606)] has part sternum [UBERON:0000975]",
+"score": 1.672,
+"path_min": 1.672,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "skeleton \u2293 in taxon (Homo sapiens) [UBERON:0004288&RO:0002162=(NCBITaxon:9606)] has part vertebral column [UBERON:0001130]",
+"score": 1.672,
+"path_min": 1.672,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "skeleton \u2293 in taxon (Homo sapiens) [UBERON:0004288&RO:0002162=(NCBITaxon:9606)] has part coccyx [UBERON:0001350]",
+"score": 1.672,
+"path_min": 1.672,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "skeleton \u2293 in taxon (Homo sapiens) [UBERON:0004288&RO:0002162=(NCBITaxon:9606)] has part hyoid bone [UBERON:0001685]",
+"score": 1.672,
+"path_min": 1.672,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "skeleton \u2293 in taxon (Homo sapiens) [UBERON:0004288&RO:0002162=(NCBITaxon:9606)] has part auditory ossicle [UBERON:0001686]",
+"score": 1.672,
+"path_min": 1.672,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "skeleton \u2293 in taxon (Homo sapiens) [UBERON:0004288&RO:0002162=(NCBITaxon:9606)] has part rib [UBERON:0002228]",
+"score": 1.672,
+"path_min": 1.672,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "skeleton \u2293 in taxon (Homo sapiens) [UBERON:0004288&RO:0002162=(NCBITaxon:9606)] has part skull [UBERON:0003129]",
+"score": 1.672,
+"path_min": 1.672,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "skeleton \u2293 in taxon (Homo sapiens) [UBERON:0004288&RO:0002162=(NCBITaxon:9606)] has part rib cage [UBERON:0003252]",
+"score": 1.672,
+"path_min": 1.672,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "skeleton \u2293 in taxon (Homo sapiens) [UBERON:0004288&RO:0002162=(NCBITaxon:9606)] has part facial bone [UBERON:0003462]",
+"score": 1.672,
+"path_min": 1.672,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "skeleton \u2293 in taxon (Homo sapiens) [UBERON:0004288&RO:0002162=(NCBITaxon:9606)] has part sacrum [UBERON:0003690]",
+"score": 1.672,
+"path_min": 1.672,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "skeleton \u2293 in taxon (Homo sapiens) [UBERON:0004288&RO:0002162=(NCBITaxon:9606)] has part cranial bone [UBERON:0004766]",
+"score": 1.672,
+"path_min": 1.672,
+"depth": 2,
+"rule": "relTrans",
 "hub_survivor": true
 },
 {
@@ -8802,11 +12413,27 @@
 "hub_survivor": true
 },
 {
+"fact": "skeleton \u2293 in taxon (Homo sapiens) [UBERON:0004288&RO:0002162=(NCBITaxon:9606)] overlaps middle ear [UBERON:0001756]",
+"score": 1.672,
+"path_min": 1.672,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
 "fact": "skeleton [UBERON:0004288] overlaps middle ear [UBERON:0001756]",
 "score": 1.672,
 "path_min": 1.672,
 "depth": 2,
 "rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "skeleton \u2293 in taxon (Homo sapiens) [UBERON:0004288&RO:0002162=(NCBITaxon:9606)] has part axial skeleton [UBERON:0005944]",
+"score": 1.672,
+"path_min": 1.672,
+"depth": 1,
+"rule": "isaInherit",
 "hub_survivor": true
 },
 {
@@ -8848,6 +12475,39 @@
 "depth": 1,
 "rule": "relTrans",
 "hub_survivor": true
+},
+{
+"fact": "glycolysis \u2293 occurs in (skeletal muscle) [GO:0006096&BFO:0000066=(UBERON:0014892)] part of metabolic reactions [GO:0008152]",
+"score": 1.633,
+"path_min": 1.633,
+"depth": 2,
+"rule": "isaGeneralise",
+"hub_survivor": true
+},
+{
+"fact": "glycolytic process \u2293 in taxon (Mammalia) [GO:0006096&RO:0002162=(NCBITaxon:40674)] part of metabolic reactions [GO:0008152]",
+"score": 1.633,
+"path_min": 1.633,
+"depth": 2,
+"rule": "isaGeneralise",
+"hub_survivor": true
+},
+{
+"fact": "mature mammalian red blood cells \u2293 in taxon (mammalian) [CL:0000232&RO:0002162=(NCBITaxon:40674)] capable of part of metabolic reactions [GO:0008152]",
+"score": 1.633,
+"path_min": 1.633,
+"depth": 2,
+"rule": "isaGeneralise",
+"hub_survivor": true
+},
+{
+"fact": "triiodothyronine \u2293 located in (thyroid gland) [CHEBI:18258&RO:0001025=(UBERON:0002046)] \u2192+ process(metabolic reactions [GO:0008152])",
+"score": 1.633,
+"path_min": 1.633,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "glycolytic process [GO:0006096] part of metabolic reactions [GO:0008152]",
@@ -9410,6 +13070,54 @@
 "hub_survivor": true
 },
 {
+"fact": "ATP synthase \u2293 located in (mitochondrion) [GO:0045259&RO:0001025=(GO:0005739)] located in membrane [GO:0016020]",
+"score": 1.515,
+"path_min": 1.515,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "neuron \u2293 in taxon (Mammalia) [CL:0000540&RO:0002162=(NCBITaxon:40674)] has part nitrogenous base [CHEBI:18282]",
+"score": 1.392,
+"path_min": 1.392,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "neuron \u2293 in taxon (Mammalia) [CL:0000540&RO:0002162=(NCBITaxon:40674)] has part phosphorus atom [CHEBI:28659]",
+"score": 1.392,
+"path_min": 1.392,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "neuron \u2293 in taxon (Mammalia) [CL:0000540&RO:0002162=(NCBITaxon:40674)] has part 2-deoxy-D-ribose [CHEBI:28816]",
+"score": 1.392,
+"path_min": 1.392,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "neuron \u2293 in taxon (Mammalia) [CL:0000540&RO:0002162=(NCBITaxon:40674)] has part phosphate group [CHEBI:32958]",
+"score": 1.392,
+"path_min": 1.392,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "neuron \u2293 in taxon (Mammalia) [CL:0000540&RO:0002162=(NCBITaxon:40674)] has part amino acids [CHEBI:33709]",
+"score": 1.392,
+"path_min": 1.392,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
 "fact": "neuron [CL:0000540] has part phosphorus atom [CHEBI:28659]",
 "score": 1.392,
 "path_min": 1.392,
@@ -9418,12 +13126,172 @@
 "hub_survivor": true
 },
 {
+"fact": "neuron \u2293 in taxon (Mammalia) [CL:0000540&RO:0002162=(NCBITaxon:40674)] overlaps ribosomes [GO:0005840]",
+"score": 1.392,
+"path_min": 1.392,
+"depth": 3,
+"rule": "relChain",
+"hub_survivor": false
+},
+{
 "fact": "neuron [CL:0000540] overlaps ribosomes [GO:0005840]",
 "score": 1.392,
 "path_min": 1.392,
 "depth": 3,
 "rule": "relChain",
 "hub_survivor": false
+},
+{
+"fact": "neuron \u2293 in taxon (Mammalia) [CL:0000540&RO:0002162=(NCBITaxon:40674)] has part structure that is capable of alcohol metabolism [GO:0006066]",
+"score": 1.392,
+"path_min": 1.392,
+"depth": 3,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "neuron \u2293 in taxon (Mammalia) [CL:0000540&RO:0002162=(NCBITaxon:40674)] has part structure that is capable of synthesize proteins [GO:0006412]",
+"score": 1.392,
+"path_min": 1.392,
+"depth": 3,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "neuron \u2293 in taxon (Mammalia) [CL:0000540&RO:0002162=(NCBITaxon:40674)] has part structure that is capable of lipid biosynthetic process [GO:0008610]",
+"score": 1.392,
+"path_min": 1.392,
+"depth": 3,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "neuron \u2293 in taxon (Mammalia) [CL:0000540&RO:0002162=(NCBITaxon:40674)] has part structure that is capable of carbohydrate biosynthetic process [GO:0016051]",
+"score": 1.392,
+"path_min": 1.392,
+"depth": 3,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "neuron \u2293 in taxon (Mammalia) [CL:0000540&RO:0002162=(NCBITaxon:40674)] has part structure that is capable of steroid hormone biosynthetic process [GO:0120178]",
+"score": 1.392,
+"path_min": 1.392,
+"depth": 3,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "neuron \u2293 in taxon (Mammalia) [CL:0000540&RO:0002162=(NCBITaxon:40674)] has part structure that is capable of detoxification [GO:1990748]",
+"score": 1.392,
+"path_min": 1.392,
+"depth": 3,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "neuron \u2293 in taxon (Mammalia) [CL:0000540&RO:0002162=(NCBITaxon:40674)] has part polypeptide [CHEBI:15841]",
+"score": 1.392,
+"path_min": 1.392,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "neuron \u2293 in taxon (Mammalia) [CL:0000540&RO:0002162=(NCBITaxon:40674)] has part DNA [CHEBI:16991]",
+"score": 1.392,
+"path_min": 1.392,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": false
+},
+{
+"fact": "neuron \u2293 in taxon (Mammalia) [CL:0000540&RO:0002162=(NCBITaxon:40674)] has part ribosomal RNA [CHEBI:18111]",
+"score": 1.392,
+"path_min": 1.392,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "neuron \u2293 in taxon (Mammalia) [CL:0000540&RO:0002162=(NCBITaxon:40674)] has part nucleotides [CHEBI:36976]",
+"score": 1.392,
+"path_min": 1.392,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "neuron \u2293 in taxon (Mammalia) [CL:0000540&RO:0002162=(NCBITaxon:40674)] has part polymer [CHEBI:60027]",
+"score": 1.392,
+"path_min": 1.392,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "neuron \u2293 in taxon (Mammalia) [CL:0000540&RO:0002162=(NCBITaxon:40674)] has part chromatin [GO:0000785]",
+"score": 1.392,
+"path_min": 1.392,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "neuron \u2293 in taxon (Mammalia) [CL:0000540&RO:0002162=(NCBITaxon:40674)] has part ribosomes [GO:0005761]",
+"score": 1.392,
+"path_min": 1.392,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "neuron \u2293 in taxon (Mammalia) [CL:0000540&RO:0002162=(NCBITaxon:40674)] has part smooth endoplasmic reticulum [GO:0005790]",
+"score": 1.392,
+"path_min": 1.392,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "neuron \u2293 in taxon (Mammalia) [CL:0000540&RO:0002162=(NCBITaxon:40674)] has part Golgi apparatus [GO:0005794]",
+"score": 1.392,
+"path_min": 1.392,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "neuron \u2293 in taxon (Mammalia) [CL:0000540&RO:0002162=(NCBITaxon:40674)] has part ribosomes [GO:0005840]",
+"score": 1.392,
+"path_min": 1.392,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": false
+},
+{
+"fact": "neuron \u2293 in taxon (Mammalia) [CL:0000540&RO:0002162=(NCBITaxon:40674)] has part large subunit [GO:0015934]",
+"score": 1.392,
+"path_min": 1.392,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "neuron \u2293 in taxon (Mammalia) [CL:0000540&RO:0002162=(NCBITaxon:40674)] has part small subunit [GO:0015935]",
+"score": 1.392,
+"path_min": 1.392,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "neuron \u2293 in taxon (Mammalia) [CL:0000540&RO:0002162=(NCBITaxon:40674)] has part node of Ranvier [GO:0033268]",
+"score": 1.392,
+"path_min": 1.392,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
 },
 {
 "fact": "neuron [CL:0000540] has part polypeptide [CHEBI:15841]",
@@ -9506,6 +13374,30 @@
 "hub_survivor": true
 },
 {
+"fact": "neuron \u2293 in taxon (Mammalia) [CL:0000540&RO:0002162=(NCBITaxon:40674)] overlaps neuron [CL:0000540]",
+"score": 1.392,
+"path_min": 1.392,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "neuron \u2293 in taxon (Mammalia) [CL:0000540&RO:0002162=(NCBITaxon:40674)] overlaps chromosome [GO:0005694]",
+"score": 1.392,
+"path_min": 1.392,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "neuron \u2293 in taxon (Mammalia) [CL:0000540&RO:0002162=(NCBITaxon:40674)] overlaps gray matter [UBERON:0002020]",
+"score": 1.392,
+"path_min": 1.392,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
 "fact": "neuron [CL:0000540] overlaps chromosome [GO:0005694]",
 "score": 1.392,
 "path_min": 1.392,
@@ -9523,6 +13415,22 @@
 },
 {
 "fact": "nervous tissue [UBERON:0001016] overlaps neuron [CL:0000540]",
+"score": 1.392,
+"path_min": 1.392,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "neuron \u2293 in taxon (Mammalia) [CL:0000540&RO:0002162=(NCBITaxon:40674)] has part structure that is capable of ATP biosynthetic process [GO:0006754]",
+"score": 1.392,
+"path_min": 1.392,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "neuron \u2293 in taxon (Mammalia) [CL:0000540&RO:0002162=(NCBITaxon:40674)] has part structure that is capable of cellular respiration [GO:0045333]",
 "score": 1.392,
 "path_min": 1.392,
 "depth": 2,
@@ -9575,6 +13483,55 @@
 "path_min": 1.392,
 "depth": 2,
 "rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "neuron \u2293 in taxon (Mammalia) [CL:0000540&RO:0002162=(NCBITaxon:40674)] \u2192+ process(muscle cell contraction [GO:0006936])",
+"score": 1.392,
+"path_min": 1.392,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "neuron \u2293 in taxon (Mammalia) [CL:0000540&RO:0002162=(NCBITaxon:40674)] has part nucleus [GO:0005634]",
+"score": 1.392,
+"path_min": 1.392,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "neuron \u2293 in taxon (Mammalia) [CL:0000540&RO:0002162=(NCBITaxon:40674)] has part Mitochondria [GO:0005739]",
+"score": 1.392,
+"path_min": 1.392,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "neuron \u2293 in taxon (Mammalia) [CL:0000540&RO:0002162=(NCBITaxon:40674)] has part axon [GO:0030424]",
+"score": 1.392,
+"path_min": 1.392,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "neuron \u2293 in taxon (Mammalia) [CL:0000540&RO:0002162=(NCBITaxon:40674)] has part dendrite [GO:0030425]",
+"score": 1.392,
+"path_min": 1.392,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "neuron \u2293 in taxon (Mammalia) [CL:0000540&RO:0002162=(NCBITaxon:40674)] has part neuronal cell body [GO:0043025]",
+"score": 1.392,
+"path_min": 1.392,
+"depth": 1,
+"rule": "isaInherit",
 "hub_survivor": true
 },
 {
@@ -9778,6 +13735,14 @@
 "hub_survivor": false
 },
 {
+"fact": "NAD+ \u2293 located in (liver) \u2293 in taxon (Mammalia) [CHEBI:15846&RO:0001025=(UBERON:0002107)&RO:0002162=(NCBITaxon:40674)] located in cytoplasm [GO:0005737]",
+"score": 1.272,
+"path_min": 0.073,
+"depth": 3,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
 "fact": "stomach [UBERON:0000945] has part cytoplasm [GO:0005737]",
 "score": 1.272,
 "path_min": 0.002,
@@ -9810,6 +13775,14 @@
 "hub_survivor": false
 },
 {
+"fact": "CHEBI:15846&RO:0001025=(UBERON:0002107) [CHEBI:15846&RO:0001025=(UBERON:0002107)] located in cytoplasm [GO:0005737]",
+"score": 1.272,
+"path_min": 0.073,
+"depth": 2,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
 "fact": "NAD+ [CHEBI:15846] located in cytoplasm [GO:0005737]",
 "score": 1.272,
 "path_min": 0.073,
@@ -9834,6 +13807,30 @@
 "hub_survivor": false
 },
 {
+"fact": "glycolysis \u2293 occurs in (skeletal muscle) [GO:0006096&BFO:0000066=(UBERON:0014892)] occurs in cytoplasm [GO:0005737]",
+"score": 1.272,
+"path_min": 1.272,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "glycolytic process \u2293 in taxon (Mammalia) [GO:0006096&RO:0002162=(NCBITaxon:40674)] occurs in cytoplasm [GO:0005737]",
+"score": 1.272,
+"path_min": 1.272,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "glucose \u2293 located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] located in cytoplasm [GO:0005737]",
+"score": 1.272,
+"path_min": 1.272,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
 "fact": "cellulose [CHEBI:18246] located in cytoplasm [GO:0005737]",
 "score": 1.272,
 "path_min": 1.272,
@@ -9845,6 +13842,14 @@
 "fact": "Coenzymes [CHEBI:23354] located in cytoplasm [GO:0005737]",
 "score": 1.272,
 "path_min": 0.073,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "sodium ion \u2293 located in (blood) [CHEBI:29101&RO:0001025=(UBERON:0000178)] located in cytoplasm [GO:0005737]",
+"score": 1.272,
+"path_min": 1.272,
 "depth": 1,
 "rule": "isaInherit",
 "hub_survivor": false
@@ -9906,6 +13911,22 @@
 "hub_survivor": true
 },
 {
+"fact": "photosynthesis \u2293 occurs in (chloroplast) [GO:0015979&BFO:0000066=(GO:0009507)] occurs in organelles [GO:0043226]",
+"score": 0.776,
+"path_min": 0.776,
+"depth": 2,
+"rule": "isaGeneralise",
+"hub_survivor": true
+},
+{
+"fact": "photosynthesizing \u2293 in taxon (plants) [GO:0015979&RO:0002162=(NCBITaxon:33090)] occurs in organelles [GO:0043226]",
+"score": 0.776,
+"path_min": 0.776,
+"depth": 2,
+"rule": "isaGeneralise",
+"hub_survivor": true
+},
+{
 "fact": "carbohydrate biosynthetic process [GO:0016051] occurs in organelles [GO:0043226]",
 "score": 0.776,
 "path_min": 0.776,
@@ -9951,6 +13972,30 @@
 "path_min": 0.776,
 "depth": 2,
 "rule": "isaGeneralise",
+"hub_survivor": true
+},
+{
+"fact": "photosynthesis \u2293 occurs in (chloroplast) [GO:0015979&BFO:0000066=(GO:0009507)] has part that occurs in organelles [GO:0043226]",
+"score": 0.776,
+"path_min": 0.776,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "photosynthesis \u2293 in taxon (NCBITaxon:2759) [GO:0015979&RO:0002162=(NCBITaxon:2759)] has part that occurs in organelles [GO:0043226]",
+"score": 0.776,
+"path_min": 0.776,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "photosynthesizing \u2293 in taxon (plants) [GO:0015979&RO:0002162=(NCBITaxon:33090)] has part that occurs in organelles [GO:0043226]",
+"score": 0.776,
+"path_min": 0.776,
+"depth": 2,
+"rule": "relChain",
 "hub_survivor": true
 },
 {
@@ -10026,12 +14071,21 @@
 "hub_survivor": true
 },
 {
+"fact": "These reactions \u2293 in taxon (prokaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2)] has input organic molecule [CHEBI:72695]",
+"score": 0.649,
+"path_min": 0.649,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
 "fact": "potassium [CHEBI:29103] \u2192+ activity(enzyme [GO:0003824])",
 "score": 0.449,
 "path_min": 0.449,
 "depth": 2,
 "rule": "isaInheritEffect",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "Minerals [CHEBI:46662] \u2192+ activity(enzyme [GO:0003824])",
@@ -10039,7 +14093,8 @@
 "path_min": 0.449,
 "depth": 1,
 "rule": "isaInheritEffect",
-"hub_survivor": true
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "organ [UBERON:0000062] has part lipid [CHEBI:18059]",
@@ -10447,6 +14502,22 @@
 "path_min": 0.322,
 "depth": 1,
 "rule": "isaGeneralise",
+"hub_survivor": true
+},
+{
+"fact": "NAD+ \u2293 located in (liver) \u2293 in taxon (Mammalia) [CHEBI:15846&RO:0001025=(UBERON:0002107)&RO:0002162=(NCBITaxon:40674)] is_a organic molecules [CHEBI:50860]",
+"score": 0.073,
+"path_min": 0.073,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "CHEBI:15846&RO:0001025=(UBERON:0002107) [CHEBI:15846&RO:0001025=(UBERON:0002107)] is_a organic molecules [CHEBI:50860]",
+"score": 0.073,
+"path_min": 0.073,
+"depth": 2,
+"rule": "relTrans",
 "hub_survivor": true
 },
 {
@@ -11386,6 +15457,190 @@
 "hub_survivor": true
 },
 {
+"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part phosphorus atom [CHEBI:28659]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] overlaps ribosomes [GO:0005840]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relChain",
+"hub_survivor": false
+},
+{
+"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] overlaps mitotic spindle [GO:0072686]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part polypeptide [CHEBI:15841]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part phospholipid [CHEBI:16247]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part sugars [CHEBI:16646]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": false
+},
+{
+"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part lipid [CHEBI:18059]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part ribosomal RNA [CHEBI:18111]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part polysaccharide [CHEBI:18154]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "isaGeneralise",
+"hub_survivor": true
+},
+{
+"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part nitrogenous base [CHEBI:18282]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part carbon atoms [CHEBI:27594]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part 2-deoxy-D-ribose [CHEBI:28816]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part phosphate group [CHEBI:32958]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part amino acids [CHEBI:33709]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part fatty acid [CHEBI:35366]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part proteins [CHEBI:36080]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part nucleotides [CHEBI:36976]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part polymer [CHEBI:60027]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "isaGeneralise",
+"hub_survivor": true
+},
+{
+"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part centrioles [GO:0005814]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part microtubule [GO:0005874]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part large subunit [GO:0015934]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part small subunit [GO:0015935]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part organelles [GO:0043226]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
 "fact": "cells [CL:0000000] has part lipid [CHEBI:18059]",
 "score": 0.002,
 "path_min": 0.002,
@@ -11562,12 +15817,52 @@
 "hub_survivor": false
 },
 {
+"fact": "glycolysis \u2293 occurs in (skeletal muscle) [GO:0006096&BFO:0000066=(UBERON:0014892)] occurs in cells [CL:0000000]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": false
+},
+{
+"fact": "glycolytic process \u2293 in taxon (Mammalia) [GO:0006096&RO:0002162=(NCBITaxon:40674)] occurs in cells [CL:0000000]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": false
+},
+{
 "fact": "glycolytic process [GO:0006096] occurs in cells [CL:0000000]",
 "score": 0.002,
 "path_min": 0.002,
 "depth": 2,
 "rule": "relChain",
 "hub_survivor": false
+},
+{
+"fact": "nucleotide-excision repair \u2293 in taxon (NCBITaxon:9606) [GO:0006289&RO:0002162=(NCBITaxon:9606)] occurs in cells [CL:0000000]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] overlaps food [CHEBI:33290]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] overlaps endomembrane system [GO:0012505]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
 },
 {
 "fact": "cells [CL:0000000] overlaps food [CHEBI:33290]",
@@ -11626,11 +15921,91 @@
 "hub_survivor": true
 },
 {
+"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part structure that is capable of synthesize proteins [GO:0006412]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part structure that is capable of transmembrane transport [GO:0055085]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
 "fact": "Animal cells [CL:0000548] has part structure that is capable of transmembrane transport [GO:0055085]",
 "score": 0.002,
 "path_min": 0.002,
 "depth": 2,
 "rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part DNA [CHEBI:16991]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part cellulose [CHEBI:18246]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 1,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part cytoplasm [GO:0005737]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part lysosomes [GO:0005764]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part centrosome [GO:0005813]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part ribosomes [GO:0005840]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part plasma membrane [GO:0005886]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part tight junction [GO:0005923]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 1,
+"rule": "isaInherit",
 "hub_survivor": true
 },
 {
@@ -11810,6 +16185,14 @@
 "hub_survivor": false
 },
 {
+"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] derives from cells [CL:0000000]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
 "fact": "transfer RNA [CHEBI:17843] located in cells [CL:0000000]",
 "score": 0.002,
 "path_min": 0.002,
@@ -11832,6 +16215,46 @@
 "depth": 1,
 "rule": "relChain",
 "hub_survivor": false
+},
+{
+"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] capable of ATP biosynthetic process [GO:0006754]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] capable of exocytosis [GO:0006887]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] capable of endocytosis [GO:0006897]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] capable of phagocytosis [GO:0006909]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] capable of transmembrane transport [GO:0055085]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
 },
 {
 "fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] capable of part of cell cycle [GO:0007049]",

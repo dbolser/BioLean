@@ -5,7 +5,7 @@ RNA" is not. Score a derived fact by how specific its least specific term is, us
 hierarchies instead of a hand-made hub list.
 
 Code: `scripts/ontology/ic.py` (builds `data/search/ic.json`), `scripts/ontology/obo.py` (reader),
-`scripts/search/closure.py --ic` (ranks and compares). Output: `data/search/ic_report.txt`,
+`scripts/search/closure.py` (ranks and compares; IC is its default filter). Output: `data/search/ic_report.txt`,
 `closure_ic.json`, `derivations_ic.json`.
 
 ## Short version
@@ -208,7 +208,9 @@ would not choose between them. Of the 837 ends-min keepers, 606 also pass the bo
 
 ```
 python3 -I scripts/ontology/ic.py data/textbook/claims_m2 /tmp/obo data/search/ic.json
-PYTHONHASHSEED=1 python3 scripts/search/closure.py data/textbook/claims_m2 /tmp/obo/go.obo 4 --ic > data/search/ic_report.txt
+PYTHONHASHSEED=1 python3 scripts/search/closure.py data/textbook/claims_m2 /tmp/obo/go.obo 4 --no-m3 --legacy > data/search/ic_report.txt
 ```
 
-Without `--ic`, `closure.py` behaves as before and writes the same files.
+IC is now the default filter of `closure.py`; `--ic=T` sets the threshold, and `--hubs` brings back the
+old hub list (and writes `derivations.json`, which `emit_closure_lean.py` reads). The numbers on this
+page are round 2 alone, before the refinement axioms: `--no-m3 --legacy` reproduces them.

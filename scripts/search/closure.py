@@ -4,7 +4,7 @@ Facts:   rel(r, a, b) / notRel(r, a, b) / effect(a, sign, target, b)
 Rules:   RO chains (enabled), transitivity, is_a laws, inverses, viaAmount, viaActivity, notRelSub/Obj
 Every derived fact keeps its shortest derivation (rule, premises). Belief: weakest-link for relational
 steps, product for effect chains. Output: data/search/closure.json and a printed summary.
-Usage: closure.py <claims_m2_dir> <go.obo> [max_depth] [--ic=T] [--hubs] [--no-m3]
+Usage: closure.py <claims_m2_dir> <go.obo> [max_depth] [--ic=T] [--hubs] [--no-m3] [--legacy]
 Facts come from the m2 claims and from the round-3 claims in the sibling claims_m3 (`emit_lean_m3.statements`, the
 same reading the Lean emitter uses; context gives composite curies as in BioLean/Context.lean). For a record round 3
 re-annotated, its rel/notRel/effect replaces the m2 fact, and a some/most claim loads nothing, so that neither
@@ -12,11 +12,15 @@ annotation acts as a universal. --no-m3 loads m2 alone.
 Interesting facts are ranked and filtered by information content: score(fact) = min IC of its subject and object, read
 from data/search/ic.json (build it with scripts/ontology/ic.py; a refined entity takes its base term's IC, a lower bound);
 keeps score >= T (default IC_MIN). Writes closure_ic.json and derivations_ic.json, and prints the comparison with the
-hub list. --hubs filters by the old hub list instead and writes derivations.json (read by emit_closure_lean.py)."""
+hub list. --hubs filters by the old hub list instead and writes derivations.json (read by emit_closure_lean.py).
+Refinement axioms load by default: every refined entity e ⊓ ∃r.f is_a e (`Entity.refineAxiom`, belief 999/1000), so a
+context links to its base term. Derived effect facts carry flags, never dropped: feedback (the chain crosses a loop),
+parthood (a premise effect between a part and its whole) and shared_cause (a common cause read as a sequence).
+--legacy turns both off and reproduces the earlier output byte for byte."""
 import json, glob, re, sys, collections, pathlib, itertools
 from fractions import Fraction as F
 IC_MIN = 2.5   # suggested threshold, see docs/ic-triviality.md
-HUBS, M3 = '--hubs' in sys.argv, '--no-m3' not in sys.argv
+HUBS, M3, LEGACY = '--hubs' in sys.argv, '--no-m3' not in sys.argv, '--legacy' in sys.argv
 IC_T = next((float(a.split('=')[1]) for a in sys.argv if a.startswith('--ic=')), IC_MIN)
 args = [a for a in sys.argv[1:] if not a.startswith('--')]
 src, go_obo = args[0], args[1]; MAXD = int(args[2]) if len(args) > 2 else 4
@@ -102,6 +106,21 @@ for sid, (key, s) in m3_facts.items():
 asserted = set(facts)
 if M3: print(f'm2 statements {n_m2} (superseded by round 3: {superseded}), round 3 statements {n_stmt - n_m2} of {len(m3_facts)} rel/notRel/effect (unquantified; {len(m3_quantified)} records some/most)')
 print(f'statements loaded: {n_stmt}  (rel {sum(1 for k in facts if k[0]=="rel")}, notRel {sum(1 for k in facts if k[0]=="notRel")}, effect {sum(1 for k in facts if k[0]=="effect")})')
+def unrefine(c):
+    """`e` from the curie of `e.refine r f` ("X&R=(F)", the last top-level '&'), or None if c is not refined."""
+    d = 0
+    for i in range(len(c) - 1, -1, -1):
+        if c[i] in '()': d += 1 if c[i] == ')' else -1
+        elif c[i] == '&' and d == 0: return c[:i]
+axioms = set()   # Entity.refineAxiom edges: definitional, not textbook statements
+if not LEGACY:
+    todo, seen = [c for k in facts for c in ((k[3], k[4]) if k[0] == 'effect' else (k[2], k[3]))], set()
+    while todo:
+        c = todo.pop(); b = unrefine(c)
+        if b is None or c in seen: continue
+        seen.add(c); todo.append(b)   # a nested context refines a refined entity: drop one refinement at a time
+        if add(('rel', ISA, c, b), ('refineAxiom', f'refine:{c}'), 0, F(999, 1000)): axioms.add(('rel', ISA, c, b))
+    print(f'refinement axioms loaded: {len(axioms)} (e ⊓ ∃r.f is_a e, belief 999/1000)')
 
 # --- forward chaining, semi-naive by depth
 SIGN = {('pos', 'pos'): 'pos', ('neg', 'neg'): 'pos', ('pos', 'neg'): 'neg', ('neg', 'pos'): 'neg'}
@@ -159,13 +178,13 @@ for depth in range(1, MAXD + 1):
     if not added: break
 
 # --- report
-novel = {k: v for k, v in facts.items() if k not in asserted}
+novel = {k: v for k, v in facts.items() if k not in asserted and k not in axioms}
 def show(k):
     if k[0] == 'effect': return f"{labels_e.get(k[3], k[3])} [{k[3]}] →{'+' if k[1]=='pos' else '−'} {k[2]}({labels_e.get(k[4], k[4])} [{k[4]}])"
     return f"{'¬' if k[0]=='notRel' else ''}{labels_e.get(k[2], k[2])} [{k[2]}] {lab(k[1])} {labels_e.get(k[3], k[3])} [{k[3]}]"
 def tree(k, ind=''):
     v = facts[k]; d = v['deriv']
-    if d[0] == 'lit': return f"{ind}{show(k)}   [{d[1]}]"
+    if d[0] in ('lit', 'refineAxiom'): return f"{ind}{show(k)}   [{d[1]}]"
     prem = [x for x in d[1:] if isinstance(x, tuple)]
     return f"{ind}{show(k)}   ({d[0]}, b={float(v['belief']):.2f})\n" + "\n".join(tree(p, ind + '  ') for p in prem)
 clashes = [k for k in facts if k[0] == 'rel' and ('notRel', k[1], k[2], k[3]) in facts]
@@ -173,8 +192,53 @@ print(f"\nasserted {len(asserted)}, derived novel {len(novel)}; by rule {dict(ru
 print(f"clashes (rel and notRel both derived): {len(clashes)}")
 for k in clashes[:5]: print(tree(k)); print(tree(('notRel',) + k[1:])); print()
 by_depth = collections.Counter(v['depth'] for v in novel.values()); print('novel by depth', dict(sorted(by_depth.items())))
+
+# --- guards on effect chains: each one flags a derived effect fact, none drops it (docs/closure-search.md, phase 4)
+flags = {}   # derived effect fact -> {flag: the fact that raised it}
+if not LEGACY:
+    PARTS = (by_label['part of'], by_label['has part'])
+    parthood, eff_out, direct = {}, collections.defaultdict(dict), collections.defaultdict(dict)
+    for k in asserted:
+        if k[0] == 'rel' and k[1] in PARTS: parthood.setdefault((k[2], k[3]), k); parthood.setdefault((k[3], k[2]), k)
+    for k in facts:
+        if k[0] == 'effect':
+            eff_out[k[3]].setdefault(k[4], k)                     # y -> {z: y → z}, asserted or derived
+            if k in asserted: direct[k[3]].setdefault(k[4], k)    # a -> {t: a → t}, stated directly
+    def chain(k):
+        """The nodes an effect's chain passes through, in order; its asserted effect premises, each with the position of
+        its subject among the nodes; and its steps (a → m, m → t). An inherited effect puts the subclass before the class."""
+        d = facts[k]['deriv']
+        if d[0] in ('viaAmount', 'viaActivity'):
+            (n1, p1, s1), (n2, p2, s2) = chain(d[1]), chain(d[2])
+            return n1 + n2[1:], p1 + [(i + len(n1) - 1, e) for i, e in p2], s1 + s2 + [(d[1], d[2])]
+        if d[0] == 'isaInheritEffect':
+            n2, p2, s2 = chain(d[2]); return [k[3]] + n2, [(i + 1, e) for i, e in p2], s2
+        return [k[3], k[4]], [(0, k)], []
+    def guards(k):
+        nodes, prem, steps = chain(k); f = {}
+        for i, (_, _, _, x, y) in prem:
+            back = [z for z in nodes[:i + 1] if z in eff_out[y]]
+            if back and len(prem) > 1: f.setdefault('feedback', eff_out[y][back[0]])   # y acts back on x or upstream; one inherited statement is not a chain
+            if (x, y) in parthood: f.setdefault('parthood', parthood[(x, y)])   # a part acting on its whole, or the reverse
+        for (_, _, _, a, m), (_, _, _, _, t) in steps:
+            if m in direct[a] and t in direct[a]: f.setdefault('shared_cause', direct[a][t])   # a → m and a → t both stated
+        return f
+    flags = {k: guards(k) for k in novel if k[0] == 'effect'}
+    by_flag = collections.Counter(g for f in flags.values() for g in f)
+    chained = [k for k in flags if facts[k]['deriv'][0] in ('viaAmount', 'viaActivity')]
+    print(f"\n=== guards on effect chains (flags; nothing is dropped) ===\nderived effect facts {len(flags)}, flagged {sum(map(bool, flags.values()))}; "
+          f"chain conclusions (viaAmount, viaActivity) {len(chained)}, flagged {sum(bool(flags[k]) for k in chained)}")
+    print('by flag', dict(by_flag), '; by combination', dict(collections.Counter('+'.join(sorted(f)) or 'none' for f in flags.values()).most_common()))
+    opp = [(k, ('effect', 'neg') + k[2:]) for k in facts if k[0] == 'effect' and k[1] == 'pos' and ('effect', 'neg') + k[2:] in facts]
+    print(f"sign clashes (a →+ t and a →− t both in the closure): {len(opp)}; with a flagged side {sum(any(flags.get(x) for x in p) for p in opp)}")
+    for g in ('feedback', 'parthood', 'shared_cause'):
+        ex = sorted((k for k in flags if g in flags[k]), key=lambda k: (facts[k]['depth'], str(k)))
+        print(f"\n--- {g}: {len(ex)} (first five, shallowest) ---")
+        for k in ex[:5]: print(tree(k)); print(f"  {g} because: {show(flags[k][g])}"); print()
 json.dump({'asserted': len(asserted), 'novel': len(novel), 'rules': dict(rule_count),
-           'facts': [{'fact': show(k), 'key': [str(x) for x in k], 'depth': v['depth'], 'belief': float(v['belief']), 'rule': v['deriv'][0], 'tree': tree(k)} for k, v in novel.items()]},
+           **({'refine_axioms': len(axioms), 'clashes': len(clashes), 'sign_clashes': len(opp), 'flags': dict(by_flag)} if not LEGACY else {}),
+           'facts': [{'fact': show(k), 'key': [str(x) for x in k], 'depth': v['depth'], 'belief': float(v['belief']), 'rule': v['deriv'][0], 'tree': tree(k),
+                      **({'flags': sorted(flags[k])} if k in flags else {})} for k, v in novel.items()]},
           open('data/search/closure.json', 'w'), indent=0)
 # samples: deepest non-inverse novel facts
 deep = sorted([k for k, v in novel.items() if v['deriv'][0] not in ('relInv',)], key=lambda k: -facts[k]['depth'])
@@ -226,7 +290,7 @@ if not HUBS:
     print(f"hub list removes {len(novel) - len(inter_hub)}: of those IC-kept {len(ics - inter_hub)}, IC-trivial {sum(low(k) for k in novel if k not in inter_hub)}, unjudged {sum(unjudged(k) for k in novel if k not in inter_hub)}")
     print(f"hub terms with IC >= {IC_T}: {sum(1 for h in hubs if ic.get(h, 0) >= IC_T)} of {len(hubs)}; with no IC: {sum(1 for h in hubs if h not in ic)}")
     print('hub terms (degree, IC):', ', '.join(f"{name(h)} ({(indeg + outdeg)[h]}, {ic[h]:.1f})" if h in ic else f"{name(h)} ({(indeg + outdeg)[h]}, -)" for h in sorted(hubs, key=lambda h: (-(indeg + outdeg)[h], h))))
-    json.dump({'threshold': IC_T, 'facts': [{'fact': show(k), 'score': round(score(k), 3), 'path_min': round(pathmin(k), 3), 'depth': facts[k]['depth'], 'rule': facts[k]['deriv'][0], 'hub_survivor': k in inter_hub} for k in scored]}, open('data/search/closure_ic.json', 'w'), indent=0)
+    json.dump({'threshold': IC_T, 'facts': [{'fact': show(k), 'score': round(score(k), 3), 'path_min': round(pathmin(k), 3), 'depth': facts[k]['depth'], 'rule': facts[k]['deriv'][0], 'hub_survivor': k in inter_hub, **({'flags': sorted(flags[k])} if k in flags else {})} for k in scored]}, open('data/search/closure_ic.json', 'w'), indent=0)
     inter = kept
 import random; random.seed(7)
 sample = random.sample(inter, min(15, len(inter)))
@@ -236,7 +300,7 @@ for k in sample: print(tree(k)); print()
 # --- structured dump for Lean emission
 def deriv_struct(k):
     v = facts[k]; d = v['deriv']
-    if d[0] == 'lit': return {'rule': 'lit', 'sid': d[1]}
+    if d[0] in ('lit', 'refineAxiom'): return {'rule': d[0], 'sid': d[1]}
     prem = [deriv_struct(x) for x in d[1:] if isinstance(x, tuple)]
     out = {'rule': d[0], 'premises': prem, 'fact': show(k), 'key': [list(x) if isinstance(x, tuple) else x for x in k]}
     if d[0] == 'relInv': out['to_rel'] = list(k[1])

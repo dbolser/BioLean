@@ -15,7 +15,7 @@ or a relation/kind pattern never seen in the textbook (Progol-style mode declara
 Effect holes are screened only for the Lean Target kinds (an activity must be a protein or function).
 Judgements are hand-written in data/search/holes_judgement.json (key = hole key) and merged in.
 
-Usage: holes.py <claims_m2_dir> <go.obo> [max_depth] [--no-m3]     (same arguments as closure.py; round 3 loads by default)
+Usage: holes.py <claims_m2_dir> <go.obo> [max_depth] [--no-m3] [--legacy]     (same arguments as closure.py; round 3 loads by default)
 Output: data/search/holes.json, docs/holes.md."""
 import sys, json, glob, re, collections, pathlib
 
@@ -73,11 +73,13 @@ def instances(C):
 def leaves_of(k, memo={}):
     if k not in memo:
         d = facts[k]['deriv']
-        memo[k] = {k} if d[0] == 'lit' else set().union(*(leaves_of(p) for p in d[1:] if isinstance(p, tuple)))
+        memo[k] = {k} if d[0] in ('lit', 'refineAxiom') else set().union(*(leaves_of(p) for p in d[1:] if isinstance(p, tuple)))
     return memo[k]
 def usable(P, C): return P in ALL and P != C and C not in leaves_of(P)
 
 def subj_obj(k): return (k[3], k[4]) if k[0] == 'effect' else (k[2], k[3])
+def reflexive(H):   # a r a, or a context of a against a ("insulin ⊓ located in blood raises insulin"); --legacy: exact curies only
+    s, o = subj_obj(H); return s == o or not ns['LEGACY'] and (s.startswith(o + '&') or o.startswith(s + '&'))
 def contradicted(H):
     """Why the hole is already refuted by what we know, or None."""
     if H[0] == 'rel':
@@ -103,7 +105,7 @@ for C in sorted(asserted, key=str):
     else:
         for rule, A, B, a_present in mine:
             H, P = (B, A) if a_present else (A, B)
-            if subj_obj(H)[0] == subj_obj(H)[1]: dropped['reflexive'] += 1; continue
+            if reflexive(H): dropped['reflexive'] += 1; continue
             why = contradicted(H)
             if why: dropped[why] += 1; continue
             holes[H].append((C, rule, P)); n_inst[rule] += 1

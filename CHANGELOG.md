@@ -22,6 +22,27 @@ Findings and decisions, dated. Code history is in `git log`; this records what w
   however thinly it is sampled. Below the targets, children are still biolib's, so the Metazoa slope (1/512) is
   generous.
 
+## 2026-10-29 (overnight: closure guards, refinement edges, neuron quantifiers)
+- `closure.py` loads Lean's refinement axiom by default (`e ⊓ ∃r.f is_a e`, 999/1000) for the 142 refined entities.
+  On the e31670c data: derived 1,614 to 2,287, IC-kept 886 to 1,254, holes 1,046 to 1,300 grouped. `--legacy`
+  reproduces every earlier output byte for byte. On the a0e235c data the edges reproduce the phase-3 scratch run
+  exactly (129 edges, 2,190 derived, 5 clashes).
+- Fixed "some neurons have no dendrites / axons" (body:m45539-54, -109): `m3` with `quant: some`. Four clashes went
+  (two direct, two inherited by neuron ⊓ Mammalia). One clash is left, a real round-2 error: "Animal cells also have a
+  centrosome" (cell:m45432-318) is annotated as true of every cell, so plant cells get centrioles against cell:m45432-75.
+  Not fixed; it needs `taxon: Metazoa`. `TextbookClaimsR3` was not regenerated; the two new `.quant .some` statements
+  compile in a scratch file.
+- Three guards flag derived effect facts (none is dropped). Feedback flags 95 of 196 chain conclusions (48 percent);
+  without the edges 16 of 94. The edges bring the homeostatic loops in (glucose, insulin, glucagon, calcium) and with
+  them 45 sign clashes ("glucose lowers insulin"), every one with a flagged side. Parthood and shared cause flag 0 in
+  the closure: no effect statement runs between a part and its whole, and the one shared-cause shape (statins) is a
+  stated fact and a mechanism. Both shapes occur as holes instead: 16 parthood, 59 shared cause.
+- Corrected `docs/closure-search.md` finding 3: "56 of 73 conclusions pass through the ATP feedback statement" was
+  wrong; 34 pass through ATP, 6 and 7 use the two ATP statements, the guard flags 15.
+- New hole artefact from the edges: 11 of the top 40 holes are "X is_a (Y ⊓ context)", unjudged and false on a read.
+  `holes.py` now counts a context against its own base term as reflexive (reflexive drops 2 to 46).
+- Fixed `docs/ic-triviality.md`: IC is the default filter; its numbers reproduce with `--no-m3 --legacy` (checked).
+
 ## 2026-10-29 (overnight: M3/M2 schema gaps and sound weakenings)
 - `Ctx.lifeStage` (UBERON stage, `Kind.anatomy`) beside `Ctx.stage` (GO process). Continuants take it by
   `existence_overlaps` (RO:0002490, the weakest of RO's "physical entity to stage" relations), processes by
