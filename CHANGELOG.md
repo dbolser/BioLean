@@ -2,6 +2,27 @@
 
 Findings and decisions, dated. Code history is in `git log`; this records what we learned.
 
+## 2026-10-28 (overnight: argument layer)
+- Built: `EvidenceKind.hypothesis` (weight 0), `Claim.noEffect` (a measured null), `opinionAt year`
+  on Statement and Derivation (one recursion, `opinionWith`, behind both), and `Rivalry`: belief in
+  one rival is fused as disbelief into the others. `Statement.forall_opinionAt` proves a property
+  for every year by checking only the evidence years.
+- M2 exit test met (`BioLean/Examples/Chemiosmosis.lean`): in 1965 both rivals are contested
+  (b = d = 1/3); by 1974 chemiosmotic is established (b = 0.806) and the chemical intermediate refuted
+  (d = 0.818). Read as one claim with refutations, chemiosmotic is never established in any year
+  (top b = 0.714), as the Python sketch found.
+- Finding, proved (`Rivalry.belief_le`): a rivalry decides losers, not winners. It never raises a
+  rival above its own evidence. Chemiosmosis wins because the chemical-intermediate reports become
+  support for a rival that the experiments then refute, not refutations of chemiosmosis.
+- With the items as the script had them, the theorems are false: 1965 chemiosmotic b = 0 (hypothesis
+  weighs 0, nothing else before 1966), 1974 b = 0.727. Changed illustrative items only: the 1963
+  review is now `.hypothesis` (it restates, no data); one 1965 pro-chemiosmotic item added (stands for
+  Mitchell & Moyle 1965, PMID unchecked). The six real papers alone give the 1974 result
+  (b = 0.800 exactly, d = 0.889) but not 1965.
+- Limit: each experiment is entered on both rivals (as `docs/formalisms/biolean.md` did), so the
+  rivalry partly counts it twice. Without those direct refutations both 1974 numbers are 0.714.
+  Multinomial opinions would fix this.
+
 ## 2026-10-28 (M2 built)
 - Context implemented as entity refinement: `Entity.refine e r f` (the class e ⊓ ∃r.f, RO domain
   checked, bracketed composite curie), `Ctx` and `Entity.inCtx` applying fields in a fixed order so

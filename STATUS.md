@@ -18,6 +18,7 @@ Last updated 2026-10-28 (after M3).
 | The textbook as Lean, round 2 (Sonnet, structured): 1,594 emitted, 1,591 compile | generated, outside the lib build | `BioLean/Lib/TextbookClaimsR2/`, `docs/textbook-lean-check.md` |
 | RO pinning tests | built, pass | `BioLean/Tests/RO.lean` |
 | Context (M2): entity refinement, `Ctx`/`inCtx`, transport between sibling taxa, protocol on Evidence; S1-S5 pass | built | `BioLean/Context.lean`, `Taxa.lean`, `Examples/Context.lean`, `Tests/Context.lean` |
+| Argument layer (M2): `hypothesis` kind, `noEffect`, `opinionAt` by year, `Rivalry`; chemiosmotic timeline as theorems | built | `BioLean/Rivalry.lean`, `Examples/Chemiosmosis.lean` |
 | Quantity (M3): counts, cardinalities, intervals, yields, some/most; 6 arithmetic rules; 7 theorems | built | `BioLean/Examples/Quantity.lean` |
 | Closure search over the textbook; 60 derived facts certified | built | `scripts/search/`, `BioLean/Examples/Closure.lean`, `docs/closure-search.md` |
 | Statements with PMID evidence, swappable reliability table | built | `BioLean/Evidence.lean` |
@@ -27,7 +28,7 @@ Last updated 2026-10-28 (after M3).
 | Formalism survey: 11 papers in 6 formalisms | done | `docs/formalisms/` |
 | Case studies: chemiosmotic timeline, NMN context, transcription generalisation | sketches in Python | `docs/case-studies.md`, `scripts/case_studies/` |
 | Textbook milestone: 4,695 claims from 7 OpenStax chapters, binned and verified | done, data committed | `docs/textbook-milestone.md`, `data/textbook/claims/` |
-| Proposed Context extension (Context.lean, inContext, noEffect, gradient, hypothesis kind) | drafted, builds in a scratch copy, not merged | `docs/formalisms/biolean.md` §5 |
+| Proposed Context extension (Context.lean, inContext, noEffect, gradient, hypothesis kind) | superseded: context by refinement, `noEffect` and `hypothesis` merged; `gradient` not | `docs/formalisms/biolean.md` §5 |
 
 ## What we have learned
 
@@ -100,7 +101,7 @@ Last updated 2026-10-28 (after M3).
 | evidence kinds | keep 8-way enum vs ECO codes with a reliability map | ECO |
 | coverage measure for generalize | clade fraction vs phylogenetic bracketing | bracketing |
 | base rate per claim | fixed 1/2 vs per-claim prior | per claim, source undecided |
-| rivals | id list on Statement vs multinomial opinion over alternatives | start with id list |
+| rivals | id list on Statement vs multinomial opinion over alternatives | built as `Rivalry` (one step, own beliefs); double counts evidence entered on both rivals; multinomial later |
 
 ## Known limits (not fixable inside the framework; must be stated)
 

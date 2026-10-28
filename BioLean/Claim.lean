@@ -114,6 +114,11 @@ inductive Claim
   | effect {k : Kind} (agent : Entity k) (sign : Sign) (target : Target)
   /-- The `sign`ed effect of `agent` on `target` runs via `mediator`. -/
   | mediatedBy {k : Kind} (agent : Entity k) (sign : Sign) (target : Target) (mediator : Target)
+  /-- `agent` has no effect on `target`: a measured null ("uncouplers leave H+/O unchanged"). This
+  is a positive finding. Refuting evidence on `effect agent s target` is not the same thing: it
+  says the effect is not `s`, which still allows the opposite sign, and a failure to see an effect
+  is not a measurement that there is none. -/
+  | noEffect {k : Kind} (agent : Entity k) (target : Target)
   /-- `a r b` for an RO relation `r`: part_of, occurs_in, has_output, is_a, ... The kinds must fit
   RO's declared domain and range (`Rel.accepts`), checked by `decide` at construction. -/
   | rel {k₁ k₂ : Kind} (r : Rel) (a : Entity k₁) (b : Entity k₂)
@@ -145,6 +150,7 @@ inductive Claim
 partial def Claim.toString : Claim → String
     | .effect a s t => s!"{a} {s.arrow} {t}"
     | .mediatedBy a s t m => s!"{a} {s.arrow} {t}  via  {m}"
+    | .noEffect a t => s!"{a} →0 {t}"
     | .rel r a b _ => s!"{a} {r} {b}"
     | .notRel r a b _ => s!"¬({a} {r} {b})"
     | .count w p n => s!"{w} has {n} × {p}"
@@ -162,7 +168,7 @@ instance : ToString Claim := ⟨Claim.toString⟩
 
 /-- The curie of a claim's subject: the agent, the first relatum, the whole or the process. -/
 def Claim.subjectCurie : Claim → String
-  | .effect a .. | .mediatedBy a .. | .rel _ a .. | .notRel _ a .. => a.curie
+  | .effect a .. | .mediatedBy a .. | .noEffect a _ | .rel _ a .. | .notRel _ a .. => a.curie
   | .count w .. | .atLeast w .. => w.curie
   | .cardinality c _ | .measure c .. | .less c .. => c.curie
   | .produces p .. | .consumes p .. | .yield p .. => p.curie

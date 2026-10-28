@@ -20,7 +20,7 @@ Add relational claims and the rules that move them.
   the other 19 structural derivations; structure-to-effect bridges; `Target.activity` on functions;
   `Kind.sequenceFeature`; compound-sentence splitting and grounding are the top blockers.
 
-## M2. Context, hypotheses, rivals (context built 2026-10-28; hypotheses and rivals remain)
+## M2. Context, hypotheses, rivals (built 2026-10-28)
 Context by entity refinement (bake-off winner, `docs/m2/judgement.md`), then the argument layer.
 - `Entity.refine` / `Entity.inCtx`: context as a subclass of the subject; specialisation via the
   existing is_a laws; `transport` between sibling taxa as a weighted rule; protocol on Evidence.
@@ -28,9 +28,10 @@ Context by entity refinement (bake-off winner, `docs/m2/judgement.md`), then the
   rival's belief into disbelief; `Claim.noEffect`.
 - **Exit:** chemiosmotic timeline reaches *established* by 1974 and Slater is *refuted*, computed in
   Lean not Python; NMN human claim is low belief with the mouse papers as axioms.
-- **Status:** context half done: NMN in aged humans is 0.21 from aged mice with the transport item as
-  an axiom; mouse and human cannot fuse (type-level). Remaining: `hypothesis` kind, `rivals` with
-  mutual exclusion, `noEffect`, the chemiosmotic timeline in Lean.
+- **Status:** done. NMN in aged humans is 0.21 from aged mice with the transport item as an axiom;
+  mouse and human cannot fuse (type-level). Rivals are a `Rivalry` over statements, not an id list.
+  Chemiosmosis is contested in 1965 and established (Slater refuted) by 1974 as theorems, after two
+  changes to illustrative items (`BioLean/Examples/Chemiosmosis.lean`, CHANGELOG).
 
 ## M3. Quantity (built 2026-10-28)
 Counts, class sizes, intervals with units, yields, and `some`/`most` quantifiers; rules carry

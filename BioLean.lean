@@ -5,3 +5,4 @@ import BioLean.Taxa
 import BioLean.Context
 import BioLean.Evidence
 import BioLean.Derivation
+import BioLean.Rivalry

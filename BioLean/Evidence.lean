@@ -27,6 +27,7 @@ inductive EvidenceKind
   | observational
   | inVitro
   | textMined       -- an automatically extracted relation (PubTator3, INDRA readers)
+  | hypothesis      -- the paper proposes the claim: recorded for provenance, contributes no belief
   | crossSpecies    -- a judgment that a result transfers between taxa (ECO ISO-like); `transport`
   | definitional    -- true by definition: a refinement is a subclass of what it refines
   deriving DecidableEq, Repr
@@ -78,6 +79,7 @@ instance EvidenceModel.standard : EvidenceModel where
     | .observational => 1 / 2
     | .inVitro => 1 / 2
     | .textMined => 3 / 10
+    | .hypothesis => 0
     | .crossSpecies => 3 / 10
     -- Weight 1 would be exact but is ruled out by `lt_one` (an opinion keeps `0 < u`). At 999/1000
     -- the refinement axiom is the weakest premise only above belief 0.999, so S3 is exact in
@@ -92,6 +94,10 @@ namespace Evidence
 /-- The opinion contributed by one citation. -/
 def opinion [m : EvidenceModel] (e : Evidence) : Opinion :=
   Opinion.ofReliability (m.reliability e.kind) (m.nonneg e.kind) (m.lt_one e.kind) e.polarity
+
+/-- The opinion contributed in `year`: nothing before the item was published. -/
+def opinionAt [EvidenceModel] (e : Evidence) (year : Nat) : Opinion :=
+  if e.year ≤ year then e.opinion else .vacuous
 
 end Evidence
 
@@ -109,6 +115,50 @@ def opinion [EvidenceModel] (s : Statement) : Opinion :=
   s.distinctEvidence.foldl (fun acc e => acc.fuse e.opinion) Opinion.vacuous
 
 def pmids (s : Statement) : List Nat := s.evidence.map (·.pmid)
+
+/-- The statement as it stood at the end of `year`: only the evidence published by then. -/
+def asOf (s : Statement) (year : Nat) : Statement :=
+  { s with evidence := s.evidence.filter (·.year ≤ year) }
+
+/-- The opinion in `year`, fused from the evidence published by then. -/
+def opinionAt [EvidenceModel] (s : Statement) (year : Nat) : Opinion := (s.asOf year).opinion
+
+/-- Once every item is published, the opinion in that year is the opinion. -/
+theorem opinionAt_of_le [EvidenceModel] {s : Statement} {year : Nat}
+    (h : ∀ e ∈ s.evidence, e.year ≤ year) : s.opinionAt year = s.opinion := by
+  have : s.evidence.filter (·.year ≤ year) = s.evidence := List.filter_eq_self.2 (by simpa using h)
+  simp only [opinionAt, asOf, this]
+
+/-- The opinion only changes in years in which evidence appeared, so a property holds in every
+year once it holds in year 0 and in each evidence year: "never established" by `decide`. -/
+theorem forall_opinionAt [EvidenceModel] {s : Statement} {P : Opinion → Prop}
+    (h : ∀ y ∈ 0 :: s.evidence.map (·.year), P (s.opinionAt y)) (year : Nat) :
+    P (s.opinionAt year) := by
+  -- the last evidence year up to `year` (or 0) admits the same evidence as `year`
+  have cut : ∀ l : List Nat, ∃ y ∈ 0 :: l, y ≤ year ∧ ∀ a ∈ l, a ≤ year → a ≤ y := by
+    intro l
+    induction l with
+    | nil => exact ⟨0, by simp, by omega, by simp⟩
+    | cons a l ih =>
+      obtain ⟨y, hy, hle, hcov⟩ := ih
+      by_cases ha : a ≤ year
+      · refine ⟨max a y, ?_, by omega, ?_⟩
+        · rcases Nat.le_total a y with h' | h'
+          · simp only [List.mem_cons] at hy ⊢; rw [Nat.max_eq_right h']; tauto
+          · rw [Nat.max_eq_left h']; simp
+        · simp only [List.mem_cons, forall_eq_or_imp]
+          exact ⟨fun _ => by omega, fun b hb hb' => by have := hcov b hb hb'; omega⟩
+      · refine ⟨y, ?_, hle, ?_⟩
+        · simp only [List.mem_cons] at hy ⊢; tauto
+        · simp only [List.mem_cons, forall_eq_or_imp]
+          exact ⟨fun h' => absurd h' ha, hcov⟩
+  obtain ⟨y, hy, hle, hcov⟩ := cut (s.evidence.map (·.year))
+  have same : s.asOf year = s.asOf y := by
+    simp only [asOf, Statement.mk.injEq, true_and]
+    refine List.filter_congr fun e he => ?_
+    have := hcov e.year (List.mem_map_of_mem he)
+    by_cases h' : e.year ≤ year <;> simp [h'] <;> omega
+  simpa [opinionAt, same] using h y hy
 
 instance : ToString Statement := ⟨fun s => s!"{s.id}: {s.claim}  ({s.evidence.length} refs)"⟩
 

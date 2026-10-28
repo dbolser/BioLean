@@ -129,25 +129,38 @@ namespace Derivation
 
 variable [EvidenceModel]
 
+/-- The strength of a derivation, given the opinion of each literature statement (`lit`) and of
+each transport item (`ev`). `opinion` and `opinionAt` are this with different leaves. -/
+def opinionWith (lit : Statement → Opinion) (ev : Evidence → Opinion) :
+    {c : Claim} → Derivation c → Opinion
+  | _, .lit s => lit s
+  | _, .viaActivity ab bt => (ab.opinionWith lit ev).chain (bt.opinionWith lit ev)
+  | _, .viaAmount am mt => (am.opinionWith lit ev).chain (mt.opinionWith lit ev)
+  | _, .both d₁ d₂ => (d₁.opinionWith lit ev).fuse (d₂.opinionWith lit ev)
+  | _, .relChain ab bc .. => (ab.opinionWith lit ev).weakest (bc.opinionWith lit ev)
+  | _, .notRelSub ab bc .. => (ab.opinionWith lit ev).weakest (bc.opinionWith lit ev)
+  | _, .notRelObj ac bc .. => (ac.opinionWith lit ev).weakest (bc.opinionWith lit ev)
+  | _, .sequencesOver a l .. => (a.opinionWith lit ev).weakest (l.opinionWith lit ev)
+  | _, .pigeonhole i hs e .. =>
+      ((i.opinionWith lit ev).weakest (hs.opinionWith lit ev)).weakest (e.opinionWith lit ev)
+  | _, .perSet p s .. => (p.opinionWith lit ev).weakest (s.opinionWith lit ev)
+  | _, .fusionAdds ix iy o cx cy .. =>
+      ((((ix.opinionWith lit ev).weakest (iy.opinionWith lit ev)).weakest (o.opinionWith lit ev)).weakest
+        (cx.opinionWith lit ev)).weakest (cy.opinionWith lit ev)
+  | _, .netYield m u .. => (m.opinionWith lit ev).weakest (u.opinionWith lit ev)
+  | _, .compareIntervals a b .. => (a.opinionWith lit ev).weakest (b.opinionWith lit ev)
+  | _, .weaken _ d => d.opinionWith lit ev
+  | _, .refineMono fg .. => fg.opinionWith lit ev
+  | _, .isaInheritEffect ab bt => (ab.opinionWith lit ev).weakest (bt.opinionWith lit ev)
+  | _, .transport _ _ d e .. => (d.opinionWith lit ev).chain (ev e)
+
 /-- The strength of a derivation. -/
-def opinion : {c : Claim} → Derivation c → Opinion
-  | _, .lit s => s.opinion
-  | _, .viaActivity ab bt => ab.opinion.chain bt.opinion
-  | _, .viaAmount am mt => am.opinion.chain mt.opinion
-  | _, .both d₁ d₂ => d₁.opinion.fuse d₂.opinion
-  | _, .relChain ab bc .. => ab.opinion.weakest bc.opinion
-  | _, .notRelSub ab bc .. => ab.opinion.weakest bc.opinion
-  | _, .notRelObj ac bc .. => ac.opinion.weakest bc.opinion
-  | _, .sequencesOver a l .. => a.opinion.weakest l.opinion
-  | _, .pigeonhole i hs e .. => (i.opinion.weakest hs.opinion).weakest e.opinion
-  | _, .perSet p s .. => p.opinion.weakest s.opinion
-  | _, .fusionAdds ix iy o cx cy .. => (((ix.opinion.weakest iy.opinion).weakest o.opinion).weakest cx.opinion).weakest cy.opinion
-  | _, .netYield m u .. => m.opinion.weakest u.opinion
-  | _, .compareIntervals a b .. => a.opinion.weakest b.opinion
-  | _, .weaken _ d => d.opinion
-  | _, .refineMono fg .. => fg.opinion
-  | _, .isaInheritEffect ab bt => ab.opinion.weakest bt.opinion
-  | _, .transport _ _ d e .. => d.opinion.chain e.opinion
+def opinion {c : Claim} (d : Derivation c) : Opinion := d.opinionWith Statement.opinion Evidence.opinion
+
+/-- The strength of a derivation in `year`: every axiom and transport item cut to the evidence
+published by then, combined by the same operators as `opinion`. -/
+def opinionAt {c : Claim} (d : Derivation c) (year : Nat) : Opinion :=
+  d.opinionWith (·.opinionAt year) (·.opinionAt year)
 
 /-- The literature statements a derivation rests on, in order of first use. -/
 def axioms : {c : Claim} → Derivation c → List Statement

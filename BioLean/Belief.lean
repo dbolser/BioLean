@@ -134,6 +134,15 @@ theorem disbelief_le_fuse_of_refutes (x y : Opinion) (hy : y.belief = 0) :
   rw [hu]
   nlinarith [mul_nonneg (mul_nonneg x.uncertainty_pos.le y.disbelief_nonneg) (sub_nonneg.2 hx)]
 
+/-- Adding evidence that carries no belief never raises belief. -/
+theorem fuse_belief_le_of_refutes (x y : Opinion) (hy : y.belief = 0) :
+    (fuse x y).belief ≤ x.belief := by
+  simp only [fuse, hy, zero_mul, add_zero]
+  rw [div_le_iff₀ (kappa_pos x y)]
+  unfold kappa
+  nlinarith [mul_nonneg (mul_nonneg x.belief_nonneg x.uncertainty_pos.le)
+    (sub_nonneg.2 y.uncertainty_le_one)]
+
 /-- Fusion never increases uncertainty: more evidence, less ignorance. -/
 theorem fuse_uncertainty_le_left (x y : Opinion) : (fuse x y).uncertainty ≤ x.uncertainty := by
   simp only [fuse]
