@@ -2,6 +2,36 @@
 
 Findings and decisions, dated. Code history is in `git log`; this records what we learned.
 
+## 2026-10-28 (overnight: round 3 annotation, quantity and context, molecular biology and inheritance)
+- Re-annotated the 198 records of `molecular-biology` (106) and `the-cellular-basis-of-inheritance` (92) that M2 blocked as
+  `quantity` (147) or `context_required` (51). Output `data/textbook/claims_m3/<chapter>.json`, each record with an `m3`
+  field. 128 now have a constructor (65 percent: 81 of 147 quantity, 47 of 51 context); 70 stay `none`. By constructor: rel 49,
+  count 20, measure 15, effect 14, cardinality 7, atLeast 6, yield 6, produces 3, notRel 3, consumes 3, less 1, mediatedBy 1.
+  Quantifiers: most 13, some 13. Context used: taxon 75 (Eukaryota 21, human 18, E. coli 16, Metazoa 7, Bacteria 6), stage 10,
+  condition 11 (organism 8, environment 3), cellType 6, component 1, anatomy 0. 67 curie_changes in 55 records. Confidence:
+  high 77, medium 107, low 14.
+- Convention: a constructor with a blocker is a sound weakening and the blocker names what was dropped (25 records: compound 8,
+  proportion 5, has_quality 4, exclusivity 4, other 4). The 70 `none` have a blocker too: other 24, ungrounded entity 17,
+  proportion 9, precondition 7, compound 5, no current ontology term 2, definition 2, has_quality 3, exclusivity 1. A
+  precondition ("only if unrepaired") is never dropped to a bare claim, since that would be stronger than the sentence.
+- Checked: all 128 constructed claims elaborate in Lean, with `inCtx` for the context (generated file, not committed).
+- What worked. `yield` on ploidy (PATO:0001374) says "meiosis I takes two sets to one" (-1) and "mitosis keeps the number" (0), 6
+  records. "Haploid cells have one set" is `measure` of ploidy with unit "chromosome sets", so `BIOLEAN:chromosome_set` is not needed.
+  `produces` fits two forks per origin (2), four haploid cells at the end of meiosis II (4, stage) and one Barr body (1).
+  Lactose present or absent is an environment condition (CHEBI:17716, or a BLN placeholder for the absent case).
+- Gaps. Equality ("as much A as T", one nucleotide per nucleotide read) 6 records; proportions and ratios ("half the
+  chromosomes", "twice as fast", "almost entirely") 14, where at best the sign survives (meiosis reduces ploidy, sexual is
+  slower than asexual); probability ("equal chance") 4; formulas (2^n); superlatives. 17 records need a part with no term:
+  ring, hydrogen bond, strand, chromatin fiber, tetrad, replication mistake. 7 are conditionals (T27-style conclusions such as
+  "diploid egg plus haploid sperm gives a triploid zygote" cannot stand alone).
+- Data traps. Polysome (GO:0005844) is obsolete with no replacement, so two polysome sentences stay `none`. GO:0000003
+  reproduction is obsolete (GO:0022414 used). CL:0002371 somatic cell is obsolete; new records use diploid cell (CL:0000415)
+  and it survives only where M1 already had it. `Ctx.stage` is `Entity .process` but "adult" and "early embryo" are UBERON stage
+  terms (UBERON:0000113, UBERON:0000068). `cardinality nucleobase 4` (`Quantity.S_bases`) overcounts: uracil is a fifth.
+- Decision for Dan: prokaryote became Bacteria (NCBITaxon:2) everywhere. The rule offered NCBITaxon:131567 for sentences naming
+  both kinds, but cellular organisms includes Eukaryota, so "transcription occurs in the cytoplasm" would contradict the
+  eukaryote sentence by is_a. Archaea are dropped.
+
 ## 2026-10-28 (overnight: round 3 annotation, quantity and context, body systems and reproduction)
 - Re-annotated the 218 records of `the-body-s-systems-a`, `-b` and `reproduction-at-the-cellular-level` that M2 blocked
   as `quantity` (142) or `context_required` (76), against the M2 context and M3 quantity constructors. Output is

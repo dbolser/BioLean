@@ -1,0 +1,7461 @@
+[
+ {
+  "id": "the-cellular-basis-of-inheritance-m45464-7",
+  "module": "m45464",
+  "source": "While many single-celled organisms and a few multicellular organisms can produce genetically identical clones of themselves through mitotic cell division, many single-celled organisms and most multicellular organisms reproduce regularly using another method.",
+  "claim": "Many single-celled and a few multicellular organisms produce genetically identical clones via mitotic cell division",
+  "kind": "process_description",
+  "bin": "missing_construct",
+  "missing_construct": "has_output",
+  "entities": [
+   {
+    "text": "organism",
+    "curie": null,
+    "ontology": null,
+    "verified": false
+   },
+   {
+    "text": "mitotic cell cycle",
+    "curie": "GO:0000278",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "genetically identical",
+    "curie": null,
+    "ontology": null,
+    "verified": false
+   }
+  ],
+  "relation": "has_output",
+  "context": {},
+  "lean": "-- needs has_output: Claim.hasOutput mitoticCellDivision clone",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "compound_sentence",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45464-8",
+  "module": "m45464",
+  "source": "While many single-celled organisms and a few multicellular organisms can produce genetically identical clones of themselves through mitotic cell division, many single-celled organisms and most multicellular organisms reproduce regularly using another method.",
+  "claim": "Most multicellular organisms reproduce using a method other than mitotic cloning",
+  "kind": "other",
+  "bin": "missing_construct",
+  "missing_construct": "has_participant",
+  "entities": [
+   {
+    "text": "organism",
+    "curie": null,
+    "ontology": null,
+    "verified": false
+   },
+   {
+    "text": "sexual reproduction",
+    "curie": "GO:0019953",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_participant",
+  "context": {},
+  "lean": "-- needs has_participant: Claim.participates multicellularOrganism sexualReproduction",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": "most",
+   "subject": "UBERON:0000468",
+   "relation": "participates in",
+   "object": "GO:0019953",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "multicellular organisms",
+     "from": null,
+     "to": "UBERON:0000468",
+     "why": "generic multicellular organism"
+    }
+   ],
+   "confidence": "low"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45464-11",
+  "module": "m45464",
+  "source": "Even within the animal kingdom, characteristics that may often be associated with sexual reproduction, such as parental care or sexual behavior, are not universal.",
+  "claim": "Parental care and sexual behavior are not universal among animals",
+  "kind": "other",
+  "bin": "missing_construct",
+  "missing_construct": "negation",
+  "entities": [
+   {
+    "text": "animals",
+    "curie": "NCBITaxon:33208",
+    "ontology": "NCBITaxon",
+    "verified": true
+   }
+  ],
+  "relation": "not_universal",
+  "context": {},
+  "lean": "-- needs negation: not (all animals have_quality parentalCare/sexualBehavior)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "compound_sentence",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45464-19",
+  "module": "m45464",
+  "source": "The vast majority of eukaryotic organisms can or must employ some form of meiosis and fertilization to reproduce.",
+  "claim": "The vast majority of eukaryotes can or must use meiosis and fertilization to reproduce",
+  "kind": "other",
+  "bin": "missing_construct",
+  "missing_construct": "has_participant",
+  "entities": [
+   {
+    "text": "eukaryotes",
+    "curie": "NCBITaxon:2759",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "meiosis",
+    "curie": "GO:0051321",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "fertilization",
+    "curie": "GO:0009566",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_participant",
+  "context": {
+   "taxon": "NCBITaxon:2759"
+  },
+  "lean": "-- needs has_participant + quantifier: Claim.participates eukaryota meiosis",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:2759",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": "most",
+   "subject": "NCBITaxon:2759",
+   "relation": "capable of",
+   "object": "GO:0051321",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "compound_sentence",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45465-2",
+  "module": "m45465",
+  "source": "The fact that most eukaryotes reproduce sexually is evidence of its evolutionary success.",
+  "claim": "Most eukaryotes reproduce sexually",
+  "kind": "other",
+  "bin": "missing_construct",
+  "missing_construct": "has_participant",
+  "entities": [
+   {
+    "text": "eukaryotes",
+    "curie": "NCBITaxon:2759",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "sexual reproduction",
+    "curie": "GO:0019953",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_participant",
+  "context": {
+   "taxon": "NCBITaxon:2759"
+  },
+  "lean": "-- needs has_participant: Claim.participates eukaryota sexualReproduction",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:2759",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": "most",
+   "subject": "NCBITaxon:2759",
+   "relation": "participates in",
+   "object": "GO:0019953",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45465-4",
+  "module": "m45465",
+  "source": "In many animals, it is the only mode of reproduction.",
+  "claim": "In many animals sexual reproduction is the only mode of reproduction",
+  "kind": "other",
+  "bin": "missing_construct",
+  "missing_construct": "has_participant",
+  "entities": [
+   {
+    "text": "animals",
+    "curie": "NCBITaxon:33208",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "sexual reproduction",
+    "curie": "GO:0019953",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_participant",
+  "context": {
+   "taxon": "NCBITaxon:33208"
+  },
+  "lean": "-- needs has_participant + exclusivity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:33208",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": "some",
+   "subject": "NCBITaxon:33208",
+   "relation": "participates in",
+   "object": "GO:0019953",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "exclusivity",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45465-8",
+  "module": "m45465",
+  "source": "There is also the obvious benefit to an organism that can produce offspring by asexual budding, fragmentation, or asexual eggs.",
+  "claim": "Some organisms produce offspring by budding, fragmentation or asexual eggs",
+  "kind": "other",
+  "bin": "missing_construct",
+  "missing_construct": "has_participant",
+  "entities": [
+   {
+    "text": "organism",
+    "curie": null,
+    "ontology": null,
+    "verified": false
+   },
+   {
+    "text": "asexual reproduction",
+    "curie": "GO:0019954",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_participant",
+  "context": {},
+  "lean": "-- needs has_participant",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": "some",
+   "subject": "NCBITaxon:131567",
+   "relation": "participates in",
+   "object": "GO:0019954",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "organism",
+     "from": null,
+     "to": "NCBITaxon:131567",
+     "why": "generic 'organism'; cellular organisms"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45465-12",
+  "module": "m45465",
+  "source": "Indeed, some organisms that lead a solitary lifestyle have retained the ability to reproduce asexually.",
+  "claim": "Some solitary organisms have retained the ability to reproduce asexually",
+  "kind": "other",
+  "bin": "missing_construct",
+  "missing_construct": "disposition/capability",
+  "entities": [
+   {
+    "text": "organism",
+    "curie": null,
+    "ontology": null,
+    "verified": false
+   },
+   {
+    "text": "asexual reproduction",
+    "curie": "GO:0019954",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_capability",
+  "context": {},
+  "lean": "-- needs capability",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": "some",
+   "subject": "NCBITaxon:131567",
+   "relation": "capable of",
+   "object": "GO:0019954",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": {
+     "kind": "organism",
+     "curie": "BLN:solitary_lifestyle",
+     "text": "solitary lifestyle"
+    }
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "organism",
+     "from": null,
+     "to": "NCBITaxon:131567",
+     "why": "generic 'organism'; cellular organisms"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45465-13",
+  "module": "m45465",
+  "source": "In addition, asexual populations only have female individuals, so every individual is capable of reproduction.",
+  "claim": "Asexual populations contain only female individuals",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "female",
+    "curie": "PATO:0000383",
+    "ontology": "PATO",
+    "verified": true
+   }
+  ],
+  "relation": "composed_of",
+  "context": {},
+  "lean": "-- needs quantity/proportion",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "exclusivity",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45465-14",
+  "module": "m45465",
+  "source": "In addition, asexual populations only have female individuals, so every individual is capable of reproduction.",
+  "claim": "Every individual in an asexual population is capable of reproduction",
+  "kind": "other",
+  "bin": "missing_construct",
+  "missing_construct": "disposition/capability",
+  "entities": [
+   {
+    "text": "reproduction",
+    "curie": null,
+    "ontology": null,
+    "verified": false
+   }
+  ],
+  "relation": "has_capability",
+  "context": {},
+  "lean": "-- needs capability",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "NCBITaxon:131567",
+   "relation": "capable of",
+   "object": "GO:0022414",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": {
+     "kind": "organism",
+     "curie": "BLN:member_of_asexual_population",
+     "text": "member of an asexual population"
+    }
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "organism",
+     "from": null,
+     "to": "NCBITaxon:131567",
+     "why": "generic 'organism'; cellular organisms"
+    },
+    {
+     "text": "reproduction",
+     "from": null,
+     "to": "GO:0022414",
+     "why": "GO:0000003 reproduction is obsolete; GO names reproductive process as its replacement"
+    }
+   ],
+   "confidence": "low"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45465-15",
+  "module": "m45465",
+  "source": "In contrast, the males in sexual populations (half the population) are not producing offspring themselves.",
+  "claim": "Males (half of a sexual population) do not themselves produce offspring",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "male",
+    "curie": "PATO:0000384",
+    "ontology": "PATO",
+    "verified": true
+   },
+   {
+    "text": "offspring",
+    "curie": null,
+    "ontology": null,
+    "verified": false
+   }
+  ],
+  "relation": "proportion",
+  "context": {},
+  "lean": "-- needs quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "proportion",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45465-16",
+  "module": "m45465",
+  "source": "Because of this, an asexual population can grow twice as fast as a sexual population in theory.",
+  "claim": "An asexual population can in theory grow twice as fast as a sexual population",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "asexual reproduction",
+    "curie": "GO:0019954",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "sexual reproduction",
+    "curie": "GO:0019953",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "rate ratio",
+  "context": {},
+  "lean": "-- needs quantity: growthRate asexual = 2 x growthRate sexual",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "less",
+   "quant": null,
+   "subject": "GO:0019953",
+   "relation": null,
+   "object": "GO:0019954",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": "PATO:0000161",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "proportion",
+   "curie_changes": [
+    {
+     "text": "rate",
+     "from": null,
+     "to": "PATO:0000161",
+     "why": "PATO quality implied by the sentence"
+    }
+   ],
+   "confidence": "low"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45465-19",
+  "module": "m45465",
+  "source": "However, multicellular organisms that exclusively depend on asexual reproduction are exceedingly rare.",
+  "claim": "Multicellular organisms that exclusively reproduce asexually are exceedingly rare",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "organism",
+    "curie": null,
+    "ontology": null,
+    "verified": false
+   },
+   {
+    "text": "asexual reproduction",
+    "curie": "GO:0019954",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "frequency",
+  "context": {},
+  "lean": "-- needs quantity/frequency",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "proportion",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45465-31",
+  "module": "m45465",
+  "source": "The problematic question is why, even in the face of fairly stable conditions, sexual reproduction persists when it is more difficult and produces fewer offspring for individual organisms?",
+  "claim": "Sexual reproduction is more difficult and produces fewer offspring per individual than asexual reproduction",
+  "kind": "effect",
+  "bin": "missing_construct",
+  "missing_construct": "similarity/comparison",
+  "entities": [
+   {
+    "text": "sexual reproduction",
+    "curie": "GO:0019953",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "offspring",
+    "curie": null,
+    "ontology": null,
+    "verified": false
+   }
+  ],
+  "relation": "decreases amount of",
+  "context": {},
+  "lean": "-- needs comparison: offspring per individual, sexualReproduction < asexualReproduction",
+  "bin_m1": "missing_construct",
+  "lean_m1": "similarity/comparison",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "compound_sentence",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45465-56",
+  "module": "m45465",
+  "source": "The process of meiosis reduces the resulting gamete’s chromosome number by half.",
+  "claim": "Meiosis halves the chromosome number of the resulting gamete",
+  "kind": "effect",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "meiosis",
+    "curie": "GO:0051321",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "gamete",
+    "curie": "CL:0000300",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "chromosome number",
+    "curie": null,
+    "ontology": null,
+    "verified": false
+   }
+  ],
+  "relation": "decreases",
+  "context": {},
+  "lean": "Claim.effect meiosis .neg (.phenotype chromosomeNumber)  -- 'by half' not captured",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "GO:0051321",
+   "relation": null,
+   "object": "PATO:0001374",
+   "sign": "neg",
+   "target": "phenotype",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "proportion",
+   "curie_changes": [
+    {
+     "text": "chromosome number",
+     "from": null,
+     "to": "PATO:0001374",
+     "why": "ploidy: the number of chromosome sets, the quality the sentence counts"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45465-67",
+  "module": "m45465",
+  "source": "Nearly all animals employ a diploid-dominant life-cycle strategy in which the only haploid cells produced by the organism are the gametes.",
+  "claim": "In animals the only haploid cells are the gametes",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "equality/identity",
+  "entities": [
+   {
+    "text": "animals",
+    "curie": "NCBITaxon:33208",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "haploid cell",
+    "curie": "CL:0000413",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "gamete",
+    "curie": "CL:0000300",
+    "ontology": "CL",
+    "verified": true
+   }
+  ],
+  "relation": "equality",
+  "context": {
+   "taxon": "NCBITaxon:33208"
+  },
+  "lean": "-- needs equality/identity: haploidCell = gamete [in animals]",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:33208",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "CL:0000300",
+   "relation": "is_a",
+   "object": "CL:0000413",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33208",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "exclusivity",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45465-68",
+  "module": "m45465",
+  "source": "The gametes are produced from diploid germ cells, a special cell line that only produces gametes.",
+  "claim": "Gametes are produced from diploid germ cells",
+  "kind": "process_description",
+  "bin": "missing_construct",
+  "missing_construct": "has_input",
+  "entities": [
+   {
+    "text": "gamete",
+    "curie": "CL:0000300",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "germ cell",
+    "curie": "CL:0000586",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "diploid",
+    "curie": "PATO:0001394",
+    "ontology": "PATO",
+    "verified": true
+   }
+  ],
+  "relation": "has_input",
+  "context": {
+   "taxon": "NCBITaxon:33208"
+  },
+  "lean": "-- needs has_input: Claim.hasInput gameteGeneration germCell",
+  "bin_m1": "missing_construct",
+  "lean_m1": "compound",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "CL:0000300",
+   "relation": "develops from",
+   "object": "CL:0000586",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:33208",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "CL:0000300",
+   "relation": "develops from",
+   "object": "CL:0000586",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33208",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "has_quality",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45465-70",
+  "module": "m45465",
+  "source": "Once the haploid gametes are formed, they lose the ability to divide again.",
+  "claim": "Once formed, haploid gametes lose the ability to divide",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "gamete",
+    "curie": "CL:0000300",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "cell division",
+    "curie": "GO:0051301",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "decreases",
+  "context": {
+   "taxon": "NCBITaxon:33208"
+  },
+  "lean": "Claim.inContext {taxa:[animals], cellType:gamete} (Claim.effect gameteFormation .neg (.process cellDivision))",
+  "m2": {
+   "ctor": "notRel",
+   "subject": "CL:0000300",
+   "relation": "capable of",
+   "object": "GO:0051301",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:33208",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "notRel",
+   "quant": null,
+   "subject": "CL:0000300",
+   "relation": "capable of",
+   "object": "GO:0051301",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33208",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45465-82",
+  "module": "m45465",
+  "source": "Meiosis is not involved in the production of gametes in this case, as the organism that produces gametes is already haploid.",
+  "claim": "In plants, meiosis is not involved in gamete production",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "meiosis",
+    "curie": "GO:0051321",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "gamete generation",
+    "curie": "GO:0007276",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "plants",
+    "curie": "NCBITaxon:3193",
+    "ontology": "NCBITaxon",
+    "verified": true
+   }
+  ],
+  "relation": "not involved in",
+  "context": {
+   "taxon": "NCBITaxon:3193"
+  },
+  "lean": "Claim.inContext {taxa:[plants]} (Claim.noEffect meiosis (.process gameteGeneration))",
+  "m2": {
+   "ctor": "notRel",
+   "subject": "GO:0007276",
+   "relation": "has part",
+   "object": "GO:0051321",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:3193",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "notRel",
+   "quant": null,
+   "subject": "GO:0007276",
+   "relation": "has part",
+   "object": "GO:0051321",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:3193",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45465-88",
+  "module": "m45465",
+  "source": "Nearly all eukaryotes undergo sexual reproduction.",
+  "claim": "Nearly all eukaryotes undergo sexual reproduction",
+  "kind": "other",
+  "bin": "missing_construct",
+  "missing_construct": "has_participant",
+  "entities": [
+   {
+    "text": "eukaryotes",
+    "curie": "NCBITaxon:2759",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "sexual reproduction",
+    "curie": "GO:0019953",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_participant",
+  "context": {
+   "taxon": "NCBITaxon:2759"
+  },
+  "lean": "-- needs has_participant",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:2759",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": "most",
+   "subject": "NCBITaxon:2759",
+   "relation": "participates in",
+   "object": "GO:0019953",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45465-92",
+  "module": "m45465",
+  "source": "The process of meiosis produces genetically unique reproductive cells called gametes, which have half the number of chromosomes as the parent cell.",
+  "claim": "Gametes have half the number of chromosomes of the parent cell",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "gamete",
+    "curie": "CL:0000300",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "chromosome number",
+    "curie": null,
+    "ontology": null,
+    "verified": false
+   }
+  ],
+  "relation": "quantity",
+  "context": {},
+  "lean": "-- needs quantity (ratio 1/2)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "proportion",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45465-104",
+  "module": "m45465",
+  "source": "The offspring of sexually reproducing organisms are all genetically unique.",
+  "claim": "Offspring of sexually reproducing organisms are all genetically unique",
+  "kind": "effect",
+  "bin": "missing_construct",
+  "missing_construct": "has_quality",
+  "entities": [
+   {
+    "text": "sexual reproduction",
+    "curie": "GO:0019953",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "genetically unique",
+    "curie": null,
+    "ontology": null,
+    "verified": false
+   }
+  ],
+  "relation": "increases",
+  "context": {},
+  "lean": "Claim.effect sexualReproduction .pos (.phenotype geneticUniqueness)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "has_quality",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45465-106",
+  "module": "m45465",
+  "source": "Because of this, sexually reproducing organisms may have more successful survival of offspring in environments that change than asexually reproducing organisms, whose offspring are all genetically identical.",
+  "claim": "Offspring of asexual organisms are all genetically identical",
+  "kind": "effect",
+  "bin": "missing_construct",
+  "missing_construct": "has_quality",
+  "entities": [
+   {
+    "text": "asexual reproduction",
+    "curie": "GO:0019954",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "genetically identical",
+    "curie": null,
+    "ontology": null,
+    "verified": false
+   }
+  ],
+  "relation": "increases",
+  "context": {},
+  "lean": "Claim.effect asexualReproduction .pos (.phenotype geneticIdentity)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "has_quality",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45466-3",
+  "module": "m45466",
+  "source": "If those two cells each contain one set of chromosomes, then the resulting cell contains two sets of chromosomes.",
+  "claim": "If two fusing cells each contain one chromosome set, the resulting cell contains two sets",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "cell",
+    "curie": "CL:0000000",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "chromosome",
+    "curie": "GO:0005694",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "quantity",
+  "context": {},
+  "lean": "-- needs quantity (1+1=2 sets)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "precondition",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45466-4",
+  "module": "m45466",
+  "source": "The number of sets of chromosomes in a cell is called its ploidy level.",
+  "claim": "The number of chromosome sets in a cell is called its ploidy level",
+  "kind": "definitional",
+  "bin": "missing_construct",
+  "missing_construct": "is_a",
+  "entities": [
+   {
+    "text": "ploidy",
+    "curie": "PATO:0001374",
+    "ontology": "PATO",
+    "verified": true
+   },
+   {
+    "text": "chromosome",
+    "curie": "GO:0005694",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "is_a",
+  "context": {},
+  "lean": "-- ontology layer",
+  "bin_m1": "missing_construct",
+  "lean_m1": "compound",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "definition_only",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45466-5",
+  "module": "m45466",
+  "source": "Haploid cells contain one set of chromosomes.",
+  "claim": "Haploid cells contain one set of chromosomes",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "haploid cell",
+    "curie": "CL:0000413",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "chromosome",
+    "curie": "GO:0005694",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "quantity",
+  "context": {},
+  "lean": "-- needs quantity: haploidCell has 1 chromosome set",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "measure",
+   "quant": null,
+   "subject": "CL:0000413",
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": 1,
+   "hi": 1,
+   "unit": "chromosome sets",
+   "quality": "PATO:0001374",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "chromosome number",
+     "from": null,
+     "to": "PATO:0001374",
+     "why": "ploidy: the number of chromosome sets, the quality the sentence counts"
+    }
+   ],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45466-6",
+  "module": "m45466",
+  "source": "Cells containing two sets of chromosomes are called diploid.",
+  "claim": "Cells containing two sets of chromosomes are called diploid",
+  "kind": "definitional",
+  "bin": "missing_construct",
+  "missing_construct": "is_a",
+  "entities": [
+   {
+    "text": "diploid cell",
+    "curie": "CL:0000415",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "chromosome",
+    "curie": "GO:0005694",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "is_a",
+  "context": {},
+  "lean": "-- ontology layer",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "measure",
+   "quant": null,
+   "subject": "CL:0000415",
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": 2,
+   "hi": 2,
+   "unit": "chromosome sets",
+   "quality": "PATO:0001374",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "chromosome number",
+     "from": null,
+     "to": "PATO:0001374",
+     "why": "ploidy: the number of chromosome sets, the quality the sentence counts"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45466-9",
+  "module": "m45466",
+  "source": "So, in addition to fertilization, sexual reproduction includes a nuclear division, known as meiosis, that reduces the number of chromosome sets.",
+  "claim": "Meiosis reduces the number of chromosome sets",
+  "kind": "effect",
+  "bin": "now",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "meiosis",
+    "curie": "GO:0051321",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "chromosome number",
+    "curie": null,
+    "ontology": null,
+    "verified": false
+   }
+  ],
+  "relation": "decreases",
+  "context": {},
+  "lean": "Claim.effect meiosis .neg (.phenotype chromosomeSetNumber)",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "GO:0051321",
+   "relation": null,
+   "object": "PATO:0001374",
+   "sign": "neg",
+   "target": "phenotype",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "chromosome number",
+     "from": null,
+     "to": "PATO:0001374",
+     "why": "ploidy: the number of chromosome sets, the quality the sentence counts"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45466-11",
+  "module": "m45466",
+  "source": "Most animals and plants are diploid, containing two sets of chromosomes; in each somatic cell (the nonreproductive cells of a multicellular organism), the nucleus contains two copies of each chromosome that are referred to as homologous chromosomes.",
+  "claim": "In each somatic cell the nucleus contains two copies of each chromosome",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "somatic cell",
+    "curie": "NCIT:C12949",
+    "ontology": "other",
+    "verified": true
+   },
+   {
+    "text": "nucleus",
+    "curie": "GO:0005634",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "chromosome",
+    "curie": "GO:0005694",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "quantity",
+  "context": {
+   "cellType": "NCIT:C12949"
+  },
+  "lean": "-- needs quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": "NCIT:C12949",
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "measure",
+   "quant": null,
+   "subject": "NCIT:C12949",
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": 2,
+   "hi": 2,
+   "unit": "chromosome sets",
+   "quality": "PATO:0001374",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "chromosome number",
+     "from": null,
+     "to": "PATO:0001374",
+     "why": "ploidy: the number of chromosome sets, the quality the sentence counts"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45466-17",
+  "module": "m45466",
+  "source": "In animals, haploid cells containing a single copy of each homologous chromosome are found only within gametes.",
+  "claim": "In animals, haploid cells are found only within gametes",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "located_in",
+  "entities": [
+   {
+    "text": "animals",
+    "curie": "NCBITaxon:33208",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "haploid cell",
+    "curie": "CL:0000413",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "gamete",
+    "curie": "CL:0000300",
+    "ontology": "CL",
+    "verified": true
+   }
+  ],
+  "relation": "located_in",
+  "context": {
+   "taxon": "NCBITaxon:33208"
+  },
+  "lean": "-- needs located_in + exclusivity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:33208",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "CL:0000413",
+   "relation": "located in",
+   "object": "CL:0000300",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33208",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "exclusivity",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45466-23",
+  "module": "m45466",
+  "source": "In mitosis, both the parent and the daughter nuclei contain the same number of chromosome sets—diploid for most plants and animals.",
+  "claim": "In mitosis the parent and daughter nuclei contain the same number of chromosome sets",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "equality/identity",
+  "entities": [
+   {
+    "text": "mitosis",
+    "curie": "GO:0140014",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "nucleus",
+    "curie": "GO:0005634",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "chromosome number",
+    "curie": null,
+    "ontology": null,
+    "verified": false
+   }
+  ],
+  "relation": "equality",
+  "context": {},
+  "lean": "-- needs equality/quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "equality/identity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "yield",
+   "quant": null,
+   "subject": "GO:0140014",
+   "relation": null,
+   "object": "PATO:0001374",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 0,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "chromosome number",
+     "from": null,
+     "to": "PATO:0001374",
+     "why": "ploidy: the number of chromosome sets, the quality the sentence counts"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45466-28",
+  "module": "m45466",
+  "source": "To achieve the reduction in chromosome number, meiosis consists of one round of chromosome duplication and two rounds of nuclear division.",
+  "claim": "Meiosis consists of one round of chromosome duplication and two rounds of nuclear division",
+  "kind": "process_description",
+  "bin": "missing_construct",
+  "missing_construct": "has_part",
+  "entities": [
+   {
+    "text": "meiosis",
+    "curie": "GO:0051321",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "DNA replication",
+    "curie": "GO:0006260",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "nuclear division",
+    "curie": "GO:0000280",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_part",
+  "context": {},
+  "lean": "-- needs has_part + quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "compound",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "GO:0051321",
+   "relation": null,
+   "object": "GO:0000280",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 2,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "compound_sentence",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45466-29",
+  "module": "m45466",
+  "source": "To achieve the reduction in chromosome number, meiosis consists of one round of chromosome duplication and two rounds of nuclear division.",
+  "claim": "One duplication plus two divisions achieves the reduction in chromosome number",
+  "kind": "effect",
+  "bin": "missing_construct",
+  "missing_construct": "has_part",
+  "entities": [
+   {
+    "text": "meiosis",
+    "curie": "GO:0051321",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "chromosome number",
+    "curie": null,
+    "ontology": null,
+    "verified": false
+   }
+  ],
+  "relation": "decreases",
+  "context": {},
+  "lean": "-- needs has_part: meiosis has_part chromosomeDuplication, nuclearDivision x2 (achieves reduction)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "compound_sentence",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45466-33",
+  "module": "m45466",
+  "source": "Meiosis I reduces the number of chromosome sets from two to one.",
+  "claim": "Meiosis I reduces the number of chromosome sets from two to one",
+  "kind": "effect",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "meiosis I",
+    "curie": "GO:0007127",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "chromosome number",
+    "curie": null,
+    "ontology": null,
+    "verified": false
+   }
+  ],
+  "relation": "decreases",
+  "context": {},
+  "lean": "Claim.effect meiosisI .neg (.phenotype chromosomeSetNumber)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "yield",
+   "quant": null,
+   "subject": "GO:0007127",
+   "relation": null,
+   "object": "PATO:0001374",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": -1,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "chromosome number",
+     "from": null,
+     "to": "PATO:0001374",
+     "why": "ploidy: the number of chromosome sets, the quality the sentence counts"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45466-61",
+  "module": "m45466",
+  "source": "The number of chiasmata varies with the species and the length of the chromosome.",
+  "claim": "The number of chiasmata varies with chromosome length",
+  "kind": "effect",
+  "bin": "missing_construct",
+  "missing_construct": "correlation",
+  "entities": [
+   {
+    "text": "length",
+    "curie": "PATO:0000122",
+    "ontology": "PATO",
+    "verified": true
+   },
+   {
+    "text": "chiasma",
+    "curie": "GO:0005712",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "increases amount of",
+  "context": {},
+  "lean": "-- needs correlation: count chiasma ~ chromosome length, species",
+  "bin_m1": "missing_construct",
+  "lean_m1": "varies",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45466-78",
+  "module": "m45466",
+  "source": "Consider that the homologous chromosomes of a sexually reproducing organism are originally inherited as two separate sets, one from each parent.",
+  "claim": "Homologous chromosomes of a sexual organism are inherited as two separate sets, one from each parent",
+  "kind": "other",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "homologous chromosome",
+    "curie": null,
+    "ontology": null,
+    "verified": false
+   }
+  ],
+  "relation": "quantity",
+  "context": {},
+  "lean": "-- needs quantity/provenance",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "ungrounded_entity",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45466-79",
+  "module": "m45466",
+  "source": "Using humans as an example, one set of 23 chromosomes is present in the egg donated by the mother.",
+  "claim": "In humans one set of 23 chromosomes is present in the egg",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "humans",
+    "curie": "NCBITaxon:9606",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "chromosome",
+    "curie": "GO:0005694",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "egg",
+    "curie": "CL:0000025",
+    "ontology": "CL",
+    "verified": true
+   }
+  ],
+  "relation": "quantity",
+  "context": {
+   "taxon": "NCBITaxon:9606",
+   "cellType": "CL:0000025"
+  },
+  "lean": "-- needs quantity: egg has 23 chromosomes [human]",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": "CL:0000025",
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "CL:0000025",
+   "relation": null,
+   "object": "GO:0005694",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 23,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45466-80",
+  "module": "m45466",
+  "source": "The father provides the other set of 23 chromosomes in the sperm that fertilizes the egg.",
+  "claim": "In humans the sperm provides the other set of 23 chromosomes",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "humans",
+    "curie": "NCBITaxon:9606",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "chromosome",
+    "curie": "GO:0005694",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "sperm",
+    "curie": "CL:0000019",
+    "ontology": "CL",
+    "verified": true
+   }
+  ],
+  "relation": "quantity",
+  "context": {
+   "taxon": "NCBITaxon:9606",
+   "cellType": "CL:0000019"
+  },
+  "lean": "-- needs quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": "CL:0000019",
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "CL:0000019",
+   "relation": null,
+   "object": "GO:0005694",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 23,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45466-82",
+  "module": "m45466",
+  "source": "Because there is an equal chance that a microtubule fiber will encounter a maternally or paternally inherited chromosome, the arrangement of the tetrads at the metaphase plate is random.",
+  "claim": "A microtubule has an equal chance of encountering a maternal or paternal chromosome",
+  "kind": "other",
+  "bin": "missing_construct",
+  "missing_construct": "probability/randomness",
+  "entities": [
+   {
+    "text": "microtubule",
+    "curie": "GO:0005874",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "chromosome",
+    "curie": "GO:0005694",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "probability",
+  "context": {},
+  "lean": "-- needs probability",
+  "bin_m1": "missing_construct",
+  "lean_m1": "probability",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45466-88",
+  "module": "m45466",
+  "source": "The number of variations depends on the number of chromosomes making up a set.",
+  "claim": "The number of possible arrangements depends on the number of chromosomes per set",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "chromosome number",
+    "curie": null,
+    "ontology": null,
+    "verified": false
+   }
+  ],
+  "relation": "function_of",
+  "context": {},
+  "lean": "-- needs quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45466-89",
+  "module": "m45466",
+  "source": "There are two possibilities for orientation (for each tetrad); thus, the possible number of alignments equals 2n where n is the number of chromosomes per set.",
+  "claim": "Each tetrad has two possible orientations",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "tetrad",
+    "curie": null,
+    "ontology": null,
+    "verified": false
+   },
+   {
+    "text": "orientation",
+    "curie": "PATO:0000133",
+    "ontology": "PATO",
+    "verified": true
+   }
+  ],
+  "relation": "quantity",
+  "context": {},
+  "lean": "-- needs quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "ungrounded_entity",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45466-90",
+  "module": "m45466",
+  "source": "There are two possibilities for orientation (for each tetrad); thus, the possible number of alignments equals 2n where n is the number of chromosomes per set.",
+  "claim": "The number of possible alignments is 2^n where n is chromosomes per set",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "chromosome number",
+    "curie": null,
+    "ontology": null,
+    "verified": false
+   }
+  ],
+  "relation": "equation",
+  "context": {},
+  "lean": "-- needs quantity/equation",
+  "bin_m1": "missing_construct",
+  "lean_m1": "equation",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45466-91",
+  "module": "m45466",
+  "source": "Humans have 23 chromosome pairs, which results in over eight million (223) possibilities.",
+  "claim": "Humans have 23 chromosome pairs",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "humans",
+    "curie": "NCBITaxon:9606",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "chromosome",
+    "curie": "GO:0005694",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "quantity",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "-- needs quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "CL:0000415",
+   "relation": null,
+   "object": "GO:0005694",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 46,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "diploid cell",
+     "from": null,
+     "to": "CL:0000415",
+     "why": "diploid cell as the whole (CL:0002371 somatic cell is obsolete); 23 pairs is 46 chromosomes"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45466-92",
+  "module": "m45466",
+  "source": "Humans have 23 chromosome pairs, which results in over eight million (223) possibilities.",
+  "claim": "23 pairs give over eight million (2^23) possible alignments",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "humans",
+    "curie": "NCBITaxon:9606",
+    "ontology": "NCBITaxon",
+    "verified": true
+   }
+  ],
+  "relation": "quantity",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "-- needs quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45466-94",
+  "module": "m45466",
+  "source": "Given these two mechanisms, it is highly unlikely that any two haploid cells resulting from meiosis will have the same genetic composition ().",
+  "claim": "It is highly unlikely that any two haploid products of meiosis have the same genetic composition",
+  "kind": "other",
+  "bin": "missing_construct",
+  "missing_construct": "probability/randomness",
+  "entities": [
+   {
+    "text": "meiosis",
+    "curie": "GO:0051321",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "haploid cell",
+    "curie": "CL:0000413",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "genetically unique",
+    "curie": null,
+    "ontology": null,
+    "verified": false
+   }
+  ],
+  "relation": "probability",
+  "context": {},
+  "lean": "-- needs probability",
+  "bin_m1": "missing_construct",
+  "lean_m1": "probability",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45466-103",
+  "module": "m45466",
+  "source": "In some organisms, the chromosomes decondense and nuclear envelopes form around the chromatids in telophase I.",
+  "claim": "In some organisms nuclear envelopes form around the chromatids in telophase I",
+  "kind": "process_description",
+  "bin": "missing_construct",
+  "missing_construct": "occurs_during",
+  "entities": [
+   {
+    "text": "nuclear envelope reformation",
+    "curie": "GO:0031468",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "telophase I",
+    "curie": "GO:0007134",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "occurs_during",
+  "context": {},
+  "lean": "-- needs occurs_during",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0031468",
+   "relation": "happens during",
+   "object": "GO:0007134",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": "some",
+   "subject": "GO:0031468",
+   "relation": "happens during",
+   "object": "GO:0007134",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45466-106",
+  "module": "m45466",
+  "source": "In nearly all species, cytokinesis separates the cell contents by either a cleavage furrow (in animals and some fungi), or a cell plate that will ultimately lead to formation of cell walls that separate the two daughter cells (in plants).",
+  "claim": "In animals and some fungi cytokinesis separates cell contents by a cleavage furrow",
+  "kind": "process_description",
+  "bin": "missing_construct",
+  "missing_construct": "has_part",
+  "entities": [
+   {
+    "text": "cytokinesis",
+    "curie": "GO:0000910",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "cleavage furrow",
+    "curie": "GO:0032154",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "animals",
+    "curie": "NCBITaxon:33208",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "fungi",
+    "curie": "NCBITaxon:4751",
+    "ontology": "NCBITaxon",
+    "verified": true
+   }
+  ],
+  "relation": "has_part",
+  "context": {
+   "taxon": "NCBITaxon:33208"
+  },
+  "lean": "-- needs has_part/mechanism + taxon",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0000910",
+   "relation": "has part",
+   "object": "GO:0032154",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:33208",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0000910",
+   "relation": "has part",
+   "object": "GO:0032154",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33208",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "compound_sentence",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45466-107",
+  "module": "m45466",
+  "source": "In nearly all species, cytokinesis separates the cell contents by either a cleavage furrow (in animals and some fungi), or a cell plate that will ultimately lead to formation of cell walls that separate the two daughter cells (in plants).",
+  "claim": "In plants cytokinesis uses a cell plate that leads to cell walls separating the daughter cells",
+  "kind": "process_description",
+  "bin": "missing_construct",
+  "missing_construct": "has_part",
+  "entities": [
+   {
+    "text": "cytokinesis",
+    "curie": "GO:0000910",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "cell plate",
+    "curie": "GO:0009504",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "cell wall",
+    "curie": "GO:0005618",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "plants",
+    "curie": "NCBITaxon:3193",
+    "ontology": "NCBITaxon",
+    "verified": true
+   }
+  ],
+  "relation": "has_part",
+  "context": {
+   "taxon": "NCBITaxon:3193"
+  },
+  "lean": "-- needs has_part + taxon",
+  "bin_m1": "missing_construct",
+  "lean_m1": "compound",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0000910",
+   "relation": "has part",
+   "object": "GO:0009504",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:3193",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0000910",
+   "relation": "has part",
+   "object": "GO:0009504",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:3193",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45466-108",
+  "module": "m45466",
+  "source": "At each pole, there is just one member of each pair of the homologous chromosomes, so only one full set of the chromosomes is present.",
+  "claim": "After meiosis I each pole has one member of each homolog pair, so one full chromosome set",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "homologous chromosome",
+    "curie": null,
+    "ontology": null,
+    "verified": false
+   },
+   {
+    "text": "spindle pole",
+    "curie": "GO:0000922",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "chromosome number",
+    "curie": null,
+    "ontology": null,
+    "verified": false
+   }
+  ],
+  "relation": "quantity",
+  "context": {},
+  "lean": "-- needs quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "ungrounded_entity",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45466-109",
+  "module": "m45466",
+  "source": "This is why the cells are considered haploid—there is only one chromosome set, even though there are duplicate copies of the set because each homolog still consists of two sister chromatids that are still attached to each other.",
+  "claim": "The cells after meiosis I are haploid because there is only one chromosome set",
+  "kind": "other",
+  "bin": "missing_construct",
+  "missing_construct": "is_a",
+  "entities": [
+   {
+    "text": "haploid",
+    "curie": "PATO:0001375",
+    "ontology": "PATO",
+    "verified": true
+   },
+   {
+    "text": "chromosome number",
+    "curie": null,
+    "ontology": null,
+    "verified": false
+   }
+  ],
+  "relation": "is_a",
+  "context": {},
+  "lean": "-- ontology layer (definitional inference)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "compound",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "measure",
+   "quant": null,
+   "subject": "CL:0000000",
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": 1,
+   "hi": 1,
+   "unit": "chromosome sets",
+   "quality": "PATO:0001374",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": "GO:0007127",
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "cells after meiosis I",
+     "from": null,
+     "to": "CL:0000000",
+     "why": "bare cell class"
+    },
+    {
+     "text": "after meiosis I",
+     "from": null,
+     "to": "GO:0007127",
+     "why": "stage of the cells"
+    },
+    {
+     "text": "chromosome number",
+     "from": null,
+     "to": "PATO:0001374",
+     "why": "ploidy: the number of chromosome sets, the quality the sentence counts"
+    }
+   ],
+   "confidence": "low"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45466-119",
+  "module": "m45466",
+  "source": "In prophase II, if the chromosomes decondensed in telophase I, they condense again.",
+  "claim": "In prophase II chromosomes condense again if they decondensed in telophase I",
+  "kind": "process_description",
+  "bin": "missing_construct",
+  "missing_construct": "occurs_during",
+  "entities": [
+   {
+    "text": "prophase II",
+    "curie": "GO:0007136",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "chromosome condensation",
+    "curie": "GO:0030261",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "occurs_during",
+  "context": {},
+  "lean": "-- needs occurs_during + conditional",
+  "bin_m1": "missing_construct",
+  "lean_m1": "conditional",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0030261",
+   "relation": "happens during",
+   "object": "GO:0007136",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": "chromosomes decondensed in telophase I"
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "precondition",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45466-120",
+  "module": "m45466",
+  "source": "If nuclear envelopes were formed, they fragment into vesicles.",
+  "claim": "In prophase II nuclear envelopes, if formed, fragment into vesicles",
+  "kind": "process_description",
+  "bin": "missing_construct",
+  "missing_construct": "occurs_during",
+  "entities": [
+   {
+    "text": "prophase II",
+    "curie": "GO:0007136",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "nuclear envelope",
+    "curie": "GO:0005635",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "nuclear envelope breakdown",
+    "curie": "GO:0051081",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "occurs_during",
+  "context": {},
+  "lean": "-- needs occurs_during + conditional",
+  "bin_m1": "missing_construct",
+  "lean_m1": "conditional",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0051081",
+   "relation": "happens during",
+   "object": "GO:0007136",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": "only if nuclear envelopes formed"
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "precondition",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45466-133",
+  "module": "m45466",
+  "source": "Cytokinesis separates the two cells into four genetically unique haploid cells.",
+  "claim": "Cytokinesis separates the two cells into four genetically unique haploid cells",
+  "kind": "process_description",
+  "bin": "missing_construct",
+  "missing_construct": "has_output",
+  "entities": [
+   {
+    "text": "cytokinesis",
+    "curie": "GO:0000910",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "haploid cell",
+    "curie": "CL:0000413",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "genetically unique",
+    "curie": null,
+    "ontology": null,
+    "verified": false
+   }
+  ],
+  "relation": "has_output",
+  "context": {},
+  "lean": "-- needs has_output + quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0000910",
+   "relation": "has output",
+   "object": "CL:0000413",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "produces",
+   "quant": null,
+   "subject": "GO:0000910",
+   "relation": null,
+   "object": "CL:0000413",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 4,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": "GO:0007135",
+    "condition": null
+   },
+   "blocker": "has_quality",
+   "curie_changes": [
+    {
+     "text": "cytokinesis separates the two cells",
+     "from": null,
+     "to": "GO:0007135",
+     "why": "the sentence describes cytokinesis at the end of meiosis II"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45466-134",
+  "module": "m45466",
+  "source": "At this point, the nuclei in the newly produced cells are both haploid and have only one copy of the single set of chromosomes.",
+  "claim": "The nuclei of the newly produced cells are haploid with one copy of a single chromosome set",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "nucleus",
+    "curie": "GO:0005634",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "haploid",
+    "curie": "PATO:0001375",
+    "ontology": "PATO",
+    "verified": true
+   },
+   {
+    "text": "chromosome number",
+    "curie": null,
+    "ontology": null,
+    "verified": false
+   }
+  ],
+  "relation": "quantity",
+  "context": {},
+  "lean": "-- needs quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "measure",
+   "quant": null,
+   "subject": "GO:0005634",
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": 1,
+   "hi": 1,
+   "unit": "chromosome sets",
+   "quality": "PATO:0001374",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": "GO:0007135",
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "newly produced cells",
+     "from": null,
+     "to": "GO:0007135",
+     "why": "stage: the preceding sentence ends meiosis II"
+    },
+    {
+     "text": "chromosome number",
+     "from": null,
+     "to": "PATO:0001374",
+     "why": "ploidy: the number of chromosome sets, the quality the sentence counts"
+    }
+   ],
+   "confidence": "low"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45466-141",
+  "module": "m45466",
+  "source": "They have the same number of sets of chromosomes: one in the case of haploid cells, and two in the case of diploid cells.",
+  "claim": "Mitotic daughter nuclei have the same number of chromosome sets as the parent: one for haploid, two for diploid",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "equality/identity",
+  "entities": [
+   {
+    "text": "mitosis",
+    "curie": "GO:0140014",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "chromosome number",
+    "curie": null,
+    "ontology": null,
+    "verified": false
+   },
+   {
+    "text": "haploid",
+    "curie": "PATO:0001375",
+    "ontology": "PATO",
+    "verified": true
+   },
+   {
+    "text": "diploid",
+    "curie": "PATO:0001394",
+    "ontology": "PATO",
+    "verified": true
+   }
+  ],
+  "relation": "equality",
+  "context": {},
+  "lean": "-- needs equality/quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "equality/identity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "yield",
+   "quant": null,
+   "subject": "GO:0140014",
+   "relation": null,
+   "object": "PATO:0001374",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 0,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "chromosome number",
+     "from": null,
+     "to": "PATO:0001374",
+     "why": "ploidy: the number of chromosome sets, the quality the sentence counts"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45466-144",
+  "module": "m45466",
+  "source": "The nuclei resulting from meiosis are never genetically identical, and they contain one chromosome set only—this is half the number of the original cell, which was diploid ().",
+  "claim": "Meiotic nuclei contain one chromosome set, half that of the diploid original",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "meiosis",
+    "curie": "GO:0051321",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "nucleus",
+    "curie": "GO:0005634",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "chromosome number",
+    "curie": null,
+    "ontology": null,
+    "verified": false
+   }
+  ],
+  "relation": "quantity",
+  "context": {},
+  "lean": "-- needs quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "measure",
+   "quant": null,
+   "subject": "GO:0005634",
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": 1,
+   "hi": 1,
+   "unit": "chromosome sets",
+   "quality": "PATO:0001374",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": "GO:0051321",
+    "condition": null
+   },
+   "blocker": "compound_sentence",
+   "curie_changes": [
+    {
+     "text": "chromosome number",
+     "from": null,
+     "to": "PATO:0001374",
+     "why": "ploidy: the number of chromosome sets, the quality the sentence counts"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45466-152",
+  "module": "m45466",
+  "source": "Homologous chromosomes move to opposite poles during meiosis I so the number of sets of chromosomes in each nucleus-to-be is reduced from two to one.",
+  "claim": "Homolog separation in meiosis I reduces chromosome sets per nucleus from two to one",
+  "kind": "effect",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "homologous chromosome segregation",
+    "curie": "GO:0045143",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "chromosome number",
+    "curie": null,
+    "ontology": null,
+    "verified": false
+   }
+  ],
+  "relation": "decreases",
+  "context": {},
+  "lean": "Claim.effect homologousChromosomeSegregation .neg (.phenotype chromosomeSetNumber)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "yield",
+   "quant": null,
+   "subject": "GO:0045143",
+   "relation": null,
+   "object": "PATO:0001374",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": -1,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": "GO:0007127",
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "chromosome number",
+     "from": null,
+     "to": "PATO:0001374",
+     "why": "ploidy: the number of chromosome sets, the quality the sentence counts"
+    },
+    {
+     "text": "in meiosis I",
+     "from": null,
+     "to": "GO:0007127",
+     "why": "stage of the segregation"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45466-154",
+  "module": "m45466",
+  "source": "There is no such reduction in ploidy level in mitosis.",
+  "claim": "There is no reduction in ploidy in mitosis",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "mitosis",
+    "curie": "GO:0140014",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "ploidy",
+    "curie": "PATO:0001374",
+    "ontology": "PATO",
+    "verified": true
+   }
+  ],
+  "relation": "no effect on",
+  "context": {},
+  "lean": "Claim.noEffect mitosis (.phenotype ploidy)",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "yield",
+   "quant": null,
+   "subject": "GO:0140014",
+   "relation": null,
+   "object": "PATO:0001374",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 0,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45466-160",
+  "module": "m45466",
+  "source": "If it were not for the fact that there had been crossovers, the two products of each meiosis II division would be identical as in mitosis; instead, they are different because there has always been at least one crossover per chromosome.",
+  "claim": "There is always at least one crossover per chromosome",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "crossing over",
+    "curie": "GO:0007131",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "chromosome",
+    "curie": "GO:0005694",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "quantity",
+  "context": {},
+  "lean": "-- needs quantity (>=1)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "atLeast",
+   "quant": null,
+   "subject": "GO:0005694",
+   "relation": null,
+   "object": "GO:0007131",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 1,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": "GO:0051321",
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "each meiosis",
+     "from": null,
+     "to": "GO:0051321",
+     "why": "crossovers happen only in meiosis"
+    }
+   ],
+   "confidence": "low"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45466-162",
+  "module": "m45466",
+  "source": "Meiosis II is not a reduction division because, although there are fewer copies of the genome in the resulting cells, there is still one set of chromosomes, as there was at the end of meiosis I.",
+  "claim": "After meiosis II there are fewer genome copies but still one chromosome set, as at the end of meiosis I",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "meiosis II",
+    "curie": "GO:0007135",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "genome",
+    "curie": "SO:0001026",
+    "ontology": "SO",
+    "verified": true
+   },
+   {
+    "text": "chromosome number",
+    "curie": null,
+    "ontology": null,
+    "verified": false
+   }
+  ],
+  "relation": "quantity",
+  "context": {},
+  "lean": "-- needs quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "yield",
+   "quant": null,
+   "subject": "GO:0007135",
+   "relation": null,
+   "object": "PATO:0001374",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 0,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "compound_sentence",
+   "curie_changes": [
+    {
+     "text": "chromosome number",
+     "from": null,
+     "to": "PATO:0001374",
+     "why": "ploidy: the number of chromosome sets, the quality the sentence counts"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45466-164",
+  "module": "m45466",
+  "source": "They may even be involved in asexual reproduction in some organisms.",
+  "claim": "Mitotic cells may be involved in asexual reproduction in some organisms",
+  "kind": "other",
+  "bin": "missing_construct",
+  "missing_construct": "part_of",
+  "entities": [
+   {
+    "text": "mitosis",
+    "curie": "GO:0140014",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "asexual reproduction",
+    "curie": "GO:0019954",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "part_of",
+  "context": {},
+  "lean": "-- needs part_of",
+  "bin_m1": "missing_construct",
+  "lean_m1": "possibility",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0140014",
+   "relation": "part of",
+   "object": "GO:0019954",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": "some organisms; mitotic cells may be involved"
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": "some",
+   "subject": "GO:0140014",
+   "relation": "part of",
+   "object": "GO:0019954",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45466-165",
+  "module": "m45466",
+  "source": "Cells produced by meiosis in a diploid-dominant organism such as an animal will only participate in sexual reproduction.",
+  "claim": "In a diploid-dominant organism such as an animal, meiotic cells participate only in sexual reproduction",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "part_of",
+  "entities": [
+   {
+    "text": "meiosis",
+    "curie": "GO:0051321",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "sexual reproduction",
+    "curie": "GO:0019953",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "animals",
+    "curie": "NCBITaxon:33208",
+    "ontology": "NCBITaxon",
+    "verified": true
+   }
+  ],
+  "relation": "part_of",
+  "context": {
+   "taxon": "NCBITaxon:33208"
+  },
+  "lean": "-- needs part_of + exclusivity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0051321",
+   "relation": "part of",
+   "object": "GO:0019953",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:33208",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0051321",
+   "relation": "part of",
+   "object": "GO:0019953",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33208",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "exclusivity",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45466-172",
+  "module": "m45466",
+  "source": "In meiosis, there are two rounds of nuclear division resulting in four nuclei and usually four haploid daughter cells, each with half the number of chromosomes as the parent cell.",
+  "claim": "Each meiotic daughter cell has half the chromosome number of the parent cell",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "chromosome number",
+    "curie": null,
+    "ontology": null,
+    "verified": false
+   },
+   {
+    "text": "haploid cell",
+    "curie": "CL:0000413",
+    "ontology": "CL",
+    "verified": true
+   }
+  ],
+  "relation": "quantity",
+  "context": {},
+  "lean": "-- needs quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "proportion",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45466-189",
+  "module": "m45466",
+  "source": "The chromosomes that were originally inherited by the gamete-producing individual came equally from the egg and the sperm.",
+  "claim": "The chromosomes of a gamete-producing individual came equally from the egg and sperm",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "chromosome",
+    "curie": "GO:0005694",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "egg",
+    "curie": "CL:0000025",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "sperm",
+    "curie": "CL:0000019",
+    "ontology": "CL",
+    "verified": true
+   }
+  ],
+  "relation": "quantity",
+  "context": {},
+  "lean": "-- needs quantity (equal halves)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "proportion",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45466-192",
+  "module": "m45466",
+  "source": "There is an equal chance that the maternally derived chromosomes will be facing either pole.",
+  "claim": "Maternally derived chromosomes have an equal chance of facing either pole",
+  "kind": "other",
+  "bin": "missing_construct",
+  "missing_construct": "probability/randomness",
+  "entities": [
+   {
+    "text": "chromosome",
+    "curie": "GO:0005694",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "spindle pole",
+    "curie": "GO:0000922",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "probability",
+  "context": {},
+  "lean": "-- needs probability",
+  "bin_m1": "missing_construct",
+  "lean_m1": "probability",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45466-193",
+  "module": "m45466",
+  "source": "The same is true of the paternally derived chromosomes.",
+  "claim": "Paternally derived chromosomes have an equal chance of facing either pole",
+  "kind": "other",
+  "bin": "missing_construct",
+  "missing_construct": "probability/randomness",
+  "entities": [
+   {
+    "text": "chromosome",
+    "curie": "GO:0005694",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "spindle pole",
+    "curie": "GO:0000922",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "probability",
+  "context": {},
+  "lean": "-- needs probability",
+  "bin_m1": "missing_construct",
+  "lean_m1": "probability",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45466-201",
+  "module": "m45466",
+  "source": "The two divisions are different because in meiosis II there are half the number of chromosomes that are present in a diploid cell of the same species undergoing mitosis.",
+  "claim": "In meiosis II there are half the chromosomes present in a diploid cell of the same species undergoing mitosis",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "meiosis II",
+    "curie": "GO:0007135",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "mitosis",
+    "curie": "GO:0140014",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "chromosome number",
+    "curie": null,
+    "ontology": null,
+    "verified": false
+   }
+  ],
+  "relation": "quantity",
+  "context": {},
+  "lean": "-- needs quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "proportion",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45467-3",
+  "module": "m45467",
+  "source": "Because even small segments of chromosomes can span many genes, chromosomal disorders are characteristically dramatic and often fatal.",
+  "claim": "Even small chromosome segments can span many genes",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "chromosome",
+    "curie": "GO:0005694",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "gene",
+    "curie": "SO:0000704",
+    "ontology": "SO",
+    "verified": true
+   }
+  ],
+  "relation": "quantity",
+  "context": {},
+  "lean": "-- needs quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45467-20",
+  "module": "m45467",
+  "source": "Examples of this are Down syndrome, which is identified by a third copy of chromosome 21, and Turner syndrome, which is characterized by the presence of only one X chromosome in women instead of two.",
+  "claim": "Down syndrome is identified by a third copy of chromosome 21",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "Down syndrome",
+    "curie": "MONDO:0008608",
+    "ontology": "MONDO",
+    "verified": true
+   },
+   {
+    "text": "chromosome 21",
+    "curie": "NCIT:C13217",
+    "ontology": "other",
+    "verified": true
+   }
+  ],
+  "relation": "has_part",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "-- needs has_part + quantity (3 copies)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "MONDO:0008608",
+   "relation": null,
+   "object": "NCIT:C13217",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 3,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45467-21",
+  "module": "m45467",
+  "source": "Examples of this are Down syndrome, which is identified by a third copy of chromosome 21, and Turner syndrome, which is characterized by the presence of only one X chromosome in women instead of two.",
+  "claim": "Turner syndrome is characterized by only one X chromosome in women instead of two",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "Turner syndrome",
+    "curie": "MONDO:0019499",
+    "ontology": "MONDO",
+    "verified": true
+   },
+   {
+    "text": "X chromosome",
+    "curie": "NCIT:C13285",
+    "ontology": "other",
+    "verified": true
+   },
+   {
+    "text": "female",
+    "curie": "PATO:0000383",
+    "ontology": "PATO",
+    "verified": true
+   }
+  ],
+  "relation": "has_part",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "-- needs quantity (1 X)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "MONDO:0019499",
+   "relation": null,
+   "object": "NCIT:C13285",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 1,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45467-35",
+  "module": "m45467",
+  "source": "If homologous chromosomes fail to separate during meiosis I, the result is two gametes that lack that chromosome and two gametes with two copies of the chromosome.",
+  "claim": "If homologs fail to separate in meiosis I, the result is two gametes lacking the chromosome and two with two copies",
+  "kind": "process_description",
+  "bin": "missing_construct",
+  "missing_construct": "conditional",
+  "entities": [
+   {
+    "text": "nondisjunction",
+    "curie": null,
+    "ontology": null,
+    "verified": false
+   },
+   {
+    "text": "meiosis I",
+    "curie": "GO:0007127",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "gamete",
+    "curie": "CL:0000300",
+    "ontology": "CL",
+    "verified": true
+   }
+  ],
+  "relation": "has_output",
+  "context": {},
+  "lean": "-- needs conditional + has_output + quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "conditional",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "precondition",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45467-36",
+  "module": "m45467",
+  "source": "If sister chromatids fail to separate during meiosis II, the result is one gamete that lacks that chromosome, two normal gametes with one copy of the chromosome, and one gamete with two copies of the chromosome.",
+  "claim": "If sister chromatids fail to separate in meiosis II, the result is one gamete lacking the chromosome, two normal, one with two copies",
+  "kind": "process_description",
+  "bin": "missing_construct",
+  "missing_construct": "conditional",
+  "entities": [
+   {
+    "text": "nondisjunction",
+    "curie": null,
+    "ontology": null,
+    "verified": false
+   },
+   {
+    "text": "meiosis II",
+    "curie": "GO:0007135",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "gamete",
+    "curie": "CL:0000300",
+    "ontology": "CL",
+    "verified": true
+   }
+  ],
+  "relation": "has_output",
+  "context": {},
+  "lean": "-- needs conditional + has_output + quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "conditional",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "precondition",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45467-38",
+  "module": "m45467",
+  "source": "An individual with the appropriate number of chromosomes for their species is called euploid; in humans, euploidy corresponds to 22 pairs of autosomes and one pair of sex chromosomes.",
+  "claim": "In humans euploidy is 22 pairs of autosomes and one pair of sex chromosomes",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "humans",
+    "curie": "NCBITaxon:9606",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "euploid",
+    "curie": "PATO:0001393",
+    "ontology": "PATO",
+    "verified": true
+   },
+   {
+    "text": "autosome",
+    "curie": "GO:0030849",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "sex chromosome",
+    "curie": "GO:0000803",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "quantity",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "-- needs quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "CL:0000415",
+   "relation": null,
+   "object": "GO:0005694",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 46,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": {
+     "kind": "organism",
+     "curie": "PATO:0001393",
+     "text": "euploid"
+    }
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "diploid cell",
+     "from": null,
+     "to": "CL:0000415",
+     "why": "diploid cell as the whole (CL:0002371 somatic cell is obsolete); 22 pairs of autosomes plus one pair of sex chromosomes is 46 chromosomes"
+    },
+    {
+     "text": "pairs of autosomes and sex chromosomes",
+     "from": null,
+     "to": "GO:0005694",
+     "why": "chromosome, counted as 22*2+2"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45467-41",
+  "module": "m45467",
+  "source": "Monosomic human zygotes missing any one copy of an autosome invariably fail to develop to birth because they have only one copy of essential genes.",
+  "claim": "Monosomic human zygotes missing an autosome invariably fail to develop to birth",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "monosomy",
+    "curie": "MONDO:0020639",
+    "ontology": "MONDO",
+    "verified": true
+   },
+   {
+    "text": "autosome",
+    "curie": "GO:0030849",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "zygote",
+    "curie": "CL:0010017",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "lethal",
+    "curie": "PATO:0000718",
+    "ontology": "PATO",
+    "verified": true
+   }
+  ],
+  "relation": "causes",
+  "context": {
+   "taxon": "NCBITaxon:9606",
+   "cellType": "CL:0010017"
+  },
+  "lean": "Claim.inContext {taxa:[human]} (Claim.effect autosomalMonosomy .pos (.phenotype embryonicLethality))",
+  "m2": {
+   "ctor": "effect",
+   "subject": "MONDO:0020639",
+   "relation": null,
+   "object": "PATO:0000718",
+   "sign": "pos",
+   "target": "phenotype",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": "CL:0010017",
+    "condition": "zygote missing an autosome"
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "MONDO:0020639",
+   "relation": null,
+   "object": "PATO:0000718",
+   "sign": "pos",
+   "target": "phenotype",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": "CL:0010017",
+    "component": null,
+    "stage": null,
+    "condition": {
+     "kind": "organism",
+     "curie": "BLN:autosome_monosomy",
+     "text": "monosomic for one copy of an autosome"
+    }
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45467-42",
+  "module": "m45467",
+  "source": "Monosomic human zygotes missing any one copy of an autosome invariably fail to develop to birth because they have only one copy of essential genes.",
+  "claim": "Monosomic zygotes fail because they have only one copy of essential genes",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "monosomy",
+    "curie": "MONDO:0020639",
+    "ontology": "MONDO",
+    "verified": true
+   },
+   {
+    "text": "gene",
+    "curie": "SO:0000704",
+    "ontology": "SO",
+    "verified": true
+   },
+   {
+    "text": "lethal",
+    "curie": "PATO:0000718",
+    "ontology": "PATO",
+    "verified": true
+   }
+  ],
+  "relation": "mediated by",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "Claim.inContext {taxa:[human]} (Claim.mediatedBy autosomalMonosomy .pos (.phenotype lethality) (.amount essentialGeneCopies))",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "mediatedBy",
+   "quant": null,
+   "subject": "MONDO:0020639",
+   "relation": null,
+   "object": "PATO:0000718",
+   "sign": "pos",
+   "target": "phenotype",
+   "mediator": "SO:0000704",
+   "mediator_target": "amount",
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "low"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45467-43",
+  "module": "m45467",
+  "source": "Most autosomal trisomies also fail to develop to birth; however, duplications of some of the smaller chromosomes (13, 15, 18, 21, or 22) can result in offspring that survive for several weeks to many years.",
+  "claim": "Most autosomal trisomies fail to develop to birth",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "trisomy",
+    "curie": null,
+    "ontology": null,
+    "verified": false
+   },
+   {
+    "text": "autosome",
+    "curie": "GO:0030849",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "lethal",
+    "curie": "PATO:0000718",
+    "ontology": "PATO",
+    "verified": true
+   }
+  ],
+  "relation": "causes",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "Claim.inContext {taxa:[human]} (Claim.effect autosomalTrisomy .pos (.phenotype embryonicLethality))",
+  "m2": {
+   "ctor": "effect",
+   "subject": "MONDO:0700065",
+   "relation": null,
+   "object": "PATO:0000718",
+   "sign": "pos",
+   "target": "phenotype",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": "most autosomal trisomies"
+   },
+   "blocker": "quantity",
+   "curie_changes": [
+    {
+     "text": "trisomy",
+     "from": null,
+     "to": "MONDO:0700065",
+     "why": "OLS4 search: trisomy is MONDO:0700065"
+    }
+   ],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": "most",
+   "subject": "MONDO:0700065",
+   "relation": null,
+   "object": "PATO:0000718",
+   "sign": "pos",
+   "target": "phenotype",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": {
+     "kind": "organism",
+     "curie": "BLN:autosomal_trisomy",
+     "text": "trisomy of an autosome"
+    }
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "trisomy",
+     "from": null,
+     "to": "MONDO:0700065",
+     "why": "OLS4 search: trisomy is MONDO:0700065"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45467-48",
+  "module": "m45467",
+  "source": "The most common trisomy is that of chromosome 21, which leads to Down syndrome.",
+  "claim": "Trisomy 21 is the most common trisomy",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "trisomy 21",
+    "curie": "MONDO:0700126",
+    "ontology": "MONDO",
+    "verified": true
+   },
+   {
+    "text": "trisomy",
+    "curie": null,
+    "ontology": null,
+    "verified": false
+   }
+  ],
+  "relation": "frequency",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "-- needs quantity/frequency",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45467-57",
+  "module": "m45467",
+  "source": "Early in development, when female mammalian embryos consist of just a few thousand cells, one X chromosome in each cell inactivates by condensing into a structure called a Barr body.",
+  "claim": "Early in development female mammalian embryos consist of a few thousand cells",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "mammals",
+    "curie": "NCBITaxon:40674",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "female",
+    "curie": "PATO:0000383",
+    "ontology": "PATO",
+    "verified": true
+   },
+   {
+    "text": "cell",
+    "curie": "CL:0000000",
+    "ontology": "CL",
+    "verified": true
+   }
+  ],
+  "relation": "quantity",
+  "context": {
+   "taxon": "NCBITaxon:40674",
+   "stage": "early embryo"
+  },
+  "lean": "-- needs quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45467-58",
+  "module": "m45467",
+  "source": "Early in development, when female mammalian embryos consist of just a few thousand cells, one X chromosome in each cell inactivates by condensing into a structure called a Barr body.",
+  "claim": "In early female mammalian embryos one X chromosome in each cell inactivates by condensing into a Barr body",
+  "kind": "process_description",
+  "bin": "missing_construct",
+  "missing_construct": "has_output",
+  "entities": [
+   {
+    "text": "X inactivation",
+    "curie": "GO:0009048",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "X chromosome",
+    "curie": "GO:0000805",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "Barr body",
+    "curie": "GO:0001740",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "mammals",
+    "curie": "NCBITaxon:40674",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "female",
+    "curie": "PATO:0000383",
+    "ontology": "PATO",
+    "verified": true
+   }
+  ],
+  "relation": "has_output",
+  "context": {
+   "taxon": "NCBITaxon:40674",
+   "stage": "early embryo"
+  },
+  "lean": "-- needs has_output + occurs_during + taxon/stage context",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0009048",
+   "relation": "has output",
+   "object": "GO:0001740",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:40674",
+    "anatomy": null,
+    "cellType": null,
+    "condition": "early female embryos"
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "produces",
+   "quant": null,
+   "subject": "GO:0009048",
+   "relation": null,
+   "object": "GO:0001740",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 1,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:40674",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": "UBERON:0000068",
+    "condition": {
+     "kind": "organism",
+     "curie": "PATO:0000383",
+     "text": "female"
+    }
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "early in development",
+     "from": null,
+     "to": "UBERON:0000068",
+     "why": "embryo stage ('early' is dropped)"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45467-63",
+  "module": "m45467",
+  "source": "In so-called “tortoiseshell” cats, X inactivation is observed as coat-color variegation ().",
+  "claim": "In tortoiseshell cats X inactivation is observed as coat-color variegation",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "cat",
+    "curie": "NCBITaxon:9685",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "X inactivation",
+    "curie": "GO:0009048",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "coat-color variegation",
+    "curie": "PATO:0001533",
+    "ontology": "PATO",
+    "verified": true
+   }
+  ],
+  "relation": "causes",
+  "context": {
+   "taxon": "NCBITaxon:9685"
+  },
+  "lean": "Claim.inContext {taxa:[cat]} (Claim.effect xInactivation .pos (.phenotype coatColorVariegation))",
+  "m2": {
+   "ctor": "effect",
+   "subject": "GO:0009048",
+   "relation": null,
+   "object": "PATO:0001533",
+   "sign": "pos",
+   "target": "phenotype",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:9685",
+    "anatomy": null,
+    "cellType": null,
+    "condition": "tortoiseshell cats"
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "low"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "GO:0009048",
+   "relation": null,
+   "object": "PATO:0001533",
+   "sign": "pos",
+   "target": "phenotype",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9685",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": {
+     "kind": "organism",
+     "curie": "BLN:tortoiseshell",
+     "text": "tortoiseshell cat"
+    }
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45467-67",
+  "module": "m45467",
+  "source": "In an individual carrying an abnormal number of X chromosomes, cellular mechanisms will inactivate all but one X in each cell.",
+  "claim": "In an individual with an abnormal number of X chromosomes, all but one X is inactivated in each cell",
+  "kind": "process_description",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "X inactivation",
+    "curie": "GO:0009048",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "X chromosome",
+    "curie": "GO:0000805",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "quantity",
+  "context": {},
+  "lean": "-- needs quantity (all but one)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45467-73",
+  "module": "m45467",
+  "source": "The XXY chromosome complement, corresponding to one type of Klinefelter syndrome, corresponds to male individuals with small testes, enlarged breasts, and reduced body hair.",
+  "claim": "An XXY chromosome complement corresponds to one type of Klinefelter syndrome",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "Klinefelter syndrome",
+    "curie": "MONDO:0006823",
+    "ontology": "MONDO",
+    "verified": true
+   },
+   {
+    "text": "X chromosome",
+    "curie": "NCIT:C13285",
+    "ontology": "other",
+    "verified": true
+   }
+  ],
+  "relation": "caused by",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "Claim.inContext {taxa:[human]} (Claim.effect XXY .pos (.phenotype klinefelterSyndrome))",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": "some",
+   "subject": "MONDO:0006823",
+   "relation": null,
+   "object": "NCIT:C13285",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 2,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45467-76",
+  "module": "m45467",
+  "source": "Turner syndrome, characterized as an X0 chromosome complement (i.e., only a single sex chromosome), corresponds to a female individual with short stature, webbed skin in the neck region, hearing and cardiac impairments, and sterility.",
+  "claim": "Turner syndrome is characterized as an X0 complement, a single sex chromosome",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "Turner syndrome",
+    "curie": "MONDO:0019499",
+    "ontology": "MONDO",
+    "verified": true
+   },
+   {
+    "text": "X chromosome",
+    "curie": "NCIT:C13285",
+    "ontology": "other",
+    "verified": true
+   },
+   {
+    "text": "sex chromosome",
+    "curie": "GO:0000803",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_part",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "-- needs quantity (1 sex chromosome)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "MONDO:0019499",
+   "relation": null,
+   "object": "GO:0000803",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 1,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45467-79",
+  "module": "m45467",
+  "source": "An individual with more than the correct number of chromosome sets (two for diploid species) is called polyploid.",
+  "claim": "Diploid species have two chromosome sets",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "diploid",
+    "curie": "PATO:0001394",
+    "ontology": "PATO",
+    "verified": true
+   },
+   {
+    "text": "chromosome number",
+    "curie": null,
+    "ontology": null,
+    "verified": false
+   }
+  ],
+  "relation": "quantity",
+  "context": {},
+  "lean": "-- needs quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "definition_only",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45467-80",
+  "module": "m45467",
+  "source": "For instance, fertilization of an abnormal diploid egg with a normal haploid sperm would yield a triploid zygote.",
+  "claim": "Fertilization of an abnormal diploid egg with a normal haploid sperm yields a triploid zygote",
+  "kind": "process_description",
+  "bin": "missing_construct",
+  "missing_construct": "has_output",
+  "entities": [
+   {
+    "text": "fertilization",
+    "curie": "GO:0009566",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "egg",
+    "curie": "CL:0000025",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "sperm",
+    "curie": "CL:0000019",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "zygote",
+    "curie": "CL:0010017",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "triploid",
+    "curie": "PATO:0001381",
+    "ontology": "PATO",
+    "verified": true
+   }
+  ],
+  "relation": "has_output",
+  "context": {},
+  "lean": "-- needs has_input/has_output",
+  "bin_m1": "missing_construct",
+  "lean_m1": "compound",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0009566",
+   "relation": "has output",
+   "object": "CL:0010017",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": "abnormal diploid egg fertilized by normal haploid sperm gives triploid zygote"
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "precondition",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45467-81",
+  "module": "m45467",
+  "source": "Polyploid animals are extremely rare, with only a few examples among the flatworms, crustaceans, amphibians, fish, and lizards.",
+  "claim": "Polyploid animals are extremely rare",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "polyploid",
+    "curie": "PATO:0001377",
+    "ontology": "PATO",
+    "verified": true
+   },
+   {
+    "text": "animals",
+    "curie": "NCBITaxon:33208",
+    "ontology": "NCBITaxon",
+    "verified": true
+   }
+  ],
+  "relation": "frequency",
+  "context": {
+   "taxon": "NCBITaxon:33208"
+  },
+  "lean": "-- needs quantity/frequency",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": "some",
+   "subject": "NCBITaxon:33208",
+   "relation": "has quality",
+   "object": "PATO:0001377",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "proportion",
+   "curie_changes": [],
+   "confidence": "low"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45467-83",
+  "module": "m45467",
+  "source": "Triploid animals are sterile because meiosis cannot proceed normally with an odd number of chromosome sets.",
+  "claim": "Triploid animals are sterile",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "triploid",
+    "curie": "PATO:0001381",
+    "ontology": "PATO",
+    "verified": true
+   },
+   {
+    "text": "sterile",
+    "curie": "PATO:0000956",
+    "ontology": "PATO",
+    "verified": true
+   },
+   {
+    "text": "animals",
+    "curie": "NCBITaxon:33208",
+    "ontology": "NCBITaxon",
+    "verified": true
+   }
+  ],
+  "relation": "causes",
+  "context": {
+   "taxon": "NCBITaxon:33208"
+  },
+  "lean": "Claim.inContext {taxa:[animals]} (Claim.effect triploidy .pos (.phenotype sterility))",
+  "m2": {
+   "ctor": "effect",
+   "subject": "PATO:0001381",
+   "relation": null,
+   "object": "PATO:0000956",
+   "sign": "pos",
+   "target": "phenotype",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:33208",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "PATO:0001381",
+   "relation": null,
+   "object": "PATO:0000956",
+   "sign": "pos",
+   "target": "phenotype",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33208",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45467-85",
+  "module": "m45467",
+  "source": "In contrast, polyploidy is very common in the plant kingdom, and polyploid plants tend to be larger and more robust than euploids of their species.",
+  "claim": "Polyploidy is very common in plants",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "polyploid",
+    "curie": "PATO:0001377",
+    "ontology": "PATO",
+    "verified": true
+   },
+   {
+    "text": "plants",
+    "curie": "NCBITaxon:3193",
+    "ontology": "NCBITaxon",
+    "verified": true
+   }
+  ],
+  "relation": "frequency",
+  "context": {
+   "taxon": "NCBITaxon:3193"
+  },
+  "lean": "-- needs quantity/frequency",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": "some",
+   "subject": "NCBITaxon:3193",
+   "relation": "has quality",
+   "object": "PATO:0001377",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "proportion",
+   "curie_changes": [],
+   "confidence": "low"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45467-86",
+  "module": "m45467",
+  "source": "In contrast, polyploidy is very common in the plant kingdom, and polyploid plants tend to be larger and more robust than euploids of their species.",
+  "claim": "Polyploid plants tend to be larger and more robust than euploids of their species",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "polyploid",
+    "curie": "PATO:0001377",
+    "ontology": "PATO",
+    "verified": true
+   },
+   {
+    "text": "plants",
+    "curie": "NCBITaxon:3193",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "larger",
+    "curie": "PATO:0000586",
+    "ontology": "PATO",
+    "verified": true
+   },
+   {
+    "text": "euploid",
+    "curie": "PATO:0001393",
+    "ontology": "PATO",
+    "verified": true
+   }
+  ],
+  "relation": "increases",
+  "context": {
+   "taxon": "NCBITaxon:3193"
+  },
+  "lean": "Claim.inContext {taxa:[plants]} (Claim.effect polyploidy .pos (.phenotype size))",
+  "m2": {
+   "ctor": "effect",
+   "subject": "PATO:0001377",
+   "relation": null,
+   "object": "PATO:0000586",
+   "sign": "pos",
+   "target": "phenotype",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:3193",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "low"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": "most",
+   "subject": "PATO:0001377",
+   "relation": null,
+   "object": "PATO:0000586",
+   "sign": "pos",
+   "target": "phenotype",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:3193",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "compound_sentence",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45467-105",
+  "module": "m45467",
+  "source": "A comparison of human and chimpanzee genes in the region of this inversion indicates that two genes—ROCK1 and USP14—are farther apart on human chromosome 18 than they are on the corresponding chimpanzee chromosome.",
+  "claim": "ROCK1 and USP14 are farther apart on human chromosome 18 than on the corresponding chimpanzee chromosome",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "ROCK1",
+    "curie": "NCIT:C24744",
+    "ontology": "other",
+    "verified": true
+   },
+   {
+    "text": "USP14",
+    "curie": "NCIT:C132090",
+    "ontology": "other",
+    "verified": true
+   },
+   {
+    "text": "chromosome 18",
+    "curie": "NCIT:C13213",
+    "ontology": "other",
+    "verified": true
+   },
+   {
+    "text": "humans",
+    "curie": "NCBITaxon:9606",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "chimpanzees",
+    "curie": "NCBITaxon:9598",
+    "ontology": "NCBITaxon",
+    "verified": true
+   }
+  ],
+  "relation": "distance_comparison",
+  "context": {},
+  "lean": "-- needs quantity/comparison",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45467-120",
+  "module": "m45467",
+  "source": "Disorders in chromosome number, or aneuploidies, are typically lethal to the embryo, although a few trisomic genotypes are viable.",
+  "claim": "A few trisomic genotypes are viable",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "trisomy",
+    "curie": null,
+    "ontology": null,
+    "verified": false
+   },
+   {
+    "text": "viable",
+    "curie": "PATO:0000719",
+    "ontology": "PATO",
+    "verified": true
+   }
+  ],
+  "relation": "permits",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "Claim.inContext {taxa:[human]} (Claim.effect someTrisomies .pos (.phenotype viability))",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": "some",
+   "subject": "MONDO:0700065",
+   "relation": "has quality",
+   "object": "PATO:0000719",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "trisomic genotypes",
+     "from": null,
+     "to": "MONDO:0700065",
+     "why": "trisomy"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45467-137",
+  "module": "m45467",
+  "source": "Chromosome 21 may be a smaller chromosome, so there are fewer unbalanced gene products.",
+  "claim": "Chromosome 21 may be smaller, giving fewer unbalanced gene products",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "chromosome 21",
+    "curie": "NCIT:C13217",
+    "ontology": "other",
+    "verified": true
+   },
+   {
+    "text": "size",
+    "curie": "PATO:0000117",
+    "ontology": "PATO",
+    "verified": true
+   },
+   {
+    "text": "gene product",
+    "curie": "NCIT:C26548",
+    "ontology": "other",
+    "verified": true
+   }
+  ],
+  "relation": "quantity",
+  "context": {},
+  "lean": "-- needs quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ }
+]
