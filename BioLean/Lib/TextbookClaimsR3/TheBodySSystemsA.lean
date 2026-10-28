@@ -31,6 +31,12 @@ def the_body_s_systems_m45535_86 : Statement where
   text := "Gastric emptying occurs two to six hours after a meal"
   claim := .measure (e_GO_0035483.inCtx { taxon := e_NCBITaxon_9606 }) e_PATO_0001309 2 6 "h"
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Gastric emptying occurs within two to six hours after a meal." }]
+/-- The human small intestine is over 6 m long -/
+def the_body_s_systems_m45535_104 : Statement where
+  id := "the-body-s-systems-m45535-104"
+  text := "The human small intestine is over 6 m long"
+  claim := .atLeastMeasure (e_UBERON_0002108.inCtx { taxon := e_NCBITaxon_9606 }) e_PATO_0000122 6 "m"
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "The human small intestine is over 6 m (19.6 ft) long and is divided into three parts: the duodenum, the jejunum and the ileum." }]
 /-- The human large intestine is shorter than the small intestine -/
 def the_body_s_systems_m45535_124 : Statement where
   id := "the-body-s-systems-m45535-124"
@@ -167,7 +173,7 @@ def the_body_s_systems_m45536_61 : Statement where
 def the_body_s_systems_m45536_65 : Statement where
   id := "the-body-s-systems-m45536-65"
   text := "Each alveolar sac contains 20 to 30 alveoli"
-  claim := .measure e_UBERON_0002169 e_PATO_0001555 20 30 "alveoli"
+  claim := .countBetween e_UBERON_0002169 e_UBERON_0002299 20 30
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "At the end of each duct are alveolar sacs, each containing 20 to 30 alveoli." }]
 /-- In open circulatory systems the circulatory fluid bathes the internal organs directly -/
 def the_body_s_systems_m45536_88 : Statement where

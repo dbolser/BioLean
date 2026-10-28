@@ -13,6 +13,12 @@ def photosynthesis_m45448_3 : Statement where
   text := "most carbohydrate molecules are produced by photosynthesis"
   claim := .quant .most (.rel ⟨.ro, 2353, false⟩ e_CHEBI_16646 e_GO_0015979)
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Each cell runs on the chemical energy found mainly in carbohydrate molecules (food), and the majority of these molecules are produced by one process: photosynthesis." }]
+/-- glucose is the most common carbohydrate product of photosynthesis [weakening; not expressed: proportion] -/
+def photosynthesis_m45448_50 : Statement where
+  id := "photosynthesis-m45448-50"
+  text := "glucose is the most common carbohydrate product of photosynthesis [weakening; not expressed: proportion]"
+  claim := .rel ⟨.ro, 2234, false⟩ e_GO_0015979 e_CHEBI_17234
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "After the process is complete, photosynthesis releases oxygen and produces carbohydrate molecules, most commonly glucose." }]
 /-- in autotrophic eukaryotes, photosynthesis takes place inside the chloroplast -/
 def photosynthesis_m45448_63 : Statement where
   id := "photosynthesis-m45448-63"
@@ -67,12 +73,24 @@ def photosynthesis_m45452_60 : Statement where
   text := "water splitting forms hydrogen ions in the thylakoid space"
   claim := .rel ⟨.ro, 2234, false⟩ (e_GO_0010242.inCtx { component := e_GO_0031977 }) e_CHEBI_15378
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "This splitting releases an electron and results in the formation of oxygen (O2) and hydrogen ions (H+) in the thylakoid space." }]
+/-- eukaryotes and some prokaryotes have two photosystems [weakening; not expressed: compound_sentence] -/
+def photosynthesis_m45452_66 : Statement where
+  id := "photosynthesis-m45452-66"
+  text := "eukaryotes and some prokaryotes have two photosystems [weakening; not expressed: compound_sentence]"
+  claim := .cardinality (e_GO_0009521.inCtx { taxon := e_NCBITaxon_2759 }) 2
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "In eukaryotes and some prokaryotes, two photosystems exist." }]
 /-- in the mitochondrion ATP synthase generates ATP from ADP -/
 def photosynthesis_m45452_90 : Statement where
   id := "photosynthesis-m45452-90"
   text := "in the mitochondrion ATP synthase generates ATP from ADP"
   claim := .rel ⟨.ro, 3000, false⟩ (e_GO_0045259.inCtx { component := e_GO_0005739 }) e_CHEBI_15422
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "This same protein generated ATP from ADP in the mitochondrion." }]
+/-- chlorophyll a is the most common and abundant photosynthetic pigment [weakening; not expressed: proportion] -/
+def photosynthesis_m45452_102 : Statement where
+  id := "photosynthesis-m45452-102"
+  text := "chlorophyll a is the most common and abundant photosynthetic pigment [weakening; not expressed: proportion]"
+  claim := .rel Rel.isA e_CHEBI_18230 e_CHEBI_26130
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "The most common and abundant pigment is chlorophyll a." }]
 /-- RuBP has five carbon atoms -/
 def photosynthesis_m45453_21 : Statement where
   id := "photosynthesis-m45453-21"

@@ -65,7 +65,7 @@ def the_body_s_systems_m45537_136 : Statement where
 def the_body_s_systems_m45537_137 : Statement where
   id := "the-body-s-systems-m45537-137"
   text := "The number of parathyroid glands varies from two to six"
-  claim := .measure (e_UBERON_0000468.inCtx { taxon := e_NCBITaxon_9606 }) e_PATO_0001555 2 6 "parathyroid glands"
+  claim := .countBetween (e_UBERON_0000468.inCtx { taxon := e_NCBITaxon_9606 }) e_UBERON_0001132 2 6
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Most people have four parathyroid glands; however, the number can vary from two to six." }]
 /-- Parathyroid hormone increases blood calcium concentration -/
 def the_body_s_systems_m45537_140 : Statement where
@@ -187,6 +187,12 @@ def the_body_s_systems_m45537_337 : Statement where
   text := "Glucagon stimulates release of stored glucose from the liver into the bloodstream"
   claim := .effect e_PR_P01275 .pos (.amount (e_CHEBI_17234.inCtx { anatomy := e_UBERON_0000178 }))
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "When blood-glucose levels are decreasing, the pancreas releases glucagon, which stimulates the release of stored glucose by the liver to the bloodstream." }]
+/-- The adult human skeleton consists of 206 bones -/
+def the_body_s_systems_m45538_18 : Statement where
+  id := "the-body-s-systems-m45538-18"
+  text := "The adult human skeleton consists of 206 bones"
+  claim := .count (e_UBERON_0004288.inCtx { taxon := e_NCBITaxon_9606, lifeStage := e_UBERON_0000113 }) e_UBERON_0001474 206
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "The human skeleton is an endoskeleton that consists of 206 bones in the adult." }]
 /-- The auditory ossicles consist of two malleus bones -/
 def the_body_s_systems_m45538_47 : Statement where
   id := "the-body-s-systems-m45538-47"
@@ -217,6 +223,12 @@ def the_body_s_systems_m45538_66 : Statement where
   text := "The vertebral column has 24 vertebrae"
   claim := .count (e_UBERON_0001130.inCtx { taxon := e_NCBITaxon_9606 }) e_UBERON_0002412 24
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "It consists of 26 bones: the 24 vertebrae, the sacrum, and the coccyx." }]
+/-- The adult vertebral column is approximately 70 cm long -/
+def the_body_s_systems_m45538_75 : Statement where
+  id := "the-body-s-systems-m45538-75"
+  text := "The adult vertebral column is approximately 70 cm long"
+  claim := .measure (e_UBERON_0001130.inCtx { taxon := e_NCBITaxon_9606, lifeStage := e_UBERON_0000113 }) e_PATO_0000122 70 70 "cm"
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "The vertebral column is approximately 70 cm (28 in) in adults and is curved, which can be seen from a side view." }]
 /-- There are 12 pairs of ribs -/
 def the_body_s_systems_m45538_93 : Statement where
   id := "the-body-s-systems-m45538-93"
@@ -329,31 +341,31 @@ def the_body_s_systems_m45539_28 : Statement where
 def the_body_s_systems_m45539_36 : Statement where
   id := "the-body-s-systems-m45539-36"
   text := "The Drosophila melanogaster nervous system contains around 100,000 neurons"
-  claim := .measure (e_UBERON_0001016.inCtx { taxon := e_NCBITaxon_7227 }) e_PATO_0001555 100000 100000 "neurons"
+  claim := .count (e_UBERON_0001016.inCtx { taxon := e_NCBITaxon_7227 }) e_CL_0000540 100000
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "The nervous system of the common laboratory fly, Drosophila melanogaster, contains around 100,000 neurons, the same number as a lobster." }]
 /-- A lobster nervous system contains around 100,000 neurons -/
 def the_body_s_systems_m45539_37 : Statement where
   id := "the-body-s-systems-m45539-37"
   text := "A lobster nervous system contains around 100,000 neurons"
-  claim := .measure (e_UBERON_0001016.inCtx { taxon := e_NCBITaxon_6705 }) e_PATO_0001555 100000 100000 "neurons"
+  claim := .count (e_UBERON_0001016.inCtx { taxon := e_NCBITaxon_6705 }) e_CL_0000540 100000
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "The nervous system of the common laboratory fly, Drosophila melanogaster, contains around 100,000 neurons, the same number as a lobster." }]
 /-- The mouse nervous system contains about 75 million neurons -/
 def the_body_s_systems_m45539_38 : Statement where
   id := "the-body-s-systems-m45539-38"
   text := "The mouse nervous system contains about 75 million neurons"
-  claim := .measure (e_UBERON_0001016.inCtx { taxon := e_NCBITaxon_10090 }) e_PATO_0001555 75000000 75000000 "neurons"
+  claim := .count (e_UBERON_0001016.inCtx { taxon := e_NCBITaxon_10090 }) e_CL_0000540 75000000
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "This number compares to 75 million in the mouse and 300 million in the octopus." }]
 /-- The octopus nervous system contains about 300 million neurons -/
 def the_body_s_systems_m45539_39 : Statement where
   id := "the-body-s-systems-m45539-39"
   text := "The octopus nervous system contains about 300 million neurons"
-  claim := .measure (e_UBERON_0001016.inCtx { taxon := e_NCBITaxon_6643 }) e_PATO_0001555 300000000 300000000 "neurons"
+  claim := .count (e_UBERON_0001016.inCtx { taxon := e_NCBITaxon_6643 }) e_CL_0000540 300000000
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "This number compares to 75 million in the mouse and 300 million in the octopus." }]
 /-- A human brain contains around 86 billion neurons -/
 def the_body_s_systems_m45539_40 : Statement where
   id := "the-body-s-systems-m45539-40"
   text := "A human brain contains around 86 billion neurons"
-  claim := .measure (e_UBERON_0000955.inCtx { taxon := e_NCBITaxon_9606 }) e_PATO_0001555 86000000000 86000000000 "neurons"
+  claim := .count (e_UBERON_0000955.inCtx { taxon := e_NCBITaxon_9606 }) e_CL_0000540 86000000000
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "A human brain contains around 86 billion neurons." }]
 /-- Most neurons have one or many dendrites -/
 def the_body_s_systems_m45539_53 : Statement where
@@ -383,7 +395,7 @@ def the_body_s_systems_m45539_94 : Statement where
 def the_body_s_systems_m45539_108 : Statement where
   id := "the-body-s-systems-m45539-108"
   text := "Neurons usually have one or two axons"
-  claim := .quant .most (.measure e_CL_0000540 e_PATO_0001555 1 2 "axons")
+  claim := .quant .most (.countBetween e_CL_0000540 e_GO_0030424 1 2)
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Neurons usually have one or two axons, but some neurons do not contain any axons." }]
 /-- The axon of a human motor neuron can be as long as a meter -/
 def the_body_s_systems_m45539_112 : Statement where
@@ -443,7 +455,7 @@ def the_body_s_systems_m45539_271 : Statement where
 def the_body_s_systems_m45539_279 : Statement where
   id := "the-body-s-systems-m45539-279"
   text := "A reflex may require only one or two synapses"
-  claim := .quant .some (.measure e_GO_0060004 e_PATO_0001555 1 2 "synapses")
+  claim := .quant .some (.countBetween e_GO_0060004 e_GO_0045202 1 2)
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "While a reflex may only require the involvement of one or two synapses, synapses with interneurons in the spinal column transmit information to the brain to convey what happened (the knee jerked, or t" }]
 /-- Most neurons contain dendrites -/
 def the_body_s_systems_m45539_321 : Statement where

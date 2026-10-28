@@ -13,6 +13,12 @@ def how_cells_obtain_energy_m45436_7 : Statement where
   text := "Muscle proteins are built from dietary amino acids"
   claim := .rel ⟨.ro, 1000, false⟩ (e_CHEBI_36080.inCtx { anatomy := e_UBERON_0002385 }) e_CHEBI_33709
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "For example, the large proteins that make up muscles are built from smaller molecules imported from dietary amino acids." }]
+/-- Photosynthesizing organisms (plants) produce sugars [weakening; not expressed: proportion] -/
+def how_cells_obtain_energy_m45437_11 : Statement where
+  id := "how-cells-obtain-energy-m45437-11"
+  text := "Photosynthesizing organisms (plants) produce sugars [weakening; not expressed: proportion]"
+  claim := .rel ⟨.ro, 2234, false⟩ (e_GO_0015979.inCtx { taxon := e_NCBITaxon_33090 }) e_CHEBI_16646
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "For the most part, photosynthesizing organisms like plants produce these sugars." }]
 /-- Plants convert the energy of sunlight to chemical energy stored in organic molecules -/
 def how_cells_obtain_energy_m45437_59 : Statement where
   id := "how-cells-obtain-energy-m45437-59"
@@ -25,12 +31,48 @@ def how_cells_obtain_energy_m45437_134 : Statement where
   text := "Most enzymes are proteins"
   claim := .quant .most (.rel Rel.isA e_GO_0003824 e_CHEBI_36080)
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Most enzymes are proteins and perform the critical task of lowering the activation energies of chemical reactions inside the cell." }]
+/-- High ADP relative to ATP triggers more ATP production through sugar catabolism [weakening; not expressed: proportion] -/
+def how_cells_obtain_energy_m45437_248 : Statement where
+  id := "how-cells-obtain-energy-m45437-248"
+  text := "High ADP relative to ATP triggers more ATP production through sugar catabolism [weakening; not expressed: proportion]"
+  claim := .effect e_CHEBI_16761 .pos (.process e_GO_0006007)
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Thus, when relative levels of ADP are high compared to ATP, the cell is triggered to produce more ATP through sugar catabolism." }]
+/-- Most vitamins and minerals act as cofactors and coenzymes for enzyme action [weakening; not expressed: compound_sentence] -/
+def how_cells_obtain_energy_m45437_285 : Statement where
+  id := "how-cells-obtain-energy-m45437-285"
+  text := "Most vitamins and minerals act as cofactors and coenzymes for enzyme action [weakening; not expressed: compound_sentence]"
+  claim := .quant .most (.rel Rel.isA e_CHEBI_33229 e_CHEBI_23357)
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Most vitamins and minerals act as cofactors and coenzymes for enzyme action." }]
 /-- Glycolysis ends with two molecules of pyruvate -/
 def how_cells_obtain_energy_m45438_35 : Statement where
   id := "how-cells-obtain-energy-m45438-35"
   text := "Glycolysis ends with two molecules of pyruvate"
   claim := .produces e_GO_0006096 e_CHEBI_15361 2
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Glycolysis begins with the six-carbon, ring-shaped structure of a single glucose molecule and ends with two molecules of a three-carbon sugar called pyruvate in a multi-step process with several inter" }]
+/-- If pyruvate is not catabolized further, the cell harvests only two ATP per glucose [weakening; not expressed: precondition] -/
+def how_cells_obtain_energy_m45438_41 : Statement where
+  id := "how-cells-obtain-energy-m45438-41"
+  text := "If pyruvate is not catabolized further, the cell harvests only two ATP per glucose [weakening; not expressed: precondition]"
+  claim := .yield e_GO_0006096 e_CHEBI_15422 2
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "If the cell cannot catabolize the pyruvate molecules further, it will harvest only two ATP molecules from one molecule of glucose." }]
+/-- Mature mammalian red blood cells are capable only of glycolysis [weakening; not expressed: exclusivity] -/
+def how_cells_obtain_energy_m45438_42 : Statement where
+  id := "how-cells-obtain-energy-m45438-42"
+  text := "Mature mammalian red blood cells are capable only of glycolysis [weakening; not expressed: exclusivity]"
+  claim := .rel ⟨.ro, 2215, false⟩ (e_CL_0000232.inCtx { taxon := e_NCBITaxon_40674 }) e_GO_0006096
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "For example, mature mammalian red blood cells are only capable of glycolysis, which is their sole source of ATP." }]
+/-- Glycolysis is the sole source of ATP in mammalian red blood cells [weakening; not expressed: exclusivity] -/
+def how_cells_obtain_energy_m45438_43 : Statement where
+  id := "how-cells-obtain-energy-m45438-43"
+  text := "Glycolysis is the sole source of ATP in mammalian red blood cells [weakening; not expressed: exclusivity]"
+  claim := .effect (e_GO_0006096.inCtx { taxon := e_NCBITaxon_40674 }) .pos (.amount (e_CHEBI_15422.inCtx { cellType := e_CL_0000232 }))
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "For example, mature mammalian red blood cells are only capable of glycolysis, which is their sole source of ATP." }]
+/-- If glycolysis is interrupted, red blood cells die [weakening; not expressed: necessity] -/
+def how_cells_obtain_energy_m45438_44 : Statement where
+  id := "how-cells-obtain-energy-m45438-44"
+  text := "If glycolysis is interrupted, red blood cells die [weakening; not expressed: necessity]"
+  claim := .effect (e_GO_0006096.inCtx { taxon := e_NCBITaxon_40674 }) .neg (.process (e_GO_0008219.inCtx { cellType := e_CL_0000232 }))
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "If glycolysis is interrupted, these cells would eventually die." }]
 /-- Two ATP are invested in the first half of glycolysis -/
 def how_cells_obtain_energy_m45438_56 : Statement where
   id := "how-cells-obtain-energy-m45438-56"
@@ -85,12 +127,30 @@ def how_cells_obtain_energy_m45439_24 : Statement where
   text := "All six carbons of glucose are eventually released as CO2"
   claim := .produces e_GO_0009060 e_CHEBI_16526 6
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "The two acetyl-carbon atoms will eventually be released on later turns of the cycle; in this way, all six carbon atoms from the original glucose molecule will be eventually released as carbon dioxide." }]
+/-- Each turn forms three NADH and one FADH2 [weakening; not expressed: compound_sentence] -/
+def how_cells_obtain_energy_m45439_26 : Statement where
+  id := "how-cells-obtain-energy-m45439-26"
+  text := "Each turn forms three NADH and one FADH2 [weakening; not expressed: compound_sentence]"
+  claim := .produces e_GO_0006099 e_CHEBI_16908 3
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Each turn of the cycle forms three high-energy NADH molecules and one high-energy FADH2 molecule." }]
+/-- Most ATP derives from a process that passes electrons through reactions to oxygen as final acceptor [weakening; not expressed: proportion] -/
+def how_cells_obtain_energy_m45439_33 : Statement where
+  id := "how-cells-obtain-energy-m45439-33"
+  text := "Most ATP derives from a process that passes electrons through reactions to oxygen as final acceptor [weakening; not expressed: proportion]"
+  claim := .rel ⟨.ro, 2234, false⟩ e_GO_0006119 e_CHEBI_15422
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Rather, it derives from a process that begins with passing electrons through a series of chemical reactions to a final electron acceptor, oxygen." }]
 /-- In prokaryotes electron transport occurs on the inner part of the cell membrane -/
 def how_cells_obtain_energy_m45439_35 : Statement where
   id := "how-cells-obtain-energy-m45439-35"
   text := "In prokaryotes electron transport occurs on the inner part of the cell membrane"
   claim := .rel ⟨.bfo, 66, false⟩ (e_GO_0022904.inCtx { taxon := e_NCBITaxon_2 }) e_GO_0005886
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "These reactions take place in specialized protein complexes located in the inner membrane of the mitochondria of eukaryotic organisms and on the inner part of the cell membrane of prokaryotic organism" }]
+/-- The electron transport chain is the only part of metabolism that uses atmospheric oxygen [weakening; not expressed: exclusivity] -/
+def how_cells_obtain_energy_m45439_40 : Statement where
+  id := "how-cells-obtain-energy-m45439-40"
+  text := "The electron transport chain is the only part of metabolism that uses atmospheric oxygen [weakening; not expressed: exclusivity]"
+  claim := .rel ⟨.ro, 2233, false⟩ e_GO_0022904 e_CHEBI_15379
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "The electron transport chain (a) is the last component of aerobic respiration and is the only part of metabolism that uses atmospheric oxygen." }]
 /-- The electron transport chain is four protein complexes (I-IV) plus mobile accessory electron carriers -/
 def how_cells_obtain_energy_m45439_46 : Statement where
   id := "how-cells-obtain-energy-m45439-46"
@@ -109,6 +169,12 @@ def how_cells_obtain_energy_m45439_57 : Statement where
   text := "There are four complexes in the chain"
   claim := .count e_GO_0022904 e_GO_0098803 4
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "As they are passed from one complex to another (there are a total of four), the electrons lose energy, and some of that energy is used to pump hydrogen ions from the mitochondrial matrix into the inte" }]
+/-- Chemiosmosis generates 90 percent of the ATP made during aerobic glucose catabolism [weakening; not expressed: proportion] -/
+def how_cells_obtain_energy_m45439_74 : Statement where
+  id := "how-cells-obtain-energy-m45439-74"
+  text := "Chemiosmosis generates 90 percent of the ATP made during aerobic glucose catabolism [weakening; not expressed: proportion]"
+  claim := .rel ⟨.ro, 2234, false⟩ e_GO_0015986 e_CHEBI_15422
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Chemiosmosis (c) is used to generate 90 percent of the ATP made during aerobic glucose catabolism." }]
 /-- NAD+ is the electron transporter in the liver -/
 def how_cells_obtain_energy_m45439_86 : Statement where
   id := "how-cells-obtain-energy-m45439-86"
@@ -127,6 +193,12 @@ def how_cells_obtain_energy_m45439_93 : Statement where
   text := "Glucose catabolism extracts about 34 percent of the energy in glucose"
   claim := .measure e_GO_0006007 e_PATO_0001029 (17/50) (17/50) "fraction"
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Overall, in living systems, these pathways of glucose catabolism extract about 34 percent of the energy contained in glucose." }]
+/-- Most mitochondrial disease patients are diagnosed in childhood; some diseases are adult-onset [weakening; not expressed: compound_sentence] -/
+def how_cells_obtain_energy_m45439_99 : Statement where
+  id := "how-cells-obtain-energy-m45439-99"
+  text := "Most mitochondrial disease patients are diagnosed in childhood; some diseases are adult-onset [weakening; not expressed: compound_sentence]"
+  claim := .quant .most (.rel ⟨.ro, 2200, false⟩ e_MONDO_0044970 e_HP_0011463)
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Most affected people are diagnosed in childhood, although there are some adult-onset diseases." }]
 /-- Electrons pass through a series of reactions, with free energy used at three points to transport hydrogen ions across the membrane -/
 def how_cells_obtain_energy_m45439_106 : Statement where
   id := "how-cells-obtain-energy-m45439-106"
@@ -157,5 +229,17 @@ def how_cells_obtain_energy_m45444_22 : Statement where
   text := "Most of the time amino acids are recycled into new proteins"
   claim := .quant .most (.rel ⟨.ro, 2352, false⟩ e_CHEBI_33709 e_GO_0006412)
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Most of the time, amino acids are recycled into new proteins." }]
+/-- In mammals the liver synthesizes urea from two ammonia molecules and one CO2 [weakening; not expressed: compound_sentence] -/
+def how_cells_obtain_energy_m45444_26 : Statement where
+  id := "how-cells-obtain-energy-m45444-26"
+  text := "In mammals the liver synthesizes urea from two ammonia molecules and one CO2 [weakening; not expressed: compound_sentence]"
+  claim := .consumes (e_GO_0000050.inCtx { taxon := e_NCBITaxon_40674, anatomy := e_UBERON_0002107 }) e_CHEBI_16134 2
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "In mammals, the liver synthesizes urea from two ammonia molecules and a carbon dioxide molecule." }]
+/-- Animals can make most of the fatty acids they need [weakening; not expressed: proportion] -/
+def how_cells_obtain_energy_m45444_39 : Statement where
+  id := "how-cells-obtain-energy-m45444-39"
+  text := "Animals can make most of the fatty acids they need [weakening; not expressed: proportion]"
+  claim := .rel ⟨.ro, 2215, false⟩ e_NCBITaxon_33208 e_GO_0006633
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Animals can make most of the fatty acids they need." }]
 
 end BioLean.Textbook.R3.HowCellsObtainEnergy

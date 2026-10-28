@@ -23,7 +23,9 @@ def glycolysis    : Entity .process   := ⟨"GO:0006096", "glycolytic process"�
 def atp           : Entity .chemical  := ⟨"CHEBI:15422", "ATP"⟩
 def chromosome    : Entity .component := ⟨"GO:0005694", "chromosome"⟩
 def chromosomeSet : Entity .component := ⟨"BIOLEAN:chromosome_set", "chromosome set (no GO term)"⟩
-def somaticCell   : Entity .cellType  := ⟨"CL:0002371", "somatic cell"⟩
+/-- "Somatic cell" (CL:0002371) is obsolete and its replacement, "cell", loses the meaning. A cell with
+46 chromosomes in two sets is a diploid cell. -/
+def diploidCell   : Entity .cellType  := ⟨"CL:0000415", "diploid cell"⟩
 def eggCell       : Entity .cellType  := ⟨"CL:0000025", "egg cell"⟩
 def sperm         : Entity .cellType  := ⟨"CL:0000019", "sperm"⟩
 def zygote        : Entity .cellType  := ⟨"CL:0000365", "animal zygote"⟩
@@ -33,6 +35,10 @@ def eukaryoticCell  : Entity .cellType := ⟨"CL:0000255", "eukaryotic cell"⟩
 def diameter      : Entity .phenotype := ⟨"PATO:0001334", "diameter"⟩
 def neuron        : Entity .cellType  := ⟨"CL:0000540", "neuron"⟩
 def axon          : Entity .component := ⟨"GO:0030424", "axon"⟩
+def alveolarSac   : Entity .anatomy   := ⟨"UBERON:0002169", "alveolar sac"⟩
+def alveolus      : Entity .anatomy   := ⟨"UBERON:0002299", "alveolus of lung"⟩
+def smallIntestine : Entity .anatomy  := ⟨"UBERON:0002108", "small intestine"⟩
+def length        : Entity .phenotype := ⟨"PATO:0000122", "length"⟩
 
 /-! ### T31: four bases, three per codon, 64 codons -/
 def S_bases : Statement := ⟨"molbio:m45473-113", "DNA has four nitrogenous bases", .cardinality nucleobase 4, [tb "OpenStax 9.1"]⟩
@@ -54,8 +60,8 @@ def S_used2 : Statement := ⟨"energy:m45438-57", "glycolysis uses two ATP", .co
 def net2 : Derivation (.yield glycolysis atp 2) := netYield (.lit S_made4) (.lit S_used2)
 
 /-! ### T25: 46 chromosomes in two sets is 23 per set -/
-def S_46 : Statement := ⟨"repro:m45455-17", "human somatic cells have 46 chromosomes", .count somaticCell chromosome 46, [tb "OpenStax 6.1 (human context not yet expressible)"]⟩
-def S_2sets : Statement := ⟨"repro:m45455-18", "somatic cells carry two sets", .count somaticCell chromosomeSet 2, [tb "OpenStax 6.1"]⟩
+def S_46 : Statement := ⟨"repro:m45455-17", "human somatic cells have 46 chromosomes", .count diploidCell chromosome 46, [tb "OpenStax 6.1 (human context not yet expressible)"]⟩
+def S_2sets : Statement := ⟨"repro:m45455-18", "somatic cells carry two sets", .count diploidCell chromosomeSet 2, [tb "OpenStax 6.1"]⟩
 def perSet23 : Derivation (.count chromosomeSet chromosome 23) := perSet (.lit S_46) (.lit S_2sets)
 
 /-! ### T26 / T27: fusion adds sets -/
@@ -76,6 +82,10 @@ def S_prokSize : Statement := ⟨"cell:m45429-44", "prokaryotic cells are 0.1 to
 def S_eukSize : Statement := ⟨"cell:m45429-45", "eukaryotic cells are 10 to 100 µm across", .measure eukaryoticCell diameter 10 100 "µm", [tb "OpenStax 3.2"]⟩
 def prokSmaller : Derivation (.less prokaryoticCell eukaryoticCell diameter) :=
   compareIntervals (.lit S_prokSize) (.lit S_eukSize)
+
+/-! ### Ranges and open ends: no rule uses these yet -/
+def S_alveoli : Statement := ⟨"body:m45536-65", "each alveolar sac contains 20 to 30 alveoli", .countBetween alveolarSac alveolus 20 30, [tb "OpenStax, module m45536"]⟩
+def S_intestine : Statement := ⟨"body:m45535-104", "the human small intestine is over 6 m long", .atLeastMeasure (smallIntestine.inCtx { taxon := some Taxa.human }) length 6 "m", [tb "OpenStax, module m45535"]⟩
 
 /-! ### The closure's clash, dissolved by quantifiers -/
 def S_mostAxons : Statement := ⟨"body:m45539-323", "most neurons contain axons", .quant .most (.rel Rel.hasPart neuron axon), [tb "OpenStax 16.1"]⟩

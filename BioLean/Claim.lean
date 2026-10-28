@@ -132,10 +132,17 @@ inductive Claim
   | count {k₁ k₂ : Kind} (whole : Entity k₁) (part : Entity k₂) (n : Nat)
   /-- Every `whole` has at least `n` parts of kind `part`. -/
   | atLeast {k₁ k₂ : Kind} (whole : Entity k₁) (part : Entity k₂) (n : Nat)
+  /-- Every `whole` has between `lo` and `hi` parts of kind `part`: an alveolar sac has 20 to 30
+  alveoli. `count` is the point case; write `count`, not `countBetween n n`. -/
+  | countBetween {k₁ k₂ : Kind} (whole : Entity k₁) (part : Entity k₂) (lo hi : Nat)
   /-- The class `c` has exactly `n` kinds of member: there are 64 codons, 20 amino acids. -/
   | cardinality {k : Kind} (c : Entity k) (n : Nat)
   /-- Quality `q` of every `x` lies in `[lo, hi]` in unit `u`: prokaryotic cell diameter 0.1 to 5 µm. -/
   | measure {k : Kind} (x : Entity k) (q : Entity .phenotype) (lo hi : Rat) (u : String)
+  /-- Quality `q` of every `x` is at least `lo` in unit `u`, with no upper bound: the human small
+  intestine is over 6 m long. A separate constructor, not an optional `hi`, so `compareIntervals`
+  keeps its closed intervals. -/
+  | atLeastMeasure {k : Kind} (x : Entity k) (q : Entity .phenotype) (lo : Rat) (u : String)
   /-- Every `a` is below every `b` in quality `q`. -/
   | less {k₁ k₂ : Kind} (a : Entity k₁) (b : Entity k₂) (q : Entity .phenotype)
   /-- One run of process `p` makes `n` of `m`. -/
@@ -155,8 +162,10 @@ partial def Claim.toString : Claim → String
     | .notRel r a b _ => s!"¬({a} {r} {b})"
     | .count w p n => s!"{w} has {n} × {p}"
     | .atLeast w p n => s!"{w} has ≥ {n} × {p}"
+    | .countBetween w p lo hi => s!"{w} has {lo} to {hi} × {p}"
     | .cardinality c n => s!"|{c}| = {n}"
     | .measure x q lo hi u => s!"{q} of {x} ∈ [{lo}, {hi}] {u}"
+    | .atLeastMeasure x q lo u => s!"{q} of {x} ≥ {lo} {u}"
     | .less a b q => s!"{a} < {b} in {q}"
     | .produces p m n => s!"{p} makes {n} × {m}"
     | .consumes p m n => s!"{p} uses {n} × {m}"
@@ -169,8 +178,8 @@ instance : ToString Claim := ⟨Claim.toString⟩
 /-- The curie of a claim's subject: the agent, the first relatum, the whole or the process. -/
 def Claim.subjectCurie : Claim → String
   | .effect a .. | .mediatedBy a .. | .noEffect a _ | .rel _ a .. | .notRel _ a .. => a.curie
-  | .count w .. | .atLeast w .. => w.curie
-  | .cardinality c _ | .measure c .. | .less c .. => c.curie
+  | .count w .. | .atLeast w .. | .countBetween w .. => w.curie
+  | .cardinality c _ | .measure c .. | .atLeastMeasure c .. | .less c .. => c.curie
   | .produces p .. | .consumes p .. | .yield p .. => p.curie
   | .quant _ c => c.subjectCurie
 instance : Repr Claim := ⟨fun c _ => c.toString⟩

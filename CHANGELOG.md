@@ -2,6 +2,22 @@
 
 Findings and decisions, dated. Code history is in `git log`; this records what we learned.
 
+## 2026-10-29 (overnight: M3/M2 schema gaps and sound weakenings)
+- `Ctx.lifeStage` (UBERON stage, `Kind.anatomy`) beside `Ctx.stage` (GO process). Continuants take it by
+  `existence_overlaps` (RO:0002490, the weakest of RO's "physical entity to stage" relations), processes by
+  `happens_during`. Applied after `stage`, before the taxon, so no existing curie changes. The five round-3 rejections
+  ("adult", "early embryo") compile; `r3_skip.tsv` is empty.
+- `Claim.atLeastMeasure` for open-ended measures ("over 6 m"), chosen over an optional `hi` so `compareIntervals`
+  stays as it was. `Claim.countBetween whole part lo hi` for count ranges; `count` is the point case.
+- The nine "has number of" (PATO:0001555) workaround records got their part as m3 `object`; the emitter turns them
+  into `countBetween` (4) or `count` (5). Five of these are approximate in the book and exact in Lean, as before.
+- Constructor-plus-blocker records are emitted as weakenings, the blocker named in the text: 53 of 57. Three
+  disjunctions are left out ("one ATP (or an equivalent)" as "one ATP" is stronger, not weaker); one is EFO.
+- Obsolete CL:0002371 "somatic cell" is CL:0000415 "diploid cell" where the sentence counts chromosomes (six m3
+  records, four m2 entity lists, `Examples/Quantity.lean`). Kept for "telomerase is not active in adult somatic
+  cells", where "somatic" means "not stem or germ line".
+- Round 3 re-emitted: 410 emitted, 410 compiled, 0 rejected. Textbook in Lean: 1,956 of 4,695 (41.7%), from 1,909.
+
 ## 2026-10-28 (overnight: M4 generalise with real taxonomy)
 - Built `Derivation.generalize` (M4): instances of one `Predicate` of `a.inCtx {taxon := Tᵢ}`, distinct `Tᵢ` all
   is_a `T`, give it at `T`. Opinion: the instances fused, then `Opinion.discount` (new, Jøsang trust discount) by a

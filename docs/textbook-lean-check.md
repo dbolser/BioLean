@@ -186,3 +186,50 @@ lake build TextbookR3
 PYTHONHASHSEED=1 python3 scripts/search/closure.py data/textbook/claims_m2 /tmp/obo/go.obo 4
 PYTHONHASHSEED=1 python3 scripts/search/holes.py data/textbook/claims_m2 /tmp/obo/go.obo 4
 ```
+
+## Round 3b: life stage, open measure, count range, weakenings (2026-10-29, overnight)
+
+Round 3's data pointed at three small schema gaps. They are now in the schema, and the emitter uses them.
+
+- **Life stage.** `Ctx.lifeStage` takes a UBERON stage ("adult", "embryo stage"), beside `Ctx.stage`, which keeps GO
+  processes. A thing `existence_overlaps` (RO:0002490) the stage; a process `happens_during` it. The five round-3
+  rejections compile, and `r3_skip.tsv` is empty.
+- **Open-ended measure.** `Claim.atLeastMeasure` ("the human small intestine is over 6 m long"). It is a separate
+  constructor, so `compareIntervals` keeps its closed intervals.
+- **Count range.** `Claim.countBetween whole part lo hi` ("each alveolar sac contains 20 to 30 alveoli"). `count`
+  stays as the point case. Nine records had used a "has number of" (PATO:0001555) measure as a workaround, with no
+  part. They now have their part (m3 `object`) and emit as `countBetween` (4) or `count` (5). Two other "has number
+  of" records stay measures: 40 to 60 *types* of tRNA (a number of kinds, not of parts), and the telomere repeat
+  (the subject is the repeat, not the telomere).
+- **Weakenings.** A record with a constructor and a blocker is emitted, and its text names the blocker
+  ("[weakening; not expressed: proportion]"). Of the 57, 53 are emitted. One is skipped (EFO), and three are left out
+  on purpose: "one ATP (or an equivalent)" as "one ATP" picks one side of a disjunction, which is stronger than the
+  sentence, not weaker.
+- **"Somatic cell" (CL:0002371, obsolete)** is now "diploid cell" (CL:0000415) where the sentence counts chromosomes:
+  six m3 records (cell -106, -107; repro m45455-17, -18, -46, -60), the same four repro records' entities in m2, and
+  `Examples/Quantity.lean`. "Telomerase is not active in adult somatic cells" (molbio m45475-71) keeps CL:0002371.
+  There "somatic" means "not stem cell or germ line", and adult stem cells are diploid too.
+
+| | round 3 | round 3b |
+|---|---:|---:|
+| emitted | 351 (+5 in the skip list) | 410 |
+| **compiled** | 351 | **410 (100%)** |
+| rejected by Lean | 5 | 0 |
+
+Still skipped by the emitter: NCIT 7, EFO 2, OBI 1, `count` with a relation other than has part 2, disjunction 3.
+The 59 new statements are the 5 life stages, the open measure and the 53 weakenings. Lean and the emitter's Python
+`inCtx` give the same subject curie for all 410.
+
+| family | round 2 | rounds 2 and 3 | rounds 2 and 3b |
+|---|---:|---:|---:|
+| relational (rel, notRel) | 1,290 | 1,376 | 1,396 |
+| causal (effect, mediatedBy) | 301 | 366 | 374 |
+| quantity | 0 | 167 | 186 |
+| **compiled, of 4,695 claims** | **1,591 (33.9%)** | **1,909 (40.7%)** | **1,956 (41.7%)** |
+
+12 of the 59 new statements were already compiled in round 2, so the textbook gains 47 claims.
+
+Two honest limits. Five counts are approximate in the book ("around 100,000 neurons", "about 75 million") but exact
+in Lean. They were exact measures before; M3 has no approximate form. And `scripts/search/closure.py` reads round 3
+through `emit_lean_m3.statements`, so its next run will also load the weakened rel, notRel and effect claims. The
+closure numbers above are from before that.

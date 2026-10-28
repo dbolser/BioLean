@@ -2440,7 +2440,7 @@
   "m3": {
    "ctor": "count",
    "quant": null,
-   "subject": "CL:0002371",
+   "subject": "CL:0000415",
    "relation": null,
    "object": "GO:0005694",
    "sign": null,
@@ -2465,8 +2465,8 @@
     {
      "text": "body cells",
      "from": null,
-     "to": "CL:0002371",
-     "why": "somatic cell, as in Examples/Quantity.lean; obsolete in CL (replaced_by CL:0000000 \"cell\", which would lose the meaning), so kept"
+     "to": "CL:0000415",
+     "why": "diploid cell: the sentence counts the chromosomes of a diploid cell; CL:0002371 somatic cell is obsolete (replaced_by CL:0000000 \"cell\", which loses the meaning)"
     }
    ],
    "confidence": "medium"
@@ -2524,7 +2524,7 @@
   "m3": {
    "ctor": "count",
    "quant": null,
-   "subject": "CL:0002371",
+   "subject": "CL:0000415",
    "relation": null,
    "object": "GO:0005694",
    "sign": null,
@@ -2549,8 +2549,8 @@
     {
      "text": "body cells",
      "from": null,
-     "to": "CL:0002371",
-     "why": "somatic cell, as in Examples/Quantity.lean; obsolete in CL (replaced_by CL:0000000 \"cell\", which would lose the meaning), so kept"
+     "to": "CL:0000415",
+     "why": "diploid cell: the sentence counts the chromosomes of a diploid cell; CL:0002371 somatic cell is obsolete (replaced_by CL:0000000 \"cell\", which loses the meaning)"
     }
    ],
    "confidence": "medium"

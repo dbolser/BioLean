@@ -13,12 +13,24 @@ def the_cellular_basis_of_inheritance_m45464_8 : Statement where
   text := "Most multicellular organisms reproduce using a method other than mitotic cloning"
   claim := .quant .most (.rel ⟨.ro, 56, false⟩ e_UBERON_0000468 e_GO_0019953)
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "While many single-celled organisms and a few multicellular organisms can produce genetically identical clones of themselves through mitotic cell division, many single-celled organisms and most multice" }]
+/-- The vast majority of eukaryotes can or must use meiosis and fertilization to reproduce [weakening; not expressed: compound_sentence] -/
+def the_cellular_basis_of_inheritance_m45464_19 : Statement where
+  id := "the-cellular-basis-of-inheritance-m45464-19"
+  text := "The vast majority of eukaryotes can or must use meiosis and fertilization to reproduce [weakening; not expressed: compound_sentence]"
+  claim := .quant .most (.rel ⟨.ro, 2215, false⟩ e_NCBITaxon_2759 e_GO_0051321)
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "The vast majority of eukaryotic organisms can or must employ some form of meiosis and fertilization to reproduce." }]
 /-- Most eukaryotes reproduce sexually -/
 def the_cellular_basis_of_inheritance_m45465_2 : Statement where
   id := "the-cellular-basis-of-inheritance-m45465-2"
   text := "Most eukaryotes reproduce sexually"
   claim := .quant .most (.rel ⟨.ro, 56, false⟩ e_NCBITaxon_2759 e_GO_0019953)
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "The fact that most eukaryotes reproduce sexually is evidence of its evolutionary success." }]
+/-- In many animals sexual reproduction is the only mode of reproduction [weakening; not expressed: exclusivity] -/
+def the_cellular_basis_of_inheritance_m45465_4 : Statement where
+  id := "the-cellular-basis-of-inheritance-m45465-4"
+  text := "In many animals sexual reproduction is the only mode of reproduction [weakening; not expressed: exclusivity]"
+  claim := .quant .some (.rel ⟨.ro, 56, false⟩ e_NCBITaxon_33208 e_GO_0019953)
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "In many animals, it is the only mode of reproduction." }]
 /-- Some organisms produce offspring by budding, fragmentation or asexual eggs -/
 def the_cellular_basis_of_inheritance_m45465_8 : Statement where
   id := "the-cellular-basis-of-inheritance-m45465-8"
@@ -37,6 +49,30 @@ def the_cellular_basis_of_inheritance_m45465_14 : Statement where
   text := "Every individual in an asexual population is capable of reproduction"
   claim := .rel ⟨.ro, 2215, false⟩ (e_NCBITaxon_131567.inCtx { condition := some (.organism e_BLN_member_of_asexual_population) }) e_GO_0022414
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "In addition, asexual populations only have female individuals, so every individual is capable of reproduction." }]
+/-- An asexual population can in theory grow twice as fast as a sexual population [weakening; not expressed: proportion] -/
+def the_cellular_basis_of_inheritance_m45465_16 : Statement where
+  id := "the-cellular-basis-of-inheritance-m45465-16"
+  text := "An asexual population can in theory grow twice as fast as a sexual population [weakening; not expressed: proportion]"
+  claim := .less e_GO_0019953 e_GO_0019954 e_PATO_0000161
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Because of this, an asexual population can grow twice as fast as a sexual population in theory." }]
+/-- Meiosis halves the chromosome number of the resulting gamete [weakening; not expressed: proportion] -/
+def the_cellular_basis_of_inheritance_m45465_56 : Statement where
+  id := "the-cellular-basis-of-inheritance-m45465-56"
+  text := "Meiosis halves the chromosome number of the resulting gamete [weakening; not expressed: proportion]"
+  claim := .effect e_GO_0051321 .neg (.phenotype e_PATO_0001374)
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "The process of meiosis reduces the resulting gamete’s chromosome number by half." }]
+/-- In animals the only haploid cells are the gametes [weakening; not expressed: exclusivity] -/
+def the_cellular_basis_of_inheritance_m45465_67 : Statement where
+  id := "the-cellular-basis-of-inheritance-m45465-67"
+  text := "In animals the only haploid cells are the gametes [weakening; not expressed: exclusivity]"
+  claim := .rel Rel.isA (e_CL_0000300.inCtx { taxon := e_NCBITaxon_33208 }) e_CL_0000413
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Nearly all animals employ a diploid-dominant life-cycle strategy in which the only haploid cells produced by the organism are the gametes." }]
+/-- Gametes are produced from diploid germ cells [weakening; not expressed: has_quality] -/
+def the_cellular_basis_of_inheritance_m45465_68 : Statement where
+  id := "the-cellular-basis-of-inheritance-m45465-68"
+  text := "Gametes are produced from diploid germ cells [weakening; not expressed: has_quality]"
+  claim := .rel ⟨.ro, 2202, false⟩ (e_CL_0000300.inCtx { taxon := e_NCBITaxon_33208 }) e_CL_0000586
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "The gametes are produced from diploid germ cells, a special cell line that only produces gametes." }]
 /-- Once formed, haploid gametes lose the ability to divide -/
 def the_cellular_basis_of_inheritance_m45465_70 : Statement where
   id := "the-cellular-basis-of-inheritance-m45465-70"
@@ -73,12 +109,24 @@ def the_cellular_basis_of_inheritance_m45466_9 : Statement where
   text := "Meiosis reduces the number of chromosome sets"
   claim := .effect e_GO_0051321 .neg (.phenotype e_PATO_0001374)
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "So, in addition to fertilization, sexual reproduction includes a nuclear division, known as meiosis, that reduces the number of chromosome sets." }]
+/-- In animals, haploid cells are found only within gametes [weakening; not expressed: exclusivity] -/
+def the_cellular_basis_of_inheritance_m45466_17 : Statement where
+  id := "the-cellular-basis-of-inheritance-m45466-17"
+  text := "In animals, haploid cells are found only within gametes [weakening; not expressed: exclusivity]"
+  claim := .rel ⟨.ro, 1025, false⟩ (e_CL_0000413.inCtx { taxon := e_NCBITaxon_33208 }) e_CL_0000300
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "In animals, haploid cells containing a single copy of each homologous chromosome are found only within gametes." }]
 /-- In mitosis the parent and daughter nuclei contain the same number of chromosome sets -/
 def the_cellular_basis_of_inheritance_m45466_23 : Statement where
   id := "the-cellular-basis-of-inheritance-m45466-23"
   text := "In mitosis the parent and daughter nuclei contain the same number of chromosome sets"
   claim := .yield e_GO_0140014 e_PATO_0001374 0
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "In mitosis, both the parent and the daughter nuclei contain the same number of chromosome sets—diploid for most plants and animals." }]
+/-- Meiosis consists of one round of chromosome duplication and two rounds of nuclear division [weakening; not expressed: compound_sentence] -/
+def the_cellular_basis_of_inheritance_m45466_28 : Statement where
+  id := "the-cellular-basis-of-inheritance-m45466-28"
+  text := "Meiosis consists of one round of chromosome duplication and two rounds of nuclear division [weakening; not expressed: compound_sentence]"
+  claim := .count e_GO_0051321 e_GO_0000280 2
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "To achieve the reduction in chromosome number, meiosis consists of one round of chromosome duplication and two rounds of nuclear division." }]
 /-- Meiosis I reduces the number of chromosome sets from two to one -/
 def the_cellular_basis_of_inheritance_m45466_33 : Statement where
   id := "the-cellular-basis-of-inheritance-m45466-33"
@@ -109,6 +157,12 @@ def the_cellular_basis_of_inheritance_m45466_103 : Statement where
   text := "In some organisms nuclear envelopes form around the chromatids in telophase I"
   claim := .quant .some (.rel ⟨.ro, 2092, false⟩ e_GO_0031468 e_GO_0007134)
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "In some organisms, the chromosomes decondense and nuclear envelopes form around the chromatids in telophase I." }]
+/-- In animals and some fungi cytokinesis separates cell contents by a cleavage furrow [weakening; not expressed: compound_sentence] -/
+def the_cellular_basis_of_inheritance_m45466_106 : Statement where
+  id := "the-cellular-basis-of-inheritance-m45466-106"
+  text := "In animals and some fungi cytokinesis separates cell contents by a cleavage furrow [weakening; not expressed: compound_sentence]"
+  claim := .rel ⟨.bfo, 51, false⟩ (e_GO_0000910.inCtx { taxon := e_NCBITaxon_33208 }) e_GO_0032154
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "In nearly all species, cytokinesis separates the cell contents by either a cleavage furrow (in animals and some fungi), or a cell plate that will ultimately lead to formation of cell walls that separa" }]
 /-- In plants cytokinesis uses a cell plate that leads to cell walls separating the daughter cells -/
 def the_cellular_basis_of_inheritance_m45466_107 : Statement where
   id := "the-cellular-basis-of-inheritance-m45466-107"
@@ -121,6 +175,12 @@ def the_cellular_basis_of_inheritance_m45466_109 : Statement where
   text := "The cells after meiosis I are haploid because there is only one chromosome set"
   claim := .measure (e_CL_0000000.inCtx { stage := e_GO_0007127 }) e_PATO_0001374 1 1 "chromosome sets"
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "This is why the cells are considered haploid—there is only one chromosome set, even though there are duplicate copies of the set because each homolog still consists of two sister chromatids that are s" }]
+/-- Cytokinesis separates the two cells into four genetically unique haploid cells [weakening; not expressed: has_quality] -/
+def the_cellular_basis_of_inheritance_m45466_133 : Statement where
+  id := "the-cellular-basis-of-inheritance-m45466-133"
+  text := "Cytokinesis separates the two cells into four genetically unique haploid cells [weakening; not expressed: has_quality]"
+  claim := .produces (e_GO_0000910.inCtx { stage := e_GO_0007135 }) e_CL_0000413 4
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Cytokinesis separates the two cells into four genetically unique haploid cells." }]
 /-- The nuclei of the newly produced cells are haploid with one copy of a single chromosome set -/
 def the_cellular_basis_of_inheritance_m45466_134 : Statement where
   id := "the-cellular-basis-of-inheritance-m45466-134"
@@ -133,6 +193,12 @@ def the_cellular_basis_of_inheritance_m45466_141 : Statement where
   text := "Mitotic daughter nuclei have the same number of chromosome sets as the parent: one for haploid, two for diploid"
   claim := .yield e_GO_0140014 e_PATO_0001374 0
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "They have the same number of sets of chromosomes: one in the case of haploid cells, and two in the case of diploid cells." }]
+/-- Meiotic nuclei contain one chromosome set, half that of the diploid original [weakening; not expressed: compound_sentence] -/
+def the_cellular_basis_of_inheritance_m45466_144 : Statement where
+  id := "the-cellular-basis-of-inheritance-m45466-144"
+  text := "Meiotic nuclei contain one chromosome set, half that of the diploid original [weakening; not expressed: compound_sentence]"
+  claim := .measure (e_GO_0005634.inCtx { stage := e_GO_0051321 }) e_PATO_0001374 1 1 "chromosome sets"
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "The nuclei resulting from meiosis are never genetically identical, and they contain one chromosome set only—this is half the number of the original cell, which was diploid ()." }]
 /-- Homolog separation in meiosis I reduces chromosome sets per nucleus from two to one -/
 def the_cellular_basis_of_inheritance_m45466_152 : Statement where
   id := "the-cellular-basis-of-inheritance-m45466-152"
@@ -151,12 +217,24 @@ def the_cellular_basis_of_inheritance_m45466_160 : Statement where
   text := "There is always at least one crossover per chromosome"
   claim := .atLeast (e_GO_0005694.inCtx { stage := e_GO_0051321 }) e_GO_0007131 1
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "If it were not for the fact that there had been crossovers, the two products of each meiosis II division would be identical as in mitosis; instead, they are different because there has always been at " }]
+/-- After meiosis II there are fewer genome copies but still one chromosome set, as at the end of meiosis I [weakening; not expressed: compound_sentence] -/
+def the_cellular_basis_of_inheritance_m45466_162 : Statement where
+  id := "the-cellular-basis-of-inheritance-m45466-162"
+  text := "After meiosis II there are fewer genome copies but still one chromosome set, as at the end of meiosis I [weakening; not expressed: compound_sentence]"
+  claim := .yield e_GO_0007135 e_PATO_0001374 0
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Meiosis II is not a reduction division because, although there are fewer copies of the genome in the resulting cells, there is still one set of chromosomes, as there was at the end of meiosis I." }]
 /-- Mitotic cells may be involved in asexual reproduction in some organisms -/
 def the_cellular_basis_of_inheritance_m45466_164 : Statement where
   id := "the-cellular-basis-of-inheritance-m45466-164"
   text := "Mitotic cells may be involved in asexual reproduction in some organisms"
   claim := .quant .some (.rel ⟨.bfo, 50, false⟩ e_GO_0140014 e_GO_0019954)
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "They may even be involved in asexual reproduction in some organisms." }]
+/-- In a diploid-dominant organism such as an animal, meiotic cells participate only in sexual reproduction [weakening; not expressed: exclusivity] -/
+def the_cellular_basis_of_inheritance_m45466_165 : Statement where
+  id := "the-cellular-basis-of-inheritance-m45466-165"
+  text := "In a diploid-dominant organism such as an animal, meiotic cells participate only in sexual reproduction [weakening; not expressed: exclusivity]"
+  claim := .rel ⟨.bfo, 50, false⟩ (e_GO_0051321.inCtx { taxon := e_NCBITaxon_33208 }) e_GO_0019953
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Cells produced by meiosis in a diploid-dominant organism such as an animal will only participate in sexual reproduction." }]
 /-- In humans euploidy is 22 pairs of autosomes and one pair of sex chromosomes -/
 def the_cellular_basis_of_inheritance_m45467_38 : Statement where
   id := "the-cellular-basis-of-inheritance-m45467-38"
@@ -169,12 +247,24 @@ def the_cellular_basis_of_inheritance_m45467_41 : Statement where
   text := "Monosomic human zygotes missing an autosome invariably fail to develop to birth"
   claim := .effect (e_MONDO_0020639.inCtx { taxon := e_NCBITaxon_9606, cellType := e_CL_0010017, condition := some (.organism e_BLN_autosome_monosomy) }) .pos (.phenotype e_PATO_0000718)
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Monosomic human zygotes missing any one copy of an autosome invariably fail to develop to birth because they have only one copy of essential genes." }]
+/-- Monosomic zygotes fail because they have only one copy of essential genes [weakening; not expressed: other] -/
+def the_cellular_basis_of_inheritance_m45467_42 : Statement where
+  id := "the-cellular-basis-of-inheritance-m45467-42"
+  text := "Monosomic zygotes fail because they have only one copy of essential genes [weakening; not expressed: other]"
+  claim := .mediatedBy (e_MONDO_0020639.inCtx { taxon := e_NCBITaxon_9606 }) .pos (.phenotype e_PATO_0000718) (.amount e_SO_0000704)
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Monosomic human zygotes missing any one copy of an autosome invariably fail to develop to birth because they have only one copy of essential genes." }]
 /-- Most autosomal trisomies fail to develop to birth -/
 def the_cellular_basis_of_inheritance_m45467_43 : Statement where
   id := "the-cellular-basis-of-inheritance-m45467-43"
   text := "Most autosomal trisomies fail to develop to birth"
   claim := .quant .most (.effect (e_MONDO_0700065.inCtx { taxon := e_NCBITaxon_9606, condition := some (.organism e_BLN_autosomal_trisomy) }) .pos (.phenotype e_PATO_0000718))
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Most autosomal trisomies also fail to develop to birth; however, duplications of some of the smaller chromosomes (13, 15, 18, 21, or 22) can result in offspring that survive for several weeks to many " }]
+/-- In early female mammalian embryos one X chromosome in each cell inactivates by condensing into a Barr body -/
+def the_cellular_basis_of_inheritance_m45467_58 : Statement where
+  id := "the-cellular-basis-of-inheritance-m45467-58"
+  text := "In early female mammalian embryos one X chromosome in each cell inactivates by condensing into a Barr body"
+  claim := .produces (e_GO_0009048.inCtx { taxon := e_NCBITaxon_40674, lifeStage := e_UBERON_0000068, condition := some (.organism e_PATO_0000383) }) e_GO_0001740 1
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Early in development, when female mammalian embryos consist of just a few thousand cells, one X chromosome in each cell inactivates by condensing into a structure called a Barr body." }]
 /-- In tortoiseshell cats X inactivation is observed as coat-color variegation -/
 def the_cellular_basis_of_inheritance_m45467_63 : Statement where
   id := "the-cellular-basis-of-inheritance-m45467-63"
@@ -187,12 +277,30 @@ def the_cellular_basis_of_inheritance_m45467_76 : Statement where
   text := "Turner syndrome is characterized as an X0 complement, a single sex chromosome"
   claim := .count (e_MONDO_0019499.inCtx { taxon := e_NCBITaxon_9606 }) e_GO_0000803 1
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Turner syndrome, characterized as an X0 chromosome complement (i.e., only a single sex chromosome), corresponds to a female individual with short stature, webbed skin in the neck region, hearing and c" }]
+/-- Polyploid animals are extremely rare [weakening; not expressed: proportion] -/
+def the_cellular_basis_of_inheritance_m45467_81 : Statement where
+  id := "the-cellular-basis-of-inheritance-m45467-81"
+  text := "Polyploid animals are extremely rare [weakening; not expressed: proportion]"
+  claim := .quant .some (.rel ⟨.ro, 86, false⟩ e_NCBITaxon_33208 e_PATO_0001377)
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Polyploid animals are extremely rare, with only a few examples among the flatworms, crustaceans, amphibians, fish, and lizards." }]
 /-- Triploid animals are sterile -/
 def the_cellular_basis_of_inheritance_m45467_83 : Statement where
   id := "the-cellular-basis-of-inheritance-m45467-83"
   text := "Triploid animals are sterile"
   claim := .effect (e_PATO_0001381.inCtx { taxon := e_NCBITaxon_33208 }) .pos (.phenotype e_PATO_0000956)
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Triploid animals are sterile because meiosis cannot proceed normally with an odd number of chromosome sets." }]
+/-- Polyploidy is very common in plants [weakening; not expressed: proportion] -/
+def the_cellular_basis_of_inheritance_m45467_85 : Statement where
+  id := "the-cellular-basis-of-inheritance-m45467-85"
+  text := "Polyploidy is very common in plants [weakening; not expressed: proportion]"
+  claim := .quant .some (.rel ⟨.ro, 86, false⟩ e_NCBITaxon_3193 e_PATO_0001377)
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "In contrast, polyploidy is very common in the plant kingdom, and polyploid plants tend to be larger and more robust than euploids of their species." }]
+/-- Polyploid plants tend to be larger and more robust than euploids of their species [weakening; not expressed: compound_sentence] -/
+def the_cellular_basis_of_inheritance_m45467_86 : Statement where
+  id := "the-cellular-basis-of-inheritance-m45467-86"
+  text := "Polyploid plants tend to be larger and more robust than euploids of their species [weakening; not expressed: compound_sentence]"
+  claim := .quant .most (.effect (e_PATO_0001377.inCtx { taxon := e_NCBITaxon_3193 }) .pos (.phenotype e_PATO_0000586))
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "In contrast, polyploidy is very common in the plant kingdom, and polyploid plants tend to be larger and more robust than euploids of their species." }]
 /-- A few trisomic genotypes are viable -/
 def the_cellular_basis_of_inheritance_m45467_120 : Statement where
   id := "the-cellular-basis-of-inheritance-m45467-120"

@@ -49,6 +49,12 @@ def cell_structure_and_function_m45429_63 : Statement where
   text := "A eukaryotic cell is typically larger than a prokaryotic cell"
   claim := .quant .most (.less e_CL_0000520 e_CL_0000255 e_PATO_0000117)
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Like a prokaryotic cell, a eukaryotic cell has a plasma membrane, cytoplasm, and ribosomes, but a eukaryotic cell is typically larger than a prokaryotic cell, has a true nucleus (meaning its DNA is su" }]
+/-- Eukaryotic cells are 10 to 100 times the size of prokaryotic cells [weakening; not expressed: proportion] -/
+def cell_structure_and_function_m45429_66 : Statement where
+  id := "cell-structure-and-function-m45429-66"
+  text := "Eukaryotic cells are 10 to 100 times the size of prokaryotic cells [weakening; not expressed: proportion]"
+  claim := .quant .most (.less e_CL_0000520 e_CL_0000255 e_PATO_0000117)
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Eukaryotic cells tend to be 10 to 100 times the size of prokaryotic cells." }]
 /-- Prokaryotes have a single large chromosome -/
 def cell_structure_and_function_m45429_73 : Statement where
   id := "cell-structure-and-function-m45429-73"
@@ -91,12 +97,24 @@ def cell_structure_and_function_m45432_50 : Statement where
   text := "Microfilaments are the thinnest cytoskeletal fibers"
   claim := .less e_GO_0005884 e_GO_0005882 e_PATO_0001334
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Microfilaments are the thinnest of the cytoskeletal fibers and function in moving cellular components, for example, during cell division." }]
+/-- Microfilaments are common in muscle cells [weakening; not expressed: proportion] -/
+def cell_structure_and_function_m45432_53 : Statement where
+  id := "cell-structure-and-function-m45432-53"
+  text := "Microfilaments are common in muscle cells [weakening; not expressed: proportion]"
+  claim := .rel ⟨.bfo, 51, false⟩ e_CL_0000187 e_GO_0005884
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "These components are also common in muscle cells and are responsible for muscle cell contraction." }]
 /-- Microtubules are the thickest cytoskeletal fibers -/
 def cell_structure_and_function_m45432_60 : Statement where
   id := "cell-structure-and-function-m45432-60"
   text := "Microtubules are the thickest cytoskeletal fibers"
   claim := .less e_GO_0005882 e_GO_0005874 e_PATO_0001334
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Microtubules are the thickest of the cytoskeletal fibers." }]
+/-- In cilia and flagella, microtubules are arranged as nine outer doublets and two central microtubules [weakening; not expressed: compound_sentence] -/
+def cell_structure_and_function_m45432_65 : Statement where
+  id := "cell-structure-and-function-m45432-65"
+  text := "In cilia and flagella, microtubules are arranged as nine outer doublets and two central microtubules [weakening; not expressed: compound_sentence]"
+  claim := .count e_GO_0005930 e_GO_0097545 9
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "In cilia and flagella, the microtubules are organized as a circle of nine double microtubules on the outside and two microtubules in the center." }]
 /-- The centrosome functions as a microtubule-organizing center -/
 def cell_structure_and_function_m45432_67 : Statement where
   id := "cell-structure-and-function-m45432-67"
@@ -125,13 +143,13 @@ def cell_structure_and_function_m45432_76 : Statement where
 def cell_structure_and_function_m45432_106 : Statement where
   id := "cell-structure-and-function-m45432-106"
   text := "Humans have 46 chromosomes"
-  claim := .count (e_CL_0002371.inCtx { taxon := e_NCBITaxon_9606 }) e_GO_0005694 46
+  claim := .count (e_CL_0000415.inCtx { taxon := e_NCBITaxon_9606 }) e_GO_0005694 46
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "For example, in humans, the chromosome number is 46, whereas in fruit flies, the chromosome number is eight." }]
 /-- Fruit flies have 8 chromosomes -/
 def cell_structure_and_function_m45432_107 : Statement where
   id := "cell-structure-and-function-m45432-107"
   text := "Fruit flies have 8 chromosomes"
-  claim := .count (e_CL_0002371.inCtx { taxon := e_NCBITaxon_7227 }) e_GO_0005694 8
+  claim := .count (e_CL_0000415.inCtx { taxon := e_NCBITaxon_7227 }) e_GO_0005694 8
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "For example, in humans, the chromosome number is 46, whereas in fruit flies, the chromosome number is eight." }]
 /-- In plant cells, the Golgi synthesises polysaccharides -/
 def cell_structure_and_function_m45432_158 : Statement where
@@ -145,6 +163,12 @@ def cell_structure_and_function_m45432_159 : Statement where
   text := "Some Golgi-made polysaccharides are incorporated into the plant cell wall"
   claim := .quant .some (.rel ⟨.bfo, 50, false⟩ (e_CHEBI_18154.inCtx { taxon := e_NCBITaxon_33090 }) e_GO_0009505)
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "In plant cells, the Golgi has an additional role of synthesizing polysaccharides, some of which are incorporated into the cell wall and some of which are used in other parts of the cell." }]
+/-- Digestive enzymes within lysosomes break down proteins, polysaccharides, lipids, nucleic acids and worn-out organelles [weakening; not expressed: compound_sentence] -/
+def cell_structure_and_function_m45432_161 : Statement where
+  id := "cell-structure-and-function-m45432-161"
+  text := "Digestive enzymes within lysosomes break down proteins, polysaccharides, lipids, nucleic acids and worn-out organelles [weakening; not expressed: compound_sentence]"
+  claim := .effect (e_GO_0016787.inCtx { taxon := e_NCBITaxon_33208 }) .neg (.amount (e_CHEBI_36080.inCtx { component := e_GO_0005764 }))
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "In animal cells, the lysosomes are the cell’s “garbage disposal.” Digestive enzymes within the lysosomes aid the breakdown of proteins, polysaccharides, lipids, nucleic acids, and even worn-out organe" }]
 /-- In single-celled eukaryotes, lysosomes digest ingested food -/
 def cell_structure_and_function_m45432_162 : Statement where
   id := "cell-structure-and-function-m45432-162"
@@ -187,12 +211,30 @@ def cell_structure_and_function_m45432_209 : Statement where
   text := "Alcohol is detoxified by peroxisomes in liver cells"
   claim := .effect e_GO_0005777 .neg (.amount (e_CHEBI_16236.inCtx { cellType := e_CL_0000182 }))
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Alcohol is detoxified by peroxisomes in liver cells." }]
+/-- Plant cells lack centrioles, centrosomes and lysosomes [weakening; not expressed: compound_sentence] -/
+def cell_structure_and_function_m45432_216 : Statement where
+  id := "cell-structure-and-function-m45432-216"
+  text := "Plant cells lack centrioles, centrosomes and lysosomes [weakening; not expressed: compound_sentence]"
+  claim := .notRel ⟨.bfo, 51, false⟩ (e_CL_0000000.inCtx { taxon := e_NCBITaxon_33090 }) e_GO_0005814
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Animal cells have centrioles, centrosomes (discussed under the cytoskeleton), and lysosomes, whereas plant cells do not." }]
+/-- Plant cells have a cell wall, chloroplasts, plasmodesmata, plastids and a large central vacuole [weakening; not expressed: compound_sentence] -/
+def cell_structure_and_function_m45432_217 : Statement where
+  id := "cell-structure-and-function-m45432-217"
+  text := "Plant cells have a cell wall, chloroplasts, plasmodesmata, plastids and a large central vacuole [weakening; not expressed: compound_sentence]"
+  claim := .rel ⟨.bfo, 51, false⟩ (e_CL_0000000.inCtx { taxon := e_NCBITaxon_33090 }) e_GO_0009505
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Plant cells have a cell wall, chloroplasts, plasmodesmata, and plastids used for storage, and a large central vacuole, whereas animal cells do not." }]
 /-- The plant cell wall is external to the plasma membrane -/
 def cell_structure_and_function_m45432_219 : Statement where
   id := "cell-structure-and-function-m45432-219"
   text := "The plant cell wall is external to the plasma membrane"
   claim := .rel ⟨.ro, 2220, false⟩ (e_GO_0009505.inCtx { taxon := e_NCBITaxon_33090 }) e_GO_0005886
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "In b, the diagram of a plant cell, you see a structure external to the plasma membrane called the cell wall." }]
+/-- The major organic molecule in the plant cell wall is cellulose [weakening; not expressed: proportion] -/
+def cell_structure_and_function_m45432_225 : Statement where
+  id := "cell-structure-and-function-m45432-225"
+  text := "The major organic molecule in the plant cell wall is cellulose [weakening; not expressed: proportion]"
+  claim := .rel ⟨.bfo, 51, false⟩ (e_GO_0009505.inCtx { taxon := e_NCBITaxon_33090 }) e_CHEBI_18246
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "While the chief component of prokaryotic cell walls is peptidoglycan, the major organic molecule in the plant cell wall is cellulose, a polysaccharide made up of long, straight chains of glucose units" }]
 /-- Vitamin K-producing microbes live inside the human gut -/
 def cell_structure_and_function_m45432_252 : Statement where
   id := "cell-structure-and-function-m45432-252"
@@ -265,6 +307,12 @@ def cell_structure_and_function_m45432_321 : Statement where
   text := "Lysosomes are the digestive organelles of animal cells"
   claim := .rel ⟨.bfo, 50, false⟩ (e_GO_0005764.inCtx { taxon := e_NCBITaxon_33208 }) e_CL_0000000
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Lysosomes are the digestive organelles of animal cells." }]
+/-- Central vacuole expansion enlarges the plant cell without producing more cytoplasm [weakening; not expressed: compound_sentence] -/
+def cell_structure_and_function_m45432_326 : Statement where
+  id := "cell-structure-and-function-m45432-326"
+  text := "Central vacuole expansion enlarges the plant cell without producing more cytoplasm [weakening; not expressed: compound_sentence]"
+  claim := .effect (e_GO_0042807.inCtx { taxon := e_NCBITaxon_33090 }) .pos (.process e_GO_0016049)
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "The central vacuole expands, enlarging the cell without the need to produce more cytoplasm." }]
 /-- The cytoskeleton has three types of protein elements -/
 def cell_structure_and_function_m45432_329 : Statement where
   id := "cell-structure-and-function-m45432-329"
@@ -295,6 +343,12 @@ def cell_structure_and_function_m45433_32 : Statement where
   text := "Human red blood cells are about 8 um thick"
   claim := .measure (e_CL_0000232.inCtx { taxon := e_NCBITaxon_9606 }) e_PATO_0000915 8 8 "µm"
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "As a comparison, human red blood cells, visible via light microscopy, are approximately 8 µm thick, or approximately 1,000 times thicker than a plasma membrane." }]
+/-- Red blood cells are about 1000 times thicker than a plasma membrane [weakening; not expressed: proportion] -/
+def cell_structure_and_function_m45433_33 : Statement where
+  id := "cell-structure-and-function-m45433-33"
+  text := "Red blood cells are about 1000 times thicker than a plasma membrane [weakening; not expressed: proportion]"
+  claim := .less e_GO_0005886 e_CL_0000232 e_PATO_0000915
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "As a comparison, human red blood cells, visible via light microscopy, are approximately 8 µm thick, or approximately 1,000 times thicker than a plasma membrane." }]
 /-- In animal cells, the plasma membrane contains cholesterol -/
 def cell_structure_and_function_m45433_36 : Statement where
   id := "cell-structure-and-function-m45433-36"
@@ -319,6 +373,12 @@ def cell_structure_and_function_m45433_73 : Statement where
   text := "Some membrane proteins transport materials into or out of the cell"
   claim := .quant .some (.rel ⟨.ro, 2215, false⟩ (e_CHEBI_36080.inCtx { component := e_GO_0005886 }) e_GO_0055085)
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Some of these proteins serve to transport materials into or out of the cell." }]
+/-- Osmosis transports only water across a membrane, whereas diffusion transports material across membranes and within cells [weakening; not expressed: exclusivity] -/
+def cell_structure_and_function_m45434_52 : Statement where
+  id := "cell-structure-and-function-m45434-52"
+  text := "Osmosis transports only water across a membrane, whereas diffusion transports material across membranes and within cells [weakening; not expressed: exclusivity]"
+  claim := .rel ⟨.ro, 57, false⟩ e_GO_0006833 e_CHEBI_15377
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Whereas diffusion transports material across membranes and within cells, osmosis transports only water across a membrane and the membrane limits the diffusion of solutes in the water." }]
 /-- In a hypotonic solution water enters the cell -/
 def cell_structure_and_function_m45434_70 : Statement where
   id := "cell-structure-and-function-m45434-70"
@@ -337,6 +397,12 @@ def cell_structure_and_function_m45434_75 : Statement where
   text := "In a hypertonic solution water leaves the cell"
   claim := .rel ⟨.ro, 57, false⟩ (e_GO_0140352.inCtx { cellType := e_CL_0000000, condition := some (.environment e_PATO_0001657) }) e_CHEBI_15377
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Because the cell has a lower concentration of solutes, the water will leave the cell." }]
+/-- Water always enters a plant cell if water is available [weakening; not expressed: precondition] -/
+def cell_structure_and_function_m45434_90 : Statement where
+  id := "cell-structure-and-function-m45434-90"
+  text := "Water always enters a plant cell if water is available [weakening; not expressed: precondition]"
+  claim := .rel ⟨.ro, 57, false⟩ (e_GO_0098657.inCtx { taxon := e_NCBITaxon_33090, cellType := e_CL_0000000 }) e_CHEBI_15377
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "In fact, the cytoplasm in plants is always slightly hypertonic compared to the cellular environment, and water will always enter a cell if water is available." }]
 /-- Some active transport mechanisms move small molecules such as ions through the membrane -/
 def cell_structure_and_function_m45435_3 : Statement where
   id := "cell-structure-and-function-m45435-3"

@@ -47,13 +47,13 @@ def reproduction_at_the_cellular_level_m45455_16 : Statement where
 def reproduction_at_the_cellular_level_m45455_17 : Statement where
   id := "reproduction-at-the-cellular-level-m45455-17"
   text := "Human somatic cells have 46 chromosomes."
-  claim := .count (e_CL_0002371.inCtx { taxon := e_NCBITaxon_9606 }) e_GO_0005694 46
+  claim := .count (e_CL_0000415.inCtx { taxon := e_NCBITaxon_9606 }) e_GO_0005694 46
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Human body cells (somatic cells) have 46 chromosomes." }]
 /-- A somatic cell contains two matched sets of chromosomes. -/
 def reproduction_at_the_cellular_level_m45455_18 : Statement where
   id := "reproduction-at-the-cellular-level-m45455-18"
   text := "A somatic cell contains two matched sets of chromosomes."
-  claim := .measure e_CL_0002371 e_PATO_0001374 2 2 "chromosome sets"
+  claim := .measure e_CL_0000415 e_PATO_0001374 2 2 "chromosome sets"
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "A somatic cell contains two matched sets of chromosomes, a configuration known as diploid." }]
 /-- Human gametes contain one set of 23 chromosomes. -/
 def reproduction_at_the_cellular_level_m45455_21 : Statement where
@@ -83,7 +83,7 @@ def reproduction_at_the_cellular_level_m45455_45 : Statement where
 def reproduction_at_the_cellular_level_m45455_46 : Statement where
   id := "reproduction-at-the-cellular-level-m45455-46"
   text := "Human somatic cells have 46 chromosomes."
-  claim := .count (e_CL_0002371.inCtx { taxon := e_NCBITaxon_9606 }) e_GO_0005694 46
+  claim := .count (e_CL_0000415.inCtx { taxon := e_NCBITaxon_9606 }) e_GO_0005694 46
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Human somatic cells have 46 chromosomes consisting of two sets of 22 homologous chromosomes and a pair of nonhomologous sex chromosomes." }]
 /-- Human gametes have 23 chromosomes, one complete set. -/
 def reproduction_at_the_cellular_level_m45455_49 : Statement where
@@ -95,7 +95,7 @@ def reproduction_at_the_cellular_level_m45455_49 : Statement where
 def reproduction_at_the_cellular_level_m45455_60 : Statement where
   id := "reproduction-at-the-cellular-level-m45455-60"
   text := "Human somatic cells have 46 chromosomes: 22 homologous pairs and one pair of nonhomologous sex chromosomes."
-  claim := .count (e_CL_0002371.inCtx { taxon := e_NCBITaxon_9606 }) e_GO_0005694 46
+  claim := .count (e_CL_0000415.inCtx { taxon := e_NCBITaxon_9606 }) e_GO_0005694 46
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Human somatic cells have 46 chromosomes, including 22 homologous pairs and one pair of nonhomologous sex chromosomes." }]
 /-- Human gametes have 23 chromosomes, one each of 23 unique chromosomes. -/
 def reproduction_at_the_cellular_level_m45455_62 : Statement where

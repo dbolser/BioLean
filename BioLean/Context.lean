@@ -6,11 +6,14 @@ import BioLean.Taxa
 
 A context is a refinement of an entity (`Entity.refine`, the class `e ⊓ ∃r.f`). `Entity.inCtx`
 is the way to build one: it applies the fields of a `Ctx` in a fixed order (anatomy, cell type,
-component, condition, stage, taxon) with fixed RO relations, so one context gives one curie.
-Mouse and human claims differ because their subjects differ. See `docs/m2/judgement.md`.
+component, condition, stage, life stage, taxon) with fixed RO relations, so one context gives one
+curie. Mouse and human claims differ because their subjects differ. See `docs/m2/judgement.md`.
 -/
 
 namespace BioLean
+
+/-- RO:0002490 existence overlaps, for `Ctx.lifeStage`. Defined here, next to its one use. -/
+def Rel.existenceOverlaps : Rel := ⟨.ro, 2490, false⟩
 
 /-- A condition, placed by what it qualifies. -/
 inductive Condition
@@ -29,7 +32,11 @@ structure Ctx where
   anatomy : Option (Entity .anatomy) := none
   cellType : Option (Entity .cellType) := none
   component : Option (Entity .component) := none
+  /-- A GO process the subject happens during (metaphase, meiosis I). -/
   stage : Option (Entity .process) := none
+  /-- A life stage of the organism (UBERON adult, embryo stage). UBERON terms are `Kind.anatomy`
+  here, so this is a separate slot from `stage`. Applied by `lifeStageRel`. -/
+  lifeStage : Option (Entity .anatomy) := none
   condition : Option Condition := none
 
 namespace Ctx
@@ -39,6 +46,14 @@ def locRel (k : Kind) : Rel := if k.sort = .occurrent then Rel.occursIn else Rel
 
 /-- A cell type: processes `occurs_in` it, continuants are `part_of` it. -/
 def cellRel (k : Kind) : Rel := if k.sort = .occurrent then Rel.occursIn else Rel.partOf
+
+/-- A life stage: processes `happens_during` it, continuants `existence_overlaps` it. A cell does
+not happen, so `happens_during` is wrong for continuants. RO:0002490 is the weakest member of RO's
+family for exactly this case (RO:0002487, "relation between physical entity and a process or
+stage"): the start or the end of x falls within the stage. An adult stem cell is a stem cell whose
+existence overlaps the adult stage. -/
+def lifeStageRel (k : Kind) : Rel :=
+  if k.sort = .occurrent then Rel.happensDuring else Rel.existenceOverlaps
 
 /-- The taxon filler: the taxon (default: cellular organisms) refined by an organism state. -/
 def taxonFiller (c : Ctx) : Option (Entity .taxon) :=
@@ -73,8 +88,9 @@ def Entity.refineOpt {k k' : Kind} (e : Entity k) (r : Rel) (f : Option (Entity 
 
 /-- `e` in context `c`. The order and relations are fixed: anatomy and component by `located_in`
 (`occurs_in` for processes), cell type by `part_of` (`occurs_in`), an environment by
-`surrounded_by`, stage by `happens_during`, taxon (with any organism state) by `in_taxon`,
-outermost. Same `Ctx`, same curie, however the structure literal is written. -/
+`surrounded_by`, stage by `happens_during`, life stage by `lifeStageRel`, taxon (with any
+organism state) by `in_taxon`, outermost. Same `Ctx`, same curie, however the structure literal is
+written. -/
 def Entity.inCtx {k : Kind} (e : Entity k) (c : Ctx) : Entity k :=
   let e := e.refineOpt (Ctx.locRel k) c.anatomy (by cases k <;> decide)
   let e := e.refineOpt (Ctx.cellRel k) c.cellType (by cases k <;> decide)
@@ -83,6 +99,7 @@ def Entity.inCtx {k : Kind} (e : Entity k) (c : Ctx) : Entity k :=
     | some (.environment (k := k') s) => e.refine Rel.surroundedBy s (by cases k <;> cases k' <;> decide)
     | _ => e
   let e := e.refineOpt Rel.happensDuring c.stage (by cases k <;> decide)
+  let e := e.refineOpt (Ctx.lifeStageRel k) c.lifeStage (by cases k <;> decide)
   e.refineOpt Rel.inTaxon c.taxonFiller (by cases k <;> decide)
 
 end BioLean

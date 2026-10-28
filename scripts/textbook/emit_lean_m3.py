@@ -2,8 +2,12 @@
 
 Context follows `BioLean/Context.lean`: taxon, stage and condition refine the subject with `Entity.inCtx`; the site
 fields (anatomy, cellType, component) refine the entity they locate, which is the target of an effect on an amount,
-process or activity ("insulin lowers blood glucose" refines glucose), and the subject otherwise. A quantifier wraps
-the claim. Records with a blocker, ctor `none`, or an id in `data/textbook/r3_skip.tsv` (Lean rejected) are skipped.
+process or activity ("insulin lowers blood glucose" refines glucose), and the subject otherwise. A UBERON stage goes to
+`Ctx.lifeStage`, a GO one to `Ctx.stage`. A quantifier wraps the claim. A measure with no `hi` is `atLeastMeasure`; a
+"has number of" (PATO:0001555) measure with a part and whole-number bounds is `count` or `countBetween`.
+A record with a ctor and a blocker is emitted as a sound weakening, the blocker named in its text, except a disjunction
+(one disjunct is stronger, not weaker). Records with ctor `none`, or an id in `data/textbook/r3_skip.tsv` (Lean
+rejected), are skipped.
 `statements()` is the shared reading: `scripts/search/closure.py` loads the same claims, with the same composite curies.
 Usage: emit_lean_m3.py <claims_m3_dir> <go.obo> <out_dir>"""
 import json, glob, re, sys, collections, pathlib
@@ -24,6 +28,9 @@ OCCURRENT = ('process', 'function')
 # context relations, as in Rel.lean
 LOCATED_IN, OCCURS_IN, PART_OF = ('ro', 1025, False), ('bfo', 66, False), ('bfo', 50, False)
 SURROUNDED_BY, HAPPENS_DURING, IN_TAXON, HAS_MODIFIER = ('ro', 2219, False), ('ro', 2092, False), ('ro', 2162, False), ('ro', 2573, False)
+EXISTENCE_OVERLAPS = ('ro', 2490, False)   # Ctx.lifeStageRel for continuants
+HAS_NUMBER_OF = 'PATO:0001555'
+NOT_WEAKENING = ('disjunction',)
 CELLULAR_ORGANISMS = ('NCBITaxon:131567', 'cellular organisms')   # Taxa.cellularOrganisms
 ISA = ('rdfs', 0, False)
 
@@ -66,6 +73,8 @@ def in_ctx(e, k, ctx):
     cond = ctx.get('condition')
     if cond and cond[0] == 'environment': refine(SURROUNDED_BY, cond[1])
     if 'stage' in ctx: refine(HAPPENS_DURING, ctx['stage']); fields.append(f'stage := {ctx["stage"][0]}')
+    if 'lifeStage' in ctx:
+        refine(HAPPENS_DURING if k in OCCURRENT else EXISTENCE_OVERLAPS, ctx['lifeStage']); fields.append(f'lifeStage := {ctx["lifeStage"][0]}')
     if 'taxon' in ctx: fields.insert(0, f'taxon := {ctx["taxon"][0]}')
     if cond: fields.append(f'condition := some (.{cond[0]} {cond[1][0]})')
     taxon = ctx.get('taxon')
@@ -101,12 +110,12 @@ def statements(src, go_ns):
             try:
                 ctor = m.get('ctor')
                 if ctor in (None, 'none'): raise Skip(f'ctor none, blocker {m.get("blocker")}')
-                if m.get('blocker'): raise Skip(f'blocker {m["blocker"]} (with ctor)')
+                if m.get('blocker') in NOT_WEAKENING: raise Skip(f'blocker {m["blocker"]} (with ctor): not a weakening')
                 if r['id'] in skip_ids: raise Skip('skip list (Lean rejected)')
                 c = m.get('context') or {}
                 subj_ctx, site_ctx = {}, {}
                 for slot in ('taxon', 'stage'):
-                    if c.get(slot): subj_ctx[slot] = ent(c[slot])[0]
+                    if c.get(slot): subj_ctx['lifeStage' if c[slot].startswith('UBERON:') else slot] = ent(c[slot])[0]
                 for slot in ('anatomy', 'cellType', 'component'):
                     if c.get(slot): site_ctx[slot] = ent(c[slot])[0]
                 if c.get('condition'):
@@ -141,14 +150,22 @@ def statements(src, go_ns):
                 elif ctor in ('produces', 'consumes', 'yield'): need(ctor, O, n is not None); claim = f'.{ctor} {S[0]} {O[0]} {num(n)}'
                 elif ctor == 'measure':
                     need(ctor, m.get('quality'))
-                    if m.get('lo') is None or m.get('hi') is None: raise Skip('measure with an open end')
-                    claim = f'.measure {S[0]} {ent(m["quality"])[0][0]} {num(m["lo"])} {num(m["hi"])} {q(m.get("unit"))}'
+                    lo, hi = m.get('lo'), m.get('hi')
+                    if lo is None: raise Skip('measure with no lower bound')
+                    if m['quality'] == HAS_NUMBER_OF and O and hi is not None and int(lo) == lo and int(hi) == hi:
+                        ctor = 'count' if lo == hi else 'countBetween'
+                        claim = f'.{ctor} {S[0]} {O[0]} {int(lo)}' + ('' if lo == hi else f' {int(hi)}')
+                    elif hi is None:
+                        ctor = 'atLeastMeasure'
+                        claim = f'.atLeastMeasure {S[0]} {ent(m["quality"])[0][0]} {num(lo)} {q(m.get("unit"))}'
+                    else: claim = f'.measure {S[0]} {ent(m["quality"])[0][0]} {num(lo)} {num(hi)} {q(m.get("unit"))}'
                 elif ctor == 'less': need(ctor, O, m.get('quality')); claim = f'.less {S[0]} {O[0]} {ent(m["quality"])[0][0]}'
                 else: raise Skip(f'unknown ctor {ctor}')
                 if m.get('quant') in ('some', 'most'): claim = f'.quant .{m["quant"]} ({claim})'
             except Skip as e:
                 skipped[str(e)] += 1; continue
-            out.append(dict(id=r['id'], chapter=slug, text=(r.get('claim') or '')[:160], source=r.get('source') or '', claim=claim,
+            text = (r.get('claim') or '')[:160] + (f' [weakening; not expressed: {m["blocker"]}]' if m.get('blocker') else '')
+            out.append(dict(id=r['id'], chapter=slug, text=text, source=r.get('source') or '', claim=claim, blocker=m.get('blocker'),
                             ents=ents, ctor=ctor, quant=m.get('quant'), rel=rel, sign=m.get('sign'), target=tgt,
                             subj=S[1:], obj=O[1:] if O else None, context=bool(subj_ctx or site_ctx)))
     return out, skipped, recs
@@ -184,7 +201,8 @@ def main():
         print(f'{mod:40s} statements={len(defs)}')
     print('records', len(recs), 'emitted', len(stmts), '; new entities', len(new))
     print('by ctor', dict(collections.Counter(s['ctor'] for s in stmts).most_common()),
-          '; quantified', sum(1 for s in stmts if s['quant']), '; with context', sum(s['context'] for s in stmts))
+          '; quantified', sum(1 for s in stmts if s['quant']), '; with context', sum(s['context'] for s in stmts),
+          '; weakenings', sum(1 for s in stmts if s['blocker']))
     print('skipped:', dict(sorted(skipped.items(), key=lambda kv: -kv[1])))
 
 if __name__ == '__main__': main()

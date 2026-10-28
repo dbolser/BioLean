@@ -55,6 +55,18 @@ def molbio_m45473_96 : Statement where
   text := "Metaphase chromosomes are approximately 700 nm wide"
   claim := .measure (e_GO_0000793.inCtx { taxon := e_NCBITaxon_2759, stage := e_GO_0051323 }) e_PATO_0000921 700 700 "nm"
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "They are approximately 700 nm in width, and are found in association with scaffold proteins." }]
+/-- Darkly staining chromatin regions usually contain inactive genes [weakening; not expressed: has_quality] -/
+def molbio_m45473_103 : Statement where
+  id := "molbio-m45473-103"
+  text := "Darkly staining chromatin regions usually contain inactive genes [weakening; not expressed: has_quality]"
+  claim := .quant .most (.rel ⟨.bfo, 51, false⟩ (e_GO_0000792.inCtx { taxon := e_NCBITaxon_2759 }) e_SO_0000704)
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "The darkly staining regions usually contain genes that are not active, and are found in the regions of the centromere and telomeres." }]
+/-- Lightly staining chromatin regions usually contain active genes [weakening; not expressed: has_quality] -/
+def molbio_m45473_106 : Statement where
+  id := "molbio-m45473-106"
+  text := "Lightly staining chromatin regions usually contain active genes [weakening; not expressed: has_quality]"
+  claim := .quant .most (.rel ⟨.bfo, 51, false⟩ (e_GO_0000791.inCtx { taxon := e_NCBITaxon_2759 }) e_SO_0000704)
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "The lightly staining regions usually contain genes that are active, with DNA packaged around nucleosomes but not further compacted." }]
 /-- DNA has four nitrogenous bases -/
 def molbio_m45473_113 : Statement where
   id := "molbio-m45473-113"
@@ -103,6 +115,12 @@ def molbio_m45475_65 : Statement where
   text := "Telomerase is active in germ cells"
   claim := .quant .most (.rel ⟨.ro, 2215, false⟩ (e_GO_0005697.inCtx { cellType := e_CL_0000586 }) e_GO_0000723)
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Telomerase is typically found to be active in germ cells, adult stem cells, and some cancer cells." }]
+/-- Telomerase is active in adult stem cells -/
+def molbio_m45475_66 : Statement where
+  id := "molbio-m45475-66"
+  text := "Telomerase is active in adult stem cells"
+  claim := .quant .most (.rel ⟨.ro, 2215, false⟩ (e_GO_0005697.inCtx { cellType := e_CL_0000034, lifeStage := e_UBERON_0000113 }) e_GO_0000723)
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Telomerase is typically found to be active in germ cells, adult stem cells, and some cancer cells." }]
 /-- Telomerase is active in some cancer cells -/
 def molbio_m45475_67 : Statement where
   id := "molbio-m45475-67"
@@ -115,6 +133,12 @@ def molbio_m45475_69 : Statement where
   text := "Telomerase is present in human cells"
   claim := .rel ⟨.ro, 1025, false⟩ (e_GO_0005697.inCtx { taxon := e_NCBITaxon_9606 }) e_CL_0000000
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Later research using HeLa cells (obtained from Henrietta Lacks) confirmed that telomerase is present in human cells." }]
+/-- Telomerase is not active in adult somatic cells -/
+def molbio_m45475_71 : Statement where
+  id := "molbio-m45475-71"
+  text := "Telomerase is not active in adult somatic cells"
+  claim := .notRel ⟨.ro, 2215, false⟩ (e_GO_0005697.inCtx { cellType := e_CL_0002371, lifeStage := e_UBERON_0000113 }) e_GO_0000723
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Telomerase is not active in adult somatic cells." }]
 /-- Telomerase-deficient mice have tissue atrophy -/
 def molbio_m45475_77 : Statement where
   id := "molbio-m45475-77"
@@ -163,6 +187,12 @@ def molbio_m45475_116 : Statement where
   text := "People with defective nucleotide excision repair genes have extreme sensitivity to sunlight"
   claim := .effect (e_GO_0006289.inCtx { taxon := e_NCBITaxon_9606 }) .neg (.phenotype e_HP_0000992)
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Individuals with flaws in their nucleotide excision repair genes show extreme sensitivity to sunlight and develop skin cancers early in life." }]
+/-- People with defective nucleotide excision repair genes develop skin cancers early in life [weakening; not expressed: other] -/
+def molbio_m45475_117 : Statement where
+  id := "molbio-m45475-117"
+  text := "People with defective nucleotide excision repair genes develop skin cancers early in life [weakening; not expressed: other]"
+  claim := .effect (e_GO_0006289.inCtx { taxon := e_NCBITaxon_9606 }) .neg (.phenotype e_HP_0008069)
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Individuals with flaws in their nucleotide excision repair genes show extreme sensitivity to sunlight and develop skin cancers early in life." }]
 /-- Replication in eukaryotes starts at multiple origins of replication -/
 def molbio_m45475_123 : Statement where
   id := "molbio-m45475-123"
@@ -175,6 +205,12 @@ def molbio_m45475_124 : Statement where
   text := "Replication in prokaryotes starts from a single origin of replication"
   claim := .count (e_GO_0005694.inCtx { taxon := e_NCBITaxon_2 }) e_SO_0000296 1
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Replication in eukaryotes starts at multiple origins of replication, while replication in prokaryotes starts from a single origin of replication." }]
+/-- Three mRNA nucleotides correspond to one amino acid in the protein [weakening; not expressed: compound_sentence] -/
+def molbio_m45476_11 : Statement where
+  id := "molbio-m45476-11"
+  text := "Three mRNA nucleotides correspond to one amino acid in the protein [weakening; not expressed: compound_sentence]"
+  claim := .count e_SO_0000360 e_CHEBI_36976 3
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "The translation to protein is more complex because groups of three mRNA nucleotides correspond to one amino acid of the protein sequence." }]
 /-- In eukaryotes transcription occurs in the nucleus -/
 def molbio_m45476_15 : Statement where
   id := "molbio-m45476-15"
@@ -205,6 +241,12 @@ def molbio_m45476_70 : Statement where
   text := "Eukaryotic mRNAs undergo splicing"
   claim := .rel ⟨.ro, 2233, false⟩ (e_GO_0000398.inCtx { taxon := e_NCBITaxon_2759 }) e_CHEBI_33699
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Eukaryotic mRNAs also undergo splicing, in which introns are removed and exons are reconnected with single-nucleotide accuracy." }]
+/-- Polypeptides range from about 50 to more than 1000 amino acids in length [weakening; not expressed: other] -/
+def molbio_m45479_7 : Statement where
+  id := "molbio-m45479-7"
+  text := "Polypeptides range from about 50 to more than 1000 amino acids in length [weakening; not expressed: other]"
+  claim := .atLeast e_CHEBI_15841 e_CHEBI_33709 50
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Amino acids are covalently strung together in lengths ranging from approximately 50 amino acids to more than 1,000." }]
 /-- An E. coli cell contains 200,000 ribosomes at any given time -/
 def molbio_m45479_15 : Statement where
   id := "molbio-m45479-15"
@@ -307,6 +349,12 @@ def molbio_m45479_78 : Statement where
   text := "The E. coli translation apparatus adds each amino acid in 0.05 seconds"
   claim := .measure (e_GO_0006414.inCtx { taxon := e_NCBITaxon_562 }) e_PATO_0001309 (1/20) (1/20) "s"
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Amazingly, the E. coli translation apparatus takes only 0.05 seconds to add each amino acid, meaning that a 200-amino acid polypeptide could be translated in just 10 seconds." }]
+/-- The genetic code is degenerate: 64 codons specify 20 amino acids and three stop codons [weakening; not expressed: compound_sentence] -/
+def molbio_m45479_92 : Statement where
+  id := "molbio-m45479-92"
+  text := "The genetic code is degenerate: 64 codons specify 20 amino acids and three stop codons [weakening; not expressed: compound_sentence]"
+  claim := .cardinality e_SO_0000360 64
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "The genetic code is degenerate because 64 triplet codons in mRNA specify only 20 amino acids and three stop codons." }]
 /-- More than one codon corresponds to a given amino acid -/
 def molbio_m45479_93 : Statement where
   id := "molbio-m45479-93"
@@ -373,11 +421,23 @@ def molbio_m45480_49 : Statement where
   text := "In the cytoplasm ribosomes translate the mRNA into protein"
   claim := .rel ⟨.bfo, 66, false⟩ (e_GO_0006412.inCtx { taxon := e_NCBITaxon_2759 }) e_GO_0005737
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "The newly synthesized mRNA is then transported out of the nucleus into the cytoplasm, where ribosomes translate the mRNA into protein." }]
+/-- Alternative RNA splicing allows different protein products to be produced from one gene [weakening; not expressed: other] -/
+def molbio_m45480_61 : Statement where
+  id := "molbio-m45480-61"
+  text := "Alternative RNA splicing allows different protein products to be produced from one gene [weakening; not expressed: other]"
+  claim := .rel ⟨.ro, 2234, false⟩ (e_GO_0000380.inCtx { taxon := e_NCBITaxon_2759 }) e_CHEBI_36080
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Alternative RNA splicing is a mechanism that allows different protein products to be produced from one gene when different combinations of introns (and sometimes exons) are removed from the transcript" }]
 /-- Alternative splicing is a common mechanism of gene regulation in eukaryotes -/
 def molbio_m45480_65 : Statement where
   id := "molbio-m45480-65"
   text := "Alternative splicing is a common mechanism of gene regulation in eukaryotes"
   claim := .quant .some (.rel ⟨.bfo, 51, false⟩ (e_GO_0010468.inCtx { taxon := e_NCBITaxon_2759 }) e_GO_0000380)
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Alternative splicing is now understood to be a common mechanism of gene regulation in eukaryotes; according to one estimate, 70% of genes in humans are expressed as multiple proteins through alternati" }]
+/-- About 70% of human genes are expressed as multiple proteins through alternative splicing [weakening; not expressed: proportion] -/
+def molbio_m45480_66 : Statement where
+  id := "molbio-m45480-66"
+  text := "About 70% of human genes are expressed as multiple proteins through alternative splicing [weakening; not expressed: proportion]"
+  claim := .quant .most (.rel ⟨.ro, 56, false⟩ (e_SO_0000704.inCtx { taxon := e_NCBITaxon_9606 }) e_GO_0000380)
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Alternative splicing is now understood to be a common mechanism of gene regulation in eukaryotes; according to one estimate, 70% of genes in humans are expressed as multiple proteins through alternati" }]
 /-- In eukaryotic cells transcription occurs in the nucleus -/
 def molbio_m45480_85 : Statement where
