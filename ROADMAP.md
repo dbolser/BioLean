@@ -28,7 +28,7 @@ Merge the drafted Context extension and the argument layer.
 - **Exit:** chemiosmotic timeline reaches *established* by 1974 and Slater is *refuted*, computed in
   Lean not Python; NMN human claim is low belief with the mouse papers as axioms.
 
-## M3. Quantity
+## M3. Quantity (next: confirmed by the closure's only clash, "most neurons" vs "some neurons")
 `Claim.quantity` with units and an arithmetic side goal discharged by `norm_num`/`decide`.
 - **Exit:** the 13 counting derivations (codon pigeonhole, 2^23 gametes, TCA carbons) type-check.
 
@@ -58,6 +58,9 @@ Alberts is not open.
 - **Exit:** the milestone measurement rerun; "now" above 70 percent.
 
 ## M8. Literature at scale
+The search half exists: `scripts/search/closure.py` forward-chains and `emit_closure_lean.py` hands
+derivations to the kernel (60/60 certified on the textbook). Remaining here is the literature as
+statements, and holes fed to an ILP-style search.
 Curated sources first (GO-CAM, SIGNOR, Reactome, GOA), text-mined relations second, LLM
 extraction targeted at gaps. Datalog search over statements with Lean checking (CertifyingDatalog
 pattern). Holes in derivations fed to an ILP-style search over the ontology lattice.

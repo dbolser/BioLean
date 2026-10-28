@@ -17,3 +17,11 @@ name = "BioLean"
 [[lean_lib]]
 name = "BioLeanLib"
 roots = ["BioLean.Lib.GLP1", "BioLean.Examples.Ozempic", "BioLean.Lib.Textbook", "BioLean.Examples.Textbook", "BioLean.Tests.RO"]
+
+[[lean_lib]]
+name = "TextbookR2"
+roots = ["BioLean.Lib.TextbookClaimsR2.Entities", "BioLean.Lib.TextbookClaimsR2.CellStructureAndFunction",
+  "BioLean.Lib.TextbookClaimsR2.HowCellsObtainEnergy", "BioLean.Lib.TextbookClaimsR2.MolecularBiology",
+  "BioLean.Lib.TextbookClaimsR2.Photosynthesis", "BioLean.Lib.TextbookClaimsR2.ReproductionAtTheCellularLevel",
+  "BioLean.Lib.TextbookClaimsR2.TheBodySSystemsA", "BioLean.Lib.TextbookClaimsR2.TheBodySSystemsB",
+  "BioLean.Lib.TextbookClaimsR2.TheCellularBasisOfInheritance", "BioLean.Examples.Closure"]

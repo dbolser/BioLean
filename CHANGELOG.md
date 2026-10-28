@@ -2,6 +2,20 @@
 
 Findings and decisions, dated. Code history is in `git log`; this records what we learned.
 
+## 2026-10-28 (closure search)
+- First forward-chaining closure over the compiled textbook: 1,248 statements give 1,551 derived
+  facts at depth 4; 60 sampled derivations emitted as Lean and **all 60 certified** by the kernel.
+  (`docs/closure-search.md`, `BioLean/Examples/Closure.lean`)
+- Found two unsound rules of ours: `relInv` (inverting a class-level existential) and the is_a laws
+  applied to is_a itself. Both removed/tightened; tests pin them. The first run had produced "DNA is_a
+  messenger RNA" and "salivary glands overlap ganglia".
+- Finding: sign chains through a feedback inhibitor (ATP inhibits sugar catabolism) are formally
+  correct and biologically misleading; 56 of 73 effect conclusions pass through it. Needs a loop
+  construct or a report flag.
+- The only clash is a quantifier ("most neurons have axons" vs "some have none"): M3 confirmed next.
+- Missing Lean rule found: is_a inherits an effect (56 uses in the closure).
+- Cancer-to-energy-metabolism path query: connected only through "cells"; nothing provable here.
+
 ## 2026-10-27 (RO issues posted)
 - Four issues opened on oborel/obo-relations from Dan's account: #897 (immediately preceded by /
   precedes chains), #898 (spatially coextensive chain), #899 (indirectly negatively regulates sign
