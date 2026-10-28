@@ -1,0 +1,8168 @@
+[
+ {
+  "id": "the-body-s-systems-m45537-53",
+  "module": "m45537",
+  "source": "They are then given a sugary drink, which stimulates the pancreas to produce insulin to decrease blood-glucose levels.",
+  "claim": "Insulin decreases blood-glucose levels",
+  "kind": "effect",
+  "bin": "now",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "insulin",
+    "curie": "PR:000009054",
+    "ontology": "PR",
+    "verified": true
+   },
+   {
+    "text": "glucose",
+    "curie": "CHEBI:17234",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "blood",
+    "curie": "UBERON:0000178",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "decreases amount of",
+  "context": {},
+  "lean": "Claim.effect insulin .neg (.amount bloodGlucose)",
+  "m2": {
+   "ctor": "effect",
+   "subject": "PR:000009054",
+   "relation": null,
+   "object": "CHEBI:17234",
+   "sign": "neg",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000178",
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "PR:000009054",
+   "relation": null,
+   "object": "CHEBI:17234",
+   "sign": "neg",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000178",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45537-55",
+  "module": "m45537",
+  "source": "If the pancreas is functioning properly, the blood-glucose level will be within a normal range.",
+  "claim": "If the pancreas functions properly, blood glucose after a glucose load is within a normal range",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "conditional (if-then)",
+  "entities": [
+   {
+    "text": "pancreas",
+    "curie": "UBERON:0001264",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "glucose",
+    "curie": "CHEBI:17234",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "blood",
+    "curie": "UBERON:0000178",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "conditional",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "Claim.implies pancreasFunctional (bloodGlucose ∈ normalRange)  -- missing: conditional + range",
+  "bin_m1": "missing_construct",
+  "lean_m1": "conditional",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "precondition",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45537-103",
+  "module": "m45537",
+  "source": "The anterior pituitary produces six hormones: growth hormone, prolactin, thyroid-stimulating hormone, adrenocorticotropic hormone, follicle-stimulating hormone, and luteinizing hormone.",
+  "claim": "The anterior pituitary produces six hormones",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "anterior pituitary",
+    "curie": "UBERON:0002196",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "hormone",
+    "curie": "CHEBI:24621",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "has_output count",
+  "context": {},
+  "lean": "-- count 6 (missing: quantity)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "cardinality",
+   "quant": null,
+   "subject": "CHEBI:24621",
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 6,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0002196",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45537-121",
+  "module": "m45537",
+  "source": "It is a butterfly-shaped gland with two lobes that are connected.",
+  "claim": "The thyroid gland has two connected lobes",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "has_part",
+  "entities": [
+   {
+    "text": "thyroid gland",
+    "curie": "UBERON:0002046",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "has_part",
+  "context": {},
+  "lean": "Claim.hasPart thyroidGland (2 lobes)  -- missing: has_part + quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "ungrounded argument",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "UBERON:0002046",
+   "relation": null,
+   "object": "UBERON:0001118",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 2,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "lobes",
+     "from": null,
+     "to": "UBERON:0001118",
+     "why": "lobe of thyroid gland"
+    }
+   ],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45537-126",
+  "module": "m45537",
+  "source": "The thyroid follicle cells synthesize the hormone thyroxine, which is also known as T4 because it contains four atoms of iodine, and triiodothyronine, also known as T3 because it contains three atoms of iodine.",
+  "claim": "Thyroxine contains four atoms of iodine",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "thyroxine",
+    "curie": "CHEBI:30660",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "iodine atom",
+    "curie": "CHEBI:24859",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "has_part count",
+  "context": {},
+  "lean": "Claim.hasPart thyroxine (4 iodine)  -- missing: quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "CHEBI:30660",
+   "relation": null,
+   "object": "CHEBI:24859",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 4,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45537-128",
+  "module": "m45537",
+  "source": "The thyroid follicle cells synthesize the hormone thyroxine, which is also known as T4 because it contains four atoms of iodine, and triiodothyronine, also known as T3 because it contains three atoms of iodine.",
+  "claim": "Triiodothyronine contains three atoms of iodine",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "triiodothyronine",
+    "curie": "CHEBI:18258",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "iodine atom",
+    "curie": "CHEBI:24859",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "has_part count",
+  "context": {},
+  "lean": "Claim.hasPart T3 (3 iodine)  -- missing: quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "CHEBI:18258",
+   "relation": null,
+   "object": "CHEBI:24859",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 3,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45537-129",
+  "module": "m45537",
+  "source": "T3 and T4 are released by the thyroid in response to thyroid-stimulating hormone produced by the anterior pituitary, and both T3 and T4 have the effect of stimulating metabolic activity in the body and increasing energy use.",
+  "claim": "Thyroid-stimulating hormone stimulates release of T3 and T4 by the thyroid",
+  "kind": "effect",
+  "bin": "now",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "thyroid-stimulating hormone",
+    "curie": "PR:P01222",
+    "ontology": "PR",
+    "verified": true
+   },
+   {
+    "text": "thyroid gland",
+    "curie": "UBERON:0002046",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "triiodothyronine",
+    "curie": "CHEBI:18258",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "thyroxine",
+    "curie": "CHEBI:30660",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "increases amount of",
+  "context": {},
+  "lean": "Claim.effect TSH .pos (.amount thyroidHormone)",
+  "m2": {
+   "ctor": "effect",
+   "subject": "PR:P01222",
+   "relation": null,
+   "object": "CHEBI:18258",
+   "sign": "pos",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0002046",
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "low"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "PR:P01222",
+   "relation": null,
+   "object": "CHEBI:18258",
+   "sign": "pos",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0002046",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45537-134",
+  "module": "m45537",
+  "source": "Calcitonin is released in response to rising calcium ion concentrations in the blood and has the effect of reducing those levels.",
+  "claim": "Rising blood calcium concentration stimulates calcitonin release",
+  "kind": "effect",
+  "bin": "now",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "calcium ion",
+    "curie": "CHEBI:29108",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "blood",
+    "curie": "UBERON:0000178",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "calcitonin",
+    "curie": "PR:P01258",
+    "ontology": "PR",
+    "verified": true
+   }
+  ],
+  "relation": "increases amount of",
+  "context": {},
+  "lean": "Claim.effect bloodCalcium .pos (.amount calcitonin)",
+  "m2": {
+   "ctor": "effect",
+   "subject": "CHEBI:29108",
+   "relation": null,
+   "object": "PR:P01258",
+   "sign": "pos",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000178",
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "CHEBI:29108",
+   "relation": null,
+   "object": "PR:P01258",
+   "sign": "pos",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000178",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45537-135",
+  "module": "m45537",
+  "source": "Calcitonin is released in response to rising calcium ion concentrations in the blood and has the effect of reducing those levels.",
+  "claim": "Calcitonin reduces blood calcium concentration",
+  "kind": "effect",
+  "bin": "now",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "calcitonin",
+    "curie": "PR:P01258",
+    "ontology": "PR",
+    "verified": true
+   },
+   {
+    "text": "calcium ion",
+    "curie": "CHEBI:29108",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "blood",
+    "curie": "UBERON:0000178",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "decreases amount of",
+  "context": {},
+  "lean": "Claim.effect calcitonin .neg (.amount bloodCalcium)",
+  "m2": {
+   "ctor": "effect",
+   "subject": "PR:P01258",
+   "relation": null,
+   "object": "CHEBI:29108",
+   "sign": "neg",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000178",
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "PR:P01258",
+   "relation": null,
+   "object": "CHEBI:29108",
+   "sign": "neg",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000178",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45537-136",
+  "module": "m45537",
+  "source": "Most people have four parathyroid glands; however, the number can vary from two to six.",
+  "claim": "Most people have four parathyroid glands",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "parathyroid gland",
+    "curie": "UBERON:0001132",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "count",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "-- count 4 (missing: quantity)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": "most",
+   "subject": "UBERON:0000468",
+   "relation": null,
+   "object": "UBERON:0001132",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 4,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "people",
+     "from": null,
+     "to": "UBERON:0000468",
+     "why": "bare class multicellular organism; the taxon is the context"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45537-137",
+  "module": "m45537",
+  "source": "Most people have four parathyroid glands; however, the number can vary from two to six.",
+  "claim": "The number of parathyroid glands varies from two to six",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "parathyroid gland",
+    "curie": "UBERON:0001132",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "count range",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "-- count 2..6 (missing: quantity)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "measure",
+   "quant": null,
+   "subject": "UBERON:0000468",
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": 2,
+   "hi": 6,
+   "unit": "parathyroid glands",
+   "quality": "PATO:0001555",
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "people",
+     "from": null,
+     "to": "UBERON:0000468",
+     "why": "bare class multicellular organism; the taxon is the context"
+    },
+    {
+     "text": "number of parathyroid glands",
+     "from": null,
+     "to": "PATO:0001555",
+     "why": "'has number of' quality; count has no range form"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45537-140",
+  "module": "m45537",
+  "source": "Parathyroid hormone increases blood calcium concentrations when calcium ion levels fall below normal.",
+  "claim": "Parathyroid hormone increases blood calcium concentration",
+  "kind": "effect",
+  "bin": "now",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "parathyroid hormone",
+    "curie": "PR:000013429",
+    "ontology": "PR",
+    "verified": true
+   },
+   {
+    "text": "calcium ion",
+    "curie": "CHEBI:29108",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "blood",
+    "curie": "UBERON:0000178",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "increases amount of",
+  "context": {},
+  "lean": "Claim.effect PTH .pos (.amount bloodCalcium)",
+  "m2": {
+   "ctor": "effect",
+   "subject": "PR:000013429",
+   "relation": null,
+   "object": "CHEBI:29108",
+   "sign": "pos",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000178",
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "PR:000013429",
+   "relation": null,
+   "object": "CHEBI:29108",
+   "sign": "pos",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000178",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45537-141",
+  "module": "m45537",
+  "source": "Parathyroid hormone increases blood calcium concentrations when calcium ion levels fall below normal.",
+  "claim": "Low blood calcium stimulates parathyroid hormone release",
+  "kind": "effect",
+  "bin": "now",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "calcium ion",
+    "curie": "CHEBI:29108",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "parathyroid hormone",
+    "curie": "PR:000013429",
+    "ontology": "PR",
+    "verified": true
+   }
+  ],
+  "relation": "decreases amount of (inverse)",
+  "context": {},
+  "lean": "Claim.effect bloodCalcium .neg (.amount PTH)",
+  "m2": {
+   "ctor": "effect",
+   "subject": "CHEBI:29108",
+   "relation": null,
+   "object": "PR:000013429",
+   "sign": "neg",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000178",
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "CHEBI:29108",
+   "relation": null,
+   "object": "PR:000013429",
+   "sign": "neg",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000178",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45537-153",
+  "module": "m45537",
+  "source": "Aldosterone release from the adrenal cortex is stimulated by a decrease in blood concentrations of sodium ions, blood volume, or blood pressure, or by an increase in blood potassium levels.",
+  "claim": "A decrease in blood sodium concentration stimulates aldosterone release from the adrenal cortex",
+  "kind": "effect",
+  "bin": "now",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "sodium ion",
+    "curie": "CHEBI:29101",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "blood",
+    "curie": "UBERON:0000178",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "aldosterone",
+    "curie": "CHEBI:27584",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "adrenal cortex",
+    "curie": "UBERON:0001235",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "decreases amount of (inverse)",
+  "context": {},
+  "lean": "Claim.effect bloodSodium .neg (.amount aldosterone)",
+  "m2": {
+   "ctor": "effect",
+   "subject": "CHEBI:29101",
+   "relation": null,
+   "object": "CHEBI:27584",
+   "sign": "neg",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000178",
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "CHEBI:29101",
+   "relation": null,
+   "object": "CHEBI:27584",
+   "sign": "neg",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000178",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45537-156",
+  "module": "m45537",
+  "source": "Aldosterone release from the adrenal cortex is stimulated by a decrease in blood concentrations of sodium ions, blood volume, or blood pressure, or by an increase in blood potassium levels.",
+  "claim": "An increase in blood potassium stimulates aldosterone release",
+  "kind": "effect",
+  "bin": "now",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "potassium ion",
+    "curie": "CHEBI:29103",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "blood",
+    "curie": "UBERON:0000178",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "aldosterone",
+    "curie": "CHEBI:27584",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "increases amount of",
+  "context": {},
+  "lean": "Claim.effect bloodPotassium .pos (.amount aldosterone)",
+  "m2": {
+   "ctor": "effect",
+   "subject": "CHEBI:29103",
+   "relation": null,
+   "object": "CHEBI:27584",
+   "sign": "pos",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000178",
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "CHEBI:29103",
+   "relation": null,
+   "object": "CHEBI:27584",
+   "sign": "pos",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000178",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45537-163",
+  "module": "m45537",
+  "source": "The testes and the adrenal cortex both secrete androgens, and the testes produce a larger amount that mostly drives development in a testicular reproductive system.",
+  "claim": "The testes produce a larger amount of androgens than the adrenal cortex",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "comparison",
+  "entities": [
+   {
+    "text": "testis",
+    "curie": "UBERON:0000473",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "adrenal cortex",
+    "curie": "UBERON:0001235",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "androgen",
+    "curie": "CHEBI:50113",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "greater_than",
+  "context": {},
+  "lean": "-- comparison (missing: comparison)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "comparison",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "unsupported_ontology",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45537-168",
+  "module": "m45537",
+  "source": "Minute amounts of estrogen occur in all humans through actions in adipose, brain, skin, and bone, which convert testosterone to estrogen.",
+  "claim": "Minute amounts of estrogen occur in all humans",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "estrogen",
+    "curie": "CHEBI:50114",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "Homo sapiens",
+    "curie": "NCBITaxon:9606",
+    "ontology": "NCBITaxon",
+    "verified": true
+   }
+  ],
+  "relation": "amount present",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "-- small amount (missing: quantity)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45537-171",
+  "module": "m45537",
+  "source": "The adrenal medulla contains two types of secretory cells: one that produces epinephrine (adrenaline) and another that produces norepinephrine (noradrenaline).",
+  "claim": "The adrenal medulla contains two types of secretory cells",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "adrenal medulla",
+    "curie": "UBERON:0001236",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "has_part count",
+  "context": {},
+  "lean": "Claim.hasPart adrenalMedulla (2 cell types)  -- missing: quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "cardinality",
+   "quant": null,
+   "subject": "CL:0000151",
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 2,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0001236",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "secretory cells",
+     "from": null,
+     "to": "CL:0000151",
+     "why": "secretory cell"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45537-181",
+  "module": "m45537",
+  "source": "The responses include increased heart rate, breathing rate, cardiac muscle contractions, and blood-glucose levels.",
+  "claim": "Epinephrine and norepinephrine increase blood-glucose levels",
+  "kind": "effect",
+  "bin": "now",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "epinephrine",
+    "curie": "CHEBI:33568",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "norepinephrine",
+    "curie": "CHEBI:33569",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "glucose",
+    "curie": "CHEBI:17234",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "blood",
+    "curie": "UBERON:0000178",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "increases amount of",
+  "context": {},
+  "lean": "Claim.effect adrenaline .pos (.amount bloodGlucose)",
+  "m2": {
+   "ctor": "effect",
+   "subject": "CHEBI:33568",
+   "relation": null,
+   "object": "CHEBI:17234",
+   "sign": "pos",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000178",
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "CHEBI:33568",
+   "relation": null,
+   "object": "CHEBI:17234",
+   "sign": "pos",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000178",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45537-182",
+  "module": "m45537",
+  "source": "They also accelerate the breakdown of glucose in skeletal muscles and stored fats in adipose tissue, and redirect blood flow toward skeletal muscles and away from skin and viscera.",
+  "claim": "Epinephrine and norepinephrine accelerate glucose breakdown in skeletal muscle",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "epinephrine",
+    "curie": "CHEBI:33568",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "norepinephrine",
+    "curie": "CHEBI:33569",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "glycolysis",
+    "curie": "GO:0006096",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "skeletal muscle",
+    "curie": "UBERON:0014892",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "increases",
+  "context": {
+   "anatomy": "UBERON:0014892"
+  },
+  "lean": "Claim.inContext {anatomy := skeletalMuscle} (Claim.effect adrenaline .pos (.process glycolysis))",
+  "m2": {
+   "ctor": "effect",
+   "subject": "CHEBI:33568",
+   "relation": null,
+   "object": "GO:0006096",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0014892",
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "CHEBI:33568",
+   "relation": null,
+   "object": "GO:0006096",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0014892",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45537-183",
+  "module": "m45537",
+  "source": "They also accelerate the breakdown of glucose in skeletal muscles and stored fats in adipose tissue, and redirect blood flow toward skeletal muscles and away from skin and viscera.",
+  "claim": "Epinephrine and norepinephrine accelerate breakdown of stored fat in adipose tissue",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "epinephrine",
+    "curie": "CHEBI:33568",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "norepinephrine",
+    "curie": "CHEBI:33569",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "lipid catabolism",
+    "curie": "GO:0016042",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "adipose tissue",
+    "curie": "UBERON:0001013",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "increases",
+  "context": {
+   "anatomy": "UBERON:0001013"
+  },
+  "lean": "Claim.inContext {anatomy := adiposeTissue} (Claim.effect adrenaline .pos (.process lipidCatabolism))",
+  "m2": {
+   "ctor": "effect",
+   "subject": "CHEBI:33568",
+   "relation": null,
+   "object": "GO:0016042",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0001013",
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "CHEBI:33568",
+   "relation": null,
+   "object": "GO:0016042",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0001013",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45537-199",
+  "module": "m45537",
+  "source": "Alpha cells release glucagon as blood-glucose levels decline.",
+  "claim": "Declining blood glucose stimulates glucagon release from alpha cells",
+  "kind": "effect",
+  "bin": "now",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "glucose",
+    "curie": "CHEBI:17234",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "blood",
+    "curie": "UBERON:0000178",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "pancreatic alpha cell",
+    "curie": "CL:0000171",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "glucagon",
+    "curie": "PR:P01275",
+    "ontology": "PR",
+    "verified": true
+   }
+  ],
+  "relation": "decreases amount of (inverse)",
+  "context": {},
+  "lean": "Claim.effect bloodGlucose .neg (.amount glucagon)",
+  "m2": {
+   "ctor": "effect",
+   "subject": "CHEBI:17234",
+   "relation": null,
+   "object": "PR:P01275",
+   "sign": "neg",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000178",
+    "cellType": "CL:0000171",
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "CHEBI:17234",
+   "relation": null,
+   "object": "PR:P01275",
+   "sign": "neg",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000178",
+    "cellType": "CL:0000171",
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45537-200",
+  "module": "m45537",
+  "source": "When blood-glucose levels rise, beta cells release insulin.",
+  "claim": "Rising blood glucose stimulates insulin release from beta cells",
+  "kind": "effect",
+  "bin": "now",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "glucose",
+    "curie": "CHEBI:17234",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "blood",
+    "curie": "UBERON:0000178",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "pancreatic beta cell",
+    "curie": "CL:0000169",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "insulin",
+    "curie": "PR:000009054",
+    "ontology": "PR",
+    "verified": true
+   }
+  ],
+  "relation": "increases amount of",
+  "context": {},
+  "lean": "Claim.effect bloodGlucose .pos (.amount insulin)",
+  "m2": {
+   "ctor": "effect",
+   "subject": "CHEBI:17234",
+   "relation": null,
+   "object": "PR:000009054",
+   "sign": "pos",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000178",
+    "cellType": "CL:0000169",
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "CHEBI:17234",
+   "relation": null,
+   "object": "PR:000009054",
+   "sign": "pos",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000178",
+    "cellType": "CL:0000169",
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45537-201",
+  "module": "m45537",
+  "source": "Glucagon causes the release of glucose to the blood from the liver, and insulin facilitates the uptake of glucose by the body’s cells.",
+  "claim": "Glucagon causes release of glucose from the liver into the blood",
+  "kind": "effect",
+  "bin": "now",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "glucagon",
+    "curie": "PR:P01275",
+    "ontology": "PR",
+    "verified": true
+   },
+   {
+    "text": "glucose",
+    "curie": "CHEBI:17234",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "liver",
+    "curie": "UBERON:0002107",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "blood",
+    "curie": "UBERON:0000178",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "increases amount of",
+  "context": {},
+  "lean": "Claim.mediatedBy glucagon .pos (.amount bloodGlucose) (.site liver)",
+  "m2": {
+   "ctor": "effect",
+   "subject": "PR:P01275",
+   "relation": null,
+   "object": "CHEBI:17234",
+   "sign": "pos",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000178",
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "PR:P01275",
+   "relation": null,
+   "object": "CHEBI:17234",
+   "sign": "pos",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000178",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45537-229",
+  "module": "m45537",
+  "source": "It causes a reduction in blood volume and blood pressure, and reduces the concentration of Na+ in the blood.",
+  "claim": "The atrial hormone reduces blood Na+ concentration",
+  "kind": "effect",
+  "bin": "now",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "atrial natriuretic peptide",
+    "curie": "PR:P01160",
+    "ontology": "PR",
+    "verified": true
+   },
+   {
+    "text": "sodium ion",
+    "curie": "CHEBI:29101",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "blood",
+    "curie": "UBERON:0000178",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "decreases amount of",
+  "context": {},
+  "lean": "Claim.effect ANP .neg (.amount bloodSodium)",
+  "m2": {
+   "ctor": "effect",
+   "subject": "PR:P01160",
+   "relation": null,
+   "object": "CHEBI:29101",
+   "sign": "neg",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000178",
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [
+    {
+     "text": "atrial hormone",
+     "from": null,
+     "to": "PR:P01160",
+     "why": "atrial natriuretic peptide, same as other records"
+    },
+    {
+     "text": "Na+",
+     "from": null,
+     "to": "CHEBI:29101",
+     "why": "sodium ion, record has no entity for it"
+    }
+   ],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "PR:P01160",
+   "relation": null,
+   "object": "CHEBI:29101",
+   "sign": "neg",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000178",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45537-240",
+  "module": "m45537",
+  "source": "EPO triggers the formation of red blood cells in the bone marrow.",
+  "claim": "EPO triggers red blood cell formation in the bone marrow",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "erythropoietin",
+    "curie": "PR:000007141",
+    "ontology": "PR",
+    "verified": true
+   },
+   {
+    "text": "erythrocyte",
+    "curie": "CL:0000232",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "erythropoiesis",
+    "curie": "GO:0030218",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "bone marrow",
+    "curie": "UBERON:0002371",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "increases",
+  "context": {
+   "anatomy": "UBERON:0002371"
+  },
+  "lean": "Claim.inContext {anatomy := boneMarrow} (Claim.effect EPO .pos (.process erythropoiesis))",
+  "m2": {
+   "ctor": "effect",
+   "subject": "PR:000007141",
+   "relation": null,
+   "object": "GO:0030218",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0002371",
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [
+    {
+     "text": "red blood cell formation",
+     "from": null,
+     "to": "GO:0030218",
+     "why": "erythrocyte differentiation (erythropoiesis), checked in OLS"
+    }
+   ],
+   "confidence": "low"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "PR:000007141",
+   "relation": null,
+   "object": "GO:0030218",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0002371",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45537-256",
+  "module": "m45537",
+  "source": "In this way, the concentration of hormones in blood is maintained within a narrow range.",
+  "claim": "Negative feedback keeps blood hormone concentration within a narrow range",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "hormone",
+    "curie": "CHEBI:24621",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "blood",
+    "curie": "UBERON:0000178",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "maintains_range",
+  "context": {},
+  "lean": "-- homeostatic range  missing: quantity / range",
+  "bin_m1": "missing_construct",
+  "lean_m1": "entity mismatch",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45537-257",
+  "module": "m45537",
+  "source": "For example, the anterior pituitary signals the thyroid to release thyroid hormones.",
+  "claim": "The anterior pituitary signals the thyroid to release thyroid hormones",
+  "kind": "effect",
+  "bin": "now",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "anterior pituitary",
+    "curie": "UBERON:0002196",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "thyroid gland",
+    "curie": "UBERON:0002046",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "thyroid hormone",
+    "curie": "CHEBI:60311",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "increases amount of",
+  "context": {},
+  "lean": "Claim.effect anteriorPituitary .pos (.amount thyroidHormone)",
+  "m2": {
+   "ctor": "effect",
+   "subject": "UBERON:0002196",
+   "relation": null,
+   "object": "CHEBI:60311",
+   "sign": "pos",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0002046",
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "low"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "UBERON:0002196",
+   "relation": null,
+   "object": "CHEBI:60311",
+   "sign": "pos",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0002046",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45537-259",
+  "module": "m45537",
+  "source": "The anterior pituitary stimulates the thyroid gland to release thyroid hormones T3 and T4.",
+  "claim": "The anterior pituitary stimulates the thyroid gland to release T3 and T4",
+  "kind": "effect",
+  "bin": "now",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "anterior pituitary",
+    "curie": "UBERON:0002196",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "thyroid gland",
+    "curie": "UBERON:0002046",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "triiodothyronine",
+    "curie": "CHEBI:18258",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "thyroxine",
+    "curie": "CHEBI:30660",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "increases amount of",
+  "context": {},
+  "lean": "Claim.effect anteriorPituitary .pos (.amount thyroidHormone)",
+  "m2": {
+   "ctor": "effect",
+   "subject": "UBERON:0002196",
+   "relation": null,
+   "object": "CHEBI:18258",
+   "sign": "pos",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0002046",
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "low"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "UBERON:0002196",
+   "relation": null,
+   "object": "CHEBI:18258",
+   "sign": "pos",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0002046",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45537-272",
+  "module": "m45537",
+  "source": "The anterior pituitary receives signals from the hypothalamus and produces six hormones.",
+  "claim": "The anterior pituitary produces six hormones",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "anterior pituitary",
+    "curie": "UBERON:0002196",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "hormone",
+    "curie": "CHEBI:24621",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "has_output count",
+  "context": {},
+  "lean": "-- count 6 (missing: quantity)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "cardinality",
+   "quant": null,
+   "subject": "CHEBI:24621",
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 6,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0002196",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45537-301",
+  "module": "m45537",
+  "source": "The heart produces the hormone atrial natriuretic peptide, which functions to reduce blood volume, pressure, and Na+ concentration.",
+  "claim": "Atrial natriuretic peptide reduces blood Na+ concentration",
+  "kind": "effect",
+  "bin": "now",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "atrial natriuretic peptide",
+    "curie": "PR:P01160",
+    "ontology": "PR",
+    "verified": true
+   },
+   {
+    "text": "sodium ion",
+    "curie": "CHEBI:29101",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "blood",
+    "curie": "UBERON:0000178",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "decreases amount of",
+  "context": {},
+  "lean": "Claim.effect ANP .neg (.amount bloodSodium)",
+  "m2": {
+   "ctor": "effect",
+   "subject": "PR:P01160",
+   "relation": null,
+   "object": "CHEBI:29101",
+   "sign": "neg",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000178",
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "PR:P01160",
+   "relation": null,
+   "object": "CHEBI:29101",
+   "sign": "neg",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000178",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45537-334",
+  "module": "m45537",
+  "source": "When blood-glucose levels are increasing, the pancreas releases insulin, which stimulates uptake of glucose by cells.",
+  "claim": "Increasing blood glucose causes the pancreas to release insulin",
+  "kind": "effect",
+  "bin": "now",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "glucose",
+    "curie": "CHEBI:17234",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "blood",
+    "curie": "UBERON:0000178",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "pancreas",
+    "curie": "UBERON:0001264",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "insulin",
+    "curie": "PR:000009054",
+    "ontology": "PR",
+    "verified": true
+   }
+  ],
+  "relation": "increases amount of",
+  "context": {},
+  "lean": "Claim.effect bloodGlucose .pos (.amount insulin)",
+  "m2": {
+   "ctor": "effect",
+   "subject": "CHEBI:17234",
+   "relation": null,
+   "object": "PR:000009054",
+   "sign": "pos",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000178",
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "CHEBI:17234",
+   "relation": null,
+   "object": "PR:000009054",
+   "sign": "pos",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000178",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45537-336",
+  "module": "m45537",
+  "source": "When blood-glucose levels are decreasing, the pancreas releases glucagon, which stimulates the release of stored glucose by the liver to the bloodstream.",
+  "claim": "Decreasing blood glucose causes the pancreas to release glucagon",
+  "kind": "effect",
+  "bin": "now",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "glucose",
+    "curie": "CHEBI:17234",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "blood",
+    "curie": "UBERON:0000178",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "pancreas",
+    "curie": "UBERON:0001264",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "glucagon",
+    "curie": "PR:P01275",
+    "ontology": "PR",
+    "verified": true
+   }
+  ],
+  "relation": "decreases amount of (inverse)",
+  "context": {},
+  "lean": "Claim.effect bloodGlucose .neg (.amount glucagon)",
+  "m2": {
+   "ctor": "effect",
+   "subject": "CHEBI:17234",
+   "relation": null,
+   "object": "PR:P01275",
+   "sign": "neg",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000178",
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "CHEBI:17234",
+   "relation": null,
+   "object": "PR:P01275",
+   "sign": "neg",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000178",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45537-337",
+  "module": "m45537",
+  "source": "When blood-glucose levels are decreasing, the pancreas releases glucagon, which stimulates the release of stored glucose by the liver to the bloodstream.",
+  "claim": "Glucagon stimulates release of stored glucose from the liver into the bloodstream",
+  "kind": "effect",
+  "bin": "now",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "glucagon",
+    "curie": "PR:P01275",
+    "ontology": "PR",
+    "verified": true
+   },
+   {
+    "text": "glucose",
+    "curie": "CHEBI:17234",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "liver",
+    "curie": "UBERON:0002107",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "blood",
+    "curie": "UBERON:0000178",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "increases amount of",
+  "context": {},
+  "lean": "Claim.mediatedBy glucagon .pos (.amount bloodGlucose) (.site liver)",
+  "m2": {
+   "ctor": "effect",
+   "subject": "PR:P01275",
+   "relation": null,
+   "object": "CHEBI:17234",
+   "sign": "pos",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000178",
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "PR:P01275",
+   "relation": null,
+   "object": "CHEBI:17234",
+   "sign": "pos",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000178",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45538-18",
+  "module": "m45538",
+  "source": "The human skeleton is an endoskeleton that consists of 206 bones in the adult.",
+  "claim": "The adult human skeleton consists of 206 bones",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "skeleton",
+    "curie": "UBERON:0004288",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "bone",
+    "curie": "UBERON:0001474",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "Homo sapiens",
+    "curie": "NCBITaxon:9606",
+    "ontology": "NCBITaxon",
+    "verified": true
+   }
+  ],
+  "relation": "has_part count",
+  "context": {
+   "taxon": "NCBITaxon:9606",
+   "stage": "adult"
+  },
+  "lean": "-- count 206 bones (missing: quantity)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "UBERON:0004288",
+   "relation": null,
+   "object": "UBERON:0001474",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 206,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": "UBERON:0000113",
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "adult",
+     "from": null,
+     "to": "UBERON:0000113",
+     "why": "post-juvenile adult stage"
+    }
+   ],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45538-21",
+  "module": "m45538",
+  "source": "The skeleton has five main functions: providing support to the body, storing minerals and lipids, producing blood cells, protecting internal organs, and allowing for movement.",
+  "claim": "The skeleton has five main functions",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "skeleton",
+    "curie": "UBERON:0004288",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "has_function count",
+  "context": {},
+  "lean": "-- count 5 (missing: quantity)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "ungrounded_entity",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45538-47",
+  "module": "m45538",
+  "source": "The auditory ossicles consist of two malleus (hammer) bones, two incus (anvil) bones, and two stapes (stirrups), one on each side.",
+  "claim": "The auditory ossicles consist of two malleus bones",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "auditory ossicle",
+    "curie": "UBERON:0001686",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "malleus",
+    "curie": "UBERON:0001689",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "has_part count",
+  "context": {},
+  "lean": "Claim.hasPart auditoryOssicles (2 malleus)  -- missing: quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "UBERON:0004288",
+   "relation": null,
+   "object": "UBERON:0001689",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 2,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "the body",
+     "from": null,
+     "to": "UBERON:0004288",
+     "why": "whole is the skeleton of one body; every auditory ossicle has two mallei would be false"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45538-48",
+  "module": "m45538",
+  "source": "The auditory ossicles consist of two malleus (hammer) bones, two incus (anvil) bones, and two stapes (stirrups), one on each side.",
+  "claim": "The auditory ossicles consist of two incus bones",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "auditory ossicle",
+    "curie": "UBERON:0001686",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "incus",
+    "curie": "UBERON:0001688",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "has_part count",
+  "context": {},
+  "lean": "Claim.hasPart auditoryOssicles (2 incus)  -- missing: quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "UBERON:0004288",
+   "relation": null,
+   "object": "UBERON:0001688",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 2,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "the body",
+     "from": null,
+     "to": "UBERON:0004288",
+     "why": "whole is the skeleton of one body; every auditory ossicle has two incudes would be false"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45538-49",
+  "module": "m45538",
+  "source": "The auditory ossicles consist of two malleus (hammer) bones, two incus (anvil) bones, and two stapes (stirrups), one on each side.",
+  "claim": "The auditory ossicles consist of two stapes",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "auditory ossicle",
+    "curie": "UBERON:0001686",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "stapes",
+    "curie": "UBERON:0001687",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "has_part count",
+  "context": {},
+  "lean": "Claim.hasPart auditoryOssicles (2 stapes)  -- missing: quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "UBERON:0004288",
+   "relation": null,
+   "object": "UBERON:0001687",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 2,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "the body",
+     "from": null,
+     "to": "UBERON:0004288",
+     "why": "whole is the skeleton of one body; every auditory ossicle has two stapes would be false"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45538-65",
+  "module": "m45538",
+  "source": "It consists of 26 bones: the 24 vertebrae, the sacrum, and the coccyx.",
+  "claim": "The vertebral column consists of 26 bones",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "vertebral column",
+    "curie": "UBERON:0001130",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "bone",
+    "curie": "UBERON:0001474",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "has_part count",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "Claim.hasPart vertebralColumn (26 bones)  -- missing: quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "UBERON:0001130",
+   "relation": null,
+   "object": "UBERON:0001474",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 26,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45538-66",
+  "module": "m45538",
+  "source": "It consists of 26 bones: the 24 vertebrae, the sacrum, and the coccyx.",
+  "claim": "The vertebral column has 24 vertebrae",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "vertebral column",
+    "curie": "UBERON:0001130",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "vertebra",
+    "curie": "UBERON:0002412",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "has_part count",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "Claim.hasPart vertebralColumn (24 vertebra)  -- missing: quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "UBERON:0001130",
+   "relation": null,
+   "object": "UBERON:0002412",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 24,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45538-75",
+  "module": "m45538",
+  "source": "The vertebral column is approximately 70 cm (28 in) in adults and is curved, which can be seen from a side view.",
+  "claim": "The adult vertebral column is approximately 70 cm long",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "vertebral column",
+    "curie": "UBERON:0001130",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "has_length",
+  "context": {
+   "taxon": "NCBITaxon:9606",
+   "stage": "adult"
+  },
+  "lean": "-- length ≈ 70 cm (missing: quantity)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "measure",
+   "quant": null,
+   "subject": "UBERON:0001130",
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": 70,
+   "hi": 70,
+   "unit": "cm",
+   "quality": "PATO:0000122",
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": "UBERON:0000113",
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "length",
+     "from": null,
+     "to": "PATO:0000122",
+     "why": "length"
+    },
+    {
+     "text": "adults",
+     "from": null,
+     "to": "UBERON:0000113",
+     "why": "post-juvenile adult stage"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45538-93",
+  "module": "m45538",
+  "source": "The ribs are 12 pairs of long curved bones that attach to the thoracic vertebrae and curve toward the front of the body, forming the ribcage.",
+  "claim": "There are 12 pairs of ribs",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "rib",
+    "curie": "UBERON:0002228",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "count",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "-- count 12 pairs (missing: quantity)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "UBERON:0003252",
+   "relation": null,
+   "object": "UBERON:0002228",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 24,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "ribcage",
+     "from": null,
+     "to": "UBERON:0003252",
+     "why": "thoracic rib cage is the whole the 12 pairs belong to"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45538-112",
+  "module": "m45538",
+  "source": "The humerus is the largest and longest bone of the upper limb.",
+  "claim": "The humerus is the largest and longest bone of the upper limb",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "comparison",
+  "entities": [
+   {
+    "text": "humerus",
+    "curie": "UBERON:0000976",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "upper limb",
+    "curie": "UBERON:0002102",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "bone",
+    "curie": "UBERON:0001474",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "superlative",
+  "context": {},
+  "lean": "-- comparison (largest/longest)  missing: comparison",
+  "bin_m1": "missing_construct",
+  "lean_m1": "comparison",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45538-116",
+  "module": "m45538",
+  "source": "The forearm extends from the elbow to the wrist and consists of two bones.",
+  "claim": "The forearm consists of two bones",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "forearm",
+    "curie": "UBERON:0002386",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "bone",
+    "curie": "UBERON:0001474",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "has_part count",
+  "context": {},
+  "lean": "Claim.hasPart forearm (2 bones)  -- missing: quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "UBERON:0002386",
+   "relation": null,
+   "object": "UBERON:0001474",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 2,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45538-126",
+  "module": "m45538",
+  "source": "The pelvic girdle is mainly composed of two large hip bones.",
+  "claim": "The pelvic girdle is mainly composed of two large hip bones",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "pelvic girdle",
+    "curie": "UBERON:0007832",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "hip bone",
+    "curie": "UBERON:0001272",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "has_part count",
+  "context": {},
+  "lean": "Claim.hasPart pelvicGirdle (2 hipBone)  -- missing: quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "UBERON:0007832",
+   "relation": null,
+   "object": "UBERON:0001272",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 2,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45538-130",
+  "module": "m45538",
+  "source": "The bones of the lower limbs are thicker and stronger than the bones of the upper limbs to support the entire weight of the body and the forces from locomotion.",
+  "claim": "Lower limb bones are thicker and stronger than upper limb bones",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "comparison",
+  "entities": [
+   {
+    "text": "lower limb",
+    "curie": "UBERON:0002103",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "upper limb",
+    "curie": "UBERON:0002102",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "bone",
+    "curie": "UBERON:0001474",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "greater_than",
+  "context": {},
+  "lean": "-- comparison  missing: comparison",
+  "bin_m1": "missing_construct",
+  "lean_m1": "comparison",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "compound_sentence",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45538-133",
+  "module": "m45538",
+  "source": "The femur, or thighbone, is the longest, heaviest, and strongest bone in the body.",
+  "claim": "The femur is the longest, heaviest and strongest bone in the body",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "comparison",
+  "entities": [
+   {
+    "text": "femur",
+    "curie": "UBERON:0000981",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "bone",
+    "curie": "UBERON:0001474",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "superlative",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "-- comparison (superlative)  missing: comparison",
+  "bin_m1": "missing_construct",
+  "lean_m1": "comparison",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45538-149",
+  "module": "m45538",
+  "source": "Cartilaginous joints allow for very little movement.",
+  "claim": "Cartilaginous joints allow very little movement",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "cartilaginous joint",
+    "curie": "UBERON:0002213",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "degree",
+  "context": {},
+  "lean": "-- degree of movement (little)  missing: quantity / degree",
+  "bin_m1": "missing_construct",
+  "lean_m1": "ungrounded argument",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45538-157",
+  "module": "m45538",
+  "source": "Synovial joints are capable of the greatest movement of the joint types.",
+  "claim": "Synovial joints are capable of the greatest movement of the joint types",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "comparison",
+  "entities": [
+   {
+    "text": "synovial joint",
+    "curie": "UBERON:0002217",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "superlative",
+  "context": {},
+  "lean": "-- comparison  missing: comparison",
+  "bin_m1": "missing_construct",
+  "lean_m1": "comparison",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45538-185",
+  "module": "m45538",
+  "source": "RA is more common people with declining estrogen levels, in particular post-menopausal people, and the age of onset is usually between 40 to 50 years.",
+  "claim": "The age of onset of rheumatoid arthritis is usually between 40 and 50 years",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "rheumatoid arthritis",
+    "curie": "MONDO:0008383",
+    "ontology": "MONDO",
+    "verified": true
+   }
+  ],
+  "relation": "onset_age",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "-- onset 40-50 y (missing: quantity)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "ungrounded argument",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "measure",
+   "quant": "most",
+   "subject": "MONDO:0008383",
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": 40,
+   "hi": 50,
+   "unit": "years",
+   "quality": "HP:0003674",
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "age of onset",
+     "from": null,
+     "to": "HP:0003674",
+     "why": "HPO 'Onset' is the age at which a disease starts"
+    }
+   ],
+   "confidence": "low"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45538-197",
+  "module": "m45538",
+  "source": "If joint damage is more extensive, medications can be used to relieve pain and decrease inflammation.",
+  "claim": "Medications relieve pain in rheumatoid arthritis",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "pain",
+    "curie": "HP:0012531",
+    "ontology": "HP",
+    "verified": true
+   },
+   {
+    "text": "rheumatoid arthritis",
+    "curie": "MONDO:0008383",
+    "ontology": "MONDO",
+    "verified": true
+   }
+  ],
+  "relation": "decreases",
+  "context": {
+   "condition": "MONDO:0008383"
+  },
+  "lean": "Claim.inContext {disease := rheumatoidArthritis} (Claim.effect analgesic .neg (.phenotype pain))",
+  "m2": {
+   "ctor": "effect",
+   "subject": "CHEBI:23888",
+   "relation": null,
+   "object": "HP:0012531",
+   "sign": "neg",
+   "target": "phenotype",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": "rheumatoid arthritis"
+   },
+   "blocker": "context_required",
+   "curie_changes": [
+    {
+     "text": "drug",
+     "from": null,
+     "to": "CHEBI:23888",
+     "why": "not grounded in record; grounded via OLS4"
+    }
+   ],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "CHEBI:23888",
+   "relation": null,
+   "object": "HP:0012531",
+   "sign": "neg",
+   "target": "phenotype",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": {
+     "kind": "organism",
+     "curie": "MONDO:0008383",
+     "text": "rheumatoid arthritis"
+    }
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "medications",
+     "from": null,
+     "to": "CHEBI:23888",
+     "why": "drug"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45538-198",
+  "module": "m45538",
+  "source": "If joint damage is more extensive, medications can be used to relieve pain and decrease inflammation.",
+  "claim": "Medications decrease inflammation in rheumatoid arthritis",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "inflammatory response",
+    "curie": "GO:0006954",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "rheumatoid arthritis",
+    "curie": "MONDO:0008383",
+    "ontology": "MONDO",
+    "verified": true
+   }
+  ],
+  "relation": "decreases",
+  "context": {
+   "condition": "MONDO:0008383"
+  },
+  "lean": "Claim.inContext {disease := rheumatoidArthritis} (Claim.effect antiInflammatoryDrug .neg (.process inflammatoryResponse))",
+  "m2": {
+   "ctor": "effect",
+   "subject": "CHEBI:23888",
+   "relation": null,
+   "object": "GO:0006954",
+   "sign": "neg",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": "rheumatoid arthritis"
+   },
+   "blocker": "context_required",
+   "curie_changes": [
+    {
+     "text": "drug",
+     "from": null,
+     "to": "CHEBI:23888",
+     "why": "not grounded in record; grounded via OLS4"
+    }
+   ],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "CHEBI:23888",
+   "relation": null,
+   "object": "GO:0006954",
+   "sign": "neg",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": {
+     "kind": "organism",
+     "curie": "MONDO:0008383",
+     "text": "rheumatoid arthritis"
+    }
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "medications",
+     "from": null,
+     "to": "CHEBI:23888",
+     "why": "drug"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45538-213",
+  "module": "m45538",
+  "source": "The body contains three types of muscle tissue: skeletal muscle, cardiac muscle, and smooth muscle ().",
+  "claim": "The body contains three types of muscle tissue",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "muscle organ",
+    "curie": "UBERON:0001630",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "count",
+  "context": {},
+  "lean": "-- count 3 (missing: quantity)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "cardinality",
+   "quant": null,
+   "subject": "UBERON:0002385",
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 3,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "muscle tissue",
+     "from": "UBERON:0001630",
+     "to": "UBERON:0002385",
+     "why": "the claim counts kinds of muscle tissue; the entity list had muscle organ"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45538-222",
+  "module": "m45538",
+  "source": "The cells of skeletal muscle are long and tapered and have multiple nuclei on the periphery of each cell.",
+  "claim": "Skeletal muscle cells have multiple nuclei at the cell periphery",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "has_part",
+  "entities": [
+   {
+    "text": "skeletal muscle fiber",
+    "curie": "CL:0008002",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "nucleus",
+    "curie": "GO:0005634",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_part",
+  "context": {},
+  "lean": "Claim.hasPart skeletalMuscleFiber (many nucleus, peripheral)  -- missing: has_part + quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "entity mismatch",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "CL:0008002",
+   "relation": "has part",
+   "object": "GO:0005634",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "atLeast",
+   "quant": null,
+   "subject": "CL:0008002",
+   "relation": null,
+   "object": "GO:0005634",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 2,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45538-228",
+  "module": "m45538",
+  "source": "Smooth muscle cells have a single nucleus.",
+  "claim": "Smooth muscle cells have a single nucleus",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "smooth muscle cell",
+    "curie": "CL:0000192",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "nucleus",
+    "curie": "GO:0005634",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_part count",
+  "context": {},
+  "lean": "Claim.hasPart smoothMuscleCell (1 nucleus)  -- missing: quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "CL:0000192",
+   "relation": "has part",
+   "object": "GO:0005634",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "CL:0000192",
+   "relation": null,
+   "object": "GO:0005634",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 1,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45538-236",
+  "module": "m45538",
+  "source": "The cells of cardiac muscle tissue are connected to each other through intercalated disks and usually have just one nucleus per cell.",
+  "claim": "Cardiac muscle cells usually have one nucleus per cell",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "cardiac muscle cell",
+    "curie": "CL:0000746",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "nucleus",
+    "curie": "GO:0005634",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_part count",
+  "context": {},
+  "lean": "Claim.hasPart cardiomyocyte (1 nucleus)  -- missing: quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "CL:0000746",
+   "relation": "has part",
+   "object": "GO:0005634",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": "most",
+   "subject": "CL:0000746",
+   "relation": null,
+   "object": "GO:0005634",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 1,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45538-265",
+  "module": "m45538",
+  "source": "The human skeleton is an endoskeleton that is composed of the axial and appendicular skeleton.",
+  "claim": "The human skeleton is an endoskeleton",
+  "kind": "definitional",
+  "bin": "missing_construct",
+  "missing_construct": "is_a (subsumption)",
+  "entities": [
+   {
+    "text": "skeleton",
+    "curie": "UBERON:0004288",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "endoskeleton",
+    "curie": "UBERON:0010362",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "Homo sapiens",
+    "curie": "NCBITaxon:9606",
+    "ontology": "NCBITaxon",
+    "verified": true
+   }
+  ],
+  "relation": "is_a",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "humanSkeleton is_a endoskeleton  -- ontology layer",
+  "bin_m1": "missing_construct",
+  "lean_m1": "multi-argument (3+ entities)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "UBERON:0004288",
+   "relation": "is_a",
+   "object": "UBERON:0010362",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "UBERON:0004288",
+   "relation": "is_a",
+   "object": "UBERON:0010362",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45538-268",
+  "module": "m45538",
+  "source": "The skull consists of eight cranial bones and 14 facial bones.",
+  "claim": "The skull consists of eight cranial bones",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "skull",
+    "curie": "UBERON:0003129",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "cranial bone",
+    "curie": "UBERON:0004766",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "has_part count",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "Claim.hasPart skull (8 cranialBone)  -- missing: quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "UBERON:0003129",
+   "relation": null,
+   "object": "UBERON:0004766",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 8,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45538-269",
+  "module": "m45538",
+  "source": "The skull consists of eight cranial bones and 14 facial bones.",
+  "claim": "The skull consists of 14 facial bones",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "skull",
+    "curie": "UBERON:0003129",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "facial bone",
+    "curie": "UBERON:0003462",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "has_part count",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "Claim.hasPart skull (14 facialBone)  -- missing: quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "UBERON:0003129",
+   "relation": null,
+   "object": "UBERON:0003462",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 14,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45538-270",
+  "module": "m45538",
+  "source": "Six bones make up the ossicles of the middle ear, while the hyoid bone is located in the neck under the mandible.",
+  "claim": "Six bones make up the ossicles of the middle ear",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "auditory ossicle",
+    "curie": "UBERON:0001686",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "middle ear",
+    "curie": "UBERON:0001756",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "has_part count",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "Claim.hasPart middleEarOssicles (6 bones)  -- missing: quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "UBERON:0004288",
+   "relation": null,
+   "object": "UBERON:0001686",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 6,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "the body",
+     "from": null,
+     "to": "UBERON:0004288",
+     "why": "six ossicles are in both ears, so the whole is the skeleton of one body"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45538-272",
+  "module": "m45538",
+  "source": "The vertebral column contains 26 bones and surrounds and protects the spinal cord.",
+  "claim": "The vertebral column contains 26 bones",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "vertebral column",
+    "curie": "UBERON:0001130",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "bone",
+    "curie": "UBERON:0001474",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "has_part count",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "Claim.hasPart vertebralColumn (26 bones)  -- missing: quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "UBERON:0001130",
+   "relation": null,
+   "object": "UBERON:0001474",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 26,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45538-278",
+  "module": "m45538",
+  "source": "The upper limb contains 30 bones in the arm, the forearm, and the hand.",
+  "claim": "The upper limb contains 30 bones",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "upper limb",
+    "curie": "UBERON:0002102",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "bone",
+    "curie": "UBERON:0001474",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "has_part count",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "Claim.hasPart upperLimb (30 bones)  -- missing: quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "UBERON:0002102",
+   "relation": null,
+   "object": "UBERON:0001474",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 30,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45538-288",
+  "module": "m45538",
+  "source": "The body contains three types of muscle tissue: skeletal muscle, cardiac muscle, and smooth muscle.",
+  "claim": "The body contains three types of muscle tissue",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "muscle organ",
+    "curie": "UBERON:0001630",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "count",
+  "context": {},
+  "lean": "-- count 3 (missing: quantity)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "cardinality",
+   "quant": null,
+   "subject": "UBERON:0002385",
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 3,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "muscle tissue",
+     "from": "UBERON:0001630",
+     "to": "UBERON:0002385",
+     "why": "the claim counts kinds of muscle tissue; the entity list had muscle organ"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45539-28",
+  "module": "m45539",
+  "source": "While there is great diversity among different vertebrate nervous systems, they all share a basic structure: a CNS that contains a brain and spinal cord and a PNS made up of peripheral sensory and motor nerves.",
+  "claim": "The vertebrate PNS is made up of peripheral sensory and motor nerves",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "has_part",
+  "entities": [
+   {
+    "text": "Vertebrata",
+    "curie": "NCBITaxon:7742",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "peripheral nervous system",
+    "curie": "UBERON:0000010",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "nerve",
+    "curie": "UBERON:0001021",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "has_part",
+  "context": {
+   "taxon": "NCBITaxon:7742"
+  },
+  "lean": "Claim.inContext {taxa := [vertebrata]} (Claim.hasPart PNS sensoryNerve; motorNerve)  -- missing: has_part",
+  "bin_m1": "missing_construct",
+  "lean_m1": "multi-argument (3+ entities)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "UBERON:0000010",
+   "relation": "has part",
+   "object": "UBERON:0001021",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:7742",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "UBERON:0000010",
+   "relation": "has part",
+   "object": "UBERON:0001021",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:7742",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45539-36",
+  "module": "m45539",
+  "source": "The nervous system of the common laboratory fly, Drosophila melanogaster, contains around 100,000 neurons, the same number as a lobster.",
+  "claim": "The Drosophila melanogaster nervous system contains around 100,000 neurons",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "Drosophila melanogaster",
+    "curie": "NCBITaxon:7227",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "nervous system",
+    "curie": "UBERON:0001016",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "neuron",
+    "curie": "CL:0000540",
+    "ontology": "CL",
+    "verified": true
+   }
+  ],
+  "relation": "has_part count",
+  "context": {
+   "taxon": "NCBITaxon:7227"
+  },
+  "lean": "-- count ≈1e5 neurons (missing: quantity)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "measure",
+   "quant": null,
+   "subject": "UBERON:0001016",
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": 100000,
+   "hi": 100000,
+   "unit": "neurons",
+   "quality": "PATO:0001555",
+   "context": {
+    "taxon": "NCBITaxon:7227",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "number of neurons",
+     "from": null,
+     "to": "PATO:0001555",
+     "why": "'has number of' quality; no PATO term for a part count, and count has no range or approximate form"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45539-37",
+  "module": "m45539",
+  "source": "The nervous system of the common laboratory fly, Drosophila melanogaster, contains around 100,000 neurons, the same number as a lobster.",
+  "claim": "A lobster nervous system contains around 100,000 neurons",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "Homarus",
+    "curie": "NCBITaxon:6705",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "nervous system",
+    "curie": "UBERON:0001016",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "neuron",
+    "curie": "CL:0000540",
+    "ontology": "CL",
+    "verified": true
+   }
+  ],
+  "relation": "has_part count",
+  "context": {
+   "taxon": "NCBITaxon:6705"
+  },
+  "lean": "-- count ≈1e5 neurons (missing: quantity)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "measure",
+   "quant": null,
+   "subject": "UBERON:0001016",
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": 100000,
+   "hi": 100000,
+   "unit": "neurons",
+   "quality": "PATO:0001555",
+   "context": {
+    "taxon": "NCBITaxon:6705",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "number of neurons",
+     "from": null,
+     "to": "PATO:0001555",
+     "why": "'has number of' quality; no PATO term for a part count, and count has no range or approximate form"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45539-38",
+  "module": "m45539",
+  "source": "This number compares to 75 million in the mouse and 300 million in the octopus.",
+  "claim": "The mouse nervous system contains about 75 million neurons",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "Mus musculus",
+    "curie": "NCBITaxon:10090",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "neuron",
+    "curie": "CL:0000540",
+    "ontology": "CL",
+    "verified": true
+   }
+  ],
+  "relation": "has_part count",
+  "context": {
+   "taxon": "NCBITaxon:10090"
+  },
+  "lean": "-- count 7.5e7 (missing: quantity)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "measure",
+   "quant": null,
+   "subject": "UBERON:0001016",
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": 75000000,
+   "hi": 75000000,
+   "unit": "neurons",
+   "quality": "PATO:0001555",
+   "context": {
+    "taxon": "NCBITaxon:10090",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "nervous system",
+     "from": null,
+     "to": "UBERON:0001016",
+     "why": "the whole is the nervous system; the entity list had no anatomy"
+    },
+    {
+     "text": "number of neurons",
+     "from": null,
+     "to": "PATO:0001555",
+     "why": "'has number of' quality; no PATO term for a part count, and count has no range or approximate form"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45539-39",
+  "module": "m45539",
+  "source": "This number compares to 75 million in the mouse and 300 million in the octopus.",
+  "claim": "The octopus nervous system contains about 300 million neurons",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "Octopus",
+    "curie": "NCBITaxon:6643",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "neuron",
+    "curie": "CL:0000540",
+    "ontology": "CL",
+    "verified": true
+   }
+  ],
+  "relation": "has_part count",
+  "context": {
+   "taxon": "NCBITaxon:6643"
+  },
+  "lean": "-- count 3e8 (missing: quantity)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "measure",
+   "quant": null,
+   "subject": "UBERON:0001016",
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": 300000000,
+   "hi": 300000000,
+   "unit": "neurons",
+   "quality": "PATO:0001555",
+   "context": {
+    "taxon": "NCBITaxon:6643",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "nervous system",
+     "from": null,
+     "to": "UBERON:0001016",
+     "why": "the whole is the nervous system; the entity list had no anatomy"
+    },
+    {
+     "text": "number of neurons",
+     "from": null,
+     "to": "PATO:0001555",
+     "why": "'has number of' quality; no PATO term for a part count, and count has no range or approximate form"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45539-40",
+  "module": "m45539",
+  "source": "A human brain contains around 86 billion neurons.",
+  "claim": "A human brain contains around 86 billion neurons",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "Homo sapiens",
+    "curie": "NCBITaxon:9606",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "brain",
+    "curie": "UBERON:0000955",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "neuron",
+    "curie": "CL:0000540",
+    "ontology": "CL",
+    "verified": true
+   }
+  ],
+  "relation": "has_part count",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "-- count 8.6e10 (missing: quantity)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "measure",
+   "quant": null,
+   "subject": "UBERON:0000955",
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": 86000000000,
+   "hi": 86000000000,
+   "unit": "neurons",
+   "quality": "PATO:0001555",
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "number of neurons",
+     "from": null,
+     "to": "PATO:0001555",
+     "why": "'has number of' quality; no PATO term for a part count, and count has no range or approximate form"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45539-53",
+  "module": "m45539",
+  "source": "Although some neurons do not have any dendrites, most have one or many dendrites.",
+  "claim": "Most neurons have one or many dendrites",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "neuron",
+    "curie": "CL:0000540",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "dendrite",
+    "curie": "GO:0030425",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_part count",
+  "context": {},
+  "lean": "Claim.hasPart neuron (≥1 dendrite), mostly  -- missing: quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "CL:0000540",
+   "relation": "has part",
+   "object": "GO:0030425",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "atLeast",
+   "quant": "most",
+   "subject": "CL:0000540",
+   "relation": null,
+   "object": "GO:0030425",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 1,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45539-62",
+  "module": "m45539",
+  "source": "A neuron at rest is negatively charged: the inside of a cell is approximately 70 millivolts more negative than the outside (–70 mV).",
+  "claim": "A neuron at rest has an inside approximately 70 mV more negative than the outside (-70 mV)",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "neuron",
+    "curie": "CL:0000540",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "resting membrane potential",
+    "curie": "GO:0060075",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_value",
+  "context": {
+   "cellType": "CL:0000540"
+  },
+  "lean": "-- value: -70 mV (missing: quantity)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "measure",
+   "quant": null,
+   "subject": "CL:0000540",
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": -70,
+   "hi": -70,
+   "unit": "mV",
+   "quality": "PATO:0001462",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": "GO:0060075",
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "membrane potential",
+     "from": null,
+     "to": "PATO:0001462",
+     "why": "membrane potential"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45539-68",
+  "module": "m45539",
+  "source": "Sodium-potassium pumps in the membrane produce the different ion concentrations inside and outside of the cell by bringing in two K+ ions and removing three Na+ ions.",
+  "claim": "Each cycle of the sodium-potassium pump brings in two K+ ions and removes three Na+ ions",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "sodium:potassium-exchanging ATPase activity",
+    "curie": "GO:0005391",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "potassium ion",
+    "curie": "CHEBI:29103",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "sodium ion",
+    "curie": "CHEBI:29101",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "stoichiometry",
+  "context": {},
+  "lean": "-- stoichiometry 2 K+ in : 3 Na+ out (missing: quantity)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "compound_sentence",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45539-69",
+  "module": "m45539",
+  "source": "The actions of this pump are costly: one molecule of ATP is used up for each turn.",
+  "claim": "One molecule of ATP is used per turn of the sodium-potassium pump",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "sodium:potassium-exchanging ATPase activity",
+    "curie": "GO:0005391",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "ATP",
+    "curie": "CHEBI:15422",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "stoichiometry",
+  "context": {},
+  "lean": "-- 1 ATP per cycle (missing: quantity)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "unsupported_ontology",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45539-70",
+  "module": "m45539",
+  "source": "Up to 50 percent of a neuron’s ATP is used in maintaining its membrane resting potential.",
+  "claim": "Up to 50 percent of a neuron's ATP is used to maintain the resting membrane potential",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "neuron",
+    "curie": "CL:0000540",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "ATP",
+    "curie": "CHEBI:15422",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "resting membrane potential",
+    "curie": "GO:0060075",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "proportion",
+  "context": {
+   "cellType": "CL:0000540"
+  },
+  "lean": "-- ≤50% ATP (missing: quantity)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": "CL:0000540",
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "proportion",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45539-71",
+  "module": "m45539",
+  "source": "Potassium ions (K+), which are higher inside the cell, move fairly freely out of the neuron through potassium channels; this loss of positive charge produces a net negative charge inside the cell.",
+  "claim": "Potassium ion concentration is higher inside the neuron than outside",
+  "kind": "process_description",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "potassium ion",
+    "curie": "CHEBI:29103",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "neuron",
+    "curie": "CL:0000540",
+    "ontology": "CL",
+    "verified": true
+   }
+  ],
+  "relation": "gradient",
+  "context": {
+   "cellType": "CL:0000540"
+  },
+  "lean": "Target.gradient potassium plasmaMembrane (inside > outside)  -- gradient as a fact, not an effect",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": "CL:0000540",
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45539-74",
+  "module": "m45539",
+  "source": "Sodium ions (Na+), which are low inside, have a driving force to enter but move less freely.",
+  "claim": "Sodium ion concentration is low inside the neuron",
+  "kind": "process_description",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "sodium ion",
+    "curie": "CHEBI:29101",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "neuron",
+    "curie": "CL:0000540",
+    "ontology": "CL",
+    "verified": true
+   }
+  ],
+  "relation": "gradient",
+  "context": {
+   "cellType": "CL:0000540"
+  },
+  "lean": "Target.gradient sodium plasmaMembrane (outside > inside)",
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": "CL:0000540",
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45539-87",
+  "module": "m45539",
+  "source": "If it is strong enough (that is, if the threshold of excitation, a depolarization to around –60mV is reached), then depolarization creates a positive feedback loop: as more Na+ ions enter the cell, the axon becomes further depolarized, opening even more sodium channels at further distances from the cell body.",
+  "claim": "The threshold of excitation is a depolarization to around -60 mV",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "membrane depolarization",
+    "curie": "GO:0051899",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "action potential",
+    "curie": "GO:0001508",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_value",
+  "context": {
+   "cellType": "CL:0000540"
+  },
+  "lean": "-- threshold ≈ -60 mV (missing: quantity)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "measure",
+   "quant": null,
+   "subject": "CL:0000540",
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": -60,
+   "hi": -60,
+   "unit": "mV",
+   "quality": "PATO:0001462",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": "GO:0001508",
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "membrane potential",
+     "from": null,
+     "to": "PATO:0001462",
+     "why": "membrane potential"
+    },
+    {
+     "text": "neuron",
+     "from": null,
+     "to": "CL:0000540",
+     "why": "the cell whose threshold is measured"
+    }
+   ],
+   "confidence": "low"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45539-94",
+  "module": "m45539",
+  "source": "As sodium ions rush into the cell, depolarization actually reverses the charge across the membrane form -70mv to +30mV.",
+  "claim": "During depolarization, sodium influx reverses the membrane potential from -70 mV to +30 mV",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "sodium ion",
+    "curie": "CHEBI:29101",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "membrane depolarization",
+    "curie": "GO:0051899",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_value",
+  "context": {
+   "cellType": "CL:0000540"
+  },
+  "lean": "-- -70 → +30 mV (missing: quantity)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "measure",
+   "quant": null,
+   "subject": "CL:0000540",
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": -70,
+   "hi": 30,
+   "unit": "mV",
+   "quality": "PATO:0001462",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": "GO:0051899",
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "membrane potential",
+     "from": null,
+     "to": "PATO:0001462",
+     "why": "membrane potential"
+    },
+    {
+     "text": "neuron",
+     "from": null,
+     "to": "CL:0000540",
+     "why": "the cell whose membrane potential changes"
+    }
+   ],
+   "confidence": "low"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45539-108",
+  "module": "m45539",
+  "source": "Neurons usually have one or two axons, but some neurons do not contain any axons.",
+  "claim": "Neurons usually have one or two axons",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "neuron",
+    "curie": "CL:0000540",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "axon",
+    "curie": "GO:0030424",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_part count",
+  "context": {},
+  "lean": "Claim.hasPart neuron (1-2 axon)  -- missing: quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "measure",
+   "quant": "most",
+   "subject": "CL:0000540",
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": 1,
+   "hi": 2,
+   "unit": "axons",
+   "quality": "PATO:0001555",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "number of axons",
+     "from": null,
+     "to": "PATO:0001555",
+     "why": "'has number of' quality; no PATO term for a part count, and count has no range or approximate form"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45539-112",
+  "module": "m45539",
+  "source": "This insulation is important, as the axon from a human motor neuron can be as long as a meter (3.2 ft)—from the base of the spine to the toes.",
+  "claim": "The axon of a human motor neuron can be as long as a meter",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "Homo sapiens",
+    "curie": "NCBITaxon:9606",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "motor neuron",
+    "curie": "CL:0000100",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "axon",
+    "curie": "GO:0030424",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_length",
+  "context": {
+   "taxon": "NCBITaxon:9606",
+   "cellType": "CL:0000100"
+  },
+  "lean": "-- length ≤ 1 m (missing: quantity)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "measure",
+   "quant": "some",
+   "subject": "GO:0030424",
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": 1,
+   "hi": 1,
+   "unit": "m",
+   "quality": "PATO:0000122",
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": "CL:0000100",
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "length",
+     "from": null,
+     "to": "PATO:0000122",
+     "why": "length"
+    }
+   ],
+   "confidence": "low"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45539-120",
+  "module": "m45539",
+  "source": "For example, dendrites from a Purkinje cell in the cerebellum are thought to receive contact from as many as 200,000 other neurons.",
+  "claim": "Dendrites of a cerebellar Purkinje cell receive contact from as many as 200,000 other neurons",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "Purkinje cell",
+    "curie": "CL:0000121",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "cerebellum",
+    "curie": "UBERON:0002037",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "dendrite",
+    "curie": "GO:0030425",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "neuron",
+    "curie": "CL:0000540",
+    "ontology": "CL",
+    "verified": true
+   }
+  ],
+  "relation": "count",
+  "context": {
+   "cellType": "CL:0000121",
+   "anatomy": "UBERON:0002037"
+  },
+  "lean": "-- up to 2e5 inputs (missing: quantity)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0002037",
+    "cellType": "CL:0000121",
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45539-124",
+  "module": "m45539",
+  "source": "Neurogenesis was first discovered in songbirds that produce new neurons while learning songs.",
+  "claim": "Songbirds produce new neurons while learning songs",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "Passeriformes",
+    "curie": "NCBITaxon:9126",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "neurogenesis",
+    "curie": "GO:0022008",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "learning",
+    "curie": "GO:0007612",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "increases",
+  "context": {
+   "taxon": "NCBITaxon:9126"
+  },
+  "lean": "Claim.inContext {taxa := [passeriformes]} (Claim.effect songLearning .pos (.process neurogenesis))",
+  "m2": {
+   "ctor": "effect",
+   "subject": "GO:0007612",
+   "relation": null,
+   "object": "GO:0022008",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:9126",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "low"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "GO:0007612",
+   "relation": null,
+   "object": "GO:0022008",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9126",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45539-126",
+  "module": "m45539",
+  "source": "For mammals, new neurons also play an important role in learning: about 1,000 new neurons develop in the hippocampus (a brain structure involved in learning and memory) each day.",
+  "claim": "In mammals, new neurons play an important role in learning",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "Mammalia",
+    "curie": "NCBITaxon:40674",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "neuron",
+    "curie": "CL:0000540",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "learning",
+    "curie": "GO:0007612",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "increases",
+  "context": {
+   "taxon": "NCBITaxon:40674"
+  },
+  "lean": "Claim.inContext {taxa := [mammalia]} (Claim.effect newNeuron .pos (.process learning))",
+  "m2": {
+   "ctor": "effect",
+   "subject": "CL:0000540",
+   "relation": null,
+   "object": "GO:0007612",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:40674",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "CL:0000540",
+   "relation": null,
+   "object": "GO:0007612",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:40674",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45539-127",
+  "module": "m45539",
+  "source": "For mammals, new neurons also play an important role in learning: about 1,000 new neurons develop in the hippocampus (a brain structure involved in learning and memory) each day.",
+  "claim": "In mammals, about 1,000 new neurons develop in the hippocampus each day",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "Mammalia",
+    "curie": "NCBITaxon:40674",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "neuron",
+    "curie": "CL:0000540",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "hippocampus",
+    "curie": "UBERON:0002421",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "neurogenesis",
+    "curie": "GO:0022008",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "rate",
+  "context": {
+   "taxon": "NCBITaxon:40674",
+   "anatomy": "UBERON:0002421"
+  },
+  "lean": "-- rate ≈1000/day (missing: quantity)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "multi-argument (3+ entities)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "measure",
+   "quant": null,
+   "subject": "GO:0022008",
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": 1000,
+   "hi": 1000,
+   "unit": "neurons/day",
+   "quality": "PATO:0000161",
+   "context": {
+    "taxon": "NCBITaxon:40674",
+    "anatomy": "UBERON:0002421",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "new neurons ... each day",
+     "from": null,
+     "to": "PATO:0000161",
+     "why": "rate; no unit-rate form in count"
+    }
+   ],
+   "confidence": "low"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45539-129",
+  "module": "m45539",
+  "source": "While most of the new neurons will die, researchers found that an increase in the number of surviving new neurons in the hippocampus correlated with how well rats learned a new task.",
+  "claim": "Most new hippocampal neurons die",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "neuron",
+    "curie": "CL:0000540",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "hippocampus",
+    "curie": "UBERON:0002421",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "proportion",
+  "context": {
+   "anatomy": "UBERON:0002421"
+  },
+  "lean": "-- proportion: most (missing: quantity)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": "most",
+   "subject": "CL:0000540",
+   "relation": "participates in",
+   "object": "GO:0008219",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0002421",
+    "cellType": null,
+    "component": null,
+    "stage": "GO:0022008",
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "die",
+     "from": null,
+     "to": "GO:0008219",
+     "why": "cell death; GO:0070997 neuron death is obsolete"
+    }
+   ],
+   "confidence": "low"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45539-132",
+  "module": "m45539",
+  "source": "Interestingly, both exercise and some antidepressant medications also promote neurogenesis in the hippocampus.",
+  "claim": "Some antidepressant medications promote neurogenesis in the hippocampus",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "antidepressant",
+    "curie": "CHEBI:35469",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "neurogenesis",
+    "curie": "GO:0022008",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "hippocampus",
+    "curie": "UBERON:0002421",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "increases",
+  "context": {
+   "anatomy": "UBERON:0002421"
+  },
+  "lean": "Claim.inContext {anatomy := hippocampus} (Claim.effect antidepressant .pos (.process neurogenesis))",
+  "m2": {
+   "ctor": "effect",
+   "subject": "CHEBI:35469",
+   "relation": null,
+   "object": "GO:0022008",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0002421",
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": "some",
+   "subject": "CHEBI:35469",
+   "relation": null,
+   "object": "GO:0022008",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0002421",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45539-133",
+  "module": "m45539",
+  "source": "Stress has the opposite effect.",
+  "claim": "Stress reduces neurogenesis in the hippocampus",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "response to stress",
+    "curie": "GO:0006950",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "neurogenesis",
+    "curie": "GO:0022008",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "hippocampus",
+    "curie": "UBERON:0002421",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "decreases",
+  "context": {
+   "anatomy": "UBERON:0002421"
+  },
+  "lean": "Claim.inContext {anatomy := hippocampus} (Claim.effect stress .neg (.process neurogenesis))",
+  "m2": {
+   "ctor": "effect",
+   "subject": "GO:0006950",
+   "relation": null,
+   "object": "GO:0022008",
+   "sign": "neg",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0002421",
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "low"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "GO:0006950",
+   "relation": null,
+   "object": "GO:0022008",
+   "sign": "neg",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0002421",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45539-142",
+  "module": "m45539",
+  "source": "While glial cells are often thought of as the supporting cast of the nervous system, the number of glial cells in the brain actually outnumbers the number of neurons by a factor of 10.",
+  "claim": "Glial cells in the brain outnumber neurons by a factor of 10",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "glial cell",
+    "curie": "CL:0000125",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "neuron",
+    "curie": "CL:0000540",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "brain",
+    "curie": "UBERON:0000955",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "ratio",
+  "context": {
+   "anatomy": "UBERON:0000955"
+  },
+  "lean": "-- ratio 10:1 (missing: quantity)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "multi-argument (3+ entities)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000955",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "proportion",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45539-163",
+  "module": "m45539",
+  "source": "The central nervous system (CNS) is made up of the brain and spinal cord and is covered with three layers of protective coverings called meninges (“meninges” is derived from the Greek and means “membranes”) ().",
+  "claim": "The CNS is covered with three layers of protective meninges",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "covered_by",
+  "entities": [
+   {
+    "text": "central nervous system",
+    "curie": "UBERON:0001017",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "meninges",
+    "curie": "UBERON:0002360",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "covered_by",
+  "context": {},
+  "lean": "Claim.coveredBy CNS meninges (3 layers)  -- missing: structural relation",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "UBERON:0001017",
+   "relation": "surrounded by",
+   "object": "UBERON:0002360",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "UBERON:0001017",
+   "relation": "surrounded by",
+   "object": "UBERON:0002360",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 3,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45539-246",
+  "module": "m45539",
+  "source": "The two amygdala (one on each side) are important both for the sensation of fear and for recognizing fearful faces.",
+  "claim": "There are two amygdalae, one on each side",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "amygdala",
+    "curie": "UBERON:0001876",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "count",
+  "context": {},
+  "lean": "-- count 2 (missing: quantity)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "UBERON:0000955",
+   "relation": null,
+   "object": "UBERON:0001876",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 2,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "the brain",
+     "from": null,
+     "to": "UBERON:0000955",
+     "why": "the whole that has two amygdalae"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45539-271",
+  "module": "m45539",
+  "source": "Axons make up the “white matter” and neuron and glia cell bodies (and interneurons) make up the “gray matter.”",
+  "claim": "Axons make up the white matter of the spinal cord",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "made_of",
+  "entities": [
+   {
+    "text": "axon",
+    "curie": "GO:0030424",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "white matter",
+    "curie": "UBERON:0002316",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "spinal cord",
+    "curie": "UBERON:0002240",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "made_of",
+  "context": {},
+  "lean": "Claim.madeOf whiteMatter axon  -- missing: made_of",
+  "bin_m1": "missing_construct",
+  "lean_m1": "multi-argument (3+ entities)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0030424",
+   "relation": "part of",
+   "object": "UBERON:0002316",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0002240",
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0030424",
+   "relation": "part of",
+   "object": "UBERON:0002316",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0002240",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45539-278",
+  "module": "m45539",
+  "source": "For example, the knee reflex that a doctor tests during a routine physical is controlled by a single synapse between a sensory neuron and a motor neuron.",
+  "claim": "The knee reflex is controlled by a single synapse between a sensory neuron and a motor neuron",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "reflex",
+    "curie": "GO:0060004",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "synapse",
+    "curie": "GO:0045202",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "sensory neuron",
+    "curie": "CL:0000101",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "motor neuron",
+    "curie": "CL:0000100",
+    "ontology": "CL",
+    "verified": true
+   }
+  ],
+  "relation": "count",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "-- 1 synapse (missing: quantity)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "ungrounded_entity",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45539-279",
+  "module": "m45539",
+  "source": "While a reflex may only require the involvement of one or two synapses, synapses with interneurons in the spinal column transmit information to the brain to convey what happened (the knee jerked, or the hand was hot).",
+  "claim": "A reflex may require only one or two synapses",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "reflex",
+    "curie": "GO:0060004",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "synapse",
+    "curie": "GO:0045202",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "count",
+  "context": {},
+  "lean": "-- 1-2 synapses (missing: quantity)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "measure",
+   "quant": "some",
+   "subject": "GO:0060004",
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": 1,
+   "hi": 2,
+   "unit": "synapses",
+   "quality": "PATO:0001555",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "number of synapses",
+     "from": null,
+     "to": "PATO:0001555",
+     "why": "'has number of' quality; count has no range form"
+    }
+   ],
+   "confidence": "low"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45539-293",
+  "module": "m45539",
+  "source": "Signaling to the target tissue usually involves two synapses: a preganglionic neuron (originating in the CNS) synapses to a neuron in a ganglion that, in turn, synapses on the target organ ().",
+  "claim": "Autonomic signaling to a target tissue usually involves two synapses",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "autonomic nervous system",
+    "curie": "UBERON:0002410",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "synapse",
+    "curie": "GO:0045202",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "count",
+  "context": {},
+  "lean": "-- 2 synapses (missing: quantity)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "ungrounded_entity",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45539-316",
+  "module": "m45539",
+  "source": "Unlike the autonomic nervous system, which usually has two synapses between the CNS and the target organ, sensory and motor neurons usually have only one synapse—one ending of the neuron is at the organ and the other directly contacts a CNS neuron.",
+  "claim": "The autonomic nervous system usually has two synapses between the CNS and the target organ",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "autonomic nervous system",
+    "curie": "UBERON:0002410",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "synapse",
+    "curie": "GO:0045202",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "central nervous system",
+    "curie": "UBERON:0001017",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "count",
+  "context": {},
+  "lean": "-- 2 synapses (missing: quantity)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "ungrounded_entity",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45539-317",
+  "module": "m45539",
+  "source": "Unlike the autonomic nervous system, which usually has two synapses between the CNS and the target organ, sensory and motor neurons usually have only one synapse—one ending of the neuron is at the organ and the other directly contacts a CNS neuron.",
+  "claim": "Sensory and motor neurons usually have only one synapse between organ and CNS",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "sensory neuron",
+    "curie": "CL:0000101",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "motor neuron",
+    "curie": "CL:0000100",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "synapse",
+    "curie": "GO:0045202",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "central nervous system",
+    "curie": "UBERON:0001017",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "count",
+  "context": {},
+  "lean": "-- 1 synapse (missing: quantity)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "ungrounded_entity",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45539-321",
+  "module": "m45539",
+  "source": "Most neurons contain dendrites, which receive these signals, and axons that send signals to other neurons or tissues.",
+  "claim": "Most neurons contain dendrites",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "has_part",
+  "entities": [
+   {
+    "text": "neuron",
+    "curie": "CL:0000540",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "dendrite",
+    "curie": "GO:0030425",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_part",
+  "context": {},
+  "lean": "Claim.hasPart neuron dendrite (most)  -- missing: has_part",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "CL:0000540",
+   "relation": "has part",
+   "object": "GO:0030425",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": "most",
+   "subject": "CL:0000540",
+   "relation": "has part",
+   "object": "GO:0030425",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45539-323",
+  "module": "m45539",
+  "source": "Most neurons contain dendrites, which receive these signals, and axons that send signals to other neurons or tissues.",
+  "claim": "Most neurons contain axons",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "has_part",
+  "entities": [
+   {
+    "text": "neuron",
+    "curie": "CL:0000540",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "axon",
+    "curie": "GO:0030424",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_part",
+  "context": {},
+  "lean": "Claim.hasPart neuron axon  -- missing: has_part",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "CL:0000540",
+   "relation": "has part",
+   "object": "GO:0030424",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": "most",
+   "subject": "CL:0000540",
+   "relation": "has part",
+   "object": "GO:0030424",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45539-373",
+  "module": "m45539",
+  "source": "Activation of the sympathetic nervous system increases heart rate and blood pressure and decreases digestion and blood flow to the skin.",
+  "claim": "Sympathetic activation decreases blood flow to the skin",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "sympathetic nervous system",
+    "curie": "UBERON:0000013",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "blood circulation",
+    "curie": "GO:0008015",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "skin",
+    "curie": "UBERON:0002097",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "decreases",
+  "context": {},
+  "lean": "Claim.inContext {anatomy := skin} (Claim.effect sympatheticNS .neg (.process bloodCirculation))",
+  "m2": {
+   "ctor": "effect",
+   "subject": "UBERON:0000013",
+   "relation": null,
+   "object": "GO:0008015",
+   "sign": "neg",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0002097",
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "UBERON:0000013",
+   "relation": null,
+   "object": "GO:0008015",
+   "sign": "neg",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0002097",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45539-377",
+  "module": "m45539",
+  "source": "Activation of the parasympathetic nervous system decreases heart rate and blood pressure and increases digestion and blood flow to the skin.",
+  "claim": "Parasympathetic activation increases blood flow to the skin",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "parasympathetic nervous system",
+    "curie": "UBERON:0000011",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "blood circulation",
+    "curie": "GO:0008015",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "skin",
+    "curie": "UBERON:0002097",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "increases",
+  "context": {},
+  "lean": "Claim.inContext {anatomy := skin} (Claim.effect parasympatheticNS .pos (.process bloodCirculation))",
+  "m2": {
+   "ctor": "effect",
+   "subject": "UBERON:0000011",
+   "relation": null,
+   "object": "GO:0008015",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0002097",
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "UBERON:0000011",
+   "relation": null,
+   "object": "GO:0008015",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0002097",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ }
+]

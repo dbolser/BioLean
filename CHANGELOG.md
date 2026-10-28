@@ -2,6 +2,28 @@
 
 Findings and decisions, dated. Code history is in `git log`; this records what we learned.
 
+## 2026-10-28 (overnight: round 3 annotation, quantity and context, body systems and reproduction)
+- Re-annotated the 218 records of `the-body-s-systems-a`, `-b` and `reproduction-at-the-cellular-level` that M2 blocked
+  as `quantity` (142) or `context_required` (76), against the M2 context and M3 quantity constructors. Output is
+  `data/textbook/claims_m3/<chapter>.json`, each record with an `m3` field. 164 now have a constructor (75 percent:
+  91 of 142 quantity, 73 of 76 context); 54 stay `none`. By constructor: effect 47, count 37, rel 31, measure 29,
+  atLeast 7, less 5, cardinality 5, notRel 2, produces 1. Quantifiers: most 10, some 6. Context used: taxon 94
+  (human 54, Bacteria 11), anatomy 47, cellType 11, stage 6, condition 9, component 0. 74 curie_changes in 65 records.
+- The 54 that stay `none`: other 28 (superlatives, rates of change, vague amounts, comparisons with no class), ungrounded
+  entity 10, proportion 5, compound 4, precondition 4, no ontology term 3. Confidence: high 43, medium 105, low 16.
+- Gaps in the M3 vocabulary the data found. (1) A count range ("20 to 30 alveoli", "one or two axons", "approximately
+  100,000 neurons") has no constructor; 9 records use `measure` with PATO:0001555 "has number of". (2) `count` has no
+  relation slot: "the trachea divides into two bronchi" and "the CNS is covered by three meninges" carry the RO label in
+  `relation`, which the Lean cannot say. (3) `measure` needs an open end ("over 6 m", hi = null). (4) Superlatives
+  ("the femur is the longest bone") are not `less`: the class on the left contains the subject. (5) A gradient between two
+  contexts of one entity (K+ inside versus outside the neuron) needs two contexts in one claim. (6) A claim with context
+  on two entities (blood glucose, alpha cell) has to share one Ctx.
+- Data traps. CL:0002371 somatic cell is obsolete (replaced_by CL:0000000, which loses the meaning); it is kept in 4
+  records and in `Examples/Quantity.lean`. Prokaryote was NCIT:C14263; it became Bacteria (NCBITaxon:2) in 11 records and
+  Archaea are dropped. "Chromosome set" has no term; `BIOLEAN:chromosome_set` was not used, "two sets" became ploidy
+  (PATO:0001374). GO:0070997 neuron death is obsolete, cell death used. PR:000009054 is preproinsulin and PR:P01275
+  pro-glucagon; kept from M2.
+
 ## 2026-10-28 (overnight: ontology is_a import)
 - Built `scripts/ontology/collect_entities.py` and `import_isa.py`, emitting `BioLean/Ontology/IsA.lean`.
   Biolib uses 1,493 CURIEs (1,004 in Lean, 1,453 in the M2 claims); 1,158 are in the five imported

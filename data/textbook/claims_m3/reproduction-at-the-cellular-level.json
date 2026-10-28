@@ -1,0 +1,5054 @@
+[
+ {
+  "id": "reproduction-at-the-cellular-level-m45454-3",
+  "module": "m45454",
+  "source": "Trillions of cell divisions subsequently occur in a controlled manner to produce a complex, multicellular human.",
+  "claim": "Repeated cell division produces a multicellular human from the zygote.",
+  "kind": "process_description",
+  "bin": "missing_construct",
+  "missing_construct": "has_output",
+  "entities": [
+   {
+    "text": "cell divisions",
+    "curie": "GO:0051301",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "multicellular human",
+    "curie": "UBERON:0000468",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "has_output",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "-- proposed: Claim.hasOutput cellDivision organism [in human]",
+  "bin_m1": "missing_construct",
+  "lean_m1": "3-place relation",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0051301",
+   "relation": "has output",
+   "object": "UBERON:0000468",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0051301",
+   "relation": "has output",
+   "object": "UBERON:0000468",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45454-4",
+  "module": "m45454",
+  "source": "Trillions of cell divisions subsequently occur in a controlled manner to produce a complex, multicellular human.",
+  "claim": "Trillions of cell divisions occur during development of a human.",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "cell divisions",
+    "curie": "GO:0051301",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_count",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "-- proposed: quantity (\"cell divisions\", 1e12, \"count\")",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity (count)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "atLeast",
+   "quant": null,
+   "subject": "GO:0007275",
+   "relation": null,
+   "object": "GO:0051301",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 1000000000000,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "development of a human",
+     "from": null,
+     "to": "GO:0007275",
+     "why": "multicellular organism development is the process the divisions belong to"
+    }
+   ],
+   "confidence": "low"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45455-7",
+  "module": "m45455",
+  "source": "In prokaryotes, the genome is composed of a single, double-stranded DNA molecule in the form of a loop or circle.",
+  "claim": "The prokaryotic genome consists of a single double-stranded DNA molecule.",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "made_of",
+  "entities": [
+   {
+    "text": "genome",
+    "curie": "SO:0001026",
+    "ontology": "SO",
+    "verified": true
+   },
+   {
+    "text": "double-stranded DNA molecule",
+    "curie": "CHEBI:4705",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "prokaryotes",
+    "curie": "NCIT:C14263",
+    "ontology": "other",
+    "verified": true
+   }
+  ],
+  "relation": "made_of",
+  "context": {
+   "taxon": "NCIT:C14263"
+  },
+  "lean": "-- proposed: Claim.madeOf genome dsDNA [in prokaryote]",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity (count)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCIT:C14263",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "SO:0001026",
+   "relation": null,
+   "object": "CHEBI:4705",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 1,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:2",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "prokaryotes",
+     "from": "NCIT:C14263",
+     "to": "NCBITaxon:2",
+     "why": "taxon proxy: prokaryote becomes Bacteria; Archaea not covered, NCIT is not a taxonomy"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45455-9",
+  "module": "m45455",
+  "source": "The region in the cell containing this genetic material is called a nucleoid.",
+  "claim": "The nucleoid is the region of a prokaryotic cell containing the genome.",
+  "kind": "definitional",
+  "bin": "missing_construct",
+  "missing_construct": "is_a",
+  "entities": [
+   {
+    "text": "nucleoid",
+    "curie": "GO:0009295",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "cell",
+    "curie": "CL:0000000",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "genetic material",
+    "curie": "SO:0001026",
+    "ontology": "SO",
+    "verified": true
+   }
+  ],
+  "relation": "is_a",
+  "context": {},
+  "lean": "-- ontology: nucleoid is_a cell region; contains genome",
+  "bin_m1": "missing_construct",
+  "lean_m1": "is_a + extra",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "SO:0001026",
+   "relation": "located in",
+   "object": "GO:0009295",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCIT:C14263",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "SO:0001026",
+   "relation": "located in",
+   "object": "GO:0009295",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:2",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "prokaryotic cell",
+     "from": null,
+     "to": "NCBITaxon:2",
+     "why": "taxon proxy: prokaryote becomes Bacteria; Archaea not covered"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45455-13",
+  "module": "m45455",
+  "source": "In eukaryotes, the genome comprises several double-stranded, linear DNA molecules () bound with proteins to form complexes called chromosomes.",
+  "claim": "The eukaryotic genome comprises several linear double-stranded DNA molecules.",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "made_of",
+  "entities": [
+   {
+    "text": "genome",
+    "curie": "SO:0001026",
+    "ontology": "SO",
+    "verified": true
+   },
+   {
+    "text": "linear DNA molecules",
+    "curie": "SO:0000957",
+    "ontology": "SO",
+    "verified": true
+   },
+   {
+    "text": "eukaryotes",
+    "curie": "NCBITaxon:2759",
+    "ontology": "NCBITaxon",
+    "verified": true
+   }
+  ],
+  "relation": "made_of",
+  "context": {
+   "taxon": "NCBITaxon:2759"
+  },
+  "lean": "-- proposed: Claim.madeOf genome linearDsDNA [in eukaryote]",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity (count)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "SO:0001026",
+   "relation": "has part",
+   "object": "SO:0000957",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:2759",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "atLeast",
+   "quant": null,
+   "subject": "SO:0001026",
+   "relation": null,
+   "object": "SO:0000957",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 2,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:2759",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45455-15",
+  "module": "m45455",
+  "source": "Each species of eukaryote has a characteristic number of chromosomes in the nuclei of its cells.",
+  "claim": "Each eukaryotic species has a characteristic chromosome number.",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "chromosomes",
+    "curie": "GO:0005694",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "eukaryote",
+    "curie": "NCBITaxon:2759",
+    "ontology": "NCBITaxon",
+    "verified": true
+   }
+  ],
+  "relation": "has_count",
+  "context": {
+   "taxon": "NCBITaxon:2759"
+  },
+  "lean": "-- proposed: quantity (\"chromosome number\", species-specific)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity (count)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:2759",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:2759",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45455-16",
+  "module": "m45455",
+  "source": "Each species of eukaryote has a characteristic number of chromosomes in the nuclei of its cells.",
+  "claim": "Chromosomes are located in the nucleus of eukaryotic cells.",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "located_in",
+  "entities": [
+   {
+    "text": "chromosomes",
+    "curie": "GO:0005694",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "nuclei",
+    "curie": "GO:0005634",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "located_in",
+  "context": {
+   "taxon": "NCBITaxon:2759"
+  },
+  "lean": "-- proposed: Claim.locatedIn chromosome nucleus [in eukaryote]",
+  "bin_m1": "with_context",
+  "lean_m1": "context: eukaryote",
+  "rel_m1": "located in",
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0005694",
+   "relation": "located in",
+   "object": "GO:0005634",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:2759",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0005694",
+   "relation": "located in",
+   "object": "GO:0005634",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:2759",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45455-17",
+  "module": "m45455",
+  "source": "Human body cells (somatic cells) have 46 chromosomes.",
+  "claim": "Human somatic cells have 46 chromosomes.",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "Human",
+    "curie": "NCBITaxon:9606",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "body cells (somatic cells)",
+    "curie": "CL:0002371",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "chromosomes",
+    "curie": "GO:0005694",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_count",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "-- proposed: quantity (\"chromosomes per somatic cell\", 46, \"count\") [in human]",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity (count)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "CL:0002371",
+   "relation": null,
+   "object": "GO:0005694",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 46,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45455-18",
+  "module": "m45455",
+  "source": "A somatic cell contains two matched sets of chromosomes, a configuration known as diploid.",
+  "claim": "A somatic cell contains two matched sets of chromosomes.",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "somatic cell",
+    "curie": "CL:0002371",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "chromosomes",
+    "curie": "GO:0005694",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_count",
+  "context": {},
+  "lean": "-- proposed: quantity (\"chromosome sets\", 2, \"count\")",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity (count)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "measure",
+   "quant": null,
+   "subject": "CL:0002371",
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": 2,
+   "hi": 2,
+   "unit": "chromosome sets",
+   "quality": "PATO:0001374",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "two matched sets of chromosomes",
+     "from": null,
+     "to": "PATO:0001374",
+     "why": "ploidy is the number of chromosome sets; no ontology term for 'chromosome set'"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45455-21",
+  "module": "m45455",
+  "source": "Human cells that contain one set of 23 chromosomes are called gametes, or sex cells; these eggs and sperm are designated n, or haploid.",
+  "claim": "Human gametes contain one set of 23 chromosomes.",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "Human",
+    "curie": "NCBITaxon:9606",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "gametes",
+    "curie": "CL:0000300",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "chromosomes",
+    "curie": "GO:0005694",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_count",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "-- proposed: quantity (\"chromosomes per gamete\", 23, \"count\") [in human]",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity (count)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "CL:0000300",
+   "relation": null,
+   "object": "GO:0005694",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 23,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45455-35",
+  "module": "m45455",
+  "source": "For example, there are three possible gene sequences on the human chromosome that codes for blood type: sequence A, sequence B, and sequence O.",
+  "claim": "The human blood-type gene has three sequence variants: A, B and O.",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "human",
+    "curie": "NCBITaxon:9606",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "gene sequences",
+    "curie": "SO:0001023",
+    "ontology": "SO",
+    "verified": true
+   },
+   {
+    "text": "blood type",
+    "curie": "NCIT:C61009",
+    "ontology": "other",
+    "verified": true
+   },
+   {
+    "text": "chromosome",
+    "curie": "GO:0005694",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_count",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "-- proposed: quantity (\"alleles of ABO\", 3, \"count\") [in human]",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity (count)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "ungrounded_entity",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45455-36",
+  "module": "m45455",
+  "source": "Because all diploid human cells have two copies of the chromosome that determines blood type, the blood type (the trait) is determined by which two versions of the marker gene are inherited.",
+  "claim": "Diploid human cells have two copies of the chromosome that determines blood type.",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "diploid",
+    "curie": "PATO:0001394",
+    "ontology": "PATO",
+    "verified": true
+   },
+   {
+    "text": "human",
+    "curie": "NCBITaxon:9606",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "chromosome",
+    "curie": "GO:0005694",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "blood type",
+    "curie": "NCIT:C61009",
+    "ontology": "other",
+    "verified": true
+   }
+  ],
+  "relation": "has_count",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "-- proposed: quantity (\"copies of chromosome 9\", 2, \"count\") [in human]",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity (count)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "ungrounded_entity",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45455-43",
+  "module": "m45455",
+  "source": "Prokaryotes have a single loop chromosome, whereas eukaryotes have multiple, linear chromosomes surrounded by a nuclear membrane.",
+  "claim": "Prokaryotes have a single circular chromosome.",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "Prokaryotes",
+    "curie": "NCIT:C14263",
+    "ontology": "other",
+    "verified": true
+   },
+   {
+    "text": "loop chromosome",
+    "curie": "SO:0000958",
+    "ontology": "SO",
+    "verified": true
+   }
+  ],
+  "relation": "has_count",
+  "context": {
+   "taxon": "NCIT:C14263"
+  },
+  "lean": "-- proposed: quantity (\"chromosomes\", 1, \"count\") [in prokaryote]",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity (count)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCIT:C14263",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "CL:0000000",
+   "relation": null,
+   "object": "SO:0000958",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 1,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:2",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "prokaryotes",
+     "from": "NCIT:C14263",
+     "to": "NCBITaxon:2",
+     "why": "taxon proxy: prokaryote becomes Bacteria; Archaea not covered, NCIT is not a taxonomy"
+    },
+    {
+     "text": "prokaryotic cell",
+     "from": null,
+     "to": "CL:0000000",
+     "why": "bare cell class, the taxon is the context"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45455-44",
+  "module": "m45455",
+  "source": "Prokaryotes have a single loop chromosome, whereas eukaryotes have multiple, linear chromosomes surrounded by a nuclear membrane.",
+  "claim": "Eukaryotes have multiple linear chromosomes.",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "has_part",
+  "entities": [
+   {
+    "text": "eukaryotes",
+    "curie": "NCBITaxon:2759",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "linear chromosomes",
+    "curie": "SO:0000957",
+    "ontology": "SO",
+    "verified": true
+   }
+  ],
+  "relation": "has_part",
+  "context": {
+   "taxon": "NCBITaxon:2759"
+  },
+  "lean": "-- proposed: Claim.hasPart eukaryoticCell linearChromosome (many)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity (count)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:2759",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "atLeast",
+   "quant": null,
+   "subject": "CL:0000000",
+   "relation": null,
+   "object": "SO:0000957",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 2,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:2759",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "eukaryotes",
+     "from": null,
+     "to": "CL:0000000",
+     "why": "bare cell class, the taxon is the context"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45455-45",
+  "module": "m45455",
+  "source": "Prokaryotes have a single loop chromosome, whereas eukaryotes have multiple, linear chromosomes surrounded by a nuclear membrane.",
+  "claim": "Eukaryotic chromosomes are surrounded by a nuclear membrane.",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "located_in",
+  "entities": [
+   {
+    "text": "chromosomes",
+    "curie": "GO:0005694",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "nuclear membrane",
+    "curie": "GO:0005635",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "located_in",
+  "context": {
+   "taxon": "NCBITaxon:2759"
+  },
+  "lean": "-- proposed: Claim.locatedIn chromosome nucleus [in eukaryote]",
+  "bin_m1": "missing_construct",
+  "lean_m1": "surrounded_by (no RO)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0005635",
+   "relation": "surrounds",
+   "object": "GO:0005694",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:2759",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0005635",
+   "relation": "surrounds",
+   "object": "GO:0005694",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:2759",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45455-46",
+  "module": "m45455",
+  "source": "Human somatic cells have 46 chromosomes consisting of two sets of 22 homologous chromosomes and a pair of nonhomologous sex chromosomes.",
+  "claim": "Human somatic cells have 46 chromosomes.",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "Human",
+    "curie": "NCBITaxon:9606",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "somatic cells",
+    "curie": "CL:0002371",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "chromosomes",
+    "curie": "GO:0005694",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_count",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "-- proposed: quantity (\"chromosomes\", 46, \"count\") [in human somatic cell]",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity (count)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "CL:0002371",
+   "relation": null,
+   "object": "GO:0005694",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 46,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45455-47",
+  "module": "m45455",
+  "source": "Human somatic cells have 46 chromosomes consisting of two sets of 22 homologous chromosomes and a pair of nonhomologous sex chromosomes.",
+  "claim": "The 46 human chromosomes consist of two sets of 22 homologous chromosomes plus a pair of nonhomologous sex chromosomes.",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "homologous chromosomes",
+    "curie": null,
+    "ontology": null,
+    "verified": false
+   },
+   {
+    "text": "sex chromosomes",
+    "curie": "NCIT:C33542",
+    "ontology": "other",
+    "verified": true
+   },
+   {
+    "text": "human",
+    "curie": "NCBITaxon:9606",
+    "ontology": "NCBITaxon",
+    "verified": true
+   }
+  ],
+  "relation": "has_count",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "-- proposed: quantity (\"autosome pairs\", 22) + quantity (\"sex chromosome pairs\", 1) [in human]",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity (count)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "compound_sentence",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45455-49",
+  "module": "m45455",
+  "source": "Human gametes have 23 chromosomes or one complete set of chromosomes.",
+  "claim": "Human gametes have 23 chromosomes, one complete set.",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "Human",
+    "curie": "NCBITaxon:9606",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "gametes",
+    "curie": "CL:0000300",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "chromosomes",
+    "curie": "GO:0005694",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_count",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "-- proposed: quantity (\"chromosomes\", 23, \"count\") [in human gamete]",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity (count)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "CL:0000300",
+   "relation": null,
+   "object": "GO:0005694",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 23,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45455-60",
+  "module": "m45455",
+  "source": "Human somatic cells have 46 chromosomes, including 22 homologous pairs and one pair of nonhomologous sex chromosomes.",
+  "claim": "Human somatic cells have 46 chromosomes: 22 homologous pairs and one pair of nonhomologous sex chromosomes.",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "Human",
+    "curie": "NCBITaxon:9606",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "somatic cells",
+    "curie": "CL:0002371",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "chromosomes",
+    "curie": "GO:0005694",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "homologous pairs",
+    "curie": null,
+    "ontology": null,
+    "verified": false
+   },
+   {
+    "text": "sex chromosomes",
+    "curie": "NCIT:C33542",
+    "ontology": "other",
+    "verified": true
+   }
+  ],
+  "relation": "has_count",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "-- proposed: quantity (\"chromosomes\", 46, \"count\") [in human somatic cell]",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity (count)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "CL:0002371",
+   "relation": null,
+   "object": "GO:0005694",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 46,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45455-62",
+  "module": "m45455",
+  "source": "Human gametes have 23 chromosomes, one each of 23 unique chromosomes.",
+  "claim": "Human gametes have 23 chromosomes, one each of 23 unique chromosomes.",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "Human",
+    "curie": "NCBITaxon:9606",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "gametes",
+    "curie": "CL:0000300",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "chromosomes",
+    "curie": "GO:0005694",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_count",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "-- proposed: quantity (\"chromosomes\", 23, \"count\") [in human gamete]",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity (count)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "CL:0000300",
+   "relation": null,
+   "object": "GO:0005694",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 23,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45461-3",
+  "module": "m45461",
+  "source": "Cells on the path to cell division proceed through a series of precisely timed and carefully regulated stages of growth, DNA replication, and division that produce two genetically identical cells.",
+  "claim": "The cell cycle produces two genetically identical cells.",
+  "kind": "process_description",
+  "bin": "missing_construct",
+  "missing_construct": "has_output",
+  "entities": [
+   {
+    "text": "cell cycle",
+    "curie": "GO:0007049",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "cells",
+    "curie": "CL:0000000",
+    "ontology": "CL",
+    "verified": true
+   }
+  ],
+  "relation": "has_output",
+  "context": {},
+  "lean": "-- proposed: Claim.hasOutput cellCycle (2 × identical cell)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity (count)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0007049",
+   "relation": "has output",
+   "object": "CL:0000000",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "produces",
+   "quant": null,
+   "subject": "GO:0007049",
+   "relation": null,
+   "object": "CL:0000000",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 2,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45461-33",
+  "module": "m45461",
+  "source": "Centrioles are not present in the centrosomes of many eukaryotic species, such as plants and most fungi.",
+  "claim": "Centrioles are absent from the centrosomes of many eukaryotic species, such as plants and most fungi.",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "negation",
+  "entities": [
+   {
+    "text": "Centrioles",
+    "curie": "GO:0005814",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "centrosomes",
+    "curie": "GO:0005813",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "plants",
+    "curie": "NCBITaxon:33090",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "fungi",
+    "curie": "NCBITaxon:4751",
+    "ontology": "NCBITaxon",
+    "verified": true
+   }
+  ],
+  "relation": "lacks_part",
+  "context": {},
+  "lean": "-- proposed: Claim.not (Claim.hasPart centrosome centriole) [in plants, most fungi]",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity (quantifier)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "notRel",
+   "subject": "GO:0005813",
+   "relation": "has part",
+   "object": "GO:0005814",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "notRel",
+   "quant": "some",
+   "subject": "GO:0005813",
+   "relation": "has part",
+   "object": "GO:0005814",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:2759",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "many eukaryotic species",
+     "from": null,
+     "to": "NCBITaxon:2759",
+     "why": "taxon of the claim; 'many' is the quantifier some"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45461-45",
+  "module": "m45461",
+  "source": "The first portion of the mitotic phase, mitosis, is composed of five stages, which accomplish nuclear division.",
+  "claim": "Mitosis is composed of five stages.",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "has_part",
+  "entities": [
+   {
+    "text": "mitosis",
+    "curie": "GO:0140014",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_part",
+  "context": {},
+  "lean": "-- proposed: quantity (\"stages of mitosis\", 5)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity (count)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "ungrounded_entity",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45461-92",
+  "module": "m45461",
+  "source": "In cells such as animal cells that lack cell walls, cytokinesis begins following the onset of anaphase.",
+  "claim": "In cells without cell walls, cytokinesis begins after the onset of anaphase.",
+  "kind": "process_description",
+  "bin": "missing_construct",
+  "missing_construct": "sequence/ordering",
+  "entities": [
+   {
+    "text": "cytokinesis",
+    "curie": "GO:0000910",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "anaphase",
+    "curie": "GO:0000090",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "animal cells",
+    "curie": "CL:0000548",
+    "ontology": "CL",
+    "verified": true
+   }
+  ],
+  "relation": "precedes",
+  "context": {},
+  "lean": "-- proposed: Claim.precedes (start anaphase) (start cytokinesis) [in animal cell]",
+  "bin_m1": "missing_construct",
+  "lean_m1": "sequence/ordering",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0000910",
+   "relation": "preceded by",
+   "object": "GO:0000090",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": "CL:0000548",
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0000910",
+   "relation": "preceded by",
+   "object": "GO:0000090",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33208",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "animal cells",
+     "from": "CL:0000548",
+     "to": "NCBITaxon:33208",
+     "why": "taxon proxy: animal cell becomes Metazoa"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45461-93",
+  "module": "m45461",
+  "source": "A contractile ring composed of actin filaments forms just inside the plasma membrane at the former metaphase plate.",
+  "claim": "The contractile ring is composed of actin filaments.",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "made_of",
+  "entities": [
+   {
+    "text": "contractile ring",
+    "curie": "GO:0005826",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "actin filaments",
+    "curie": "GO:0005884",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "made_of",
+  "context": {
+   "cellType": "CL:0000548"
+  },
+  "lean": "-- proposed: Claim.madeOf contractileRing actinFilament",
+  "bin_m1": "with_context",
+  "lean_m1": "context: animal cell",
+  "rel_m1": "has part",
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0005826",
+   "relation": "has part",
+   "object": "GO:0005884",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": "CL:0000548",
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0005826",
+   "relation": "has part",
+   "object": "GO:0005884",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33208",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "animal cells",
+     "from": "CL:0000548",
+     "to": "NCBITaxon:33208",
+     "why": "taxon proxy: animal cell becomes Metazoa"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45461-99",
+  "module": "m45461",
+  "source": "In plant cells, a cleavage furrow is not possible because of the rigid cell walls surrounding the plasma membrane.",
+  "claim": "A cleavage furrow cannot form in plant cells because of their rigid cell walls.",
+  "kind": "effect",
+  "bin": "missing_construct",
+  "missing_construct": "negation",
+  "entities": [
+   {
+    "text": "plant cells",
+    "curie": "PO:0009002",
+    "ontology": "other",
+    "verified": true
+   },
+   {
+    "text": "cleavage furrow",
+    "curie": "GO:0032154",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "cell walls",
+    "curie": "GO:0005618",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "plasma membrane",
+    "curie": "GO:0005886",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "prevents",
+  "context": {
+   "cellType": "PO:0009002"
+  },
+  "lean": "Claim.inContext {cellType := some plantCell} (.effect cellWall .neg (.process cleavageFurrowFormation)) -- really \"impossible\", not →−",
+  "bin_m1": "missing_construct",
+  "lean_m1": "causal",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "effect",
+   "subject": "GO:0005618",
+   "relation": null,
+   "object": "GO:0032154",
+   "sign": "neg",
+   "target": "site",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": "PO:0009002",
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "low"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "GO:0005618",
+   "relation": null,
+   "object": "GO:0036089",
+   "sign": "neg",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "plant cells",
+     "from": "PO:0009002",
+     "to": "NCBITaxon:33090",
+     "why": "taxon proxy: plant cell becomes Viridiplantae"
+    },
+    {
+     "text": "cleavage furrow ... form",
+     "from": null,
+     "to": "GO:0036089",
+     "why": "cleavage furrow formation is the process the wall prevents"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45461-100",
+  "module": "m45461",
+  "source": "In plant cells, a cleavage furrow is not possible because of the rigid cell walls surrounding the plasma membrane.",
+  "claim": "In plant cells the plasma membrane is surrounded by a rigid cell wall.",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "spatial_relation",
+  "entities": [
+   {
+    "text": "plasma membrane",
+    "curie": "GO:0005886",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "cell walls",
+    "curie": "GO:0005618",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "plant cells",
+    "curie": "PO:0009002",
+    "ontology": "other",
+    "verified": true
+   }
+  ],
+  "relation": "surrounded_by",
+  "context": {
+   "cellType": "PO:0009002"
+  },
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "lean_m1": "surrounded_by (no RO)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0005618",
+   "relation": "surrounds",
+   "object": "GO:0005886",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": "PO:0009002",
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0005618",
+   "relation": "surrounds",
+   "object": "GO:0005886",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "plant cells",
+     "from": "PO:0009002",
+     "to": "NCBITaxon:33090",
+     "why": "taxon proxy: plant cell becomes Viridiplantae"
+    }
+   ],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45461-117",
+  "module": "m45461",
+  "source": "The length of the cell cycle is highly variable even within the cells of an individual organism.",
+  "claim": "The length of the cell cycle is highly variable even among cells of one organism.",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "cell cycle",
+    "curie": "GO:0007049",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "cells",
+    "curie": "CL:0000000",
+    "ontology": "CL",
+    "verified": true
+   }
+  ],
+  "relation": "has_duration",
+  "context": {},
+  "lean": "-- proposed: quantity (\"cell cycle length\", variable)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity (duration)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45461-118",
+  "module": "m45461",
+  "source": "In humans, the frequency of cell turnover ranges from a few hours in early embryonic development to an average of two to five days for epithelial cells, or to an entire human lifetime spent in G0 by specialized cells such as cortical neurons or cardiac muscle cells.",
+  "claim": "In early human embryonic development the cell turnover time is a few hours.",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "humans",
+    "curie": "NCBITaxon:9606",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "embryonic development",
+    "curie": "GO:0009790",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_duration",
+  "context": {
+   "taxon": "NCBITaxon:9606",
+   "stage": "early embryo"
+  },
+  "lean": "-- proposed: quantity (\"cell cycle length\", ~hours) [in human embryo]",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity (duration)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45461-119",
+  "module": "m45461",
+  "source": "In humans, the frequency of cell turnover ranges from a few hours in early embryonic development to an average of two to five days for epithelial cells, or to an entire human lifetime spent in G0 by specialized cells such as cortical neurons or cardiac muscle cells.",
+  "claim": "Human epithelial cells turn over on average every two to five days.",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "humans",
+    "curie": "NCBITaxon:9606",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "epithelial cells",
+    "curie": "CL:0000066",
+    "ontology": "CL",
+    "verified": true
+   }
+  ],
+  "relation": "has_duration",
+  "context": {
+   "taxon": "NCBITaxon:9606",
+   "cellType": "CL:0000066"
+  },
+  "lean": "-- proposed: quantity (\"turnover time\", 2-5, \"days\") [in human epithelial cell]",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity (duration)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": "CL:0000066",
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": "CL:0000066",
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "unsupported_ontology",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45461-120",
+  "module": "m45461",
+  "source": "In humans, the frequency of cell turnover ranges from a few hours in early embryonic development to an average of two to five days for epithelial cells, or to an entire human lifetime spent in G0 by specialized cells such as cortical neurons or cardiac muscle cells.",
+  "claim": "Human cortical neurons and cardiac muscle cells spend an entire lifetime in G0.",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "humans",
+    "curie": "NCBITaxon:9606",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "cortical neurons",
+    "curie": "CL:0010012",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "cardiac muscle cells",
+    "curie": "CL:0000746",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "G0",
+    "curie": "GO:0044838",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_duration",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "-- proposed: quantity (\"time in G0\", lifetime) [in human cortical neuron, cardiac muscle cell]",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity (duration)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45461-121",
+  "module": "m45461",
+  "source": "There is also variation in the time that a cell spends in each phase of the cell cycle.",
+  "claim": "The time a cell spends in each cell cycle phase varies.",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "cell",
+    "curie": "CL:0000000",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "cell cycle",
+    "curie": "GO:0007049",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "phase of the cell cycle",
+    "curie": "GO:0022403",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_duration",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity (duration)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45461-122",
+  "module": "m45461",
+  "source": "When fast-dividing mammalian cells are grown in culture (outside the body under optimal growing conditions), the length of the cycle is approximately 24 hours.",
+  "claim": "Fast-dividing mammalian cells grown in culture have a cell cycle of approximately 24 hours.",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "mammalian cells",
+    "curie": "NCBITaxon:40674",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "culture",
+    "curie": "OBI:0001876",
+    "ontology": "OBI",
+    "verified": true
+   },
+   {
+    "text": "cycle",
+    "curie": "GO:0007049",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_duration",
+  "context": {
+   "taxon": "NCBITaxon:40674",
+   "condition": "OBI:0001876"
+  },
+  "lean": "-- proposed: quantity (\"cell cycle length\", 24, \"h\") [in mammal, in vitro]",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity (duration)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:40674",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "measure",
+   "quant": null,
+   "subject": "GO:0007049",
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": 24,
+   "hi": 24,
+   "unit": "h",
+   "quality": "PATO:0001309",
+   "context": {
+    "taxon": "NCBITaxon:40674",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": {
+     "kind": "environment",
+     "curie": "OBI:0001876",
+     "text": "culture"
+    }
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "cell cycle length",
+     "from": null,
+     "to": "PATO:0001309",
+     "why": "duration"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45461-123",
+  "module": "m45461",
+  "source": "In rapidly dividing human cells with a 24-hour cell cycle, the G1 phase lasts approximately 11 hours.",
+  "claim": "In rapidly dividing human cells with a 24-hour cell cycle, G1 lasts approximately 11 hours.",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "human",
+    "curie": "NCBITaxon:9606",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "cell cycle",
+    "curie": "GO:0007049",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "G1 phase",
+    "curie": "GO:0051318",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_duration",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "-- proposed: quantity (\"G1 duration\", 11, \"h\") [in human, 24 h cycle]",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity (duration)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "measure",
+   "quant": null,
+   "subject": "GO:0051318",
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": 11,
+   "hi": 11,
+   "unit": "h",
+   "quality": "PATO:0001309",
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": {
+     "kind": "organism",
+     "curie": "BLN:rapidly_dividing_24h_cell_cycle",
+     "text": "rapidly dividing cells with a 24-hour cell cycle"
+    }
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "lasts",
+     "from": null,
+     "to": "PATO:0001309",
+     "why": "duration"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45461-129",
+  "module": "m45461",
+  "source": "To prevent a compromised cell from continuing to divide, there are internal control mechanisms that operate at three main cell cycle checkpoints at which the cell cycle can be stopped until conditions are favorable.",
+  "claim": "Internal control mechanisms operate at three main cell cycle checkpoints.",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "cell cycle checkpoints",
+    "curie": "GO:0000075",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "cell cycle",
+    "curie": "GO:0007049",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_count",
+  "context": {},
+  "lean": "-- proposed: quantity (\"checkpoints\", 3)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity (count)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "GO:0007049",
+   "relation": null,
+   "object": "GO:0000075",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 3,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45461-140",
+  "module": "m45461",
+  "source": "A cell that does not meet all the requirements will not be released into the S phase.",
+  "claim": "A cell that fails the G1 checkpoint requirements is not released into S phase.",
+  "kind": "effect",
+  "bin": "missing_construct",
+  "missing_construct": "conditional (if-then)",
+  "entities": [
+   {
+    "text": "G1 checkpoint",
+    "curie": "GO:0044819",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "S phase",
+    "curie": "GO:0051320",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "G1/S transition",
+    "curie": "GO:0000082",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "blocks",
+  "context": {},
+  "lean": "Claim.effect unmetG1Requirements .neg (.process g1sTransition)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "conditional (if-then)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "effect",
+   "subject": "GO:0044819",
+   "relation": null,
+   "object": "GO:0000082",
+   "sign": "neg",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": "checkpoint requirements not met"
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "precondition",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45461-141",
+  "module": "m45461",
+  "source": "The G2 checkpoint bars the entry to the mitotic phase if certain conditions are not met.",
+  "claim": "The G2 checkpoint blocks entry to the mitotic phase if certain conditions are not met.",
+  "kind": "effect",
+  "bin": "missing_construct",
+  "missing_construct": "conditional (if-then)",
+  "entities": [
+   {
+    "text": "G2 checkpoint",
+    "curie": "GO:0007095",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "mitotic phase",
+    "curie": "GO:0000087",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "G2/M transition",
+    "curie": "GO:0000086",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "blocks",
+  "context": {},
+  "lean": "Claim.effect g2Checkpoint .neg (.process g2mTransition) -- conditional",
+  "bin_m1": "missing_construct",
+  "lean_m1": "conditional (if-then)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "effect",
+   "subject": "GO:0007095",
+   "relation": null,
+   "object": "GO:0000086",
+   "sign": "neg",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": "certain conditions not met"
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "precondition",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45461-154",
+  "module": "m45461",
+  "source": "In eukaryotes, the cell cycle consists of a long preparatory period, called interphase.",
+  "claim": "In eukaryotes the cell cycle includes a long preparatory period called interphase.",
+  "kind": "definitional",
+  "bin": "missing_construct",
+  "missing_construct": "part_of",
+  "entities": [
+   {
+    "text": "eukaryotes",
+    "curie": "NCBITaxon:2759",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "cell cycle",
+    "curie": "GO:0007049",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "interphase",
+    "curie": "GO:0051325",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "part_of",
+  "context": {},
+  "lean": "-- ontology: interphase part_of cellCycle [in eukaryote]",
+  "bin_m1": "with_context",
+  "lean_m1": "context: eukaryote",
+  "rel_m1": "has part",
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0051325",
+   "relation": "part of",
+   "object": "GO:0007049",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:2759",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0051325",
+   "relation": "part of",
+   "object": "GO:0007049",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:2759",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45461-161",
+  "module": "m45461",
+  "source": "There are three major checkpoints in the cell cycle: one near the end of G1, a second at the G2–M transition, and the third during metaphase.",
+  "claim": "There are three major checkpoints in the cell cycle: near the end of G1, at the G2-M transition, and during metaphase.",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "checkpoints",
+    "curie": "GO:0000075",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "cell cycle",
+    "curie": "GO:0007049",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "G1",
+    "curie": "GO:0051318",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "G2–M transition",
+    "curie": "GO:0000086",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "metaphase",
+    "curie": "GO:0000089",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_count",
+  "context": {},
+  "lean": "-- proposed: quantity (\"checkpoints\", 3)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity (count)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "GO:0007049",
+   "relation": null,
+   "object": "GO:0000075",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 3,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45461-174",
+  "module": "m45461",
+  "source": "In animal cells, a ring of actin fibers is formed around the periphery of the cell at the former metaphase plate.",
+  "claim": "In animal cells a ring of actin fibers forms around the cell periphery at the former metaphase plate.",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "located_in",
+  "entities": [
+   {
+    "text": "animal cells",
+    "curie": "CL:0000548",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "ring of actin fibers",
+    "curie": "GO:0005826",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "periphery of the cell",
+    "curie": "GO:0071944",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "metaphase plate",
+    "curie": "GO:0070090",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "located_in",
+  "context": {
+   "cellType": "CL:0000548"
+  },
+  "lean": "-- proposed: Claim.locatedIn contractileRing (cell periphery, metaphase plate) [in animal cell]",
+  "bin_m1": "missing_construct",
+  "lean_m1": "spatial",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0005826",
+   "relation": "located in",
+   "object": "GO:0071944",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": "CL:0000548",
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "low"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0005826",
+   "relation": "located in",
+   "object": "GO:0071944",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33208",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "animal cells",
+     "from": "CL:0000548",
+     "to": "NCBITaxon:33208",
+     "why": "taxon proxy: animal cell becomes Metazoa"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45461-178",
+  "module": "m45461",
+  "source": "Instead, a cell plate is formed in the center of the cell at the former metaphase plate.",
+  "claim": "In plant cells a cell plate forms in the center of the cell at the former metaphase plate.",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "located_in",
+  "entities": [
+   {
+    "text": "cell plate",
+    "curie": "GO:0009504",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "cell",
+    "curie": "CL:0000000",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "metaphase plate",
+    "curie": "GO:0070090",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "plant cell",
+    "curie": "PO:0009002",
+    "ontology": "other",
+    "verified": true
+   }
+  ],
+  "relation": "located_in",
+  "context": {
+   "cellType": "PO:0009002"
+  },
+  "lean": "-- proposed: Claim.locatedIn cellPlate metaphasePlate [in plant cell]",
+  "bin_m1": "missing_construct",
+  "lean_m1": "spatial",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0009504",
+   "relation": "located in",
+   "object": "GO:0070090",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "low"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0009504",
+   "relation": "located in",
+   "object": "GO:0070090",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "plant cell",
+     "from": "PO:0009002",
+     "to": "NCBITaxon:33090",
+     "why": "taxon proxy: plant cell becomes Viridiplantae"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45461-179",
+  "module": "m45461",
+  "source": "The cell plate is formed from Golgi vesicles that contain enzymes, proteins, and glucose.",
+  "claim": "The cell plate is formed from Golgi vesicles.",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "made_of",
+  "entities": [
+   {
+    "text": "cell plate",
+    "curie": "GO:0009504",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "Golgi vesicles",
+    "curie": "GO:0005798",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "made_of",
+  "context": {
+   "cellType": "PO:0009002"
+  },
+  "lean": "-- proposed: Claim.madeOf cellPlate golgiVesicle",
+  "bin_m1": "with_context",
+  "lean_m1": "context: plant cell",
+  "rel_m1": "derives from",
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0009504",
+   "relation": "derives from",
+   "object": "GO:0005798",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0009504",
+   "relation": "derives from",
+   "object": "GO:0005798",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "plant cells",
+     "from": "PO:0009002",
+     "to": "NCBITaxon:33090",
+     "why": "taxon proxy: plant cell becomes Viridiplantae"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45461-190",
+  "module": "m45461",
+  "source": "centriole: a paired rod-like structure constructed of microtubules at the center of each animal cell centrosome",
+  "claim": "Centrioles are located at the center of each animal cell centrosome.",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "located_in",
+  "entities": [
+   {
+    "text": "centriole",
+    "curie": "GO:0005814",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "animal cell",
+    "curie": "CL:0000548",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "centrosome",
+    "curie": "GO:0005813",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "located_in",
+  "context": {
+   "cellType": "CL:0000548"
+  },
+  "lean": "-- proposed: Claim.locatedIn centriole centrosome [in animal cell]",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity (quantifier)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0005814",
+   "relation": "located in",
+   "object": "GO:0005813",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:33208",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0005814",
+   "relation": "located in",
+   "object": "GO:0005813",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33208",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "animal cell",
+     "from": "CL:0000548",
+     "to": "NCBITaxon:33208",
+     "why": "taxon proxy: animal cell becomes Metazoa"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45462-5",
+  "module": "m45462",
+  "source": "Even when all of the cell-cycle controls are fully functional, a small percentage of replication errors (mutations) will be passed on to the daughter cells.",
+  "claim": "Even with fully functional cell-cycle controls, a small percentage of replication errors (mutations) is passed to daughter cells.",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "replication errors (mutations)",
+    "curie": "SO:0001059",
+    "ontology": "SO",
+    "verified": true
+   },
+   {
+    "text": "cell-cycle controls",
+    "curie": "GO:0051726",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "daughter cells",
+    "curie": "CL:0000000",
+    "ontology": "CL",
+    "verified": true
+   }
+  ],
+  "relation": "has_proportion",
+  "context": {},
+  "lean": "-- proposed: quantity (\"replication errors inherited\", small %)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity (quantifier)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "proportion",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45462-20",
+  "module": "m45462",
+  "source": "In most instances, the alteration of the DNA sequence will result in a less functional (or non-functional) protein.",
+  "claim": "In most instances, alteration of a DNA sequence results in a less functional or non-functional protein.",
+  "kind": "effect",
+  "bin": "missing_construct",
+  "missing_construct": "variant/mutation entity kind",
+  "entities": [
+   {
+    "text": "DNA sequence",
+    "curie": "NCIT:C13299",
+    "ontology": "other",
+    "verified": true
+   },
+   {
+    "text": "mutation",
+    "curie": "SO:0001059",
+    "ontology": "SO",
+    "verified": true
+   },
+   {
+    "text": "protein",
+    "curie": "PR:000000001",
+    "ontology": "PR",
+    "verified": true
+   }
+  ],
+  "relation": "causes",
+  "context": {},
+  "lean": "-- missing: agent is a mutation/sequence alteration; no Entity kind for variants. Claim.effect sequenceAlteration .neg (.activity protein)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity (quantifier)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": "most",
+   "subject": "SO:0001059",
+   "relation": null,
+   "object": "PR:000000001",
+   "sign": "neg",
+   "target": "activity",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45462-24",
+  "module": "m45462",
+  "source": "Occasionally, however, a gene mutation causes a change that increases the activity of a positive regulator.",
+  "claim": "Occasionally a gene mutation increases the activity of a positive cell-cycle regulator.",
+  "kind": "effect",
+  "bin": "missing_construct",
+  "missing_construct": "variant/mutation entity kind",
+  "entities": [
+   {
+    "text": "gene mutation",
+    "curie": "NCIT:C18093",
+    "ontology": "other",
+    "verified": true
+   },
+   {
+    "text": "positive regulator",
+    "curie": "GO:0045787",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "causes",
+  "context": {},
+  "lean": "-- missing: agent is a mutation/sequence alteration; no Entity kind for variants. Claim.effect gainOfFunctionMutation .pos (.activity positiveRegulator)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity (quantifier)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": "some",
+   "subject": "NCIT:C18093",
+   "relation": null,
+   "object": "GO:0045787",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "low"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45462-29",
+  "module": "m45462",
+  "source": "The Cdk example is only one of many genes that are considered proto-oncogenes.",
+  "claim": "Many genes besides Cdk are considered proto-oncogenes.",
+  "kind": "other",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "Cdk",
+    "curie": "NCIT:C17767",
+    "ontology": "other",
+    "verified": true
+   },
+   {
+    "text": "proto-oncogenes",
+    "curie": "NCIT:C17023",
+    "ontology": "other",
+    "verified": true
+   },
+   {
+    "text": "genes",
+    "curie": "SO:0000704",
+    "ontology": "SO",
+    "verified": true
+   }
+  ],
+  "relation": "has_member",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity (quantifier)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": "some",
+   "subject": "SO:0000704",
+   "relation": "is_a",
+   "object": "NCIT:C17023",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45462-30",
+  "module": "m45462",
+  "source": "In addition to the cell-cycle regulatory proteins, any protein that influences the cycle can be altered in such a way as to override cell-cycle checkpoints.",
+  "claim": "Any protein that influences the cell cycle can be altered so as to override cell-cycle checkpoints.",
+  "kind": "effect",
+  "bin": "missing_construct",
+  "missing_construct": "modality (may)",
+  "entities": [
+   {
+    "text": "protein",
+    "curie": "PR:000000001",
+    "ontology": "PR",
+    "verified": true
+   },
+   {
+    "text": "cycle",
+    "curie": "GO:0007049",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "cell-cycle checkpoints",
+    "curie": "GO:0000075",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "overrides",
+  "context": {},
+  "lean": "Claim.effect alteredCellCycleProtein .neg (.process checkpoint)",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity (quantifier)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45462-40",
+  "module": "m45462",
+  "source": "Mutated p53 genes have been identified in more than half of all human tumor cells.",
+  "claim": "Mutated p53 genes occur in more than half of all human tumor cells.",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "p53",
+    "curie": "PR:000003035",
+    "ontology": "PR",
+    "verified": true
+   },
+   {
+    "text": "human",
+    "curie": "NCBITaxon:9606",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "tumor cells",
+    "curie": "CL:0001063",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "mutation",
+    "curie": "SO:0001059",
+    "ontology": "SO",
+    "verified": true
+   }
+  ],
+  "relation": "has_proportion",
+  "context": {
+   "taxon": "NCBITaxon:9606",
+   "cellType": "CL:0001063"
+  },
+  "lean": "-- proposed: quantity (\"tumor cells with mutant TP53\", >50, \"%\") [in human neoplastic cell]",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity (quantifier)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": "CL:0001063",
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "proportion",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45462-44",
+  "module": "m45462",
+  "source": "The p53 protein activates other genes whose products halt the cell cycle (allowing time for DNA repair), activates genes whose products participate in DNA repair, or activates genes that initiate cell death when DNA damage cannot be repaired.",
+  "claim": "When DNA damage cannot be repaired, p53 activates genes that initiate cell death.",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "p53",
+    "curie": "PR:000003035",
+    "ontology": "PR",
+    "verified": true
+   },
+   {
+    "text": "genes",
+    "curie": "SO:0000704",
+    "ontology": "SO",
+    "verified": true
+   },
+   {
+    "text": "cell death",
+    "curie": "GO:0008219",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "DNA damage",
+    "curie": "NCIT:C16507",
+    "ontology": "other",
+    "verified": true
+   }
+  ],
+  "relation": "increases via",
+  "context": {
+   "condition": "irreparable DNA damage"
+  },
+  "lean": "Claim.inContext {stage := some \"irreparable DNA damage\"} (.mediatedBy p53 .pos (.process cellDeath) (.amount proApoptoticGeneProducts))",
+  "m2": {
+   "ctor": "effect",
+   "subject": "PR:000003035",
+   "relation": null,
+   "object": "GO:0008219",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": "DNA damage cannot be repaired"
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "precondition",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45462-53",
+  "module": "m45462",
+  "source": "Several scientists showed that inhibiting folic acid uptake by tumor cells resulted in reduced growth.",
+  "claim": "Inhibiting folic acid uptake by tumor cells reduces their growth.",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "folic acid",
+    "curie": "CHEBI:27470",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "tumor cells",
+    "curie": "CL:0001063",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "growth",
+    "curie": "GO:0008283",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "decreases",
+  "context": {
+   "cellType": "CL:0001063"
+  },
+  "lean": "Claim.inContext {cellType := some neoplasticCell} (.effect folicAcid .pos (.process cellProliferation)) -- stated as inhibition of uptake →− growth",
+  "m2": {
+   "ctor": "effect",
+   "subject": "CHEBI:27470",
+   "relation": null,
+   "object": "GO:0008283",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": "CL:0001063",
+    "condition": "uptake of folic acid by tumor cells"
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "low"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "CHEBI:27470",
+   "relation": null,
+   "object": "GO:0008283",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": "CL:0001063",
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45462-69",
+  "module": "m45462",
+  "source": "Eventually, all checkpoints become nonfunctional, and rapidly reproducing cells crowd out normal cells, resulting in tumorous growth.",
+  "claim": "Eventually all checkpoints become nonfunctional.",
+  "kind": "process_description",
+  "bin": "missing_construct",
+  "missing_construct": "sequence/ordering",
+  "entities": [
+   {
+    "text": "checkpoints",
+    "curie": "GO:0000075",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "eventually",
+  "context": {},
+  "lean": null,
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity (quantifier)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45463-8",
+  "module": "m45463",
+  "source": "In bacterial cells, the genome consists of a single, circular DNA chromosome; therefore, the process of cell division is simplified.",
+  "claim": "The bacterial genome consists of a single circular DNA chromosome.",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "bacterial cells",
+    "curie": "NCBITaxon:2",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "genome",
+    "curie": "SO:0001026",
+    "ontology": "SO",
+    "verified": true
+   },
+   {
+    "text": "circular DNA chromosome",
+    "curie": "SO:0000958",
+    "ontology": "SO",
+    "verified": true
+   }
+  ],
+  "relation": "has_count",
+  "context": {
+   "taxon": "NCBITaxon:2"
+  },
+  "lean": "-- proposed: quantity (\"chromosomes\", 1) + Claim.hasQuality chromosome circular [in bacteria]",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity (count)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "SO:0001026",
+   "relation": null,
+   "object": "SO:0000958",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 1,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:2",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45463-12",
+  "module": "m45463",
+  "source": "The cell division process of prokaryotes, called binary fission, is a less complicated and much quicker process than cell division in eukaryotes.",
+  "claim": "Binary fission is the cell division process of prokaryotes.",
+  "kind": "definitional",
+  "bin": "missing_construct",
+  "missing_construct": "is_a",
+  "entities": [
+   {
+    "text": "binary fission",
+    "curie": "GO:0043093",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "cell division",
+    "curie": "GO:0051301",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "prokaryotes",
+    "curie": "NCIT:C14263",
+    "ontology": "other",
+    "verified": true
+   }
+  ],
+  "relation": "is_a",
+  "context": {},
+  "lean": "-- ontology: binaryFission is_a cell division [in prokaryote]",
+  "bin_m1": "with_context",
+  "lean_m1": "context: prokaryote",
+  "rel_m1": "is_a",
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0043093",
+   "relation": "is_a",
+   "object": "GO:0051301",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:2",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0043093",
+   "relation": "is_a",
+   "object": "GO:0051301",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:2",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "prokaryote",
+     "from": "NCIT:C14263",
+     "to": "NCBITaxon:2",
+     "why": "taxon proxy: prokaryote becomes Bacteria; Archaea not covered, NCIT is not a taxonomy"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45463-16",
+  "module": "m45463",
+  "source": "The single, circular DNA chromosome of bacteria is not enclosed in a nucleus, but instead occupies a specific location, the nucleoid, within the cell.",
+  "claim": "The bacterial chromosome is not enclosed in a nucleus.",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "negation",
+  "entities": [
+   {
+    "text": "circular DNA chromosome",
+    "curie": "SO:0000958",
+    "ontology": "SO",
+    "verified": true
+   },
+   {
+    "text": "bacteria",
+    "curie": "NCBITaxon:2",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "nucleus",
+    "curie": "GO:0005634",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "not_located_in",
+  "context": {
+   "taxon": "NCBITaxon:2"
+  },
+  "lean": "-- proposed: Claim.not (Claim.locatedIn chromosome nucleus) [in bacteria]",
+  "bin_m1": "missing_construct",
+  "lean_m1": "ungrounded entity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "notRel",
+   "subject": "SO:0000958",
+   "relation": "located in",
+   "object": "GO:0005634",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:2",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "notRel",
+   "quant": null,
+   "subject": "SO:0000958",
+   "relation": "located in",
+   "object": "GO:0005634",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:2",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45463-17",
+  "module": "m45463",
+  "source": "The single, circular DNA chromosome of bacteria is not enclosed in a nucleus, but instead occupies a specific location, the nucleoid, within the cell.",
+  "claim": "The bacterial chromosome occupies a specific location in the cell called the nucleoid.",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "located_in",
+  "entities": [
+   {
+    "text": "circular DNA chromosome",
+    "curie": "SO:0000958",
+    "ontology": "SO",
+    "verified": true
+   },
+   {
+    "text": "nucleoid",
+    "curie": "GO:0009295",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "cell",
+    "curie": "CL:0000000",
+    "ontology": "CL",
+    "verified": true
+   }
+  ],
+  "relation": "located_in",
+  "context": {
+   "taxon": "NCBITaxon:2"
+  },
+  "lean": "-- proposed: Claim.locatedIn chromosome nucleoid [in bacteria]",
+  "bin_m1": "missing_construct",
+  "lean_m1": "ungrounded entity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "SO:0000958",
+   "relation": "located in",
+   "object": "GO:0009295",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:2",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "SO:0000958",
+   "relation": "located in",
+   "object": "GO:0009295",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:2",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45463-55",
+  "module": "m45463",
+  "source": "Bacteria have a single, circular DNA chromosome and no nucleus.",
+  "claim": "Bacteria have a single circular DNA chromosome.",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "Bacteria",
+    "curie": "NCBITaxon:2",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "circular DNA chromosome",
+    "curie": "SO:0000958",
+    "ontology": "SO",
+    "verified": true
+   }
+  ],
+  "relation": "has_count",
+  "context": {
+   "taxon": "NCBITaxon:2"
+  },
+  "lean": "-- proposed: quantity (\"chromosomes\", 1) [in bacteria]",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity (count)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "CL:0000000",
+   "relation": null,
+   "object": "SO:0000958",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 1,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:2",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "Bacteria",
+     "from": null,
+     "to": "CL:0000000",
+     "why": "bare cell class, the taxon is the context"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45463-66",
+  "module": "m45463",
+  "source": "binary fission: the process of prokaryotic cell division",
+  "claim": "Binary fission is the process of prokaryotic cell division.",
+  "kind": "definitional",
+  "bin": "missing_construct",
+  "missing_construct": "is_a",
+  "entities": [
+   {
+    "text": "binary fission",
+    "curie": "GO:0043093",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "cell division",
+    "curie": "GO:0051301",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "prokaryote",
+    "curie": "NCIT:C14263",
+    "ontology": "other",
+    "verified": true
+   }
+  ],
+  "relation": "is_a",
+  "context": {},
+  "lean": "-- ontology: binaryFission is_a cell division [in prokaryote]",
+  "bin_m1": "with_context",
+  "lean_m1": "context: prokaryote",
+  "rel_m1": "is_a",
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0043093",
+   "relation": "is_a",
+   "object": "GO:0051301",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:2",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0043093",
+   "relation": "is_a",
+   "object": "GO:0051301",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:2",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "prokaryote",
+     "from": "NCIT:C14263",
+     "to": "NCBITaxon:2",
+     "why": "taxon proxy: prokaryote becomes Bacteria; Archaea not covered, NCIT is not a taxonomy"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45463-67",
+  "module": "m45463",
+  "source": "FtsZ: a tubulin-like protein component of the prokaryotic cytoskeleton that is important in prokaryotic cytokinesis (name origin: Filamenting temperature-sensitive mutant Z)",
+  "claim": "FtsZ is a tubulin-like protein component of the prokaryotic cytoskeleton.",
+  "kind": "definitional",
+  "bin": "missing_construct",
+  "missing_construct": "is_a",
+  "entities": [
+   {
+    "text": "FtsZ",
+    "curie": "PR:000022726",
+    "ontology": "PR",
+    "verified": true
+   },
+   {
+    "text": "tubulin",
+    "curie": "PR:000028799",
+    "ontology": "PR",
+    "verified": true
+   },
+   {
+    "text": "cytoskeleton",
+    "curie": "GO:0005856",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "prokaryote",
+    "curie": "NCIT:C14263",
+    "ontology": "other",
+    "verified": true
+   }
+  ],
+  "relation": "is_a",
+  "context": {},
+  "lean": "-- ontology: FtsZ is_a protein; part_of prokaryotic cytoskeleton; homologous tubulin",
+  "bin_m1": "missing_construct",
+  "lean_m1": "is_a + extra",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "PR:000022726",
+   "relation": "part of",
+   "object": "GO:0005856",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:2",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "PR:000022726",
+   "relation": "part of",
+   "object": "GO:0005856",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:2",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "prokaryote",
+     "from": "NCIT:C14263",
+     "to": "NCBITaxon:2",
+     "why": "taxon proxy: prokaryote becomes Bacteria; Archaea not covered, NCIT is not a taxonomy"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45463-68",
+  "module": "m45463",
+  "source": "FtsZ: a tubulin-like protein component of the prokaryotic cytoskeleton that is important in prokaryotic cytokinesis (name origin: Filamenting temperature-sensitive mutant Z)",
+  "claim": "FtsZ is important in prokaryotic cytokinesis.",
+  "kind": "effect",
+  "bin": "missing_construct",
+  "missing_construct": "necessity (requires)",
+  "entities": [
+   {
+    "text": "FtsZ",
+    "curie": "PR:000022726",
+    "ontology": "PR",
+    "verified": true
+   },
+   {
+    "text": "prokaryotic cytokinesis",
+    "curie": "GO:0043093",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "required_for",
+  "context": {},
+  "lean": "-- missing: Claim.requires prokaryoticCytokinesis FtsZ",
+  "bin_m1": "missing_construct",
+  "lean_m1": "necessity (requires)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "effect",
+   "subject": "PR:000022726",
+   "relation": null,
+   "object": "GO:0043093",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:2",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "PR:000022726",
+   "relation": null,
+   "object": "GO:0043093",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:2",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "prokaryote",
+     "from": "NCIT:C14263",
+     "to": "NCBITaxon:2",
+     "why": "taxon proxy: prokaryote becomes Bacteria; Archaea not covered, NCIT is not a taxonomy"
+    }
+   ],
+   "confidence": "medium"
+  }
+ }
+]

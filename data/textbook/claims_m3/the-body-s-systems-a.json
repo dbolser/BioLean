@@ -1,0 +1,4641 @@
+[
+ {
+  "id": "the-body-s-systems-m45534-33",
+  "module": "m45534",
+  "source": "The body temperature of these organisms is generally similar to the temperature of the environment, although the individual organisms may do things that keep their bodies slightly below or above the environmental temperature.",
+  "claim": "Body temperature of ectotherms is similar to environmental temperature",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "equality/identity",
+  "entities": [
+   {
+    "text": "these organisms",
+    "curie": null,
+    "ontology": "NCBITaxon",
+    "verified": false
+   },
+   {
+    "text": "body temperature",
+    "curie": "PATO:0000146",
+    "ontology": "PATO",
+    "verified": true
+   }
+  ],
+  "relation": "approximately_equal",
+  "context": {},
+  "lean": "-- bodyTemp ≈ envTemp needs equality",
+  "bin_m1": "missing_construct",
+  "lean_m1": "ungrounded entity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45534-40",
+  "module": "m45534",
+  "source": "These animals are able to maintain a level of activity that an ectothermic animal cannot because they generate internal heat that keeps their cellular processes operating optimally even when the environment is cold.",
+  "claim": "Endotherms maintain a level of activity that ectotherms cannot",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "endotherms",
+    "curie": null,
+    "ontology": "NCBITaxon",
+    "verified": false
+   },
+   {
+    "text": "ectothermic animal",
+    "curie": null,
+    "ontology": "NCBITaxon",
+    "verified": false
+   }
+  ],
+  "relation": "greater_than",
+  "context": {},
+  "lean": "-- comparison between taxa needs quantity/comparison",
+  "bin_m1": "missing_construct",
+  "lean_m1": "ungrounded entity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "ungrounded_entity",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45534-59",
+  "module": "m45534",
+  "source": "Vasodilation, the opening up of arteries to the skin by relaxation of their smooth muscles, brings more blood and heat to the body surface, facilitating radiation and evaporative heat loss, cooling the body.",
+  "claim": "Vasodilation brings more blood and heat to the body surface",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "Vasodilation",
+    "curie": "GO:0042311",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "blood",
+    "curie": "UBERON:0000178",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "body surface",
+    "curie": "UBERON:0002097",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "increases amount of",
+  "context": {},
+  "lean": "Claim.effect vasodilation .pos (.amount blood)  -- at site skin",
+  "m2": {
+   "ctor": "effect",
+   "subject": "GO:0042311",
+   "relation": null,
+   "object": "UBERON:0000178",
+   "sign": "pos",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0002097",
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "low"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "GO:0042311",
+   "relation": null,
+   "object": "UBERON:0000178",
+   "sign": "pos",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0002097",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45534-128",
+  "module": "m45534",
+  "source": "Each of the kidneys contains more than a million tiny units called nephrons that filter blood containing the metabolic wastes from cells.",
+  "claim": "Each kidney contains more than a million nephrons",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "kidneys",
+    "curie": "UBERON:0002113",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "nephrons",
+    "curie": "UBERON:0001285",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "has_part",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "Claim.hasPart kidney nephron (count > 1e6)  -- proposed",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "UBERON:0002113",
+   "relation": "has part",
+   "object": "UBERON:0001285",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "atLeast",
+   "quant": null,
+   "subject": "UBERON:0002113",
+   "relation": null,
+   "object": "UBERON:0001285",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 1000001,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45534-130",
+  "module": "m45534",
+  "source": "All the blood in the human body is filtered about 60 times a day by the kidneys.",
+  "claim": "All the blood in the human body is filtered about 60 times a day by the kidneys",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "blood",
+    "curie": "UBERON:0000178",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "human body",
+    "curie": "NCBITaxon:9606",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "kidneys",
+    "curie": "UBERON:0002113",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "rate",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "-- 60/day needs quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45534-225",
+  "module": "m45534",
+  "source": "interstitial fluid: the fluid found between cells in the body, similar in constitution to the fluid component of blood, but without the high concentrations of proteins",
+  "claim": "Interstitial fluid is similar to blood plasma but without high protein concentrations",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "interstitial fluid",
+    "curie": "UBERON:0000913",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "fluid component of blood",
+    "curie": "UBERON:0001969",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "proteins",
+    "curie": "CHEBI:36080",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "less_than",
+  "context": {},
+  "lean": "-- comparison of concentration",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45535-23",
+  "module": "m45535",
+  "source": "The stomach contents are extremely acidic, with a pH between 1.5 and 2.5.",
+  "claim": "Stomach contents have a pH between 1.5 and 2.5",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "stomach contents",
+    "curie": "UBERON:0000945",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "pH",
+    "curie": "PATO:0001842",
+    "ontology": "PATO",
+    "verified": true
+   }
+  ],
+  "relation": "has_value",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "-- pH ∈ [1.5, 2.5] needs quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "measure",
+   "quant": null,
+   "subject": "UBERON:0001971",
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": 1.5,
+   "hi": 2.5,
+   "unit": "pH",
+   "quality": "PATO:0001842",
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "stomach contents",
+     "from": "UBERON:0000945",
+     "to": "UBERON:0001971",
+     "why": "UBERON:0000945 is the stomach organ; its acidic contents are gastric juice"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45535-86",
+  "module": "m45535",
+  "source": "Gastric emptying occurs within two to six hours after a meal.",
+  "claim": "Gastric emptying occurs two to six hours after a meal",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "Gastric emptying",
+    "curie": "GO:0035483",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_duration",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "-- 2–6 h needs quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "measure",
+   "quant": null,
+   "subject": "GO:0035483",
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": 2,
+   "hi": 6,
+   "unit": "h",
+   "quality": "PATO:0001309",
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "two to six hours",
+     "from": null,
+     "to": "PATO:0001309",
+     "why": "duration"
+    }
+   ],
+   "confidence": "low"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45535-87",
+  "module": "m45535",
+  "source": "Only a small amount of chyme is released into the small intestine at a time.",
+  "claim": "Only a small amount of chyme is released into the small intestine at a time",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "chyme",
+    "curie": "UBERON:0000910",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "small intestine",
+    "curie": "UBERON:0002108",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "rate",
+  "context": {},
+  "lean": "-- amount per release needs quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45535-104",
+  "module": "m45535",
+  "source": "The human small intestine is over 6 m (19.6 ft) long and is divided into three parts: the duodenum, the jejunum and the ileum.",
+  "claim": "The human small intestine is over 6 m long",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "human small intestine",
+    "curie": "UBERON:0002108",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "length",
+    "curie": "PATO:0000122",
+    "ontology": "PATO",
+    "verified": true
+   }
+  ],
+  "relation": "has_length",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "-- length > 6 m needs quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "measure",
+   "quant": null,
+   "subject": "UBERON:0002108",
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": 6,
+   "hi": null,
+   "unit": "m",
+   "quality": "PATO:0000122",
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45535-124",
+  "module": "m45535",
+  "source": "The human large intestine is much smaller in length compared to the small intestine but larger in diameter.",
+  "claim": "The human large intestine is shorter than the small intestine",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "human large intestine",
+    "curie": "UBERON:0000059",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "small intestine",
+    "curie": "UBERON:0002108",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "length",
+    "curie": "PATO:0000122",
+    "ontology": "PATO",
+    "verified": true
+   }
+  ],
+  "relation": "less_than",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "-- comparison needs quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "less",
+   "quant": null,
+   "subject": "UBERON:0000059",
+   "relation": null,
+   "object": "UBERON:0002108",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": "PATO:0000122",
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45535-125",
+  "module": "m45535",
+  "source": "The human large intestine is much smaller in length compared to the small intestine but larger in diameter.",
+  "claim": "The human large intestine is larger in diameter than the small intestine",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "human large intestine",
+    "curie": "UBERON:0000059",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "small intestine",
+    "curie": "UBERON:0002108",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "diameter",
+    "curie": "PATO:0001334",
+    "ontology": "PATO",
+    "verified": true
+   }
+  ],
+  "relation": "greater_than",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "-- comparison needs quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "less",
+   "quant": null,
+   "subject": "UBERON:0002108",
+   "relation": null,
+   "object": "UBERON:0000059",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": "PATO:0001334",
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45535-145",
+  "module": "m45535",
+  "source": "The liver is the largest internal organ in humans and it plays an important role in digestion of fats and detoxifying blood.",
+  "claim": "The liver is the largest internal organ in humans",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "liver",
+    "curie": "UBERON:0002107",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "humans",
+    "curie": "NCBITaxon:9606",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "internal organ",
+    "curie": "UBERON:0000062",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "largest",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "-- size comparison needs quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45535-159",
+  "module": "m45535",
+  "source": "The stomach has an extremely acidic environment where most of the protein gets digested.",
+  "claim": "Most protein is digested in the stomach",
+  "kind": "process_description",
+  "bin": "missing_construct",
+  "missing_construct": "occurs_in",
+  "entities": [
+   {
+    "text": "protein",
+    "curie": "CHEBI:36080",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "stomach",
+    "curie": "UBERON:0000945",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "digested",
+    "curie": "GO:0044256",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "occurs_in",
+  "context": {},
+  "lean": "Claim.occursIn proteinDigestion stomach  -- proposed",
+  "bin_m1": "missing_construct",
+  "lean_m1": "occurs_in",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0044256",
+   "relation": "occurs in",
+   "object": "UBERON:0000945",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": "most",
+   "subject": "GO:0044256",
+   "relation": "occurs in",
+   "object": "UBERON:0000945",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45535-176",
+  "module": "m45535",
+  "source": "Fats are stored under the skin of mammals for insulation and energy reserves.",
+  "claim": "Fats are stored under the skin of mammals",
+  "kind": "structural",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "Fats",
+    "curie": "CHEBI:18059",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "skin of body",
+    "curie": "UBERON:0002097",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "mammals",
+    "curie": "NCBITaxon:40674",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "subcutaneous adipose tissue",
+    "curie": "UBERON:0002190",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "located_in",
+  "context": {
+   "taxon": "NCBITaxon:40674"
+  },
+  "lean": "Claim.inContext {taxa := [mammalia]} (Claim.locatedIn fat subcutaneousTissue)  -- also needs located_in",
+  "m2": {
+   "ctor": "rel",
+   "subject": "CHEBI:18059",
+   "relation": "located in",
+   "object": "UBERON:0002190",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:40674",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "CHEBI:18059",
+   "relation": "located in",
+   "object": "UBERON:0002190",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:40674",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45535-202",
+  "module": "m45535",
+  "source": "The human body can synthesize only 11 of the 20 required amino acids; the rest must be obtained from food.",
+  "claim": "The human body can synthesise only 11 of the 20 required amino acids",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "human body",
+    "curie": "NCBITaxon:9606",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "amino acids",
+    "curie": "CHEBI:33709",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "count",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "-- 11 of 20 needs quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "proportion",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45535-206",
+  "module": "m45535",
+  "source": "Fatty foods are calorie-dense, meaning that they have more calories per unit mass than carbohydrates or proteins.",
+  "claim": "Fatty foods have more calories per unit mass than carbohydrates or proteins",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "Fatty foods",
+    "curie": "CHEBI:18059",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "carbohydrates",
+    "curie": "CHEBI:16646",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "proteins",
+    "curie": "CHEBI:36080",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "calories",
+    "curie": "UO:0010051",
+    "ontology": "other",
+    "verified": true
+   }
+  ],
+  "relation": "greater_than",
+  "context": {},
+  "lean": "-- energy density comparison needs quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "compound_sentence",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45535-207",
+  "module": "m45535",
+  "source": "One gram of carbohydrates has four calories, one gram of protein has four calories, and one gram of fat has nine calories.",
+  "claim": "One gram of carbohydrate has four calories",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "carbohydrates",
+    "curie": "CHEBI:16646",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "calories",
+    "curie": "UO:0010051",
+    "ontology": "other",
+    "verified": true
+   }
+  ],
+  "relation": "has_value",
+  "context": {},
+  "lean": "-- 4 kcal/g needs quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "measure",
+   "quant": null,
+   "subject": "CHEBI:16646",
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": 4,
+   "hi": 4,
+   "unit": "kcal/g",
+   "quality": "PATO:0001021",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "calories per gram",
+     "from": null,
+     "to": "PATO:0001021",
+     "why": "energy quality of the substance, per gram; no energy-density term in PATO"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45535-208",
+  "module": "m45535",
+  "source": "One gram of carbohydrates has four calories, one gram of protein has four calories, and one gram of fat has nine calories.",
+  "claim": "One gram of protein has four calories",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "protein",
+    "curie": "CHEBI:36080",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "calories",
+    "curie": "UO:0010051",
+    "ontology": "other",
+    "verified": true
+   }
+  ],
+  "relation": "has_value",
+  "context": {},
+  "lean": "-- 4 kcal/g needs quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "measure",
+   "quant": null,
+   "subject": "CHEBI:36080",
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": 4,
+   "hi": 4,
+   "unit": "kcal/g",
+   "quality": "PATO:0001021",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "calories per gram",
+     "from": null,
+     "to": "PATO:0001021",
+     "why": "energy quality of the substance, per gram; no energy-density term in PATO"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45535-209",
+  "module": "m45535",
+  "source": "One gram of carbohydrates has four calories, one gram of protein has four calories, and one gram of fat has nine calories.",
+  "claim": "One gram of fat has nine calories",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "fat",
+    "curie": "CHEBI:18059",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "calories",
+    "curie": "UO:0010051",
+    "ontology": "other",
+    "verified": true
+   }
+  ],
+  "relation": "has_value",
+  "context": {},
+  "lean": "-- 9 kcal/g needs quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "measure",
+   "quant": null,
+   "subject": "CHEBI:18059",
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": 9,
+   "hi": 9,
+   "unit": "kcal/g",
+   "quality": "PATO:0001021",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "calories per gram",
+     "from": null,
+     "to": "PATO:0001021",
+     "why": "energy quality of the substance, per gram; no energy-density term in PATO"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45535-213",
+  "module": "m45535",
+  "source": "When glycogen stores are full, additional glucose is converted into fatty acids.",
+  "claim": "When glycogen stores are full, glucose is converted into fatty acids",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "glycogen stores",
+    "curie": "CHEBI:28087",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "glucose",
+    "curie": "CHEBI:17234",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "fatty acids",
+    "curie": "CHEBI:35366",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "fatty acid biosynthetic process",
+    "curie": "GO:0006633",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "converted_to",
+  "context": {},
+  "lean": "Claim.inContext {stage := some \"glycogen stores full\"} (Claim.effect glucose .pos (.process fattyAcidBiosynthesis))",
+  "m2": {
+   "ctor": "rel",
+   "subject": "GO:0006633",
+   "relation": "has output",
+   "object": "CHEBI:35366",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": "when glycogen stores are full"
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0006633",
+   "relation": "has input",
+   "object": "CHEBI:17234",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": {
+     "kind": "organism",
+     "curie": "BLN:glycogen_stores_full",
+     "text": "glycogen stores are full"
+    }
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45535-216",
+  "module": "m45535",
+  "source": "The rate of obesity among children is rapidly rising in the United States.",
+  "claim": "The rate of childhood obesity is rising rapidly in the United States",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [],
+  "relation": "increases over time",
+  "context": {},
+  "lean": "quantity childhoodObesityRate rising  -- US",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45535-230",
+  "module": "m45535",
+  "source": "The enzyme pepsin digests protein in the stomach.",
+  "claim": "Pepsin digests protein in the stomach",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "pepsin A-3",
+    "curie": "PR:000031143",
+    "ontology": "PR",
+    "verified": true
+   },
+   {
+    "text": "protein",
+    "curie": "CHEBI:36080",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "stomach",
+    "curie": "UBERON:0000945",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "protein digestion",
+    "curie": "GO:0044256",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "increases",
+  "context": {},
+  "lean": "Claim.effect pepsin .pos (.process proteinDigestion)  -- site stomach",
+  "m2": {
+   "ctor": "effect",
+   "subject": "PR:000031143",
+   "relation": null,
+   "object": "CHEBI:36080",
+   "sign": "neg",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000945",
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "PR:000031143",
+   "relation": null,
+   "object": "CHEBI:36080",
+   "sign": "neg",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000945",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45535-237",
+  "module": "m45535",
+  "source": "Food intake in more than necessary amounts is stored as glycogen in the liver and muscle cells, and in adipose tissue.",
+  "claim": "Excess food intake is stored as glycogen in liver and muscle cells",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "Food intake",
+    "curie": "CHEBI:33290",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "glycogen",
+    "curie": "CHEBI:28087",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "liver",
+    "curie": "UBERON:0002107",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "muscle cells",
+    "curie": "UBERON:0002385",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "glycogen biosynthetic process",
+    "curie": "GO:0005978",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "increases",
+  "context": {},
+  "lean": "Claim.effect (exposure excessFoodIntake) .pos (.amount glycogen)",
+  "m2": {
+   "ctor": "effect",
+   "subject": "CHEBI:33290",
+   "relation": null,
+   "object": "CHEBI:28087",
+   "sign": "pos",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0002107",
+    "cellType": null,
+    "condition": "excess food intake"
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "low"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "CHEBI:33290",
+   "relation": null,
+   "object": "CHEBI:28087",
+   "sign": "pos",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0002107",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": {
+     "kind": "organism",
+     "curie": "BLN:excess_food_intake",
+     "text": "food intake in more than necessary amounts"
+    }
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "low"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45535-238",
+  "module": "m45535",
+  "source": "Food intake in more than necessary amounts is stored as glycogen in the liver and muscle cells, and in adipose tissue.",
+  "claim": "Excess food intake is stored in adipose tissue",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "Food intake",
+    "curie": "CHEBI:33290",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "adipose tissue",
+    "curie": "UBERON:0001013",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "lipid storage",
+    "curie": "GO:0019915",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "increases",
+  "context": {},
+  "lean": "Claim.effect (exposure excessFoodIntake) .pos (.process lipidStorage)",
+  "m2": {
+   "ctor": "effect",
+   "subject": "CHEBI:33290",
+   "relation": null,
+   "object": "GO:0019915",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0001013",
+    "cellType": null,
+    "condition": "excess food intake"
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "low"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "CHEBI:33290",
+   "relation": null,
+   "object": "GO:0019915",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0001013",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": {
+     "kind": "organism",
+     "curie": "BLN:excess_food_intake",
+     "text": "food intake in more than necessary amounts"
+    }
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "low"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45535-252",
+  "module": "m45535",
+  "source": "While minerals are required in trace amounts, not having minerals in the diet can be potentially harmful.",
+  "claim": "Minerals are required only in trace amounts",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "minerals",
+    "curie": "CHEBI:46662",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "relation": "has_amount",
+  "context": {},
+  "lean": "-- trace amount needs quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45535-265",
+  "module": "m45535",
+  "source": "colon: the largest portion of the large intestine consisting of the ascending colon, transverse colon, and descending colon",
+  "claim": "The colon is the largest portion of the large intestine",
+  "kind": "definitional",
+  "bin": "missing_construct",
+  "missing_construct": "is_a",
+  "entities": [
+   {
+    "text": "colon",
+    "curie": "UBERON:0001155",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "large intestine",
+    "curie": "UBERON:0000059",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "part_of",
+  "context": {},
+  "lean": "Claim.partOf colon largeIntestine  -- proposed",
+  "bin_m1": "missing_construct",
+  "lean_m1": "is_a (object not a grounded entity)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "UBERON:0001155",
+   "relation": "part of",
+   "object": "UBERON:0000059",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "UBERON:0001155",
+   "relation": "part of",
+   "object": "UBERON:0000059",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45535-280",
+  "module": "m45535",
+  "source": "salivary gland: one of three pairs of exocrine glands in the mammalian mouth that secretes saliva, a mix of watery mucus and enzymes",
+  "claim": "Salivary glands are three pairs of exocrine glands in the mammalian mouth",
+  "kind": "definitional",
+  "bin": "missing_construct",
+  "missing_construct": "is_a",
+  "entities": [
+   {
+    "text": "saliva-secreting gland",
+    "curie": "UBERON:0001044",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "mouth",
+    "curie": "UBERON:0000165",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "mammalian",
+    "curie": "NCBITaxon:40674",
+    "ontology": "NCBITaxon",
+    "verified": true
+   }
+  ],
+  "relation": "is_a",
+  "context": {
+   "taxon": "NCBITaxon:40674"
+  },
+  "lean": "-- UBERON definition",
+  "bin_m1": "missing_construct",
+  "lean_m1": "is_a (object not a grounded entity)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "UBERON:0001044",
+   "relation": "part of",
+   "object": "UBERON:0000165",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "UBERON:0000165",
+   "relation": null,
+   "object": "UBERON:0001044",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 6,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:40674",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45536-2",
+  "module": "m45536",
+  "source": "The human circulatory system has a complex network of blood vessels that reach all parts of the body.",
+  "claim": "The human circulatory system is a network of blood vessels reaching all parts of the body",
+  "kind": "structural",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "human circulatory system",
+    "curie": "UBERON:0001009",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "blood vessels",
+    "curie": "UBERON:0001981",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "multicellular organism",
+    "curie": "UBERON:0000468",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "made_of",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "Claim.inContext {taxa := [human]} (Claim.madeOf circulatorySystem bloodVessel)  -- also needs made_of",
+  "m2": {
+   "ctor": "rel",
+   "subject": "UBERON:0001009",
+   "relation": "has part",
+   "object": "UBERON:0001981",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [
+    {
+     "text": "human",
+     "from": null,
+     "to": "NCBITaxon:9606",
+     "why": "context taxon"
+    }
+   ],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "UBERON:0001009",
+   "relation": "has part",
+   "object": "UBERON:0001981",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45536-10",
+  "module": "m45536",
+  "source": "In humans, other mammals, and birds, blood absorbs oxygen and releases carbon dioxide in the lungs.",
+  "claim": "In humans, other mammals and birds, blood absorbs oxygen in the lungs",
+  "kind": "process_description",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "humans",
+    "curie": "NCBITaxon:9606",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "mammals",
+    "curie": "NCBITaxon:40674",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "birds",
+    "curie": "NCBITaxon:8782",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "blood",
+    "curie": "UBERON:0000178",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "oxygen",
+    "curie": "CHEBI:15379",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "lungs",
+    "curie": "UBERON:0002048",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "absorbs",
+  "context": {
+   "taxon": "NCBITaxon:40674",
+   "anatomy": "UBERON:0002048"
+  },
+  "lean": "Claim.inContext {taxa := [mammalia, aves], anatomy := some lung} (Claim.effect lung .pos (.amount bloodOxygen))",
+  "m2": {
+   "ctor": "effect",
+   "subject": "UBERON:0000178",
+   "relation": null,
+   "object": "CHEBI:15379",
+   "sign": "pos",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:40674",
+    "anatomy": "UBERON:0002048",
+    "cellType": null,
+    "condition": "also humans and birds"
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "UBERON:0000178",
+   "relation": null,
+   "object": "CHEBI:15379",
+   "sign": "pos",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:40674",
+    "anatomy": "UBERON:0002048",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "low"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45536-11",
+  "module": "m45536",
+  "source": "In humans, other mammals, and birds, blood absorbs oxygen and releases carbon dioxide in the lungs.",
+  "claim": "In humans, other mammals and birds, blood releases carbon dioxide in the lungs",
+  "kind": "process_description",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "humans",
+    "curie": "NCBITaxon:9606",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "mammals",
+    "curie": "NCBITaxon:40674",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "birds",
+    "curie": "NCBITaxon:8782",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "blood",
+    "curie": "UBERON:0000178",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "carbon dioxide",
+    "curie": "CHEBI:16526",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "lungs",
+    "curie": "UBERON:0002048",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "releases",
+  "context": {
+   "taxon": "NCBITaxon:40674",
+   "anatomy": "UBERON:0002048"
+  },
+  "lean": "Claim.inContext {taxa := [mammalia, aves], anatomy := some lung} (Claim.effect lung .neg (.amount bloodCO2))",
+  "m2": {
+   "ctor": "effect",
+   "subject": "UBERON:0000178",
+   "relation": null,
+   "object": "CHEBI:16526",
+   "sign": "neg",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:40674",
+    "anatomy": "UBERON:0002048",
+    "cellType": null,
+    "condition": "also humans and birds"
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "UBERON:0000178",
+   "relation": null,
+   "object": "CHEBI:16526",
+   "sign": "neg",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:40674",
+    "anatomy": "UBERON:0002048",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "low"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45536-16",
+  "module": "m45536",
+  "source": "Humans, when they are not exerting themselves, breathe approximately 15 times per minute on average.",
+  "claim": "Resting humans breathe about 15 times per minute",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "Humans",
+    "curie": "NCBITaxon:9606",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "breathe",
+    "curie": "GO:0003016",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "rate",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "-- 15/min needs quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "measure",
+   "quant": null,
+   "subject": "GO:0003016",
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": 15,
+   "hi": 15,
+   "unit": "breaths/min",
+   "quality": "PATO:0000044",
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": {
+     "kind": "organism",
+     "curie": "BLN:at_rest",
+     "text": "not exerting themselves"
+    }
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "breathing rate",
+     "from": null,
+     "to": "PATO:0000044",
+     "why": "frequency; a rate per unit time"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45536-17",
+  "module": "m45536",
+  "source": "This equates to about 900 breaths an hour or 21,600 breaths per day.",
+  "claim": "Humans take about 900 breaths an hour or 21,600 per day",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "Homo sapiens",
+    "curie": "NCBITaxon:9606",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "breaths",
+    "curie": "GO:0003016",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "rate",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "-- 21600/day needs quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "measure",
+   "quant": null,
+   "subject": "GO:0003016",
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": 900,
+   "hi": 900,
+   "unit": "breaths/h",
+   "quality": "PATO:0000044",
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": {
+     "kind": "organism",
+     "curie": "BLN:at_rest",
+     "text": "not exerting themselves"
+    }
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "breathing rate",
+     "from": null,
+     "to": "PATO:0000044",
+     "why": "frequency; a rate per unit time"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45536-45",
+  "module": "m45536",
+  "source": "The human trachea is a cylinder, about 25 to 30 cm (9.8–11.8 in) long, which sits in front of the esophagus and extends from the pharynx into the chest cavity to the lungs.",
+  "claim": "The human trachea is a cylinder about 25 to 30 cm long",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "human trachea",
+    "curie": "UBERON:0003126",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "length",
+    "curie": "PATO:0000122",
+    "ontology": "PATO",
+    "verified": true
+   }
+  ],
+  "relation": "has_length",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "-- 25–30 cm needs quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "measure",
+   "quant": null,
+   "subject": "UBERON:0003126",
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": 25,
+   "hi": 30,
+   "unit": "cm",
+   "quality": "PATO:0000122",
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45536-53",
+  "module": "m45536",
+  "source": "The end of the trachea divides into two bronchi that enter the right and left lung.",
+  "claim": "The trachea divides into two bronchi",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "connects_to",
+  "entities": [
+   {
+    "text": "trachea",
+    "curie": "UBERON:0003126",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "bronchi",
+    "curie": "UBERON:0002185",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "connects_to",
+  "context": {},
+  "lean": "Claim.connectsTo trachea bronchus  -- proposed",
+  "bin_m1": "missing_construct",
+  "lean_m1": "connects_to",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "UBERON:0003126",
+   "relation": "connected to",
+   "object": "UBERON:0002185",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "UBERON:0003126",
+   "relation": "connected to",
+   "object": "UBERON:0002185",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 2,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "low"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45536-57",
+  "module": "m45536",
+  "source": "The primary bronchus divides, creating smaller and smaller diameter bronchi until the passages are under 1 mm (.03 in) in diameter when they are called bronchioles as they split and spread through the lung.",
+  "claim": "Passages under 1 mm in diameter are called bronchioles",
+  "kind": "definitional",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "bronchioles",
+    "curie": "UBERON:0002186",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "diameter",
+    "curie": "PATO:0001334",
+    "ontology": "PATO",
+    "verified": true
+   }
+  ],
+  "relation": "is_a",
+  "context": {},
+  "lean": "-- definition with threshold 1 mm",
+  "bin_m1": "missing_construct",
+  "lean_m1": "is_a (object not a grounded entity)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "measure",
+   "quant": null,
+   "subject": "UBERON:0002186",
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": 0,
+   "hi": 1,
+   "unit": "mm",
+   "quality": "PATO:0001334",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45536-60",
+  "module": "m45536",
+  "source": "Bronchi are innervated by nerves of both the parasympathetic and sympathetic nervous systems that control muscle contraction (parasympathetic) or relaxation (sympathetic) in the bronchi and bronchioles, depending on the nervous system’s cues.",
+  "claim": "Parasympathetic input causes bronchial muscle contraction",
+  "kind": "effect",
+  "bin": "now",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "parasympathetic",
+    "curie": "UBERON:0000011",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "bronchi",
+    "curie": "UBERON:0002185",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "muscle contraction",
+    "curie": "GO:0006939",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "increases",
+  "context": {},
+  "lean": "Claim.effect parasympathetic .pos (.process bronchialSmoothMuscleContraction)",
+  "m2": {
+   "ctor": "effect",
+   "subject": "UBERON:0000011",
+   "relation": null,
+   "object": "GO:0006939",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0002185",
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "UBERON:0000011",
+   "relation": null,
+   "object": "GO:0006939",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0002185",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45536-61",
+  "module": "m45536",
+  "source": "Bronchi are innervated by nerves of both the parasympathetic and sympathetic nervous systems that control muscle contraction (parasympathetic) or relaxation (sympathetic) in the bronchi and bronchioles, depending on the nervous system’s cues.",
+  "claim": "Sympathetic input causes bronchial muscle relaxation",
+  "kind": "effect",
+  "bin": "now",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "sympathetic",
+    "curie": "UBERON:0000013",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "bronchi",
+    "curie": "UBERON:0002185",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "relaxation",
+    "curie": "GO:0044557",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "increases",
+  "context": {},
+  "lean": "Claim.effect sympathetic .pos (.process bronchialSmoothMuscleRelaxation)",
+  "m2": {
+   "ctor": "effect",
+   "subject": "UBERON:0000013",
+   "relation": null,
+   "object": "GO:0044557",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0002185",
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "UBERON:0000013",
+   "relation": null,
+   "object": "GO:0044557",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0002185",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45536-65",
+  "module": "m45536",
+  "source": "At the end of each duct are alveolar sacs, each containing 20 to 30 alveoli.",
+  "claim": "Each alveolar sac contains 20 to 30 alveoli",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "alveolar sac",
+    "curie": "UBERON:0002169",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "alveoli",
+    "curie": "UBERON:0002299",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "has_part",
+  "context": {},
+  "lean": "Claim.hasPart alveolarSac alveolus (count 20–30)  -- proposed",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "UBERON:0002169",
+   "relation": "has part",
+   "object": "UBERON:0002299",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "measure",
+   "quant": null,
+   "subject": "UBERON:0002169",
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": 20,
+   "hi": 30,
+   "unit": "alveoli",
+   "quality": "PATO:0001555",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "number of alveoli",
+     "from": null,
+     "to": "PATO:0001555",
+     "why": "'has number of' quality; no PATO term for a part count, and count has no range form"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45536-72",
+  "module": "m45536",
+  "source": "Estimates for the surface area of alveoli in the lungs vary around 100 m2.",
+  "claim": "The surface area of alveoli in the lungs is around 100 m2",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "alveoli",
+    "curie": "UBERON:0002299",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "lungs",
+    "curie": "UBERON:0002048",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "area",
+    "curie": "PATO:0001323",
+    "ontology": "PATO",
+    "verified": true
+   }
+  ],
+  "relation": "has_value",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "-- 100 m² needs quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45536-73",
+  "module": "m45536",
+  "source": "This large area is about the area of half a tennis court.",
+  "claim": "Total alveolar surface area is about the area of half a tennis court",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [],
+  "relation": "has_quantity",
+  "context": {},
+  "lean": "quantity alveolarSurfaceArea ~ 100 m^2",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45536-88",
+  "module": "m45536",
+  "source": "Open circulatory systems are found in invertebrate animals in which the circulatory fluid bathes the internal organs directly even though it may be moved about with a pumping heart.",
+  "claim": "In open circulatory systems the circulatory fluid bathes the internal organs directly",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "adjacent_to",
+  "entities": [
+   {
+    "text": "circulatory fluid",
+    "curie": "UBERON:0006314",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "internal organs",
+    "curie": "UBERON:0000062",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "contacts",
+  "context": {},
+  "lean": "Claim.adjacentTo hemolymph organ  -- proposed",
+  "bin_m1": "missing_construct",
+  "lean_m1": "adjacent_to",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "UBERON:0006314",
+   "relation": "adjacent to",
+   "object": "UBERON:0000062",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": "open circulatory system"
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "UBERON:0006314",
+   "relation": "adjacent to",
+   "object": "UBERON:0000062",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0009054",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "open circulatory system",
+     "from": null,
+     "to": "UBERON:0009054",
+     "why": "the system type is the context of the claim"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45536-90",
+  "module": "m45536",
+  "source": "The heart is a complex muscle that consists of two pumps: one that pumps blood through pulmonary circulation to the lungs, and the other that pumps blood through systemic circulation to the rest of the body’s tissues (and the heart itself).",
+  "claim": "The heart consists of two pumps",
+  "kind": "structural",
+  "bin": "missing_construct",
+  "missing_construct": "part_of",
+  "entities": [
+   {
+    "text": "heart",
+    "curie": "UBERON:0000948",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "has_part",
+  "context": {},
+  "lean": "Claim.hasPart heart pump (2)  -- proposed",
+  "bin_m1": "missing_construct",
+  "lean_m1": "part_of",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "ungrounded_entity",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45536-93",
+  "module": "m45536",
+  "source": "The heart is asymmetrical, with the left side being larger than the right side, correlating with the different sizes of the pulmonary and systemic circuits ().",
+  "claim": "The heart is asymmetrical with the left side larger than the right",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "heart",
+    "curie": "UBERON:0000948",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "asymmetrical",
+    "curie": "PATO:0000616",
+    "ontology": "PATO",
+    "verified": true
+   },
+   {
+    "text": "size",
+    "curie": "PATO:0000117",
+    "ontology": "PATO",
+    "verified": true
+   }
+  ],
+  "relation": "greater_than",
+  "context": {},
+  "lean": "-- size comparison needs quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "less",
+   "quant": null,
+   "subject": "UBERON:0035554",
+   "relation": null,
+   "object": "UBERON:0035553",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": "PATO:0000117",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "right side of the heart",
+     "from": null,
+     "to": "UBERON:0035554",
+     "why": "right cardiac chamber is the nearest UBERON term"
+    },
+    {
+     "text": "left side of the heart",
+     "from": null,
+     "to": "UBERON:0035553",
+     "why": "left cardiac chamber is the nearest UBERON term"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45536-95",
+  "module": "m45536",
+  "source": "In humans, the heart is about the size of a clenched fist; it is divided into four chambers: two atria and two ventricles.",
+  "claim": "In humans the heart is about the size of a clenched fist",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "humans",
+    "curie": "NCBITaxon:9606",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "heart",
+    "curie": "UBERON:0000948",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "size",
+    "curie": "PATO:0000117",
+    "ontology": "PATO",
+    "verified": true
+   }
+  ],
+  "relation": "has_size",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "-- size needs quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45536-96",
+  "module": "m45536",
+  "source": "In humans, the heart is about the size of a clenched fist; it is divided into four chambers: two atria and two ventricles.",
+  "claim": "The human heart is divided into two atria and two ventricles",
+  "kind": "structural",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "heart",
+    "curie": "UBERON:0000948",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "atria",
+    "curie": "UBERON:0002081",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "ventricles",
+    "curie": "UBERON:0002082",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "has_part",
+  "context": {
+   "taxon": "NCBITaxon:9606"
+  },
+  "lean": "Claim.inContext {taxa := [human]} (Claim.hasPart heart atrium)  -- also needs has_part",
+  "m2": {
+   "ctor": "rel",
+   "subject": "UBERON:0000948",
+   "relation": "has part",
+   "object": "UBERON:0002081",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [
+    {
+     "text": "human",
+     "from": null,
+     "to": "NCBITaxon:9606",
+     "why": "context taxon"
+    }
+   ],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "count",
+   "quant": null,
+   "subject": "UBERON:0000948",
+   "relation": null,
+   "object": "UBERON:0004151",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 4,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "four chambers",
+     "from": null,
+     "to": "UBERON:0004151",
+     "why": "the source says four chambers (two atria and two ventricles); a count of atria alone would drop the ventricles"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45536-130",
+  "module": "m45536",
+  "source": "The electrochemical signal moves from there across the atria causing them to contract.",
+  "claim": "The signal causes the atria to contract",
+  "kind": "effect",
+  "bin": "now",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "electrochemical signal",
+    "curie": "GO:0061337",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "atria",
+    "curie": "UBERON:0002081",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "contract",
+    "curie": "GO:0060048",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "causes",
+  "context": {},
+  "lean": "Claim.effect cardiacConduction .pos (.process atrialContraction)",
+  "m2": {
+   "ctor": "effect",
+   "subject": "GO:0061337",
+   "relation": null,
+   "object": "GO:0060048",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0002081",
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "GO:0061337",
+   "relation": null,
+   "object": "GO:0060048",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0002081",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45536-135",
+  "module": "m45536",
+  "source": "The signal then causes the ventricles to contract.",
+  "claim": "The signal causes the ventricles to contract",
+  "kind": "effect",
+  "bin": "now",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "signal",
+    "curie": "GO:0061337",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "ventricles",
+    "curie": "UBERON:0002082",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "contract",
+    "curie": "GO:0060048",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "causes",
+  "context": {},
+  "lean": "Claim.effect cardiacConduction .pos (.process ventricularContraction)",
+  "m2": {
+   "ctor": "effect",
+   "subject": "GO:0061337",
+   "relation": null,
+   "object": "GO:0060048",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0002082",
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "GO:0061337",
+   "relation": null,
+   "object": "GO:0060048",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0002082",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45536-157",
+  "module": "m45536",
+  "source": "Arteries farther away from the heart have more muscle tissue in their walls that can constrict to affect flow rates of blood.",
+  "claim": "Arteries farther from the heart have more muscle in their walls",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "Arteries farther away from the heart",
+    "curie": "UBERON:0001637",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "muscle tissue",
+    "curie": "UBERON:0002385",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "heart",
+    "curie": "UBERON:0000948",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "greater_than",
+  "context": {},
+  "lean": "-- comparison needs quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45536-162",
+  "module": "m45536",
+  "source": "Capillary beds contain a large number, 10’s to 100’s of capillaries that branch among the cells of the body.",
+  "claim": "Capillary beds contain tens to hundreds of capillaries",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "capillary beds",
+    "curie": "UBERON:0001982",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "capillaries",
+    "curie": "UBERON:0001982",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "relation": "has_part",
+  "context": {},
+  "lean": "-- count 10s–100s needs quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "UBERON:0013141",
+   "relation": "has part",
+   "object": "UBERON:0001982",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [
+    {
+     "text": "capillary beds",
+     "from": "UBERON:0001982",
+     "to": "UBERON:0013141",
+     "why": "OAK: capillary bed, not capillary"
+    }
+   ],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "atLeast",
+   "quant": null,
+   "subject": "UBERON:0013141",
+   "relation": null,
+   "object": "UBERON:0001982",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": 10,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "capillary beds",
+     "from": "UBERON:0001982",
+     "to": "UBERON:0013141",
+     "why": "entity list had capillaries for capillary beds"
+    }
+   ],
+   "confidence": "low"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45536-164",
+  "module": "m45536",
+  "source": "Capillaries are narrow-diameter tubes that can fit single red blood cells and are the sites for the exchange of nutrients, waste, and oxygen with tissues at the cellular level.",
+  "claim": "Capillaries are narrow tubes that fit single red blood cells",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "Capillaries",
+    "curie": "UBERON:0001982",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "red blood cells",
+    "curie": "CL:0000232",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "diameter",
+    "curie": "PATO:0001334",
+    "ontology": "PATO",
+    "verified": true
+   }
+  ],
+  "relation": "has_diameter",
+  "context": {},
+  "lean": "-- diameter ≈ RBC needs quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45536-170",
+  "module": "m45536",
+  "source": "Veins are not as thick-walled as arteries, since pressure is lower, and they have valves along their length that prevent backflow of blood away from the heart.",
+  "claim": "Veins are less thick-walled than arteries",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "Veins",
+    "curie": "UBERON:0001638",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "arteries",
+    "curie": "UBERON:0001637",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "thickness",
+    "curie": "PATO:0000915",
+    "ontology": "PATO",
+    "verified": true
+   }
+  ],
+  "relation": "less_than",
+  "context": {},
+  "lean": "-- comparison needs quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "less",
+   "quant": null,
+   "subject": "UBERON:0001638",
+   "relation": null,
+   "object": "UBERON:0001637",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": "PATO:0000915",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45536-171",
+  "module": "m45536",
+  "source": "Veins are not as thick-walled as arteries, since pressure is lower, and they have valves along their length that prevent backflow of blood away from the heart.",
+  "claim": "Venous pressure is lower than arterial pressure",
+  "kind": "quantitative",
+  "bin": "missing_construct",
+  "missing_construct": "quantity",
+  "entities": [
+   {
+    "text": "Veins",
+    "curie": "UBERON:0001638",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "pressure",
+    "curie": "PATO:0001025",
+    "ontology": "PATO",
+    "verified": true
+   }
+  ],
+  "relation": "less_than",
+  "context": {},
+  "lean": "-- comparison needs quantity",
+  "bin_m1": "missing_construct",
+  "lean_m1": "quantity",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "none",
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "less",
+   "quant": null,
+   "subject": "UBERON:0001638",
+   "relation": null,
+   "object": "UBERON:0001637",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": "PATO:0001025",
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [
+    {
+     "text": "arterial pressure",
+     "from": null,
+     "to": "UBERON:0001637",
+     "why": "artery; the entity list had veins only"
+    }
+   ],
+   "confidence": "medium"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45536-175",
+  "module": "m45536",
+  "source": "Animal respiratory systems are designed to facilitate gas exchange.",
+  "claim": "Animal respiratory systems facilitate gas exchange",
+  "kind": "effect",
+  "bin": "with_context",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "Animal respiratory systems",
+    "curie": "UBERON:0001004",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "respiratory gaseous exchange by respiratory system",
+    "curie": "GO:0007585",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "has_function",
+  "context": {
+   "taxon": "NCBITaxon:33208"
+  },
+  "lean": "Claim.inContext {taxa := [metazoa]} (Claim.effect respiratorySystem .pos (.process gasExchange))",
+  "m2": {
+   "ctor": "rel",
+   "subject": "UBERON:0001004",
+   "relation": "capable of",
+   "object": "GO:0007585",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": "NCBITaxon:33208",
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [
+    {
+     "text": "animal",
+     "from": null,
+     "to": "NCBITaxon:33208",
+     "why": "context taxon"
+    }
+   ],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "UBERON:0001004",
+   "relation": "capable of",
+   "object": "GO:0007585",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33208",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45536-190",
+  "module": "m45536",
+  "source": "The electrochemical signal causes the two atria to contract in unison; then the signal causes the ventricles to contract.",
+  "claim": "The electrochemical signal causes the two atria to contract in unison",
+  "kind": "effect",
+  "bin": "now",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "electrochemical signal",
+    "curie": "GO:0061337",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "atria",
+    "curie": "UBERON:0002081",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "contract",
+    "curie": "GO:0060048",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "causes",
+  "context": {},
+  "lean": "Claim.effect cardiacConduction .pos (.process atrialContraction)",
+  "m2": {
+   "ctor": "effect",
+   "subject": "GO:0061337",
+   "relation": null,
+   "object": "GO:0060048",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0002081",
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "GO:0061337",
+   "relation": null,
+   "object": "GO:0060048",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0002081",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45536-212",
+  "module": "m45536",
+  "source": "The heart receives an electrical signal triggering the cardiac muscle cells in the atria to contract.",
+  "claim": "An electrical signal triggers atrial cardiac muscle cells to contract",
+  "kind": "effect",
+  "bin": "now",
+  "missing_construct": null,
+  "entities": [
+   {
+    "text": "heart",
+    "curie": "UBERON:0000948",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "electrical signal",
+    "curie": "GO:0061337",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "cardiac muscle cells",
+    "curie": "CL:0000746",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "atria",
+    "curie": "UBERON:0002081",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "contract",
+    "curie": "GO:0060048",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "relation": "causes",
+  "context": {},
+  "lean": "Claim.effect cardiacConduction .pos (.process atrialContraction)",
+  "m2": {
+   "ctor": "effect",
+   "subject": "GO:0061337",
+   "relation": null,
+   "object": "GO:0060048",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0002081",
+    "cellType": "CL:0000746",
+    "condition": null
+   },
+   "blocker": "context_required",
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "GO:0061337",
+   "relation": null,
+   "object": "GO:0060048",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0002081",
+    "cellType": "CL:0000746",
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45536-225",
+  "module": "m45536",
+  "source": "capillary: the smallest blood vessel that allows the passage of individual blood cells and the site of diffusion of oxygen and nutrient exchange",
+  "claim": "A capillary is the smallest blood vessel allowing passage of individual blood cells",
+  "kind": "definitional",
+  "bin": "missing_construct",
+  "missing_construct": "is_a",
+  "entities": [
+   {
+    "text": "capillary",
+    "curie": "UBERON:0001982",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "blood vessel",
+    "curie": "UBERON:0001981",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "blood cells",
+    "curie": "CL:0000232",
+    "ontology": "CL",
+    "verified": true
+   }
+  ],
+  "relation": "is_a",
+  "context": {},
+  "lean": "-- UBERON definition",
+  "bin_m1": "missing_construct",
+  "lean_m1": "is_a (object not a grounded entity)",
+  "rel_m1": null,
+  "m2": {
+   "ctor": "rel",
+   "subject": "UBERON:0001982",
+   "relation": "is_a",
+   "object": "UBERON:0001981",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "condition": null
+   },
+   "blocker": "quantity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "UBERON:0001982",
+   "relation": "is_a",
+   "object": "UBERON:0001981",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  }
+ }
+]
