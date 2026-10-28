@@ -90,6 +90,14 @@ instance : ToString Rel := ⟨label⟩
 
 end Rel
 
+/-- How many of a class a sentence is about. A bare claim is universal ("every neuron ...");
+`some` and `most` are weaker. "Some neurons have no axons" does not contradict "most neurons have
+axons"; it would contradict "every neuron has an axon". -/
+inductive Quantifier
+  | some
+  | most
+  deriving DecidableEq, Repr
+
 /-- A formal claim. -/
 inductive Claim
   /-- `agent` has a `sign`ed effect on `target`. -/
@@ -104,14 +112,43 @@ inductive Claim
   OWL EL cannot say this; CL fakes it with a `lacks_part` property. -/
   | notRel {k₁ k₂ : Kind} (r : Rel) (a : Entity k₁) (b : Entity k₂)
       (h : r.accepts k₁ k₂ = true := by decide)
+  -- Quantities (M3). Numbers are exact: `ℕ` for counts, `ℚ` for measurements.
+  /-- Every `whole` has exactly `n` parts of kind `part`: a codon has 3 nucleotides. -/
+  | count {k₁ k₂ : Kind} (whole : Entity k₁) (part : Entity k₂) (n : Nat)
+  /-- Every `whole` has at least `n` parts of kind `part`. -/
+  | atLeast {k₁ k₂ : Kind} (whole : Entity k₁) (part : Entity k₂) (n : Nat)
+  /-- The class `c` has exactly `n` kinds of member: there are 64 codons, 20 amino acids. -/
+  | cardinality {k : Kind} (c : Entity k) (n : Nat)
+  /-- Quality `q` of every `x` lies in `[lo, hi]` in unit `u`: prokaryotic cell diameter 0.1 to 5 µm. -/
+  | measure {k : Kind} (x : Entity k) (q : Entity .phenotype) (lo hi : Rat) (u : String)
+  /-- Every `a` is below every `b` in quality `q`. -/
+  | less {k₁ k₂ : Kind} (a : Entity k₁) (b : Entity k₂) (q : Entity .phenotype)
+  /-- One run of process `p` makes `n` of `m`. -/
+  | produces {k : Kind} (p : Entity .process) (m : Entity k) (n : Nat)
+  /-- One run of process `p` uses `n` of `m`. -/
+  | consumes {k : Kind} (p : Entity .process) (m : Entity k) (n : Nat)
+  /-- Net change in `m` per run of `p`, made minus used. -/
+  | yield {k : Kind} (p : Entity .process) (m : Entity k) (n : Int)
+  /-- A weaker-than-universal claim. -/
+  | quant (q : Quantifier) (c : Claim)
 
-instance : ToString Claim where
-  toString
+partial def Claim.toString : Claim → String
     | .effect a s t => s!"{a} {s.arrow} {t}"
     | .mediatedBy a s t m => s!"{a} {s.arrow} {t}  via  {m}"
     | .rel r a b _ => s!"{a} {r} {b}"
     | .notRel r a b _ => s!"¬({a} {r} {b})"
+    | .count w p n => s!"{w} has {n} × {p}"
+    | .atLeast w p n => s!"{w} has ≥ {n} × {p}"
+    | .cardinality c n => s!"|{c}| = {n}"
+    | .measure x q lo hi u => s!"{q} of {x} ∈ [{lo}, {hi}] {u}"
+    | .less a b q => s!"{a} < {b} in {q}"
+    | .produces p m n => s!"{p} makes {n} × {m}"
+    | .consumes p m n => s!"{p} uses {n} × {m}"
+    | .yield p m n => s!"{p} nets {n} × {m}"
+    | .quant Quantifier.some c => s!"some: {c.toString}"
+    | .quant Quantifier.most c => s!"most: {c.toString}"
 
-instance : Repr Claim := ⟨fun c _ => toString c⟩
+instance : ToString Claim := ⟨Claim.toString⟩
+instance : Repr Claim := ⟨fun c _ => c.toString⟩
 
 end BioLean

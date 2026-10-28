@@ -2,6 +2,19 @@
 
 Findings and decisions, dated. Code history is in `git log`; this records what we learned.
 
+## 2026-10-28 (M3: quantity)
+- Claims: `count`, `atLeast`, `cardinality`, `measure` (interval with unit), `less`, `produces`,
+  `consumes`, `yield`, and a `quant` wrapper for `some` / `most`. Rules with arithmetic side goals
+  discharged at construction: `sequencesOver` (4^3 = 64 codons), `pigeonhole` (61 sense codons onto
+  20 amino acids gives SOME amino acid two codons), `perSet` (46 / 2 = 23), `fusionAdds` (haploid +
+  haploid = diploid; diploid egg + haploid sperm = triploid), `netYield` (4 − 2 = 2 ATP),
+  `compareIntervals` (5 µm < 10 µm), `weaken`. Seven textbook counting sentences are theorems
+  (`BioLean/Examples/Quantity.lean`); `cardinality codon 65` fails to build.
+- The closure's only clash dissolves: "most neurons have axons" and "some neurons have none" are
+  different claims under `quant`; no rule connects them. A universal would still clash.
+- Decision (Dan): triviality of conclusions and the caveated-chain discount should come from the
+  information content of the ontology term, not a hub list or a flat factor. Not implemented.
+
 ## 2026-10-28 (closure search)
 - First forward-chaining closure over the compiled textbook: 1,248 statements give 1,551 derived
   facts at depth 4; 60 sampled derivations emitted as Lean and **all 60 certified** by the kernel.

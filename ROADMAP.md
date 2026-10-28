@@ -28,9 +28,14 @@ Merge the drafted Context extension and the argument layer.
 - **Exit:** chemiosmotic timeline reaches *established* by 1974 and Slater is *refuted*, computed in
   Lean not Python; NMN human claim is low belief with the mouse papers as axioms.
 
-## M3. Quantity (next: confirmed by the closure's only clash, "most neurons" vs "some neurons")
-`Claim.quantity` with units and an arithmetic side goal discharged by `norm_num`/`decide`.
+## M3. Quantity (built 2026-10-28)
+Counts, class sizes, intervals with units, yields, and `some`/`most` quantifiers; rules carry
+arithmetic side goals discharged by `decide`/`norm_num` when the term is built.
 - **Exit:** the 13 counting derivations (codon pigeonhole, 2^23 gametes, TCA carbons) type-check.
+- **Status:** 7 of 13 are theorems (T21, T25, T26, T27, T31, T32, T34). Remaining: T22 proportion,
+  T23 carbon conservation, T24 input/output duality, T28 parity plus necessity, T29 2^23 (needs a
+  tetrad entity), T30, T33 bijection. The 430 textbook claims binned `quantity` have not been
+  re-annotated against the new constructors yet.
 
 ## M4. Generalisation and canon
 `generalize` with a coverage function over NCBITaxon/UBERON/CL; `canonical` evidence kind;

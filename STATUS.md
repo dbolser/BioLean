@@ -3,7 +3,7 @@
 Where BioLean stands, what we have learned, and what is open. Updated at milestones, not per
 commit. History of findings and decisions: [CHANGELOG.md](CHANGELOG.md). Direction: [ROADMAP.md](ROADMAP.md).
 
-Last updated 2026-10-28 (after the closure search).
+Last updated 2026-10-28 (after M3).
 
 ## What exists
 
@@ -17,6 +17,7 @@ Last updated 2026-10-28 (after the closure search).
 | Textbook example: produces, occurs_in lift, part_of transitivity, is_a inheritance, inherited negation | built, theorems check | `BioLean/Examples/Textbook.lean` |
 | The textbook as Lean, round 2 (Sonnet, structured): 1,594 emitted, 1,591 compile | generated, outside the lib build | `BioLean/Lib/TextbookClaimsR2/`, `docs/textbook-lean-check.md` |
 | RO pinning tests | built, pass | `BioLean/Tests/RO.lean` |
+| Quantity (M3): counts, cardinalities, intervals, yields, some/most; 6 arithmetic rules; 7 theorems | built | `BioLean/Examples/Quantity.lean` |
 | Closure search over the textbook; 60 derived facts certified | built | `scripts/search/`, `BioLean/Examples/Closure.lean`, `docs/closure-search.md` |
 | Statements with PMID evidence, swappable reliability table | built | `BioLean/Evidence.lean` |
 | Derivation (lit, viaActivity, viaAmount, both), axioms, verdicts, `Established` | built, `decide +kernel` | `BioLean/Derivation.lean` |
@@ -94,7 +95,7 @@ Last updated 2026-10-28 (after the closure search).
 | feedback loops | flag chains through self-inhibiting nodes, or add `Claim.loop` | open |
 | `isaInheritEffect` rule | a is_a b, b →s t ⊢ a →s t; sound, 56 uses in the closure, no constructor | open, small |
 | `Target.disease` | one textbook claim (obesity causes T2D) needs a disease target | open, small |
-| caveated chains | 76 chains are sound only with a caveat; one fixed discount per caveated step was recommended and is not implemented | open |
+| caveated chains / trivial conclusions | decided in principle (Dan, 2026-10-28): use information content of the ontology term (Resnik: -log p from descendant count or annotation frequency) as the triviality threshold for conclusions, replacing the hub list in the closure search and the flat discount idea. Not implemented | open |
 | evidence kinds | keep 8-way enum vs ECO codes with a reliability map | ECO |
 | coverage measure for generalize | clade fraction vs phylogenetic bracketing | bracketing |
 | base rate per claim | fixed 1/2 vs per-claim prior | per claim, source undecided |

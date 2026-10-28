@@ -48,6 +48,45 @@ inductive Derivation : Claim → Type
   -- b"), and the inverse of an existential does not follow: every nuclear membrane has some
   -- phospholipid, but not every phospholipid is part of a nuclear membrane. State the inverse
   -- direction as its own claim when the source asserts it (`Rel.flip`). Found by the closure search.
+  -- Quantity rules (M3). Each is a logical step with an arithmetic side goal.
+  /-- Sequences of length `n` over an alphabet of `k` symbols number `k ^ n`: four bases, three
+  per codon, 64 codons. Models `seq` as a sequence over `sym`. -/
+  | sequencesOver {k₁ k₂ : Kind} {sym : Entity k₁} {seq : Entity k₂} {k n m : ℕ}
+      (alphabet : Derivation (.cardinality sym k)) (length : Derivation (.count seq sym n))
+      (h : k ^ n = m := by decide) : Derivation (.cardinality seq m)
+  /-- Pigeonhole: `a` items each assigned one `b`, more items than holes, so some hole has two.
+  61 sense codons, 20 amino acids: some amino acid has at least two codons. -/
+  | pigeonhole {k₁ k₂ : Kind} {item : Entity k₁} {hole : Entity k₂} {a b : ℕ}
+      (items : Derivation (.cardinality item a)) (holes : Derivation (.cardinality hole b))
+      (each : Derivation (.count item hole 1))
+      (h : b < a := by decide) : Derivation (.quant Quantifier.some (.atLeast hole item 2))
+  /-- Equal division: a whole with `n` parts arranged in `s` equal sets has `n / s` per set.
+  46 chromosomes in 2 sets, 23 per set. Assumes the sets are equal, which is what "set" means here. -/
+  | perSet {k₁ k₂ k₃ : Kind} {whole : Entity k₁} {part : Entity k₂} {set : Entity k₃} {n s m : ℕ}
+      (parts : Derivation (.count whole part n)) (sets : Derivation (.count whole set s))
+      (h : s * m = n := by decide) : Derivation (.count set part m)
+  /-- Fusion adds: a process with two inputs and one output conserves the counted parts.
+  Haploid egg (1 set) + haploid sperm (1 set) → diploid zygote (2 sets). -/
+  | fusionAdds {k₁ k₂ k₃ k₄ : Kind} {p : Entity .process} {x : Entity k₁} {y : Entity k₂}
+      {z : Entity k₃} {part : Entity k₄} {a b c : ℕ}
+      {hx : Rel.hasInput.accepts .process k₁ = true} {hy : Rel.hasInput.accepts .process k₂ = true}
+      {hz : Rel.hasOutput.accepts .process k₃ = true}
+      (inx : Derivation (.rel Rel.hasInput p x hx)) (iny : Derivation (.rel Rel.hasInput p y hy))
+      (out : Derivation (.rel Rel.hasOutput p z hz))
+      (cx : Derivation (.count x part a)) (cy : Derivation (.count y part b))
+      (h : a + b = c := by decide) : Derivation (.count z part c)
+  /-- Net yield is made minus used: glycolysis makes 4 ATP and uses 2, net 2. -/
+  | netYield {k : Kind} {p : Entity .process} {m : Entity k} {a b : ℕ} {n : ℤ}
+      (made : Derivation (.produces p m a)) (used : Derivation (.consumes p m b))
+      (h : (a : ℤ) - b = n := by decide) : Derivation (.yield p m n)
+  /-- Disjoint intervals order the classes: prokaryotes 0.1 to 5 µm, eukaryotes 10 to 100 µm,
+  so every prokaryote is smaller than every eukaryote. -/
+  | compareIntervals {k₁ k₂ : Kind} {a : Entity k₁} {b : Entity k₂} {q : Entity .phenotype}
+      {lo₁ hi₁ lo₂ hi₂ : ℚ} {u : String}
+      (ma : Derivation (.measure a q lo₁ hi₁ u)) (mb : Derivation (.measure b q lo₂ hi₂ u))
+      (h : hi₁ < lo₂ := by norm_num) : Derivation (.less a b q)
+  /-- A universal claim implies the `some` and `most` forms (for a non-empty class). -/
+  | weaken {c : Claim} (q : Quantifier) (d : Derivation c) : Derivation (.quant q c)
   /-- A subclass inherits a negation: `a is_a b` and `¬(b r c)` give `¬(a r c)`. -/
   | notRelSub {k₁ k₂ k₃ : Kind} {a : Entity k₁} {b : Entity k₂} {c : Entity k₃} {r : Rel}
       {h₁ : Rel.isA.accepts k₁ k₂ = true} {h₂ : r.accepts k₂ k₃ = true}
@@ -74,6 +113,13 @@ def opinion : {c : Claim} → Derivation c → Opinion
   | _, .relChain ab bc .. => ab.opinion.weakest bc.opinion
   | _, .notRelSub ab bc .. => ab.opinion.weakest bc.opinion
   | _, .notRelObj ac bc .. => ac.opinion.weakest bc.opinion
+  | _, .sequencesOver a l .. => a.opinion.weakest l.opinion
+  | _, .pigeonhole i hs e .. => (i.opinion.weakest hs.opinion).weakest e.opinion
+  | _, .perSet p s .. => p.opinion.weakest s.opinion
+  | _, .fusionAdds ix iy o cx cy .. => (((ix.opinion.weakest iy.opinion).weakest o.opinion).weakest cx.opinion).weakest cy.opinion
+  | _, .netYield m u .. => m.opinion.weakest u.opinion
+  | _, .compareIntervals a b .. => a.opinion.weakest b.opinion
+  | _, .weaken _ d => d.opinion
 
 /-- The literature statements a derivation rests on, in order of first use. -/
 def axioms : {c : Claim} → Derivation c → List Statement
@@ -84,6 +130,13 @@ def axioms : {c : Claim} → Derivation c → List Statement
   | _, .relChain ab bc .. => ab.axioms ++ bc.axioms
   | _, .notRelSub ab bc .. => ab.axioms ++ bc.axioms
   | _, .notRelObj ac bc .. => ac.axioms ++ bc.axioms
+  | _, .sequencesOver a l .. => a.axioms ++ l.axioms
+  | _, .pigeonhole i hs e .. => i.axioms ++ hs.axioms ++ e.axioms
+  | _, .perSet p s .. => p.axioms ++ s.axioms
+  | _, .fusionAdds ix iy o cx cy .. => ix.axioms ++ iy.axioms ++ o.axioms ++ cx.axioms ++ cy.axioms
+  | _, .netYield m u .. => m.axioms ++ u.axioms
+  | _, .compareIntervals a b .. => a.axioms ++ b.axioms
+  | _, .weaken _ d => d.axioms
 
 /-- Every PMID cited anywhere in the derivation, without repeats. -/
 def pmids {c : Claim} (d : Derivation c) : List Nat :=
@@ -117,6 +170,8 @@ def claim {c : Claim} (_ : Derivation c) : Claim := c
 
 /-- Pretty-print a derivation as an indented tree with the opinion at each node. -/
 partial def render {c : Claim} (d : Derivation c) (indent : String := "") : String :=
+  let node (rule : String) (kids : List String) : String :=
+    s!"{indent}{d.opinion} {rule} ⊢ {d.claim}\n" ++ String.intercalate "\n" kids
   match d with
   | .lit s =>
       s!"{indent}{s.opinion} {s.id}: {s.claim}  [{s.distinctEvidence.length} refs]"
@@ -138,6 +193,13 @@ partial def render {c : Claim} (d : Derivation c) (indent : String := "") : Stri
   | .notRelObj ac bc .. =>
       s!"{indent}{d.opinion} ¬ covers subclass ⊢ {d.claim}\n" ++
         render ac (indent ++ "  ") ++ "\n" ++ render bc (indent ++ "  ")
+  | .sequencesOver a l .. => node "k^n sequences" [render a (indent ++ "  "), render l (indent ++ "  ")]
+  | .pigeonhole i hs e .. => node "pigeonhole" [render i (indent ++ "  "), render hs (indent ++ "  "), render e (indent ++ "  ")]
+  | .perSet p s .. => node "equal division" [render p (indent ++ "  "), render s (indent ++ "  ")]
+  | .fusionAdds ix iy o cx cy .. => node "fusion adds" [render ix (indent ++ "  "), render iy (indent ++ "  "), render o (indent ++ "  "), render cx (indent ++ "  "), render cy (indent ++ "  ")]
+  | .netYield m u .. => node "made − used" [render m (indent ++ "  "), render u (indent ++ "  ")]
+  | .compareIntervals a b .. => node "disjoint intervals" [render a (indent ++ "  "), render b (indent ++ "  ")]
+  | .weaken q d' => node s!"weaken to {repr q}" [render d' (indent ++ "  ")]
 
 /-- Statements used more than once in a derivation. `fuse` assumes independence, so a
 shared axiom means the strength is over-stated. -/
