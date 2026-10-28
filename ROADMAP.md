@@ -20,9 +20,10 @@ Add relational claims and the rules that move them.
   the other 19 structural derivations; structure-to-effect bridges; `Target.activity` on functions;
   `Kind.sequenceFeature`; compound-sentence splitting and grounding are the top blockers.
 
-## M2. Context, hypotheses, rivals
-Merge the drafted Context extension and the argument layer.
-- `Context` inside the claim; `specialise` free; `transport` as a weighted rule.
+## M2. Context, hypotheses, rivals (context design decided 2026-10-28, implementing)
+Context by entity refinement (bake-off winner, `docs/m2/judgement.md`), then the argument layer.
+- `Entity.refine` / `Entity.inCtx`: context as a subclass of the subject; specialisation via the
+  existing is_a laws; `transport` between sibling taxa as a weighted rule; protocol on Evidence.
 - `EvidenceKind.hypothesis` at weight 0; `Statement.rivals` with mutual exclusion moving a
   rival's belief into disbelief; `Claim.noEffect`.
 - **Exit:** chemiosmotic timeline reaches *established* by 1974 and Slater is *refuted*, computed in

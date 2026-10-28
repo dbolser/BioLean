@@ -2,6 +2,20 @@
 
 Findings and decisions, dated. Code history is in `git log`; this records what we learned.
 
+## 2026-10-28 (M2 bake-off)
+- Three context designs built in isolated worktrees against the same 40 textbook claims plus NMN
+  and chemiosmosis, then judged on soundness first (`docs/m2/`). Wrapper-on-the-claim and
+  refinement-on-the-entity both enforce "mouse and human evidence cannot fuse" at the type level;
+  evidence-level context passes only by discipline and already failed on real data ("in some
+  organisms" became universal). Verdict: refinement, hardened.
+- The hybrid hypothesis held with one correction: textbook "conditions" are claim-level 23 of 37
+  times, misfiled quantifiers 7, preconditions 7, experiment protocol 0. Conditions are refinable
+  entities; Evidence carries only protocol (dose, duration, strain, system). Organism state
+  (disease, genotype, age) refines the taxon filler. ~93 percent of the 190 context claims covered.
+- All three builders found transport costs exactly 0.7 × 0.3 = 0.21 with a proved ceiling. The
+  refinement builder found and fixed a composite-identifier collision ("(NMN in human) aged" vs
+  "NMN in (aged human)").
+
 ## 2026-10-28 (M3: quantity)
 - Claims: `count`, `atLeast`, `cardinality`, `measure` (interval with unit), `less`, `produces`,
   `consumes`, `yield`, and a `quant` wrapper for `some` / `most`. Rules with arithmetic side goals
