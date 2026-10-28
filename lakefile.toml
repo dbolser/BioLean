@@ -16,7 +16,7 @@ name = "BioLean"
 
 [[lean_lib]]
 name = "BioLeanLib"
-roots = ["BioLean.Lib.GLP1", "BioLean.Examples.Ozempic", "BioLean.Lib.Textbook", "BioLean.Examples.Textbook", "BioLean.Examples.Quantity", "BioLean.Tests.RO"]
+roots = ["BioLean.Lib.GLP1", "BioLean.Examples.Ozempic", "BioLean.Lib.Textbook", "BioLean.Examples.Textbook", "BioLean.Examples.Quantity", "BioLean.Examples.Context", "BioLean.Tests.RO", "BioLean.Tests.Context"]
 
 [[lean_lib]]
 name = "TextbookR2"

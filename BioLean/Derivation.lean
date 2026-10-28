@@ -99,6 +99,31 @@ inductive Derivation : Claim → Type
       (ac : Derivation (.notRel r a c h₁)) (bc : Derivation (.rel Rel.isA b c h₂))
       (h₃ : r.accepts k₁ k₂ = true := by decide) :
       Derivation (.notRel r a b h₃)
+  -- Context as refinement (M2, `BioLean/Context.lean`). A mouse claim and a human claim have
+  -- different subjects, so they never fuse. Specialisation is free through the is_a laws and
+  -- `Entity.refineAxiom`; generalisation (dropping or widening a context) has no rule.
+  /-- Refinement is monotone in its filler: `f is_a g` gives `(e ⊓ ∃r.f) is_a (e ⊓ ∃r.g)`. Mouse
+  is_a Eukaryota, so a mouse chromosome is a eukaryotic chromosome. Sound for any `r`. -/
+  | refineMono {k k' : Kind} {e : Entity k} {r : Rel} {f g : Entity k'}
+      {h : Rel.isA.accepts k' k' = true}
+      (fg : Derivation (.rel Rel.isA f g h)) (hr : r.accepts k k' = true := by decide)
+      (h' : Rel.isA.accepts k k = true := by decide) :
+      Derivation (.rel Rel.isA (e.refine r f hr) (e.refine r g hr) h')
+  /-- A subclass of the agent inherits its effect: `a is_a b`, `b →s t` give `a →s t`. The effect
+  half of the is_a laws, needed so that refined agents specialise. -/
+  | isaInheritEffect {k₁ k₂ : Kind} {a : Entity k₁} {b : Entity k₂} {s : Sign} {t : Target}
+      {h : Rel.isA.accepts k₁ k₂ = true}
+      (ab : Derivation (.rel Rel.isA a b h)) (bt : Derivation (.effect b s t)) :
+      Derivation (.effect a s t)
+  /-- Transport an effect from taxon `T₁` to a sibling taxon `T₂` (mouse to human), the rest of
+  the context `c` unchanged. Never free: it needs an `Evidence` item of kind `.crossSpecies`,
+  listed in `axioms`, and the opinion is discounted by it (`chain`). Siblings means neither is_a
+  the other in `Taxa.edges`, so mouse to Mammalia (a generalisation) is refused. -/
+  | transport {k : Kind} {a : Entity k} {s : Sign} {t : Target} (c : Ctx) {T₁ : Entity .taxon}
+      (T₂ : Entity .taxon) (d : Derivation (.effect (a.inCtx { c with taxon := some T₁ }) s t))
+      (e : Evidence) (hk : e.kind = .crossSpecies := by decide)
+      (hs : Taxa.siblings T₁ T₂ = true := by decide) :
+      Derivation (.effect (a.inCtx { c with taxon := some T₂ }) s t)
 
 namespace Derivation
 
@@ -120,6 +145,9 @@ def opinion : {c : Claim} → Derivation c → Opinion
   | _, .netYield m u .. => m.opinion.weakest u.opinion
   | _, .compareIntervals a b .. => a.opinion.weakest b.opinion
   | _, .weaken _ d => d.opinion
+  | _, .refineMono fg .. => fg.opinion
+  | _, .isaInheritEffect ab bt => ab.opinion.weakest bt.opinion
+  | _, .transport _ _ d e .. => d.opinion.chain e.opinion
 
 /-- The literature statements a derivation rests on, in order of first use. -/
 def axioms : {c : Claim} → Derivation c → List Statement
@@ -137,6 +165,11 @@ def axioms : {c : Claim} → Derivation c → List Statement
   | _, .netYield m u .. => m.axioms ++ u.axioms
   | _, .compareIntervals a b .. => a.axioms ++ b.axioms
   | _, .weaken _ d => d.axioms
+  | _, .refineMono fg .. => fg.axioms
+  | _, .isaInheritEffect ab bt => ab.axioms ++ bt.axioms
+  | _, .transport (a := a) (s := s) (t := t) c T₂ d e .. =>
+      d.axioms ++ [{ id := s!"transport:{T₂.curie}", text := e.note,
+                     claim := .effect (a.inCtx { c with taxon := some T₂ }) s t, evidence := [e] }]
 
 /-- Every PMID cited anywhere in the derivation, without repeats. -/
 def pmids {c : Claim} (d : Derivation c) : List Nat :=
@@ -200,6 +233,9 @@ partial def render {c : Claim} (d : Derivation c) (indent : String := "") : Stri
   | .netYield m u .. => node "made − used" [render m (indent ++ "  "), render u (indent ++ "  ")]
   | .compareIntervals a b .. => node "disjoint intervals" [render a (indent ++ "  "), render b (indent ++ "  ")]
   | .weaken q d' => node s!"weaken to {repr q}" [render d' (indent ++ "  ")]
+  | .refineMono fg .. => node "refinement monotone" [render fg (indent ++ "  ")]
+  | .isaInheritEffect ab bt => node "is_a inherits effect" [render ab (indent ++ "  "), render bt (indent ++ "  ")]
+  | .transport _ T₂ d' e .. => node s!"transport to {T₂.label} (PMID {e.pmid}, {repr e.kind})" [render d' (indent ++ "  ")]
 
 /-- Statements used more than once in a derivation. `fuse` assumes independence, so a
 shared axiom means the strength is over-stated. -/

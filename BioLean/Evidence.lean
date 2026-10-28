@@ -1,5 +1,5 @@
 import BioLean.Belief
-import BioLean.Claim
+import BioLean.Context
 
 /-!
 # Evidence and statements
@@ -27,15 +27,29 @@ inductive EvidenceKind
   | observational
   | inVitro
   | textMined       -- an automatically extracted relation (PubTator3, INDRA readers)
+  | crossSpecies    -- a judgment that a result transfers between taxa (ECO ISO-like); `transport`
+  | definitional    -- true by definition: a refinement is a subclass of what it refines
   deriving DecidableEq, Repr
 
-/-- One citation. -/
+/-- The experimental system a result came from. Experiment-level, so it lives on `Evidence`. -/
+inductive ExpSystem
+  | inVivo | exVivo | inVitro | reconstituted
+  deriving DecidableEq, Repr
+
+/-- One citation. Dose, duration, strain, system and taxon describe the experiment, not the
+claim: the same claim is tested at many doses, so they never make two claims different. `taxon`
+is checked against the claim by `Statement.taxonConsistent`. -/
 structure Evidence where
   pmid : Nat
   year : Nat
   kind : EvidenceKind
   polarity : Opinion.Polarity := .supports
   note : String := ""
+  dose : Option String := none
+  duration : Option String := none
+  strain : Option String := none
+  system : Option ExpSystem := none
+  taxon : Option (Entity .taxon) := none
   deriving Repr
 
 /-- A claim with its evidence: the axiom form of BioLean. -/
@@ -64,6 +78,11 @@ instance EvidenceModel.standard : EvidenceModel where
     | .observational => 1 / 2
     | .inVitro => 1 / 2
     | .textMined => 3 / 10
+    | .crossSpecies => 3 / 10
+    -- Weight 1 would be exact but is ruled out by `lt_one` (an opinion keeps `0 < u`). At 999/1000
+    -- the refinement axiom is the weakest premise only above belief 0.999, so S3 is exact in
+    -- practice: `weakest` returns the other premise.
+    | .definitional => 999 / 1000
   nonneg := by intro k; cases k <;> norm_num
   lt_one := by intro k; cases k <;> norm_num
 
@@ -93,5 +112,24 @@ def pmids (s : Statement) : List Nat := s.evidence.map (·.pmid)
 
 instance : ToString Statement := ⟨fun s => s!"{s.id}: {s.claim}  ({s.evidence.length} refs)"⟩
 
+/-- Lint (decidable, not kernel-enforced): if any evidence item sets `taxon`, the claim's subject
+must carry an `in_taxon` filler that the evidence taxon is_a (`Taxa.isA`; organism states on
+either side are ignored). Catches mouse evidence put on a context-free or a human claim. -/
+def taxonConsistent (s : Statement) : Bool :=
+  match s.evidence.filterMap (·.taxon), Ctx.taxonOfCurie s.claim.subjectCurie with
+  | [], _ => true
+  | _, none => false
+  | ts, some f => ts.all fun t => Taxa.isA (Ctx.baseCurie t.curie) f
+
 end Statement
+
+/-- The refinement axiom `e ⊓ ∃r.f ⊑ e`: dropping a context is a subsumption. True by definition,
+so its evidence is `.definitional` and the existing is_a laws use it almost losslessly. -/
+def Entity.refineAxiom {k k' : Kind} (e : Entity k) (r : Rel) (f : Entity k')
+    (hr : r.accepts k k' = true := by decide) (h : Rel.isA.accepts k k = true := by decide) :
+    Statement where
+  id := s!"refine:{(e.refine r f hr).curie}"
+  text := s!"{(e.refine r f hr).label} is_a {e.label}"
+  claim := .rel Rel.isA (e.refine r f hr) e h
+  evidence := [{ pmid := 0, year := 0, kind := .definitional, note := "C ⊓ ∃r.F ⊑ C" }]
 end BioLean

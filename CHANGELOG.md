@@ -2,6 +2,20 @@
 
 Findings and decisions, dated. Code history is in `git log`; this records what we learned.
 
+## 2026-10-28 (M2 built)
+- Context implemented as entity refinement: `Entity.refine e r f` (the class e ⊓ ∃r.f, RO domain
+  checked, bracketed composite curie), `Ctx` and `Entity.inCtx` applying fields in a fixed order so
+  one context gives one identifier. Organism state refines the taxon filler; environment refines the
+  subject. Rules `refineMono`, `isaInheritEffect`, `transport` (sibling taxa only, needs a
+  `crossSpecies` evidence item at 3/10, listed in axioms). Evidence gains dose, duration, strain,
+  system, taxon; `Statement.taxonConsistent` lint. Pinned taxon table `BioLean/Taxa.lean`.
+- S1 to S5 pass as theorems and `#check_failure`s; 38 of the 40 bake-off claims port (the two left
+  are preconditions, now rejected by the domain check). NMN in aged humans from aged mice: belief
+  0.21, unsupported, with the transport item as an axiom. (`BioLean/Examples/Context.lean`)
+- Known limits: one organism state per `Ctx`; the refinement axiom is 999/1000 not 1 (`lt_one`);
+  the lint reads curie strings so it is `#guard`, not kernel `decide`; lineage steps through
+  ordinary ontology axioms are still capped at 0.9.
+
 ## 2026-10-28 (M2 bake-off)
 - Three context designs built in isolated worktrees against the same 40 textbook claims plus NMN
   and chemiosmosis, then judged on soundness first (`docs/m2/`). Wrapper-on-the-claim and

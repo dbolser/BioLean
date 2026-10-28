@@ -90,6 +90,16 @@ instance : ToString Rel := ⟨label⟩
 
 end Rel
 
+/-- Context as refinement (M2): `e.refine r f` is the class `e ⊓ ∃r.f`, description-logic style,
+of the same kind as `e`. "Hepatocyte in mouse" has curie `CL:0000182&RO:0002162=(NCBITaxon:10090)`.
+The filler is bracketed so that a refined filler (aged mouse) cannot collide with a second
+refinement of the subject. The kinds must fit RO's domain and range, as for `Claim.rel`. Build
+contexts with `Entity.inCtx` (`BioLean/Context.lean`), which fixes relation and order. -/
+def Entity.refine {k k' : Kind} (e : Entity k) (r : Rel) (f : Entity k')
+    (_h : r.accepts k k' = true := by decide) : Entity k where
+  curie := s!"{e.curie}&{r.curie}=({f.curie})"
+  label := s!"{e.label} ⊓ {r} ({f.label})"
+
 /-- How many of a class a sentence is about. A bare claim is universal ("every neuron ...");
 `some` and `most` are weaker. "Some neurons have no axons" does not contradict "most neurons have
 axons"; it would contradict "every neuron has an axon". -/
@@ -149,6 +159,14 @@ partial def Claim.toString : Claim → String
     | .quant Quantifier.most c => s!"most: {c.toString}"
 
 instance : ToString Claim := ⟨Claim.toString⟩
+
+/-- The curie of a claim's subject: the agent, the first relatum, the whole or the process. -/
+def Claim.subjectCurie : Claim → String
+  | .effect a .. | .mediatedBy a .. | .rel _ a .. | .notRel _ a .. => a.curie
+  | .count w .. | .atLeast w .. => w.curie
+  | .cardinality c _ | .measure c .. | .less c .. => c.curie
+  | .produces p .. | .consumes p .. | .yield p .. => p.curie
+  | .quant _ c => c.subjectCurie
 instance : Repr Claim := ⟨fun c _ => c.toString⟩
 
 end BioLean

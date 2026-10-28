@@ -17,6 +17,7 @@ Last updated 2026-10-28 (after M3).
 | Textbook example: produces, occurs_in lift, part_of transitivity, is_a inheritance, inherited negation | built, theorems check | `BioLean/Examples/Textbook.lean` |
 | The textbook as Lean, round 2 (Sonnet, structured): 1,594 emitted, 1,591 compile | generated, outside the lib build | `BioLean/Lib/TextbookClaimsR2/`, `docs/textbook-lean-check.md` |
 | RO pinning tests | built, pass | `BioLean/Tests/RO.lean` |
+| Context (M2): entity refinement, `Ctx`/`inCtx`, transport between sibling taxa, protocol on Evidence; S1-S5 pass | built | `BioLean/Context.lean`, `Taxa.lean`, `Examples/Context.lean`, `Tests/Context.lean` |
 | Quantity (M3): counts, cardinalities, intervals, yields, some/most; 6 arithmetic rules; 7 theorems | built | `BioLean/Examples/Quantity.lean` |
 | Closure search over the textbook; 60 derived facts certified | built | `scripts/search/`, `BioLean/Examples/Closure.lean`, `docs/closure-search.md` |
 | Statements with PMID evidence, swappable reliability table | built | `BioLean/Evidence.lean` |
@@ -93,7 +94,7 @@ Last updated 2026-10-28 (after M3).
 | derivation rules for structure | decided: RO chains imported as data, `RO.chainOK` decides (M1) | done; hand-check pending |
 | weight of logical steps | decided: RO-chain steps use `Opinion.weakest` (min belief), after the chain-length experiment showed sound 12-step partonomies falling to 0.28 under product | done |
 | feedback loops | flag chains through self-inhibiting nodes, or add `Claim.loop` | open |
-| `isaInheritEffect` rule | a is_a b, b →s t ⊢ a →s t; sound, 56 uses in the closure, no constructor | open, small |
+| `isaInheritEffect` rule | a is_a b, b →s t ⊢ a →s t; sound, 56 uses in the closure; added in M2 (`Derivation.isaInheritEffect`, opinion `weakest`) | done |
 | `Target.disease` | one textbook claim (obesity causes T2D) needs a disease target | open, small |
 | caveated chains / trivial conclusions | decided in principle (Dan, 2026-10-28): use information content of the ontology term (Resnik: -log p from descendant count or annotation frequency) as the triviality threshold for conclusions, replacing the hub list in the closure search and the flat discount idea. Not implemented | open |
 | evidence kinds | keep 8-way enum vs ECO codes with a reliability map | ECO |
