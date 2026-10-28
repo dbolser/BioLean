@@ -217,3 +217,34 @@ Nothing was pushed to GitHub by agents; I pushed after verifying each phase's bu
 literature work, no weight calibration, no rule induction. The attribution trailer on agent
 commits names the model that did the work (Sonnet 5.5, Opus 5.5) rather than Fable 5.1; I left
 those as they are, since they are accurate.
+
+## 6. Phase 4 (follow-ups the data asked for)
+
+Three agents, all committed (e31670c, c64b8c3, a9c7d83); full build green and pushed.
+
+| follow-up | result |
+|---|---|
+| M3/M2 schema gaps | `Ctx.lifeStage` for UBERON life stages (RO existence_overlaps); `Claim.atLeastMeasure` for open ends; `Claim.countBetween` for ranges. The five Lean-rejected claims now compile; round 3 is **410 of 410**. Sound weakenings emitted (53; three "either/or" cases refused because picking one option makes the claim stronger, not weaker). Obsolete "somatic cell" replaced by "diploid cell" where chromosomes are counted. **Textbook now 1,956 of 4,695 claims in Lean, 41.7 percent.** |
+| Closure guards and refinement edges | Refinement edges ("e ⊓ ∃r.f is_a e") load by default: derived facts 1,614 → 2,287; IC-kept 886 → 1,254. **Feedback flag fires on 95 of 196 effect-chain conclusions (48 percent)**, almost all the body's glucose, insulin and glucagon loops once "glucose in blood" connects to "glucose". Parthood and shared-cause flags fire 0 times in the closure but match 16 and 59 holes in the hole search. 45 sign clashes appear (a raises t and a lowers t); every one has a feedback-flagged side. The neuron clashes are gone (quantified). **One clash remains and it is a real annotation error**: "animal cells also have a centrosome" was annotated as true of every cell; the book says animal cells. Left in place as the demonstration; fix is one context field. |
+| Honest bracketing | Children now come from NCBI, not our vocabulary. Numbers dropped as they should: Eukaryota from five model organisms 0.470 → **0.104** (they hit 2 of 18 children); Opisthokonta 0.923 → 0.307. Cellular organisms stays 0.634 from five and **0.969, established, from eight**, because it really has three children. Rule of thumb, proved: a sample inside a single child never covers more than 1/#children, so a clade is established only once about four fifths of its NCBI children are sampled. The cliff became a slope (mouse plus human give Metazoa 1/512 instead of 0). **New flaw found and proved** (`cellular_above_eukaryota`): bracketing can rate "in cellular organisms" (0.969) above "in Eukaryota" (0.213) from the same instances, though the former implies the latter. Two fixes proposed; neither applied. |
+
+| new question | provisional answer |
+|---|---|
+| Put the three either/or weakenings back? | No. The agent is right: choosing one disjunct strengthens the claim. Disjunction needs its own constructor later. |
+| Approximate counts as exact? | Keep exact for now; "about" is lost and said so in the text. An approximate form is M3 follow-up if the literature needs it. |
+| Closure loads weakenings too | Yes by default; they are statements. Their text carries the blocker. |
+| Fix the centrosome record (taxon Metazoa)? | Yes, but after you have seen it: it is the cleanest example yet of the system catching a false universal. |
+| Bracketing rates a broad clade above a narrower one it implies | Cap a target's coverage by the coverage of each sampled child along the path (option b); it is the smaller change and respects the nesting. Not applied tonight. |
+| Fetch NCBI children along the whole descent path? | Yes when generalisation is used in anger; for the transcription case the eight targets suffice. |
+| "Candidatus" phyla binned under Bacteria | Yes, as assumed. |
+| Feedback guard through has_output; parthood/shared-cause flags in the hole search; screen "X is_a (Y in context)" holes | All three yes, small; queued. |
+
+### The night in one paragraph
+
+Milestones M2 and M4 are built and tested, M5 is started, and the textbook went from 34 to 42
+percent Lean. The type checker and the search kept finding real errors: a wrong UBERON id in the
+demo, a false universal about centrosomes, seven bad RO axioms earlier in the week. The weights are
+still placeholders, nothing surprising has been derived, and the literature has not been touched;
+those are the three things only you can scope. The system now has the pieces your rat-versus-mouse
+question needs (context, transport with a cost, generalisation with an honest coverage, holes as
+hypotheses) and none of the data.

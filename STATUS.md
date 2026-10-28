@@ -23,7 +23,8 @@ Last updated 2026-10-28 (after M3).
 | Argument layer: hypothesis kind, noEffect, opinionAt, Rivalry; chemiosmotic history as theorems | built | `BioLean/Rivalry.lean`, `Examples/Chemiosmosis.lean` |
 | Generalise (M4): coverage over real NCBITaxon, bracketing and clade fraction; transcription case | built | `BioLean/Coverage.lean`, `Examples/Transcription.lean` |
 | Ontology is_a closure for every used CURIE, ten ontologies, as a Lean search tree | generated | `BioLean/Ontology/IsA.lean`, `scripts/ontology/` |
-| Round 3 textbook claims (quantity, context): 351 compile; textbook 40.7 percent in Lean | generated | `BioLean/Lib/TextbookClaimsR3/` |
+| Round 3 textbook claims (quantity, context, life stage, weakenings): 410 compile; textbook 41.7 percent in Lean | generated | `BioLean/Lib/TextbookClaimsR3/` |
+| Closure guards (feedback, parthood, shared cause) and refinement edges; one real clash left (centrosome) | built | `scripts/search/closure.py`, `docs/closure-search.md` |
 | Quantity (M3): counts, cardinalities, intervals, yields, some/most; 6 arithmetic rules; 7 theorems | built | `BioLean/Examples/Quantity.lean` |
 | Closure search over the textbook; 60 derived facts certified | built | `scripts/search/`, `BioLean/Examples/Closure.lean`, `docs/closure-search.md` |
 | Statements with PMID evidence, swappable reliability table | built | `BioLean/Evidence.lean` |
@@ -99,7 +100,7 @@ Last updated 2026-10-28 (after M3).
 | structural claims | decided: generic `Claim.rel r a b`, typed by RO domain/range (M1) | done |
 | derivation rules for structure | decided: RO chains imported as data, `RO.chainOK` decides (M1) | done; hand-check pending |
 | weight of logical steps | decided: RO-chain steps use `Opinion.weakest` (min belief), after the chain-length experiment showed sound 12-step partonomies falling to 0.28 under product | done |
-| feedback loops | flag chains through self-inhibiting nodes, or add `Claim.loop` | open |
+| feedback loops | flag built in the closure search (48 percent of effect chains flagged); a Lean-side `Claim.loop` or report flag still open | partly |
 | `isaInheritEffect` rule | a is_a b, b →s t ⊢ a →s t; sound, 56 uses in the closure; added in M2 (`Derivation.isaInheritEffect`, opinion `weakest`) | done |
 | `Target.disease` | one textbook claim (obesity causes T2D) needs a disease target | open, small |
 | caveated chains / trivial conclusions | decided in principle (Dan, 2026-10-28): use information content of the ontology term (Resnik: -log p from descendant count or annotation frequency) as the triviality threshold for conclusions, replacing the hub list in the closure search and the flat discount idea. Not implemented | open |
