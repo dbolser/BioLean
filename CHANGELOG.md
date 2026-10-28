@@ -2,6 +2,26 @@
 
 Findings and decisions, dated. Code history is in `git log`; this records what we learned.
 
+## 2026-10-28 (overnight: round 3 emit, compile and closure rerun)
+- Built `scripts/textbook/emit_lean_m3.py` and lean_lib `TextbookR3` (`BioLean/Lib/TextbookClaimsR3/`, 134 new
+  entities). Of the 620 round-3 records, 356 were emitted and 351 compiled (98.6%). The 57 records that have a
+  constructor and also a blocker were skipped, as the rule says; 56 of them would emit. All 5 Lean rejections are
+  UBERON life stages ("adult") put in `Ctx.stage`, which is `Entity .process`. That is a schema gap, recorded in
+  `data/textbook/r3_skip.tsv`. Lean found no emitter bug. A Lean `#eval` showed the emitter's composite curies
+  match `Entity.inCtx` for all 351 statements.
+- The whole textbook is now 1,909 compiled claims out of 4,695 (40.7%; round 2 was 1,591, 33.9%): relational
+  1,376, causal 366, quantity 167. 33 round-3 claims replace weaker round-2 versions of the same sentence.
+- Context rule, my call: a site (anatomy, cell type, component) refines the effect's target when the target is an
+  amount, process or activity, and refines the subject otherwise. So "rising blood glucose stimulates insulin"
+  becomes glucose raising insulin ⊓ blood. That differs from Examples/Context.lean T08, which refines the subject.
+- `closure.py` now loads round 3 and uses IC as its default filter (`--hubs` for the old hub filter, `--no-m3` to
+  reproduce the earlier run byte for byte). Asserted 1,248 to 1,378; derived 1,551 to 1,606; IC-kept 837 to 881;
+  clashes still 2. Holes 6,735 to 7,418; after screening 2,172 to 2,611; grouped 842 to 1,016. None of the eight
+  hand-found holes was rediscovered.
+- Found: refined entities do not link to their base term in the closure. Loading Lean's `refineAxiom` edges
+  (scratch run, not committed) gives 2,190 derived facts and 5 clashes. One clash is a real round-2 error:
+  "Animal cells also have a centrosome" was annotated as true of every cell, so plant cells get centrioles.
+
 ## 2026-10-28 (overnight: round 3 annotation, quantity and context, cells, photosynthesis, energy)
 - Re-annotated the 204 records of `cell-structure-and-function` (106), `photosynthesis` (28) and `how-cells-obtain-energy`
   (70) that M2 blocked as `quantity` (141) or `context_required` (63). Output `data/textbook/claims_m3/<chapter>.json`,

@@ -4,15 +4,21 @@ Facts:   rel(r, a, b) / notRel(r, a, b) / effect(a, sign, target, b)
 Rules:   RO chains (enabled), transitivity, is_a laws, inverses, viaAmount, viaActivity, notRelSub/Obj
 Every derived fact keeps its shortest derivation (rule, premises). Belief: weakest-link for relational
 steps, product for effect chains. Output: data/search/closure.json and a printed summary.
-Usage: closure.py <claims_m2_dir> <go.obo> [max_depth] [--ic[=T]]
---ic ranks and filters by information content instead of the hub list: score(fact) = min IC of its subject and
-object, read from data/search/ic.json (build it with scripts/ontology/ic.py); keeps score >= T (default IC_MIN).
-Writes closure_ic.json and derivations_ic.json beside the defaults, and prints the comparison with the hub list."""
+Usage: closure.py <claims_m2_dir> <go.obo> [max_depth] [--ic=T] [--hubs] [--no-m3]
+Facts come from the m2 claims and from the round-3 claims in the sibling claims_m3 (`emit_lean_m3.statements`, the
+same reading the Lean emitter uses; context gives composite curies as in BioLean/Context.lean). For a record round 3
+re-annotated, its rel/notRel/effect replaces the m2 fact, and a some/most claim loads nothing, so that neither
+annotation acts as a universal. --no-m3 loads m2 alone.
+Interesting facts are ranked and filtered by information content: score(fact) = min IC of its subject and object, read
+from data/search/ic.json (build it with scripts/ontology/ic.py; a refined entity takes its base term's IC, a lower bound);
+keeps score >= T (default IC_MIN). Writes closure_ic.json and derivations_ic.json, and prints the comparison with the
+hub list. --hubs filters by the old hub list instead and writes derivations.json (read by emit_closure_lean.py)."""
 import json, glob, re, sys, collections, pathlib, itertools
 from fractions import Fraction as F
 IC_MIN = 2.5   # suggested threshold, see docs/ic-triviality.md
-IC = next((a for a in sys.argv if a.startswith('--ic')), None); IC_T = float(IC.split('=')[1]) if IC and '=' in IC else IC_MIN
-args = [a for a in sys.argv[1:] if not a.startswith('--ic')]
+HUBS, M3 = '--hubs' in sys.argv, '--no-m3' not in sys.argv
+IC_T = next((float(a.split('=')[1]) for a in sys.argv if a.startswith('--ic=')), IC_MIN)
+args = [a for a in sys.argv[1:] if not a.startswith('--')]
 src, go_obo = args[0], args[1]; MAXD = int(args[2]) if len(args) > 2 else 4
 sys.path.insert(0, 'scripts/textbook')
 # --- reuse kind logic from the emitter
@@ -24,7 +30,7 @@ KIND_BY_NS = {'biological_process': 'process', 'molecular_function': 'function',
 PREFIX_KIND = {'CHEBI': 'chemical', 'PR': 'protein', 'UniProt': 'protein', 'UNIPROT': 'protein', 'UniProtKB': 'protein', 'HGNC': 'gene', 'NCBIGene': 'gene', 'SO': 'gene', 'MGI': 'gene', 'HP': 'phenotype', 'MP': 'phenotype', 'PATO': 'phenotype', 'OBA': 'phenotype', 'MONDO': 'disease', 'DOID': 'disease', 'UBERON': 'anatomy', 'CL': 'cellType', 'NCBITaxon': 'taxon'}
 def kind_of(c):
     if not c: return None
-    p = c.split(':')[0]; return KIND_BY_NS.get(go_ns.get(c)) if p == 'GO' else PREFIX_KIND.get(p)
+    p = c.split(':')[0]; return KIND_BY_NS.get(go_ns.get(c.split('&')[0])) if p == 'GO' else PREFIX_KIND.get(p)   # a refined entity keeps its kind
 # --- RO data from the generated Lean
 ro_src = open('BioLean/RO.lean').read()
 def parse_rel(t):
@@ -58,6 +64,16 @@ def add(key, deriv, depth, belief, src_id=None):
     facts[key] = dict(depth=depth, belief=belief, deriv=deriv, src=src_id); return True
 skip = {l.split('\t')[0] for l in open('data/textbook/r2_skip.tsv') if l.strip() and not l.startswith('#')}
 n_stmt = 0; sid_of = {}
+m3_facts, m3_quantified = {}, set()   # round 3: record id -> (key, statement); ids marked some/most
+if M3:
+    import emit_lean_m3
+    m3_stmts, _, m3_recs = emit_lean_m3.statements(str(pathlib.Path(src).with_name('claims_m3')), go_ns)
+    m3_quantified = {r['id'] for r in m3_recs if r['m3'].get('quant') in ('some', 'most')}
+    for s in m3_stmts:
+        if s['quant']: continue
+        if s['ctor'] in ('rel', 'notRel'): m3_facts[s['id']] = ((s['ctor'], s['rel'], s['subj'][0], s['obj'][0]), s)
+        elif s['ctor'] == 'effect': m3_facts[s['id']] = (('effect', s['sign'], s['target'], s['subj'][0], s['obj'][0]), s)
+superseded = 0
 for p in sorted(glob.glob(f'{src}/*.json')):
     for r in json.load(open(p)):
         m = r.get('m2')
@@ -76,8 +92,15 @@ for p in sorted(glob.glob(f'{src}/*.json')):
             if m['ctor'] == 'mediatedBy': continue   # no Lean rule forgets a mediator yet; keep the search honest
             if m.get('sign') not in ('pos', 'neg') or m.get('target') not in ('activity', 'amount', 'process', 'phenotype', 'site'): continue
             key = ('effect', m['sign'], m['target'], s_, o_)
+        if r['id'] in m3_facts or r['id'] in m3_quantified: superseded += 1; continue
         if add(key, ('lit', r['id']), 0, R_TB, r['id']): n_stmt += 1; sid_of[key] = r['id']
+n_m2 = n_stmt
+for sid, (key, s) in m3_facts.items():
+    for c, (_, l) in s['ents'].items(): labels_e.setdefault(c, l)
+    for c, l in (s['subj'], s['obj']): labels_e.setdefault(c, l)
+    if add(key, ('lit', sid), 0, R_TB, sid): n_stmt += 1; sid_of[key] = sid
 asserted = set(facts)
+if M3: print(f'm2 statements {n_m2} (superseded by round 3: {superseded}), round 3 statements {n_stmt - n_m2} of {len(m3_facts)} rel/notRel/effect (unquantified; {len(m3_quantified)} records some/most)')
 print(f'statements loaded: {n_stmt}  (rel {sum(1 for k in facts if k[0]=="rel")}, notRel {sum(1 for k in facts if k[0]=="notRel")}, effect {sum(1 for k in facts if k[0]=="effect")})')
 
 # --- forward chaining, semi-naive by depth
@@ -175,11 +198,12 @@ def interesting(k):
 inter = [k for k in novel if interesting(k)]
 print(f"\nhubs excluded: {[labels_e.get(h, h) for h in list(hubs)[:12]]} ...")
 print(f"novel facts after dropping inverses-of-asserted and hub lifts: {len(inter)}; by rule {dict(collections.Counter(facts[k]['deriv'][0] for k in inter))}")
-# --- --ic: score = min IC over subject and object; a conclusion about "cell" or "organism" scores near 0.
+# --- IC (the default filter): score = min IC over subject and object; a conclusion about "cell" or "organism" scores near 0.
 # Scored only when both ends have an IC (GO, UBERON, CL, ChEBI); one scored end gives an upper bound, enough to call a fact trivial.
-if IC:
+if not HUBS:
     ic_tab = json.load(open('data/search/ic.json'))['terms']; ic = {c: v['ic'] for c, v in ic_tab.items() if 'ic' in v}
     ends = lambda k: (k[3], k[4]) if k[0] == 'effect' else (k[2], k[3])
+    ic.update({c: ic[c.split('&')[0]] for k in facts for c in ends(k) if c.split('&')[0] in ic})   # refined: base IC, a lower bound
     bound = lambda k: min((ic[c] for c in ends(k) if c in ic), default=None)
     score = lambda k: bound(k) if all(c in ic for c in ends(k)) else None
     name = lambda c: labels_e.get(c) or (ic_tab.get(c) or {}).get('name') or c
@@ -217,7 +241,7 @@ def deriv_struct(k):
     out = {'rule': d[0], 'premises': prem, 'fact': show(k), 'key': [list(x) if isinstance(x, tuple) else x for x in k]}
     if d[0] == 'relInv': out['to_rel'] = list(k[1])
     return out
-json.dump([deriv_struct(k) for k in sorted(inter, key=(lambda k: (-score(k), str(k))) if IC else (lambda k: (facts[k]['depth'], str(k))))[:400]], open('data/search/derivations_ic.json' if IC else 'data/search/derivations.json', 'w'), indent=0)
+json.dump([deriv_struct(k) for k in sorted(inter, key=(lambda k: (facts[k]['depth'], str(k))) if HUBS else (lambda k: (-score(k), str(k))))[:400]], open('data/search/derivations.json' if HUBS else 'data/search/derivations_ic.json', 'w'), indent=0)
 
 # --- path query: Dan's question, "cancer is a disease of energy metabolism"
 G = collections.defaultdict(list)

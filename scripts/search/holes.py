@@ -15,7 +15,7 @@ or a relation/kind pattern never seen in the textbook (Progol-style mode declara
 Effect holes are screened only for the Lean Target kinds (an activity must be a protein or function).
 Judgements are hand-written in data/search/holes_judgement.json (key = hole key) and merged in.
 
-Usage: holes.py <claims_m2_dir> <go.obo> [max_depth]     (same arguments as closure.py)
+Usage: holes.py <claims_m2_dir> <go.obo> [max_depth] [--no-m3]     (same arguments as closure.py; round 3 loads by default)
 Output: data/search/holes.json, docs/holes.md."""
 import sys, json, glob, re, collections, pathlib
 
@@ -188,8 +188,8 @@ def say(k):
 ic = {}
 if pathlib.Path('data/search/ic.json').exists():
     ic = {c: t['ic'] for c, t in json.load(open('data/search/ic.json'))['terms'].items() if t.get('ic') is not None}
-def ic_of(H):
-    v = [ic[c] for c in subj_obj(H) if c in ic]; return round(min(v), 2) if v else None
+def ic_of(H):   # a refined entity (context) takes its base term's IC, a lower bound
+    v = [ic[c.split('&')[0]] for c in subj_obj(H) if c.split('&')[0] in ic]; return round(min(v), 2) if v else None
 print(f'IC loaded for {len(ic)} terms' if ic else 'no data/search/ic.json: ranking without IC')
 
 # --- group, screen, rank

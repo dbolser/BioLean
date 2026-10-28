@@ -1,5 +1,43 @@
 [
 {
+"rule": "viaAmount",
+"premises": [
+{
+"rule": "viaActivity",
+"premises": [
+{
+"rule": "lit",
+"sid": "the-body-s-systems-m45539-80"
+},
+{
+"rule": "lit",
+"sid": "the-body-s-systems-m45539-82"
+}
+],
+"fact": "neurotransmitters [CHEBI:25512] \u2192+ amount(sodium [CHEBI:29101])",
+"key": [
+"effect",
+"pos",
+"amount",
+"CHEBI:25512",
+"CHEBI:29101"
+]
+},
+{
+"rule": "lit",
+"sid": "the-body-s-systems-m45537-153"
+}
+],
+"fact": "neurotransmitters [CHEBI:25512] \u2192\u2212 amount(aldosterone \u2293 located in (blood) [CHEBI:27584&RO:0001025=(UBERON:0000178)])",
+"key": [
+"effect",
+"neg",
+"amount",
+"CHEBI:25512",
+"CHEBI:27584&RO:0001025=(UBERON:0000178)"
+]
+},
+{
 "rule": "viaActivity",
 "premises": [
 {
@@ -770,6 +808,27 @@ false
 ],
 "CHEBI:33699",
 "CHEBI:33942"
+]
+},
+{
+"rule": "viaAmount",
+"premises": [
+{
+"rule": "lit",
+"sid": "the-body-s-systems-m45537-52"
+},
+{
+"rule": "lit",
+"sid": "the-body-s-systems-m45537-53"
+}
+],
+"fact": "glucose [CHEBI:17234] \u2192\u2212 amount(glucose \u2293 located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])",
+"key": [
+"effect",
+"neg",
+"amount",
+"CHEBI:17234",
+"CHEBI:17234&RO:0001025=(UBERON:0000178)"
 ]
 },
 {
@@ -1860,6 +1919,30 @@ false
 ]
 },
 {
+"rule": "isaInherit",
+"premises": [
+{
+"rule": "lit",
+"sid": "reproduction-at-the-cellular-level-m45463-12"
+},
+{
+"rule": "lit",
+"sid": "reproduction-at-the-cellular-level-m45461-9"
+}
+],
+"fact": "binary fission \u2293 in taxon (prokaryote) [GO:0043093&RO:0002162=(NCBITaxon:2)] happens during mitotic phase [GO:0000087]",
+"key": [
+"rel",
+[
+"ro",
+2092,
+false
+],
+"GO:0043093&RO:0002162=(NCBITaxon:2)",
+"GO:0000087"
+]
+},
+{
 "rule": "relChain",
 "premises": [
 {
@@ -2088,6 +2171,30 @@ false
 false
 ],
 "CHEBI:33699",
+"CHEBI:33697"
+]
+},
+{
+"rule": "isaGeneralise",
+"premises": [
+{
+"rule": "lit",
+"sid": "molbio-m45480-48"
+},
+{
+"rule": "lit",
+"sid": "molbio-m45476-76"
+}
+],
+"fact": "mRNA export from nucleus \u2293 in taxon (NCBITaxon:2759) [GO:0006406&RO:0002162=(NCBITaxon:2759)] has input RNA [CHEBI:33697]",
+"key": [
+"rel",
+[
+"ro",
+2233,
+false
+],
+"GO:0006406&RO:0002162=(NCBITaxon:2759)",
 "CHEBI:33697"
 ]
 },
@@ -2570,6 +2677,50 @@ false
 "premises": [
 {
 "rule": "lit",
+"sid": "molbio-m45480-48"
+},
+{
+"rule": "lit",
+"sid": "molbio-m45476-76"
+}
+],
+"fact": "mRNA export from nucleus \u2293 in taxon (NCBITaxon:2759) [GO:0006406&RO:0002162=(NCBITaxon:2759)] has input RNA [CHEBI:33697]",
+"key": [
+"rel",
+[
+"ro",
+2233,
+false
+],
+"GO:0006406&RO:0002162=(NCBITaxon:2759)",
+"CHEBI:33697"
+]
+},
+{
+"rule": "lit",
+"sid": "molbio-m45473-47"
+}
+],
+"fact": "mRNA export from nucleus \u2293 in taxon (NCBITaxon:2759) [GO:0006406&RO:0002162=(NCBITaxon:2759)] has input nucleic acids [CHEBI:33696]",
+"key": [
+"rel",
+[
+"ro",
+2233,
+false
+],
+"GO:0006406&RO:0002162=(NCBITaxon:2759)",
+"CHEBI:33696"
+]
+},
+{
+"rule": "isaGeneralise",
+"premises": [
+{
+"rule": "isaGeneralise",
+"premises": [
+{
+"rule": "lit",
 "sid": "molbio-m45476-64"
 },
 {
@@ -2648,6 +2799,177 @@ false
 ],
 "GO:0006354",
 "CHEBI:33696"
+]
+},
+{
+"rule": "viaAmount",
+"premises": [
+{
+"rule": "lit",
+"sid": "the-body-s-systems-m45537-238"
+},
+{
+"rule": "lit",
+"sid": "the-body-s-systems-m45537-240"
+}
+],
+"fact": "oxygen [CHEBI:15379] \u2192\u2212 process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])",
+"key": [
+"effect",
+"neg",
+"process",
+"CHEBI:15379",
+"GO:0030218&BFO:0000066=(UBERON:0002371)"
+]
+},
+{
+"rule": "viaAmount",
+"premises": [
+{
+"rule": "isaInheritEffect",
+"premises": [
+{
+"rule": "relTrans",
+"premises": [
+{
+"rule": "lit",
+"sid": "the-body-s-systems-m45536-232"
+},
+{
+"rule": "lit",
+"sid": "the-body-s-systems-m45536-244"
+}
+],
+"fact": "inferior vena cava [UBERON:0001072] is_a blood vessel [UBERON:0001981]",
+"key": [
+"rel",
+[
+"rdfs",
+0,
+false
+],
+"UBERON:0001072",
+"UBERON:0001981"
+]
+},
+{
+"rule": "lit",
+"sid": "the-body-s-systems-m45536-3"
+}
+],
+"fact": "inferior vena cava [UBERON:0001072] \u2192+ amount(oxygen [CHEBI:15379])",
+"key": [
+"effect",
+"pos",
+"amount",
+"UBERON:0001072",
+"CHEBI:15379"
+]
+},
+{
+"rule": "viaAmount",
+"premises": [
+{
+"rule": "lit",
+"sid": "the-body-s-systems-m45537-238"
+},
+{
+"rule": "lit",
+"sid": "the-body-s-systems-m45537-240"
+}
+],
+"fact": "oxygen [CHEBI:15379] \u2192\u2212 process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])",
+"key": [
+"effect",
+"neg",
+"process",
+"CHEBI:15379",
+"GO:0030218&BFO:0000066=(UBERON:0002371)"
+]
+}
+],
+"fact": "inferior vena cava [UBERON:0001072] \u2192\u2212 process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])",
+"key": [
+"effect",
+"neg",
+"process",
+"UBERON:0001072",
+"GO:0030218&BFO:0000066=(UBERON:0002371)"
+]
+},
+{
+"rule": "viaAmount",
+"premises": [
+{
+"rule": "isaInheritEffect",
+"premises": [
+{
+"rule": "relTrans",
+"premises": [
+{
+"rule": "lit",
+"sid": "the-body-s-systems-m45536-239"
+},
+{
+"rule": "lit",
+"sid": "the-body-s-systems-m45536-244"
+}
+],
+"fact": "superior vena cava [UBERON:0001585] is_a blood vessel [UBERON:0001981]",
+"key": [
+"rel",
+[
+"rdfs",
+0,
+false
+],
+"UBERON:0001585",
+"UBERON:0001981"
+]
+},
+{
+"rule": "lit",
+"sid": "the-body-s-systems-m45536-3"
+}
+],
+"fact": "superior vena cava [UBERON:0001585] \u2192+ amount(oxygen [CHEBI:15379])",
+"key": [
+"effect",
+"pos",
+"amount",
+"UBERON:0001585",
+"CHEBI:15379"
+]
+},
+{
+"rule": "viaAmount",
+"premises": [
+{
+"rule": "lit",
+"sid": "the-body-s-systems-m45537-238"
+},
+{
+"rule": "lit",
+"sid": "the-body-s-systems-m45537-240"
+}
+],
+"fact": "oxygen [CHEBI:15379] \u2192\u2212 process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])",
+"key": [
+"effect",
+"neg",
+"process",
+"CHEBI:15379",
+"GO:0030218&BFO:0000066=(UBERON:0002371)"
+]
+}
+],
+"fact": "superior vena cava [UBERON:0001585] \u2192\u2212 process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])",
+"key": [
+"effect",
+"neg",
+"process",
+"UBERON:0001585",
+"GO:0030218&BFO:0000066=(UBERON:0002371)"
 ]
 },
 {
@@ -3002,6 +3324,27 @@ false
 ],
 "GO:0006909",
 "CHEBI:15422"
+]
+},
+{
+"rule": "viaAmount",
+"premises": [
+{
+"rule": "lit",
+"sid": "the-body-s-systems-m45539-90"
+},
+{
+"rule": "lit",
+"sid": "the-body-s-systems-m45537-153"
+}
+],
+"fact": "voltage-gated sodium channel activity [GO:0005248] \u2192\u2212 amount(aldosterone \u2293 located in (blood) [CHEBI:27584&RO:0001025=(UBERON:0000178)])",
+"key": [
+"effect",
+"neg",
+"amount",
+"GO:0005248",
+"CHEBI:27584&RO:0001025=(UBERON:0000178)"
 ]
 },
 {
@@ -4585,6 +4928,358 @@ false
 ]
 },
 {
+"rule": "relTrans",
+"premises": [
+{
+"rule": "lit",
+"sid": "molbio-m45479-60"
+},
+{
+"rule": "isaInherit",
+"premises": [
+{
+"rule": "lit",
+"sid": "molbio-m45476-76"
+},
+{
+"rule": "lit",
+"sid": "molbio-m45473-58"
+}
+],
+"fact": "messenger RNA [CHEBI:33699] has part cytosine [CHEBI:16040]",
+"key": [
+"rel",
+[
+"bfo",
+51,
+false
+],
+"CHEBI:33699",
+"CHEBI:16040"
+]
+}
+],
+"fact": "translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part cytosine [CHEBI:16040]",
+"key": [
+"rel",
+[
+"bfo",
+51,
+false
+],
+"GO:0070992&RO:0002162=(NCBITaxon:562)",
+"CHEBI:16040"
+]
+},
+{
+"rule": "relTrans",
+"premises": [
+{
+"rule": "lit",
+"sid": "molbio-m45479-60"
+},
+{
+"rule": "isaInherit",
+"premises": [
+{
+"rule": "lit",
+"sid": "molbio-m45476-76"
+},
+{
+"rule": "lit",
+"sid": "molbio-m45473-59"
+}
+],
+"fact": "messenger RNA [CHEBI:33699] has part guanine [CHEBI:16235]",
+"key": [
+"rel",
+[
+"bfo",
+51,
+false
+],
+"CHEBI:33699",
+"CHEBI:16235"
+]
+}
+],
+"fact": "translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part guanine [CHEBI:16235]",
+"key": [
+"rel",
+[
+"bfo",
+51,
+false
+],
+"GO:0070992&RO:0002162=(NCBITaxon:562)",
+"CHEBI:16235"
+]
+},
+{
+"rule": "relTrans",
+"premises": [
+{
+"rule": "lit",
+"sid": "molbio-m45479-60"
+},
+{
+"rule": "isaInherit",
+"premises": [
+{
+"rule": "lit",
+"sid": "molbio-m45476-76"
+},
+{
+"rule": "lit",
+"sid": "molbio-m45473-57"
+}
+],
+"fact": "messenger RNA [CHEBI:33699] has part adenine [CHEBI:16708]",
+"key": [
+"rel",
+[
+"bfo",
+51,
+false
+],
+"CHEBI:33699",
+"CHEBI:16708"
+]
+}
+],
+"fact": "translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part adenine [CHEBI:16708]",
+"key": [
+"rel",
+[
+"bfo",
+51,
+false
+],
+"GO:0070992&RO:0002162=(NCBITaxon:562)",
+"CHEBI:16708"
+]
+},
+{
+"rule": "relTrans",
+"premises": [
+{
+"rule": "lit",
+"sid": "molbio-m45479-60"
+},
+{
+"rule": "isaInherit",
+"premises": [
+{
+"rule": "lit",
+"sid": "molbio-m45476-76"
+},
+{
+"rule": "lit",
+"sid": "molbio-m45473-61"
+}
+],
+"fact": "messenger RNA [CHEBI:33699] has part uracil [CHEBI:17568]",
+"key": [
+"rel",
+[
+"bfo",
+51,
+false
+],
+"CHEBI:33699",
+"CHEBI:17568"
+]
+}
+],
+"fact": "translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part uracil [CHEBI:17568]",
+"key": [
+"rel",
+[
+"bfo",
+51,
+false
+],
+"GO:0070992&RO:0002162=(NCBITaxon:562)",
+"CHEBI:17568"
+]
+},
+{
+"rule": "isaGeneralise",
+"premises": [
+{
+"rule": "isaGeneralise",
+"premises": [
+{
+"rule": "lit",
+"sid": "molbio-m45479-60"
+},
+{
+"rule": "lit",
+"sid": "molbio-m45476-76"
+}
+],
+"fact": "translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part RNA [CHEBI:33697]",
+"key": [
+"rel",
+[
+"bfo",
+51,
+false
+],
+"GO:0070992&RO:0002162=(NCBITaxon:562)",
+"CHEBI:33697"
+]
+},
+{
+"rule": "lit",
+"sid": "molbio-m45473-47"
+}
+],
+"fact": "translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part nucleic acids [CHEBI:33696]",
+"key": [
+"rel",
+[
+"bfo",
+51,
+false
+],
+"GO:0070992&RO:0002162=(NCBITaxon:562)",
+"CHEBI:33696"
+]
+},
+{
+"rule": "isaGeneralise",
+"premises": [
+{
+"rule": "lit",
+"sid": "molbio-m45479-60"
+},
+{
+"rule": "lit",
+"sid": "molbio-m45476-76"
+}
+],
+"fact": "translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part RNA [CHEBI:33697]",
+"key": [
+"rel",
+[
+"bfo",
+51,
+false
+],
+"GO:0070992&RO:0002162=(NCBITaxon:562)",
+"CHEBI:33697"
+]
+},
+{
+"rule": "relTrans",
+"premises": [
+{
+"rule": "lit",
+"sid": "molbio-m45479-60"
+},
+{
+"rule": "isaInherit",
+"premises": [
+{
+"rule": "lit",
+"sid": "molbio-m45476-76"
+},
+{
+"rule": "lit",
+"sid": "molbio-m45473-53"
+}
+],
+"fact": "messenger RNA [CHEBI:33699] has part ribose [CHEBI:33942]",
+"key": [
+"rel",
+[
+"bfo",
+51,
+false
+],
+"CHEBI:33699",
+"CHEBI:33942"
+]
+}
+],
+"fact": "translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part ribose [CHEBI:33942]",
+"key": [
+"rel",
+[
+"bfo",
+51,
+false
+],
+"GO:0070992&RO:0002162=(NCBITaxon:562)",
+"CHEBI:33942"
+]
+},
+{
+"rule": "relTrans",
+"premises": [
+{
+"rule": "isaGeneralise",
+"premises": [
+{
+"rule": "lit",
+"sid": "molbio-m45479-60"
+},
+{
+"rule": "lit",
+"sid": "molbio-m45476-76"
+}
+],
+"fact": "translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part RNA [CHEBI:33697]",
+"key": [
+"rel",
+[
+"bfo",
+51,
+false
+],
+"GO:0070992&RO:0002162=(NCBITaxon:562)",
+"CHEBI:33697"
+]
+},
+{
+"rule": "relTrans",
+"premises": [
+{
+"rule": "lit",
+"sid": "molbio-m45473-53"
+},
+{
+"rule": "lit",
+"sid": "molbio-m45473-55"
+}
+],
+"fact": "RNA [CHEBI:33697] has part hydroxy group [CHEBI:43176]",
+"key": [
+"rel",
+[
+"bfo",
+51,
+false
+],
+"CHEBI:33697",
+"CHEBI:43176"
+]
+}
+],
+"fact": "translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part hydroxy group [CHEBI:43176]",
+"key": [
+"rel",
+[
+"bfo",
+51,
+false
+],
+"GO:0070992&RO:0002162=(NCBITaxon:562)",
+"CHEBI:43176"
+]
+},
+{
 "rule": "relChain",
 "premises": [
 {
@@ -4734,6 +5429,192 @@ false
 ],
 "GO:0042383",
 "CHEBI:33290"
+]
+},
+{
+"rule": "relChain",
+"premises": [
+{
+"rule": "isaGeneralise",
+"premises": [
+{
+"rule": "lit",
+"sid": "molbio-m45479-60"
+},
+{
+"rule": "lit",
+"sid": "molbio-m45476-76"
+}
+],
+"fact": "translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part RNA [CHEBI:33697]",
+"key": [
+"rel",
+[
+"bfo",
+51,
+false
+],
+"GO:0070992&RO:0002162=(NCBITaxon:562)",
+"CHEBI:33697"
+]
+},
+{
+"rule": "relChain",
+"premises": [
+{
+"rule": "lit",
+"sid": "molbio-m45473-53"
+},
+{
+"rule": "isaGeneralise",
+"premises": [
+{
+"rule": "lit",
+"sid": "how-cells-obtain-energy-m45438-21"
+},
+{
+"rule": "lit",
+"sid": "molbio-m45473-47"
+}
+],
+"fact": "ribose [CHEBI:33942] part of nucleic acids [CHEBI:33696]",
+"key": [
+"rel",
+[
+"bfo",
+50,
+false
+],
+"CHEBI:33942",
+"CHEBI:33696"
+]
+}
+],
+"fact": "RNA [CHEBI:33697] overlaps nucleic acids [CHEBI:33696]",
+"key": [
+"rel",
+[
+"ro",
+2131,
+false
+],
+"CHEBI:33697",
+"CHEBI:33696"
+]
+}
+],
+"fact": "translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] overlaps nucleic acids [CHEBI:33696]",
+"key": [
+"rel",
+[
+"ro",
+2131,
+false
+],
+"GO:0070992&RO:0002162=(NCBITaxon:562)",
+"CHEBI:33696"
+]
+},
+{
+"rule": "relChain",
+"premises": [
+{
+"rule": "lit",
+"sid": "molbio-m45479-60"
+},
+{
+"rule": "relChain",
+"premises": [
+{
+"rule": "isaInherit",
+"premises": [
+{
+"rule": "lit",
+"sid": "molbio-m45476-76"
+},
+{
+"rule": "lit",
+"sid": "molbio-m45473-53"
+}
+],
+"fact": "messenger RNA [CHEBI:33699] has part ribose [CHEBI:33942]",
+"key": [
+"rel",
+[
+"bfo",
+51,
+false
+],
+"CHEBI:33699",
+"CHEBI:33942"
+]
+},
+{
+"rule": "lit",
+"sid": "how-cells-obtain-energy-m45438-21"
+}
+],
+"fact": "messenger RNA [CHEBI:33699] overlaps RNA [CHEBI:33697]",
+"key": [
+"rel",
+[
+"ro",
+2131,
+false
+],
+"CHEBI:33699",
+"CHEBI:33697"
+]
+}
+],
+"fact": "translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] overlaps RNA [CHEBI:33697]",
+"key": [
+"rel",
+[
+"ro",
+2131,
+false
+],
+"GO:0070992&RO:0002162=(NCBITaxon:562)",
+"CHEBI:33697"
+]
+},
+{
+"rule": "viaAmount",
+"premises": [
+{
+"rule": "viaActivity",
+"premises": [
+{
+"rule": "lit",
+"sid": "the-body-s-systems-m45539-76"
+},
+{
+"rule": "lit",
+"sid": "the-body-s-systems-m45539-90"
+}
+],
+"fact": "membrane depolarization [GO:0051899] \u2192+ amount(sodium [CHEBI:29101])",
+"key": [
+"effect",
+"pos",
+"amount",
+"GO:0051899",
+"CHEBI:29101"
+]
+},
+{
+"rule": "lit",
+"sid": "the-body-s-systems-m45537-153"
+}
+],
+"fact": "membrane depolarization [GO:0051899] \u2192\u2212 amount(aldosterone \u2293 located in (blood) [CHEBI:27584&RO:0001025=(UBERON:0000178)])",
+"key": [
+"effect",
+"neg",
+"amount",
+"GO:0051899",
+"CHEBI:27584&RO:0001025=(UBERON:0000178)"
 ]
 },
 {
@@ -5138,6 +6019,74 @@ false
 ],
 "GO:0030057",
 "GO:0006909"
+]
+},
+{
+"rule": "isaGeneralise",
+"premises": [
+{
+"rule": "isaGeneralise",
+"premises": [
+{
+"rule": "lit",
+"sid": "molbio-m45476-70"
+},
+{
+"rule": "lit",
+"sid": "molbio-m45476-76"
+}
+],
+"fact": "mRNA splicing, via spliceosome \u2293 in taxon (NCBITaxon:2759) [GO:0000398&RO:0002162=(NCBITaxon:2759)] has input RNA [CHEBI:33697]",
+"key": [
+"rel",
+[
+"ro",
+2233,
+false
+],
+"GO:0000398&RO:0002162=(NCBITaxon:2759)",
+"CHEBI:33697"
+]
+},
+{
+"rule": "lit",
+"sid": "molbio-m45473-47"
+}
+],
+"fact": "mRNA splicing, via spliceosome \u2293 in taxon (NCBITaxon:2759) [GO:0000398&RO:0002162=(NCBITaxon:2759)] has input nucleic acids [CHEBI:33696]",
+"key": [
+"rel",
+[
+"ro",
+2233,
+false
+],
+"GO:0000398&RO:0002162=(NCBITaxon:2759)",
+"CHEBI:33696"
+]
+},
+{
+"rule": "isaGeneralise",
+"premises": [
+{
+"rule": "lit",
+"sid": "molbio-m45476-70"
+},
+{
+"rule": "lit",
+"sid": "molbio-m45476-76"
+}
+],
+"fact": "mRNA splicing, via spliceosome \u2293 in taxon (NCBITaxon:2759) [GO:0000398&RO:0002162=(NCBITaxon:2759)] has input RNA [CHEBI:33697]",
+"key": [
+"rel",
+[
+"ro",
+2233,
+false
+],
+"GO:0000398&RO:0002162=(NCBITaxon:2759)",
+"CHEBI:33697"
 ]
 },
 {
@@ -8073,6 +9022,61 @@ false
 ]
 },
 {
+"rule": "viaAmount",
+"premises": [
+{
+"rule": "isaInheritEffect",
+"premises": [
+{
+"rule": "lit",
+"sid": "the-body-s-systems-m45536-225"
+},
+{
+"rule": "lit",
+"sid": "the-body-s-systems-m45536-3"
+}
+],
+"fact": "capillaries [UBERON:0001982] \u2192+ amount(oxygen [CHEBI:15379])",
+"key": [
+"effect",
+"pos",
+"amount",
+"UBERON:0001982",
+"CHEBI:15379"
+]
+},
+{
+"rule": "viaAmount",
+"premises": [
+{
+"rule": "lit",
+"sid": "the-body-s-systems-m45537-238"
+},
+{
+"rule": "lit",
+"sid": "the-body-s-systems-m45537-240"
+}
+],
+"fact": "oxygen [CHEBI:15379] \u2192\u2212 process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])",
+"key": [
+"effect",
+"neg",
+"process",
+"CHEBI:15379",
+"GO:0030218&BFO:0000066=(UBERON:0002371)"
+]
+}
+],
+"fact": "capillaries [UBERON:0001982] \u2192\u2212 process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])",
+"key": [
+"effect",
+"neg",
+"process",
+"UBERON:0001982",
+"GO:0030218&BFO:0000066=(UBERON:0002371)"
+]
+},
+{
 "rule": "isaInheritEffect",
 "premises": [
 {
@@ -8368,6 +9372,50 @@ false
 false
 ],
 "GO:0043025",
+"CHEBI:60027"
+]
+},
+{
+"rule": "isaGeneralise",
+"premises": [
+{
+"rule": "isaGeneralise",
+"premises": [
+{
+"rule": "lit",
+"sid": "molbio-m45479-60"
+},
+{
+"rule": "lit",
+"sid": "molbio-m45476-76"
+}
+],
+"fact": "translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part RNA [CHEBI:33697]",
+"key": [
+"rel",
+[
+"bfo",
+51,
+false
+],
+"GO:0070992&RO:0002162=(NCBITaxon:562)",
+"CHEBI:33697"
+]
+},
+{
+"rule": "lit",
+"sid": "molbio-m45473-49"
+}
+],
+"fact": "translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part polymer [CHEBI:60027]",
+"key": [
+"rel",
+[
+"bfo",
+51,
+false
+],
+"GO:0070992&RO:0002162=(NCBITaxon:562)",
 "CHEBI:60027"
 ]
 },
@@ -8780,6 +9828,178 @@ false
 false
 ],
 "GO:0005697",
+"CHEBI:60027"
+]
+},
+{
+"rule": "relChain",
+"premises": [
+{
+"rule": "isaGeneralise",
+"premises": [
+{
+"rule": "lit",
+"sid": "molbio-m45479-60"
+},
+{
+"rule": "lit",
+"sid": "molbio-m45476-76"
+}
+],
+"fact": "translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part RNA [CHEBI:33697]",
+"key": [
+"rel",
+[
+"bfo",
+51,
+false
+],
+"GO:0070992&RO:0002162=(NCBITaxon:562)",
+"CHEBI:33697"
+]
+},
+{
+"rule": "relChain",
+"premises": [
+{
+"rule": "lit",
+"sid": "molbio-m45473-53"
+},
+{
+"rule": "isaGeneralise",
+"premises": [
+{
+"rule": "lit",
+"sid": "how-cells-obtain-energy-m45438-21"
+},
+{
+"rule": "lit",
+"sid": "molbio-m45473-49"
+}
+],
+"fact": "ribose [CHEBI:33942] part of polymer [CHEBI:60027]",
+"key": [
+"rel",
+[
+"bfo",
+50,
+false
+],
+"CHEBI:33942",
+"CHEBI:60027"
+]
+}
+],
+"fact": "RNA [CHEBI:33697] overlaps polymer [CHEBI:60027]",
+"key": [
+"rel",
+[
+"ro",
+2131,
+false
+],
+"CHEBI:33697",
+"CHEBI:60027"
+]
+}
+],
+"fact": "translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] overlaps polymer [CHEBI:60027]",
+"key": [
+"rel",
+[
+"ro",
+2131,
+false
+],
+"GO:0070992&RO:0002162=(NCBITaxon:562)",
+"CHEBI:60027"
+]
+},
+{
+"rule": "isaGeneralise",
+"premises": [
+{
+"rule": "isaGeneralise",
+"premises": [
+{
+"rule": "lit",
+"sid": "molbio-m45476-70"
+},
+{
+"rule": "lit",
+"sid": "molbio-m45476-76"
+}
+],
+"fact": "mRNA splicing, via spliceosome \u2293 in taxon (NCBITaxon:2759) [GO:0000398&RO:0002162=(NCBITaxon:2759)] has input RNA [CHEBI:33697]",
+"key": [
+"rel",
+[
+"ro",
+2233,
+false
+],
+"GO:0000398&RO:0002162=(NCBITaxon:2759)",
+"CHEBI:33697"
+]
+},
+{
+"rule": "lit",
+"sid": "molbio-m45473-49"
+}
+],
+"fact": "mRNA splicing, via spliceosome \u2293 in taxon (NCBITaxon:2759) [GO:0000398&RO:0002162=(NCBITaxon:2759)] has input polymer [CHEBI:60027]",
+"key": [
+"rel",
+[
+"ro",
+2233,
+false
+],
+"GO:0000398&RO:0002162=(NCBITaxon:2759)",
+"CHEBI:60027"
+]
+},
+{
+"rule": "isaGeneralise",
+"premises": [
+{
+"rule": "isaGeneralise",
+"premises": [
+{
+"rule": "lit",
+"sid": "molbio-m45480-48"
+},
+{
+"rule": "lit",
+"sid": "molbio-m45476-76"
+}
+],
+"fact": "mRNA export from nucleus \u2293 in taxon (NCBITaxon:2759) [GO:0006406&RO:0002162=(NCBITaxon:2759)] has input RNA [CHEBI:33697]",
+"key": [
+"rel",
+[
+"ro",
+2233,
+false
+],
+"GO:0006406&RO:0002162=(NCBITaxon:2759)",
+"CHEBI:33697"
+]
+},
+{
+"rule": "lit",
+"sid": "molbio-m45473-49"
+}
+],
+"fact": "mRNA export from nucleus \u2293 in taxon (NCBITaxon:2759) [GO:0006406&RO:0002162=(NCBITaxon:2759)] has input polymer [CHEBI:60027]",
+"key": [
+"rel",
+[
+"ro",
+2233,
+false
+],
+"GO:0006406&RO:0002162=(NCBITaxon:2759)",
 "CHEBI:60027"
 ]
 },
@@ -9900,6 +11120,30 @@ false
 false
 ],
 "GO:0019684",
+"CHEBI:36976"
+]
+},
+{
+"rule": "isaGeneralise",
+"premises": [
+{
+"rule": "lit",
+"sid": "photosynthesis-m45452-90"
+},
+{
+"rule": "lit",
+"sid": "how-cells-obtain-energy-m45438-47"
+}
+],
+"fact": "ATP synthase \u2293 located in (mitochondrion) [GO:0045259&RO:0001025=(GO:0005739)] produces nucleotides [CHEBI:36976]",
+"key": [
+"rel",
+[
+"ro",
+3000,
+false
+],
+"GO:0045259&RO:0001025=(GO:0005739)",
 "CHEBI:36976"
 ]
 },
@@ -13836,6 +15080,30 @@ false
 ]
 },
 {
+"rule": "relChain",
+"premises": [
+{
+"rule": "lit",
+"sid": "reproduction-at-the-cellular-level-m45461-93"
+},
+{
+"rule": "lit",
+"sid": "cell-structure-and-function-m45432-51"
+}
+],
+"fact": "contractile ring \u2293 in taxon (animal cells) [GO:0005826&RO:0002162=(NCBITaxon:33208)] has part structure that is capable of arise from [GO:0051301]",
+"key": [
+"rel",
+[
+"ro",
+2584,
+false
+],
+"GO:0005826&RO:0002162=(NCBITaxon:33208)",
+"GO:0051301"
+]
+},
+{
 "rule": "relTrans",
 "premises": [
 {
@@ -14185,2319 +15453,6 @@ false
 ],
 "GO:0005890",
 "GO:0015031"
-]
-},
-{
-"rule": "relChain",
-"premises": [
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45432-17"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45432-89"
-}
-],
-"fact": "microvillus [GO:0005902] part of endomembrane system [GO:0012505]",
-"key": [
-"rel",
-[
-"bfo",
-50,
-false
-],
-"GO:0005902",
-"GO:0012505"
-]
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45432-87"
-}
-],
-"fact": "microvillus [GO:0005902] part of structure that is capable of protein transport [GO:0015031]",
-"key": [
-"rel",
-[
-"ro",
-2329,
-false
-],
-"GO:0005902",
-"GO:0015031"
-]
-},
-{
-"rule": "relChain",
-"premises": [
-{
-"rule": "isaInherit",
-"premises": [
-{
-"rule": "lit",
-"sid": "the-body-s-systems-m45538-242"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45432-89"
-}
-],
-"fact": "sarcolemma [GO:0042383] part of endomembrane system [GO:0012505]",
-"key": [
-"rel",
-[
-"bfo",
-50,
-false
-],
-"GO:0042383",
-"GO:0012505"
-]
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45432-87"
-}
-],
-"fact": "sarcolemma [GO:0042383] part of structure that is capable of protein transport [GO:0015031]",
-"key": [
-"rel",
-[
-"ro",
-2329,
-false
-],
-"GO:0042383",
-"GO:0015031"
-]
-},
-{
-"rule": "isaInheritEffect",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-8"
-},
-{
-"rule": "lit",
-"sid": "the-body-s-systems-m45535-246"
-}
-],
-"fact": "stomach [UBERON:0000945] \u2192+ process(digestion [GO:0007586])",
-"key": [
-"effect",
-"pos",
-"process",
-"UBERON:0000945",
-"GO:0007586"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "isaInherit",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-8"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-5"
-}
-],
-"fact": "stomach [UBERON:0000945] has part tissues [UBERON:0000479]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"UBERON:0000479"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-4"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45429-11"
-}
-],
-"fact": "tissues [UBERON:0000479] has part ribosomes [GO:0005840]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"GO:0005840"
-]
-},
-{
-"rule": "lit",
-"sid": "molbio-m45479-17"
-}
-],
-"fact": "tissues [UBERON:0000479] has part polypeptide [CHEBI:15841]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"CHEBI:15841"
-]
-}
-],
-"fact": "stomach [UBERON:0000945] has part polypeptide [CHEBI:15841]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"CHEBI:15841"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "isaInherit",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-8"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-5"
-}
-],
-"fact": "stomach [UBERON:0000945] has part tissues [UBERON:0000479]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"UBERON:0000479"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-4"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45429-9"
-}
-],
-"fact": "tissues [UBERON:0000479] has part DNA [CHEBI:16991]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"CHEBI:16991"
-]
-}
-],
-"fact": "stomach [UBERON:0000945] has part DNA [CHEBI:16991]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"CHEBI:16991"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "isaInherit",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-8"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-5"
-}
-],
-"fact": "stomach [UBERON:0000945] has part tissues [UBERON:0000479]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"UBERON:0000479"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-4"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45429-11"
-}
-],
-"fact": "tissues [UBERON:0000479] has part ribosomes [GO:0005840]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"GO:0005840"
-]
-},
-{
-"rule": "lit",
-"sid": "molbio-m45479-16"
-}
-],
-"fact": "tissues [UBERON:0000479] has part ribosomal RNA [CHEBI:18111]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"CHEBI:18111"
-]
-}
-],
-"fact": "stomach [UBERON:0000945] has part ribosomal RNA [CHEBI:18111]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"CHEBI:18111"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "isaInherit",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-8"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-5"
-}
-],
-"fact": "stomach [UBERON:0000945] has part tissues [UBERON:0000479]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"UBERON:0000479"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-4"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45432-322"
-}
-],
-"fact": "tissues [UBERON:0000479] has part plant cell wall [GO:0009505]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"GO:0009505"
-]
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45432-323"
-}
-],
-"fact": "tissues [UBERON:0000479] has part cellulose [CHEBI:18246]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"CHEBI:18246"
-]
-}
-],
-"fact": "stomach [UBERON:0000945] has part cellulose [CHEBI:18246]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"CHEBI:18246"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "isaInherit",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-8"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-5"
-}
-],
-"fact": "stomach [UBERON:0000945] has part tissues [UBERON:0000479]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"UBERON:0000479"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-4"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45429-9"
-}
-],
-"fact": "tissues [UBERON:0000479] has part DNA [CHEBI:16991]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"CHEBI:16991"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "lit",
-"sid": "molbio-m45473-14"
-},
-{
-"rule": "lit",
-"sid": "molbio-m45473-17"
-}
-],
-"fact": "DNA [CHEBI:16991] has part nitrogenous base [CHEBI:18282]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"CHEBI:16991",
-"CHEBI:18282"
-]
-}
-],
-"fact": "tissues [UBERON:0000479] has part nitrogenous base [CHEBI:18282]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"CHEBI:18282"
-]
-}
-],
-"fact": "stomach [UBERON:0000945] has part nitrogenous base [CHEBI:18282]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"CHEBI:18282"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "isaInherit",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-8"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-5"
-}
-],
-"fact": "stomach [UBERON:0000945] has part tissues [UBERON:0000479]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"UBERON:0000479"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-4"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45429-5"
-}
-],
-"fact": "tissues [UBERON:0000479] has part plasma membrane [GO:0005886]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"GO:0005886"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45433-51"
-},
-{
-"rule": "lit",
-"sid": "photosynthesis-m45453-2"
-}
-],
-"fact": "plasma membrane [GO:0005886] has part carbon atoms [CHEBI:27594]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"GO:0005886",
-"CHEBI:27594"
-]
-}
-],
-"fact": "tissues [UBERON:0000479] has part carbon atoms [CHEBI:27594]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"CHEBI:27594"
-]
-}
-],
-"fact": "stomach [UBERON:0000945] has part carbon atoms [CHEBI:27594]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"CHEBI:27594"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "isaInherit",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-8"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-5"
-}
-],
-"fact": "stomach [UBERON:0000945] has part tissues [UBERON:0000479]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"UBERON:0000479"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-4"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45429-9"
-}
-],
-"fact": "tissues [UBERON:0000479] has part DNA [CHEBI:16991]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"CHEBI:16991"
-]
-}
-],
-"fact": "stomach [UBERON:0000945] has part DNA [CHEBI:16991]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"CHEBI:16991"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "lit",
-"sid": "molbio-m45473-14"
-},
-{
-"rule": "lit",
-"sid": "molbio-m45473-16"
-}
-],
-"fact": "DNA [CHEBI:16991] has part phosphate group [CHEBI:32958]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"CHEBI:16991",
-"CHEBI:32958"
-]
-},
-{
-"rule": "lit",
-"sid": "molbio-m45473-164"
-}
-],
-"fact": "DNA [CHEBI:16991] has part phosphorus atom [CHEBI:28659]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"CHEBI:16991",
-"CHEBI:28659"
-]
-}
-],
-"fact": "stomach [UBERON:0000945] has part phosphorus atom [CHEBI:28659]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"CHEBI:28659"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "isaInherit",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-8"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-5"
-}
-],
-"fact": "stomach [UBERON:0000945] has part tissues [UBERON:0000479]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"UBERON:0000479"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-4"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45429-9"
-}
-],
-"fact": "tissues [UBERON:0000479] has part DNA [CHEBI:16991]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"CHEBI:16991"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "lit",
-"sid": "molbio-m45473-14"
-},
-{
-"rule": "lit",
-"sid": "molbio-m45473-15"
-}
-],
-"fact": "DNA [CHEBI:16991] has part 2-deoxy-D-ribose [CHEBI:28816]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"CHEBI:16991",
-"CHEBI:28816"
-]
-}
-],
-"fact": "tissues [UBERON:0000479] has part 2-deoxy-D-ribose [CHEBI:28816]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"CHEBI:28816"
-]
-}
-],
-"fact": "stomach [UBERON:0000945] has part 2-deoxy-D-ribose [CHEBI:28816]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"CHEBI:28816"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "isaInherit",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-8"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-5"
-}
-],
-"fact": "stomach [UBERON:0000945] has part tissues [UBERON:0000479]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"UBERON:0000479"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-4"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45429-9"
-}
-],
-"fact": "tissues [UBERON:0000479] has part DNA [CHEBI:16991]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"CHEBI:16991"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "lit",
-"sid": "molbio-m45473-14"
-},
-{
-"rule": "lit",
-"sid": "molbio-m45473-16"
-}
-],
-"fact": "DNA [CHEBI:16991] has part phosphate group [CHEBI:32958]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"CHEBI:16991",
-"CHEBI:32958"
-]
-}
-],
-"fact": "tissues [UBERON:0000479] has part phosphate group [CHEBI:32958]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"CHEBI:32958"
-]
-}
-],
-"fact": "stomach [UBERON:0000945] has part phosphate group [CHEBI:32958]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"CHEBI:32958"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "isaInherit",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-8"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-5"
-}
-],
-"fact": "stomach [UBERON:0000945] has part tissues [UBERON:0000479]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"UBERON:0000479"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-4"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45429-5"
-}
-],
-"fact": "tissues [UBERON:0000479] has part plasma membrane [GO:0005886]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"GO:0005886"
-]
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45433-46"
-}
-],
-"fact": "tissues [UBERON:0000479] has part proteins [CHEBI:36080]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"CHEBI:36080"
-]
-}
-],
-"fact": "stomach [UBERON:0000945] has part proteins [CHEBI:36080]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"CHEBI:36080"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "isaInherit",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-8"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-5"
-}
-],
-"fact": "stomach [UBERON:0000945] has part tissues [UBERON:0000479]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"UBERON:0000479"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-4"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45429-9"
-}
-],
-"fact": "tissues [UBERON:0000479] has part DNA [CHEBI:16991]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"CHEBI:16991"
-]
-},
-{
-"rule": "lit",
-"sid": "molbio-m45473-14"
-}
-],
-"fact": "tissues [UBERON:0000479] has part nucleotides [CHEBI:36976]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"CHEBI:36976"
-]
-}
-],
-"fact": "stomach [UBERON:0000945] has part nucleotides [CHEBI:36976]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"CHEBI:36976"
-]
-},
-{
-"rule": "isaGeneralise",
-"premises": [
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "isaInherit",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-8"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-5"
-}
-],
-"fact": "stomach [UBERON:0000945] has part tissues [UBERON:0000479]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"UBERON:0000479"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-4"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45429-9"
-}
-],
-"fact": "tissues [UBERON:0000479] has part DNA [CHEBI:16991]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"CHEBI:16991"
-]
-}
-],
-"fact": "stomach [UBERON:0000945] has part DNA [CHEBI:16991]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"CHEBI:16991"
-]
-},
-{
-"rule": "lit",
-"sid": "molbio-m45473-27"
-}
-],
-"fact": "stomach [UBERON:0000945] has part polymer [CHEBI:60027]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"CHEBI:60027"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "isaInherit",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-8"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-5"
-}
-],
-"fact": "stomach [UBERON:0000945] has part tissues [UBERON:0000479]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"UBERON:0000479"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-4"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45432-318"
-}
-],
-"fact": "tissues [UBERON:0000479] has part centrosome [GO:0005813]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"GO:0005813"
-]
-}
-],
-"fact": "stomach [UBERON:0000945] has part centrosome [GO:0005813]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"GO:0005813"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "isaInherit",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-8"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-5"
-}
-],
-"fact": "stomach [UBERON:0000945] has part tissues [UBERON:0000479]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"UBERON:0000479"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-4"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45432-318"
-}
-],
-"fact": "tissues [UBERON:0000479] has part centrosome [GO:0005813]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"GO:0005813"
-]
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45432-68"
-}
-],
-"fact": "tissues [UBERON:0000479] has part centrioles [GO:0005814]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"GO:0005814"
-]
-}
-],
-"fact": "stomach [UBERON:0000945] has part centrioles [GO:0005814]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"GO:0005814"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "isaInherit",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-8"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-5"
-}
-],
-"fact": "stomach [UBERON:0000945] has part tissues [UBERON:0000479]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"UBERON:0000479"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-4"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45429-11"
-}
-],
-"fact": "tissues [UBERON:0000479] has part ribosomes [GO:0005840]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"GO:0005840"
-]
-}
-],
-"fact": "stomach [UBERON:0000945] has part ribosomes [GO:0005840]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"GO:0005840"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "isaInherit",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-8"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-5"
-}
-],
-"fact": "stomach [UBERON:0000945] has part tissues [UBERON:0000479]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"UBERON:0000479"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-4"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45432-339"
-}
-],
-"fact": "tissues [UBERON:0000479] has part tight junction [GO:0005923]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"GO:0005923"
-]
-}
-],
-"fact": "stomach [UBERON:0000945] has part tight junction [GO:0005923]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"GO:0005923"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "isaInherit",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-8"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-5"
-}
-],
-"fact": "stomach [UBERON:0000945] has part tissues [UBERON:0000479]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"UBERON:0000479"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-4"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45432-322"
-}
-],
-"fact": "tissues [UBERON:0000479] has part plant cell wall [GO:0009505]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"GO:0009505"
-]
-}
-],
-"fact": "stomach [UBERON:0000945] has part plant cell wall [GO:0009505]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"GO:0009505"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "isaInherit",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-8"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-5"
-}
-],
-"fact": "stomach [UBERON:0000945] has part tissues [UBERON:0000479]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"UBERON:0000479"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-4"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45432-343"
-}
-],
-"fact": "tissues [UBERON:0000479] has part plasmodesma [GO:0009506]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"GO:0009506"
-]
-}
-],
-"fact": "stomach [UBERON:0000945] has part plasmodesma [GO:0009506]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"GO:0009506"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "isaInherit",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-8"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-5"
-}
-],
-"fact": "stomach [UBERON:0000945] has part tissues [UBERON:0000479]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"UBERON:0000479"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-4"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45429-11"
-}
-],
-"fact": "tissues [UBERON:0000479] has part ribosomes [GO:0005840]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"GO:0005840"
-]
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45432-184"
-}
-],
-"fact": "tissues [UBERON:0000479] has part large subunit [GO:0015934]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"GO:0015934"
-]
-}
-],
-"fact": "stomach [UBERON:0000945] has part large subunit [GO:0015934]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"GO:0015934"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "isaInherit",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-8"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-5"
-}
-],
-"fact": "stomach [UBERON:0000945] has part tissues [UBERON:0000479]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"UBERON:0000479"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-4"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45429-11"
-}
-],
-"fact": "tissues [UBERON:0000479] has part ribosomes [GO:0005840]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"GO:0005840"
-]
-},
-{
-"rule": "lit",
-"sid": "molbio-m45479-24"
-}
-],
-"fact": "tissues [UBERON:0000479] has part small subunit [GO:0015935]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"GO:0015935"
-]
-}
-],
-"fact": "stomach [UBERON:0000945] has part small subunit [GO:0015935]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"GO:0015935"
-]
-},
-{
-"rule": "relChain",
-"premises": [
-{
-"rule": "isaInherit",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-8"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-5"
-}
-],
-"fact": "stomach [UBERON:0000945] has part tissues [UBERON:0000479]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"UBERON:0000479"
-]
-},
-{
-"rule": "relChain",
-"premises": [
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-4"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45429-5"
-}
-],
-"fact": "tissues [UBERON:0000479] has part plasma membrane [GO:0005886]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"GO:0005886"
-]
-},
-{
-"rule": "relChain",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45433-51"
-},
-{
-"rule": "lit",
-"sid": "the-body-s-systems-m45535-234"
-}
-],
-"fact": "plasma membrane [GO:0005886] overlaps food [CHEBI:33290]",
-"key": [
-"rel",
-[
-"ro",
-2131,
-false
-],
-"GO:0005886",
-"CHEBI:33290"
-]
-}
-],
-"fact": "tissues [UBERON:0000479] overlaps food [CHEBI:33290]",
-"key": [
-"rel",
-[
-"ro",
-2131,
-false
-],
-"UBERON:0000479",
-"CHEBI:33290"
-]
-}
-],
-"fact": "stomach [UBERON:0000945] overlaps food [CHEBI:33290]",
-"key": [
-"rel",
-[
-"ro",
-2131,
-false
-],
-"UBERON:0000945",
-"CHEBI:33290"
-]
-},
-{
-"rule": "relChain",
-"premises": [
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "isaInherit",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-8"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-5"
-}
-],
-"fact": "stomach [UBERON:0000945] has part tissues [UBERON:0000479]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"UBERON:0000479"
-]
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-4"
-}
-],
-"fact": "stomach [UBERON:0000945] has part cells [CL:0000000]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"CL:0000000"
-]
-},
-{
-"rule": "relChain",
-"premises": [
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45429-11"
-},
-{
-"rule": "lit",
-"sid": "molbio-m45479-16"
-}
-],
-"fact": "cells [CL:0000000] has part ribosomal RNA [CHEBI:18111]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"CL:0000000",
-"CHEBI:18111"
-]
-},
-{
-"rule": "lit",
-"sid": "molbio-m45479-115"
-}
-],
-"fact": "cells [CL:0000000] overlaps ribosomes [GO:0005840]",
-"key": [
-"rel",
-[
-"ro",
-2131,
-false
-],
-"CL:0000000",
-"GO:0005840"
-]
-}
-],
-"fact": "stomach [UBERON:0000945] overlaps ribosomes [GO:0005840]",
-"key": [
-"rel",
-[
-"ro",
-2131,
-false
-],
-"UBERON:0000945",
-"GO:0005840"
-]
-},
-{
-"rule": "relChain",
-"premises": [
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "isaInherit",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-8"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-5"
-}
-],
-"fact": "stomach [UBERON:0000945] has part tissues [UBERON:0000479]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"UBERON:0000479"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-4"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45432-318"
-}
-],
-"fact": "tissues [UBERON:0000479] has part centrosome [GO:0005813]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"GO:0005813"
-]
-}
-],
-"fact": "stomach [UBERON:0000945] has part centrosome [GO:0005813]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"GO:0005813"
-]
-},
-{
-"rule": "relChain",
-"premises": [
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45432-68"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45432-70"
-}
-],
-"fact": "centrosome [GO:0005813] has part microtubule [GO:0005874]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"GO:0005813",
-"GO:0005874"
-]
-},
-{
-"rule": "lit",
-"sid": "reproduction-at-the-cellular-level-m45461-59"
-}
-],
-"fact": "centrosome [GO:0005813] overlaps mitotic spindle [GO:0072686]",
-"key": [
-"rel",
-[
-"ro",
-2131,
-false
-],
-"GO:0005813",
-"GO:0072686"
-]
-}
-],
-"fact": "stomach [UBERON:0000945] overlaps mitotic spindle [GO:0072686]",
-"key": [
-"rel",
-[
-"ro",
-2131,
-false
-],
-"UBERON:0000945",
-"GO:0072686"
-]
-},
-{
-"rule": "relChain",
-"premises": [
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "isaInherit",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-8"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-5"
-}
-],
-"fact": "stomach [UBERON:0000945] has part tissues [UBERON:0000479]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"UBERON:0000479"
-]
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-4"
-}
-],
-"fact": "stomach [UBERON:0000945] has part cells [CL:0000000]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"CL:0000000"
-]
-},
-{
-"rule": "lit",
-"sid": "molbio-m45480-10"
-}
-],
-"fact": "stomach [UBERON:0000945] has part structure that is capable of ATP biosynthetic process [GO:0006754]",
-"key": [
-"rel",
-[
-"ro",
-2584,
-false
-],
-"UBERON:0000945",
-"GO:0006754"
-]
-},
-{
-"rule": "relChain",
-"premises": [
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "isaInherit",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-8"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-5"
-}
-],
-"fact": "stomach [UBERON:0000945] has part tissues [UBERON:0000479]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"UBERON:0000479"
-]
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-4"
-}
-],
-"fact": "stomach [UBERON:0000945] has part cells [CL:0000000]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"CL:0000000"
-]
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45435-76"
-}
-],
-"fact": "stomach [UBERON:0000945] has part structure that is capable of exocytosis [GO:0006887]",
-"key": [
-"rel",
-[
-"ro",
-2584,
-false
-],
-"UBERON:0000945",
-"GO:0006887"
-]
-},
-{
-"rule": "relChain",
-"premises": [
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "isaInherit",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-8"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-5"
-}
-],
-"fact": "stomach [UBERON:0000945] has part tissues [UBERON:0000479]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"UBERON:0000479"
-]
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-4"
-}
-],
-"fact": "stomach [UBERON:0000945] has part cells [CL:0000000]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000945",
-"CL:0000000"
-]
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45435-4"
-}
-],
-"fact": "stomach [UBERON:0000945] has part structure that is capable of endocytosis [GO:0006897]",
-"key": [
-"rel",
-[
-"ro",
-2584,
-false
-],
-"UBERON:0000945",
-"GO:0006897"
 ]
 }
 ]

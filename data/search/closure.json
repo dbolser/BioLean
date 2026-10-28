@@ -1,13 +1,13 @@
 {
-"asserted": 1248,
-"novel": 1551,
+"asserted": 1378,
+"novel": 1606,
 "rules": {
-"relChain": 460,
-"relTrans": 674,
-"viaAmount": 73,
-"isaInherit": 95,
-"isaInheritEffect": 56,
-"isaGeneralise": 185,
+"relChain": 472,
+"relTrans": 685,
+"viaAmount": 90,
+"isaInherit": 97,
+"isaInheritEffect": 57,
+"isaGeneralise": 197,
 "viaActivity": 4,
 "notRelSub": 4
 },
@@ -850,6 +850,45 @@
 "tree": "nucleoid [GO:0009295] part of structure that is capable of binary fission [GO:0043093]   (relChain, b=0.80)\n  nucleoid [GO:0009295] part of prokaryotic cell [CL:0000520]   [cell-structure-and-function-m45429-19]\n  prokaryotic cell [CL:0000520] capable of binary fission [GO:0043093]   [reproduction-at-the-cellular-level-m45463-1]"
 },
 {
+"fact": "chromosome \u2293 in taxon (prokaryote) [GO:0005694&RO:0002162=(NCBITaxon:2)] located in prokaryotic cell [CL:0000520]",
+"key": [
+"rel",
+"('ro', 1025, False)",
+"GO:0005694&RO:0002162=(NCBITaxon:2)",
+"CL:0000520"
+],
+"depth": 1,
+"belief": 0.8,
+"rule": "relChain",
+"tree": "chromosome \u2293 in taxon (prokaryote) [GO:0005694&RO:0002162=(NCBITaxon:2)] located in prokaryotic cell [CL:0000520]   (relChain, b=0.80)\n  chromosome \u2293 in taxon (prokaryote) [GO:0005694&RO:0002162=(NCBITaxon:2)] located in nucleoid [GO:0009295]   [molbio-m45473-76]\n  nucleoid [GO:0009295] part of prokaryotic cell [CL:0000520]   [cell-structure-and-function-m45429-19]"
+},
+{
+"fact": "genetic material \u2293 in taxon (prokaryotic cell) [SO:0001026&RO:0002162=(NCBITaxon:2)] located in prokaryotic cell [CL:0000520]",
+"key": [
+"rel",
+"('ro', 1025, False)",
+"SO:0001026&RO:0002162=(NCBITaxon:2)",
+"CL:0000520"
+],
+"depth": 1,
+"belief": 0.8,
+"rule": "relChain",
+"tree": "genetic material \u2293 in taxon (prokaryotic cell) [SO:0001026&RO:0002162=(NCBITaxon:2)] located in prokaryotic cell [CL:0000520]   (relChain, b=0.80)\n  genetic material \u2293 in taxon (prokaryotic cell) [SO:0001026&RO:0002162=(NCBITaxon:2)] located in nucleoid [GO:0009295]   [reproduction-at-the-cellular-level-m45455-9]\n  nucleoid [GO:0009295] part of prokaryotic cell [CL:0000520]   [cell-structure-and-function-m45429-19]"
+},
+{
+"fact": "circular DNA chromosome \u2293 in taxon (bacteria) [SO:0000958&RO:0002162=(NCBITaxon:2)] located in prokaryotic cell [CL:0000520]",
+"key": [
+"rel",
+"('ro', 1025, False)",
+"SO:0000958&RO:0002162=(NCBITaxon:2)",
+"CL:0000520"
+],
+"depth": 1,
+"belief": 0.8,
+"rule": "relChain",
+"tree": "circular DNA chromosome \u2293 in taxon (bacteria) [SO:0000958&RO:0002162=(NCBITaxon:2)] located in prokaryotic cell [CL:0000520]   (relChain, b=0.80)\n  circular DNA chromosome \u2293 in taxon (bacteria) [SO:0000958&RO:0002162=(NCBITaxon:2)] located in nucleoid [GO:0009295]   [reproduction-at-the-cellular-level-m45463-17]\n  nucleoid [GO:0009295] part of prokaryotic cell [CL:0000520]   [cell-structure-and-function-m45429-19]"
+},
+{
 "fact": "bacteria [NCBITaxon:2] has part peptidoglycan [CHEBI:8005]",
 "key": [
 "rel",
@@ -913,6 +952,19 @@
 "belief": 0.8,
 "rule": "relTrans",
 "tree": "cell wall [GO:0005618] has part sugars [CHEBI:16646]   (relTrans, b=0.80)\n  cell wall [GO:0005618] has part peptidoglycan [CHEBI:8005]   [cell-structure-and-function-m45432-224]\n  peptidoglycan [CHEBI:8005] has part sugars [CHEBI:16646]   [cell-structure-and-function-m45429-22]"
+},
+{
+"fact": "cell wall \u2293 in taxon (NCBITaxon:2) [GO:0005618&RO:0002162=(NCBITaxon:2)] has part sugars [CHEBI:16646]",
+"key": [
+"rel",
+"('bfo', 51, False)",
+"GO:0005618&RO:0002162=(NCBITaxon:2)",
+"CHEBI:16646"
+],
+"depth": 1,
+"belief": 0.8,
+"rule": "relTrans",
+"tree": "cell wall \u2293 in taxon (NCBITaxon:2) [GO:0005618&RO:0002162=(NCBITaxon:2)] has part sugars [CHEBI:16646]   (relTrans, b=0.80)\n  cell wall \u2293 in taxon (NCBITaxon:2) [GO:0005618&RO:0002162=(NCBITaxon:2)] has part peptidoglycan [CHEBI:8005]   [cell-structure-and-function-m45429-21]\n  peptidoglycan [CHEBI:8005] has part sugars [CHEBI:16646]   [cell-structure-and-function-m45429-22]"
 },
 {
 "fact": "prokaryotic cell [CL:0000520] has part structure that is capable of locomotion [GO:0048870]",
@@ -1424,6 +1476,19 @@
 "tree": "microfilaments [GO:0005884] capable of part of cell cycle [GO:0007049]   (relChain, b=0.80)\n  microfilaments [GO:0005884] capable of arise from [GO:0051301]   [cell-structure-and-function-m45432-51]\n  arise from [GO:0051301] part of cell cycle [GO:0007049]   [reproduction-at-the-cellular-level-m45455-1]"
 },
 {
+"fact": "contractile ring \u2293 in taxon (animal cells) [GO:0005826&RO:0002162=(NCBITaxon:33208)] has part structure that is capable of arise from [GO:0051301]",
+"key": [
+"rel",
+"('ro', 2584, False)",
+"GO:0005826&RO:0002162=(NCBITaxon:33208)",
+"GO:0051301"
+],
+"depth": 1,
+"belief": 0.8,
+"rule": "relChain",
+"tree": "contractile ring \u2293 in taxon (animal cells) [GO:0005826&RO:0002162=(NCBITaxon:33208)] has part structure that is capable of arise from [GO:0051301]   (relChain, b=0.80)\n  contractile ring \u2293 in taxon (animal cells) [GO:0005826&RO:0002162=(NCBITaxon:33208)] has part microfilaments [GO:0005884]   [reproduction-at-the-cellular-level-m45461-93]\n  microfilaments [GO:0005884] capable of arise from [GO:0051301]   [cell-structure-and-function-m45432-51]"
+},
+{
 "fact": "Keratin [GO:0045095] \u2192+ process(maintain its shape [GO:0008360])",
 "key": [
 "effect",
@@ -1595,6 +1660,32 @@
 "tree": "sodium:potassium-exchanging ATPase [GO:0005890] overlaps endomembrane system [GO:0012505]   (relChain, b=0.80)\n  sodium:potassium-exchanging ATPase [GO:0005890] part of plasma membrane [GO:0005886]   [the-body-s-systems-m45539-67]\n  plasma membrane [GO:0005886] part of endomembrane system [GO:0012505]   [cell-structure-and-function-m45432-89]"
 },
 {
+"fact": "microvilli \u2293 part of (cells that specialize in absorption) [GO:0005902&BFO:0000050=(CL:0000584)] overlaps endomembrane system [GO:0012505]",
+"key": [
+"rel",
+"('ro', 2131, False)",
+"GO:0005902&BFO:0000050=(CL:0000584)",
+"GO:0012505"
+],
+"depth": 1,
+"belief": 0.8,
+"rule": "relChain",
+"tree": "microvilli \u2293 part of (cells that specialize in absorption) [GO:0005902&BFO:0000050=(CL:0000584)] overlaps endomembrane system [GO:0012505]   (relChain, b=0.80)\n  microvilli \u2293 part of (cells that specialize in absorption) [GO:0005902&BFO:0000050=(CL:0000584)] part of plasma membrane [GO:0005886]   [cell-structure-and-function-m45432-16]\n  plasma membrane [GO:0005886] part of endomembrane system [GO:0012505]   [cell-structure-and-function-m45432-89]"
+},
+{
+"fact": "These reactions \u2293 in taxon (prokaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2)] occurs in endomembrane system [GO:0012505]",
+"key": [
+"rel",
+"('bfo', 66, False)",
+"GO:0022904&RO:0002162=(NCBITaxon:2)",
+"GO:0012505"
+],
+"depth": 1,
+"belief": 0.8,
+"rule": "relChain",
+"tree": "These reactions \u2293 in taxon (prokaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2)] occurs in endomembrane system [GO:0012505]   (relChain, b=0.80)\n  These reactions \u2293 in taxon (prokaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2)] occurs in plasma membrane [GO:0005886]   [how-cells-obtain-energy-m45439-35]\n  plasma membrane [GO:0005886] part of endomembrane system [GO:0012505]   [cell-structure-and-function-m45432-89]"
+},
+{
 "fact": "ion channel [GO:0034702] part of endomembrane system [GO:0012505]",
 "key": [
 "rel",
@@ -1619,6 +1710,19 @@
 "belief": 0.8,
 "rule": "relTrans",
 "tree": "sodium:potassium-exchanging ATPase [GO:0005890] part of endomembrane system [GO:0012505]   (relTrans, b=0.80)\n  sodium:potassium-exchanging ATPase [GO:0005890] part of plasma membrane [GO:0005886]   [the-body-s-systems-m45539-67]\n  plasma membrane [GO:0005886] part of endomembrane system [GO:0012505]   [cell-structure-and-function-m45432-89]"
+},
+{
+"fact": "microvilli \u2293 part of (cells that specialize in absorption) [GO:0005902&BFO:0000050=(CL:0000584)] part of endomembrane system [GO:0012505]",
+"key": [
+"rel",
+"('bfo', 50, False)",
+"GO:0005902&BFO:0000050=(CL:0000584)",
+"GO:0012505"
+],
+"depth": 1,
+"belief": 0.8,
+"rule": "relTrans",
+"tree": "microvilli \u2293 part of (cells that specialize in absorption) [GO:0005902&BFO:0000050=(CL:0000584)] part of endomembrane system [GO:0012505]   (relTrans, b=0.80)\n  microvilli \u2293 part of (cells that specialize in absorption) [GO:0005902&BFO:0000050=(CL:0000584)] part of plasma membrane [GO:0005886]   [cell-structure-and-function-m45432-16]\n  plasma membrane [GO:0005886] part of endomembrane system [GO:0012505]   [cell-structure-and-function-m45432-89]"
 },
 {
 "fact": "nucleus [GO:0005634] overlaps chromosome [GO:0005694]",
@@ -1658,19 +1762,6 @@
 "belief": 0.8,
 "rule": "relTrans",
 "tree": "smooth muscle cells [CL:0000192] has part chromatin [GO:0000785]   (relTrans, b=0.80)\n  smooth muscle cells [CL:0000192] has part nucleus [GO:0005634]   [the-body-s-systems-m45538-228]\n  nucleus [GO:0005634] has part chromatin [GO:0000785]   [cell-structure-and-function-m45432-91]"
-},
-{
-"fact": "cardiomyocytes [CL:0000746] has part chromatin [GO:0000785]",
-"key": [
-"rel",
-"('bfo', 51, False)",
-"CL:0000746",
-"GO:0000785"
-],
-"depth": 1,
-"belief": 0.8,
-"rule": "relTrans",
-"tree": "cardiomyocytes [CL:0000746] has part chromatin [GO:0000785]   (relTrans, b=0.80)\n  cardiomyocytes [CL:0000746] has part nucleus [GO:0005634]   [the-body-s-systems-m45538-236]\n  nucleus [GO:0005634] has part chromatin [GO:0000785]   [cell-structure-and-function-m45432-91]"
 },
 {
 "fact": "neuronal cell body [GO:0043025] has part chromatin [GO:0000785]",
@@ -1749,6 +1840,32 @@
 "belief": 0.8,
 "rule": "relChain",
 "tree": "ribosome assembly [GO:0042255] occurs in nucleus [GO:0005634]   (relChain, b=0.80)\n  ribosome assembly [GO:0042255] occurs in nucleolus [GO:0005730]   [cell-structure-and-function-m45432-114]\n  nucleolus [GO:0005730] part of nucleus [GO:0005634]   [cell-structure-and-function-m45432-112]"
+},
+{
+"fact": "rRNA transcription \u2293 in taxon (NCBITaxon:2759) [GO:0009303&RO:0002162=(NCBITaxon:2759)] occurs in nucleus [GO:0005634]",
+"key": [
+"rel",
+"('bfo', 66, False)",
+"GO:0009303&RO:0002162=(NCBITaxon:2759)",
+"GO:0005634"
+],
+"depth": 1,
+"belief": 0.8,
+"rule": "relChain",
+"tree": "rRNA transcription \u2293 in taxon (NCBITaxon:2759) [GO:0009303&RO:0002162=(NCBITaxon:2759)] occurs in nucleus [GO:0005634]   (relChain, b=0.80)\n  rRNA transcription \u2293 in taxon (NCBITaxon:2759) [GO:0009303&RO:0002162=(NCBITaxon:2759)] occurs in nucleolus [GO:0005730]   [molbio-m45479-18]\n  nucleolus [GO:0005730] part of nucleus [GO:0005634]   [cell-structure-and-function-m45432-112]"
+},
+{
+"fact": "ribosome biogenesis \u2293 in taxon (NCBITaxon:2759) [GO:0042254&RO:0002162=(NCBITaxon:2759)] occurs in nucleus [GO:0005634]",
+"key": [
+"rel",
+"('bfo', 66, False)",
+"GO:0042254&RO:0002162=(NCBITaxon:2759)",
+"GO:0005634"
+],
+"depth": 1,
+"belief": 0.8,
+"rule": "relChain",
+"tree": "ribosome biogenesis \u2293 in taxon (NCBITaxon:2759) [GO:0042254&RO:0002162=(NCBITaxon:2759)] occurs in nucleus [GO:0005634]   (relChain, b=0.80)\n  ribosome biogenesis \u2293 in taxon (NCBITaxon:2759) [GO:0042254&RO:0002162=(NCBITaxon:2759)] occurs in nucleolus [GO:0005730]   [molbio-m45479-19]\n  nucleolus [GO:0005730] part of nucleus [GO:0005634]   [cell-structure-and-function-m45432-112]"
 },
 {
 "fact": "lumen [GO:0005788] part of structure that is capable of protein modification process [GO:0036211]",
@@ -2493,19 +2610,6 @@
 "tree": "extracellular matrix [GO:0031012] overlaps connective tissue [UBERON:0002384]   (relChain, b=0.80)\n  extracellular matrix [GO:0031012] has part collagen [GO:0005581]   [cell-structure-and-function-m45432-275]\n  collagen [GO:0005581] part of connective tissue [UBERON:0002384]   [how-cells-obtain-energy-m45437-230]"
 },
 {
-"fact": "tight junction [GO:0005923] has part structure that is capable of transmembrane transport [GO:0055085]",
-"key": [
-"rel",
-"('ro', 2584, False)",
-"GO:0005923",
-"GO:0055085"
-],
-"depth": 1,
-"belief": 0.8,
-"rule": "relChain",
-"tree": "tight junction [GO:0005923] has part structure that is capable of transmembrane transport [GO:0055085]   (relChain, b=0.80)\n  tight junction [GO:0005923] has part proteins [CHEBI:36080]   [cell-structure-and-function-m45432-293]\n  proteins [CHEBI:36080] capable of transmembrane transport [GO:0055085]   [cell-structure-and-function-m45433-73]"
-},
-{
 "fact": "tight junction [GO:0005923] located in skin [UBERON:0002097]",
 "key": [
 "rel",
@@ -2714,6 +2818,19 @@
 "tree": "cell wall [GO:0005618] has part polysaccharide [CHEBI:18154]   (isaGeneralise, b=0.80)\n  cell wall [GO:0005618] has part cellulose [CHEBI:18246]   [cell-structure-and-function-m45432-355]\n  cellulose [CHEBI:18246] is_a polysaccharide [CHEBI:18154]   [cell-structure-and-function-m45432-226]"
 },
 {
+"fact": "Lysosomes \u2293 in taxon (NCBITaxon:33208) [GO:0005764&RO:0002162=(NCBITaxon:33208)] part of structure that is capable of transmembrane transport [GO:0055085]",
+"key": [
+"rel",
+"('ro', 2329, False)",
+"GO:0005764&RO:0002162=(NCBITaxon:33208)",
+"GO:0055085"
+],
+"depth": 1,
+"belief": 0.8,
+"rule": "relChain",
+"tree": "Lysosomes \u2293 in taxon (NCBITaxon:33208) [GO:0005764&RO:0002162=(NCBITaxon:33208)] part of structure that is capable of transmembrane transport [GO:0055085]   (relChain, b=0.80)\n  Lysosomes \u2293 in taxon (NCBITaxon:33208) [GO:0005764&RO:0002162=(NCBITaxon:33208)] part of cells [CL:0000000]   [cell-structure-and-function-m45432-321]\n  cells [CL:0000000] capable of transmembrane transport [GO:0055085]   [cell-structure-and-function-m45433-3]"
+},
+{
 "fact": "metabolic reactions [GO:0008152] has output nucleotides [CHEBI:36976]",
 "key": [
 "rel",
@@ -2725,19 +2842,6 @@
 "belief": 0.8,
 "rule": "isaGeneralise",
 "tree": "metabolic reactions [GO:0008152] has output nucleotides [CHEBI:36976]   (isaGeneralise, b=0.80)\n  metabolic reactions [GO:0008152] has output ATP [CHEBI:15422]   [cell-structure-and-function-m45433-15]\n  ATP [CHEBI:15422] is_a nucleotides [CHEBI:36976]   [how-cells-obtain-energy-m45438-47]"
-},
-{
-"fact": "plasma membrane [GO:0005886] has part structure that is capable of transmembrane transport [GO:0055085]",
-"key": [
-"rel",
-"('ro', 2584, False)",
-"GO:0005886",
-"GO:0055085"
-],
-"depth": 1,
-"belief": 0.8,
-"rule": "relChain",
-"tree": "plasma membrane [GO:0005886] has part structure that is capable of transmembrane transport [GO:0055085]   (relChain, b=0.80)\n  plasma membrane [GO:0005886] has part proteins [CHEBI:36080]   [cell-structure-and-function-m45433-46]\n  proteins [CHEBI:36080] capable of transmembrane transport [GO:0055085]   [cell-structure-and-function-m45433-73]"
 },
 {
 "fact": "plasma membrane [GO:0005886] overlaps food [CHEBI:33290]",
@@ -2766,32 +2870,6 @@
 "tree": "plasma membrane [GO:0005886] has part carbon atoms [CHEBI:27594]   (relTrans, b=0.80)\n  plasma membrane [GO:0005886] has part sugars [CHEBI:16646]   [cell-structure-and-function-m45433-51]\n  sugars [CHEBI:16646] has part carbon atoms [CHEBI:27594]   [photosynthesis-m45453-2]"
 },
 {
-"fact": "electron transport chain [GO:0009767] has part structure that is capable of transmembrane transport [GO:0055085]",
-"key": [
-"rel",
-"('ro', 2584, False)",
-"GO:0009767",
-"GO:0055085"
-],
-"depth": 1,
-"belief": 0.8,
-"rule": "relChain",
-"tree": "electron transport chain [GO:0009767] has part structure that is capable of transmembrane transport [GO:0055085]   (relChain, b=0.80)\n  electron transport chain [GO:0009767] has part proteins [CHEBI:36080]   [photosynthesis-m45452-69]\n  proteins [CHEBI:36080] capable of transmembrane transport [GO:0055085]   [cell-structure-and-function-m45433-73]"
-},
-{
-"fact": "food [CHEBI:33290] has part structure that is capable of transmembrane transport [GO:0055085]",
-"key": [
-"rel",
-"('ro', 2584, False)",
-"CHEBI:33290",
-"GO:0055085"
-],
-"depth": 1,
-"belief": 0.8,
-"rule": "relChain",
-"tree": "food [CHEBI:33290] has part structure that is capable of transmembrane transport [GO:0055085]   (relChain, b=0.80)\n  food [CHEBI:33290] has part proteins [CHEBI:36080]   [the-body-s-systems-m45535-6]\n  proteins [CHEBI:36080] capable of transmembrane transport [GO:0055085]   [cell-structure-and-function-m45433-73]"
-},
-{
 "fact": "ion channel [GO:0034702] part of structure that is capable of transmembrane transport [GO:0055085]",
 "key": [
 "rel",
@@ -2818,6 +2896,19 @@
 "tree": "sodium:potassium-exchanging ATPase [GO:0005890] part of structure that is capable of transmembrane transport [GO:0055085]   (relChain, b=0.80)\n  sodium:potassium-exchanging ATPase [GO:0005890] part of plasma membrane [GO:0005886]   [the-body-s-systems-m45539-67]\n  plasma membrane [GO:0005886] capable of transmembrane transport [GO:0055085]   [cell-structure-and-function-m45434-1]"
 },
 {
+"fact": "microvilli \u2293 part of (cells that specialize in absorption) [GO:0005902&BFO:0000050=(CL:0000584)] part of structure that is capable of transmembrane transport [GO:0055085]",
+"key": [
+"rel",
+"('ro', 2329, False)",
+"GO:0005902&BFO:0000050=(CL:0000584)",
+"GO:0055085"
+],
+"depth": 1,
+"belief": 0.8,
+"rule": "relChain",
+"tree": "microvilli \u2293 part of (cells that specialize in absorption) [GO:0005902&BFO:0000050=(CL:0000584)] part of structure that is capable of transmembrane transport [GO:0055085]   (relChain, b=0.80)\n  microvilli \u2293 part of (cells that specialize in absorption) [GO:0005902&BFO:0000050=(CL:0000584)] part of plasma membrane [GO:0005886]   [cell-structure-and-function-m45432-16]\n  plasma membrane [GO:0005886] capable of transmembrane transport [GO:0055085]   [cell-structure-and-function-m45434-1]"
+},
+{
 "fact": "active transport [GO:0022804] has input nucleotides [CHEBI:36976]",
 "key": [
 "rel",
@@ -2829,6 +2920,32 @@
 "belief": 0.8,
 "rule": "isaGeneralise",
 "tree": "active transport [GO:0022804] has input nucleotides [CHEBI:36976]   (isaGeneralise, b=0.80)\n  active transport [GO:0022804] has input ATP [CHEBI:15422]   [cell-structure-and-function-m45435-1]\n  ATP [CHEBI:15422] is_a nucleotides [CHEBI:36976]   [how-cells-obtain-energy-m45438-47]"
+},
+{
+"fact": "Lysosomes \u2293 in taxon (NCBITaxon:33208) [GO:0005764&RO:0002162=(NCBITaxon:33208)] part of structure that is capable of endocytosis [GO:0006897]",
+"key": [
+"rel",
+"('ro', 2329, False)",
+"GO:0005764&RO:0002162=(NCBITaxon:33208)",
+"GO:0006897"
+],
+"depth": 1,
+"belief": 0.8,
+"rule": "relChain",
+"tree": "Lysosomes \u2293 in taxon (NCBITaxon:33208) [GO:0005764&RO:0002162=(NCBITaxon:33208)] part of structure that is capable of endocytosis [GO:0006897]   (relChain, b=0.80)\n  Lysosomes \u2293 in taxon (NCBITaxon:33208) [GO:0005764&RO:0002162=(NCBITaxon:33208)] part of cells [CL:0000000]   [cell-structure-and-function-m45432-321]\n  cells [CL:0000000] capable of endocytosis [GO:0006897]   [cell-structure-and-function-m45435-4]"
+},
+{
+"fact": "Lysosomes \u2293 in taxon (NCBITaxon:33208) [GO:0005764&RO:0002162=(NCBITaxon:33208)] part of structure that is capable of phagocytosis [GO:0006909]",
+"key": [
+"rel",
+"('ro', 2329, False)",
+"GO:0005764&RO:0002162=(NCBITaxon:33208)",
+"GO:0006909"
+],
+"depth": 1,
+"belief": 0.8,
+"rule": "relChain",
+"tree": "Lysosomes \u2293 in taxon (NCBITaxon:33208) [GO:0005764&RO:0002162=(NCBITaxon:33208)] part of structure that is capable of phagocytosis [GO:0006909]   (relChain, b=0.80)\n  Lysosomes \u2293 in taxon (NCBITaxon:33208) [GO:0005764&RO:0002162=(NCBITaxon:33208)] part of cells [CL:0000000]   [cell-structure-and-function-m45432-321]\n  cells [CL:0000000] capable of phagocytosis [GO:0006909]   [cell-structure-and-function-m45435-5]"
 },
 {
 "fact": "endocytosis [GO:0006897] has input nucleotides [CHEBI:36976]",
@@ -2935,6 +3052,19 @@
 "belief": 0.8,
 "rule": "relTrans",
 "tree": "LDL [GO:0034362] is_a lipid [CHEBI:18059]   (relTrans, b=0.80)\n  LDL [GO:0034362] is_a cholesterol [CHEBI:16113]   [cell-structure-and-function-m45435-53]\n  cholesterol [CHEBI:16113] is_a lipid [CHEBI:18059]   [how-cells-obtain-energy-m45444-30]"
+},
+{
+"fact": "Lysosomes \u2293 in taxon (NCBITaxon:33208) [GO:0005764&RO:0002162=(NCBITaxon:33208)] part of structure that is capable of exocytosis [GO:0006887]",
+"key": [
+"rel",
+"('ro', 2329, False)",
+"GO:0005764&RO:0002162=(NCBITaxon:33208)",
+"GO:0006887"
+],
+"depth": 1,
+"belief": 0.8,
+"rule": "relChain",
+"tree": "Lysosomes \u2293 in taxon (NCBITaxon:33208) [GO:0005764&RO:0002162=(NCBITaxon:33208)] part of structure that is capable of exocytosis [GO:0006887]   (relChain, b=0.80)\n  Lysosomes \u2293 in taxon (NCBITaxon:33208) [GO:0005764&RO:0002162=(NCBITaxon:33208)] part of cells [CL:0000000]   [cell-structure-and-function-m45432-321]\n  cells [CL:0000000] capable of exocytosis [GO:0006887]   [cell-structure-and-function-m45435-76]"
 },
 {
 "fact": "phagocytosis [GO:0006909] has input ATP [CHEBI:15422]",
@@ -4439,32 +4569,6 @@
 "tree": "S phase [GO:0051320] part of cell cycle [GO:0007049]   (relTrans, b=0.80)\n  S phase [GO:0051320] part of interphase [GO:0051325]   [reproduction-at-the-cellular-level-m45461-211]\n  interphase [GO:0051325] part of cell cycle [GO:0007049]   [molbio-m45473-98]"
 },
 {
-"fact": "heterochromatin [GO:0000792] overlaps chromosome [GO:0005694]",
-"key": [
-"rel",
-"('ro', 2131, False)",
-"GO:0000792",
-"GO:0005694"
-],
-"depth": 1,
-"belief": 0.8,
-"rule": "relChain",
-"tree": "heterochromatin [GO:0000792] overlaps chromosome [GO:0005694]   (relChain, b=0.80)\n  heterochromatin [GO:0000792] has part gene [SO:0000704]   [molbio-m45473-103]\n  gene [SO:0000704] part of chromosome [GO:0005694]   [reproduction-at-the-cellular-level-m45455-26]"
-},
-{
-"fact": "euchromatin [GO:0000791] overlaps chromosome [GO:0005694]",
-"key": [
-"rel",
-"('ro', 2131, False)",
-"GO:0000791",
-"GO:0005694"
-],
-"depth": 1,
-"belief": 0.8,
-"rule": "relChain",
-"tree": "euchromatin [GO:0000791] overlaps chromosome [GO:0005694]   (relChain, b=0.80)\n  euchromatin [GO:0000791] has part gene [SO:0000704]   [molbio-m45473-106]\n  gene [SO:0000704] part of chromosome [GO:0005694]   [reproduction-at-the-cellular-level-m45455-26]"
-},
-{
 "fact": "cytosine [CHEBI:16040] interacts with purines [CHEBI:26401]",
 "key": [
 "rel",
@@ -5052,6 +5156,19 @@
 "tree": "gene expression [GO:0010467] has output polymer [CHEBI:60027]   (isaGeneralise, b=0.80)\n  gene expression [GO:0010467] has output RNA [CHEBI:33697]   [molbio-m45480-3]\n  RNA [CHEBI:33697] is_a polymer [CHEBI:60027]   [molbio-m45473-49]"
 },
 {
+"fact": "Lysosomes \u2293 in taxon (NCBITaxon:33208) [GO:0005764&RO:0002162=(NCBITaxon:33208)] part of structure that is capable of ATP biosynthetic process [GO:0006754]",
+"key": [
+"rel",
+"('ro', 2329, False)",
+"GO:0005764&RO:0002162=(NCBITaxon:33208)",
+"GO:0006754"
+],
+"depth": 1,
+"belief": 0.8,
+"rule": "relChain",
+"tree": "Lysosomes \u2293 in taxon (NCBITaxon:33208) [GO:0005764&RO:0002162=(NCBITaxon:33208)] part of structure that is capable of ATP biosynthetic process [GO:0006754]   (relChain, b=0.80)\n  Lysosomes \u2293 in taxon (NCBITaxon:33208) [GO:0005764&RO:0002162=(NCBITaxon:33208)] part of cells [CL:0000000]   [cell-structure-and-function-m45432-321]\n  cells [CL:0000000] capable of ATP biosynthetic process [GO:0006754]   [molbio-m45480-10]"
+},
+{
 "fact": "plants [NCBITaxon:33090] has part inner membrane [GO:0009706]",
 "key": [
 "rel",
@@ -5557,6 +5674,19 @@
 "belief": 0.8,
 "rule": "relChain",
 "tree": "cytoplasmic contents are separated [GO:0000910] overlaps cell cycle [GO:0007049]   (relChain, b=0.80)\n  cytoplasmic contents are separated [GO:0000910] part of arise from [GO:0051301]   [reproduction-at-the-cellular-level-m45461-88]\n  arise from [GO:0051301] part of cell cycle [GO:0007049]   [reproduction-at-the-cellular-level-m45455-1]"
+},
+{
+"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] capable of part of cell cycle [GO:0007049]",
+"key": [
+"rel",
+"('ro', 2216, False)",
+"CL:0000000&RO:0002162=(NCBITaxon:33090)",
+"GO:0007049"
+],
+"depth": 1,
+"belief": 0.8,
+"rule": "relChain",
+"tree": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] capable of part of cell cycle [GO:0007049]   (relChain, b=0.80)\n  plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] capable of arise from [GO:0051301]   [cell-structure-and-function-m45432-76]\n  arise from [GO:0051301] part of cell cycle [GO:0007049]   [reproduction-at-the-cellular-level-m45455-1]"
 },
 {
 "fact": "cytoplasmic contents are separated [GO:0000910] part of cell cycle [GO:0007049]",
@@ -6706,19 +6836,6 @@
 "tree": "alpha-amylase activity [GO:0004556] has output disaccharide [CHEBI:36233]   (isaGeneralise, b=0.80)\n  alpha-amylase activity [GO:0004556] has output maltose [CHEBI:17306]   [the-body-s-systems-m45535-260]\n  maltose [CHEBI:17306] is_a disaccharide [CHEBI:36233]   [the-body-s-systems-m45535-50]"
 },
 {
-"fact": "colon [UBERON:0001155] part of digestive system organ [UBERON:0013765]",
-"key": [
-"rel",
-"('bfo', 50, False)",
-"UBERON:0001155",
-"UBERON:0013765"
-],
-"depth": 1,
-"belief": 0.8,
-"rule": "isaGeneralise",
-"tree": "colon [UBERON:0001155] part of digestive system organ [UBERON:0013765]   (isaGeneralise, b=0.80)\n  colon [UBERON:0001155] part of large intestine [UBERON:0000059]   [the-body-s-systems-m45535-265]\n  large intestine [UBERON:0000059] is_a digestive system organ [UBERON:0013765]   [the-body-s-systems-m45535-271]"
-},
-{
 "fact": "pepsin A-3 [PR:000031143] located in organ [UBERON:0000062]",
 "key": [
 "rel",
@@ -7137,60 +7254,6 @@
 "tree": "arteries [UBERON:0001637] \u2192\u2212 amount(carbon dioxide [CHEBI:16526])   (isaInheritEffect, b=0.80)\n  arteries [UBERON:0001637] is_a blood vessel [UBERON:0001981]   [the-body-s-systems-m45536-219]\n  blood vessel [UBERON:0001981] \u2192\u2212 amount(carbon dioxide [CHEBI:16526])   [the-body-s-systems-m45536-4]"
 },
 {
-"fact": "capillaries [UBERON:0001982] connected to aorta [UBERON:0000947]",
-"key": [
-"rel",
-"('ro', 2170, False)",
-"UBERON:0001982",
-"UBERON:0000947"
-],
-"depth": 1,
-"belief": 0.8,
-"rule": "isaInherit",
-"tree": "capillaries [UBERON:0001982] connected to aorta [UBERON:0000947]   (isaInherit, b=0.80)\n  capillaries [UBERON:0001982] is_a blood vessel [UBERON:0001981]   [the-body-s-systems-m45536-225]\n  blood vessel [UBERON:0001981] connected to aorta [UBERON:0000947]   [the-body-s-systems-m45534-192]"
-},
-{
-"fact": "capillaries [UBERON:0001982] connected to inferior vena cava [UBERON:0001072]",
-"key": [
-"rel",
-"('ro', 2170, False)",
-"UBERON:0001982",
-"UBERON:0001072"
-],
-"depth": 1,
-"belief": 0.8,
-"rule": "isaInherit",
-"tree": "capillaries [UBERON:0001982] connected to inferior vena cava [UBERON:0001072]   (isaInherit, b=0.80)\n  capillaries [UBERON:0001982] is_a blood vessel [UBERON:0001981]   [the-body-s-systems-m45536-225]\n  blood vessel [UBERON:0001981] connected to inferior vena cava [UBERON:0001072]   [the-body-s-systems-m45534-193]"
-},
-{
-"fact": "capillaries [UBERON:0001982] \u2192+ amount(oxygen [CHEBI:15379])",
-"key": [
-"effect",
-"pos",
-"amount",
-"UBERON:0001982",
-"CHEBI:15379"
-],
-"depth": 1,
-"belief": 0.8,
-"rule": "isaInheritEffect",
-"tree": "capillaries [UBERON:0001982] \u2192+ amount(oxygen [CHEBI:15379])   (isaInheritEffect, b=0.80)\n  capillaries [UBERON:0001982] is_a blood vessel [UBERON:0001981]   [the-body-s-systems-m45536-225]\n  blood vessel [UBERON:0001981] \u2192+ amount(oxygen [CHEBI:15379])   [the-body-s-systems-m45536-3]"
-},
-{
-"fact": "capillaries [UBERON:0001982] \u2192\u2212 amount(carbon dioxide [CHEBI:16526])",
-"key": [
-"effect",
-"neg",
-"amount",
-"UBERON:0001982",
-"CHEBI:16526"
-],
-"depth": 1,
-"belief": 0.8,
-"rule": "isaInheritEffect",
-"tree": "capillaries [UBERON:0001982] \u2192\u2212 amount(carbon dioxide [CHEBI:16526])   (isaInheritEffect, b=0.80)\n  capillaries [UBERON:0001982] is_a blood vessel [UBERON:0001981]   [the-body-s-systems-m45536-225]\n  blood vessel [UBERON:0001981] \u2192\u2212 amount(carbon dioxide [CHEBI:16526])   [the-body-s-systems-m45536-4]"
-},
-{
 "fact": "diaphragm [UBERON:0001103] part of skeletal muscle [UBERON:0014892]",
 "key": [
 "rel",
@@ -7480,6 +7543,20 @@
 "tree": "glucose [CHEBI:17234] \u2192+ process(glucose import [GO:0098708])   (viaAmount, b=0.64)\n  glucose [CHEBI:17234] \u2192+ amount(insulin [PR:000009054])   [the-body-s-systems-m45537-52]\n  insulin [PR:000009054] \u2192+ process(glucose import [GO:0098708])   [the-body-s-systems-m45537-202]"
 },
 {
+"fact": "glucose [CHEBI:17234] \u2192\u2212 amount(glucose \u2293 located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])",
+"key": [
+"effect",
+"neg",
+"amount",
+"CHEBI:17234",
+"CHEBI:17234&RO:0001025=(UBERON:0000178)"
+],
+"depth": 1,
+"belief": 0.64,
+"rule": "viaAmount",
+"tree": "glucose [CHEBI:17234] \u2192\u2212 amount(glucose \u2293 located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])   (viaAmount, b=0.64)\n  glucose [CHEBI:17234] \u2192+ amount(insulin [PR:000009054])   [the-body-s-systems-m45537-52]\n  insulin [PR:000009054] \u2192\u2212 amount(glucose \u2293 located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])   [the-body-s-systems-m45537-53]"
+},
+{
 "fact": "testis [UBERON:0000473] is_a endocrine gland [UBERON:0002368]",
 "key": [
 "rel",
@@ -7688,6 +7765,20 @@
 "belief": 0.8,
 "rule": "isaInheritEffect",
 "tree": "testosterone [CHEBI:17347] \u2192+ site(strand of hair [UBERON:0001037])   (isaInheritEffect, b=0.80)\n  testosterone [CHEBI:17347] is_a androgen [CHEBI:50113]   [the-body-s-systems-m45537-206]\n  androgen [CHEBI:50113] \u2192+ site(strand of hair [UBERON:0001037])   [the-body-s-systems-m45537-211]"
+},
+{
+"fact": "oxygen [CHEBI:15379] \u2192\u2212 process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])",
+"key": [
+"effect",
+"neg",
+"process",
+"CHEBI:15379",
+"GO:0030218&BFO:0000066=(UBERON:0002371)"
+],
+"depth": 1,
+"belief": 0.64,
+"rule": "viaAmount",
+"tree": "oxygen [CHEBI:15379] \u2192\u2212 process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])   (viaAmount, b=0.64)\n  oxygen [CHEBI:15379] \u2192\u2212 amount(erythropoietin [PR:000007141])   [the-body-s-systems-m45537-238]\n  erythropoietin [PR:000007141] \u2192+ process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])   [the-body-s-systems-m45537-240]"
 },
 {
 "fact": "food intake [GO:0042755] \u2192+ process(sense of satiety or fullness [GO:0032098])",
@@ -8371,6 +8462,19 @@
 "tree": "thick filament [GO:0032982] part of myofibril [GO:0030016]   (isaInherit, b=0.80)\n  thick filament [GO:0032982] is_a myofilament [GO:0036379]   [the-body-s-systems-m45538-246]\n  myofilament [GO:0036379] part of myofibril [GO:0030016]   [the-body-s-systems-m45538-314]"
 },
 {
+"fact": "contractile ring \u2293 in taxon (animal cells) [GO:0005826&RO:0002162=(NCBITaxon:33208)] has part actin [PR:P68133]",
+"key": [
+"rel",
+"('bfo', 51, False)",
+"GO:0005826&RO:0002162=(NCBITaxon:33208)",
+"PR:P68133"
+],
+"depth": 1,
+"belief": 0.8,
+"rule": "relTrans",
+"tree": "contractile ring \u2293 in taxon (animal cells) [GO:0005826&RO:0002162=(NCBITaxon:33208)] has part actin [PR:P68133]   (relTrans, b=0.80)\n  contractile ring \u2293 in taxon (animal cells) [GO:0005826&RO:0002162=(NCBITaxon:33208)] has part microfilaments [GO:0005884]   [reproduction-at-the-cellular-level-m45461-93]\n  microfilaments [GO:0005884] has part actin [PR:P68133]   [the-body-s-systems-m45538-248]"
+},
+{
 "fact": "thick filament [GO:0032982] overlaps skeletal muscle [UBERON:0001134]",
 "key": [
 "rel",
@@ -8514,19 +8618,6 @@
 "tree": "ganglion [UBERON:0000045] has part dendrite [GO:0030425]   (relTrans, b=0.80)\n  ganglion [UBERON:0000045] has part neuron [CL:0000540]   [the-body-s-systems-m45539-21]\n  neuron [CL:0000540] has part dendrite [GO:0030425]   [the-body-s-systems-m45539-50]"
 },
 {
-"fact": "ganglion [UBERON:0000045] has part axon [GO:0030424]",
-"key": [
-"rel",
-"('bfo', 51, False)",
-"UBERON:0000045",
-"GO:0030424"
-],
-"depth": 1,
-"belief": 0.8,
-"rule": "relTrans",
-"tree": "ganglion [UBERON:0000045] has part axon [GO:0030424]   (relTrans, b=0.80)\n  ganglion [UBERON:0000045] has part neuron [CL:0000540]   [the-body-s-systems-m45539-21]\n  neuron [CL:0000540] has part axon [GO:0030424]   [the-body-s-systems-m45539-323]"
-},
-{
 "fact": "ganglion [UBERON:0000045] has part nucleus [GO:0005634]",
 "key": [
 "rel",
@@ -8551,6 +8642,19 @@
 "belief": 0.8,
 "rule": "relTrans",
 "tree": "ganglion [UBERON:0000045] has part Mitochondria [GO:0005739]   (relTrans, b=0.80)\n  ganglion [UBERON:0000045] has part neuron [CL:0000540]   [the-body-s-systems-m45539-21]\n  neuron [CL:0000540] has part Mitochondria [GO:0005739]   [the-body-s-systems-m45539-356]"
+},
+{
+"fact": "ganglion [UBERON:0000045] has part axon [GO:0030424]",
+"key": [
+"rel",
+"('bfo', 51, False)",
+"UBERON:0000045",
+"GO:0030424"
+],
+"depth": 1,
+"belief": 0.8,
+"rule": "relTrans",
+"tree": "ganglion [UBERON:0000045] has part axon [GO:0030424]   (relTrans, b=0.80)\n  ganglion [UBERON:0000045] has part neuron [CL:0000540]   [the-body-s-systems-m45539-21]\n  neuron [CL:0000540] has part axon [GO:0030424]   [the-body-s-systems-m45539-358]"
 },
 {
 "fact": "central nervous system [UBERON:0001017] overlaps nervous tissue [UBERON:0001016]",
@@ -9164,19 +9268,6 @@
 "tree": "nervous tissue [UBERON:0001016] has part dendrite [GO:0030425]   (relTrans, b=0.80)\n  nervous tissue [UBERON:0001016] has part neuron [CL:0000540]   [the-body-s-systems-m45539-32]\n  neuron [CL:0000540] has part dendrite [GO:0030425]   [the-body-s-systems-m45539-50]"
 },
 {
-"fact": "nervous tissue [UBERON:0001016] has part axon [GO:0030424]",
-"key": [
-"rel",
-"('bfo', 51, False)",
-"UBERON:0001016",
-"GO:0030424"
-],
-"depth": 1,
-"belief": 0.8,
-"rule": "relTrans",
-"tree": "nervous tissue [UBERON:0001016] has part axon [GO:0030424]   (relTrans, b=0.80)\n  nervous tissue [UBERON:0001016] has part neuron [CL:0000540]   [the-body-s-systems-m45539-32]\n  neuron [CL:0000540] has part axon [GO:0030424]   [the-body-s-systems-m45539-323]"
-},
-{
 "fact": "nervous tissue [UBERON:0001016] has part nucleus [GO:0005634]",
 "key": [
 "rel",
@@ -9201,6 +9292,19 @@
 "belief": 0.8,
 "rule": "relTrans",
 "tree": "nervous tissue [UBERON:0001016] has part Mitochondria [GO:0005739]   (relTrans, b=0.80)\n  nervous tissue [UBERON:0001016] has part neuron [CL:0000540]   [the-body-s-systems-m45539-32]\n  neuron [CL:0000540] has part Mitochondria [GO:0005739]   [the-body-s-systems-m45539-356]"
+},
+{
+"fact": "nervous tissue [UBERON:0001016] has part axon [GO:0030424]",
+"key": [
+"rel",
+"('bfo', 51, False)",
+"UBERON:0001016",
+"GO:0030424"
+],
+"depth": 1,
+"belief": 0.8,
+"rule": "relTrans",
+"tree": "nervous tissue [UBERON:0001016] has part axon [GO:0030424]   (relTrans, b=0.80)\n  nervous tissue [UBERON:0001016] has part neuron [CL:0000540]   [the-body-s-systems-m45539-32]\n  neuron [CL:0000540] has part axon [GO:0030424]   [the-body-s-systems-m45539-358]"
 },
 {
 "fact": "neuron [CL:0000540] overlaps gray matter [UBERON:0002020]",
@@ -9284,6 +9388,20 @@
 "tree": "ion channel activity [GO:0005216] \u2192+ process(membrane depolarization [GO:0051899])   (viaAmount, b=0.64)\n  ion channel activity [GO:0005216] \u2192+ amount(sodium [CHEBI:29101])   [the-body-s-systems-m45539-82]\n  sodium [CHEBI:29101] \u2192+ process(membrane depolarization [GO:0051899])   [the-body-s-systems-m45539-83]"
 },
 {
+"fact": "ion channel activity [GO:0005216] \u2192\u2212 amount(aldosterone \u2293 located in (blood) [CHEBI:27584&RO:0001025=(UBERON:0000178)])",
+"key": [
+"effect",
+"neg",
+"amount",
+"GO:0005216",
+"CHEBI:27584&RO:0001025=(UBERON:0000178)"
+],
+"depth": 1,
+"belief": 0.64,
+"rule": "viaAmount",
+"tree": "ion channel activity [GO:0005216] \u2192\u2212 amount(aldosterone \u2293 located in (blood) [CHEBI:27584&RO:0001025=(UBERON:0000178)])   (viaAmount, b=0.64)\n  ion channel activity [GO:0005216] \u2192+ amount(sodium [CHEBI:29101])   [the-body-s-systems-m45539-82]\n  sodium [CHEBI:29101] \u2192\u2212 amount(aldosterone \u2293 located in (blood) [CHEBI:27584&RO:0001025=(UBERON:0000178)])   [the-body-s-systems-m45537-153]"
+},
+{
 "fact": "voltage-gated sodium channel activity [GO:0005248] \u2192+ process(membrane depolarization [GO:0051899])",
 "key": [
 "effect",
@@ -9298,6 +9416,20 @@
 "tree": "voltage-gated sodium channel activity [GO:0005248] \u2192+ process(membrane depolarization [GO:0051899])   (viaAmount, b=0.64)\n  voltage-gated sodium channel activity [GO:0005248] \u2192+ amount(sodium [CHEBI:29101])   [the-body-s-systems-m45539-90]\n  sodium [CHEBI:29101] \u2192+ process(membrane depolarization [GO:0051899])   [the-body-s-systems-m45539-83]"
 },
 {
+"fact": "voltage-gated sodium channel activity [GO:0005248] \u2192\u2212 amount(aldosterone \u2293 located in (blood) [CHEBI:27584&RO:0001025=(UBERON:0000178)])",
+"key": [
+"effect",
+"neg",
+"amount",
+"GO:0005248",
+"CHEBI:27584&RO:0001025=(UBERON:0000178)"
+],
+"depth": 1,
+"belief": 0.64,
+"rule": "viaAmount",
+"tree": "voltage-gated sodium channel activity [GO:0005248] \u2192\u2212 amount(aldosterone \u2293 located in (blood) [CHEBI:27584&RO:0001025=(UBERON:0000178)])   (viaAmount, b=0.64)\n  voltage-gated sodium channel activity [GO:0005248] \u2192+ amount(sodium [CHEBI:29101])   [the-body-s-systems-m45539-90]\n  sodium [CHEBI:29101] \u2192\u2212 amount(aldosterone \u2293 located in (blood) [CHEBI:27584&RO:0001025=(UBERON:0000178)])   [the-body-s-systems-m45537-153]"
+},
+{
 "fact": "neuron [CL:0000540] has part node of Ranvier [GO:0033268]",
 "key": [
 "rel",
@@ -9308,7 +9440,7 @@
 "depth": 1,
 "belief": 0.8,
 "rule": "relTrans",
-"tree": "neuron [CL:0000540] has part node of Ranvier [GO:0033268]   (relTrans, b=0.80)\n  neuron [CL:0000540] has part axon [GO:0030424]   [the-body-s-systems-m45539-323]\n  axon [GO:0030424] has part node of Ranvier [GO:0033268]   [the-body-s-systems-m45539-115]"
+"tree": "neuron [CL:0000540] has part node of Ranvier [GO:0033268]   (relTrans, b=0.80)\n  neuron [CL:0000540] has part axon [GO:0030424]   [the-body-s-systems-m45539-358]\n  axon [GO:0030424] has part node of Ranvier [GO:0033268]   [the-body-s-systems-m45539-115]"
 },
 {
 "fact": "temporal lobe [UBERON:0001871] has part structure that is capable of learning [GO:0007612]",
@@ -9336,6 +9468,20 @@
 "belief": 0.64,
 "rule": "viaAmount",
 "tree": "ligand-gated ion channel activity [GO:0015276] \u2192+ process(membrane depolarization [GO:0051899])   (viaAmount, b=0.64)\n  ligand-gated ion channel activity [GO:0015276] \u2192+ amount(sodium [CHEBI:29101])   [the-body-s-systems-m45539-158]\n  sodium [CHEBI:29101] \u2192+ process(membrane depolarization [GO:0051899])   [the-body-s-systems-m45539-83]"
+},
+{
+"fact": "ligand-gated ion channel activity [GO:0015276] \u2192\u2212 amount(aldosterone \u2293 located in (blood) [CHEBI:27584&RO:0001025=(UBERON:0000178)])",
+"key": [
+"effect",
+"neg",
+"amount",
+"GO:0015276",
+"CHEBI:27584&RO:0001025=(UBERON:0000178)"
+],
+"depth": 1,
+"belief": 0.64,
+"rule": "viaAmount",
+"tree": "ligand-gated ion channel activity [GO:0015276] \u2192\u2212 amount(aldosterone \u2293 located in (blood) [CHEBI:27584&RO:0001025=(UBERON:0000178)])   (viaAmount, b=0.64)\n  ligand-gated ion channel activity [GO:0015276] \u2192+ amount(sodium [CHEBI:29101])   [the-body-s-systems-m45539-158]\n  sodium [CHEBI:29101] \u2192\u2212 amount(aldosterone \u2293 located in (blood) [CHEBI:27584&RO:0001025=(UBERON:0000178)])   [the-body-s-systems-m45537-153]"
 },
 {
 "fact": "central nervous system [UBERON:0001017] has part cerebral cortex [UBERON:0000956]",
@@ -10118,6 +10264,205 @@
 "belief": 0.8,
 "rule": "isaInheritEffect",
 "tree": "monosomy [MONDO:0020639] \u2192+ phenotype(lethal [PATO:0000718])   (isaInheritEffect, b=0.80)\n  monosomy [MONDO:0020639] is_a aneuploidy [MONDO:0700064]   [the-cellular-basis-of-inheritance-m45467-40]\n  aneuploidy [MONDO:0700064] \u2192+ phenotype(lethal [PATO:0000718])   [the-cellular-basis-of-inheritance-m45467-119]"
+},
+{
+"fact": "immune response \u2293 in taxon (NCBITaxon:9606 \u2293 has modifier (celiac disease)) [GO:0006955&RO:0002162=(NCBITaxon:9606&RO:0002573=(MONDO:0005130))] \u2192\u2212 phenotype(surface area [PATO:0001323])",
+"key": [
+"effect",
+"neg",
+"phenotype",
+"GO:0006955&RO:0002162=(NCBITaxon:9606&RO:0002573=(MONDO:0005130))",
+"PATO:0001323"
+],
+"depth": 1,
+"belief": 0.64,
+"rule": "viaAmount",
+"tree": "immune response \u2293 in taxon (NCBITaxon:9606 \u2293 has modifier (celiac disease)) [GO:0006955&RO:0002162=(NCBITaxon:9606&RO:0002573=(MONDO:0005130))] \u2192\u2212 phenotype(surface area [PATO:0001323])   (viaAmount, b=0.64)\n  immune response \u2293 in taxon (NCBITaxon:9606 \u2293 has modifier (celiac disease)) [GO:0006955&RO:0002162=(NCBITaxon:9606&RO:0002573=(MONDO:0005130))] \u2192\u2212 amount(microvillus [GO:0005902])   [cell-structure-and-function-m45432-24]\n  microvillus [GO:0005902] \u2192+ phenotype(surface area [PATO:0001323])   [cell-structure-and-function-m45432-18]"
+},
+{
+"fact": "plasma membrane \u2293 in taxon (NCBITaxon:33208) [GO:0005886&RO:0002162=(NCBITaxon:33208)] has part lipid [CHEBI:18059]",
+"key": [
+"rel",
+"('bfo', 51, False)",
+"GO:0005886&RO:0002162=(NCBITaxon:33208)",
+"CHEBI:18059"
+],
+"depth": 1,
+"belief": 0.8,
+"rule": "isaGeneralise",
+"tree": "plasma membrane \u2293 in taxon (NCBITaxon:33208) [GO:0005886&RO:0002162=(NCBITaxon:33208)] has part lipid [CHEBI:18059]   (isaGeneralise, b=0.80)\n  plasma membrane \u2293 in taxon (NCBITaxon:33208) [GO:0005886&RO:0002162=(NCBITaxon:33208)] has part cholesterol [CHEBI:16113]   [cell-structure-and-function-m45433-36]\n  cholesterol [CHEBI:16113] is_a lipid [CHEBI:18059]   [how-cells-obtain-energy-m45444-30]"
+},
+{
+"fact": "mRNA splicing, via spliceosome \u2293 in taxon (NCBITaxon:2759) [GO:0000398&RO:0002162=(NCBITaxon:2759)] has input RNA [CHEBI:33697]",
+"key": [
+"rel",
+"('ro', 2233, False)",
+"GO:0000398&RO:0002162=(NCBITaxon:2759)",
+"CHEBI:33697"
+],
+"depth": 1,
+"belief": 0.8,
+"rule": "isaGeneralise",
+"tree": "mRNA splicing, via spliceosome \u2293 in taxon (NCBITaxon:2759) [GO:0000398&RO:0002162=(NCBITaxon:2759)] has input RNA [CHEBI:33697]   (isaGeneralise, b=0.80)\n  mRNA splicing, via spliceosome \u2293 in taxon (NCBITaxon:2759) [GO:0000398&RO:0002162=(NCBITaxon:2759)] has input messenger RNA [CHEBI:33699]   [molbio-m45476-70]\n  messenger RNA [CHEBI:33699] is_a RNA [CHEBI:33697]   [molbio-m45476-76]"
+},
+{
+"fact": "translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part RNA [CHEBI:33697]",
+"key": [
+"rel",
+"('bfo', 51, False)",
+"GO:0070992&RO:0002162=(NCBITaxon:562)",
+"CHEBI:33697"
+],
+"depth": 1,
+"belief": 0.8,
+"rule": "isaGeneralise",
+"tree": "translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part RNA [CHEBI:33697]   (isaGeneralise, b=0.80)\n  translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part messenger RNA [CHEBI:33699]   [molbio-m45479-60]\n  messenger RNA [CHEBI:33699] is_a RNA [CHEBI:33697]   [molbio-m45476-76]"
+},
+{
+"fact": "mRNA export from nucleus \u2293 in taxon (NCBITaxon:2759) [GO:0006406&RO:0002162=(NCBITaxon:2759)] has input RNA [CHEBI:33697]",
+"key": [
+"rel",
+"('ro', 2233, False)",
+"GO:0006406&RO:0002162=(NCBITaxon:2759)",
+"CHEBI:33697"
+],
+"depth": 1,
+"belief": 0.8,
+"rule": "isaGeneralise",
+"tree": "mRNA export from nucleus \u2293 in taxon (NCBITaxon:2759) [GO:0006406&RO:0002162=(NCBITaxon:2759)] has input RNA [CHEBI:33697]   (isaGeneralise, b=0.80)\n  mRNA export from nucleus \u2293 in taxon (NCBITaxon:2759) [GO:0006406&RO:0002162=(NCBITaxon:2759)] has input messenger RNA [CHEBI:33699]   [molbio-m45480-48]\n  messenger RNA [CHEBI:33699] is_a RNA [CHEBI:33697]   [molbio-m45476-76]"
+},
+{
+"fact": "photosynthesis \u2293 in taxon (NCBITaxon:2759) [GO:0015979&RO:0002162=(NCBITaxon:2759)] occurs in organelles [GO:0043226]",
+"key": [
+"rel",
+"('bfo', 66, False)",
+"GO:0015979&RO:0002162=(NCBITaxon:2759)",
+"GO:0043226"
+],
+"depth": 1,
+"belief": 0.8,
+"rule": "isaGeneralise",
+"tree": "photosynthesis \u2293 in taxon (NCBITaxon:2759) [GO:0015979&RO:0002162=(NCBITaxon:2759)] occurs in organelles [GO:0043226]   (isaGeneralise, b=0.80)\n  photosynthesis \u2293 in taxon (NCBITaxon:2759) [GO:0015979&RO:0002162=(NCBITaxon:2759)] occurs in chloroplast [GO:0009507]   [photosynthesis-m45448-63]\n  chloroplast [GO:0009507] is_a organelles [GO:0043226]   [photosynthesis-m45448-64]"
+},
+{
+"fact": "ATP synthase \u2293 located in (mitochondrion) [GO:0045259&RO:0001025=(GO:0005739)] produces nucleotides [CHEBI:36976]",
+"key": [
+"rel",
+"('ro', 3000, False)",
+"GO:0045259&RO:0001025=(GO:0005739)",
+"CHEBI:36976"
+],
+"depth": 1,
+"belief": 0.8,
+"rule": "isaGeneralise",
+"tree": "ATP synthase \u2293 located in (mitochondrion) [GO:0045259&RO:0001025=(GO:0005739)] produces nucleotides [CHEBI:36976]   (isaGeneralise, b=0.80)\n  ATP synthase \u2293 located in (mitochondrion) [GO:0045259&RO:0001025=(GO:0005739)] produces ATP [CHEBI:15422]   [photosynthesis-m45452-90]\n  ATP [CHEBI:15422] is_a nucleotides [CHEBI:36976]   [how-cells-obtain-energy-m45438-47]"
+},
+{
+"fact": "binary fission \u2293 in taxon (prokaryote) [GO:0043093&RO:0002162=(NCBITaxon:2)] part of cell cycle [GO:0007049]",
+"key": [
+"rel",
+"('bfo', 50, False)",
+"GO:0043093&RO:0002162=(NCBITaxon:2)",
+"GO:0007049"
+],
+"depth": 1,
+"belief": 0.8,
+"rule": "isaInherit",
+"tree": "binary fission \u2293 in taxon (prokaryote) [GO:0043093&RO:0002162=(NCBITaxon:2)] part of cell cycle [GO:0007049]   (isaInherit, b=0.80)\n  binary fission \u2293 in taxon (prokaryote) [GO:0043093&RO:0002162=(NCBITaxon:2)] is_a arise from [GO:0051301]   [reproduction-at-the-cellular-level-m45463-12]\n  arise from [GO:0051301] part of cell cycle [GO:0007049]   [reproduction-at-the-cellular-level-m45455-1]"
+},
+{
+"fact": "binary fission \u2293 in taxon (prokaryote) [GO:0043093&RO:0002162=(NCBITaxon:2)] happens during mitotic phase [GO:0000087]",
+"key": [
+"rel",
+"('ro', 2092, False)",
+"GO:0043093&RO:0002162=(NCBITaxon:2)",
+"GO:0000087"
+],
+"depth": 1,
+"belief": 0.8,
+"rule": "isaInherit",
+"tree": "binary fission \u2293 in taxon (prokaryote) [GO:0043093&RO:0002162=(NCBITaxon:2)] happens during mitotic phase [GO:0000087]   (isaInherit, b=0.80)\n  binary fission \u2293 in taxon (prokaryote) [GO:0043093&RO:0002162=(NCBITaxon:2)] is_a arise from [GO:0051301]   [reproduction-at-the-cellular-level-m45463-12]\n  arise from [GO:0051301] happens during mitotic phase [GO:0000087]   [reproduction-at-the-cellular-level-m45461-9]"
+},
+{
+"fact": "binary fission \u2293 in taxon (prokaryote) [GO:0043093&RO:0002162=(NCBITaxon:2)] \u2192+ process(growth [GO:0040007])",
+"key": [
+"effect",
+"pos",
+"process",
+"GO:0043093&RO:0002162=(NCBITaxon:2)",
+"GO:0040007"
+],
+"depth": 1,
+"belief": 0.8,
+"rule": "isaInheritEffect",
+"tree": "binary fission \u2293 in taxon (prokaryote) [GO:0043093&RO:0002162=(NCBITaxon:2)] \u2192+ process(growth [GO:0040007])   (isaInheritEffect, b=0.80)\n  binary fission \u2293 in taxon (prokaryote) [GO:0043093&RO:0002162=(NCBITaxon:2)] is_a arise from [GO:0051301]   [reproduction-at-the-cellular-level-m45463-12]\n  arise from [GO:0051301] \u2192+ process(growth [GO:0040007])   [reproduction-at-the-cellular-level-m45454-9]"
+},
+{
+"fact": "colon [UBERON:0001155] part of digestive system organ [UBERON:0013765]",
+"key": [
+"rel",
+"('bfo', 50, False)",
+"UBERON:0001155",
+"UBERON:0013765"
+],
+"depth": 1,
+"belief": 0.8,
+"rule": "isaGeneralise",
+"tree": "colon [UBERON:0001155] part of digestive system organ [UBERON:0013765]   (isaGeneralise, b=0.80)\n  colon [UBERON:0001155] part of large intestine [UBERON:0000059]   [the-body-s-systems-m45535-265]\n  large intestine [UBERON:0000059] is_a digestive system organ [UBERON:0013765]   [the-body-s-systems-m45535-271]"
+},
+{
+"fact": "capillaries [UBERON:0001982] connected to aorta [UBERON:0000947]",
+"key": [
+"rel",
+"('ro', 2170, False)",
+"UBERON:0001982",
+"UBERON:0000947"
+],
+"depth": 1,
+"belief": 0.8,
+"rule": "isaInherit",
+"tree": "capillaries [UBERON:0001982] connected to aorta [UBERON:0000947]   (isaInherit, b=0.80)\n  capillaries [UBERON:0001982] is_a blood vessel [UBERON:0001981]   [the-body-s-systems-m45536-225]\n  blood vessel [UBERON:0001981] connected to aorta [UBERON:0000947]   [the-body-s-systems-m45534-192]"
+},
+{
+"fact": "capillaries [UBERON:0001982] connected to inferior vena cava [UBERON:0001072]",
+"key": [
+"rel",
+"('ro', 2170, False)",
+"UBERON:0001982",
+"UBERON:0001072"
+],
+"depth": 1,
+"belief": 0.8,
+"rule": "isaInherit",
+"tree": "capillaries [UBERON:0001982] connected to inferior vena cava [UBERON:0001072]   (isaInherit, b=0.80)\n  capillaries [UBERON:0001982] is_a blood vessel [UBERON:0001981]   [the-body-s-systems-m45536-225]\n  blood vessel [UBERON:0001981] connected to inferior vena cava [UBERON:0001072]   [the-body-s-systems-m45534-193]"
+},
+{
+"fact": "capillaries [UBERON:0001982] \u2192+ amount(oxygen [CHEBI:15379])",
+"key": [
+"effect",
+"pos",
+"amount",
+"UBERON:0001982",
+"CHEBI:15379"
+],
+"depth": 1,
+"belief": 0.8,
+"rule": "isaInheritEffect",
+"tree": "capillaries [UBERON:0001982] \u2192+ amount(oxygen [CHEBI:15379])   (isaInheritEffect, b=0.80)\n  capillaries [UBERON:0001982] is_a blood vessel [UBERON:0001981]   [the-body-s-systems-m45536-225]\n  blood vessel [UBERON:0001981] \u2192+ amount(oxygen [CHEBI:15379])   [the-body-s-systems-m45536-3]"
+},
+{
+"fact": "capillaries [UBERON:0001982] \u2192\u2212 amount(carbon dioxide [CHEBI:16526])",
+"key": [
+"effect",
+"neg",
+"amount",
+"UBERON:0001982",
+"CHEBI:16526"
+],
+"depth": 1,
+"belief": 0.8,
+"rule": "isaInheritEffect",
+"tree": "capillaries [UBERON:0001982] \u2192\u2212 amount(carbon dioxide [CHEBI:16526])   (isaInheritEffect, b=0.80)\n  capillaries [UBERON:0001982] is_a blood vessel [UBERON:0001981]   [the-body-s-systems-m45536-225]\n  blood vessel [UBERON:0001981] \u2192\u2212 amount(carbon dioxide [CHEBI:16526])   [the-body-s-systems-m45536-4]"
 },
 {
 "fact": "body [UBERON:0000468] overlaps endomembrane system [GO:0012505]",
@@ -12434,6 +12779,19 @@
 "tree": "cell wall [GO:0005618] overlaps food [CHEBI:33290]   (relChain, b=0.80)\n  cell wall [GO:0005618] has part peptidoglycan [CHEBI:8005]   [cell-structure-and-function-m45432-224]\n  peptidoglycan [CHEBI:8005] overlaps food [CHEBI:33290]   (relChain, b=0.80)\n    peptidoglycan [CHEBI:8005] has part sugars [CHEBI:16646]   [cell-structure-and-function-m45429-22]\n    sugars [CHEBI:16646] part of food [CHEBI:33290]   [the-body-s-systems-m45535-234]"
 },
 {
+"fact": "cell wall \u2293 in taxon (NCBITaxon:2) [GO:0005618&RO:0002162=(NCBITaxon:2)] overlaps food [CHEBI:33290]",
+"key": [
+"rel",
+"('ro', 2131, False)",
+"GO:0005618&RO:0002162=(NCBITaxon:2)",
+"CHEBI:33290"
+],
+"depth": 2,
+"belief": 0.8,
+"rule": "relChain",
+"tree": "cell wall \u2293 in taxon (NCBITaxon:2) [GO:0005618&RO:0002162=(NCBITaxon:2)] overlaps food [CHEBI:33290]   (relChain, b=0.80)\n  cell wall \u2293 in taxon (NCBITaxon:2) [GO:0005618&RO:0002162=(NCBITaxon:2)] has part peptidoglycan [CHEBI:8005]   [cell-structure-and-function-m45429-21]\n  peptidoglycan [CHEBI:8005] overlaps food [CHEBI:33290]   (relChain, b=0.80)\n    peptidoglycan [CHEBI:8005] has part sugars [CHEBI:16646]   [cell-structure-and-function-m45429-22]\n    sugars [CHEBI:16646] part of food [CHEBI:33290]   [the-body-s-systems-m45535-234]"
+},
+{
 "fact": "prokaryotic cell [CL:0000520] overlaps food [CHEBI:33290]",
 "key": [
 "rel",
@@ -12471,6 +12829,19 @@
 "belief": 0.8,
 "rule": "relTrans",
 "tree": "cell wall [GO:0005618] has part carbon atoms [CHEBI:27594]   (relTrans, b=0.80)\n  cell wall [GO:0005618] has part peptidoglycan [CHEBI:8005]   [cell-structure-and-function-m45432-224]\n  peptidoglycan [CHEBI:8005] has part carbon atoms [CHEBI:27594]   (relTrans, b=0.80)\n    peptidoglycan [CHEBI:8005] has part sugars [CHEBI:16646]   [cell-structure-and-function-m45429-22]\n    sugars [CHEBI:16646] has part carbon atoms [CHEBI:27594]   [photosynthesis-m45453-2]"
+},
+{
+"fact": "cell wall \u2293 in taxon (NCBITaxon:2) [GO:0005618&RO:0002162=(NCBITaxon:2)] has part carbon atoms [CHEBI:27594]",
+"key": [
+"rel",
+"('bfo', 51, False)",
+"GO:0005618&RO:0002162=(NCBITaxon:2)",
+"CHEBI:27594"
+],
+"depth": 2,
+"belief": 0.8,
+"rule": "relTrans",
+"tree": "cell wall \u2293 in taxon (NCBITaxon:2) [GO:0005618&RO:0002162=(NCBITaxon:2)] has part carbon atoms [CHEBI:27594]   (relTrans, b=0.80)\n  cell wall \u2293 in taxon (NCBITaxon:2) [GO:0005618&RO:0002162=(NCBITaxon:2)] has part peptidoglycan [CHEBI:8005]   [cell-structure-and-function-m45429-21]\n  peptidoglycan [CHEBI:8005] has part carbon atoms [CHEBI:27594]   (relTrans, b=0.80)\n    peptidoglycan [CHEBI:8005] has part sugars [CHEBI:16646]   [cell-structure-and-function-m45429-22]\n    sugars [CHEBI:16646] has part carbon atoms [CHEBI:27594]   [photosynthesis-m45453-2]"
 },
 {
 "fact": "prokaryotic cell [CL:0000520] has part carbon atoms [CHEBI:27594]",
@@ -12876,6 +13247,19 @@
 "tree": "sodium:potassium-exchanging ATPase [GO:0005890] part of structure that is capable of protein transport [GO:0015031]   (relChain, b=0.80)\n  sodium:potassium-exchanging ATPase [GO:0005890] part of endomembrane system [GO:0012505]   (relTrans, b=0.80)\n    sodium:potassium-exchanging ATPase [GO:0005890] part of plasma membrane [GO:0005886]   [the-body-s-systems-m45539-67]\n    plasma membrane [GO:0005886] part of endomembrane system [GO:0012505]   [cell-structure-and-function-m45432-89]\n  endomembrane system [GO:0012505] capable of protein transport [GO:0015031]   [cell-structure-and-function-m45432-87]"
 },
 {
+"fact": "microvilli \u2293 part of (cells that specialize in absorption) [GO:0005902&BFO:0000050=(CL:0000584)] part of structure that is capable of protein transport [GO:0015031]",
+"key": [
+"rel",
+"('ro', 2329, False)",
+"GO:0005902&BFO:0000050=(CL:0000584)",
+"GO:0015031"
+],
+"depth": 2,
+"belief": 0.8,
+"rule": "relChain",
+"tree": "microvilli \u2293 part of (cells that specialize in absorption) [GO:0005902&BFO:0000050=(CL:0000584)] part of structure that is capable of protein transport [GO:0015031]   (relChain, b=0.80)\n  microvilli \u2293 part of (cells that specialize in absorption) [GO:0005902&BFO:0000050=(CL:0000584)] part of endomembrane system [GO:0012505]   (relTrans, b=0.80)\n    microvilli \u2293 part of (cells that specialize in absorption) [GO:0005902&BFO:0000050=(CL:0000584)] part of plasma membrane [GO:0005886]   [cell-structure-and-function-m45432-16]\n    plasma membrane [GO:0005886] part of endomembrane system [GO:0012505]   [cell-structure-and-function-m45432-89]\n  endomembrane system [GO:0012505] capable of protein transport [GO:0015031]   [cell-structure-and-function-m45432-87]"
+},
+{
 "fact": "skeletal muscle fiber [CL:0008002] overlaps chromosome [GO:0005694]",
 "key": [
 "rel",
@@ -12900,19 +13284,6 @@
 "belief": 0.8,
 "rule": "relChain",
 "tree": "smooth muscle cells [CL:0000192] overlaps chromosome [GO:0005694]   (relChain, b=0.80)\n  smooth muscle cells [CL:0000192] has part nucleus [GO:0005634]   [the-body-s-systems-m45538-228]\n  nucleus [GO:0005634] overlaps chromosome [GO:0005694]   (relChain, b=0.80)\n    nucleus [GO:0005634] has part chromatin [GO:0000785]   [cell-structure-and-function-m45432-91]\n    chromatin [GO:0000785] part of chromosome [GO:0005694]   [cell-structure-and-function-m45432-358]"
-},
-{
-"fact": "cardiomyocytes [CL:0000746] overlaps chromosome [GO:0005694]",
-"key": [
-"rel",
-"('ro', 2131, False)",
-"CL:0000746",
-"GO:0005694"
-],
-"depth": 2,
-"belief": 0.8,
-"rule": "relChain",
-"tree": "cardiomyocytes [CL:0000746] overlaps chromosome [GO:0005694]   (relChain, b=0.80)\n  cardiomyocytes [CL:0000746] has part nucleus [GO:0005634]   [the-body-s-systems-m45538-236]\n  nucleus [GO:0005634] overlaps chromosome [GO:0005694]   (relChain, b=0.80)\n    nucleus [GO:0005634] has part chromatin [GO:0000785]   [cell-structure-and-function-m45432-91]\n    chromatin [GO:0000785] part of chromosome [GO:0005694]   [cell-structure-and-function-m45432-358]"
 },
 {
 "fact": "neuronal cell body [GO:0043025] overlaps chromosome [GO:0005694]",
@@ -14401,6 +14772,19 @@
 "tree": "telomerase [GO:0005697] has part hydroxy group [CHEBI:43176]   (relTrans, b=0.80)\n  telomerase [GO:0005697] has part RNA [CHEBI:33697]   [molbio-m45475-135]\n  RNA [CHEBI:33697] has part hydroxy group [CHEBI:43176]   (relTrans, b=0.80)\n    RNA [CHEBI:33697] has part ribose [CHEBI:33942]   [molbio-m45473-53]\n    ribose [CHEBI:33942] has part hydroxy group [CHEBI:43176]   [molbio-m45473-55]"
 },
 {
+"fact": "translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part hydroxy group [CHEBI:43176]",
+"key": [
+"rel",
+"('bfo', 51, False)",
+"GO:0070992&RO:0002162=(NCBITaxon:562)",
+"CHEBI:43176"
+],
+"depth": 2,
+"belief": 0.8,
+"rule": "relTrans",
+"tree": "translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part hydroxy group [CHEBI:43176]   (relTrans, b=0.80)\n  translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part RNA [CHEBI:33697]   (isaGeneralise, b=0.80)\n    translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part messenger RNA [CHEBI:33699]   [molbio-m45479-60]\n    messenger RNA [CHEBI:33699] is_a RNA [CHEBI:33697]   [molbio-m45476-76]\n  RNA [CHEBI:33697] has part hydroxy group [CHEBI:43176]   (relTrans, b=0.80)\n    RNA [CHEBI:33697] has part ribose [CHEBI:33942]   [molbio-m45473-53]\n    ribose [CHEBI:33942] has part hydroxy group [CHEBI:43176]   [molbio-m45473-55]"
+},
+{
 "fact": "telomerase [GO:0005697] overlaps RNA [CHEBI:33697]",
 "key": [
 "rel",
@@ -14427,6 +14811,19 @@
 "tree": "telomerase [GO:0005697] has part purines [CHEBI:26401]   (isaGeneralise, b=0.80)\n  telomerase [GO:0005697] has part adenine [CHEBI:16708]   (relTrans, b=0.80)\n    telomerase [GO:0005697] has part RNA [CHEBI:33697]   [molbio-m45475-135]\n    RNA [CHEBI:33697] has part adenine [CHEBI:16708]   [molbio-m45473-57]\n  adenine [CHEBI:16708] is_a purines [CHEBI:26401]   [molbio-m45473-19]"
 },
 {
+"fact": "translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part purines [CHEBI:26401]",
+"key": [
+"rel",
+"('bfo', 51, False)",
+"GO:0070992&RO:0002162=(NCBITaxon:562)",
+"CHEBI:26401"
+],
+"depth": 2,
+"belief": 0.8,
+"rule": "relTrans",
+"tree": "translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part purines [CHEBI:26401]   (relTrans, b=0.80)\n  translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part RNA [CHEBI:33697]   (isaGeneralise, b=0.80)\n    translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part messenger RNA [CHEBI:33699]   [molbio-m45479-60]\n    messenger RNA [CHEBI:33699] is_a RNA [CHEBI:33697]   [molbio-m45476-76]\n  RNA [CHEBI:33697] has part purines [CHEBI:26401]   (isaGeneralise, b=0.80)\n    RNA [CHEBI:33697] has part adenine [CHEBI:16708]   [molbio-m45473-57]\n    adenine [CHEBI:16708] is_a purines [CHEBI:26401]   [molbio-m45473-19]"
+},
+{
 "fact": "telomerase [GO:0005697] has part pyrimidines [CHEBI:39447]",
 "key": [
 "rel",
@@ -14438,6 +14835,19 @@
 "belief": 0.8,
 "rule": "isaGeneralise",
 "tree": "telomerase [GO:0005697] has part pyrimidines [CHEBI:39447]   (isaGeneralise, b=0.80)\n  telomerase [GO:0005697] has part cytosine [CHEBI:16040]   (relTrans, b=0.80)\n    telomerase [GO:0005697] has part RNA [CHEBI:33697]   [molbio-m45475-135]\n    RNA [CHEBI:33697] has part cytosine [CHEBI:16040]   [molbio-m45473-58]\n  cytosine [CHEBI:16040] is_a pyrimidines [CHEBI:39447]   [molbio-m45473-21]"
+},
+{
+"fact": "translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part pyrimidines [CHEBI:39447]",
+"key": [
+"rel",
+"('bfo', 51, False)",
+"GO:0070992&RO:0002162=(NCBITaxon:562)",
+"CHEBI:39447"
+],
+"depth": 2,
+"belief": 0.8,
+"rule": "relTrans",
+"tree": "translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part pyrimidines [CHEBI:39447]   (relTrans, b=0.80)\n  translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part RNA [CHEBI:33697]   (isaGeneralise, b=0.80)\n    translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part messenger RNA [CHEBI:33699]   [molbio-m45479-60]\n    messenger RNA [CHEBI:33699] is_a RNA [CHEBI:33697]   [molbio-m45476-76]\n  RNA [CHEBI:33697] has part pyrimidines [CHEBI:39447]   (isaGeneralise, b=0.80)\n    RNA [CHEBI:33697] has part cytosine [CHEBI:16040]   [molbio-m45473-58]\n    cytosine [CHEBI:16040] is_a pyrimidines [CHEBI:39447]   [molbio-m45473-21]"
 },
 {
 "fact": "synthesize proteins [GO:0006412] has input nucleic acids [CHEBI:33696]",
@@ -14661,6 +15071,32 @@
 "tree": "messenger RNA [CHEBI:33699] has part hydroxy group [CHEBI:43176]   (relTrans, b=0.80)\n  messenger RNA [CHEBI:33699] has part ribose [CHEBI:33942]   (isaInherit, b=0.80)\n    messenger RNA [CHEBI:33699] is_a RNA [CHEBI:33697]   [molbio-m45476-76]\n    RNA [CHEBI:33697] has part ribose [CHEBI:33942]   [molbio-m45473-53]\n  ribose [CHEBI:33942] has part hydroxy group [CHEBI:43176]   [molbio-m45473-55]"
 },
 {
+"fact": "translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part ribose [CHEBI:33942]",
+"key": [
+"rel",
+"('bfo', 51, False)",
+"GO:0070992&RO:0002162=(NCBITaxon:562)",
+"CHEBI:33942"
+],
+"depth": 2,
+"belief": 0.8,
+"rule": "relTrans",
+"tree": "translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part ribose [CHEBI:33942]   (relTrans, b=0.80)\n  translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part messenger RNA [CHEBI:33699]   [molbio-m45479-60]\n  messenger RNA [CHEBI:33699] has part ribose [CHEBI:33942]   (isaInherit, b=0.80)\n    messenger RNA [CHEBI:33699] is_a RNA [CHEBI:33697]   [molbio-m45476-76]\n    RNA [CHEBI:33697] has part ribose [CHEBI:33942]   [molbio-m45473-53]"
+},
+{
+"fact": "translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part adenine [CHEBI:16708]",
+"key": [
+"rel",
+"('bfo', 51, False)",
+"GO:0070992&RO:0002162=(NCBITaxon:562)",
+"CHEBI:16708"
+],
+"depth": 2,
+"belief": 0.8,
+"rule": "relTrans",
+"tree": "translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part adenine [CHEBI:16708]   (relTrans, b=0.80)\n  translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part messenger RNA [CHEBI:33699]   [molbio-m45479-60]\n  messenger RNA [CHEBI:33699] has part adenine [CHEBI:16708]   (isaInherit, b=0.80)\n    messenger RNA [CHEBI:33699] is_a RNA [CHEBI:33697]   [molbio-m45476-76]\n    RNA [CHEBI:33697] has part adenine [CHEBI:16708]   [molbio-m45473-57]"
+},
+{
 "fact": "messenger RNA [CHEBI:33699] has part purines [CHEBI:26401]",
 "key": [
 "rel",
@@ -14674,6 +15110,19 @@
 "tree": "messenger RNA [CHEBI:33699] has part purines [CHEBI:26401]   (isaGeneralise, b=0.80)\n  messenger RNA [CHEBI:33699] has part adenine [CHEBI:16708]   (isaInherit, b=0.80)\n    messenger RNA [CHEBI:33699] is_a RNA [CHEBI:33697]   [molbio-m45476-76]\n    RNA [CHEBI:33697] has part adenine [CHEBI:16708]   [molbio-m45473-57]\n  adenine [CHEBI:16708] is_a purines [CHEBI:26401]   [molbio-m45473-19]"
 },
 {
+"fact": "translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part cytosine [CHEBI:16040]",
+"key": [
+"rel",
+"('bfo', 51, False)",
+"GO:0070992&RO:0002162=(NCBITaxon:562)",
+"CHEBI:16040"
+],
+"depth": 2,
+"belief": 0.8,
+"rule": "relTrans",
+"tree": "translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part cytosine [CHEBI:16040]   (relTrans, b=0.80)\n  translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part messenger RNA [CHEBI:33699]   [molbio-m45479-60]\n  messenger RNA [CHEBI:33699] has part cytosine [CHEBI:16040]   (isaInherit, b=0.80)\n    messenger RNA [CHEBI:33699] is_a RNA [CHEBI:33697]   [molbio-m45476-76]\n    RNA [CHEBI:33697] has part cytosine [CHEBI:16040]   [molbio-m45473-58]"
+},
+{
 "fact": "messenger RNA [CHEBI:33699] has part pyrimidines [CHEBI:39447]",
 "key": [
 "rel",
@@ -14685,6 +15134,32 @@
 "belief": 0.8,
 "rule": "isaGeneralise",
 "tree": "messenger RNA [CHEBI:33699] has part pyrimidines [CHEBI:39447]   (isaGeneralise, b=0.80)\n  messenger RNA [CHEBI:33699] has part cytosine [CHEBI:16040]   (isaInherit, b=0.80)\n    messenger RNA [CHEBI:33699] is_a RNA [CHEBI:33697]   [molbio-m45476-76]\n    RNA [CHEBI:33697] has part cytosine [CHEBI:16040]   [molbio-m45473-58]\n  cytosine [CHEBI:16040] is_a pyrimidines [CHEBI:39447]   [molbio-m45473-21]"
+},
+{
+"fact": "translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part guanine [CHEBI:16235]",
+"key": [
+"rel",
+"('bfo', 51, False)",
+"GO:0070992&RO:0002162=(NCBITaxon:562)",
+"CHEBI:16235"
+],
+"depth": 2,
+"belief": 0.8,
+"rule": "relTrans",
+"tree": "translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part guanine [CHEBI:16235]   (relTrans, b=0.80)\n  translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part messenger RNA [CHEBI:33699]   [molbio-m45479-60]\n  messenger RNA [CHEBI:33699] has part guanine [CHEBI:16235]   (isaInherit, b=0.80)\n    messenger RNA [CHEBI:33699] is_a RNA [CHEBI:33697]   [molbio-m45476-76]\n    RNA [CHEBI:33697] has part guanine [CHEBI:16235]   [molbio-m45473-59]"
+},
+{
+"fact": "translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part uracil [CHEBI:17568]",
+"key": [
+"rel",
+"('bfo', 51, False)",
+"GO:0070992&RO:0002162=(NCBITaxon:562)",
+"CHEBI:17568"
+],
+"depth": 2,
+"belief": 0.8,
+"rule": "relTrans",
+"tree": "translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part uracil [CHEBI:17568]   (relTrans, b=0.80)\n  translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part messenger RNA [CHEBI:33699]   [molbio-m45479-60]\n  messenger RNA [CHEBI:33699] has part uracil [CHEBI:17568]   (isaInherit, b=0.80)\n    messenger RNA [CHEBI:33699] is_a RNA [CHEBI:33697]   [molbio-m45476-76]\n    RNA [CHEBI:33697] has part uracil [CHEBI:17568]   [molbio-m45473-61]"
 },
 {
 "fact": "small subunit [GO:0015935] molecularly interacts with nucleic acids [CHEBI:33696]",
@@ -15221,6 +15696,48 @@
 "tree": "potassium [CHEBI:29103] \u2192+ activity(enzyme [GO:0003824])   (isaInheritEffect, b=0.80)\n  potassium [CHEBI:29103] is_a these molecules [CHEBI:23357]   (relTrans, b=0.80)\n    potassium [CHEBI:29103] is_a Minerals [CHEBI:46662]   [the-body-s-systems-m45535-250]\n    Minerals [CHEBI:46662] is_a these molecules [CHEBI:23357]   [the-body-s-systems-m45535-199]\n  these molecules [CHEBI:23357] \u2192+ activity(enzyme [GO:0003824])   [how-cells-obtain-energy-m45437-222]"
 },
 {
+"fact": "blood vessel [UBERON:0001981] \u2192\u2212 process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])",
+"key": [
+"effect",
+"neg",
+"process",
+"UBERON:0001981",
+"GO:0030218&BFO:0000066=(UBERON:0002371)"
+],
+"depth": 2,
+"belief": 0.512,
+"rule": "viaAmount",
+"tree": "blood vessel [UBERON:0001981] \u2192\u2212 process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])   (viaAmount, b=0.51)\n  blood vessel [UBERON:0001981] \u2192\u2212 amount(erythropoietin [PR:000007141])   (viaAmount, b=0.64)\n    blood vessel [UBERON:0001981] \u2192+ amount(oxygen [CHEBI:15379])   [the-body-s-systems-m45536-3]\n    oxygen [CHEBI:15379] \u2192\u2212 amount(erythropoietin [PR:000007141])   [the-body-s-systems-m45537-238]\n  erythropoietin [PR:000007141] \u2192+ process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])   [the-body-s-systems-m45537-240]"
+},
+{
+"fact": "respiratory system [UBERON:0001004] \u2192\u2212 process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])",
+"key": [
+"effect",
+"neg",
+"process",
+"UBERON:0001004",
+"GO:0030218&BFO:0000066=(UBERON:0002371)"
+],
+"depth": 2,
+"belief": 0.512,
+"rule": "viaAmount",
+"tree": "respiratory system [UBERON:0001004] \u2192\u2212 process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])   (viaAmount, b=0.51)\n  respiratory system [UBERON:0001004] \u2192\u2212 amount(erythropoietin [PR:000007141])   (viaAmount, b=0.64)\n    respiratory system [UBERON:0001004] \u2192+ amount(oxygen [CHEBI:15379])   [the-body-s-systems-m45536-12]\n    oxygen [CHEBI:15379] \u2192\u2212 amount(erythropoietin [PR:000007141])   [the-body-s-systems-m45537-238]\n  erythropoietin [PR:000007141] \u2192+ process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])   [the-body-s-systems-m45537-240]"
+},
+{
+"fact": "lungs [UBERON:0002048] \u2192\u2212 process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])",
+"key": [
+"effect",
+"neg",
+"process",
+"UBERON:0002048",
+"GO:0030218&BFO:0000066=(UBERON:0002371)"
+],
+"depth": 2,
+"belief": 0.512,
+"rule": "viaAmount",
+"tree": "lungs [UBERON:0002048] \u2192\u2212 process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])   (viaAmount, b=0.51)\n  lungs [UBERON:0002048] \u2192\u2212 amount(erythropoietin [PR:000007141])   (viaAmount, b=0.64)\n    lungs [UBERON:0002048] \u2192+ amount(oxygen [CHEBI:15379])   [the-body-s-systems-m45536-105]\n    oxygen [CHEBI:15379] \u2192\u2212 amount(erythropoietin [PR:000007141])   [the-body-s-systems-m45537-238]\n  erythropoietin [PR:000007141] \u2192+ process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])   [the-body-s-systems-m45537-240]"
+},
+{
 "fact": "aorta [UBERON:0000947] connected to inferior vena cava [UBERON:0001072]",
 "key": [
 "rel",
@@ -15426,99 +15943,18 @@
 "tree": "arteries [UBERON:0001637] \u2192\u2212 amount(erythropoietin [PR:000007141])   (viaAmount, b=0.64)\n  arteries [UBERON:0001637] \u2192+ amount(oxygen [CHEBI:15379])   (isaInheritEffect, b=0.80)\n    arteries [UBERON:0001637] is_a blood vessel [UBERON:0001981]   [the-body-s-systems-m45536-219]\n    blood vessel [UBERON:0001981] \u2192+ amount(oxygen [CHEBI:15379])   [the-body-s-systems-m45536-3]\n  oxygen [CHEBI:15379] \u2192\u2212 amount(erythropoietin [PR:000007141])   [the-body-s-systems-m45537-238]"
 },
 {
-"fact": "capillaries [UBERON:0001982] connected to arteries [UBERON:0001637]",
-"key": [
-"rel",
-"('ro', 2170, False)",
-"UBERON:0001982",
-"UBERON:0001637"
-],
-"depth": 2,
-"belief": 0.8,
-"rule": "isaGeneralise",
-"tree": "capillaries [UBERON:0001982] connected to arteries [UBERON:0001637]   (isaGeneralise, b=0.80)\n  capillaries [UBERON:0001982] connected to aorta [UBERON:0000947]   (isaInherit, b=0.80)\n    capillaries [UBERON:0001982] is_a blood vessel [UBERON:0001981]   [the-body-s-systems-m45536-225]\n    blood vessel [UBERON:0001981] connected to aorta [UBERON:0000947]   [the-body-s-systems-m45534-192]\n  aorta [UBERON:0000947] is_a arteries [UBERON:0001637]   [the-body-s-systems-m45536-109]"
-},
-{
-"fact": "capillaries [UBERON:0001982] connected to blood vessel [UBERON:0001981]",
-"key": [
-"rel",
-"('ro', 2170, False)",
-"UBERON:0001982",
-"UBERON:0001981"
-],
-"depth": 2,
-"belief": 0.8,
-"rule": "isaGeneralise",
-"tree": "capillaries [UBERON:0001982] connected to blood vessel [UBERON:0001981]   (isaGeneralise, b=0.80)\n  capillaries [UBERON:0001982] connected to aorta [UBERON:0000947]   (isaInherit, b=0.80)\n    capillaries [UBERON:0001982] is_a blood vessel [UBERON:0001981]   [the-body-s-systems-m45536-225]\n    blood vessel [UBERON:0001981] connected to aorta [UBERON:0000947]   [the-body-s-systems-m45534-192]\n  aorta [UBERON:0000947] is_a blood vessel [UBERON:0001981]   (relTrans, b=0.80)\n    aorta [UBERON:0000947] is_a arteries [UBERON:0001637]   [the-body-s-systems-m45536-109]\n    arteries [UBERON:0001637] is_a blood vessel [UBERON:0001981]   [the-body-s-systems-m45536-219]"
-},
-{
-"fact": "capillaries [UBERON:0001982] connected to veins [UBERON:0001638]",
-"key": [
-"rel",
-"('ro', 2170, False)",
-"UBERON:0001982",
-"UBERON:0001638"
-],
-"depth": 2,
-"belief": 0.8,
-"rule": "isaGeneralise",
-"tree": "capillaries [UBERON:0001982] connected to veins [UBERON:0001638]   (isaGeneralise, b=0.80)\n  capillaries [UBERON:0001982] connected to inferior vena cava [UBERON:0001072]   (isaInherit, b=0.80)\n    capillaries [UBERON:0001982] is_a blood vessel [UBERON:0001981]   [the-body-s-systems-m45536-225]\n    blood vessel [UBERON:0001981] connected to inferior vena cava [UBERON:0001072]   [the-body-s-systems-m45534-193]\n  inferior vena cava [UBERON:0001072] is_a veins [UBERON:0001638]   [the-body-s-systems-m45536-232]"
-},
-{
-"fact": "capillaries [UBERON:0001982] \u2192+ process(this reaction [GO:0009060])",
-"key": [
-"effect",
-"pos",
-"process",
-"UBERON:0001982",
-"GO:0009060"
-],
-"depth": 2,
-"belief": 0.64,
-"rule": "viaAmount",
-"tree": "capillaries [UBERON:0001982] \u2192+ process(this reaction [GO:0009060])   (viaAmount, b=0.64)\n  capillaries [UBERON:0001982] \u2192+ amount(oxygen [CHEBI:15379])   (isaInheritEffect, b=0.80)\n    capillaries [UBERON:0001982] is_a blood vessel [UBERON:0001981]   [the-body-s-systems-m45536-225]\n    blood vessel [UBERON:0001981] \u2192+ amount(oxygen [CHEBI:15379])   [the-body-s-systems-m45536-3]\n  oxygen [CHEBI:15379] \u2192+ process(this reaction [GO:0009060])   [how-cells-obtain-energy-m45439-3]"
-},
-{
-"fact": "capillaries [UBERON:0001982] \u2192+ process(this transfer [GO:0022904])",
-"key": [
-"effect",
-"pos",
-"process",
-"UBERON:0001982",
-"GO:0022904"
-],
-"depth": 2,
-"belief": 0.64,
-"rule": "viaAmount",
-"tree": "capillaries [UBERON:0001982] \u2192+ process(this transfer [GO:0022904])   (viaAmount, b=0.64)\n  capillaries [UBERON:0001982] \u2192+ amount(oxygen [CHEBI:15379])   (isaInheritEffect, b=0.80)\n    capillaries [UBERON:0001982] is_a blood vessel [UBERON:0001981]   [the-body-s-systems-m45536-225]\n    blood vessel [UBERON:0001981] \u2192+ amount(oxygen [CHEBI:15379])   [the-body-s-systems-m45536-3]\n  oxygen [CHEBI:15379] \u2192+ process(this transfer [GO:0022904])   [how-cells-obtain-energy-m45439-20]"
-},
-{
-"fact": "capillaries [UBERON:0001982] \u2192+ process(a process [GO:0006119])",
-"key": [
-"effect",
-"pos",
-"process",
-"UBERON:0001982",
-"GO:0006119"
-],
-"depth": 2,
-"belief": 0.64,
-"rule": "viaAmount",
-"tree": "capillaries [UBERON:0001982] \u2192+ process(a process [GO:0006119])   (viaAmount, b=0.64)\n  capillaries [UBERON:0001982] \u2192+ amount(oxygen [CHEBI:15379])   (isaInheritEffect, b=0.80)\n    capillaries [UBERON:0001982] is_a blood vessel [UBERON:0001981]   [the-body-s-systems-m45536-225]\n    blood vessel [UBERON:0001981] \u2192+ amount(oxygen [CHEBI:15379])   [the-body-s-systems-m45536-3]\n  oxygen [CHEBI:15379] \u2192+ process(a process [GO:0006119])   [how-cells-obtain-energy-m45440-69]"
-},
-{
-"fact": "capillaries [UBERON:0001982] \u2192\u2212 amount(erythropoietin [PR:000007141])",
+"fact": "arteries [UBERON:0001637] \u2192\u2212 process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])",
 "key": [
 "effect",
 "neg",
-"amount",
-"UBERON:0001982",
-"PR:000007141"
+"process",
+"UBERON:0001637",
+"GO:0030218&BFO:0000066=(UBERON:0002371)"
 ],
 "depth": 2,
-"belief": 0.64,
+"belief": 0.512,
 "rule": "viaAmount",
-"tree": "capillaries [UBERON:0001982] \u2192\u2212 amount(erythropoietin [PR:000007141])   (viaAmount, b=0.64)\n  capillaries [UBERON:0001982] \u2192+ amount(oxygen [CHEBI:15379])   (isaInheritEffect, b=0.80)\n    capillaries [UBERON:0001982] is_a blood vessel [UBERON:0001981]   [the-body-s-systems-m45536-225]\n    blood vessel [UBERON:0001981] \u2192+ amount(oxygen [CHEBI:15379])   [the-body-s-systems-m45536-3]\n  oxygen [CHEBI:15379] \u2192\u2212 amount(erythropoietin [PR:000007141])   [the-body-s-systems-m45537-238]"
+"tree": "arteries [UBERON:0001637] \u2192\u2212 process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])   (viaAmount, b=0.51)\n  arteries [UBERON:0001637] \u2192+ amount(oxygen [CHEBI:15379])   (isaInheritEffect, b=0.80)\n    arteries [UBERON:0001637] is_a blood vessel [UBERON:0001981]   [the-body-s-systems-m45536-219]\n    blood vessel [UBERON:0001981] \u2192+ amount(oxygen [CHEBI:15379])   [the-body-s-systems-m45536-3]\n  oxygen [CHEBI:15379] \u2192\u2212 process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])   (viaAmount, b=0.64)\n    oxygen [CHEBI:15379] \u2192\u2212 amount(erythropoietin [PR:000007141])   [the-body-s-systems-m45537-238]\n    erythropoietin [PR:000007141] \u2192+ process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])   [the-body-s-systems-m45537-240]"
 },
 {
 "fact": "diaphragm [UBERON:0001103] part of structure that is capable of locomotion [GO:0040011]",
@@ -15873,6 +16309,20 @@
 "belief": 0.64,
 "rule": "viaAmount",
 "tree": "veins [UBERON:0001638] \u2192\u2212 amount(erythropoietin [PR:000007141])   (viaAmount, b=0.64)\n  veins [UBERON:0001638] \u2192+ amount(oxygen [CHEBI:15379])   (isaInheritEffect, b=0.80)\n    veins [UBERON:0001638] is_a blood vessel [UBERON:0001981]   [the-body-s-systems-m45536-244]\n    blood vessel [UBERON:0001981] \u2192+ amount(oxygen [CHEBI:15379])   [the-body-s-systems-m45536-3]\n  oxygen [CHEBI:15379] \u2192\u2212 amount(erythropoietin [PR:000007141])   [the-body-s-systems-m45537-238]"
+},
+{
+"fact": "veins [UBERON:0001638] \u2192\u2212 process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])",
+"key": [
+"effect",
+"neg",
+"process",
+"UBERON:0001638",
+"GO:0030218&BFO:0000066=(UBERON:0002371)"
+],
+"depth": 2,
+"belief": 0.512,
+"rule": "viaAmount",
+"tree": "veins [UBERON:0001638] \u2192\u2212 process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])   (viaAmount, b=0.51)\n  veins [UBERON:0001638] \u2192+ amount(oxygen [CHEBI:15379])   (isaInheritEffect, b=0.80)\n    veins [UBERON:0001638] is_a blood vessel [UBERON:0001981]   [the-body-s-systems-m45536-244]\n    blood vessel [UBERON:0001981] \u2192+ amount(oxygen [CHEBI:15379])   [the-body-s-systems-m45536-3]\n  oxygen [CHEBI:15379] \u2192\u2212 process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])   (viaAmount, b=0.64)\n    oxygen [CHEBI:15379] \u2192\u2212 amount(erythropoietin [PR:000007141])   [the-body-s-systems-m45537-238]\n    erythropoietin [PR:000007141] \u2192+ process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])   [the-body-s-systems-m45537-240]"
 },
 {
 "fact": "adrenal cortex [UBERON:0001235] produces anti-inflammatory drug [CHEBI:35472]",
@@ -16343,19 +16793,6 @@
 "tree": "sarcolemma [GO:0042383] part of structure that is capable of protein transport [GO:0015031]   (relChain, b=0.80)\n  sarcolemma [GO:0042383] part of endomembrane system [GO:0012505]   (isaInherit, b=0.80)\n    sarcolemma [GO:0042383] is_a plasma membrane [GO:0005886]   [the-body-s-systems-m45538-242]\n    plasma membrane [GO:0005886] part of endomembrane system [GO:0012505]   [cell-structure-and-function-m45432-89]\n  endomembrane system [GO:0012505] capable of protein transport [GO:0015031]   [cell-structure-and-function-m45432-87]"
 },
 {
-"fact": "sarcolemma [GO:0042383] has part structure that is capable of transmembrane transport [GO:0055085]",
-"key": [
-"rel",
-"('ro', 2584, False)",
-"GO:0042383",
-"GO:0055085"
-],
-"depth": 2,
-"belief": 0.8,
-"rule": "relChain",
-"tree": "sarcolemma [GO:0042383] has part structure that is capable of transmembrane transport [GO:0055085]   (relChain, b=0.80)\n  sarcolemma [GO:0042383] has part proteins [CHEBI:36080]   (isaInherit, b=0.80)\n    sarcolemma [GO:0042383] is_a plasma membrane [GO:0005886]   [the-body-s-systems-m45538-242]\n    plasma membrane [GO:0005886] has part proteins [CHEBI:36080]   [cell-structure-and-function-m45433-46]\n  proteins [CHEBI:36080] capable of transmembrane transport [GO:0055085]   [cell-structure-and-function-m45433-73]"
-},
-{
 "fact": "sarcolemma [GO:0042383] overlaps food [CHEBI:33290]",
 "key": [
 "rel",
@@ -16512,19 +16949,6 @@
 "tree": "ganglion [UBERON:0000045] overlaps neuron [CL:0000540]   (relChain, b=0.80)\n  ganglion [UBERON:0000045] has part dendrite [GO:0030425]   (relTrans, b=0.80)\n    ganglion [UBERON:0000045] has part neuron [CL:0000540]   [the-body-s-systems-m45539-21]\n    neuron [CL:0000540] has part dendrite [GO:0030425]   [the-body-s-systems-m45539-50]\n  dendrite [GO:0030425] part of neuron [CL:0000540]   [the-body-s-systems-m45539-51]"
 },
 {
-"fact": "ganglion [UBERON:0000045] has part node of Ranvier [GO:0033268]",
-"key": [
-"rel",
-"('bfo', 51, False)",
-"UBERON:0000045",
-"GO:0033268"
-],
-"depth": 2,
-"belief": 0.8,
-"rule": "relTrans",
-"tree": "ganglion [UBERON:0000045] has part node of Ranvier [GO:0033268]   (relTrans, b=0.80)\n  ganglion [UBERON:0000045] has part axon [GO:0030424]   (relTrans, b=0.80)\n    ganglion [UBERON:0000045] has part neuron [CL:0000540]   [the-body-s-systems-m45539-21]\n    neuron [CL:0000540] has part axon [GO:0030424]   [the-body-s-systems-m45539-323]\n  axon [GO:0030424] has part node of Ranvier [GO:0033268]   [the-body-s-systems-m45539-115]"
-},
-{
 "fact": "ganglion [UBERON:0000045] has part structure that is capable of ATP biosynthetic process [GO:0006754]",
 "key": [
 "rel",
@@ -16549,6 +16973,19 @@
 "belief": 0.8,
 "rule": "relChain",
 "tree": "ganglion [UBERON:0000045] has part structure that is capable of cellular respiration [GO:0045333]   (relChain, b=0.80)\n  ganglion [UBERON:0000045] has part Mitochondria [GO:0005739]   (relTrans, b=0.80)\n    ganglion [UBERON:0000045] has part neuron [CL:0000540]   [the-body-s-systems-m45539-21]\n    neuron [CL:0000540] has part Mitochondria [GO:0005739]   [the-body-s-systems-m45539-356]\n  Mitochondria [GO:0005739] capable of cellular respiration [GO:0045333]   [cell-structure-and-function-m45432-313]"
+},
+{
+"fact": "ganglion [UBERON:0000045] has part node of Ranvier [GO:0033268]",
+"key": [
+"rel",
+"('bfo', 51, False)",
+"UBERON:0000045",
+"GO:0033268"
+],
+"depth": 2,
+"belief": 0.8,
+"rule": "relTrans",
+"tree": "ganglion [UBERON:0000045] has part node of Ranvier [GO:0033268]   (relTrans, b=0.80)\n  ganglion [UBERON:0000045] has part axon [GO:0030424]   (relTrans, b=0.80)\n    ganglion [UBERON:0000045] has part neuron [CL:0000540]   [the-body-s-systems-m45539-21]\n    neuron [CL:0000540] has part axon [GO:0030424]   [the-body-s-systems-m45539-358]\n  axon [GO:0030424] has part node of Ranvier [GO:0033268]   [the-body-s-systems-m45539-115]"
 },
 {
 "fact": "brain [UBERON:0000955] overlaps nervous tissue [UBERON:0001016]",
@@ -16785,19 +17222,6 @@
 "tree": "nervous tissue [UBERON:0001016] overlaps neuron [CL:0000540]   (relChain, b=0.80)\n  nervous tissue [UBERON:0001016] has part dendrite [GO:0030425]   (relTrans, b=0.80)\n    nervous tissue [UBERON:0001016] has part neuron [CL:0000540]   [the-body-s-systems-m45539-32]\n    neuron [CL:0000540] has part dendrite [GO:0030425]   [the-body-s-systems-m45539-50]\n  dendrite [GO:0030425] part of neuron [CL:0000540]   [the-body-s-systems-m45539-51]"
 },
 {
-"fact": "nervous tissue [UBERON:0001016] has part node of Ranvier [GO:0033268]",
-"key": [
-"rel",
-"('bfo', 51, False)",
-"UBERON:0001016",
-"GO:0033268"
-],
-"depth": 2,
-"belief": 0.8,
-"rule": "relTrans",
-"tree": "nervous tissue [UBERON:0001016] has part node of Ranvier [GO:0033268]   (relTrans, b=0.80)\n  nervous tissue [UBERON:0001016] has part axon [GO:0030424]   (relTrans, b=0.80)\n    nervous tissue [UBERON:0001016] has part neuron [CL:0000540]   [the-body-s-systems-m45539-32]\n    neuron [CL:0000540] has part axon [GO:0030424]   [the-body-s-systems-m45539-323]\n  axon [GO:0030424] has part node of Ranvier [GO:0033268]   [the-body-s-systems-m45539-115]"
-},
-{
 "fact": "nervous tissue [UBERON:0001016] has part structure that is capable of ATP biosynthetic process [GO:0006754]",
 "key": [
 "rel",
@@ -16822,6 +17246,19 @@
 "belief": 0.8,
 "rule": "relChain",
 "tree": "nervous tissue [UBERON:0001016] has part structure that is capable of cellular respiration [GO:0045333]   (relChain, b=0.80)\n  nervous tissue [UBERON:0001016] has part Mitochondria [GO:0005739]   (relTrans, b=0.80)\n    nervous tissue [UBERON:0001016] has part neuron [CL:0000540]   [the-body-s-systems-m45539-32]\n    neuron [CL:0000540] has part Mitochondria [GO:0005739]   [the-body-s-systems-m45539-356]\n  Mitochondria [GO:0005739] capable of cellular respiration [GO:0045333]   [cell-structure-and-function-m45432-313]"
+},
+{
+"fact": "nervous tissue [UBERON:0001016] has part node of Ranvier [GO:0033268]",
+"key": [
+"rel",
+"('bfo', 51, False)",
+"UBERON:0001016",
+"GO:0033268"
+],
+"depth": 2,
+"belief": 0.8,
+"rule": "relTrans",
+"tree": "nervous tissue [UBERON:0001016] has part node of Ranvier [GO:0033268]   (relTrans, b=0.80)\n  nervous tissue [UBERON:0001016] has part axon [GO:0030424]   (relTrans, b=0.80)\n    nervous tissue [UBERON:0001016] has part neuron [CL:0000540]   [the-body-s-systems-m45539-32]\n    neuron [CL:0000540] has part axon [GO:0030424]   [the-body-s-systems-m45539-358]\n  axon [GO:0030424] has part node of Ranvier [GO:0033268]   [the-body-s-systems-m45539-115]"
 },
 {
 "fact": "neuron [CL:0000540] has part structure that is capable of carbohydrate biosynthetic process [GO:0016051]",
@@ -16889,6 +17326,20 @@
 "tree": "neuron [CL:0000540] has part structure that is capable of alcohol metabolism [GO:0006066]   (relChain, b=0.80)\n  neuron [CL:0000540] has part smooth endoplasmic reticulum [GO:0005790]   (relTrans, b=0.80)\n    neuron [CL:0000540] has part neuronal cell body [GO:0043025]   [the-body-s-systems-m45539-45]\n    neuronal cell body [GO:0043025] has part smooth endoplasmic reticulum [GO:0005790]   [the-body-s-systems-m45539-47]\n  smooth endoplasmic reticulum [GO:0005790] capable of alcohol metabolism [GO:0006066]   [cell-structure-and-function-m45432-139]"
 },
 {
+"fact": "membrane depolarization [GO:0051899] \u2192\u2212 amount(aldosterone \u2293 located in (blood) [CHEBI:27584&RO:0001025=(UBERON:0000178)])",
+"key": [
+"effect",
+"neg",
+"amount",
+"GO:0051899",
+"CHEBI:27584&RO:0001025=(UBERON:0000178)"
+],
+"depth": 2,
+"belief": 0.512,
+"rule": "viaAmount",
+"tree": "membrane depolarization [GO:0051899] \u2192\u2212 amount(aldosterone \u2293 located in (blood) [CHEBI:27584&RO:0001025=(UBERON:0000178)])   (viaAmount, b=0.51)\n  membrane depolarization [GO:0051899] \u2192+ amount(sodium [CHEBI:29101])   (viaActivity, b=0.64)\n    membrane depolarization [GO:0051899] \u2192+ activity(voltage-gated sodium channel activity [GO:0005248])   [the-body-s-systems-m45539-76]\n    voltage-gated sodium channel activity [GO:0005248] \u2192+ amount(sodium [CHEBI:29101])   [the-body-s-systems-m45539-90]\n  sodium [CHEBI:29101] \u2192\u2212 amount(aldosterone \u2293 located in (blood) [CHEBI:27584&RO:0001025=(UBERON:0000178)])   [the-body-s-systems-m45537-153]"
+},
+{
 "fact": "neurotransmitters [CHEBI:25512] \u2192+ process(membrane depolarization [GO:0051899])",
 "key": [
 "effect",
@@ -16901,6 +17352,20 @@
 "belief": 0.512,
 "rule": "viaAmount",
 "tree": "neurotransmitters [CHEBI:25512] \u2192+ process(membrane depolarization [GO:0051899])   (viaAmount, b=0.51)\n  neurotransmitters [CHEBI:25512] \u2192+ amount(sodium [CHEBI:29101])   (viaActivity, b=0.64)\n    neurotransmitters [CHEBI:25512] \u2192+ activity(ion channel activity [GO:0005216])   [the-body-s-systems-m45539-80]\n    ion channel activity [GO:0005216] \u2192+ amount(sodium [CHEBI:29101])   [the-body-s-systems-m45539-82]\n  sodium [CHEBI:29101] \u2192+ process(membrane depolarization [GO:0051899])   [the-body-s-systems-m45539-83]"
+},
+{
+"fact": "neurotransmitters [CHEBI:25512] \u2192\u2212 amount(aldosterone \u2293 located in (blood) [CHEBI:27584&RO:0001025=(UBERON:0000178)])",
+"key": [
+"effect",
+"neg",
+"amount",
+"CHEBI:25512",
+"CHEBI:27584&RO:0001025=(UBERON:0000178)"
+],
+"depth": 2,
+"belief": 0.512,
+"rule": "viaAmount",
+"tree": "neurotransmitters [CHEBI:25512] \u2192\u2212 amount(aldosterone \u2293 located in (blood) [CHEBI:27584&RO:0001025=(UBERON:0000178)])   (viaAmount, b=0.51)\n  neurotransmitters [CHEBI:25512] \u2192+ amount(sodium [CHEBI:29101])   (viaActivity, b=0.64)\n    neurotransmitters [CHEBI:25512] \u2192+ activity(ion channel activity [GO:0005216])   [the-body-s-systems-m45539-80]\n    ion channel activity [GO:0005216] \u2192+ amount(sodium [CHEBI:29101])   [the-body-s-systems-m45539-82]\n  sodium [CHEBI:29101] \u2192\u2212 amount(aldosterone \u2293 located in (blood) [CHEBI:27584&RO:0001025=(UBERON:0000178)])   [the-body-s-systems-m45537-153]"
 },
 {
 "fact": "central nervous system [UBERON:0001017] overlaps brain [UBERON:0000955]",
@@ -17148,6 +17613,193 @@
 "belief": 0.8,
 "rule": "relTrans",
 "tree": "meiosis II [GO:0007135] part of cell cycle [GO:0007049]   (relTrans, b=0.80)\n  meiosis II [GO:0007135] part of meiotic cell cycle [GO:0051321]   [the-cellular-basis-of-inheritance-m45466-211]\n  meiotic cell cycle [GO:0051321] part of cell cycle [GO:0007049]   (isaInherit, b=0.80)\n    meiotic cell cycle [GO:0051321] is_a arise from [GO:0051301]   [the-cellular-basis-of-inheritance-m45464-14]\n    arise from [GO:0051301] part of cell cycle [GO:0007049]   [reproduction-at-the-cellular-level-m45455-1]"
+},
+{
+"fact": "mRNA splicing, via spliceosome \u2293 in taxon (NCBITaxon:2759) [GO:0000398&RO:0002162=(NCBITaxon:2759)] has input nucleic acids [CHEBI:33696]",
+"key": [
+"rel",
+"('ro', 2233, False)",
+"GO:0000398&RO:0002162=(NCBITaxon:2759)",
+"CHEBI:33696"
+],
+"depth": 2,
+"belief": 0.8,
+"rule": "isaGeneralise",
+"tree": "mRNA splicing, via spliceosome \u2293 in taxon (NCBITaxon:2759) [GO:0000398&RO:0002162=(NCBITaxon:2759)] has input nucleic acids [CHEBI:33696]   (isaGeneralise, b=0.80)\n  mRNA splicing, via spliceosome \u2293 in taxon (NCBITaxon:2759) [GO:0000398&RO:0002162=(NCBITaxon:2759)] has input RNA [CHEBI:33697]   (isaGeneralise, b=0.80)\n    mRNA splicing, via spliceosome \u2293 in taxon (NCBITaxon:2759) [GO:0000398&RO:0002162=(NCBITaxon:2759)] has input messenger RNA [CHEBI:33699]   [molbio-m45476-70]\n    messenger RNA [CHEBI:33699] is_a RNA [CHEBI:33697]   [molbio-m45476-76]\n  RNA [CHEBI:33697] is_a nucleic acids [CHEBI:33696]   [molbio-m45473-47]"
+},
+{
+"fact": "mRNA splicing, via spliceosome \u2293 in taxon (NCBITaxon:2759) [GO:0000398&RO:0002162=(NCBITaxon:2759)] has input polymer [CHEBI:60027]",
+"key": [
+"rel",
+"('ro', 2233, False)",
+"GO:0000398&RO:0002162=(NCBITaxon:2759)",
+"CHEBI:60027"
+],
+"depth": 2,
+"belief": 0.8,
+"rule": "isaGeneralise",
+"tree": "mRNA splicing, via spliceosome \u2293 in taxon (NCBITaxon:2759) [GO:0000398&RO:0002162=(NCBITaxon:2759)] has input polymer [CHEBI:60027]   (isaGeneralise, b=0.80)\n  mRNA splicing, via spliceosome \u2293 in taxon (NCBITaxon:2759) [GO:0000398&RO:0002162=(NCBITaxon:2759)] has input RNA [CHEBI:33697]   (isaGeneralise, b=0.80)\n    mRNA splicing, via spliceosome \u2293 in taxon (NCBITaxon:2759) [GO:0000398&RO:0002162=(NCBITaxon:2759)] has input messenger RNA [CHEBI:33699]   [molbio-m45476-70]\n    messenger RNA [CHEBI:33699] is_a RNA [CHEBI:33697]   [molbio-m45476-76]\n  RNA [CHEBI:33697] is_a polymer [CHEBI:60027]   [molbio-m45473-49]"
+},
+{
+"fact": "translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part nucleic acids [CHEBI:33696]",
+"key": [
+"rel",
+"('bfo', 51, False)",
+"GO:0070992&RO:0002162=(NCBITaxon:562)",
+"CHEBI:33696"
+],
+"depth": 2,
+"belief": 0.8,
+"rule": "isaGeneralise",
+"tree": "translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part nucleic acids [CHEBI:33696]   (isaGeneralise, b=0.80)\n  translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part RNA [CHEBI:33697]   (isaGeneralise, b=0.80)\n    translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part messenger RNA [CHEBI:33699]   [molbio-m45479-60]\n    messenger RNA [CHEBI:33699] is_a RNA [CHEBI:33697]   [molbio-m45476-76]\n  RNA [CHEBI:33697] is_a nucleic acids [CHEBI:33696]   [molbio-m45473-47]"
+},
+{
+"fact": "translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part polymer [CHEBI:60027]",
+"key": [
+"rel",
+"('bfo', 51, False)",
+"GO:0070992&RO:0002162=(NCBITaxon:562)",
+"CHEBI:60027"
+],
+"depth": 2,
+"belief": 0.8,
+"rule": "isaGeneralise",
+"tree": "translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part polymer [CHEBI:60027]   (isaGeneralise, b=0.80)\n  translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part RNA [CHEBI:33697]   (isaGeneralise, b=0.80)\n    translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part messenger RNA [CHEBI:33699]   [molbio-m45479-60]\n    messenger RNA [CHEBI:33699] is_a RNA [CHEBI:33697]   [molbio-m45476-76]\n  RNA [CHEBI:33697] is_a polymer [CHEBI:60027]   [molbio-m45473-49]"
+},
+{
+"fact": "mRNA export from nucleus \u2293 in taxon (NCBITaxon:2759) [GO:0006406&RO:0002162=(NCBITaxon:2759)] has input nucleic acids [CHEBI:33696]",
+"key": [
+"rel",
+"('ro', 2233, False)",
+"GO:0006406&RO:0002162=(NCBITaxon:2759)",
+"CHEBI:33696"
+],
+"depth": 2,
+"belief": 0.8,
+"rule": "isaGeneralise",
+"tree": "mRNA export from nucleus \u2293 in taxon (NCBITaxon:2759) [GO:0006406&RO:0002162=(NCBITaxon:2759)] has input nucleic acids [CHEBI:33696]   (isaGeneralise, b=0.80)\n  mRNA export from nucleus \u2293 in taxon (NCBITaxon:2759) [GO:0006406&RO:0002162=(NCBITaxon:2759)] has input RNA [CHEBI:33697]   (isaGeneralise, b=0.80)\n    mRNA export from nucleus \u2293 in taxon (NCBITaxon:2759) [GO:0006406&RO:0002162=(NCBITaxon:2759)] has input messenger RNA [CHEBI:33699]   [molbio-m45480-48]\n    messenger RNA [CHEBI:33699] is_a RNA [CHEBI:33697]   [molbio-m45476-76]\n  RNA [CHEBI:33697] is_a nucleic acids [CHEBI:33696]   [molbio-m45473-47]"
+},
+{
+"fact": "mRNA export from nucleus \u2293 in taxon (NCBITaxon:2759) [GO:0006406&RO:0002162=(NCBITaxon:2759)] has input polymer [CHEBI:60027]",
+"key": [
+"rel",
+"('ro', 2233, False)",
+"GO:0006406&RO:0002162=(NCBITaxon:2759)",
+"CHEBI:60027"
+],
+"depth": 2,
+"belief": 0.8,
+"rule": "isaGeneralise",
+"tree": "mRNA export from nucleus \u2293 in taxon (NCBITaxon:2759) [GO:0006406&RO:0002162=(NCBITaxon:2759)] has input polymer [CHEBI:60027]   (isaGeneralise, b=0.80)\n  mRNA export from nucleus \u2293 in taxon (NCBITaxon:2759) [GO:0006406&RO:0002162=(NCBITaxon:2759)] has input RNA [CHEBI:33697]   (isaGeneralise, b=0.80)\n    mRNA export from nucleus \u2293 in taxon (NCBITaxon:2759) [GO:0006406&RO:0002162=(NCBITaxon:2759)] has input messenger RNA [CHEBI:33699]   [molbio-m45480-48]\n    messenger RNA [CHEBI:33699] is_a RNA [CHEBI:33697]   [molbio-m45476-76]\n  RNA [CHEBI:33697] is_a polymer [CHEBI:60027]   [molbio-m45473-49]"
+},
+{
+"fact": "capillaries [UBERON:0001982] connected to arteries [UBERON:0001637]",
+"key": [
+"rel",
+"('ro', 2170, False)",
+"UBERON:0001982",
+"UBERON:0001637"
+],
+"depth": 2,
+"belief": 0.8,
+"rule": "isaGeneralise",
+"tree": "capillaries [UBERON:0001982] connected to arteries [UBERON:0001637]   (isaGeneralise, b=0.80)\n  capillaries [UBERON:0001982] connected to aorta [UBERON:0000947]   (isaInherit, b=0.80)\n    capillaries [UBERON:0001982] is_a blood vessel [UBERON:0001981]   [the-body-s-systems-m45536-225]\n    blood vessel [UBERON:0001981] connected to aorta [UBERON:0000947]   [the-body-s-systems-m45534-192]\n  aorta [UBERON:0000947] is_a arteries [UBERON:0001637]   [the-body-s-systems-m45536-109]"
+},
+{
+"fact": "capillaries [UBERON:0001982] connected to blood vessel [UBERON:0001981]",
+"key": [
+"rel",
+"('ro', 2170, False)",
+"UBERON:0001982",
+"UBERON:0001981"
+],
+"depth": 2,
+"belief": 0.8,
+"rule": "isaGeneralise",
+"tree": "capillaries [UBERON:0001982] connected to blood vessel [UBERON:0001981]   (isaGeneralise, b=0.80)\n  capillaries [UBERON:0001982] connected to aorta [UBERON:0000947]   (isaInherit, b=0.80)\n    capillaries [UBERON:0001982] is_a blood vessel [UBERON:0001981]   [the-body-s-systems-m45536-225]\n    blood vessel [UBERON:0001981] connected to aorta [UBERON:0000947]   [the-body-s-systems-m45534-192]\n  aorta [UBERON:0000947] is_a blood vessel [UBERON:0001981]   (relTrans, b=0.80)\n    aorta [UBERON:0000947] is_a arteries [UBERON:0001637]   [the-body-s-systems-m45536-109]\n    arteries [UBERON:0001637] is_a blood vessel [UBERON:0001981]   [the-body-s-systems-m45536-219]"
+},
+{
+"fact": "capillaries [UBERON:0001982] connected to veins [UBERON:0001638]",
+"key": [
+"rel",
+"('ro', 2170, False)",
+"UBERON:0001982",
+"UBERON:0001638"
+],
+"depth": 2,
+"belief": 0.8,
+"rule": "isaGeneralise",
+"tree": "capillaries [UBERON:0001982] connected to veins [UBERON:0001638]   (isaGeneralise, b=0.80)\n  capillaries [UBERON:0001982] connected to inferior vena cava [UBERON:0001072]   (isaInherit, b=0.80)\n    capillaries [UBERON:0001982] is_a blood vessel [UBERON:0001981]   [the-body-s-systems-m45536-225]\n    blood vessel [UBERON:0001981] connected to inferior vena cava [UBERON:0001072]   [the-body-s-systems-m45534-193]\n  inferior vena cava [UBERON:0001072] is_a veins [UBERON:0001638]   [the-body-s-systems-m45536-232]"
+},
+{
+"fact": "capillaries [UBERON:0001982] \u2192+ process(this reaction [GO:0009060])",
+"key": [
+"effect",
+"pos",
+"process",
+"UBERON:0001982",
+"GO:0009060"
+],
+"depth": 2,
+"belief": 0.64,
+"rule": "viaAmount",
+"tree": "capillaries [UBERON:0001982] \u2192+ process(this reaction [GO:0009060])   (viaAmount, b=0.64)\n  capillaries [UBERON:0001982] \u2192+ amount(oxygen [CHEBI:15379])   (isaInheritEffect, b=0.80)\n    capillaries [UBERON:0001982] is_a blood vessel [UBERON:0001981]   [the-body-s-systems-m45536-225]\n    blood vessel [UBERON:0001981] \u2192+ amount(oxygen [CHEBI:15379])   [the-body-s-systems-m45536-3]\n  oxygen [CHEBI:15379] \u2192+ process(this reaction [GO:0009060])   [how-cells-obtain-energy-m45439-3]"
+},
+{
+"fact": "capillaries [UBERON:0001982] \u2192+ process(this transfer [GO:0022904])",
+"key": [
+"effect",
+"pos",
+"process",
+"UBERON:0001982",
+"GO:0022904"
+],
+"depth": 2,
+"belief": 0.64,
+"rule": "viaAmount",
+"tree": "capillaries [UBERON:0001982] \u2192+ process(this transfer [GO:0022904])   (viaAmount, b=0.64)\n  capillaries [UBERON:0001982] \u2192+ amount(oxygen [CHEBI:15379])   (isaInheritEffect, b=0.80)\n    capillaries [UBERON:0001982] is_a blood vessel [UBERON:0001981]   [the-body-s-systems-m45536-225]\n    blood vessel [UBERON:0001981] \u2192+ amount(oxygen [CHEBI:15379])   [the-body-s-systems-m45536-3]\n  oxygen [CHEBI:15379] \u2192+ process(this transfer [GO:0022904])   [how-cells-obtain-energy-m45439-20]"
+},
+{
+"fact": "capillaries [UBERON:0001982] \u2192+ process(a process [GO:0006119])",
+"key": [
+"effect",
+"pos",
+"process",
+"UBERON:0001982",
+"GO:0006119"
+],
+"depth": 2,
+"belief": 0.64,
+"rule": "viaAmount",
+"tree": "capillaries [UBERON:0001982] \u2192+ process(a process [GO:0006119])   (viaAmount, b=0.64)\n  capillaries [UBERON:0001982] \u2192+ amount(oxygen [CHEBI:15379])   (isaInheritEffect, b=0.80)\n    capillaries [UBERON:0001982] is_a blood vessel [UBERON:0001981]   [the-body-s-systems-m45536-225]\n    blood vessel [UBERON:0001981] \u2192+ amount(oxygen [CHEBI:15379])   [the-body-s-systems-m45536-3]\n  oxygen [CHEBI:15379] \u2192+ process(a process [GO:0006119])   [how-cells-obtain-energy-m45440-69]"
+},
+{
+"fact": "capillaries [UBERON:0001982] \u2192\u2212 amount(erythropoietin [PR:000007141])",
+"key": [
+"effect",
+"neg",
+"amount",
+"UBERON:0001982",
+"PR:000007141"
+],
+"depth": 2,
+"belief": 0.64,
+"rule": "viaAmount",
+"tree": "capillaries [UBERON:0001982] \u2192\u2212 amount(erythropoietin [PR:000007141])   (viaAmount, b=0.64)\n  capillaries [UBERON:0001982] \u2192+ amount(oxygen [CHEBI:15379])   (isaInheritEffect, b=0.80)\n    capillaries [UBERON:0001982] is_a blood vessel [UBERON:0001981]   [the-body-s-systems-m45536-225]\n    blood vessel [UBERON:0001981] \u2192+ amount(oxygen [CHEBI:15379])   [the-body-s-systems-m45536-3]\n  oxygen [CHEBI:15379] \u2192\u2212 amount(erythropoietin [PR:000007141])   [the-body-s-systems-m45537-238]"
+},
+{
+"fact": "capillaries [UBERON:0001982] \u2192\u2212 process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])",
+"key": [
+"effect",
+"neg",
+"process",
+"UBERON:0001982",
+"GO:0030218&BFO:0000066=(UBERON:0002371)"
+],
+"depth": 2,
+"belief": 0.512,
+"rule": "viaAmount",
+"tree": "capillaries [UBERON:0001982] \u2192\u2212 process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])   (viaAmount, b=0.51)\n  capillaries [UBERON:0001982] \u2192+ amount(oxygen [CHEBI:15379])   (isaInheritEffect, b=0.80)\n    capillaries [UBERON:0001982] is_a blood vessel [UBERON:0001981]   [the-body-s-systems-m45536-225]\n    blood vessel [UBERON:0001981] \u2192+ amount(oxygen [CHEBI:15379])   [the-body-s-systems-m45536-3]\n  oxygen [CHEBI:15379] \u2192\u2212 process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])   (viaAmount, b=0.64)\n    oxygen [CHEBI:15379] \u2192\u2212 amount(erythropoietin [PR:000007141])   [the-body-s-systems-m45537-238]\n    erythropoietin [PR:000007141] \u2192+ process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])   [the-body-s-systems-m45537-240]"
 },
 {
 "fact": "body [UBERON:0000468] has part phosphorus atom [CHEBI:28659]",
@@ -19945,6 +20597,45 @@
 "tree": "nervous tissue [UBERON:0001016] has part phosphorus atom [CHEBI:28659]   (relTrans, b=0.80)\n  nervous tissue [UBERON:0001016] has part Mitochondria [GO:0005739]   (relTrans, b=0.80)\n    nervous tissue [UBERON:0001016] has part neuron [CL:0000540]   [the-body-s-systems-m45539-32]\n    neuron [CL:0000540] has part Mitochondria [GO:0005739]   [the-body-s-systems-m45539-356]\n  Mitochondria [GO:0005739] has part phosphorus atom [CHEBI:28659]   (relTrans, b=0.80)\n    Mitochondria [GO:0005739] has part nucleotides [CHEBI:36976]   (relTrans, b=0.80)\n      Mitochondria [GO:0005739] has part DNA [CHEBI:16991]   [cell-structure-and-function-m45432-257]\n      DNA [CHEBI:16991] has part nucleotides [CHEBI:36976]   [molbio-m45473-14]\n    nucleotides [CHEBI:36976] has part phosphorus atom [CHEBI:28659]   (relTrans, b=0.80)\n      nucleotides [CHEBI:36976] has part phosphate group [CHEBI:32958]   [molbio-m45473-16]\n      phosphate group [CHEBI:32958] has part phosphorus atom [CHEBI:28659]   [molbio-m45473-164]"
 },
 {
+"fact": "translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] overlaps nucleic acids [CHEBI:33696]",
+"key": [
+"rel",
+"('ro', 2131, False)",
+"GO:0070992&RO:0002162=(NCBITaxon:562)",
+"CHEBI:33696"
+],
+"depth": 3,
+"belief": 0.8,
+"rule": "relChain",
+"tree": "translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] overlaps nucleic acids [CHEBI:33696]   (relChain, b=0.80)\n  translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part RNA [CHEBI:33697]   (isaGeneralise, b=0.80)\n    translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part messenger RNA [CHEBI:33699]   [molbio-m45479-60]\n    messenger RNA [CHEBI:33699] is_a RNA [CHEBI:33697]   [molbio-m45476-76]\n  RNA [CHEBI:33697] overlaps nucleic acids [CHEBI:33696]   (relChain, b=0.80)\n    RNA [CHEBI:33697] has part ribose [CHEBI:33942]   [molbio-m45473-53]\n    ribose [CHEBI:33942] part of nucleic acids [CHEBI:33696]   (isaGeneralise, b=0.80)\n      ribose [CHEBI:33942] part of RNA [CHEBI:33697]   [how-cells-obtain-energy-m45438-21]\n      RNA [CHEBI:33697] is_a nucleic acids [CHEBI:33696]   [molbio-m45473-47]"
+},
+{
+"fact": "translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] overlaps polymer [CHEBI:60027]",
+"key": [
+"rel",
+"('ro', 2131, False)",
+"GO:0070992&RO:0002162=(NCBITaxon:562)",
+"CHEBI:60027"
+],
+"depth": 3,
+"belief": 0.8,
+"rule": "relChain",
+"tree": "translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] overlaps polymer [CHEBI:60027]   (relChain, b=0.80)\n  translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part RNA [CHEBI:33697]   (isaGeneralise, b=0.80)\n    translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part messenger RNA [CHEBI:33699]   [molbio-m45479-60]\n    messenger RNA [CHEBI:33699] is_a RNA [CHEBI:33697]   [molbio-m45476-76]\n  RNA [CHEBI:33697] overlaps polymer [CHEBI:60027]   (relChain, b=0.80)\n    RNA [CHEBI:33697] has part ribose [CHEBI:33942]   [molbio-m45473-53]\n    ribose [CHEBI:33942] part of polymer [CHEBI:60027]   (isaGeneralise, b=0.80)\n      ribose [CHEBI:33942] part of RNA [CHEBI:33697]   [how-cells-obtain-energy-m45438-21]\n      RNA [CHEBI:33697] is_a polymer [CHEBI:60027]   [molbio-m45473-49]"
+},
+{
+"fact": "translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] overlaps RNA [CHEBI:33697]",
+"key": [
+"rel",
+"('ro', 2131, False)",
+"GO:0070992&RO:0002162=(NCBITaxon:562)",
+"CHEBI:33697"
+],
+"depth": 3,
+"belief": 0.8,
+"rule": "relChain",
+"tree": "translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] overlaps RNA [CHEBI:33697]   (relChain, b=0.80)\n  translation initiation complex \u2293 in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part messenger RNA [CHEBI:33699]   [molbio-m45479-60]\n  messenger RNA [CHEBI:33699] overlaps RNA [CHEBI:33697]   (relChain, b=0.80)\n    messenger RNA [CHEBI:33699] has part ribose [CHEBI:33942]   (isaInherit, b=0.80)\n      messenger RNA [CHEBI:33699] is_a RNA [CHEBI:33697]   [molbio-m45476-76]\n      RNA [CHEBI:33697] has part ribose [CHEBI:33942]   [molbio-m45473-53]\n    ribose [CHEBI:33942] part of RNA [CHEBI:33697]   [how-cells-obtain-energy-m45438-21]"
+},
+{
 "fact": "Calvin cycle [GO:0019253] has part that occurs in organelles [GO:0043226]",
 "key": [
 "rel",
@@ -20062,6 +20753,20 @@
 "tree": "gallbladder [UBERON:0002110] has part structure that is capable of ATP biosynthetic process [GO:0006754]   (relChain, b=0.80)\n  gallbladder [UBERON:0002110] has part cells [CL:0000000]   (relTrans, b=0.80)\n    gallbladder [UBERON:0002110] has part tissues [UBERON:0000479]   (isaInherit, b=0.80)\n      gallbladder [UBERON:0002110] is_a organ [UBERON:0000062]   [the-body-s-systems-m45535-152]\n      organ [UBERON:0000062] has part tissues [UBERON:0000479]   [cell-structure-and-function-m45428-5]\n    tissues [UBERON:0000479] has part cells [CL:0000000]   [cell-structure-and-function-m45428-4]\n  cells [CL:0000000] capable of ATP biosynthetic process [GO:0006754]   [molbio-m45480-10]"
 },
 {
+"fact": "aorta [UBERON:0000947] \u2192\u2212 process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])",
+"key": [
+"effect",
+"neg",
+"process",
+"UBERON:0000947",
+"GO:0030218&BFO:0000066=(UBERON:0002371)"
+],
+"depth": 3,
+"belief": 0.512,
+"rule": "viaAmount",
+"tree": "aorta [UBERON:0000947] \u2192\u2212 process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])   (viaAmount, b=0.51)\n  aorta [UBERON:0000947] \u2192+ amount(oxygen [CHEBI:15379])   (isaInheritEffect, b=0.80)\n    aorta [UBERON:0000947] is_a blood vessel [UBERON:0001981]   (relTrans, b=0.80)\n      aorta [UBERON:0000947] is_a arteries [UBERON:0001637]   [the-body-s-systems-m45536-109]\n      arteries [UBERON:0001637] is_a blood vessel [UBERON:0001981]   [the-body-s-systems-m45536-219]\n    blood vessel [UBERON:0001981] \u2192+ amount(oxygen [CHEBI:15379])   [the-body-s-systems-m45536-3]\n  oxygen [CHEBI:15379] \u2192\u2212 process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])   (viaAmount, b=0.64)\n    oxygen [CHEBI:15379] \u2192\u2212 amount(erythropoietin [PR:000007141])   [the-body-s-systems-m45537-238]\n    erythropoietin [PR:000007141] \u2192+ process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])   [the-body-s-systems-m45537-240]"
+},
+{
 "fact": "inferior vena cava [UBERON:0001072] connected to blood vessel [UBERON:0001981]",
 "key": [
 "rel",
@@ -20075,6 +20780,20 @@
 "tree": "inferior vena cava [UBERON:0001072] connected to blood vessel [UBERON:0001981]   (isaGeneralise, b=0.80)\n  inferior vena cava [UBERON:0001072] connected to aorta [UBERON:0000947]   (isaInherit, b=0.80)\n    inferior vena cava [UBERON:0001072] is_a blood vessel [UBERON:0001981]   (relTrans, b=0.80)\n      inferior vena cava [UBERON:0001072] is_a veins [UBERON:0001638]   [the-body-s-systems-m45536-232]\n      veins [UBERON:0001638] is_a blood vessel [UBERON:0001981]   [the-body-s-systems-m45536-244]\n    blood vessel [UBERON:0001981] connected to aorta [UBERON:0000947]   [the-body-s-systems-m45534-192]\n  aorta [UBERON:0000947] is_a blood vessel [UBERON:0001981]   (relTrans, b=0.80)\n    aorta [UBERON:0000947] is_a arteries [UBERON:0001637]   [the-body-s-systems-m45536-109]\n    arteries [UBERON:0001637] is_a blood vessel [UBERON:0001981]   [the-body-s-systems-m45536-219]"
 },
 {
+"fact": "inferior vena cava [UBERON:0001072] \u2192\u2212 process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])",
+"key": [
+"effect",
+"neg",
+"process",
+"UBERON:0001072",
+"GO:0030218&BFO:0000066=(UBERON:0002371)"
+],
+"depth": 3,
+"belief": 0.512,
+"rule": "viaAmount",
+"tree": "inferior vena cava [UBERON:0001072] \u2192\u2212 process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])   (viaAmount, b=0.51)\n  inferior vena cava [UBERON:0001072] \u2192+ amount(oxygen [CHEBI:15379])   (isaInheritEffect, b=0.80)\n    inferior vena cava [UBERON:0001072] is_a blood vessel [UBERON:0001981]   (relTrans, b=0.80)\n      inferior vena cava [UBERON:0001072] is_a veins [UBERON:0001638]   [the-body-s-systems-m45536-232]\n      veins [UBERON:0001638] is_a blood vessel [UBERON:0001981]   [the-body-s-systems-m45536-244]\n    blood vessel [UBERON:0001981] \u2192+ amount(oxygen [CHEBI:15379])   [the-body-s-systems-m45536-3]\n  oxygen [CHEBI:15379] \u2192\u2212 process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])   (viaAmount, b=0.64)\n    oxygen [CHEBI:15379] \u2192\u2212 amount(erythropoietin [PR:000007141])   [the-body-s-systems-m45537-238]\n    erythropoietin [PR:000007141] \u2192+ process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])   [the-body-s-systems-m45537-240]"
+},
+{
 "fact": "superior vena cava [UBERON:0001585] connected to blood vessel [UBERON:0001981]",
 "key": [
 "rel",
@@ -20086,6 +20805,20 @@
 "belief": 0.8,
 "rule": "isaGeneralise",
 "tree": "superior vena cava [UBERON:0001585] connected to blood vessel [UBERON:0001981]   (isaGeneralise, b=0.80)\n  superior vena cava [UBERON:0001585] connected to aorta [UBERON:0000947]   (isaInherit, b=0.80)\n    superior vena cava [UBERON:0001585] is_a blood vessel [UBERON:0001981]   (relTrans, b=0.80)\n      superior vena cava [UBERON:0001585] is_a veins [UBERON:0001638]   [the-body-s-systems-m45536-239]\n      veins [UBERON:0001638] is_a blood vessel [UBERON:0001981]   [the-body-s-systems-m45536-244]\n    blood vessel [UBERON:0001981] connected to aorta [UBERON:0000947]   [the-body-s-systems-m45534-192]\n  aorta [UBERON:0000947] is_a blood vessel [UBERON:0001981]   (relTrans, b=0.80)\n    aorta [UBERON:0000947] is_a arteries [UBERON:0001637]   [the-body-s-systems-m45536-109]\n    arteries [UBERON:0001637] is_a blood vessel [UBERON:0001981]   [the-body-s-systems-m45536-219]"
+},
+{
+"fact": "superior vena cava [UBERON:0001585] \u2192\u2212 process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])",
+"key": [
+"effect",
+"neg",
+"process",
+"UBERON:0001585",
+"GO:0030218&BFO:0000066=(UBERON:0002371)"
+],
+"depth": 3,
+"belief": 0.512,
+"rule": "viaAmount",
+"tree": "superior vena cava [UBERON:0001585] \u2192\u2212 process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])   (viaAmount, b=0.51)\n  superior vena cava [UBERON:0001585] \u2192+ amount(oxygen [CHEBI:15379])   (isaInheritEffect, b=0.80)\n    superior vena cava [UBERON:0001585] is_a blood vessel [UBERON:0001981]   (relTrans, b=0.80)\n      superior vena cava [UBERON:0001585] is_a veins [UBERON:0001638]   [the-body-s-systems-m45536-239]\n      veins [UBERON:0001638] is_a blood vessel [UBERON:0001981]   [the-body-s-systems-m45536-244]\n    blood vessel [UBERON:0001981] \u2192+ amount(oxygen [CHEBI:15379])   [the-body-s-systems-m45536-3]\n  oxygen [CHEBI:15379] \u2192\u2212 process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])   (viaAmount, b=0.64)\n    oxygen [CHEBI:15379] \u2192\u2212 amount(erythropoietin [PR:000007141])   [the-body-s-systems-m45537-238]\n    erythropoietin [PR:000007141] \u2192+ process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])   [the-body-s-systems-m45537-240]"
 },
 {
 "fact": "skeletal system [UBERON:0001434] overlaps rib cage [UBERON:0003252]",
