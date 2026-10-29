@@ -1,0 +1,751 @@
+{
+ "run_id": "20260824T223623Z-4f7d1a",
+ "model": "anthropic:claude-opus-5",
+ "question": {
+  "budget": {
+   "max_delegations": 14,
+   "max_model_requests": 60,
+   "min_evidence_per_hypothesis": 2,
+   "min_hypotheses": 3,
+   "min_sources_per_hypothesis": 2,
+   "output_retries": 3
+  },
+  "disease": "idiopathic pulmonary fibrosis",
+  "genes": [
+   "MUC5B",
+   "TERT",
+   "SFTPC",
+   "TOLLIP",
+   "DSP",
+   "FAM13A"
+  ],
+  "model": "anthropic:claude-opus-5",
+  "specialist_model": "anthropic:claude-opus-5",
+  "use_network": true
+ },
+ "disease": "idiopathic pulmonary fibrosis",
+ "genes_considered": [
+  "MUC5B",
+  "TERT",
+  "SFTPC",
+  "TOLLIP",
+  "DSP",
+  "FAM13A"
+ ],
+ "hypotheses": [
+  {
+   "chain": [
+    {
+     "context": {
+      "cell_type": null,
+      "disease_state": {
+       "curie": "EFO:0000768",
+       "grounding_evidence": "",
+       "kind": "disease",
+       "label": "idiopathic pulmonary fibrosis"
+      },
+      "tissue": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "tissue",
+       "label": "respiratory bronchiole / distal airway"
+      }
+     },
+     "evidence": [
+      "PMID:21506741",
+      "PMID:27630174"
+     ],
+     "note": "Association is genetic; direct cellular causality has not been demonstrated by any record retrieved.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "MUC5B mucin"
+     },
+     "polarity": "positive",
+     "relation": "increases_amount",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "MUC5B promoter variant rs35705950"
+     }
+    },
+    {
+     "context": {
+      "cell_type": null,
+      "disease_state": {
+       "curie": "EFO:0000768",
+       "grounding_evidence": "",
+       "kind": "disease",
+       "label": "idiopathic pulmonary fibrosis"
+      },
+      "tissue": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "tissue",
+       "label": "respiratory bronchiole"
+      }
+     },
+     "evidence": [
+      "PMID:41091081",
+      "PMID:18635891"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "endoplasmic reticulum stress in bronchiolar epithelium"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "ectopic MUC5B expression"
+     }
+    },
+    {
+     "context": {
+      "cell_type": null,
+      "disease_state": null,
+      "tissue": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "tissue",
+       "label": "lung epithelium"
+      }
+     },
+     "evidence": [
+      "PMID:42120512",
+      "P15924"
+     ],
+     "note": "UniProt also records DSP as a negative regulator of MAPK/PI3K signalling and as raising TGFB1 abundance in cardiomyocytes; sign may be context-dependent.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "epithelial-mesenchymal transition via Hippo/YAP"
+     },
+     "polarity": "negative",
+     "relation": "inhibits",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "DSP (desmoplakin)"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:24050627",
+      "PMID:41090357"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "pulmonary fibrosis"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "EMT and ER stress in distal airway epithelium"
+     }
+    }
+   ],
+   "confidence": "medium",
+   "contradicting_evidence": [
+    "HPA:ENSG00000117983 shows MUC5B is enriched in salivary gland and submucosal glandular/goblet cells, not lung, and HPA:ENSG00000096696 shows DSP is enriched in esophagus and skin basal keratinocytes — in normal lung neither gene marks the distal airspace, so the proposed cell of origin only exists in the remodelled (fibrotic) lung",
+    "STRING:SFTPC-MUC5B and the other set edges are text-mining only (experimental 0.00), and DSP has no STRING edge to any other gene in the list, so there is no physical or curated-pathway link between MUC5B and DSP",
+    "OT:MUC5B-constraint and OT:DSP-constraint show both genes are the least loss-of-function-constrained in the set (score 1, bin 0), which argues against simple haploinsufficiency mechanisms"
+   ],
+   "falsification": {
+    "description": "In human distal airway organoids or precision-cut lung slices carrying the rs35705950 risk allele, knock down MUC5B (or block mucin secretion) and measure ER stress markers (BiP/CHOP/spliced XBP1) and EMT/YAP target gene induction in DSP-expressing epithelium. If MUC5B knockdown does not reduce ER stress and does not restore desmosomal/junctional gene programmes, the hypothesis that mucin burden is upstream of junctional/EMT change fails; equally, restoring DSP should blunt EMT if the arm is real.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "knockdown",
+     "target": {
+      "curie": "UniProt:Q9HC84",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "MUC5B"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "process",
+     "label": "epithelial ER stress and EMT/YAP target gene expression"
+    },
+    "system": "human distal airway/bronchiolar organoid genotyped at rs35705950"
+   },
+   "genes": [
+    "MUC5B",
+    "DSP"
+   ],
+   "hypothesis_id": "H1",
+   "mechanism": "The MUC5B promoter variant rs35705950 drives ectopic expression of a secreted gel-forming mucin in the respiratory bronchiole, where mucin biosynthesis overloads the secretory pathway and initiates ER stress in the very epithelium that lines honeycomb cysts. DSP, a desmosomal plakin whose normal expression is basal/apical stratified epithelium rather than alveolus, sits at the same GWAS-defined airway-epithelial axis and constrains epithelial-mesenchymal transition through Hippo/YAP; loss or dysregulation of DSP-anchored junctions in this ectopic airway epithelium permits EMT and profibrotic signalling. The two genes therefore describe one lesion — a mislocated, mucus-secreting, junctionally destabilised distal airway epithelium — not two independent risk loci. This predicts that the fibrotic driver is airway-epithelial secretory burden, not alveolar loss per se.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "PMID:21506741",
+    "PMID:27630174",
+    "PMID:41091081",
+    "PMID:42120512",
+    "OT:MUC5B-EFO_0000768",
+    "OT:DSP-EFO_0000768",
+    "HPA:ENSG00000117983",
+    "HPA:ENSG00000096696",
+    "PMID:30345907",
+    "PMID:23583980"
+   ],
+   "title": "Distal airway secretory reprogramming: MUC5B over-expression plus DSP-dependent junction/EMT change converts the respiratory bronchiole into a fibrogenic, ER-stressed epithelium"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "O14746",
+      "STRING:GO:0000723"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "telomere maintenance"
+     },
+     "polarity": "positive",
+     "relation": "required_for",
+     "subject": {
+      "curie": "UniProt:O14746",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "TERT"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:41728098",
+      "PMID:23535734"
+     ],
+     "note": "",
+     "object": {
+      "curie": "EFO:0000768",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "idiopathic pulmonary fibrosis"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "phenotype",
+      "label": "short telomere length"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "alveolar type II cell"
+      },
+      "disease_state": null,
+      "tissue": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "tissue",
+       "label": "lung"
+      }
+     },
+     "evidence": [
+      "R-HSA-5688354",
+      "P11686",
+      "PMID:18635891"
+     ],
+     "note": "Reactome curates a defective pro-SFTPC disease pathway; the causal step to fibrosis specifically is not demonstrated in any retrieved primary record.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "alveolar epithelial ER stress"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "mutant pro-SFTPC (BRICHOS)"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "alveolar type II cell"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [
+      "PMID:32678092",
+      "PMID:32661339",
+      "PMID:42346293",
+      "PMID:42587125"
+     ],
+     "note": "",
+     "object": {
+      "curie": "EFO:0000768",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "idiopathic pulmonary fibrosis"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "AT2 senescence / failed alveolar regeneration"
+     }
+    }
+   ],
+   "confidence": "medium",
+   "contradicting_evidence": [
+    "HPA:ENSG00000164362 records TERT as not detected in normal human tissues including lung, so the cell in which telomerase loss acts cannot be demonstrated by expression data — the mechanism is inferred from genetics and telomere length, not from measured TERT in AT2 cells",
+    "The literature specialist found no primary record demonstrating that an SFTPC mutation causes AT2 unfolded-protein-response activation that drives fibrosis, nor AT2-specific senescence from TERT mutation; both arms are review- rather than experiment-supported here"
+   ],
+   "falsification": {
+    "description": "Delete Tert conditionally in AT2 cells (Sftpc-CreER) in mice already carrying a BRICHOS-mutant Sftpc allele and compare with each single perturbation after a low-dose injury. If AT2 senescence markers, KRT8+ transitional-state persistence and fibrosis are no greater than with either lesion alone, the claim that telomere attrition and pro-SFTPC misfolding converge on one AT2 proteostasis/renewal bottleneck is falsified.",
+    "expected": "positive",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "UniProt:O14746",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "TERT"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "process",
+     "label": "AT2 senescence and persistent KRT8+ transitional state"
+    },
+    "system": "AT2-conditional mouse model with low-dose injury"
+   },
+   "genes": [
+    "TERT",
+    "SFTPC"
+   ],
+   "hypothesis_id": "H2",
+   "mechanism": "AT2 cells are the alveolar progenitor and the only cell in this list with an unambiguous lung identity (SFTPC is essentially AT2-exclusive). Rare TERT loss-of-function alleles shorten telomeres and remove the replicative reserve that AT2 cells need to re-epithelialise after injury, while BRICHOS-domain pro-SFTPC mutants overload AT2 proteostasis; both funnel into AT2 senescence/apoptosis, a persistent KRT8+/KRT17+ transitional state, and failure of alveolar regeneration. Reactome independently recovers 'Surfactant metabolism' and 'Defective pro-SFTPC causes SMDP2 and RDS' as the only coherent block in the set, and TERT as the senescence/DNA-damage arm — two failure modes of one cell, not two diseases.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "OT:TERT-EFO_0000768",
+    "OT:SFTPC-EFO_0000768",
+    "R-HSA-5683826",
+    "R-HSA-5688354",
+    "R-HSA-9825895",
+    "HPA:ENSG00000168484",
+    "P11686",
+    "O14746",
+    "PMID:41728098",
+    "PMID:32678092",
+    "PMID:32661339",
+    "PMID:18635891",
+    "PMID:24050627"
+   ],
+   "title": "Alveolar type II cell exhaustion: TERT-dependent telomere attrition and misfolded pro-SFTPC converge on the same AT2 proteostasis/senescence failure"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "Q9H0E2"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "IRAK1 phosphorylation / IL-1R-TLR signalling"
+     },
+     "polarity": "negative",
+     "relation": "inhibits",
+     "subject": {
+      "curie": "UniProt:Q9H0E2",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "TOLLIP"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "Q9H0E2"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "autophagic clearance of ubiquitin conjugates"
+     },
+     "polarity": "positive",
+     "relation": "required_for",
+     "subject": {
+      "curie": "UniProt:Q9H0E2",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "TOLLIP"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:24429156",
+      "PMID:23583980",
+      "OT:TOLLIP-EFO_0000768"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "IPF susceptibility and mortality"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "TOLLIP variants"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:22607134"
+     ],
+     "note": "PANTHER showed no benefit of NAC in the unselected population; the hypothesis is that benefit is confined to a TOLLIP genotype stratum, which this record does not itself establish.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "phenotype",
+      "label": "FVC decline in IPF"
+     },
+     "polarity": "unknown",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "drug",
+      "label": "N-acetylcysteine"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [
+    "R-HSA-5683826 and the rest of the Reactome result: no TOLLIP-driven TLR/IL-1 pathway reached significance in this gene set, so the innate-immune arm is not recovered by set-level enrichment",
+    "The trials specialist could not retrieve any TOLLIP-genotype-stratified N-acetylcysteine registration (e.g. PRECISIONS), so the pharmacogenetic claim rests on the PANTHER trial record plus the mortality GWAS, not on a prospective stratified trial",
+    "HPA:ENSG00000078902 shows TOLLIP has low tissue specificity with no lung enrichment, giving no cell-type anchor for the mechanism"
+   ],
+   "falsification": {
+    "description": "Prospectively randomise IPF patients stratified by TOLLIP rs3750920/rs5743890 genotype to N-acetylcysteine versus placebo with FVC decline and mortality as endpoints, and in parallel knock down TOLLIP in primary human lung epithelial cells and measure IRAK1 phosphorylation, IL-1-driven cytokine output and autophagic clearance of ubiquitin conjugates. If genotype does not modify treatment effect and TOLLIP knockdown does not disinhibit IL-1R/TLR output in lung epithelium, the hypothesis fails.",
+    "expected": "positive",
+    "perturbation": {
+     "action": "knockdown",
+     "target": {
+      "curie": "UniProt:Q9H0E2",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "TOLLIP"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "process",
+     "label": "IRAK1 phosphorylation and IL-1-driven cytokine output"
+    },
+    "system": "primary human lung epithelial cells; genotype-stratified IPF trial"
+   },
+   "genes": [
+    "TOLLIP"
+   ],
+   "hypothesis_id": "H3",
+   "mechanism": "TOLLIP is a cytoplasmic/early-endosomal adapter that recruits IRAK1 to the IL-1R complex and inhibits its phosphorylation, and that couples ubiquitin conjugates to ATG8 proteins for selective autophagy. Reduced TOLLIP function would therefore both disinhibit innate immune signalling after repeated micro-injury and impair clearance of the ubiquitinated protein aggregates generated by the ER-stressed epithelium of H1/H2. This predicts that TOLLIP genotype should modulate disease *course* and drug response rather than simply risk — consistent with the same GWAS reporting TOLLIP variants associated with mortality, and with the pharmacogenetic interaction between TOLLIP genotype and N-acetylcysteine in the PANTHER trial population.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "Q9H0E2",
+    "PMID:24429156",
+    "PMID:23583980",
+    "PMID:22607134",
+    "OT:TOLLIP-EFO_0000768",
+    "HPA:ENSG00000078902"
+   ],
+   "title": "Host-response set point: TOLLIP-dependent restraint of IL-1R/TLR signalling and ubiquitin-directed autophagy sets injury response and treatment response, not baseline susceptibility"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "O94988",
+      "PMID:42266412"
+     ],
+     "note": "Inferred from the Rho-GAP domain and a review; UniProt has no curated function statement and no primary experiment was retrieved.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "RhoA activity"
+     },
+     "polarity": "negative",
+     "relation": "inhibits",
+     "subject": {
+      "curie": "UniProt:O94988",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "FAM13A"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:23583980",
+      "PMID:29066090",
+      "PMID:31710517",
+      "OT:FAM13A-EFO_0000768"
+     ],
+     "note": "",
+     "object": {
+      "curie": "EFO:0000768",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "idiopathic pulmonary fibrosis"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "FAM13A variants"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:39418199",
+      "STRING:PMID:34490311"
+     ],
+     "note": "Shared association across fibrotic and emphysematous lung phenotypes is the main argument for a modifier rather than an initiator role.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "phenotype",
+      "label": "UIP pattern in systemic sclerosis ILD and in emphysema/CPFE"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "FAM13A variants"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [
+    "O94988: UniProt records no curated function and no subcellular location for FAM13A, so the Rho-GAP mechanism is a domain inference, not an annotation",
+    "HPA:ENSG00000138640 shows no lung enrichment (top cell types adipocytes, pancreatic acinar, pituicytes), giving no lung cell-type anchor",
+    "STRING returns only text-mining edges from FAM13A to MUC5B (0.51) and TOLLIP (0.40) with experimental scores ~0, so FAM13A is not part of any physical module with the rest of the list"
+   ],
+   "falsification": {
+    "description": "Knock out FAM13A, and separately express a GAP-dead point mutant, in primary human lung fibroblasts and alveolar epithelial cells, then measure RhoA-GTP loading, actomyosin contraction/traction force, beta-catenin target gene expression and TGF-beta-induced myofibroblast differentiation. If loss of FAM13A and the GAP-dead mutant produce no change in RhoA activity or contractile/Wnt output, the Rho-GAP modifier hypothesis is dead and FAM13A must be acting through a non-catalytic route.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "UniProt:O94988",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "FAM13A"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "process",
+     "label": "RhoA-GTP loading and myofibroblast contractile differentiation"
+    },
+    "system": "primary human lung fibroblasts and alveolar epithelial cells"
+   },
+   "genes": [
+    "FAM13A"
+   ],
+   "hypothesis_id": "H4",
+   "mechanism": "FAM13A carries a Rho-GAP domain but has no curated UniProt function statement and no lung-enriched expression; it is nonetheless one of the most reproducibly replicated IPF GWAS loci and is shared with COPD/emphysema and with a UIP pattern in systemic sclerosis ILD. The parsimonious reading is that FAM13A acts as a RhoA-directed modifier of cytoskeletal tension and Wnt/beta-catenin signalling in mesenchymal and epithelial cells, setting the amplitude of the fibrotic or emphysematous response to injury rather than initiating it — which is why the same locus produces opposite-looking lung phenotypes depending on the co-occurring epithelial lesion. Its Open Targets safety liability (body mass index) and degrader-only tractability are consistent with a broadly acting cytoskeletal regulator.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "PMID:23583980",
+    "PMID:29066090",
+    "PMID:31710517",
+    "PMID:39418199",
+    "PMID:42266412",
+    "PMID:31900205",
+    "O94988",
+    "OT:FAM13A-EFO_0000768",
+    "OT:FAM13A-safety",
+    "HPA:ENSG00000138640",
+    "STRING:PMID:34490311"
+   ],
+   "title": "FAM13A is a Rho-GAP modifier of mesenchymal/epithelial mechanotransduction shared between emphysema and fibrosis, and is not part of the epithelial secretory or telomere modules"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "STRING:DOID:0050156",
+      "STRING:PMID:23583980",
+      "OT:TERT-EFO_0000768",
+      "OT:MUC5B-EFO_0000768",
+      "OT:DSP-EFO_0000768",
+      "OT:FAM13A-EFO_0000768",
+      "OT:SFTPC-EFO_0000768",
+      "OT:TOLLIP-EFO_0000768"
+     ],
+     "note": "The only set-level enrichment is co-citation and the disease term itself.",
+     "object": {
+      "curie": "EFO:0000768",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "idiopathic pulmonary fibrosis"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "MUC5B, TERT, SFTPC, TOLLIP, DSP, FAM13A"
+     }
+    },
+    {
+     "context": {
+      "cell_type": null,
+      "disease_state": {
+       "curie": "EFO:0000768",
+       "grounding_evidence": "",
+       "kind": "disease",
+       "label": "idiopathic pulmonary fibrosis"
+      },
+      "tissue": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "tissue",
+       "label": "distal lung"
+      }
+     },
+     "evidence": [
+      "PMID:24050627",
+      "PMID:27630174",
+      "R-HSA-5683826"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "failed repair of repetitive distal lung injury"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "independent epithelial lesions (secretion, junctions, proteostasis, replicative reserve, immune set point, tension)"
+     }
+    }
+   ],
+   "confidence": "medium",
+   "contradicting_evidence": [
+    "P15924 records that DSP binds telomeric DNA via its C-terminus and maintains telomere length through TRF2, which would place DSP and TERT in a shared telomere module; STRING found no DSP edge to TERT, TERF2, TERF1, TINF2, POT1 or RTEL1, so the two sources disagree on whether a DSP-telomere axis exists",
+    "Open Targets gives every gene a substantial genetic_association component (TERT 0.87 down to TOLLIP 0.59), so the set is not merely a text-mining artefact even though its internal edges are"
+   ],
+   "falsification": {
+    "description": "Test for statistical interaction (epistasis) between rs35705950 and the TERT, DSP, TOLLIP and FAM13A risk alleles in a large IPF case-control cohort, and in parallel test whether a single pathway intervention (e.g. IRE1alpha inhibition) normalises fibrotic outcome regardless of which risk allele a patient-derived organoid carries. Significant epistasis, or uniform rescue across genotypes, would falsify the convergence-without-interaction claim and re-establish the set as one module.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "inhibit",
+     "target": {
+      "curie": "UniProt:Q9HC84",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "MUC5B"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "phenotype",
+     "label": "fibrotic outcome across risk genotypes"
+    },
+    "system": "IPF case-control cohort; patient-derived distal lung organoids"
+   },
+   "genes": [
+    "MUC5B",
+    "TERT",
+    "SFTPC",
+    "TOLLIP",
+    "DSP",
+    "FAM13A"
+   ],
+   "hypothesis_id": "H5",
+   "mechanism": "STRING finds no experimentally supported edge anywhere in the set — every edge is text-mining with experimental and database scores of ~0.00, DSP has no edge at all, and the only enrichments are the DISEASES term 'idiopathic pulmonary fibrosis' and co-citation in the same GWAS papers. Reactome likewise returns only single-gene hits (surfactant metabolism for SFTPC, MITF-M/senescence for TERT, apoptotic cleavage of adhesion proteins for DSP) with nothing joining them. The correct causal statement is therefore convergence, not interaction: independent lesions in mucociliary secretion (MUC5B), junction integrity (DSP), progenitor replicative capacity (TERT), surfactant proteostasis (SFTPC), innate-immune set point (TOLLIP) and cytoskeletal tension (FAM13A) each raise the probability that repetitive distal-lung injury resolves as fibrosis rather than repair. This predicts additive, not epistatic, genetic risk and argues for patient stratification by which arm is broken rather than one common target.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "STRING:DOID:0050156",
+    "STRING:SFTPC-MUC5B",
+    "STRING:TOLLIP-MUC5B",
+    "STRING:TERT-MUC5B",
+    "STRING:FAM13A-MUC5B",
+    "STRING:PMID:23583980",
+    "R-HSA-5683826",
+    "R-HSA-9825895",
+    "R-HSA-351906",
+    "HPA:ENSG00000168484",
+    "HPA:ENSG00000117983",
+    "HPA:ENSG00000096696",
+    "HPA:ENSG00000164362",
+    "OT:TERT-EFO_0000768",
+    "OT:MUC5B-EFO_0000768"
+   ],
+   "title": "The set is not a module: these six genes are a literature-defined risk list whose only shared node is the injured distal lung epithelium, so no single pathway intervention will address them"
+  }
+ ],
+ "unexplained_genes": []
+}
