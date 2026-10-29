@@ -234,7 +234,7 @@ Three agents, all committed (e31670c, c64b8c3, a9c7d83); full build green and pu
 | Approximate counts as exact? | Keep exact for now; "about" is lost and said so in the text. An approximate form is M3 follow-up if the literature needs it. |
 | Closure loads weakenings too | Yes by default; they are statements. Their text carries the blocker. |
 | Fix the centrosome record (taxon Metazoa)? | Yes, but after you have seen it: it is the cleanest example yet of the system catching a false universal. |
-| Bracketing rates a broad clade above a narrower one it implies | Cap a target's coverage by the coverage of each sampled child along the path (option b); it is the smaller change and respects the nesting. Not applied tonight. |
+| Bracketing rates a broad clade above a narrower one it implies | Cap a target's coverage by the coverage of each sampled child along the path (option b); it is the smaller change and respects the nesting. Not applied tonight. **Dan, 2026-10-29: not decided; leave as is (option c) and research the options.** The research is `docs/programs/01-universals-and-descent.md`. It also shows that the cap, with today's base case, gives 0 for every sample. |
 | Fetch NCBI children along the whole descent path? | Yes when generalisation is used in anger; for the transcription case the eight targets suffice. |
 | "Candidatus" phyla binned under Bacteria | Yes, as assumed. |
 | Feedback guard through has_output; parthood/shared-cause flags in the hole search; screen "X is_a (Y in context)" holes | All three yes, small; queued. |

@@ -9,10 +9,12 @@ in Lean. Each instance is "DNA-templated transcription has output RNA" with the 
 the target clade in the imported NCBITaxon hierarchy (`BioLean/Coverage.lean`).
 
 Each instance rests on one curated-database item: the GO annotations of that taxon's gene products
-to GO:0006351 or a descendant, counted on QuickGO on 2026-10-28. Many are electronic (IEA): E. coli
-88 percent, yeast 36, human 63, Arabidopsis 52, Euglena 100, Paramecium 88, Halobacterium 76. IEA is
-mostly inference from homology, itself a generalisation, so the instances are not fully independent;
-that caveat applies to every fusion below.
+to GO:0006351 or a descendant, counted on QuickGO on 2026-10-28. QuickGO's default descendants also
+follow `regulates`, so most of each count is regulation of transcription. Many are electronic (IEA):
+E. coli 88 percent, yeast 36, human 63, Arabidopsis 52, Euglena 100, Paramecium 88, Halobacterium 76.
+IEA is mostly inference from homology, itself a generalisation, so the instances are not fully
+independent; that caveat applies to every fusion below. Euglena, Paramecium and Halobacterium have no
+experimental annotation at all (`docs/programs/01-universals-and-descent.md`, section 2).
 
 The numbers (from `table` below; each instance at belief 4/5, and only the sampled taxa under the
 target enter). Children are NCBI's (`Ontology.targets`, bins left out); leaves are biolib's.
@@ -65,7 +67,8 @@ def viruses     : Entity .taxon := ⟨"NCBITaxon:10239", "Viruses"⟩
 /-- "... has output RNA": the predicate held fixed while the taxon widens. -/
 def makesRNA : Predicate .process := .rel hasOutput rna
 
-/-- QuickGO, 2026-10-28: annotations to GO:0006351 or a descendant, taxon and its descendants. -/
+/-- QuickGO, 2026-10-28: annotations to GO:0006351 or a descendant (QuickGO's default, which also
+follows `regulates`), taxon and its descendants. -/
 def quickGO : List (String × Nat) :=
   [(ecoli.curie, 10869), (yeast.curie, 5718), (mouse.curie, 32055), (human.curie, 38124),
    (arabidopsis.curie, 14286), (euglena.curie, 21), (paramecium.curie, 10499),

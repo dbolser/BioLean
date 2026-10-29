@@ -105,7 +105,7 @@ Last updated 2026-10-28 (after M3).
 | `Target.disease` | one textbook claim (obesity causes T2D) needs a disease target | open, small |
 | caveated chains / trivial conclusions | decided in principle (Dan, 2026-10-28): use information content of the ontology term (Resnik: -log p from descendant count or annotation frequency) as the triviality threshold for conclusions, replacing the hub list in the closure search and the flat discount idea. Not implemented | open |
 | evidence kinds | keep 8-way enum vs ECO codes with a reliability map | ECO |
-| coverage measure for generalize | clade fraction vs phylogenetic bracketing | bracketing |
+| coverage measure for generalize | clade fraction vs phylogenetic bracketing | bracketing kept as is, its incoherence a theorem (`cellular_above_eukaryota`). How to get from instances to universals is deferred (Dan, 2026-10-29) to a program of work: `docs/programs/01-universals-and-descent.md` | deferred |
 | base rate per claim | fixed 1/2 vs per-claim prior | per claim, source undecided |
 | rivals | id list on Statement vs multinomial opinion over alternatives | built as `Rivalry` (one step, own beliefs); double counts evidence entered on both rivals; multinomial later |
 
