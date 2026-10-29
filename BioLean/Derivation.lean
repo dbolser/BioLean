@@ -44,6 +44,19 @@ inductive Derivation : Claim → Type
       (am : Derivation (.effect a s₁ (.amount m)))
       (mt : Derivation (.effect m s₂ t)) :
       Derivation (.effect a (s₁ * s₂) t)
+  /-- Chain through a process: `a →s₁ p` and `p →s₂ t` give `a →(s₁·s₂) t`. Disease mechanisms
+  run through processes ("MUC5B raises ER stress, ER stress drives fibrosis"), not only through
+  activities and amounts. -/
+  | viaProcess {k : Kind} {a : Entity k} {p : Entity .process} {s₁ s₂ : Sign} {t : Target}
+      (ap : Derivation (.effect a s₁ (.process p)))
+      (pt : Derivation (.effect p s₂ t)) :
+      Derivation (.effect a (s₁ * s₂) t)
+  /-- Chain through a phenotype: `a →s₁ q` and `q →s₂ t` give `a →(s₁·s₂) t`. Telomere maintenance
+  lowers short telomere length, short telomeres raise the risk of IPF. -/
+  | viaPhenotype {k : Kind} {a : Entity k} {q : Entity .phenotype} {s₁ s₂ : Sign} {t : Target}
+      (aq : Derivation (.effect a s₁ (.phenotype q)))
+      (qt : Derivation (.effect q s₂ t)) :
+      Derivation (.effect a (s₁ * s₂) t)
   /-- Two independent derivations of the same claim. -/
   | both {c : Claim} (d₁ d₂ : Derivation c) : Derivation c
   /-- Compose two relations along an RO axiom: a property chain `r₁ ∘ r₂ ⊑ r₃`, transitivity
@@ -160,6 +173,8 @@ def opinionWith (lit : Statement → Opinion) (ev : Evidence → Opinion) :
   | _, .lit s => lit s
   | _, .viaActivity ab bt => (ab.opinionWith lit ev).chain (bt.opinionWith lit ev)
   | _, .viaAmount am mt => (am.opinionWith lit ev).chain (mt.opinionWith lit ev)
+  | _, .viaProcess ap pt => (ap.opinionWith lit ev).chain (pt.opinionWith lit ev)
+  | _, .viaPhenotype aq qt => (aq.opinionWith lit ev).chain (qt.opinionWith lit ev)
   | _, .both d₁ d₂ => (d₁.opinionWith lit ev).fuse (d₂.opinionWith lit ev)
   | _, .relChain ab bc .. => (ab.opinionWith lit ev).weakest (bc.opinionWith lit ev)
   | _, .notRelSub ab bc .. => (ab.opinionWith lit ev).weakest (bc.opinionWith lit ev)
@@ -194,6 +209,8 @@ def axioms : {c : Claim} → Derivation c → List Statement
   | _, .lit s => [s]
   | _, .viaActivity ab bt => ab.axioms ++ bt.axioms
   | _, .viaAmount am mt => am.axioms ++ mt.axioms
+  | _, .viaProcess ap pt => ap.axioms ++ pt.axioms
+  | _, .viaPhenotype aq qt => aq.axioms ++ qt.axioms
   | _, .both d₁ d₂ => d₁.axioms ++ d₂.axioms
   | _, .relChain ab bc .. => ab.axioms ++ bc.axioms
   | _, .notRelSub ab bc .. => ab.axioms ++ bc.axioms
@@ -255,6 +272,8 @@ partial def render {c : Claim} (d : Derivation c) (indent : String := "") : Stri
   | .viaAmount am mt =>
       s!"{indent}{d.opinion} chain ⊢ {d.claim}\n" ++
         render am (indent ++ "  ") ++ "\n" ++ render mt (indent ++ "  ")
+  | .viaProcess ap pt => node "chain" [render ap (indent ++ "  "), render pt (indent ++ "  ")]
+  | .viaPhenotype aq qt => node "chain" [render aq (indent ++ "  "), render qt (indent ++ "  ")]
   | .both d₁ d₂ =>
       s!"{indent}{d.opinion} fuse ⊢ {d.claim}\n" ++
         render d₁ (indent ++ "  ") ++ "\n" ++ render d₂ (indent ++ "  ")
