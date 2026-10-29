@@ -3,6 +3,10 @@
 Written 2026-10-29, revised the same day after a fact-check and a critique. This is a program of
 work, not a decision. Nothing in it is built. Dan decides at the points in section 10.
 
+**Dan's lean, 2026-10-29:** option (k) looks like the best simple solution. His reasons: DNA sequencing
+now gives direct evidence for loss, so loss will rarely be in contention, and well-known convergence
+examples are few. Not yet decided; E0 to E2 and the scorecard measurements come first.
+
 Sources: three research reports, one data measurement (2026-10-28 and 29), and my own checks on
 2026-10-29 (OLS4, QuickGO, NCBI E-utilities, Crossref, Europe PMC, GO's computed taxon constraints,
 UBERON `uberon-base` release 2026-10-01). Anything I could not check is marked UNVERIFIED and listed

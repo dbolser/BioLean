@@ -151,6 +151,13 @@ inductive Claim
   | consumes {k : Kind} (p : Entity .process) (m : Entity k) (n : Nat)
   /-- Net change in `m` per run of `p`, made minus used. -/
   | yield {k : Kind} (p : Entity .process) (m : Entity k) (n : Int)
+  /-- `regulator` holds `held` near a set point by negative feedback: insulin and blood glucose,
+  calcitonin and PTH and blood calcium. A biological concept in its own right, not a pair of effects:
+  the two arms ("glucose raises insulin", "insulin lowers glucose") are separate `effect` claims, and
+  this claim says they close a loop. Static sign algebra cannot hold a loop, so derivation rules
+  must not chain an effect through one as if it were a one-way cascade. No dynamics: set point,
+  gain and time scale are out of scope (that is for ODE models, e.g. BioModels). -/
+  | homeostasis {k : Kind} (regulator : Entity k) (held : Target)
   /-- A weaker-than-universal claim. -/
   | quant (q : Quantifier) (c : Claim)
 
@@ -170,6 +177,7 @@ partial def Claim.toString : Claim → String
     | .produces p m n => s!"{p} makes {n} × {m}"
     | .consumes p m n => s!"{p} uses {n} × {m}"
     | .yield p m n => s!"{p} nets {n} × {m}"
+    | .homeostasis r h => s!"{r} holds {h} near a set point"
     | .quant Quantifier.some c => s!"some: {c.toString}"
     | .quant Quantifier.most c => s!"most: {c.toString}"
 
@@ -181,6 +189,7 @@ def Claim.subjectCurie : Claim → String
   | .count w .. | .atLeast w .. | .countBetween w .. => w.curie
   | .cardinality c _ | .measure c .. | .atLeastMeasure c .. | .less c .. => c.curie
   | .produces p .. | .consumes p .. | .yield p .. => p.curie
+  | .homeostasis r _ => r.curie
   | .quant _ c => c.subjectCurie
 instance : Repr Claim := ⟨fun c _ => c.toString⟩
 

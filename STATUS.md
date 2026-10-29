@@ -100,7 +100,7 @@ Last updated 2026-10-28 (after M3).
 | structural claims | decided: generic `Claim.rel r a b`, typed by RO domain/range (M1) | done |
 | derivation rules for structure | decided: RO chains imported as data, `RO.chainOK` decides (M1) | done; hand-check pending |
 | weight of logical steps | decided: RO-chain steps use `Opinion.weakest` (min belief), after the chain-length experiment showed sound 12-step partonomies falling to 0.28 under product | done |
-| feedback loops | flag built in the closure search (48 percent of effect chains flagged); a Lean-side `Claim.loop` or report flag still open | partly |
+| feedback loops | decided (Dan, 2026-10-29): name the loop as a claim in its own right (`Claim.homeostasis regulator held`, example `Examples/Homeostasis.lean`); the closure flags each chain with its named loop (7 loops, 95 chains). No dynamics: ODE models are left to others | built; textbook sentences not yet annotated with it |
 | `isaInheritEffect` rule | a is_a b, b →s t ⊢ a →s t; sound, 56 uses in the closure; added in M2 (`Derivation.isaInheritEffect`, opinion `weakest`) | done |
 | `Target.disease` | one textbook claim (obesity causes T2D) needs a disease target | open, small |
 | caveated chains / trivial conclusions | decided in principle (Dan, 2026-10-28): use information content of the ontology term (Resnik: -log p from descendant count or annotation frequency) as the triviality threshold for conclusions, replacing the hub list in the closure search and the flat discount idea. Not implemented | open |

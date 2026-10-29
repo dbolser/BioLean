@@ -218,17 +218,21 @@ if not LEGACY:
         nodes, prem, steps = chain(k); f = {}
         for i, (_, _, _, x, y) in prem:
             back = [z for z in nodes[:i + 1] if z in eff_out[y]]
-            if back and len(prem) > 1: f.setdefault('feedback', eff_out[y][back[0]])   # y acts back on x or upstream; one inherited statement is not a chain
+            if back and len(prem) > 1:
+                f.setdefault('feedback', eff_out[y][back[0]])   # y acts back on x or upstream; one inherited statement is not a chain
+                f.setdefault('loop', tuple(sorted((y.split('&')[0], back[0].split('&')[0]))))   # the loop, named by the pair of base terms it joins
             if (x, y) in parthood: f.setdefault('parthood', parthood[(x, y)])   # a part acting on its whole, or the reverse
         for (_, _, _, a, m), (_, _, _, _, t) in steps:
             if m in direct[a] and t in direct[a]: f.setdefault('shared_cause', direct[a][t])   # a → m and a → t both stated
         return f
     flags = {k: guards(k) for k in novel if k[0] == 'effect'}
-    by_flag = collections.Counter(g for f in flags.values() for g in f)
+    by_flag = collections.Counter(g for f in flags.values() for g in f if g != 'loop')
+    by_loop = collections.Counter(f['loop'] for f in flags.values() if 'loop' in f)
     chained = [k for k in flags if facts[k]['deriv'][0] in ('viaAmount', 'viaActivity')]
     print(f"\n=== guards on effect chains (flags; nothing is dropped) ===\nderived effect facts {len(flags)}, flagged {sum(map(bool, flags.values()))}; "
           f"chain conclusions (viaAmount, viaActivity) {len(chained)}, flagged {sum(bool(flags[k]) for k in chained)}")
-    print('by flag', dict(by_flag), '; by combination', dict(collections.Counter('+'.join(sorted(f)) or 'none' for f in flags.values()).most_common()))
+    print('by flag', dict(by_flag), '; by combination', dict(collections.Counter('+'.join(sorted(g for g in f if g != 'loop')) or 'none' for f in flags.values()).most_common()))
+    print('named loops (chains crossing each):', '; '.join(f"{labels_e.get(a, a)} / {labels_e.get(b, b)} {n}" for (a, b), n in by_loop.most_common()))
     opp = [(k, ('effect', 'neg') + k[2:]) for k in facts if k[0] == 'effect' and k[1] == 'pos' and ('effect', 'neg') + k[2:] in facts]
     print(f"sign clashes (a →+ t and a →− t both in the closure): {len(opp)}; with a flagged side {sum(any(flags.get(x) for x in p) for p in opp)}")
     for g in ('feedback', 'parthood', 'shared_cause'):
