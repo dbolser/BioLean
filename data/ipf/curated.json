@@ -1,0 +1,122 @@
+{
+ "run_id": "20260824T223623Z-4f7d1a",
+ "curated_by": "Claude (Opus 5.5) for the IPF side quest, 2026-10-28; every abstract read against its step",
+ "rules": [
+  "A step's evidence is what the run cited for that step. A citation may move to another step of the same hypothesis when its text states that step; the move is recorded in `moved_from`.",
+  "A citation is excluded when its text does not state the step. The reason is recorded.",
+  "Every `quote` is a verbatim substring of the abstract or UniProt entry (checked by 02_render_lean.py).",
+  "Mouse-only evidence carries `taxon: mouse`. Claims stay context-free, so the taxon lint flags them; that is reported, not fixed.",
+  "A statement marked `bridge` is not in the run. It is a link the derivation needs and the run left out."
+ ],
+ "entities": {
+  "ipf": {"kind": "disease", "curie": "MONDO:0800504", "label": "idiopathic pulmonary fibrosis"},
+  "pulmonaryFibrosis": {"kind": "disease", "curie": "MONDO:0002771", "label": "pulmonary fibrosis"},
+  "rs35705950": {"kind": "variant", "curie": "dbSNP:rs35705950", "label": "MUC5B promoter variant rs35705950"},
+  "sftpcBrichos": {"kind": "variant", "curie": "BLN:SFTPC-BRICHOS-mutation", "label": "SFTPC BRICHOS-domain mutation (no public identifier for the class)"},
+  "MUC5B": {"kind": "protein", "curie": "UniProt:Q9HC84", "label": "MUC5B"},
+  "DSP": {"kind": "protein", "curie": "UniProt:P15924", "label": "DSP (desmoplakin)"},
+  "TERT": {"kind": "protein", "curie": "UniProt:O14746", "label": "TERT"},
+  "TOLLIP": {"kind": "protein", "curie": "UniProt:Q9H0E2", "label": "TOLLIP"},
+  "IRAK1": {"kind": "protein", "curie": "UniProt:P51617", "label": "IRAK1"},
+  "FAM13A": {"kind": "protein", "curie": "UniProt:O94988", "label": "FAM13A"},
+  "RHOA": {"kind": "protein", "curie": "UniProt:P61586", "label": "RHOA"},
+  "erStress": {"kind": "process", "curie": "GO:0034976", "label": "response to endoplasmic reticulum stress"},
+  "emt": {"kind": "process", "curie": "GO:0001837", "label": "epithelial to mesenchymal transition"},
+  "telomereMaintenance": {"kind": "process", "curie": "GO:0000723", "label": "telomere maintenance"},
+  "cellularSenescence": {"kind": "process", "curie": "GO:0090398", "label": "cellular senescence"},
+  "aggrephagy": {"kind": "process", "curie": "GO:0035973", "label": "aggrephagy"},
+  "at2": {"kind": "cellType", "curie": "CL:0002063", "label": "pulmonary alveolar type 2 cell"},
+  "shortTelomeres": {"kind": "phenotype", "curie": "HP:0031413", "label": "short telomere length"}
+ },
+ "statements": [
+  {"id": "I1", "step": "H1.1", "text": "rs35705950 raises MUC5B",
+   "claim": ".effect rs35705950 .pos (.amount MUC5B)",
+   "evidence": [
+    {"ref": "PMID:27630174", "kind": "review", "quote": "a common gain-of-function promoter variant in MUC5B rs35705950"},
+    {"ref": "PMID:41091081", "kind": "observational", "moved_from": "H1.2", "quote": "MUC5B was ectopically expressed in AT2 cells in controls with the risk variant"}],
+   "excluded": [
+    {"ref": "PMID:21506741", "reason": "reports MUC5B 14 times higher in IPF lung and the variant's association with IPF, not expression by genotype"}]},
+  {"id": "I2", "step": "H1.2", "text": "MUC5B raises ER stress",
+   "claim": ".effect MUC5B .pos (.process erStress)",
+   "evidence": [
+    {"ref": "PMID:41091081", "kind": "inVitro", "quote": "we demonstrated a direct relationship between MUC5B expression and ER stress in bronchiolar epithelia in vitro"}],
+   "excluded": [
+    {"ref": "PMID:18635891", "reason": "ER stress in IPF type II cells; MUC5B not mentioned"}]},
+  {"id": "I3", "step": "H1.3", "text": "DSP restrains EMT",
+   "claim": ".effect DSP .neg (.process emt)",
+   "evidence": [
+    {"ref": "PMID:42120512", "kind": "mechanistic", "quote": "SYISL promotes DSP degradation, thereby relieving a key constraint on epithelial integrity"}],
+   "excluded": [
+    {"ref": "UniProt:P15924", "reason": "UniProt entry says nothing about EMT"}]},
+  {"id": "I4", "step": "H1.4", "text": "ER stress drives pulmonary fibrosis",
+   "claim": ".effect erStress .pos (.disease pulmonaryFibrosis)",
+   "evidence": [
+    {"ref": "PMID:41090357", "kind": "mechanistic", "taxon": "mouse", "quote": "selective inhibition of RIDD with PAIR2 reduced AT2 differentiation into profibrotic transitional cells and protected mice from bleomycin-induced pulmonary fibrosis"}],
+   "excluded": [
+    {"ref": "PMID:24050627", "reason": "review abstract names neither ER stress nor EMT"}]},
+  {"id": "I5", "step": "H1.4", "text": "EMT drives pulmonary fibrosis",
+   "claim": ".effect emt .pos (.disease pulmonaryFibrosis)",
+   "evidence": [
+    {"ref": "PMID:42120512", "kind": "mechanistic", "moved_from": "H1.3", "quote": "The resultant aberrant epithelial-mesenchymal crosstalk contributes to pathological extracellular matrix (ECM) deposition"}],
+   "excluded": [
+    {"ref": "PMID:24050627", "reason": "review abstract names neither ER stress nor EMT"},
+    {"ref": "PMID:41090357", "reason": "about ER stress (IRE1α), not EMT"}]},
+  {"id": "I6", "step": "H2.1", "text": "TERT maintains telomeres",
+   "claim": ".effect TERT .pos (.process telomereMaintenance)",
+   "evidence": [
+    {"ref": "UniProt:O14746", "kind": "curatedDb", "quote": "main activity is the elongation of telomeres"}],
+   "excluded": [
+    {"ref": "STRING:GO:0000723", "reason": "a STRING enrichment term id, no text to check; the UniProt entry already states the step"}]},
+  {"id": "I7", "step": "bridge", "text": "telomere maintenance prevents short telomeres",
+   "claim": ".effect telomereMaintenance .neg (.phenotype shortTelomeres)",
+   "evidence": [
+    {"ref": "GO:0000723", "kind": "textbook", "quote": "", "note": "GO definition of telomere maintenance: maintenance of proper telomeric length. The run never states this link."}],
+   "excluded": []},
+  {"id": "I8", "step": "H2.2", "text": "short telomeres raise IPF risk",
+   "claim": ".effect shortTelomeres .pos (.disease ipf)",
+   "sign_note": "the run says associated_with (unsigned); the sign comes from the meta-analysis direction",
+   "evidence": [
+    {"ref": "PMID:41728098", "kind": "observational", "quote": "significant shorter telomere lengths in IPF patients compared to healthy controls"},
+    {"ref": "PMID:23535734", "kind": "observational", "quote": "Lead SNPs at two loci (TERC and TERT) associate with several cancers and other diseases, including idiopathic pulmonary fibrosis"}],
+   "excluded": []},
+  {"id": "I9", "step": "H2.3", "text": "mutant pro-SFTPC raises ER stress",
+   "claim": ".effect sftpcBrichos .pos (.process erStress)",
+   "evidence": [],
+   "excluded": [
+    {"ref": "R-HSA-5688354", "reason": "Reactome pathway 'Defective pro-SFTPC causes SMDP2 and RDS': surfactant disease, no ER stress"},
+    {"ref": "UniProt:P11686", "reason": "UniProt entry does not mention misfolding or ER stress"},
+    {"ref": "PMID:18635891", "reason": "ER stress in IPF type II cells; SFTPC not mentioned"}]},
+  {"id": "I10", "step": "H2.4", "text": "AT2 senescence drives IPF",
+   "claim": ".effect at2Senescence .pos (.disease ipf)",
+   "evidence": [
+    {"ref": "PMID:32661339", "kind": "observational", "quote": "accumulation of PATS-like cells in human fibrotic lungs was observed"},
+    {"ref": "PMID:32678092", "kind": "observational", "quote": "state appears in several independent models of lung injury and persists in human lung fibrosis"},
+    {"ref": "PMID:42346293", "kind": "review", "quote": "cellular senescence is not merely a consequence of tissue injury but a central driver of disease progression"}],
+   "excluded": [
+    {"ref": "PMID:42587125", "reason": "telomeric DNA damage response in telomerase-knockout mice; not AT2 senescence"}]},
+  {"id": "I11", "step": "H3.1", "text": "TOLLIP inhibits IRAK1",
+   "claim": ".effect TOLLIP .neg (.activity IRAK1)",
+   "evidence": [
+    {"ref": "UniProt:Q9H0E2", "kind": "curatedDb", "quote": "Inhibits IRAK1 phosphorylation and kinase activity"}],
+   "excluded": []},
+  {"id": "I12", "step": "H3.2", "text": "TOLLIP drives aggrephagy",
+   "claim": ".effect TOLLIP .pos (.process aggrephagy)",
+   "evidence": [
+    {"ref": "UniProt:Q9H0E2", "kind": "curatedDb", "quote": "mediating autophagic clearance of ubiquitin conjugates"}],
+   "excluded": []},
+  {"id": "I13", "step": "H4.1", "text": "FAM13A inhibits RHOA",
+   "claim": ".effect FAM13A .neg (.activity RHOA)",
+   "evidence": [
+    {"ref": "PMID:42266412", "kind": "review", "quote": "a protein with a characteristic RhoGAP domain"}],
+   "excluded": [
+    {"ref": "UniProt:O94988", "reason": "no function recorded (the run says so itself)"}]}
+ ],
+ "unexpressed": [
+  {"step": "H3.3", "reason": "unsigned association, and the sign depends on the allele: the cited GWAS calls the rs5743890 minor allele protective for susceptibility but harmful for mortality. Needs allele-level variants and two targets (risk, mortality)."},
+  {"step": "H3.4", "reason": "the cited trial (PMID:22607134) reports the three-drug combination arm; it does not report NAC alone, so it cannot support or refute NAC → FVC decline"},
+  {"step": "H4.2", "reason": "unsigned association of 'FAM13A variants' (no variant named) with IPF"},
+  {"step": "H4.3", "reason": "unsigned association with a compound phenotype ('UIP pattern in SSc-ILD and in emphysema/CPFE')"},
+  {"step": "H5.1", "reason": "the subject is a list of six genes; BioLean has no set-valued agent"},
+  {"step": "H5.2", "reason": "both ends are compound, ungroundable phrases ('independent epithelial lesions (...)', 'failed repair of repetitive distal lung injury')"}
+ ]
+}
