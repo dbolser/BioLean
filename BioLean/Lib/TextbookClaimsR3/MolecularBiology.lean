@@ -451,5 +451,29 @@ def molbio_m45480_86 : Statement where
   text := "In eukaryotic cells translation occurs in the cytoplasm"
   claim := .rel ⟨.bfo, 66, false⟩ (e_GO_0006412.inCtx { taxon := e_NCBITaxon_2759 }) e_GO_0005737
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "In eukaryotic cells, transcription occurs in the nucleus and is separate from the translation that occurs in the cytoplasm." }]
+/-- Eukaryotic cells have intracellular organelles -/
+def molbio_m45480_44 : Statement where
+  id := "molbio-m45480-44"
+  text := "Eukaryotic cells have intracellular organelles"
+  claim := .rel ⟨.bfo, 51, false⟩ (e_CL_0000255.inCtx { taxon := e_NCBITaxon_2759 }) e_GO_0043226
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Eukaryotic cells, in contrast, have intracellular organelles and are much more complex." }]
+/-- In eukaryotes transcription occurs only within the nucleus [weakening; not expressed: necessity] -/
+def molbio_m45480_51 : Statement where
+  id := "molbio-m45480-51"
+  text := "In eukaryotes transcription occurs only within the nucleus [weakening; not expressed: necessity]"
+  claim := .rel ⟨.bfo, 66, false⟩ (e_GO_0006351.inCtx { taxon := e_NCBITaxon_2759 }) e_GO_0005634
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "The processes of transcription and translation are physically separated by the nuclear membrane; transcription occurs only within the nucleus, and translation only occurs outside the nucleus in the cy" }]
+/-- In eukaryotes translation occurs only in the cytoplasm, outside the nucleus [weakening; not expressed: necessity] -/
+def molbio_m45480_52 : Statement where
+  id := "molbio-m45480-52"
+  text := "In eukaryotes translation occurs only in the cytoplasm, outside the nucleus [weakening; not expressed: necessity]"
+  claim := .rel ⟨.bfo, 66, false⟩ (e_GO_0006412.inCtx { taxon := e_NCBITaxon_2759 }) e_GO_0005737
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "The processes of transcription and translation are physically separated by the nuclear membrane; transcription occurs only within the nucleus, and translation only occurs outside the nucleus in the cy" }]
+/-- Alternative RNA splicing is a post-transcriptional regulatory mechanism in eukaryotes by which multiple proteins are produced from one gene via alternative spli [weakening; not expressed: compound_sentence] -/
+def molbio_m45480_99 : Statement where
+  id := "molbio-m45480-99"
+  text := "Alternative RNA splicing is a post-transcriptional regulatory mechanism in eukaryotes by which multiple proteins are produced from one gene via alternative spli [weakening; not expressed: compound_sentence]"
+  claim := .rel Rel.isA (e_GO_0000380.inCtx { taxon := e_NCBITaxon_2759 }) e_GO_0010608
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "alternative RNA splicing: a post-transcriptional gene regulation mechanism in eukaryotes in which multiple protein products are produced by a single gene through alternative splicing combinations of t" }]
 
 end BioLean.Textbook.R3.MolecularBiology

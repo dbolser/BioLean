@@ -241,5 +241,41 @@ def how_cells_obtain_energy_m45444_39 : Statement where
   text := "Animals can make most of the fatty acids they need [weakening; not expressed: proportion]"
   claim := .rel ⟨.ro, 2215, false⟩ e_NCBITaxon_33208 e_GO_0006633
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Animals can make most of the fatty acids they need." }]
+/-- In photosynthesis, plants use energy from sunlight to convert CO2 into glucose [weakening; not expressed: compound_sentence] -/
+def how_cells_obtain_energy_m45437_12 : Statement where
+  id := "how-cells-obtain-energy-m45437-12"
+  text := "In photosynthesis, plants use energy from sunlight to convert CO2 into glucose [weakening; not expressed: compound_sentence]"
+  claim := .rel ⟨.ro, 2234, false⟩ (e_GO_0015979.inCtx { taxon := e_NCBITaxon_33090 }) e_CHEBI_17234
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "During photosynthesis, plants use energy (originally from sunlight) to convert carbon dioxide gas (CO2) into sugar molecules (like glucose: C6H12O6)." }]
+/-- Photosynthesis consumes carbon dioxide -/
+def how_cells_obtain_energy_m45437_13 : Statement where
+  id := "how-cells-obtain-energy-m45437-13"
+  text := "Photosynthesis consumes carbon dioxide"
+  claim := .rel ⟨.ro, 2233, false⟩ (e_GO_0015979.inCtx { taxon := e_NCBITaxon_33090 }) e_CHEBI_16526
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "They consume carbon dioxide and produce oxygen as a waste product." }]
+/-- Photosynthesis produces oxygen as a waste product -/
+def how_cells_obtain_energy_m45437_14 : Statement where
+  id := "how-cells-obtain-energy-m45437-14"
+  text := "Photosynthesis produces oxygen as a waste product"
+  claim := .rel ⟨.ro, 2234, false⟩ (e_GO_0015979.inCtx { taxon := e_NCBITaxon_33090 }) e_CHEBI_15379
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "They consume carbon dioxide and produce oxygen as a waste product." }]
+/-- Electron transport reactions occur in protein complexes in the inner mitochondrial membrane of eukaryotes -/
+def how_cells_obtain_energy_m45439_34 : Statement where
+  id := "how-cells-obtain-energy-m45439-34"
+  text := "Electron transport reactions occur in protein complexes in the inner mitochondrial membrane of eukaryotes"
+  claim := .rel ⟨.bfo, 66, false⟩ (e_GO_0022904.inCtx { taxon := e_NCBITaxon_2759 }) e_GO_0005743
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "These reactions take place in specialized protein complexes located in the inner membrane of the mitochondria of eukaryotic organisms and on the inner part of the cell membrane of prokaryotic organism" }]
+/-- The electron transport chain is present in multiple copies in the inner mitochondrial membrane of eukaryotes -/
+def how_cells_obtain_energy_m45439_47 : Statement where
+  id := "how-cells-obtain-energy-m45439-47"
+  text := "The electron transport chain is present in multiple copies in the inner mitochondrial membrane of eukaryotes"
+  claim := .rel ⟨.bfo, 66, false⟩ (e_GO_0022904.inCtx { taxon := e_NCBITaxon_2759 }) e_GO_0005743
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "The electron transport chain is present in multiple copies in the inner mitochondrial membrane of eukaryotes and in the plasma membrane of prokaryotes." }]
+/-- Glycogen is mobilised when blood sugar drops -/
+def how_cells_obtain_energy_m45444_12 : Statement where
+  id := "how-cells-obtain-energy-m45444-12"
+  text := "Glycogen is mobilised when blood sugar drops"
+  claim := .effect e_CHEBI_17234 .neg (.process (e_GO_0005980.inCtx { anatomy := e_UBERON_0000178 }))
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Glycogen will be taken out of storage if blood sugar levels drop." }]
 
 end BioLean.Textbook.R3.HowCellsObtainEnergy

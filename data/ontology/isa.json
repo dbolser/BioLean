@@ -50,10 +50,22 @@
 "BFO:0000001"
 ]
 },
+"BFO:0000003": {
+"label": "occurrent",
+"parents": [
+"BFO:0000001"
+]
+},
 "BFO:0000004": {
 "label": "independent continuant",
 "parents": [
 "BFO:0000002"
+]
+},
+"BFO:0000015": {
+"label": "process",
+"parents": [
+"BFO:0000003"
 ]
 },
 "BFO:0000016": {
@@ -13438,6 +13450,13 @@
 ],
 "namespace": "biological_process"
 },
+"GO:0097545": {
+"label": "axonemal doublet microtubule",
+"parents": [
+"GO:0110165"
+],
+"namespace": "cellular_component"
+},
 "GO:0097623": {
 "label": "potassium ion export across plasma membrane",
 "parents": [
@@ -16944,6 +16963,12 @@
 "NCBITaxon:117570"
 ]
 },
+"NCBITaxon:118883": {
+"label": "Sulfolobaceae",
+"parents": [
+"NCBITaxon:2281"
+]
+},
 "NCBITaxon:119203": {
 "label": "Selachii",
 "parents": [
@@ -17130,6 +17155,12 @@
 "NCBITaxon:1783272"
 ]
 },
+"NCBITaxon:183924": {
+"label": "Thermoprotei",
+"parents": [
+"NCBITaxon:28889"
+]
+},
 "NCBITaxon:183963": {
 "label": "Halobacteria",
 "parents": [
@@ -17230,6 +17261,24 @@
 "label": "Halobacterium salinarum",
 "parents": [
 "NCBITaxon:2239"
+]
+},
+"NCBITaxon:2281": {
+"label": "Sulfolobales",
+"parents": [
+"NCBITaxon:183924"
+]
+},
+"NCBITaxon:2284": {
+"label": "Sulfolobus",
+"parents": [
+"NCBITaxon:118883"
+]
+},
+"NCBITaxon:2285": {
+"label": "Sulfolobus acidocaldarius",
+"parents": [
+"NCBITaxon:2284"
 ]
 },
 "NCBITaxon:2290931": {
@@ -17394,6 +17443,12 @@
 "NCBITaxon:3313"
 ]
 },
+"NCBITaxon:28889": {
+"label": "Thermoproteota",
+"parents": [
+"NCBITaxon:1783275"
+]
+},
 "NCBITaxon:28890": {
 "label": "Methanobacteriota",
 "parents": [
@@ -17554,6 +17609,12 @@
 "label": "Orthoretrovirinae",
 "parents": [
 "NCBITaxon:11632"
+]
+},
+"NCBITaxon:330779": {
+"label": "Sulfolobus acidocaldarius DSM 639",
+"parents": [
+"NCBITaxon:2285"
 ]
 },
 "NCBITaxon:33090": {
@@ -20288,6 +20349,12 @@
 "UBERON:0001005"
 ]
 },
+"UBERON:0000068": {
+"label": "embryo stage",
+"parents": [
+"UBERON:0000105"
+]
+},
 "UBERON:0000072": {
 "label": "proximo-distal subdivision of respiratory tract",
 "parents": [
@@ -20317,6 +20384,18 @@
 "label": "membrane organ",
 "parents": [
 "UBERON:0000062"
+]
+},
+"UBERON:0000105": {
+"label": "life cycle stage",
+"parents": [
+"BFO:0000015"
+]
+},
+"UBERON:0000113": {
+"label": "post-juvenile adult stage",
+"parents": [
+"UBERON:0000105"
 ]
 },
 "UBERON:0000115": {

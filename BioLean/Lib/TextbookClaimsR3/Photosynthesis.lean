@@ -127,5 +127,47 @@ def photosynthesis_m45453_82 : Statement where
   text := "photosynthesis builds carbohydrates in chloroplasts"
   claim := .rel ⟨.ro, 2234, false⟩ (e_GO_0015979.inCtx { component := e_GO_0009507 }) e_CHEBI_16646
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Photosynthesis absorbs energy to build carbohydrates in chloroplasts, and aerobic cellular respiration releases energy by using oxygen to break down carbohydrates." }]
+/-- in plants, photosynthesis takes place primarily in leaves [weakening; not expressed: unsupported_ontology] -/
+def photosynthesis_m45448_55 : Statement where
+  id := "photosynthesis-m45448-55"
+  text := "in plants, photosynthesis takes place primarily in leaves [weakening; not expressed: unsupported_ontology]"
+  claim := .rel ⟨.bfo, 66, false⟩ (e_GO_0015979.inCtx { taxon := e_NCBITaxon_33090 }) e_PO_0025034
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "In plants, photosynthesis takes place primarily in leaves, which consist of many layers of cells and have differentiated top and bottom sides." }]
+/-- leaves consist of many layers of cells [weakening; not expressed: unsupported_ontology] -/
+def photosynthesis_m45448_56 : Statement where
+  id := "photosynthesis-m45448-56"
+  text := "leaves consist of many layers of cells [weakening; not expressed: unsupported_ontology]"
+  claim := .rel ⟨.bfo, 51, false⟩ (e_PO_0025034.inCtx { taxon := e_NCBITaxon_33090 }) e_CL_0000000
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "In plants, photosynthesis takes place primarily in leaves, which consist of many layers of cells and have differentiated top and bottom sides." }]
+/-- photosynthesis occurs in the mesophyll [weakening; not expressed: unsupported_ontology] -/
+def photosynthesis_m45448_58 : Statement where
+  id := "photosynthesis-m45448-58"
+  text := "photosynthesis occurs in the mesophyll [weakening; not expressed: unsupported_ontology]"
+  claim := .rel ⟨.bfo, 66, false⟩ (e_GO_0015979.inCtx { taxon := e_NCBITaxon_33090 }) e_PO_0005645
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "The process of photosynthesis occurs not on the surface layers of the leaf, but rather in a middle layer called the mesophyll ()." }]
+/-- the mesophyll is the middle layer of the leaf [weakening; not expressed: unsupported_ontology] -/
+def photosynthesis_m45448_60 : Statement where
+  id := "photosynthesis-m45448-60"
+  text := "the mesophyll is the middle layer of the leaf [weakening; not expressed: unsupported_ontology]"
+  claim := .rel ⟨.bfo, 50, false⟩ (e_PO_0005645.inCtx { taxon := e_NCBITaxon_33090 }) e_PO_0025034
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "The process of photosynthesis occurs not on the surface layers of the leaf, but rather in a middle layer called the mesophyll ()." }]
+/-- in plants, cells of the mesophyll contain chloroplasts [weakening; not expressed: unsupported_ontology] -/
+def photosynthesis_m45448_65 : Statement where
+  id := "photosynthesis-m45448-65"
+  text := "in plants, cells of the mesophyll contain chloroplasts [weakening; not expressed: unsupported_ontology]"
+  claim := .rel ⟨.bfo, 51, false⟩ (e_PO_0004006.inCtx { taxon := e_NCBITaxon_33090 }) e_GO_0009507
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "In plants, chloroplast-containing cells exist in the mesophyll." }]
+/-- cells of the leaf middle layer have chloroplasts [weakening; not expressed: unsupported_ontology] -/
+def photosynthesis_m45448_81 : Statement where
+  id := "photosynthesis-m45448-81"
+  text := "cells of the leaf middle layer have chloroplasts [weakening; not expressed: unsupported_ontology]"
+  claim := .rel ⟨.bfo, 51, false⟩ (e_PO_0004006.inCtx { taxon := e_NCBITaxon_33090 }) e_GO_0009507
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Cells within the middle layer of a leaf have chloroplasts, which contain the photosynthetic apparatus." }]
+/-- the mesophyll is the middle layer of cells in a leaf [weakening; not expressed: unsupported_ontology] -/
+def photosynthesis_m45448_142 : Statement where
+  id := "photosynthesis-m45448-142"
+  text := "the mesophyll is the middle layer of cells in a leaf [weakening; not expressed: unsupported_ontology]"
+  claim := .rel ⟨.bfo, 50, false⟩ (e_PO_0005645.inCtx { taxon := e_NCBITaxon_33090 }) e_PO_0025034
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "mesophyll: the middle layer of cells in a leaf" }]
 
 end BioLean.Textbook.R3.Photosynthesis

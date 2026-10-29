@@ -19,6 +19,15 @@
 "hub_survivor": true
 },
 {
+"fact": "sodium ion \u2293 part of (neuron) [CHEBI:29101&BFO:0000050=(CL:0000540)] \u2192\u2212 amount(aldosterone \u2293 located in (blood) [CHEBI:27584&RO:0001025=(UBERON:0000178)])",
+"score": 12.297,
+"path_min": 12.297,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
+},
+{
 "fact": "sodium ion \u2293 located in (blood) [CHEBI:29101&RO:0001025=(UBERON:0000178)] \u2192\u2212 amount(aldosterone \u2293 located in (blood) [CHEBI:27584&RO:0001025=(UBERON:0000178)])",
 "score": 12.297,
 "path_min": 12.297,
@@ -28,7 +37,7 @@
 "flags": []
 },
 {
-"fact": "neurotransmitters [CHEBI:25512] \u2192+ amount(sodium [CHEBI:29101])",
+"fact": "neurotransmitters [CHEBI:25512] \u2192+ amount(sodium ion \u2293 part of (neuron) [CHEBI:29101&BFO:0000050=(CL:0000540)])",
 "score": 12.297,
 "path_min": 4.332,
 "depth": 1,
@@ -414,6 +423,14 @@
 "hub_survivor": false
 },
 {
+"fact": "platelets to adhere (platelet activation) \u2293 occurs in (blood vessel) \u2293 occurs in (platelets) [GO:0030168&BFO:0000066=(UBERON:0001981)&BFO:0000066=(CL:0000233)] is_a platelets to adhere (platelet activation) [GO:0030168]",
+"score": 9.392,
+"path_min": 9.392,
+"depth": 1,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
 "fact": "citric acid cycle \u2293 in taxon (NCBITaxon:2759) [GO:0006099&RO:0002162=(NCBITaxon:2759)] has input acetyl group [CHEBI:40574]",
 "score": 9.392,
 "path_min": 9.392,
@@ -514,7 +531,7 @@
 ]
 },
 {
-"fact": "glucose [CHEBI:17234] \u2192+ process(glycogen catabolic process [GO:0005980])",
+"fact": "glucose [CHEBI:17234] \u2192+ process(glycogen catabolic process \u2293 occurs in (blood) [GO:0005980&BFO:0000066=(UBERON:0000178)])",
 "score": 9.206,
 "path_min": 9.206,
 "depth": 2,
@@ -538,7 +555,7 @@
 ]
 },
 {
-"fact": "glucose \u2293 located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] \u2192\u2212 process(glycogen catabolic process [GO:0005980])",
+"fact": "glucose \u2293 located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] \u2192\u2212 process(glycogen catabolic process \u2293 occurs in (blood) [GO:0005980&BFO:0000066=(UBERON:0000178)])",
 "score": 9.206,
 "path_min": 9.206,
 "depth": 1,
@@ -643,6 +660,15 @@
 "depth": 1,
 "rule": "isaInherit",
 "hub_survivor": true
+},
+{
+"fact": "cholesterol \u2293 located in (blood) [CHEBI:16113&RO:0001025=(UBERON:0000178)] \u2192+ process(sense of satiety or fullness [GO:0032098])",
+"score": 8.698,
+"path_min": 1.704,
+"depth": 2,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "cholesterol [CHEBI:16113] \u2192+ process(sense of satiety or fullness [GO:0032098])",
@@ -900,6 +926,15 @@
 "feedback",
 "loop"
 ]
+},
+{
+"fact": "cholesterol \u2293 located in (blood) [CHEBI:16113&RO:0001025=(UBERON:0000178)] \u2192+ process(absorbs nutrients [GO:0050892])",
+"score": 8.005,
+"path_min": 1.704,
+"depth": 2,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
 },
 {
 "fact": "LDL [GO:0034362] \u2192+ process(absorbs nutrients [GO:0050892])",
@@ -1350,7 +1385,37 @@
 "flags": []
 },
 {
+"fact": "These reactions \u2293 in taxon (eukaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2759)] \u2192\u2212 process(broken down [GO:0006007])",
+"score": 7.52,
+"path_min": 7.52,
+"depth": 2,
+"rule": "viaAmount",
+"hub_survivor": true,
+"flags": [
+"feedback",
+"loop"
+]
+},
+{
+"fact": "These reactions \u2293 in taxon (eukaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2759)] \u2192\u2212 process(ATP biosynthetic process [GO:0006754])",
+"score": 7.52,
+"path_min": 7.52,
+"depth": 2,
+"rule": "viaAmount",
+"hub_survivor": true,
+"flags": []
+},
+{
 "fact": "These reactions \u2293 in taxon (prokaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2)] \u2192+ process(glycogen biosynthetic process [GO:0005978])",
+"score": 7.52,
+"path_min": 7.52,
+"depth": 2,
+"rule": "viaAmount",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "These reactions \u2293 in taxon (eukaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2759)] \u2192+ process(glycogen biosynthetic process [GO:0005978])",
 "score": 7.52,
 "path_min": 7.52,
 "depth": 2,
@@ -1423,6 +1488,15 @@
 "flags": []
 },
 {
+"fact": "These reactions \u2293 in taxon (eukaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2759)] \u2192+ amount(ATP [CHEBI:15422])",
+"score": 7.52,
+"path_min": 7.52,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": false,
+"flags": []
+},
+{
 "fact": "oxygen \u2293 located in (PO:0025034) [CHEBI:15379&RO:0001025=(PO:0025034)] \u2192+ process(this transfer [GO:0022904])",
 "score": 7.52,
 "path_min": 7.52,
@@ -1451,6 +1525,15 @@
 },
 {
 "fact": "These reactions \u2293 in taxon (prokaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2)] \u2192+ process(H+ gradient [GO:0010248])",
+"score": 7.52,
+"path_min": 7.52,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "These reactions \u2293 in taxon (eukaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2759)] \u2192+ process(H+ gradient [GO:0010248])",
 "score": 7.52,
 "path_min": 7.52,
 "depth": 1,
@@ -1492,7 +1575,31 @@
 "hub_survivor": false
 },
 {
+"fact": "These reactions \u2293 in taxon (eukaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2759)] has input high-energy electrons [CHEBI:10545]",
+"score": 7.52,
+"path_min": 7.52,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "These reactions \u2293 in taxon (eukaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2759)] has input oxygen [CHEBI:15379]",
+"score": 7.52,
+"path_min": 7.52,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
 "fact": "These reactions \u2293 in taxon (prokaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2)] has output water [CHEBI:15377]",
+"score": 7.52,
+"path_min": 7.52,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "These reactions \u2293 in taxon (eukaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2759)] has output water [CHEBI:15377]",
 "score": 7.52,
 "path_min": 7.52,
 "depth": 1,
@@ -1737,14 +1844,6 @@
 "hub_survivor": true
 },
 {
-"fact": "gallbladder [UBERON:0002110] has part cellulose [CHEBI:18246]",
-"score": 7.221,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "gallbladder [UBERON:0002110] has part nitrogenous base [CHEBI:18282]",
 "score": 7.221,
 "path_min": 0.002,
@@ -1785,14 +1884,6 @@
 "hub_survivor": true
 },
 {
-"fact": "gallbladder [UBERON:0002110] has part centrioles [GO:0005814]",
-"score": 7.221,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "gallbladder [UBERON:0002110] overlaps food [CHEBI:33290]",
 "score": 7.221,
 "path_min": 0.002,
@@ -1823,14 +1914,6 @@
 "depth": 2,
 "rule": "relTrans",
 "hub_survivor": false
-},
-{
-"fact": "gallbladder [UBERON:0002110] has part tight junction [GO:0005923]",
-"score": 7.221,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
 },
 {
 "fact": "Telomerase \u2293 part of (adult somatic cells) \u2293 existence overlaps (adult) [GO:0005697&BFO:0000050=(CL:0002371)&RO:0002490=(UBERON:0000113)] has part hydroxy group [CHEBI:43176]",
@@ -2335,6 +2418,15 @@
 ]
 },
 {
+"fact": "sodium ion \u2293 part of (neuron) [CHEBI:29101&BFO:0000050=(CL:0000540)] \u2192+ process(membrane depolarization [GO:0051899])",
+"score": 7.04,
+"path_min": 7.04,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
+},
+{
 "fact": "sodium ion \u2293 located in (blood) [CHEBI:29101&RO:0001025=(UBERON:0000178)] \u2192+ process(membrane depolarization [GO:0051899])",
 "score": 7.04,
 "path_min": 7.04,
@@ -2540,14 +2632,6 @@
 "hub_survivor": true
 },
 {
-"fact": "photosynthesizing \u2293 in taxon (plants) [GO:0015979&RO:0002162=(NCBITaxon:33090)] has input carbon dioxide [CHEBI:16526]",
-"score": 6.994,
-"path_min": 6.994,
-"depth": 1,
-"rule": "isaInherit",
-"hub_survivor": true
-},
-{
 "fact": "photosynthesis \u2293 occurs in (chloroplast) [GO:0015979&BFO:0000066=(GO:0009507)] has output oxygen [CHEBI:15379]",
 "score": 6.994,
 "path_min": 6.994,
@@ -2573,22 +2657,6 @@
 },
 {
 "fact": "photosynthesis \u2293 in taxon (NCBITaxon:2759) [GO:0015979&RO:0002162=(NCBITaxon:2759)] has output glucose [CHEBI:17234]",
-"score": 6.994,
-"path_min": 6.994,
-"depth": 1,
-"rule": "isaInherit",
-"hub_survivor": false
-},
-{
-"fact": "photosynthesizing \u2293 in taxon (plants) [GO:0015979&RO:0002162=(NCBITaxon:33090)] has output oxygen [CHEBI:15379]",
-"score": 6.994,
-"path_min": 6.994,
-"depth": 1,
-"rule": "isaInherit",
-"hub_survivor": false
-},
-{
-"fact": "photosynthesizing \u2293 in taxon (plants) [GO:0015979&RO:0002162=(NCBITaxon:33090)] has output glucose [CHEBI:17234]",
 "score": 6.994,
 "path_min": 6.994,
 "depth": 1,
@@ -2754,7 +2822,15 @@
 "hub_survivor": true
 },
 {
-"fact": "desmosome [GO:0030057] part of structure that is capable of ATP biosynthetic process [GO:0006754]",
+"fact": "alveoli \u2293 located in (lung) [UBERON:0002299&RO:0001025=(UBERON:0002048)] connected to alveolar sacs [UBERON:0002169]",
+"score": 6.98,
+"path_min": 6.98,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "desmosome \u2293 in taxon (NCBITaxon:33208) [GO:0030057&RO:0002162=(NCBITaxon:33208)] part of structure that is capable of ATP biosynthetic process [GO:0006754]",
 "score": 6.927,
 "path_min": 0.002,
 "depth": 1,
@@ -2762,7 +2838,7 @@
 "hub_survivor": true
 },
 {
-"fact": "desmosome [GO:0030057] part of structure that is capable of phagocytosis [GO:0006909]",
+"fact": "desmosome \u2293 in taxon (NCBITaxon:33208) [GO:0030057&RO:0002162=(NCBITaxon:33208)] part of structure that is capable of phagocytosis [GO:0006909]",
 "score": 6.927,
 "path_min": 0.002,
 "depth": 1,
@@ -2876,14 +2952,6 @@
 "hub_survivor": false
 },
 {
-"fact": "prokaryotic cell [CL:0000520] has part cellulose [CHEBI:18246]",
-"score": 6.726,
-"path_min": 4.506,
-"depth": 1,
-"rule": "relTrans",
-"hub_survivor": false
-},
-{
 "fact": "prokaryotic cell [CL:0000520] has part proteins [CHEBI:36080]",
 "score": 6.726,
 "path_min": 2.282,
@@ -2981,6 +3049,14 @@
 "hub_survivor": false
 },
 {
+"fact": "vermiform appendix \u2293 in taxon (humans) [UBERON:0001154&RO:0002162=(NCBITaxon:9606)] located in ileocecal valve [UBERON:0000569]",
+"score": 6.574,
+"path_min": 6.574,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
 "fact": "adrenal gland [UBERON:0002369] located in coelemic cavity lumen [UBERON:0002323]",
 "score": 6.574,
 "path_min": 3.932,
@@ -3056,14 +3132,6 @@
 "fact": "neuronal cell body [GO:0043025] has part small subunit [GO:0015935]",
 "score": 6.521,
 "path_min": 4.05,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "gallbladder [UBERON:0002110] has part centrosome [GO:0005813]",
-"score": 6.521,
-"path_min": 0.002,
 "depth": 2,
 "rule": "relTrans",
 "hub_survivor": true
@@ -3272,6 +3340,14 @@
 "hub_survivor": true
 },
 {
+"fact": "These reactions \u2293 in taxon (eukaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2759)] part of this reaction [GO:0009060]",
+"score": 6.421,
+"path_min": 6.421,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
 "fact": "cytochrome c oxidase [GO:0045277] part of this reaction [GO:0009060]",
 "score": 6.421,
 "path_min": 6.421,
@@ -3336,14 +3412,6 @@
 "hub_survivor": true
 },
 {
-"fact": "gallbladder [UBERON:0002110] has part plasmodesma [GO:0009506]",
-"score": 6.367,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "alpha-amylase activity [GO:0004556] has output disaccharide [CHEBI:36233]",
 "score": 6.331,
 "path_min": 6.331,
@@ -3376,7 +3444,7 @@
 "hub_survivor": true
 },
 {
-"fact": "desmosome [GO:0030057] part of structure that is capable of exocytosis [GO:0006887]",
+"fact": "desmosome \u2293 in taxon (NCBITaxon:33208) [GO:0030057&RO:0002162=(NCBITaxon:33208)] part of structure that is capable of exocytosis [GO:0006887]",
 "score": 6.278,
 "path_min": 0.002,
 "depth": 1,
@@ -3462,14 +3530,6 @@
 "hub_survivor": true
 },
 {
-"fact": "gallbladder [UBERON:0002110] overlaps mitotic spindle [GO:0072686]",
-"score": 6.116,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
 "fact": "centrosome \u2293 in taxon (NCBITaxon:33208) [GO:0005813&RO:0002162=(NCBITaxon:33208)] overlaps mitotic spindle [GO:0072686]",
 "score": 6.116,
 "path_min": 4.817,
@@ -3503,6 +3563,14 @@
 },
 {
 "fact": "These reactions \u2293 in taxon (prokaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2)] has part protein complexes [GO:0098803]",
+"score": 6.116,
+"path_min": 6.116,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "These reactions \u2293 in taxon (eukaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2759)] has part protein complexes [GO:0098803]",
 "score": 6.116,
 "path_min": 6.116,
 "depth": 1,
@@ -3545,6 +3613,15 @@
 },
 {
 "fact": "These reactions \u2293 in taxon (prokaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2)] \u2192+ process(muscle cell contraction [GO:0006936])",
+"score": 6.096,
+"path_min": 6.096,
+"depth": 2,
+"rule": "viaAmount",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "These reactions \u2293 in taxon (eukaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2759)] \u2192+ process(muscle cell contraction [GO:0006936])",
 "score": 6.096,
 "path_min": 6.096,
 "depth": 2,
@@ -3637,6 +3714,22 @@
 "flags": []
 },
 {
+"fact": "muscle cell contraction \u2293 occurs in (CL:0000187) [GO:0006936&BFO:0000066=(CL:0000187)] has input ATP [CHEBI:15422]",
+"score": 6.096,
+"path_min": 6.096,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "muscle contraction \u2293 occurs in (skeletal muscle fiber) [GO:0006936&BFO:0000066=(CL:0008002)] has input ATP [CHEBI:15422]",
+"score": 6.096,
+"path_min": 6.096,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
 "fact": "capillaries [UBERON:0001982] \u2192\u2212 process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])",
 "score": 6.093,
 "path_min": 2.657,
@@ -3694,6 +3787,14 @@
 "fact": "capillaries [UBERON:0001982] connected to inferior vena cava [UBERON:0001072]",
 "score": 6.093,
 "path_min": 2.657,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "alveoli \u2293 located in (lung) [UBERON:0002299&RO:0001025=(UBERON:0002048)] adjacent to capillaries [UBERON:0001982]",
+"score": 6.093,
+"path_min": 6.093,
 "depth": 1,
 "rule": "isaInherit",
 "hub_survivor": true
@@ -4043,7 +4144,7 @@
 "hub_survivor": true
 },
 {
-"fact": "desmosome [GO:0030057] part of structure that is capable of endocytosis [GO:0006897]",
+"fact": "desmosome \u2293 in taxon (NCBITaxon:33208) [GO:0030057&RO:0002162=(NCBITaxon:33208)] part of structure that is capable of endocytosis [GO:0006897]",
 "score": 5.91,
 "path_min": 0.002,
 "depth": 1,
@@ -4108,6 +4209,22 @@
 },
 {
 "fact": "phagocytosis [GO:0006909] has input nucleotides [CHEBI:36976]",
+"score": 5.853,
+"path_min": 5.853,
+"depth": 2,
+"rule": "isaGeneralise",
+"hub_survivor": true
+},
+{
+"fact": "muscle cell contraction \u2293 occurs in (CL:0000187) [GO:0006936&BFO:0000066=(CL:0000187)] has input nucleotides [CHEBI:36976]",
+"score": 5.853,
+"path_min": 5.853,
+"depth": 2,
+"rule": "isaGeneralise",
+"hub_survivor": true
+},
+{
+"fact": "muscle contraction \u2293 occurs in (skeletal muscle fiber) [GO:0006936&BFO:0000066=(CL:0008002)] has input nucleotides [CHEBI:36976]",
 "score": 5.853,
 "path_min": 5.853,
 "depth": 2,
@@ -4380,14 +4497,6 @@
 "hub_survivor": true
 },
 {
-"fact": "salivary glands [UBERON:0001044] has part cellulose [CHEBI:18246]",
-"score": 5.769,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "salivary glands [UBERON:0001044] has part nitrogenous base [CHEBI:18282]",
 "score": 5.769,
 "path_min": 0.002,
@@ -4452,14 +4561,6 @@
 "hub_survivor": true
 },
 {
-"fact": "salivary glands [UBERON:0001044] has part centrioles [GO:0005814]",
-"score": 5.769,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "salivary glands [UBERON:0001044] has part large subunit [GO:0015934]",
 "score": 5.769,
 "path_min": 0.002,
@@ -4477,14 +4578,6 @@
 },
 {
 "fact": "salivary glands [UBERON:0001044] overlaps food [CHEBI:33290]",
-"score": 5.769,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "salivary glands [UBERON:0001044] overlaps mitotic spindle [GO:0072686]",
 "score": 5.769,
 "path_min": 0.002,
 "depth": 3,
@@ -4530,30 +4623,6 @@
 "depth": 2,
 "rule": "relTrans",
 "hub_survivor": false
-},
-{
-"fact": "salivary glands [UBERON:0001044] has part centrosome [GO:0005813]",
-"score": 5.769,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "salivary glands [UBERON:0001044] has part tight junction [GO:0005923]",
-"score": 5.769,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "salivary glands [UBERON:0001044] has part plasmodesma [GO:0009506]",
-"score": 5.769,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
 },
 {
 "fact": "salivary glands [UBERON:0001044] \u2192+ process(digestion [GO:0007586])",
@@ -4830,22 +4899,6 @@
 "hub_survivor": true
 },
 {
-"fact": "salivary glands [UBERON:0001044] has part plant cell wall [GO:0009505]",
-"score": 5.674,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "gallbladder [UBERON:0002110] has part plant cell wall [GO:0009505]",
-"score": 5.674,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "plant cell wall \u2293 in taxon (NCBITaxon:33090) [GO:0009505&RO:0002162=(NCBITaxon:33090)] \u2192+ process(maintain its shape [GO:0008360])",
 "score": 5.674,
 "path_min": 5.674,
@@ -4874,6 +4927,15 @@
 "fact": "centriole \u2293 in taxon (animal cell) [GO:0005814&RO:0002162=(NCBITaxon:33208)] \u2192+ process(chromosome segregation [GO:0007059])",
 "score": 5.619,
 "path_min": 5.619,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "desmosome \u2293 in taxon (NCBITaxon:33208) [GO:0030057&RO:0002162=(NCBITaxon:33208)] \u2192+ process(attach to surfaces [GO:0007155])",
+"score": 5.596,
+"path_min": 5.596,
 "depth": 1,
 "rule": "isaInheritEffect",
 "hub_survivor": true,
@@ -4938,6 +5000,15 @@
 },
 {
 "fact": "These reactions \u2293 in taxon (prokaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2)] \u2192+ process(proton transmembrane transport [GO:1902600])",
+"score": 5.384,
+"path_min": 5.384,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "These reactions \u2293 in taxon (eukaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2759)] \u2192+ process(proton transmembrane transport [GO:1902600])",
 "score": 5.384,
 "path_min": 5.384,
 "depth": 1,
@@ -5443,14 +5514,6 @@
 "hub_survivor": true
 },
 {
-"fact": "stomach [UBERON:0000945] has part cellulose [CHEBI:18246]",
-"score": 5.176,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "stomach [UBERON:0000945] has part nitrogenous base [CHEBI:18282]",
 "score": 5.176,
 "path_min": 0.002,
@@ -5515,14 +5578,6 @@
 "hub_survivor": true
 },
 {
-"fact": "stomach [UBERON:0000945] has part centrioles [GO:0005814]",
-"score": 5.176,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "stomach [UBERON:0000945] has part large subunit [GO:0015934]",
 "score": 5.176,
 "path_min": 0.002,
@@ -5553,14 +5608,6 @@
 "depth": 3,
 "rule": "relChain",
 "hub_survivor": false
-},
-{
-"fact": "stomach [UBERON:0000945] overlaps mitotic spindle [GO:0072686]",
-"score": 5.176,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relChain",
-"hub_survivor": true
 },
 {
 "fact": "stomach [UBERON:0000945] has part structure that is capable of ATP biosynthetic process [GO:0006754]",
@@ -5603,44 +5650,12 @@
 "hub_survivor": false
 },
 {
-"fact": "stomach [UBERON:0000945] has part centrosome [GO:0005813]",
-"score": 5.176,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "stomach [UBERON:0000945] has part ribosomes [GO:0005840]",
 "score": 5.176,
 "path_min": 0.002,
 "depth": 2,
 "rule": "relTrans",
 "hub_survivor": false
-},
-{
-"fact": "stomach [UBERON:0000945] has part tight junction [GO:0005923]",
-"score": 5.176,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "stomach [UBERON:0000945] has part plant cell wall [GO:0009505]",
-"score": 5.176,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "stomach [UBERON:0000945] has part plasmodesma [GO:0009506]",
-"score": 5.176,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
 },
 {
 "fact": "stomach [UBERON:0000945] \u2192+ process(digestion [GO:0007586])",
@@ -5663,30 +5678,6 @@
 "fact": "temporal lobe [UBERON:0001871] has part structure that is capable of memory [GO:0007613]",
 "score": 5.176,
 "path_min": 4.865,
-"depth": 1,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "These reactions \u2293 in taxon (prokaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2)] occurs in inner layer [GO:0005743]",
-"score": 5.135,
-"path_min": 5.135,
-"depth": 1,
-"rule": "isaInherit",
-"hub_survivor": true
-},
-{
-"fact": "cytochrome c oxidase [GO:0045277] occurs in inner layer [GO:0005743]",
-"score": 5.135,
-"path_min": 5.135,
-"depth": 1,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "a process [GO:0006119] has part that occurs in inner layer [GO:0005743]",
-"score": 5.135,
-"path_min": 5.135,
 "depth": 1,
 "rule": "relChain",
 "hub_survivor": true
@@ -5719,6 +5710,15 @@
 },
 {
 "fact": "These reactions \u2293 in taxon (prokaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2)] \u2192\u2212 process(cell death [GO:0008219])",
+"score": 5.081,
+"path_min": 5.081,
+"depth": 2,
+"rule": "viaAmount",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "These reactions \u2293 in taxon (eukaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2759)] \u2192\u2212 process(cell death [GO:0008219])",
 "score": 5.081,
 "path_min": 5.081,
 "depth": 2,
@@ -6127,6 +6127,14 @@
 "hub_survivor": true
 },
 {
+"fact": "meiosis \u2293 in taxon (NCBITaxon:3193) [GO:0051321&RO:0002162=(NCBITaxon:3193)] happens during mitotic phase [GO:0000087]",
+"score": 5.01,
+"path_min": 5.01,
+"depth": 2,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
 "fact": "meiosis \u2293 in taxon (animals) [GO:0051321&RO:0002162=(NCBITaxon:33208)] happens during mitotic phase [GO:0000087]",
 "score": 5.01,
 "path_min": 5.01,
@@ -6181,6 +6189,14 @@
 "depth": 2,
 "rule": "relChain",
 "hub_survivor": true
+},
+{
+"fact": "meiosis \u2293 in taxon (NCBITaxon:3193) [GO:0051321&RO:0002162=(NCBITaxon:3193)] is_a arise from [GO:0051301]",
+"score": 5.01,
+"path_min": 5.01,
+"depth": 1,
+"rule": "relTrans",
+"hub_survivor": false
 },
 {
 "fact": "meiosis \u2293 in taxon (animals) [GO:0051321&RO:0002162=(NCBITaxon:33208)] is_a arise from [GO:0051301]",
@@ -6271,6 +6287,22 @@
 "hub_survivor": true
 },
 {
+"fact": "meiosis \u2293 in taxon (NCBITaxon:3193) [GO:0051321&RO:0002162=(NCBITaxon:3193)] has output gametes [CL:0000300]",
+"score": 5.01,
+"path_min": 5.01,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "meiosis \u2293 in taxon (NCBITaxon:3193) [GO:0051321&RO:0002162=(NCBITaxon:3193)] has output haploid cell [CL:0000413]",
+"score": 5.01,
+"path_min": 5.01,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
 "fact": "meiosis \u2293 in taxon (animals) [GO:0051321&RO:0002162=(NCBITaxon:33208)] has output gametes [CL:0000300]",
 "score": 5.01,
 "path_min": 5.01,
@@ -6344,6 +6376,15 @@
 "flags": []
 },
 {
+"fact": "constricting \u2293 occurs in (smooth muscle cells) [GO:0042310&BFO:0000066=(CL:0000192)] \u2192\u2212 process(blood flow [GO:0008015])",
+"score": 4.949,
+"path_min": 4.949,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
+},
+{
 "fact": "contract \u2293 occurs in (atria) [GO:0060048&BFO:0000066=(UBERON:0002081)] \u2192+ process(blood flow [GO:0008015])",
 "score": 4.949,
 "path_min": 4.949,
@@ -6357,6 +6398,15 @@
 "score": 4.949,
 "path_min": 4.949,
 "depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "meiosis \u2293 in taxon (NCBITaxon:3193) [GO:0051321&RO:0002162=(NCBITaxon:3193)] \u2192+ process(growth [GO:0040007])",
+"score": 4.914,
+"path_min": 4.914,
+"depth": 2,
 "rule": "isaInheritEffect",
 "hub_survivor": true,
 "flags": []
@@ -6413,6 +6463,70 @@
 "depth": 1,
 "rule": "isaInherit",
 "hub_survivor": true
+},
+{
+"fact": "hypothalamus \u2293 located in (hypothalamus) \u2293 in taxon (NCBITaxon:7742) [UBERON:0001898&RO:0001025=(UBERON:0001898)&RO:0002162=(NCBITaxon:7742)] produces antidiuretic hormone [CHEBI:34543]",
+"score": 4.9,
+"path_min": 4.9,
+"depth": 2,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "hypothalamus \u2293 located in (hypothalamus) \u2293 in taxon (NCBITaxon:7742) [UBERON:0001898&RO:0001025=(UBERON:0001898)&RO:0002162=(NCBITaxon:7742)] produces oxytocin [CHEBI:7872]",
+"score": 4.9,
+"path_min": 4.9,
+"depth": 2,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "hypothalamus \u2293 located in (hypothalamus) \u2293 in taxon (NCBITaxon:7742) [UBERON:0001898&RO:0001025=(UBERON:0001898)&RO:0002162=(NCBITaxon:7742)] is_a hypothalamus [UBERON:0001898]",
+"score": 4.9,
+"path_min": 4.9,
+"depth": 1,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "UBERON:0001898&RO:0001025=(UBERON:0001898) [UBERON:0001898&RO:0001025=(UBERON:0001898)] produces antidiuretic hormone [CHEBI:34543]",
+"score": 4.9,
+"path_min": 4.9,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "UBERON:0001898&RO:0001025=(UBERON:0001898) [UBERON:0001898&RO:0001025=(UBERON:0001898)] produces oxytocin [CHEBI:7872]",
+"score": 4.9,
+"path_min": 4.9,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "antibodies [GO:0019814] \u2192+ amount(antibodies \u2293 located in (immune system) [GO:0019814&RO:0001025=(UBERON:0002405)])",
+"score": 4.879,
+"path_min": 4.879,
+"depth": 3,
+"rule": "viaAmount",
+"hub_survivor": true,
+"flags": [
+"feedback",
+"loop"
+]
+},
+{
+"fact": "antibodies [GO:0019814] \u2192\u2212 amount(antibodies \u2293 located in (immune system) [GO:0019814&RO:0001025=(UBERON:0002405)])",
+"score": 4.879,
+"path_min": 4.879,
+"depth": 1,
+"rule": "viaAmount",
+"hub_survivor": true,
+"flags": [
+"feedback",
+"loop"
+]
 },
 {
 "fact": "flagellum [GO:0031514] overlaps mitotic spindle [GO:0072686]",
@@ -6495,11 +6609,35 @@
 "hub_survivor": false
 },
 {
-"fact": "alternative mRNA splicing, via spliceosome \u2293 in taxon (NCBITaxon:2759) [GO:0000380&RO:0002162=(NCBITaxon:2759)] is_a post-transcriptional regulation of gene expression [GO:0010608]",
-"score": 4.875,
-"path_min": 4.875,
+"fact": "frontal lobe \u2293 in taxon (Mammalia) [UBERON:0016525&RO:0002162=(NCBITaxon:40674)] has part structure that is capable of olfaction [GO:0007608]",
+"score": 4.874,
+"path_min": 4.874,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "frontal lobe \u2293 in taxon (Mammalia) [UBERON:0016525&RO:0002162=(NCBITaxon:40674)] has part structure that is capable of motor function [GO:0061744]",
+"score": 4.874,
+"path_min": 4.874,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "frontal lobe \u2293 in taxon (Mammalia) [UBERON:0016525&RO:0002162=(NCBITaxon:40674)] has part motor cortex [UBERON:0001384]",
+"score": 4.874,
+"path_min": 4.874,
 "depth": 1,
-"rule": "relTrans",
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "frontal lobe \u2293 in taxon (Mammalia) [UBERON:0016525&RO:0002162=(NCBITaxon:40674)] has part olfactory bulb [UBERON:0002264]",
+"score": 4.874,
+"path_min": 4.874,
+"depth": 1,
+"rule": "isaInherit",
 "hub_survivor": true
 },
 {
@@ -6560,30 +6698,6 @@
 "flags": []
 },
 {
-"fact": "stomach [UBERON:0000945] has part microtubule [GO:0005874]",
-"score": 4.817,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "salivary glands [UBERON:0001044] has part microtubule [GO:0005874]",
-"score": 4.817,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "gallbladder [UBERON:0002110] has part microtubule [GO:0005874]",
-"score": 4.817,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "centrosome \u2293 in taxon (NCBITaxon:33208) [GO:0005813&RO:0002162=(NCBITaxon:33208)] has part microtubule [GO:0005874]",
 "score": 4.817,
 "path_min": 4.817,
@@ -6605,6 +6719,94 @@
 "path_min": 4.817,
 "depth": 1,
 "rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "ganglion \u2293 in taxon (Platyhelminthes) [UBERON:0000045&RO:0002162=(NCBITaxon:6157)] has part polypeptide [CHEBI:15841]",
+"score": 4.799,
+"path_min": 1.392,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "ganglion \u2293 in taxon (Platyhelminthes) [UBERON:0000045&RO:0002162=(NCBITaxon:6157)] has part ribosomal RNA [CHEBI:18111]",
+"score": 4.799,
+"path_min": 1.392,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "ganglion \u2293 in taxon (Platyhelminthes) [UBERON:0000045&RO:0002162=(NCBITaxon:6157)] has part nitrogenous base [CHEBI:18282]",
+"score": 4.799,
+"path_min": 1.392,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "ganglion \u2293 in taxon (Platyhelminthes) [UBERON:0000045&RO:0002162=(NCBITaxon:6157)] has part phosphorus atom [CHEBI:28659]",
+"score": 4.799,
+"path_min": 1.392,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "ganglion \u2293 in taxon (Platyhelminthes) [UBERON:0000045&RO:0002162=(NCBITaxon:6157)] has part 2-deoxy-D-ribose [CHEBI:28816]",
+"score": 4.799,
+"path_min": 1.392,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "ganglion \u2293 in taxon (Platyhelminthes) [UBERON:0000045&RO:0002162=(NCBITaxon:6157)] has part phosphate group [CHEBI:32958]",
+"score": 4.799,
+"path_min": 1.392,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "ganglion \u2293 in taxon (Platyhelminthes) [UBERON:0000045&RO:0002162=(NCBITaxon:6157)] has part amino acids [CHEBI:33709]",
+"score": 4.799,
+"path_min": 1.392,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "ganglion \u2293 in taxon (Platyhelminthes) [UBERON:0000045&RO:0002162=(NCBITaxon:6157)] has part nucleotides [CHEBI:36976]",
+"score": 4.799,
+"path_min": 1.392,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "ganglion \u2293 in taxon (Platyhelminthes) [UBERON:0000045&RO:0002162=(NCBITaxon:6157)] has part polymer [CHEBI:60027]",
+"score": 4.799,
+"path_min": 1.392,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "ganglion \u2293 in taxon (Platyhelminthes) [UBERON:0000045&RO:0002162=(NCBITaxon:6157)] has part large subunit [GO:0015934]",
+"score": 4.799,
+"path_min": 1.392,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "ganglion \u2293 in taxon (Platyhelminthes) [UBERON:0000045&RO:0002162=(NCBITaxon:6157)] has part small subunit [GO:0015935]",
+"score": 4.799,
+"path_min": 1.392,
+"depth": 3,
+"rule": "relTrans",
 "hub_survivor": true
 },
 {
@@ -6648,12 +6850,68 @@
 "hub_survivor": true
 },
 {
+"fact": "ganglion \u2293 in taxon (Platyhelminthes) [UBERON:0000045&RO:0002162=(NCBITaxon:6157)] overlaps ribosomes [GO:0005840]",
+"score": 4.799,
+"path_min": 1.392,
+"depth": 3,
+"rule": "relChain",
+"hub_survivor": false
+},
+{
 "fact": "ganglion [UBERON:0000045] overlaps ribosomes [GO:0005840]",
 "score": 4.799,
 "path_min": 1.392,
 "depth": 3,
 "rule": "relChain",
 "hub_survivor": false
+},
+{
+"fact": "ganglion \u2293 in taxon (Platyhelminthes) [UBERON:0000045&RO:0002162=(NCBITaxon:6157)] has part structure that is capable of synthesize proteins [GO:0006412]",
+"score": 4.799,
+"path_min": 1.392,
+"depth": 3,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "ganglion \u2293 in taxon (Platyhelminthes) [UBERON:0000045&RO:0002162=(NCBITaxon:6157)] has part structure that is capable of ATP biosynthetic process [GO:0006754]",
+"score": 4.799,
+"path_min": 1.392,
+"depth": 3,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "ganglion \u2293 in taxon (Platyhelminthes) [UBERON:0000045&RO:0002162=(NCBITaxon:6157)] has part structure that is capable of carbohydrate biosynthetic process [GO:0016051]",
+"score": 4.799,
+"path_min": 1.392,
+"depth": 3,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "ganglion \u2293 in taxon (Platyhelminthes) [UBERON:0000045&RO:0002162=(NCBITaxon:6157)] has part structure that is capable of cellular respiration [GO:0045333]",
+"score": 4.799,
+"path_min": 1.392,
+"depth": 3,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "ganglion \u2293 in taxon (Platyhelminthes) [UBERON:0000045&RO:0002162=(NCBITaxon:6157)] has part structure that is capable of steroid hormone biosynthetic process [GO:0120178]",
+"score": 4.799,
+"path_min": 1.392,
+"depth": 3,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "ganglion \u2293 in taxon (Platyhelminthes) [UBERON:0000045&RO:0002162=(NCBITaxon:6157)] has part structure that is capable of detoxification [GO:1990748]",
+"score": 4.799,
+"path_min": 1.392,
+"depth": 3,
+"rule": "relChain",
+"hub_survivor": true
 },
 {
 "fact": "ganglion [UBERON:0000045] has part structure that is capable of synthesize proteins [GO:0006412]",
@@ -6685,6 +6943,54 @@
 "path_min": 1.392,
 "depth": 3,
 "rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "ganglion \u2293 in taxon (Platyhelminthes) [UBERON:0000045&RO:0002162=(NCBITaxon:6157)] has part DNA [CHEBI:16991]",
+"score": 4.799,
+"path_min": 1.392,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": false
+},
+{
+"fact": "ganglion \u2293 in taxon (Platyhelminthes) [UBERON:0000045&RO:0002162=(NCBITaxon:6157)] has part ribosomes [GO:0005761]",
+"score": 4.799,
+"path_min": 1.392,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "ganglion \u2293 in taxon (Platyhelminthes) [UBERON:0000045&RO:0002162=(NCBITaxon:6157)] has part smooth endoplasmic reticulum [GO:0005790]",
+"score": 4.799,
+"path_min": 1.392,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "ganglion \u2293 in taxon (Platyhelminthes) [UBERON:0000045&RO:0002162=(NCBITaxon:6157)] has part ribosomes [GO:0005840]",
+"score": 4.799,
+"path_min": 1.392,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": false
+},
+{
+"fact": "ganglion \u2293 in taxon (Platyhelminthes) [UBERON:0000045&RO:0002162=(NCBITaxon:6157)] has part node of Ranvier [GO:0033268]",
+"score": 4.799,
+"path_min": 1.392,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "ganglion \u2293 in taxon (Platyhelminthes) [UBERON:0000045&RO:0002162=(NCBITaxon:6157)] has part neuronal cell body [GO:0043025]",
+"score": 4.799,
+"path_min": 1.392,
+"depth": 2,
+"rule": "relTrans",
 "hub_survivor": true
 },
 {
@@ -6798,38 +7104,6 @@
 "depth": 1,
 "rule": "relTrans",
 "hub_survivor": true
-},
-{
-"fact": "stomach [UBERON:0000945] has part polysaccharide [CHEBI:18154]",
-"score": 4.798,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "salivary glands [UBERON:0001044] has part polysaccharide [CHEBI:18154]",
-"score": 4.798,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "gallbladder [UBERON:0002110] has part polysaccharide [CHEBI:18154]",
-"score": 4.798,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "prokaryotic cell [CL:0000520] has part polysaccharide [CHEBI:18154]",
-"score": 4.798,
-"path_min": 4.506,
-"depth": 2,
-"rule": "isaGeneralise",
-"hub_survivor": false
 },
 {
 "fact": "plant cell wall \u2293 in taxon (NCBITaxon:33090) [GO:0009505&RO:0002162=(NCBITaxon:33090)] has part polysaccharide [CHEBI:18154]",
@@ -7008,34 +7282,18 @@
 "hub_survivor": true
 },
 {
+"fact": "ganglion \u2293 in taxon (Platyhelminthes) [UBERON:0000045&RO:0002162=(NCBITaxon:6157)] has part dendrite [GO:0030425]",
+"score": 4.676,
+"path_min": 1.392,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
 "fact": "ganglion [UBERON:0000045] has part dendrite [GO:0030425]",
 "score": 4.676,
 "path_min": 1.392,
 "depth": 1,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "stomach [UBERON:0000945] has part lysosomes [GO:0005764]",
-"score": 4.65,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "salivary glands [UBERON:0001044] has part lysosomes [GO:0005764]",
-"score": 4.65,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "gallbladder [UBERON:0002110] has part lysosomes [GO:0005764]",
-"score": 4.65,
-"path_min": 0.002,
-"depth": 2,
 "rule": "relTrans",
 "hub_survivor": true
 },
@@ -7068,6 +7326,14 @@
 "score": 4.65,
 "path_min": 0.002,
 "depth": 1,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "ganglion \u2293 in taxon (Platyhelminthes) [UBERON:0000045&RO:0002162=(NCBITaxon:6157)] has part structure that is capable of alcohol metabolism [GO:0006066]",
+"score": 4.647,
+"path_min": 1.392,
+"depth": 3,
 "rule": "relChain",
 "hub_survivor": true
 },
@@ -7216,33 +7482,6 @@
 "hub_survivor": false
 },
 {
-"fact": "stomach [UBERON:0000945] \u2192+ process(homeostatic process [GO:0042592])",
-"score": 4.54,
-"path_min": 0.322,
-"depth": 1,
-"rule": "isaInheritEffect",
-"hub_survivor": true,
-"flags": []
-},
-{
-"fact": "salivary glands [UBERON:0001044] \u2192+ process(homeostatic process [GO:0042592])",
-"score": 4.54,
-"path_min": 0.322,
-"depth": 1,
-"rule": "isaInheritEffect",
-"hub_survivor": true,
-"flags": []
-},
-{
-"fact": "gallbladder [UBERON:0002110] \u2192+ process(homeostatic process [GO:0042592])",
-"score": 4.54,
-"path_min": 0.322,
-"depth": 1,
-"rule": "isaInheritEffect",
-"hub_survivor": true,
-"flags": []
-},
-{
 "fact": "lungs [UBERON:0002048] \u2192\u2212 process(erythropoiesis \u2293 occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])",
 "score": 4.537,
 "path_min": 4.537,
@@ -7279,6 +7518,14 @@
 "flags": []
 },
 {
+"fact": "alveoli \u2293 located in (lung) [UBERON:0002299&RO:0001025=(UBERON:0002048)] part of lungs [UBERON:0002048]",
+"score": 4.537,
+"path_min": 4.537,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
 "fact": "Gas exchange [GO:0007585] occurs in lungs [UBERON:0002048]",
 "score": 4.537,
 "path_min": 4.537,
@@ -7299,6 +7546,14 @@
 "score": 4.532,
 "path_min": 3.698,
 "depth": 1,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "ganglion \u2293 in taxon (Platyhelminthes) [UBERON:0000045&RO:0002162=(NCBITaxon:6157)] has part structure that is capable of lipid biosynthetic process [GO:0008610]",
+"score": 4.528,
+"path_min": 1.392,
+"depth": 3,
 "rule": "relChain",
 "hub_survivor": true
 },
@@ -7327,14 +7582,6 @@
 "hub_survivor": true
 },
 {
-"fact": "cell wall \u2293 in taxon (NCBITaxon:2) [GO:0005618&RO:0002162=(NCBITaxon:2)] has part polysaccharide [CHEBI:18154]",
-"score": 4.506,
-"path_min": 4.506,
-"depth": 2,
-"rule": "isaGeneralise",
-"hub_survivor": true
-},
-{
 "fact": "cell wall \u2293 in taxon (NCBITaxon:2) [GO:0005618&RO:0002162=(NCBITaxon:2)] has part carbon atoms [CHEBI:27594]",
 "score": 4.506,
 "path_min": 3.639,
@@ -7343,15 +7590,7 @@
 "hub_survivor": true
 },
 {
-"fact": "cell walls \u2293 in taxon (plant cells) [GO:0005618&RO:0002162=(NCBITaxon:33090)] has part polysaccharide [CHEBI:18154]",
-"score": 4.506,
-"path_min": 4.506,
-"depth": 2,
-"rule": "isaGeneralise",
-"hub_survivor": true
-},
-{
-"fact": "cell walls \u2293 in taxon (plant cells) [GO:0005618&RO:0002162=(NCBITaxon:33090)] has part carbon atoms [CHEBI:27594]",
+"fact": "cell wall \u2293 in taxon (plants) [GO:0005618&RO:0002162=(NCBITaxon:33090)] has part carbon atoms [CHEBI:27594]",
 "score": 4.506,
 "path_min": 3.639,
 "depth": 2,
@@ -7375,7 +7614,7 @@
 "hub_survivor": true
 },
 {
-"fact": "cell walls \u2293 in taxon (plant cells) [GO:0005618&RO:0002162=(NCBITaxon:33090)] overlaps food [CHEBI:33290]",
+"fact": "cell wall \u2293 in taxon (plants) [GO:0005618&RO:0002162=(NCBITaxon:33090)] overlaps food [CHEBI:33290]",
 "score": 4.506,
 "path_min": 3.639,
 "depth": 2,
@@ -7400,7 +7639,7 @@
 "flags": []
 },
 {
-"fact": "cell walls \u2293 in taxon (plant cells) [GO:0005618&RO:0002162=(NCBITaxon:33090)] \u2192\u2212 process(cell lysis [GO:0019835])",
+"fact": "cell wall \u2293 in taxon (plants) [GO:0005618&RO:0002162=(NCBITaxon:33090)] \u2192\u2212 process(cell lysis [GO:0019835])",
 "score": 4.506,
 "path_min": 4.506,
 "depth": 1,
@@ -7418,7 +7657,7 @@
 "flags": []
 },
 {
-"fact": "cell walls \u2293 in taxon (plant cells) [GO:0005618&RO:0002162=(NCBITaxon:33090)] \u2192+ process(maintain its shape [GO:0008360])",
+"fact": "cell wall \u2293 in taxon (plants) [GO:0005618&RO:0002162=(NCBITaxon:33090)] \u2192+ process(maintain its shape [GO:0008360])",
 "score": 4.506,
 "path_min": 4.506,
 "depth": 1,
@@ -7427,35 +7666,19 @@
 "flags": []
 },
 {
-"fact": "cell wall \u2293 in taxon (NCBITaxon:2) [GO:0005618&RO:0002162=(NCBITaxon:2)] has part cellulose [CHEBI:18246]",
-"score": 4.506,
-"path_min": 4.506,
-"depth": 1,
-"rule": "isaInherit",
-"hub_survivor": true
-},
-{
-"fact": "cell walls \u2293 in taxon (plant cells) [GO:0005618&RO:0002162=(NCBITaxon:33090)] has part cellulose [CHEBI:18246]",
-"score": 4.506,
-"path_min": 4.506,
-"depth": 1,
-"rule": "isaInherit",
-"hub_survivor": true
-},
-{
-"fact": "cell walls \u2293 in taxon (plant cells) [GO:0005618&RO:0002162=(NCBITaxon:33090)] has part peptidoglycan [CHEBI:8005]",
-"score": 4.506,
-"path_min": 4.506,
-"depth": 1,
-"rule": "isaInherit",
-"hub_survivor": true
-},
-{
-"fact": "cell wall [GO:0005618] has part polysaccharide [CHEBI:18154]",
+"fact": "cell wall \u2293 in taxon (plants) [GO:0005618&RO:0002162=(NCBITaxon:33090)] has part polysaccharide [CHEBI:18154]",
 "score": 4.506,
 "path_min": 4.506,
 "depth": 1,
 "rule": "isaGeneralise",
+"hub_survivor": true
+},
+{
+"fact": "cell wall \u2293 in taxon (plants) [GO:0005618&RO:0002162=(NCBITaxon:33090)] has part peptidoglycan [CHEBI:8005]",
+"score": 4.506,
+"path_min": 4.506,
+"depth": 1,
+"rule": "isaInherit",
 "hub_survivor": true
 },
 {
@@ -7515,6 +7738,14 @@
 "hub_survivor": true
 },
 {
+"fact": "ganglion \u2293 in taxon (Platyhelminthes) [UBERON:0000045&RO:0002162=(NCBITaxon:6157)] has part Golgi apparatus [GO:0005794]",
+"score": 4.421,
+"path_min": 1.392,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
 "fact": "ganglion [UBERON:0000045] has part Golgi apparatus [GO:0005794]",
 "score": 4.421,
 "path_min": 1.392,
@@ -7537,27 +7768,6 @@
 "depth": 1,
 "rule": "relChain",
 "hub_survivor": true
-},
-{
-"fact": "ion channel activity [GO:0005216] \u2192\u2212 amount(aldosterone \u2293 located in (blood) [CHEBI:27584&RO:0001025=(UBERON:0000178)])",
-"score": 4.332,
-"path_min": 4.332,
-"depth": 1,
-"rule": "viaAmount",
-"hub_survivor": true,
-"flags": []
-},
-{
-"fact": "ion channel activity [GO:0005216] \u2192+ process(membrane depolarization [GO:0051899])",
-"score": 4.332,
-"path_min": 4.332,
-"depth": 1,
-"rule": "viaAmount",
-"hub_survivor": true,
-"flags": [
-"feedback",
-"loop"
-]
 },
 {
 "fact": "photosynthesis \u2293 occurs in (chloroplast) [GO:0015979&BFO:0000066=(GO:0009507)] has part that occurs in thylakoids [GO:0009579]",
@@ -7608,6 +7818,14 @@
 "hub_survivor": true
 },
 {
+"fact": "ganglion \u2293 in taxon (Platyhelminthes) [UBERON:0000045&RO:0002162=(NCBITaxon:6157)] has part axon [GO:0030424]",
+"score": 4.219,
+"path_min": 1.392,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
 "fact": "axon \u2293 located in (spinal cord) [GO:0030424&RO:0001025=(UBERON:0002240)] has part node of Ranvier [GO:0033268]",
 "score": 4.219,
 "path_min": 4.219,
@@ -7645,6 +7863,14 @@
 "path_min": 4.213,
 "depth": 1,
 "rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "meiosis \u2293 in taxon (NCBITaxon:3193) [GO:0051321&RO:0002162=(NCBITaxon:3193)] part of sexual reproduction [GO:0019953]",
+"score": 4.213,
+"path_min": 4.213,
+"depth": 1,
+"rule": "isaInherit",
 "hub_survivor": true
 },
 {
@@ -7757,6 +7983,14 @@
 "path_min": 4.056,
 "depth": 2,
 "rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "meiosis \u2293 in taxon (NCBITaxon:3193) [GO:0051321&RO:0002162=(NCBITaxon:3193)] part of cell cycle [GO:0007049]",
+"score": 4.056,
+"path_min": 4.056,
+"depth": 2,
+"rule": "isaInherit",
 "hub_survivor": true
 },
 {
@@ -8072,6 +8306,14 @@
 "hub_survivor": false
 },
 {
+"fact": "ganglion \u2293 in taxon (Platyhelminthes) [UBERON:0000045&RO:0002162=(NCBITaxon:6157)] has part Mitochondria [GO:0005739]",
+"score": 4.05,
+"path_min": 1.392,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": false
+},
+{
 "fact": "Mitochondria [GO:0005739] overlaps ribosomes [GO:0005840]",
 "score": 4.05,
 "path_min": 4.05,
@@ -8137,6 +8379,14 @@
 },
 {
 "fact": "These reactions \u2293 in taxon (prokaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2)] occurs in Mitochondria [GO:0005739]",
+"score": 4.05,
+"path_min": 4.05,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "These reactions \u2293 in taxon (eukaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2759)] occurs in Mitochondria [GO:0005739]",
 "score": 4.05,
 "path_min": 4.05,
 "depth": 1,
@@ -8248,19 +8498,69 @@
 "hub_survivor": true
 },
 {
+"fact": "kidneys \u2293 in taxon (mammalian systems) [UBERON:0002113&RO:0002162=(NCBITaxon:40674)] has part structure that is capable of filter [GO:0003094]",
+"score": 3.932,
+"path_min": 3.932,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "kidneys \u2293 in taxon (mammalian systems) [UBERON:0002113&RO:0002162=(NCBITaxon:40674)] \u2192\u2212 amount(water [CHEBI:15377])",
+"score": 3.932,
+"path_min": 3.932,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "kidneys \u2293 in taxon (mammalian systems) [UBERON:0002113&RO:0002162=(NCBITaxon:40674)] \u2192+ process(ion homeostasis [GO:0050801])",
+"score": 3.932,
+"path_min": 3.932,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": true,
+"flags": []
+},
+{
+"fact": "kidneys \u2293 in taxon (mammalian systems) [UBERON:0002113&RO:0002162=(NCBITaxon:40674)] has part outer cortex [UBERON:0001225]",
+"score": 3.932,
+"path_min": 3.932,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "kidneys \u2293 in taxon (mammalian systems) [UBERON:0002113&RO:0002162=(NCBITaxon:40674)] has part nephrons [UBERON:0001285]",
+"score": 3.932,
+"path_min": 3.932,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "kidneys \u2293 in taxon (mammalian systems) [UBERON:0002113&RO:0002162=(NCBITaxon:40674)] located in coelemic cavity lumen [UBERON:0002323]",
+"score": 3.932,
+"path_min": 3.932,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "kidneys \u2293 in taxon (mammalian systems) [UBERON:0002113&RO:0002162=(NCBITaxon:40674)] capable of filter [GO:0003094]",
+"score": 3.932,
+"path_min": 3.932,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
 "fact": "kidneys [UBERON:0002113] has part structure that is capable of filter [GO:0003094]",
 "score": 3.932,
 "path_min": 3.932,
 "depth": 1,
 "rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "muscle tissue [UBERON:0002385] has part polysaccharide [CHEBI:18154]",
-"score": 3.905,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
 "hub_survivor": true
 },
 {
@@ -8320,14 +8620,6 @@
 "hub_survivor": true
 },
 {
-"fact": "muscle tissue [UBERON:0002385] has part microtubule [GO:0005874]",
-"score": 3.905,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "muscle tissue [UBERON:0002385] overlaps food [CHEBI:33290]",
 "score": 3.905,
 "path_min": 0.002,
@@ -8342,14 +8634,6 @@
 "depth": 3,
 "rule": "relChain",
 "hub_survivor": false
-},
-{
-"fact": "muscle tissue [UBERON:0002385] overlaps mitotic spindle [GO:0072686]",
-"score": 3.905,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relChain",
-"hub_survivor": true
 },
 {
 "fact": "muscle tissue [UBERON:0002385] has part structure that is capable of synthesize proteins [GO:0006412]",
@@ -8384,14 +8668,6 @@
 "hub_survivor": true
 },
 {
-"fact": "muscle tissue [UBERON:0002385] has part cellulose [CHEBI:18246]",
-"score": 3.905,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "muscle tissue [UBERON:0002385] has part proteins [CHEBI:36080]",
 "score": 3.905,
 "path_min": 0.002,
@@ -8416,60 +8692,12 @@
 "hub_survivor": true
 },
 {
-"fact": "muscle tissue [UBERON:0002385] has part lysosomes [GO:0005764]",
-"score": 3.905,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "muscle tissue [UBERON:0002385] has part centrosome [GO:0005813]",
-"score": 3.905,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "muscle tissue [UBERON:0002385] has part centrioles [GO:0005814]",
-"score": 3.905,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "muscle tissue [UBERON:0002385] has part ribosomes [GO:0005840]",
 "score": 3.905,
 "path_min": 0.002,
 "depth": 2,
 "rule": "relTrans",
 "hub_survivor": false
-},
-{
-"fact": "muscle tissue [UBERON:0002385] has part tight junction [GO:0005923]",
-"score": 3.905,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "muscle tissue [UBERON:0002385] has part plant cell wall [GO:0009505]",
-"score": 3.905,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "muscle tissue [UBERON:0002385] has part plasmodesma [GO:0009506]",
-"score": 3.905,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
 },
 {
 "fact": "muscle tissue [UBERON:0002385] has part large subunit [GO:0015934]",
@@ -8517,6 +8745,14 @@
 "path_min": 0.002,
 "depth": 2,
 "rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "ganglion \u2293 in taxon (Platyhelminthes) [UBERON:0000045&RO:0002162=(NCBITaxon:6157)] has part chromatin [GO:0000785]",
+"score": 3.859,
+"path_min": 1.392,
+"depth": 2,
+"rule": "relTrans",
 "hub_survivor": true
 },
 {
@@ -8762,7 +8998,7 @@
 "hub_survivor": false
 },
 {
-"fact": "cell walls \u2293 in taxon (plant cells) [GO:0005618&RO:0002162=(NCBITaxon:33090)] has part sugars [CHEBI:16646]",
+"fact": "cell wall \u2293 in taxon (plants) [GO:0005618&RO:0002162=(NCBITaxon:33090)] has part sugars [CHEBI:16646]",
 "score": 3.639,
 "path_min": 3.639,
 "depth": 2,
@@ -8969,14 +9205,6 @@
 },
 {
 "fact": "renal system [UBERON:0001008] has part structure that is capable of filter [GO:0003094]",
-"score": 3.519,
-"path_min": 3.519,
-"depth": 1,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "renal system [UBERON:0001008] has part structure that is capable of osmotic balance [GO:0050891]",
 "score": 3.519,
 "path_min": 3.519,
 "depth": 1,
@@ -9578,6 +9806,14 @@
 "hub_survivor": true
 },
 {
+"fact": "cerebral cortex \u2293 in taxon (Mammalia) [UBERON:0000956&RO:0002162=(NCBITaxon:40674)] part of cerebral hemisphere [UBERON:0001869]",
+"score": 3.04,
+"path_min": 3.04,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
 "fact": "temporal lobe [UBERON:0001871] part of cerebral hemisphere [UBERON:0001869]",
 "score": 3.04,
 "path_min": 3.04,
@@ -9595,6 +9831,14 @@
 },
 {
 "fact": "occipital lobe [UBERON:0002021] part of cerebral hemisphere [UBERON:0001869]",
+"score": 3.04,
+"path_min": 3.04,
+"depth": 1,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "frontal lobe \u2293 in taxon (Mammalia) [UBERON:0016525&RO:0002162=(NCBITaxon:40674)] part of cerebral hemisphere [UBERON:0001869]",
 "score": 3.04,
 "path_min": 3.04,
 "depth": 1,
@@ -9634,6 +9878,14 @@
 "hub_survivor": true
 },
 {
+"fact": "frontal lobe \u2293 in taxon (Mammalia) [UBERON:0016525&RO:0002162=(NCBITaxon:40674)] overlaps cerebral hemisphere [UBERON:0001869]",
+"score": 3.04,
+"path_min": 3.04,
+"depth": 1,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
 "fact": "frontal lobe [UBERON:0016525] overlaps cerebral hemisphere [UBERON:0001869]",
 "score": 3.04,
 "path_min": 3.04,
@@ -9655,6 +9907,14 @@
 "path_min": 2.995,
 "depth": 3,
 "rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "ganglion \u2293 in taxon (Platyhelminthes) [UBERON:0000045&RO:0002162=(NCBITaxon:6157)] overlaps chromosome [GO:0005694]",
+"score": 2.995,
+"path_min": 1.392,
+"depth": 3,
+"rule": "relChain",
 "hub_survivor": true
 },
 {
@@ -10043,7 +10303,7 @@
 "hub_survivor": true
 },
 {
-"fact": "desmosome [GO:0030057] part of structure that is capable of transmembrane transport [GO:0055085]",
+"fact": "desmosome \u2293 in taxon (NCBITaxon:33208) [GO:0030057&RO:0002162=(NCBITaxon:33208)] part of structure that is capable of transmembrane transport [GO:0055085]",
 "score": 2.793,
 "path_min": 0.002,
 "depth": 1,
@@ -10141,6 +10401,14 @@
 },
 {
 "fact": "aorta [UBERON:0000947] adjacent to blood vessel [UBERON:0001981]",
+"score": 2.657,
+"path_min": 2.657,
+"depth": 2,
+"rule": "isaGeneralise",
+"hub_survivor": true
+},
+{
+"fact": "alveoli \u2293 located in (lung) [UBERON:0002299&RO:0001025=(UBERON:0002048)] adjacent to blood vessel [UBERON:0001981]",
 "score": 2.657,
 "path_min": 2.657,
 "depth": 2,
@@ -10316,6 +10584,14 @@
 "path_min": 2.516,
 "depth": 1,
 "rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "ganglion \u2293 in taxon (Platyhelminthes) [UBERON:0000045&RO:0002162=(NCBITaxon:6157)] overlaps gray matter [UBERON:0002020]",
+"score": 2.446,
+"path_min": 1.392,
+"depth": 2,
+"rule": "relChain",
 "hub_survivor": true
 },
 {
@@ -10826,22 +11102,6 @@
 "hub_survivor": true
 },
 {
-"fact": "digestive system [UBERON:0001007] has part polysaccharide [CHEBI:18154]",
-"score": 2.193,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "digestive system [UBERON:0001007] has part cellulose [CHEBI:18246]",
-"score": 2.193,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "digestive system [UBERON:0001007] has part nitrogenous base [CHEBI:18282]",
 "score": 2.193,
 "path_min": 0.002,
@@ -10922,30 +11182,6 @@
 "hub_survivor": true
 },
 {
-"fact": "digestive system [UBERON:0001007] has part lysosomes [GO:0005764]",
-"score": 2.193,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "digestive system [UBERON:0001007] has part centrosome [GO:0005813]",
-"score": 2.193,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "digestive system [UBERON:0001007] has part centrioles [GO:0005814]",
-"score": 2.193,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "digestive system [UBERON:0001007] has part ribosomes [GO:0005840]",
 "score": 2.193,
 "path_min": 0.002,
@@ -10954,44 +11190,12 @@
 "hub_survivor": false
 },
 {
-"fact": "digestive system [UBERON:0001007] has part microtubule [GO:0005874]",
-"score": 2.193,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "digestive system [UBERON:0001007] has part plasma membrane [GO:0005886]",
 "score": 2.193,
 "path_min": 0.002,
 "depth": 3,
 "rule": "relTrans",
 "hub_survivor": false
-},
-{
-"fact": "digestive system [UBERON:0001007] has part tight junction [GO:0005923]",
-"score": 2.193,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "digestive system [UBERON:0001007] has part plant cell wall [GO:0009505]",
-"score": 2.193,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "digestive system [UBERON:0001007] has part plasmodesma [GO:0009506]",
-"score": 2.193,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
 },
 {
 "fact": "digestive system [UBERON:0001007] has part large subunit [GO:0015934]",
@@ -11027,14 +11231,6 @@
 },
 {
 "fact": "digestive system [UBERON:0001007] overlaps endomembrane system [GO:0012505]",
-"score": 2.193,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "digestive system [UBERON:0001007] overlaps mitotic spindle [GO:0072686]",
 "score": 2.193,
 "path_min": 0.002,
 "depth": 3,
@@ -11082,22 +11278,12 @@
 "hub_survivor": true
 },
 {
-"fact": "digestive system [UBERON:0001007] \u2192+ amount(nutrients [CHEBI:33284])",
-"score": 2.193,
-"path_min": 0.004,
-"depth": 1,
-"rule": "isaInheritEffect",
-"hub_survivor": true,
-"flags": []
-},
-{
-"fact": "digestive system [UBERON:0001007] \u2192+ process(homeostatic process [GO:0042592])",
-"score": 2.193,
-"path_min": 0.004,
-"depth": 1,
-"rule": "isaInheritEffect",
-"hub_survivor": true,
-"flags": []
+"fact": "ganglion \u2293 in taxon (Platyhelminthes) [UBERON:0000045&RO:0002162=(NCBITaxon:6157)] has part nucleus [GO:0005634]",
+"score": 2.163,
+"path_min": 1.392,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": false
 },
 {
 "fact": "nuclear membrane \u2293 in taxon (NCBITaxon:2759) [GO:0005635&RO:0002162=(NCBITaxon:2759)] part of nucleus [GO:0005634]",
@@ -11113,14 +11299,6 @@
 "path_min": 1.392,
 "depth": 1,
 "rule": "relTrans",
-"hub_survivor": false
-},
-{
-"fact": "DNA-templated transcription \u2293 in taxon (prokaryotes, which include bacteria and archaea) [GO:0006351&RO:0002162=(NCBITaxon:2)] occurs in nucleus [GO:0005634]",
-"score": 2.163,
-"path_min": 2.163,
-"depth": 1,
-"rule": "isaInherit",
 "hub_survivor": false
 },
 {
@@ -11172,7 +11350,23 @@
 "hub_survivor": false
 },
 {
+"fact": "meiosis \u2293 in taxon (NCBITaxon:3193) [GO:0051321&RO:0002162=(NCBITaxon:3193)] has input nucleus [GO:0005634]",
+"score": 2.163,
+"path_min": 2.163,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
 "fact": "meiosis \u2293 in taxon (animals) [GO:0051321&RO:0002162=(NCBITaxon:33208)] has input nucleus [GO:0005634]",
+"score": 2.163,
+"path_min": 2.163,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "meiosis \u2293 in taxon (NCBITaxon:3193) [GO:0051321&RO:0002162=(NCBITaxon:3193)] has output nucleus [GO:0005634]",
 "score": 2.163,
 "path_min": 2.163,
 "depth": 1,
@@ -11188,11 +11382,139 @@
 "hub_survivor": false
 },
 {
+"fact": "hypothalamus \u2293 located in (hypothalamus) \u2293 in taxon (NCBITaxon:7742) [UBERON:0001898&RO:0001025=(UBERON:0001898)&RO:0002162=(NCBITaxon:7742)] part of brain [UBERON:0000955]",
+"score": 2.026,
+"path_min": 2.026,
+"depth": 2,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "brain \u2293 in taxon (Insecta) [UBERON:0000955&RO:0002162=(NCBITaxon:50557)] overlaps brain [UBERON:0000955]",
+"score": 2.026,
+"path_min": 2.026,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": false
+},
+{
+"fact": "brain \u2293 in taxon (Insecta) [UBERON:0000955&RO:0002162=(NCBITaxon:50557)] overlaps cerebral hemisphere [UBERON:0001869]",
+"score": 2.026,
+"path_min": 2.026,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "brain \u2293 in taxon (Insecta) [UBERON:0000955&RO:0002162=(NCBITaxon:50557)] overlaps thalamus [UBERON:0001897]",
+"score": 2.026,
+"path_min": 2.026,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "brain \u2293 in taxon (Vertebrata) [UBERON:0000955&RO:0002162=(NCBITaxon:7742)] overlaps brain [UBERON:0000955]",
+"score": 2.026,
+"path_min": 2.026,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": false
+},
+{
+"fact": "brain \u2293 in taxon (Vertebrata) [UBERON:0000955&RO:0002162=(NCBITaxon:7742)] overlaps cerebral hemisphere [UBERON:0001869]",
+"score": 2.026,
+"path_min": 2.026,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "brain \u2293 in taxon (Vertebrata) [UBERON:0000955&RO:0002162=(NCBITaxon:7742)] overlaps thalamus [UBERON:0001897]",
+"score": 2.026,
+"path_min": 2.026,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "brain \u2293 in taxon (Insecta) [UBERON:0000955&RO:0002162=(NCBITaxon:50557)] has part structure that is capable of learning [GO:0007612]",
+"score": 2.026,
+"path_min": 2.026,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "brain \u2293 in taxon (Insecta) [UBERON:0000955&RO:0002162=(NCBITaxon:50557)] has part structure that is capable of memory [GO:0007613]",
+"score": 2.026,
+"path_min": 2.026,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "brain \u2293 in taxon (Insecta) [UBERON:0000955&RO:0002162=(NCBITaxon:50557)] has part structure that is capable of motor coordination [GO:0050885]",
+"score": 2.026,
+"path_min": 2.026,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "brain \u2293 in taxon (Insecta) [UBERON:0000955&RO:0002162=(NCBITaxon:50557)] has part structure that is capable of motor function [GO:0061744]",
+"score": 2.026,
+"path_min": 2.026,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "brain \u2293 in taxon (Vertebrata) [UBERON:0000955&RO:0002162=(NCBITaxon:7742)] has part structure that is capable of learning [GO:0007612]",
+"score": 2.026,
+"path_min": 2.026,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "brain \u2293 in taxon (Vertebrata) [UBERON:0000955&RO:0002162=(NCBITaxon:7742)] has part structure that is capable of memory [GO:0007613]",
+"score": 2.026,
+"path_min": 2.026,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "brain \u2293 in taxon (Vertebrata) [UBERON:0000955&RO:0002162=(NCBITaxon:7742)] has part structure that is capable of motor coordination [GO:0050885]",
+"score": 2.026,
+"path_min": 2.026,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "brain \u2293 in taxon (Vertebrata) [UBERON:0000955&RO:0002162=(NCBITaxon:7742)] has part structure that is capable of motor function [GO:0061744]",
+"score": 2.026,
+"path_min": 2.026,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
 "fact": "amygdala [UBERON:0001876] part of brain [UBERON:0000955]",
 "score": 2.026,
 "path_min": 2.026,
 "depth": 1,
 "rule": "relTrans",
+"hub_survivor": false
+},
+{
+"fact": "UBERON:0001898&RO:0001025=(UBERON:0001898) [UBERON:0001898&RO:0001025=(UBERON:0001898)] part of brain [UBERON:0000955]",
+"score": 2.026,
+"path_min": 2.026,
+"depth": 1,
+"rule": "isaInherit",
 "hub_survivor": false
 },
 {
@@ -11202,6 +11524,142 @@
 "depth": 1,
 "rule": "relTrans",
 "hub_survivor": false
+},
+{
+"fact": "frontal lobe \u2293 in taxon (Mammalia) [UBERON:0016525&RO:0002162=(NCBITaxon:40674)] part of brain [UBERON:0000955]",
+"score": 2.026,
+"path_min": 2.026,
+"depth": 1,
+"rule": "relTrans",
+"hub_survivor": false
+},
+{
+"fact": "brain \u2293 in taxon (Insecta) [UBERON:0000955&RO:0002162=(NCBITaxon:50557)] has part limbic system [UBERON:0000349]",
+"score": 2.026,
+"path_min": 2.026,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "brain \u2293 in taxon (Insecta) [UBERON:0000955&RO:0002162=(NCBITaxon:50557)] has part cerebral cortex [UBERON:0000956]",
+"score": 2.026,
+"path_min": 2.026,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "brain \u2293 in taxon (Insecta) [UBERON:0000955&RO:0002162=(NCBITaxon:50557)] has part retina [UBERON:0000966]",
+"score": 2.026,
+"path_min": 2.026,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "brain \u2293 in taxon (Insecta) [UBERON:0000955&RO:0002162=(NCBITaxon:50557)] has part thalamus [UBERON:0001897]",
+"score": 2.026,
+"path_min": 2.026,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "brain \u2293 in taxon (Insecta) [UBERON:0000955&RO:0002162=(NCBITaxon:50557)] has part hypothalamus [UBERON:0001898]",
+"score": 2.026,
+"path_min": 2.026,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "brain \u2293 in taxon (Insecta) [UBERON:0000955&RO:0002162=(NCBITaxon:50557)] has part cerebellum [UBERON:0002037]",
+"score": 2.026,
+"path_min": 2.026,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "brain \u2293 in taxon (Insecta) [UBERON:0000955&RO:0002162=(NCBITaxon:50557)] has part brainstem [UBERON:0002298]",
+"score": 2.026,
+"path_min": 2.026,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "brain \u2293 in taxon (Insecta) [UBERON:0000955&RO:0002162=(NCBITaxon:50557)] has part basal ganglia [UBERON:0002420]",
+"score": 2.026,
+"path_min": 2.026,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "brain \u2293 in taxon (Vertebrata) [UBERON:0000955&RO:0002162=(NCBITaxon:7742)] has part limbic system [UBERON:0000349]",
+"score": 2.026,
+"path_min": 2.026,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "brain \u2293 in taxon (Vertebrata) [UBERON:0000955&RO:0002162=(NCBITaxon:7742)] has part cerebral cortex [UBERON:0000956]",
+"score": 2.026,
+"path_min": 2.026,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "brain \u2293 in taxon (Vertebrata) [UBERON:0000955&RO:0002162=(NCBITaxon:7742)] has part retina [UBERON:0000966]",
+"score": 2.026,
+"path_min": 2.026,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "brain \u2293 in taxon (Vertebrata) [UBERON:0000955&RO:0002162=(NCBITaxon:7742)] has part thalamus [UBERON:0001897]",
+"score": 2.026,
+"path_min": 2.026,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "brain \u2293 in taxon (Vertebrata) [UBERON:0000955&RO:0002162=(NCBITaxon:7742)] has part hypothalamus [UBERON:0001898]",
+"score": 2.026,
+"path_min": 2.026,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "brain \u2293 in taxon (Vertebrata) [UBERON:0000955&RO:0002162=(NCBITaxon:7742)] has part cerebellum [UBERON:0002037]",
+"score": 2.026,
+"path_min": 2.026,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "brain \u2293 in taxon (Vertebrata) [UBERON:0000955&RO:0002162=(NCBITaxon:7742)] has part brainstem [UBERON:0002298]",
+"score": 2.026,
+"path_min": 2.026,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "brain \u2293 in taxon (Vertebrata) [UBERON:0000955&RO:0002162=(NCBITaxon:7742)] has part basal ganglia [UBERON:0002420]",
+"score": 2.026,
+"path_min": 2.026,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
 },
 {
 "fact": "maintain body temperature [GO:0001659] occurs in brain [UBERON:0000955]",
@@ -11284,6 +11742,14 @@
 "hub_survivor": false
 },
 {
+"fact": "frontal lobe \u2293 in taxon (Mammalia) [UBERON:0016525&RO:0002162=(NCBITaxon:40674)] overlaps brain [UBERON:0000955]",
+"score": 2.026,
+"path_min": 2.026,
+"depth": 1,
+"rule": "relChain",
+"hub_survivor": false
+},
+{
 "fact": "frontal lobe [UBERON:0016525] overlaps brain [UBERON:0000955]",
 "score": 2.026,
 "path_min": 2.026,
@@ -11298,6 +11764,38 @@
 "depth": 1,
 "rule": "relChain",
 "hub_survivor": false
+},
+{
+"fact": "brain \u2293 in taxon (Insecta) [UBERON:0000955&RO:0002162=(NCBITaxon:50557)] surrounded by cerebrospinal fluid [UBERON:0001359]",
+"score": 2.026,
+"path_min": 2.026,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "brain \u2293 in taxon (Insecta) [UBERON:0000955&RO:0002162=(NCBITaxon:50557)] surrounded by meninges [UBERON:0002360]",
+"score": 2.026,
+"path_min": 2.026,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "brain \u2293 in taxon (Vertebrata) [UBERON:0000955&RO:0002162=(NCBITaxon:7742)] surrounded by cerebrospinal fluid [UBERON:0001359]",
+"score": 2.026,
+"path_min": 2.026,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "brain \u2293 in taxon (Vertebrata) [UBERON:0000955&RO:0002162=(NCBITaxon:7742)] surrounded by meninges [UBERON:0002360]",
+"score": 2.026,
+"path_min": 2.026,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
 },
 {
 "fact": "brain [UBERON:0000955] has part structure that is capable of learning [GO:0007612]",
@@ -11380,7 +11878,31 @@
 "hub_survivor": true
 },
 {
+"fact": "hypothalamus \u2293 located in (hypothalamus) \u2293 in taxon (NCBITaxon:7742) [UBERON:0001898&RO:0001025=(UBERON:0001898)&RO:0002162=(NCBITaxon:7742)] part of central nervous system [UBERON:0001017]",
+"score": 1.879,
+"path_min": 1.879,
+"depth": 2,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "UBERON:0001898&RO:0001025=(UBERON:0001898) [UBERON:0001898&RO:0001025=(UBERON:0001898)] part of central nervous system [UBERON:0001017]",
+"score": 1.879,
+"path_min": 1.879,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
 "fact": "hippocampus [UBERON:0002421] part of central nervous system [UBERON:0001017]",
+"score": 1.879,
+"path_min": 1.879,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "frontal lobe \u2293 in taxon (Mammalia) [UBERON:0016525&RO:0002162=(NCBITaxon:40674)] part of central nervous system [UBERON:0001017]",
 "score": 1.879,
 "path_min": 1.879,
 "depth": 2,
@@ -11397,6 +11919,22 @@
 },
 {
 "fact": "neuronal cell body [GO:0043025] located in central nervous system [UBERON:0001017]",
+"score": 1.879,
+"path_min": 1.879,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "brain \u2293 in taxon (Insecta) [UBERON:0000955&RO:0002162=(NCBITaxon:50557)] overlaps central nervous system [UBERON:0001017]",
+"score": 1.879,
+"path_min": 1.879,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "brain \u2293 in taxon (Vertebrata) [UBERON:0000955&RO:0002162=(NCBITaxon:7742)] overlaps central nervous system [UBERON:0001017]",
 "score": 1.879,
 "path_min": 1.879,
 "depth": 2,
@@ -11444,7 +11982,31 @@
 "hub_survivor": true
 },
 {
+"fact": "hypothalamus \u2293 located in (hypothalamus) \u2293 in taxon (NCBITaxon:7742) [UBERON:0001898&RO:0001025=(UBERON:0001898)&RO:0002162=(NCBITaxon:7742)] overlaps central nervous system [UBERON:0001017]",
+"score": 1.879,
+"path_min": 1.879,
+"depth": 2,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "UBERON:0001898&RO:0001025=(UBERON:0001898) [UBERON:0001898&RO:0001025=(UBERON:0001898)] overlaps central nervous system [UBERON:0001017]",
+"score": 1.879,
+"path_min": 1.879,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
 "fact": "hippocampus [UBERON:0002421] overlaps central nervous system [UBERON:0001017]",
+"score": 1.879,
+"path_min": 1.879,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "frontal lobe \u2293 in taxon (Mammalia) [UBERON:0016525&RO:0002162=(NCBITaxon:40674)] overlaps central nervous system [UBERON:0001017]",
 "score": 1.879,
 "path_min": 1.879,
 "depth": 2,
@@ -11493,6 +12055,22 @@
 },
 {
 "fact": "limbic system [UBERON:0000349] part of central nervous system [UBERON:0001017]",
+"score": 1.879,
+"path_min": 1.879,
+"depth": 1,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "brain \u2293 in taxon (Insecta) [UBERON:0000955&RO:0002162=(NCBITaxon:50557)] part of central nervous system [UBERON:0001017]",
+"score": 1.879,
+"path_min": 1.879,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "cerebral cortex \u2293 in taxon (Mammalia) [UBERON:0000956&RO:0002162=(NCBITaxon:40674)] part of central nervous system [UBERON:0001017]",
 "score": 1.879,
 "path_min": 1.879,
 "depth": 1,
@@ -11668,6 +12246,14 @@
 "hub_survivor": true
 },
 {
+"fact": "cerebral cortex \u2293 in taxon (Mammalia) [UBERON:0000956&RO:0002162=(NCBITaxon:40674)] overlaps central nervous system [UBERON:0001017]",
+"score": 1.879,
+"path_min": 1.879,
+"depth": 1,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
 "fact": "cerebral cortex [UBERON:0000956] overlaps central nervous system [UBERON:0001017]",
 "score": 1.879,
 "path_min": 1.879,
@@ -11773,12 +12359,84 @@
 "flags": []
 },
 {
+"fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] has part nitrogenous base [CHEBI:18282]",
+"score": 1.712,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] has part carbon atoms [CHEBI:27594]",
+"score": 1.712,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] has part phosphorus atom [CHEBI:28659]",
+"score": 1.712,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] has part 2-deoxy-D-ribose [CHEBI:28816]",
+"score": 1.712,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] has part phosphate group [CHEBI:32958]",
+"score": 1.712,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] has part amino acids [CHEBI:33709]",
+"score": 1.712,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] has part fatty acid [CHEBI:35366]",
+"score": 1.712,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
 "fact": "tissues [UBERON:0000479] has part phosphorus atom [CHEBI:28659]",
 "score": 1.712,
 "path_min": 0.002,
 "depth": 3,
 "rule": "relTrans",
 "hub_survivor": true
+},
+{
+"fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] overlaps food [CHEBI:33290]",
+"score": 1.712,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] overlaps ribosomes [GO:0005840]",
+"score": 1.712,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relChain",
+"hub_survivor": false
 },
 {
 "fact": "tissues [UBERON:0000479] overlaps ribosomes [GO:0005840]",
@@ -11789,11 +12447,107 @@
 "hub_survivor": false
 },
 {
-"fact": "tissues [UBERON:0000479] overlaps mitotic spindle [GO:0072686]",
+"fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] has part structure that is capable of synthesize proteins [GO:0006412]",
 "score": 1.712,
 "path_min": 0.002,
 "depth": 3,
 "rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] has part polypeptide [CHEBI:15841]",
+"score": 1.712,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] has part phospholipid [CHEBI:16247]",
+"score": 1.712,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] has part sugars [CHEBI:16646]",
+"score": 1.712,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": false
+},
+{
+"fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] has part DNA [CHEBI:16991]",
+"score": 1.712,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": false
+},
+{
+"fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] has part ribosomal RNA [CHEBI:18111]",
+"score": 1.712,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] has part proteins [CHEBI:36080]",
+"score": 1.712,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] has part nucleotides [CHEBI:36976]",
+"score": 1.712,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] has part polymer [CHEBI:60027]",
+"score": 1.712,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] has part ribosomes [GO:0005840]",
+"score": 1.712,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": false
+},
+{
+"fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] has part plasma membrane [GO:0005886]",
+"score": 1.712,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": false
+},
+{
+"fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] has part large subunit [GO:0015934]",
+"score": 1.712,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] has part small subunit [GO:0015935]",
+"score": 1.712,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
 "hub_survivor": true
 },
 {
@@ -11822,22 +12576,6 @@
 },
 {
 "fact": "tissues [UBERON:0000479] has part ribosomal RNA [CHEBI:18111]",
-"score": 1.712,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "tissues [UBERON:0000479] has part polysaccharide [CHEBI:18154]",
-"score": 1.712,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "tissues [UBERON:0000479] has part cellulose [CHEBI:18246]",
 "score": 1.712,
 "path_min": 0.002,
 "depth": 2,
@@ -11917,22 +12655,6 @@
 "hub_survivor": true
 },
 {
-"fact": "tissues [UBERON:0000479] has part centrioles [GO:0005814]",
-"score": 1.712,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "tissues [UBERON:0000479] has part microtubule [GO:0005874]",
-"score": 1.712,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "tissues [UBERON:0000479] has part large subunit [GO:0015934]",
 "score": 1.712,
 "path_min": 0.002,
@@ -11957,6 +12679,14 @@
 "hub_survivor": true
 },
 {
+"fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] overlaps endomembrane system [GO:0012505]",
+"score": 1.712,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
 "fact": "tissues [UBERON:0000479] overlaps food [CHEBI:33290]",
 "score": 1.712,
 "path_min": 0.002,
@@ -11966,6 +12696,46 @@
 },
 {
 "fact": "tissues [UBERON:0000479] overlaps endomembrane system [GO:0012505]",
+"score": 1.712,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] has part structure that is capable of ATP biosynthetic process [GO:0006754]",
+"score": 1.712,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] has part structure that is capable of exocytosis [GO:0006887]",
+"score": 1.712,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] has part structure that is capable of endocytosis [GO:0006897]",
+"score": 1.712,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] has part structure that is capable of phagocytosis [GO:0006909]",
+"score": 1.712,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] has part structure that is capable of transmembrane transport [GO:0055085]",
 "score": 1.712,
 "path_min": 0.002,
 "depth": 2,
@@ -11989,22 +12759,6 @@
 "hub_survivor": false
 },
 {
-"fact": "tissues [UBERON:0000479] has part lysosomes [GO:0005764]",
-"score": 1.712,
-"path_min": 0.002,
-"depth": 1,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "tissues [UBERON:0000479] has part centrosome [GO:0005813]",
-"score": 1.712,
-"path_min": 0.002,
-"depth": 1,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "tissues [UBERON:0000479] has part ribosomes [GO:0005840]",
 "score": 1.712,
 "path_min": 0.002,
@@ -12019,30 +12773,6 @@
 "depth": 1,
 "rule": "relTrans",
 "hub_survivor": false
-},
-{
-"fact": "tissues [UBERON:0000479] has part tight junction [GO:0005923]",
-"score": 1.712,
-"path_min": 0.002,
-"depth": 1,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "tissues [UBERON:0000479] has part plant cell wall [GO:0009505]",
-"score": 1.712,
-"path_min": 0.002,
-"depth": 1,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "tissues [UBERON:0000479] has part plasmodesma [GO:0009506]",
-"score": 1.712,
-"path_min": 0.002,
-"depth": 1,
-"rule": "relTrans",
-"hub_survivor": true
 },
 {
 "fact": "stomach [UBERON:0000945] has part tissues [UBERON:0000479]",
@@ -12114,6 +12844,14 @@
 "path_min": 0.002,
 "depth": 1,
 "rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] has part lipid [CHEBI:18059]",
+"score": 1.704,
+"path_min": 0.002,
+"depth": 3,
+"rule": "isaGeneralise",
 "hub_survivor": true
 },
 {
@@ -12252,6 +12990,14 @@
 "path_min": 1.704,
 "depth": 1,
 "rule": "isaGeneralise",
+"hub_survivor": true
+},
+{
+"fact": "cholesterol \u2293 located in (blood) [CHEBI:16113&RO:0001025=(UBERON:0000178)] is_a lipid [CHEBI:18059]",
+"score": 1.704,
+"path_min": 1.704,
+"depth": 1,
+"rule": "relTrans",
 "hub_survivor": true
 },
 {
@@ -12648,22 +13394,6 @@
 "hub_survivor": true
 },
 {
-"fact": "amygdala [UBERON:0001876] part of nervous tissue [UBERON:0001016]",
-"score": 1.622,
-"path_min": 1.622,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "hippocampus [UBERON:0002421] part of nervous tissue [UBERON:0001016]",
-"score": 1.622,
-"path_min": 1.622,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "nervous tissue [UBERON:0001016] has part polypeptide [CHEBI:15841]",
 "score": 1.622,
 "path_min": 1.392,
@@ -12768,30 +13498,6 @@
 "hub_survivor": true
 },
 {
-"fact": "maintain body temperature [GO:0001659] occurs in nervous tissue [UBERON:0001016]",
-"score": 1.622,
-"path_min": 1.622,
-"depth": 2,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "neuronal cell body [GO:0043025] located in nervous tissue [UBERON:0001016]",
-"score": 1.622,
-"path_min": 1.622,
-"depth": 2,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "brain [UBERON:0000955] overlaps nervous tissue [UBERON:0001016]",
-"score": 1.622,
-"path_min": 1.622,
-"depth": 2,
-"rule": "relChain",
-"hub_survivor": false
-},
-{
 "fact": "nervous tissue [UBERON:0001016] overlaps chromosome [GO:0005694]",
 "score": 1.622,
 "path_min": 1.392,
@@ -12803,30 +13509,6 @@
 "fact": "nervous tissue [UBERON:0001016] overlaps gray matter [UBERON:0002020]",
 "score": 1.622,
 "path_min": 1.392,
-"depth": 2,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "amygdala [UBERON:0001876] overlaps nervous tissue [UBERON:0001016]",
-"score": 1.622,
-"path_min": 1.622,
-"depth": 2,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "hippocampus [UBERON:0002421] overlaps nervous tissue [UBERON:0001016]",
-"score": 1.622,
-"path_min": 1.622,
-"depth": 2,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "pituitary gland [UBERON:0000007] attached to part of nervous tissue [UBERON:0001016]",
-"score": 1.622,
-"path_min": 1.622,
 "depth": 2,
 "rule": "relChain",
 "hub_survivor": true
@@ -12845,102 +13527,6 @@
 "path_min": 1.392,
 "depth": 2,
 "rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "limbic system [UBERON:0000349] part of nervous tissue [UBERON:0001016]",
-"score": 1.622,
-"path_min": 1.622,
-"depth": 1,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "cerebral cortex [UBERON:0000956] part of nervous tissue [UBERON:0001016]",
-"score": 1.622,
-"path_min": 1.622,
-"depth": 1,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "temporal lobe [UBERON:0001871] part of nervous tissue [UBERON:0001016]",
-"score": 1.622,
-"path_min": 1.622,
-"depth": 1,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "parietal lobe [UBERON:0001872] part of nervous tissue [UBERON:0001016]",
-"score": 1.622,
-"path_min": 1.622,
-"depth": 1,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "thalamus [UBERON:0001897] part of nervous tissue [UBERON:0001016]",
-"score": 1.622,
-"path_min": 1.622,
-"depth": 1,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "hypothalamus [UBERON:0001898] part of nervous tissue [UBERON:0001016]",
-"score": 1.622,
-"path_min": 1.622,
-"depth": 1,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "occipital lobe [UBERON:0002021] part of nervous tissue [UBERON:0001016]",
-"score": 1.622,
-"path_min": 1.622,
-"depth": 1,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "cerebellum [UBERON:0002037] part of nervous tissue [UBERON:0001016]",
-"score": 1.622,
-"path_min": 1.622,
-"depth": 1,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "posterior pituitary [UBERON:0002198] part of nervous tissue [UBERON:0001016]",
-"score": 1.622,
-"path_min": 1.622,
-"depth": 1,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "brainstem [UBERON:0002298] part of nervous tissue [UBERON:0001016]",
-"score": 1.622,
-"path_min": 1.622,
-"depth": 1,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "basal ganglia [UBERON:0002420] part of nervous tissue [UBERON:0001016]",
-"score": 1.622,
-"path_min": 1.622,
-"depth": 1,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "frontal lobe [UBERON:0016525] part of nervous tissue [UBERON:0001016]",
-"score": 1.622,
-"path_min": 1.622,
-"depth": 1,
-"rule": "relTrans",
 "hub_survivor": true
 },
 {
@@ -12981,118 +13567,6 @@
 "path_min": 1.392,
 "depth": 1,
 "rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "pituitary gland [UBERON:0000007] located in nervous tissue [UBERON:0001016]",
-"score": 1.622,
-"path_min": 1.622,
-"depth": 1,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "limbic system [UBERON:0000349] overlaps nervous tissue [UBERON:0001016]",
-"score": 1.622,
-"path_min": 1.622,
-"depth": 1,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "cerebral cortex [UBERON:0000956] overlaps nervous tissue [UBERON:0001016]",
-"score": 1.622,
-"path_min": 1.622,
-"depth": 1,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "central nervous system [UBERON:0001017] overlaps nervous tissue [UBERON:0001016]",
-"score": 1.622,
-"path_min": 1.622,
-"depth": 1,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "temporal lobe [UBERON:0001871] overlaps nervous tissue [UBERON:0001016]",
-"score": 1.622,
-"path_min": 1.622,
-"depth": 1,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "parietal lobe [UBERON:0001872] overlaps nervous tissue [UBERON:0001016]",
-"score": 1.622,
-"path_min": 1.622,
-"depth": 1,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "thalamus [UBERON:0001897] overlaps nervous tissue [UBERON:0001016]",
-"score": 1.622,
-"path_min": 1.622,
-"depth": 1,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "hypothalamus [UBERON:0001898] overlaps nervous tissue [UBERON:0001016]",
-"score": 1.622,
-"path_min": 1.622,
-"depth": 1,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "occipital lobe [UBERON:0002021] overlaps nervous tissue [UBERON:0001016]",
-"score": 1.622,
-"path_min": 1.622,
-"depth": 1,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "cerebellum [UBERON:0002037] overlaps nervous tissue [UBERON:0001016]",
-"score": 1.622,
-"path_min": 1.622,
-"depth": 1,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "posterior pituitary [UBERON:0002198] overlaps nervous tissue [UBERON:0001016]",
-"score": 1.622,
-"path_min": 1.622,
-"depth": 1,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "brainstem [UBERON:0002298] overlaps nervous tissue [UBERON:0001016]",
-"score": 1.622,
-"path_min": 1.622,
-"depth": 1,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "basal ganglia [UBERON:0002420] overlaps nervous tissue [UBERON:0001016]",
-"score": 1.622,
-"path_min": 1.622,
-"depth": 1,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "frontal lobe [UBERON:0016525] overlaps nervous tissue [UBERON:0001016]",
-"score": 1.622,
-"path_min": 1.622,
-"depth": 1,
-"rule": "relChain",
 "hub_survivor": true
 },
 {
@@ -13166,6 +13640,14 @@
 "depth": 3,
 "rule": "relChain",
 "hub_survivor": false
+},
+{
+"fact": "ganglion \u2293 in taxon (Platyhelminthes) [UBERON:0000045&RO:0002162=(NCBITaxon:6157)] overlaps neuron [CL:0000540]",
+"score": 1.392,
+"path_min": 1.392,
+"depth": 3,
+"rule": "relChain",
+"hub_survivor": true
 },
 {
 "fact": "neuron \u2293 in taxon (Mammalia) [CL:0000540&RO:0002162=(NCBITaxon:40674)] has part structure that is capable of alcohol metabolism [GO:0006066]",
@@ -13512,7 +13994,7 @@
 "hub_survivor": true
 },
 {
-"fact": "neuron \u2293 in taxon (Mammalia) [CL:0000540&RO:0002162=(NCBITaxon:40674)] \u2192+ process(muscle cell contraction [GO:0006936])",
+"fact": "neuron \u2293 in taxon (Mammalia) [CL:0000540&RO:0002162=(NCBITaxon:40674)] \u2192+ process(muscle contraction \u2293 occurs in (skeletal muscle fiber) [GO:0006936&BFO:0000066=(CL:0008002)])",
 "score": 1.392,
 "path_min": 1.392,
 "depth": 1,
@@ -13614,6 +14096,14 @@
 "path_min": 1.392,
 "depth": 1,
 "rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "ganglion \u2293 in taxon (Platyhelminthes) [UBERON:0000045&RO:0002162=(NCBITaxon:6157)] has part neuron [CL:0000540]",
+"score": 1.392,
+"path_min": 1.392,
+"depth": 1,
+"rule": "isaInherit",
 "hub_survivor": true
 },
 {
@@ -13769,6 +14259,14 @@
 "hub_survivor": false
 },
 {
+"fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] has part cytoplasm [GO:0005737]",
+"score": 1.272,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": false
+},
+{
 "fact": "stomach [UBERON:0000945] has part cytoplasm [GO:0005737]",
 "score": 1.272,
 "path_min": 0.002,
@@ -13873,6 +14371,14 @@
 "hub_survivor": false
 },
 {
+"fact": "sodium ion \u2293 part of (neuron) [CHEBI:29101&BFO:0000050=(CL:0000540)] located in cytoplasm [GO:0005737]",
+"score": 1.272,
+"path_min": 1.272,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
 "fact": "sodium ion \u2293 located in (blood) [CHEBI:29101&RO:0001025=(UBERON:0000178)] located in cytoplasm [GO:0005737]",
 "score": 1.272,
 "path_min": 1.272,
@@ -13919,6 +14425,14 @@
 "depth": 3,
 "rule": "isaGeneralise",
 "hub_survivor": false
+},
+{
+"fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] has part organelles [GO:0043226]",
+"score": 0.776,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
 },
 {
 "fact": "tissues [UBERON:0000479] has part organelles [GO:0043226]",
@@ -14105,6 +14619,14 @@
 "hub_survivor": true
 },
 {
+"fact": "These reactions \u2293 in taxon (eukaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2759)] has input organic molecule [CHEBI:72695]",
+"score": 0.649,
+"path_min": 0.649,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
 "fact": "potassium [CHEBI:29103] \u2192+ activity(enzyme [GO:0003824])",
 "score": 0.449,
 "path_min": 0.449,
@@ -14123,7 +14645,7 @@
 "flags": []
 },
 {
-"fact": "organ [UBERON:0000062] has part lipid [CHEBI:18059]",
+"fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] has part polypeptide [CHEBI:15841]",
 "score": 0.322,
 "path_min": 0.002,
 "depth": 3,
@@ -14131,7 +14653,143 @@
 "hub_survivor": true
 },
 {
-"fact": "organ [UBERON:0000062] has part polysaccharide [CHEBI:18154]",
+"fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] has part phospholipid [CHEBI:16247]",
+"score": 0.322,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] has part sugars [CHEBI:16646]",
+"score": 0.322,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": false
+},
+{
+"fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] has part lipid [CHEBI:18059]",
+"score": 0.322,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] has part ribosomal RNA [CHEBI:18111]",
+"score": 0.322,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] has part nitrogenous base [CHEBI:18282]",
+"score": 0.322,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] has part carbon atoms [CHEBI:27594]",
+"score": 0.322,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] has part phosphorus atom [CHEBI:28659]",
+"score": 0.322,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] has part 2-deoxy-D-ribose [CHEBI:28816]",
+"score": 0.322,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] has part phosphate group [CHEBI:32958]",
+"score": 0.322,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] has part amino acids [CHEBI:33709]",
+"score": 0.322,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] has part fatty acid [CHEBI:35366]",
+"score": 0.322,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] has part proteins [CHEBI:36080]",
+"score": 0.322,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] has part nucleotides [CHEBI:36976]",
+"score": 0.322,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] has part polymer [CHEBI:60027]",
+"score": 0.322,
+"path_min": 0.002,
+"depth": 3,
+"rule": "isaGeneralise",
+"hub_survivor": true
+},
+{
+"fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] has part large subunit [GO:0015934]",
+"score": 0.322,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] has part small subunit [GO:0015935]",
+"score": 0.322,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] has part organelles [GO:0043226]",
+"score": 0.322,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "organ [UBERON:0000062] has part lipid [CHEBI:18059]",
 "score": 0.322,
 "path_min": 0.002,
 "depth": 3,
@@ -14195,11 +14853,27 @@
 "hub_survivor": true
 },
 {
-"fact": "organ [UBERON:0000062] has part microtubule [GO:0005874]",
+"fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] overlaps food [CHEBI:33290]",
 "score": 0.322,
 "path_min": 0.002,
 "depth": 3,
-"rule": "relTrans",
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] overlaps ribosomes [GO:0005840]",
+"score": 0.322,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relChain",
+"hub_survivor": false
+},
+{
+"fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] overlaps endomembrane system [GO:0012505]",
+"score": 0.322,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relChain",
 "hub_survivor": true
 },
 {
@@ -14219,7 +14893,7 @@
 "hub_survivor": false
 },
 {
-"fact": "organ [UBERON:0000062] overlaps mitotic spindle [GO:0072686]",
+"fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] has part structure that is capable of synthesize proteins [GO:0006412]",
 "score": 0.322,
 "path_min": 0.002,
 "depth": 3,
@@ -14227,9 +14901,41 @@
 "hub_survivor": true
 },
 {
-"fact": "digestive system [UBERON:0001007] overlaps organ [UBERON:0000062]",
+"fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] has part structure that is capable of ATP biosynthetic process [GO:0006754]",
 "score": 0.322,
-"path_min": 0.004,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] has part structure that is capable of exocytosis [GO:0006887]",
+"score": 0.322,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] has part structure that is capable of endocytosis [GO:0006897]",
+"score": 0.322,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] has part structure that is capable of phagocytosis [GO:0006909]",
+"score": 0.322,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] has part structure that is capable of transmembrane transport [GO:0055085]",
+"score": 0.322,
+"path_min": 0.002,
 "depth": 3,
 "rule": "relChain",
 "hub_survivor": true
@@ -14241,6 +14947,38 @@
 "depth": 3,
 "rule": "relChain",
 "hub_survivor": true
+},
+{
+"fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] has part DNA [CHEBI:16991]",
+"score": 0.322,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": false
+},
+{
+"fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] has part cytoplasm [GO:0005737]",
+"score": 0.322,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": false
+},
+{
+"fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] has part ribosomes [GO:0005840]",
+"score": 0.322,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": false
+},
+{
+"fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] has part plasma membrane [GO:0005886]",
+"score": 0.322,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": false
 },
 {
 "fact": "organ [UBERON:0000062] has part polypeptide [CHEBI:15841]",
@@ -14283,14 +15021,6 @@
 "hub_survivor": true
 },
 {
-"fact": "organ [UBERON:0000062] has part cellulose [CHEBI:18246]",
-"score": 0.322,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "organ [UBERON:0000062] has part proteins [CHEBI:36080]",
 "score": 0.322,
 "path_min": 0.002,
@@ -14323,30 +15053,6 @@
 "hub_survivor": false
 },
 {
-"fact": "organ [UBERON:0000062] has part lysosomes [GO:0005764]",
-"score": 0.322,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "organ [UBERON:0000062] has part centrosome [GO:0005813]",
-"score": 0.322,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "organ [UBERON:0000062] has part centrioles [GO:0005814]",
-"score": 0.322,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "organ [UBERON:0000062] has part ribosomes [GO:0005840]",
 "score": 0.322,
 "path_min": 0.002,
@@ -14361,30 +15067,6 @@
 "depth": 2,
 "rule": "relTrans",
 "hub_survivor": false
-},
-{
-"fact": "organ [UBERON:0000062] has part tight junction [GO:0005923]",
-"score": 0.322,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "organ [UBERON:0000062] has part plant cell wall [GO:0009505]",
-"score": 0.322,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "organ [UBERON:0000062] has part plasmodesma [GO:0009506]",
-"score": 0.322,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
 },
 {
 "fact": "organ [UBERON:0000062] has part large subunit [GO:0015934]",
@@ -14411,41 +15093,9 @@
 "hub_survivor": true
 },
 {
-"fact": "arterioles [UBERON:0001980] located in organ [UBERON:0000062]",
-"score": 0.322,
-"path_min": 0.322,
-"depth": 2,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
 "fact": "organ [UBERON:0000062] overlaps endomembrane system [GO:0012505]",
 "score": 0.322,
 "path_min": 0.002,
-"depth": 2,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "stomach [UBERON:0000945] overlaps organ [UBERON:0000062]",
-"score": 0.322,
-"path_min": 0.322,
-"depth": 2,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "salivary glands [UBERON:0001044] overlaps organ [UBERON:0000062]",
-"score": 0.322,
-"path_min": 0.322,
-"depth": 2,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "gallbladder [UBERON:0002110] overlaps organ [UBERON:0000062]",
-"score": 0.322,
-"path_min": 0.322,
 "depth": 2,
 "rule": "relChain",
 "hub_survivor": true
@@ -14491,7 +15141,16 @@
 "hub_survivor": true
 },
 {
-"fact": "muscle tissue [UBERON:0002385] part of organ [UBERON:0000062]",
+"fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] \u2192+ process(digestion [GO:0007586])",
+"score": 0.322,
+"path_min": 0.322,
+"depth": 1,
+"rule": "isaInheritEffect",
+"hub_survivor": false,
+"flags": []
+},
+{
+"fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] has part tissues [UBERON:0000479]",
 "score": 0.322,
 "path_min": 0.322,
 "depth": 1,
@@ -14555,6 +15214,62 @@
 "hub_survivor": true
 },
 {
+"fact": "eukaryotic cell \u2293 in taxon (NCBITaxon:2759) [CL:0000255&RO:0002162=(NCBITaxon:2759)] has part phospholipid [CHEBI:16247]",
+"score": 0.054,
+"path_min": 0.054,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "eukaryotic cell \u2293 in taxon (NCBITaxon:2759) [CL:0000255&RO:0002162=(NCBITaxon:2759)] has part sugars [CHEBI:16646]",
+"score": 0.054,
+"path_min": 0.054,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": false
+},
+{
+"fact": "eukaryotic cell \u2293 in taxon (NCBITaxon:2759) [CL:0000255&RO:0002162=(NCBITaxon:2759)] has part lipid [CHEBI:18059]",
+"score": 0.054,
+"path_min": 0.054,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "eukaryotic cell \u2293 in taxon (NCBITaxon:2759) [CL:0000255&RO:0002162=(NCBITaxon:2759)] has part carbon atoms [CHEBI:27594]",
+"score": 0.054,
+"path_min": 0.054,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "eukaryotic cell \u2293 in taxon (NCBITaxon:2759) [CL:0000255&RO:0002162=(NCBITaxon:2759)] has part fatty acid [CHEBI:35366]",
+"score": 0.054,
+"path_min": 0.054,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "eukaryotic cell \u2293 in taxon (NCBITaxon:2759) [CL:0000255&RO:0002162=(NCBITaxon:2759)] has part proteins [CHEBI:36080]",
+"score": 0.054,
+"path_min": 0.054,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "eukaryotic cell \u2293 in taxon (NCBITaxon:2759) [CL:0000255&RO:0002162=(NCBITaxon:2759)] has part chromatin [GO:0000785]",
+"score": 0.054,
+"path_min": 0.054,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
 "fact": "eukaryotic [CL:0000255] has part lipid [CHEBI:18059]",
 "score": 0.054,
 "path_min": 0.054,
@@ -14595,6 +15310,30 @@
 "hub_survivor": true
 },
 {
+"fact": "eukaryotic cell \u2293 in taxon (NCBITaxon:2759) [CL:0000255&RO:0002162=(NCBITaxon:2759)] overlaps food [CHEBI:33290]",
+"score": 0.054,
+"path_min": 0.054,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "eukaryotic cell \u2293 in taxon (NCBITaxon:2759) [CL:0000255&RO:0002162=(NCBITaxon:2759)] overlaps chromosome [GO:0005694]",
+"score": 0.054,
+"path_min": 0.054,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "eukaryotic cell \u2293 in taxon (NCBITaxon:2759) [CL:0000255&RO:0002162=(NCBITaxon:2759)] overlaps endomembrane system [GO:0012505]",
+"score": 0.054,
+"path_min": 0.054,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
 "fact": "eukaryotic [CL:0000255] overlaps food [CHEBI:33290]",
 "score": 0.054,
 "path_min": 0.054,
@@ -14608,6 +15347,38 @@
 "path_min": 0.054,
 "depth": 2,
 "rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "eukaryotic cell \u2293 in taxon (NCBITaxon:2759) [CL:0000255&RO:0002162=(NCBITaxon:2759)] has part structure that is capable of transmembrane transport [GO:0055085]",
+"score": 0.054,
+"path_min": 0.054,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "eukaryotic cell \u2293 in taxon (NCBITaxon:2759) [CL:0000255&RO:0002162=(NCBITaxon:2759)] has part nucleus [GO:0005634]",
+"score": 0.054,
+"path_min": 0.054,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "eukaryotic cell \u2293 in taxon (NCBITaxon:2759) [CL:0000255&RO:0002162=(NCBITaxon:2759)] has part plasma membrane [GO:0005886]",
+"score": 0.054,
+"path_min": 0.054,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "eukaryotic cell \u2293 in taxon (NCBITaxon:2759) [CL:0000255&RO:0002162=(NCBITaxon:2759)] has part membrane-bound organelle [GO:0043231]",
+"score": 0.054,
+"path_min": 0.054,
+"depth": 1,
+"rule": "isaInherit",
 "hub_survivor": true
 },
 {
@@ -14667,6 +15438,190 @@
 "hub_survivor": true
 },
 {
+"fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] has part structure that is capable of synthesize proteins [GO:0006412]",
+"score": 0.004,
+"path_min": 0.002,
+"depth": 4,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] has part polypeptide [CHEBI:15841]",
+"score": 0.004,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] has part phospholipid [CHEBI:16247]",
+"score": 0.004,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] has part sugars [CHEBI:16646]",
+"score": 0.004,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": false
+},
+{
+"fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] has part DNA [CHEBI:16991]",
+"score": 0.004,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": false
+},
+{
+"fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] has part lipid [CHEBI:18059]",
+"score": 0.004,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] has part ribosomal RNA [CHEBI:18111]",
+"score": 0.004,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] has part nitrogenous base [CHEBI:18282]",
+"score": 0.004,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] has part carbon atoms [CHEBI:27594]",
+"score": 0.004,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] has part phosphorus atom [CHEBI:28659]",
+"score": 0.004,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] has part 2-deoxy-D-ribose [CHEBI:28816]",
+"score": 0.004,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] has part phosphate group [CHEBI:32958]",
+"score": 0.004,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] has part amino acids [CHEBI:33709]",
+"score": 0.004,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] has part fatty acid [CHEBI:35366]",
+"score": 0.004,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] has part proteins [CHEBI:36080]",
+"score": 0.004,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] has part nucleotides [CHEBI:36976]",
+"score": 0.004,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] has part polymer [CHEBI:60027]",
+"score": 0.004,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] has part cytoplasm [GO:0005737]",
+"score": 0.004,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": false
+},
+{
+"fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] has part ribosomes [GO:0005840]",
+"score": 0.004,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": false
+},
+{
+"fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] has part plasma membrane [GO:0005886]",
+"score": 0.004,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": false
+},
+{
+"fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] has part large subunit [GO:0015934]",
+"score": 0.004,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] has part small subunit [GO:0015935]",
+"score": 0.004,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] has part organelles [GO:0043226]",
+"score": 0.004,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
 "fact": "organ system [UBERON:0000467] has part polypeptide [CHEBI:15841]",
 "score": 0.004,
 "path_min": 0.002,
@@ -14700,22 +15655,6 @@
 },
 {
 "fact": "organ system [UBERON:0000467] has part ribosomal RNA [CHEBI:18111]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "organ system [UBERON:0000467] has part polysaccharide [CHEBI:18154]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "organ system [UBERON:0000467] has part cellulose [CHEBI:18246]",
 "score": 0.004,
 "path_min": 0.002,
 "depth": 3,
@@ -14803,22 +15742,6 @@
 "hub_survivor": true
 },
 {
-"fact": "organ system [UBERON:0000467] has part centrioles [GO:0005814]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "organ system [UBERON:0000467] has part microtubule [GO:0005874]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "organ system [UBERON:0000467] has part large subunit [GO:0015934]",
 "score": 0.004,
 "path_min": 0.002,
@@ -14843,11 +15766,99 @@
 "hub_survivor": true
 },
 {
+"fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part lipid [CHEBI:18059]",
+"score": 0.004,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part nitrogenous base [CHEBI:18282]",
+"score": 0.004,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part carbon atoms [CHEBI:27594]",
+"score": 0.004,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part phosphorus atom [CHEBI:28659]",
+"score": 0.004,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part 2-deoxy-D-ribose [CHEBI:28816]",
+"score": 0.004,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part phosphate group [CHEBI:32958]",
+"score": 0.004,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part amino acids [CHEBI:33709]",
+"score": 0.004,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part fatty acid [CHEBI:35366]",
+"score": 0.004,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
 "fact": "body [UBERON:0000468] has part phosphorus atom [CHEBI:28659]",
 "score": 0.004,
 "path_min": 0.002,
 "depth": 3,
 "rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] overlaps food [CHEBI:33290]",
+"score": 0.004,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] overlaps ribosomes [GO:0005840]",
+"score": 0.004,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relChain",
+"hub_survivor": false
+},
+{
+"fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] overlaps endomembrane system [GO:0012505]",
+"score": 0.004,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relChain",
 "hub_survivor": true
 },
 {
@@ -14875,12 +15886,20 @@
 "hub_survivor": true
 },
 {
-"fact": "organ system [UBERON:0000467] overlaps mitotic spindle [GO:0072686]",
+"fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] overlaps food [CHEBI:33290]",
 "score": 0.004,
 "path_min": 0.002,
 "depth": 3,
 "rule": "relChain",
 "hub_survivor": true
+},
+{
+"fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] overlaps ribosomes [GO:0005840]",
+"score": 0.004,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relChain",
+"hub_survivor": false
 },
 {
 "fact": "body [UBERON:0000468] overlaps ribosomes [GO:0005840]",
@@ -14891,7 +15910,39 @@
 "hub_survivor": false
 },
 {
-"fact": "body [UBERON:0000468] overlaps mitotic spindle [GO:0072686]",
+"fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] has part structure that is capable of ATP biosynthetic process [GO:0006754]",
+"score": 0.004,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] has part structure that is capable of exocytosis [GO:0006887]",
+"score": 0.004,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] has part structure that is capable of endocytosis [GO:0006897]",
+"score": 0.004,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] has part structure that is capable of phagocytosis [GO:0006909]",
+"score": 0.004,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] has part structure that is capable of transmembrane transport [GO:0055085]",
 "score": 0.004,
 "path_min": 0.002,
 "depth": 3,
@@ -14947,7 +15998,15 @@
 "hub_survivor": true
 },
 {
-"fact": "muscle tissue [UBERON:0002385] part of organ system [UBERON:0000467]",
+"fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part structure that is capable of synthesize proteins [GO:0006412]",
+"score": 0.004,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] has part tissues [UBERON:0000479]",
 "score": 0.004,
 "path_min": 0.004,
 "depth": 2,
@@ -14971,22 +16030,6 @@
 "hub_survivor": false
 },
 {
-"fact": "organ system [UBERON:0000467] has part lysosomes [GO:0005764]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "organ system [UBERON:0000467] has part centrosome [GO:0005813]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "organ system [UBERON:0000467] has part ribosomes [GO:0005840]",
 "score": 0.004,
 "path_min": 0.002,
@@ -15003,7 +16046,7 @@
 "hub_survivor": false
 },
 {
-"fact": "organ system [UBERON:0000467] has part tight junction [GO:0005923]",
+"fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part polypeptide [CHEBI:15841]",
 "score": 0.004,
 "path_min": 0.002,
 "depth": 2,
@@ -15011,7 +16054,7 @@
 "hub_survivor": true
 },
 {
-"fact": "organ system [UBERON:0000467] has part plant cell wall [GO:0009505]",
+"fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part phospholipid [CHEBI:16247]",
 "score": 0.004,
 "path_min": 0.002,
 "depth": 2,
@@ -15019,9 +16062,105 @@
 "hub_survivor": true
 },
 {
-"fact": "organ system [UBERON:0000467] has part plasmodesma [GO:0009506]",
+"fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part sugars [CHEBI:16646]",
 "score": 0.004,
 "path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": false
+},
+{
+"fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part DNA [CHEBI:16991]",
+"score": 0.004,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": false
+},
+{
+"fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part ribosomal RNA [CHEBI:18111]",
+"score": 0.004,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part proteins [CHEBI:36080]",
+"score": 0.004,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part nucleotides [CHEBI:36976]",
+"score": 0.004,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part polymer [CHEBI:60027]",
+"score": 0.004,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part cytoplasm [GO:0005737]",
+"score": 0.004,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": false
+},
+{
+"fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part ribosomes [GO:0005840]",
+"score": 0.004,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": false
+},
+{
+"fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part plasma membrane [GO:0005886]",
+"score": 0.004,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": false
+},
+{
+"fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part large subunit [GO:0015934]",
+"score": 0.004,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part small subunit [GO:0015935]",
+"score": 0.004,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part organelles [GO:0043226]",
+"score": 0.004,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part organ [UBERON:0000062]",
+"score": 0.004,
+"path_min": 0.004,
 "depth": 2,
 "rule": "relTrans",
 "hub_survivor": true
@@ -15060,22 +16199,6 @@
 },
 {
 "fact": "body [UBERON:0000468] has part ribosomal RNA [CHEBI:18111]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "body [UBERON:0000468] has part polysaccharide [CHEBI:18154]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "body [UBERON:0000468] has part cellulose [CHEBI:18246]",
 "score": 0.004,
 "path_min": 0.002,
 "depth": 2,
@@ -15155,22 +16278,6 @@
 "hub_survivor": true
 },
 {
-"fact": "body [UBERON:0000468] has part centrioles [GO:0005814]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "body [UBERON:0000468] has part microtubule [GO:0005874]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "body [UBERON:0000468] has part large subunit [GO:0015934]",
 "score": 0.004,
 "path_min": 0.002,
@@ -15195,41 +16302,17 @@
 "hub_survivor": true
 },
 {
-"fact": "protein digestion [GO:0044256] occurs in organ system [UBERON:0000467]",
+"fact": "body [UBERON:0000468] has part tissues [UBERON:0000479]",
 "score": 0.004,
 "path_min": 0.004,
 "depth": 2,
-"rule": "relChain",
+"rule": "relTrans",
 "hub_survivor": true
 },
 {
-"fact": "bile [UBERON:0001970] located in organ system [UBERON:0000467]",
+"fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] overlaps endomembrane system [GO:0012505]",
 "score": 0.004,
-"path_min": 0.004,
-"depth": 2,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "arterioles [UBERON:0001980] located in organ system [UBERON:0000467]",
-"score": 0.004,
-"path_min": 0.004,
-"depth": 2,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "organ [UBERON:0000062] overlaps organ system [UBERON:0000467]",
-"score": 0.004,
-"path_min": 0.004,
-"depth": 2,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "organ system [UBERON:0000467] overlaps organ [UBERON:0000062]",
-"score": 0.004,
-"path_min": 0.004,
+"path_min": 0.002,
 "depth": 2,
 "rule": "relChain",
 "hub_survivor": true
@@ -15251,49 +16334,41 @@
 "hub_survivor": true
 },
 {
-"fact": "body [UBERON:0000468] overlaps organ system [UBERON:0000467]",
+"fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part structure that is capable of ATP biosynthetic process [GO:0006754]",
 "score": 0.004,
-"path_min": 0.004,
+"path_min": 0.002,
 "depth": 2,
 "rule": "relChain",
 "hub_survivor": true
 },
 {
-"fact": "stomach [UBERON:0000945] overlaps organ system [UBERON:0000467]",
+"fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part structure that is capable of exocytosis [GO:0006887]",
 "score": 0.004,
-"path_min": 0.004,
+"path_min": 0.002,
 "depth": 2,
 "rule": "relChain",
 "hub_survivor": true
 },
 {
-"fact": "digestive system [UBERON:0001007] overlaps organ system [UBERON:0000467]",
+"fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part structure that is capable of endocytosis [GO:0006897]",
 "score": 0.004,
-"path_min": 0.004,
+"path_min": 0.002,
 "depth": 2,
 "rule": "relChain",
 "hub_survivor": true
 },
 {
-"fact": "salivary glands [UBERON:0001044] overlaps organ system [UBERON:0000467]",
+"fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part structure that is capable of phagocytosis [GO:0006909]",
 "score": 0.004,
-"path_min": 0.004,
+"path_min": 0.002,
 "depth": 2,
 "rule": "relChain",
 "hub_survivor": true
 },
 {
-"fact": "gallbladder [UBERON:0002110] overlaps organ system [UBERON:0000467]",
+"fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part structure that is capable of transmembrane transport [GO:0055085]",
 "score": 0.004,
-"path_min": 0.004,
-"depth": 2,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "muscle tissue [UBERON:0002385] overlaps organ system [UBERON:0000467]",
-"score": 0.004,
-"path_min": 0.004,
+"path_min": 0.002,
 "depth": 2,
 "rule": "relChain",
 "hub_survivor": true
@@ -15307,31 +16382,7 @@
 "hub_survivor": true
 },
 {
-"fact": "tissues [UBERON:0000479] part of organ system [UBERON:0000467]",
-"score": 0.004,
-"path_min": 0.004,
-"depth": 1,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "stomach [UBERON:0000945] part of organ system [UBERON:0000467]",
-"score": 0.004,
-"path_min": 0.004,
-"depth": 1,
-"rule": "isaInherit",
-"hub_survivor": true
-},
-{
-"fact": "salivary glands [UBERON:0001044] part of organ system [UBERON:0000467]",
-"score": 0.004,
-"path_min": 0.004,
-"depth": 1,
-"rule": "isaInherit",
-"hub_survivor": true
-},
-{
-"fact": "gallbladder [UBERON:0002110] part of organ system [UBERON:0000467]",
+"fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] has part organ [UBERON:0000062]",
 "score": 0.004,
 "path_min": 0.004,
 "depth": 1,
@@ -15344,6 +16395,14 @@
 "path_min": 0.004,
 "depth": 1,
 "rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part organ system [UBERON:0000467]",
+"score": 0.004,
+"path_min": 0.004,
+"depth": 1,
+"rule": "isaInherit",
 "hub_survivor": true
 },
 {
@@ -15363,22 +16422,6 @@
 "hub_survivor": false
 },
 {
-"fact": "body [UBERON:0000468] has part lysosomes [GO:0005764]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 1,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "body [UBERON:0000468] has part centrosome [GO:0005813]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 1,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "body [UBERON:0000468] has part ribosomes [GO:0005840]",
 "score": 0.004,
 "path_min": 0.002,
@@ -15395,30 +16438,6 @@
 "hub_survivor": false
 },
 {
-"fact": "body [UBERON:0000468] has part tight junction [GO:0005923]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 1,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "body [UBERON:0000468] has part plant cell wall [GO:0009505]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 1,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "body [UBERON:0000468] has part plasmodesma [GO:0009506]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 1,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "body [UBERON:0000468] has part organ [UBERON:0000062]",
 "score": 0.004,
 "path_min": 0.004,
@@ -15427,19 +16446,11 @@
 "hub_survivor": true
 },
 {
-"fact": "body [UBERON:0000468] overlaps organ [UBERON:0000062]",
+"fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] develops from zygote [CL:0010017]",
 "score": 0.004,
 "path_min": 0.004,
 "depth": 1,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "tissues [UBERON:0000479] overlaps organ system [UBERON:0000467]",
-"score": 0.004,
-"path_min": 0.004,
-"depth": 1,
-"rule": "relChain",
+"rule": "isaInherit",
 "hub_survivor": true
 },
 {
@@ -15491,6 +16502,38 @@
 "hub_survivor": true
 },
 {
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] has part phosphorus atom [CHEBI:28659]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000548&RO:0002162=(NCBITaxon:33208)] has part lipid [CHEBI:18059]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000548&RO:0002162=(NCBITaxon:33208)] has part carbon atoms [CHEBI:27594]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000548&RO:0002162=(NCBITaxon:33208)] has part fatty acid [CHEBI:35366]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
 "fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] overlaps ribosomes [GO:0005840]",
 "score": 0.002,
 "path_min": 0.002,
@@ -15499,7 +16542,23 @@
 "hub_survivor": false
 },
 {
-"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] overlaps mitotic spindle [GO:0072686]",
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] overlaps ribosomes [GO:0005840]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relChain",
+"hub_survivor": false
+},
+{
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000548&RO:0002162=(NCBITaxon:33208)] overlaps food [CHEBI:33290]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 3,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000548&RO:0002162=(NCBITaxon:33208)] overlaps chromosome [GO:0005694]",
 "score": 0.002,
 "path_min": 0.002,
 "depth": 3,
@@ -15627,22 +16686,6 @@
 "hub_survivor": true
 },
 {
-"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part centrioles [GO:0005814]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part microtubule [GO:0005874]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part large subunit [GO:0015934]",
 "score": 0.002,
 "path_min": 0.002,
@@ -15667,15 +16710,143 @@
 "hub_survivor": true
 },
 {
-"fact": "cells [CL:0000000] has part lipid [CHEBI:18059]",
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] has part polypeptide [CHEBI:15841]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] has part phospholipid [CHEBI:16247]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] has part sugars [CHEBI:16646]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": false
+},
+{
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] has part lipid [CHEBI:18059]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] has part ribosomal RNA [CHEBI:18111]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] has part nitrogenous base [CHEBI:18282]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] has part carbon atoms [CHEBI:27594]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] has part 2-deoxy-D-ribose [CHEBI:28816]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] has part phosphate group [CHEBI:32958]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] has part amino acids [CHEBI:33709]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] has part fatty acid [CHEBI:35366]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] has part nucleotides [CHEBI:36976]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] has part polymer [CHEBI:60027]",
 "score": 0.002,
 "path_min": 0.002,
 "depth": 2,
 "rule": "isaGeneralise",
-"hub_survivor": false
+"hub_survivor": true
 },
 {
-"fact": "cells [CL:0000000] has part polysaccharide [CHEBI:18154]",
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] has part microtubule [GO:0005874]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] has part large subunit [GO:0015934]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] has part small subunit [GO:0015935]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] has part organelles [GO:0043226]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "cells [CL:0000000] has part lipid [CHEBI:18059]",
 "score": 0.002,
 "path_min": 0.002,
 "depth": 2,
@@ -15739,12 +16910,60 @@
 "hub_survivor": false
 },
 {
-"fact": "cells [CL:0000000] has part microtubule [GO:0005874]",
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000548&RO:0002162=(NCBITaxon:33208)] has part phospholipid [CHEBI:16247]",
 "score": 0.002,
 "path_min": 0.002,
 "depth": 2,
-"rule": "relTrans",
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000548&RO:0002162=(NCBITaxon:33208)] has part sugars [CHEBI:16646]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "isaInherit",
 "hub_survivor": false
+},
+{
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000548&RO:0002162=(NCBITaxon:33208)] has part proteins [CHEBI:36080]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000548&RO:0002162=(NCBITaxon:33208)] has part chromatin [GO:0000785]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000548&RO:0002162=(NCBITaxon:33208)] has part nucleus [GO:0005634]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000548&RO:0002162=(NCBITaxon:33208)] has part plasma membrane [GO:0005886]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000548&RO:0002162=(NCBITaxon:33208)] has part membrane-bound organelle [GO:0043231]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "isaInherit",
+"hub_survivor": true
 },
 {
 "fact": "Animal cells [CL:0000548] has part phospholipid [CHEBI:16247]",
@@ -15801,6 +17020,22 @@
 "depth": 2,
 "rule": "relTrans",
 "hub_survivor": true
+},
+{
+"fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] has part cells [CL:0000000]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": false
+},
+{
+"fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] has part cells [CL:0000000]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relTrans",
+"hub_survivor": false
 },
 {
 "fact": "organ system [UBERON:0000467] has part cells [CL:0000000]",
@@ -15891,6 +17126,30 @@
 "hub_survivor": true
 },
 {
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] overlaps food [CHEBI:33290]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] overlaps endomembrane system [GO:0012505]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] overlaps mitotic spindle [GO:0072686]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
 "fact": "cells [CL:0000000] overlaps food [CHEBI:33290]",
 "score": 0.002,
 "path_min": 0.002,
@@ -15907,12 +17166,20 @@
 "hub_survivor": false
 },
 {
-"fact": "cells [CL:0000000] overlaps mitotic spindle [GO:0072686]",
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000548&RO:0002162=(NCBITaxon:33208)] overlaps endomembrane system [GO:0012505]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000548&RO:0002162=(NCBITaxon:33208)] overlaps mitotic spindle [GO:0072686]",
 "score": 0.002,
 "path_min": 0.002,
 "depth": 2,
 "rule": "relChain",
-"hub_survivor": false
+"hub_survivor": true
 },
 {
 "fact": "Animal cells [CL:0000548] overlaps food [CHEBI:33290]",
@@ -15939,14 +17206,6 @@
 "hub_survivor": true
 },
 {
-"fact": "Animal cells [CL:0000548] overlaps mitotic spindle [GO:0072686]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
 "fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part structure that is capable of synthesize proteins [GO:0006412]",
 "score": 0.002,
 "path_min": 0.002,
@@ -15963,11 +17222,43 @@
 "hub_survivor": true
 },
 {
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] has part structure that is capable of synthesize proteins [GO:0006412]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] has part structure that is capable of transmembrane transport [GO:0055085]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000548&RO:0002162=(NCBITaxon:33208)] has part structure that is capable of transmembrane transport [GO:0055085]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
 "fact": "Animal cells [CL:0000548] has part structure that is capable of transmembrane transport [GO:0055085]",
 "score": 0.002,
 "path_min": 0.002,
 "depth": 2,
 "rule": "relChain",
+"hub_survivor": true
+},
+{
+"fact": "\u00acanimal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000548&RO:0002162=(NCBITaxon:33208)] has part cell wall [GO:0005618]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 1,
+"rule": "notRelSub",
 "hub_survivor": true
 },
 {
@@ -15995,22 +17286,6 @@
 "hub_survivor": false
 },
 {
-"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part lysosomes [GO:0005764]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 1,
-"rule": "isaInherit",
-"hub_survivor": true
-},
-{
-"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part centrosome [GO:0005813]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 1,
-"rule": "isaInherit",
-"hub_survivor": true
-},
-{
 "fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part ribosomes [GO:0005840]",
 "score": 0.002,
 "path_min": 0.002,
@@ -16027,12 +17302,52 @@
 "hub_survivor": false
 },
 {
-"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part tight junction [GO:0005923]",
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] has part DNA [CHEBI:16991]",
 "score": 0.002,
 "path_min": 0.002,
 "depth": 1,
 "rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] has part proteins [CHEBI:36080]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 1,
+"rule": "relTrans",
 "hub_survivor": true
+},
+{
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] has part cytoplasm [GO:0005737]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] has part centrioles [GO:0005814]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 1,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] has part ribosomes [GO:0005840]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] has part plasma membrane [GO:0005886]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
 },
 {
 "fact": "cells [CL:0000000] has part polypeptide [CHEBI:15841]",
@@ -16067,14 +17382,6 @@
 "hub_survivor": false
 },
 {
-"fact": "cells [CL:0000000] has part cellulose [CHEBI:18246]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 1,
-"rule": "relTrans",
-"hub_survivor": false
-},
-{
 "fact": "cells [CL:0000000] has part proteins [CHEBI:36080]",
 "score": 0.002,
 "path_min": 0.002,
@@ -16096,14 +17403,6 @@
 "path_min": 0.002,
 "depth": 1,
 "rule": "isaGeneralise",
-"hub_survivor": false
-},
-{
-"fact": "cells [CL:0000000] has part centrioles [GO:0005814]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 1,
-"rule": "relTrans",
 "hub_survivor": false
 },
 {
@@ -16131,6 +17430,14 @@
 "hub_survivor": false
 },
 {
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000548&RO:0002162=(NCBITaxon:33208)] has part microtubule [GO:0005874]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 1,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
 "fact": "Animal cells [CL:0000548] has part nucleus [GO:0005634]",
 "score": 0.002,
 "path_min": 0.002,
@@ -16139,28 +17446,12 @@
 "hub_survivor": false
 },
 {
-"fact": "Animal cells [CL:0000548] has part microtubule [GO:0005874]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 1,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "Animal cells [CL:0000548] has part plasma membrane [GO:0005886]",
 "score": 0.002,
 "path_min": 0.002,
 "depth": 1,
 "rule": "isaInherit",
 "hub_survivor": false
-},
-{
-"fact": "Animal cells [CL:0000548] has part organelles [GO:0043226]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 1,
-"rule": "isaInherit",
-"hub_survivor": true
 },
 {
 "fact": "Animal cells [CL:0000548] has part membrane-bound organelle [GO:0043231]",
@@ -16176,6 +17467,22 @@
 "path_min": 0.002,
 "depth": 1,
 "rule": "relTrans",
+"hub_survivor": false
+},
+{
+"fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part cells [CL:0000000]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 1,
+"rule": "relTrans",
+"hub_survivor": false
+},
+{
+"fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] has part cells [CL:0000000]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 1,
+"rule": "isaInherit",
 "hub_survivor": false
 },
 {
@@ -16211,7 +17518,23 @@
 "hub_survivor": false
 },
 {
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000548&RO:0002162=(NCBITaxon:33208)] is_a eukaryotic [CL:0000255]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 1,
+"rule": "relTrans",
+"hub_survivor": true
+},
+{
 "fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] derives from cells [CL:0000000]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": false
+},
+{
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] derives from cells [CL:0000000]",
 "score": 0.002,
 "path_min": 0.002,
 "depth": 1,
@@ -16276,6 +17599,46 @@
 },
 {
 "fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] capable of transmembrane transport [GO:0055085]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] capable of ATP biosynthetic process [GO:0006754]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] capable of exocytosis [GO:0006887]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] capable of endocytosis [GO:0006897]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] capable of phagocytosis [GO:0006909]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] capable of transmembrane transport [GO:0055085]",
 "score": 0.002,
 "path_min": 0.002,
 "depth": 1,

@@ -5538,5 +5538,347 @@
    "curie_changes": [],
    "confidence": "medium"
   }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45437-12",
+  "module": "m45437",
+  "source": "During photosynthesis, plants use energy (originally from sunlight) to convert carbon dioxide gas (CO2) into sugar molecules (like glucose: C6H12O6).",
+  "claim": "In photosynthesis, plants use energy from sunlight to convert CO2 into glucose",
+  "entities": [
+   {
+    "text": "photosynthesis",
+    "curie": "GO:0015979",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "carbon dioxide gas (CO2)",
+    "curie": "CHEBI:16526",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "glucose",
+    "curie": "CHEBI:17234",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "Viridiplantae",
+    "curie": "NCBITaxon:33090",
+    "ontology": "NCBITaxon",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0015979",
+   "relation": "has output",
+   "object": "CHEBI:17234",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "compound_sentence",
+   "curie_changes": [],
+   "confidence": "medium",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45437-13",
+  "module": "m45437",
+  "source": "They consume carbon dioxide and produce oxygen as a waste product.",
+  "claim": "Photosynthesis consumes carbon dioxide",
+  "entities": [
+   {
+    "text": "photosynthesis",
+    "curie": "GO:0015979",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "carbon dioxide",
+    "curie": "CHEBI:16526",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "They",
+    "curie": "NCBITaxon:33090",
+    "ontology": "NCBITaxon",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0015979",
+   "relation": "has input",
+   "object": "CHEBI:16526",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45437-14",
+  "module": "m45437",
+  "source": "They consume carbon dioxide and produce oxygen as a waste product.",
+  "claim": "Photosynthesis produces oxygen as a waste product",
+  "entities": [
+   {
+    "text": "photosynthesis",
+    "curie": "GO:0015979",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "oxygen",
+    "curie": "CHEBI:15379",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "They",
+    "curie": "NCBITaxon:33090",
+    "ontology": "NCBITaxon",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0015979",
+   "relation": "has output",
+   "object": "CHEBI:15379",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45439-34",
+  "module": "m45439",
+  "source": "These reactions take place in specialized protein complexes located in the inner membrane of the mitochondria of eukaryotic organisms and on the inner part of the cell membrane of prokaryotic organisms.",
+  "claim": "Electron transport reactions occur in protein complexes in the inner mitochondrial membrane of eukaryotes",
+  "entities": [
+   {
+    "text": "These reactions",
+    "curie": "GO:0022904",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "protein complexes",
+    "curie": "GO:0098803",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "inner membrane of the mitochondria",
+    "curie": "GO:0005743",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "eukaryotic organisms",
+    "curie": "NCBITaxon:2759",
+    "ontology": "NCBITaxon",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0022904",
+   "relation": "occurs in",
+   "object": "GO:0005743",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:2759",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45439-47",
+  "module": "m45439",
+  "source": "The electron transport chain is present in multiple copies in the inner mitochondrial membrane of eukaryotes and in the plasma membrane of prokaryotes.",
+  "claim": "The electron transport chain is present in multiple copies in the inner mitochondrial membrane of eukaryotes",
+  "entities": [
+   {
+    "text": "respiratory electron transport chain",
+    "curie": "GO:0022904",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "mitochondrial inner membrane",
+    "curie": "GO:0005743",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "eukaryotes",
+    "curie": "NCBITaxon:2759",
+    "ontology": "NCBITaxon",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0022904",
+   "relation": "occurs in",
+   "object": "GO:0005743",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:2759",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45444-12",
+  "module": "m45444",
+  "source": "Glycogen will be taken out of storage if blood sugar levels drop.",
+  "claim": "Glycogen is mobilised when blood sugar drops",
+  "entities": [
+   {
+    "text": "glycogen",
+    "curie": "CHEBI:28087",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "blood sugar",
+    "curie": "CHEBI:17234",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "blood",
+    "curie": "UBERON:0000178",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "glycogen catabolic process",
+    "curie": "GO:0005980",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "CHEBI:17234",
+   "relation": null,
+   "object": "GO:0005980",
+   "sign": "neg",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000178",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium",
+   "promoted_from": "m2"
+  }
  }
 ]

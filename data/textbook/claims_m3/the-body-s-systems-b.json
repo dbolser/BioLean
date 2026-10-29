@@ -8314,5 +8314,647 @@
    "curie_changes": [],
    "confidence": "medium"
   }
+ },
+ {
+  "id": "the-body-s-systems-m45538-251",
+  "module": "m45538",
+  "source": "Contraction is stimulated by an electrochemical signal from a nerve cell associated with the muscle fiber.",
+  "claim": "An electrochemical signal from a nerve cell stimulates muscle contraction",
+  "entities": [
+   {
+    "text": "neuron",
+    "curie": "CL:0000540",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "muscle contraction",
+    "curie": "GO:0006936",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "skeletal muscle fiber",
+    "curie": "CL:0008002",
+    "ontology": "CL",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "CL:0000540",
+   "relation": null,
+   "object": "GO:0006936",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": "CL:0008002",
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45539-20",
+  "module": "m45539",
+  "source": "Flatworms have both a central nervous system (CNS), made up of a ganglion (clusters of connected neurons) and two nerve cords, and a peripheral nervous system (PNS) containing a system of nerves that extend throughout the body.",
+  "claim": "Flatworms have a central nervous system made up of a ganglion and two nerve cords",
+  "entities": [
+   {
+    "text": "Platyhelminthes",
+    "curie": "NCBITaxon:6157",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "central nervous system",
+    "curie": "UBERON:0001017",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "ganglion",
+    "curie": "UBERON:0000045",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "nerve cord",
+    "curie": "UBERON:0005053",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "UBERON:0000045",
+   "relation": "part of",
+   "object": "UBERON:0001017",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:6157",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "compound_sentence",
+   "curie_changes": [],
+   "confidence": "medium",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45539-24",
+  "module": "m45539",
+  "source": "It contains a brain, ventral nerve cord, and ganglia.",
+  "claim": "The insect nervous system contains a brain, ventral nerve cord and ganglia",
+  "entities": [
+   {
+    "text": "Insecta",
+    "curie": "NCBITaxon:50557",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "nervous system",
+    "curie": "UBERON:0001016",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "brain",
+    "curie": "UBERON:0000955",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "ventral nerve cord",
+    "curie": "UBERON:0000934",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "ganglion",
+    "curie": "UBERON:0000045",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "UBERON:0000955",
+   "relation": "part of",
+   "object": "UBERON:0001016",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:50557",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "compound_sentence",
+   "curie_changes": [],
+   "confidence": "medium",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45539-27",
+  "module": "m45539",
+  "source": "While there is great diversity among different vertebrate nervous systems, they all share a basic structure: a CNS that contains a brain and spinal cord and a PNS made up of peripheral sensory and motor nerves.",
+  "claim": "The vertebrate CNS contains a brain and spinal cord",
+  "entities": [
+   {
+    "text": "Vertebrata",
+    "curie": "NCBITaxon:7742",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "central nervous system",
+    "curie": "UBERON:0001017",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "brain",
+    "curie": "UBERON:0000955",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "spinal cord",
+    "curie": "UBERON:0002240",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "UBERON:0000955",
+   "relation": "part of",
+   "object": "UBERON:0001017",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:7742",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "compound_sentence",
+   "curie_changes": [],
+   "confidence": "medium",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45539-82",
+  "module": "m45539",
+  "source": "This opening allows sodium ions to enter the neuron and results in depolarization of the membrane—a decrease in the voltage across the neuron membrane.",
+  "claim": "Opening of ion channels allows sodium ions to enter the neuron",
+  "entities": [
+   {
+    "text": "ion channel activity",
+    "curie": "GO:0005216",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "sodium ion",
+    "curie": "CHEBI:29101",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "neuron",
+    "curie": "CL:0000540",
+    "ontology": "CL",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "GO:0005216",
+   "relation": null,
+   "object": "CHEBI:29101",
+   "sign": "pos",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": "CL:0000540",
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "low",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45539-131",
+  "module": "m45539",
+  "source": "Interestingly, both exercise and some antidepressant medications also promote neurogenesis in the hippocampus.",
+  "claim": "Exercise promotes neurogenesis in the hippocampus",
+  "entities": [
+   {
+    "text": "exercise",
+    "curie": "EFO:0000483",
+    "ontology": "other",
+    "verified": true
+   },
+   {
+    "text": "neurogenesis",
+    "curie": "GO:0022008",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "hippocampus",
+    "curie": "UBERON:0002421",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "EFO:0000483",
+   "relation": null,
+   "object": "GO:0022008",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0002421",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "unsupported_ontology",
+   "curie_changes": [],
+   "confidence": "medium",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45539-201",
+  "module": "m45539",
+  "source": "Each hemisphere of the mammalian cerebral cortex can be broken down into four functionally and spatially defined lobes: frontal, parietal, temporal, and occipital ().",
+  "claim": "Each hemisphere of the mammalian cerebral cortex has four lobes: frontal, parietal, temporal and occipital",
+  "entities": [
+   {
+    "text": "Mammalia",
+    "curie": "NCBITaxon:40674",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "cerebral cortex",
+    "curie": "UBERON:0000956",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "frontal lobe",
+    "curie": "UBERON:0016525",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "parietal lobe",
+    "curie": "UBERON:0001872",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "temporal lobe",
+    "curie": "UBERON:0001871",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "occipital lobe",
+    "curie": "UBERON:0002021",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "UBERON:0016525",
+   "relation": "part of",
+   "object": "UBERON:0000956",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:40674",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "compound_sentence",
+   "curie_changes": [],
+   "confidence": "medium",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45539-331",
+  "module": "m45539",
+  "source": "The vertebrate central nervous system contains the brain and the spinal cord, which are covered and protected by three meninges.",
+  "claim": "The vertebrate CNS contains the brain and spinal cord",
+  "entities": [
+   {
+    "text": "Vertebrata",
+    "curie": "NCBITaxon:7742",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "central nervous system",
+    "curie": "UBERON:0001017",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "brain",
+    "curie": "UBERON:0000955",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "spinal cord",
+    "curie": "UBERON:0002240",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "UBERON:0000955",
+   "relation": "part of",
+   "object": "UBERON:0001017",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:7742",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "compound_sentence",
+   "curie_changes": [],
+   "confidence": "medium",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45539-334",
+  "module": "m45539",
+  "source": "In mammals, these include the cortex (which can be broken down into four primary functional lobes: frontal, temporal, occipital, and parietal), basal ganglia, thalamus, hypothalamus, limbic system, cerebellum, and brainstem—although structures in some of these designations overlap.",
+  "claim": "In mammals, brain regions include the cortex, basal ganglia, thalamus, hypothalamus, limbic system, cerebellum and brainstem",
+  "entities": [
+   {
+    "text": "Mammalia",
+    "curie": "NCBITaxon:40674",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "brain",
+    "curie": "UBERON:0000955",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "cerebral cortex",
+    "curie": "UBERON:0000956",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "basal ganglia",
+    "curie": "UBERON:0002420",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "thalamus",
+    "curie": "UBERON:0001897",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "hypothalamus",
+    "curie": "UBERON:0001898",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "limbic system",
+    "curie": "UBERON:0000349",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "cerebellum",
+    "curie": "UBERON:0002037",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "brainstem",
+    "curie": "UBERON:0002298",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "UBERON:0000956",
+   "relation": "part of",
+   "object": "UBERON:0000955",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:40674",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "compound_sentence",
+   "curie_changes": [],
+   "confidence": "medium",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45539-335",
+  "module": "m45539",
+  "source": "In mammals, these include the cortex (which can be broken down into four primary functional lobes: frontal, temporal, occipital, and parietal), basal ganglia, thalamus, hypothalamus, limbic system, cerebellum, and brainstem—although structures in some of these designations overlap.",
+  "claim": "The mammalian cortex has four primary functional lobes: frontal, temporal, occipital and parietal",
+  "entities": [
+   {
+    "text": "Mammalia",
+    "curie": "NCBITaxon:40674",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "cerebral cortex",
+    "curie": "UBERON:0000956",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "frontal lobe",
+    "curie": "UBERON:0016525",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "temporal lobe",
+    "curie": "UBERON:0001871",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "occipital lobe",
+    "curie": "UBERON:0002021",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "parietal lobe",
+    "curie": "UBERON:0001872",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "UBERON:0016525",
+   "relation": "part of",
+   "object": "UBERON:0000956",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:40674",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "compound_sentence",
+   "curie_changes": [],
+   "confidence": "medium",
+   "promoted_from": "m2"
+  }
  }
 ]

@@ -30,6 +30,36 @@ at the end.
   cellular organisms transcribe" stays at 0.96 and "all eukaryotes transcribe" falls to 0.10.
 - **What matters now.** E0, E1 and E2 are cheap and need no new code. Run them first.
 
+## Results of E0, E1 and E2 (run 2026-10-29)
+
+**E0. Where the choice matters today.**
+- `generalize` is used only in `Examples/Transcription.lean`. Option (c) does no harm outside it.
+- 557 of the 2,287 closure facts (24 percent) rested on a taxon or any-cell universal. Of those, 103
+  rested on six statements whose context was dropped.
+
+**The context bug, found and fixed.** The round-2 emitter and the closure's round-2 loader read
+`m2.subject` and ignored `m2.context`. "Animal cells have a centrosome" (and four more animal and plant
+cell sentences) became "cells have X". Round 3 applies context. `scripts/textbook/promote_context_to_m3.py`
+copies the 70 round-2 records that carry a taxon, anatomy or cell-type context into `claims_m3`, so
+they are emitted with their context. Result: facts resting on a context-dropped statement 103 → 0, and
+the closure's one clash (centrosome) is gone, 1 → 0. 28 records carry a "condition" (a string in round 2,
+a kind plus curie in round 3) and are not promoted.
+
+**E1. Evidence hygiene.** Confirmed in Lean (`cellularE_value`, `eukaryotaE_value`,
+`cellularE_above_eukaryotaE`). Experimental instances only: Euglena, Paramecium and Halobacterium
+drop out (0 experimental annotations), Sulfolobus acidocaldarius joins (13). Cellular organisms
+24/25 = 0.96, Eukaryota 16/153 = 0.10. The gap widens. Experimental counts, QuickGO 2026-10-29:
+E. coli 158, yeast 859, mouse 139, human 644, Arabidopsis 61, Sulfolobus 13.
+
+**E2. False universals in the encoding.** Nine statements are flagged in
+`data/textbook/false_as_written.tsv` (universal_false 3, mapping 2, overgeneral 4). The closure now
+reports what rests on them: **337 of 2,510 derived facts (13 percent)**. Most rest on "all cells have
+ribosomes" (135) and "all cells have DNA" (118), false for mature mammalian red cells. Only two of the
+nine are verified against a source; the rest are marked `memory` and need a check. Not yet done: the
+exceptions slot (option f), the hedged `most` reading, and the E2 counterexample rule.
+
+---
+
 ## Words used here
 
 | word | meaning here |

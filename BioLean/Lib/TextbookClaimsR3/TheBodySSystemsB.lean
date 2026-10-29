@@ -373,6 +373,12 @@ def the_body_s_systems_m45539_53 : Statement where
   text := "Most neurons have one or many dendrites"
   claim := .quant .most (.atLeast e_CL_0000540 e_GO_0030425 1)
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Although some neurons do not have any dendrites, most have one or many dendrites." }]
+/-- Some neurons have no dendrites -/
+def the_body_s_systems_m45539_54 : Statement where
+  id := "the-body-s-systems-m45539-54"
+  text := "Some neurons have no dendrites"
+  claim := .quant .some (.notRel ⟨.bfo, 51, false⟩ e_CL_0000540 e_GO_0030425)
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Although some neurons do not have any dendrites, most have one or many dendrites." }]
 /-- A neuron at rest has an inside approximately 70 mV more negative than the outside (-70 mV) -/
 def the_body_s_systems_m45539_62 : Statement where
   id := "the-body-s-systems-m45539-62"
@@ -396,6 +402,12 @@ def the_body_s_systems_m45539_108 : Statement where
   id := "the-body-s-systems-m45539-108"
   text := "Neurons usually have one or two axons"
   claim := .quant .most (.countBetween e_CL_0000540 e_GO_0030424 1 2)
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Neurons usually have one or two axons, but some neurons do not contain any axons." }]
+/-- Some neurons contain no axons -/
+def the_body_s_systems_m45539_109 : Statement where
+  id := "the-body-s-systems-m45539-109"
+  text := "Some neurons contain no axons"
+  claim := .quant .some (.notRel ⟨.bfo, 51, false⟩ e_CL_0000540 e_GO_0030424)
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Neurons usually have one or two axons, but some neurons do not contain any axons." }]
 /-- The axon of a human motor neuron can be as long as a meter -/
 def the_body_s_systems_m45539_112 : Statement where
@@ -481,5 +493,59 @@ def the_body_s_systems_m45539_377 : Statement where
   text := "Parasympathetic activation increases blood flow to the skin"
   claim := .effect e_UBERON_0000011 .pos (.process (e_GO_0008015.inCtx { anatomy := e_UBERON_0002097 }))
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Activation of the parasympathetic nervous system decreases heart rate and blood pressure and increases digestion and blood flow to the skin." }]
+/-- An electrochemical signal from a nerve cell stimulates muscle contraction -/
+def the_body_s_systems_m45538_251 : Statement where
+  id := "the-body-s-systems-m45538-251"
+  text := "An electrochemical signal from a nerve cell stimulates muscle contraction"
+  claim := .effect e_CL_0000540 .pos (.process (e_GO_0006936.inCtx { cellType := e_CL_0008002 }))
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Contraction is stimulated by an electrochemical signal from a nerve cell associated with the muscle fiber." }]
+/-- Flatworms have a central nervous system made up of a ganglion and two nerve cords [weakening; not expressed: compound_sentence] -/
+def the_body_s_systems_m45539_20 : Statement where
+  id := "the-body-s-systems-m45539-20"
+  text := "Flatworms have a central nervous system made up of a ganglion and two nerve cords [weakening; not expressed: compound_sentence]"
+  claim := .rel ⟨.bfo, 50, false⟩ (e_UBERON_0000045.inCtx { taxon := e_NCBITaxon_6157 }) e_UBERON_0001017
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Flatworms have both a central nervous system (CNS), made up of a ganglion (clusters of connected neurons) and two nerve cords, and a peripheral nervous system (PNS) containing a system of nerves that " }]
+/-- The insect nervous system contains a brain, ventral nerve cord and ganglia [weakening; not expressed: compound_sentence] -/
+def the_body_s_systems_m45539_24 : Statement where
+  id := "the-body-s-systems-m45539-24"
+  text := "The insect nervous system contains a brain, ventral nerve cord and ganglia [weakening; not expressed: compound_sentence]"
+  claim := .rel ⟨.bfo, 50, false⟩ (e_UBERON_0000955.inCtx { taxon := e_NCBITaxon_50557 }) e_UBERON_0001016
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "It contains a brain, ventral nerve cord, and ganglia." }]
+/-- The vertebrate CNS contains a brain and spinal cord [weakening; not expressed: compound_sentence] -/
+def the_body_s_systems_m45539_27 : Statement where
+  id := "the-body-s-systems-m45539-27"
+  text := "The vertebrate CNS contains a brain and spinal cord [weakening; not expressed: compound_sentence]"
+  claim := .rel ⟨.bfo, 50, false⟩ (e_UBERON_0000955.inCtx { taxon := e_NCBITaxon_7742 }) e_UBERON_0001017
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "While there is great diversity among different vertebrate nervous systems, they all share a basic structure: a CNS that contains a brain and spinal cord and a PNS made up of peripheral sensory and mot" }]
+/-- Opening of ion channels allows sodium ions to enter the neuron -/
+def the_body_s_systems_m45539_82 : Statement where
+  id := "the-body-s-systems-m45539-82"
+  text := "Opening of ion channels allows sodium ions to enter the neuron"
+  claim := .effect e_GO_0005216 .pos (.amount (e_CHEBI_29101.inCtx { cellType := e_CL_0000540 }))
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "This opening allows sodium ions to enter the neuron and results in depolarization of the membrane—a decrease in the voltage across the neuron membrane." }]
+/-- Each hemisphere of the mammalian cerebral cortex has four lobes: frontal, parietal, temporal and occipital [weakening; not expressed: compound_sentence] -/
+def the_body_s_systems_m45539_201 : Statement where
+  id := "the-body-s-systems-m45539-201"
+  text := "Each hemisphere of the mammalian cerebral cortex has four lobes: frontal, parietal, temporal and occipital [weakening; not expressed: compound_sentence]"
+  claim := .rel ⟨.bfo, 50, false⟩ (e_UBERON_0016525.inCtx { taxon := e_NCBITaxon_40674 }) e_UBERON_0000956
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Each hemisphere of the mammalian cerebral cortex can be broken down into four functionally and spatially defined lobes: frontal, parietal, temporal, and occipital ()." }]
+/-- The vertebrate CNS contains the brain and spinal cord [weakening; not expressed: compound_sentence] -/
+def the_body_s_systems_m45539_331 : Statement where
+  id := "the-body-s-systems-m45539-331"
+  text := "The vertebrate CNS contains the brain and spinal cord [weakening; not expressed: compound_sentence]"
+  claim := .rel ⟨.bfo, 50, false⟩ (e_UBERON_0000955.inCtx { taxon := e_NCBITaxon_7742 }) e_UBERON_0001017
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "The vertebrate central nervous system contains the brain and the spinal cord, which are covered and protected by three meninges." }]
+/-- In mammals, brain regions include the cortex, basal ganglia, thalamus, hypothalamus, limbic system, cerebellum and brainstem [weakening; not expressed: compound_sentence] -/
+def the_body_s_systems_m45539_334 : Statement where
+  id := "the-body-s-systems-m45539-334"
+  text := "In mammals, brain regions include the cortex, basal ganglia, thalamus, hypothalamus, limbic system, cerebellum and brainstem [weakening; not expressed: compound_sentence]"
+  claim := .rel ⟨.bfo, 50, false⟩ (e_UBERON_0000956.inCtx { taxon := e_NCBITaxon_40674 }) e_UBERON_0000955
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "In mammals, these include the cortex (which can be broken down into four primary functional lobes: frontal, temporal, occipital, and parietal), basal ganglia, thalamus, hypothalamus, limbic system, ce" }]
+/-- The mammalian cortex has four primary functional lobes: frontal, temporal, occipital and parietal [weakening; not expressed: compound_sentence] -/
+def the_body_s_systems_m45539_335 : Statement where
+  id := "the-body-s-systems-m45539-335"
+  text := "The mammalian cortex has four primary functional lobes: frontal, temporal, occipital and parietal [weakening; not expressed: compound_sentence]"
+  claim := .rel ⟨.bfo, 50, false⟩ (e_UBERON_0016525.inCtx { taxon := e_NCBITaxon_40674 }) e_UBERON_0000956
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "In mammals, these include the cortex (which can be broken down into four primary functional lobes: frontal, temporal, occipital, and parietal), basal ganglia, thalamus, hypothalamus, limbic system, ce" }]
 
 end BioLean.Textbook.R3.TheBodySSystemsB

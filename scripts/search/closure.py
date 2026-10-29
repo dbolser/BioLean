@@ -239,6 +239,18 @@ if not LEGACY:
         ex = sorted((k for k in flags if g in flags[k]), key=lambda k: (facts[k]['depth'], str(k)))
         print(f"\n--- {g}: {len(ex)} (first five, shallowest) ---")
         for k in ex[:5]: print(tree(k)); print(f"  {g} because: {show(flags[k][g])}"); print()
+# --- statements flagged false as written (data/textbook/false_as_written.tsv): what rests on each?
+flag_file = pathlib.Path('data/textbook/false_as_written.tsv')
+if flag_file.exists() and not LEGACY:
+    bad = {l.split('\t')[0]: l.split('\t')[1] for l in flag_file.read_text().splitlines() if l.strip() and not l.startswith('#')}
+    def uses(k): return {x for x in re.findall(r'\[([a-z0-9-]+-m\d+-\d+[a-z]?)\]', tree(k))}
+    rest = collections.Counter(); on_any = 0
+    for k in novel:
+        hit = uses(k) & set(bad)
+        on_any += bool(hit)
+        for b in hit: rest[b] += 1
+    print(f"\n=== statements flagged false as written: {len(bad)}; derived facts resting on at least one: {on_any} of {len(novel)} ===")
+    for b, n in rest.most_common(): print(f"  {n:4d}  {b}  ({bad[b]})")
 json.dump({'asserted': len(asserted), 'novel': len(novel), 'rules': dict(rule_count),
            **({'refine_axioms': len(axioms), 'clashes': len(clashes), 'sign_clashes': len(opp), 'flags': dict(by_flag)} if not LEGACY else {}),
            'facts': [{'fact': show(k), 'key': [str(x) for x in k], 'depth': v['depth'], 'belief': float(v['belief']), 'rule': v['deriv'][0], 'tree': tree(k),

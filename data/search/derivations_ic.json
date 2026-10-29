@@ -14,18 +14,35 @@
 "sid": "the-body-s-systems-m45539-82"
 }
 ],
-"fact": "neurotransmitters [CHEBI:25512] \u2192+ amount(sodium [CHEBI:29101])",
+"fact": "neurotransmitters [CHEBI:25512] \u2192+ amount(sodium ion \u2293 part of (neuron) [CHEBI:29101&BFO:0000050=(CL:0000540)])",
 "key": [
 "effect",
 "pos",
 "amount",
 "CHEBI:25512",
-"CHEBI:29101"
+"CHEBI:29101&BFO:0000050=(CL:0000540)"
 ]
+},
+{
+"rule": "isaInheritEffect",
+"premises": [
+{
+"rule": "refineAxiom",
+"sid": "refine:CHEBI:29101&BFO:0000050=(CL:0000540)"
 },
 {
 "rule": "lit",
 "sid": "the-body-s-systems-m45537-153"
+}
+],
+"fact": "sodium ion \u2293 part of (neuron) [CHEBI:29101&BFO:0000050=(CL:0000540)] \u2192\u2212 amount(aldosterone \u2293 located in (blood) [CHEBI:27584&RO:0001025=(UBERON:0000178)])",
+"key": [
+"effect",
+"neg",
+"amount",
+"CHEBI:29101&BFO:0000050=(CL:0000540)",
+"CHEBI:27584&RO:0001025=(UBERON:0000178)"
+]
 }
 ],
 "fact": "neurotransmitters [CHEBI:25512] \u2192\u2212 amount(aldosterone \u2293 located in (blood) [CHEBI:27584&RO:0001025=(UBERON:0000178)])",
@@ -34,6 +51,27 @@
 "neg",
 "amount",
 "CHEBI:25512",
+"CHEBI:27584&RO:0001025=(UBERON:0000178)"
+]
+},
+{
+"rule": "isaInheritEffect",
+"premises": [
+{
+"rule": "refineAxiom",
+"sid": "refine:CHEBI:29101&BFO:0000050=(CL:0000540)"
+},
+{
+"rule": "lit",
+"sid": "the-body-s-systems-m45537-153"
+}
+],
+"fact": "sodium ion \u2293 part of (neuron) [CHEBI:29101&BFO:0000050=(CL:0000540)] \u2192\u2212 amount(aldosterone \u2293 located in (blood) [CHEBI:27584&RO:0001025=(UBERON:0000178)])",
+"key": [
+"effect",
+"neg",
+"amount",
+"CHEBI:29101&BFO:0000050=(CL:0000540)",
 "CHEBI:27584&RO:0001025=(UBERON:0000178)"
 ]
 },
@@ -70,13 +108,13 @@
 "sid": "the-body-s-systems-m45539-82"
 }
 ],
-"fact": "neurotransmitters [CHEBI:25512] \u2192+ amount(sodium [CHEBI:29101])",
+"fact": "neurotransmitters [CHEBI:25512] \u2192+ amount(sodium ion \u2293 part of (neuron) [CHEBI:29101&BFO:0000050=(CL:0000540)])",
 "key": [
 "effect",
 "pos",
 "amount",
 "CHEBI:25512",
-"CHEBI:29101"
+"CHEBI:29101&BFO:0000050=(CL:0000540)"
 ]
 },
 {
@@ -1729,6 +1767,30 @@ false
 ]
 },
 {
+"rule": "relTrans",
+"premises": [
+{
+"rule": "refineAxiom",
+"sid": "refine:GO:0030168&BFO:0000066=(UBERON:0001981)&BFO:0000066=(CL:0000233)"
+},
+{
+"rule": "refineAxiom",
+"sid": "refine:GO:0030168&BFO:0000066=(UBERON:0001981)"
+}
+],
+"fact": "platelets to adhere (platelet activation) \u2293 occurs in (blood vessel) \u2293 occurs in (platelets) [GO:0030168&BFO:0000066=(UBERON:0001981)&BFO:0000066=(CL:0000233)] is_a platelets to adhere (platelet activation) [GO:0030168]",
+"key": [
+"rel",
+[
+"rdfs",
+0,
+false
+],
+"GO:0030168&BFO:0000066=(UBERON:0001981)&BFO:0000066=(CL:0000233)",
+"GO:0030168"
+]
+},
+{
 "rule": "isaInherit",
 "premises": [
 {
@@ -1953,13 +2015,13 @@ false
 "sid": "how-cells-obtain-energy-m45444-12"
 }
 ],
-"fact": "glucose \u2293 located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] \u2192\u2212 process(glycogen catabolic process [GO:0005980])",
+"fact": "glucose \u2293 located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] \u2192\u2212 process(glycogen catabolic process \u2293 occurs in (blood) [GO:0005980&BFO:0000066=(UBERON:0000178)])",
 "key": [
 "effect",
 "neg",
 "process",
 "CHEBI:17234&RO:0001025=(UBERON:0000178)",
-"GO:0005980"
+"GO:0005980&BFO:0000066=(UBERON:0000178)"
 ]
 },
 {
@@ -2201,23 +2263,23 @@ false
 "sid": "how-cells-obtain-energy-m45444-12"
 }
 ],
-"fact": "glucose \u2293 located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] \u2192\u2212 process(glycogen catabolic process [GO:0005980])",
+"fact": "glucose \u2293 located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] \u2192\u2212 process(glycogen catabolic process \u2293 occurs in (blood) [GO:0005980&BFO:0000066=(UBERON:0000178)])",
 "key": [
 "effect",
 "neg",
 "process",
 "CHEBI:17234&RO:0001025=(UBERON:0000178)",
-"GO:0005980"
+"GO:0005980&BFO:0000066=(UBERON:0000178)"
 ]
 }
 ],
-"fact": "glucose [CHEBI:17234] \u2192+ process(glycogen catabolic process [GO:0005980])",
+"fact": "glucose [CHEBI:17234] \u2192+ process(glycogen catabolic process \u2293 occurs in (blood) [GO:0005980&BFO:0000066=(UBERON:0000178)])",
 "key": [
 "effect",
 "pos",
 "process",
 "CHEBI:17234",
-"GO:0005980"
+"GO:0005980&BFO:0000066=(UBERON:0000178)"
 ]
 },
 {
@@ -2499,6 +2561,47 @@ false
 ],
 "CHEBI:17843",
 "CHEBI:43176"
+]
+},
+{
+"rule": "isaInheritEffect",
+"premises": [
+{
+"rule": "relTrans",
+"premises": [
+{
+"rule": "refineAxiom",
+"sid": "refine:CHEBI:16113&RO:0001025=(UBERON:0000178)"
+},
+{
+"rule": "lit",
+"sid": "how-cells-obtain-energy-m45444-30"
+}
+],
+"fact": "cholesterol \u2293 located in (blood) [CHEBI:16113&RO:0001025=(UBERON:0000178)] is_a lipid [CHEBI:18059]",
+"key": [
+"rel",
+[
+"rdfs",
+0,
+false
+],
+"CHEBI:16113&RO:0001025=(UBERON:0000178)",
+"CHEBI:18059"
+]
+},
+{
+"rule": "lit",
+"sid": "the-body-s-systems-m45535-183"
+}
+],
+"fact": "cholesterol \u2293 located in (blood) [CHEBI:16113&RO:0001025=(UBERON:0000178)] \u2192+ process(sense of satiety or fullness [GO:0032098])",
+"key": [
+"effect",
+"pos",
+"process",
+"CHEBI:16113&RO:0001025=(UBERON:0000178)",
+"GO:0032098"
 ]
 },
 {
@@ -3300,6 +3403,47 @@ false
 "process",
 "GO:0070293",
 "GO:0005978"
+]
+},
+{
+"rule": "isaInheritEffect",
+"premises": [
+{
+"rule": "relTrans",
+"premises": [
+{
+"rule": "refineAxiom",
+"sid": "refine:CHEBI:16113&RO:0001025=(UBERON:0000178)"
+},
+{
+"rule": "lit",
+"sid": "how-cells-obtain-energy-m45444-30"
+}
+],
+"fact": "cholesterol \u2293 located in (blood) [CHEBI:16113&RO:0001025=(UBERON:0000178)] is_a lipid [CHEBI:18059]",
+"key": [
+"rel",
+[
+"rdfs",
+0,
+false
+],
+"CHEBI:16113&RO:0001025=(UBERON:0000178)",
+"CHEBI:18059"
+]
+},
+{
+"rule": "lit",
+"sid": "the-body-s-systems-m45535-186"
+}
+],
+"fact": "cholesterol \u2293 located in (blood) [CHEBI:16113&RO:0001025=(UBERON:0000178)] \u2192+ process(absorbs nutrients [GO:0050892])",
+"key": [
+"effect",
+"pos",
+"process",
+"CHEBI:16113&RO:0001025=(UBERON:0000178)",
+"GO:0050892"
 ]
 },
 {
@@ -4951,6 +5095,82 @@ false
 "rule": "viaAmount",
 "premises": [
 {
+"rule": "isaInheritEffect",
+"premises": [
+{
+"rule": "refineAxiom",
+"sid": "refine:GO:0022904&RO:0002162=(NCBITaxon:2759)"
+},
+{
+"rule": "lit",
+"sid": "how-cells-obtain-energy-m45439-63"
+}
+],
+"fact": "These reactions \u2293 in taxon (eukaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2759)] \u2192+ amount(ATP [CHEBI:15422])",
+"key": [
+"effect",
+"pos",
+"amount",
+"GO:0022904&RO:0002162=(NCBITaxon:2759)",
+"CHEBI:15422"
+]
+},
+{
+"rule": "lit",
+"sid": "how-cells-obtain-energy-m45437-244"
+}
+],
+"fact": "These reactions \u2293 in taxon (eukaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2759)] \u2192\u2212 process(broken down [GO:0006007])",
+"key": [
+"effect",
+"neg",
+"process",
+"GO:0022904&RO:0002162=(NCBITaxon:2759)",
+"GO:0006007"
+]
+},
+{
+"rule": "viaAmount",
+"premises": [
+{
+"rule": "isaInheritEffect",
+"premises": [
+{
+"rule": "refineAxiom",
+"sid": "refine:GO:0022904&RO:0002162=(NCBITaxon:2759)"
+},
+{
+"rule": "lit",
+"sid": "how-cells-obtain-energy-m45439-63"
+}
+],
+"fact": "These reactions \u2293 in taxon (eukaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2759)] \u2192+ amount(ATP [CHEBI:15422])",
+"key": [
+"effect",
+"pos",
+"amount",
+"GO:0022904&RO:0002162=(NCBITaxon:2759)",
+"CHEBI:15422"
+]
+},
+{
+"rule": "lit",
+"sid": "how-cells-obtain-energy-m45437-246"
+}
+],
+"fact": "These reactions \u2293 in taxon (eukaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2759)] \u2192\u2212 process(ATP biosynthetic process [GO:0006754])",
+"key": [
+"effect",
+"neg",
+"process",
+"GO:0022904&RO:0002162=(NCBITaxon:2759)",
+"GO:0006754"
+]
+},
+{
+"rule": "viaAmount",
+"premises": [
+{
 "rule": "lit",
 "sid": "how-cells-obtain-energy-m45439-63"
 },
@@ -5007,6 +5227,27 @@ false
 "pos",
 "amount",
 "GO:0022904&RO:0002162=(NCBITaxon:2)",
+"CHEBI:15422"
+]
+},
+{
+"rule": "isaInheritEffect",
+"premises": [
+{
+"rule": "refineAxiom",
+"sid": "refine:GO:0022904&RO:0002162=(NCBITaxon:2759)"
+},
+{
+"rule": "lit",
+"sid": "how-cells-obtain-energy-m45439-63"
+}
+],
+"fact": "These reactions \u2293 in taxon (eukaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2759)] \u2192+ amount(ATP [CHEBI:15422])",
+"key": [
+"effect",
+"pos",
+"amount",
+"GO:0022904&RO:0002162=(NCBITaxon:2759)",
 "CHEBI:15422"
 ]
 },
@@ -5129,6 +5370,65 @@ false
 "pos",
 "process",
 "GO:0022904&RO:0002162=(NCBITaxon:2)",
+"GO:0010248"
+]
+},
+{
+"rule": "viaAmount",
+"premises": [
+{
+"rule": "isaInheritEffect",
+"premises": [
+{
+"rule": "refineAxiom",
+"sid": "refine:GO:0022904&RO:0002162=(NCBITaxon:2759)"
+},
+{
+"rule": "lit",
+"sid": "how-cells-obtain-energy-m45439-63"
+}
+],
+"fact": "These reactions \u2293 in taxon (eukaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2759)] \u2192+ amount(ATP [CHEBI:15422])",
+"key": [
+"effect",
+"pos",
+"amount",
+"GO:0022904&RO:0002162=(NCBITaxon:2759)",
+"CHEBI:15422"
+]
+},
+{
+"rule": "lit",
+"sid": "how-cells-obtain-energy-m45444-10"
+}
+],
+"fact": "These reactions \u2293 in taxon (eukaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2759)] \u2192+ process(glycogen biosynthetic process [GO:0005978])",
+"key": [
+"effect",
+"pos",
+"process",
+"GO:0022904&RO:0002162=(NCBITaxon:2759)",
+"GO:0005978"
+]
+},
+{
+"rule": "isaInheritEffect",
+"premises": [
+{
+"rule": "refineAxiom",
+"sid": "refine:GO:0022904&RO:0002162=(NCBITaxon:2759)"
+},
+{
+"rule": "lit",
+"sid": "how-cells-obtain-energy-m45439-36"
+}
+],
+"fact": "These reactions \u2293 in taxon (eukaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2759)] \u2192+ process(H+ gradient [GO:0010248])",
+"key": [
+"effect",
+"pos",
+"process",
+"GO:0022904&RO:0002162=(NCBITaxon:2759)",
 "GO:0010248"
 ]
 },
@@ -5434,6 +5734,54 @@ false
 "premises": [
 {
 "rule": "refineAxiom",
+"sid": "refine:GO:0022904&RO:0002162=(NCBITaxon:2759)"
+},
+{
+"rule": "lit",
+"sid": "how-cells-obtain-energy-m45439-56"
+}
+],
+"fact": "These reactions \u2293 in taxon (eukaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2759)] has input high-energy electrons [CHEBI:10545]",
+"key": [
+"rel",
+[
+"ro",
+2233,
+false
+],
+"GO:0022904&RO:0002162=(NCBITaxon:2759)",
+"CHEBI:10545"
+]
+},
+{
+"rule": "isaInherit",
+"premises": [
+{
+"rule": "refineAxiom",
+"sid": "refine:GO:0022904&RO:0002162=(NCBITaxon:2759)"
+},
+{
+"rule": "lit",
+"sid": "how-cells-obtain-energy-m45439-121"
+}
+],
+"fact": "These reactions \u2293 in taxon (eukaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2759)] has input oxygen [CHEBI:15379]",
+"key": [
+"rel",
+[
+"ro",
+2233,
+false
+],
+"GO:0022904&RO:0002162=(NCBITaxon:2759)",
+"CHEBI:15379"
+]
+},
+{
+"rule": "isaInherit",
+"premises": [
+{
+"rule": "refineAxiom",
 "sid": "refine:GO:0022904&RO:0002162=(NCBITaxon:2)"
 },
 {
@@ -5450,6 +5798,30 @@ false
 false
 ],
 "GO:0022904&RO:0002162=(NCBITaxon:2)",
+"CHEBI:15377"
+]
+},
+{
+"rule": "isaInherit",
+"premises": [
+{
+"rule": "refineAxiom",
+"sid": "refine:GO:0022904&RO:0002162=(NCBITaxon:2759)"
+},
+{
+"rule": "lit",
+"sid": "how-cells-obtain-energy-m45439-44"
+}
+],
+"fact": "These reactions \u2293 in taxon (eukaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2759)] has output water [CHEBI:15377]",
+"key": [
+"rel",
+[
+"ro",
+2234,
+false
+],
+"GO:0022904&RO:0002162=(NCBITaxon:2759)",
 "CHEBI:15377"
 ]
 },
@@ -6350,90 +6722,6 @@ false
 },
 {
 "rule": "lit",
-"sid": "cell-structure-and-function-m45432-322"
-}
-],
-"fact": "tissues [UBERON:0000479] has part plant cell wall [GO:0009505]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"GO:0009505"
-]
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45432-323"
-}
-],
-"fact": "tissues [UBERON:0000479] has part cellulose [CHEBI:18246]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"CHEBI:18246"
-]
-}
-],
-"fact": "gallbladder [UBERON:0002110] has part cellulose [CHEBI:18246]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0002110",
-"CHEBI:18246"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "isaInherit",
-"premises": [
-{
-"rule": "lit",
-"sid": "the-body-s-systems-m45535-152"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-5"
-}
-],
-"fact": "gallbladder [UBERON:0002110] has part tissues [UBERON:0000479]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0002110",
-"UBERON:0000479"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-4"
-},
-{
-"rule": "lit",
 "sid": "cell-structure-and-function-m45429-9"
 }
 ],
@@ -6933,154 +7221,6 @@ false
 ],
 "UBERON:0002110",
 "CHEBI:32958"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "isaInherit",
-"premises": [
-{
-"rule": "lit",
-"sid": "the-body-s-systems-m45535-152"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-5"
-}
-],
-"fact": "gallbladder [UBERON:0002110] has part tissues [UBERON:0000479]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0002110",
-"UBERON:0000479"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-4"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45432-318"
-}
-],
-"fact": "tissues [UBERON:0000479] has part centrosome [GO:0005813]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"GO:0005813"
-]
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45432-68"
-}
-],
-"fact": "tissues [UBERON:0000479] has part centrioles [GO:0005814]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"GO:0005814"
-]
-}
-],
-"fact": "gallbladder [UBERON:0002110] has part centrioles [GO:0005814]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0002110",
-"GO:0005814"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "isaInherit",
-"premises": [
-{
-"rule": "lit",
-"sid": "the-body-s-systems-m45535-152"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-5"
-}
-],
-"fact": "gallbladder [UBERON:0002110] has part tissues [UBERON:0000479]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0002110",
-"UBERON:0000479"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-4"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45432-339"
-}
-],
-"fact": "tissues [UBERON:0000479] has part tight junction [GO:0005923]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"GO:0005923"
-]
-}
-],
-"fact": "gallbladder [UBERON:0002110] has part tight junction [GO:0005923]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0002110",
-"GO:0005923"
 ]
 },
 {
@@ -10235,18 +10375,35 @@ false
 "sid": "the-body-s-systems-m45539-82"
 }
 ],
-"fact": "neurotransmitters [CHEBI:25512] \u2192+ amount(sodium [CHEBI:29101])",
+"fact": "neurotransmitters [CHEBI:25512] \u2192+ amount(sodium ion \u2293 part of (neuron) [CHEBI:29101&BFO:0000050=(CL:0000540)])",
 "key": [
 "effect",
 "pos",
 "amount",
 "CHEBI:25512",
-"CHEBI:29101"
+"CHEBI:29101&BFO:0000050=(CL:0000540)"
 ]
+},
+{
+"rule": "isaInheritEffect",
+"premises": [
+{
+"rule": "refineAxiom",
+"sid": "refine:CHEBI:29101&BFO:0000050=(CL:0000540)"
 },
 {
 "rule": "lit",
 "sid": "the-body-s-systems-m45539-83"
+}
+],
+"fact": "sodium ion \u2293 part of (neuron) [CHEBI:29101&BFO:0000050=(CL:0000540)] \u2192+ process(membrane depolarization [GO:0051899])",
+"key": [
+"effect",
+"pos",
+"process",
+"CHEBI:29101&BFO:0000050=(CL:0000540)",
+"GO:0051899"
+]
 }
 ],
 "fact": "neurotransmitters [CHEBI:25512] \u2192+ process(membrane depolarization [GO:0051899])",
@@ -10255,6 +10412,27 @@ false
 "pos",
 "process",
 "CHEBI:25512",
+"GO:0051899"
+]
+},
+{
+"rule": "isaInheritEffect",
+"premises": [
+{
+"rule": "refineAxiom",
+"sid": "refine:CHEBI:29101&BFO:0000050=(CL:0000540)"
+},
+{
+"rule": "lit",
+"sid": "the-body-s-systems-m45539-83"
+}
+],
+"fact": "sodium ion \u2293 part of (neuron) [CHEBI:29101&BFO:0000050=(CL:0000540)] \u2192+ process(membrane depolarization [GO:0051899])",
+"key": [
+"effect",
+"pos",
+"process",
+"CHEBI:29101&BFO:0000050=(CL:0000540)",
 "GO:0051899"
 ]
 },
@@ -10905,35 +11083,11 @@ false
 "premises": [
 {
 "rule": "refineAxiom",
-"sid": "refine:GO:0015979&RO:0002162=(NCBITaxon:33090)"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45432-231"
-}
-],
-"fact": "photosynthesizing \u2293 in taxon (plants) [GO:0015979&RO:0002162=(NCBITaxon:33090)] has input carbon dioxide [CHEBI:16526]",
-"key": [
-"rel",
-[
-"ro",
-2233,
-false
-],
-"GO:0015979&RO:0002162=(NCBITaxon:33090)",
-"CHEBI:16526"
-]
-},
-{
-"rule": "isaInherit",
-"premises": [
-{
-"rule": "refineAxiom",
 "sid": "refine:GO:0015979&BFO:0000066=(GO:0009507)"
 },
 {
 "rule": "lit",
-"sid": "how-cells-obtain-energy-m45437-14"
+"sid": "photosynthesis-m45448-10"
 }
 ],
 "fact": "photosynthesis \u2293 occurs in (chloroplast) [GO:0015979&BFO:0000066=(GO:0009507)] has output oxygen [CHEBI:15379]",
@@ -10981,7 +11135,7 @@ false
 },
 {
 "rule": "lit",
-"sid": "how-cells-obtain-energy-m45437-14"
+"sid": "photosynthesis-m45448-10"
 }
 ],
 "fact": "photosynthesis \u2293 in taxon (NCBITaxon:2759) [GO:0015979&RO:0002162=(NCBITaxon:2759)] has output oxygen [CHEBI:15379]",
@@ -11017,54 +11171,6 @@ false
 false
 ],
 "GO:0015979&RO:0002162=(NCBITaxon:2759)",
-"CHEBI:17234"
-]
-},
-{
-"rule": "isaInherit",
-"premises": [
-{
-"rule": "refineAxiom",
-"sid": "refine:GO:0015979&RO:0002162=(NCBITaxon:33090)"
-},
-{
-"rule": "lit",
-"sid": "how-cells-obtain-energy-m45437-14"
-}
-],
-"fact": "photosynthesizing \u2293 in taxon (plants) [GO:0015979&RO:0002162=(NCBITaxon:33090)] has output oxygen [CHEBI:15379]",
-"key": [
-"rel",
-[
-"ro",
-2234,
-false
-],
-"GO:0015979&RO:0002162=(NCBITaxon:33090)",
-"CHEBI:15379"
-]
-},
-{
-"rule": "isaInherit",
-"premises": [
-{
-"rule": "refineAxiom",
-"sid": "refine:GO:0015979&RO:0002162=(NCBITaxon:33090)"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45432-232"
-}
-],
-"fact": "photosynthesizing \u2293 in taxon (plants) [GO:0015979&RO:0002162=(NCBITaxon:33090)] has output glucose [CHEBI:17234]",
-"key": [
-"rel",
-[
-"ro",
-2234,
-false
-],
-"GO:0015979&RO:0002162=(NCBITaxon:33090)",
 "CHEBI:17234"
 ]
 },
@@ -11776,6 +11882,30 @@ false
 ]
 },
 {
+"rule": "isaInherit",
+"premises": [
+{
+"rule": "refineAxiom",
+"sid": "refine:UBERON:0002299&RO:0001025=(UBERON:0002048)"
+},
+{
+"rule": "lit",
+"sid": "the-body-s-systems-m45536-207"
+}
+],
+"fact": "alveoli \u2293 located in (lung) [UBERON:0002299&RO:0001025=(UBERON:0002048)] connected to alveolar sacs [UBERON:0002169]",
+"key": [
+"rel",
+[
+"ro",
+2170,
+false
+],
+"UBERON:0002299&RO:0001025=(UBERON:0002048)",
+"UBERON:0002169"
+]
+},
+{
 "rule": "relChain",
 "premises": [
 {
@@ -11787,7 +11917,7 @@ false
 "sid": "molbio-m45480-10"
 }
 ],
-"fact": "desmosome [GO:0030057] part of structure that is capable of ATP biosynthetic process [GO:0006754]",
+"fact": "desmosome \u2293 in taxon (NCBITaxon:33208) [GO:0030057&RO:0002162=(NCBITaxon:33208)] part of structure that is capable of ATP biosynthetic process [GO:0006754]",
 "key": [
 "rel",
 [
@@ -11795,7 +11925,7 @@ false
 2329,
 false
 ],
-"GO:0030057",
+"GO:0030057&RO:0002162=(NCBITaxon:33208)",
 "GO:0006754"
 ]
 },
@@ -11811,7 +11941,7 @@ false
 "sid": "cell-structure-and-function-m45435-5"
 }
 ],
-"fact": "desmosome [GO:0030057] part of structure that is capable of phagocytosis [GO:0006909]",
+"fact": "desmosome \u2293 in taxon (NCBITaxon:33208) [GO:0030057&RO:0002162=(NCBITaxon:33208)] part of structure that is capable of phagocytosis [GO:0006909]",
 "key": [
 "rel",
 [
@@ -11819,7 +11949,7 @@ false
 2329,
 false
 ],
-"GO:0030057",
+"GO:0030057&RO:0002162=(NCBITaxon:33208)",
 "GO:0006909"
 ]
 },
@@ -11979,30 +12109,6 @@ false
 ],
 "CL:0000520",
 "CHEBI:18111"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45429-57"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45432-355"
-}
-],
-"fact": "prokaryotic cell [CL:0000520] has part cellulose [CHEBI:18246]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"CL:0000520",
-"CHEBI:18246"
 ]
 },
 {
@@ -12679,6 +12785,30 @@ false
 ]
 },
 {
+"rule": "isaInherit",
+"premises": [
+{
+"rule": "refineAxiom",
+"sid": "refine:UBERON:0001154&RO:0002162=(NCBITaxon:9606)"
+},
+{
+"rule": "lit",
+"sid": "the-body-s-systems-m45535-120"
+}
+],
+"fact": "vermiform appendix \u2293 in taxon (humans) [UBERON:0001154&RO:0002162=(NCBITaxon:9606)] located in ileocecal valve [UBERON:0000569]",
+"key": [
+"rel",
+[
+"ro",
+1025,
+false
+],
+"UBERON:0001154&RO:0002162=(NCBITaxon:9606)",
+"UBERON:0000569"
+]
+},
+{
 "rule": "relTrans",
 "premises": [
 {
@@ -13228,70 +13358,6 @@ false
 ],
 "GO:0043025",
 "GO:0015935"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "isaInherit",
-"premises": [
-{
-"rule": "lit",
-"sid": "the-body-s-systems-m45535-152"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-5"
-}
-],
-"fact": "gallbladder [UBERON:0002110] has part tissues [UBERON:0000479]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0002110",
-"UBERON:0000479"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-4"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45432-318"
-}
-],
-"fact": "tissues [UBERON:0000479] has part centrosome [GO:0005813]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"GO:0005813"
-]
-}
-],
-"fact": "gallbladder [UBERON:0002110] has part centrosome [GO:0005813]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0002110",
-"GO:0005813"
 ]
 },
 {
@@ -14049,6 +14115,30 @@ false
 ]
 },
 {
+"rule": "isaInherit",
+"premises": [
+{
+"rule": "refineAxiom",
+"sid": "refine:GO:0022904&RO:0002162=(NCBITaxon:2759)"
+},
+{
+"rule": "lit",
+"sid": "how-cells-obtain-energy-m45439-39"
+}
+],
+"fact": "These reactions \u2293 in taxon (eukaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2759)] part of this reaction [GO:0009060]",
+"key": [
+"rel",
+[
+"bfo",
+50,
+false
+],
+"GO:0022904&RO:0002162=(NCBITaxon:2759)",
+"GO:0009060"
+]
+},
+{
 "rule": "relTrans",
 "premises": [
 {
@@ -14142,278 +14232,6 @@ false
 ],
 "UBERON:0000473",
 "CHEBI:26764"
-]
-},
-{
-"rule": "relChain",
-"premises": [
-{
-"rule": "lit",
-"sid": "the-body-s-systems-m45539-245"
-},
-{
-"rule": "lit",
-"sid": "the-body-s-systems-m45539-219"
-}
-],
-"fact": "amygdala [UBERON:0001876] part of structure that is capable of hearing [GO:0007605]",
-"key": [
-"rel",
-[
-"ro",
-2329,
-false
-],
-"UBERON:0001876",
-"GO:0007605"
-]
-},
-{
-"rule": "relChain",
-"premises": [
-{
-"rule": "lit",
-"sid": "the-body-s-systems-m45539-244"
-},
-{
-"rule": "lit",
-"sid": "the-body-s-systems-m45539-242"
-}
-],
-"fact": "amygdala [UBERON:0001876] part of structure that is capable of memory [GO:0007613]",
-"key": [
-"rel",
-[
-"ro",
-2329,
-false
-],
-"UBERON:0001876",
-"GO:0007613"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "isaInherit",
-"premises": [
-{
-"rule": "refineAxiom",
-"sid": "refine:GO:0051325&RO:0002162=(NCBITaxon:2759)"
-},
-{
-"rule": "lit",
-"sid": "reproduction-at-the-cellular-level-m45461-13"
-}
-],
-"fact": "interphase \u2293 in taxon (eukaryotes) [GO:0051325&RO:0002162=(NCBITaxon:2759)] has part G1 [GO:0051318]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"GO:0051325&RO:0002162=(NCBITaxon:2759)",
-"GO:0051318"
-]
-},
-{
-"rule": "lit",
-"sid": "the-cellular-basis-of-inheritance-m45466-40"
-}
-],
-"fact": "interphase \u2293 in taxon (eukaryotes) [GO:0051325&RO:0002162=(NCBITaxon:2759)] has part growth [GO:0016049]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"GO:0051325&RO:0002162=(NCBITaxon:2759)",
-"GO:0016049"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "lit",
-"sid": "reproduction-at-the-cellular-level-m45461-13"
-},
-{
-"rule": "lit",
-"sid": "the-cellular-basis-of-inheritance-m45466-40"
-}
-],
-"fact": "interphase [GO:0051325] has part growth [GO:0016049]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"GO:0051325",
-"GO:0016049"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "isaInherit",
-"premises": [
-{
-"rule": "lit",
-"sid": "the-body-s-systems-m45535-152"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-5"
-}
-],
-"fact": "gallbladder [UBERON:0002110] has part tissues [UBERON:0000479]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0002110",
-"UBERON:0000479"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-4"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45432-343"
-}
-],
-"fact": "tissues [UBERON:0000479] has part plasmodesma [GO:0009506]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"GO:0009506"
-]
-}
-],
-"fact": "gallbladder [UBERON:0002110] has part plasmodesma [GO:0009506]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0002110",
-"GO:0009506"
-]
-},
-{
-"rule": "isaGeneralise",
-"premises": [
-{
-"rule": "lit",
-"sid": "the-body-s-systems-m45535-260"
-},
-{
-"rule": "lit",
-"sid": "the-body-s-systems-m45535-50"
-}
-],
-"fact": "alpha-amylase activity [GO:0004556] has output disaccharide [CHEBI:36233]",
-"key": [
-"rel",
-[
-"ro",
-2234,
-false
-],
-"GO:0004556",
-"CHEBI:36233"
-]
-},
-{
-"rule": "isaGeneralise",
-"premises": [
-{
-"rule": "isaGeneralise",
-"premises": [
-{
-"rule": "lit",
-"sid": "molbio-m45479-36"
-},
-{
-"rule": "lit",
-"sid": "molbio-m45479-28"
-}
-],
-"fact": "tRNA aminoacylation for protein translation [GO:0006418] has input RNA [CHEBI:33697]",
-"key": [
-"rel",
-[
-"ro",
-2233,
-false
-],
-"GO:0006418",
-"CHEBI:33697"
-]
-},
-{
-"rule": "lit",
-"sid": "molbio-m45473-47"
-}
-],
-"fact": "tRNA aminoacylation for protein translation [GO:0006418] has input nucleic acids [CHEBI:33696]",
-"key": [
-"rel",
-[
-"ro",
-2233,
-false
-],
-"GO:0006418",
-"CHEBI:33696"
-]
-},
-{
-"rule": "isaGeneralise",
-"premises": [
-{
-"rule": "lit",
-"sid": "molbio-m45479-36"
-},
-{
-"rule": "lit",
-"sid": "molbio-m45479-28"
-}
-],
-"fact": "tRNA aminoacylation for protein translation [GO:0006418] has input RNA [CHEBI:33697]",
-"key": [
-"rel",
-[
-"ro",
-2233,
-false
-],
-"GO:0006418",
-"CHEBI:33697"
 ]
 }
 ]

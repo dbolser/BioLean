@@ -8499,5 +8499,1032 @@
    "curie_changes": [],
    "confidence": "medium"
   }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-54",
+  "module": "m45432",
+  "source": "These components are also common in muscle cells and are responsible for muscle cell contraction.",
+  "claim": "Microfilaments are responsible for muscle cell contraction",
+  "entities": [
+   {
+    "text": "microfilaments",
+    "curie": "GO:0005884",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "muscle cell contraction",
+    "curie": "GO:0006936",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "GO:0005884",
+   "relation": null,
+   "object": "GO:0006936",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": "CL:0000187",
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-215",
+  "module": "m45432",
+  "source": "Animal cells have centrioles, centrosomes (discussed under the cytoskeleton), and lysosomes, whereas plant cells do not.",
+  "claim": "Animal cells have centrioles, centrosomes and lysosomes",
+  "entities": [
+   {
+    "text": "animal cell",
+    "curie": null,
+    "ontology": "other",
+    "verified": false
+   },
+   {
+    "text": "centrioles",
+    "curie": "GO:0005814",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "centrosomes",
+    "curie": "GO:0005813",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "lysosomes",
+    "curie": "GO:0005764",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "CL:0000548",
+   "relation": "has part",
+   "object": "GO:0005814",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33208",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "compound_sentence",
+   "curie_changes": [
+    {
+     "text": "animal cell",
+     "from": null,
+     "to": "CL:0000548",
+     "why": "animal cell in CL"
+    }
+   ],
+   "confidence": "medium",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-281",
+  "module": "m45432",
+  "source": "When tissue factor binds with another factor in the extracellular matrix, it causes platelets to adhere to the wall of the damaged blood vessel, stimulates adjacent smooth muscle cells in the blood vessel to contract (thus constricting the blood vessel), and initiates a series of steps that stimulate the platelets to produce clotting factors.",
+  "claim": "Tissue factor binding causes platelets to adhere to the damaged vessel wall",
+  "entities": [
+   {
+    "text": "tissue factor",
+    "curie": "PR:000001940",
+    "ontology": "PR",
+    "verified": true
+   },
+   {
+    "text": "platelets",
+    "curie": "CL:0000233",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "platelets to adhere (platelet activation)",
+    "curie": "GO:0030168",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "blood vessel",
+    "curie": "UBERON:0001981",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "PR:000001940",
+   "relation": null,
+   "object": "GO:0030168",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0001981",
+    "cellType": "CL:0000233",
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-282",
+  "module": "m45432",
+  "source": "When tissue factor binds with another factor in the extracellular matrix, it causes platelets to adhere to the wall of the damaged blood vessel, stimulates adjacent smooth muscle cells in the blood vessel to contract (thus constricting the blood vessel), and initiates a series of steps that stimulate the platelets to produce clotting factors.",
+  "claim": "Tissue factor binding stimulates adjacent smooth muscle cells to contract, constricting the blood vessel",
+  "entities": [
+   {
+    "text": "tissue factor",
+    "curie": "PR:000001940",
+    "ontology": "PR",
+    "verified": true
+   },
+   {
+    "text": "smooth muscle cells",
+    "curie": "CL:0000192",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "constricting",
+    "curie": "GO:0042310",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "PR:000001940",
+   "relation": null,
+   "object": "GO:0042310",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": "CL:0000192",
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-298",
+  "module": "m45432",
+  "source": "Also found only in animal cells are desmosomes, which act like spot welds between adjacent epithelial cells (c).",
+  "claim": "Desmosomes are found only in animal cells",
+  "entities": [
+   {
+    "text": "desmosome",
+    "curie": "GO:0030057",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "animal cell",
+    "curie": null,
+    "ontology": "other",
+    "verified": false
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0030057",
+   "relation": "part of",
+   "object": "CL:0000000",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33208",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "necessity",
+   "curie_changes": [
+    {
+     "text": "animal cell",
+     "from": null,
+     "to": "CL:0000000",
+     "why": "generic cell with taxon Metazoa context (CL animal cell is obsolete)"
+    }
+   ],
+   "confidence": "low",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-318",
+  "module": "m45432",
+  "source": "Animal cells also have a centrosome and lysosomes.",
+  "claim": "Animal cells have a centrosome and lysosomes",
+  "entities": [
+   {
+    "text": "animal cell",
+    "curie": null,
+    "ontology": "other",
+    "verified": false
+   },
+   {
+    "text": "centrosome",
+    "curie": "GO:0005813",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "lysosomes",
+    "curie": "GO:0005764",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "CL:0000000",
+   "relation": "has part",
+   "object": "GO:0005813",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33208",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "compound_sentence",
+   "curie_changes": [
+    {
+     "text": "animal cell",
+     "from": null,
+     "to": "CL:0000000",
+     "why": "generic cell with taxon Metazoa context (CL animal cell is obsolete)"
+    }
+   ],
+   "confidence": "medium",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-322",
+  "module": "m45432",
+  "source": "Plant cells have a cell wall, chloroplasts, and a central vacuole.",
+  "claim": "Plant cells have a cell wall, chloroplasts and a central vacuole",
+  "entities": [
+   {
+    "text": "plant cell",
+    "curie": null,
+    "ontology": "other",
+    "verified": false
+   },
+   {
+    "text": "plant cell wall",
+    "curie": "GO:0009505",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "chloroplasts",
+    "curie": "GO:0009507",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "central vacuole",
+    "curie": "GO:0000325",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "CL:0000000",
+   "relation": "has part",
+   "object": "GO:0009505",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "compound_sentence",
+   "curie_changes": [
+    {
+     "text": "plant cell",
+     "from": null,
+     "to": "CL:0000000",
+     "why": "generic cell with taxon Viridiplantae context (PO not supported)"
+    }
+   ],
+   "confidence": "medium",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-339",
+  "module": "m45432",
+  "source": "Animal cells communicate through their extracellular matrices and are connected to each other by tight junctions, desmosomes, and gap junctions.",
+  "claim": "Animal cells are connected by tight junctions, desmosomes and gap junctions",
+  "entities": [
+   {
+    "text": "animal cell",
+    "curie": null,
+    "ontology": "other",
+    "verified": false
+   },
+   {
+    "text": "tight junction",
+    "curie": "GO:0005923",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "desmosome",
+    "curie": "GO:0030057",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "gap junction",
+    "curie": "GO:0005921",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "CL:0000000",
+   "relation": "has part",
+   "object": "GO:0005923",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33208",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "compound_sentence",
+   "curie_changes": [
+    {
+     "text": "animal cell",
+     "from": null,
+     "to": "CL:0000000",
+     "why": "generic cell with taxon Metazoa context (CL animal cell is obsolete)"
+    }
+   ],
+   "confidence": "low",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-343",
+  "module": "m45432",
+  "source": "Plant cells have plasmodesmata, a cell wall, a large central vacuole, chloroplasts, and plastids.",
+  "claim": "Plant cells have plasmodesmata, a cell wall, a large central vacuole, chloroplasts and plastids",
+  "entities": [
+   {
+    "text": "plant cell",
+    "curie": null,
+    "ontology": "other",
+    "verified": false
+   },
+   {
+    "text": "plasmodesma",
+    "curie": "GO:0009506",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "plant cell wall",
+    "curie": "GO:0009505",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "central vacuole",
+    "curie": "GO:0000325",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "chloroplast",
+    "curie": "GO:0009507",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "plastids",
+    "curie": "GO:0009536",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "CL:0000000",
+   "relation": "has part",
+   "object": "GO:0009506",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "compound_sentence",
+   "curie_changes": [
+    {
+     "text": "plant cell",
+     "from": null,
+     "to": "CL:0000000",
+     "why": "generic cell with taxon Viridiplantae context (PO not supported)"
+    }
+   ],
+   "confidence": "medium",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-344",
+  "module": "m45432",
+  "source": "Animal cells have lysosomes and centrosomes.",
+  "claim": "Animal cells have lysosomes and centrosomes",
+  "entities": [
+   {
+    "text": "animal cell",
+    "curie": null,
+    "ontology": "other",
+    "verified": false
+   },
+   {
+    "text": "lysosomes",
+    "curie": "GO:0005764",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "centrosomes",
+    "curie": "GO:0005813",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "CL:0000000",
+   "relation": "has part",
+   "object": "GO:0005764",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33208",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "compound_sentence",
+   "curie_changes": [
+    {
+     "text": "animal cell",
+     "from": null,
+     "to": "CL:0000000",
+     "why": "generic cell with taxon Metazoa context (CL animal cell is obsolete)"
+    }
+   ],
+   "confidence": "medium",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-355",
+  "module": "m45432",
+  "source": "cell wall: a rigid cell covering made of cellulose in plants, peptidoglycan in bacteria, non-peptidoglycan compounds in Archaea, and chitin in fungi that protects the cell, provides structural support, and gives shape to the cell",
+  "claim": "The cell wall is made of cellulose in plants, peptidoglycan in bacteria, non-peptidoglycan compounds in Archaea and chitin in fungi",
+  "entities": [
+   {
+    "text": "cell wall",
+    "curie": "GO:0005618",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "cellulose",
+    "curie": "CHEBI:18246",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "peptidoglycan",
+    "curie": "CHEBI:8005",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "chitin",
+    "curie": "CHEBI:17029",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "plants",
+    "curie": "NCBITaxon:33090",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "bacteria",
+    "curie": "NCBITaxon:2",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "Archaea",
+    "curie": "NCBITaxon:2157",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "fungi",
+    "curie": "NCBITaxon:4751",
+    "ontology": "NCBITaxon",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0005618",
+   "relation": "has part",
+   "object": "CHEBI:18246",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "compound_sentence",
+   "curie_changes": [],
+   "confidence": "medium",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45433-57",
+  "module": "m45433",
+  "source": "For example, HIV is able to penetrate the plasma membranes of specific kinds of white blood cells called T-helper cells and monocytes, as well as some cells of the central nervous system.",
+  "claim": "HIV penetrates the plasma membranes of T-helper cells and monocytes",
+  "entities": [
+   {
+    "text": "HIV",
+    "curie": "NCBITaxon:12721",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "T-helper cells",
+    "curie": "CL:0000912",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "monocytes",
+    "curie": "CL:0000576",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "symbiont entry into host cell",
+    "curie": "GO:0046718",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "NCBITaxon:12721",
+   "relation": "capable of",
+   "object": "GO:0046718",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": "CL:0000912",
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "compound_sentence",
+   "curie_changes": [],
+   "confidence": "medium",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45433-63",
+  "module": "m45433",
+  "source": "Other recognition sites on the virus’s surface interact with the human immune system, prompting the body to produce antibodies.",
+  "claim": "Recognition sites on the virus surface prompt the immune system to produce antibodies",
+  "entities": [
+   {
+    "text": "virus",
+    "curie": "NCBITaxon:10239",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "antibodies",
+    "curie": "GO:0019814",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "immune system",
+    "curie": "UBERON:0002405",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "NCBITaxon:10239",
+   "relation": null,
+   "object": "GO:0019814",
+   "sign": "pos",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0002405",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45434-91",
+  "module": "m45434",
+  "source": "This influx of water produces turgor pressure, which stiffens the cell walls of the plant ().",
+  "claim": "Water influx produces turgor pressure",
+  "entities": [
+   {
+    "text": "water",
+    "curie": "CHEBI:15377",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "turgor pressure",
+    "curie": "PATO:0001620",
+    "ontology": "PATO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "CHEBI:15377",
+   "relation": null,
+   "object": "PATO:0001620",
+   "sign": "pos",
+   "target": "phenotype",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45434-92",
+  "module": "m45434",
+  "source": "This influx of water produces turgor pressure, which stiffens the cell walls of the plant ().",
+  "claim": "Turgor pressure stiffens plant cell walls",
+  "entities": [
+   {
+    "text": "turgor pressure",
+    "curie": "PATO:0001620",
+    "ontology": "PATO",
+    "verified": true
+   },
+   {
+    "text": "cell walls",
+    "curie": "GO:0009505",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "stiffness",
+    "curie": "PATO:0001545",
+    "ontology": "PATO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "PATO:0001620",
+   "relation": null,
+   "object": "PATO:0001545",
+   "sign": "pos",
+   "target": "phenotype",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45435-54",
+  "module": "m45435",
+  "source": "For example, the form of cholesterol termed low-density lipoprotein or LDL (also referred to as “bad” cholesterol) is removed from the blood by receptor-mediated endocytosis.",
+  "claim": "LDL is removed from the blood by receptor-mediated endocytosis",
+  "entities": [
+   {
+    "text": "receptor-mediated endocytosis",
+    "curie": "GO:0006898",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "LDL",
+    "curie": "CHEBI:39026",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "blood",
+    "curie": "UBERON:0000178",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "GO:0006898",
+   "relation": null,
+   "object": "CHEBI:39026",
+   "sign": "neg",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000178",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45435-57",
+  "module": "m45435",
+  "source": "People with this condition have life-threatening levels of cholesterol in their blood, because their cells cannot clear the chemical from their blood.",
+  "claim": "People with familial hypercholesterolemia have life-threatening blood cholesterol levels",
+  "entities": [
+   {
+    "text": "familial hypercholesterolemia",
+    "curie": "MONDO:0005439",
+    "ontology": "MONDO",
+    "verified": true
+   },
+   {
+    "text": "cholesterol",
+    "curie": "CHEBI:16113",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "blood",
+    "curie": "UBERON:0000178",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "MONDO:0005439",
+   "relation": null,
+   "object": "CHEBI:16113",
+   "sign": "pos",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": "UBERON:0000178",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium",
+   "promoted_from": "m2"
+  }
  }
 ]

@@ -415,5 +415,107 @@ def cell_structure_and_function_m45435_10 : Statement where
   text := "The interior of living cells is electrically negative relative to the extracellular fluid"
   claim := .less e_CL_0000000 e_GO_0005576 e_PATO_0001464
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "The interior of living cells is electrically negative with respect to the extracellular fluid in which they are bathed; at the same time, cells have higher concentrations of potassium (K+) and lower c" }]
+/-- Microfilaments are responsible for muscle cell contraction -/
+def cell_structure_and_function_m45432_54 : Statement where
+  id := "cell-structure-and-function-m45432-54"
+  text := "Microfilaments are responsible for muscle cell contraction"
+  claim := .effect e_GO_0005884 .pos (.process (e_GO_0006936.inCtx { cellType := e_CL_0000187 }))
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "These components are also common in muscle cells and are responsible for muscle cell contraction." }]
+/-- Animal cells have centrioles, centrosomes and lysosomes [weakening; not expressed: compound_sentence] -/
+def cell_structure_and_function_m45432_215 : Statement where
+  id := "cell-structure-and-function-m45432-215"
+  text := "Animal cells have centrioles, centrosomes and lysosomes [weakening; not expressed: compound_sentence]"
+  claim := .rel ⟨.bfo, 51, false⟩ (e_CL_0000548.inCtx { taxon := e_NCBITaxon_33208 }) e_GO_0005814
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Animal cells have centrioles, centrosomes (discussed under the cytoskeleton), and lysosomes, whereas plant cells do not." }]
+/-- Tissue factor binding causes platelets to adhere to the damaged vessel wall -/
+def cell_structure_and_function_m45432_281 : Statement where
+  id := "cell-structure-and-function-m45432-281"
+  text := "Tissue factor binding causes platelets to adhere to the damaged vessel wall"
+  claim := .effect e_PR_000001940 .pos (.process (e_GO_0030168.inCtx { anatomy := e_UBERON_0001981, cellType := e_CL_0000233 }))
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "When tissue factor binds with another factor in the extracellular matrix, it causes platelets to adhere to the wall of the damaged blood vessel, stimulates adjacent smooth muscle cells in the blood ve" }]
+/-- Tissue factor binding stimulates adjacent smooth muscle cells to contract, constricting the blood vessel -/
+def cell_structure_and_function_m45432_282 : Statement where
+  id := "cell-structure-and-function-m45432-282"
+  text := "Tissue factor binding stimulates adjacent smooth muscle cells to contract, constricting the blood vessel"
+  claim := .effect e_PR_000001940 .pos (.process (e_GO_0042310.inCtx { cellType := e_CL_0000192 }))
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "When tissue factor binds with another factor in the extracellular matrix, it causes platelets to adhere to the wall of the damaged blood vessel, stimulates adjacent smooth muscle cells in the blood ve" }]
+/-- Desmosomes are found only in animal cells [weakening; not expressed: necessity] -/
+def cell_structure_and_function_m45432_298 : Statement where
+  id := "cell-structure-and-function-m45432-298"
+  text := "Desmosomes are found only in animal cells [weakening; not expressed: necessity]"
+  claim := .rel ⟨.bfo, 50, false⟩ (e_GO_0030057.inCtx { taxon := e_NCBITaxon_33208 }) e_CL_0000000
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Also found only in animal cells are desmosomes, which act like spot welds between adjacent epithelial cells (c)." }]
+/-- Animal cells have a centrosome and lysosomes [weakening; not expressed: compound_sentence] -/
+def cell_structure_and_function_m45432_318 : Statement where
+  id := "cell-structure-and-function-m45432-318"
+  text := "Animal cells have a centrosome and lysosomes [weakening; not expressed: compound_sentence]"
+  claim := .rel ⟨.bfo, 51, false⟩ (e_CL_0000000.inCtx { taxon := e_NCBITaxon_33208 }) e_GO_0005813
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Animal cells also have a centrosome and lysosomes." }]
+/-- Plant cells have a cell wall, chloroplasts and a central vacuole [weakening; not expressed: compound_sentence] -/
+def cell_structure_and_function_m45432_322 : Statement where
+  id := "cell-structure-and-function-m45432-322"
+  text := "Plant cells have a cell wall, chloroplasts and a central vacuole [weakening; not expressed: compound_sentence]"
+  claim := .rel ⟨.bfo, 51, false⟩ (e_CL_0000000.inCtx { taxon := e_NCBITaxon_33090 }) e_GO_0009505
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Plant cells have a cell wall, chloroplasts, and a central vacuole." }]
+/-- Animal cells are connected by tight junctions, desmosomes and gap junctions [weakening; not expressed: compound_sentence] -/
+def cell_structure_and_function_m45432_339 : Statement where
+  id := "cell-structure-and-function-m45432-339"
+  text := "Animal cells are connected by tight junctions, desmosomes and gap junctions [weakening; not expressed: compound_sentence]"
+  claim := .rel ⟨.bfo, 51, false⟩ (e_CL_0000000.inCtx { taxon := e_NCBITaxon_33208 }) e_GO_0005923
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Animal cells communicate through their extracellular matrices and are connected to each other by tight junctions, desmosomes, and gap junctions." }]
+/-- Plant cells have plasmodesmata, a cell wall, a large central vacuole, chloroplasts and plastids [weakening; not expressed: compound_sentence] -/
+def cell_structure_and_function_m45432_343 : Statement where
+  id := "cell-structure-and-function-m45432-343"
+  text := "Plant cells have plasmodesmata, a cell wall, a large central vacuole, chloroplasts and plastids [weakening; not expressed: compound_sentence]"
+  claim := .rel ⟨.bfo, 51, false⟩ (e_CL_0000000.inCtx { taxon := e_NCBITaxon_33090 }) e_GO_0009506
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Plant cells have plasmodesmata, a cell wall, a large central vacuole, chloroplasts, and plastids." }]
+/-- Animal cells have lysosomes and centrosomes [weakening; not expressed: compound_sentence] -/
+def cell_structure_and_function_m45432_344 : Statement where
+  id := "cell-structure-and-function-m45432-344"
+  text := "Animal cells have lysosomes and centrosomes [weakening; not expressed: compound_sentence]"
+  claim := .rel ⟨.bfo, 51, false⟩ (e_CL_0000000.inCtx { taxon := e_NCBITaxon_33208 }) e_GO_0005764
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Animal cells have lysosomes and centrosomes." }]
+/-- The cell wall is made of cellulose in plants, peptidoglycan in bacteria, non-peptidoglycan compounds in Archaea and chitin in fungi [weakening; not expressed: compound_sentence] -/
+def cell_structure_and_function_m45432_355 : Statement where
+  id := "cell-structure-and-function-m45432-355"
+  text := "The cell wall is made of cellulose in plants, peptidoglycan in bacteria, non-peptidoglycan compounds in Archaea and chitin in fungi [weakening; not expressed: compound_sentence]"
+  claim := .rel ⟨.bfo, 51, false⟩ (e_GO_0005618.inCtx { taxon := e_NCBITaxon_33090 }) e_CHEBI_18246
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "cell wall: a rigid cell covering made of cellulose in plants, peptidoglycan in bacteria, non-peptidoglycan compounds in Archaea, and chitin in fungi that protects the cell, provides structural support" }]
+/-- HIV penetrates the plasma membranes of T-helper cells and monocytes [weakening; not expressed: compound_sentence] -/
+def cell_structure_and_function_m45433_57 : Statement where
+  id := "cell-structure-and-function-m45433-57"
+  text := "HIV penetrates the plasma membranes of T-helper cells and monocytes [weakening; not expressed: compound_sentence]"
+  claim := .rel ⟨.ro, 2215, false⟩ (e_NCBITaxon_12721.inCtx { cellType := e_CL_0000912 }) e_GO_0046718
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "For example, HIV is able to penetrate the plasma membranes of specific kinds of white blood cells called T-helper cells and monocytes, as well as some cells of the central nervous system." }]
+/-- Recognition sites on the virus surface prompt the immune system to produce antibodies -/
+def cell_structure_and_function_m45433_63 : Statement where
+  id := "cell-structure-and-function-m45433-63"
+  text := "Recognition sites on the virus surface prompt the immune system to produce antibodies"
+  claim := .effect e_NCBITaxon_10239 .pos (.amount (e_GO_0019814.inCtx { anatomy := e_UBERON_0002405 }))
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Other recognition sites on the virus’s surface interact with the human immune system, prompting the body to produce antibodies." }]
+/-- Water influx produces turgor pressure -/
+def cell_structure_and_function_m45434_91 : Statement where
+  id := "cell-structure-and-function-m45434-91"
+  text := "Water influx produces turgor pressure"
+  claim := .effect (e_CHEBI_15377.inCtx { taxon := e_NCBITaxon_33090 }) .pos (.phenotype e_PATO_0001620)
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "This influx of water produces turgor pressure, which stiffens the cell walls of the plant ()." }]
+/-- Turgor pressure stiffens plant cell walls -/
+def cell_structure_and_function_m45434_92 : Statement where
+  id := "cell-structure-and-function-m45434-92"
+  text := "Turgor pressure stiffens plant cell walls"
+  claim := .effect (e_PATO_0001620.inCtx { taxon := e_NCBITaxon_33090 }) .pos (.phenotype e_PATO_0001545)
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "This influx of water produces turgor pressure, which stiffens the cell walls of the plant ()." }]
+/-- LDL is removed from the blood by receptor-mediated endocytosis -/
+def cell_structure_and_function_m45435_54 : Statement where
+  id := "cell-structure-and-function-m45435-54"
+  text := "LDL is removed from the blood by receptor-mediated endocytosis"
+  claim := .effect e_GO_0006898 .neg (.amount (e_CHEBI_39026.inCtx { anatomy := e_UBERON_0000178 }))
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "For example, the form of cholesterol termed low-density lipoprotein or LDL (also referred to as “bad” cholesterol) is removed from the blood by receptor-mediated endocytosis." }]
+/-- People with familial hypercholesterolemia have life-threatening blood cholesterol levels -/
+def cell_structure_and_function_m45435_57 : Statement where
+  id := "cell-structure-and-function-m45435-57"
+  text := "People with familial hypercholesterolemia have life-threatening blood cholesterol levels"
+  claim := .effect (e_MONDO_0005439.inCtx { taxon := e_NCBITaxon_9606 }) .pos (.amount (e_CHEBI_16113.inCtx { anatomy := e_UBERON_0000178 }))
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "People with this condition have life-threatening levels of cholesterol in their blood, because their cells cannot clear the chemical from their blood." }]
 
 end BioLean.Textbook.R3.CellStructureAndFunction

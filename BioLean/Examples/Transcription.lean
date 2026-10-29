@@ -58,6 +58,7 @@ def arabidopsis : Entity .taxon := ⟨"NCBITaxon:3702", "Arabidopsis thaliana"�
 def euglena     : Entity .taxon := ⟨"NCBITaxon:3038", "Euglena"⟩
 def paramecium  : Entity .taxon := ⟨"NCBITaxon:5884", "Paramecium"⟩
 def halobacterium : Entity .taxon := ⟨"NCBITaxon:2242", "Halobacterium salinarum"⟩
+def sulfolobus  : Entity .taxon := ⟨"NCBITaxon:330779", "Sulfolobus acidocaldarius DSM 639"⟩
 def opisthokonta : Entity .taxon := ⟨"NCBITaxon:33154", "Opisthokonta"⟩
 def retroviridae : Entity .taxon := ⟨"NCBITaxon:11632", "Retroviridae"⟩
 def viruses     : Entity .taxon := ⟨"NCBITaxon:10239", "Viruses"⟩
@@ -85,6 +86,19 @@ def inst (t : Entity .taxon) : Statement where
                    note := s!"{n} GO annotations to GO:0006351 or a descendant (QuickGO, 2026-10-28)" }]
     | none => []
 
+/-- QuickGO, 2026-10-29: experimental (ECO:0000269 and descendants) annotations to GO:0006351 or a
+descendant by is_a, part_of and occurs_in only, taxon and its descendants. Program 01, E1. -/
+def quickGOExperimental : List (String × Nat) :=
+  [(ecoli.curie, 158), (yeast.curie, 859), (mouse.curie, 139), (human.curie, 644), (arabidopsis.curie, 61),
+   (sulfolobus.curie, 13), (euglena.curie, 0), (paramecium.curie, 0), (halobacterium.curie, 0)]
+
+/-- The instance in `t` from experimental annotations only: no evidence, so no belief, if there are none. -/
+def instE (t : Entity .taxon) : Statement :=
+  { inst t with evidence := match quickGOExperimental.lookup t.curie with
+      | some (n + 1) => [{ pmid := 0, year := 2026, kind := .curatedDb, taxon := some t,
+                           note := s!"{n + 1} experimental GO annotations to GO:0006351 or a descendant (QuickGO, 2026-10-29)" }]
+      | _ => [] }
+
 /-- "Transcription has output RNA in `T`", generalised from the instances in `taxa`. -/
 abbrev Universal (T : Entity .taxon) : Claim := makesRNA.claim (transcription.inCtx { taxon := some T })
 
@@ -92,6 +106,11 @@ abbrev Universal (T : Entity .taxon) : Claim := makesRNA.claim (transcription.in
 def gen (T : Entity .taxon) (m : Measure) (taxa : List (Entity .taxon))
     (h : admissible T taxa = true := by decide +kernel) : Derivation (Universal T) :=
   .generalize makesRNA {} T m taxa (fun i => .lit (inst taxa[i])) h
+
+/-- As `gen`, from experimental instances only. -/
+def genE (T : Entity .taxon) (m : Measure) (taxa : List (Entity .taxon))
+    (h : admissible T taxa = true := by decide +kernel) : Derivation (Universal T) :=
+  .generalize makesRNA {} T m taxa (fun i => .lit (instE taxa[i])) h
 
 /-- The five model organisms of the case study, and three more in the lineages they miss. -/
 def five : List (Entity .taxon) := [ecoli, yeast, mouse, human, arabidopsis]
@@ -158,6 +177,25 @@ theorem cellular8_clade_value : cellular8_c.opinion.belief = 256 / 2343 := by de
 theorem eukaryota6_bracketing_value : eukaryota6_b.opinion.belief = 16 / 75 := by decide +kernel
 theorem eukaryota6_unsupported : eukaryota6_b.verdict = .unsupported := by decide +kernel
 theorem eukaryota6_clade_value : eukaryota6_c.opinion.belief = 12 / 125 := by decide +kernel
+
+/-! ## Experimental instances only (program 01, E1)
+
+Euglena, Paramecium and Halobacterium have no experimental annotation, so they drop out; Sulfolobus
+(13 experimental) represents Archaea. Six instances. Cellular organisms rises to 24/25, Eukaryota (four
+instances, none changed) stays at 16/153: cleaner evidence widens the gap. -/
+
+def six : List (Entity .taxon) := five ++ [sulfolobus]
+def cellularE_b := genE cellularOrganisms .bracketing six
+def eukaryotaE_b := genE eukaryota .bracketing euk4
+
+theorem cellularE_value : cellularE_b.opinion.belief = 24 / 25 := by decide +kernel
+theorem cellularE_established : Established (Universal cellularOrganisms) (4 / 5) :=
+  ⟨cellularE_b, by decide +kernel⟩
+theorem eukaryotaE_value : eukaryotaE_b.opinion.belief = 16 / 153 := by decide +kernel
+theorem cellularE_above_eukaryotaE : eukaryotaE_b.opinion.belief < cellularE_b.opinion.belief := by
+  rw [eukaryotaE_value, cellularE_value]; norm_num
+-- the three taxa with no experimental annotation carry no evidence
+#guard [euglena, paramecium, halobacterium].all fun t => (instE t).evidence.isEmpty
 
 /-- Bracketing is not monotone in the target: from the same instances, "in cellular organisms" is
 believed more than the narrower "in Eukaryota" that it entails, because a sampled child of

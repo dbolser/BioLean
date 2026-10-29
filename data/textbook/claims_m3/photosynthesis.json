@@ -2191,5 +2191,401 @@
    "curie_changes": [],
    "confidence": "high"
   }
+ },
+ {
+  "id": "photosynthesis-m45448-55",
+  "module": "m45448",
+  "source": "In plants, photosynthesis takes place primarily in leaves, which consist of many layers of cells and have differentiated top and bottom sides.",
+  "claim": "in plants, photosynthesis takes place primarily in leaves",
+  "entities": [
+   {
+    "text": "photosynthesis",
+    "curie": "GO:0015979",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "leaves",
+    "curie": "PO:0025034",
+    "ontology": "other",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0015979",
+   "relation": "occurs in",
+   "object": "PO:0025034",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "unsupported_ontology",
+   "curie_changes": [],
+   "confidence": "medium",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "photosynthesis-m45448-56",
+  "module": "m45448",
+  "source": "In plants, photosynthesis takes place primarily in leaves, which consist of many layers of cells and have differentiated top and bottom sides.",
+  "claim": "leaves consist of many layers of cells",
+  "entities": [
+   {
+    "text": "leaves",
+    "curie": "PO:0025034",
+    "ontology": "other",
+    "verified": true
+   },
+   {
+    "text": "cells",
+    "curie": "CL:0000000",
+    "ontology": "CL",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "PO:0025034",
+   "relation": "has part",
+   "object": "CL:0000000",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "unsupported_ontology",
+   "curie_changes": [],
+   "confidence": "medium",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "photosynthesis-m45448-58",
+  "module": "m45448",
+  "source": "The process of photosynthesis occurs not on the surface layers of the leaf, but rather in a middle layer called the mesophyll ().",
+  "claim": "photosynthesis occurs in the mesophyll",
+  "entities": [
+   {
+    "text": "photosynthesis",
+    "curie": "GO:0015979",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "mesophyll",
+    "curie": "PO:0005645",
+    "ontology": "other",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0015979",
+   "relation": "occurs in",
+   "object": "PO:0005645",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "unsupported_ontology",
+   "curie_changes": [],
+   "confidence": "high",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "photosynthesis-m45448-60",
+  "module": "m45448",
+  "source": "The process of photosynthesis occurs not on the surface layers of the leaf, but rather in a middle layer called the mesophyll ().",
+  "claim": "the mesophyll is the middle layer of the leaf",
+  "entities": [
+   {
+    "text": "mesophyll",
+    "curie": "PO:0005645",
+    "ontology": "other",
+    "verified": true
+   },
+   {
+    "text": "leaves",
+    "curie": "PO:0025034",
+    "ontology": "other",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "PO:0005645",
+   "relation": "part of",
+   "object": "PO:0025034",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "unsupported_ontology",
+   "curie_changes": [],
+   "confidence": "high",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "photosynthesis-m45448-65",
+  "module": "m45448",
+  "source": "In plants, chloroplast-containing cells exist in the mesophyll.",
+  "claim": "in plants, cells of the mesophyll contain chloroplasts",
+  "entities": [
+   {
+    "text": "mesophyll cells",
+    "curie": "PO:0004006",
+    "ontology": "other",
+    "verified": true
+   },
+   {
+    "text": "chloroplast",
+    "curie": "GO:0009507",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "PO:0004006",
+   "relation": "has part",
+   "object": "GO:0009507",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "unsupported_ontology",
+   "curie_changes": [],
+   "confidence": "high",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "photosynthesis-m45448-81",
+  "module": "m45448",
+  "source": "Cells within the middle layer of a leaf have chloroplasts, which contain the photosynthetic apparatus.",
+  "claim": "cells of the leaf middle layer have chloroplasts",
+  "entities": [
+   {
+    "text": "mesophyll cells",
+    "curie": "PO:0004006",
+    "ontology": "other",
+    "verified": true
+   },
+   {
+    "text": "chloroplast",
+    "curie": "GO:0009507",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "PO:0004006",
+   "relation": "has part",
+   "object": "GO:0009507",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "unsupported_ontology",
+   "curie_changes": [],
+   "confidence": "high",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "photosynthesis-m45448-114",
+  "module": "m45448",
+  "source": "Eukaryotic autotrophs, such as plants and algae, have organelles called chloroplasts in which photosynthesis takes place.",
+  "claim": "eukaryotic autotrophs have chloroplasts",
+  "entities": [
+   {
+    "text": "eukaryotes",
+    "curie": "NCBITaxon:2759",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "autotroph",
+    "curie": "ECOCORE:00000023",
+    "ontology": "other",
+    "verified": true
+   },
+   {
+    "text": "chloroplast",
+    "curie": "GO:0009507",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "ECOCORE:00000023",
+   "relation": "has part",
+   "object": "GO:0009507",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:2759",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "unsupported_ontology",
+   "curie_changes": [],
+   "confidence": "medium",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "photosynthesis-m45448-142",
+  "module": "m45448",
+  "source": "mesophyll: the middle layer of cells in a leaf",
+  "claim": "the mesophyll is the middle layer of cells in a leaf",
+  "entities": [
+   {
+    "text": "mesophyll",
+    "curie": "PO:0005645",
+    "ontology": "other",
+    "verified": true
+   },
+   {
+    "text": "leaves",
+    "curie": "PO:0025034",
+    "ontology": "other",
+    "verified": true
+   },
+   {
+    "text": "cells",
+    "curie": "CL:0000000",
+    "ontology": "CL",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "PO:0005645",
+   "relation": "part of",
+   "object": "PO:0025034",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "unsupported_ontology",
+   "curie_changes": [],
+   "confidence": "high",
+   "promoted_from": "m2"
+  }
  }
 ]

@@ -7457,5 +7457,317 @@
    "curie_changes": [],
    "confidence": "high"
   }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45465-39",
+  "module": "m45465",
+  "source": "Bats find their prey by emitting high-pitched clicks, but moths have evolved simple ears to hear these clicks so they can avoid the bats.",
+  "claim": "Bats find prey by emitting high-pitched clicks",
+  "entities": [
+   {
+    "text": "bats",
+    "curie": "NCBITaxon:9397",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "echolocation",
+    "curie": "GO:0050959",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "NCBITaxon:9397",
+   "relation": "capable of",
+   "object": "GO:0050959",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9397",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45465-40",
+  "module": "m45465",
+  "source": "The moths have also adapted behaviors, such as flying away from the bat when they first hear it, or dropping suddenly to the ground when the bat is upon them.",
+  "claim": "Moths have evolved ears that hear bat clicks",
+  "entities": [
+   {
+    "text": "moths",
+    "curie": "NCBITaxon:7088",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "ear",
+    "curie": "UBERON:0001690",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "bats",
+    "curie": "NCBITaxon:9397",
+    "ontology": "NCBITaxon",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "NCBITaxon:7088",
+   "relation": "has part",
+   "object": "UBERON:0001690",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:7088",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "compound_sentence",
+   "curie_changes": [],
+   "confidence": "medium",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45465-46",
+  "module": "m45465",
+  "source": "Some moths have evolved the ability to respond to the bats’ clicks with their own clicks as a strategy to confuse the bats’ echolocation abilities.",
+  "claim": "Moth clicks confuse bat echolocation",
+  "entities": [
+   {
+    "text": "moths",
+    "curie": "NCBITaxon:7088",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "bats",
+    "curie": "NCBITaxon:9397",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "echolocation",
+    "curie": "GO:0050959",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "NCBITaxon:7088",
+   "relation": null,
+   "object": "GO:0050959",
+   "sign": "neg",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9397",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "low",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45465-81",
+  "module": "m45465",
+  "source": "The haploid multicellular plants are called gametophytes because they produce gametes.",
+  "claim": "Gametophytes produce gametes",
+  "entities": [
+   {
+    "text": "gametophyte",
+    "curie": "PO:0028003",
+    "ontology": "other",
+    "verified": false
+   },
+   {
+    "text": "gamete",
+    "curie": "CL:0000300",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "gamete generation",
+    "curie": "GO:0007276",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "PO:0028003",
+   "relation": "produces",
+   "object": "CL:0000300",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:3193",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "unsupported_ontology",
+   "curie_changes": [],
+   "confidence": "medium",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45465-86",
+  "module": "m45465",
+  "source": "Specialized cells of the sporophyte will undergo meiosis and produce haploid spores.",
+  "claim": "Specialized sporophyte cells undergo meiosis to produce haploid spores",
+  "entities": [
+   {
+    "text": "sporophyte",
+    "curie": "PO:0028002",
+    "ontology": "other",
+    "verified": false
+   },
+   {
+    "text": "meiosis",
+    "curie": "GO:0051321",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "spore",
+    "curie": "PO:0025017",
+    "ontology": "other",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0051321",
+   "relation": "has output",
+   "object": "PO:0025017",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:3193",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "unsupported_ontology",
+   "curie_changes": [],
+   "confidence": "medium",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "the-cellular-basis-of-inheritance-m45465-87",
+  "module": "m45465",
+  "source": "The spores will develop into the gametophytes (c).",
+  "claim": "Spores develop into gametophytes",
+  "entities": [
+   {
+    "text": "spore",
+    "curie": "PO:0025017",
+    "ontology": "other",
+    "verified": true
+   },
+   {
+    "text": "gametophyte",
+    "curie": "PO:0028003",
+    "ontology": "other",
+    "verified": false
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "PO:0025017",
+   "relation": "precedes",
+   "object": "PO:0028003",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:3193",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "unsupported_ontology",
+   "curie_changes": [],
+   "confidence": "low",
+   "promoted_from": "m2"
+  }
  }
 ]

@@ -247,5 +247,77 @@ def the_body_s_systems_m45536_225 : Statement where
   text := "A capillary is the smallest blood vessel allowing passage of individual blood cells"
   claim := .rel Rel.isA e_UBERON_0001982 e_UBERON_0001981
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "capillary: the smallest blood vessel that allows the passage of individual blood cells and the site of diffusion of oxygen and nutrient exchange" }]
+/-- Animal bodies consist of tissues -/
+def the_body_s_systems_m45533_2 : Statement where
+  id := "the-body-s-systems-m45533-2"
+  text := "Animal bodies consist of tissues"
+  claim := .rel ⟨.bfo, 51, false⟩ (e_UBERON_0000468.inCtx { taxon := e_NCBITaxon_33208 }) e_UBERON_0000479
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "The multicellular bodies of animals consist of tissues that make up more complex organs and organ systems." }]
+/-- Tissues make up organs -/
+def the_body_s_systems_m45533_3 : Statement where
+  id := "the-body-s-systems-m45533-3"
+  text := "Tissues make up organs"
+  claim := .rel ⟨.bfo, 50, false⟩ (e_UBERON_0000479.inCtx { taxon := e_NCBITaxon_33208 }) e_UBERON_0000062
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "The multicellular bodies of animals consist of tissues that make up more complex organs and organ systems." }]
+/-- Organs make up organ systems -/
+def the_body_s_systems_m45533_4 : Statement where
+  id := "the-body-s-systems-m45533-4"
+  text := "Organs make up organ systems"
+  claim := .rel ⟨.bfo, 50, false⟩ (e_UBERON_0000062.inCtx { taxon := e_NCBITaxon_33208 }) e_UBERON_0000467
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "The multicellular bodies of animals consist of tissues that make up more complex organs and organ systems." }]
+/-- Organ systems maintain homeostasis within the body -/
+def the_body_s_systems_m45533_5 : Statement where
+  id := "the-body-s-systems-m45533-5"
+  text := "Organ systems maintain homeostasis within the body"
+  claim := .effect (e_UBERON_0000467.inCtx { taxon := e_NCBITaxon_33208 }) .pos (.process e_GO_0042592)
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "The organ systems of an animal maintain homeostasis within the multicellular body." }]
+/-- Organ systems obtain nutrients needed by the cells of the body -/
+def the_body_s_systems_m45533_6 : Statement where
+  id := "the-body-s-systems-m45533-6"
+  text := "Organ systems obtain nutrients needed by the cells of the body"
+  claim := .effect (e_UBERON_0000467.inCtx { taxon := e_NCBITaxon_33208 }) .pos (.amount e_CHEBI_33284)
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "These systems are adapted to obtain the necessary nutrients and other resources needed by the cells of the body, to remove the wastes those cells produce, to coordinate the activities of the cells, ti" }]
+/-- Organs and organ systems adjust to internal and external changes to maintain homeostasis -/
+def the_body_s_systems_m45534_2 : Statement where
+  id := "the-body-s-systems-m45534-2"
+  text := "Organs and organ systems adjust to internal and external changes to maintain homeostasis"
+  claim := .effect (e_UBERON_0000062.inCtx { taxon := e_NCBITaxon_33208 }) .pos (.process e_GO_0042592)
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Animal organs and organ systems constantly adjust to internal and external changes in order to maintain this steady state." }]
+/-- The hypothalamus maintains the body temperature set point -/
+def the_body_s_systems_m45534_77 : Statement where
+  id := "the-body-s-systems-m45534-77"
+  text := "The hypothalamus maintains the body temperature set point"
+  claim := .effect (e_UBERON_0001898.inCtx { taxon := e_NCBITaxon_7742, anatomy := e_UBERON_0001898 }) .pos (.phenotype e_PATO_0000146)
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "The hypothalamus maintains the set point for body temperature through reflexes that cause vasodilation or vasoconstriction and shivering or sweating." }]
+/-- The kidneys are the main osmoregulatory organs in mammals -/
+def the_body_s_systems_m45534_188 : Statement where
+  id := "the-body-s-systems-m45534-188"
+  text := "The kidneys are the main osmoregulatory organs in mammals"
+  claim := .rel ⟨.ro, 2215, false⟩ (e_UBERON_0002113.inCtx { taxon := e_NCBITaxon_40674 }) e_GO_0050891
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "The kidneys are the main osmoregulatory organs in mammalian systems; they function to filter blood and maintain the dissolved ion concentrations of body fluids." }]
+/-- All mammals have teeth -/
+def the_body_s_systems_m45535_39 : Statement where
+  id := "the-body-s-systems-m45535-39"
+  text := "All mammals have teeth"
+  claim := .rel ⟨.bfo, 51, false⟩ (e_NCBITaxon_40674.inCtx { taxon := e_NCBITaxon_40674 }) e_UBERON_0001091
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "All mammals have teeth and can chew their food to begin the process of physically breaking it down into smaller particles." }]
+/-- The human appendix has a minor role in immunity -/
+def the_body_s_systems_m45535_121 : Statement where
+  id := "the-body-s-systems-m45535-121"
+  text := "The human appendix has a minor role in immunity"
+  claim := .rel ⟨.ro, 56, false⟩ (e_UBERON_0001154.inCtx { taxon := e_NCBITaxon_9606 }) e_GO_0002376
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "The appendix of humans has a minor role in immunity." }]
+/-- The colon hosts many bacteria (intestinal flora) -/
+def the_body_s_systems_m45535_129 : Statement where
+  id := "the-body-s-systems-m45535-129"
+  text := "The colon hosts many bacteria (intestinal flora)"
+  claim := .rel ⟨.ro, 1025, false⟩ (e_NCBITaxon_2.inCtx { anatomy := e_UBERON_0001155 }) e_UBERON_0001155
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "The colon is home to many bacteria or “intestinal flora” that aid in the digestive processes." }]
+/-- Many alveoli and alveolar sacs give the lung a very large gas exchange surface area -/
+def the_body_s_systems_m45536_180 : Statement where
+  id := "the-body-s-systems-m45536-180"
+  text := "Many alveoli and alveolar sacs give the lung a very large gas exchange surface area"
+  claim := .effect (e_UBERON_0002299.inCtx { anatomy := e_UBERON_0002048 }) .pos (.phenotype e_PATO_0001323)
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Because there are so many alveoli and alveolar sacs in the lung, the surface area for gas exchange is very large." }]
 
 end BioLean.Textbook.R3.TheBodySSystemsA

@@ -4637,5 +4637,833 @@
    "curie_changes": [],
    "confidence": "medium"
   }
+ },
+ {
+  "id": "the-body-s-systems-m45533-2",
+  "module": "m45533",
+  "source": "The multicellular bodies of animals consist of tissues that make up more complex organs and organ systems.",
+  "claim": "Animal bodies consist of tissues",
+  "entities": [
+   {
+    "text": "multicellular bodies of animals",
+    "curie": "UBERON:0000468",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "tissues",
+    "curie": "UBERON:0000479",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "UBERON:0000468",
+   "relation": "has part",
+   "object": "UBERON:0000479",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33208",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45533-3",
+  "module": "m45533",
+  "source": "The multicellular bodies of animals consist of tissues that make up more complex organs and organ systems.",
+  "claim": "Tissues make up organs",
+  "entities": [
+   {
+    "text": "tissues",
+    "curie": "UBERON:0000479",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "organs",
+    "curie": "UBERON:0000062",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "UBERON:0000479",
+   "relation": "part of",
+   "object": "UBERON:0000062",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33208",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45533-4",
+  "module": "m45533",
+  "source": "The multicellular bodies of animals consist of tissues that make up more complex organs and organ systems.",
+  "claim": "Organs make up organ systems",
+  "entities": [
+   {
+    "text": "organs",
+    "curie": "UBERON:0000062",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "organ systems",
+    "curie": "UBERON:0000467",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "UBERON:0000062",
+   "relation": "part of",
+   "object": "UBERON:0000467",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33208",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45533-5",
+  "module": "m45533",
+  "source": "The organ systems of an animal maintain homeostasis within the multicellular body.",
+  "claim": "Organ systems maintain homeostasis within the body",
+  "entities": [
+   {
+    "text": "organ systems",
+    "curie": "UBERON:0000467",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "homeostatic process",
+    "curie": "GO:0042592",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "UBERON:0000467",
+   "relation": null,
+   "object": "GO:0042592",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33208",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45533-6",
+  "module": "m45533",
+  "source": "These systems are adapted to obtain the necessary nutrients and other resources needed by the cells of the body, to remove the wastes those cells produce, to coordinate the activities of the cells, tissues, and organs throughout the body, and to coordinate the many responses of the individual organism to its environment.",
+  "claim": "Organ systems obtain nutrients needed by the cells of the body",
+  "entities": [
+   {
+    "text": "systems",
+    "curie": "UBERON:0000467",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "nutrients",
+    "curie": "CHEBI:33284",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "cells",
+    "curie": "CL:0000000",
+    "ontology": "CL",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "UBERON:0000467",
+   "relation": null,
+   "object": "CHEBI:33284",
+   "sign": "pos",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33208",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45533-7",
+  "module": "m45533",
+  "source": "These systems are adapted to obtain the necessary nutrients and other resources needed by the cells of the body, to remove the wastes those cells produce, to coordinate the activities of the cells, tissues, and organs throughout the body, and to coordinate the many responses of the individual organism to its environment.",
+  "claim": "Organ systems remove the wastes that cells produce",
+  "entities": [
+   {
+    "text": "systems",
+    "curie": "UBERON:0000467",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "wastes",
+    "curie": null,
+    "ontology": "CHEBI",
+    "verified": false
+   },
+   {
+    "text": "cells",
+    "curie": "CL:0000000",
+    "ontology": "CL",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "UBERON:0000467",
+   "relation": null,
+   "object": null,
+   "sign": "neg",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33208",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "ungrounded_entity",
+   "curie_changes": [],
+   "confidence": "low",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45534-2",
+  "module": "m45534",
+  "source": "Animal organs and organ systems constantly adjust to internal and external changes in order to maintain this steady state.",
+  "claim": "Organs and organ systems adjust to internal and external changes to maintain homeostasis",
+  "entities": [
+   {
+    "text": "Animal organs",
+    "curie": "UBERON:0000062",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "organ systems",
+    "curie": "UBERON:0000467",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "steady state",
+    "curie": "GO:0042592",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "UBERON:0000062",
+   "relation": null,
+   "object": "GO:0042592",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33208",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "low",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45534-49",
+  "module": "m45534",
+  "source": "Mammals can increase body heat production by shivering, which is an involuntary increase in muscle activity.",
+  "claim": "Shivering increases body heat production in mammals",
+  "entities": [
+   {
+    "text": "Mammals",
+    "curie": "NCBITaxon:40674",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "shivering reflex",
+    "curie": "NBO:0000441",
+    "ontology": "other",
+    "verified": true
+   },
+   {
+    "text": "body heat production",
+    "curie": "GO:0031649",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "NBO:0000441",
+   "relation": null,
+   "object": "GO:0031649",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:40674",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "unsupported_ontology",
+   "curie_changes": [],
+   "confidence": "medium",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45534-77",
+  "module": "m45534",
+  "source": "The hypothalamus maintains the set point for body temperature through reflexes that cause vasodilation or vasoconstriction and shivering or sweating.",
+  "claim": "The hypothalamus maintains the body temperature set point",
+  "entities": [
+   {
+    "text": "hypothalamus",
+    "curie": "UBERON:0001898",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "body temperature",
+    "curie": "PATO:0000146",
+    "ontology": "PATO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "UBERON:0001898",
+   "relation": null,
+   "object": "PATO:0000146",
+   "sign": "pos",
+   "target": "phenotype",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:7742",
+    "anatomy": "UBERON:0001898",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "low",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45534-188",
+  "module": "m45534",
+  "source": "The kidneys are the main osmoregulatory organs in mammalian systems; they function to filter blood and maintain the dissolved ion concentrations of body fluids.",
+  "claim": "The kidneys are the main osmoregulatory organs in mammals",
+  "entities": [
+   {
+    "text": "kidneys",
+    "curie": "UBERON:0002113",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "mammalian systems",
+    "curie": "NCBITaxon:40674",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "osmoregulatory",
+    "curie": "GO:0050891",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "UBERON:0002113",
+   "relation": "capable of",
+   "object": "GO:0050891",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:40674",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45535-24",
+  "module": "m45535",
+  "source": "This acidity kills microorganisms, breaks down food tissues, and activates digestive enzymes.",
+  "claim": "Stomach acidity kills microorganisms",
+  "entities": [
+   {
+    "text": "acidity",
+    "curie": "PATO:0001842",
+    "ontology": "PATO",
+    "verified": true
+   },
+   {
+    "text": "microorganisms",
+    "curie": null,
+    "ontology": "NCBITaxon",
+    "verified": false
+   }
+  ],
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "PATO:0001842",
+   "relation": null,
+   "object": null,
+   "sign": "neg",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000945",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "ungrounded_entity",
+   "curie_changes": [],
+   "confidence": "low",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45535-39",
+  "module": "m45535",
+  "source": "All mammals have teeth and can chew their food to begin the process of physically breaking it down into smaller particles.",
+  "claim": "All mammals have teeth",
+  "entities": [
+   {
+    "text": "mammals",
+    "curie": "NCBITaxon:40674",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "teeth",
+    "curie": "UBERON:0001091",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "NCBITaxon:40674",
+   "relation": "has part",
+   "object": "UBERON:0001091",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:40674",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45535-81",
+  "module": "m45535",
+  "source": "The highly acidic environment kills many microorganisms in the food and, combined with the action of the enzyme pepsin, results in the catabolism of protein in the food.",
+  "claim": "The acidic stomach environment kills many microorganisms in food",
+  "entities": [
+   {
+    "text": "highly acidic environment",
+    "curie": "PATO:0001842",
+    "ontology": "PATO",
+    "verified": true
+   },
+   {
+    "text": "microorganisms",
+    "curie": null,
+    "ontology": "NCBITaxon",
+    "verified": false
+   },
+   {
+    "text": "food",
+    "curie": "CHEBI:33290",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "PATO:0001842",
+   "relation": null,
+   "object": null,
+   "sign": "neg",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000945",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "ungrounded_entity",
+   "curie_changes": [],
+   "confidence": "low",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45535-121",
+  "module": "m45535",
+  "source": "The appendix of humans has a minor role in immunity.",
+  "claim": "The human appendix has a minor role in immunity",
+  "entities": [
+   {
+    "text": "vermiform appendix",
+    "curie": "UBERON:0001154",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "humans",
+    "curie": "NCBITaxon:9606",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "immunity",
+    "curie": "GO:0002376",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "UBERON:0001154",
+   "relation": "participates in",
+   "object": "GO:0002376",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:9606",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "low",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45535-129",
+  "module": "m45535",
+  "source": "The colon is home to many bacteria or “intestinal flora” that aid in the digestive processes.",
+  "claim": "The colon hosts many bacteria (intestinal flora)",
+  "entities": [
+   {
+    "text": "colon",
+    "curie": "UBERON:0001155",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "bacteria or “intestinal flora”",
+    "curie": "NCBITaxon:2",
+    "ontology": "NCBITaxon",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "NCBITaxon:2",
+   "relation": "located in",
+   "object": "UBERON:0001155",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0001155",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "low",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "the-body-s-systems-m45536-180",
+  "module": "m45536",
+  "source": "Because there are so many alveoli and alveolar sacs in the lung, the surface area for gas exchange is very large.",
+  "claim": "Many alveoli and alveolar sacs give the lung a very large gas exchange surface area",
+  "entities": [
+   {
+    "text": "alveoli",
+    "curie": "UBERON:0002299",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "alveolar sacs",
+    "curie": "UBERON:0002169",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "lung",
+    "curie": "UBERON:0002048",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "area",
+    "curie": "PATO:0001323",
+    "ontology": "PATO",
+    "verified": true
+   },
+   {
+    "text": "respiratory gaseous exchange by respiratory system",
+    "curie": "GO:0007585",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "UBERON:0002299",
+   "relation": null,
+   "object": "PATO:0001323",
+   "sign": "pos",
+   "target": "phenotype",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0002048",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "low",
+   "promoted_from": "m2"
+  }
  }
 ]

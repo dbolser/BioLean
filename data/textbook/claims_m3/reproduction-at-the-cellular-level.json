@@ -5050,5 +5050,53 @@
    ],
    "confidence": "medium"
   }
+ },
+ {
+  "id": "reproduction-at-the-cellular-level-m45455-10",
+  "module": "m45455",
+  "source": "Some prokaryotes also have smaller loops of DNA called plasmids that are not essential for normal growth.",
+  "claim": "Some prokaryotes have plasmids.",
+  "entities": [
+   {
+    "text": "prokaryotes",
+    "curie": "NCIT:C14263",
+    "ontology": "other",
+    "verified": true
+   },
+   {
+    "text": "plasmids",
+    "curie": "SO:0000155",
+    "ontology": "SO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "NCIT:C14263",
+   "relation": "has part",
+   "object": "SO:0000155",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCIT:C14263",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "unsupported_ontology",
+   "curie_changes": [],
+   "confidence": "low",
+   "promoted_from": "m2"
+  }
  }
 ]

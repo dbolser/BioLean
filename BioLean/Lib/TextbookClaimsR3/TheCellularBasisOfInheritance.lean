@@ -307,5 +307,41 @@ def the_cellular_basis_of_inheritance_m45467_120 : Statement where
   text := "A few trisomic genotypes are viable"
   claim := .quant .some (.rel ⟨.ro, 86, false⟩ (e_MONDO_0700065.inCtx { taxon := e_NCBITaxon_9606 }) e_PATO_0000719)
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Disorders in chromosome number, or aneuploidies, are typically lethal to the embryo, although a few trisomic genotypes are viable." }]
+/-- Bats find prey by emitting high-pitched clicks -/
+def the_cellular_basis_of_inheritance_m45465_39 : Statement where
+  id := "the-cellular-basis-of-inheritance-m45465-39"
+  text := "Bats find prey by emitting high-pitched clicks"
+  claim := .rel ⟨.ro, 2215, false⟩ (e_NCBITaxon_9397.inCtx { taxon := e_NCBITaxon_9397 }) e_GO_0050959
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Bats find their prey by emitting high-pitched clicks, but moths have evolved simple ears to hear these clicks so they can avoid the bats." }]
+/-- Moths have evolved ears that hear bat clicks [weakening; not expressed: compound_sentence] -/
+def the_cellular_basis_of_inheritance_m45465_40 : Statement where
+  id := "the-cellular-basis-of-inheritance-m45465-40"
+  text := "Moths have evolved ears that hear bat clicks [weakening; not expressed: compound_sentence]"
+  claim := .rel ⟨.bfo, 51, false⟩ (e_NCBITaxon_7088.inCtx { taxon := e_NCBITaxon_7088 }) e_UBERON_0001690
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "The moths have also adapted behaviors, such as flying away from the bat when they first hear it, or dropping suddenly to the ground when the bat is upon them." }]
+/-- Moth clicks confuse bat echolocation -/
+def the_cellular_basis_of_inheritance_m45465_46 : Statement where
+  id := "the-cellular-basis-of-inheritance-m45465-46"
+  text := "Moth clicks confuse bat echolocation"
+  claim := .effect (e_NCBITaxon_7088.inCtx { taxon := e_NCBITaxon_9397 }) .neg (.process e_GO_0050959)
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Some moths have evolved the ability to respond to the bats’ clicks with their own clicks as a strategy to confuse the bats’ echolocation abilities." }]
+/-- Gametophytes produce gametes [weakening; not expressed: unsupported_ontology] -/
+def the_cellular_basis_of_inheritance_m45465_81 : Statement where
+  id := "the-cellular-basis-of-inheritance-m45465-81"
+  text := "Gametophytes produce gametes [weakening; not expressed: unsupported_ontology]"
+  claim := .rel ⟨.ro, 3000, false⟩ (e_PO_0028003.inCtx { taxon := e_NCBITaxon_3193 }) e_CL_0000300
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "The haploid multicellular plants are called gametophytes because they produce gametes." }]
+/-- Specialized sporophyte cells undergo meiosis to produce haploid spores [weakening; not expressed: unsupported_ontology] -/
+def the_cellular_basis_of_inheritance_m45465_86 : Statement where
+  id := "the-cellular-basis-of-inheritance-m45465-86"
+  text := "Specialized sporophyte cells undergo meiosis to produce haploid spores [weakening; not expressed: unsupported_ontology]"
+  claim := .rel ⟨.ro, 2234, false⟩ (e_GO_0051321.inCtx { taxon := e_NCBITaxon_3193 }) e_PO_0025017
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Specialized cells of the sporophyte will undergo meiosis and produce haploid spores." }]
+/-- Spores develop into gametophytes [weakening; not expressed: unsupported_ontology] -/
+def the_cellular_basis_of_inheritance_m45465_87 : Statement where
+  id := "the-cellular-basis-of-inheritance-m45465-87"
+  text := "Spores develop into gametophytes [weakening; not expressed: unsupported_ontology]"
+  claim := .rel ⟨.bfo, 63, false⟩ (e_PO_0025017.inCtx { taxon := e_NCBITaxon_3193 }) e_PO_0028003
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "The spores will develop into the gametophytes (c)." }]
 
 end BioLean.Textbook.R3.TheCellularBasisOfInheritance

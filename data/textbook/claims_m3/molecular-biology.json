@@ -8775,5 +8775,329 @@
    "curie_changes": [],
    "confidence": "high"
   }
+ },
+ {
+  "id": "molbio-m45475-72",
+  "module": "m45475",
+  "source": "Adult somatic cells that undergo cell division continue to have their telomeres shortened.",
+  "claim": "Dividing adult somatic cells have their telomeres progressively shortened",
+  "entities": [
+   {
+    "text": "cell division",
+    "curie": "GO:0051301",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "telomere length",
+    "curie": null,
+    "ontology": "other",
+    "verified": false
+   },
+   {
+    "text": "Adult somatic cells",
+    "curie": "CL:0002371",
+    "ontology": "CL",
+    "verified": false
+   }
+  ],
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "GO:0051301",
+   "relation": null,
+   "object": null,
+   "sign": "pos",
+   "target": "phenotype",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": "CL:0002371",
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "ungrounded_entity",
+   "curie_changes": [],
+   "confidence": "low",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "molbio-m45475-74",
+  "module": "m45475",
+  "source": "In 2010, scientists found that telomerase can reverse some age-related conditions in mice, and this may have potential in regenerative medicine.",
+  "claim": "Telomerase reverses some age-related conditions in mice",
+  "entities": [
+   {
+    "text": "telomerase",
+    "curie": "GO:0003720",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "age-related conditions",
+    "curie": null,
+    "ontology": "other",
+    "verified": false
+   },
+   {
+    "text": "Mus musculus",
+    "curie": "NCBITaxon:10090",
+    "ontology": "NCBITaxon",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "GO:0003720",
+   "relation": null,
+   "object": null,
+   "sign": "neg",
+   "target": "phenotype",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:10090",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "ungrounded_entity",
+   "curie_changes": [],
+   "confidence": "low",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "molbio-m45480-44",
+  "module": "m45480",
+  "source": "Eukaryotic cells, in contrast, have intracellular organelles and are much more complex.",
+  "claim": "Eukaryotic cells have intracellular organelles",
+  "entities": [
+   {
+    "text": "eukaryotic cell",
+    "curie": "CL:0000255",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "organelle",
+    "curie": "GO:0043226",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "CL:0000255",
+   "relation": "has part",
+   "object": "GO:0043226",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:2759",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "molbio-m45480-51",
+  "module": "m45480",
+  "source": "The processes of transcription and translation are physically separated by the nuclear membrane; transcription occurs only within the nucleus, and translation only occurs outside the nucleus in the cytoplasm.",
+  "claim": "In eukaryotes transcription occurs only within the nucleus",
+  "entities": [
+   {
+    "text": "DNA-templated transcription",
+    "curie": "GO:0006351",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "nucleus",
+    "curie": "GO:0005634",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0006351",
+   "relation": "occurs in",
+   "object": "GO:0005634",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:2759",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "necessity",
+   "curie_changes": [],
+   "confidence": "medium",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "molbio-m45480-52",
+  "module": "m45480",
+  "source": "The processes of transcription and translation are physically separated by the nuclear membrane; transcription occurs only within the nucleus, and translation only occurs outside the nucleus in the cytoplasm.",
+  "claim": "In eukaryotes translation occurs only in the cytoplasm, outside the nucleus",
+  "entities": [
+   {
+    "text": "translation",
+    "curie": "GO:0006412",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "cytoplasm",
+    "curie": "GO:0005737",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "nucleus",
+    "curie": "GO:0005634",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0006412",
+   "relation": "occurs in",
+   "object": "GO:0005737",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:2759",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "necessity",
+   "curie_changes": [],
+   "confidence": "medium",
+   "promoted_from": "m2"
+  }
+ },
+ {
+  "id": "molbio-m45480-99",
+  "module": "m45480",
+  "source": "alternative RNA splicing: a post-transcriptional gene regulation mechanism in eukaryotes in which multiple protein products are produced by a single gene through alternative splicing combinations of the RNA transcript",
+  "claim": "Alternative RNA splicing is a post-transcriptional regulatory mechanism in eukaryotes by which multiple proteins are produced from one gene via alternative splicing of the transcript",
+  "entities": [
+   {
+    "text": "alternative mRNA splicing, via spliceosome",
+    "curie": "GO:0000380",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "post-transcriptional regulation of gene expression",
+    "curie": "GO:0010608",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "gene",
+    "curie": "SO:0000704",
+    "ontology": "SO",
+    "verified": true
+   },
+   {
+    "text": "protein",
+    "curie": "CHEBI:36080",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "transcript",
+    "curie": "SO:0000673",
+    "ontology": "SO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "GO:0000380",
+   "relation": "is_a",
+   "object": "GO:0010608",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:2759",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "compound_sentence",
+   "curie_changes": [],
+   "confidence": "medium",
+   "promoted_from": "m2"
+  }
  }
 ]
