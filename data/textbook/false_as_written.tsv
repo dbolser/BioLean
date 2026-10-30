@@ -1,14 +1,15 @@
-# id	kind	why	suggested fix	checked
+# id	kind	why	suggested fix	checked	m3_edit
 # Statements in the encoding that are false, or not what the book means, as a universal over their subject. Flagged, not
 # removed: the closure reports what rests on each (scripts/search/closure.py). Origin: docs/programs/01-universals-and-descent.md, E2.
 # kind: universal_false = false as stated for the subject; mapping = the subject term is wrong for the sentence; overgeneral = true of many, not all.
 # checked: yes = verified against a source; memory = from my own knowledge, to verify.
-cell-structure-and-function-m45429-9	universal_false	"All cells have DNA": mature mammalian red blood cells lose the nucleus and their DNA (CL:0000595; Ji 2011)	quantifier most, or organism-level scope (cellular organisms)	yes
-cell-structure-and-function-m45429-11	universal_false	"All cells have ribosomes": mature mammalian red blood cells have none left	quantifier most, or organism-level scope	memory
-the-body-s-systems-m45535-39	universal_false	"All mammals have teeth": baleen whales, pangolins, anteaters; UBERON has tooth never in Mysticeti, Tachyglossidae, Ornithorhynchus (Meredith 2009)	exceptions slot (option f) or quantifier most	yes
-how-cells-obtain-energy-m45438-62	mapping	"prokaryotic and eukaryotic organisms carry out glycolysis" is encoded as "protist cells (Eukaryota) capable of glycolysis"; the prokaryote half is lost	two statements: Bacteria/Archaea and Eukaryota, or cellular organisms	memory
-cell-structure-and-function-m45432-241	mapping	"photosynthetic protists have chloroplasts" is encoded as "Eukaryota has part chloroplast", which is false for animals and fungi; no ontology term for photosynthetic protists	quantifier some, or a taxon-plus-function context	memory
-cell-structure-and-function-m45435-4	overgeneral	"cells need to take in larger particles" is encoded as every cell capable of endocytosis; walled bacteria and archaea do not	scope Eukaryota, or quantifier most	memory
-cell-structure-and-function-m45435-76	overgeneral	"the cell expels waste through exocytosis" is encoded as every cell capable of exocytosis; prokaryotes use other routes	scope Eukaryota	memory
-cell-structure-and-function-m45429-20	overgeneral	"bacteria have a cell wall": Mycoplasma and L-forms have none	quantifier most	memory
-photosynthesis-m45453-72	overgeneral	"plants have chloroplasts": some parasitic plants have lost photosynthesis and have reduced plastids	quantifier most	memory
+# m3_edit: applied by scripts/textbook/apply_false_as_written.py, which writes a corrected round-3 record (key=value;key=value: quant, subject).
+cell-structure-and-function-m45429-9	universal_false	"All cells have DNA": mature mammalian red blood cells lose the nucleus and their DNA (CL:0000595; Ji 2011)	quantifier most, or organism-level scope (cellular organisms)	yes	quant=most
+cell-structure-and-function-m45429-11	universal_false	"All cells have ribosomes": mature mammalian red blood cells have none left	quantifier most, or organism-level scope	memory	quant=most
+the-body-s-systems-m45535-39	universal_false	"All mammals have teeth": baleen whales, pangolins, anteaters; UBERON has tooth never in Mysticeti, Tachyglossidae, Ornithorhynchus (Meredith 2009)	exceptions slot (option f) or quantifier most	yes	quant=most
+how-cells-obtain-energy-m45438-62	mapping	"prokaryotic and eukaryotic organisms carry out glycolysis" is encoded as "protist cells (Eukaryota) capable of glycolysis"; the prokaryote half is lost	two statements: Bacteria/Archaea and Eukaryota, or cellular organisms	memory	subject=NCBITaxon:131567;quant=most
+cell-structure-and-function-m45432-241	mapping	"photosynthetic protists have chloroplasts" is encoded as "Eukaryota has part chloroplast", which is false for animals and fungi; no ontology term for photosynthetic protists	quantifier some, or a taxon-plus-function context	memory	quant=some
+cell-structure-and-function-m45435-4	overgeneral	"cells need to take in larger particles" is encoded as every cell capable of endocytosis; walled bacteria and archaea do not	scope Eukaryota, or quantifier most	memory	subject=CL:0000255
+cell-structure-and-function-m45435-76	overgeneral	"the cell expels waste through exocytosis" is encoded as every cell capable of exocytosis; prokaryotes use other routes	scope Eukaryota	memory	subject=CL:0000255
+cell-structure-and-function-m45429-20	overgeneral	"bacteria have a cell wall": Mycoplasma and L-forms have none	quantifier most	memory	quant=most
+photosynthesis-m45453-72	overgeneral	"plants have chloroplasts": some parasitic plants have lost photosynthesis and have reduced plastids	quantifier most	memory	quant=most

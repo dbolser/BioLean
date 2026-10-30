@@ -5217,7 +5217,7 @@
   ],
   "m3": {
    "ctor": "rel",
-   "quant": null,
+   "quant": "most",
    "subject": "NCBITaxon:40674",
    "relation": "has part",
    "object": "UBERON:0001091",
@@ -5241,7 +5241,8 @@
    "blocker": null,
    "curie_changes": [],
    "confidence": "high",
-   "promoted_from": "m2"
+   "promoted_from": "m2",
+   "edited_from": "false_as_written.tsv"
   }
  },
  {

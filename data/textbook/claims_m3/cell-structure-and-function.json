@@ -9526,5 +9526,299 @@
    "confidence": "medium",
    "promoted_from": "m2"
   }
+ },
+ {
+  "id": "cell-structure-and-function-m45429-9",
+  "module": "m45429",
+  "source": "All cells share four common components: 1) a plasma membrane, an outer covering that separates the cell’s interior from its surrounding environment; 2) cytoplasm, consisting of a jelly-like region within the cell in which other cellular components are found; 3) DNA, the genetic material of the cell; and 4) ribosomes, particles that synthesize proteins.",
+  "claim": "All cells have DNA",
+  "entities": [
+   {
+    "text": "cells",
+    "curie": "CL:0000000",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "DNA",
+    "curie": "CHEBI:16991",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": "most",
+   "subject": "CL:0000000",
+   "relation": "has part",
+   "object": "CHEBI:16991",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high",
+   "edited_from": "false_as_written.tsv"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45429-11",
+  "module": "m45429",
+  "source": "All cells share four common components: 1) a plasma membrane, an outer covering that separates the cell’s interior from its surrounding environment; 2) cytoplasm, consisting of a jelly-like region within the cell in which other cellular components are found; 3) DNA, the genetic material of the cell; and 4) ribosomes, particles that synthesize proteins.",
+  "claim": "All cells have ribosomes",
+  "entities": [
+   {
+    "text": "cells",
+    "curie": "CL:0000000",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "ribosomes",
+    "curie": "GO:0005840",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": "most",
+   "subject": "CL:0000000",
+   "relation": "has part",
+   "object": "GO:0005840",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high",
+   "edited_from": "false_as_written.tsv"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45429-20",
+  "module": "m45429",
+  "source": "Unlike Archaea and eukaryotes, bacteria have a cell wall made of peptidoglycan, comprised of sugars and amino acids, and many have a polysaccharide capsule ().",
+  "claim": "Bacteria have a cell wall",
+  "entities": [
+   {
+    "text": "bacteria",
+    "curie": "NCBITaxon:2",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "cell wall",
+    "curie": "GO:0005618",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": "most",
+   "subject": "NCBITaxon:2",
+   "relation": "has part",
+   "object": "GO:0005618",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium",
+   "edited_from": "false_as_written.tsv"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45432-241",
+  "module": "m45432",
+  "source": "Like plant cells, photosynthetic protists also have chloroplasts.",
+  "claim": "Photosynthetic protists have chloroplasts",
+  "entities": [
+   {
+    "text": "photosynthetic protists",
+    "curie": "NCBITaxon:2759",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "chloroplast",
+    "curie": "GO:0009507",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": "some",
+   "subject": "NCBITaxon:2759",
+   "relation": "has part",
+   "object": "GO:0009507",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "ungrounded_entity",
+   "curie_changes": [],
+   "confidence": "low",
+   "edited_from": "false_as_written.tsv"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45435-4",
+  "module": "m45435",
+  "source": "In addition to moving small ions and molecules through the membrane, cells also need to remove and take in larger molecules and particles.",
+  "claim": "Cells also remove and take in larger molecules and particles",
+  "entities": [
+   {
+    "text": "cell",
+    "curie": "CL:0000000",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "macromolecule",
+    "curie": "CHEBI:33839",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "endocytosis",
+    "curie": "GO:0006897",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "CL:0000255",
+   "relation": "capable of",
+   "object": "GO:0006897",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "compound_sentence",
+   "curie_changes": [],
+   "confidence": "medium",
+   "edited_from": "false_as_written.tsv"
+  }
+ },
+ {
+  "id": "cell-structure-and-function-m45435-76",
+  "module": "m45435",
+  "source": "The cell expels waste and other particles through the reverse process, exocytosis.",
+  "claim": "The cell expels waste and other particles by exocytosis",
+  "entities": [
+   {
+    "text": "cell",
+    "curie": "CL:0000000",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "exocytosis",
+    "curie": "GO:0006887",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": null,
+   "subject": "CL:0000255",
+   "relation": "capable of",
+   "object": "GO:0006887",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high",
+   "edited_from": "false_as_written.tsv"
+  }
  }
 ]

@@ -5880,5 +5880,59 @@
    "confidence": "medium",
    "promoted_from": "m2"
   }
+ },
+ {
+  "id": "how-cells-obtain-energy-m45438-62",
+  "module": "m45438",
+  "source": "Both prokaryotic and eukaryotic organisms carry out some form of glycolysis.",
+  "claim": "Both prokaryotes and eukaryotes carry out some form of glycolysis",
+  "entities": [
+   {
+    "text": "glycolytic process",
+    "curie": "GO:0006096",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "prokaryotic",
+    "curie": "CL:0000520",
+    "ontology": "CL",
+    "verified": true
+   },
+   {
+    "text": "eukaryotic organisms",
+    "curie": "NCBITaxon:2759",
+    "ontology": "NCBITaxon",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": "most",
+   "subject": "NCBITaxon:131567",
+   "relation": "capable of",
+   "object": "GO:0006096",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "compound_sentence",
+   "curie_changes": [],
+   "confidence": "medium",
+   "edited_from": "false_as_written.tsv"
+  }
  }
 ]

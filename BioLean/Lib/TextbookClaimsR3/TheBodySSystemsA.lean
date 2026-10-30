@@ -299,7 +299,7 @@ def the_body_s_systems_m45534_188 : Statement where
 def the_body_s_systems_m45535_39 : Statement where
   id := "the-body-s-systems-m45535-39"
   text := "All mammals have teeth"
-  claim := .rel ⟨.bfo, 51, false⟩ (e_NCBITaxon_40674.inCtx { taxon := e_NCBITaxon_40674 }) e_UBERON_0001091
+  claim := .quant .most (.rel ⟨.bfo, 51, false⟩ (e_NCBITaxon_40674.inCtx { taxon := e_NCBITaxon_40674 }) e_UBERON_0001091)
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "All mammals have teeth and can chew their food to begin the process of physically breaking it down into smaller particles." }]
 /-- The human appendix has a minor role in immunity -/
 def the_body_s_systems_m45535_121 : Statement where

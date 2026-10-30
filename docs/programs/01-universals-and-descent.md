@@ -55,8 +55,13 @@ E. coli 158, yeast 859, mouse 139, human 644, Arabidopsis 61, Sulfolobus 13.
 `data/textbook/false_as_written.tsv` (universal_false 3, mapping 2, overgeneral 4). The closure now
 reports what rests on them: **337 of 2,510 derived facts (13 percent)**. Most rest on "all cells have
 ribosomes" (135) and "all cells have DNA" (118), false for mature mammalian red cells. Only two of the
-nine are verified against a source; the rest are marked `memory` and need a check. Not yet done: the
-exceptions slot (option f), the hedged `most` reading, and the E2 counterexample rule.
+nine are verified against a source; the rest are marked `memory` and need a check. **Corrected.** `scripts/textbook/apply_false_as_written.py` applies a fix to each of the nine, using
+the existing `most` and `some` quantifiers and a narrower subject (5 `most`, 1 `some`, 2 "eukaryotic
+cell", 1 "cellular organisms, most"). Round 3 supersedes round 2, and a `most` or `some` claim loads
+nothing into the closure. Facts resting on a flagged statement: 337 → 0. The closure now has 2,223 derived
+facts (it had 2,510 after the context fix). The sources for the `memory` rows are still to check. Not built:
+the exceptions slot (option f), which would keep "all cells have DNA, except x" instead of weakening to
+`most`, and the E2 counterexample rule.
 
 ---
 

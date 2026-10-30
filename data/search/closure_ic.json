@@ -1836,47 +1836,7 @@
 "flags": []
 },
 {
-"fact": "gallbladder [UBERON:0002110] has part ribosomal RNA [CHEBI:18111]",
-"score": 7.221,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "gallbladder [UBERON:0002110] has part nitrogenous base [CHEBI:18282]",
-"score": 7.221,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "gallbladder [UBERON:0002110] has part carbon atoms [CHEBI:27594]",
-"score": 7.221,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "gallbladder [UBERON:0002110] has part phosphorus atom [CHEBI:28659]",
-"score": 7.221,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "gallbladder [UBERON:0002110] has part 2-deoxy-D-ribose [CHEBI:28816]",
-"score": 7.221,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "gallbladder [UBERON:0002110] has part phosphate group [CHEBI:32958]",
 "score": 7.221,
 "path_min": 0.002,
 "depth": 3,
@@ -1906,14 +1866,6 @@
 "depth": 3,
 "rule": "relChain",
 "hub_survivor": true
-},
-{
-"fact": "gallbladder [UBERON:0002110] has part DNA [CHEBI:16991]",
-"score": 7.221,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": false
 },
 {
 "fact": "Telomerase \u2293 part of (adult somatic cells) \u2293 existence overlaps (adult) [GO:0005697&BFO:0000050=(CL:0002371)&RO:0002490=(UBERON:0000113)] has part hydroxy group [CHEBI:43176]",
@@ -3073,22 +3025,6 @@
 "hub_survivor": true
 },
 {
-"fact": "gallbladder [UBERON:0002110] has part large subunit [GO:0015934]",
-"score": 6.521,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "gallbladder [UBERON:0002110] has part small subunit [GO:0015935]",
-"score": 6.521,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "neuronal cell body [GO:0043025] has part ribosomal RNA [CHEBI:18111]",
 "score": 6.521,
 "path_min": 4.05,
@@ -3434,22 +3370,6 @@
 "depth": 1,
 "rule": "isaGeneralise",
 "hub_survivor": false
-},
-{
-"fact": "gallbladder [UBERON:0002110] has part structure that is capable of exocytosis [GO:0006887]",
-"score": 6.278,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "desmosome \u2293 in taxon (NCBITaxon:33208) [GO:0030057&RO:0002162=(NCBITaxon:33208)] part of structure that is capable of exocytosis [GO:0006887]",
-"score": 6.278,
-"path_min": 0.002,
-"depth": 1,
-"rule": "relChain",
-"hub_survivor": true
 },
 {
 "fact": "Alveolar ducts [UBERON:0002173] connected to bronchioles [UBERON:0002186]",
@@ -3800,14 +3720,6 @@
 "hub_survivor": true
 },
 {
-"fact": "gallbladder [UBERON:0002110] has part polymer [CHEBI:60027]",
-"score": 6.076,
-"path_min": 0.002,
-"depth": 3,
-"rule": "isaGeneralise",
-"hub_survivor": true
-},
-{
 "fact": "Telomerase \u2293 part of (adult somatic cells) \u2293 existence overlaps (adult) [GO:0005697&BFO:0000050=(CL:0002371)&RO:0002490=(UBERON:0000113)] overlaps polymer [CHEBI:60027]",
 "score": 6.076,
 "path_min": 6.076,
@@ -4136,27 +4048,19 @@
 "hub_survivor": true
 },
 {
+"fact": "desmosome \u2293 in taxon (NCBITaxon:33208) [GO:0030057&RO:0002162=(NCBITaxon:33208)] part of structure that is capable of endocytosis [GO:0006897]",
+"score": 5.91,
+"path_min": 0.002,
+"depth": 2,
+"rule": "isaGeneralise",
+"hub_survivor": true
+},
+{
 "fact": "neutrophil [CL:0000775] capable of endocytosis [GO:0006897]",
 "score": 5.91,
 "path_min": 5.91,
 "depth": 1,
 "rule": "isaGeneralise",
-"hub_survivor": true
-},
-{
-"fact": "desmosome \u2293 in taxon (NCBITaxon:33208) [GO:0030057&RO:0002162=(NCBITaxon:33208)] part of structure that is capable of endocytosis [GO:0006897]",
-"score": 5.91,
-"path_min": 0.002,
-"depth": 1,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "gallbladder [UBERON:0002110] has part nucleotides [CHEBI:36976]",
-"score": 5.853,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
 "hub_survivor": true
 },
 {
@@ -4489,22 +4393,6 @@
 "flags": []
 },
 {
-"fact": "salivary glands [UBERON:0001044] has part ribosomal RNA [CHEBI:18111]",
-"score": 5.769,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "salivary glands [UBERON:0001044] has part nitrogenous base [CHEBI:18282]",
-"score": 5.769,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "salivary glands [UBERON:0001044] has part carbon atoms [CHEBI:27594]",
 "score": 5.769,
 "path_min": 0.002,
@@ -4513,63 +4401,7 @@
 "hub_survivor": true
 },
 {
-"fact": "salivary glands [UBERON:0001044] has part phosphorus atom [CHEBI:28659]",
-"score": 5.769,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "salivary glands [UBERON:0001044] has part 2-deoxy-D-ribose [CHEBI:28816]",
-"score": 5.769,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "salivary glands [UBERON:0001044] has part phosphate group [CHEBI:32958]",
-"score": 5.769,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "salivary glands [UBERON:0001044] has part proteins [CHEBI:36080]",
-"score": 5.769,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "salivary glands [UBERON:0001044] has part nucleotides [CHEBI:36976]",
-"score": 5.769,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "salivary glands [UBERON:0001044] has part polymer [CHEBI:60027]",
-"score": 5.769,
-"path_min": 0.002,
-"depth": 3,
-"rule": "isaGeneralise",
-"hub_survivor": true
-},
-{
-"fact": "salivary glands [UBERON:0001044] has part large subunit [GO:0015934]",
-"score": 5.769,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "salivary glands [UBERON:0001044] has part small subunit [GO:0015935]",
 "score": 5.769,
 "path_min": 0.002,
 "depth": 3,
@@ -4593,14 +4425,6 @@
 "hub_survivor": true
 },
 {
-"fact": "salivary glands [UBERON:0001044] has part structure that is capable of exocytosis [GO:0006887]",
-"score": 5.769,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
 "fact": "salivary glands [UBERON:0001044] has part structure that is capable of endocytosis [GO:0006897]",
 "score": 5.769,
 "path_min": 0.002,
@@ -4615,14 +4439,6 @@
 "depth": 3,
 "rule": "relChain",
 "hub_survivor": true
-},
-{
-"fact": "salivary glands [UBERON:0001044] has part DNA [CHEBI:16991]",
-"score": 5.769,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": false
 },
 {
 "fact": "salivary glands [UBERON:0001044] \u2192+ process(digestion [GO:0007586])",
@@ -4819,22 +4635,6 @@
 "hub_survivor": false
 },
 {
-"fact": "salivary glands [UBERON:0001044] has part polypeptide [CHEBI:15841]",
-"score": 5.762,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "gallbladder [UBERON:0002110] has part polypeptide [CHEBI:15841]",
-"score": 5.762,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "neuronal cell body [GO:0043025] has part polypeptide [CHEBI:15841]",
 "score": 5.762,
 "path_min": 4.05,
@@ -5022,38 +4822,6 @@
 "path_min": 4.05,
 "depth": 3,
 "rule": "relChain",
-"hub_survivor": false
-},
-{
-"fact": "salivary glands [UBERON:0001044] overlaps ribosomes [GO:0005840]",
-"score": 5.369,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relChain",
-"hub_survivor": false
-},
-{
-"fact": "gallbladder [UBERON:0002110] overlaps ribosomes [GO:0005840]",
-"score": 5.369,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relChain",
-"hub_survivor": false
-},
-{
-"fact": "salivary glands [UBERON:0001044] has part ribosomes [GO:0005840]",
-"score": 5.369,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": false
-},
-{
-"fact": "gallbladder [UBERON:0002110] has part ribosomes [GO:0005840]",
-"score": 5.369,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
 "hub_survivor": false
 },
 {
@@ -5498,55 +5266,7 @@
 "hub_survivor": true
 },
 {
-"fact": "stomach [UBERON:0000945] has part polypeptide [CHEBI:15841]",
-"score": 5.176,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "stomach [UBERON:0000945] has part ribosomal RNA [CHEBI:18111]",
-"score": 5.176,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "stomach [UBERON:0000945] has part nitrogenous base [CHEBI:18282]",
-"score": 5.176,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "stomach [UBERON:0000945] has part carbon atoms [CHEBI:27594]",
-"score": 5.176,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "stomach [UBERON:0000945] has part phosphorus atom [CHEBI:28659]",
-"score": 5.176,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "stomach [UBERON:0000945] has part 2-deoxy-D-ribose [CHEBI:28816]",
-"score": 5.176,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "stomach [UBERON:0000945] has part phosphate group [CHEBI:32958]",
 "score": 5.176,
 "path_min": 0.002,
 "depth": 3,
@@ -5562,38 +5282,6 @@
 "hub_survivor": true
 },
 {
-"fact": "stomach [UBERON:0000945] has part nucleotides [CHEBI:36976]",
-"score": 5.176,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "stomach [UBERON:0000945] has part polymer [CHEBI:60027]",
-"score": 5.176,
-"path_min": 0.002,
-"depth": 3,
-"rule": "isaGeneralise",
-"hub_survivor": true
-},
-{
-"fact": "stomach [UBERON:0000945] has part large subunit [GO:0015934]",
-"score": 5.176,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "stomach [UBERON:0000945] has part small subunit [GO:0015935]",
-"score": 5.176,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "stomach [UBERON:0000945] overlaps food [CHEBI:33290]",
 "score": 5.176,
 "path_min": 0.002,
@@ -5602,23 +5290,7 @@
 "hub_survivor": true
 },
 {
-"fact": "stomach [UBERON:0000945] overlaps ribosomes [GO:0005840]",
-"score": 5.176,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relChain",
-"hub_survivor": false
-},
-{
 "fact": "stomach [UBERON:0000945] has part structure that is capable of ATP biosynthetic process [GO:0006754]",
-"score": 5.176,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "stomach [UBERON:0000945] has part structure that is capable of exocytosis [GO:0006887]",
 "score": 5.176,
 "path_min": 0.002,
 "depth": 3,
@@ -5640,22 +5312,6 @@
 "depth": 3,
 "rule": "relChain",
 "hub_survivor": true
-},
-{
-"fact": "stomach [UBERON:0000945] has part DNA [CHEBI:16991]",
-"score": 5.176,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": false
-},
-{
-"fact": "stomach [UBERON:0000945] has part ribosomes [GO:0005840]",
-"score": 5.176,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": false
 },
 {
 "fact": "stomach [UBERON:0000945] \u2192+ process(digestion [GO:0007586])",
@@ -6103,30 +5759,6 @@
 ]
 },
 {
-"fact": "stomach [UBERON:0000945] has part structure that is capable of synthesize proteins [GO:0006412]",
-"score": 5.01,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "salivary glands [UBERON:0001044] has part structure that is capable of synthesize proteins [GO:0006412]",
-"score": 5.01,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "gallbladder [UBERON:0002110] has part structure that is capable of synthesize proteins [GO:0006412]",
-"score": 5.01,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
 "fact": "meiosis \u2293 in taxon (NCBITaxon:3193) [GO:0051321&RO:0002162=(NCBITaxon:3193)] happens during mitotic phase [GO:0000087]",
 "score": 5.01,
 "path_min": 5.01,
@@ -6534,30 +6166,6 @@
 "path_min": 4.817,
 "depth": 1,
 "rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "stomach [UBERON:0000945] has part amino acids [CHEBI:33709]",
-"score": 4.876,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "salivary glands [UBERON:0001044] has part amino acids [CHEBI:33709]",
-"score": 4.876,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "gallbladder [UBERON:0002110] has part amino acids [CHEBI:33709]",
-"score": 4.876,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
 "hub_survivor": true
 },
 {
@@ -7298,23 +6906,15 @@
 "hub_survivor": true
 },
 {
-"fact": "Lysosomes \u2293 in taxon (NCBITaxon:33208) [GO:0005764&RO:0002162=(NCBITaxon:33208)] part of structure that is capable of ATP biosynthetic process [GO:0006754]",
-"score": 4.65,
-"path_min": 0.002,
-"depth": 1,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "Lysosomes \u2293 in taxon (NCBITaxon:33208) [GO:0005764&RO:0002162=(NCBITaxon:33208)] part of structure that is capable of exocytosis [GO:0006887]",
-"score": 4.65,
-"path_min": 0.002,
-"depth": 1,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
 "fact": "Lysosomes \u2293 in taxon (NCBITaxon:33208) [GO:0005764&RO:0002162=(NCBITaxon:33208)] part of structure that is capable of endocytosis [GO:0006897]",
+"score": 4.65,
+"path_min": 0.002,
+"depth": 2,
+"rule": "isaGeneralise",
+"hub_survivor": true
+},
+{
+"fact": "Lysosomes \u2293 in taxon (NCBITaxon:33208) [GO:0005764&RO:0002162=(NCBITaxon:33208)] part of structure that is capable of ATP biosynthetic process [GO:0006754]",
 "score": 4.65,
 "path_min": 0.002,
 "depth": 1,
@@ -8564,47 +8164,7 @@
 "hub_survivor": true
 },
 {
-"fact": "muscle tissue [UBERON:0002385] has part nitrogenous base [CHEBI:18282]",
-"score": 3.905,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "muscle tissue [UBERON:0002385] has part carbon atoms [CHEBI:27594]",
-"score": 3.905,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "muscle tissue [UBERON:0002385] has part phosphorus atom [CHEBI:28659]",
-"score": 3.905,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "muscle tissue [UBERON:0002385] has part 2-deoxy-D-ribose [CHEBI:28816]",
-"score": 3.905,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "muscle tissue [UBERON:0002385] has part phosphate group [CHEBI:32958]",
-"score": 3.905,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "muscle tissue [UBERON:0002385] has part amino acids [CHEBI:33709]",
 "score": 3.905,
 "path_min": 0.002,
 "depth": 3,
@@ -8628,46 +8188,6 @@
 "hub_survivor": true
 },
 {
-"fact": "muscle tissue [UBERON:0002385] overlaps ribosomes [GO:0005840]",
-"score": 3.905,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relChain",
-"hub_survivor": false
-},
-{
-"fact": "muscle tissue [UBERON:0002385] has part structure that is capable of synthesize proteins [GO:0006412]",
-"score": 3.905,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "muscle tissue [UBERON:0002385] has part polypeptide [CHEBI:15841]",
-"score": 3.905,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "muscle tissue [UBERON:0002385] has part DNA [CHEBI:16991]",
-"score": 3.905,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": false
-},
-{
-"fact": "muscle tissue [UBERON:0002385] has part ribosomal RNA [CHEBI:18111]",
-"score": 3.905,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "muscle tissue [UBERON:0002385] has part proteins [CHEBI:36080]",
 "score": 3.905,
 "path_min": 0.002,
@@ -8676,55 +8196,7 @@
 "hub_survivor": true
 },
 {
-"fact": "muscle tissue [UBERON:0002385] has part nucleotides [CHEBI:36976]",
-"score": 3.905,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "muscle tissue [UBERON:0002385] has part polymer [CHEBI:60027]",
-"score": 3.905,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "muscle tissue [UBERON:0002385] has part ribosomes [GO:0005840]",
-"score": 3.905,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": false
-},
-{
-"fact": "muscle tissue [UBERON:0002385] has part large subunit [GO:0015934]",
-"score": 3.905,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "muscle tissue [UBERON:0002385] has part small subunit [GO:0015935]",
-"score": 3.905,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "muscle tissue [UBERON:0002385] has part structure that is capable of ATP biosynthetic process [GO:0006754]",
-"score": 3.905,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "muscle tissue [UBERON:0002385] has part structure that is capable of exocytosis [GO:0006887]",
 "score": 3.905,
 "path_min": 0.002,
 "depth": 2,
@@ -11054,22 +10526,6 @@
 "hub_survivor": true
 },
 {
-"fact": "digestive system [UBERON:0001007] has part structure that is capable of synthesize proteins [GO:0006412]",
-"score": 2.193,
-"path_min": 0.002,
-"depth": 4,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "digestive system [UBERON:0001007] has part polypeptide [CHEBI:15841]",
-"score": 2.193,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "digestive system [UBERON:0001007] has part phospholipid [CHEBI:16247]",
 "score": 2.193,
 "path_min": 0.002,
@@ -11086,63 +10542,7 @@
 "hub_survivor": false
 },
 {
-"fact": "digestive system [UBERON:0001007] has part DNA [CHEBI:16991]",
-"score": 2.193,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": false
-},
-{
-"fact": "digestive system [UBERON:0001007] has part ribosomal RNA [CHEBI:18111]",
-"score": 2.193,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "digestive system [UBERON:0001007] has part nitrogenous base [CHEBI:18282]",
-"score": 2.193,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "digestive system [UBERON:0001007] has part carbon atoms [CHEBI:27594]",
-"score": 2.193,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "digestive system [UBERON:0001007] has part phosphorus atom [CHEBI:28659]",
-"score": 2.193,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "digestive system [UBERON:0001007] has part 2-deoxy-D-ribose [CHEBI:28816]",
-"score": 2.193,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "digestive system [UBERON:0001007] has part phosphate group [CHEBI:32958]",
-"score": 2.193,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "digestive system [UBERON:0001007] has part amino acids [CHEBI:33709]",
 "score": 2.193,
 "path_min": 0.002,
 "depth": 3,
@@ -11166,30 +10566,6 @@
 "hub_survivor": true
 },
 {
-"fact": "digestive system [UBERON:0001007] has part nucleotides [CHEBI:36976]",
-"score": 2.193,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "digestive system [UBERON:0001007] has part polymer [CHEBI:60027]",
-"score": 2.193,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "digestive system [UBERON:0001007] has part ribosomes [GO:0005840]",
-"score": 2.193,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": false
-},
-{
 "fact": "digestive system [UBERON:0001007] has part plasma membrane [GO:0005886]",
 "score": 2.193,
 "path_min": 0.002,
@@ -11198,36 +10574,12 @@
 "hub_survivor": false
 },
 {
-"fact": "digestive system [UBERON:0001007] has part large subunit [GO:0015934]",
-"score": 2.193,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "digestive system [UBERON:0001007] has part small subunit [GO:0015935]",
-"score": 2.193,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "digestive system [UBERON:0001007] overlaps food [CHEBI:33290]",
 "score": 2.193,
 "path_min": 0.002,
 "depth": 3,
 "rule": "relChain",
 "hub_survivor": true
-},
-{
-"fact": "digestive system [UBERON:0001007] overlaps ribosomes [GO:0005840]",
-"score": 2.193,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relChain",
-"hub_survivor": false
 },
 {
 "fact": "digestive system [UBERON:0001007] overlaps endomembrane system [GO:0012505]",
@@ -11239,14 +10591,6 @@
 },
 {
 "fact": "digestive system [UBERON:0001007] has part structure that is capable of ATP biosynthetic process [GO:0006754]",
-"score": 2.193,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "digestive system [UBERON:0001007] has part structure that is capable of exocytosis [GO:0006887]",
 "score": 2.193,
 "path_min": 0.002,
 "depth": 3,
@@ -12359,47 +11703,7 @@
 "flags": []
 },
 {
-"fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] has part nitrogenous base [CHEBI:18282]",
-"score": 1.712,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] has part carbon atoms [CHEBI:27594]",
-"score": 1.712,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] has part phosphorus atom [CHEBI:28659]",
-"score": 1.712,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] has part 2-deoxy-D-ribose [CHEBI:28816]",
-"score": 1.712,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] has part phosphate group [CHEBI:32958]",
-"score": 1.712,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] has part amino acids [CHEBI:33709]",
 "score": 1.712,
 "path_min": 0.002,
 "depth": 3,
@@ -12415,51 +11719,11 @@
 "hub_survivor": true
 },
 {
-"fact": "tissues [UBERON:0000479] has part phosphorus atom [CHEBI:28659]",
-"score": 1.712,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] overlaps food [CHEBI:33290]",
 "score": 1.712,
 "path_min": 0.002,
 "depth": 3,
 "rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] overlaps ribosomes [GO:0005840]",
-"score": 1.712,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relChain",
-"hub_survivor": false
-},
-{
-"fact": "tissues [UBERON:0000479] overlaps ribosomes [GO:0005840]",
-"score": 1.712,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relChain",
-"hub_survivor": false
-},
-{
-"fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] has part structure that is capable of synthesize proteins [GO:0006412]",
-"score": 1.712,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] has part polypeptide [CHEBI:15841]",
-"score": 1.712,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
 "hub_survivor": true
 },
 {
@@ -12479,22 +11743,6 @@
 "hub_survivor": false
 },
 {
-"fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] has part DNA [CHEBI:16991]",
-"score": 1.712,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": false
-},
-{
-"fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] has part ribosomal RNA [CHEBI:18111]",
-"score": 1.712,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] has part proteins [CHEBI:36080]",
 "score": 1.712,
 "path_min": 0.002,
@@ -12503,60 +11751,12 @@
 "hub_survivor": true
 },
 {
-"fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] has part nucleotides [CHEBI:36976]",
-"score": 1.712,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] has part polymer [CHEBI:60027]",
-"score": 1.712,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] has part ribosomes [GO:0005840]",
-"score": 1.712,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": false
-},
-{
 "fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] has part plasma membrane [GO:0005886]",
 "score": 1.712,
 "path_min": 0.002,
 "depth": 2,
 "rule": "relTrans",
 "hub_survivor": false
-},
-{
-"fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] has part large subunit [GO:0015934]",
-"score": 1.712,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] has part small subunit [GO:0015935]",
-"score": 1.712,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "tissues [UBERON:0000479] has part polypeptide [CHEBI:15841]",
-"score": 1.712,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
 },
 {
 "fact": "tissues [UBERON:0000479] has part phospholipid [CHEBI:16247]",
@@ -12575,47 +11775,7 @@
 "hub_survivor": false
 },
 {
-"fact": "tissues [UBERON:0000479] has part ribosomal RNA [CHEBI:18111]",
-"score": 1.712,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "tissues [UBERON:0000479] has part nitrogenous base [CHEBI:18282]",
-"score": 1.712,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "tissues [UBERON:0000479] has part carbon atoms [CHEBI:27594]",
-"score": 1.712,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "tissues [UBERON:0000479] has part 2-deoxy-D-ribose [CHEBI:28816]",
-"score": 1.712,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "tissues [UBERON:0000479] has part phosphate group [CHEBI:32958]",
-"score": 1.712,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "tissues [UBERON:0000479] has part amino acids [CHEBI:33709]",
 "score": 1.712,
 "path_min": 0.002,
 "depth": 2,
@@ -12632,38 +11792,6 @@
 },
 {
 "fact": "tissues [UBERON:0000479] has part proteins [CHEBI:36080]",
-"score": 1.712,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "tissues [UBERON:0000479] has part nucleotides [CHEBI:36976]",
-"score": 1.712,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "tissues [UBERON:0000479] has part polymer [CHEBI:60027]",
-"score": 1.712,
-"path_min": 0.002,
-"depth": 2,
-"rule": "isaGeneralise",
-"hub_survivor": true
-},
-{
-"fact": "tissues [UBERON:0000479] has part large subunit [GO:0015934]",
-"score": 1.712,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "tissues [UBERON:0000479] has part small subunit [GO:0015935]",
 "score": 1.712,
 "path_min": 0.002,
 "depth": 2,
@@ -12711,14 +11839,6 @@
 "hub_survivor": true
 },
 {
-"fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] has part structure that is capable of exocytosis [GO:0006887]",
-"score": 1.712,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
 "fact": "tissues \u2293 in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] has part structure that is capable of endocytosis [GO:0006897]",
 "score": 1.712,
 "path_min": 0.002,
@@ -12743,28 +11863,12 @@
 "hub_survivor": true
 },
 {
-"fact": "tissues [UBERON:0000479] has part structure that is capable of synthesize proteins [GO:0006412]",
+"fact": "tissues [UBERON:0000479] has part structure that is capable of endocytosis [GO:0006897]",
 "score": 1.712,
 "path_min": 0.002,
 "depth": 2,
-"rule": "relChain",
+"rule": "isaGeneralise",
 "hub_survivor": true
-},
-{
-"fact": "tissues [UBERON:0000479] has part DNA [CHEBI:16991]",
-"score": 1.712,
-"path_min": 0.002,
-"depth": 1,
-"rule": "relTrans",
-"hub_survivor": false
-},
-{
-"fact": "tissues [UBERON:0000479] has part ribosomes [GO:0005840]",
-"score": 1.712,
-"path_min": 0.002,
-"depth": 1,
-"rule": "relTrans",
-"hub_survivor": false
 },
 {
 "fact": "tissues [UBERON:0000479] has part plasma membrane [GO:0005886]",
@@ -12808,22 +11912,6 @@
 },
 {
 "fact": "tissues [UBERON:0000479] has part structure that is capable of ATP biosynthetic process [GO:0006754]",
-"score": 1.712,
-"path_min": 0.002,
-"depth": 1,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "tissues [UBERON:0000479] has part structure that is capable of exocytosis [GO:0006887]",
-"score": 1.712,
-"path_min": 0.002,
-"depth": 1,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "tissues [UBERON:0000479] has part structure that is capable of endocytosis [GO:0006897]",
 "score": 1.712,
 "path_min": 0.002,
 "depth": 1,
@@ -14645,14 +13733,6 @@
 "flags": []
 },
 {
-"fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] has part polypeptide [CHEBI:15841]",
-"score": 0.322,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] has part phospholipid [CHEBI:16247]",
 "score": 0.322,
 "path_min": 0.002,
@@ -14677,55 +13757,7 @@
 "hub_survivor": true
 },
 {
-"fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] has part ribosomal RNA [CHEBI:18111]",
-"score": 0.322,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] has part nitrogenous base [CHEBI:18282]",
-"score": 0.322,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] has part carbon atoms [CHEBI:27594]",
-"score": 0.322,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] has part phosphorus atom [CHEBI:28659]",
-"score": 0.322,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] has part 2-deoxy-D-ribose [CHEBI:28816]",
-"score": 0.322,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] has part phosphate group [CHEBI:32958]",
-"score": 0.322,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] has part amino acids [CHEBI:33709]",
 "score": 0.322,
 "path_min": 0.002,
 "depth": 3,
@@ -14749,38 +13781,6 @@
 "hub_survivor": true
 },
 {
-"fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] has part nucleotides [CHEBI:36976]",
-"score": 0.322,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] has part polymer [CHEBI:60027]",
-"score": 0.322,
-"path_min": 0.002,
-"depth": 3,
-"rule": "isaGeneralise",
-"hub_survivor": true
-},
-{
-"fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] has part large subunit [GO:0015934]",
-"score": 0.322,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] has part small subunit [GO:0015935]",
-"score": 0.322,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] has part organelles [GO:0043226]",
 "score": 0.322,
 "path_min": 0.002,
@@ -14797,47 +13797,7 @@
 "hub_survivor": true
 },
 {
-"fact": "organ [UBERON:0000062] has part nitrogenous base [CHEBI:18282]",
-"score": 0.322,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "organ [UBERON:0000062] has part carbon atoms [CHEBI:27594]",
-"score": 0.322,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "organ [UBERON:0000062] has part phosphorus atom [CHEBI:28659]",
-"score": 0.322,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "organ [UBERON:0000062] has part 2-deoxy-D-ribose [CHEBI:28816]",
-"score": 0.322,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "organ [UBERON:0000062] has part phosphate group [CHEBI:32958]",
-"score": 0.322,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "organ [UBERON:0000062] has part amino acids [CHEBI:33709]",
 "score": 0.322,
 "path_min": 0.002,
 "depth": 3,
@@ -14861,14 +13821,6 @@
 "hub_survivor": true
 },
 {
-"fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] overlaps ribosomes [GO:0005840]",
-"score": 0.322,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relChain",
-"hub_survivor": false
-},
-{
 "fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] overlaps endomembrane system [GO:0012505]",
 "score": 0.322,
 "path_min": 0.002,
@@ -14885,31 +13837,7 @@
 "hub_survivor": true
 },
 {
-"fact": "organ [UBERON:0000062] overlaps ribosomes [GO:0005840]",
-"score": 0.322,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relChain",
-"hub_survivor": false
-},
-{
-"fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] has part structure that is capable of synthesize proteins [GO:0006412]",
-"score": 0.322,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
 "fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] has part structure that is capable of ATP biosynthetic process [GO:0006754]",
-"score": 0.322,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] has part structure that is capable of exocytosis [GO:0006887]",
 "score": 0.322,
 "path_min": 0.002,
 "depth": 3,
@@ -14941,31 +13869,7 @@
 "hub_survivor": true
 },
 {
-"fact": "organ [UBERON:0000062] has part structure that is capable of synthesize proteins [GO:0006412]",
-"score": 0.322,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] has part DNA [CHEBI:16991]",
-"score": 0.322,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": false
-},
-{
 "fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] has part cytoplasm [GO:0005737]",
-"score": 0.322,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": false
-},
-{
-"fact": "organs \u2293 in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] has part ribosomes [GO:0005840]",
 "score": 0.322,
 "path_min": 0.002,
 "depth": 2,
@@ -14979,14 +13883,6 @@
 "depth": 2,
 "rule": "relTrans",
 "hub_survivor": false
-},
-{
-"fact": "organ [UBERON:0000062] has part polypeptide [CHEBI:15841]",
-"score": 0.322,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
 },
 {
 "fact": "organ [UBERON:0000062] has part phospholipid [CHEBI:16247]",
@@ -15005,39 +13901,7 @@
 "hub_survivor": false
 },
 {
-"fact": "organ [UBERON:0000062] has part DNA [CHEBI:16991]",
-"score": 0.322,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": false
-},
-{
-"fact": "organ [UBERON:0000062] has part ribosomal RNA [CHEBI:18111]",
-"score": 0.322,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "organ [UBERON:0000062] has part proteins [CHEBI:36080]",
-"score": 0.322,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "organ [UBERON:0000062] has part nucleotides [CHEBI:36976]",
-"score": 0.322,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "organ [UBERON:0000062] has part polymer [CHEBI:60027]",
 "score": 0.322,
 "path_min": 0.002,
 "depth": 2,
@@ -15053,36 +13917,12 @@
 "hub_survivor": false
 },
 {
-"fact": "organ [UBERON:0000062] has part ribosomes [GO:0005840]",
-"score": 0.322,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": false
-},
-{
 "fact": "organ [UBERON:0000062] has part plasma membrane [GO:0005886]",
 "score": 0.322,
 "path_min": 0.002,
 "depth": 2,
 "rule": "relTrans",
 "hub_survivor": false
-},
-{
-"fact": "organ [UBERON:0000062] has part large subunit [GO:0015934]",
-"score": 0.322,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "organ [UBERON:0000062] has part small subunit [GO:0015935]",
-"score": 0.322,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
 },
 {
 "fact": "organ [UBERON:0000062] has part organelles [GO:0043226]",
@@ -15102,14 +13942,6 @@
 },
 {
 "fact": "organ [UBERON:0000062] has part structure that is capable of ATP biosynthetic process [GO:0006754]",
-"score": 0.322,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "organ [UBERON:0000062] has part structure that is capable of exocytosis [GO:0006887]",
 "score": 0.322,
 "path_min": 0.002,
 "depth": 2,
@@ -15430,27 +14262,27 @@
 "hub_survivor": true
 },
 {
+"fact": "eukaryotic cell \u2293 in taxon (NCBITaxon:2759) [CL:0000255&RO:0002162=(NCBITaxon:2759)] capable of exocytosis [GO:0006887]",
+"score": 0.054,
+"path_min": 0.054,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "eukaryotic cell \u2293 in taxon (NCBITaxon:2759) [CL:0000255&RO:0002162=(NCBITaxon:2759)] capable of endocytosis [GO:0006897]",
+"score": 0.054,
+"path_min": 0.054,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
 "fact": "eukaryotic [CL:0000255] has part structure that is capable of transmembrane transport [GO:0055085]",
 "score": 0.054,
 "path_min": 0.054,
 "depth": 1,
 "rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] has part structure that is capable of synthesize proteins [GO:0006412]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 4,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] has part polypeptide [CHEBI:15841]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
 "hub_survivor": true
 },
 {
@@ -15470,14 +14302,6 @@
 "hub_survivor": false
 },
 {
-"fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] has part DNA [CHEBI:16991]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": false
-},
-{
 "fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] has part lipid [CHEBI:18059]",
 "score": 0.004,
 "path_min": 0.002,
@@ -15486,55 +14310,7 @@
 "hub_survivor": true
 },
 {
-"fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] has part ribosomal RNA [CHEBI:18111]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] has part nitrogenous base [CHEBI:18282]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] has part carbon atoms [CHEBI:27594]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] has part phosphorus atom [CHEBI:28659]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] has part 2-deoxy-D-ribose [CHEBI:28816]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] has part phosphate group [CHEBI:32958]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] has part amino acids [CHEBI:33709]",
 "score": 0.004,
 "path_min": 0.002,
 "depth": 3,
@@ -15558,31 +14334,7 @@
 "hub_survivor": true
 },
 {
-"fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] has part nucleotides [CHEBI:36976]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] has part polymer [CHEBI:60027]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] has part cytoplasm [GO:0005737]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": false
-},
-{
-"fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] has part ribosomes [GO:0005840]",
 "score": 0.004,
 "path_min": 0.002,
 "depth": 3,
@@ -15598,31 +14350,7 @@
 "hub_survivor": false
 },
 {
-"fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] has part large subunit [GO:0015934]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] has part small subunit [GO:0015935]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] has part organelles [GO:0043226]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "organ system [UBERON:0000467] has part polypeptide [CHEBI:15841]",
 "score": 0.004,
 "path_min": 0.002,
 "depth": 3,
@@ -15654,55 +14382,7 @@
 "hub_survivor": true
 },
 {
-"fact": "organ system [UBERON:0000467] has part ribosomal RNA [CHEBI:18111]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "organ system [UBERON:0000467] has part nitrogenous base [CHEBI:18282]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "organ system [UBERON:0000467] has part carbon atoms [CHEBI:27594]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "organ system [UBERON:0000467] has part phosphorus atom [CHEBI:28659]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "organ system [UBERON:0000467] has part 2-deoxy-D-ribose [CHEBI:28816]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "organ system [UBERON:0000467] has part phosphate group [CHEBI:32958]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "organ system [UBERON:0000467] has part amino acids [CHEBI:33709]",
 "score": 0.004,
 "path_min": 0.002,
 "depth": 3,
@@ -15726,38 +14406,6 @@
 "hub_survivor": true
 },
 {
-"fact": "organ system [UBERON:0000467] has part nucleotides [CHEBI:36976]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "organ system [UBERON:0000467] has part polymer [CHEBI:60027]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 3,
-"rule": "isaGeneralise",
-"hub_survivor": true
-},
-{
-"fact": "organ system [UBERON:0000467] has part large subunit [GO:0015934]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "organ system [UBERON:0000467] has part small subunit [GO:0015935]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "organ system [UBERON:0000467] has part organelles [GO:0043226]",
 "score": 0.004,
 "path_min": 0.002,
@@ -15774,47 +14422,7 @@
 "hub_survivor": true
 },
 {
-"fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part nitrogenous base [CHEBI:18282]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part carbon atoms [CHEBI:27594]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part phosphorus atom [CHEBI:28659]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part 2-deoxy-D-ribose [CHEBI:28816]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part phosphate group [CHEBI:32958]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part amino acids [CHEBI:33709]",
 "score": 0.004,
 "path_min": 0.002,
 "depth": 3,
@@ -15830,28 +14438,12 @@
 "hub_survivor": true
 },
 {
-"fact": "body [UBERON:0000468] has part phosphorus atom [CHEBI:28659]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] overlaps food [CHEBI:33290]",
 "score": 0.004,
 "path_min": 0.002,
 "depth": 3,
 "rule": "relChain",
 "hub_survivor": true
-},
-{
-"fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] overlaps ribosomes [GO:0005840]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relChain",
-"hub_survivor": false
 },
 {
 "fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] overlaps endomembrane system [GO:0012505]",
@@ -15870,14 +14462,6 @@
 "hub_survivor": true
 },
 {
-"fact": "organ system [UBERON:0000467] overlaps ribosomes [GO:0005840]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relChain",
-"hub_survivor": false
-},
-{
 "fact": "organ system [UBERON:0000467] overlaps endomembrane system [GO:0012505]",
 "score": 0.004,
 "path_min": 0.002,
@@ -15894,31 +14478,7 @@
 "hub_survivor": true
 },
 {
-"fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] overlaps ribosomes [GO:0005840]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relChain",
-"hub_survivor": false
-},
-{
-"fact": "body [UBERON:0000468] overlaps ribosomes [GO:0005840]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relChain",
-"hub_survivor": false
-},
-{
 "fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] has part structure that is capable of ATP biosynthetic process [GO:0006754]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] has part structure that is capable of exocytosis [GO:0006887]",
 "score": 0.004,
 "path_min": 0.002,
 "depth": 3,
@@ -15950,23 +14510,7 @@
 "hub_survivor": true
 },
 {
-"fact": "organ system [UBERON:0000467] has part structure that is capable of synthesize proteins [GO:0006412]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
 "fact": "organ system [UBERON:0000467] has part structure that is capable of ATP biosynthetic process [GO:0006754]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "organ system [UBERON:0000467] has part structure that is capable of exocytosis [GO:0006887]",
 "score": 0.004,
 "path_min": 0.002,
 "depth": 3,
@@ -15998,14 +14542,6 @@
 "hub_survivor": true
 },
 {
-"fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part structure that is capable of synthesize proteins [GO:0006412]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
 "fact": "organ systems \u2293 in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] has part tissues [UBERON:0000479]",
 "score": 0.004,
 "path_min": 0.004,
@@ -16014,23 +14550,7 @@
 "hub_survivor": true
 },
 {
-"fact": "organ system [UBERON:0000467] has part DNA [CHEBI:16991]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": false
-},
-{
 "fact": "organ system [UBERON:0000467] has part cytoplasm [GO:0005737]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": false
-},
-{
-"fact": "organ system [UBERON:0000467] has part ribosomes [GO:0005840]",
 "score": 0.004,
 "path_min": 0.002,
 "depth": 2,
@@ -16044,14 +14564,6 @@
 "depth": 2,
 "rule": "relTrans",
 "hub_survivor": false
-},
-{
-"fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part polypeptide [CHEBI:15841]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
 },
 {
 "fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part phospholipid [CHEBI:16247]",
@@ -16070,39 +14582,7 @@
 "hub_survivor": false
 },
 {
-"fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part DNA [CHEBI:16991]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": false
-},
-{
-"fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part ribosomal RNA [CHEBI:18111]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part proteins [CHEBI:36080]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part nucleotides [CHEBI:36976]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part polymer [CHEBI:60027]",
 "score": 0.004,
 "path_min": 0.002,
 "depth": 2,
@@ -16118,36 +14598,12 @@
 "hub_survivor": false
 },
 {
-"fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part ribosomes [GO:0005840]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": false
-},
-{
 "fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part plasma membrane [GO:0005886]",
 "score": 0.004,
 "path_min": 0.002,
 "depth": 2,
 "rule": "relTrans",
 "hub_survivor": false
-},
-{
-"fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part large subunit [GO:0015934]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part small subunit [GO:0015935]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
 },
 {
 "fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part organelles [GO:0043226]",
@@ -16161,14 +14617,6 @@
 "fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part organ [UBERON:0000062]",
 "score": 0.004,
 "path_min": 0.004,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "body [UBERON:0000468] has part polypeptide [CHEBI:15841]",
-"score": 0.004,
-"path_min": 0.002,
 "depth": 2,
 "rule": "relTrans",
 "hub_survivor": true
@@ -16198,47 +14646,7 @@
 "hub_survivor": true
 },
 {
-"fact": "body [UBERON:0000468] has part ribosomal RNA [CHEBI:18111]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "body [UBERON:0000468] has part nitrogenous base [CHEBI:18282]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "body [UBERON:0000468] has part carbon atoms [CHEBI:27594]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "body [UBERON:0000468] has part 2-deoxy-D-ribose [CHEBI:28816]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "body [UBERON:0000468] has part phosphate group [CHEBI:32958]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "body [UBERON:0000468] has part amino acids [CHEBI:33709]",
 "score": 0.004,
 "path_min": 0.002,
 "depth": 2,
@@ -16255,38 +14663,6 @@
 },
 {
 "fact": "body [UBERON:0000468] has part proteins [CHEBI:36080]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "body [UBERON:0000468] has part nucleotides [CHEBI:36976]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "body [UBERON:0000468] has part polymer [CHEBI:60027]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 2,
-"rule": "isaGeneralise",
-"hub_survivor": true
-},
-{
-"fact": "body [UBERON:0000468] has part large subunit [GO:0015934]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "body [UBERON:0000468] has part small subunit [GO:0015935]",
 "score": 0.004,
 "path_min": 0.002,
 "depth": 2,
@@ -16342,14 +14718,6 @@
 "hub_survivor": true
 },
 {
-"fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part structure that is capable of exocytosis [GO:0006887]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
 "fact": "multicellular bodies of animals \u2293 in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part structure that is capable of endocytosis [GO:0006897]",
 "score": 0.004,
 "path_min": 0.002,
@@ -16374,11 +14742,11 @@
 "hub_survivor": true
 },
 {
-"fact": "body [UBERON:0000468] has part structure that is capable of synthesize proteins [GO:0006412]",
+"fact": "body [UBERON:0000468] has part structure that is capable of endocytosis [GO:0006897]",
 "score": 0.004,
 "path_min": 0.002,
 "depth": 2,
-"rule": "relChain",
+"rule": "isaGeneralise",
 "hub_survivor": true
 },
 {
@@ -16406,23 +14774,7 @@
 "hub_survivor": true
 },
 {
-"fact": "body [UBERON:0000468] has part DNA [CHEBI:16991]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 1,
-"rule": "relTrans",
-"hub_survivor": false
-},
-{
 "fact": "body [UBERON:0000468] has part cytoplasm [GO:0005737]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 1,
-"rule": "relTrans",
-"hub_survivor": false
-},
-{
-"fact": "body [UBERON:0000468] has part ribosomes [GO:0005840]",
 "score": 0.004,
 "path_min": 0.002,
 "depth": 1,
@@ -16462,22 +14814,6 @@
 "hub_survivor": true
 },
 {
-"fact": "body [UBERON:0000468] has part structure that is capable of exocytosis [GO:0006887]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 1,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "body [UBERON:0000468] has part structure that is capable of endocytosis [GO:0006897]",
-"score": 0.004,
-"path_min": 0.002,
-"depth": 1,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
 "fact": "body [UBERON:0000468] has part structure that is capable of phagocytosis [GO:0006909]",
 "score": 0.004,
 "path_min": 0.002,
@@ -16491,22 +14827,6 @@
 "path_min": 0.002,
 "depth": 1,
 "rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part phosphorus atom [CHEBI:28659]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] has part phosphorus atom [CHEBI:28659]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relTrans",
 "hub_survivor": true
 },
 {
@@ -16534,22 +14854,6 @@
 "hub_survivor": true
 },
 {
-"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] overlaps ribosomes [GO:0005840]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relChain",
-"hub_survivor": false
-},
-{
-"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] overlaps ribosomes [GO:0005840]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 3,
-"rule": "relChain",
-"hub_survivor": false
-},
-{
 "fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000548&RO:0002162=(NCBITaxon:33208)] overlaps food [CHEBI:33290]",
 "score": 0.002,
 "path_min": 0.002,
@@ -16563,14 +14867,6 @@
 "path_min": 0.002,
 "depth": 3,
 "rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part polypeptide [CHEBI:15841]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
 "hub_survivor": true
 },
 {
@@ -16598,14 +14894,6 @@
 "hub_survivor": true
 },
 {
-"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part ribosomal RNA [CHEBI:18111]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part polysaccharide [CHEBI:18154]",
 "score": 0.002,
 "path_min": 0.002,
@@ -16614,39 +14902,7 @@
 "hub_survivor": true
 },
 {
-"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part nitrogenous base [CHEBI:18282]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part carbon atoms [CHEBI:27594]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part 2-deoxy-D-ribose [CHEBI:28816]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part phosphate group [CHEBI:32958]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part amino acids [CHEBI:33709]",
 "score": 0.002,
 "path_min": 0.002,
 "depth": 2,
@@ -16670,47 +14926,7 @@
 "hub_survivor": true
 },
 {
-"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part nucleotides [CHEBI:36976]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part polymer [CHEBI:60027]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 2,
-"rule": "isaGeneralise",
-"hub_survivor": true
-},
-{
-"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part large subunit [GO:0015934]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part small subunit [GO:0015935]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part organelles [GO:0043226]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] has part polypeptide [CHEBI:15841]",
 "score": 0.002,
 "path_min": 0.002,
 "depth": 2,
@@ -16742,47 +14958,7 @@
 "hub_survivor": true
 },
 {
-"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] has part ribosomal RNA [CHEBI:18111]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] has part nitrogenous base [CHEBI:18282]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
 "fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] has part carbon atoms [CHEBI:27594]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] has part 2-deoxy-D-ribose [CHEBI:28816]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] has part phosphate group [CHEBI:32958]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] has part amino acids [CHEBI:33709]",
 "score": 0.002,
 "path_min": 0.002,
 "depth": 2,
@@ -16798,39 +14974,7 @@
 "hub_survivor": true
 },
 {
-"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] has part nucleotides [CHEBI:36976]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] has part polymer [CHEBI:60027]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 2,
-"rule": "isaGeneralise",
-"hub_survivor": true
-},
-{
 "fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] has part microtubule [GO:0005874]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] has part large subunit [GO:0015934]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": true
-},
-{
-"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] has part small subunit [GO:0015935]",
 "score": 0.002,
 "path_min": 0.002,
 "depth": 2,
@@ -16854,47 +14998,7 @@
 "hub_survivor": false
 },
 {
-"fact": "cells [CL:0000000] has part nitrogenous base [CHEBI:18282]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": false
-},
-{
 "fact": "cells [CL:0000000] has part carbon atoms [CHEBI:27594]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": false
-},
-{
-"fact": "cells [CL:0000000] has part phosphorus atom [CHEBI:28659]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": false
-},
-{
-"fact": "cells [CL:0000000] has part 2-deoxy-D-ribose [CHEBI:28816]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": false
-},
-{
-"fact": "cells [CL:0000000] has part phosphate group [CHEBI:32958]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relTrans",
-"hub_survivor": false
-},
-{
-"fact": "cells [CL:0000000] has part amino acids [CHEBI:33709]",
 "score": 0.002,
 "path_min": 0.002,
 "depth": 2,
@@ -17158,14 +15262,6 @@
 "hub_survivor": false
 },
 {
-"fact": "cells [CL:0000000] overlaps ribosomes [GO:0005840]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relChain",
-"hub_survivor": false
-},
-{
 "fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000548&RO:0002162=(NCBITaxon:33208)] overlaps endomembrane system [GO:0012505]",
 "score": 0.002,
 "path_min": 0.002,
@@ -17206,23 +15302,39 @@
 "hub_survivor": true
 },
 {
-"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part structure that is capable of synthesize proteins [GO:0006412]",
+"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] capable of endocytosis [GO:0006897]",
 "score": 0.002,
 "path_min": 0.002,
 "depth": 2,
-"rule": "relChain",
+"rule": "isaGeneralise",
+"hub_survivor": true
+},
+{
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] capable of endocytosis [GO:0006897]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "isaGeneralise",
+"hub_survivor": true
+},
+{
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000548&RO:0002162=(NCBITaxon:33208)] capable of exocytosis [GO:0006887]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000548&RO:0002162=(NCBITaxon:33208)] capable of endocytosis [GO:0006897]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 2,
+"rule": "isaInherit",
 "hub_survivor": true
 },
 {
 "fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part structure that is capable of transmembrane transport [GO:0055085]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 2,
-"rule": "relChain",
-"hub_survivor": true
-},
-{
-"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] has part structure that is capable of synthesize proteins [GO:0006412]",
 "score": 0.002,
 "path_min": 0.002,
 "depth": 2,
@@ -17262,14 +15374,6 @@
 "hub_survivor": true
 },
 {
-"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part DNA [CHEBI:16991]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 1,
-"rule": "isaInherit",
-"hub_survivor": false
-},
-{
 "fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part cellulose [CHEBI:18246]",
 "score": 0.002,
 "path_min": 0.002,
@@ -17286,23 +15390,7 @@
 "hub_survivor": false
 },
 {
-"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part ribosomes [GO:0005840]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 1,
-"rule": "isaInherit",
-"hub_survivor": false
-},
-{
 "fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part plasma membrane [GO:0005886]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 1,
-"rule": "isaInherit",
-"hub_survivor": false
-},
-{
-"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] has part DNA [CHEBI:16991]",
 "score": 0.002,
 "path_min": 0.002,
 "depth": 1,
@@ -17334,27 +15422,11 @@
 "hub_survivor": true
 },
 {
-"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] has part ribosomes [GO:0005840]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 1,
-"rule": "isaInherit",
-"hub_survivor": false
-},
-{
 "fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] has part plasma membrane [GO:0005886]",
 "score": 0.002,
 "path_min": 0.002,
 "depth": 1,
 "rule": "isaInherit",
-"hub_survivor": false
-},
-{
-"fact": "cells [CL:0000000] has part polypeptide [CHEBI:15841]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 1,
-"rule": "relTrans",
 "hub_survivor": false
 },
 {
@@ -17374,47 +15446,7 @@
 "hub_survivor": false
 },
 {
-"fact": "cells [CL:0000000] has part ribosomal RNA [CHEBI:18111]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 1,
-"rule": "relTrans",
-"hub_survivor": false
-},
-{
 "fact": "cells [CL:0000000] has part proteins [CHEBI:36080]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 1,
-"rule": "relTrans",
-"hub_survivor": false
-},
-{
-"fact": "cells [CL:0000000] has part nucleotides [CHEBI:36976]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 1,
-"rule": "relTrans",
-"hub_survivor": false
-},
-{
-"fact": "cells [CL:0000000] has part polymer [CHEBI:60027]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 1,
-"rule": "isaGeneralise",
-"hub_survivor": false
-},
-{
-"fact": "cells [CL:0000000] has part large subunit [GO:0015934]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 1,
-"rule": "relTrans",
-"hub_survivor": false
-},
-{
-"fact": "cells [CL:0000000] has part small subunit [GO:0015935]",
 "score": 0.002,
 "path_min": 0.002,
 "depth": 1,
@@ -17574,22 +15606,6 @@
 "hub_survivor": true
 },
 {
-"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] capable of exocytosis [GO:0006887]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 1,
-"rule": "isaInherit",
-"hub_survivor": true
-},
-{
-"fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] capable of endocytosis [GO:0006897]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 1,
-"rule": "isaInherit",
-"hub_survivor": true
-},
-{
 "fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] capable of phagocytosis [GO:0006909]",
 "score": 0.002,
 "path_min": 0.002,
@@ -17614,22 +15630,6 @@
 "hub_survivor": true
 },
 {
-"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] capable of exocytosis [GO:0006887]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 1,
-"rule": "isaInherit",
-"hub_survivor": true
-},
-{
-"fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] capable of endocytosis [GO:0006897]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 1,
-"rule": "isaInherit",
-"hub_survivor": true
-},
-{
 "fact": "animal cell \u2293 in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] capable of phagocytosis [GO:0006909]",
 "score": 0.002,
 "path_min": 0.002,
@@ -17646,20 +15646,36 @@
 "hub_survivor": true
 },
 {
+"fact": "cells [CL:0000000] capable of endocytosis [GO:0006897]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 1,
+"rule": "isaGeneralise",
+"hub_survivor": false
+},
+{
+"fact": "Animal cells [CL:0000548] capable of exocytosis [GO:0006887]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
+"fact": "Animal cells [CL:0000548] capable of endocytosis [GO:0006897]",
+"score": 0.002,
+"path_min": 0.002,
+"depth": 1,
+"rule": "isaInherit",
+"hub_survivor": true
+},
+{
 "fact": "plant cell \u2293 in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] capable of part of cell cycle [GO:0007049]",
 "score": 0.002,
 "path_min": 0.002,
 "depth": 1,
 "rule": "relChain",
 "hub_survivor": true
-},
-{
-"fact": "cells [CL:0000000] has part structure that is capable of synthesize proteins [GO:0006412]",
-"score": 0.002,
-"path_min": 0.002,
-"depth": 1,
-"rule": "relChain",
-"hub_survivor": false
 },
 {
 "fact": "cells [CL:0000000] has part structure that is capable of transmembrane transport [GO:0055085]",

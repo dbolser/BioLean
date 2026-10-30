@@ -517,5 +517,41 @@ def cell_structure_and_function_m45435_57 : Statement where
   text := "People with familial hypercholesterolemia have life-threatening blood cholesterol levels"
   claim := .effect (e_MONDO_0005439.inCtx { taxon := e_NCBITaxon_9606 }) .pos (.amount (e_CHEBI_16113.inCtx { anatomy := e_UBERON_0000178 }))
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "People with this condition have life-threatening levels of cholesterol in their blood, because their cells cannot clear the chemical from their blood." }]
+/-- All cells have DNA -/
+def cell_structure_and_function_m45429_9 : Statement where
+  id := "cell-structure-and-function-m45429-9"
+  text := "All cells have DNA"
+  claim := .quant .most (.rel ⟨.bfo, 51, false⟩ e_CL_0000000 e_CHEBI_16991)
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "All cells share four common components: 1) a plasma membrane, an outer covering that separates the cell’s interior from its surrounding environment; 2) cytoplasm, consisting of a jelly-like region wit" }]
+/-- All cells have ribosomes -/
+def cell_structure_and_function_m45429_11 : Statement where
+  id := "cell-structure-and-function-m45429-11"
+  text := "All cells have ribosomes"
+  claim := .quant .most (.rel ⟨.bfo, 51, false⟩ e_CL_0000000 e_GO_0005840)
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "All cells share four common components: 1) a plasma membrane, an outer covering that separates the cell’s interior from its surrounding environment; 2) cytoplasm, consisting of a jelly-like region wit" }]
+/-- Bacteria have a cell wall -/
+def cell_structure_and_function_m45429_20 : Statement where
+  id := "cell-structure-and-function-m45429-20"
+  text := "Bacteria have a cell wall"
+  claim := .quant .most (.rel ⟨.bfo, 51, false⟩ e_NCBITaxon_2 e_GO_0005618)
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Unlike Archaea and eukaryotes, bacteria have a cell wall made of peptidoglycan, comprised of sugars and amino acids, and many have a polysaccharide capsule ()." }]
+/-- Photosynthetic protists have chloroplasts [weakening; not expressed: ungrounded_entity] -/
+def cell_structure_and_function_m45432_241 : Statement where
+  id := "cell-structure-and-function-m45432-241"
+  text := "Photosynthetic protists have chloroplasts [weakening; not expressed: ungrounded_entity]"
+  claim := .quant .some (.rel ⟨.bfo, 51, false⟩ e_NCBITaxon_2759 e_GO_0009507)
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Like plant cells, photosynthetic protists also have chloroplasts." }]
+/-- Cells also remove and take in larger molecules and particles [weakening; not expressed: compound_sentence] -/
+def cell_structure_and_function_m45435_4 : Statement where
+  id := "cell-structure-and-function-m45435-4"
+  text := "Cells also remove and take in larger molecules and particles [weakening; not expressed: compound_sentence]"
+  claim := .rel ⟨.ro, 2215, false⟩ e_CL_0000255 e_GO_0006897
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "In addition to moving small ions and molecules through the membrane, cells also need to remove and take in larger molecules and particles." }]
+/-- The cell expels waste and other particles by exocytosis -/
+def cell_structure_and_function_m45435_76 : Statement where
+  id := "cell-structure-and-function-m45435-76"
+  text := "The cell expels waste and other particles by exocytosis"
+  claim := .rel ⟨.ro, 2215, false⟩ e_CL_0000255 e_GO_0006887
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "The cell expels waste and other particles through the reverse process, exocytosis." }]
 
 end BioLean.Textbook.R3.CellStructureAndFunction

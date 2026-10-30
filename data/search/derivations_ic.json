@@ -6566,258 +6566,6 @@ false
 "rule": "relTrans",
 "premises": [
 {
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-4"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45429-9"
-}
-],
-"fact": "tissues [UBERON:0000479] has part DNA [CHEBI:16991]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"CHEBI:16991"
-]
-}
-],
-"fact": "gallbladder [UBERON:0002110] has part DNA [CHEBI:16991]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0002110",
-"CHEBI:16991"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "isaInherit",
-"premises": [
-{
-"rule": "lit",
-"sid": "the-body-s-systems-m45535-152"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-5"
-}
-],
-"fact": "gallbladder [UBERON:0002110] has part tissues [UBERON:0000479]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0002110",
-"UBERON:0000479"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-4"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45429-11"
-}
-],
-"fact": "tissues [UBERON:0000479] has part ribosomes [GO:0005840]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"GO:0005840"
-]
-},
-{
-"rule": "lit",
-"sid": "molbio-m45479-16"
-}
-],
-"fact": "tissues [UBERON:0000479] has part ribosomal RNA [CHEBI:18111]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"CHEBI:18111"
-]
-}
-],
-"fact": "gallbladder [UBERON:0002110] has part ribosomal RNA [CHEBI:18111]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0002110",
-"CHEBI:18111"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "isaInherit",
-"premises": [
-{
-"rule": "lit",
-"sid": "the-body-s-systems-m45535-152"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-5"
-}
-],
-"fact": "gallbladder [UBERON:0002110] has part tissues [UBERON:0000479]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0002110",
-"UBERON:0000479"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-4"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45429-9"
-}
-],
-"fact": "tissues [UBERON:0000479] has part DNA [CHEBI:16991]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"CHEBI:16991"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "lit",
-"sid": "molbio-m45473-14"
-},
-{
-"rule": "lit",
-"sid": "molbio-m45473-17"
-}
-],
-"fact": "DNA [CHEBI:16991] has part nitrogenous base [CHEBI:18282]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"CHEBI:16991",
-"CHEBI:18282"
-]
-}
-],
-"fact": "tissues [UBERON:0000479] has part nitrogenous base [CHEBI:18282]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"CHEBI:18282"
-]
-}
-],
-"fact": "gallbladder [UBERON:0002110] has part nitrogenous base [CHEBI:18282]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0002110",
-"CHEBI:18282"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "isaInherit",
-"premises": [
-{
-"rule": "lit",
-"sid": "the-body-s-systems-m45535-152"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-5"
-}
-],
-"fact": "gallbladder [UBERON:0002110] has part tissues [UBERON:0000479]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0002110",
-"UBERON:0000479"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
 "rule": "relTrans",
 "premises": [
 {
@@ -6889,338 +6637,6 @@ false
 ],
 "UBERON:0002110",
 "CHEBI:27594"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "isaInherit",
-"premises": [
-{
-"rule": "lit",
-"sid": "the-body-s-systems-m45535-152"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-5"
-}
-],
-"fact": "gallbladder [UBERON:0002110] has part tissues [UBERON:0000479]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0002110",
-"UBERON:0000479"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-4"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45429-9"
-}
-],
-"fact": "tissues [UBERON:0000479] has part DNA [CHEBI:16991]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"CHEBI:16991"
-]
-}
-],
-"fact": "gallbladder [UBERON:0002110] has part DNA [CHEBI:16991]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0002110",
-"CHEBI:16991"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "lit",
-"sid": "molbio-m45473-14"
-},
-{
-"rule": "lit",
-"sid": "molbio-m45473-16"
-}
-],
-"fact": "DNA [CHEBI:16991] has part phosphate group [CHEBI:32958]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"CHEBI:16991",
-"CHEBI:32958"
-]
-},
-{
-"rule": "lit",
-"sid": "molbio-m45473-164"
-}
-],
-"fact": "DNA [CHEBI:16991] has part phosphorus atom [CHEBI:28659]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"CHEBI:16991",
-"CHEBI:28659"
-]
-}
-],
-"fact": "gallbladder [UBERON:0002110] has part phosphorus atom [CHEBI:28659]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0002110",
-"CHEBI:28659"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "isaInherit",
-"premises": [
-{
-"rule": "lit",
-"sid": "the-body-s-systems-m45535-152"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-5"
-}
-],
-"fact": "gallbladder [UBERON:0002110] has part tissues [UBERON:0000479]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0002110",
-"UBERON:0000479"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-4"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45429-9"
-}
-],
-"fact": "tissues [UBERON:0000479] has part DNA [CHEBI:16991]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"CHEBI:16991"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "lit",
-"sid": "molbio-m45473-14"
-},
-{
-"rule": "lit",
-"sid": "molbio-m45473-15"
-}
-],
-"fact": "DNA [CHEBI:16991] has part 2-deoxy-D-ribose [CHEBI:28816]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"CHEBI:16991",
-"CHEBI:28816"
-]
-}
-],
-"fact": "tissues [UBERON:0000479] has part 2-deoxy-D-ribose [CHEBI:28816]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"CHEBI:28816"
-]
-}
-],
-"fact": "gallbladder [UBERON:0002110] has part 2-deoxy-D-ribose [CHEBI:28816]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0002110",
-"CHEBI:28816"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "isaInherit",
-"premises": [
-{
-"rule": "lit",
-"sid": "the-body-s-systems-m45535-152"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-5"
-}
-],
-"fact": "gallbladder [UBERON:0002110] has part tissues [UBERON:0000479]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0002110",
-"UBERON:0000479"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-4"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45429-9"
-}
-],
-"fact": "tissues [UBERON:0000479] has part DNA [CHEBI:16991]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"CHEBI:16991"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "lit",
-"sid": "molbio-m45473-14"
-},
-{
-"rule": "lit",
-"sid": "molbio-m45473-16"
-}
-],
-"fact": "DNA [CHEBI:16991] has part phosphate group [CHEBI:32958]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"CHEBI:16991",
-"CHEBI:32958"
-]
-}
-],
-"fact": "tissues [UBERON:0000479] has part phosphate group [CHEBI:32958]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"CHEBI:32958"
-]
-}
-],
-"fact": "gallbladder [UBERON:0002110] has part phosphate group [CHEBI:32958]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0002110",
-"CHEBI:32958"
 ]
 },
 {
@@ -13361,174 +12777,6 @@ false
 ]
 },
 {
-"rule": "relTrans",
-"premises": [
-{
-"rule": "isaInherit",
-"premises": [
-{
-"rule": "lit",
-"sid": "the-body-s-systems-m45535-152"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-5"
-}
-],
-"fact": "gallbladder [UBERON:0002110] has part tissues [UBERON:0000479]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0002110",
-"UBERON:0000479"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-4"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45429-11"
-}
-],
-"fact": "tissues [UBERON:0000479] has part ribosomes [GO:0005840]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"GO:0005840"
-]
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45432-184"
-}
-],
-"fact": "tissues [UBERON:0000479] has part large subunit [GO:0015934]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"GO:0015934"
-]
-}
-],
-"fact": "gallbladder [UBERON:0002110] has part large subunit [GO:0015934]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0002110",
-"GO:0015934"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "isaInherit",
-"premises": [
-{
-"rule": "lit",
-"sid": "the-body-s-systems-m45535-152"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-5"
-}
-],
-"fact": "gallbladder [UBERON:0002110] has part tissues [UBERON:0000479]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0002110",
-"UBERON:0000479"
-]
-},
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "relTrans",
-"premises": [
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45428-4"
-},
-{
-"rule": "lit",
-"sid": "cell-structure-and-function-m45429-11"
-}
-],
-"fact": "tissues [UBERON:0000479] has part ribosomes [GO:0005840]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"GO:0005840"
-]
-},
-{
-"rule": "lit",
-"sid": "molbio-m45479-24"
-}
-],
-"fact": "tissues [UBERON:0000479] has part small subunit [GO:0015935]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0000479",
-"GO:0015935"
-]
-}
-],
-"fact": "gallbladder [UBERON:0002110] has part small subunit [GO:0015935]",
-"key": [
-"rel",
-[
-"bfo",
-51,
-false
-],
-"UBERON:0002110",
-"GO:0015935"
-]
-},
-{
 "rule": "isaGeneralise",
 "premises": [
 {
@@ -14232,6 +13480,238 @@ false
 ],
 "UBERON:0000473",
 "CHEBI:26764"
+]
+},
+{
+"rule": "relChain",
+"premises": [
+{
+"rule": "lit",
+"sid": "the-body-s-systems-m45539-245"
+},
+{
+"rule": "lit",
+"sid": "the-body-s-systems-m45539-219"
+}
+],
+"fact": "amygdala [UBERON:0001876] part of structure that is capable of hearing [GO:0007605]",
+"key": [
+"rel",
+[
+"ro",
+2329,
+false
+],
+"UBERON:0001876",
+"GO:0007605"
+]
+},
+{
+"rule": "relChain",
+"premises": [
+{
+"rule": "lit",
+"sid": "the-body-s-systems-m45539-244"
+},
+{
+"rule": "lit",
+"sid": "the-body-s-systems-m45539-242"
+}
+],
+"fact": "amygdala [UBERON:0001876] part of structure that is capable of memory [GO:0007613]",
+"key": [
+"rel",
+[
+"ro",
+2329,
+false
+],
+"UBERON:0001876",
+"GO:0007613"
+]
+},
+{
+"rule": "relTrans",
+"premises": [
+{
+"rule": "isaInherit",
+"premises": [
+{
+"rule": "refineAxiom",
+"sid": "refine:GO:0051325&RO:0002162=(NCBITaxon:2759)"
+},
+{
+"rule": "lit",
+"sid": "reproduction-at-the-cellular-level-m45461-13"
+}
+],
+"fact": "interphase \u2293 in taxon (eukaryotes) [GO:0051325&RO:0002162=(NCBITaxon:2759)] has part G1 [GO:0051318]",
+"key": [
+"rel",
+[
+"bfo",
+51,
+false
+],
+"GO:0051325&RO:0002162=(NCBITaxon:2759)",
+"GO:0051318"
+]
+},
+{
+"rule": "lit",
+"sid": "the-cellular-basis-of-inheritance-m45466-40"
+}
+],
+"fact": "interphase \u2293 in taxon (eukaryotes) [GO:0051325&RO:0002162=(NCBITaxon:2759)] has part growth [GO:0016049]",
+"key": [
+"rel",
+[
+"bfo",
+51,
+false
+],
+"GO:0051325&RO:0002162=(NCBITaxon:2759)",
+"GO:0016049"
+]
+},
+{
+"rule": "relTrans",
+"premises": [
+{
+"rule": "lit",
+"sid": "reproduction-at-the-cellular-level-m45461-13"
+},
+{
+"rule": "lit",
+"sid": "the-cellular-basis-of-inheritance-m45466-40"
+}
+],
+"fact": "interphase [GO:0051325] has part growth [GO:0016049]",
+"key": [
+"rel",
+[
+"bfo",
+51,
+false
+],
+"GO:0051325",
+"GO:0016049"
+]
+},
+{
+"rule": "isaGeneralise",
+"premises": [
+{
+"rule": "lit",
+"sid": "the-body-s-systems-m45535-260"
+},
+{
+"rule": "lit",
+"sid": "the-body-s-systems-m45535-50"
+}
+],
+"fact": "alpha-amylase activity [GO:0004556] has output disaccharide [CHEBI:36233]",
+"key": [
+"rel",
+[
+"ro",
+2234,
+false
+],
+"GO:0004556",
+"CHEBI:36233"
+]
+},
+{
+"rule": "isaGeneralise",
+"premises": [
+{
+"rule": "isaGeneralise",
+"premises": [
+{
+"rule": "lit",
+"sid": "molbio-m45479-36"
+},
+{
+"rule": "lit",
+"sid": "molbio-m45479-28"
+}
+],
+"fact": "tRNA aminoacylation for protein translation [GO:0006418] has input RNA [CHEBI:33697]",
+"key": [
+"rel",
+[
+"ro",
+2233,
+false
+],
+"GO:0006418",
+"CHEBI:33697"
+]
+},
+{
+"rule": "lit",
+"sid": "molbio-m45473-47"
+}
+],
+"fact": "tRNA aminoacylation for protein translation [GO:0006418] has input nucleic acids [CHEBI:33696]",
+"key": [
+"rel",
+[
+"ro",
+2233,
+false
+],
+"GO:0006418",
+"CHEBI:33696"
+]
+},
+{
+"rule": "isaGeneralise",
+"premises": [
+{
+"rule": "lit",
+"sid": "molbio-m45479-36"
+},
+{
+"rule": "lit",
+"sid": "molbio-m45479-28"
+}
+],
+"fact": "tRNA aminoacylation for protein translation [GO:0006418] has input RNA [CHEBI:33697]",
+"key": [
+"rel",
+[
+"ro",
+2233,
+false
+],
+"GO:0006418",
+"CHEBI:33697"
+]
+},
+{
+"rule": "isaGeneralise",
+"premises": [
+{
+"rule": "lit",
+"sid": "the-body-s-systems-m45536-63"
+},
+{
+"rule": "lit",
+"sid": "the-body-s-systems-m45536-62"
+}
+],
+"fact": "Alveolar ducts [UBERON:0002173] connected to bronchioles [UBERON:0002186]",
+"key": [
+"rel",
+[
+"ro",
+2170,
+false
+],
+"UBERON:0002173",
+"UBERON:0002186"
 ]
 }
 ]

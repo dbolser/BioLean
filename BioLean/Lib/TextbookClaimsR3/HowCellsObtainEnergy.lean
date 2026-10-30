@@ -277,5 +277,11 @@ def how_cells_obtain_energy_m45444_12 : Statement where
   text := "Glycogen is mobilised when blood sugar drops"
   claim := .effect e_CHEBI_17234 .neg (.process (e_GO_0005980.inCtx { anatomy := e_UBERON_0000178 }))
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Glycogen will be taken out of storage if blood sugar levels drop." }]
+/-- Both prokaryotes and eukaryotes carry out some form of glycolysis [weakening; not expressed: compound_sentence] -/
+def how_cells_obtain_energy_m45438_62 : Statement where
+  id := "how-cells-obtain-energy-m45438-62"
+  text := "Both prokaryotes and eukaryotes carry out some form of glycolysis [weakening; not expressed: compound_sentence]"
+  claim := .quant .most (.rel ⟨.ro, 2215, false⟩ e_NCBITaxon_131567 e_GO_0006096)
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Both prokaryotic and eukaryotic organisms carry out some form of glycolysis." }]
 
 end BioLean.Textbook.R3.HowCellsObtainEnergy

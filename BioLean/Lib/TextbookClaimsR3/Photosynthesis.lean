@@ -169,5 +169,11 @@ def photosynthesis_m45448_142 : Statement where
   text := "the mesophyll is the middle layer of cells in a leaf [weakening; not expressed: unsupported_ontology]"
   claim := .rel ⟨.bfo, 50, false⟩ (e_PO_0005645.inCtx { taxon := e_NCBITaxon_33090 }) e_PO_0025034
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "mesophyll: the middle layer of cells in a leaf" }]
+/-- plants have chloroplasts -/
+def photosynthesis_m45453_72 : Statement where
+  id := "photosynthesis-m45453-72"
+  text := "plants have chloroplasts"
+  claim := .quant .most (.rel ⟨.bfo, 51, false⟩ e_NCBITaxon_33090 e_GO_0009507)
+  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Photosynthetic organisms also carry out the reactions of respiration to harvest the energy that they have stored in carbohydrates, for example, plants have mitochondria in addition to chloroplasts." }]
 
 end BioLean.Textbook.R3.Photosynthesis

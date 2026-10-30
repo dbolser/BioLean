@@ -2587,5 +2587,53 @@
    "confidence": "high",
    "promoted_from": "m2"
   }
+ },
+ {
+  "id": "photosynthesis-m45453-72",
+  "module": "m45453",
+  "source": "Photosynthetic organisms also carry out the reactions of respiration to harvest the energy that they have stored in carbohydrates, for example, plants have mitochondria in addition to chloroplasts.",
+  "claim": "plants have chloroplasts",
+  "entities": [
+   {
+    "text": "plants",
+    "curie": "NCBITaxon:33090",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "chloroplast",
+    "curie": "GO:0009507",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "rel",
+   "quant": "most",
+   "subject": "NCBITaxon:33090",
+   "relation": "has part",
+   "object": "GO:0009507",
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium",
+   "edited_from": "false_as_written.tsv"
+  }
  }
 ]
