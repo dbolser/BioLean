@@ -24,6 +24,7 @@ inductive Kind
   | cellType   -- CL
   | component  -- GO cellular component
   | taxon      -- NCBITaxon
+  | variant    -- a sequence variant: dbSNP, ClinVar
   deriving DecidableEq, Repr
 
 /-- The BFO sort of a kind: processes and functions are occurrents, everything else a continuant. -/
