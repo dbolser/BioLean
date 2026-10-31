@@ -1,0 +1,101 @@
+id	interesting	true	note
+R001	0	yes	Weaker form of the chloroplast premise; generic object (organelle). True as an existential.
+R002	1	yes	Two is-a steps (aorta, artery, blood vessel). Obvious.
+R003	0	yes	An RNA primer is itself a polymer; 'overlaps' is the weakest relation. Four premises for nothing.
+R004	1	no	Excitatory (Na+/cation) channels only. GABA-A and glycine receptors are ligand-gated Cl- channels that hyperpolarise; class is overgeneral.
+R005	0	yes	Same fact as the base PNS term, narrowed to vertebrates.
+R006	0	yes	Same fact for a narrower context (Metazoa). Loose: the system raises oxygen in the body, not in the air.
+R007	0	yes	Every cell has ribosomes; reached by a detour through mitoribosomes. Weak 'overlaps'. Term is nervous system, premise says nervous tissue.
+R008	1	no	tRNA has ribothymidine (m5U54) in the T-loop, so it does contain thymine. Book rule 'RNA has no thymine' is a simplification. Rated as if true: restates RNA premise.
+R009	0	yes	Narrow-context restatement. Ribosomes are machinery, not an input; 'requires' is the real sense.
+R010	0	yes	Weaker than the premise chain: basal ganglia are part of the CNS, not just overlapping it.
+R011	1	yes	Same shape as the tRNA-uracil worked example.
+R012	1	yes	2'-OH of ribose (also 3'-OH, phosphate OH). Obvious.
+R013	0	yes	True anatomically (aorta lies by the vena cava) but the route is wrong: premise is 'some animals' counter-current heat exchange in limbs, not the aorta.
+R014	0	yes	Narrow-context restatement of a base chromosome fact.
+R015	0	yes	Every nucleated cell overlaps a chromosome. Neuron adds nothing.
+R016	2	unsure	Flatworm ganglion vs UBERON gray matter (a vertebrate CNS term). Class-level overlap via 'cell body'; invertebrates use cell-body rind and neuropil.
+R017	3	no	Axonemal and spindle microtubules are different instances; class-level overlap via 'microtubule' is false as 'shares a part'. Startling if true. Prokaryotic flagella have no microtubules either.
+R018	0	yes	Trivial and absurd: everything has carbon. Seven-step chain through plasma membrane sugars.
+R019	0	yes	Narrow-context restatement; DNA is a polymer. Premise 'chromosome within the nucleus' does not hold for prokaryotes.
+R020	2	unsure	Class-level supply claim: arteries carry oxygen, lungs raise it (pulmonary artery carries deoxygenated blood). Sign is right if read as oxygen delivery; EPO is set by kidney oxygen sensing.
+R021	1	yes	Only true because the book (and GO) put the plasma membrane inside the endomembrane system. Weaker than 'passive transport happens in plasma membrane'. Misleading to a student.
+R022	0	yes	Trivial, weak 'overlaps'. True of incorporated ribonucleotides; free ATP/GTP are not in a polymer.
+R023	0	yes	Every cell has a plasma membrane. Generic.
+R024	0	yes	Weaker than the premise chain: amygdala is part of the brain.
+R025	0	yes	Telomerase has an RNA component; RNA is a nucleic acid. Route via ribose is pointless.
+R026	1	yes	True only by the book/GO convention that the plasma membrane is endomembrane (many texts exclude it). A student would think of sarcoplasmic reticulum.
+R027	0	yes	Generic subject (organ system); cells make ATP.
+R028	0	yes	Trivial: mitochondrial DNA is a polymer.
+R029	1	yes	True (degranulation, cytokines), but the route is unsound: the premise secretors are antibody-secreting plasma cells, not neutrophils.
+R030	0	yes	Same as the aldosterone premise, narrowed to blood. Standard teaching (low Na+ raises aldosterone); K+ and angiotensin II matter more.
+R031	2	yes	Vessels deliver oxygen; oxygen drives the ETC. Same type as capillaries promote aerobic respiration. Generic 'blood vessel' is loose (veins carry little oxygen).
+R032	0	unsure	Weak 'overlaps' for generic muscle organ. Cardiac and smooth muscle have no skeletal muscle tissue; smooth muscle has no sarcomeres.
+R033	0	unsure	Narrow-context restatement. 'Limbic system' is a mammalian concept; homologues in other vertebrates are debated. Book is human.
+R034	0	yes	A venule is itself a blood vessel; trivial.
+R035	0	unsure	Wrong term: label says deficient, term is telomerase activity (in mouse). Read as the term it is a restated premise (true); read as labelled it would be false and startling.
+R036	3	no	Context error: oxygen in a leaf cannot lower a mammalian kidney hormone (plants have no EPO). Startling if true. Base fact is about blood oxygen.
+R037	0	unsure	Unreadable relation 'can carry out arise from'. Probably 'takes part in cell division'; cytoskeletal parts do (spindle, contractile ring).
+R038	1	yes	Two is-a steps. In ChEBI, nutrient is a role, not a class of ions.
+R039	0	yes	Aorta is itself a blood vessel; 'connected to' is trivial.
+R040	0	yes	Generic subject; enterocytes endocytose. Route through 'cells can phagocytose'.
+R041	0	yes	Every nucleated cell has ribosomal subunits; detour via mitoribosomes. GO term is the cytosolic small subunit, mitochondria have their own (GO mitochondrial small ribosomal subunit). Term is nervous system, premise says nervous tissue.
+R042	0	yes	Narrow-context restatement of a premise. Subject label 'These reactions' is an unresolved pointer; unreadable on its own.
+R043	0	no	Generic subject. Premise is about accessory organs of the digestive system; the heart does not promote digestion. Wrong term: should be digestive accessory organ.
+R044	0	yes	Weaker than 'alveoli are next to capillaries'.
+R045	0	yes	Weaker than the premise chain: brainstem is part of the CNS.
+R046	0	yes	Obsolete CL term (obsolete animal cell). Generic, weak 'overlaps'; plasma membrane counts as endomembrane only by the book's convention.
+R047	1	yes	Two part-of steps. 'Forearm' here means the forearm bones; UBERON zeugopod is a body segment, a slight stretch for a skeleton part.
+R048	1	yes	Same shape as the tRNA-uracil worked example.
+R049	0	yes	Already a sentence in the book (premise 1 says they attach to the plasma membrane).
+R050	1	yes	Two premises joined; obvious.
+R051	0	yes	Weaker than 'happens in ATP synthase'. 'Integral membrane protein' mapped to 'membrane protein complex'; ATP synthase is a complex, so the name is close but not the same.
+R052	1	yes	Two part-of steps.
+R053	0	yes	Arteries are blood vessels; trivial and weaker than the premise.
+R054	1	yes	The definition of rough ER: ribosome-studded, so it makes proteins. Obvious.
+R055	2	yes	Glucose promotes its own import through insulin: a feedback loop a teacher might use. Insulin-dependent import is in muscle and fat, not all cells.
+R056	0	yes	Narrow-context restatement. Weak: the point is that meiosis outputs haploid nuclei.
+R057	1	unsure	Dietary fat aids absorption of fat-soluble vitamins, not nutrients in general (fat slows gastric emptying and glucose uptake). Term 'intestinal absorption' is wider than the premise.
+R058	0	yes	Narrow-context restatement.
+R059	1	yes	Two premises joined. Smooth muscle has myofilaments too, though not in sarcomeres.
+R060	0	yes	Weaker than 'gene expression gives RNA as output'; leaves out protein.
+R061	0	yes	Narrow-context restatement. ATP synthase is a multi-subunit complex (F1 peripheral, Fo integral), so 'membrane protein complex' is the better name than 'integral membrane protein'.
+R062	3	no	Catabolism does not contain anabolism: 'has part anabolism' belongs to metabolism as a whole and was pushed down to one half of it. 'Broken down' is also an unresolved pointer. Startling if true.
+R063	0	yes	Restates a premise for a narrower context. Obsolete CL term.
+R064	0	yes	Weaker than the premise, which lists the thalamus as a brain part; reached by a detour via the limbic system.
+R065	1	yes	Sarcolemma is a plasma membrane; plasma membranes transport. Obvious.
+R066	1	yes	Brain has basal ganglia; basal ganglia control movement. Obvious.
+R067	0	yes	Silly context (BLN:hot_dry_day); plants have DNA on any day. Trivial; detour via mitochondrial DNA.
+R068	3	no	Equivocation on 'bacteria': immune cells fight invaders, the colon flora are tolerated and help digestion. Startling if true.
+R069	0	yes	Already a book sentence (neuron cell body contains Golgi); every cell has Golgi.
+R070	3	no	Chromatin is the eukaryotic DNA-histone complex in the nucleus; the book's own definition says so. Bacteria have a nucleoid, though archaea do have histone chromatin. Startling if true.
+R071	2	yes	Depolarisation opens Na+ channels so Na+ enters: the positive feedback of the action potential. 'Amount of sodium' is intracellular only.
+R072	3	no	Anaphor 'These atoms' joins two pathways: the glucose sentence is respiration, the NADPH one is the Calvin cycle. NADPH hydrogen is passed to the sugar (transfer, not a shared part). Both hold hydrogen, so 'overlaps' is empty.
+R073	3	no	Loop with a spurious sign: insulin lowers glucose, which lowers insulin secretion, so net insulin lowers insulin. The path via glucagon gives 'raises'. Odd context on the object (beta cell).
+R074	3	no	Plainly false: eukaryotic chromosomes sit in the nucleus. The premise is about prokaryotes; a negative on the generic term was pushed down into Eukaryota.
+R075	1	unsure	Membranes regulate: they block some things and let others pass. One-sided, and it contradicts R065.
+R076	2	no	Same equivocation as R068 (invaders versus gut flora), narrower subject.
+R077	0	yes	Narrow-context restatement. The premise 'chromosome within the nucleus' is wrong for prokaryotes but the conclusion holds.
+R078	2	yes	Oxidative phosphorylation makes ATP; ATP powers contraction. Same type as ATP synthase promotes muscle contraction. Fast bursts run on glycolysis and creatine phosphate.
+R079	0	yes	Restates a book sentence. Book and GO include the plasma membrane in the endomembrane system; many texts do not.
+R080	0	yes	Generic subject; every gland has cells with plasma membranes.
+R081	1	unsure	True of metabolic poisons that cut the ATP supply (cyanide, ouabain acts directly). Generic 'poison' is too wide: tetrodotoxin blocks Na+ channels, other poisons act elsewhere.
+R082	0	yes	Trivial and absurd route: ribosome polypeptides inside mitochondria. Amino acids are in every cell.
+R083	1	yes	Two premises joined; obvious.
+R084	0	yes	Narrow-context restatement. Pumps in the plasma membrane do active transport; the premise only says 'actively bringing in'.
+R085	1	unsure	Membrane integrity prevents lysis. But the plasma membrane also executes some deaths (gasdermin pores, MLKL, complement) and carries death receptors.
+R086	0	yes	Trivial. Obsolete CL term.
+R087	1	yes	Three part-of steps, each standard. Hippocampal formation is archicortex of the temporal lobe.
+R088	0	yes	Generic subject (cell); phospholipid tails.
+R089	2	yes	Same type as R031 and the capillaries-aerobic respiration example: vessels deliver oxygen, oxygen drives oxidative phosphorylation. 'A process' is an unresolved pointer.
+R090	3	no	Equivocation on 'sugars': membrane glycans versus dietary sugar. Meat is muscle, but muscle tissue as a class is not food. Startling if true.
+R091	0	yes	Narrow-context restatement of the book definition of chromosome.
+R092	0	yes	Weak: a part inherits what the whole does. True by the plasma-membrane-is-endomembrane convention.
+R093	1	yes	Two part-of steps; anyone sees it at once.
+R094	0	yes	Trivial: lysosomes are in cells, cells transport.
+R095	0	yes	Generic and trivial. Obsolete CL term.
+R096	0	yes	Weaker than the premise (temporal lobe is part of the cortex; the book is loose, lobes include white matter).
+R097	1	yes	Chemiosmosis in bacteria is real (plasma membrane, not the mitochondrial membrane in the premise). 'These reactions' is an unresolved pointer. Fermenting prokaryotes lack an ETC.
+R098	1	unsure	Many ion channels are in the plasma membrane, but class-wide it fails: mitochondrial and bacterial channels are not endomembrane. Also rests on the plasma-membrane convention.
+R099	1	yes	Human skeleton only (fish have no sacrum). Three part-of steps.
+R100	0	yes	Narrow-context restatement of a book sentence.

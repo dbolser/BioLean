@@ -1,0 +1,54 @@
+section	item	value
+old42	still derived today	33 of 42
+old42	labels of those still derived (T/S/E)	17/12/4
+old42	labels of those no longer derived (T/S/E)	7/0/2
+old42	ends-min T=2.0: removed n T/S/E | kept n T/S/E	12 11/1/0 | 21 6/11/4
+old42	ends-min T=2.5: removed n T/S/E | kept n T/S/E	15 13/2/0 | 18 4/10/4
+old42	ends-min T=3.0: removed n T/S/E | kept n T/S/E	17 13/4/0 | 16 4/8/4
+old42	ends-min T=3.5: removed n T/S/E | kept n T/S/E	20 14/6/0 | 13 3/6/4
+old42	ends-min T=4.0: removed n T/S/E | kept n T/S/E	23 14/6/3 | 10 3/6/1
+old42	path_min T=2.0: removed n T/S/E | kept n T/S/E	16 12/2/2 | 17 5/10/2
+old42	path_min T=2.5: removed n T/S/E | kept n T/S/E	20 13/5/2 | 13 4/7/2
+old42	path_min T=3.0: removed n T/S/E | kept n T/S/E	22 13/6/3 | 11 4/6/1
+old42	path_min T=3.5: removed n T/S/E | kept n T/S/E	24 14/7/3 | 9 3/5/1
+old42	path_min T=4.0: removed n T/S/E | kept n T/S/E	24 14/7/3 | 9 3/5/1
+cut	derived facts; kept at 2.5; dropped; unjudged	2223; 1219; 724; 280
+structure	kept facts that restate a premise through a refinement	223 of 1219 (18%)
+structure	kept facts that weaken a premise (isaGeneralise, or overlaps beside part_of)	220 of 1219 (18%)
+structure	kept facts with either flag	443 of 1219 (36%)
+structure	all derived facts: restatement / weakening	375 / 337 of 2223
+structure	kept facts the bottleneck (path_min < 2.5) would drop	162 of 1219
+rank	top 100 by IC with a ChEBI end	89
+rank	top 100 that restate a premise through a refinement	26
+rank	rank of the first fact with no ChEBI end	53: platelets to adhere (platelet activation) ⊓ occurs in (blood vessel) ⊓ occurs in (platelet
+rank	distinct scores among 1,921 ranked facts; largest tie	206; 107 facts at 0.002
+surprise	kept: premises from more than one chapter	368 of 1219 (30%)
+surprise	kept: depth 1/2/3/4	699/419/101/0
+surprise	dropped: premises from more than one chapter	192 of 724 (27%)
+surprise	dropped: depth 1/2/3/4	289/318/117/0
+surprise	unjudged: premises from more than one chapter	96 of 280 (34%)
+surprise	unjudged: depth 1/2/3/4	120/97/43/20
+coverage	ends with no IC among unscored facts, by prefix	{'PR': 155, 'NCBITaxon': 95, 'PO': 27, 'MONDO': 26, 'PATO': 24, 'SO': 19, 'HP': 3, 'OBA': 3}
+features	OBO graph reproduces ic.json	1079 of 1079 terms; CHEBI chebi/256, CL cl/releases/2026-06-08/cl-basic.owl, GO releases/2026-07-26, UBERON releases/2026-10-01
+features	kept: the ontology already relates the two ends (is_a or part_of, either way)	166 of 1219; by kind {'is_a': 43, 'part_of': 57, 'has_part': 39, 'has_subclass': 4, 'same': 23}
+features	kept: the ontology already entails the fact (is_a, part of, overlaps)	105 of 1219
+features	all derived: the ontology already entails the fact	183 of 2223
+features	kept: both ends in the same ontology (GO by namespace)	471 of 1219
+features	kept: gain = IC(conclusion) - max IC(premise): below 0 / 0 / above 0	649 / 285 / 258 of 1192
+features	all scored: gain below 0 / 0 / above 0	1171 / 405 / 317 of 1893
+rank	normalised IC (IC / ln N of its ontology): top 100 with a ChEBI end	88
+rank	normalised IC: rank of the first fact with no ChEBI end	11: ATP synthase [GO:0045259] →+ process(glycogen biosynthetic process [GO:0005978])
+rank	normalised IC: number of facts at or above the value that 2.5 has in GO BP	1284 (raw IC >= 2.5: 1219)
+old42	AUC of ic for S against T (0.5 is chance; LLM labels)	0.84 (n=29)
+old42	AUC of path_min for S against T (0.5 is chance; LLM labels)	0.82 (n=29)
+old42	AUC of gain for S against T (0.5 is chance; LLM labels)	0.71 (n=29)
+old42	AUC of mica_ic for S against T (0.5 is chance; LLM labels)	0.38 (n=10)
+old42	AUC of onto_dist for S against T (0.5 is chance; LLM labels)	0.58 (n=10)
+old42	AUC of norm_ic for S against T (0.5 is chance; LLM labels)	0.84 (n=29)
+old42	AUC of depth for S against T (0.5 is chance; LLM labels)	0.28 (n=29)
+old42	AUC of n_premises for S against T (0.5 is chance; LLM labels)	0.29 (n=29)
+old42	AUC of n_chapters for S against T (0.5 is chance; LLM labels)	0.43 (n=29)
+old42	labels T/S/E of facts with restates	0/0/0
+old42	labels T/S/E of facts with weakening	5/1/0
+old42	labels T/S/E of facts with entailed	2/2/0
+old42	labels T/S/E of facts with same_ontology	4/6/1

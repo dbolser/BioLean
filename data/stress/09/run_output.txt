@@ -1,0 +1,313 @@
+mirror self-test against the example's tables: OK
+
+== counts by 1974 (non-hypothesis items, for / against) ==
+   C: 13 for, 2 against
+   S: 7 for, 2 against
+
+== CH-01 to CH-04: single entry (each item on the one rival it bears on) ==
+   1961  C: b=0.000 d=0.500 unsupported  S: b=0.500 d=0.000 unsupported
+   1962  C: b=0.000 d=0.846 refuted  S: b=0.846 d=0.000 established
+   1963  C: b=0.000 d=0.866 refuted  S: b=0.866 d=0.000 established
+   1964  C: b=0.240 d=0.520 unsupported  S: b=0.619 d=0.285 contested
+   1965  C: b=0.486 d=0.351 contested  S: b=0.520 d=0.400 contested
+   1966  C: b=0.491 d=0.409 contested  S: b=0.582 d=0.328 contested
+   1974  C: b=0.702 d=0.243 unsupported  S: b=0.505 d=0.426 contested
+   1977  C: b=0.750 d=0.207 unsupported  S: b=0.490 d=0.451 contested
+   1978  C: b=0.719 d=0.239 unsupported  S: b=0.535 d=0.401 contested
+   2020  C: b=0.735 d=0.225 unsupported  S: b=0.523 d=0.415 contested
+   1965 C contested, S contested | 1974 C unsupported, S contested | C established from None | S refuted from None | exit fail
+   C established in: never
+   C refuted in: 1962-1963
+   S refuted in: never
+   S contested in: 1964-2025
+   C highest belief under the rivalry: ('0.750', 1977)
+
+== CH-05: dual entry (discriminating experiments also refute S) ==
+   1965  C: b=0.533 d=0.288 contested  S: b=0.481 d=0.444 contested
+   1974  C: b=0.767 d=0.173 unsupported  S: b=0.378 d=0.571 contested
+   1976  C: b=0.795 d=0.151 unsupported  S: b=0.361 d=0.595 contested
+   1977  C: b=0.819 d=0.133 established  S: b=0.349 d=0.609 contested
+   1978  C: b=0.782 d=0.172 unsupported  S: b=0.371 d=0.584 contested
+   2020  C: b=0.796 d=0.161 unsupported  S: b=0.365 d=0.591 contested
+   1965 C contested, S contested | 1974 C unsupported, S contested | C established from 1977 | S refuted from None | exit fail
+   C established in: 1977
+   S refuted in: never
+
+== CH-09, CH-12: own opinions, no rivalry ==
+   1963  C own: b=0.000 d=0.000 unsupported  S own: b=0.866 d=0.000 established
+   1965  C own: b=0.750 d=0.000 unsupported  S own: b=0.684 d=0.210 unsupported
+   1974  C own: b=0.812 d=0.125 established  S own: b=0.714 d=0.190 unsupported
+   1977  C own: b=0.853 d=0.097 established  S own: b=0.739 d=0.173 unsupported
+   2020  C own: b=0.826 d=0.130 established  S own: b=0.739 d=0.173 unsupported
+   exact 1974: C own b = 13/16  S own b = 5/7
+   margins 1974 single: C d = 0.2432 against tau 0.25; S b = 0.5056
+
+== CH-06: one claim, the chemical reports read as refutations of C ==
+   1961 b=0.000 d=0.500 unsupported
+   1965 b=0.400 d=0.520 contested
+   1974 b=0.588 d=0.372 contested
+   1977 b=0.629 d=0.338 contested
+   2020 b=0.626 d=0.343 contested
+   established in: never
+
+== CH-02, CH-07: leave one out ==
+   single: drop c02 (Neumann J 1964, title): 1974 C: unsupported->contested
+   single: drop c03 (Mitchell P 1965, title): 1974 C: unsupported->contested
+   single: drop c04 (Mitchell P 1965, memory): 1974 C: unsupported->contested
+   single: drop c06 (Jagendorf AT 1966, title): 1974 C: unsupported->contested
+   single: drop c07 (Reid RA 1966, title): 1974 C: unsupported->contested
+   single: drop c08 (Mitchell P 1967, abstract): 1974 C: unsupported->contested
+   single: drop c09 (Mitchell P 1967, abstract): 1974 C: unsupported->contested
+   single: drop c10 (Hopfer U 1968, title): 1974 C: unsupported->contested
+   single: drop c11 (Liberman EA 1969, title): 1974 C: unsupported->contested
+   single: drop c12 (Mitchell P 1969, title): 1974 C: unsupported->contested
+   single: drop c13 (Hinkle PC 1971, title): 1974 C: unsupported->contested
+   single: drop c14 (Oesterhelt D 1973, abstract): 1974 C: unsupported->contested
+   single: drop c15 (Racker E 1974, title): 1974 C: unsupported->contested
+   single: drop s09 (Mitchell RA 1964, title): 1974 C: unsupported->contested; 1977 C: unsupported->contested
+   single: drop s10 (Kreil G 1964, title): 1974 C: unsupported->contested; 1977 C: unsupported->contested
+   single: 15 single items flip a verdict in 1965, 1974 or 1977
+   dual: drop c21 (Chance B 1966, memory): 1974 C: unsupported->established
+   dual: drop c22 (Tager JM 1966, memory): 1974 C: unsupported->established
+   dual: drop s07 (Lehninger AL 1962, memory): 1965 C: contested->unsupported
+   dual: 3 single items flip a verdict in 1965, 1974 or 1977
+   the example's six real papers (realCoupling), 1974:
+     drop None: C: b=0.800 d=0.000 established  S: b=0.000 d=0.888 refuted
+     drop j66: C: b=0.750 d=0.000 unsupported  S: b=0.000 d=0.857 refuted
+     drop mm67: C: b=0.750 d=0.000 unsupported  S: b=0.000 d=0.857 refuted
+     drop h71: C: b=0.750 d=0.000 unsupported  S: b=0.000 d=0.857 refuted
+     drop r74: C: b=0.750 d=0.000 unsupported  S: b=0.000 d=0.857 refuted
+     realCoupling S refuted in: 1967-2025 | C 1965: unsupported
+
+== CH-08, CH-22: refuted with no evidence of its own ==
+   three rivals: C refuted in 1962-1963 | W refuted in 1962-1963, 1965, 1967-1981 | W contested in 1991-2025 | C contested in 1965-1973, 1982-2025
+   1965  C: b=0.486 d=0.351 contested  S: b=0.520 d=0.400 contested  W: b=0.000 d=0.837 refuted
+   1974  C: b=0.702 d=0.243 unsupported  S: b=0.505 d=0.426 contested  W: b=0.000 d=0.872 refuted
+   1977  C: b=0.750 d=0.207 unsupported  S: b=0.490 d=0.451 contested  W: b=0.000 d=0.896 refuted
+   1994  C: b=0.679 d=0.281 contested  S: b=0.491 d=0.450 contested  W: b=0.318 d=0.618 contested
+   2014  C: b=0.671 d=0.289 contested  S: b=0.483 d=0.459 contested  W: b=0.359 d=0.581 contested
+   2020  C: b=0.682 d=0.281 contested  S: b=0.465 d=0.479 contested  W: b=0.387 d=0.557 contested
+   four rivals: G refuted in 1962-1963, 1965, 1967-2025
+   three rivals, dual: C established in 1977 | C contested in 1965-1967 | W refuted in 1962-1963, 1965, 1969-1981
+
+== CH-21: W also counts every proton experiment (no parent claim) ==
+   1965  C: b=0.327 d=0.563 contested  S: b=0.419 d=0.516 contested  W: b=0.327 d=0.563 contested
+   1974  C: b=0.412 d=0.555 contested  S: b=0.269 d=0.694 contested  W: b=0.624 d=0.328 contested
+   1977  C: b=0.428 d=0.546 contested  S: b=0.244 d=0.727 unsupported  W: b=0.644 d=0.319 contested
+   2020  C: b=0.571 d=0.398 contested  S: b=0.358 d=0.598 contested  W: b=0.701 d=0.271 contested
+   C contested in 1965-2025 | W contested in 1965-2025 | S unsupported in 1950-1961, 1977, 1982-1984
+
+== CH-10, CH-11, CH-12, CH-28: dated retirement (PROTO, option D1) ==
+   phosphohistidine supports retired from 1964, single: 1965 C contested, S contested | 1974 C unsupported, S contested | C established from None | S refuted from None | exit fail
+   1974  C: b=0.728 d=0.214 unsupported  S: b=0.428 d=0.493 contested
+   and the two 1964 refutations retired too (CH-11): 1965 C contested, S contested | 1974 C contested, S contested | C established from None | S refuted from None | exit fail
+   1974  C: b=0.604 d=0.348 contested  S: b=0.507 d=0.400 contested
+   phosphohistidine, dual: 1965 C unsupported, S contested | 1974 C unsupported, S contested | C established from 1976 | S refuted from None | exit fail
+   all 7 reports retired (1964 and 1974), single: 1965 C contested, S contested | 1974 C unsupported, S unsupported | C established from 1975 | S refuted from None | exit fail
+   all 7 reports retired, dual: 1965 C unsupported, S contested | 1974 C established, S refuted | C established from 1974 | S refuted from 1974 | exit fail
+   1965  C: b=0.585 d=0.219 unsupported  S: b=0.391 d=0.521 contested
+   1974  C: b=0.803 d=0.135 established  S: b=0.108 d=0.819 refuted
+   S own belief 2020, no supersession: b=0.739 d=0.173
+
+== CH-15, CH-16: reviews ==
+   reviews at face value: 1965 C contested, S contested | 1974 C contested, S contested | C established from None | S refuted from None | exit fail
+   1962  C: b=0.000 d=0.846 refuted  S: b=0.846 d=0.000 established
+   1974  C: b=0.674 d=0.279 contested  S: b=0.546 d=0.380 contested
+   1977  C: b=0.721 d=0.240 unsupported  S: b=0.540 d=0.395 contested
+
+== CH-25 to CH-27: weights ==
+   std          single: 1965 C contested, S contested | 1974 C unsupported, S contested | C established from None | S refuted from None | exit fail
+                dual:   1965 C contested, S contested | 1974 C unsupported, S contested | C established from 1977 | S refuted from None | exit fail
+   exp x2       single: 1965 C unsupported, S contested | 1974 C unsupported, S contested | C established from 1977 | S refuted from None | exit fail
+                dual:   1965 C unsupported, S contested | 1974 C established, S contested | C established from 1974 | S refuted from None | exit fail
+   exp x1/2     single: 1965 C contested, S contested | 1974 C contested, S contested | C established from None | S refuted from None | exit fail
+                dual:   1965 C contested, S contested | 1974 C unsupported, S contested | C established from None | S refuted from None | exit fail
+   review x2    single: 1965 C contested, S contested | 1974 C contested, S contested | C established from None | S refuted from None | exit fail
+                dual:   1965 C contested, S contested | 1974 C unsupported, S contested | C established from 1977 | S refuted from None | exit fail
+   review x1/2  single: 1965 C contested, S contested | 1974 C unsupported, S contested | C established from None | S refuted from None | exit fail
+                dual:   1965 C contested, S contested | 1974 C unsupported, S contested | C established from 1977 | S refuted from None | exit fail
+   all x2       single: 1965 C contested, S contested | 1974 C unsupported, S contested | C established from 1977 | S refuted from None | exit fail
+                dual:   1965 C unsupported, S contested | 1974 C established, S contested | C established from 1974 | S refuted from None | exit fail
+   all x1/2     single: 1965 C contested, S contested | 1974 C contested, S contested | C established from None | S refuted from None | exit fail
+                dual:   1965 C contested, S contested | 1974 C unsupported, S contested | C established from None | S refuted from None | exit fail
+   C exp x2, S exp x1, single: 1965 C unsupported, S contested | 1974 C unsupported, S contested | C established from 1977 | S refuted from None | exit fail; S refuted in never; S contested in 1964-2025
+   C exp x2, S exp x1, dual: 1965 C unsupported, S contested | 1974 C established, S contested | C established from 1974 | S refuted from None | exit fail; S refuted in never; S contested in 1964-2025
+   C exp x1, S exp x1/2, single: 1965 C contested, S contested | 1974 C unsupported, S contested | C established from None | S refuted from None | exit fail; S refuted in never; S contested in 1964-2025
+   C exp x1, S exp x1/2, dual: 1965 C contested, S contested | 1974 C unsupported, S contested | C established from 1977 | S refuted from None | exit fail; S refuted in never; S contested in 1964-2025
+   C exp x2, S exp x1/2, single: 1965 C unsupported, S contested | 1974 C unsupported, S contested | C established from 1976 | S refuted from None | exit fail; S refuted in never; S contested in 1964-2025
+   C exp x2, S exp x1/2, dual: 1965 C unsupported, S contested | 1974 C established, S contested | C established from 1974 | S refuted from None | exit fail; S refuted in never; S contested in 1964-2025
+   C exp x1/2, S exp x2, single: 1965 C contested, S contested | 1974 C contested, S contested | C established from None | S refuted from None | exit fail; S refuted in never; S contested in 1964-2025
+   C exp x1/2, S exp x2, dual: 1965 C contested, S contested | 1974 C unsupported, S contested | C established from None | S refuted from None | exit fail; S refuted in never; S contested in 1964-2025
+
+== CH-28: the grid of 72 encodings ==
+   M2 exit passes in 8 of 72 encodings
+     PASS: ['single', 'advocate=hypothesis', 'allReports', 'std', 'dropped']
+     PASS: ['single', 'advocate=hypothesis', 'allReports', 'x1/2', 'dropped']
+     PASS: ['single', 'face', 'allReports', 'std', 'dropped']
+     PASS: ['single', 'face', 'allReports', 'x1/2', 'dropped']
+     PASS: ['dual', 'advocate=hypothesis', 'allReports', 'std', 'dropped']
+     PASS: ['dual', 'advocate=hypothesis', 'allReports', 'x1/2', 'dropped']
+     PASS: ['dual', 'face', 'allReports', 'std', 'dropped']
+     PASS: ['dual', 'face', 'allReports', 'x1/2', 'dropped']
+   1965 C contested in 50 | 1974 C established in 35 | 1974 S refuted in 18
+   every PASS retires all reports and drops the memory items: True
+
+== E1 aside: memory-direction items dropped ==
+   single: 1965 C contested, S contested | 1974 C established, S contested | C established from 1974 | S refuted from None | exit fail
+   dual:   1965 C contested, S contested | 1974 C established, S unsupported | C established from 1969 | S refuted from None | exit fail
+   items: ('c04', 'c19', 'c21', 'c22', 'c23', 's07', 'w08', 'w14')
+   which memory items decide exit claim 2 (C established in 1974)? Every subset of the 6 C and S ones:
+     single: drop ('c21', 'c22', 's07'): 1965 C contested; C established in 1973-2025; S refuted in never
+     single: 1 smallest subset(s) found
+     dual: drop ('c21',): 1965 C contested; C established in 1974-2025; S refuted in never
+     dual: drop ('c22',): 1965 C contested; C established in 1974-2025; S refuted in never
+     dual: 2 smallest subset(s) found
+
+== CH-17: one lab, one vote (PROTO, option G, crude) ==
+   items kept: {'C': 18, 'S': 7} of {'C': 28, 'S': 11}
+   1965 C contested, S contested | 1974 C contested, S contested | C established from None | S refuted from None | exit fail
+   C contested in 1965-2025 | S contested in 1964-1965, 1968-2025
+   dual: 1965 C contested, S contested | 1974 C contested, S contested | C established from None | S refuted from None | exit fail
+
+== CH-29: the 2013 textbook sentence added to C ==
+   2012  C: b=0.719 d=0.239 unsupported  S: b=0.535 d=0.401 contested
+   2013  C: b=0.758 d=0.205 unsupported  S: b=0.503 d=0.437 contested
+
+== option I2: rival scope by own evidence (PROTO) ==
+   single 1962: C: b=0.000 d=0.000 unsupported  S: b=0.846 d=0.000 established
+   single 1963: C: b=0.000 d=0.000 unsupported  S: b=0.866 d=0.000 established
+   single 1965: C: b=0.486 d=0.351 contested  S: b=0.520 d=0.400 contested
+   single 1974: C: b=0.702 d=0.243 unsupported  S: b=0.505 d=0.426 contested
+   three 1963: C: b=0.000 d=0.000 unsupported  S: b=0.866 d=0.000 established  W: b=0.000 d=0.000 unsupported
+   three 1965: C: b=0.486 d=0.351 contested  S: b=0.520 d=0.400 contested  W: b=0.000 d=0.000 unsupported
+   three 1974: C: b=0.702 d=0.243 unsupported  S: b=0.505 d=0.426 contested  W: b=0.000 d=0.000 unsupported
+   three 1994: C: b=0.679 d=0.281 contested  S: b=0.491 d=0.450 contested  W: b=0.318 d=0.618 contested
+   four 1965: C: b=0.486 d=0.351 contested  S: b=0.520 d=0.400 contested  W: b=0.000 d=0.000 unsupported  G: b=0.000 d=0.000 unsupported
+   four 1974: C: b=0.702 d=0.243 unsupported  S: b=0.505 d=0.426 contested  W: b=0.000 d=0.000 unsupported  G: b=0.000 d=0.000 unsupported
+   the example (illustrative), 1965 and 1974:
+     1965: C: b=0.333 d=0.333 contested  S: b=0.333 d=0.333 contested
+     1965 realCoupling: C: b=0.000 d=0.000 unsupported  S: b=0.000 d=0.000 unsupported
+     1974: C: b=0.806 d=0.032 established  S: b=0.090 d=0.818 refuted
+     1974 realCoupling: C: b=0.800 d=0.000 established  S: b=0.000 d=0.888 refuted
+
+== option H: multinomial shares (PROTO) ==
+   C,S 1965: C 0.240  S 0.520  other 0.160  u 0.080
+   C,S 1974: C 0.509  S 0.294  other 0.156  u 0.039
+   C,S 1977: C 0.564  S 0.274  other 0.129  u 0.032
+   C,S 2020: C 0.567  S 0.253  other 0.149  u 0.029
+   C,S,W 1965: C 0.240  S 0.520  W 0.000  other 0.160  u 0.080
+   C,S,W 1974: C 0.509  S 0.294  W 0.000  other 0.156  u 0.039
+   C,S,W 1977: C 0.564  S 0.274  W 0.000  other 0.129  u 0.032
+   C,S,W 2020: C 0.441  S 0.197  W 0.162  other 0.174  u 0.023
+
+== CH-19: Williams with his real record (three rivals, single entry) ==
+   C established: never | W established: never
+   C contested: 1965-1973, 1982-2025 | W contested: 1991-2025
+   C refuted: 1962-1963 | W refuted: 1962-1963, 1965, 1967-1981
+   C unsupported: 1950-1961, 1964, 1974-1981 | W unsupported: 1950-1961, 1964, 1966, 1982-1990
+   1965  C: b=0.486 d=0.351 contested  S: b=0.520 d=0.400 contested  W: b=0.000 d=0.837 refuted
+   1974  C: b=0.702 d=0.243 unsupported  S: b=0.505 d=0.426 contested  W: b=0.000 d=0.872 refuted
+   1981  C: b=0.719 d=0.239 unsupported  S: b=0.535 d=0.401 contested  W: b=0.000 d=0.878 refuted
+   1982  C: b=0.690 d=0.269 contested  S: b=0.503 d=0.437 contested  W: b=0.108 d=0.782 unsupported
+   1983  C: b=0.664 d=0.297 contested  S: b=0.475 d=0.468 contested  W: b=0.195 d=0.706 unsupported
+   1985  C: b=0.702 d=0.257 contested  S: b=0.516 d=0.422 contested  W: b=0.157 d=0.763 unsupported
+   1989  C: b=0.694 d=0.265 contested  S: b=0.508 d=0.432 contested  W: b=0.218 d=0.708 unsupported
+   1991  C: b=0.686 d=0.273 contested  S: b=0.499 d=0.441 contested  W: b=0.271 d=0.660 contested
+   2014  C: b=0.671 d=0.289 contested  S: b=0.483 d=0.459 contested  W: b=0.359 d=0.581 contested
+   2020  C: b=0.682 d=0.281 contested  S: b=0.465 d=0.479 contested  W: b=0.387 d=0.557 contested
+   2024  C: b=0.697 d=0.265 contested  S: b=0.481 d=0.461 contested  W: b=0.357 d=0.591 contested
+   W own (no rivalry): 1982 b=0.500 d=0.000 unsupported  1985 b=0.363 d=0.454 contested  1991 b=0.533 d=0.333 contested  2020 b=0.666 d=0.238 unsupported  2024 b=0.583 d=0.333 contested
+   Ferguson 1985 (memory) dropped: 1985 W b=0.178 d=0.732 unsupported 1991 W b=0.302 d=0.621 contested 2020 W b=0.422 d=0.517 contested
+   leave one out over W's items, three rivals, years 1985, 1994, 2020:
+     drop w11 (Hitchens GD 1982, abstract): 1985 C: contested->unsupported; 1985 W: unsupported->refuted
+     drop w12 (Hitchens GD 1983, abstract): 1985 C: contested->unsupported; 1985 W: unsupported->refuted
+   all x2: C established 1977; C contested 1964-1968, 1970, 1983-1984; W refuted 1962-1981; W contested 1983-1984, 1989-2025
+   all x1/2: C established never; C contested 1965-1976, 1978-2025; W refuted 1969-1981; W contested 2014-2025
+
+== CH-43: Nath 2017 as a hypothesis (baseline) or as an ordinary review ==
+   baseline:
+   2016  C: b=0.719 d=0.239 unsupported  S: b=0.535 d=0.401 contested
+   2017  C: b=0.719 d=0.239 unsupported  S: b=0.535 d=0.401 contested
+   as review:
+   2016  C: b=0.719 d=0.239 unsupported  S: b=0.535 d=0.401 contested
+   2017  C: b=0.677 d=0.283 contested  S: b=0.578 d=0.352 contested
+   2020  C: b=0.695 d=0.268 contested  S: b=0.568 d=0.364 contested
+
+== CH-44: Silva 2020 counted as new support ==
+   2020  C: b=0.719 d=0.239 unsupported  S: b=0.535 d=0.401 contested
+   2020  C: b=0.735 d=0.225 unsupported  S: b=0.523 d=0.415 contested
+   C own 2020 without / with Silva: b=0.813 d=0.139 b=0.826 d=0.130
+
+== CH-45: murburn as a fourth rival ==
+   2018  C: b=0.671 d=0.289 contested  S: b=0.483 d=0.459 contested  W: b=0.359 d=0.581 contested  M: b=0.000 d=0.899 refuted
+   2019  C: b=0.671 d=0.289 contested  S: b=0.483 d=0.459 contested  W: b=0.359 d=0.581 contested  M: b=0.000 d=0.899 refuted
+   2020  C: b=0.682 d=0.281 contested  S: b=0.465 d=0.479 contested  W: b=0.387 d=0.557 contested  M: b=0.000 d=0.905 refuted
+   2019  C: b=0.813 d=0.139 established  M: b=0.000 d=0.813 refuted
+
+== CH-46: Slater 1985 (hypothesis) left out ==
+   identical in 1985 and 2020: True
+
+== CH-47: the 1978 Nobel presentation as a .textbook item on C ==
+   single:
+   1977  C: b=0.750 d=0.207 unsupported  S: b=0.490 d=0.451 contested
+   1978  C: b=0.758 d=0.205 unsupported  S: b=0.503 d=0.437 contested
+   2020  C: b=0.770 d=0.195 unsupported  S: b=0.492 d=0.449 contested
+   dual:
+   1978  C: b=0.815 d=0.146 established  S: b=0.356 d=0.602 contested
+   2020  C: b=0.825 d=0.138 established  S: b=0.350 d=0.608 contested
+   dual, C established in: 1977-2025
+   single with the 2013 textbook too:
+   2013  C: b=0.788 d=0.180 unsupported  S: b=0.475 d=0.468 contested
+   2020  C: b=0.798 d=0.172 unsupported  S: b=0.465 d=0.479 contested
+
+== CH-48: thresholds (theta, tau), single entry ==
+   theta=4/5 tau=1/4: 1965 C contested S contested | 1974 C unsupported S contested | C established never
+   theta=4/5 tau=1/5: 1965 C contested S contested | 1974 C contested S contested | C established never
+   theta=4/5 tau=3/10: 1965 C contested S contested | 1974 C unsupported S contested | C established never
+   theta=3/4 tau=1/4: 1965 C contested S contested | 1974 C unsupported S contested | C established 1977
+   theta=7/10 tau=1/4: 1965 C contested S contested | 1974 C established S contested | C established 1974-2025
+   theta=17/20 tau=1/4: 1965 C contested S contested | 1974 C unsupported S contested | C established never
+   1974 C: d = 9/37 ; tau - d = 1/148
+   single: C within 0.02 of a threshold in 47 years (1964, 1973-1976, 1978-2019); of a verdict-changing threshold in 47 years; same years: True
+   dual: C within 0.02 of a threshold in 54 years (1964, 1967-1968, 1975-2025); of a verdict-changing threshold in 54 years; same years: True
+
+== CH-49: the 1966 grey book as a second item (PMID 0) beside the Biol Rev paper ==
+   baseline: 1974 C b=0.702 d=0.243 -> b=0.702 d=0.243
+   face value: 1974 C b=0.674 d=0.279 -> b=0.695 d=0.260
+
+== option I: rival scope, two variants (PROTO) ==
+   I1 proposal year C,S: refuted years C 1962-1963; S never
+   I1 proposal year C,S,W: refuted years C 1962-1963; S never; W 1962-1963, 1965, 1967-1981
+   I1 proposal year C,S,W,G: refuted years C 1962-1963; S never; W 1962-1963, 1965, 1967-1981; G 1974-2025
+   I2 own evidence C,S: refuted years C never; S never
+   I2 own evidence C,S,W: refuted years C never; S never; W never
+   I2 own evidence C,S,W,G: refuted years C never; S never; W never; G never
+
+== option H: multinomial shares coarsened to one rival (PROTO) ==
+   1965: C b=0.240 d=0.680 unsupported  S b=0.520 d=0.400 contested  W b=0.000 d=0.920 refuted  G b=0.000 d=0.920 refuted  other 0.160 u 0.080
+   1974: C b=0.509 d=0.450 contested  S b=0.294 d=0.666 contested  W b=0.000 d=0.960 refuted  G b=0.000 d=0.960 refuted  other 0.156 u 0.039
+   1985: C b=0.479 d=0.493 contested  S b=0.232 d=0.739 unsupported  W b=0.054 d=0.917 refuted  G b=0.000 d=0.972 refuted  other 0.205 u 0.027
+   2020: C b=0.441 d=0.534 contested  S b=0.197 d=0.779 unsupported  W b=0.162 d=0.813 refuted  G b=0.000 d=0.976 refuted  other 0.174 u 0.023
+   C,S: C's highest share over 1950 to 2025: 0.567 in 2025
+   C,S,W: C's highest share over 1950 to 2025: 0.564 in 1977
+
+== option N: forgetting, each item's pseudo-count halves every h years (PROTO) ==
+   h= 5 single: 1965 ['contested', 'contested'] | 1974 ['unsupported', 'contested'] | C established never | S refuted never | 2020 C b=0.601 d=0.005 unsupported, S b=0.003 d=0.601 unsupported
+   h= 5 dual: 1965 ['contested', 'contested'] | 1974 ['unsupported', 'unsupported'] | C established 1976-1977 | S refuted never | 2020 C b=0.601 d=0.005 unsupported, S b=0.003 d=0.603 unsupported
+   h=10 single: 1965 ['contested', 'contested'] | 1974 ['unsupported', 'contested'] | C established never | S refuted never | 2020 C b=0.621 d=0.106 unsupported, S b=0.083 d=0.619 unsupported
+   h=10 dual: 1965 ['contested', 'contested'] | 1974 ['unsupported', 'contested'] | C established 1976-1977 | S refuted never | 2020 C b=0.631 d=0.091 unsupported, S b=0.076 d=0.652 unsupported
+   h=20 single: 1965 ['contested', 'contested'] | 1974 ['unsupported', 'contested'] | C established never | S refuted never | 2020 C b=0.655 d=0.232 unsupported, S b=0.291 d=0.562 contested
+   h=20 dual: 1965 ['contested', 'contested'] | 1974 ['unsupported', 'contested'] | C established 1977, 1986 | S refuted never | 2020 C b=0.712 d=0.165 unsupported, S b=0.232 d=0.651 unsupported
+   check: with h = 1000 (no forgetting) it equals the core's Rivalry in 1965, 1974, 2020: True
+
+== option J: rival hierarchy as two rivalries (curator encoding) ==
+   1974 parent C: b=0.702 d=0.243 unsupported  S: b=0.505 d=0.426 contested | child bulk: b=0.000 d=0.000 unsupported  W: b=0.000 d=0.000 unsupported
+   1982 parent C: b=0.719 d=0.239 unsupported  S: b=0.535 d=0.401 contested | child bulk: b=0.000 d=0.500 unsupported  W: b=0.500 d=0.000 unsupported
+   1985 parent C: b=0.719 d=0.239 unsupported  S: b=0.535 d=0.401 contested | child bulk: b=0.000 d=0.363 unsupported  W: b=0.363 d=0.454 contested
+   1991 parent C: b=0.719 d=0.239 unsupported  S: b=0.535 d=0.401 contested | child bulk: b=0.000 d=0.533 unsupported  W: b=0.533 d=0.333 contested
+   2020 parent C: b=0.735 d=0.225 unsupported  S: b=0.523 d=0.415 contested | child bulk: b=0.000 d=0.666 unsupported  W: b=0.666 d=0.238 unsupported
+   2024 parent C: b=0.735 d=0.225 unsupported  S: b=0.523 d=0.415 contested | child bulk: b=0.000 d=0.583 unsupported  W: b=0.583 d=0.333 contested
+   child W established: never
+   child W contested: 1985-2019, 2024-2025
+   child W refuted: never
+   child W unsupported: 1950-1984, 2020-2023

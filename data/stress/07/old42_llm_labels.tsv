@@ -1,0 +1,43 @@
+old_index	old_band	old_ic	llm_label	old_fact	in_current_closure	current_fact	current_ic	current_path_min	current_rule	current_depth
+0	2	2.193	T	digestive system [UBERON:0001007] has part lysosomes [GO:0005764]	no					
+1	5	6.587	S	ribonucleotide [CHEBI:26561] has part hydroxy group [CHEBI:43176]	yes	ribonucleotide [CHEBI:26561] has part hydroxy group [CHEBI:43176]	6.587	6.587	relTrans	1
+2	1	1.879	T	basal ganglia [UBERON:0002420] overlaps central nervous system [UBERON:0001017]	yes	basal ganglia [UBERON:0002420] overlaps central nervous system [UBERON:0001017]	1.879	1.879	relChain	1
+3	5	6.076	T	ribonucleotide [CHEBI:26561] overlaps polymer [CHEBI:60027]	yes	ribonucleotide [CHEBI:26561] overlaps polymer [CHEBI:60027]	6.076	6.076	isaGeneralise	2
+4	5	11.198	S	messenger RNA [CHEBI:33699] has part uracil [CHEBI:17568]	yes	messenger RNA [CHEBI:33699] has part uracil [CHEBI:17568]	11.198	7.808	isaInherit	1
+5	3	3.04	S	hippocampus [UBERON:0002421] part of cerebral hemisphere [UBERON:0001869]	yes	hippocampus [UBERON:0002421] part of cerebral hemisphere [UBERON:0001869]	3.04	3.04	relTrans	2
+6	3	3.859	E	prokaryotic cell [CL:0000520] has part chromatin [GO:0000785]	yes	prokaryotic cell [CL:0000520] has part chromatin [GO:0000785]	3.859	2.995	relTrans	1
+7	3	3.475	T	temporal lobe [UBERON:0001871] overlaps cerebral cortex [UBERON:0000956]	yes	temporal lobe [UBERON:0001871] overlaps cerebral cortex [UBERON:0000956]	3.475	3.475	relChain	2
+8	2	2.193	E	digestive system [UBERON:0001007] has part plant cell wall [GO:0009505]	no					
+9	3	3.905	E	muscle tissue [UBERON:0002385] overlaps food [CHEBI:33290]	yes	muscle tissue [UBERON:0002385] overlaps food [CHEBI:33290]	3.905	0.002	relChain	3
+10	2	2.433	S	endomembrane system [GO:0012505] has part phospholipid [CHEBI:16247]	yes	endomembrane system [GO:0012505] has part phospholipid [CHEBI:16247]	2.433	2.433	relTrans	1
+11	0	0.002	T	Animal cells [CL:0000548] has part structure that is capable of transmembrane transport [GO:0055085]	yes	Animal cells [CL:0000548] has part structure that is capable of transmembrane transport [GO:0055085]	0.002	0.002	relChain	2
+12	0	0.004	T	organ system [UBERON:0000467] has part structure that is capable of ATP biosynthetic process [GO:0006754]	yes	organ system [UBERON:0000467] has part structure that is capable of ATP biosynthetic process [GO:0006754]	0.004	0.002	relChain	3
+13	0	0.002	T	Animal cells [CL:0000548] has part plasma membrane [GO:0005886]	yes	Animal cells [CL:0000548] has part plasma membrane [GO:0005886]	0.002	0.002	isaInherit	1
+14	4	4.056	S	G1 [GO:0051318] part of cell cycle [GO:0007049]	yes	G1 [GO:0051318] part of cell cycle [GO:0007049]	4.056	4.056	relTrans	1
+15	4	4.817	T	stomach [UBERON:0000945] has part microtubule [GO:0005874]	no					
+16	5	5.176	E	stomach [UBERON:0000945] has part plant cell wall [GO:0009505]	no					
+17	0	0.002	T	Animal cells [CL:0000548] overlaps endomembrane system [GO:0012505]	yes	Animal cells [CL:0000548] overlaps endomembrane system [GO:0012505]	0.002	0.002	relChain	2
+18	5	7.215	S	telomerase [GO:0005697] overlaps nucleic acids [CHEBI:33696]	yes	telomerase [GO:0005697] overlaps nucleic acids [CHEBI:33696]	7.215	7.215	relChain	2
+19	3	3.781	E	macrophages [CL:0000235] →− process(digestion [GO:0007586])	yes	macrophages [CL:0000235] →− process(digestion [GO:0007586])	3.781	1.761	viaAmount	2
+20	4	4.796	S	neutrophil [CL:0000775] capable of secretion [GO:0046903]	yes	neutrophil [CL:0000775] capable of secretion [GO:0046903]	4.796	1.761	isaInherit	1
+21	1	1.392	T	neuron [CL:0000540] has part Golgi apparatus [GO:0005794]	yes	neuron [CL:0000540] has part Golgi apparatus [GO:0005794]	1.392	1.392	relTrans	1
+22	2	2.026	T	brain [UBERON:0000955] has part structure that is capable of motor function [GO:0061744]	yes	brain [UBERON:0000955] has part structure that is capable of motor function [GO:0061744]	2.026	2.026	relChain	1
+23	1	1.672	S	skeleton [UBERON:0004288] has part sacrum [UBERON:0003690]	yes	skeleton [UBERON:0004288] has part sacrum [UBERON:0003690]	1.672	1.672	relTrans	2
+24	1	1.622	T	nervous tissue [UBERON:0001016] has part small subunit [GO:0015935]	yes	nervous tissue [UBERON:0001016] has part small subunit [GO:0015935]	1.622	1.392	relTrans	2
+25	1	1.622	T	nervous tissue [UBERON:0001016] overlaps ribosomes [GO:0005840]	yes	nervous tissue [UBERON:0001016] overlaps ribosomes [GO:0005840]	1.622	1.392	relChain	3
+26	3	3.905	T	muscle tissue [UBERON:0002385] has part centrioles [GO:0005814]	no					
+27	0	0.004	T	body [UBERON:0000468] has part 2-deoxy-D-ribose [CHEBI:28816]	no					
+28	3	3.412	S	sarcolemma [GO:0042383] has part phospholipid [CHEBI:16247]	yes	sarcolemma [GO:0042383] has part phospholipid [CHEBI:16247]	3.412	2.282	isaInherit	1
+29	5	5.01	S	rough endoplasmic reticulum [GO:0005791] has part structure that is capable of synthesize proteins [GO:0006412]	yes	rough endoplasmic reticulum [GO:0005791] has part structure that is capable of synthesize proteins [GO:0006412]	5.01	5.01	relChain	1
+30	1	1.392	T	neuron [CL:0000540] overlaps chromosome [GO:0005694]	yes	neuron [CL:0000540] overlaps chromosome [GO:0005694]	1.392	1.392	relChain	2
+31	2	2.657	S	aorta [UBERON:0000947] is_a blood vessel [UBERON:0001981]	yes	aorta [UBERON:0000947] is_a blood vessel [UBERON:0001981]	2.657	2.657	relTrans	1
+32	4	4.879	E	flagellum [GO:0031514] overlaps mitotic spindle [GO:0072686]	yes	flagellum [GO:0031514] overlaps mitotic spindle [GO:0072686]	4.879	4.817	relChain	1
+33	0	0.002	T	cells [CL:0000000] has part fatty acid [CHEBI:35366]	yes	cells [CL:0000000] has part fatty acid [CHEBI:35366]	0.002	0.002	relTrans	2
+34	0	0.004	T	organ system [UBERON:0000467] overlaps mitotic spindle [GO:0072686]	no					
+35	4	4.817	T	salivary glands [UBERON:0001044] has part microtubule [GO:0005874]	no					
+36	2	2.793	S	sarcolemma [GO:0042383] →− process(transmembrane transport [GO:0055085])	yes	sarcolemma [GO:0042383] →− process(transmembrane transport [GO:0055085])	2.793	2.282	isaInheritEffect	1
+37	2	2.193	T	digestive system [UBERON:0001007] has part structure that is capable of endocytosis [GO:0006897]	yes	digestive system [UBERON:0001007] has part structure that is capable of endocytosis [GO:0006897]	2.193	0.002	relChain	3
+38	4	4.876	T	neuronal cell body [GO:0043025] has part amino acids [CHEBI:33709]	yes	neuronal cell body [GO:0043025] has part amino acids [CHEBI:33709]	4.876	4.05	relTrans	2
+39	1	1.879	T	brainstem [UBERON:0002298] overlaps central nervous system [UBERON:0001017]	yes	brainstem [UBERON:0002298] overlaps central nervous system [UBERON:0001017]	1.879	1.879	relChain	1
+40	5	5.769	T	salivary glands [UBERON:0001044] has part structure that is capable of exocytosis [GO:0006887]	no					
+41	4	4.05	T	Mitochondria [GO:0005739] has part polymer [CHEBI:60027]	yes	Mitochondria [GO:0005739] has part polymer [CHEBI:60027]	4.05	4.05	isaGeneralise	1

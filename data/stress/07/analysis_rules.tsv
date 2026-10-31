@@ -1,0 +1,57 @@
+rule	option	view	n	kept	precision	recall	f1	trivial_kept	trivial_removed	worth_showing_lost	judged_false_kept	precision_closure_weighted
+keep all	-	llm1	96	96	0.156	1.000	0.270	51	0	0	8	0.145
+keep all	-	llm2	96	96	0.167	1.000	0.286	56	0	0	10	0.172
+keep all	-	llm3	96	96	0.156	1.000	0.270	52	0	0	11	0.145
+keep all	-	pooled_llm	96	96	0.135	1.000	0.239	52	0	0	10	0.113
+A: IC >= 2.5 (today)	A	llm1	96	57	0.193	0.733	0.306	23	28	2	5	0.191
+A: IC >= 2.5 (today)	A	llm2	96	57	0.211	0.750	0.329	30	26	2	7	0.234
+A: IC >= 2.5 (today)	A	llm3	96	57	0.193	0.733	0.306	24	28	1	7	0.191
+A: IC >= 2.5 (today)	A	pooled_llm	96	57	0.158	0.692	0.257	23	29	2	7	0.140
+A: IC >= 2.25	A	llm1	96	69	0.203	0.933	0.333	28	23	0	6	0.194
+A: IC >= 2.25	A	llm2	96	69	0.217	0.938	0.353	36	20	0	8	0.235
+A: IC >= 2.25	A	llm3	96	69	0.203	0.933	0.333	28	24	0	9	0.194
+A: IC >= 2.25	A	pooled_llm	96	69	0.174	0.923	0.293	28	24	0	8	0.145
+A: IC >= 2.4 (inside the exact interval)	A	llm1	96	63	0.222	0.933	0.359	23	28	0	6	0.198
+A: IC >= 2.4 (inside the exact interval)	A	llm2	96	63	0.238	0.938	0.380	31	25	0	8	0.240
+A: IC >= 2.4 (inside the exact interval)	A	llm3	96	63	0.222	0.933	0.359	24	28	0	9	0.198
+A: IC >= 2.4 (inside the exact interval)	A	pooled_llm	96	63	0.190	0.923	0.316	23	29	0	8	0.148
+A: IC >= 3.25	A	llm1	96	32	0.250	0.533	0.340	11	40	4	4	0.202
+A: IC >= 3.25	A	llm2	96	32	0.281	0.562	0.375	15	41	4	6	0.249
+A: IC >= 3.25	A	llm3	96	32	0.250	0.533	0.340	12	40	3	6	0.202
+A: IC >= 3.25	A	pooled_llm	96	32	0.188	0.462	0.267	11	41	4	6	0.145
+B: path_min >= 2.5	B	llm1	96	49	0.204	0.667	0.312	21	30	2	4	0.197
+B: path_min >= 2.5	B	llm2	96	49	0.204	0.625	0.308	27	29	3	6	0.230
+B: path_min >= 2.5	B	llm3	96	49	0.204	0.667	0.312	21	31	1	6	0.197
+B: path_min >= 2.5	B	pooled_llm	96	49	0.163	0.615	0.258	21	31	2	6	0.141
+C1: gain >= 0 (missing gain kept)	C1	llm1	96	43	0.233	0.667	0.345	21	30	5	8	0.255
+C1: gain >= 0 (missing gain kept)	C1	llm2	96	43	0.233	0.625	0.339	25	31	5	8	0.257
+C1: gain >= 0 (missing gain kept)	C1	llm3	96	43	0.233	0.667	0.345	21	31	5	10	0.255
+C1: gain >= 0 (missing gain kept)	C1	pooled_llm	96	43	0.209	0.692	0.321	21	31	4	9	0.238
+C2: no structural flag	C2	llm1	96	55	0.255	0.933	0.400	14	37	0	6	0.238
+C2: no structural flag	C2	llm2	96	55	0.273	0.938	0.423	22	34	0	8	0.283
+C2: no structural flag	C2	llm3	96	55	0.255	0.933	0.400	16	36	0	9	0.238
+C2: no structural flag	C2	pooled_llm	96	55	0.218	0.923	0.353	15	37	0	8	0.184
+C2 then A: no flag and IC >= 2.5	C2+A	llm1	96	34	0.294	0.667	0.408	4	47	2	4	0.302
+C2 then A: no flag and IC >= 2.5	C2+A	llm2	96	34	0.324	0.688	0.440	10	46	2	6	0.370
+C2 then A: no flag and IC >= 2.5	C2+A	llm3	96	34	0.294	0.667	0.408	5	47	1	6	0.302
+C2 then A: no flag and IC >= 2.5	C2+A	pooled_llm	96	34	0.235	0.615	0.340	4	48	2	6	0.219
+C2 then A: no flag and IC >= 2.25	C2+A	llm1	96	42	0.310	0.867	0.456	5	46	0	5	0.305
+C2 then A: no flag and IC >= 2.25	C2+A	llm2	96	42	0.333	0.875	0.483	12	44	0	7	0.370
+C2 then A: no flag and IC >= 2.25	C2+A	llm3	96	42	0.310	0.867	0.456	6	46	0	8	0.305
+C2 then A: no flag and IC >= 2.25	C2+A	pooled_llm	96	42	0.262	0.846	0.400	5	47	0	7	0.226
+C2 then A: no flag and IC >= 2.4	C2+A	llm1	96	40	0.325	0.867	0.473	4	47	0	5	0.309
+C2 then A: no flag and IC >= 2.4	C2+A	llm2	96	40	0.350	0.875	0.500	11	45	0	7	0.375
+C2 then A: no flag and IC >= 2.4	C2+A	llm3	96	40	0.325	0.867	0.473	5	47	0	8	0.309
+C2 then A: no flag and IC >= 2.4	C2+A	pooled_llm	96	40	0.275	0.846	0.415	4	48	0	7	0.229
+C2 then A: no flag and IC >= 2.0	C2+A	llm1	96	45	0.289	0.867	0.433	7	44	0	5	0.296
+C2 then A: no flag and IC >= 2.0	C2+A	llm2	96	45	0.311	0.875	0.459	14	42	0	7	0.359
+C2 then A: no flag and IC >= 2.0	C2+A	llm3	96	45	0.289	0.867	0.433	8	44	0	8	0.296
+C2 then A: no flag and IC >= 2.0	C2+A	pooled_llm	96	45	0.244	0.846	0.379	7	45	0	7	0.220
+E: depth 1 only	E	llm1	96	64	0.156	0.667	0.253	30	21	4	7	0.178
+E: depth 1 only	E	llm2	96	64	0.172	0.688	0.275	32	24	3	8	0.218
+E: depth 1 only	E	llm3	96	64	0.156	0.667	0.253	30	22	2	8	0.178
+E: depth 1 only	E	pooled_llm	96	64	0.141	0.692	0.234	31	21	2	8	0.139
+E then A: depth 1 and IC >= 2.5	E+A	llm1	96	40	0.200	0.533	0.291	14	37	4	4	0.210
+E then A: depth 1 and IC >= 2.5	E+A	llm2	96	40	0.225	0.562	0.321	18	38	3	5	0.265
+E then A: depth 1 and IC >= 2.5	E+A	llm3	96	40	0.200	0.533	0.291	14	38	2	5	0.210
+E then A: depth 1 and IC >= 2.5	E+A	pooled_llm	96	40	0.175	0.538	0.264	14	38	2	5	0.155

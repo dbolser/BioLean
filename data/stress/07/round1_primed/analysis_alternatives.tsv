@@ -1,0 +1,53 @@
+feature	option	what	view	n	auc_interesting_2plus	ci90_low	ci90_high	auc_not_trivial	auc_true_vs_false
+ic	A	ends-min IC (the current score)	llm1	96	0.681			0.776	0.418
+ic	A	ends-min IC (the current score)	llm2	96	0.661			0.752	0.511
+ic	A	ends-min IC (the current score)	llm3	96	0.690			0.713	0.353
+ic	A	ends-min IC (the current score)	pooled_llm	96	0.678	0.542	0.797	0.750	0.366
+pm	B	path_min, lowest IC anywhere in the proof	llm1	100	0.686			0.729	0.415
+pm	B	path_min, lowest IC anywhere in the proof	llm2	100	0.620			0.684	0.454
+pm	B	path_min, lowest IC anywhere in the proof	llm3	100	0.625			0.650	0.405
+pm	B	path_min, lowest IC anywhere in the proof	pooled_llm	100	0.678	0.541	0.810	0.683	0.361
+gain	C	gain = IC(conclusion) minus max IC(premise)	llm1	94	0.565			0.603	0.248
+gain	C	gain = IC(conclusion) minus max IC(premise)	llm2	94	0.628			0.645	0.240
+gain	C	gain = IC(conclusion) minus max IC(premise)	llm3	94	0.620			0.661	0.226
+gain	C	gain = IC(conclusion) minus max IC(premise)	pooled_llm	94	0.592	0.384	0.797	0.664	0.239
+no_flag	C	no structural flag (not a restatement, weakening or ontology-entailed): 1, else 0	llm1	100	0.638			0.718	0.410
+no_flag	C	no structural flag (not a restatement, weakening or ontology-entailed): 1, else 0	llm2	100	0.638			0.713	0.461
+no_flag	C	no structural flag (not a restatement, weakening or ontology-entailed): 1, else 0	llm3	100	0.682			0.733	0.392
+no_flag	C	no structural flag (not a restatement, weakening or ontology-entailed): 1, else 0	pooled_llm	100	0.661	0.566	0.744	0.720	0.395
+not_restates	C	not a restatement through a refinement	llm1	100	0.513			0.578	0.554
+not_restates	C	not a restatement through a refinement	llm2	100	0.513			0.566	0.592
+not_restates	C	not a restatement through a refinement	llm3	100	0.556			0.586	0.523
+not_restates	C	not a restatement through a refinement	pooled_llm	100	0.539	0.445	0.615	0.570	0.533
+not_weak	C	not a weakening of a premise	llm1	100	0.607			0.655	0.377
+not_weak	C	not a weakening of a premise	llm2	100	0.607			0.640	0.390
+not_weak	C	not a weakening of a premise	llm3	100	0.608			0.661	0.382
+not_weak	C	not a weakening of a premise	pooled_llm	100	0.605	0.569	0.642	0.664	0.382
+not_entailed	C	not already entailed by the ontology	llm1	100	0.554			0.537	0.438
+not_entailed	C	not already entailed by the ontology	llm2	100	0.554			0.560	0.438
+not_entailed	C	not already entailed by the ontology	llm3	100	0.554			0.540	0.447
+not_entailed	C	not already entailed by the ontology	pooled_llm	100	0.552	0.528	0.580	0.541	0.441
+n_chapters	D	premises from how many chapters (Swanson proxy)	llm1	100	0.577			0.506	0.543
+n_chapters	D	premises from how many chapters (Swanson proxy)	llm2	100	0.577			0.533	0.467
+n_chapters	D	premises from how many chapters (Swanson proxy)	llm3	100	0.563			0.494	0.463
+n_chapters	D	premises from how many chapters (Swanson proxy)	pooled_llm	100	0.571	0.454	0.688	0.508	0.480
+depth	E	path length: derivation depth	llm1	100	0.478			0.415	0.545
+depth	E	path length: derivation depth	llm2	100	0.491			0.428	0.539
+depth	E	path length: derivation depth	llm3	100	0.512			0.390	0.554
+depth	E	path length: derivation depth	pooled_llm	100	0.466	0.355	0.587	0.403	0.597
+n_premises	E	path length: number of premises	llm1	100	0.474			0.418	0.544
+n_premises	E	path length: number of premises	llm2	100	0.491			0.430	0.543
+n_premises	E	path length: number of premises	llm3	100	0.518			0.385	0.556
+n_premises	E	path length: number of premises	pooled_llm	100	0.466	0.358	0.595	0.401	0.599
+mica_ic	F	Resnik similarity of the two ends	llm1	39	0.232			0.237	0.703
+mica_ic	F	Resnik similarity of the two ends	llm2	39	0.256			0.228	0.667
+mica_ic	F	Resnik similarity of the two ends	llm3	39	0.280			0.208	0.657
+mica_ic	F	Resnik similarity of the two ends	pooled_llm	39	0.256	0.111	0.407	0.208	0.690
+onto_dist	F	ontology path length between the two ends	llm1	38	0.792			0.789	0.259
+onto_dist	F	ontology path length between the two ends	llm2	38	0.827			0.868	0.222
+onto_dist	F	ontology path length between the two ends	llm3	38	0.768			0.801	0.203
+onto_dist	F	ontology path length between the two ends	pooled_llm	38	0.827	0.681	0.953	0.801	0.200
+norm_ic	G	IC divided by ln(ontology size)	llm1	96	0.699			0.768	0.399
+norm_ic	G	IC divided by ln(ontology size)	llm2	96	0.662			0.756	0.508
+norm_ic	G	IC divided by ln(ontology size)	llm3	96	0.679			0.712	0.341
+norm_ic	G	IC divided by ln(ontology size)	pooled_llm	96	0.675	0.541	0.799	0.754	0.353

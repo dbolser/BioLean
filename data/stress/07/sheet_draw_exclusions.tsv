@@ -1,0 +1,43 @@
+fact	why
+cells [CL:0000000] has part phospholipid [CHEBI:16247]	stress case C01
+body [UBERON:0000468] has part fatty acid [CHEBI:35366]	stress case C02
+Animal cells [CL:0000548] capable of exocytosis [GO:0006887]	stress case C03
+tissues [UBERON:0000479] has part cytoplasm [GO:0005737]	stress case C04
+neuron [CL:0000540] has part ribosomes [GO:0005840]	stress case C05
+hippocampus [UBERON:0002421] part of cerebral cortex [UBERON:0000956]	stress case C06
+oxygen [CHEBI:15379] →− process(erythropoiesis ⊓ occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])	stress case C07
+central nervous system [UBERON:0001017] has part retina [UBERON:0000966]	stress case C08
+FAD+ ⊓ located in (brain) ⊓ in taxon (NCBITaxon:40674) [CHEBI:16238&RO:0001025=(UBERON:0000955)&RO:0002162=(NCBITaxon:40674)] is_a FAD+ [CHEBI:16238]	stress case C10
+kidneys ⊓ in taxon (mammalian systems) [UBERON:0002113&RO:0002162=(NCBITaxon:40674)] has part outer cortex [UBERON:0001225]	stress case C11
+telomerase [GO:0005697] has part polymer [CHEBI:60027]	stress case C12
+ATP [CHEBI:15422] has part phosphorus atom [CHEBI:28659]	stress case C13
+ATP synthase [GO:0045259] →− process(ATP biosynthetic process [GO:0006754])	stress case C14
+LDL [GO:0034362] →+ process(sense of satiety or fullness [GO:0032098])	stress case C15
+deoxyribonucleic acid ⊓ in taxon (NCBITaxon:2759) [CHEBI:16991&RO:0002162=(NCBITaxon:2759)] located in saliva [UBERON:0001836]	stress case C16
+veins [UBERON:0001638] connected to aorta [UBERON:0000947]	stress case C17
+glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] located in cytoplasm [GO:0005737]	stress case C18
+brain ⊓ in taxon (Insecta) [UBERON:0000955&RO:0002162=(NCBITaxon:50557)] has part retina [UBERON:0000966]	stress case C19
+chromosome ⊓ in taxon (prokaryote) [GO:0005694&RO:0002162=(NCBITaxon:2)] located in nucleus [GO:0005634]	stress case C20
+brain ⊓ in taxon (Insecta) [UBERON:0000955&RO:0002162=(NCBITaxon:50557)] surrounded by cerebrospinal fluid [UBERON:0001359]	stress case C21
+plants [NCBITaxon:33090] has part carbon atoms [CHEBI:27594]	stress case C22
+mismatch repair [GO:0006298] →− phenotype(cancer [HP:0002664])	stress case C23
+Addison disease [MONDO:0100480] disease has location endocrine gland [UBERON:0002368]	stress case C24
+insulin ⊓ located in (blood) [PR:000009054&RO:0001025=(UBERON:0000178)] →+ amount(glucagon ⊓ located in (blood) [PR:P01275&RO:0001025=(UBERON:0000178)])	stress case C25
+messenger RNA [CHEBI:33699] has part guanine [CHEBI:16235]	stress case C26
+metaphase [GO:0000089] overlaps mitotic phase [GO:0000087]	stress case C27
+metaphase [GO:0000089] part of mitotic phase [GO:0000087]	stress case C28
+deoxyribonucleic acid ⊓ in taxon (NCBITaxon:2759) [CHEBI:16991&RO:0002162=(NCBITaxon:2759)] located in nucleoid [GO:0009295]	stress case C29
+digestive system [UBERON:0001007] has part plant cell wall [GO:0009505]	stress case C31
+binary fission ⊓ in taxon (prokaryote) [GO:0043093&RO:0002162=(NCBITaxon:2)] happens during mitotic phase [GO:0000087]	stress case C32
+cells [CL:0000000] has part proteins [CHEBI:36080]	rubric example, first draft (level 0)
+Telomerase ⊓ part of (adult somatic cells) ⊓ existence overlaps (adult) [GO:0005697&BFO:0000050=(CL:0002371)&RO:0002490=(UBERON:0000113)] is_a telomerase [GO:0005697]	rubric example, first draft (level 0)
+DNA-templated transcription [GO:0006351] has input polymer [CHEBI:60027]	rubric example, first draft (level 0)
+axial skeleton [UBERON:0005944] has part cranial bone [UBERON:0004766]	rubric example, first draft (level 1)
+meiosis II [GO:0007135] part of sexual reproduction [GO:0019953]	rubric example, first draft (level 1)
+transfer RNA [CHEBI:17843] has part uracil [CHEBI:17568]	rubric example, first draft (level 1)
+respiratory system [UBERON:0001004] →− process(erythropoiesis ⊓ occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])	rubric example, first draft (level 2)
+capillaries [UBERON:0001982] →+ process(this reaction [GO:0009060])	rubric example, first draft (level 2)
+ATP synthase [GO:0045259] →+ process(muscle cell contraction [GO:0006936])	rubric example, first draft (level 2)
+glucagon ⊓ located in (blood) [PR:P01275&RO:0001025=(UBERON:0000178)] →+ amount(insulin ⊓ located in (blood) [PR:000009054&RO:0001025=(UBERON:0000178)])	rubric example, first draft (level 3)
+meiosis ⊓ in taxon (animals) [GO:0051321&RO:0002162=(NCBITaxon:33208)] happens during mitotic phase [GO:0000087]	rubric example, first draft (level 3)
+antibodies [GO:0019814] →− amount(antibodies ⊓ located in (immune system) [GO:0019814&RO:0001025=(UBERON:0002405)])	rubric example, first draft (level 3)

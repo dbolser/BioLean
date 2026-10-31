@@ -1,0 +1,21 @@
+group	measure	n_items	value	band
+llm raters	Fleiss kappa, interesting, 4 levels	100	0.772	substantial
+llm raters	Fleiss kappa, interesting, 0 against 1+	100	0.784	substantial
+llm raters	Fleiss kappa, interesting, under 2 against 2+	100	0.880	almost perfect
+llm raters	Fleiss kappa, true, 3 values	100	0.740	substantial
+llm raters	true, all raters agree (share)	100	0.840	
+llm raters	true, mean pairwise agreement (share)	100	0.893	
+llm raters	interesting, all raters agree (share)	100	0.800	
+llm raters	llm1 vs llm2: weighted kappa on interesting (quadratic)	100	0.846	almost perfect
+llm raters	llm1 vs llm2: Cohen kappa on true	100	0.782	substantial
+llm raters	llm1 vs llm2: percent agreement on true	100	0.910	
+llm raters	llm1 vs llm3: weighted kappa on interesting (quadratic)	100	0.913	almost perfect
+llm raters	llm1 vs llm3: Cohen kappa on true	100	0.695	substantial
+llm raters	llm1 vs llm3: percent agreement on true	100	0.880	
+llm raters	llm2 vs llm3: weighted kappa on interesting (quadratic)	100	0.856	almost perfect
+llm raters	llm2 vs llm3: Cohen kappa on true	100	0.741	substantial
+llm raters	llm2 vs llm3: percent agreement on true	100	0.890	
+old 42 labels	llm1: old T against trivial, Cohen kappa	33	0.818	almost perfect
+old 42 labels	llm2: old T against trivial, Cohen kappa	33	0.636	substantial
+old 42 labels	llm3: old T against trivial, Cohen kappa	33	0.818	almost perfect
+old 42 labels	pooled_llm: old T against trivial, Cohen kappa	33	0.879	almost perfect

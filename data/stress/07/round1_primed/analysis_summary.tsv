@@ -1,0 +1,62 @@
+section	item	value
+raters	raters and rows rated	llm1 100; llm2 100; llm3 100
+raters	human rating present	no
+spread	llm1 interesting 0/1/2/3; true yes/no/unsure	58/26/10/6; 73/14/13
+spread	llm2 interesting 0/1/2/3; true yes/no/unsure	56/28/9/7; 73/8/19
+spread	llm3 interesting 0/1/2/3; true yes/no/unsure	56/27/8/9; 76/13/11
+agreement	llm Fleiss kappa, interesting, 4 levels	0.736 (substantial)
+agreement	llm Fleiss kappa, interesting, 0 against 1+	0.810 (almost perfect)
+agreement	llm Fleiss kappa, interesting, under 2 against 2+	0.854 (almost perfect)
+agreement	llm Fleiss kappa, true, 3 values	0.713 (substantial)
+agreement	llm true: all three agree; mean pairwise	82%; 88%
+agreement	llm interesting: all three give the same level	77%
+threshold	llm1: F1 at 2.5; best F1 (T); T within 0.05 of best; Youden T; scorer-rule T	0.310; 0.348 (3.25); 2.25-3.75; 3.25; 2.5
+threshold	llm1: closure-weighted share of kept facts that are trivial, at 0 and 2.5	0.547; 0.353
+threshold	llm1: at 2.5 kept, precision, recall, trivial kept, interesting lost, base rate	57, 0.193, 0.786, 23, 3, 0.146
+threshold	llm2: F1 at 2.5; best F1 (T); T within 0.05 of best; Youden T; scorer-rule T	0.310; 0.348 (3.25); 2.25-3.75; 3.25; 2.5
+threshold	llm2: closure-weighted share of kept facts that are trivial, at 0 and 2.5	0.521; 0.347
+threshold	llm2: at 2.5 kept, precision, recall, trivial kept, interesting lost, base rate	57, 0.193, 0.786, 24, 3, 0.146
+threshold	llm3: F1 at 2.5; best F1 (T); T within 0.05 of best; Youden T; scorer-rule T	0.333; 0.383 (3.25); 2.25-3.75; 3.25; 2.5
+threshold	llm3: closure-weighted share of kept facts that are trivial, at 0 and 2.5	0.543; 0.391
+threshold	llm3: at 2.5 kept, precision, recall, trivial kept, interesting lost, base rate	57, 0.211, 0.800, 26, 3, 0.156
+threshold	pooled_llm: F1 at 2.5; best F1 (T); T within 0.05 of best; Youden T; scorer-rule T	0.290; 0.318 (3.25); 2.25-3.75; 3.25; 2.5
+threshold	pooled_llm: closure-weighted share of kept facts that are trivial, at 0 and 2.5	0.520; 0.345
+threshold	pooled_llm: at 2.5 kept, precision, recall, trivial kept, interesting lost, base rate	57, 0.175, 0.833, 23, 2, 0.125
+threshold	pooled_llm: bootstrap best-F1 T median; 90% range; share within 0.25 of 2.5	3.25; 2.25-8.75; 24%
+threshold	pooled_llm: scorer-rule T if one interesting row is demoted	R020 (IC 3.48) -> 2.5; R031 (IC 2.66) -> 3.25; R055 (IC 9.21) -> 2.5; R078 (IC 6.10) -> 2.5; R089 (IC 2.66) -> 3.25
+threshold	pooled mean rating, IC 2 to 2.5 against 2.5 to 3	0.41 (n=22) against 0.62 (n=23)
+truth	llm1: judged false; kept/dropped/unjudged at 2.5; AUC of IC false vs true; mean interesting false vs true	14; 8/4/2; 0.582; 2.000 vs 0.370
+truth	llm2: judged false; kept/dropped/unjudged at 2.5; AUC of IC false vs true; mean interesting false vs true	8; 3/3/2; 0.489; 2.625 vs 0.356
+truth	llm3: judged false; kept/dropped/unjudged at 2.5; AUC of IC false vs true; mean interesting false vs true	13; 8/3/2; 0.647; 2.385 vs 0.395
+truth	pooled_llm: judged false; kept/dropped/unjudged at 2.5; AUC of IC false vs true; mean interesting false vs true	12; 7/3/2; 0.634; 2.222 vs 0.364
+truth	rows any LLM rater calls false; of those kept at 2.5	16; 10
+truth	ratings of 3; same rater says false; unsure	22; 22; 0
+truth	pooled_llm: AUC of IC false vs true, 90% interval	0.466-0.795
+truth	pooled_llm: interesting rows; of those judged false	14; 9
+alternatives	pooled_llm AUC ic (A): interesting [90% CI]; not trivial; true vs false; n	0.678 [0.542, 0.797]; 0.750; 0.366; 96
+alternatives	pooled_llm AUC pm (B): interesting [90% CI]; not trivial; true vs false; n	0.678 [0.541, 0.810]; 0.683; 0.361; 100
+alternatives	pooled_llm AUC gain (C): interesting [90% CI]; not trivial; true vs false; n	0.592 [0.384, 0.797]; 0.664; 0.239; 94
+alternatives	pooled_llm AUC no_flag (C): interesting [90% CI]; not trivial; true vs false; n	0.661 [0.566, 0.744]; 0.720; 0.395; 100
+alternatives	pooled_llm AUC not_restates (C): interesting [90% CI]; not trivial; true vs false; n	0.539 [0.445, 0.615]; 0.570; 0.533; 100
+alternatives	pooled_llm AUC not_weak (C): interesting [90% CI]; not trivial; true vs false; n	0.605 [0.569, 0.642]; 0.664; 0.382; 100
+alternatives	pooled_llm AUC not_entailed (C): interesting [90% CI]; not trivial; true vs false; n	0.552 [0.528, 0.580]; 0.541; 0.441; 100
+alternatives	pooled_llm AUC n_chapters (D): interesting [90% CI]; not trivial; true vs false; n	0.571 [0.454, 0.688]; 0.508; 0.480; 100
+alternatives	pooled_llm AUC depth (E): interesting [90% CI]; not trivial; true vs false; n	0.466 [0.355, 0.587]; 0.403; 0.597; 100
+alternatives	pooled_llm AUC n_premises (E): interesting [90% CI]; not trivial; true vs false; n	0.466 [0.358, 0.595]; 0.401; 0.599; 100
+alternatives	pooled_llm AUC mica_ic (F): interesting [90% CI]; not trivial; true vs false; n	0.256 [0.111, 0.407]; 0.208; 0.690; 39
+alternatives	pooled_llm AUC onto_dist (F): interesting [90% CI]; not trivial; true vs false; n	0.827 [0.681, 0.953]; 0.801; 0.200; 38
+alternatives	pooled_llm AUC norm_ic (G): interesting [90% CI]; not trivial; true vs false; n	0.675 [0.541, 0.799]; 0.754; 0.353; 96
+rules	pooled_llm keep all: kept; precision; recall; F1; trivial kept; interesting lost; false kept	96; 0.125; 1.000; 0.222; 53; 0; 10
+rules	pooled_llm A: IC >= 2.5 (today): kept; precision; recall; F1; trivial kept; interesting lost; false kept	57; 0.175; 0.833; 0.290; 23; 0; 7
+rules	pooled_llm A: IC >= 3.25 (best F1, pooled_llm): kept; precision; recall; F1; trivial kept; interesting lost; false kept	32; 0.219; 0.583; 0.318; 10; 2; 6
+rules	pooled_llm B: path_min >= 2.5: kept; precision; recall; F1; trivial kept; interesting lost; false kept	49; 0.184; 0.750; 0.295; 21; 0; 6
+rules	pooled_llm C: no structural flag: kept; precision; recall; F1; trivial kept; interesting lost; false kept	55; 0.200; 0.917; 0.328; 19; 0; 8
+rules	pooled_llm C: gain >= 0 (missing gain kept): kept; precision; recall; F1; trivial kept; interesting lost; false kept	43; 0.186; 0.667; 0.291; 18; 3; 8
+rules	pooled_llm C then A: no flag and IC >= 2.5: kept; precision; recall; F1; trivial kept; interesting lost; false kept	34; 0.265; 0.750; 0.391; 5; 0; 6
+rules	pooled_llm C then A: no flag and IC >= 2.0: kept; precision; recall; F1; trivial kept; interesting lost; false kept	45; 0.222; 0.833; 0.351; 11; 0; 7
+rules	pooled_llm E: depth 1 only: kept; precision; recall; F1; trivial kept; interesting lost; false kept	64; 0.141; 0.750; 0.237; 31; 2; 9
+rules	pooled_llm E then A: depth 1 and IC >= 2.5: kept; precision; recall; F1; trivial kept; interesting lost; false kept	40; 0.175; 0.583; 0.269; 13; 2; 6
+rules	pooled_llm: flagged rows; trivial; interesting; interesting and not false	42; 34; 2; 0
+rules	pooled_llm: flagged rows kept at 2.5; of those trivial	23; 18
+cases	sheet cases; PASS/FAIL/SILENT/INEXPRESSIBLE (LLM pool)	61; 35/19/7/0
+terms	closure facts scored 2 to 3; terms that set the score; 2.25 to 2.75: facts, terms	228; 16; 90, 9

@@ -1,0 +1,14 @@
+group	measure	n_items	value	band
+llm raters	Fleiss kappa, interesting, 4 levels	100	0.736	substantial
+llm raters	Fleiss kappa, interesting, 0 against 1+	100	0.810	almost perfect
+llm raters	Fleiss kappa, interesting, under 2 against 2+	100	0.854	almost perfect
+llm raters	Fleiss kappa, true, 3 values	100	0.713	substantial
+llm raters	true, all raters agree (share)	100	0.820	
+llm raters	true, mean pairwise agreement (share)	100	0.880	
+llm raters	interesting, all raters agree (share)	100	0.770	
+llm raters	llm1 vs llm2: weighted kappa on interesting (quadratic)	100	0.845	almost perfect
+llm raters	llm1 vs llm2: Cohen kappa on true	100	0.652	substantial
+llm raters	llm1 vs llm3: weighted kappa on interesting (quadratic)	100	0.800	almost perfect
+llm raters	llm1 vs llm3: Cohen kappa on true	100	0.782	substantial
+llm raters	llm2 vs llm3: weighted kappa on interesting (quadratic)	100	0.913	almost perfect
+llm raters	llm2 vs llm3: Cohen kappa on true	100	0.710	substantial
