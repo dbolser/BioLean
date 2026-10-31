@@ -1,0 +1,68 @@
+curie	OLS4 label	defining ontology	status	spec label	check	all ontologies
+BFO:0000051	has part	addicto	live		label ok	addicto,afo,agro,aio,aism,apollo_sv,bcgo,bco,bspo,caro,cdno,ceph,chebi,cheminf,chiro,chmo,cido,cl,clo,cmpo,cob,coho,colao,covoc,cro,cteno,dideo,disdriv,doid,dpo,dron,duo,ecao,eco,ecocore,ecto,efo,ehdaa2,emapa,emro,envo,eupath,exmo,exo,fbbi,fbbt,fbcv,fbdv,flopo,foodon
+BFO:0000066	occurs in	addicto	live		label ok	addicto,afo,agro,aism,apollo_sv,bcgo,bco,caro,cdno,cheminf,chiro,cido,cl,clo,cmpo,covoc,cvdo,dideo,dpo,duo,ecao,ecocore,ecto,efo,envo,eupath,exmo,fbbt,flopo,fovt,fypo,genepio,geo,go,hcao,hp,htn,iao,ico,ido,idocovid19,maxo,mcro,mfmo,micro,mondo,mp,nbo,ncro,ngbo
+CHEBI:15378	hydron	chebi	live		label ok	chebi,cl,ecto,envo,fbcv,go,micro,mop,mp,oba,pcl,peco,rbo,slso,uberon,upheno
+CHEBI:167574	semaglutide	chebi	live		label ok	chebi,dron
+CHEBI:16991	deoxyribonucleic acid	chebi	live	deoxyribonucleic acid	label ok	ado,aism,bcgo,bco,chebi,cido,cl,cmpo,eco,ecto,efo,eupath,fbcv,fypo,genepio,go,hcao,ico,idocovid19,ino,micro,mp,msio,oba,obcs,obi,obib,ohmi,omiabis,one,ons,ornaseq,pcl,peco,phipo,prefer,pride,proco,psdo,rbo,stato,txpo,uberon,upheno,valuesets,zp
+CHEBI:33696	nucleic acid	chebi	live	nucleic acid	label ok	aism,bcgo,bco,caro,chebi,chmo,cido,cl,cmpo,dideo,dron,ecao,eco,ecocore,ecto,eupath,fbcv,flopo,fovt,fypo,genepio,geno,go,hcao,ico,idocovid19,ino,micro,mp,msio,oba,obcs,obi,obib,ohmi,omiabis,one,ons,opmi,pato,pcl,peco,phipo,pr,prefer,pride,proco,psdo,rbo,slso
+CHEBI:33697	ribonucleic acid	chebi	live	ribonucleic acid	label ok	ado,aism,bcgo,bco,caro,chebi,chmo,cido,cl,dideo,dron,ecao,eco,ecocore,ecto,efo,eupath,flopo,fovt,fypo,genepio,go,hcao,ico,idocovid19,ino,mp,msio,ncro,oba,obi,obib,ohmi,omiabis,omit,one,ons,pato,pcl,phipo,prefer,pride,proco,psdo,rbo,slso,stato,txpo,uberon,upheno
+CHEBI:35475	non-steroidal anti-inflammatory drug	chebi	live	non-steroidal anti-inflammatory drug	label ok	ado,bao,chebi,chiro,cido,dron,ecto,efo,enm,go,maxo,mondo,oba,phipo,pride,scdo,txpo,upheno
+CHEBI:36080	protein	chebi	live	protein	label ok	ado,aism,caro,cdno,chebi,cl,covoc,cteno,dideo,dron,ecao,ecocore,ecto,efo,flopo,foodon,fovt,fypo,genepio,go,gsso,hcao,hp,idocovid19,idomal,maxo,micro,mondo,mp,nbo,oba,ons,pato,pcl,peco,phipo,prefer,pride,rbo,slso,to,txpo,uberon,upheno,xpo,zp
+CHEBI:59132	antigen	chebi	live	antigen	label ok	bao,chebi,chiro,ecto,genepio,go,hp,pcl,txpo,upheno,zp
+CHEBI:64645	amyloid-beta	chebi	live	amyloid-beta	label ok	ado,bmont,chebi,ecto,efo,go,pride,upheno,zp
+CL:0000000	cell	cl	live	cell	label ok	aeo,aism,amphx,bcgo,bco,bmont,caro,ccf,ceph,chmo,cido,cl,clo,clyh,cob,colao,covoc,cteno,doid,dpo,ecao,eco,ecocore,efo,ehdaa2,enm,eupath,fbbt,flopo,foodon,fovt,fypo,genepio,geno,go,hcao,hp,hra,ico,ido,idocovid19,idomal,ino,lepao,maxo,mfmo,mondo,mp,msio,oba
+CL:0000540	neuron	cl	live	neuron	label ok	ado,aeo,aism,caro,cl,clo,cteno,doid,ecao,eco,ecocore,efo,ehdaa2,fbbt,flopo,fovt,go,hcao,hp,hra,maxo,mfmo,mondo,mp,ngbo,oba,obi,one,ontoneo,ornaseq,pain,pato,pcl,phipo,planp,prefer,pride,rbo,ro,uberon,upheno,wbphenotype,xpo
+ECO:0000034	author statement without traceable support	eco	live		label ok	eco
+ECO:0000303	author statement without traceable support used in manual assertion	eco	live		label ok	eco,valuesets
+GENO:0000482	genetic material	geno	live	genetic material (GENO; kind tag only)	label ok	geno
+GO:0001696	gastric acid secretion	go	live	gastric acid secretion	label ok	aism,cl,ecao,ecto,flopo,fovt,go,hcao,hp,maxo,mondo,mp,nbo,oba,pato,pcl,prefer,rbo,uberon,upheno
+GO:0002377	immunoglobulin production	go	live	immunoglobulin production	label ok	cl,go,gsso,hcao,hp,maxo,mondo,mp,oba,pcl,uberon,upheno,zp
+GO:0003964	RNA-directed DNA polymerase activity	go	live	RNA-directed DNA polymerase activity	label ok	bcgo,bco,cco,chiro,cido,cmpo,ec,eco,eupath,fypo,gexo,go,obi,one,prefer,psdo,rbo,reto,rexo,slso,stato,upheno,zp
+GO:0003968	RNA-directed RNA polymerase activity	go	live	RNA-directed RNA polymerase activity	label ok	cco,ec,fypo,gexo,go,reto,rexo
+GO:0004396	hexokinase activity	go	live	hexokinase activity	label ok	cco,ec,gexo,go,mp,oba,reto,rexo,upheno,xpo,zp
+GO:0005739	mitochondrion	go	live	mitochondrion	label ok	ado,bao,cco,chiro,cl,cmpo,efo,flopo,fypo,gexo,go,hp,mondo,mp,oba,obi,ogsf,one,ornaseq,pato,pcl,phipo,planp,prefer,pride,reto,rexo,txpo,upheno,wbphenotype,xpo,zp
+GO:0005886	plasma membrane	go	live	plasma membrane	label ok	aism,bao,caro,cco,chiro,cl,cmpo,ecao,ecocore,ecto,efo,fbbt,flopo,fovt,fypo,gexo,go,hcao,hp,maxo,micro,mondo,mp,nbo,oba,pato,pcl,phipo,planp,poro,pr,prefer,pride,rbo,reto,rexo,to,txpo,uberon,upheno,wbphenotype,xpo,zp
+GO:0006119	oxidative phosphorylation	go	live		label ok	efo,fypo,go,mondo,mp,oba,pride,txpo,upheno,zp
+GO:0006261	DNA-templated DNA replication	go	live	DNA-templated DNA replication	label ok	cco,chiro,fypo,go,mp,upheno,wbphenotype,zp
+GO:0006412	translation	go	live	translation	label ok	ado,aism,bao,caro,chiro,cido,cl,covoc,ecao,eco,ecocore,efo,flopo,fovt,fypo,gexo,go,hcao,hp,maxo,mondo,mp,ncro,oba,ogsf,omit,omp,pato,pcl,phipo,pr,prefer,pride,rbo,txpo,uberon,upheno,wbphenotype,xpo,zp
+GO:0006457	protein folding	go	live	protein folding	label ok	go,txpo,upheno,xpo,zp
+GO:0007268	chemical synaptic transmission	go	live	chemical synaptic transmission	label ok	ado,aism,chiro,cido,cl,ecao,ecocore,fbbt,flopo,fovt,go,hcao,hp,maxo,mondo,mp,oba,pato,pcl,phipo,prefer,rbo,uberon,upheno,wbphenotype,xpo,zp
+GO:0007631	feeding behavior	go	live		label ok	dpo,ecocore,ecto,envo,fbbt,foodon,go,gsso,hcao,hp,htn,mf,mfoem,mfomd,mondo,mp,nbo,oba,ons,planp,txpo,uberon,upheno,wbphenotype,xpo,zp
+GO:0009953	dorsal/ventral pattern formation	go	live	dorsal/ventral pattern formation	label ok	dpo,go,mp,upheno,xpo,zp
+GO:0010644	cell communication by electrical coupling	go	live	cell communication by electrical coupling	label ok	go,upheno,zp
+GO:0012505	endomembrane system	go	live	endomembrane system	label ok	aism,caro,cco,cl,cmpo,ecao,ecocore,efo,flopo,fovt,fypo,gexo,go,hcao,hp,maxo,mondo,mp,oba,pato,pcl,phipo,planp,prefer,pride,rbo,reto,rexo,uberon,upheno,wbphenotype,xpo,zp
+GO:0019079	viral genome replication	go	live	viral genome replication	label ok	bao,cido,covoc,go,zp
+GO:0019814	immunoglobulin complex	go	live	immunoglobulin complex	label ok	bcgo,cco,chmo,cido,cl,dideo,eco,efo,eupath,gexo,go,hcao,hp,ido,idocovid19,maxo,mondo,mp,oba,obi,obib,one,opmi,pr,pride,reto,rexo,uberon,upheno,vo,zp
+GO:0019953	sexual reproduction	go	live	sexual reproduction	label ok	aism,apollo_sv,cl,dpo,ecao,ecocore,ecto,flopo,fovt,fypo,go,gsso,hcao,hp,maxo,mondo,mp,nbo,oba,pato,pcl,phipo,plana,planp,prefer,rbo,to,uberon,upheno,wbphenotype,xpo,zp
+GO:0022008	neurogenesis	go	live	neurogenesis	label ok	aism,cl,ecao,ecocore,flopo,fovt,go,hcao,hp,mondo,mp,oba,pato,pcl,phipo,planp,prefer,rbo,uberon,upheno,wbphenotype,xpo,zp
+GO:0022904	respiratory electron transport chain	go	live		label ok	envo,fypo,go,mp,txpo,upheno,zp
+GO:0032047	mitosome	go	live	mitosome	label ok	cco,gexo,go,reto,rexo
+GO:0042100	B cell proliferation	go	live	B cell proliferation	label ok	cco,cl,go,hcao,hp,mp,oba,pcl,txpo,uberon,upheno
+GO:0099536	synaptic signaling	go	live	synaptic signaling	label ok	aism,cl,ecao,ecocore,fbbt,flopo,fovt,go,hcao,hp,maxo,mondo,mp,oba,obi,pato,pcl,phipo,planp,prefer,rbo,uberon,upheno,wbphenotype,xpo,zp
+HP:0002511	Alzheimer disease	hp	live	Alzheimer disease	label ok	hp,upheno
+HP:0004398	Peptic ulcer	hp	live	Peptic ulcer	label ok	efo,hp,pride,upheno
+HP:0034345	Mendelian inheritance	hp	live		label ok	hp,mondo,oba,valuesets
+NCBITaxon:11886	Rous sarcoma virus	ncbitaxon	live	Rous sarcoma virus	label ok	ncbitaxon
+NCBITaxon:12242	Tobacco mosaic virus	ncbitaxon	live	Tobacco mosaic virus	label ok	efo,ncbitaxon,pride,pso
+NCBITaxon:131567	cellular organisms	ncbitaxon	live	cellular organisms	label ok	ado,agro,aism,apollo_sv,bco,ceph,cl,clo,cob,cteno,doid,ecao,ecocore,ecto,envo,epio,fao,fbbt,flopo,foodon,fovt,gallont,genepio,go,hcao,htn,maxo,mco,micro,mondo,mp,nbo,ncbitaxon,oba,obi,omrse,ons,oostt,pato,pcl,pco,peco,phipo,po,prefer,pso,rbo,slso,to,uberon
+NCBITaxon:210	Helicobacter pylori	ncbitaxon	live	Helicobacter pylori	label ok	apollo_sv,bao,ecto,efo,eupath,go,iceo,mondo,ncbitaxon,ohmi,ohpi,pr,pride,valuesets,vo
+NCBITaxon:2157	Archaea	ncbitaxon	live	Archaea	label ok	agro,aism,apollo_sv,bcgo,bco,cido,clo,ecao,eco,ecocore,efo,eupath,fovt,genepio,geno,go,hcao,ico,ido,ino,micro,mondo,mp,msio,ncbitaxon,obcs,obi,obib,ohmi,ohpi,omiabis,one,ons,ontoneo,opmi,pco,pr,prefer,pride,psdo,rbo,slso,stato,swo,uberon,valuesets,vo
+NCBITaxon:2611341	Metamonada	ncbitaxon	live	Metamonada	label ok	doid,ecto,eupath,go,mondo,ncbitaxon,vo
+NCBITaxon:2759	Eukaryota	ncbitaxon	live	Eukaryota	label ok	ado,agro,aism,apollo_sv,bcgo,bco,caro,ceph,chmo,cido,cl,clo,cteno,doid,ecao,eco,ecocore,ecto,efo,envo,epio,eupath,fao,fbbt,flopo,foodon,fovt,gallont,genepio,geno,go,hcao,hso,ico,ido,idocovid19,ino,maxo,micro,mondo,mp,msio,nbo,ncbitaxon,ngbo,oba,obcs,obi,obib,ogsf
+NCBITaxon:27923	Mnemiopsis leidyi	ncbitaxon	live	Mnemiopsis leidyi	label ok	cteno,ncbitaxon
+NCBITaxon:28211	Alphaproteobacteria	ncbitaxon	live	Alphaproteobacteria	label ok	agro,apollo_sv,doid,ecto,go,iceo,micro,mondo,ncbitaxon,ohmi,ohpi,ons,pr,pso,vo
+NCBITaxon:6656	Arthropoda	ncbitaxon	live	Arthropoda	label ok	agro,aism,apollo_sv,cl,clo,doid,ecao,ecocore,ecto,efo,envo,epio,eupath,fbbt,flopo,fovt,gallont,go,gsso,hcao,idomal,mondo,mp,nbo,ncbitaxon,oba,obi,ons,pato,pcl,peco,phipo,pr,prefer,pride,pso,rbo,to,uberon,valuesets,xpo
+NCBITaxon:6724	Astacoidea	ncbitaxon	live	Astacoidea (crayfish; species not checked)	label ok	clo,foodon,ncbitaxon,ons
+NCBITaxon:7711	Chordata	ncbitaxon	live	Chordata	label ok	agro,aism,apollo_sv,bco,cido,cl,doid,ecao,ecocore,ecto,envo,flopo,foodon,fovt,go,gsso,hcao,maxo,mondo,mp,nbo,ncbitaxon,oba,ons,opmi,pato,pcl,pco,peco,phipo,prefer,pso,rbo,slso,uberon,vbo,xpo
+NCBITaxon:7742	Vertebrata <vertebrates>	ncbitaxon	live	Vertebrata	label ok	ado,agro,aism,apollo_sv,bcgo,bco,chmo,cido,cl,clo,doid,ecao,ecocore,ecto,envo,epio,eupath,flopo,foodon,fovt,genepio,geno,go,gsso,hcao,ico,idomal,maxo,mondo,mp,msio,nbo,ncbitaxon,ngbo,oba,obi,obib,ohmi,ohpi,omiabis,one,ons,opl,opmi,pato,pbpko,pcl,pco,peco,phipo
+NCBITaxon:9606	Homo sapiens	ncbitaxon	live	Homo sapiens	label ok	ado,afo,agro,aism,apollo_sv,bao,bcgo,bco,cco,chmo,cido,cl,clo,covoc,credit,dideo,ecao,ecocore,ecto,efo,envo,epio,eupath,fbbi,foodon,fovt,genepio,geno,gexo,go,gsso,hcao,hgnc,hgnc.genegroup,hso,htn,ico,ido,idocovid19,ino,labo,maxo,mondo,mp,mro,msio,nbo,ncbitaxon,ngbo,oba
+PR:000001886	major prion protein	pr	live	major prion protein	label ok	efo,oba,pr,pride
+RO:0001000	derives from	addicto	live		label ok	addicto,afo,agro,apollo_sv,bcgo,bco,cdno,cheminf,cido,cl,clo,cob,covoc,dideo,doid,dpo,duo,eco,ecocore,ecto,efo,envo,eupath,exmo,foodon,genepio,geno,geo,hcao,hso,iao,ico,ido,idocovid19,maxo,mcro,mfmo,mondo,mp,msio,ncro,oba,obcs,obi,obib,occo,ohmi,ohpi,omiabis,omit
+RO:0002150	continuous with	ro	live		label ok	afo,agro,aism,cl,clao,colao,covoc,cteno,ecao,ecocore,ecto,envo,exmo,fbbt,flopo,fovt,go,hcao,hp,hra,hso,htn,lepao,maxo,mfmo,micro,mondo,mp,nbo,oae,oba,ohpi,ontoneo,ovae,pato,pcl,phipo,poro,prefer,rbo,ro,uberon,upheno,xpo,zfa,zfs,zp
+RO:0002162	in taxon	ro	live		label ok	agro,aism,caro,ceph,cl,colao,covoc,ecao,ecocore,ecto,efo,envo,exmo,fbbt,flopo,foodon,fovt,gallont,geno,go,hcao,hgnc,hgnc.genegroup,lepao,maxo,mfmo,mondo,mp,mro,nbo,oba,ons,opl,orth,pato,pcl,phipo,planp,po,pr,prefer,pride,pso,rbo,ro,slso,to,uberon,upheno,vo
+SEPIO:0000008	has_disputing_evidence_line	sepio	live		label ok	sepio
+SEPIO:0000101	contradicts	sepio	live		label ok	sepio
+SEPIO:0000432	hypothesis	sepio	live		label ok	sepio
+UBERON:0001885	dentate gyrus of hippocampal formation	uberon	live	dentate gyrus of hippocampal formation	label ok	cl,efo,go,hcao,mondo,mp,oba,pcl,pride,uberon,upheno
+UBERON:0001898	hypothalamus	uberon	live		label ok	bcgo,cl,doid,efo,envo,epio,go,hcao,hp,hra,maxo,mondo,mp,oba,pcl,phipo,pride,uberon,upheno
+UBERON:0002162	area postrema	uberon	live		label ok	cl,hcao,mp,oba,uberon,upheno

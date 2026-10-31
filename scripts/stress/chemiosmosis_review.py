@@ -14,7 +14,7 @@ run is trusted. It also checks more:
 
 Writes data/stress/09/review_checks.tsv. Downloads are untrusted: run with `python3 -I`.
 
-    python3 -I scripts/stress/chemiosmosis_review.py <repo root>
+    python3 -I scripts/stress/chemiosmosis_review.py <repo root> [download folder]
 """
 import csv
 import html
@@ -27,7 +27,9 @@ import urllib.parse
 import urllib.request
 
 ROOT = sys.argv[1] if len(sys.argv) > 1 else "."
-DL = "/tmp/biolean-09/review/fresh"
+# A second argument gives a fresh download folder (the build re-check of 2026-10-31 used
+# /tmp/biolean-09/build4/fresh), so nothing cached earlier is trusted.
+DL = sys.argv[2] if len(sys.argv) > 2 else "/tmp/biolean-09/review/fresh"
 OUT = os.path.join(ROOT, "data/stress/09/review_checks.tsv")
 DOC = os.path.join(ROOT, "docs/programs/09-chemiosmosis-real-record.md")
 LEAN = os.path.join(ROOT, "BioLean/Stress/ChemiosmosisReal.lean")
@@ -43,7 +45,8 @@ CROSSREF_FORMAT = {
     "10.1104/pp.90.4.1513": "Crossref keeps 'Ca<sup>2+</sup>', PubMed 'Ca'",
 }
 # Single-quoted phrases in cases.tsv that are not quotations of a source.
-NOT_QUOTES = {"m is_a C~I", "localised with 5 mM CaCl2, delocalised with 100 mM KCl"}
+NOT_QUOTES = {"m is_a C~I", "localised with 5 mM CaCl2, delocalised with 100 mM KCl",
+              "phospho-L-histidine is_a C~I"}
 
 # Expected (year, first author surname, title) for PMIDs cited but not in record.tsv.
 HISTORIES = {
@@ -55,6 +58,9 @@ HISTORIES = {
     "23104597": ("2013", "Prebble", "Contrasting approaches to a biological problem"),
     "22082452": ("2011", "Mitchell", "Chemiosmotic coupling in oxidative and photosynthetic phosphorylation"),
     "18846415": ("2008", "Rich", "A perspective on Peter Mitchell and the chemiosmotic theory"),
+    "4291593": ("1967", "Mitchell", "Chemiosmotic hypothesis of oxidative phosphorylation"),
+    # E1 lead added by the review (2026-10-31): cites Tager et al. 1966; free scan in PMC (PMC223899)
+    "4170459": ("1967", "van Dam", "A suggested mechanism of uncoupling of respiratory-chain phosphorylation"),
 }
 # DOIs cited in the doc but not in record.tsv: (year, first author surname, title start).
 DOC_DOIS = {
@@ -149,6 +155,7 @@ def main():
         cited |= set(re.findall(r"PMID[: ]+(\d+)", t))
     cited.discard("0")
     abstracts = {}
+    has_abstract = {}  # fixed at build 2026-10-31: the flag used to test abstract + title, so was always 'y'
     for p in sorted(cited | set(expected), key=int):
         r = epmc(p)
         if p not in expected:
@@ -159,6 +166,7 @@ def main():
             rows.append(["pmid", p, key, f"{a} {y}", "", "", "NOT FOUND"])
             continue
         abstracts[p] = (r.get("abstractText", "") or "") + " " + r.get("title", "")
+        has_abstract[p] = bool((r.get("abstractText", "") or "").strip())
         gy = str(r.get("pubYear", ""))
         au = (r.get("authorList", {}).get("author") or [{}])[0]
         ga = au.get("lastName", au.get("fullName", au.get("collectiveName", "")))
@@ -166,7 +174,7 @@ def main():
         ts = title_status(t, gt) if key != "history" else ("prefix" if norm(gt).startswith(norm(t)) else "DIFFERENT")
         ok = gy == y and norm(ga) == norm(a) and ts != "DIFFERENT"
         rows.append(["pmid", p, key, f"{a} {y}", f"{ga} {gy}", gt[:120],
-                     ("OK" if ok else "MISMATCH") + f" (title {ts}; abstract {'y' if abstracts[p] else 'n'})"])
+                     ("OK" if ok else "MISMATCH") + f" (title {ts}; abstract {'y' if has_abstract[p] else 'n'})"])
     # DOIs
     dois = {r["doi"]: (r["year"], surname(r["first_author"]), r["title"], r["key"]) for r in record if r["doi"]}
     for d, (y, a, t) in DOC_DOIS.items():

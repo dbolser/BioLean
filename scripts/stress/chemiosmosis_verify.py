@@ -29,6 +29,9 @@ EXTRA = [
     ("h06", "23104597", "2013", "Prebble JN", "Contrasting approaches to a biological problem"),
     ("h07", "22082452", "2011", "Mitchell P", "Chemiosmotic coupling in oxidative and photosynthetic phosphorylation"),
     ("h08", "18846415", "2008", "Rich PR", "A perspective on Peter Mitchell and the chemiosmotic theory"),
+    # Added at build 2026-10-31: a lead for E1. Its reference 1 is Tager et al. 1966 (Nature page).
+    ("h09", "4291593", "1967", "Mitchell P", "Chemiosmotic hypothesis of oxidative phosphorylation"),
+    ("h10", "4170459", "1967", "van Dam K", "A suggested mechanism of uncoupling of respiratory-chain phosphorylation"),
 ]
 
 # References with no PMID, checked on Crossref instead: (key, doi, year, first author, title).

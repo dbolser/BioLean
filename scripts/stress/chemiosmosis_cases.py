@@ -1,6 +1,9 @@
-"""Program 09: write data/stress/09/cases.tsv, the chemiosmosis stress set (CH-01 to CH-49).
+"""Program 09: write data/stress/09/cases.tsv, the chemiosmosis stress set (CH-01 to CH-50).
 
-Every `observed` cell was read off a run on 2026-10-30: `lake env lean
+CH-50 and the checked-date retirement in CH-12 and CH-28 were added by the independent review on
+2026-10-31 (Lean pins checked by scripts/stress/chemiosmosis_consensus.py).
+
+Every `observed` cell was read off a run on 2026-10-30 and re-run at build on 2026-10-31: `lake env lean
 BioLean/Stress/ChemiosmosisReal.lean` (exit 0; the theorems and #guards named in `test` pass) and
 `python3 scripts/stress/chemiosmosis_run.py` (data/stress/09/run_output.txt; it agrees with the
 Lean tables on all 40 printed cells, see chemiosmosis_crosscheck.py). Numbers are truncated to
@@ -99,21 +102,27 @@ CASES = [
      "FAIL", "phospho_still_counts; " + PROTO + ".phospho_single_1974",
      "PMID:14014715 PMID:13942705 PMID:5871845 PMID:5332854 PMID:12068893", "no"),
     ("CH-11", "Refuting an instance, not the hypothesis", "Claim granularity (option E)",
-     "The four CH-10 items; narrower claim 'phosphohistidine is C~I' (CHEBI:18847 or CHEBI:19855; isomer UNVERIFIED).",
+     "The four CH-10 items on a narrower claim, 'via phospho-L-histidine' (CHEBI:26048, the parent of both isomers), "
+     "lifted to S by 'phospho-L-histidine is_a C~I'.",
      "The 1964 papers cancel Boyer's items; they add no disbelief to C~I in general.",
      "No rule links 'm is_a C~I' to S, so the 1964 papers can only refute S. Proto D1, retiring reports and refutations together: "
-     "1974 C contested (b=0.604 d=0.348).",
-     "INEXPRESSIBLE", PROTO + ".phosphoBoth_single_1974, #guard cells (supRiv phosphoBoth Enc.single.two 1974)",
+     "1974 C contested (b=0.604 d=0.348). Proto E (added at build 2026-10-31; lift with weakest, as the core's is_a rules): "
+     "half right. The 1964 papers no longer count against S, but the disputed instance (2 for, 2 against) still lifts b=0.400, so S's own belief "
+     "rises from 5/7 to 0.860 and 1974 C is contested (b=0.586 d=0.368); single entry C contested 1965 to 2025.",
+     "INEXPRESSIBLE", PROTO + ".phosphoBoth_single_1974, #guard cells (supRiv phosphoBoth Enc.single.two 1974); "
+     + PROTO + ".lift_1974, #guard (liftAt Enc.single 1974).map cell",
      "PMID:5871845 PMID:5332854", "no"),
     ("CH-12", "Unreplicated reports never retire", "Cumulative fusion never forgets",
      "Pinchot 1960 and 1962; Griffiths & Chaplain 1962; Painter & Hunter 1970 (abstract: 'may represent the type reaction'); "
      "Griffiths 1976 (abstract: 'analogous to those of substrate-level phosphorylation').",
-     "None became accepted: Ernster 1978, 'no experimental evidence could be obtained'. I found no dated refutation of these five.",
+     "None became accepted: Ernster 1978, 'no experimental evidence could be obtained'. No dated refutation of any one of the five "
+     "was found; the 1978 speech is a dated blanket statement (it names none of them).",
      "S's own belief b=0.739 in 2020; S contested every year from 1964 (proved). Proto N (forgetting: each item's weight "
      "halves every 5, 10 or 20 years) does not fix it: S is never refuted, and C is never established in single entry, "
-     "because C's own evidence fades too (h=10, 2020: C b=0.621, S b=0.083, both unsupported).",
+     "because C's own evidence fades too (h=10, 2020: C b=0.621, S b=0.083, both unsupported). Proto D1 with the five retired "
+     "from 1978 (Ernster, blanket): single entry still never refutes S; dual entry refutes S from 1978.",
      "FAIL", "single_S_contested_from_1964, #guard cell ((Enc.single.stmt .S).opinionAt 2020); " + PROTO + ".forget10_1974, "
-     "#guard [5, 10, 20].all fun h => forgetYears",
+     "#guard [5, 10, 20].all fun h => forgetYears; " + PROTO + ".ernster_dual_1978, #guard supYears ernsterDates Enc.single.two 1",
      "PMID:16590695 PMID:13943645 PMID:13901866 PMID:5507209 PMID:138419 " + NOBEL, "no"),
     ("CH-13", "Reinterpretation over time (X_E)", "A polarity that changes with the year",
      "Hind & Jagendorf 1963 (PMID 16591093), 'Separation of light and dark stages in photophosphorylation'; GO:0009777.",
@@ -214,8 +223,12 @@ CASES = [
      "No retirement in the core. Proto D1 with dual entry: 1974 C established (0.803), S refuted (0.819), but 1965 C unsupported "
      "(0.585). The exit passes in 8 of 72 encodings; all 8 retire every report and drop the 6 memory-direction items. 1965 C "
      "contested in 50, 1974 C established in 35, 1974 S refuted in 18 (none without retirement; 2 with only the two "
-     "sourced retirements, both dual entry with all weights x2 and the memory items dropped; 16 retiring all 7).",
-     "INEXPRESSIBLE", PROTO + ".sup_dual_1974, sup_dual_1965, #guard grid.length, #guard [(gridParts.filter", "PMID:5871845 PMID:5332854", "no"),
+     "sourced retirements, both dual entry with all weights x2 and the memory items dropped; 16 retiring all 7). Review, with checked dates only (1964; the five from 1978 by the Nobel speech, read as a blanket "
+     "retirement) and the 6 memory items dropped: single entry passes the exit restated for 1978 (1965 C b=1/2 d=1/4, exactly on "
+     "tau; 1978 C b=0.882 established, S d=0.904 refuted). The 1974 exit still fails claim 3 (1974 S unsupported). With the "
+     "memory items kept, dual entry refutes S from 1978 but 1965 C is unsupported; single entry never refutes S.",
+     "INEXPRESSIBLE", PROTO + ".sup_dual_1974, sup_dual_1965, #guard grid.length, #guard [(gridParts.filter; " + PROTO
+     + ".ernster_noMemory_exit78, ernster_noMemory_1965_edge, #guard [Enc.single.two, Enc.dualEntry.two].map (exit78 ernsterDates)", "PMID:5871845 PMID:5332854 " + NOBEL, "no"),
     ("CH-29", "The textbook as canon (2013)", "Textbook evidence on the historical claim",
      "OpenStax how-cells-obtain-energy-m45439-73 'This flow of hydrogen ions across the membrane through ATP synthase is called "
      "chemiosmosis'; its R2 item (textbook 4/5, 2013) added to C.",
@@ -336,10 +349,19 @@ CASES = [
      "At face value counted twice with no warning: 1974 C b 0.674 to 0.695. Two copies of one PMID-0 item both count. At baseline "
      "(an advocate's review weighs 0) no effect.",
      "SILENT", "grey_baseline_weightless, #guard (cells (withGrey Enc.faceValue .review) 1974)", "PMID:5329743 PMID:22082452", "no"),
+    ("CH-50", "Recorded consensus on both rivals (Nobel 1978)", "Whether canon can refute the undead side (option K on both sides)",
+     "As CH-47, plus the same speech against S as a .textbook item (4/5, PMID 0, refutes): each half on the rival it names.",
+     "C established from 1978; S abandoned: 'Despite intensive efforts in many laboratories, however, no experimental evidence "
+     "could be obtained for these hypotheses' (Ernster 1978).",
+     "Single entry: C established in every year from 1978 (proved; 1978 b=0.804 d=0.157), which K on C alone never gives. But S "
+     "is contested every year from 1964 and never refuted, single or dual (proved; 1978 b=0.407 d=0.544): the seven reports still "
+     "outvote a canonical refutation. Dual entry: C established 1977 to 2025. Added by the review, 2026-10-31.",
+     "FAIL", "nobelBoth_single_from_1978, nobelBoth_single_S_never_refuted, nobelBoth_dual_S_never_refuted, "
+     "#guard cells (withNobelBoth Enc.single) 1978", NOBEL, "no"),
 ]
 
 
-# Root cause of each case (added at review, 2026-10-30), so the 49 marks read as a few causes.
+# Root cause of each case (added at review, 2026-10-30), so the marks read as a few causes.
 CAUSES = {
     "undead": "unreplicated reports keep voting: nothing retires an item",
     "scope": "the rivalry gives disbelief to a rival with no evidence of its own",
@@ -353,7 +375,7 @@ CAUSES = {
 }
 CAUSE = {}
 for ids, c in [
-        ("02 03 04 05 06 09 10 12 27 28 29 34 47", "undead"), ("08 22 45", "scope"), ("19 21 40", "hierarchy"),
+        ("02 03 04 05 06 09 10 12 27 28 29 34 47 50", "undead"), ("08 22 45", "scope"), ("19 21 40", "hierarchy"),
         ("07 15 16 25 26 43 48", "weights"), ("17 49", "independence"), ("18 20", "lint"),
         ("11 13 14 33 41 44", "argument"), ("30 31 32", "textbook"), ("01 23 24 35 36 37 38 39 42 46", "works")]:
     for i in ids.split():
@@ -361,7 +383,7 @@ for ids, c in [
 
 
 def main():
-    assert len({c[0] for c in CASES}) == len(CASES) == 49
+    assert len({c[0] for c in CASES}) == len(CASES) == 50
     assert set(CAUSE) == {c[0] for c in CASES} and set(CAUSE.values()) <= set(CAUSES)
     with open(OUT, "w", newline="") as f:
         w = csv.writer(f, delimiter="\t", lineterminator="\n")

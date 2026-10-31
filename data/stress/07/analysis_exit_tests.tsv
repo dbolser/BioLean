@@ -1,21 +1,22 @@
 test	view	measure	value	passes
 X2 flags first	pooled_llm	share of 42 flagged rows trivial; flagged rows interesting and true	0.88; 0	True
-X3 path_min beats ends-min	pooled_llm	AUC difference, not trivial; interesting	-0.061; -0.052	False
-X4 cut is stable	pooled_llm	largest move of the scorer-rule T (exact cut points) when one worth-showing row is demoted	0.000	True
-X4 on the 0.25 grid (for comparison)	pooled_llm	the same on the 0.25 grid	0.25	False
-X5 IC separates trivia	pooled_llm	AUC of IC, not trivial	0.734	False
+X3 path_min beats ends-min	pooled_llm	AUC difference, not trivial; interesting	-0.077; -0.094	False
+X4 cut is stable	pooled_llm	largest move of the scorer-rule T (exact cut points) when one worth-showing row is demoted	1.342	False
+X4 on the 0.25 grid (for comparison)	pooled_llm	the same on the 0.25 grid	1.25	False
+X5 IC separates trivia	pooled_llm	AUC of IC, not trivial	0.698	False
 X2 flags first	llm1	share of 42 flagged rows trivial; flagged rows interesting and true	0.88; 0	True
-X3 path_min beats ends-min	llm1	AUC difference, not trivial; interesting	-0.058; -0.020	False
-X4 cut is stable	llm1	largest move of the scorer-rule T (exact cut points) when one worth-showing row is demoted	0.000	True
-X4 on the 0.25 grid (for comparison)	llm1	the same on the 0.25 grid	0.25	False
-X5 IC separates trivia	llm1	AUC of IC, not trivial	0.716	False
-X2 flags first	llm2	share of 42 flagged rows trivial; flagged rows interesting and true	0.83; 0	True
-X3 path_min beats ends-min	llm2	AUC difference, not trivial; interesting	-0.057; -0.096	False
+X3 path_min beats ends-min	llm1	AUC difference, not trivial; interesting	-0.064; -0.090	False
+X4 cut is stable	llm1	largest move of the scorer-rule T (exact cut points) when one worth-showing row is demoted	1.038	False
+X4 on the 0.25 grid (for comparison)	llm1	the same on the 0.25 grid	0.75	False
+X5 IC separates trivia	llm1	AUC of IC, not trivial	0.676	False
+X2 flags first	llm2	share of 42 flagged rows trivial; flagged rows interesting and true	0.79; 0	False
+X3 path_min beats ends-min	llm2	AUC difference, not trivial; interesting	-0.056; -0.090	False
 X4 cut is stable	llm2	largest move of the scorer-rule T (exact cut points) when one worth-showing row is demoted	0.000	True
 X4 on the 0.25 grid (for comparison)	llm2	the same on the 0.25 grid	0.25	False
-X5 IC separates trivia	llm2	AUC of IC, not trivial	0.604	False
-X2 flags first	llm3	share of 42 flagged rows trivial; flagged rows interesting and true	0.88; 0	True
-X3 path_min beats ends-min	llm3	AUC difference, not trivial; interesting	-0.048; -0.050	False
+X5 IC separates trivia	llm2	AUC of IC, not trivial	0.742	False
+X2 flags first	llm3	share of 42 flagged rows trivial; flagged rows interesting and true	0.90; 0	True
+X3 path_min beats ends-min	llm3	AUC difference, not trivial; interesting	-0.080; -0.101	False
 X4 cut is stable	llm3	largest move of the scorer-rule T (exact cut points) when one worth-showing row is demoted	0.000	True
 X4 on the 0.25 grid (for comparison)	llm3	the same on the 0.25 grid	0.00	True
-X5 IC separates trivia	llm3	AUC of IC, not trivial	0.716	False
+X5 IC separates trivia	llm3	AUC of IC, not trivial	0.718	False
+X7 stand-in stable run to run	llm r2 vs r3	per-rater weighted kappa; same exact scorer interval	0.853/0.869/0.947; False	False

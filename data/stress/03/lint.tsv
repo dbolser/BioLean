@@ -1,0 +1,68 @@
+case	encoding	A1 encoding	A1 mark	flags	detail
+R01a	both	yes	PASS	L2	L2 2 item(s) on two or more rivals: 16589984, 16590258
+R01a	once			L8	L8 conservative has no items
+R01b	support-both	yes	FAIL	L2 L3	L2 1 item(s) on two or more rivals: 16590258; L3 supports two rivals: 16590258
+R01b	refute-only			L8 L8	L8 semi has no items; L8 dispersive has no items
+R01c	gen1-first	yes	FAIL	L4	L4 dispersive: PMID 16590258 twice with opposite polarity
+R01c	gen2-first	yes	FAIL	L4	L4 dispersive: PMID 16590258 twice with opposite polarity
+R01c	both-findings	yes	FAIL	L2 L3 L4 L4 L4	L2 2 item(s) on two or more rivals: 16590258#1, 16590258#2; L3 supports two rivals: 16590258#1; L4 semi: PMID 16590258 twice; L4 conservative: PMID 16590258 twice; L4 dispersive: PMID 16590258 twice with opposite polarity
+R02a	both	yes	PASS	L2	L2 2 item(s) on two or more rivals: 12981234, 19871359
+R02b	naive	yes	FAIL	L2	L2 4 item(s) on two or more rivals: 12981234, 13321939, 13436476, 19871359
+R02b	ctx-cellular			L2	L2 2 item(s) on two or more rivals: 12981234, 19871359
+R02b	ctx-tmv			L2	L2 1 item(s) on two or more rivals: 13436476
+R03a	both	yes	SILENT	L2 L9	L2 4 item(s) on two or more rivals: 14381427, 14381429, cajal88, harrison10; L9 a claim and its negation: enter as one Statement
+R03a	one-claim				
+R03b	naive	yes	FAIL	L2 L9	L2 5 item(s) on two or more rivals: 14381427, 14381429, 37079688, cajal88, harrison10; L9 a claim and its negation: enter as one Statement
+R03b	ctx			L2 L9	L2 4 item(s) on two or more rivals: 14381427, 14381429, cajal88, harrison10; L9 a claim and its negation: enter as one Statement
+R04	naive	yes	SILENT	L2	L2 3 item(s) on two or more rivals: 12991232, 13642302, 14898516
+R04	ctx-vertebrate			L2	L2 2 item(s) on two or more rivals: 12991232, 14898516
+R04	ctx-crayfish				
+R05	naive	yes	FAIL	L2 L3 L7	L2 2 item(s) on two or more rivals: 11809181, 1558340; L3 supports two rivals: 11809181; L7 different agents for one effect: H. pylori, acid/stress, NSAID
+R05	co-causes			L2 L7	L2 1 item(s) on two or more rivals: 1558340; L7 different agents for one effect: H. pylori, acid/stress
+R06	naive	yes	SILENT	L2	L2 1 item(s) on two or more rivals: 283394
+R07	both	yes	SILENT	L2	L2 1 item(s) on two or more rivals: 13552693
+R08a	repo	yes	PASS	L2	L2 4 item(s) on two or more rivals: 16742541, 4272126, 4330063, 5220864
+R08a	repo-real			L2	L2 4 item(s) on two or more rivals: 16742541, 4272126, 4330063, 5220864
+R08a	once				
+R08a	once-real				
+R08c	both	yes	FAIL	L2	L2 4 item(s) on two or more rivals: 16742541, 4272126, 4330063, 5220864
+R08d	naive	yes	FAIL	L2	L2 4 item(s) on two or more rivals: 16742541, 4272126, 4330063, 5220864
+R09	both	yes	SILENT	L2	L2 2 item(s) on two or more rivals: pasteur61, tyndall77
+R10	both	yes	PASS	L2	L2 5 item(s) on two or more rivals: 1904993, 29722831, 30460993, 5637732, 5767777
+R11a	one-claim	yes	PASS		
+R11b	one-claim	yes	INEXPRESSIBLE		
+R11b	removed-by-hand				
+R12	hypothesis	yes	SILENT	L2	L2 3 item(s) on two or more rivals: correns00, devries00, tschermak00
+R12	data			L2	L2 3 item(s) on two or more rivals: correns00, devries00, tschermak00
+R13	both	yes	PASS	L2 L6	L2 9 item(s) on two or more rivals: 10361303, 12192407, 14614504, 16572163, 27185558, 7604025; L6 Archezoa and secondary loss differ in 3 places
+R13	once			L6	L6 Archezoa and secondary loss differ in 3 places
+R14	both	yes	SILENT	L2	L2 2 item(s) on two or more rivals: 10066161, 202030
+R15	both	yes	SILENT	L2	L2 2 item(s) on two or more rivals: 4098863, 5334198
+R16	one-claim				
+R16	both	yes	SILENT	L2 L9	L2 7 item(s) on two or more rivals: 23746839, 29513649, 29625071, 30911133, 34798047, 35794479; L9 a claim and its negation: enter as one Statement
+R16b	textbook	yes	SILENT		
+R16b	transport				
+R16b	without				
+R17	both	yes	SILENT	L2	L2 1 item(s) on two or more rivals: 13882203
+R18	both	yes	SILENT	L2	L2 2 item(s) on two or more rivals: 13054694, 7432492
+R19	one-claim				
+R19	both	yes	PASS	L2 L9	L2 4 item(s) on two or more rivals: 24336283, 25945739, 31819234, 37316666; L9 a claim and its negation: enter as one Statement
+R20	both	yes	PASS	L2	L2 2 item(s) on two or more rivals: 4316300, 4316301
+R21	both	yes	FAIL	L2 L6 L6 L8	L2 2 item(s) on two or more rivals: 20110469, 4963878; L6 protein only and virus differ in 2 places; L6 protein only and virino differ in 2 places; L8 virino has no items
+R21	refute-only			L6 L6 L8	L6 protein only and virus differ in 2 places; L6 protein only and virino differ in 2 places; L8 virino has no items
+R22	naive	yes	FAIL	L2 L3	L2 1 item(s) on two or more rivals: west99; L3 supports two rivals: west99
+R22	not-rivals				
+R23	as-rivalry	yes	FAIL		
+R24	both	yes	PASS	L2	L2 1 item(s) on two or more rivals: 7617035
+S01	both	yes	FAIL	L2	L2 1 item(s) on two or more rivals: 1
+S01	once			L8	L8 B has no items
+S03	support-both	yes	FAIL	L2 L3	L2 1 item(s) on two or more rivals: 1; L3 supports two rivals: 1
+S03	refute-only			L8 L8	L8 A has no items; L8 B has no items
+S04	both	yes	PASS		
+S05	unsplit				
+S05	split	yes	FAIL	L2 L3	L2 1 item(s) on two or more rivals: 2; L3 supports two rivals: 2
+S06	both	yes	SILENT	L2	L2 2 item(s) on two or more rivals: 2, 3
+S07	both	yes	INEXPRESSIBLE		
+S09	dup	yes	FAIL	L1 L3 L8	L1 duplicate rival: A; L3 supports two rivals: 1, 4; L8 B has no items
+S10	both	yes	SILENT	L8	L8 A has no items
+S11	refute-only	yes	INEXPRESSIBLE	L8	L8 A has no items

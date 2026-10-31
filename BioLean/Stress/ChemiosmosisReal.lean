@@ -22,7 +22,8 @@ Two namespaces, kept apart on purpose:
   operator or type. Encodings (single or dual entry, how reviews count, dropped items, weights,
   extra items such as the 1978 Nobel speech) are data. The one general lemma,
   `Rivalry.forall_from`, is about existing core functions.
-* `BioLean.Proto.ChemiosmosisReal`: prototypes of the doc's options D1, F2, G, H, I, J, L and M.
+* `BioLean.Proto.ChemiosmosisReal`: prototypes of the doc's options D1, E, F2, G, H, I, J, L, M
+  and N.
   Some would change the core if adopted, some are curator encodings; each section says which.
   Nothing in the Stress part uses them.
 
@@ -1274,6 +1275,48 @@ theorem nobel_dual_from_1977 (year : Nat) (hy : 1977 ≤ year) :
 
 #guard cells (withNobel Enc.dualEntry) 1978 = ["b=0.815 d=0.146 established", "b=0.356 d=0.602 contested"]
 
+/-! ## CH-50: recorded consensus on both rivals (option K on both sides; added at review 2026-10-31)
+
+The same 1978 speech also speaks of the chemical-intermediate hypotheses: "Despite intensive
+efforts in many laboratories, however, no experimental evidence could be obtained for these
+hypotheses". Each half bears directly on one rival, so each goes on that rival alone (single
+entry). "No evidence was obtained" is not "shown false", but `.refutes` is the only other
+polarity the core has. -/
+
+def ernster78S : Evidence :=
+  { pmid := 0, year := 1978, kind := .textbook, polarity := .refutes,
+    note := "Ernster L, presentation speech, Nobel Prize in Chemistry 1978: for the chemical-intermediate hypotheses 'no experimental evidence could be obtained'" }
+
+def withNobelBoth (enc : Enc) : Rivalry :=
+  ⟨[{ enc.stmt .C with evidence := enc.items .C ++ [nobel78] },
+    { enc.stmt .S with evidence := enc.items .S ++ [ernster78S] }], by simp⟩
+
+/-- CH-50. Single entry, canon on both rivals: chemiosmosis established in every year from 1978. -/
+theorem nobelBoth_single_from_1978 (year : Nat) (hy : 1978 ≤ year) :
+    (vAt (withNobelBoth Enc.single) year).head? = some .established :=
+  Rivalry.forall_from (withNobelBoth Enc.single) recordYears 1978
+    (P := fun r => (vs r).head? = some .established)
+    (by decide +kernel) (by decide +kernel) (by decide +kernel) year hy
+
+/-- CH-50. ... but S is never refuted, in any year, even with canon against it. FAIL. -/
+theorem nobelBoth_single_S_never_refuted (year : Nat) :
+    (vAt (withNobelBoth Enc.single) year)[1]? ≠ some .refuted :=
+  Rivalry.forall_from (withNobelBoth Enc.single) recordYears 0 (P := fun r => (vs r)[1]? ≠ some .refuted)
+    (by decide +kernel) (by decide +kernel) (by decide +kernel) year (Nat.zero_le _)
+
+/-- CH-50. Dual entry as well: S never refuted. -/
+theorem nobelBoth_dual_S_never_refuted (year : Nat) :
+    (vAt (withNobelBoth Enc.dualEntry) year)[1]? ≠ some .refuted :=
+  Rivalry.forall_from (withNobelBoth Enc.dualEntry) recordYears 0 (P := fun r => (vs r)[1]? ≠ some .refuted)
+    (by decide +kernel) (by decide +kernel) (by decide +kernel) year (Nat.zero_le _)
+
+#guard cells (withNobelBoth Enc.single) 1978 = ["b=0.804 d=0.157 established", "b=0.407 d=0.544 contested"]
+#guard cells (withNobelBoth Enc.single) 2020 = ["b=0.815 d=0.149 established", "b=0.400 d=0.552 contested"]
+#guard yearsWhere (withNobelBoth Enc.single) 0 .established = List.range' 1978 48
+#guard yearsWhere (withNobelBoth Enc.single) 1 .contested = List.range' 1964 62
+#guard yearsWhere (withNobelBoth Enc.dualEntry) 0 .established = List.range' 1977 49
+#guard cells (withNobelBoth Enc.dualEntry) 1978 = ["b=0.823 d=0.138 established", "b=0.304 d=0.659 contested"]
+
 /-! ## CH-48: verdicts on a knife edge (option L) -/
 
 /-- CH-48. 1974 under other thresholds: τ = 1/5 makes chemiosmosis contested; θ = 7/10 makes it
@@ -1766,5 +1809,138 @@ theorem forget10_1974 : (forget 10 1974 Enc.single.two).map (fun p => verdictOf 
 -- N, h = 10, 2020: C's own evidence has faded too. Both rivals unsupported.
 #guard (forget 10 2020 Enc.single.two).map (fun p => (p.1.toDecimal, p.2.toDecimal, verdictOf p.1 p.2)) =
   [("0.621", "0.106", .unsupported), ("0.083", "0.619", .unsupported)]
+
+/-! ## Option E (crude, added at build 2026-10-31): lift a mediator instance along is_a
+
+As a core change E is a new `Derivation` rule ("`a` drives `t` via `m`, and `m` is_a `m'`, give
+`a` drives `t` via `m'`"), plus a second change so that `Rivalry` can take a derivation. Here both
+are done by hand, outside the core, from core functions only.
+
+Boyer 1962 and Peter 1963 reported phosphohistidine as an intermediate; Mitchell RA 1964 and Kreil
+1964 placed it on succinate thiokinase. Under E these four items bear on the narrower claim "the
+respiratory chain drives ox phos via phospho-L-histidine" (`phStmt`), not on S. The lift to S uses
+`Opinion.weakest`, as the core's `isaInheritEffect` and `relChain` do: belief passes up, and
+disbelief in the instance does not. The is_a premise is `.definitional` (an ox phos intermediate
+that is a phosphoryl compound is a chemical intermediate). CHEBI:26048 is the ChEBI parent of
+both isomers, so the isomer question (UNVERIFIED) does not arise.
+
+Caveat (review, 2026-10-31): the example labels `cI` "non-phosphorylated", and phosphohistidine is
+phosphorylated, so `isaCI` is false of that label. It holds only if S is read as "via some chemical
+high-energy intermediate", which is how the record already reads S (Griffiths & Chaplain 1962
+report a phosphorylated intermediate too). -/
+
+def phosphoHistidine : Entity .chemical := ⟨"CHEBI:26048", "phospho-L-histidine"⟩
+
+/-- The four items that move from S to the instance claim. -/
+def phPmids : List Nat := [14014715, 13942705, 5871845, 5332854]
+
+def phStmt (enc : Enc) : Statement where
+  id := "via phospho-L-histidine"
+  text := "the respiratory chain drives oxidative phosphorylation via phospho-L-histidine"
+  claim := .mediatedBy respChain .pos (.process oxphos) (.amount phosphoHistidine)
+  evidence := (enc.items .S).filter (phPmids.contains ·.pmid)
+
+def isaCI : Statement where
+  id := "phospho-L-histidine is_a C~I"
+  text := "phospho-L-histidine is a chemical high-energy intermediate (if it is one at all)"
+  claim := .rel Rel.isA phosphoHistidine cI
+  evidence := [{ pmid := 0, year := 0, kind := .definitional, note := "true by the meaning of C~I" }]
+
+/-- S without the four items. -/
+def sRest (enc : Enc) : Statement :=
+  { enc.stmt .S with evidence := (enc.items .S).filter (!phPmids.contains ·.pmid) }
+
+/-- The lifted opinion: `weakest` of the instance claim and the is_a, as the core's is_a rules. -/
+def lifted [EvidenceModel] (enc : Enc) (year : Nat) : Opinion :=
+  ((phStmt enc).opinionAt year).weakest isaCI.opinion
+
+/-- C and S under E in `year`, with `extra` fused into S's own opinion; then the two-rival rivalry
+step exactly as `Rivalry.opinions` takes it (own opinion fused with `against` of the other). -/
+def liftWith [EvidenceModel] (enc : Enc) (year : Nat) (extra : Opinion) : List Opinion :=
+  let c := (enc.stmt .C).opinionAt year
+  let s := ((sRest enc).opinionAt year).fuse extra
+  [c.fuse s.against, s.fuse c.against]
+
+def liftAt [EvidenceModel] (enc : Enc) (year : Nat) : List Opinion := liftWith enc year (lifted enc year)
+
+-- Sanity: with nothing lifted, E is the core's rivalry with the four items retired (D1,
+-- `phosphoBoth`), from 1964 on.
+#guard [1964, 1974, 2020].all fun y => (liftWith Enc.single y .vacuous).map (fun o => (o.belief, o.disbelief)) ==
+  (supRiv phosphoBoth Enc.single.two y).opinions.map (fun p => (p.2.belief, p.2.disbelief))
+-- 1963: nothing refuted yet, so lifting gives exactly today's numbers (2 items, belief 2/3).
+#guard (liftAt Enc.single 1963).map cell = ["b=0.000 d=0.866 refuted", "b=0.866 d=0.000 established"]
+-- The lifted support in 1974: the instance claim is 2 for, 2 against (b = d = 2/5); weakest
+-- passes up its belief 2/5 and none of its disbelief.
+#guard cell (lifted Enc.single 1974) = "b=0.400 d=0.000 unsupported"
+/-- CH-11 under E. The 1964 papers no longer count against S, so S's own belief rises from 5/7 to
+0.860 (established on its own evidence), and 1974 chemiosmosis is contested, not unsupported. -/
+theorem lift_1974 : ((liftAt Enc.single 1974).map (·.verdict)) = [.contested, .contested] := by
+  decide +kernel
+#guard cell (((sRest Enc.single).opinionAt 1974).fuse (lifted Enc.single 1974)) = "b=0.860 d=0.000 established"
+#guard (liftAt Enc.single 1974).map cell = ["b=0.586 d=0.368 contested", "b=0.536 d=0.376 contested"]
+#guard (liftAt Enc.single 1965).map cell = ["b=0.327 d=0.563 contested", "b=0.563 d=0.327 contested"]
+-- E, single entry: chemiosmosis contested in every year 1965 to 2025, never established; S never
+-- refuted. Dual entry: established in 1977 only, as without E; S never refuted.
+#guard (allYears.filter fun y => ((liftAt Enc.single y).head?.map (·.verdict)) == some .contested) = List.range' 1965 61
+#guard (allYears.filter fun y => ((liftAt Enc.single y).head?.map (·.verdict)) == some .established) = []
+#guard (allYears.filter fun y => ((liftAt Enc.dualEntry y).head?.map (·.verdict)) == some .established) = [1977]
+#guard (allYears.filter fun y => [Enc.single, Enc.dualEntry].any fun e =>
+  ((liftAt e y)[1]?.map (·.verdict)) == some .refuted) = []
+#guard (liftAt Enc.dualEntry 1974).map cell = ["b=0.763 d=0.177 unsupported", "b=0.373 d=0.565 contested"]
+
+/-! ## Option D1 with checked dates only (added at review, 2026-10-31)
+
+The 1978 Nobel presentation speech says of the chemical-intermediate hypotheses: "Despite intensive
+efforts in many laboratories, however, no experimental evidence could be obtained for these
+hypotheses". It names none of the five unrefuted reports, and its context is the state of play in
+1961. Read as a blanket retirement, it dates all five at 1978 at the latest. That reading is the
+curator's; the date and the sentence are checked. A curator list, so no core change (D1). -/
+
+/-- The phosphohistidine pair from 1964 (sourced), the other five from 1978 (Ernster, blanket). -/
+def ernsterDates : List (Nat × Nat) :=
+  phosphoHis ++ [(16590695, 1978), (13943645, 1978), (13901866, 1978), (5507209, 1978), (138419, 1978)]
+
+/-- The years 1950 to 2025 in which rival `i` has verdict `v` under retirement `rules`. -/
+def supYears [EvidenceModel] (rules : List (Nat × Nat)) (r : Rivalry) (i : Nat) (v : Verdict) : List Nat :=
+  allYears.filter fun y => (vs (supRiv rules r y))[i]? == some v
+
+/-- The exit restated for 1978 (experiment E8): 1965 C contested; 1978 C established, S refuted. -/
+def exit78 [EvidenceModel] (rules : List (Nat × Nat)) (r : Rivalry) : Bool :=
+  (vs (supRiv rules r 1965)).head? == some .contested && vs (supRiv rules r 1978) == [.established, .refuted]
+
+def noMemSingle : Rivalry := { Enc.single with dropMemory := true }.two
+def noMemDual : Rivalry := { Enc.dualEntry with dropMemory := true }.two
+
+-- Memory items kept: neither entry passes. Dual entry refutes S from 1978 and establishes C from
+-- 1976, but 1965 C is unsupported. Single entry never refutes S; C established only from 2020.
+#guard [Enc.single.two, Enc.dualEntry.two].map (exit78 ernsterDates) = [false, false]
+/-- Dual entry, checked dates: 1978 chemiosmosis established and S refuted. -/
+theorem ernster_dual_1978 : (supRiv ernsterDates Enc.dualEntry.two 1978).verdicts =
+    [("chemiosmotic", .established), ("chemical intermediate", .refuted)] := by decide +kernel
+#guard cells (supRiv ernsterDates Enc.dualEntry.two 1978) 1978 = ["b=0.808 d=0.145 established", "b=0.094 d=0.842 refuted"]
+#guard supYears ernsterDates Enc.dualEntry.two 0 .established = List.range' 1976 50
+#guard supYears ernsterDates Enc.dualEntry.two 1 .refuted = List.range' 1978 48
+#guard vs (supRiv ernsterDates Enc.dualEntry.two 1965) = [.unsupported, .contested]
+#guard vs (supRiv ernsterDates Enc.single.two 1965) = [.contested, .contested]
+#guard cells (supRiv ernsterDates Enc.single.two 1978) 1978 = ["b=0.795 d=0.159 unsupported", "b=0.169 d=0.718 unsupported"]
+#guard supYears ernsterDates Enc.single.two 0 .established = List.range' 2020 6
+#guard supYears ernsterDates Enc.single.two 1 .refuted = []
+
+/-- Single entry, checked dates, the six memory items dropped: the exit restated for 1978 passes.
+No judgement dates, no core change. -/
+theorem ernster_noMemory_exit78 : exit78 ernsterDates noMemSingle = true ∧
+    vs (supRiv ernsterDates noMemSingle 1965) = [.contested, .contested] ∧
+    vs (supRiv ernsterDates noMemSingle 1978) = [.established, .refuted] := by decide +kernel
+/-- ... with no margin: 1965 chemiosmosis has b = 1/2 and d = 1/4 exactly, d on τ. -/
+theorem ernster_noMemory_1965_edge :
+    ((supRiv ernsterDates noMemSingle 1965).opinions.map fun p => (p.2.belief, p.2.disbelief)).head? =
+      some (1 / 2, 1 / 4) := by decide +kernel
+-- C established 1969 and 1971 to 2025; S refuted from 1978 only, so the 1974 exit still fails
+-- claim 3 (1974 S unsupported, d = 14/19). Dual entry passes 1978 too.
+#guard supYears ernsterDates noMemSingle 0 .established = [1969] ++ List.range' 1971 55
+#guard supYears ernsterDates noMemSingle 1 .refuted = List.range' 1978 48
+#guard vs (supRiv ernsterDates noMemSingle 1974) = [.established, .unsupported]
+#guard cells (supRiv ernsterDates noMemSingle 1978) 1978 = ["b=0.882 d=0.058 established", "b=0.000 d=0.904 refuted"]
+#guard exit78 ernsterDates noMemDual = true
 
 end BioLean.Proto.ChemiosmosisReal

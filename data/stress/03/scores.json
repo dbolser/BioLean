@@ -1,0 +1,2581 @@
+{
+ "R01a": {
+  "A1": [
+   "PASS",
+   []
+  ],
+  "A2": [
+   "PASS",
+   []
+  ],
+  "A2H": [
+   "PASS",
+   []
+  ],
+  "D1": [
+   "PASS",
+   []
+  ],
+  "B1": [
+   "PASS",
+   []
+  ],
+  "B2": [
+   "PASS",
+   []
+  ],
+  "B3": [
+   "PASS",
+   []
+  ],
+  "B2best": [
+   "PASS",
+   []
+  ],
+  "E1:1/10": [
+   "PASS",
+   []
+  ],
+  "E1:1/5": [
+   "SILENT",
+   [
+    "1958 semi: unsupported, want established",
+    "1958 dispersive: unsupported, want refuted"
+   ]
+  ],
+  "E1:3/10": [
+   "SILENT",
+   [
+    "1958 semi: unsupported, want established",
+    "1958 dispersive: unsupported, want refuted"
+   ]
+  ]
+ },
+ "R01b": {
+  "A1": [
+   "FAIL",
+   [
+    "1958 semi: contested, want unsupported",
+    "1958 dispersive: contested, want unsupported"
+   ]
+  ],
+  "A2": [
+   "PASS",
+   []
+  ],
+  "A2H": [
+   "PASS",
+   []
+  ],
+  "D1": [
+   "PASS",
+   []
+  ],
+  "B1": [
+   "PASS",
+   []
+  ],
+  "B2": [
+   "PASS",
+   []
+  ],
+  "B3": [
+   "PASS",
+   []
+  ],
+  "B2best": [
+   "PASS",
+   []
+  ],
+  "E1:1/10": [
+   "PASS",
+   []
+  ],
+  "E1:1/5": [
+   "PASS",
+   []
+  ],
+  "E1:3/10": [
+   "PASS",
+   []
+  ]
+ },
+ "R01c": {
+  "A1": [
+   "FAIL",
+   [
+    "dispersive (7/10, 0) unsupported; (7/17, 7/17) contested"
+   ]
+  ],
+  "A2": [
+   "PASS",
+   [
+    "dispersive belief 0, disbelief above 0"
+   ]
+  ],
+  "A2H": [
+   "PASS",
+   [
+    "dispersive belief 0, disbelief above 0"
+   ]
+  ],
+  "D1": [
+   "FAIL",
+   [
+    "dispersive (7/10, 0) unsupported; (7/10, 0) unsupported"
+   ]
+  ],
+  "B1": [
+   "PASS",
+   [
+    "dispersive belief 0, disbelief above 0"
+   ]
+  ],
+  "B2": [
+   "PASS",
+   [
+    "dispersive belief 0, disbelief above 0"
+   ]
+  ],
+  "B3": [
+   "PASS",
+   [
+    "dispersive belief 0, disbelief above 0"
+   ]
+  ],
+  "B2best": [
+   "PASS",
+   [
+    "dispersive belief 0, disbelief above 0"
+   ]
+  ],
+  "E1:1/10": [
+   "PASS",
+   [
+    "dispersive belief 0, disbelief above 0"
+   ]
+  ],
+  "E1:1/5": [
+   "PASS",
+   [
+    "dispersive belief 0, disbelief above 0"
+   ]
+  ],
+  "E1:3/10": [
+   "PASS",
+   [
+    "dispersive belief 0, disbelief above 0"
+   ]
+  ]
+ },
+ "R02a": {
+  "A1": [
+   "PASS",
+   []
+  ],
+  "A2": [
+   "PASS",
+   []
+  ],
+  "A2H": [
+   "PASS",
+   []
+  ],
+  "D1": [
+   "PASS",
+   []
+  ],
+  "B1": [
+   "PASS",
+   []
+  ],
+  "B2": [
+   "PASS",
+   []
+  ],
+  "B3": [
+   "PASS",
+   []
+  ],
+  "B2best": [
+   "PASS",
+   []
+  ],
+  "E1:1/10": [
+   "PASS",
+   []
+  ],
+  "E1:1/5": [
+   "PASS",
+   []
+  ],
+  "E1:3/10": [
+   "PASS",
+   []
+  ]
+ },
+ "R02b": {
+  "A1": [
+   "FAIL",
+   [
+    "1957 DNA: contested, want established",
+    "1957 RNA: contested, want established"
+   ]
+  ],
+  "A2": [
+   "SILENT",
+   [
+    "1957 protein: unsupported, want refuted",
+    "1957 RNA: unsupported, want established"
+   ]
+  ],
+  "A2H": [
+   "SILENT",
+   [
+    "1957 protein: unsupported, want refuted",
+    "1957 RNA: unsupported, want established"
+   ]
+  ],
+  "D1": [
+   "FAIL",
+   [
+    "1957 DNA: contested, want established",
+    "1957 RNA: contested, want established"
+   ]
+  ],
+  "B1": [
+   "FAIL",
+   [
+    "1957 DNA: contested, want established",
+    "1957 RNA: contested, want established"
+   ]
+  ],
+  "B2": [
+   "FAIL",
+   [
+    "1957 DNA: contested, want established",
+    "1957 RNA: contested, want established"
+   ]
+  ],
+  "B3": [
+   "SILENT",
+   [
+    "1957 DNA: unsupported, want established",
+    "1957 protein: unsupported, want refuted",
+    "1957 RNA: unsupported, want established"
+   ]
+  ],
+  "B2best": [
+   "SILENT",
+   [
+    "1957 protein: unsupported, want refuted",
+    "1957 RNA: unsupported, want established"
+   ]
+  ],
+  "E1:1/10": [
+   "SILENT",
+   [
+    "1957 protein: unsupported, want refuted",
+    "1957 RNA: unsupported, want established"
+   ]
+  ],
+  "E1:1/5": [
+   "SILENT",
+   [
+    "1957 protein: unsupported, want refuted",
+    "1957 RNA: unsupported, want established"
+   ]
+  ],
+  "E1:3/10": [
+   "SILENT",
+   [
+    "1957 protein: unsupported, want refuted",
+    "1957 RNA: unsupported, want established"
+   ]
+  ]
+ },
+ "R03a": {
+  "A1": [
+   "SILENT",
+   [
+    "1906 neuron doctrine: unsupported, want contested",
+    "1955 neuron doctrine: unsupported, want established"
+   ]
+  ],
+  "A2": [
+   "SILENT",
+   [
+    "1955 neuron doctrine: unsupported, want established",
+    "1955 reticular: unsupported, want refuted"
+   ]
+  ],
+  "A2H": [
+   "SILENT",
+   [
+    "1955 neuron doctrine: unsupported, want established",
+    "1955 reticular: unsupported, want refuted"
+   ]
+  ],
+  "D1": [
+   "SILENT",
+   [
+    "1955 neuron doctrine: unsupported, want established",
+    "1955 reticular: unsupported, want refuted"
+   ]
+  ],
+  "B1": [
+   "SILENT",
+   [
+    "1955 neuron doctrine: unsupported, want established",
+    "1955 reticular: unsupported, want refuted"
+   ]
+  ],
+  "B2": [
+   "SILENT",
+   [
+    "1955 neuron doctrine: unsupported, want established",
+    "1955 reticular: unsupported, want refuted"
+   ]
+  ],
+  "B3": [
+   "SILENT",
+   [
+    "1955 neuron doctrine: unsupported, want established",
+    "1955 reticular: unsupported, want refuted"
+   ]
+  ],
+  "B2best": [
+   "SILENT",
+   [
+    "1955 neuron doctrine: unsupported, want established",
+    "1955 reticular: unsupported, want refuted"
+   ]
+  ],
+  "E1:1/10": [
+   "SILENT",
+   [
+    "1955 neuron doctrine: unsupported, want established",
+    "1955 reticular: unsupported, want refuted"
+   ]
+  ],
+  "E1:1/5": [
+   "SILENT",
+   [
+    "1955 neuron doctrine: unsupported, want established",
+    "1955 reticular: unsupported, want refuted"
+   ]
+  ],
+  "E1:3/10": [
+   "SILENT",
+   [
+    "1955 neuron doctrine: unsupported, want established",
+    "1955 reticular: unsupported, want refuted"
+   ]
+  ]
+ },
+ "R03b": {
+  "A1": [
+   "FAIL",
+   [
+    "the ctenophore paper moves the vertebrate numbers"
+   ]
+  ],
+  "A2": [
+   "PASS",
+   [
+    "2023 equals 2022"
+   ]
+  ],
+  "A2H": [
+   "PASS",
+   [
+    "2023 equals 2022"
+   ]
+  ],
+  "D1": [
+   "FAIL",
+   [
+    "the ctenophore paper moves the vertebrate numbers"
+   ]
+  ],
+  "B1": [
+   "FAIL",
+   [
+    "the ctenophore paper moves the vertebrate numbers"
+   ]
+  ],
+  "B2": [
+   "FAIL",
+   [
+    "the ctenophore paper moves the vertebrate numbers"
+   ]
+  ],
+  "B3": [
+   "FAIL",
+   [
+    "the ctenophore paper moves the vertebrate numbers"
+   ]
+  ],
+  "B2best": [
+   "PASS",
+   [
+    "2023 equals 2022"
+   ]
+  ],
+  "E1:1/10": [
+   "PASS",
+   [
+    "2023 equals 2022"
+   ]
+  ],
+  "E1:1/5": [
+   "PASS",
+   [
+    "2023 equals 2022"
+   ]
+  ],
+  "E1:3/10": [
+   "PASS",
+   [
+    "2023 equals 2022"
+   ]
+  ]
+ },
+ "R04": {
+  "A1": [
+   "SILENT",
+   [
+    "1959 chemical: unsupported, want established",
+    "1959 electrical (crayfish): unsupported, want established"
+   ]
+  ],
+  "A2": [
+   "SILENT",
+   [
+    "1959 electrical (crayfish): unsupported, want established"
+   ]
+  ],
+  "A2H": [
+   "SILENT",
+   [
+    "1959 electrical (crayfish): unsupported, want established"
+   ]
+  ],
+  "D1": [
+   "SILENT",
+   [
+    "1959 chemical: unsupported, want established",
+    "1959 electrical (crayfish): unsupported, want established"
+   ]
+  ],
+  "B1": [
+   "SILENT",
+   [
+    "1959 chemical: unsupported, want established",
+    "1959 electrical (crayfish): unsupported, want established"
+   ]
+  ],
+  "B2": [
+   "SILENT",
+   [
+    "1959 chemical: unsupported, want established",
+    "1959 electrical (crayfish): unsupported, want established"
+   ]
+  ],
+  "B3": [
+   "SILENT",
+   [
+    "1959 chemical: unsupported, want established",
+    "1959 electrical (crayfish): unsupported, want established"
+   ]
+  ],
+  "B2best": [
+   "SILENT",
+   [
+    "1959 electrical (crayfish): unsupported, want established"
+   ]
+  ],
+  "E1:1/10": [
+   "SILENT",
+   [
+    "1959 electrical (crayfish): unsupported, want established"
+   ]
+  ],
+  "E1:1/5": [
+   "SILENT",
+   [
+    "1959 electrical (crayfish): unsupported, want established"
+   ]
+  ],
+  "E1:3/10": [
+   "SILENT",
+   [
+    "1959 electrical (crayfish): unsupported, want established"
+   ]
+  ]
+ },
+ "R05": {
+  "A1": [
+   "FAIL",
+   [
+    "2002 H. pylori: contested, want established",
+    "2002 NSAID: contested, want established"
+   ]
+  ],
+  "A2": [
+   "PASS",
+   []
+  ],
+  "A2H": [
+   "PASS",
+   []
+  ],
+  "D1": [
+   "FAIL",
+   [
+    "2002 NSAID: contested, want established"
+   ]
+  ],
+  "B1": [
+   "SILENT",
+   [
+    "2002 H. pylori: unsupported, want established",
+    "2002 NSAID: unsupported, want established"
+   ]
+  ],
+  "B2": [
+   "FAIL",
+   [
+    "2002 NSAID: refuted, want established"
+   ]
+  ],
+  "B3": [
+   "FAIL",
+   [
+    "2002 NSAID: refuted, want established"
+   ]
+  ],
+  "B2best": [
+   "PASS",
+   []
+  ],
+  "E1:1/10": [
+   "PASS",
+   []
+  ],
+  "E1:1/5": [
+   "PASS",
+   []
+  ],
+  "E1:3/10": [
+   "PASS",
+   []
+  ]
+ },
+ "R06": {
+  "A1": [
+   "SILENT",
+   [
+    "1978 lock-and-key: unsupported, want refuted",
+    "2013 induced fit: unsupported, want established"
+   ]
+  ],
+  "A2": [
+   "SILENT",
+   [
+    "1978 lock-and-key: unsupported, want refuted"
+   ]
+  ],
+  "A2H": [
+   "SILENT",
+   [
+    "1978 lock-and-key: unsupported, want refuted"
+   ]
+  ],
+  "D1": [
+   "SILENT",
+   [
+    "1978 lock-and-key: unsupported, want refuted",
+    "2013 induced fit: unsupported, want established"
+   ]
+  ],
+  "B1": [
+   "SILENT",
+   [
+    "1978 lock-and-key: unsupported, want refuted",
+    "2013 induced fit: unsupported, want established"
+   ]
+  ],
+  "B2": [
+   "FAIL",
+   [
+    "1978 lock-and-key: unsupported, want refuted",
+    "2013 conformational selection: refuted, want established or unsupported"
+   ]
+  ],
+  "B3": [
+   "FAIL",
+   [
+    "1978 lock-and-key: unsupported, want refuted",
+    "2013 conformational selection: refuted, want established or unsupported"
+   ]
+  ],
+  "B2best": [
+   "SILENT",
+   [
+    "1978 lock-and-key: unsupported, want refuted"
+   ]
+  ],
+  "E1:1/10": [
+   "SILENT",
+   [
+    "1978 lock-and-key: unsupported, want refuted"
+   ]
+  ],
+  "E1:1/5": [
+   "SILENT",
+   [
+    "1978 lock-and-key: unsupported, want refuted"
+   ]
+  ],
+  "E1:3/10": [
+   "SILENT",
+   [
+    "1978 lock-and-key: unsupported, want refuted"
+   ]
+  ]
+ },
+ "R07": {
+  "A1": [
+   "SILENT",
+   [
+    "1976 clonal selection: unsupported, want established"
+   ]
+  ],
+  "A2": [
+   "SILENT",
+   [
+    "1976 instructive: unsupported, want refuted",
+    "1976 clonal selection: unsupported, want established"
+   ]
+  ],
+  "A2H": [
+   "SILENT",
+   [
+    "1976 instructive: unsupported, want refuted",
+    "1976 clonal selection: unsupported, want established"
+   ]
+  ],
+  "D1": [
+   "SILENT",
+   [
+    "1976 instructive: unsupported, want refuted",
+    "1976 clonal selection: unsupported, want established"
+   ]
+  ],
+  "B1": [
+   "SILENT",
+   [
+    "1976 instructive: unsupported, want refuted",
+    "1976 clonal selection: unsupported, want established"
+   ]
+  ],
+  "B2": [
+   "SILENT",
+   [
+    "1976 instructive: unsupported, want refuted",
+    "1976 clonal selection: unsupported, want established"
+   ]
+  ],
+  "B3": [
+   "SILENT",
+   [
+    "1976 clonal selection: unsupported, want established"
+   ]
+  ],
+  "B2best": [
+   "SILENT",
+   [
+    "1976 instructive: unsupported, want refuted",
+    "1976 clonal selection: unsupported, want established"
+   ]
+  ],
+  "E1:1/10": [
+   "SILENT",
+   [
+    "1976 instructive: unsupported, want refuted",
+    "1976 clonal selection: unsupported, want established"
+   ]
+  ],
+  "E1:1/5": [
+   "SILENT",
+   [
+    "1976 instructive: unsupported, want refuted",
+    "1976 clonal selection: unsupported, want established"
+   ]
+  ],
+  "E1:3/10": [
+   "SILENT",
+   [
+    "1976 instructive: unsupported, want refuted",
+    "1976 clonal selection: unsupported, want established"
+   ]
+  ]
+ },
+ "R08a": {
+  "A1": [
+   "PASS",
+   []
+  ],
+  "A2": [
+   "SILENT",
+   [
+    "1974 chemiosmotic: unsupported, want established",
+    "1974 chemical intermediate: unsupported, want refuted"
+   ]
+  ],
+  "A2H": [
+   "PASS",
+   []
+  ],
+  "D1": [
+   "SILENT",
+   [
+    "1974 chemiosmotic: unsupported, want established",
+    "1974 chemical intermediate: unsupported, want refuted"
+   ]
+  ],
+  "B1": [
+   "PASS",
+   []
+  ],
+  "B2": [
+   "PASS",
+   []
+  ],
+  "B3": [
+   "PASS",
+   []
+  ],
+  "B2best": [
+   "PASS",
+   []
+  ],
+  "E1:1/10": [
+   "SILENT",
+   [
+    "1974 chemiosmotic: unsupported, want established",
+    "1974 chemical intermediate: unsupported, want refuted"
+   ]
+  ],
+  "E1:1/5": [
+   "SILENT",
+   [
+    "1974 chemiosmotic: unsupported, want established",
+    "1974 chemical intermediate: unsupported, want refuted"
+   ]
+  ],
+  "E1:3/10": [
+   "SILENT",
+   [
+    "1974 chemiosmotic: unsupported, want established",
+    "1974 chemical intermediate: unsupported, want refuted"
+   ]
+  ]
+ },
+ "R08c": {
+  "A1": [
+   "FAIL",
+   [
+    "1964 chemical intermediate: contested, want unsupported"
+   ]
+  ],
+  "A2": [
+   "SILENT",
+   [
+    "1974 chemiosmotic: unsupported, want established",
+    "1974 chemical intermediate: unsupported, want refuted"
+   ]
+  ],
+  "A2H": [
+   "PASS",
+   []
+  ],
+  "D1": [
+   "FAIL",
+   [
+    "1964 chemical intermediate: contested, want unsupported",
+    "1974 chemiosmotic: unsupported, want established",
+    "1974 chemical intermediate: unsupported, want refuted"
+   ]
+  ],
+  "B1": [
+   "PASS",
+   []
+  ],
+  "B2": [
+   "PASS",
+   []
+  ],
+  "B3": [
+   "PASS",
+   []
+  ],
+  "B2best": [
+   "PASS",
+   []
+  ],
+  "E1:1/10": [
+   "SILENT",
+   [
+    "1974 chemiosmotic: unsupported, want established",
+    "1974 chemical intermediate: unsupported, want refuted"
+   ]
+  ],
+  "E1:1/5": [
+   "SILENT",
+   [
+    "1974 chemiosmotic: unsupported, want established",
+    "1974 chemical intermediate: unsupported, want refuted"
+   ]
+  ],
+  "E1:3/10": [
+   "SILENT",
+   [
+    "1974 chemiosmotic: unsupported, want established",
+    "1974 chemical intermediate: unsupported, want refuted"
+   ]
+  ]
+ },
+ "R08d": {
+  "A1": [
+   "FAIL",
+   [
+    "1997 chemiosmotic: contested, want established",
+    "1997 conformational coupling: contested, want established"
+   ]
+  ],
+  "A2": [
+   "SILENT",
+   [
+    "1997 conformational coupling: unsupported, want established"
+   ]
+  ],
+  "A2H": [
+   "SILENT",
+   [
+    "1997 conformational coupling: unsupported, want established"
+   ]
+  ],
+  "D1": [
+   "FAIL",
+   [
+    "1997 chemiosmotic: contested, want established",
+    "1997 conformational coupling: contested, want established"
+   ]
+  ],
+  "B1": [
+   "SILENT",
+   [
+    "1997 chemiosmotic: unsupported, want established",
+    "1997 conformational coupling: unsupported, want established"
+   ]
+  ],
+  "B2": [
+   "FAIL",
+   [
+    "1997 conformational coupling: refuted, want established"
+   ]
+  ],
+  "B3": [
+   "FAIL",
+   [
+    "1997 conformational coupling: refuted, want established"
+   ]
+  ],
+  "B2best": [
+   "SILENT",
+   [
+    "1997 conformational coupling: unsupported, want established"
+   ]
+  ],
+  "E1:1/10": [
+   "SILENT",
+   [
+    "1997 conformational coupling: unsupported, want established"
+   ]
+  ],
+  "E1:1/5": [
+   "SILENT",
+   [
+    "1997 conformational coupling: unsupported, want established"
+   ]
+  ],
+  "E1:3/10": [
+   "SILENT",
+   [
+    "1997 conformational coupling: unsupported, want established"
+   ]
+  ]
+ },
+ "R09": {
+  "A1": [
+   "SILENT",
+   [
+    "1877 biogenesis: unsupported, want established",
+    "1877 spontaneous generation: unsupported, want refuted"
+   ]
+  ],
+  "A2": [
+   "FAIL",
+   [
+    "1877 biogenesis: contested, want established",
+    "1877 spontaneous generation: contested, want refuted"
+   ]
+  ],
+  "A2H": [
+   "SILENT",
+   [
+    "1877 biogenesis: unsupported, want established",
+    "1877 spontaneous generation: unsupported, want refuted"
+   ]
+  ],
+  "D1": [
+   "FAIL",
+   [
+    "1877 biogenesis: contested, want established",
+    "1877 spontaneous generation: contested, want refuted"
+   ]
+  ],
+  "B1": [
+   "SILENT",
+   [
+    "1877 biogenesis: unsupported, want established",
+    "1877 spontaneous generation: unsupported, want refuted"
+   ]
+  ],
+  "B2": [
+   "SILENT",
+   [
+    "1877 biogenesis: unsupported, want established",
+    "1877 spontaneous generation: unsupported, want refuted"
+   ]
+  ],
+  "B3": [
+   "SILENT",
+   [
+    "1877 biogenesis: unsupported, want established",
+    "1877 spontaneous generation: unsupported, want refuted"
+   ]
+  ],
+  "B2best": [
+   "SILENT",
+   [
+    "1877 biogenesis: unsupported, want established",
+    "1877 spontaneous generation: unsupported, want refuted"
+   ]
+  ],
+  "E1:1/10": [
+   "SILENT",
+   [
+    "1877 biogenesis: unsupported, want established",
+    "1877 spontaneous generation: unsupported, want refuted"
+   ]
+  ],
+  "E1:1/5": [
+   "SILENT",
+   [
+    "1877 biogenesis: unsupported, want established",
+    "1877 spontaneous generation: unsupported, want refuted"
+   ]
+  ],
+  "E1:3/10": [
+   "SILENT",
+   [
+    "1877 biogenesis: unsupported, want established",
+    "1877 spontaneous generation: unsupported, want refuted"
+   ]
+  ]
+ },
+ "R10": {
+  "A1": [
+   "PASS",
+   []
+  ],
+  "A2": [
+   "PASS",
+   []
+  ],
+  "A2H": [
+   "PASS",
+   []
+  ],
+  "D1": [
+   "PASS",
+   []
+  ],
+  "B1": [
+   "PASS",
+   []
+  ],
+  "B2": [
+   "PASS",
+   []
+  ],
+  "B3": [
+   "SILENT",
+   [
+    "2019 neutral: unsupported, want contested",
+    "2019 selection: unsupported, want contested"
+   ]
+  ],
+  "B2best": [
+   "PASS",
+   []
+  ],
+  "E1:1/10": [
+   "PASS",
+   []
+  ],
+  "E1:1/5": [
+   "PASS",
+   []
+  ],
+  "E1:3/10": [
+   "PASS",
+   []
+  ]
+ },
+ "R11a": {
+  "A1": [
+   "PASS",
+   []
+  ],
+  "A2": [
+   "PASS",
+   []
+  ],
+  "A2H": [
+   "PASS",
+   []
+  ],
+  "D1": [
+   "PASS",
+   []
+  ],
+  "B1": [
+   "PASS",
+   []
+  ],
+  "B2": [
+   "PASS",
+   []
+  ],
+  "B3": [
+   "SILENT",
+   [
+    "2023 amyloid causes AD: unsupported, want contested"
+   ]
+  ],
+  "B2best": [
+   "PASS",
+   []
+  ],
+  "E1:1/10": [
+   "PASS",
+   []
+  ],
+  "E1:1/5": [
+   "PASS",
+   []
+  ],
+  "E1:3/10": [
+   "PASS",
+   []
+  ]
+ },
+ "R11b": {
+  "A1": [
+   "INEXPRESSIBLE",
+   [
+    "cannot state that an item stops counting from a year (a retraction date)"
+   ]
+  ],
+  "A2": [
+   "INEXPRESSIBLE",
+   [
+    "cannot state that an item stops counting from a year (a retraction date)"
+   ]
+  ],
+  "A2H": [
+   "PASS",
+   [
+    "Lesne stops counting in 2024; still contested"
+   ]
+  ],
+  "D1": [
+   "INEXPRESSIBLE",
+   [
+    "cannot state that an item stops counting from a year (a retraction date)"
+   ]
+  ],
+  "B1": [
+   "PASS",
+   [
+    "Lesne stops counting in 2024; still contested"
+   ]
+  ],
+  "B2": [
+   "PASS",
+   [
+    "Lesne stops counting in 2024; still contested"
+   ]
+  ],
+  "B3": [
+   "FAIL",
+   [
+    "Lesne still counts or the dispute is lost"
+   ]
+  ],
+  "B2best": [
+   "PASS",
+   [
+    "Lesne stops counting in 2024; still contested"
+   ]
+  ],
+  "E1:1/10": [
+   "INEXPRESSIBLE",
+   [
+    "cannot state that an item stops counting from a year (a retraction date)"
+   ]
+  ],
+  "E1:1/5": [
+   "INEXPRESSIBLE",
+   [
+    "cannot state that an item stops counting from a year (a retraction date)"
+   ]
+  ],
+  "E1:3/10": [
+   "INEXPRESSIBLE",
+   [
+    "cannot state that an item stops counting from a year (a retraction date)"
+   ]
+  ]
+ },
+ "R12": {
+  "A1": [
+   "SILENT",
+   [
+    "1899: Mendel's data count for nothing (belief 0)"
+   ]
+  ],
+  "A2": [
+   "PASS",
+   [
+    "1899 particulate (7/10, 0) unsupported"
+   ]
+  ],
+  "A2H": [
+   "PASS",
+   [
+    "1899 particulate (7/10, 0) unsupported"
+   ]
+  ],
+  "D1": [
+   "SILENT",
+   [
+    "1899: Mendel's data count for nothing (belief 0)"
+   ]
+  ],
+  "B1": [
+   "PASS",
+   [
+    "1899 particulate (7/10, 0) unsupported"
+   ]
+  ],
+  "B2": [
+   "PASS",
+   [
+    "1899 particulate (7/10, 0) unsupported"
+   ]
+  ],
+  "B3": [
+   "PASS",
+   [
+    "1899 particulate (7/10, 0) unsupported"
+   ]
+  ],
+  "B2best": [
+   "PASS",
+   [
+    "1899 particulate (7/10, 0) unsupported"
+   ]
+  ],
+  "E1:1/10": [
+   "PASS",
+   [
+    "1899 particulate (7/10, 0) unsupported"
+   ]
+  ],
+  "E1:1/5": [
+   "PASS",
+   [
+    "1899 particulate (7/10, 0) unsupported"
+   ]
+  ],
+  "E1:3/10": [
+   "PASS",
+   [
+    "1899 particulate (7/10, 0) unsupported"
+   ]
+  ]
+ },
+ "R13": {
+  "A1": [
+   "PASS",
+   []
+  ],
+  "A2": [
+   "PASS",
+   []
+  ],
+  "A2H": [
+   "PASS",
+   []
+  ],
+  "D1": [
+   "PASS",
+   []
+  ],
+  "B1": [
+   "PASS",
+   []
+  ],
+  "B2": [
+   "PASS",
+   []
+  ],
+  "B3": [
+   "SILENT",
+   [
+    "2003 Archezoa: unsupported, want refuted",
+    "2003 secondary loss: unsupported, want established"
+   ]
+  ],
+  "B2best": [
+   "PASS",
+   []
+  ],
+  "E1:1/10": [
+   "SILENT",
+   [
+    "2003 Archezoa: unsupported, want refuted",
+    "2003 secondary loss: unsupported, want established"
+   ]
+  ],
+  "E1:1/5": [
+   "SILENT",
+   [
+    "2003 Archezoa: unsupported, want refuted",
+    "2003 secondary loss: unsupported, want established"
+   ]
+  ],
+  "E1:3/10": [
+   "SILENT",
+   [
+    "2003 Archezoa: unsupported, want refuted",
+    "2003 secondary loss: unsupported, want established"
+   ]
+  ]
+ },
+ "R14": {
+  "A1": [
+   "SILENT",
+   [
+    "1999 endosymbiotic: unsupported, want established"
+   ]
+  ],
+  "A2": [
+   "SILENT",
+   [
+    "1999 endosymbiotic: unsupported, want established",
+    "1999 autogenous: unsupported, want refuted"
+   ]
+  ],
+  "A2H": [
+   "SILENT",
+   [
+    "1999 endosymbiotic: unsupported, want established",
+    "1999 autogenous: unsupported, want refuted"
+   ]
+  ],
+  "D1": [
+   "SILENT",
+   [
+    "1999 endosymbiotic: unsupported, want established",
+    "1999 autogenous: unsupported, want refuted"
+   ]
+  ],
+  "B1": [
+   "SILENT",
+   [
+    "1999 endosymbiotic: unsupported, want established",
+    "1999 autogenous: unsupported, want refuted"
+   ]
+  ],
+  "B2": [
+   "SILENT",
+   [
+    "1999 endosymbiotic: unsupported, want established",
+    "1999 autogenous: unsupported, want refuted"
+   ]
+  ],
+  "B3": [
+   "PASS",
+   []
+  ],
+  "B2best": [
+   "SILENT",
+   [
+    "1999 endosymbiotic: unsupported, want established",
+    "1999 autogenous: unsupported, want refuted"
+   ]
+  ],
+  "E1:1/10": [
+   "SILENT",
+   [
+    "1999 endosymbiotic: unsupported, want established",
+    "1999 autogenous: unsupported, want refuted"
+   ]
+  ],
+  "E1:1/5": [
+   "SILENT",
+   [
+    "1999 endosymbiotic: unsupported, want established",
+    "1999 autogenous: unsupported, want refuted"
+   ]
+  ],
+  "E1:3/10": [
+   "SILENT",
+   [
+    "1999 endosymbiotic: unsupported, want established",
+    "1999 autogenous: unsupported, want refuted"
+   ]
+  ]
+ },
+ "R15": {
+  "A1": [
+   "SILENT",
+   [
+    "1972 fluid mosaic: unsupported, want established",
+    "1972 Davson-Danielli: unsupported, want refuted"
+   ]
+  ],
+  "A2": [
+   "SILENT",
+   [
+    "1972 fluid mosaic: unsupported, want established",
+    "1972 Davson-Danielli: unsupported, want refuted"
+   ]
+  ],
+  "A2H": [
+   "SILENT",
+   [
+    "1972 fluid mosaic: unsupported, want established",
+    "1972 Davson-Danielli: unsupported, want refuted"
+   ]
+  ],
+  "D1": [
+   "SILENT",
+   [
+    "1972 fluid mosaic: unsupported, want established",
+    "1972 Davson-Danielli: unsupported, want refuted"
+   ]
+  ],
+  "B1": [
+   "SILENT",
+   [
+    "1972 fluid mosaic: unsupported, want established",
+    "1972 Davson-Danielli: unsupported, want refuted"
+   ]
+  ],
+  "B2": [
+   "SILENT",
+   [
+    "1972 fluid mosaic: unsupported, want established",
+    "1972 Davson-Danielli: unsupported, want refuted"
+   ]
+  ],
+  "B3": [
+   "SILENT",
+   [
+    "1972 fluid mosaic: unsupported, want established",
+    "1972 Davson-Danielli: unsupported, want refuted"
+   ]
+  ],
+  "B2best": [
+   "SILENT",
+   [
+    "1972 fluid mosaic: unsupported, want established",
+    "1972 Davson-Danielli: unsupported, want refuted"
+   ]
+  ],
+  "E1:1/10": [
+   "SILENT",
+   [
+    "1972 fluid mosaic: unsupported, want established",
+    "1972 Davson-Danielli: unsupported, want refuted"
+   ]
+  ],
+  "E1:1/5": [
+   "SILENT",
+   [
+    "1972 fluid mosaic: unsupported, want established",
+    "1972 Davson-Danielli: unsupported, want refuted"
+   ]
+  ],
+  "E1:3/10": [
+   "SILENT",
+   [
+    "1972 fluid mosaic: unsupported, want established",
+    "1972 Davson-Danielli: unsupported, want refuted"
+   ]
+  ]
+ },
+ "R16": {
+  "A1": [
+   "SILENT",
+   [
+    "2022 none in adults: unsupported, want contested"
+   ]
+  ],
+  "A2": [
+   "PASS",
+   []
+  ],
+  "A2H": [
+   "PASS",
+   []
+  ],
+  "D1": [
+   "PASS",
+   []
+  ],
+  "B1": [
+   "PASS",
+   []
+  ],
+  "B2": [
+   "PASS",
+   []
+  ],
+  "B3": [
+   "SILENT",
+   [
+    "2022 adult neurogenesis: unsupported, want contested",
+    "2022 none in adults: unsupported, want contested"
+   ]
+  ],
+  "B2best": [
+   "PASS",
+   []
+  ],
+  "E1:1/10": [
+   "PASS",
+   []
+  ],
+  "E1:1/5": [
+   "PASS",
+   []
+  ],
+  "E1:3/10": [
+   "PASS",
+   []
+  ]
+ },
+ "R16b": {
+  "A1": [
+   "SILENT",
+   [
+    "2022 adult neurogenesis: unsupported, want contested"
+   ]
+  ],
+  "A2": [
+   "SILENT",
+   [
+    "2022 adult neurogenesis: unsupported, want contested"
+   ]
+  ],
+  "A2H": [
+   "SILENT",
+   [
+    "2022 adult neurogenesis: unsupported, want contested"
+   ]
+  ],
+  "D1": [
+   "SILENT",
+   [
+    "2022 adult neurogenesis: unsupported, want contested"
+   ]
+  ],
+  "B1": [
+   "SILENT",
+   [
+    "2022 adult neurogenesis: unsupported, want contested"
+   ]
+  ],
+  "B2": [
+   "SILENT",
+   [
+    "2022 adult neurogenesis: unsupported, want contested"
+   ]
+  ],
+  "B3": [
+   "SILENT",
+   [
+    "2022 adult neurogenesis: unsupported, want contested"
+   ]
+  ],
+  "B2best": [
+   "SILENT",
+   [
+    "2022 adult neurogenesis: unsupported, want contested"
+   ]
+  ],
+  "E1:1/10": [
+   "SILENT",
+   [
+    "2022 adult neurogenesis: unsupported, want contested"
+   ]
+  ],
+  "E1:1/5": [
+   "SILENT",
+   [
+    "2022 adult neurogenesis: unsupported, want contested"
+   ]
+  ],
+  "E1:3/10": [
+   "SILENT",
+   [
+    "2022 adult neurogenesis: unsupported, want contested"
+   ]
+  ]
+ },
+ "R17": {
+  "A1": [
+   "SILENT",
+   [
+    "1961 comma-free: unsupported, want refuted",
+    "1961 non-overlapping, fixed start: unsupported, want established"
+   ]
+  ],
+  "A2": [
+   "SILENT",
+   [
+    "1961 overlapping: unsupported, want refuted",
+    "1961 comma-free: unsupported, want refuted",
+    "1961 non-overlapping, fixed start: unsupported, want established"
+   ]
+  ],
+  "A2H": [
+   "SILENT",
+   [
+    "1961 overlapping: unsupported, want refuted",
+    "1961 comma-free: unsupported, want refuted",
+    "1961 non-overlapping, fixed start: unsupported, want established"
+   ]
+  ],
+  "D1": [
+   "SILENT",
+   [
+    "1961 overlapping: unsupported, want refuted",
+    "1961 comma-free: unsupported, want refuted",
+    "1961 non-overlapping, fixed start: unsupported, want established"
+   ]
+  ],
+  "B1": [
+   "SILENT",
+   [
+    "1961 overlapping: unsupported, want refuted",
+    "1961 comma-free: unsupported, want refuted",
+    "1961 non-overlapping, fixed start: unsupported, want established"
+   ]
+  ],
+  "B2": [
+   "SILENT",
+   [
+    "1961 overlapping: unsupported, want refuted",
+    "1961 comma-free: unsupported, want refuted",
+    "1961 non-overlapping, fixed start: unsupported, want established"
+   ]
+  ],
+  "B3": [
+   "SILENT",
+   [
+    "1961 non-overlapping, fixed start: unsupported, want established"
+   ]
+  ],
+  "B2best": [
+   "SILENT",
+   [
+    "1961 overlapping: unsupported, want refuted",
+    "1961 comma-free: unsupported, want refuted",
+    "1961 non-overlapping, fixed start: unsupported, want established"
+   ]
+  ],
+  "E1:1/10": [
+   "SILENT",
+   [
+    "1961 overlapping: unsupported, want refuted",
+    "1961 comma-free: unsupported, want refuted",
+    "1961 non-overlapping, fixed start: unsupported, want established"
+   ]
+  ],
+  "E1:1/5": [
+   "SILENT",
+   [
+    "1961 overlapping: unsupported, want refuted",
+    "1961 comma-free: unsupported, want refuted",
+    "1961 non-overlapping, fixed start: unsupported, want established"
+   ]
+  ],
+  "E1:3/10": [
+   "SILENT",
+   [
+    "1961 overlapping: unsupported, want refuted",
+    "1961 comma-free: unsupported, want refuted",
+    "1961 non-overlapping, fixed start: unsupported, want established"
+   ]
+  ]
+ },
+ "R18": {
+  "A1": [
+   "SILENT",
+   [
+    "1953 triple helix: unsupported, want refuted",
+    "1980 double helix: unsupported, want established",
+    "1980 triple helix: unsupported, want refuted",
+    "1980 side-by-side: unsupported, want refuted"
+   ]
+  ],
+  "A2": [
+   "SILENT",
+   [
+    "1953 triple helix: unsupported, want refuted",
+    "1980 double helix: unsupported, want established",
+    "1980 triple helix: unsupported, want refuted",
+    "1980 side-by-side: unsupported, want refuted"
+   ]
+  ],
+  "A2H": [
+   "SILENT",
+   [
+    "1953 triple helix: unsupported, want refuted",
+    "1980 double helix: unsupported, want established",
+    "1980 triple helix: unsupported, want refuted",
+    "1980 side-by-side: unsupported, want refuted"
+   ]
+  ],
+  "D1": [
+   "SILENT",
+   [
+    "1953 triple helix: unsupported, want refuted",
+    "1980 double helix: unsupported, want established",
+    "1980 triple helix: unsupported, want refuted",
+    "1980 side-by-side: unsupported, want refuted"
+   ]
+  ],
+  "B1": [
+   "SILENT",
+   [
+    "1953 triple helix: unsupported, want refuted",
+    "1980 double helix: unsupported, want established",
+    "1980 triple helix: unsupported, want refuted",
+    "1980 side-by-side: unsupported, want refuted"
+   ]
+  ],
+  "B2": [
+   "SILENT",
+   [
+    "1953 triple helix: unsupported, want refuted",
+    "1980 double helix: unsupported, want established",
+    "1980 triple helix: unsupported, want refuted",
+    "1980 side-by-side: unsupported, want refuted"
+   ]
+  ],
+  "B3": [
+   "SILENT",
+   [
+    "1953 triple helix: unsupported, want refuted",
+    "1980 double helix: unsupported, want established",
+    "1980 triple helix: unsupported, want refuted",
+    "1980 side-by-side: unsupported, want refuted"
+   ]
+  ],
+  "B2best": [
+   "SILENT",
+   [
+    "1953 triple helix: unsupported, want refuted",
+    "1980 double helix: unsupported, want established",
+    "1980 triple helix: unsupported, want refuted",
+    "1980 side-by-side: unsupported, want refuted"
+   ]
+  ],
+  "E1:1/10": [
+   "SILENT",
+   [
+    "1953 triple helix: unsupported, want refuted",
+    "1980 double helix: unsupported, want established",
+    "1980 triple helix: unsupported, want refuted",
+    "1980 side-by-side: unsupported, want refuted"
+   ]
+  ],
+  "E1:1/5": [
+   "SILENT",
+   [
+    "1953 triple helix: unsupported, want refuted",
+    "1980 double helix: unsupported, want established",
+    "1980 triple helix: unsupported, want refuted",
+    "1980 side-by-side: unsupported, want refuted"
+   ]
+  ],
+  "E1:3/10": [
+   "SILENT",
+   [
+    "1953 triple helix: unsupported, want refuted",
+    "1980 double helix: unsupported, want established",
+    "1980 triple helix: unsupported, want refuted",
+    "1980 side-by-side: unsupported, want refuted"
+   ]
+  ]
+ },
+ "R19": {
+  "A1": [
+   "PASS",
+   []
+  ],
+  "A2": [
+   "PASS",
+   []
+  ],
+  "A2H": [
+   "PASS",
+   []
+  ],
+  "D1": [
+   "PASS",
+   []
+  ],
+  "B1": [
+   "PASS",
+   []
+  ],
+  "B2": [
+   "PASS",
+   []
+  ],
+  "B3": [
+   "SILENT",
+   [
+    "1990 two domains: unsupported, want contested",
+    "1990 three domains: unsupported, want contested"
+   ]
+  ],
+  "B2best": [
+   "PASS",
+   []
+  ],
+  "E1:1/10": [
+   "PASS",
+   []
+  ],
+  "E1:1/5": [
+   "PASS",
+   []
+  ],
+  "E1:3/10": [
+   "PASS",
+   []
+  ]
+ },
+ "R20": {
+  "A1": [
+   "PASS",
+   []
+  ],
+  "A2": [
+   "PASS",
+   []
+  ],
+  "A2H": [
+   "PASS",
+   []
+  ],
+  "D1": [
+   "PASS",
+   []
+  ],
+  "B1": [
+   "PASS",
+   []
+  ],
+  "B2": [
+   "PASS",
+   []
+  ],
+  "B3": [
+   "PASS",
+   []
+  ],
+  "B2best": [
+   "PASS",
+   []
+  ],
+  "E1:1/10": [
+   "PASS",
+   []
+  ],
+  "E1:1/5": [
+   "PASS",
+   []
+  ],
+  "E1:3/10": [
+   "PASS",
+   []
+  ]
+ },
+ "R21": {
+  "A1": [
+   "FAIL",
+   [
+    "1993 protein only: established, want unsupported",
+    "1993 virino: refuted, want unsupported"
+   ]
+  ],
+  "A2": [
+   "SILENT",
+   [
+    "2010 protein only: unsupported, want established"
+   ]
+  ],
+  "A2H": [
+   "SILENT",
+   [
+    "2010 protein only: unsupported, want established"
+   ]
+  ],
+  "D1": [
+   "FAIL",
+   [
+    "1993 protein only: established, want unsupported",
+    "1993 virino: refuted, want unsupported"
+   ]
+  ],
+  "B1": [
+   "SILENT",
+   [
+    "2010 protein only: unsupported, want established"
+   ]
+  ],
+  "B2": [
+   "SILENT",
+   [
+    "2010 protein only: unsupported, want established"
+   ]
+  ],
+  "B3": [
+   "SILENT",
+   [
+    "2010 protein only: unsupported, want established",
+    "2010 virus: unsupported, want refuted"
+   ]
+  ],
+  "B2best": [
+   "SILENT",
+   [
+    "2010 protein only: unsupported, want established"
+   ]
+  ],
+  "E1:1/10": [
+   "PASS",
+   []
+  ],
+  "E1:1/5": [
+   "PASS",
+   []
+  ],
+  "E1:3/10": [
+   "PASS",
+   []
+  ]
+ },
+ "R22": {
+  "A1": [
+   "FAIL",
+   [
+    "mutation purging gets disbelief 29/44 from Red Queen support"
+   ]
+  ],
+  "A2": [
+   "PASS",
+   []
+  ],
+  "A2H": [
+   "PASS",
+   []
+  ],
+  "D1": [
+   "FAIL",
+   [
+    "2011 mutational deterministic: contested, want unsupported",
+    "mutation purging gets disbelief 4/7 from Red Queen support"
+   ]
+  ],
+  "B1": [
+   "FAIL",
+   [
+    "mutation purging gets disbelief 4/7 from Red Queen support"
+   ]
+  ],
+  "B2": [
+   "FAIL",
+   [
+    "mutation purging gets disbelief 10/13 from Red Queen support"
+   ]
+  ],
+  "B3": [
+   "FAIL",
+   [
+    "2011 mutational deterministic: refuted, want unsupported",
+    "mutation purging gets disbelief 17/20 from Red Queen support"
+   ]
+  ],
+  "B2best": [
+   "PASS",
+   []
+  ],
+  "E1:1/10": [
+   "PASS",
+   []
+  ],
+  "E1:1/5": [
+   "PASS",
+   []
+  ],
+  "E1:3/10": [
+   "PASS",
+   []
+  ]
+ },
+ "R23": {
+  "A1": [
+   "FAIL",
+   [
+    "S9c disbelief rises from 23/61 to 83/121 because of the other"
+   ]
+  ],
+  "A2": [
+   "PASS",
+   []
+  ],
+  "A2H": [
+   "PASS",
+   []
+  ],
+  "D1": [
+   "FAIL",
+   [
+    "S9c disbelief rises from 23/61 to 83/121 because of the other"
+   ]
+  ],
+  "B1": [
+   "PASS",
+   []
+  ],
+  "B2": [
+   "PASS",
+   []
+  ],
+  "B3": [
+   "PASS",
+   []
+  ],
+  "B2best": [
+   "PASS",
+   []
+  ],
+  "E1:1/10": [
+   "PASS",
+   []
+  ],
+  "E1:1/5": [
+   "PASS",
+   []
+  ],
+  "E1:3/10": [
+   "PASS",
+   []
+  ]
+ },
+ "R24": {
+  "A1": [
+   "PASS",
+   []
+  ],
+  "A2": [
+   "PASS",
+   []
+  ],
+  "A2H": [
+   "PASS",
+   []
+  ],
+  "D1": [
+   "PASS",
+   []
+  ],
+  "B1": [
+   "PASS",
+   []
+  ],
+  "B2": [
+   "PASS",
+   []
+  ],
+  "B3": [
+   "PASS",
+   []
+  ],
+  "B2best": [
+   "PASS",
+   []
+  ],
+  "E1:1/10": [
+   "PASS",
+   []
+  ],
+  "E1:1/5": [
+   "PASS",
+   []
+  ],
+  "E1:3/10": [
+   "PASS",
+   []
+  ]
+ },
+ "S01": {
+  "A1": [
+   "FAIL",
+   [
+    "2000 B: refuted, want unsupported"
+   ]
+  ],
+  "A2": [
+   "PASS",
+   []
+  ],
+  "A2H": [
+   "PASS",
+   []
+  ],
+  "D1": [
+   "PASS",
+   []
+  ],
+  "B1": [
+   "PASS",
+   []
+  ],
+  "B2": [
+   "PASS",
+   []
+  ],
+  "B3": [
+   "PASS",
+   []
+  ],
+  "B2best": [
+   "PASS",
+   []
+  ],
+  "E1:1/10": [
+   "PASS",
+   []
+  ],
+  "E1:1/5": [
+   "PASS",
+   []
+  ],
+  "E1:3/10": [
+   "PASS",
+   []
+  ]
+ },
+ "S03": {
+  "A1": [
+   "FAIL",
+   [
+    "2000 A: contested, want unsupported",
+    "2000 B: contested, want unsupported",
+    "2000 C: refuted, want unsupported"
+   ]
+  ],
+  "A2": [
+   "PASS",
+   []
+  ],
+  "A2H": [
+   "PASS",
+   []
+  ],
+  "D1": [
+   "PASS",
+   []
+  ],
+  "B1": [
+   "PASS",
+   []
+  ],
+  "B2": [
+   "PASS",
+   []
+  ],
+  "B3": [
+   "PASS",
+   []
+  ],
+  "B2best": [
+   "PASS",
+   []
+  ],
+  "E1:1/10": [
+   "PASS",
+   []
+  ],
+  "E1:1/5": [
+   "PASS",
+   []
+  ],
+  "E1:3/10": [
+   "PASS",
+   []
+  ]
+ },
+ "S04": {
+  "A1": [
+   "PASS",
+   []
+  ],
+  "A2": [
+   "PASS",
+   []
+  ],
+  "A2H": [
+   "PASS",
+   []
+  ],
+  "D1": [
+   "PASS",
+   []
+  ],
+  "B1": [
+   "SILENT",
+   [
+    "2000 A: unsupported, want refuted",
+    "2000 B: unsupported, want refuted"
+   ]
+  ],
+  "B2": [
+   "PASS",
+   []
+  ],
+  "B3": [
+   "PASS",
+   []
+  ],
+  "B2best": [
+   "PASS",
+   []
+  ],
+  "E1:1/10": [
+   "PASS",
+   []
+  ],
+  "E1:1/5": [
+   "PASS",
+   []
+  ],
+  "E1:3/10": [
+   "PASS",
+   []
+  ]
+ },
+ "S05": {
+  "A1": [
+   "FAIL",
+   [
+    "A moves from (17/27, 7/27) to (1/2, 7/17)"
+   ]
+  ],
+  "A2": [
+   "PASS",
+   [
+    "A unchanged (17/27, 7/27)"
+   ]
+  ],
+  "A2H": [
+   "PASS",
+   [
+    "A unchanged (17/27, 7/27)"
+   ]
+  ],
+  "D1": [
+   "FAIL",
+   [
+    "A moves from (17/27, 7/27) to (1/2, 7/17)"
+   ]
+  ],
+  "B1": [
+   "PASS",
+   [
+    "A unchanged (17/27, 7/27)"
+   ]
+  ],
+  "B2": [
+   "PASS",
+   [
+    "A unchanged (17/27, 7/27)"
+   ]
+  ],
+  "B3": [
+   "PASS",
+   [
+    "A unchanged (51/200, 21/200)"
+   ]
+  ],
+  "B2best": [
+   "PASS",
+   [
+    "A unchanged (17/27, 7/27)"
+   ]
+  ],
+  "E1:1/10": [
+   "PASS",
+   [
+    "A unchanged (17/27, 7/27)"
+   ]
+  ],
+  "E1:1/5": [
+   "PASS",
+   [
+    "A unchanged (17/27, 7/27)"
+   ]
+  ],
+  "E1:3/10": [
+   "PASS",
+   [
+    "A unchanged (17/27, 7/27)"
+   ]
+  ]
+ },
+ "S06": {
+  "A1": [
+   "SILENT",
+   [
+    "1970 B: unsupported, want established"
+   ]
+  ],
+  "A2": [
+   "SILENT",
+   [
+    "1970 A: unsupported, want refuted",
+    "1970 B: unsupported, want established"
+   ]
+  ],
+  "A2H": [
+   "PASS",
+   []
+  ],
+  "D1": [
+   "SILENT",
+   [
+    "1970 A: unsupported, want refuted",
+    "1970 B: unsupported, want established"
+   ]
+  ],
+  "B1": [
+   "PASS",
+   []
+  ],
+  "B2": [
+   "PASS",
+   []
+  ],
+  "B3": [
+   "PASS",
+   []
+  ],
+  "B2best": [
+   "PASS",
+   []
+  ],
+  "E1:1/10": [
+   "SILENT",
+   [
+    "1970 A: unsupported, want refuted",
+    "1970 B: unsupported, want established"
+   ]
+  ],
+  "E1:1/5": [
+   "SILENT",
+   [
+    "1970 A: unsupported, want refuted",
+    "1970 B: unsupported, want established"
+   ]
+  ],
+  "E1:3/10": [
+   "SILENT",
+   [
+    "1970 A: unsupported, want refuted",
+    "1970 B: unsupported, want established"
+   ]
+  ]
+ },
+ "S07": {
+  "A1": [
+   "INEXPRESSIBLE",
+   [
+    "cannot state a base rate shared over a frame (each rival gets 1/2 on its own)"
+   ]
+  ],
+  "A2": [
+   "INEXPRESSIBLE",
+   [
+    "cannot state a base rate shared over a frame (each rival gets 1/2 on its own)"
+   ]
+  ],
+  "A2H": [
+   "INEXPRESSIBLE",
+   [
+    "cannot state a base rate shared over a frame (each rival gets 1/2 on its own)"
+   ]
+  ],
+  "D1": [
+   "INEXPRESSIBLE",
+   [
+    "cannot state a base rate shared over a frame (each rival gets 1/2 on its own)"
+   ]
+  ],
+  "B1": [
+   "PASS",
+   [
+    "P = 1/3, 1/3, 1/3"
+   ]
+  ],
+  "B2": [
+   "PASS",
+   [
+    "P = 1/3, 1/3, 1/3"
+   ]
+  ],
+  "B3": [
+   "PASS",
+   [
+    "P = 1/3, 1/3, 1/3"
+   ]
+  ],
+  "B2best": [
+   "PASS",
+   [
+    "P = 1/3, 1/3, 1/3"
+   ]
+  ],
+  "E1:1/10": [
+   "INEXPRESSIBLE",
+   [
+    "cannot state a base rate shared over a frame (each rival gets 1/2 on its own)"
+   ]
+  ],
+  "E1:1/5": [
+   "INEXPRESSIBLE",
+   [
+    "cannot state a base rate shared over a frame (each rival gets 1/2 on its own)"
+   ]
+  ],
+  "E1:3/10": [
+   "INEXPRESSIBLE",
+   [
+    "cannot state a base rate shared over a frame (each rival gets 1/2 on its own)"
+   ]
+  ]
+ },
+ "S09": {
+  "A1": [
+   "FAIL",
+   [
+    "2000 A: contested, want established",
+    "2000 A: contested, want established"
+   ]
+  ],
+  "A2": [
+   "PASS",
+   []
+  ],
+  "A2H": [
+   "PASS",
+   []
+  ],
+  "D1": [
+   "PASS",
+   []
+  ],
+  "B1": [
+   "PASS",
+   []
+  ],
+  "B2": [
+   "PASS",
+   []
+  ],
+  "B3": [
+   "PASS",
+   []
+  ],
+  "B2best": [
+   "PASS",
+   []
+  ],
+  "E1:1/10": [
+   "PASS",
+   []
+  ],
+  "E1:1/5": [
+   "PASS",
+   []
+  ],
+  "E1:3/10": [
+   "PASS",
+   []
+  ]
+ },
+ "S10": {
+  "A1": [
+   "SILENT",
+   [
+    "2000 A: unsupported, want established"
+   ]
+  ],
+  "A2": [
+   "PASS",
+   []
+  ],
+  "A2H": [
+   "PASS",
+   []
+  ],
+  "D1": [
+   "SILENT",
+   [
+    "2000 A: unsupported, want established"
+   ]
+  ],
+  "B1": [
+   "PASS",
+   []
+  ],
+  "B2": [
+   "PASS",
+   []
+  ],
+  "B3": [
+   "PASS",
+   []
+  ],
+  "B2best": [
+   "PASS",
+   []
+  ],
+  "E1:1/10": [
+   "PASS",
+   []
+  ],
+  "E1:1/5": [
+   "PASS",
+   []
+  ],
+  "E1:3/10": [
+   "PASS",
+   []
+  ]
+ },
+ "S11": {
+  "A1": [
+   "INEXPRESSIBLE",
+   [
+    "cannot state that A, B and C are the only possibilities (a closed frame)"
+   ]
+  ],
+  "A2": [
+   "INEXPRESSIBLE",
+   [
+    "cannot state that A, B and C are the only possibilities (a closed frame)"
+   ]
+  ],
+  "A2H": [
+   "INEXPRESSIBLE",
+   [
+    "cannot state that A, B and C are the only possibilities (a closed frame)"
+   ]
+  ],
+  "D1": [
+   "INEXPRESSIBLE",
+   [
+    "cannot state that A, B and C are the only possibilities (a closed frame)"
+   ]
+  ],
+  "B1": [
+   "SILENT",
+   [
+    "2000 B: unsupported, want refuted",
+    "2000 C: unsupported, want refuted",
+    "A belief 0: partial exclusions not combined"
+   ]
+  ],
+  "B2": [
+   "SILENT",
+   [
+    "A belief 0: partial exclusions not combined"
+   ]
+  ],
+  "B3": [
+   "PASS",
+   [
+    "A belief 289/400"
+   ]
+  ],
+  "B2best": [
+   "SILENT",
+   [
+    "A belief 0: partial exclusions not combined"
+   ]
+  ],
+  "E1:1/10": [
+   "INEXPRESSIBLE",
+   [
+    "cannot state that A, B and C are the only possibilities (a closed frame)"
+   ]
+  ],
+  "E1:1/5": [
+   "INEXPRESSIBLE",
+   [
+    "cannot state that A, B and C are the only possibilities (a closed frame)"
+   ]
+  ],
+  "E1:3/10": [
+   "INEXPRESSIBLE",
+   [
+    "cannot state that A, B and C are the only possibilities (a closed frame)"
+   ]
+  ]
+ }
+}

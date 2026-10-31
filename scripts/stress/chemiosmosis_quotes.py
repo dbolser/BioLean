@@ -46,6 +46,8 @@ QUOTES = [
     ("CH-01", "SPEECH", "received with reservation"),
     ("CH-02 CH-47", "SPEECH", "generally regarded as experimentally proven"),
     ("CH-03 CH-12", "SPEECH", "no experimental evidence could be obtained"),
+    # added by the review, 2026-10-31 (CH-50; the blanket retirement date in CH-12 and CH-28)
+    ("CH-12 CH-28 CH-50", "SPEECH", "Despite intensive efforts in many laboratories, however, no experimental evidence could be obtained for these hypotheses"),
 ]
 
 

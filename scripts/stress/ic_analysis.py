@@ -8,12 +8,15 @@ Inputs (all in data/stress/07/, read only):
 - rating_sheet.tsv (fact, terms, IC), rating_sheet_key.tsv (closure key, path_min, flags, stratum, old LLM label),
   features.tsv (gain, ontology features; from ic_alternatives.py), sample_strata.tsv (pool sizes),
   sheet_draw_exclusions.tsv (the first-draft rubric examples, used to find the rows they primed).
-- Raters: rating_llm_1.tsv, rating_llm_2.tsv, rating_llm_3.tsv (three blind LLM raters, round 2, made with the current
-  rubric.md: a STAND-IN for Dan), and Dan's file rating_dan.tsv (or rating_dan.csv) when it exists. Dan's file can be
-  the blind sheet itself with 'interesting' and 'true' filled; other columns are ignored, empty rows are skipped, tab
-  or comma separated both work, y / n / ? are read as yes / no / unsure.
+- Raters: rating_llm_1.tsv, rating_llm_2.tsv, rating_llm_3.tsv (three fresh blind LLM raters, round 3, 2026-10-31,
+  made with the current rubric.md: a STAND-IN for Dan), and Dan's file rating_dan.tsv (or rating_dan.csv) when it
+  exists. Dan's file can be the blind sheet itself with 'interesting' and 'true' filled; other columns are ignored,
+  empty rows are skipped, tab or comma separated both work, y / n / ? are read as yes / no / unsure.
+- round2/rating_llm_1..3.tsv: the round-2 LLM ratings (2026-10-30, the same current rubric.md; copied byte for byte
+  from git commit 6441d2f, unchanged at c1984b8, before round 3 overwrote the live files). round2/ also keeps that
+  run's outputs.
 - round1_primed/analysis_rows.tsv: the round-1 LLM ratings (made with the first-draft rubric, rubric_draft1.md, whose
-  examples primed some rows). Used only for the round comparison (section 2). Optional.
+  examples primed some rows). Rounds 1 and 2 are used only for the round comparison (section 2). Optional.
 
 Outputs (data/stress/07/, or --out DIR; all rewritten on every run; deterministic):
 - analysis_report.txt            the report as printed
@@ -21,7 +24,8 @@ Outputs (data/stress/07/, or --out DIR; all rewritten on every run; deterministi
 - analysis_rows.tsv              one row per sheet fact: IC, verdict at 2.5, features, every rating, pooled mean and truth
 - analysis_agreement.tsv         Fleiss' kappa on 'interesting' (4 levels; 0 against 1+; under 2 against 2+); Fleiss'
                                  kappa and percent agreement on 'true'; pairwise weighted kappa; old 42 labels against new
-- analysis_rounds.tsv            round 1 (primed) against round 2, per row and per rater
+- analysis_rounds.tsv            rounds 1 (primed), 2 and 3 (current rubric), per row, with the six-rating pool of
+                                 rounds 2 and 3
 - analysis_threshold_curve.tsv   T = 0, 0.25, ... up to the largest IC: precision (share of kept facts rated
                                  interesting) and recall (share of interesting facts kept), by rater and pooled
 - analysis_alternatives.tsv      AUC of each score (options A to G) with a bootstrap 90 percent interval
@@ -35,11 +39,13 @@ a mean under 0.5. 'judged false': for a pool, a strict majority says 'no'. 'wort
 false. Marks for sheet cases follow scripts/stress/ic_cases.py: a trivial fact should be dropped; a worth-showing fact
 kept; a fact judged false should be flagged, which a cut cannot do, so false and kept is FAIL and false and dropped is
 SILENT; a fact with no IC is SILENT; a middle fact (mean 0.5 to 2) may go either way (PASS, counted apart as 'either').
-The truth a mark uses is the checked source (SOURCE_TRUTH, 17 rows) where there is one, else the LLM pool.
+The truth a mark uses is the checked source (SOURCE_TRUTH, 20 rows) where there is one, else the LLM pool.
 
 Thresholds. The rules (scorer rule, highest safe T, best F1) are computed twice: on the 0.25 grid (the tables) and on
 exact cut points, the sheet's own IC values (review fix: the grid has no point between 2.282, plasma membrane, and
 2.433, endomembrane system, so on the grid a rule can only say 2.25 or 2.5). Read the exact ones for where T belongs.
+The scorer rule breaks ties by taking the lowest T, so it names one interval. 'Plateau' (added 2026-10-31) is every
+exact cut point that ties with it: the whole range of equally good cuts. Read the plateau, not the single interval.
 
 Pins. The marks and headline numbers from the three LLM raters are pinned below. Dan's ratings never break a pin:
 they get their own column (mark_dan) and their own lines. A change to the closure, the IC table, the cut or the LLM
@@ -48,7 +54,7 @@ rating files flips a pin and the script exits non-zero, naming what moved. Pure 
 import collections, csv, io, json, math, os, random, statistics, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from ic_common import base, ends, ic_of, key_of, load_closure, load_ic, score, templates  # noqa: E402
+from ic_common import base, bound, ends, ic_of, key_of, load_closure, load_ic, path_min, score, templates  # noqa: E402
 
 D = 'data/stress/07'
 IC_MIN = 2.5
@@ -56,6 +62,8 @@ STEP = 0.25
 LLM = [('llm1', f'{D}/rating_llm_1.tsv'), ('llm2', f'{D}/rating_llm_2.tsv'), ('llm3', f'{D}/rating_llm_3.tsv')]
 DAN = [f'{D}/rating_dan.tsv', f'{D}/rating_dan.csv']
 ROUND1 = f'{D}/round1_primed/analysis_rows.tsv'
+ROUND2 = [('llm1', f'{D}/round2/rating_llm_1.tsv'), ('llm2', f'{D}/round2/rating_llm_2.tsv'),
+          ('llm3', f'{D}/round2/rating_llm_3.tsv')]
 TRUE = {'yes': 'yes', 'y': 'yes', 'true': 'yes', 'no': 'no', 'n': 'no', 'false': 'no',
         'unsure': 'unsure', '?': 'unsure', 'u': 'unsure', 'maybe': 'unsure'}
 NBOOT = 2000
@@ -131,6 +139,12 @@ def read_round1(ids):
         out[n] = {r['id']: (int(r[f'{n}_interesting']), r[f'{n}_true']) for r in rr
                   if r['id'] in ids and r.get(f'{n}_interesting', '') != ''}
     return out
+
+
+def read_round2(ids, bad):
+    """Round-2 LLM ratings (same rubric as round 3), kept in round2/ (copied from git 6441d2f)."""
+    if not all(os.path.exists(p) for _, p in ROUND2): return {}
+    return {n: read_ratings(p, ids, bad) for n, p in ROUND2}
 
 
 # ---------------------------------------------------------------- statistics
@@ -215,6 +229,9 @@ def labels(rows, view):
     return [dict(r, lvl=view[r['id']][0], truth=view[r['id']][1]) for r in rows if r['id'] in view]
 
 
+def ids_sorted(rows): return [r['id'] for r in rows]
+
+
 def is_int(x): return x >= 2
 def is_triv(x): return x < 0.5
 def is_worth(r): return r['lvl'] >= 2 and r['truth'] != 'no'
@@ -278,6 +295,41 @@ def interval(T, cps):
     return f'({lo:.3f}, {T:.3f}]' if lo is not None else f'[0, {T:.3f}]'
 
 
+def plateau(sc, cps):
+    """Every exact cut point that ties with the scorer rule's best (most trivial rows removed, at most one worth-showing
+    row lost), as a list of runs of neighbouring cut points. Added 2026-10-31: the scorer rule takes the lowest T on
+    ties, so on its own it hides a range of equally good cuts."""
+    pts = {T: curve_point(sc, T) for T in cps}
+    ok = [T for T in cps if pts[T]['worth_lost'] <= 1]
+    if not ok: return []
+    best = max(pts[T]['trivial_removed'] for T in ok)
+    hit = {T for T in ok if pts[T]['trivial_removed'] == best}
+    runs, cur = [], []
+    for T in cps:
+        if T in hit: cur.append(T)
+        elif cur: runs.append(cur); cur = []
+    if cur: runs.append(cur)
+    return runs
+
+
+def plateau_str(runs, cps):
+    out = []
+    for run in runs:
+        lo = max([c for c in cps if c < run[0]], default=None)
+        out.append((f'({lo:.3f}, ' if lo is not None else '[0, ') + f'{run[-1]:.3f}]')
+    return ' or '.join(out) if out else 'none'
+
+
+def split_of(T, cps):
+    """The exact cut point that gives the same split as 'keep IC >= T' on the sheet."""
+    return min([c for c in cps if c >= T - 1e-12], default=None)
+
+
+def in_plateau(T, runs, cps):
+    s = split_of(T, cps)
+    return any(s in run for run in runs)
+
+
 FEATS = [('ic', 'A', 'ends-min IC (the current score)', lambda r: r['ic']),
          ('pm', 'B', 'path_min: lowest IC anywhere in the proof', lambda r: r['pm']),
          ('gain', 'C1', 'gain: IC(conclusion) minus max IC(premise)', lambda r: r['gain']),
@@ -326,6 +378,10 @@ def key_metrics(rows, view, ts):
              scorer_T_exact=sx[0], scorer_removed_exact=sx[1], safe_T_exact=safe_T(sc, cps),
              best_f1_T_exact=min(bx) if bx else None,
              f1_25=curve_point(sc, IC_MIN)['f1'], false_kept=sum(r['truth'] == 'no' and r['verdict'] == 'kept' for r in lab))
+    runs = plateau(sc, cps)
+    m['plateau'] = plateau_str(runs, cps); m['plateau_has_2.5'] = in_plateau(IC_MIN, runs, cps)
+    m['plateau_has_2.4'] = in_plateau(2.4, runs, cps)
+    m['worth_ids'] = ','.join(sorted(r['id'] for r in lab if is_worth(r)))
     for code, _, _, f in FEATS:
         m[f'auc_{code}'] = feat_auc(lab, f, 'interesting')[0]
         m[f'auc_nt_{code}'] = feat_auc(lab, f, 'not trivial')[0]
@@ -355,30 +411,39 @@ SOURCES = {
     'R008': 'False. tRNA carries 5-methyluridine (ribothymidine: the base is 5-methyluracil, that is thymine) at position 54, "one of the most highly conserved modifications" (Jones 2024, PMID:39159370). The book premise molbio-m45473-60 simplifies.',
     'R016': 'Depends on the reading. UBERON:0002020 gray matter is "a nervous system structure composed primarily of nerve cell bodies" (OLS4; the definition names no taxon), and part_of central nervous system, which uberon.obo (2026-10-01) puts in_taxon Bilateria; flatworms are Bilateria (NCBI Taxonomy lineage). The book means the vertebrate CNS (the-body-s-systems-m45539-272); the chain reads "cell bodies make up the gray matter" as true of every cell body.',
     'R017': 'False. RO:0002131 overlaps needs a shared part. The chain needs every microtubule to be part of a mitotic spindle; the book (reproduction-at-the-cellular-level-m45461-59) says only that the spindle is made of microtubules. Axonemal microtubules are not spindle parts.',
-    'R020': 'Misleading as a regulation. The kidney releases EPO when oxygen is low (book the-body-s-systems-m45537-238; HIF-2 drives EPO in kidney and liver: Haase 2013, PMID:23291219). Arteries carry the oxygen; the chain blames the carrier. True only as "oxygen delivery damps EPO". Two of three raters said false.',
-    'R026': 'True in GO\'s sense, odd in the book\'s. GO:0012505 endomembrane system lists "cell membrane" among its main components (OLS4 definition), and myofibrils attach to the sarcolemma at their ends (the-body-s-systems-m45538-241). The book adds the plasma membrane only "although not technically within the cell" (cell-structure-and-function-m45432-89).',
+    'R020': 'True only indirectly, as R031 (changed 2026-10-31 by the review, from false). The kidney releases EPO when oxygen is low (book the-body-s-systems-m45537-238; HIF-2 drives EPO in kidney and liver: Haase 2013, PMID:23291219). The chain is arteries is_a blood vessel, blood vessel raises oxygen (the-body-s-systems-m45536-3, the same premise as R031 and R089), oxygen lowers EPO, EPO raises erythropoiesis (-240): every sign is right, and the core reads an effect as a signed, composable influence (Claim.effect, Derivation.viaAmount). Misleading as a regulation: the vessel is a carrier. The LLM pool calls it false and R031, R089 true; the checked source treats all three alike.',
+    'R021': 'False as a universal (added 2026-10-31 by the review). The chain is "other compounds move passively across the membrane" (cell-structure-and-function-m45432-15), encoded as every passive transmembrane transport occurring in the plasma membrane, then plasma membrane part of endomembrane system (-m45432-89). In GO (go.obo 2026-07-26) channel activity (GO:0015267) is_a passive transmembrane transporter activity (GO:0022803), and the uniplex complex (GO:1990246) is "a calcium channel complex in the mitochondrial inner membrane"; GO does not place the mitochondrial inner membrane (GO:0005743), nor the plasma membrane (GO:0005886), under GO:0012505. Only the GO:0012505 definition text names "cell membrane".',
+    'R026': 'Depends on the reading. GO:0012505 endomembrane system names "cell membrane" among its main components in its definition text, but GO\'s graph (go.obo 2026-07-26) does not place the plasma membrane (GO:0005886) under it. Myofibrils attach to the sarcolemma at their ends (the-body-s-systems-m45538-241). The book adds the plasma membrane only "although not technically within the cell" (cell-structure-and-function-m45432-89).',
     'R031': 'True only indirectly. Blood vessels supply oxygen (the-body-s-systems-m45536-3) and without oxygen the transfer stops (how-cells-obtain-energy-m45439-20). "Blood vessel promotes the electron transport chain" is a path through a carrier, not a regulation.',
     'R036': 'False: a context clash. Leaf (PO:0025034) is a plant organ; erythropoietin (PR:000007141) is released by kidneys in response to low oxygen (book the-body-s-systems-m45537-238). The refinement "located in leaf" inherited a fact about the body.',
     'R043': 'False universal. The book premise says "Accessory organs play an important role ... during digestion" (the-body-s-systems-m45535-246); it was encoded as true of every organ.',
     'R062': 'False. The book says "metabolism is composed of synthesis (anabolism) and degradation (catabolism)" (how-cells-obtain-energy-m45437-31), encoded as "every metabolic process has part anabolism". Glucose catabolic process (GO:0006007) is a breakdown, not a synthesis.',
     'R068': 'False: an equivocation. "Cells of the immune system fight invading bacteria" (cell-structure-and-function-m45427-11) and "the colon is home to many bacteria ... that aid in the digestive processes" (the-body-s-systems-m45535-130) are about different bacteria.',
-    'R070': 'Depends on the term. GO:0000785 chromatin is "the ordered and organized complex of DNA, protein, and sometimes RNA, that forms the chromosome" (OLS4); the definition names no taxon, so a bacterial chromosome has it in GO\'s sense. In the book\'s sense (chromatin within the nucleus, cell-structure-and-function-m45432-359) it is false. All three raters said false.',
-    'R072': 'False. "For NADPH, it is a hydrogen atom" (photosynthesis-m45452-79) and "these atoms were originally part of a glucose molecule" (how-cells-obtain-energy-m45439-76) are about different atoms; overlaps (RO:0002131) needs one shared part. Round 2 raters split (one no, two unsure).',
+    'R070': 'Depends on the reading (changed 2026-10-31 from false). GO:0000785 chromatin is "the ordered and organized complex of DNA, protein, and sometimes RNA, that forms the chromosome" (OLS4, rechecked 2026-10-31; no taxon constraint in its OLS4 record). "Small basic proteins present in most Archaea share a common ancestor with the eukaryotic core histones" and form archaeal chromatin (Mattiroli 2017, PMID:28798133); archaea are prokaryotes. In the book\'s sense (chromatin within the nucleus, cell-structure-and-function-m45432-359) it is false. Round 2: all three raters said false; round 3: one false, two unsure (one citing archaeal histones).',
+    'R072': 'False. "For NADPH, it is a hydrogen atom" (photosynthesis-m45452-79) and "these atoms were originally part of a glucose molecule" (how-cells-obtain-energy-m45439-76) are about different atoms; overlaps (RO:0002131) needs one shared part. Round 2 raters split (one no, two unsure); all three round-3 raters said no.',
     'R073': 'False as a net effect. Insulin lowers blood glucose and high blood glucose makes beta cells release insulin (the-body-s-systems-m45537-53, -200): negative feedback. The derivation takes a longer path through glucagon (-336, -201) whose signs multiply to plus. A path sign is not the net effect.',
     'R074': 'False. The premise is "Prokaryotes have a single large chromosome that is not surrounded by a nuclear membrane" (cell-structure-and-function-m45429-74), encoded about every chromosome; notRelSub pushed it to eukaryotic chromosomes, which sit inside the nuclear envelope (GO:0005635).',
     'R076': 'False: the same equivocation as R068 (macrophages are immune cells; the bacteria that aid digestion are not the ones they fight).',
+    'R088': 'Depends: true of bacteria and eukaryotes, not shown for every archaeon. The chain is cell has plasma membrane (cell-structure-and-function-m45429-5), membrane has phospholipid (-m45432-8), phospholipid has two fatty acid chains (-m45432-11). Archaeal lipids have "ether-linked isoprenoid chains" (Li 2025, PMID:40243902), not fatty-acid esters, so the last step fails for archaea; yet "certain archaea appear to synthesize and/or metabolize fatty acids" (Dibrova 2014, PMID:24818264). Round 3: two of three raters said false.',
     'R089': 'True only indirectly, as R031: oxygen from the blood is needed for oxidative phosphorylation (GO:0006119); the vessel is a carrier, not a regulator.',
+    'R098': 'False as a universal (added 2026-10-31 by the review). The chain is "ions must pass through ion channels that span the membrane" (the-body-s-systems-m45539-57, said of the neuron), encoded as every ion channel part of the plasma membrane, then plasma membrane part of endomembrane system (cell-structure-and-function-m45432-89). In GO (go.obo 2026-07-26) the uniplex complex (GO:1990246) is_a monoatomic ion channel complex (GO:0034702) and part of the mitochondrial inner membrane (GO:0005743, via GO:0098800), which GO does not place under GO:0012505.',
 }
 # The truth a case's mark uses (review fix, 2026-10-30): the checked source above where there is one, else the LLM pool.
-# 'unsure' where the source says it depends on the reading. Only R072 differs from the LLM pool (pool unsure; the
-# source says false), so only R072's mark moves (PASS to FAIL). Dan's own mark (mark_dan) keeps Dan's own truth call.
-SOURCE_TRUTH = {'R004': 'no', 'R008': 'no', 'R016': 'unsure', 'R017': 'no', 'R020': 'no', 'R026': 'unsure',
-                'R031': 'unsure', 'R036': 'no', 'R043': 'no', 'R062': 'no', 'R068': 'no', 'R070': 'no', 'R072': 'no',
-                'R073': 'no', 'R074': 'no', 'R076': 'no', 'R089': 'unsure'}
+# 'unsure' where the source says it depends on the reading. Section 8 prints the rows where this differs from the LLM
+# pool. 2026-10-31: R070 changed from 'no' to 'unsure' (archaeal histone chromatin, Mattiroli 2017) and R088 added
+# ('unsure': archaeal lipids, Dibrova 2014); both points were raised by round-3 raters and checked on Europe PMC.
+# Review, 2026-10-31: R020 from 'no' to 'unsure' (the same shape and carrier premise as R031 and R089, which were
+# already 'unsure'); R021 and R098 added as 'no' (a premise read as a universal; GO's own uniplex complex is a
+# counter-example, and GO's graph does not put the plasma membrane under the endomembrane system).
+# Dan's own mark (mark_dan) keeps Dan's own truth call.
+SOURCE_TRUTH = {'R004': 'no', 'R008': 'no', 'R016': 'unsure', 'R017': 'no', 'R020': 'unsure', 'R021': 'no', 'R026': 'unsure',
+                'R031': 'unsure', 'R036': 'no', 'R043': 'no', 'R062': 'no', 'R068': 'no', 'R070': 'unsure', 'R072': 'no',
+                'R073': 'no', 'R074': 'no', 'R076': 'no', 'R088': 'unsure', 'R089': 'unsure', 'R098': 'no'}
 
 
-# ---------------------------------------------------------------- pins (observed 2026-10-30, round-2 LLM raters only)
-# id -> (verdict at 2.5, IC, mark from the LLM pool)
+# ---------------------------------------------------------------- pins (observed 2026-10-31, round-3 LLM raters only)
+# Re-pinned 2026-10-31 after round 3 replaced the live rating files; the round-2 pins are in git 6441d2f.
+# id -> (verdict at 2.5, IC, mark from the checked source, else the LLM pool)
 PINS = {
     'R002': ('kept', 2.657, 'PASS'),
     'R003': ('unjudged', None, 'SILENT'),
@@ -386,15 +451,15 @@ PINS = {
     'R008': ('kept', 9.039, 'FAIL'),
     'R013': ('kept', 2.657, 'FAIL'),
     'R014': ('kept', 2.995, 'PASS'),
-    'R016': ('dropped', 2.446, 'FAIL'),
+    'R016': ('dropped', 2.446, 'PASS'),
     'R017': ('kept', 4.879, 'FAIL'),
     'R018': ('dropped', 2.193, 'PASS'),
     'R019': ('kept', 2.995, 'FAIL'),
-    'R020': ('kept', 3.477, 'FAIL'),
-    'R021': ('dropped', 2.433, 'PASS'),
+    'R020': ('kept', 3.477, 'PASS'),   # review 2026-10-31: source truth 'unsure', as R031 and R089
+    'R021': ('dropped', 2.433, 'SILENT'),   # review 2026-10-31: false by checked source
     'R023': ('dropped', 2.282, 'PASS'),
     'R024': ('dropped', 2.026, 'PASS'),
-    'R026': ('dropped', 2.433, 'FAIL'),
+    'R026': ('dropped', 2.433, 'PASS'),
     'R031': ('kept', 2.657, 'PASS'),
     'R032': ('kept', 2.912, 'FAIL'),
     'R033': ('dropped', 2.026, 'PASS'),
@@ -420,80 +485,97 @@ PINS = {
     'R066': ('dropped', 2.026, 'PASS'),
     'R067': ('unjudged', None, 'SILENT'),
     'R068': ('dropped', 1.761, 'SILENT'),
-    'R070': ('kept', 3.859, 'FAIL'),
-    'R072': ('kept', 9.206, 'FAIL'),   # review: was PASS on the LLM pool's 'unsure'; the checked source says false
+    'R070': ('kept', 3.859, 'PASS'),
+    'R072': ('kept', 9.206, 'FAIL'),
     'R073': ('unjudged', None, 'SILENT'),
     'R074': ('kept', 2.995, 'FAIL'),
     'R075': ('kept', 2.793, 'PASS'),
     'R076': ('kept', 3.781, 'FAIL'),
-    'R077': ('kept', 2.995, 'PASS'),
+    'R077': ('kept', 2.995, 'FAIL'),
     'R079': ('dropped', 2.282, 'PASS'),
     'R080': ('kept', 2.793, 'FAIL'),
     'R083': ('dropped', 2.433, 'PASS'),
     'R084': ('dropped', 2.282, 'PASS'),
     'R085': ('dropped', 2.282, 'PASS'),
+    'R088': ('dropped', 0.002, 'PASS'),
     'R089': ('kept', 2.657, 'PASS'),
     'R091': ('kept', 2.995, 'FAIL'),
     'R092': ('dropped', 2.282, 'PASS'),
     'R094': ('kept', 2.793, 'FAIL'),
-    'R098': ('dropped', 2.433, 'PASS'),
+    'R098': ('dropped', 2.433, 'SILENT'),   # review 2026-10-31: false by checked source
     'R100': ('dropped', 2.163, 'PASS'),
 }
 HEAD_PINS = {
-    'fleiss_interesting_llm': 0.772,
-    'fleiss_true_llm': 0.74,
-    'true_pairwise_agreement_llm': 0.893,
-    'old_T_kappa_llm': 0.879,
-    'primed_rows': 'R008,R020,R031,R048,R073,R078,R088,R089',
-    'scorer_T_llm': 2.25,
-    'safe_T_llm': 2.25,
-    'best_f1_T_llm': 2.25,
-    'f1_at_2.5_llm': 0.257,
-    'worth_llm': 6,
-    'interesting_and_true_llm': 0,
-    'false_kept_llm': 7,
-    'judged_false_llm': 12,
-    'auc_ic_llm': 0.602,
-    'auc_nt_ic_llm': 0.734,
-    'auc_pm_llm': 0.55,
-    'auc_nt_pm_llm': 0.673,
-    'auc_gain_llm': 0.622,
-    'auc_nt_gain_llm': 0.606,
-    'auc_no_flag_llm': 0.703,
-    'auc_nt_no_flag_llm': 0.788,
-    'auc_depth_llm': 0.504,
-    'auc_nt_depth_llm': 0.415,
-    'auc_n_premises_llm': 0.512,
-    'auc_nt_n_premises_llm': 0.417,
-    'auc_onto_dist_llm': 0.698,
-    'auc_nt_onto_dist_llm': 0.801,
-    'c2a_trivial_kept_llm': 4,
-    'c2a_worth_lost_llm': 2,
-    # added in review (2026-10-30): the doc's Summary numbers, and the exact-cut-point results
-    'fleiss_interesting_2plus_llm': 0.88,
+    'fleiss_interesting_llm': 0.8,
+    'fleiss_true_llm': 0.716,
+    'fleiss_interesting_2plus_llm': 0.906,
     'true_all_agree_llm': 0.84,
-    'trivial_removed_of_total_at_2.5_llm': '29/52',
-    'precision_0_2.5_2.4_llm': '0.135/0.158/0.190',
-    'a25_kept_trivial_worthlost_falsekept_llm': '57/23/2/7',
-    'trivial_share_w_0_2.5_2.4_llm': '0.552/0.381/0.372',
-    'scorer_T_exact_round1_llm': 2.439,
-    'scorer_T_exact_llm': 2.433,
-    'scorer_interval_exact_llm': '(2.282, 2.433]',
-    'scorer_exact_stable_to_one_row_llm': True,
-    'scorer_exact_boot_share_llm': 0.91,
-    'safe_T_exact_llm': 2.433,
-    'best_f1_T_exact_llm': 2.433,
-    'scorer_removed_exact_llm': 29,
-    'interesting_n_false_unsure_true_llm': '14/8/6/0',
-    'a24_kept_trivial_worthlost_falsekept_llm': '63/23/0/8',
-    'c2_kept_trivial_worthlost_falsekept_llm': '55/15/0/8',
-    'c2a225_kept_trivial_worthlost_falsekept_llm': '42/5/0/7',
-    'c2a24_kept_trivial_worthlost_falsekept_llm': '40/4/0/7',
+    'true_pairwise_agreement_llm': 0.893,
+    'old_T_kappa_llm': 0.818,
+    'primed_rows': 'R008,R020,R031,R048,R073,R078,R088,R089',
+    'primed_change_by_pair': 'r1r2 0.25/0.17 3/5; r1r3 0.12/0.13 2/7; r2r3 0.12/0.10 3/6',
+    'rounds_scorer_exact': 'r1 (2.433, 2.439]; r2 (2.282, 2.433]; r3 (2.433, 2.439]; r23 (2.282, 2.433]',
+    'rounds_plateau': 'r1 (2.433, 2.657]; r2 (2.282, 2.446]; r3 (2.433, 2.657]; r23 (2.282, 2.657]',
+    'rounds_interesting_worth_true_false': 'r1 14/5/4/12; r2 14/6/0/12; r3 15/7/4/13; r23 12/3/0/13',
+    'rounds_worth_flip': 'R016,R020,R026,R055,R070,R071,R072,R078,R081,R090',
+    'r23_boot_modal_share_2.5_in_plateau': '0.59/0.60',
+    'x7_wk_same_interval_pass': '0.853/0.869/0.947; False; False',
+    'trivial_removed_of_total_at_2.5_llm': '28/53',
+    'precision_0_2.5_2.4_llm': '0.146/0.211/0.206',
+    'trivial_share_w_0_2.5_2.4_llm': '0.565/0.426/0.420',
+    'scorer_T_llm': 2.5,
+    'safe_T_llm': 2.5,
+    'best_f1_T_llm': 3.25,
+    'f1_at_2.5_llm': 0.338,
+    'worth_llm': 7,
+    'interesting_and_true_llm': 4,
+    'scorer_T_exact_llm': 2.439,
+    'scorer_interval_exact_llm': '(2.433, 2.439]',
+    'scorer_exact_stable_to_one_row_llm': False,
+    'scorer_exact_boot_share_llm': 0.37,
+    'safe_T_exact_llm': 2.657,
+    'best_f1_T_exact_llm': 3.477,
+    'scorer_removed_exact_llm': 28,
+    'plateau_llm': '(2.433, 2.657]; 2.5 in it True; 2.4 in it False',
+    'false_kept_llm': 7,
+    'judged_false_llm': 13,
+    'interesting_n_false_unsure_true_llm': '15/8/3/4',
+    'auc_ic_llm': 0.7,
+    'auc_nt_ic_llm': 0.698,
+    'auc_pm_llm': 0.606,
+    'auc_nt_pm_llm': 0.621,
+    'auc_gain_llm': 0.644,
+    'auc_nt_gain_llm': 0.633,
+    'auc_no_flag_llm': 0.708,
+    'auc_nt_no_flag_llm': 0.774,
+    'auc_depth_llm': 0.467,
+    'auc_nt_depth_llm': 0.409,
+    'auc_n_premises_llm': 0.472,
+    'auc_nt_n_premises_llm': 0.408,
+    'auc_onto_dist_llm': 0.827,
+    'auc_nt_onto_dist_llm': 0.772,
+    'a25_kept_trivial_worthlost_falsekept_llm': '57/25/0/7',
+    'a24_kept_trivial_worthlost_falsekept_llm': '63/26/0/8',
+    'c2_kept_trivial_worthlost_falsekept_llm': '55/17/0/9',
+    'c2a_trivial_kept_llm': 5,
+    'c2a_worth_lost_llm': 0,
+    'c2a225_kept_trivial_worthlost_falsekept_llm': '42/7/0/7',
+    'c2a24_kept_trivial_worthlost_falsekept_llm': '40/6/0/7',
     'flagged_trivial_worth_llm': '42/37/0',
     'flag_kinds_n_trivial_llm': 'restatement 21/18; weakening 18/18; entailed 9/7',
-    'case_marks_llm': '30/21/7/0',
-    'case_pass_right_either_llm': '16/14',
-    'x4_exact_grid_llm': '0.000/0.25',
+    'source_vs_pool_differs': 'R020,R021,R026,R031,R088,R089,R098',
+    'case_marks_llm': '32/18/9/0',
+    'case_pass_right_either_llm': '19/13',
+    # added by the review, 2026-10-31
+    'plateau_if_r031_r089_demoted_llm': '(3.674, 3.905]',
+    'core_belief_values_auc_tf_auc_int': '0.8 x89, 0.64 x9, 0.512 x1, 0.41 x1; 0.635; 0.210',
+    'case_fail_kinds_llm': '6/12/0',
+    'case_cut_job_right_llm': '19/31',
+    'source_false_kept_dropped_unjudged': '13: 6/5/2',
+    'band_2.4_2.5_truth': 'R021 no, R026 unsure, R083 yes, R098 no, R062 no, R016 unsure',
+    'closure_pm_drop_top100_chebi': '162/1219; 89',
+    'closure_unscored_ends_by_prefix': 'PR 155, NCBITaxon 95, PO 27, MONDO 26, PATO 24, SO 19, HP 3, OBA 3',
+    'x4_exact_grid_llm': '1.342/1.25',
     'closure_facts_terms_2.25_to_2.5': '58/5',
     'closure_kept_dropped_unjudged_2.25': '1277/660/286',
     'closure_kept_dropped_unjudged_2.4': '1247/695/281',
@@ -565,10 +647,17 @@ def main():
             cps0 = cut_points(rows)
             say(f"  your scorer-rule T on exact cut points: {interval(d['scorer_T_exact'], cps0)}  (LLM pool: "
                 f"{interval(km['pooled_llm']['scorer_T_exact'], cps0)}). Read this one: the grid has no point between 2.28 and 2.43")
+            say(f"  your plateau (every T as good as your best): {d['plateau']}; 2.5 in it: {'yes' if d['plateau_has_2.5'] else 'no'}; "
+                f"2.4 in it: {'yes' if d['plateau_has_2.4'] else 'no'}  (LLM round 3: {km['pooled_llm']['plateau']})")
             say(f"  your AUC of IC, interesting: {f3(d['auc_ic'])} (LLM {f3(km['pooled_llm']['auc_ic'])}); not trivial: "
                 f"{f3(d['auc_nt_ic'])} (LLM {f3(km['pooled_llm']['auc_nt_ic'])})")
             say(f"  your AUC of 'no structural flag', not trivial: {f3(d['auc_nt_no_flag'])} (LLM {f3(km['pooled_llm']['auc_nt_no_flag'])})")
             say(f"  you rated {d['judged_false']} rows false; {d['false_kept']} of them survive the 2.5 cut")
+        gap = sorted([r for r in rows if r['ic'] is not None and 2.4 <= r['ic'] < IC_MIN], key=lambda r: (r['ic'], r['id']))
+        say(f'  the {len(gap)} rows between 2.4 and 2.5 decide between those two cuts. Yours, then the LLM round-3 mean:')
+        for r in gap:
+            g = ratings['dan'].get(r['id']); lm = views['pooled_llm'][r['id']]
+            say(f"    {r['id']}  IC {r['ic']:.3f}  you {'/'.join(map(str, g)) if g else 'not rated'}  LLM {lm[0]:.2f}/{lm[1]}  {r['fact'][:70]}")
         put('dan', 'weighted kappa with rounded LLM mean; n', f'{f3(wk)}; {len(common)}')
         say('  The exit tests (section 9) are computed for you too.')
 
@@ -643,7 +732,7 @@ def main():
             agree.append(('dan', f'dan vs {n}: percent agreement on true', len(c2), f3(pa), ''))
     # old 42 LLM labels (2026-10-28, one LLM, T/S/E) against the new ratings, on the 33 rows that carry one
     old = [r for r in rows if r['old'] in ('T', 'S', 'E')]
-    say(f'  old LLM labels (2026-10-28, T/S/E) on {len(old)} sheet rows, against round 2:')
+    say(f'  old LLM labels (2026-10-28, T/S/E) on {len(old)} sheet rows, against round 3 (the live rating files):')
     for v in llm + (['dan'] if dan_p else []) + ['pooled_llm']:
         got = [r for r in old if r['id'] in views[v]]
         if not got: continue
@@ -658,12 +747,17 @@ def main():
         if v == 'pooled_llm': HEAD['old_T_kappa_llm'] = round(k1, 3)
     write(f'{out_dir}/analysis_agreement.tsv', agree)
 
-    # ---- 2. rounds: did the first-draft rubric prime the round-1 ratings?
-    r1 = read_round1(ids)
-    rounds = [('id', 'primed_by', 'fact', 'ic', 'verdict_2.5', 'r1_llm1', 'r1_llm2', 'r1_llm3', 'r1_mean', 'r1_truth',
-               'r2_llm1', 'r2_llm2', 'r2_llm3', 'r2_mean', 'r2_truth', 'change_mean')]
-    if r1 and all(len(r1[n]) == len(rows) for n in llm):
-        say('\n2. Round 1 (first-draft rubric, primed) against round 2 (current rubric), same sheet, same kind of rater')
+    # ---- 2. rounds (rewritten 2026-10-31). Round 1: first-draft rubric (primed). Rounds 2 and 3: the current rubric,
+    # fresh blind raters each time. Rounds 2 and 3 measure run-to-run noise, the control for the priming claim (X7).
+    r1 = read_round1(ids); r2 = read_round2(ids, bad)
+    R = {'r1': r1, 'r2': r2, 'r3': {n: ratings[n] for n in llm}}
+    R = {k: v for k, v in R.items() if v and all(len(v.get(n, {})) == len(rows) for n in llm)}
+    RNAME = {'r1': 'round 1, first-draft rubric (primed)', 'r2': 'round 2, current rubric',
+             'r3': 'round 3, current rubric (the live rating files)', 'r23': 'rounds 2 and 3 pooled (six ratings a row)'}
+    x7 = None; cps = cut_points(rows)
+    if len(R) >= 2 and 'r3' in R:
+        say('\n2. Rounds: the same sheet rated three times by fresh blind LLM raters')
+        for k in R: say(f'  {k}: {RNAME[k]}')
         facts = {f['fact']: f for f in load_closure()}
         ex = [x['fact'] for x in read_tsv(f'{D}/sheet_draw_exclusions.tsv') if x['why'].startswith('rubric example, first draft')]
         ex_tpl = {e: templates(facts[e]['k']) for e in ex if e in facts}
@@ -672,67 +766,116 @@ def main():
             hit = [e for e, t in ex_tpl.items() if t & templates(r['k'])]
             if hit: primed[r['id']] = hit[0].split(' [')[0]
         primed.update({i: v for i, v in PRIMED_BY_HAND.items() if i not in primed})
-        p1 = pool(rows, r1, llm); p2 = views['pooled_llm']
-        for n in llm:
-            a = [r1[n][r['id']][0] for r in rows]; b = [ratings[n][r['id']][0] for r in rows]
-            wk = weighted_kappa(a, b); same = sum(x == y for x, y in zip(a, b)) / len(rows)
-            st = sum(r1[n][r['id']][1] == ratings[n][r['id']][1] for r in rows) / len(rows)
-            say(f'  {n}: round 1 against round 2, weighted kappa {f3(wk)}; same level {pcts(same)}; same truth {pcts(st)}')
-            put('rounds', f'{n} round 1 vs 2: weighted kappa; same level; same truth', f'{f3(wk)}; {pcts(same)}; {pcts(st)}')
-        ch = {r['id']: p2[r['id']][0] - p1[r['id']][0] for r in rows}
-        tc = {r['id']: p1[r['id']][1] != p2[r['id']][1] for r in rows}
+        P = {k: pool(rows, v, llm) for k, v in R.items()}
+        if 'r2' in R:
+            six = {f'{k}_{n}': R[k][n] for k in ('r2', 'r3') for n in llm}
+            P['r23'] = pool(rows, six, list(six))
         pr = [r['id'] for r in rows if r['id'] in primed]; ot = [r['id'] for r in rows if r['id'] not in primed]
-        mp = statistics.mean(abs(ch[i]) for i in pr); mo = statistics.mean(abs(ch[i]) for i in ot)
-        say(f'  pooled mean, average size of change: primed rows ({len(pr)}) {mp:.2f}; other rows ({len(ot)}) {mo:.2f}. '
-            f'Pooled truth changed: primed {sum(tc[i] for i in pr)} of {len(pr)}; other {sum(tc[i] for i in ot)} of {len(ot)}')
-        put('rounds', 'average |change| of pooled mean: primed rows; other rows', f'{mp:.2f} (n={len(pr)}); {mo:.2f} (n={len(ot)})')
-        put('rounds', 'pooled truth changed: primed; other', f'{sum(tc[i] for i in pr)} of {len(pr)}; {sum(tc[i] for i in ot)} of {len(ot)}')
         HEAD['primed_rows'] = ','.join(sorted(pr))
-        say('  primed rows (round 1 -> round 2, pooled mean and truth):')
+        rd = lambda m: min(3, max(0, round(m)))
+        pairs = [(a, b) for a, b in (('r1', 'r2'), ('r1', 'r3'), ('r2', 'r3')) if a in R and b in R]
+        prim_pin = []
+        for a, b in pairs:
+            tag = f'{a} vs {b}' + ('  (control: same rubric)' if a != 'r1' else '  (rubric changed)')
+            per = []
+            for n in llm:
+                x = [R[a][n][r['id']][0] for r in rows]; y = [R[b][n][r['id']][0] for r in rows]
+                wk = weighted_kappa(x, y); same = sum(p == q for p, q in zip(x, y)) / len(rows)
+                st = sum(R[a][n][r['id']][1] == R[b][n][r['id']][1] for r in rows) / len(rows)
+                per.append(f'{n} {f3(wk)}/{pcts(same)}/{pcts(st)}')
+                put('rounds', f'{n} {a} vs {b}: weighted kappa; same level; same truth', f'{f3(wk)}; {pcts(same)}; {pcts(st)}')
+            wkp = weighted_kappa([rd(P[a][r['id']][0]) for r in rows], [rd(P[b][r['id']][0]) for r in rows])
+            ch = {r['id']: P[b][r['id']][0] - P[a][r['id']][0] for r in rows}
+            tc = {r['id']: P[a][r['id']][1] != P[b][r['id']][1] for r in rows}
+            mp = statistics.mean(abs(ch[i]) for i in pr); mo = statistics.mean(abs(ch[i]) for i in ot)
+            tp_, to_ = sum(tc[i] for i in pr), sum(tc[i] for i in ot)
+            say(f'  {tag}')
+            say(f'    per rater, weighted kappa / same level / same truth: ' + '; '.join(per))
+            say(f'    pooled mean (rounded), weighted kappa {f3(wkp)}. Average change of the pooled mean: primed rows '
+                f'({len(pr)}) {mp:.2f}, other rows ({len(ot)}) {mo:.2f}. Pooled truth changed: primed {tp_} of {len(pr)}, '
+                f'other {to_} of {len(ot)}')
+            put('rounds', f'{a} vs {b}: pooled weighted kappa; |change| primed, other; truth changed primed, other',
+                f'{f3(wkp)}; {mp:.2f}, {mo:.2f}; {tp_} of {len(pr)}, {to_} of {len(ot)}')
+            prim_pin.append(f'{a}{b} {mp:.2f}/{mo:.2f} {tp_}/{to_}')
+            big = sorted([i for i in ids_sorted(rows) if abs(ch[i]) >= 0.67 or tc[i]], key=lambda i: (-abs(ch[i]), i))
+            say(f'    rows whose pooled mean moved by 0.67 or more, or whose truth changed ({len(big)}): ' +
+                '; '.join(f'{i}{"*" if i in primed else ""} {P[a][i][0]:.2f}{P[a][i][1][0]}->{P[b][i][0]:.2f}{P[b][i][1][0]}' for i in big))
+            put('rounds', f'{a} vs {b}: rows that moved (0.67+ or truth; * = primed)', ', '.join(i + ('*' if i in primed else '') for i in big))
+        HEAD['primed_change_by_pair'] = '; '.join(prim_pin)
+        say('  primed rows, pooled mean and truth by round:')
         for i in sorted(pr):
-            say(f'    {i}  {p1[i][0]:.2f} {p1[i][1]:<6} -> {p2[i][0]:.2f} {p2[i][1]:<6}  IC {f2(byid[i]["ic"])}  '
-                f'example: {primed[i][:60]}')
-        big = sorted([i for i in ot if abs(ch[i]) >= 0.67 or tc[i]], key=lambda i: (-abs(ch[i]), i))
-        say(f'  other rows whose pooled mean moved by 0.67 or more, or whose truth changed ({len(big)}): ' +
-            '; '.join(f'{i} {p1[i][0]:.2f}{p1[i][1][0]}->{p2[i][0]:.2f}{p2[i][1][0]}' for i in big))
-        put('rounds', 'other rows that moved (0.67+ or truth)', ', '.join(big))
-        m1 = key_metrics(rows, p1, ts); m2 = km['pooled_llm']
-        say('  pooled, round 1 against round 2:')
+            say(f'    {i}  ' + '   '.join(f'{k} {P[k][i][0]:.2f} {P[k][i][1]:<6}' for k in P) +
+                f'  IC {f2(byid[i]["ic"])}  example: {primed[i][:50]}')
+        M = {k: key_metrics(rows, P[k], ts) for k in P}
+        say('  pooled, by round:' + ''.join(f'{k:>12}' for k in P))
         for lab, k in (('interesting rows', 'interesting'), ('worth showing (interesting, not judged false)', 'worth'),
                        ('interesting and judged true', 'interesting_and_true'), ('judged false', 'judged_false'),
-                       ('scorer-rule T', 'scorer_T'), ('highest T losing nothing worth showing', 'safe_T'),
-                       ('best-F1 T', 'best_f1_T'),
-                       ('scorer-rule T, exact cut points', 'scorer_T_exact'),
-                       ('highest T losing nothing, exact cut points', 'safe_T_exact'),
-                       ('best-F1 T, exact cut points', 'best_f1_T_exact'),
+                       ('scorer-rule T, 0.25 grid', 'scorer_T'), ('highest T losing nothing, grid', 'safe_T'),
+                       ('best-F1 T, grid', 'best_f1_T'), ('scorer-rule T, exact cut points', 'scorer_T_exact'),
+                       ('highest T losing nothing, exact', 'safe_T_exact'), ('best-F1 T, exact', 'best_f1_T_exact'),
                        ('AUC of IC, interesting', 'auc_ic'), ('AUC of IC, not trivial', 'auc_nt_ic'),
                        ('AUC of path_min, interesting', 'auc_pm'), ('AUC of gain, interesting', 'auc_gain'),
                        ('AUC of no flag, interesting', 'auc_no_flag'), ('AUC of no flag, not trivial', 'auc_nt_no_flag'),
                        ('AUC of depth, interesting', 'auc_depth'), ('AUC of ontology distance, interesting', 'auc_onto_dist')):
-            a, b = m1[k], m2[k]
-            fa = f3(a) if isinstance(a, float) and k.startswith('auc') else a
-            fb = f3(b) if isinstance(b, float) and k.startswith('auc') else b
-            say(f'    {lab:<45} {fa!s:>7}  ->  {fb!s:>7}')
-            put('rounds', f'pooled {lab}: round 1 -> round 2', f'{fa} -> {fb}')
-        sc1 = [r for r in labels(rows, p1) if r['ic'] is not None]
-        hinge1 = [r['id'] for r in sc1 if is_worth(r) and
-                  scorer_rule([dict(x, lvl=1.0) if x['id'] == r['id'] else x for x in sc1], ts)[0] != m1['scorer_T']]
-        say(f'  round 1 scorer rule hinged on: {", ".join(hinge1)}; of those, primed: {", ".join(i for i in hinge1 if i in primed)}')
-        put('rounds', 'round-1 scorer rule hinge rows; of those primed', f'{", ".join(hinge1)}; {", ".join(i for i in hinge1 if i in primed)}')
-        cps = cut_points(rows)
-        say(f"  exact cut points: round 1 scorer rule {interval(m1['scorer_T_exact'], cps)}, round 2 "
-            f"{interval(m2['scorer_T_exact'], cps)} (on the 0.25 grid: round 1 {m1['scorer_T']}, round 2 {m2['scorer_T']})")
-        put('rounds', 'pooled scorer-rule T, exact cut points: round 1; round 2',
-            f"{interval(m1['scorer_T_exact'], cps)}; {interval(m2['scorer_T_exact'], cps)}")
-        HEAD['scorer_T_exact_round1_llm'] = m1['scorer_T_exact']
+            vals = [M[x][k] for x in P]
+            fv = [f3(v) if k.startswith('auc') else ('' if v is None else f'{v:.3f}' if isinstance(v, float) and 'exact' in k else str(v)) for v in vals]
+            say(f'    {lab:<46}' + ''.join(f'{v:>12}' for v in fv))
+            put('rounds', f'pooled {lab}: ' + ' / '.join(P), ' / '.join(fv))
+        say('  exact cut points by round: the scorer rule (lowest T on ties), and its plateau (every equally good T):')
+        for k in P:
+            sv = [r for r in labels(rows, P[k]) if r['ic'] is not None]
+            x0 = M[k]['scorer_T_exact']
+            hinge = [r['id'] for r in sv if is_worth(r) and
+                     scorer_rule([dict(x, lvl=1.0) if x['id'] == r['id'] else x for x in sv], cps)[0] != x0]
+            say(f"    {k:<4} scorer {interval(x0, cps)}; plateau {M[k]['plateau']}; 2.5 in it: "
+                f"{'yes' if M[k]['plateau_has_2.5'] else 'no'}; 2.4 in it: {'yes' if M[k]['plateau_has_2.4'] else 'no'}; "
+                f"worth showing {M[k]['worth']} ({M[k]['worth_ids']}); demoting one of these moves the scorer T: {', '.join(hinge) or 'none'}")
+            put('rounds', f'{k}: exact scorer interval; plateau; 2.5 in plateau; 2.4 in plateau; hinge rows',
+                f"{interval(x0, cps)}; {M[k]['plateau']}; {M[k]['plateau_has_2.5']}; {M[k]['plateau_has_2.4']}; {', '.join(hinge) or 'none'}")
+        HEAD['rounds_scorer_exact'] = '; '.join(f"{k} {interval(M[k]['scorer_T_exact'], cps)}" for k in P)
+        HEAD['rounds_plateau'] = '; '.join(f"{k} {M[k]['plateau']}" for k in P)
+        HEAD['rounds_interesting_worth_true_false'] = '; '.join(
+            f"{k} {M[k]['interesting']}/{M[k]['worth']}/{M[k]['interesting_and_true']}/{M[k]['judged_false']}" for k in P)
+        ws = {k: {r['id'] for r in labels(rows, P[k]) if is_worth(r)} for k in P}
+        flip = sorted(set.union(*[ws[k] for k in R]) - set.intersection(*[ws[k] for k in R]))
+        say(f'  rows worth showing in some rounds but not all ({len(flip)}): ' +
+            '; '.join(f"{i} (IC {f2(byid[i]['ic'])}: " + ', '.join(f'{k} {P[k][i][0]:.2f}{P[k][i][1][0]}' for k in R) + ')' for i in flip))
+        put('rounds', 'rows worth showing in some rounds but not all', ', '.join(flip))
+        HEAD['rounds_worth_flip'] = ','.join(flip)
+        if 'r23' in P:
+            sv = [r for r in labels(rows, P['r23']) if r['ic'] is not None]
+            bx = M['r23']['scorer_T_exact']; rng = random.Random(20261031); bs = []; inp = 0
+            for _ in range(NBOOT):
+                s = [sv[rng.randrange(len(sv))] for _ in sv]
+                t = scorer_rule(s, cps)
+                if t: bs.append(t[0])
+                inp += in_plateau(IC_MIN, plateau(s, cps), cps)
+            share_x = sum(b == bx for b in bs) / len(bs)
+            say(f'  r23 bootstrap ({NBOOT} resamples): the exact scorer T lands in {interval(bx, cps)} in {pcts(share_x)}; '
+                f'2.5 is in the plateau in {pcts(inp / NBOOT)}')
+            put('rounds', 'r23 bootstrap: share in the modal exact interval; share with 2.5 in the plateau',
+                f'{pcts(share_x)}; {pcts(inp / NBOOT)}')
+            HEAD['r23_boot_modal_share_2.5_in_plateau'] = f'{share_x:.2f}/{inp / NBOOT:.2f}'
+        if 'r2' in R:
+            wks = [weighted_kappa([R['r2'][n][r['id']][0] for r in rows], [R['r3'][n][r['id']][0] for r in rows]) for n in llm]
+            same_iv = M['r2']['scorer_T_exact'] == M['r3']['scorer_T_exact']
+            x7 = (wks, same_iv, all(w is not None and w >= 0.8 for w in wks) and same_iv)
+            HEAD['x7_wk_same_interval_pass'] = '/'.join(f3(w) for w in wks) + f'; {same_iv}; {x7[2]}'
+        rh = ['id', 'primed_by', 'fact', 'ic', 'verdict_2.5']
+        for k in R: rh += [f'{k}_{n}' for n in llm] + [f'{k}_mean', f'{k}_truth']
+        if 'r23' in P: rh += ['r23_mean', 'r23_truth']
+        rh += [f'change_{a}_{b}' for a, b in pairs]
+        rounds_out = [tuple(rh)]
         for r in rows:
             i = r['id']
-            rounds.append((i, primed.get(i, ''), r['fact'], '' if r['ic'] is None else r['ic'], r['verdict'],
-                           *('/'.join(map(str, r1[n][i])) for n in llm), f'{p1[i][0]:.2f}', p1[i][1],
-                           *('/'.join(map(str, ratings[n][i])) for n in llm), f'{p2[i][0]:.2f}', p2[i][1], f'{ch[i]:+.2f}'))
-        write(f'{out_dir}/analysis_rounds.tsv', rounds)
+            line = [i, primed.get(i, ''), r['fact'], '' if r['ic'] is None else r['ic'], r['verdict']]
+            for k in R: line += ['/'.join(map(str, R[k][n][i])) for n in llm] + [f'{P[k][i][0]:.2f}', P[k][i][1]]
+            if 'r23' in P: line += [f"{P['r23'][i][0]:.2f}", P['r23'][i][1]]
+            line += [f'{P[b][i][0] - P[a][i][0]:+.2f}' for a, b in pairs]
+            rounds_out.append(tuple(line))
+        write(f'{out_dir}/analysis_rounds.tsv', rounds_out)
     else:
-        say('\n2. Round comparison skipped: round1_primed/analysis_rows.tsv is missing or incomplete')
+        say('\n2. Round comparison skipped: round1_primed/analysis_rows.tsv or round2/ is missing or incomplete')
 
     # ---- 3. threshold curve
     curve = [('rater', 'T', 'n_scored', 'kept', 'interesting', 'interesting_kept', 'precision', 'recall', 'f1',
@@ -822,7 +965,9 @@ def main():
         m = km[v]
         if m is None: continue
         say(f"    {v:<10}: scorer rule {interval(m['scorer_T_exact'], cps)} (removes {m['scorer_removed_exact']} trivial); "
+            f"plateau {m['plateau']} (2.5 in it: {'yes' if m['plateau_has_2.5'] else 'no'}); "
             f"highest T losing nothing worth showing {interval(m['safe_T_exact'], cps)}; best F1 {interval(m['best_f1_T_exact'], cps)}")
+        put('threshold', f'{v}: exact cut points: plateau; 2.5 in plateau', f"{m['plateau']}; {m['plateau_has_2.5']}")
         put('threshold', f'{v}: exact cut points: scorer-rule T; trivial removed; safe T; best-F1 T',
             f"{interval(m['scorer_T_exact'], cps)}; {m['scorer_removed_exact']}; {interval(m['safe_T_exact'], cps)}; "
             f"{interval(m['best_f1_T_exact'], cps)}")
@@ -835,6 +980,12 @@ def main():
             xmoves.append(f"{r['id']} -> {t2}")
         say(f'    {v}: exact scorer rule {bx}; if one worth-showing row were rated 1 instead: ' + '; '.join(xmoves))
         put('threshold', f'{v}: exact scorer-rule T if one worth-showing row is demoted', '; '.join(xmoves))
+        if v == 'pooled_llm':   # review, 2026-10-31: the ceiling rows R031 and R089 demoted together
+            dem = [dict(x, lvl=1.0) if x['id'] in ('R031', 'R089') else x for x in sv]
+            pdem = plateau_str(plateau(dem, cps), cps)
+            say(f'    {v}: if R031 and R089 (blood vessel, the ceiling) were both rated 1: plateau {pdem}')
+            put('threshold', f'{v}: plateau if R031 and R089 are both demoted', pdem)
+            HEAD['plateau_if_r031_r089_demoted_llm'] = pdem
         rng = random.Random(20261031)
         bs = []
         for _ in range(NBOOT):
@@ -860,7 +1011,8 @@ def main():
             HEAD['scorer_exact_boot_share_llm'] = round(share_x, 2)
     m = km['pooled_llm']
     HEAD.update({'safe_T_exact_llm': m['safe_T_exact'], 'best_f1_T_exact_llm': m['best_f1_T_exact'],
-                 'scorer_removed_exact_llm': m['scorer_removed_exact']})
+                 'scorer_removed_exact_llm': m['scorer_removed_exact'],
+                 'plateau_llm': f"{m['plateau']}; 2.5 in it {m['plateau_has_2.5']}; 2.4 in it {m['plateau_has_2.4']}"})
     band_rows = sorted([r for r in sc if 2.0 <= r['ic'] < 3.0], key=lambda r: r['ic'])
     say(f'  rows with IC from 2 to 3 ({len(band_rows)}), in IC order, {pooled} mean (* = interesting, x = judged false):')
     say('    ' + ' '.join(f'{r["ic"]:.2f}:{r["lvl"]:.1f}{"*" if is_int(r["lvl"]) else ""}{"x" if r["truth"] == "no" else ""}' for r in band_rows))
@@ -907,6 +1059,27 @@ def main():
     pli = [r for r in labels(rows, views['pooled_llm']) if is_int(r['lvl'])]
     HEAD['interesting_n_false_unsure_true_llm'] = (f"{len(pli)}/{sum(r['truth'] == 'no' for r in pli)}/"
                                                    f"{sum(r['truth'] == 'unsure' for r in pli)}/{sum(r['truth'] == 'yes' for r in pli)}")
+    # Review, 2026-10-31: the core's own strength. closure.py gives each derived fact a belief that mirrors
+    # Derivation.opinionWith (a logical step takes the weaker premise; an effect chain multiplies). Can it see the false
+    # rows or the interesting ones? Truth as the marks use it: the checked source, else the LLM pool.
+    bel_of = {f['fact']: f['belief'] for f in load_closure()}
+    plm = views['pooled_llm']
+    bel = {r['id']: bel_of.get(r['formal']) for r in rows}
+    tmk = {r['id']: SOURCE_TRUTH.get(r['id'], plm[r['id']][1]) for r in rows}
+    bt = [bel[i] for i in bel if bel[i] is not None and tmk[i] == 'yes']
+    bf = [bel[i] for i in bel if bel[i] is not None and tmk[i] == 'no']
+    bi = [bel[r['id']] for r in rows if bel[r['id']] is not None and is_int(plm[r['id']][0])]
+    bo = [bel[r['id']] for r in rows if bel[r['id']] is not None and not is_int(plm[r['id']][0])]
+    bvals = collections.Counter(round(b, 3) for b in bel.values() if b is not None)
+    bfl = sorted(i for i in bel if tmk[i] == 'no' and bel[i] is not None and bel[i] < 0.8)
+    say(f"  the core's belief (closure.py, as Derivation.opinionWith): values on the sheet "
+        + ', '.join(f'{b} x{n}' for b, n in sorted(bvals.items(), reverse=True))
+        + f"; AUC for true ({len(bt)}) above false ({len(bf)}): {f3(auc(bt, bf))}; false rows under 0.8: {', '.join(bfl) or 'none'}; "
+        f"AUC for interesting above the rest (pooled_llm): {f3(auc(bi, bo))}")
+    put('truth', "core belief: values on the sheet; AUC true above false; false rows under 0.8; AUC interesting above rest",
+        ', '.join(f'{b} x{n}' for b, n in sorted(bvals.items(), reverse=True)) + f'; {f3(auc(bt, bf))}; {",".join(bfl)}; {f3(auc(bi, bo))}')
+    HEAD['core_belief_values_auc_tf_auc_int'] = (', '.join(f'{b} x{n}' for b, n in sorted(bvals.items(), reverse=True))
+                                                 + f'; {f3(auc(bt, bf))}; {f3(auc(bi, bo))}')
 
     # ---- 6. alternatives
     say('\n6. Alternatives on the same ratings (AUC; 0.5 = chance; 90% bootstrap interval)')
@@ -1013,8 +1186,12 @@ def main():
         out.append(tuple(x))
     write(f'{out_dir}/analysis_rows.tsv', out)
 
-    say('\n8. Stress cases on the sheet (near the cut: IC 2 to 3; any LLM rater says false; no IC). Marks use the checked '
-        'source where there is one (17 rows), else the LLM pool.')
+    say(f'\n8. Stress cases on the sheet (near the cut: IC 2 to 3; any LLM rater says false; no IC). Marks use the checked '
+        f'source where there is one ({len(SOURCE_TRUTH)} rows), else the LLM pool.')
+    dif = [f'{i} (source {t}, pool {pl[i][1]})' for i, t in sorted(SOURCE_TRUTH.items()) if pl[i][1] != t]
+    say('  checked source differs from the LLM pool on: ' + ('; '.join(dif) or 'none'))
+    put('cases', 'checked source differs from the LLM pool on', '; '.join(dif) or 'none')
+    HEAD['source_vs_pool_differs'] = ','.join(sorted(i for i, t in SOURCE_TRUTH.items() if pl[i][1] != t))
     ch = ['id', 'probe', 'fact', 'terms', 'ic', 'verdict_2.5', 'llm1', 'llm2', 'llm3'] + (['dan'] if dan_p else []) + \
          ['llm_mean', 'llm_truth', 'truth_for_mark', 'correct_conclusion', 'source', 'mark_llm'] + (['mark_dan'] if dan_p else [])
     cases = [tuple(ch)]
@@ -1055,6 +1232,32 @@ def main():
     put('cases', 'PASS by kind: right call; either (middle fact)', f"{pass_kind['right call']}; {pass_kind['either']}")
     HEAD['case_marks_llm'] = f"{tally['PASS']}/{tally['FAIL']}/{tally['SILENT']}/{tally['INEXPRESSIBLE']}"
     HEAD['case_pass_right_either_llm'] = f"{pass_kind['right call']}/{pass_kind['either']}"
+    # Review, 2026-10-31: which FAILs a cut could ever avoid, and the cut's score on its own job.
+    ci = {c: ch.index(c) for c in ('verdict_2.5', 'correct_conclusion', 'mark_llm')}
+    fk = collections.Counter()
+    for c in cases[1:]:
+        if c[ci['mark_llm']] != 'FAIL': continue
+        e = c[ci['correct_conclusion']]
+        fk['false kept' if e == 'flag as false' else 'trivial kept' if e.startswith('drop') else 'worth showing lost'] += 1
+    job = [c for c in cases[1:] if c[ci['verdict_2.5']] != 'unjudged' and c[ci['correct_conclusion']].startswith(('drop', 'keep'))]
+    jr = sum(c[ci['mark_llm']] == 'PASS' for c in job)
+    say(f"  FAIL by kind: false and kept {fk['false kept']} (no cut can flag these); trivial and kept {fk['trivial kept']}; "
+        f"worth showing and dropped {fk['worth showing lost']}. On the job a cut can do (a trivial or worth-showing fact with "
+        f"an IC): right on {jr} of {len(job)}")
+    put('cases', 'FAIL by kind: false kept; trivial kept; worth showing lost. Cut right on its own job',
+        f"{fk['false kept']}/{fk['trivial kept']}/{fk['worth showing lost']}; {jr} of {len(job)}")
+    HEAD['case_fail_kinds_llm'] = f"{fk['false kept']}/{fk['trivial kept']}/{fk['worth showing lost']}"
+    HEAD['case_cut_job_right_llm'] = f'{jr}/{len(job)}'
+    sf = [r for r in rows if SOURCE_TRUTH.get(r['id']) == 'no']
+    sfv = collections.Counter(r['verdict'] for r in sf)
+    say(f"  false by checked source: {len(sf)} rows; kept at 2.5 {sfv['kept']}, dropped {sfv['dropped']}, unjudged {sfv['unjudged']}")
+    put('cases', 'false by checked source: n; kept/dropped/unjudged at 2.5', f"{len(sf)}; {sfv['kept']}/{sfv['dropped']}/{sfv['unjudged']}")
+    HEAD['source_false_kept_dropped_unjudged'] = f"{len(sf)}: {sfv['kept']}/{sfv['dropped']}/{sfv['unjudged']}"
+    b24 = sorted([r for r in rows if r['ic'] is not None and 2.4 <= r['ic'] < IC_MIN], key=lambda r: (r['ic'], r['id']))
+    b24s = ', '.join(f"{r['id']} {SOURCE_TRUTH.get(r['id'], pl[r['id']][1])}" for r in b24)
+    say(f'  the {len(b24)} rows between 2.4 and 2.5, with the truth the marks use: {b24s}')
+    put('cases', 'rows between 2.4 and 2.5: truth the marks use', b24s)
+    HEAD['band_2.4_2.5_truth'] = b24s
     fails = [c for c in cases[1:] if c[ch.index('mark_llm')] == 'FAIL']
     say('  FAIL cases: ' + '; '.join(f"{c[0]} ({c[5]}, IC {c[4] if c[4] != '' else 'none'}, {c[ch.index('correct_conclusion')]})" for c in fails))
     if dan_p:
@@ -1104,6 +1307,11 @@ def main():
         say(f'  X1 Dan agrees with the stand-in (90+ rows, weighted kappa 0.6 or more): {len(common)} rows, {f3(wk)}: {"PASS" if ok else "not met"}')
     else:
         say('  X1 Dan agrees with the stand-in: needs rating_dan.tsv')
+    if x7:
+        et.append(('X7 stand-in stable run to run', 'llm r2 vs r3', 'per-rater weighted kappa; same exact scorer interval',
+                   '/'.join(f3(w) for w in x7[0]) + f'; {x7[1]}', x7[2]))
+        say(f"  X7 stand-in stable run to run (weighted kappa 0.8+ per rater, round 2 against 3, and the same exact scorer "
+            f"interval): kappa {', '.join(f3(w) for w in x7[0])}; same interval: {'yes' if x7[1] else 'no'}: {'PASS' if x7[2] else 'not met'}")
     write(f'{out_dir}/analysis_exit_tests.tsv', et)
 
     # ---- 10. which terms decide the cut
@@ -1148,6 +1356,25 @@ def main():
     fl_of = lambda x: '+'.join(n for n, k in (('restates', 'restates'), ('weakening', 'weakening'), ('entailed', 'entailed')) if x.get(k) == 'True') or 'none'
     say(f'  off-sheet cases the cut cannot express, as C2 flags them: C27 {fl_of(c27)}; C28 {fl_of(c28)}')
     HEAD['c2_flags_c27_c28'] = f'{fl_of(c27)}; {fl_of(c28)}'
+    # Review, 2026-10-31: three figures the doc quotes from ic_alternatives.py, which has no pins; recomputed here the
+    # same way so that a change to the closure or the IC table flips them.
+    kept_c = [f for f in facts if score(f['k'], ic) is not None and score(f['k'], ic) >= IC_MIN]
+    pmd = sum(1 for f in kept_c if (lambda x: x is not None and x < IC_MIN)(path_min(f['t'], ic)))
+    by_fact = {f['fact']: f for f in facts}
+    top = json.load(open('data/search/closure_ic.json'))['facts'][:100]
+    chebi = sum(1 for f in top if any(base(c).startswith('CHEBI:') for c in ends(by_fact[f['fact']]['k'])))
+    pre = collections.Counter()
+    for f in facts:
+        if score(f['k'], ic) is not None: continue
+        for c in ends(f['k']):
+            if ic.get(c, ic.get(base(c))) is None: pre[base(c).split(':')[0]] += 1
+    pres = ', '.join(f'{k} {n}' for k, n in pre.most_common())
+    say(f'  kept facts that path_min (B) would also drop: {pmd} of {len(kept_c)}; top 100 by IC with a ChEBI end: {chebi}; '
+        f'ends with no IC on unscored facts, by ontology: {pres}')
+    put('terms', 'kept facts path_min would drop; top 100 by IC with a ChEBI end; ends with no IC, by ontology',
+        f'{pmd} of {len(kept_c)}; {chebi}; {pres}')
+    HEAD['closure_pm_drop_top100_chebi'] = f'{pmd}/{len(kept_c)}; {chebi}'
+    HEAD['closure_unscored_ends_by_prefix'] = pres
 
     for k, v in HEAD_PINS.items():
         if HEAD.get(k) != v: flipped.append(f'headline {k}: pinned {v!r}, observed {HEAD.get(k)!r}')

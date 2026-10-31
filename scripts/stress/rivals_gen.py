@@ -1,0 +1,909 @@
+"""Generate the two Lean files of program 03 from rivals_spec.py.
+
+  BioLean/Stress/Rivals.lean        every case on the current core (Rivalry, Statement)
+  BioLean/Proto/Multinomial.lean    every case on the frame prototype (B1, B2, B3, E2, H)
+
+Usage (from the repo root):
+  python3 scripts/stress/rivals_gen.py                 # unpinned files, to observe
+  python3 scripts/stress/rivals_gen.py --pin           # pin what data/stress/03/observed_*.json recorded
+"""
+import json, os, sys
+from fractions import Fraction as F
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, HERE)
+from rivals_spec import ENT, CASES, C, FB, best_frames, translate, EXPY, A1V, withdrawals
+
+ROOT = os.path.abspath(os.path.join(HERE, "..", ".."))
+STRESS = os.path.join(ROOT, "BioLean", "Stress", "Rivals.lean")
+PROTO = os.path.join(ROOT, "BioLean", "Proto", "Multinomial.lean")
+DATA = os.path.join(ROOT, "data", "stress", "03")
+R2 = "BioLean.Textbook.R2.CellStructureAndFunction"
+
+KIND = {"process": ".process", "chemical": ".chemical", "taxon": ".taxon", "cellType": ".cellType",
+        "phenotype": ".phenotype", "function": ".function", "component": ".component",
+        "anatomy": ".anatomy", "protein": ".protein"}
+
+
+def lstr(s):
+    return '"' + s.replace("\\", "\\\\").replace('"', "'") + '"'
+
+
+def ident(s):
+    return "".join(ch if ch.isalnum() else "_" for ch in s)
+
+
+def q(x):
+    """A rational literal for Lean."""
+    x = F(x)
+    return f"({x.numerator} : ℚ)" if x.denominator == 1 else f"({x.numerator}/{x.denominator} : ℚ)"
+
+
+def ent(n, ctx=None):
+    return f"({n}.inCtx {{ taxon := some {ctx} }})" if ctx else n
+
+
+def target(n):
+    k = ENT[n][0]
+    if k == "process": return f"(.process {n})"
+    if k == "phenotype": return f"(.phenotype {n})"
+    if k == "function": return f"(.activity {n})"
+    return f"(.amount {n})"
+
+
+def claim(c):
+    op = c[0]
+    base, _, ctx = op.partition("@")
+    ctx = ctx or None
+    if base == "isA": return f".rel Rel.isA {ent(c[1], ctx)} {c[2]}"
+    if base == "notIsA": return f".notRel Rel.isA {ent(c[1], ctx)} {c[2]}"
+    if base == "rel2150": return f".rel ⟨.ro, 2150, false⟩ {ent(c[1], ctx)} {c[2]}"
+    if base == "notRel2150": return f".notRel ⟨.ro, 2150, false⟩ {ent(c[1], ctx)} {c[2]}"
+    if base == "rel1000": return f".rel ⟨.ro, 1000, false⟩ {ent(c[1], ctx)} {c[2]}"
+    if base == "hasPart": return f".rel Rel.hasPart {ent(c[1], ctx)} {c[2]}"
+    if base == "occursIn": return f".rel Rel.occursIn {c[1]} {ent(c[2], ctx)}"
+    if base == "notOccursIn": return f".notRel Rel.occursIn {c[1]} {ent(c[2], ctx)}"
+    if base == "effect+": return f".effect {c[1]} .pos {target(c[2])}"
+    if base in ("medBy", "medByAct"): return f".mediatedBy {c[1]} .pos {target(c[2])} {target(c[3])}"
+    if base == "chemio":
+        med = {"cm": "(.amount hydron)", "ci": "(.amount cI)", "cc": "(.process confCoupling)"}[c[1]]
+        return f".mediatedBy respChain .pos (.process oxphos) {med}"
+    raise ValueError(op)
+
+
+def ev(e):
+    pol = ", polarity := .refutes" if e["pol"] == "-" else ""
+    note = e["note"] or e["key"]
+    tx = f", taxon := some {e['taxon']}" if e.get("taxon") else ""
+    return f"{{ pmid := {e['pmid']}, year := {e['year']}, kind := .{e['kind']}{pol}{tx}, note := {lstr(note)} }}"
+
+
+def statement(name, r):
+    evs = [e for e in r["ev"] if not e.get("r2")]
+    lst = "[" + ",\n    ".join(ev(e) for e in evs) + "]"
+    if r.get("base"):
+        b = f"{R2}.{r['base']}"
+        return (f"def {name} : Statement :=\n  {{ {b} with\n    id := {lstr(r['rid'])}\n"
+                f"    evidence := {lst} ++ {b}.evidence }}")
+    return (f"def {name} : Statement where\n  id := {lstr(r['rid'])}\n  text := {lstr(r['text'] or r['rid'])}\n"
+            f"  claim := {claim(r['claim'])}\n  evidence := {lst}")
+
+
+def verdict_list(rows):
+    return "[" + ", ".join(f"({lstr(r)}, .{v})" for r, b, d, v in rows) + "]"
+
+
+def num_list(rows):
+    return "[" + ", ".join(f"({q(b)}, {q(d)})" for r, b, d, v in rows) + "]"
+
+
+def load(path):
+    return json.load(open(path)) if os.path.exists(path) else None
+
+
+def doc_case(c):
+    exp = "; ".join(f"{y}: " + ", ".join(f"{r} {'/'.join(sorted(v))}" for r, v in d.items()) for y, d in EXPY.get(c["id"], {}).items())
+    lines = [f"/-! ## {c['id']}. {c['title']}", "",
+             f"Probes: {c['probe']}.",
+             f"Expected (checked source): {exp or 'see the special rule in rivals_score.py'}.",
+             f"Source: {c['source']}."]
+    if c["kind"] == "synthetic": lines.append("SYNTHETIC case.")
+    return "\n".join(lines).replace("-/", "- /") + " -/"
+
+
+# ============================================================ Stress/Rivals.lean (current core)
+
+STRESS_HEAD = '''import BioLean.Rivalry
+import BioLean.Examples.Chemiosmosis
+import BioLean.Lib.GLP1Statements
+import BioLean.Lib.TextbookClaimsR2.CellStructureAndFunction
+
+/-!
+# Stress set for program 03: rivals and hypotheses, on the current core
+
+Generated by `scripts/stress/rivals_gen.py` from `scripts/stress/rivals_spec.py`. Do not edit by
+hand; regenerate. Doc: `docs/programs/03-rivals-and-hypotheses.md`. Table: `data/stress/03/cases.tsv`.
+
+Every case is encoded with today's `Rivalry` (or a `Statement` for P against not-P), in one or more
+variants. Nothing here is imported by `BioLean.lean`, so `lake build` does not build it. Every
+observation is also printed under three option-E1 weight models (`hyp10`, `hyp5`, `hyp3`: the
+`hypothesis` kind at 1/10, 1/5, 3/10), and E1 pins record the verdicts that move.
+
+* the first variant is how the worked example (`Examples/Chemiosmosis.lean`) enters evidence: each
+  experiment on both rivals, as support for one and refutation of the other (score column A1);
+* `A2:k` variants are the prototype's frames translated to today's core by the documented rule
+  (`translate` in the spec): each item once, as support for the one rival it singles out, otherwise as
+  a refutation of each rival it excludes; a withdrawal year cannot be stated, so withdrawn items stay
+  in (score column A2, "best curation today");
+* `A2H:k` variants (review stage) are the same `A2:k` statements with option H emulated here, outside
+  the core: `withdrawAt` drops an item from its withdrawal year on (score column A2H). In the core this
+  would be one field on `Evidence`, read by `Statement.asOf`; no new type and no new operator;
+* other variants are hand encodings kept for reference.
+
+Each theorem pins what the core does now, not what it should do. A change to `Rivalry`, `fuse` or
+the weights flips some of them; that is the point. `{case}_{variant}_{year}` pins the verdicts and
+`..._num` pins the exact belief and disbelief at the key year.
+-/
+
+namespace BioLean.Stress.Rivals
+open BioLean
+open BioLean.Examples.Chemiosmosis (respChain oxphos hydron cI chemiosmotic chemicalIntermediate coupling realOnly realCoupling)
+'''
+
+STRESS_HELPERS = '''
+/-- One output line per rival: OBS|case|variant|year|id|belief|disbelief|verdict. -/
+def vname : Derivation.Verdict → String
+  | .established => "established" | .contested => "contested" | .refuted => "refuted" | .unsupported => "unsupported"
+def line (t c v : String) (y : Nat) (id : String) (o : Opinion) : String :=
+  s!"OBS|{t}|{c}|{v}|{y}|{id}|{o.belief}|{o.disbelief}|{vname o.verdict}"
+def rivLines [EvidenceModel] (t c v : String) (r : Rivalry) (ys : List Nat) : List String :=
+  ys.flatMap fun y => (r.opinionsAt y).map fun (s, o) => line t c v y s.id o
+def stmtLines [EvidenceModel] (t c v : String) (s : Statement) (ys : List Nat) : List String :=
+  ys.map fun y => line t c v y s.id (s.opinionAt y)
+
+/-- Option E1: the standard weights with the `hypothesis` kind at weight `w`. This is a data instance
+(an `EvidenceModel`), not a core change. It is used only by name (`@... hyp5`), never as an instance. -/
+@[reducible] def hypModel (w : ℚ) (h0 : 0 ≤ w) (h1 : w < 1) : EvidenceModel where
+  reliability k := if k = .hypothesis then w else EvidenceModel.standard.reliability k
+  nonneg k := by
+    by_cases h : k = .hypothesis
+    · simp only [h, ite_true]; exact h0
+    · simp only [h, ite_false]; exact EvidenceModel.standard.nonneg k
+  lt_one k := by
+    by_cases h : k = .hypothesis
+    · simp only [h, ite_true]; exact h1
+    · simp only [h, ite_false]; exact EvidenceModel.standard.lt_one k
+abbrev hyp10 : EvidenceModel := hypModel (1/10) (by norm_num) (by norm_num)
+abbrev hyp5 : EvidenceModel := hypModel (1/5) (by norm_num) (by norm_num)
+abbrev hyp3 : EvidenceModel := hypModel (3/10) (by norm_num) (by norm_num)
+/-- Belief and disbelief of each rival in `y`, for exact pins. -/
+def nums (r : Rivalry) (y : Nat) : List (ℚ × ℚ) := (r.opinionsAt y).map fun p => (p.2.belief, p.2.disbelief)
+def snums (s : Statement) (y : Nat) : List (ℚ × ℚ) := [((s.opinionAt y).belief, (s.opinionAt y).disbelief)]
+/-- `nums` under a named weight model (option E1 pins). -/
+def numsM [EvidenceModel] (r : Rivalry) (y : Nat) : List (ℚ × ℚ) := (r.opinionsAt y).map fun p => (p.2.belief, p.2.disbelief)
+
+/-! ### Option H on today's core, emulated outside it (review stage)
+
+`withdrawAt w y s` drops from `s` every item listed in `w` as `(pmid, note, year withdrawn)` once that
+year has come. Nothing else changes: the opinion is still `Statement.opinion` and the rivalry is still
+`Rivalry.opinions`. In the core, H would be one field on `Evidence` read by `Statement.asOf`. -/
+def withdrawAt (w : List (Nat × String × Nat)) (y : Nat) (s : Statement) : Statement :=
+  { s with evidence := s.evidence.filter fun e => !(w.any fun (p, n, u) => p == e.pmid && n == e.note && decide (u ≤ y)) }
+def rivalryW (w : List (Nat × String × Nat)) (y : Nat) (r : Rivalry) : Rivalry :=
+  ⟨r.rivals.map (withdrawAt w y), by simpa using r.two_le⟩
+def rivLinesH [EvidenceModel] (t c v : String) (w : List (Nat × String × Nat)) (r : Rivalry) (ys : List Nat) : List String :=
+  ys.flatMap fun y => ((rivalryW w y r).opinionsAt y).map fun (s, o) => line t c v y s.id o
+def stmtLinesH [EvidenceModel] (t c v : String) (w : List (Nat × String × Nat)) (s : Statement) (ys : List Nat) : List String :=
+  ys.map fun y => line t c v y s.id ((withdrawAt w y s).opinionAt y)
+def numsH (w : List (Nat × String × Nat)) (r : Rivalry) (y : Nat) : List (ℚ × ℚ) := nums (rivalryW w y r) y
+def snumsH (w : List (Nat × String × Nat)) (s : Statement) (y : Nat) : List (ℚ × ℚ) := snums (withdrawAt w y s) y
+
+/-- The worked example entered once: the direct refutations of C~I dropped, the rivalry carries them. -/
+def onceCI : Statement := { chemicalIntermediate with evidence := chemicalIntermediate.evidence.filter (·.polarity == .supports) }
+def onceCoupling : Rivalry := ⟨[chemiosmotic, onceCI], by decide⟩
+def onceRealCoupling : Rivalry := ⟨[realOnly chemiosmotic, realOnly onceCI], by decide⟩
+def glp1Rivalry : Rivalry := ⟨[BioLean.Lib.S9c, BioLean.Lib.S9d], by decide⟩
+'''
+
+# Hand-written pins beyond the generated ones, per case (Lean, referencing generated names).
+STRESS_EXTRA = {
+ "R03b": ['-- The core\'s own lint catches the naive entry, once the ctenophore item carries its taxon:',
+          '-- `Statement.taxonConsistent` fails because Mnemiopsis is not a vertebrate (`Taxa.isA`).',
+          '#guard s_R03b_naive_0.taxonConsistent == false && s_R03b_naive_1.taxonConsistent == false',
+          '#guard s_R03b_ctx_0.taxonConsistent && s_R03b_ctx_1.taxonConsistent',
+          '/-- The ctenophore item, entered in the vertebrate rivalry, moves the vertebrate verdict numbers. -/',
+          'theorem R03b_naive_moves : nums r_R03b_naive 2023 ≠ nums r_R03b_naive 2022 := by decide +kernel',
+          '/-- Kept in its own context, it changes nothing. -/',
+          'theorem R03b_ctx_still : nums r_R03b_ctx 2023 = nums r_R03b_ctx 2022 := by decide +kernel'],
+ "R03a": ['/-- Review 2. Golgi\'s 1873 reading is superseded support, like Needham\'s broths in R09, but the',
+          'spec does not withdraw it. Withdrawn in 1955, the year EM settled the case, H would PASS R03a at',
+          'exactly 4/5 and keep 1906 contested: which items a curator withdraws decides part of H\'s score. -/',
+          'theorem R03a_golgi_withdrawn_1955 : numsH [(0, "golgi73", 1955)] a2r_R03a_0 1955 = [(4/5, 0), (0, 4/5)] ∧',
+          '    ((rivalryW [(0, "golgi73", 1955)] 1906 a2r_R03a_0).asOf 1906).verdicts =',
+          '      [("neuron doctrine", .contested), ("reticular", .contested)] := by decide +kernel'],
+ "R11b": ['/-- The retracted paper still counts in 2025: the core cannot date a withdrawal. -/',
+          'theorem R11b_retracted_still_counts : snums s_R11b_one_claim_0 2025 = snums s_R11b_one_claim_0 2023 := by decide +kernel',
+          '/-- Deleting it by hand also rewrites 2023, when it was not yet retracted. -/',
+          'theorem R11b_hand_edit_rewrites_2023 : snums s_R11b_removed_by_hand_0 2023 ≠ snums s_R11b_one_claim_0 2023 := by decide +kernel',
+          '/-- Review 2. The emulated H acts only where a year is given. The timeless `Statement.opinion`, which',
+          '`Derivation.opinion` and `Rivalry.opinions` read, still counts Lesne 2006 (60/109, 43/109), while the',
+          'year-cut A2H reading drops it (46/95, 43/95). A real `withdrawn` field read only by `asOf` would',
+          'leave every timeless derivation counting the retracted paper. -/',
+          'theorem R11b_timeless_still_counts : (a2_R11b_0_0.opinion.belief, a2_R11b_0_0.opinion.disbelief) = (60/109, 43/109) ∧',
+          '    snumsH w_R11b a2_R11b_0_0 2025 = [(46/95, 43/95)] := by decide +kernel'],
+ "S05": ['/-- Entered on both variants, the shared paper counts twice against A: the split moves A. -/',
+         'theorem S05_split_moves_A : (nums r_S05_split 2000).head? ≠ (nums r_S05_unsplit 2000).head? := by decide +kernel',
+         '/-- Entered once, as a refutation of A (the rule), the split leaves A unchanged. -/',
+         'theorem S05_A2_keeps_A : (nums a2r_S05_0 2000).head? = (nums a2r_S05_u 2000).head? := by decide +kernel'],
+ "S07": ['/-- Three proposals in a closed frame: the default base rate 1/2 gives projected probabilities summing to 3/2. -/',
+         'theorem S07_prob_sum : ((r_S07_both.opinionsAt 2000).map (·.2.prob)).sum = 3 / 2 := by decide +kernel',
+         '/-- Review 2. `Opinion.prob` already takes a base rate: told 1/3, the core gives 1/3 each. What it cannot',
+         'store is the 1/3, or that the three rivals are the only ones (a closed frame). -/',
+         'theorem S07_prob_told_third : (r_S07_both.opinionsAt 2000).map (·.2.prob (1/3)) = [1/3, 1/3, 1/3] := by decide +kernel'],
+ "S10": ['/-- Refuting B never raises A (`Rivalry.belief_le`): A stays at belief 0 although the pair is exhaustive. -/',
+         'theorem S10_A_belief_zero : ((r_S10_both.opinionsAt 2000).head?.map (·.2.belief)) = some 0 := by decide +kernel',
+         '/-- Review stage. Entered as a closed pair is entered today (rule 4: P against not-P), the trial goes on A',
+         'and A is established. The exhaustive pair is expressible in the core. -/',
+         'theorem S10_A2_states_it : nums a2r_S10_0 2000 = [(17/20, 0), (0, 17/20)] := by decide +kernel'],
+ "R01c": ['/-- The PMID rule keeps the first item of a paper: the order of entry decides whether "dispersive"',
+          'is supported (generation 1 first) or refuted (generation 2 first). -/',
+          'theorem R01c_order_decides : (s_R01c_gen1_first_0.opinionAt 1958).belief = 7/10 ∧',
+          '    (s_R01c_gen1_first_0.opinionAt 1958).disbelief = 0 ∧ (s_R01c_gen2_first_0.opinionAt 1958).belief = 0 ∧',
+          '    (s_R01c_gen2_first_0.opinionAt 1958).disbelief = 7/10 := by decide +kernel'],
+ "S11": ['/-- No closed frame: two partial exclusions leave the survivor A at belief 0. -/',
+         'theorem S11_A_belief_zero : ((r_S11_refute_only.opinionsAt 2000).head?.map (·.2.belief)) = some 0 := by decide +kernel'],
+ "R23": ['/-- Review stage. Both mechanisms act (Gabery 2020), so they are not rivals. As a Rivalry, S9c keeps',
+         'its verdict (contested) but its disbelief rises from 23/61 to 83/121 because of S9d (rule: FAIL). -/',
+         'theorem R23_rivalry_moves_S9c : (nums glp1Rivalry 2026).head? = some (32/121, 83/121) ∧',
+         '    snums BioLean.Lib.S9c 2026 = [(32/61, 23/61)] := by decide +kernel'],
+ "R16": ['/-- As a Rivalry, the two halves of one dispute get different verdicts. -/',
+         'theorem R16_halves_disagree : ((r_R16_both.asOf 2022).verdicts.map (·.2)) = [.contested, .unsupported] := by decide +kernel'],
+}
+
+
+E1MODELS = [("h1/10", "hyp10"), ("h1/5", "hyp5"), ("h3/10", "hyp3")]
+
+# Review stage: exact numbers the doc quotes at a non-key year or under an E1 weight. (case, variant,
+# year, tag). Pinned with `nums`/`snums` (std) or `@numsM inst` (E1).
+DOC_NUM_PINS = [("R13", "both", 1999, "std"), ("R13", "A2:0", 1999, "std"), ("R16b", "textbook", 2013, "std"),
+                ("R08a", "repo", 1965, "h1/5"), ("R08a", "repo", 1974, "h1/5"), ("R13", "A2:0", 2003, "h1/10"),
+                ("R21", "A2:0", 2010, "h1/10"), ("R21", "A2:0", 2010, "std")]
+
+
+
+def e1_pins(cid, encs, obs):
+    """Pins for option E1: for each encoding and dated year where some hypothesis weight changes a
+    verdict, pin the verdicts under that weight."""
+    if not obs: return []
+    out = []
+    c = C[cid]
+    for vname, kind, name in encs:
+        if kind.endswith("H"): continue
+        for y in c["years"]:
+            base = [r[3] for r in obs["std"][cid][vname][str(y)]]
+            for tag, inst in E1MODELS:
+                rows = obs[tag][cid][vname][str(y)]
+                if [r[3] for r in rows] == base: continue
+                t = f"{ident(cid)}_{ident(vname)}_{y}_E1_{inst}"
+                if kind == "rivalry":
+                    out.append(f"theorem {t} : (@Rivalry.verdicts {inst} ({name}.asOf {y}) (4/5) (1/4)) = {verdict_list(rows)} := by decide +kernel")
+                else:
+                    out.append(f"theorem {t} : (@Statement.opinionAt {inst} {name} {y}).verdict = .{rows[0][3]} := by decide +kernel")
+    return out
+
+
+def stress_variants(c):
+    """(variant name, lean kind, lean name, obs expression builder) for every encoding of a case."""
+    out = []
+    cid = c["id"]
+    for vname, spec in c["variants"].items():
+        tag = ident(f"{cid}_{vname}")
+        kind = spec[0]
+        if kind == "rivalry": out.append((vname, "rivalry", f"r_{tag}", spec))
+        elif kind == "stmt": out.append((vname, "stmt", f"s_{tag}_0", spec))
+        elif kind == "repo": out.append((vname, "repo", spec[1], spec))
+        elif kind == "glp1": out.append((vname, "glp1", spec[1], spec))
+    return out
+
+
+def a2_frames(cid):
+    frames = [(str(k), f) for k, f in enumerate(best_frames(cid))]
+    if cid == "S05": frames.append(("u", C["S05"]["frame_unsplit"]))
+    return frames
+
+
+def gen_stress(obs=None):
+    out = [STRESS_HEAD]
+    for n, (k, cu, lab) in ENT.items():
+        out.append(f"def {n} : Entity {KIND[k]} := ⟨{lstr(cu)}, {lstr(lab)}⟩")
+    out.append(STRESS_HELPERS)
+    evals = []
+    for c in CASES:
+        cid = c["id"]
+        ys = c["years"]
+        yl = "[" + ", ".join(map(str, ys)) + "]"
+        out.append(doc_case(c))
+        out.append("")
+        encs = []   # (variant, kind, name)
+        for vname, kind, name, spec in stress_variants(c):
+            tag = ident(f"{cid}_{vname}")
+            if kind in ("rivalry", "stmt"):
+                names = []
+                for i, r in enumerate(spec[1]):
+                    sname = f"s_{tag}_{i}"
+                    names.append(sname)
+                    out.append(statement(sname, r))
+                if kind == "rivalry":
+                    out.append(f"def r_{tag} : Rivalry := ⟨[{', '.join(names)}], by decide⟩")
+                    encs.append((vname, "rivalry", f"r_{tag}"))
+                else:
+                    encs.append((vname, "stmt", names[0]))
+            elif kind == "repo":
+                encs.append((vname, "rivalry", name))
+            elif kind == "glp1":
+                if spec[1] == "separate":
+                    encs.append((vname + ":S9c", "stmt", "BioLean.Lib.S9c"))
+                    encs.append((vname + ":S9d", "stmt", "BioLean.Lib.S9d"))
+                else:
+                    encs.append((vname, "rivalry", "glp1Rivalry"))
+        # A2: the frames, translated by the once rule
+        for k, fr in a2_frames(cid):
+            rivals = translate(cid, fr)
+            names = []
+            for i, r in enumerate(rivals):
+                sname = f"a2_{ident(cid)}_{k}_{i}"
+                names.append(sname)
+                out.append(statement(sname, r))
+            if len(names) >= 2:
+                out.append(f"/-- A2 (best curation today): frame {k} translated by the once rule. -/")
+                out.append(f"def a2r_{ident(cid)}_{k} : Rivalry := ⟨[{', '.join(names)}], by decide⟩")
+                encs.append((f"A2:{k}", "rivalry", f"a2r_{ident(cid)}_{k}"))
+            else:
+                encs.append((f"A2:{k}", "stmt", names[0]))
+        # A2H (review stage): the same statements with option H emulated outside the core
+        wd = withdrawals(cid)
+        if wd:
+            wl = "[" + ", ".join(f"({p}, {lstr(n)}, {u})" for p, n, u in wd) + "]"
+            out.append(f"/-- Option H for {cid}: (pmid, note, year withdrawn). -/")
+            out.append(f"def w_{ident(cid)} : List (Nat × String × Nat) := {wl}")
+            for k, fr in a2_frames(cid):
+                if k == "u": continue
+                n_riv = len(translate(cid, fr))
+                if n_riv >= 2: encs.append((f"A2H:{k}", "rivalryH", f"a2r_{ident(cid)}_{k}"))
+                else: encs.append((f"A2H:{k}", "stmtH", f"a2_{ident(cid)}_{k}_0"))
+        out.append("")
+        for vname, kind, name in encs:
+            if kind == "rivalry": evals.append(f"rivLines t {lstr(cid)} {lstr(vname)} {name} {yl}")
+            elif kind == "rivalryH": evals.append(f"rivLinesH t {lstr(cid)} {lstr(vname)} w_{ident(cid)} {name} {yl}")
+            elif kind == "stmtH": evals.append(f"stmtLinesH t {lstr(cid)} {lstr(vname)} w_{ident(cid)} {name} {yl}")
+            else: evals.append(f"stmtLines t {lstr(cid)} {lstr(vname)} {name} {yl}")
+        # pins
+        if obs:
+            for vname, kind, name in encs:
+                vt = ident(vname)
+                for y in ys:
+                    rows = obs["std"][cid][vname][str(y)]
+                    w = f"w_{ident(cid)}"
+                    if kind == "rivalry":
+                        out.append(f"theorem {ident(cid)}_{vt}_{y} : ({name}.asOf {y}).verdicts = {verdict_list(rows)} := by decide +kernel")
+                    elif kind == "rivalryH":
+                        out.append(f"theorem {ident(cid)}_{vt}_{y} : ((rivalryW {w} {y} {name}).asOf {y}).verdicts = {verdict_list(rows)} := by decide +kernel")
+                    elif kind == "stmtH":
+                        out.append(f"theorem {ident(cid)}_{vt}_{y} : ((withdrawAt {w} {y} {name}).opinionAt {y}).verdict = .{rows[0][3]} := by decide +kernel")
+                    else:
+                        out.append(f"theorem {ident(cid)}_{vt}_{y} : ({name}.opinionAt {y}).verdict = .{rows[0][3]} := by decide +kernel")
+            y = c["key"]
+            for vname, kind, name in encs:
+                rows = obs["std"][cid][vname][str(y)]
+                f = {"rivalry": "nums", "stmt": "snums", "rivalryH": f"numsH w_{ident(cid)}", "stmtH": f"snumsH w_{ident(cid)}"}[kind]
+                out.append(f"theorem {ident(cid)}_{ident(vname)}_{y}_num : {f} {name} {y} = {num_list(rows)} := by decide +kernel")
+            for pc, pv, py, pt in DOC_NUM_PINS:
+                if pc != cid: continue
+                kind, name = next((k, n) for v, k, n in encs if v == pv)
+                rows = obs[pt][cid][pv][str(py)]
+                inst = dict(E1MODELS).get(pt)
+                tag = "" if pt == "std" else "_E1_" + inst
+                if kind == "rivalry":
+                    f = f"@numsM {inst}" if inst else "nums"
+                else:
+                    assert not inst
+                    f = "snums"
+                out.append(f"theorem {ident(cid)}_{ident(pv)}_{py}{tag}_num : {f} {name} {py} = {num_list(rows)} := by decide +kernel")
+            for l in STRESS_EXTRA.get(cid, []):
+                out.append(l)
+            e1 = e1_pins(cid, encs, obs)
+            if e1:
+                out.append("/-- Option E1: verdicts that move when `hypothesis` weighs more than 0 (observed). -/")
+                out.extend(e1)
+            out.append("")
+    out.append("/-- Every observation, one line per rival per year, under weight model `t`; parsed by")
+    out.append("`scripts/stress/rivals_run.py`. -/")
+    out.append("def allLines (t : String) [EvidenceModel] : List String :=\n  " + " ++\n  ".join(evals))
+    out.append("#eval IO.println (String.intercalate \"\\n\" (allLines \"std\"))")
+    for tag, inst in E1MODELS:
+        out.append(f"#eval IO.println (String.intercalate \"\\n\" (@allLines {lstr(tag)} {inst}))")
+    out.append("end BioLean.Stress.Rivals")
+    return "\n".join(out) + "\n"
+
+
+# ============================================================ Proto/Multinomial.lean (prototype)
+
+PROTO_HEAD = r'''import BioLean.Rivalry
+import BioLean.Examples.Chemiosmosis
+import BioLean.Lib.TextbookClaimsR2.CellStructureAndFunction
+
+/-!
+# Prototype (program 03): one set of items over a frame of rivals
+
+PROTOTYPE, not core. Generated by `scripts/stress/rivals_gen.py` (the prototype section is a fixed
+template in that script; the cases come from `scripts/stress/rivals_spec.py`). Doc:
+`docs/programs/03-rivals-and-hypotheses.md`.
+
+Nothing here is imported by `BioLean.lean`, so `lake build` does not build it. Option letters follow
+the doc: B1, B2, B3 (readings of a frame), E2 (base rates over a frame), H (withdrawal).
+
+A `Frame` lists mutually exclusive rivals. It is open (an extra cell `other`, "none of these") or
+closed (the list is exhaustive). Each evidence `Item` is entered once, with the cells it favours, and
+is keyed by `(pmid, finding)` so two findings of one paper can bear on a rival in opposite
+directions (case R01c). Three readings of the same items:
+
+* **B2, per-cell binomials** (`Frame.cellOpinion`). A cell's opinion is the core `fuse` over one
+  binomial per item that decides that cell: support when the item favours that cell alone,
+  refutation when it does not favour it. An item that favours the cell together with others says
+  nothing about it. No new opinion operator: only `Opinion.fuse` and `Evidence.opinion`.
+* **B1, Jøsang's hyper-opinion, coarsened per cell** (`Frame.hyper`). Item counts are added on the
+  subset each favours; belief in a cell is the mass on that cell alone, disbelief the mass on subsets
+  without it, and mass on subsets that hold it with others is vagueness (uncertainty). This is a new
+  operator (`ofCounts`), not the core `fuse`.
+* **B3, Smets' transferable belief model** (`Frame.tbmCell`). Each item is mass `r` on the set it
+  favours; sets intersect with no renormalisation; mass on the empty set is conflict. A new operator.
+* **E2, frame base rates** (`Frame.prob`): the B1 projected probability with a uniform base rate over
+  the frame's cells, so the cells' probabilities sum to 1.
+
+**H, withdrawal**: `Item.withdrawn` drops an item from that year on (a retraction, or support
+superseded by an identification), so history replays correctly.
+
+Cells are numbered for kernel speed (`favours : List Nat`; `other` is index `names.length`).
+-/
+
+namespace BioLean.Proto.Multinomial
+open BioLean
+
+/-- One evidence item, entered once, on the cells it favours. -/
+structure Item where
+  pmid : Nat
+  year : Nat
+  kind : EvidenceKind
+  /-- The cells the item favours, by index; `other` is index `names.length` in an open frame. -/
+  favours : List Nat
+  /-- Dropped from this year on (retracted, or superseded by an identification). Option H. -/
+  withdrawn : Option Nat := none
+  note : String := ""
+  /-- Which finding of the paper this is (case R01c). Items are keyed by `(pmid, finding)`. -/
+  finding : Nat := 0
+
+def it (pmid year : Nat) (kind : EvidenceKind) (fav : List Nat) (w : Option Nat := none) (note : String := "")
+    (finding : Nat := 0) : Item :=
+  { pmid, year, kind, favours := fav, withdrawn := w, note, finding }
+
+/-- An item from a core evidence record (used for compiled textbook statements). -/
+def Item.ofEvidence (fav : List Nat) (e : Evidence) : Item :=
+  { pmid := e.pmid, year := e.year, kind := e.kind, favours := fav, note := e.note }
+
+/-- Exclusive rivals. Duplicate names are a type error (`nodup`), unlike `Rivalry` (case S09). -/
+structure Frame where
+  names : List String
+  isOpen : Bool
+  items : List Item
+  nodup : names.Nodup := by decide
+
+/-- `Opinion.verdict` on a bare (belief, disbelief) pair, for B3, whose masses are not an `Opinion`. -/
+def verdictBD (b d : ℚ) (θ : ℚ := 4 / 5) (τ : ℚ := 1 / 4) : Derivation.Verdict :=
+  if τ ≤ b ∧ τ ≤ d then .contested
+  else if θ ≤ b then .established
+  else if θ ≤ d then .refuted
+  else .unsupported
+
+theorem verdictBD_eq (o : Opinion) : verdictBD o.belief o.disbelief = o.verdict := rfl
+
+/-- Add mass `v` on focal set `s` (a bitmask). -/
+def addMass (m : List (Nat × ℚ)) (s : Nat) (v : ℚ) : List (Nat × ℚ) :=
+  if m.any (·.1 == s) then m.map fun (t, w) => if t == s then (t, w + v) else (t, w) else m ++ [(s, v)]
+
+/-- Conjunctive combination of a mass function with a simple support function on `s` of weight `r`. -/
+def conj (m : List (Nat × ℚ)) (s : Nat) (r : ℚ) : List (Nat × ℚ) :=
+  m.foldl (fun acc (t, w) => addMass (addMass acc (t &&& s) (w * r)) t (w * (1 - r))) []
+
+namespace Frame
+
+def size (f : Frame) : Nat := if f.isOpen then f.names.length + 1 else f.names.length
+def label (f : Frame) (x : Nat) : String := f.names.getD x "other"
+
+/-- Items live in `y`: published, not withdrawn, not favouring the whole frame, one per finding
+(`(pmid, finding)`; PMID 0 marks non-paper items and is never deduplicated). -/
+def live (f : Frame) (y : Nat) : List Item :=
+  let ok := f.items.filter fun i =>
+    decide (i.year ≤ y) && (match i.withdrawn with | some u => decide (y < u) | none => true) &&
+      !((List.range f.size).all i.favours.contains)
+  ok.foldl (fun acc i =>
+    if i.pmid != 0 && acc.any (fun j => j.pmid == i.pmid && j.finding == i.finding) then acc else acc ++ [i]) []
+
+def asEvidence (i : Item) (p : Opinion.Polarity) : Evidence :=
+  { pmid := i.pmid, year := i.year, kind := i.kind, polarity := p, note := i.note }
+
+/-- One B2 step for cell `x`: support if the item favours `x` alone, nothing if it favours `x` with
+others, refutation if it does not favour `x`. -/
+def step [EvidenceModel] (x : Nat) (o : Opinion) (i : Item) : Opinion :=
+  if i.favours == [x] then o.fuse (asEvidence i .supports).opinion
+  else if i.favours.contains x then o
+  else o.fuse (asEvidence i .refutes).opinion
+
+/-- B2: the opinion about cell `x` in year `y`. -/
+def cellOpinion [EvidenceModel] (f : Frame) (y : Nat) (x : Nat) : Opinion :=
+  (f.live y).foldl (step x) .vacuous
+
+def verdicts [EvidenceModel] (f : Frame) (y : Nat) : List Derivation.Verdict :=
+  (List.range f.size).map fun x => (f.cellOpinion y x).verdict
+
+/-- B1 pseudo-count of one item: the count whose binomial belief, with prior weight 2, is its
+reliability (`r = c / (c + 2)`). Cumulative fusion adds these counts. -/
+def count [m : EvidenceModel] (k : EvidenceKind) : ℚ := 2 * m.reliability k / (1 - m.reliability k)
+
+/-- B1 tallies for cell `x`: counts on `{x}`, on subsets without `x`, and on larger subsets with `x`. -/
+def tally [EvidenceModel] (f : Frame) (y : Nat) (x : Nat) : ℚ × ℚ × ℚ :=
+  (f.live y).foldl (fun (p, n, v) i =>
+    if i.favours == [x] then (p + count i.kind, n, v)
+    else if i.favours.contains x then (p, n, v + count i.kind)
+    else (p, n + count i.kind, v)) (0, 0, 0)
+
+end Frame
+
+/-- An opinion from evidence counts (positive, negative, vague) with prior weight 2. A new operator:
+`fuse` has no place for vague mass. Negative inputs are clamped to 0 (they never occur). -/
+def ofCounts (p n v : ℚ) : Opinion where
+  belief := max p 0 / (max p 0 + max n 0 + max v 0 + 2)
+  disbelief := max n 0 / (max p 0 + max n 0 + max v 0 + 2)
+  uncertainty := (max v 0 + 2) / (max p 0 + max n 0 + max v 0 + 2)
+  belief_nonneg := by
+    have := le_max_right p 0; have := le_max_right n 0; have := le_max_right v 0
+    exact div_nonneg (le_max_right _ _) (by linarith)
+  disbelief_nonneg := by
+    have := le_max_right p 0; have := le_max_right n 0; have := le_max_right v 0
+    exact div_nonneg (le_max_right _ _) (by linarith)
+  uncertainty_pos := by
+    have := le_max_right p 0; have := le_max_right n 0; have := le_max_right v 0
+    exact div_pos (by linarith) (by linarith)
+  sum_eq_one := by
+    have := le_max_right p 0; have := le_max_right n 0; have := le_max_right v 0
+    rw [← add_div, ← add_div, div_eq_one_iff_eq (by linarith)]
+    ring
+
+namespace Frame
+
+/-- B1: Jøsang's hyper-opinion over the frame, coarsened to cell `x`. -/
+def hyper [EvidenceModel] (f : Frame) (y : Nat) (x : Nat) : Opinion :=
+  let (p, n, v) := f.tally y x
+  ofCounts p n v
+
+def verdictsB1 [EvidenceModel] (f : Frame) (y : Nat) : List Derivation.Verdict :=
+  (List.range f.size).map fun x => (f.hyper y x).verdict
+
+/-- E2: projected probability of cell `x` with a uniform base rate `1 / size`. Vague mass is shared
+equally among the cells an item favours. Sums to 1 over the cells (pinned on S07 and S03). -/
+def prob [EvidenceModel] (f : Frame) (y : Nat) (x : Nat) : ℚ :=
+  let tot := (f.live y).foldl (fun t i => t + count i.kind) 2
+  let share := (f.live y).foldl (fun t i =>
+    if i.favours.contains x then t + count i.kind / (i.favours.length : ℚ) else t) 0
+  (share + 2 / (f.size : ℚ)) / tot
+
+/-! ### B3: Smets' transferable belief model (unnormalised Dempster combination)
+
+Each item is a simple support function: mass `r` (its reliability) on the set of cells it favours
+and `1 − r` on the whole frame. Items combine by intersection, with no renormalisation, so mass on
+the empty set is conflict ("none of these" when the frame is closed). Focal sets are bitmasks. This
+is a new operator: the core has no mass on sets. -/
+
+def mask (l : List Nat) : Nat := l.foldl (fun m x => m ||| (1 <<< x)) 0
+def full (f : Frame) : Nat := (1 <<< f.size) - 1
+
+def tbm [m : EvidenceModel] (f : Frame) (y : Nat) : List (Nat × ℚ) :=
+  (f.live y).foldl (fun acc i =>
+    let r := m.reliability i.kind
+    if r == 0 then acc else conj acc (mask i.favours) r) [(f.full, 1)]
+
+/-- B3 belief and disbelief in cell `x`: the mass on `{x}` alone, and the mass on non-empty sets
+without `x`. Conflict mass counts as neither. -/
+def tbmCell [EvidenceModel] (f : Frame) (y x : Nat) : ℚ × ℚ :=
+  let m := f.tbm y
+  let bit := 1 <<< x
+  ((m.filter (·.1 == bit)).foldl (fun t p => t + p.2) 0,
+   (m.filter fun p => p.1 != 0 && p.1 &&& bit == 0).foldl (fun t p => t + p.2) 0)
+
+def conflict [EvidenceModel] (f : Frame) (y : Nat) : ℚ := ((f.tbm y).filter (·.1 == 0)).foldl (fun t p => t + p.2) 0
+
+def verdictsB3 [EvidenceModel] (f : Frame) (y : Nat) : List Derivation.Verdict :=
+  (List.range f.size).map fun x => verdictBD (f.tbmCell y x).1 (f.tbmCell y x).2
+
+def render [EvidenceModel] (f : Frame) (y : Nat) : String :=
+  String.intercalate " | " ((List.range f.size).map fun x => s!"{f.label x}: {f.cellOpinion y x}")
+
+end Frame
+
+/-! ## B2 without a new type (review stage)
+
+B2 reads each cell on its own, with no rivalry step. So cell `x` is also one ordinary core
+`Statement`: support for each item that favours `x` alone, refutation for each item that does not
+favour `x`, nothing for the rest. The claim is a placeholder (the opinion never reads it). With no
+withdrawal (H) and one finding per paper, `Frame.cellOpinion` and `Statement.opinionAt` agree;
+`#guard ... b2IsStatements` checks this on every frame below. So B2 can be an emitter that writes
+today's Statements, outside the core; only H (and the finding key, X3) need the core. -/
+
+namespace Frame
+
+def cellEvidence (f : Frame) (x : Nat) : List Evidence :=
+  f.items.filterMap fun i =>
+    if (List.range f.size).all i.favours.contains then none
+    else if i.favours == [x] then some (asEvidence i .supports)
+    else if i.favours.contains x then none
+    else some (asEvidence i .refutes)
+
+def cellStatement (f : Frame) (x : Nat) : Statement :=
+  { id := f.label x, text := "", claim := BioLean.Examples.Chemiosmosis.chemiosmotic.claim,
+    evidence := f.cellEvidence x }
+
+def noWithdrawal (f : Frame) : Frame :=
+  { f with items := f.items.map fun i => { i with withdrawn := none } }
+
+/-- B2 with withdrawals ignored equals the per-cell core `Statement` in every year of `ys`, every cell. -/
+def b2IsStatements [EvidenceModel] (f : Frame) (ys : List Nat) : Bool :=
+  ys.all fun y => (List.range f.size).all fun x =>
+    (f.noWithdrawal.cellOpinion y x).belief == ((f.cellStatement x).opinionAt y).belief &&
+    (f.noWithdrawal.cellOpinion y x).disbelief == ((f.cellStatement x).opinionAt y).disbelief
+
+end Frame
+
+/-! ## Laws (proved for every frame, not just the cases) -/
+
+/-- Negation commutes with cumulative fusion. -/
+theorem fuse_negate (x y : Opinion) : (x.fuse y).negate = x.negate.fuse y.negate := by
+  ext <;> simp [Opinion.fuse, Opinion.negate, Opinion.kappa]
+
+theorem ofReliability_negate (r : ℚ) (h0 : 0 ≤ r) (h1 : r < 1) :
+    (Opinion.ofReliability r h0 h1 .supports).negate = Opinion.ofReliability r h0 h1 .refutes := by
+  ext <;> simp [Opinion.ofReliability, Opinion.negate]
+
+/-- Why today's `Rivalry`, fed support-only rivals entered once, agrees with B2: `against`
+distributes over fusion of support-only opinions, so a rival's items each count once, at full
+weight, in the others' disbelief. With refutations on a rival this fails, and the two differ. -/
+theorem against_fuse (x y : Opinion) (hx : x.disbelief = 0) (hy : y.disbelief = 0) :
+    (x.fuse y).against = x.against.fuse y.against := by
+  have hux : x.uncertainty = 1 - x.belief := by linarith [x.sum_eq_one]
+  have huy : y.uncertainty = 1 - y.belief := by linarith [y.sum_eq_one]
+  have hk := Opinion.kappa_pos x y
+  unfold Opinion.kappa at hk
+  rw [hux, huy] at hk
+  have hkne' : 1 - x.belief + (1 - y.belief) - (1 - y.belief) * (1 - x.belief) ≠ 0 := by
+    rw [mul_comm]; exact hk.ne'
+  ext <;> simp only [Opinion.against, Opinion.ofReliability, Opinion.fuse, Opinion.kappa, hux, huy]
+  · simp
+  · field_simp
+    ring
+
+theorem step_mirror [EvidenceModel] (i : Item) (o : Opinion) (h : i.favours = [0] ∨ i.favours = [1]) :
+    Frame.step 1 o.negate i = (Frame.step 0 o i).negate := by
+  rcases h with h | h
+  · simp [Frame.step, h, fuse_negate, Evidence.opinion, Frame.asEvidence, ofReliability_negate]
+  · simp [Frame.step, h, fuse_negate, Evidence.opinion, Frame.asEvidence, ← ofReliability_negate]
+
+theorem fold_mirror [EvidenceModel] (L : List Item) (hL : ∀ i ∈ L, i.favours = [0] ∨ i.favours = [1])
+    (o : Opinion) : L.foldl (Frame.step 1) o.negate = (L.foldl (Frame.step 0) o).negate := by
+  induction L generalizing o with
+  | nil => rfl
+  | cons i L ih =>
+    simp only [List.foldl_cons]
+    rw [step_mirror i o (hL i (by simp)), ih (fun j hj => hL j (by simp [hj]))]
+
+/-- In a closed pair whose items each favour one cell, the two cells are mirror images: the two
+halves of one dispute always agree. A `Rivalry` over P and not-P does not (case R16). -/
+theorem closedPair_mirror [EvidenceModel] (f : Frame) (y : Nat)
+    (h : ∀ i ∈ f.live y, i.favours = [0] ∨ i.favours = [1]) :
+    f.cellOpinion y 1 = (f.cellOpinion y 0).negate := by
+  have hv : (Opinion.vacuous).negate = Opinion.vacuous := by ext <;> rfl
+  unfold Frame.cellOpinion
+  rw [← hv, fold_mirror _ h, hv]
+
+/-! ## Output -/
+
+def vname : Derivation.Verdict → String
+  | .established => "established" | .contested => "contested" | .refuted => "refuted" | .unsupported => "unsupported"
+
+/-- One line per cell and reading: OBS|case|frame|model|year|cell|belief|disbelief|verdict|extra, where
+extra is the E2 projected probability for B1 and B2 and the conflict mass for B3. -/
+def frameLines [EvidenceModel] (c fr : String) (f : Frame) (ys : List Nat) : List String :=
+  ys.flatMap fun y => (List.range f.size).flatMap fun x =>
+    let o := f.cellOpinion y x
+    let h := f.hyper y x
+    let (tb, td) := f.tbmCell y x
+    [s!"OBS|{c}|{fr}|B2|{y}|{f.label x}|{o.belief}|{o.disbelief}|{vname o.verdict}|{f.prob y x}",
+     s!"OBS|{c}|{fr}|B1|{y}|{f.label x}|{h.belief}|{h.disbelief}|{vname h.verdict}|{f.prob y x}",
+     s!"OBS|{c}|{fr}|B3|{y}|{f.label x}|{tb}|{td}|{vname (verdictBD tb td)}|{f.conflict y}"]
+
+def nums [EvidenceModel] (f : Frame) (y : Nat) : List (ℚ × ℚ) :=
+  (List.range f.size).map fun x => ((f.cellOpinion y x).belief, (f.cellOpinion y x).disbelief)
+'''
+
+PROTO_EXTRA = {
+ "R08c": ['/-- A closed two-cell frame with single-cell items is today\'s `Statement.opinion`. -/',
+          'def r08cStmt : Statement :=',
+          '  { id := "chemiosmotic", text := "", claim := BioLean.Examples.Chemiosmosis.chemiosmotic.claim,',
+          '    evidence := (fr_R08c.live 1974).map fun i => Frame.asEvidence i (if i.favours == [0] then .supports else .refutes) }',
+          'theorem R08c_B2_is_statement : (fr_R08c.cellOpinion 1974 0).belief = r08cStmt.opinion.belief ∧',
+          '    (fr_R08c.cellOpinion 1974 0).disbelief = r08cStmt.opinion.disbelief := by decide +kernel',
+          '/-- With the 1962 support withdrawn in 1964 (H), 1964 reads as two open rivals, not a dispute. -/',
+          'theorem R08c_B2_withdrawn_1964 : (fr_R08c.cellOpinion 1964 1).belief = 0 := by decide +kernel'],
+ "R11b": ['/-- Lesne 2006 stops counting from 2024 and 2023 is left as it was. -/',
+          'theorem R11b_B2_withdrawal : nums fr_R11b 2025 ≠ nums fr_R11b 2023 ∧ nums fr_R11b 2023 = nums fr_R11a 2023 := by decide +kernel'],
+ "R16": ['/-- The mirror law on a real case: the two halves agree. -/',
+         'theorem R16_B2_mirror : fr_R16.cellOpinion 2022 1 = (fr_R16.cellOpinion 2022 0).negate :=',
+         '  closedPair_mirror _ _ (by decide +kernel)'],
+ "S04": ['/-- Closed frame fed "all false" evidence: each refutation reads as support for the other, so both look contested. -/',
+         'theorem S04_B2_closed_alarm : fc_S04.verdicts 2000 = [.contested, .contested] := by decide +kernel',
+         '/-- B1 dilutes: in the open frame each refuted rival reaches only 17/37 disbelief (vague mass on "other"). -/',
+         'theorem S04_B1_misses : (fr_S04.hyper 2000 0).disbelief = 17/37 ∧ (fr_S04.hyper 2000 1).disbelief = 17/37 := by',
+         '  decide +kernel'],
+ "R11a": ['/-- B3 erases a live dispute: conflict mass leaves the amyloid claim at (0.06, 0.01). -/',
+          'theorem R11a_B3_erases_dispute : fr_R11a.tbmCell 2023 0 = (2373/40000, 423/40000) := by decide +kernel'],
+ "S05": ['/-- Splitting B into B1 and B2 that share one paper leaves A unchanged under B2 and B1. -/',
+         'theorem S05_B2_split_invariant : (nums fr_S05 2000).head? = (nums fu_S05 2000).head? := by decide +kernel',
+         'theorem S05_B1_split_invariant : (fr_S05.hyper 2000 0).belief = (fu_S05.hyper 2000 0).belief ∧',
+         '    (fr_S05.hyper 2000 0).disbelief = (fu_S05.hyper 2000 0).disbelief := by decide +kernel'],
+ "S07": ['/-- Frame base rates: three bare proposals each get projected probability 1/3. -/',
+         'theorem S07_E2_prob : (List.range 3).map (fr_S07.prob 2000) = [1/3, 1/3, 1/3] := by decide +kernel'],
+ "S03": ['/-- E2 also sums to 1 with a subset vote (vague mass shared). -/',
+         'theorem S03_E2_prob_sum : ((List.range 4).map (fr_S03.prob 2000)).sum = 1 := by decide +kernel'],
+ "R01c": ['/-- Keyed by finding, generation 2 refutes "dispersive" (cell 2) whatever the order. Keyed by PMID',
+          'only, the second finding is dropped and the order of entry decides (as in the core). -/',
+          'theorem R01c_finding_keys : (fr_R01c.cellOpinion 1958 2).belief = 0 ∧ (fr_R01c.cellOpinion 1958 2).disbelief = 7/10 := by',
+          '  decide +kernel',
+          'theorem R01c_pmid_keys_order_decides : (fx_R01c_pmid_gen1_first.cellOpinion 1958 2).disbelief = 0 ∧',
+          '    (fx_R01c_pmid_gen2_first.cellOpinion 1958 2).disbelief = 7/10 := by decide +kernel'],
+ "S11": ['/-- Two partial exclusions. B2 cannot combine them (A stays at belief 0); B3 can (0.7225 = 0.85²). -/',
+         'theorem S11_B2_A_zero : (fr_S11.cellOpinion 2000 0).belief = 0 := by decide +kernel',
+         'theorem S11_B3_A_survives : (fr_S11.tbmCell 2000 0).1 = 289/400 ∧ fr_S11.conflict 2000 = 0 := by decide +kernel'],
+ "R08a": ['/-- The worked example entered once (B2, closed pair) settles in 1974 only because the illustrative',
+          '1965 intermediate report is withdrawn in 1967 (option H). Without the withdrawal it is 5/7 both ways,',
+          'the same as the core with the direct refutations dropped. -/',
+          'theorem R08a_B2_rests_on_withdrawal : fr_R08a.verdicts 1974 = [.established, .refuted] ∧',
+          '    fx_R08a_no_withdrawal.verdicts 1974 = [.unsupported, .unsupported] ∧',
+          '    (fx_R08a_no_withdrawal.cellOpinion 1974 0).belief = 5/7 := by decide +kernel'],
+ "S09": ['/-- A frame with a duplicate rival cannot be built: its `nodup` obligation is false. -/',
+         'theorem S09_dup_rejected : ¬ (["A", "A", "B"] : List String).Nodup := by decide'],
+}
+
+
+def frame_lean(name, cid, fr, doc=None):
+    cells = list(fr["cells"])
+    idx = {x: i for i, x in enumerate(cells)}
+    if fr["open"]: idx["other"] = len(cells)
+    segs, cur = [], []
+    for i in fr["items"]:
+        fav = "[" + ", ".join(str(idx[x]) for x in i["fav"]) + "]"
+        if i.get("r2"):
+            if cur: segs.append("[" + ",\n    ".join(cur) + "]"); cur = []
+            segs.append(f"({R2}.{i['r2']}.evidence.map (Item.ofEvidence {fav}))")
+            continue
+        w = f"(some {i['until']})" if i.get("until") is not None else "none"
+        note = i["note"] or i["key"]
+        fnd = f" {i['finding']}" if i.get("finding") else ""
+        cur.append(f"it {i['pmid']} {i['year']} .{i['kind']} {fav} {w} {lstr(note)}{fnd}")
+    if cur or not segs: segs.append("[" + ",\n    ".join(cur) + "]")
+    items = " ++\n    ".join(segs)
+    names = "[" + ", ".join(lstr(x) for x in cells) + "]"
+    d = f"/-- {doc} -/\n" if doc else ""
+    return f"{d}def {name} : Frame where\n  names := {names}\n  isOpen := {'true' if fr['open'] else 'false'}\n  items := {items}"
+
+
+def proto_frames(c):
+    """(label, lean name, frame dict, doc) for every frame of a case."""
+    cid = c["id"]
+    out = []
+    if c.get("frame"):
+        out.append(("plain", f"fr_{ident(cid)}", c["frame"], "B2 on the frame as first written (no extra curation)."))
+    if c.get("frame_closed"):
+        out.append(("closed", f"fc_{ident(cid)}", c["frame_closed"], "The same items in a closed frame."))
+    if c.get("frame_unsplit"):
+        out.append(("unsplit", f"fu_{ident(cid)}", c["frame_unsplit"], "Before the split."))
+    for label, fr in c.get("frames_extra", []):
+        out.append((label, f"fx_{ident(cid)}_{ident(label)}", fr, f"Extra frame: {label}."))
+    for k, fr in enumerate(best_frames(cid)):
+        if k == 0 and cid not in FB and not fr.get("solo"):
+            continue   # best_frames index 0 is the plain frame itself
+        out.append((f"best:{k}", f"fb_{ident(cid)}_{k}", fr, "Best curation: " + ("a separate statement (closed pair)." if fr.get("solo") else "context split or non-rivals kept out.")))
+    return out
+
+
+def b2_is_statements(fr, ys):
+    """Python side of `Frame.b2IsStatements` (rivals_mirror arithmetic): does B2, withdrawals ignored,
+    equal the per-cell core Statement in every year and cell? The Lean `#guard` checks the same."""
+    import rivals_mirror as M
+    m = M.model()
+    fr0 = dict(fr, items=[dict(i, until=None) for i in fr["items"]])
+    cells = M.cells_of(fr0)
+    for y in ys:
+        _, o2 = M.b2(fr0, y, m)
+        for x in range(len(cells)):
+            ev = []
+            for it in fr0["items"]:
+                if set(it["fav"]) == set(cells): continue
+                if it["fav"] == [cells[x]]: pol = "+"
+                elif cells[x] in it["fav"]: continue
+                else: pol = "-"
+                ev.append(dict(pmid=it["pmid"], year=it["year"], kind=it["kind"], pol=pol, key=it["key"]))
+            o = M.stmt_op(ev, y, m)
+            if (o[0], o[1]) != (o2[x][0], o2[x][1]): return False
+    return True
+
+
+def gen_proto(obs=None, cur=None):
+    out = [PROTO_HEAD]
+    evals = []
+    for c in CASES:
+        cid = c["id"]
+        frames = proto_frames(c)
+        if not frames: continue
+        ys = c["years"]
+        yl = "[" + ", ".join(map(str, ys)) + "]"
+        out.append(doc_case(c))
+        if cur:
+            y = c["key"]
+            v1 = list(C[cid]["variants"])[0]
+            def show(v):
+                rows = cur.get(cid, {}).get(v, {}).get(str(y))
+                return "; ".join(f"{r} {vd}" for r, b, d, vd in rows) if rows else "n/a"
+            a2 = [v for v in cur.get(cid, {}) if v.startswith("A2:")]
+            out.append(f"-- current core in {y}: A1 [{v1}] {show(v1)}" + "".join(f"; A2 [{v}] {show(v)}" for v in a2))
+        for label, name, fr, doc in frames:
+            out.append(frame_lean(name, cid, fr, doc))
+            evals.append(f"frameLines {lstr(cid)} {lstr(label)} {name} {yl}")
+        if obs:
+            for label, name, fr, doc in frames:
+                lt = ident(label)
+                for y in ys:
+                    rows = obs[cid][label][str(y)]
+                    b2 = "[" + ", ".join("." + r["B2"][2] for r in rows) + "]"
+                    b1 = "[" + ", ".join("." + r["B1"][2] for r in rows) + "]"
+                    b3 = "[" + ", ".join("." + r["B3"][2] for r in rows) + "]"
+                    out.append(f"theorem {ident(cid)}_{lt}_B2_{y} : {name}.verdicts {y} = {b2} := by decide +kernel")
+                    out.append(f"theorem {ident(cid)}_{lt}_B1_{y} : {name}.verdictsB1 {y} = {b1} := by decide +kernel")
+                    out.append(f"theorem {ident(cid)}_{lt}_B3_{y} : {name}.verdictsB3 {y} = {b3} := by decide +kernel")
+                y = c["key"]
+                rows = obs[cid][label][str(y)]
+                nl = "[" + ", ".join(f"({q(r['B2'][0])}, {q(r['B2'][1])})" for r in rows) + "]"
+                out.append(f"theorem {ident(cid)}_{lt}_B2_{y}_num : nums {name} {y} = {nl} := by decide +kernel")
+            for l in PROTO_EXTRA.get(cid, []):
+                out.append(l)
+            for label, name, fr, doc in frames:
+                ok = b2_is_statements(fr, ys)
+                out.append(f"#guard {'' if ok else '!'}({name}.b2IsStatements {yl})")
+        out.append("")
+    out.append("def allLines : List String :=\n  " + " ++\n  ".join(evals))
+    out.append("#eval IO.println (String.intercalate \"\\n\" allLines)")
+    out.append("end BioLean.Proto.Multinomial")
+    return "\n".join(out) + "\n"
+
+
+if __name__ == "__main__":
+    pin = "--pin" in sys.argv
+    obs_cur = load(os.path.join(DATA, "observed_current.json")) if pin else None
+    obs_pro = load(os.path.join(DATA, "observed_proto.json")) if pin else None
+    if pin and (obs_cur is None or obs_pro is None):
+        sys.exit("run rivals_run.py first")
+    os.makedirs(os.path.dirname(STRESS), exist_ok=True)
+    os.makedirs(os.path.dirname(PROTO), exist_ok=True)
+    s = gen_stress(obs_cur)
+    open(STRESS, "w").write(s)
+    cur = load(os.path.join(DATA, "observed_current.json"))
+    p = gen_proto(obs_pro, cur["std"] if cur else None)
+    open(PROTO, "w").write(p)
+    print("wrote", STRESS, s.count("\n"), "lines,", s.count(":= by decide"), "pins")
+    print("wrote", PROTO, p.count("\n"), "lines,", p.count(":= by decide"), "pins")

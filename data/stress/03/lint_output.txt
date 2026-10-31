@@ -1,0 +1,19 @@
+67 encodings linted; 50 flagged
+A1 FAIL encodings: 16; flagged by the lint: 15
+   R01b support-both -> L2 L3
+   R01c gen1-first -> L4
+   R01c gen2-first -> L4
+   R01c both-findings -> L2 L3 L4 L4 L4
+   R02b naive -> L2
+   R03b naive -> L2 L9
+   R05 naive -> L2 L3 L7
+   R08c both -> L2
+   R08d naive -> L2
+   R21 both -> L2 L6 L6 L8
+   R22 naive -> L2 L3
+   R23 as-rivalry -> NOT FLAGGED
+   S01 both -> L2
+   S03 support-both -> L2 L3
+   S05 split -> L2 L3
+   S09 dup -> L1 L3 L8
+A1 PASS encodings that are flagged anyway: 8: R01a (L2), R02a (L2), R08a (L2), R10 (L2), R13 (L2 L6), R19 (L2 L9), R20 (L2), R24 (L2)
