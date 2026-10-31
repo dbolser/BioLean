@@ -64,8 +64,8 @@ example : retired.lookup (0, 7050) = some [(0, 51726)] := by decide    -- alt_id
 example : known (0, 7050) = false := by decide                           -- retired ids are not terms
 
 -- the size of the import, pinned
-theorem terms_count : labels.length = 3575 := by decide +kernel
-theorem edges_count : edges.length = 4884 := by decide +kernel
+theorem terms_count : labels.length = 3588 := by decide +kernel
+theorem edges_count : edges.length = 4897 := by decide +kernel
 -- the search tree is ordered (every term is found) and the closure is closed (every parent is a term)
 #guard labels.all fun (c, _) => known c
 #guard edges.all fun (_, p) => known p

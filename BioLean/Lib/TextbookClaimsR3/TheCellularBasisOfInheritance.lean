@@ -337,11 +337,5 @@ def the_cellular_basis_of_inheritance_m45465_86 : Statement where
   text := "Specialized sporophyte cells undergo meiosis to produce haploid spores [weakening; not expressed: unsupported_ontology]"
   claim := .rel ⟨.ro, 2234, false⟩ (e_GO_0051321.inCtx { taxon := e_NCBITaxon_3193 }) e_PO_0025017
   evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "Specialized cells of the sporophyte will undergo meiosis and produce haploid spores." }]
-/-- Spores develop into gametophytes [weakening; not expressed: unsupported_ontology] -/
-def the_cellular_basis_of_inheritance_m45465_87 : Statement where
-  id := "the-cellular-basis-of-inheritance-m45465-87"
-  text := "Spores develop into gametophytes [weakening; not expressed: unsupported_ontology]"
-  claim := .rel ⟨.bfo, 63, false⟩ (e_PO_0025017.inCtx { taxon := e_NCBITaxon_3193 }) e_PO_0028003
-  evidence := [{ pmid := 0, year := 2013, kind := .textbook, note := "The spores will develop into the gametophytes (c)." }]
 
 end BioLean.Textbook.R3.TheCellularBasisOfInheritance
