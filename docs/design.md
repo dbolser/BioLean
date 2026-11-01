@@ -31,7 +31,9 @@ Why subjective logic for strength: one piece of evidence is an opinion with some
 and some uncertainty. Independent items fuse, so belief rises with more papers.
 Refuting items add disbelief instead. A claim with both high belief and high disbelief
 is **contested**, which is the honest answer when the literature disagrees. INDRA's
-belief score is a special case of this, so INDRA's priors can be reused.
+belief score is not a special case of this: it is noisy-OR over evidence with a systematic error
+per source (Bachman 2023), so two items of reliability 1/2 give 3/4 there and 2/3 here. Its
+per-source error rates can still be reused as priors (`docs/programs/10a-evidence-weights.md`).
 
 Why Lean and not a plain graph: the graph says the edges exist. Lean says the argument
 is well-formed and the arithmetic is right, once, for every proof, with a proof term
