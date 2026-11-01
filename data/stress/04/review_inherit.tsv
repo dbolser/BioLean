@@ -1,0 +1,12 @@
+# option C0: inherit RO rdfs:domain / rdfs:range down rdfs:subPropertyOf (review 2026-11-01)
+# own domains parsed here matching RO.lean: 138 of 138
+# relations used in the live data that gain a sort by inheritance: 20: RO_0000085 RO_0000086 RO_0002009 RO_0002092 RO_0002093 RO_0002203 RO_0002219 RO_0002221 RO_0002230 RO_0002233 RO_0002234 RO_0002327 RO_0002331 RO_0002353 RO_0002371 RO_0002436 RO_0002470 RO_0002510 RO_0002511 RO_0002513
+# live statements newly rejected: 5; mutants and controls newly rejected (beyond Rel.accepts today): 3
+live	cell-structure-and-function-m45433-11	('rel', ('ro', 85, False), 'GO:0005886', 'GO:0038023')
+live	how-cells-obtain-energy-m45437-199	('rel', ('ro', 2331, False), 'GO:0003824', 'GO:0008152')
+live	how-cells-obtain-energy-m45439-86	('rel', ('ro', 85, False), 'CHEBI:15846&RO:0001025=(UBERON:0002107)&RO:0002162=(NCBITaxon:40674)', 'GO:0009055')
+live	how-cells-obtain-energy-m45439-87	('rel', ('ro', 85, False), 'CHEBI:16238&RO:0001025=(UBERON:0000955)&RO:0002162=(NCBITaxon:40674)', 'GO:0009055')
+live	molbio-m45476-31	('rel', ('ro', 2331, False), 'GO:0003899', 'GO:0006354')
+mutant	B21-E4	false	relation has output -> output of, same order (as round 1 did for m45432-261)
+mutant	B22-E4	false	relation has input -> input of, same order (as round 1 did for m45432-261)
+mutant	B22-E6	false	object CHEBI:17234 (glucose, chemical) -> GO:0006006 (glucose metabolic process, process)

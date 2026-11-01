@@ -1,0 +1,44 @@
+{
+ "glucose [CHEBI:17234] →− amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])": [
+  "roundTrip",
+  "the-body-s-systems-m45537-22"
+ ],
+ "glucose [CHEBI:17234] →− amount(insulin ⊓ located in (blood) ⊓ part of (pancreatic beta cell) [PR:000009054&RO:0001025=(UBERON:0000178)&BFO:0000050=(CL:0000169)])": [
+  "roundTrip",
+  "the-body-s-systems-m45537-22"
+ ],
+ "antibodies [GO:0019814] →− amount(antibodies ⊓ located in (immune system) [GO:0019814&RO:0001025=(UBERON:0002405)])": [
+  "cycle",
+  null
+ ],
+ "lungs [UBERON:0002048] →− amount(erythropoietin [PR:000007141])": [
+  "crosses",
+  [
+   "the-body-s-systems-m45537-238~loop"
+  ]
+ ],
+ "goiter [MONDO:0005397] →+ process(metabolic reactions [GO:0008152])": [
+  "crosses",
+  [
+   "the-body-s-systems-m45537-260~loop"
+  ]
+ ],
+ "food intake [GO:0042755] →− process(food intake [GO:0042755])": [
+  "roundTrip",
+  "the-body-s-systems-m45537-251~loop"
+ ],
+ "membrane depolarization [GO:0051899] →+ process(membrane depolarization [GO:0051899])": [
+  "cycle",
+  null
+ ],
+ "voltage-gated sodium channel activity [GO:0005248] →+ process(membrane depolarization [GO:0051899])": [
+  "plain",
+  null
+ ],
+ "#flagged": 125,
+ "#sign_clashes": 61,
+ "#sign_clashes_explained": 58,
+ "#round_trips": 66,
+ "#reflexive_dropped": 20,
+ "#explained_kept_crosses": 35
+}

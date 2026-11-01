@@ -1,0 +1,58 @@
+# mid	judgement	why
+# Hand judgements (program 04, 2026-10-31). Controls default to "true" (correct as written); mutants default to "false"
+# (the mutated claim no longer says what the sentence says, and is false or ill-formed as a universal).
+# error = a control that is a real annotation error in the live data. equivalent = the mutant is still true biology, so
+# only a check against the sentence text can see it. unclear = I could not decide; excluded from rates like equivalent.
+# Judgements from my own knowledge are marked (memory) and listed as UNVERIFIED in the doc.
+B13-E0	error	GO:0009579 thylakoid includes cyanobacterial thylakoids (GO computed constraint: never_in Metazoa only); chloroplast is never_in Bacteria. The glossary sentence means chloroplast thylakoid (GO:0009534)
+B18-E0	error	GO:0019253 Calvin cycle also runs in bacteria (GO: never_in Metazoa, Saccharomycetes only); chloroplast stroma is never_in Bacteria. The sentence is about plants; taxon context dropped
+B24-E0	error	CHEBI:26130 biological pigment is a ChEBI role (under CHEBI:50906 role); chlorophyll is_a role mixes a chemical with a role; should be has_role (RO:0000087)
+B28-E0	error	the sentence says "sexually reproducing organism"; the annotation says every multicellular organism develops from a zygote, false for budding and parthenogenesis (memory). The mode flag fired for an unrelated reason
+B36-E0	error	PR:000009054 is PR's gene-level class, label "preproinsulin"; the text means mature insulin
+B42-E0	error	PR:000009054 is PR's gene-level class, label "preproinsulin"; the text means mature insulin
+B43-E0	error	CL:0002371 somatic cell is obsolete (replaced_by CL:0000000, which loses the meaning)
+B44-E0	error	CL:0000548 animal cell is obsolete (replaced_by CL:0000000)
+B45-E0	error	CL:0000548 animal cell is obsolete (replaced_by CL:0000000)
+B01-E5	equivalent	animal cells have centrioles (in their centrosomes) as much as they have centrosomes
+B02-E5	equivalent	plant cells have plasmodesmata
+B04-E5	unclear	CHEBI:8006 is a KEGG-style peptidoglycan variant; possibly a near-synonym
+B05-E5	equivalent	mammals have a first vertebra (atlas): "most mammals have vertebral bone 1" is true
+B07-E3	equivalent	widening the subject of a "some" claim keeps it true: some cellular organisms have chloroplasts
+B07-E5	equivalent	some eukaryotes have a plastid chromosome
+B08-E5	equivalent	eukaryotic cells have a nuclear envelope, with the same exceptions as the nucleus
+B11-E5	equivalent	most neurons have dendrites (m45539-321 says so)
+B14-E1	equivalent	desmosomes occur only in animals, so dropping the Metazoa context leaves a true claim
+B19-E5	equivalent	red blood cells also carry carbon dioxide (memory)
+B25-E3	equivalent	becomes "endocrine gland is_a endocrine gland": reflexive, trivially true
+B26-E5	unclear	the mitochondrial envelope plausibly derives from the bacterial ancestor's membranes
+B29-E4	equivalent	a negation with its direction reversed is vacuously true: no prokaryotic cell is part of a nucleus
+B29-E5	equivalent	prokaryotic cells lack a nuclear envelope
+B30-E4	equivalent	vacuously true negation: no bacterium is part of a nucleus
+B30-E5	equivalent	bacteria lack a nuclear envelope
+B30-E8	equivalent	Archaea also lack a nucleus
+B31-E3	equivalent	widening the subject of a negation can keep it true: Bacteria lack chloroplasts
+B31-E4	equivalent	vacuously true negation: no cyanobacterium is part of a chloroplast
+B31-E5	equivalent	cyanobacteria lack a plastid chromosome
+B32-E4	equivalent	vacuously true negation: no plant cell is part of a centriole
+B33-E4	equivalent	vacuously true negation: RNA is not part of thymine
+B33-E5	equivalent	RNA does not contain serine
+B34-E3	unclear	whether sponges have any UBERON "anatomical system"
+B34-E5	equivalent	sponges lack a central nervous system
+B35-E5	equivalent	prokaryotic cells are not capable of meiotic nuclear division either
+B41-E5	unclear	centrioles and male meiotic chromosome segregation in animals (memory)
+B43-E5	equivalent	telomerase does not do double-strand break repair by homologous recombination
+B44-E4	equivalent	vacuously true negation: no animal cell is part of a cell wall
+B44-E5	equivalent	animal cells lack an ascospore wall
+B46-E5	unclear	most bacteria lack a 20S proteasome; "most cells" is ill-defined
+B47-E3	unclear	"most cellular organisms have a cell wall" depends on how organisms are counted
+B47-E8	equivalent	most archaea have a cell wall (S-layer) (memory)
+B48-E5	equivalent	most plants have a plastid chromosome
+B49-E1	equivalent	some centrosomes, in any taxon, lack centrioles
+B49-E3	equivalent	some eukaryotic microtubule organizing centres lack centrioles
+B49-E4	equivalent	vacuously true negation, "some" form
+B49-E5	unclear	"some centrosomes have no microtubule organizing centre as a part" is ill-posed: a centrosome is one
+B49-E10	equivalent	losing the negation of a "some not" claim gives "some do", also true
+B50-E3	equivalent	some cells lack axons
+B50-E4	equivalent	vacuously true negation, "some" form
+B50-E5	equivalent	some neurons have no dendrites (m45539-54 says so)
+B50-E10	equivalent	"some neurons have axons" is true

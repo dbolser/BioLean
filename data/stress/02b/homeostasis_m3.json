@@ -1,0 +1,7204 @@
+{
+ "about": "Program 02b proposal: round-3 annotations for the loop sentences. Not applied to claims_m3. The m3 block is what the core can hold; the loop block is outside the core.",
+ "summary": {
+  "sentences": 85,
+  "with_loop_words": 41,
+  "records": 174,
+  "by_action": {
+   "keep": 65,
+   "none": 71,
+   "add": 16,
+   "replace": 22
+  },
+  "homeostasis_claims": 26,
+  "new_or_fixed_arms": 12,
+  "blockers": {
+   "class_level_loop": 17,
+   "definition_only": 14,
+   "process_description": 7,
+   "other": 10,
+   "ungrounded_entity": 12,
+   "disjunction": 2,
+   "set_point_shift": 3,
+   "set_point_no_value": 1,
+   "signless_regulation": 1,
+   "positive_loop": 1,
+   "sequence_or_ordering": 1,
+   "not_homeostasis": 2
+  },
+  "loops_with_sign": 19,
+  "sentences matching \"negative feedback\"": 5,
+  "sentences matching \"positive feedback\"": 1,
+  "sentences matching \"homeosta\"": 16,
+  "sentences matching \"set point\"": 10
+ },
+ "sentences": [
+  {
+   "first_id": "cell-structure-and-function-m45433-63",
+   "source": "Other recognition sites on the virus’s surface interact with the human immune system, prompting the body to produce antibodies.",
+   "words": [],
+   "records": [
+    {
+     "id": "cell-structure-and-function-m45433-63",
+     "action": "keep",
+     "claim": "Recognition sites on the virus surface prompt the immune system to produce antibodies",
+     "current": {
+      "ctor": "effect",
+      "subject": "NCBITaxon:10239",
+      "relation": null,
+      "sign": "pos",
+      "target": "amount",
+      "object": "GO:0019814",
+      "blocker": null,
+      "context": {
+       "anatomy": "UBERON:0002405"
+      }
+     },
+     "current_round": "m3",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "how-cells-obtain-energy-m45437-238",
+   "source": "In a most efficient and elegant way, cells have evolved to use the products of their own reactions for feedback inhibition of enzyme activity.",
+   "words": [
+    "feedback"
+   ],
+   "records": [
+    {
+     "id": "how-cells-obtain-energy-m45437-238",
+     "action": "none",
+     "claim": "Cells have evolved to use their own products for feedback inhibition (evolutionary framing)",
+     "current": null,
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "class_level_loop",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": "\"products of their own reactions\": a bound variable"
+    }
+   ]
+  },
+  {
+   "first_id": "how-cells-obtain-energy-m45437-239",
+   "source": "Feedback inhibition involves the use of a reaction product to regulate its own further production ().",
+   "words": [
+    "feedback"
+   ],
+   "records": [
+    {
+     "id": "how-cells-obtain-energy-m45437-239",
+     "action": "none",
+     "claim": "Feedback inhibition is the use of a reaction product to regulate its own further production",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "definition_only",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "definition_only",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "how-cells-obtain-energy-m45437-242",
+   "source": "The production of both amino acids and nucleotides is controlled through feedback inhibition.",
+   "words": [
+    "feedback"
+   ],
+   "records": [
+    {
+     "id": "how-cells-obtain-energy-m45437-242",
+     "action": "none",
+     "claim": "Amino acid production is controlled through feedback inhibition",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "process_description",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "class_level_loop",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": "each amino acid inhibits its own synthesis: a bound variable, not \"amino acid holds amino acid\""
+    },
+    {
+     "id": "how-cells-obtain-energy-m45437-243",
+     "action": "none",
+     "claim": "Nucleotide production is controlled through feedback inhibition",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "process_description",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "class_level_loop",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": "as -242 for nucleotides"
+    }
+   ]
+  },
+  {
+   "first_id": "how-cells-obtain-energy-m45437-244",
+   "source": "Additionally, ATP is an allosteric regulator of some of the enzymes involved in the catabolic breakdown of sugar, the process that creates ATP.",
+   "words": [],
+   "records": [
+    {
+     "id": "how-cells-obtain-energy-m45437-244~loop",
+     "action": "add",
+     "claim": "ATP is an allosteric regulator of some enzymes of sugar catabolism",
+     "current": {
+      "ctor": "effect",
+      "subject": "CHEBI:15422",
+      "relation": null,
+      "sign": "neg",
+      "target": "process",
+      "object": "GO:0006007",
+      "blocker": null,
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "homeostasis",
+      "quant": null,
+      "subject": "GO:0006007",
+      "relation": null,
+      "object": "CHEBI:15422",
+      "sign": null,
+      "target": "amount",
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": null,
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": {
+      "sign": "neg",
+      "teddy": "TEDDY_0000034",
+      "held": "CHEBI:15422",
+      "regulators": [
+       [
+        "GO:0006007",
+        "pos"
+       ],
+       [
+        "CHEBI:16761",
+        "pos"
+       ]
+      ],
+      "homeostatic": true,
+      "extra_nodes": []
+     },
+     "note": "product inhibition: sugar catabolism makes ATP and ATP inhibits it; the held is really the energy charge, a ratio (case L19)"
+    },
+    {
+     "id": "how-cells-obtain-energy-m45437-245",
+     "action": "keep",
+     "claim": "Sugar catabolism creates ATP",
+     "current": {
+      "ctor": "rel",
+      "subject": "GO:0006007",
+      "relation": "has output",
+      "sign": null,
+      "target": null,
+      "object": "CHEBI:15422",
+      "blocker": null,
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "how-cells-obtain-energy-m45437-247",
+   "source": "On the other hand, ADP serves as a positive allosteric regulator (an allosteric activator) for some of the same enzymes that are inhibited by ATP.",
+   "words": [],
+   "records": [
+    {
+     "id": "how-cells-obtain-energy-m45437-247",
+     "action": "keep",
+     "claim": "ADP is a positive allosteric regulator of some enzymes that ATP inhibits",
+     "current": {
+      "ctor": "effect",
+      "subject": "CHEBI:16761",
+      "relation": null,
+      "sign": "pos",
+      "target": "activity",
+      "object": "GO:0003824",
+      "blocker": null,
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "how-cells-obtain-energy-m45437-299",
+   "source": "feedback inhibition: a mechanism of enzyme activity regulation in which the product of a reaction or the final product of a series of sequential reactions inhibits an enzyme for an earlier step in the reaction series",
+   "words": [
+    "feedback"
+   ],
+   "records": [
+    {
+     "id": "how-cells-obtain-energy-m45437-299",
+     "action": "none",
+     "claim": "Feedback inhibition is enzyme regulation where a product of a reaction series inhibits an enzyme for an earlier step",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "definition_only",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "definition_only",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "how-cells-obtain-energy-m45444-12",
+   "source": "Glycogen will be taken out of storage if blood sugar levels drop.",
+   "words": [],
+   "records": [
+    {
+     "id": "how-cells-obtain-energy-m45444-12",
+     "action": "keep",
+     "claim": "Glycogen is mobilised when blood sugar drops",
+     "current": {
+      "ctor": "effect",
+      "subject": "CHEBI:17234",
+      "relation": null,
+      "sign": "neg",
+      "target": "process",
+      "object": "GO:0005980",
+      "blocker": null,
+      "context": {
+       "anatomy": "UBERON:0000178"
+      }
+     },
+     "current_round": "m3",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "how-cells-obtain-energy-m45444-63",
+   "source": "The substrates, intermediates, and products move between pathways and do so in response to finely tuned feedback inhibition loops that keep metabolism overall on an even keel.",
+   "words": [
+    "feedback"
+   ],
+   "records": [
+    {
+     "id": "how-cells-obtain-energy-m45444-63",
+     "action": "none",
+     "claim": "Feedback inhibition loops keep metabolism on an even keel",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "other",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "class_level_loop",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "how-cells-obtain-energy-m45444-64",
+     "action": "none",
+     "claim": "Substrates, intermediates and products move between pathways",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "process_description",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "process_description",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "photosynthesis-m45448-84",
+   "source": "On a hot, dry day, plants close their stomata to conserve water.",
+   "words": [],
+   "records": [
+    {
+     "id": "photosynthesis-m45448-84~loop",
+     "action": "add",
+     "claim": "hot dry conditions cause plants to close their stomata",
+     "current": {
+      "ctor": "rel",
+      "subject": "NCBITaxon:33090",
+      "relation": "capable of",
+      "sign": null,
+      "target": null,
+      "object": "GO:0090332",
+      "blocker": null,
+      "context": {
+       "condition": {
+        "kind": "environment",
+        "curie": "BLN:hot_dry_day",
+        "text": "hot, dry day"
+       }
+      }
+     },
+     "current_round": "m3",
+     "m3": {
+      "ctor": "homeostasis",
+      "quant": null,
+      "subject": "GO:0090332",
+      "relation": null,
+      "object": "CHEBI:15377",
+      "sign": null,
+      "target": "amount",
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": "NCBITaxon:33090",
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": null,
+      "curie_changes": [],
+      "confidence": "medium"
+     },
+     "loop": {
+      "sign": "neg",
+      "teddy": "TEDDY_0000034",
+      "held": "CHEBI:15377",
+      "regulators": [
+       [
+        "GO:0090332",
+        "neg"
+       ]
+      ],
+      "homeostatic": true,
+      "extra_nodes": [
+       "GO:0010148"
+      ]
+     },
+     "note": "\"close their stomata to conserve water\": the sensor arm is implicit (Buckley 2005, hydro-active local feedback)"
+    },
+    {
+     "id": "photosynthesis-m45448-85",
+     "action": "keep",
+     "claim": "stomatal closure reduces water loss",
+     "current": {
+      "ctor": "effect",
+      "subject": "GO:0090332",
+      "relation": null,
+      "sign": "neg",
+      "target": "process",
+      "object": "GO:0010148",
+      "blocker": null,
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "photosynthesis-m45448-116",
+     "action": "keep",
+     "claim": "hot dry conditions cause plants to close their stomata",
+     "current": {
+      "ctor": "rel",
+      "subject": "NCBITaxon:33090",
+      "relation": "capable of",
+      "sign": null,
+      "target": null,
+      "object": "GO:0090332",
+      "blocker": null,
+      "context": {
+       "condition": {
+        "kind": "environment",
+        "curie": "BLN:hot_dry_day",
+        "text": "hot, dry day"
+       }
+      }
+     },
+     "current_round": "m3",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "photosynthesis-m45448-117",
+     "action": "keep",
+     "claim": "stomatal closure reduces water loss",
+     "current": {
+      "ctor": "effect",
+      "subject": "GO:0090332",
+      "relation": null,
+      "sign": "neg",
+      "target": "process",
+      "object": "GO:0010148",
+      "blocker": null,
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45533-5",
+   "source": "The organ systems of an animal maintain homeostasis within the multicellular body.",
+   "words": [
+    "homeosta"
+   ],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45533-5",
+     "action": "keep",
+     "claim": "Organ systems maintain homeostasis within the body",
+     "current": {
+      "ctor": "effect",
+      "subject": "UBERON:0000467",
+      "relation": null,
+      "sign": "pos",
+      "target": "process",
+      "object": "GO:0042592",
+      "blocker": null,
+      "context": {
+       "taxon": "NCBITaxon:33208"
+      }
+     },
+     "current_round": "m3",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45534-1",
+   "source": "Homeostasis refers to the relatively stable state inside the body of an animal.",
+   "words": [
+    "homeosta"
+   ],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45534-1",
+     "action": "none",
+     "claim": "Homeostasis is the relatively stable internal state of an animal body",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "definition_only",
+      "context": {
+       "taxon": "NCBITaxon:33208"
+      }
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "definition_only",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45534-3",
+   "source": "Examples of internal conditions maintained homeostatically are the level of blood glucose, body temperature, blood calcium level.",
+   "words": [
+    "homeosta"
+   ],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45534-3",
+     "action": "replace",
+     "claim": "Blood glucose level is maintained homeostatically",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "process_description",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "homeostasis",
+      "quant": null,
+      "subject": "GO:0042593",
+      "relation": null,
+      "object": "CHEBI:17234",
+      "sign": null,
+      "target": "amount",
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": "UBERON:0000178",
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": null,
+      "curie_changes": [],
+      "confidence": "medium"
+     },
+     "loop": null,
+     "note": "no regulator named; GO:0042593 glucose homeostasis stands in as the regulator"
+    },
+    {
+     "id": "the-body-s-systems-m45534-4",
+     "action": "replace",
+     "claim": "Body temperature is maintained homeostatically",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "process_description",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "homeostasis",
+      "quant": null,
+      "subject": "GO:0001659",
+      "relation": null,
+      "object": "OBA:VT0005535",
+      "sign": null,
+      "target": "phenotype",
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": null,
+      "curie_changes": [],
+      "confidence": "medium"
+     },
+     "loop": null,
+     "note": "no regulator named; GO:0001659 temperature homeostasis stands in"
+    },
+    {
+     "id": "the-body-s-systems-m45534-5",
+     "action": "replace",
+     "claim": "Blood calcium level is maintained homeostatically",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "process_description",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "homeostasis",
+      "quant": null,
+      "subject": "GO:0055074",
+      "relation": null,
+      "object": "CHEBI:29108",
+      "sign": null,
+      "target": "amount",
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": "UBERON:0000178",
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": null,
+      "curie_changes": [],
+      "confidence": "medium"
+     },
+     "loop": null,
+     "note": "no regulator named; GO:0055074 calcium ion homeostasis stands in"
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45534-6",
+   "source": "These conditions remain stable because of physiologic processes that result in negative feedback relationships.",
+   "words": [
+    "feedback"
+   ],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45534-6",
+     "action": "none",
+     "claim": "Homeostatic conditions remain stable because of negative feedback processes",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "ungrounded_entity",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "class_level_loop",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45534-9",
+   "source": "The signals that restore the normal levels are examples of negative feedback.",
+   "words": [
+    "feedback"
+   ],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45534-9",
+     "action": "none",
+     "claim": "Signals that restore normal levels are negative feedback",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "definition_only",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "definition_only",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45534-10",
+   "source": "When homeostatic mechanisms fail, the results can be unfavorable for the animal.",
+   "words": [
+    "homeosta"
+   ],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45534-10",
+     "action": "none",
+     "claim": "Failure of homeostatic mechanisms harms the animal",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "other",
+      "context": {
+       "taxon": "NCBITaxon:33208"
+      }
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "other",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45534-11",
+   "source": "Homeostatic mechanisms keep the body in dynamic equilibrium by constantly adjusting to the changes that the body’s systems encounter.",
+   "words": [
+    "homeosta"
+   ],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45534-11",
+     "action": "none",
+     "claim": "Homeostatic mechanisms keep the body in dynamic equilibrium by constantly adjusting to changes",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "process_description",
+      "context": {
+       "taxon": "NCBITaxon:33208"
+      }
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "process_description",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45534-12",
+   "source": "Even an animal that is apparently inactive is maintaining this homeostatic equilibrium.",
+   "words": [
+    "homeosta"
+   ],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45534-12",
+     "action": "none",
+     "claim": "An inactive animal still maintains homeostatic equilibrium",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "process_description",
+      "context": {
+       "taxon": "NCBITaxon:33208"
+      }
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "process_description",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45534-13",
+   "source": "Two examples of factors that are regulated homeostatically are temperature and water content.",
+   "words": [
+    "homeosta"
+   ],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45534-13",
+     "action": "replace",
+     "claim": "Temperature is regulated homeostatically",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "process_description",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "homeostasis",
+      "quant": null,
+      "subject": "GO:0001659",
+      "relation": null,
+      "object": "OBA:VT0005535",
+      "sign": null,
+      "target": "phenotype",
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": null,
+      "curie_changes": [],
+      "confidence": "medium"
+     },
+     "loop": null,
+     "note": "as -4"
+    },
+    {
+     "id": "the-body-s-systems-m45534-14",
+     "action": "replace",
+     "claim": "Water content is regulated homeostatically",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "process_description",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "homeostasis",
+      "quant": null,
+      "subject": "GO:0050891",
+      "relation": null,
+      "object": "CHEBI:15377",
+      "sign": null,
+      "target": "amount",
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": null,
+      "curie_changes": [],
+      "confidence": "medium"
+     },
+     "loop": null,
+     "note": "water content; GO:0050891 multicellular organismal-level water homeostasis stands in"
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45534-15",
+   "source": "The processes that maintain homeostasis of these two factors are called thermoregulation and osmoregulation.",
+   "words": [
+    "homeosta"
+   ],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45534-15",
+     "action": "none",
+     "claim": "Thermoregulation is the process that maintains temperature homeostasis",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "definition_only",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "definition_only",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45534-16",
+     "action": "none",
+     "claim": "Osmoregulation is the process that maintains water homeostasis",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "definition_only",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "definition_only",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45534-17",
+   "source": "The goal of homeostasis is the maintenance of equilibrium around a specific value of some aspect of the body or its cells called a set point.",
+   "words": [
+    "homeosta",
+    "set point"
+   ],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45534-17",
+     "action": "none",
+     "claim": "A set point is the specific value around which homeostasis maintains equilibrium",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "definition_only",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "definition_only",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45534-18",
+   "source": "While there are normal fluctuations from the set point, the body’s systems will usually attempt to go back to this point.",
+   "words": [
+    "set point"
+   ],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45534-18",
+     "action": "none",
+     "claim": "Body systems return a fluctuating variable toward the set point",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "ungrounded_entity",
+      "context": {
+       "taxon": "NCBITaxon:33208"
+      }
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "class_level_loop",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45534-19",
+   "source": "A change in the internal or external environment is called a stimulus and is detected by a receptor; the response of the system is to adjust the activities of the system so the value moves back toward the set point.",
+   "words": [
+    "set point"
+   ],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45534-19",
+     "action": "none",
+     "claim": "A stimulus is a change in the internal or external environment",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "definition_only",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "definition_only",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45534-20",
+     "action": "none",
+     "claim": "A stimulus is detected by a receptor",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "ungrounded_entity",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "ungrounded_entity",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45534-21",
+     "action": "none",
+     "claim": "The system responds by adjusting its activities so the value moves back toward the set point",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "ungrounded_entity",
+      "context": {
+       "taxon": "NCBITaxon:33208"
+      }
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "class_level_loop",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45534-23",
+   "source": "If glucose levels in the blood rise after a meal, adjustments are made to lower them and to get the nutrient into tissues that need it or to store it for later use.",
+   "words": [],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45534-23",
+     "action": "replace",
+     "claim": "A rise in blood glucose after a meal triggers adjustments that lower blood glucose",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "process_description",
+      "context": {
+       "taxon": "NCBITaxon:33208"
+      }
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "homeostasis",
+      "quant": null,
+      "subject": "GO:0042593",
+      "relation": null,
+      "object": "CHEBI:17234",
+      "sign": null,
+      "target": "amount",
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": "UBERON:0000178",
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": null,
+      "curie_changes": [],
+      "confidence": "medium"
+     },
+     "loop": null,
+     "note": "the book states the round trip (\"rise ... adjustments to lower them\") with no regulator named"
+    },
+    {
+     "id": "the-body-s-systems-m45534-24",
+     "action": "none",
+     "claim": "After a meal glucose is moved into tissues or stored",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "process_description",
+      "context": {
+       "taxon": "NCBITaxon:33208"
+      }
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "process_description",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45534-26",
+   "source": "The receptor that senses the change in the environment is part of a feedback mechanism.",
+   "words": [
+    "feedback"
+   ],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45534-26",
+     "action": "keep",
+     "claim": "The receptor that senses the environmental change is part of a feedback mechanism",
+     "current": {
+      "ctor": "rel",
+      "subject": null,
+      "relation": "part of",
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "ungrounded_entity",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45534-77",
+   "source": "The hypothalamus maintains the set point for body temperature through reflexes that cause vasodilation or vasoconstriction and shivering or sweating.",
+   "words": [
+    "set point"
+   ],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45534-77",
+     "action": "replace",
+     "claim": "The hypothalamus maintains the body temperature set point",
+     "current": {
+      "ctor": "effect",
+      "subject": "UBERON:0001898",
+      "relation": null,
+      "sign": "pos",
+      "target": "phenotype",
+      "object": "PATO:0000146",
+      "blocker": null,
+      "context": {
+       "taxon": "NCBITaxon:7742",
+       "anatomy": "UBERON:0001898"
+      }
+     },
+     "current_round": "m3",
+     "m3": {
+      "ctor": "homeostasis",
+      "quant": null,
+      "subject": "UBERON:0001898",
+      "relation": null,
+      "object": "OBA:VT0005535",
+      "sign": null,
+      "target": "phenotype",
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": "NCBITaxon:40674",
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": null,
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": {
+      "sign": "neg",
+      "teddy": "TEDDY_0000034",
+      "held": "OBA:VT0005535",
+      "regulators": [
+       [
+        "UBERON:0001898",
+        "neg"
+       ]
+      ],
+      "homeostatic": true,
+      "extra_nodes": []
+     },
+     "note": "was effect pos on PATO:0000146 with the hypothalamus refined by \"located in hypothalamus\" and taxon Vertebrata: \"maintains the set point\" is not \"raises\"; Mammalia because the passage is about endotherms (birds are endotherms too: medium on the taxon)"
+    },
+    {
+     "id": "the-body-s-systems-m45534-78",
+     "action": "none",
+     "claim": "Hypothalamic reflexes cause vasodilation or vasoconstriction",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "disjunction",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "disjunction",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": "effectors of the temperature loop (\"vasodilation or vasoconstriction\"); case T03"
+    },
+    {
+     "id": "the-body-s-systems-m45534-79",
+     "action": "none",
+     "claim": "Hypothalamic reflexes cause shivering or sweating",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "disjunction",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "disjunction",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": "effectors (\"shivering or sweating\"); case T03"
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45534-80",
+   "source": "The sympathetic nervous system under control of the hypothalamus directs the responses that effect the changes in temperature loss or gain that return the body to the set point.",
+   "words": [
+    "set point"
+   ],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45534-80",
+     "action": "none",
+     "claim": "The sympathetic nervous system is under control of the hypothalamus",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "other",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "other",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45534-81",
+     "action": "keep",
+     "claim": "The sympathetic nervous system directs responses that change heat loss or gain to return the body to the set point",
+     "current": {
+      "ctor": "effect",
+      "subject": "UBERON:0000013",
+      "relation": null,
+      "sign": "pos",
+      "target": "process",
+      "object": "GO:0001659",
+      "blocker": null,
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45534-82",
+   "source": "The set point may be adjusted in some instances.",
+   "words": [
+    "set point"
+   ],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45534-82",
+     "action": "none",
+     "claim": "The temperature set point can be adjusted",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "ungrounded_entity",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "set_point_shift",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": "needs LClaim.shiftsSetPoint (Proto/Feedback.lean, case S02)"
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45534-83",
+   "source": "During an infection, compounds called pyrogens are produced and circulate to the hypothalamus resetting the thermostat to a higher value.",
+   "words": [
+    "thermostat"
+   ],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45534-83",
+     "action": "keep",
+     "claim": "During infection pyrogens are produced",
+     "current": {
+      "ctor": "effect",
+      "subject": "MONDO:0005550",
+      "relation": null,
+      "sign": "pos",
+      "target": "amount",
+      "object": "NCIT:C71583",
+      "blocker": "unsupported_ontology",
+      "context": {
+       "condition": "MONDO:0005550"
+      }
+     },
+     "current_round": "m2",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45534-84",
+     "action": "none",
+     "claim": "Pyrogens circulate to the hypothalamus",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "process_description",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "process_description",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45534-85",
+     "action": "none",
+     "claim": "Pyrogens reset the hypothalamic set point to a higher value",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "other",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "set_point_shift",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": "pyrogens reset the set point; NCIT pyrogen is also outside the supported ontologies"
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45534-86",
+   "source": "This allows the body’s temperature to increase to a new homeostatic equilibrium point in what is commonly called a fever.",
+   "words": [
+    "equilibrium point",
+    "homeosta"
+   ],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45534-86",
+     "action": "none",
+     "claim": "A raised set point lets body temperature rise to a new equilibrium called fever",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "other",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "set_point_shift",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": "fever as a new equilibrium point"
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45534-89",
+   "source": "The body is able to regulate temperature in response to signals from the nervous system.",
+   "words": [],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45534-89",
+     "action": "keep",
+     "claim": "The body regulates temperature in response to nervous system signals",
+     "current": {
+      "ctor": "effect",
+      "subject": "UBERON:0001016",
+      "relation": null,
+      "sign": "pos",
+      "target": "process",
+      "object": "GO:0001659",
+      "blocker": null,
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45534-90",
+   "source": "When bacteria are destroyed by leukocytes, pyrogens are released into the blood.",
+   "words": [],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45534-90",
+     "action": "keep",
+     "claim": "Leukocytes destroy bacteria",
+     "current": {
+      "ctor": "effect",
+      "subject": "CL:0000738",
+      "relation": null,
+      "sign": "neg",
+      "target": "amount",
+      "object": "NCBITaxon:2",
+      "blocker": null,
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45534-91",
+     "action": "keep",
+     "claim": "Destruction of bacteria by leukocytes releases pyrogens into the blood",
+     "current": {
+      "ctor": "effect",
+      "subject": "CL:0000738",
+      "relation": null,
+      "sign": "pos",
+      "target": "amount",
+      "object": "NCIT:C71583",
+      "blocker": "unsupported_ontology",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45534-200",
+     "action": "keep",
+     "claim": "Leukocytes destroy bacteria",
+     "current": {
+      "ctor": "effect",
+      "subject": "CL:0000738",
+      "relation": null,
+      "sign": "neg",
+      "target": "amount",
+      "object": "NCBITaxon:2",
+      "blocker": null,
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45534-201",
+     "action": "keep",
+     "claim": "Destruction of bacteria by leukocytes releases pyrogens into the blood",
+     "current": {
+      "ctor": "effect",
+      "subject": "CL:0000738",
+      "relation": null,
+      "sign": "pos",
+      "target": "amount",
+      "object": "NCIT:C71583",
+      "blocker": "unsupported_ontology",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45534-92",
+   "source": "Pyrogens reset the body’s thermostat to a higher temperature, resulting in fever.",
+   "words": [
+    "thermostat"
+   ],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45534-92",
+     "action": "keep",
+     "claim": "Pyrogens reset the thermostat to a higher temperature",
+     "current": {
+      "ctor": "effect",
+      "subject": "NCIT:C71583",
+      "relation": null,
+      "sign": "pos",
+      "target": "phenotype",
+      "object": "PATO:0000146",
+      "blocker": "unsupported_ontology",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45534-93",
+     "action": "keep",
+     "claim": "Pyrogens cause fever",
+     "current": {
+      "ctor": "effect",
+      "subject": "NCIT:C71583",
+      "relation": null,
+      "sign": "pos",
+      "target": "process",
+      "object": "GO:0001660",
+      "blocker": "unsupported_ontology",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45534-202",
+     "action": "keep",
+     "claim": "Pyrogens reset the thermostat to a higher temperature",
+     "current": {
+      "ctor": "effect",
+      "subject": "NCIT:C71583",
+      "relation": null,
+      "sign": "pos",
+      "target": "phenotype",
+      "object": "PATO:0000146",
+      "blocker": "unsupported_ontology",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45534-203",
+     "action": "keep",
+     "claim": "Pyrogens cause fever",
+     "current": {
+      "ctor": "effect",
+      "subject": "NCIT:C71583",
+      "relation": null,
+      "sign": "pos",
+      "target": "process",
+      "object": "GO:0001660",
+      "blocker": "unsupported_ontology",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45534-185",
+   "source": "Homeostasis is a dynamic equilibrium that is maintained in body tissues and organs.",
+   "words": [
+    "homeosta"
+   ],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45534-185",
+     "action": "none",
+     "claim": "Homeostasis is a dynamic equilibrium maintained in body tissues and organs",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "definition_only",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "definition_only",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45534-187",
+   "source": "It is an equilibrium because body functions are kept within a normal range, with some fluctuations around a set point.",
+   "words": [
+    "set point"
+   ],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45534-187",
+     "action": "none",
+     "claim": "In homeostasis body functions are kept within a normal range around a set point",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "definition_only",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "definition_only",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45534-188",
+   "source": "The kidneys are the main osmoregulatory organs in mammalian systems; they function to filter blood and maintain the dissolved ion concentrations of body fluids.",
+   "words": [],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45534-188",
+     "action": "keep",
+     "claim": "The kidneys are the main osmoregulatory organs in mammals",
+     "current": {
+      "ctor": "rel",
+      "subject": "UBERON:0002113",
+      "relation": "capable of",
+      "sign": null,
+      "target": null,
+      "object": "GO:0050891",
+      "blocker": null,
+      "context": {
+       "taxon": "NCBITaxon:40674"
+      }
+     },
+     "current_round": "m3",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45534-189",
+     "action": "keep",
+     "claim": "The kidneys filter blood",
+     "current": {
+      "ctor": "rel",
+      "subject": "UBERON:0002113",
+      "relation": "capable of",
+      "sign": null,
+      "target": null,
+      "object": "GO:0003094",
+      "blocker": null,
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45534-190~loop",
+     "action": "add",
+     "claim": "The kidneys maintain dissolved ion concentrations of body fluids",
+     "current": {
+      "ctor": "effect",
+      "subject": "UBERON:0002113",
+      "relation": null,
+      "sign": "pos",
+      "target": "process",
+      "object": "GO:0050801",
+      "blocker": null,
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "homeostasis",
+      "quant": null,
+      "subject": "UBERON:0002113",
+      "relation": null,
+      "object": "CHEBI:24870",
+      "sign": null,
+      "target": "amount",
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": "NCBITaxon:40674",
+       "anatomy": "UBERON:0006314",
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": null,
+      "curie_changes": [],
+      "confidence": "medium"
+     },
+     "loop": null,
+     "note": "\"maintain the dissolved ion concentrations of body fluids\""
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45534-205",
+   "source": "Pyrogens increase body temperature by causing the blood vessels to constrict, inducing shivering, and stopping sweat glands from secreting fluid.",
+   "words": [],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45534-205",
+     "action": "keep",
+     "claim": "Pyrogens increase body temperature",
+     "current": {
+      "ctor": "effect",
+      "subject": "NCIT:C71583",
+      "relation": null,
+      "sign": "pos",
+      "target": "phenotype",
+      "object": "PATO:0000146",
+      "blocker": "unsupported_ontology",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45534-206",
+     "action": "keep",
+     "claim": "Pyrogens cause blood vessels to constrict",
+     "current": {
+      "ctor": "effect",
+      "subject": "NCIT:C71583",
+      "relation": null,
+      "sign": "pos",
+      "target": "process",
+      "object": "GO:0042310",
+      "blocker": "unsupported_ontology",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45534-207",
+     "action": "keep",
+     "claim": "Pyrogens induce shivering",
+     "current": {
+      "ctor": "effect",
+      "subject": "NCIT:C71583",
+      "relation": null,
+      "sign": "pos",
+      "target": "process",
+      "object": "NBO:0000441",
+      "blocker": "unsupported_ontology",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45534-208",
+     "action": "keep",
+     "claim": "Pyrogens stop sweat glands from secreting fluid",
+     "current": {
+      "ctor": "effect",
+      "subject": "NCIT:C71583",
+      "relation": null,
+      "sign": "neg",
+      "target": "process",
+      "object": "GO:0160269",
+      "blocker": "unsupported_ontology",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45534-209",
+     "action": "keep",
+     "claim": "Pyrogens raise body temperature via vasoconstriction, shivering and reduced sweating",
+     "current": {
+      "ctor": "mediatedBy",
+      "subject": "NCIT:C71583",
+      "relation": null,
+      "sign": "pos",
+      "target": "phenotype",
+      "object": "PATO:0000146",
+      "blocker": "unsupported_ontology",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45534-213",
+   "source": "Describe how the body’s mechanisms maintain homeostasis?",
+   "words": [
+    "homeosta"
+   ],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45534-213",
+     "action": "keep",
+     "claim": "Describe how the body’s mechanisms maintain homeostasis?",
+     "current": null,
+     "current_round": "m2",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45534-214",
+   "source": "The body has a sensor that detects a deviation of the state of the cells or the body from the set point.",
+   "words": [
+    "set point"
+   ],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45534-214",
+     "action": "none",
+     "claim": "The body has a sensor that detects deviation from the set point",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "ungrounded_entity",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "ungrounded_entity",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45534-217",
+   "source": "Those effectors cause a negative feedback response that moves the state of the body in a direction back toward the set point.",
+   "words": [
+    "feedback",
+    "set point"
+   ],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45534-217",
+     "action": "none",
+     "claim": "Effectors cause a negative feedback response that moves the body back toward the set point",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "ungrounded_entity",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "class_level_loop",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45534-232",
+   "source": "set point: the target value of a physiological state in homeostasis",
+   "words": [
+    "homeosta",
+    "set point"
+   ],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45534-232",
+     "action": "none",
+     "claim": "A set point is the target value of a physiological state in homeostasis",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "definition_only",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "definition_only",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45536-30",
+   "source": "How often a breath is taken and how much air is inhaled or exhaled is regulated by the respiratory center in the brain in response to signals it receives about the carbon dioxide content of the blood.",
+   "words": [],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45536-30",
+     "action": "replace",
+     "claim": "Breathing rate and depth are regulated by the respiratory center in the brain",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "other",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "homeostasis",
+      "quant": null,
+      "subject": "UBERON:0000955",
+      "relation": null,
+      "object": "CHEBI:16526",
+      "sign": null,
+      "target": "amount",
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": "UBERON:0000178",
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": null,
+      "curie_changes": [],
+      "confidence": "medium"
+     },
+     "loop": {
+      "sign": "neg",
+      "teddy": "TEDDY_0000034",
+      "held": "CHEBI:16526",
+      "regulators": [
+       [
+        "UBERON:0000955",
+        "neg"
+       ]
+      ],
+      "homeostatic": true,
+      "extra_nodes": [
+       "GO:0007585"
+      ]
+     },
+     "note": "\"regulated by the respiratory center in the brain in response to ... carbon dioxide\"; no UBERON class for the respiratory centre"
+    },
+    {
+     "id": "the-body-s-systems-m45536-31",
+     "action": "replace",
+     "claim": "The respiratory center responds to signals about blood carbon dioxide content",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "other",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "effect",
+      "quant": null,
+      "subject": "CHEBI:16526",
+      "relation": null,
+      "object": "GO:0007585",
+      "sign": "pos",
+      "target": "process",
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": "UBERON:0000178",
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": null,
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": "sensor arm: blood CO2 raises breathing; the return arm (breathing lowers CO2) is not in the book"
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45537-12",
+   "source": "Maintaining homeostasis within the body requires the coordination of many different systems and organs.",
+   "words": [
+    "homeosta"
+   ],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45537-12",
+     "action": "none",
+     "claim": "Homeostasis requires coordination of many systems and organs",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "other",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "other",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45537-19",
+   "source": "Examples of endocrine organs include the pancreas, which produces the hormones insulin and glucagon to regulate blood-glucose levels, the adrenal glands, which produce hormones such as epinephrine and norepinephrine that regulate responses to stress, and the thyroid gland, which produces thyroid hormones that regulate metabolic rates.",
+   "words": [],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45537-19",
+     "action": "keep",
+     "claim": "The pancreas is an endocrine organ",
+     "current": {
+      "ctor": "rel",
+      "subject": "UBERON:0001264",
+      "relation": "is_a",
+      "sign": null,
+      "target": null,
+      "object": "UBERON:0002368",
+      "blocker": null,
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45537-20",
+     "action": "keep",
+     "claim": "The pancreas produces insulin",
+     "current": {
+      "ctor": "rel",
+      "subject": "UBERON:0001264",
+      "relation": "produces",
+      "sign": null,
+      "target": null,
+      "object": "PR:000009054",
+      "blocker": null,
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45537-21",
+     "action": "keep",
+     "claim": "The pancreas produces glucagon",
+     "current": {
+      "ctor": "rel",
+      "subject": "UBERON:0001264",
+      "relation": "produces",
+      "sign": null,
+      "target": null,
+      "object": "PR:P01275",
+      "blocker": null,
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45537-22",
+     "action": "replace",
+     "claim": "Insulin and glucagon regulate blood-glucose levels",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "other",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "homeostasis",
+      "quant": null,
+      "subject": "PR:000009054",
+      "relation": null,
+      "object": "CHEBI:17234",
+      "sign": null,
+      "target": "amount",
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": "UBERON:0000178",
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": null,
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": {
+      "sign": "neg",
+      "teddy": "TEDDY_0000034",
+      "held": "CHEBI:17234",
+      "regulators": [
+       [
+        "PR:000009054",
+        "neg"
+       ],
+       [
+        "PR:P01275",
+        "pos"
+       ]
+      ],
+      "homeostatic": true,
+      "extra_nodes": []
+     },
+     "note": "\"insulin and glucagon regulate blood-glucose levels\""
+    },
+    {
+     "id": "the-body-s-systems-m45537-22#2",
+     "action": "add",
+     "claim": "Insulin and glucagon regulate blood-glucose levels",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "other",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "homeostasis",
+      "quant": null,
+      "subject": "PR:P01275",
+      "relation": null,
+      "object": "CHEBI:17234",
+      "sign": null,
+      "target": "amount",
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": "UBERON:0000178",
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": null,
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": {
+      "sign": "neg",
+      "teddy": "TEDDY_0000034",
+      "held": "CHEBI:17234",
+      "regulators": [
+       [
+        "PR:000009054",
+        "neg"
+       ],
+       [
+        "PR:P01275",
+        "pos"
+       ]
+      ],
+      "homeostatic": true,
+      "extra_nodes": []
+     },
+     "note": "second regulator of -22"
+    },
+    {
+     "id": "the-body-s-systems-m45537-23",
+     "action": "keep",
+     "claim": "The adrenal glands are endocrine organs",
+     "current": {
+      "ctor": "rel",
+      "subject": "UBERON:0002369",
+      "relation": "is_a",
+      "sign": null,
+      "target": null,
+      "object": "UBERON:0002368",
+      "blocker": null,
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45537-24",
+     "action": "keep",
+     "claim": "The adrenal glands produce epinephrine and norepinephrine",
+     "current": {
+      "ctor": "rel",
+      "subject": "UBERON:0002369",
+      "relation": "produces",
+      "sign": null,
+      "target": null,
+      "object": "CHEBI:33568",
+      "blocker": null,
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45537-25",
+     "action": "none",
+     "claim": "Epinephrine and norepinephrine regulate responses to stress",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "other",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "other",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45537-26",
+     "action": "keep",
+     "claim": "The thyroid gland is an endocrine organ",
+     "current": {
+      "ctor": "rel",
+      "subject": "UBERON:0002046",
+      "relation": "is_a",
+      "sign": null,
+      "target": null,
+      "object": "UBERON:0002368",
+      "blocker": null,
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45537-27",
+     "action": "keep",
+     "claim": "The thyroid gland produces thyroid hormones",
+     "current": {
+      "ctor": "rel",
+      "subject": "UBERON:0002046",
+      "relation": "produces",
+      "sign": null,
+      "target": null,
+      "object": "CHEBI:60311",
+      "blocker": null,
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45537-28",
+     "action": "none",
+     "claim": "Thyroid hormones regulate metabolic rate",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "other",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "other",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45537-52",
+   "source": "They are then given a sugary drink, which stimulates the pancreas to produce insulin to decrease blood-glucose levels.",
+   "words": [],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45537-52",
+     "action": "keep",
+     "claim": "A sugary drink stimulates the pancreas to produce insulin",
+     "current": {
+      "ctor": "effect",
+      "subject": "CHEBI:17234",
+      "relation": null,
+      "sign": "pos",
+      "target": "amount",
+      "object": "PR:000009054",
+      "blocker": null,
+      "context": {
+       "condition": "glucose load acts via the pancreas"
+      }
+     },
+     "current_round": "m2",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45537-53",
+     "action": "keep",
+     "claim": "Insulin decreases blood-glucose levels",
+     "current": {
+      "ctor": "effect",
+      "subject": "PR:000009054",
+      "relation": null,
+      "sign": "neg",
+      "target": "amount",
+      "object": "CHEBI:17234",
+      "blocker": null,
+      "context": {
+       "anatomy": "UBERON:0000178"
+      }
+     },
+     "current_round": "m3",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45537-55",
+   "source": "If the pancreas is functioning properly, the blood-glucose level will be within a normal range.",
+   "words": [],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45537-55",
+     "action": "none",
+     "claim": "If the pancreas functions properly, blood glucose after a glucose load is within a normal range",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "precondition",
+      "context": {
+       "taxon": "NCBITaxon:9606"
+      }
+     },
+     "current_round": "m3",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "set_point_no_value",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": "\"within a normal range\": a set point with no number"
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45537-78",
+   "source": "In up-regulation, the number of receptors increases in response to prolonged low hormone levels, making the cell more sensitive to the hormone and allowing for more cellular activity.",
+   "words": [],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45537-78",
+     "action": "none",
+     "claim": "Up-regulation is an increase in receptor number in response to prolonged low hormone levels",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "definition_only",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "class_level_loop",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": "receptor up-regulation: a loop on sensitivity, class-level"
+    },
+    {
+     "id": "the-body-s-systems-m45537-79",
+     "action": "none",
+     "claim": "Prolonged low hormone levels increase the number of receptors for that hormone",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "ungrounded_entity",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "ungrounded_entity",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45537-80",
+     "action": "none",
+     "claim": "More receptors make the cell more sensitive to the hormone",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "ungrounded_entity",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "ungrounded_entity",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45537-81",
+     "action": "none",
+     "claim": "More receptors allow more cellular activity in response to the hormone",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "other",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "other",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45537-82",
+   "source": "When the number of receptors decreases in response to rising hormone levels, called down-regulation, cellular activity is reduced.",
+   "words": [],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45537-82",
+     "action": "none",
+     "claim": "Down-regulation is a decrease in receptor number in response to rising hormone levels",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "definition_only",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "class_level_loop",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": "receptor down-regulation"
+    },
+    {
+     "id": "the-body-s-systems-m45537-83",
+     "action": "none",
+     "claim": "Rising hormone levels decrease the number of receptors for that hormone",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "ungrounded_entity",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "ungrounded_entity",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45537-84",
+     "action": "none",
+     "claim": "Fewer receptors reduce cellular activity in response to the hormone",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "ungrounded_entity",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "ungrounded_entity",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45537-134",
+   "source": "Calcitonin is released in response to rising calcium ion concentrations in the blood and has the effect of reducing those levels.",
+   "words": [],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45537-134~loop",
+     "action": "add",
+     "claim": "Rising blood calcium concentration stimulates calcitonin release",
+     "current": {
+      "ctor": "effect",
+      "subject": "CHEBI:29108",
+      "relation": null,
+      "sign": "pos",
+      "target": "amount",
+      "object": "PR:P01258",
+      "blocker": null,
+      "context": {
+       "anatomy": "UBERON:0000178"
+      }
+     },
+     "current_round": "m3",
+     "m3": {
+      "ctor": "homeostasis",
+      "quant": null,
+      "subject": "PR:P01258",
+      "relation": null,
+      "object": "CHEBI:29108",
+      "sign": null,
+      "target": "amount",
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": "UBERON:0000178",
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": null,
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": {
+      "sign": "neg",
+      "teddy": "TEDDY_0000034",
+      "held": "CHEBI:29108",
+      "regulators": [
+       [
+        "PR:000013429",
+        "pos"
+       ],
+       [
+        "PR:P01258",
+        "neg"
+       ]
+      ],
+      "homeostatic": true,
+      "extra_nodes": []
+     },
+     "note": "both arms in one sentence (-134, -135); the literature disputes a physiological role (Hirsch 2001, case L04)"
+    },
+    {
+     "id": "the-body-s-systems-m45537-135",
+     "action": "keep",
+     "claim": "Calcitonin reduces blood calcium concentration",
+     "current": {
+      "ctor": "effect",
+      "subject": "PR:P01258",
+      "relation": null,
+      "sign": "neg",
+      "target": "amount",
+      "object": "CHEBI:29108",
+      "blocker": null,
+      "context": {
+       "anatomy": "UBERON:0000178"
+      }
+     },
+     "current_round": "m3",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45537-140",
+   "source": "Parathyroid hormone increases blood calcium concentrations when calcium ion levels fall below normal.",
+   "words": [],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45537-140~loop",
+     "action": "add",
+     "claim": "Parathyroid hormone increases blood calcium concentration",
+     "current": {
+      "ctor": "effect",
+      "subject": "PR:000013429",
+      "relation": null,
+      "sign": "pos",
+      "target": "amount",
+      "object": "CHEBI:29108",
+      "blocker": null,
+      "context": {
+       "anatomy": "UBERON:0000178"
+      }
+     },
+     "current_round": "m3",
+     "m3": {
+      "ctor": "homeostasis",
+      "quant": null,
+      "subject": "PR:000013429",
+      "relation": null,
+      "object": "CHEBI:29108",
+      "sign": null,
+      "target": "amount",
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": "UBERON:0000178",
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": null,
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": {
+      "sign": "neg",
+      "teddy": "TEDDY_0000034",
+      "held": "CHEBI:29108",
+      "regulators": [
+       [
+        "PR:000013429",
+        "pos"
+       ],
+       [
+        "PR:P01258",
+        "neg"
+       ]
+      ],
+      "homeostatic": true,
+      "extra_nodes": []
+     },
+     "note": "both arms in one sentence (-140, -141)"
+    },
+    {
+     "id": "the-body-s-systems-m45537-141",
+     "action": "keep",
+     "claim": "Low blood calcium stimulates parathyroid hormone release",
+     "current": {
+      "ctor": "effect",
+      "subject": "CHEBI:29108",
+      "relation": null,
+      "sign": "neg",
+      "target": "amount",
+      "object": "PR:000013429",
+      "blocker": null,
+      "context": {
+       "anatomy": "UBERON:0000178"
+      }
+     },
+     "current_round": "m3",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45537-149",
+   "source": "The main mineralocorticoid is aldosterone, which regulates the concentration of ions in urine, sweat, and saliva.",
+   "words": [],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45537-149",
+     "action": "keep",
+     "claim": "Aldosterone is the main mineralocorticoid",
+     "current": {
+      "ctor": "rel",
+      "subject": "CHEBI:27584",
+      "relation": "is_a",
+      "sign": null,
+      "target": null,
+      "object": "CHEBI:25354",
+      "blocker": null,
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45537-150",
+     "action": "none",
+     "claim": "Aldosterone regulates ion concentration in urine",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "other",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "signless_regulation",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": "\"aldosterone regulates the concentration of ions\": no sign, so no arm and no loop (case L16)"
+    },
+    {
+     "id": "the-body-s-systems-m45537-151",
+     "action": "none",
+     "claim": "Aldosterone regulates ion concentration in sweat",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "other",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "other",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45537-152",
+     "action": "none",
+     "claim": "Aldosterone regulates ion concentration in saliva",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "other",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "other",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45537-153",
+   "source": "Aldosterone release from the adrenal cortex is stimulated by a decrease in blood concentrations of sodium ions, blood volume, or blood pressure, or by an increase in blood potassium levels.",
+   "words": [],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45537-153",
+     "action": "keep",
+     "claim": "A decrease in blood sodium concentration stimulates aldosterone release from the adrenal cortex",
+     "current": {
+      "ctor": "effect",
+      "subject": "CHEBI:29101",
+      "relation": null,
+      "sign": "neg",
+      "target": "amount",
+      "object": "CHEBI:27584",
+      "blocker": null,
+      "context": {
+       "anatomy": "UBERON:0000178"
+      }
+     },
+     "current_round": "m3",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45537-154",
+     "action": "keep",
+     "claim": "A decrease in blood volume stimulates aldosterone release",
+     "current": {
+      "ctor": "effect",
+      "subject": "OBA:0003648",
+      "relation": null,
+      "sign": "neg",
+      "target": "amount",
+      "object": "CHEBI:27584",
+      "blocker": null,
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45537-155",
+     "action": "keep",
+     "claim": "A decrease in blood pressure stimulates aldosterone release",
+     "current": {
+      "ctor": "effect",
+      "subject": "OBA:VT0000183",
+      "relation": null,
+      "sign": "neg",
+      "target": "amount",
+      "object": "CHEBI:27584",
+      "blocker": null,
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45537-156",
+     "action": "keep",
+     "claim": "An increase in blood potassium stimulates aldosterone release",
+     "current": {
+      "ctor": "effect",
+      "subject": "CHEBI:29103",
+      "relation": null,
+      "sign": "pos",
+      "target": "amount",
+      "object": "CHEBI:27584",
+      "blocker": null,
+      "context": {
+       "anatomy": "UBERON:0000178"
+      }
+     },
+     "current_round": "m3",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45537-157",
+   "source": "The glucocorticoids maintain proper blood-glucose levels between meals.",
+   "words": [],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45537-157",
+     "action": "replace",
+     "claim": "Glucocorticoids maintain blood-glucose levels between meals",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "other",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "homeostasis",
+      "quant": null,
+      "subject": "CHEBI:24261",
+      "relation": null,
+      "object": "CHEBI:17234",
+      "sign": null,
+      "target": "amount",
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": "UBERON:0000178",
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": null,
+      "curie_changes": [],
+      "confidence": "medium"
+     },
+     "loop": null,
+     "note": "\"maintain proper blood-glucose levels between meals\"; arms not stated"
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45537-198",
+   "source": "These hormones regulate blood-glucose levels.",
+   "words": [],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45537-198",
+     "action": "replace",
+     "claim": "Glucagon and insulin regulate blood-glucose levels",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "other",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "homeostasis",
+      "quant": null,
+      "subject": "PR:000009054",
+      "relation": null,
+      "object": "CHEBI:17234",
+      "sign": null,
+      "target": "amount",
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": "UBERON:0000178",
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": null,
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": {
+      "sign": "neg",
+      "teddy": "TEDDY_0000034",
+      "held": "CHEBI:17234",
+      "regulators": [
+       [
+        "PR:000009054",
+        "neg"
+       ],
+       [
+        "PR:P01275",
+        "pos"
+       ]
+      ],
+      "homeostatic": true,
+      "extra_nodes": []
+     },
+     "note": "\"these hormones\" are insulin and glucagon (-194 to -197)"
+    },
+    {
+     "id": "the-body-s-systems-m45537-198#2",
+     "action": "add",
+     "claim": "Glucagon and insulin regulate blood-glucose levels",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "other",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "homeostasis",
+      "quant": null,
+      "subject": "PR:P01275",
+      "relation": null,
+      "object": "CHEBI:17234",
+      "sign": null,
+      "target": "amount",
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": "UBERON:0000178",
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": null,
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": {
+      "sign": "neg",
+      "teddy": "TEDDY_0000034",
+      "held": "CHEBI:17234",
+      "regulators": [
+       [
+        "PR:000009054",
+        "neg"
+       ],
+       [
+        "PR:P01275",
+        "pos"
+       ]
+      ],
+      "homeostatic": true,
+      "extra_nodes": []
+     },
+     "note": "second regulator of -198"
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45537-199",
+   "source": "Alpha cells release glucagon as blood-glucose levels decline.",
+   "words": [],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45537-199",
+     "action": "keep",
+     "claim": "Declining blood glucose stimulates glucagon release from alpha cells",
+     "current": {
+      "ctor": "effect",
+      "subject": "CHEBI:17234",
+      "relation": null,
+      "sign": "neg",
+      "target": "amount",
+      "object": "PR:P01275",
+      "blocker": null,
+      "context": {
+       "anatomy": "UBERON:0000178",
+       "cellType": "CL:0000171"
+      }
+     },
+     "current_round": "m3",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45537-200",
+   "source": "When blood-glucose levels rise, beta cells release insulin.",
+   "words": [],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45537-200",
+     "action": "keep",
+     "claim": "Rising blood glucose stimulates insulin release from beta cells",
+     "current": {
+      "ctor": "effect",
+      "subject": "CHEBI:17234",
+      "relation": null,
+      "sign": "pos",
+      "target": "amount",
+      "object": "PR:000009054",
+      "blocker": null,
+      "context": {
+       "anatomy": "UBERON:0000178",
+       "cellType": "CL:0000169"
+      }
+     },
+     "current_round": "m3",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45537-201",
+   "source": "Glucagon causes the release of glucose to the blood from the liver, and insulin facilitates the uptake of glucose by the body’s cells.",
+   "words": [],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45537-201",
+     "action": "keep",
+     "claim": "Glucagon causes release of glucose from the liver into the blood",
+     "current": {
+      "ctor": "effect",
+      "subject": "PR:P01275",
+      "relation": null,
+      "sign": "pos",
+      "target": "amount",
+      "object": "CHEBI:17234",
+      "blocker": null,
+      "context": {
+       "anatomy": "UBERON:0000178"
+      }
+     },
+     "current_round": "m3",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45537-202",
+     "action": "keep",
+     "claim": "Insulin facilitates uptake of glucose by cells",
+     "current": {
+      "ctor": "effect",
+      "subject": "PR:000009054",
+      "relation": null,
+      "sign": "pos",
+      "target": "process",
+      "object": "GO:0098708",
+      "blocker": null,
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45537-225",
+   "source": "The heart has endocrine cells in the walls of the atria that release a hormone in response to increased blood volume.",
+   "words": [],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45537-225",
+     "action": "keep",
+     "claim": "The heart has endocrine cells in the walls of the atria",
+     "current": {
+      "ctor": "rel",
+      "subject": "UBERON:0000948",
+      "relation": "has part",
+      "sign": null,
+      "target": null,
+      "object": "CL:0000163",
+      "blocker": null,
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45537-226",
+     "action": "replace",
+     "claim": "Increased blood volume stimulates atrial endocrine cells to release a hormone",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "ungrounded_entity",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "effect",
+      "quant": null,
+      "subject": "OBA:0003648",
+      "relation": null,
+      "object": "PR:P01160",
+      "sign": "pos",
+      "target": "amount",
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": null,
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": "\"a hormone\" is the atrial natriuretic peptide that -227 acts with (PR:P01160)"
+    },
+    {
+     "id": "the-body-s-systems-m45537-226~loop",
+     "action": "add",
+     "claim": "Increased blood volume stimulates atrial endocrine cells to release a hormone",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "ungrounded_entity",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "homeostasis",
+      "quant": null,
+      "subject": "PR:P01160",
+      "relation": null,
+      "object": "OBA:0003648",
+      "sign": null,
+      "target": "phenotype",
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": null,
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": {
+      "sign": "neg",
+      "teddy": "TEDDY_0000034",
+      "held": "OBA:0003648",
+      "regulators": [
+       [
+        "PR:P01160",
+        "neg"
+       ]
+      ],
+      "homeostatic": true,
+      "extra_nodes": []
+     },
+     "note": "loop closed by -226 and -227"
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45537-227",
+   "source": "It causes a reduction in blood volume and blood pressure, and reduces the concentration of Na+ in the blood.",
+   "words": [],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45537-227",
+     "action": "keep",
+     "claim": "The atrial hormone reduces blood volume",
+     "current": {
+      "ctor": "effect",
+      "subject": "PR:P01160",
+      "relation": null,
+      "sign": "neg",
+      "target": "phenotype",
+      "object": "OBA:0003648",
+      "blocker": null,
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45537-228",
+     "action": "keep",
+     "claim": "The atrial hormone reduces blood pressure",
+     "current": {
+      "ctor": "effect",
+      "subject": "PR:P01160",
+      "relation": null,
+      "sign": "neg",
+      "target": "phenotype",
+      "object": "OBA:VT0000183",
+      "blocker": null,
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45537-229",
+     "action": "keep",
+     "claim": "The atrial hormone reduces blood Na+ concentration",
+     "current": {
+      "ctor": "effect",
+      "subject": "PR:P01160",
+      "relation": null,
+      "sign": "neg",
+      "target": "amount",
+      "object": "CHEBI:29101",
+      "blocker": null,
+      "context": {
+       "anatomy": "UBERON:0000178"
+      }
+     },
+     "current_round": "m3",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45537-236",
+   "source": "Two of these hormones regulate ion concentrations and blood volume or pressure.",
+   "words": [],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45537-236",
+     "action": "none",
+     "claim": "Two kidney hormones regulate ion concentration and blood volume or pressure",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "other",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "class_level_loop",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": "\"two of these hormones\" are not named"
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45537-237",
+   "source": "Erythropoietin (EPO) is released by kidneys in response to low oxygen levels.",
+   "words": [],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45537-237",
+     "action": "keep",
+     "claim": "The kidneys release erythropoietin",
+     "current": {
+      "ctor": "rel",
+      "subject": "UBERON:0002113",
+      "relation": "produces",
+      "sign": null,
+      "target": null,
+      "object": "PR:000007141",
+      "blocker": null,
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45537-238~loop",
+     "action": "add",
+     "claim": "Low oxygen levels stimulate erythropoietin release",
+     "current": {
+      "ctor": "effect",
+      "subject": "CHEBI:15379",
+      "relation": null,
+      "sign": "neg",
+      "target": "amount",
+      "object": "PR:000007141",
+      "blocker": null,
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "homeostasis",
+      "quant": null,
+      "subject": "PR:000007141",
+      "relation": null,
+      "object": "CHEBI:15379",
+      "sign": null,
+      "target": "amount",
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": "UBERON:0000178",
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": null,
+      "curie_changes": [],
+      "confidence": "medium"
+     },
+     "loop": {
+      "sign": "neg",
+      "teddy": "TEDDY_0000034",
+      "held": "CHEBI:15379",
+      "regulators": [
+       [
+        "PR:000007141",
+        "pos"
+       ]
+      ],
+      "homeostatic": true,
+      "extra_nodes": [
+       "GO:0030218"
+      ]
+     },
+     "note": "sensor arm -238; the return arm (-240) ends on erythropoiesis, a process, so no chain closes (case L12)"
+    },
+    {
+     "id": "the-body-s-systems-m45537-239",
+     "action": "none",
+     "claim": "Erythropoietin is abbreviated EPO",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "definition_only",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "definition_only",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45537-240",
+   "source": "EPO triggers the formation of red blood cells in the bone marrow.",
+   "words": [],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45537-240",
+     "action": "keep",
+     "claim": "EPO triggers red blood cell formation in the bone marrow",
+     "current": {
+      "ctor": "effect",
+      "subject": "PR:000007141",
+      "relation": null,
+      "sign": "pos",
+      "target": "process",
+      "object": "GO:0030218",
+      "blocker": null,
+      "context": {
+       "anatomy": "UBERON:0002371"
+      }
+     },
+     "current_round": "m3",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45537-250",
+   "source": "Adipose tissue, or fat tissue, produces the hormone leptin in response to food intake.",
+   "words": [],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45537-250",
+     "action": "keep",
+     "claim": "Adipose tissue produces leptin",
+     "current": {
+      "ctor": "rel",
+      "subject": "UBERON:0001013",
+      "relation": "produces",
+      "sign": null,
+      "target": null,
+      "object": "PR:000009758",
+      "blocker": null,
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45537-251~loop",
+     "action": "add",
+     "claim": "Food intake stimulates leptin production",
+     "current": {
+      "ctor": "effect",
+      "subject": "GO:0042755",
+      "relation": null,
+      "sign": "pos",
+      "target": "amount",
+      "object": "PR:000009758",
+      "blocker": null,
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "homeostasis",
+      "quant": null,
+      "subject": "PR:000009758",
+      "relation": null,
+      "object": "GO:0042755",
+      "sign": null,
+      "target": "process",
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": null,
+      "curie_changes": [],
+      "confidence": "medium"
+     },
+     "loop": {
+      "sign": "neg",
+      "teddy": "TEDDY_0000034",
+      "held": "GO:0042755",
+      "regulators": [
+       [
+        "PR:000009758",
+        "neg"
+       ]
+      ],
+      "homeostatic": true,
+      "extra_nodes": []
+     },
+     "note": "closed by -251 and -254; mostly defends against a fall in leptin (Ahima 1996, case L17)"
+    },
+    {
+     "id": "the-body-s-systems-m45537-252",
+     "action": "none",
+     "claim": "Adipose tissue is also called fat tissue",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "definition_only",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "definition_only",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45537-253",
+   "source": "Leptin produces a feeling of satiety after eating, reducing the urge for further eating.",
+   "words": [],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45537-253",
+     "action": "none",
+     "claim": "Leptin produces a feeling of satiety after eating",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "other",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "ungrounded_entity",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": "satiety has no GO process; -254 carries the arm"
+    },
+    {
+     "id": "the-body-s-systems-m45537-254",
+     "action": "replace",
+     "claim": "Leptin reduces the urge for further eating",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "ungrounded_entity",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "effect",
+      "quant": null,
+      "subject": "PR:000009758",
+      "relation": null,
+      "object": "GO:0042755",
+      "sign": "neg",
+      "target": "process",
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": null,
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": "\"reducing the urge for further eating\"; the R2 entity GO:0042755 is eating behavior"
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45537-255",
+   "source": "Hormone production and release are primarily controlled by negative feedback, as described in the discussion on homeostasis.",
+   "words": [
+    "feedback",
+    "homeosta"
+   ],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45537-255",
+     "action": "none",
+     "claim": "Hormone production and release are primarily controlled by negative feedback",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "process_description",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "class_level_loop",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": "hormones in general"
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45537-256",
+   "source": "In this way, the concentration of hormones in blood is maintained within a narrow range.",
+   "words": [],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45537-256",
+     "action": "none",
+     "claim": "Negative feedback keeps blood hormone concentration within a narrow range",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "other",
+      "context": {}
+     },
+     "current_round": "m3",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "class_level_loop",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45537-257",
+   "source": "For example, the anterior pituitary signals the thyroid to release thyroid hormones.",
+   "words": [],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45537-257",
+     "action": "keep",
+     "claim": "The anterior pituitary signals the thyroid to release thyroid hormones",
+     "current": {
+      "ctor": "effect",
+      "subject": "UBERON:0002196",
+      "relation": null,
+      "sign": "pos",
+      "target": "amount",
+      "object": "CHEBI:60311",
+      "blocker": null,
+      "context": {
+       "anatomy": "UBERON:0002046"
+      }
+     },
+     "current_round": "m3",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45537-258",
+   "source": "Increasing levels of these hormones in the blood then give feedback to the hypothalamus and anterior pituitary to inhibit further signaling to the thyroid gland ().",
+   "words": [
+    "feedback"
+   ],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45537-258",
+     "action": "replace",
+     "claim": "Rising blood thyroid hormone inhibits the hypothalamus and anterior pituitary from further signaling to the thyroid",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "other",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "effect",
+      "quant": null,
+      "subject": "CHEBI:60311",
+      "relation": null,
+      "object": "PR:P01222",
+      "sign": "neg",
+      "target": "amount",
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": null,
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": "negative arm: \"these hormones\" (thyroid hormones of -257) inhibit pituitary signalling (TSH); hypothalamic TRH arm is #2"
+    },
+    {
+     "id": "the-body-s-systems-m45537-258#2",
+     "action": "add",
+     "claim": "Rising blood thyroid hormone inhibits the hypothalamus and anterior pituitary from further signaling to the thyroid",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "other",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "effect",
+      "quant": null,
+      "subject": "CHEBI:60311",
+      "relation": null,
+      "object": "CHEBI:35940",
+      "sign": "neg",
+      "target": "amount",
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": null,
+      "curie_changes": [],
+      "confidence": "medium"
+     },
+     "loop": null,
+     "note": "hypothalamic arm: TRH (CHEBI:35940 protirelin)"
+    },
+    {
+     "id": "the-body-s-systems-m45537-258~loop",
+     "action": "add",
+     "claim": "Rising blood thyroid hormone inhibits the hypothalamus and anterior pituitary from further signaling to the thyroid",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "other",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "homeostasis",
+      "quant": null,
+      "subject": "UBERON:0002196",
+      "relation": null,
+      "object": "CHEBI:60311",
+      "sign": null,
+      "target": "amount",
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": "UBERON:0002046",
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": null,
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": {
+      "sign": "neg",
+      "teddy": "TEDDY_0000034",
+      "held": "CHEBI:60311",
+      "regulators": [
+       [
+        "UBERON:0002196",
+        "pos"
+       ],
+       [
+        "PR:P01222",
+        "pos"
+       ]
+      ],
+      "homeostatic": true,
+      "extra_nodes": []
+     },
+     "note": "loop closed by -257 and -258"
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45537-259",
+   "source": "The anterior pituitary stimulates the thyroid gland to release thyroid hormones T3 and T4.",
+   "words": [],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45537-259",
+     "action": "keep",
+     "claim": "The anterior pituitary stimulates the thyroid gland to release T3 and T4",
+     "current": {
+      "ctor": "effect",
+      "subject": "UBERON:0002196",
+      "relation": null,
+      "sign": "pos",
+      "target": "amount",
+      "object": "CHEBI:18258",
+      "blocker": null,
+      "context": {
+       "anatomy": "UBERON:0002046"
+      }
+     },
+     "current_round": "m3",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45537-260",
+   "source": "Increasing levels of these hormones in the blood result in feedback to the hypothalamus and anterior pituitary to inhibit further signaling to the thyroid gland.",
+   "words": [
+    "feedback"
+   ],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45537-260",
+     "action": "replace",
+     "claim": "Rising blood thyroid hormone inhibits hypothalamic and anterior pituitary signaling to the thyroid",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "other",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "effect",
+      "quant": null,
+      "subject": "CHEBI:18258",
+      "relation": null,
+      "object": "PR:P01222",
+      "sign": "neg",
+      "target": "amount",
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": null,
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": "\"these hormones\" are T3 and T4 (-259); T4 is #2"
+    },
+    {
+     "id": "the-body-s-systems-m45537-260#2",
+     "action": "add",
+     "claim": "Rising blood thyroid hormone inhibits hypothalamic and anterior pituitary signaling to the thyroid",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "other",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "effect",
+      "quant": null,
+      "subject": "CHEBI:30660",
+      "relation": null,
+      "object": "PR:P01222",
+      "sign": "neg",
+      "target": "amount",
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": null,
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": "T4 arm"
+    },
+    {
+     "id": "the-body-s-systems-m45537-260~loop",
+     "action": "add",
+     "claim": "Rising blood thyroid hormone inhibits hypothalamic and anterior pituitary signaling to the thyroid",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "other",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "homeostasis",
+      "quant": null,
+      "subject": "PR:P01222",
+      "relation": null,
+      "object": "CHEBI:18258",
+      "sign": null,
+      "target": "amount",
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": "UBERON:0002046",
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": null,
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": {
+      "sign": "neg",
+      "teddy": "TEDDY_0000034",
+      "held": "CHEBI:18258",
+      "regulators": [
+       [
+        "PR:P01222",
+        "pos"
+       ],
+       [
+        "UBERON:0002196",
+        "pos"
+       ]
+      ],
+      "homeostatic": true,
+      "extra_nodes": []
+     },
+     "note": "loop closed by -129 and -260"
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45537-262",
+   "source": "Goiter, a disease caused by iodine deficiency, results in the inability of the thyroid gland to form T3 and T4.",
+   "words": [],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45537-262",
+     "action": "none",
+     "claim": "Iodine deficiency causes goiter",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "ungrounded_entity",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "ungrounded_entity",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": "no MONDO class for iodine deficiency found on OLS4 (fetal iodine syndrome is narrower)"
+    },
+    {
+     "id": "the-body-s-systems-m45537-263",
+     "action": "replace",
+     "claim": "Goiter results in inability of the thyroid gland to form T3 and T4",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "other",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "effect",
+      "quant": null,
+      "subject": "MONDO:0005397",
+      "relation": null,
+      "object": "CHEBI:30660",
+      "sign": "neg",
+      "target": "amount",
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": null,
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": "goiter: inability to form T4"
+    },
+    {
+     "id": "the-body-s-systems-m45537-263#2",
+     "action": "add",
+     "claim": "Goiter results in inability of the thyroid gland to form T3 and T4",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "other",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "effect",
+      "quant": null,
+      "subject": "MONDO:0005397",
+      "relation": null,
+      "object": "CHEBI:18258",
+      "sign": "neg",
+      "target": "amount",
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": null,
+      "curie_changes": [],
+      "confidence": "low"
+     },
+     "loop": null,
+     "note": "as written, but Chopra 1975 (PMID 1117981) finds serum T3 supranormal in endemic goiter: a candidate for false_as_written"
+    },
+    {
+     "id": "the-body-s-systems-m45537-310",
+     "action": "none",
+     "claim": "Iodine deficiency causes goiter",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "ungrounded_entity",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "ungrounded_entity",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": "duplicate of -262"
+    },
+    {
+     "id": "the-body-s-systems-m45537-311",
+     "action": "replace",
+     "claim": "Goiter results in inability of the thyroid gland to form T3 and T4",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "other",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "effect",
+      "quant": null,
+      "subject": "MONDO:0005397",
+      "relation": null,
+      "object": "CHEBI:30660",
+      "sign": "neg",
+      "target": "amount",
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": null,
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": "duplicate sentence of -263"
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45537-264",
+   "source": "The body typically attempts to compensate by producing greater amounts of TSH.",
+   "words": [],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45537-264",
+     "action": "replace",
+     "claim": "In goiter the body compensates by producing more TSH",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "other",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "effect",
+      "quant": null,
+      "subject": "MONDO:0005397",
+      "relation": null,
+      "object": "PR:P01222",
+      "sign": "pos",
+      "target": "amount",
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": null,
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": "the loop compensating; also derivable from -263 and -258 (case L09)"
+    },
+    {
+     "id": "the-body-s-systems-m45537-312",
+     "action": "replace",
+     "claim": "In goiter the body compensates by producing more TSH",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "other",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "effect",
+      "quant": null,
+      "subject": "MONDO:0005397",
+      "relation": null,
+      "object": "PR:P01222",
+      "sign": "pos",
+      "target": "amount",
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": null,
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": "duplicate sentence of -264"
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45537-268",
+   "source": "Hormone levels are primarily controlled through negative feedback, in which rising levels of a hormone inhibit its further release.",
+   "words": [
+    "feedback"
+   ],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45537-268",
+     "action": "none",
+     "claim": "Hormone levels are primarily controlled by negative feedback",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "process_description",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "class_level_loop",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45537-269",
+     "action": "none",
+     "claim": "Rising levels of a hormone inhibit its further release",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "ungrounded_entity",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "class_level_loop",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": "\"rising levels of a hormone inhibit its further release\": every hormone x lowers x, a bound variable"
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45537-325",
+   "source": "The number of receptors can increase in response to rising hormone levels, called up-regulation, making the cell more sensitive to the hormone and allowing for more cellular activity.",
+   "words": [],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45537-325",
+     "action": "none",
+     "claim": "Up-regulation is an increase in receptor number in response to rising hormone levels",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "definition_only",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "class_level_loop",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45537-326",
+     "action": "none",
+     "claim": "Rising hormone levels can increase the number of receptors",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "ungrounded_entity",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "ungrounded_entity",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45537-327",
+     "action": "none",
+     "claim": "More receptors make the cell more sensitive to the hormone and allow more cellular activity",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "other",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "other",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45537-328",
+   "source": "The number of receptors can also decrease in response to rising hormone levels, called down-regulation, leading to reduced cellular activity.",
+   "words": [],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45537-328",
+     "action": "none",
+     "claim": "Down-regulation is a decrease in receptor number in response to rising hormone levels",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "definition_only",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "class_level_loop",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45537-329",
+     "action": "none",
+     "claim": "Rising hormone levels can decrease the number of receptors",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "ungrounded_entity",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "ungrounded_entity",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45537-330",
+     "action": "none",
+     "claim": "Fewer receptors lead to reduced cellular activity",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "ungrounded_entity",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "ungrounded_entity",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45537-333",
+   "source": "Blood-glucose levels are regulated by hormones produced by the pancreas: insulin and glucagon.",
+   "words": [],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45537-333",
+     "action": "replace",
+     "claim": "Insulin and glucagon from the pancreas regulate blood-glucose levels",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "other",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "homeostasis",
+      "quant": null,
+      "subject": "PR:000009054",
+      "relation": null,
+      "object": "CHEBI:17234",
+      "sign": null,
+      "target": "amount",
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": "UBERON:0000178",
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": null,
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": {
+      "sign": "neg",
+      "teddy": "TEDDY_0000034",
+      "held": "CHEBI:17234",
+      "regulators": [
+       [
+        "PR:000009054",
+        "neg"
+       ],
+       [
+        "PR:P01275",
+        "pos"
+       ]
+      ],
+      "homeostatic": true,
+      "extra_nodes": []
+     },
+     "note": "two regulators: one core claim per regulator; the loop block keeps the pair and the directions"
+    },
+    {
+     "id": "the-body-s-systems-m45537-333#2",
+     "action": "add",
+     "claim": "Insulin and glucagon from the pancreas regulate blood-glucose levels",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "other",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "homeostasis",
+      "quant": null,
+      "subject": "PR:P01275",
+      "relation": null,
+      "object": "CHEBI:17234",
+      "sign": null,
+      "target": "amount",
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": "UBERON:0000178",
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": null,
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": {
+      "sign": "neg",
+      "teddy": "TEDDY_0000034",
+      "held": "CHEBI:17234",
+      "regulators": [
+       [
+        "PR:000009054",
+        "neg"
+       ],
+       [
+        "PR:P01275",
+        "pos"
+       ]
+      ],
+      "homeostatic": true,
+      "extra_nodes": []
+     },
+     "note": "second regulator of -333"
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45539-82",
+   "source": "This opening allows sodium ions to enter the neuron and results in depolarization of the membrane—a decrease in the voltage across the neuron membrane.",
+   "words": [],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45539-82",
+     "action": "keep",
+     "claim": "Opening of ion channels allows sodium ions to enter the neuron",
+     "current": {
+      "ctor": "effect",
+      "subject": "GO:0005216",
+      "relation": null,
+      "sign": "pos",
+      "target": "amount",
+      "object": "CHEBI:29101",
+      "blocker": null,
+      "context": {
+       "cellType": "CL:0000540"
+      }
+     },
+     "current_round": "m3",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45539-83",
+     "action": "keep",
+     "claim": "Sodium entry depolarizes the membrane",
+     "current": {
+      "ctor": "effect",
+      "subject": "CHEBI:29101",
+      "relation": null,
+      "sign": "pos",
+      "target": "process",
+      "object": "GO:0051899",
+      "blocker": null,
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45539-84",
+     "action": "none",
+     "claim": "Depolarization is a decrease in the voltage across the neuron membrane",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "definition_only",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "definition_only",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45539-87",
+   "source": "If it is strong enough (that is, if the threshold of excitation, a depolarization to around –60mV is reached), then depolarization creates a positive feedback loop: as more Na+ ions enter the cell, the axon becomes further depolarized, opening even more sodium channels at further distances from the cell body.",
+   "words": [
+    "feedback"
+   ],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45539-87",
+     "action": "keep",
+     "claim": "The threshold of excitation is a depolarization to around -60 mV",
+     "current": {
+      "ctor": "measure",
+      "subject": "CL:0000540",
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": null,
+      "context": {
+       "stage": "GO:0001508"
+      }
+     },
+     "current_round": "m3",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45539-88",
+     "action": "none",
+     "claim": "Above threshold, Na+ entry further depolarizes the axon, which opens more sodium channels (positive feedback)",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "process_description",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "positive_loop",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": {
+      "sign": "pos",
+      "teddy": "TEDDY_0000035",
+      "held": "GO:0051899",
+      "regulators": [
+       [
+        "GO:0005248",
+        "pos"
+       ],
+       [
+        "CHEBI:29101",
+        "pos"
+       ]
+      ],
+      "homeostatic": false,
+      "extra_nodes": []
+     },
+     "note": "the one \"positive feedback\" sentence; the arms are -89, -90, -83; Claim.homeostasis cannot hold a positive loop"
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45539-89",
+   "source": "This will cause voltage dependent Na+ channels further down the axon to open and more positive ions to enter the cell.",
+   "words": [],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45539-89",
+     "action": "keep",
+     "claim": "Depolarization opens voltage-dependent Na+ channels further down the axon",
+     "current": {
+      "ctor": "effect",
+      "subject": "GO:0051899",
+      "relation": null,
+      "sign": "pos",
+      "target": "activity",
+      "object": "GO:0005248",
+      "blocker": null,
+      "context": {
+       "condition": "further down the axon"
+      }
+     },
+     "current_round": "m2",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45539-90",
+     "action": "keep",
+     "claim": "Opening of Na+ channels lets more positive ions enter the cell",
+     "current": {
+      "ctor": "effect",
+      "subject": "GO:0005248",
+      "relation": null,
+      "sign": "pos",
+      "target": "amount",
+      "object": "CHEBI:29101",
+      "blocker": null,
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45539-95",
+   "source": "This change in the membrane potential causes voltage-gated K+ channels to open, and K+ begins to leave the cell, repolarizing it.",
+   "words": [],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45539-95",
+     "action": "keep",
+     "claim": "The depolarized membrane potential opens voltage-gated K+ channels",
+     "current": {
+      "ctor": "effect",
+      "subject": "GO:0051899",
+      "relation": null,
+      "sign": "pos",
+      "target": "activity",
+      "object": "GO:0005249",
+      "blocker": null,
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45539-96",
+     "action": "none",
+     "claim": "K+ leaves the cell through open voltage-gated K+ channels",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "process_description",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "process_description",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": "K+ efflux: the missing arm of the negative loop (case P05)"
+    },
+    {
+     "id": "the-body-s-systems-m45539-97",
+     "action": "keep",
+     "claim": "K+ efflux repolarizes the membrane",
+     "current": {
+      "ctor": "effect",
+      "subject": "CHEBI:29103",
+      "relation": null,
+      "sign": "pos",
+      "target": "process",
+      "object": "GO:0086009",
+      "blocker": null,
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45539-102",
+   "source": "It travels in only one direction because the sodium channels have been inactivated and unavailable until the membrane potential is near the resting potential again; at this point they are reset to closed and can be opened again.",
+   "words": [],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45539-102",
+     "action": "none",
+     "claim": "Inactivated sodium channels prevent the action potential from travelling backwards",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "process_description",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "process_description",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45539-103",
+     "action": "none",
+     "claim": "Sodium channels remain unavailable until the membrane potential is near resting, then reset to closed and can reopen",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "sequence_or_ordering",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "sequence_or_ordering",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45539-230",
+   "source": "It receives sensory and motor inputs from the body and also receives feedback from the cortex.",
+   "words": [
+    "feedback"
+   ],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45539-230",
+     "action": "none",
+     "claim": "The thalamus receives sensory and motor inputs from the body",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "other",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "other",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": ""
+    },
+    {
+     "id": "the-body-s-systems-m45539-231",
+     "action": "none",
+     "claim": "The thalamus receives feedback from the cortex",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "other",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "not_homeostasis",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": "cortico-thalamic \"feedback\" is a connection, not a regulated variable (case N03)"
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45539-232",
+   "source": "This feedback mechanism can modulate conscious awareness of sensory and motor inputs depending on the attention and arousal state of the animal.",
+   "words": [
+    "feedback"
+   ],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45539-232",
+     "action": "none",
+     "claim": "Cortico-thalamic feedback modulates conscious awareness of sensory and motor inputs depending on attention and arousal",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "other",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "none",
+      "quant": null,
+      "subject": null,
+      "relation": null,
+      "object": null,
+      "sign": null,
+      "target": null,
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": "not_homeostasis",
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": null,
+     "note": "as -231"
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45539-236",
+   "source": "Among other functions, the hypothalamus is the body’s thermostat—it makes sure the body temperature is kept at appropriate levels.",
+   "words": [
+    "thermostat"
+   ],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45539-236",
+     "action": "replace",
+     "claim": "The hypothalamus keeps body temperature at appropriate levels (thermostat)",
+     "current": {
+      "ctor": "none",
+      "subject": null,
+      "relation": null,
+      "sign": null,
+      "target": null,
+      "object": null,
+      "blocker": "other",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": {
+      "ctor": "homeostasis",
+      "quant": null,
+      "subject": "UBERON:0001898",
+      "relation": null,
+      "object": "OBA:VT0005535",
+      "sign": null,
+      "target": "phenotype",
+      "mediator": null,
+      "mediator_target": null,
+      "n": null,
+      "lo": null,
+      "hi": null,
+      "unit": null,
+      "quality": null,
+      "context": {
+       "taxon": null,
+       "anatomy": null,
+       "cellType": null,
+       "component": null,
+       "stage": null,
+       "condition": null
+      },
+      "blocker": null,
+      "curie_changes": [],
+      "confidence": "high"
+     },
+     "loop": {
+      "sign": "neg",
+      "teddy": "TEDDY_0000034",
+      "held": "OBA:VT0005535",
+      "regulators": [
+       [
+        "UBERON:0001898",
+        "neg"
+       ]
+      ],
+      "homeostatic": true,
+      "extra_nodes": []
+     },
+     "note": "\"the hypothalamus is the body's thermostat\""
+    }
+   ]
+  },
+  {
+   "first_id": "the-body-s-systems-m45539-398",
+   "source": "hypothalamus: the brain structure that controls hormone release and body homeostasis",
+   "words": [
+    "homeosta"
+   ],
+   "records": [
+    {
+     "id": "the-body-s-systems-m45539-398",
+     "action": "keep",
+     "claim": "The hypothalamus is the brain structure that controls hormone release and body homeostasis",
+     "current": {
+      "ctor": "rel",
+      "subject": "UBERON:0001898",
+      "relation": "part of",
+      "sign": null,
+      "target": null,
+      "object": "UBERON:0000955",
+      "blocker": "compound_sentence",
+      "context": {}
+     },
+     "current_round": "m2",
+     "m3": null,
+     "loop": null,
+     "note": ""
+    }
+   ]
+  }
+ ]
+}

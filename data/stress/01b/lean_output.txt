@@ -1,0 +1,113 @@
+Application type mismatch: The argument
+  lit Textbook.R3.Photosynthesis.photosynthesis_m45453_72
+has type
+  Derivation Textbook.R3.Photosynthesis.photosynthesis_m45453_72.claim
+but is expected to have type
+  Derivation (Claim.rel ?m.11 e_NCBITaxon_33090 ?m.9 ?m.14)
+in the application
+  @relChain Kind.taxon Kind.taxon ?m.6 epifagus e_NCBITaxon_33090 ?m.9 Rel.isA ?m.11 ?m.12 isaStmt._proof_1 ?m.14
+    (lit (isaStmt epifagus e_NCBITaxon_33090)) (lit Textbook.R3.Photosynthesis.photosynthesis_m45453_72)
+could not synthesize default value for parameter 'ok' using tactics
+Expected type must not contain metavariables
+  RO.chainOK Rel.isA ?m.11 Rel.hasPart = true
+(lit (isaStmt epifagus e_NCBITaxon_33090)).relChain sorry ⋯
+  ⋯ : Derivation (Claim.rel Rel.hasPart epifagus e_GO_0009507 ⋯)
+Application type mismatch: The argument
+  lit Textbook.R3.TheBodySSystemsA.the_body_s_systems_m45535_39
+has type
+  Derivation Textbook.R3.TheBodySSystemsA.the_body_s_systems_m45535_39.claim
+but is expected to have type
+  Derivation (Claim.rel ?m.11 e_NCBITaxon_40674 ?m.9 ?m.14)
+in the application
+  @relChain Kind.taxon Kind.taxon ?m.6 mysticeti e_NCBITaxon_40674 ?m.9 Rel.isA ?m.11 ?m.12 isaStmt._proof_1 ?m.14
+    (lit (isaStmt mysticeti e_NCBITaxon_40674)) (lit Textbook.R3.TheBodySSystemsA.the_body_s_systems_m45535_39)
+could not synthesize default value for parameter 'ok' using tactics
+Expected type must not contain metavariables
+  RO.chainOK Rel.isA ?m.11 Rel.hasPart = true
+(lit (isaStmt mysticeti e_NCBITaxon_40674)).relChain sorry ⋯
+  ⋯ : Derivation (Claim.rel Rel.hasPart mysticeti e_UBERON_0001091 ⋯)
+OBS	U1	c=established b=0.960 d=0.000	from=cellular organisms	core=established b=0.960 d=0.000	Examples/Transcription.lean cellularE_b (E1)
+OBS	U2	c=established b=0.952 d=0.000	from=cellular organisms	core=established b=0.952 d=0.000	
+OBS	LT1	c=unsupported b=0.461 d=0.000	from=Mammalia	core=unsupported b=0.461 d=0.000	platypus not imported
+OBS	N1	c=none	from=-	core=none	INEXPRESSIBLE: no kind or term for a mitochondrial genetic code (kindName)
+OBS	N1-	c=none	from=-	core=none	INEXPRESSIBLE: no kind or term for a mitochondrial genetic code (kindName)
+OBS	N2	c=none	from=-	core=none	INEXPRESSIBLE: no term for a codon assignment (kindName)
+OBS	N2-	c=none	from=-	core=none	INEXPRESSIBLE: no term for a codon assignment (kindName)
+OBS	N3	c=none	from=-	core=none	INEXPRESSIBLE: no term for a codon assignment (kindName)
+OBS	N3-	c=none	from=-	core=none	INEXPRESSIBLE: no term for a codon assignment (kindName)
+OBS	N4	c=none	from=-	core=none	INEXPRESSIBLE: no term for a codon assignment (kindName)
+OBS	N4-	c=none	from=-	core=none	INEXPRESSIBLE: no term for a codon assignment (kindName)
+OBS	L1	c=unsupported b=0.104 d=0.000	from=Eukaryota	core=unsupported b=0.022 d=0.781	
+OBS	L1-	c=unsupported b=0.104 d=0.000	from=Eukaryota	core=unsupported b=0.104 d=0.000	
+OBS	L2	c=unsupported b=0.104 d=0.000	from=Eukaryota	core=unsupported b=0.022 d=0.781	
+OBS	L2-	c=unsupported b=0.104 d=0.000	from=Eukaryota	core=unsupported b=0.104 d=0.000	
+OBS	L3	c=none	from=-	core=none	INEXPRESSIBLE: no GO class for 'mitochondrion or a related organelle'; Giardia and Trichomonas not imported
+OBS	L3-	c=none	from=-	core=none	INEXPRESSIBLE: no GO class for 'mitochondrion or a related organelle'; Giardia and Trichomonas not imported
+OBS	L4	c=none	from=-	core=refuted b=0.000 d=0.800	jakobids not imported: no generalisation; the human record alone
+OBS	L4-	c=none	from=-	core=none	jakobids not imported: no generalisation
+OBS	L5	c=unsupported b=0.111 d=0.000	from=Mammalia	core=unsupported b=0.111 d=0.000	loss records cannot revise a universal
+OBS	L5-	c=unsupported b=0.111 d=0.000	from=Mammalia	core=unsupported b=0.111 d=0.000	
+OBS	L6	c=established b=0.800 d=0.000	from=Astyanax mexicanus	core=contested b=0.444 d=0.444	surface and cave records on one taxon
+OBS	L6-	c=established b=0.800 d=0.000	from=Astyanax mexicanus	core=established b=0.800 d=0.000	
+OBS	L7	c=unsupported b=0.222 d=0.000	from=Mammalia	core=unsupported b=0.222 d=0.000	cell in mammals has part nucleus; the enucleate erythrocyte cannot enter
+OBS	L8	c=unsupported b=0.013 d=0.000	from=Vertebrata	core=unsupported b=0.013 d=0.000	
+OBS	L8-	c=unsupported b=0.013 d=0.000	from=Vertebrata	core=unsupported b=0.013 d=0.000	
+OBS	L9	c=unsupported b=0.461 d=0.000	from=Mammalia	core=unsupported b=0.461 d=0.000	
+OBS	L9-	c=unsupported b=0.461 d=0.000	from=Mammalia	core=unsupported b=0.461 d=0.000	
+OBS	CV1	c=none	from=-	core=refuted b=0.000 d=0.800	stated with RO:0002158 shares ancestor with; the convergence record (notRel) decides
+OBS	CV1-	c=none	from=-	core=none	stated with RO:0002158 shares ancestor with; no rule derives it from shared presence
+OBS	CV2	c=none	from=-	core=refuted b=0.000 d=0.800	stated with RO:0002158 shares ancestor with; the convergence record (notRel) decides
+OBS	CV2-	c=none	from=-	core=none	stated with RO:0002158 shares ancestor with; no rule derives it from shared presence
+OBS	CV3	c=none	from=-	core=refuted b=0.000 d=0.800	stated with RO:0002158 shares ancestor with; the convergence record (notRel) decides
+OBS	CV3-	c=none	from=-	core=none	stated with RO:0002158 shares ancestor with; no rule derives it from shared presence
+OBS	CV4	c=none	from=-	core=refuted b=0.000 d=0.800	stated with RO:0002158 shares ancestor with; the convergence record (notRel) decides
+OBS	CV4-	c=none	from=-	core=none	stated with RO:0002158 shares ancestor with; no rule derives it from shared presence
+OBS	H1	c=none	from=-	core=none	stated as notRel (h1Claim); no rule widens a negation (predShape) or lets the aphid record revise it
+OBS	H1-	c=none	from=-	core=none	stated as notRel (h1Claim); no rule widens a negation (predShape)
+OBS	A1	c=none	from=-	core=none	INEXPRESSIBLE: no ancestor claim (shape)
+OBS	A1-	c=none	from=-	core=none	INEXPRESSIBLE: no ancestor claim (shape)
+OBS	NT1	c=none	from=-	core=none	INEXPRESSIBLE: no term for a nuclear genetic code (kindName)
+OBS	LT2	c=unsupported b=0.102 d=0.000	from=Eukaryota	core=unsupported b=0.102 d=0.000	
+OBS	LT3	c=unsupported b=0.000 d=0.000	from=Murinae	core=unsupported b=0.000 d=0.000	
+OBS	CVT1	c=none	from=-	core=none	stated with RO:0002158 shares ancestor with; no rule derives it from shared presence
+OBS	CVT2	c=none	from=-	core=none	stated with RO:0002158 shares ancestor with; no rule derives it from shared presence
+OBS	RMT1	c=established b=0.888 d=0.000	from=Euarchontoglires	core=established b=0.888 d=0.000	
+OBS	RM1	c=established b=0.888 d=0.000	from=Euarchontoglires	core=established b=0.888 d=0.000	
+OBS	RM2	c=established b=0.888 d=0.000	from=Euarchontoglires	core=established b=0.888 d=0.000	
+OBS	RM3	c=established b=0.888 d=0.000	from=Euarchontoglires	core=established b=0.888 d=0.000	
+OBS	RM4	c=unsupported b=0.000 d=0.000	from=Euarchontoglires	core=unsupported b=0.000 d=0.000	the mouse and guinea pig absences cannot enter
+OBS	RM5	c=established b=0.888 d=0.000	from=Euarchontoglires	core=established b=0.888 d=0.000	
+OBS	D01-	c=unsupported b=0.104 d=0.000	from=Eukaryota	core=unsupported b=0.104 d=0.000	
+OBS	D01+	c=unsupported b=0.104 d=0.000	from=Eukaryota	core=unsupported b=0.022 d=0.781	
+OBS	D02-	c=unsupported b=0.000 d=0.000	from=Eumetazoa	core=unsupported b=0.000 d=0.000	
+OBS	D02+	c=unsupported b=0.000 d=0.000	from=Eumetazoa	core=refuted b=0.000 d=0.800	
+OBS	D03-	c=unsupported b=0.098 d=0.000	from=Eukaryota	core=unsupported b=0.098 d=0.000	
+OBS	D03+	c=unsupported b=0.098 d=0.000	from=Eukaryota	core=unsupported b=0.021 d=0.782	
+OBS	D04-	c=unsupported b=0.000 d=0.000	from=Eukaryota	core=unsupported b=0.000 d=0.000	
+OBS	D04+	c=unsupported b=0.000 d=0.000	from=Eukaryota	core=refuted b=0.000 d=0.800	
+OBS	D05-	c=unsupported b=0.444 d=0.000	from=Euarchontoglires	core=unsupported b=0.444 d=0.000	the human, macaque, guinea pig and Tarsius losses cannot enter
+OBS	D05+	c=unsupported b=0.444 d=0.000	from=Euarchontoglires	core=unsupported b=0.137 d=0.689	
+OBS	D06-	c=established b=0.888 d=0.000	from=Euarchontoglires	core=established b=0.888 d=0.000	
+OBS	D06+	c=established b=0.888 d=0.000	from=Euarchontoglires	core=contested b=0.615 d=0.307	
+OBS	D07-	c=unsupported b=0.000 d=0.000	from=Amniota	core=unsupported b=0.000 d=0.000	
+OBS	D07+	c=unsupported b=0.000 d=0.000	from=Amniota	core=refuted b=0.000 d=0.800	the Aves loss record reaches Gallus through notRelSub
+OBS	D08-	c=unsupported b=0.000 d=0.000	from=Euteleostomi	core=unsupported b=0.000 d=0.000	
+OBS	D08+	c=unsupported b=0.000 d=0.000	from=Euteleostomi	core=refuted b=0.000 d=0.800	the family loss record reaches the species through notRelSub
+OBS	D09-	c=unsupported b=0.000 d=0.000	from=Pentapetalae	core=unsupported b=0.000 d=0.000	
+OBS	D09+	c=unsupported b=0.000 d=0.000	from=Pentapetalae	core=refuted b=0.000 d=0.800	
+OBS	D10-	c=none	from=-	core=none	stated with RO:0002158 shares ancestor with; no rule derives it from shared presence
+OBS	D10+	c=none	from=-	core=refuted b=0.000 d=0.800	stated with RO:0002158 shares ancestor with; the convergence record (notRel) decides
+OBS	D11-	c=unsupported b=0.592 d=0.000	from=Laurasiatheria	core=unsupported b=0.592 d=0.000	
+OBS	D11+	c=unsupported b=0.592 d=0.000	from=Laurasiatheria	core=unsupported b=0.592 d=0.000	the convergence record can be stated (convRec) but no rule carries it to cattle
+OBS	D12-	c=unsupported b=0.296 d=0.000	from=Boreoeutheria	core=unsupported b=0.296 d=0.000	
+OBS	D12+	c=established b=0.800 d=0.000	from=Typhlomys	core=established b=0.800 d=0.000	
+OBS	D13-	c=none	from=-	core=none	INEXPRESSIBLE: no population slot (ctxFields)
+OBS	D13+	c=none	from=-	core=none	INEXPRESSIBLE: no population slot (ctxFields)
+OBS	D14-	c=unsupported b=0.000 d=0.000	from=Tetrapoda	core=unsupported b=0.000 d=0.000	the frog absences cannot enter
+OBS	D14+	c=established b=0.800 d=0.000	from=Gastrotheca guentheri	core=established b=0.800 d=0.000	
+OBS	D15-	c=established b=0.888 d=0.000	from=Boreoeutheria	core=established b=0.888 d=0.000	
+OBS	D15+	c=established b=0.888 d=0.000	from=Boreoeutheria	core=established b=0.888 d=0.000	
+OBS	TB1	c=none	from=-	core=established b=0.800 d=0.000	R2 photosynthesis-m45453-100 narrowed to Epifagus
+OBS	TB2	c=none	from=-	core=none	R3 photosynthesis-m45453-72 is `most`: no narrowing (R2 would give established b=0.800 d=0.000)
+OBS	TB3	c=none	from=-	core=none	R3 the-body-s-systems-m45535-39 is `most`: no narrowing (R2 would give established b=0.800 d=0.000)
+OBS	TB4	c=none	from=-	core=established b=0.800 d=0.000	R2 photosynthesis-m45453-71 narrowed to Viscum album

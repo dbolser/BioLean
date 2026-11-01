@@ -16,7 +16,7 @@ name = "BioLean"
 
 [[lean_lib]]
 name = "BioLeanLib"
-roots = ["BioLean.Lib.GLP1", "BioLean.Examples.Ozempic", "BioLean.Lib.Textbook", "BioLean.Examples.Textbook", "BioLean.Examples.Quantity", "BioLean.Examples.Context", "BioLean.Examples.Chemiosmosis", "BioLean.Examples.Transcription", "BioLean.Examples.Homeostasis", "BioLean.Stress.ChemiosmosisReal", "BioLean.Stress.Rivals", "BioLean.Proto.Multinomial", "BioLean.Stress.GradeTerms", "BioLean.Proto.TaxonUnion", "BioLean.Stress.Opposition", "BioLean.Proto.Opposes", "BioLean.Stress.SchemaGaps", "BioLean.Proto.SchemaGaps", "BioLean.Stress.Weights", "BioLean.Tests.RO", "BioLean.Tests.Context", "BioLean.Tests.IsA"]
+roots = ["BioLean.Lib.GLP1", "BioLean.Examples.Ozempic", "BioLean.Lib.Textbook", "BioLean.Examples.Textbook", "BioLean.Examples.Quantity", "BioLean.Examples.Context", "BioLean.Examples.Chemiosmosis", "BioLean.Examples.Transcription", "BioLean.Examples.Homeostasis", "BioLean.Stress.ChemiosmosisReal", "BioLean.Stress.Rivals", "BioLean.Proto.Multinomial", "BioLean.Stress.GradeTerms", "BioLean.Proto.TaxonUnion", "BioLean.Stress.Opposition", "BioLean.Proto.Opposes", "BioLean.Stress.SchemaGaps", "BioLean.Proto.SchemaGaps", "BioLean.Stress.Weights", "BioLean.Stress.AnnotationErrors", "BioLean.Stress.Feedback", "BioLean.Proto.Feedback", "BioLean.Stress.Descent", "BioLean.Tests.RO", "BioLean.Tests.Context", "BioLean.Tests.IsA"]
 
 [[lean_lib]]
 name = "TextbookR2"

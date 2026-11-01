@@ -1,0 +1,19 @@
+# step	detector added	new false mutants caught	cumulative (of 181)	equivalent mutants it also sees	live statements flagged (of 1401)	live precision (hand sample)
+0	today (Lean, closure clash, off-loop sign clash, taxon lint)	19	19	0	-	-
+1	label	49	68	20	161	0/10
+2	mode	47	115	6	47	2/10
+3	go_tax_c	9	124	0	52	8/10
+4	obsolete	5	129	0	10	10/10
+5	onto_refutes	4	133	0	36	5/10
+6	ub_tax_c	3	136	0	83	3/10
+7	sig	3	139	0	19	10/10
+# precision-first order
+p1	sig	23	42	0	19	10/10
+p2	obsolete	9	51	0	10	10/10
+p3	go_tax_c	13	64	0	52	8/10
+p4	onto_refutes	4	68	0	36	5/10
+p5	ub_tax_c	3	71	0	83	3/10
+p6	mode	28	99	6	47	2/10
+p7	label	40	139	20	161	0/10
+p8	go_tax	0	139	0	0	no live flags
+p9	ub_tax	0	139	0	0	no live flags

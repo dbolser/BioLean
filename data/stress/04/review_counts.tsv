@@ -1,0 +1,12 @@
+# what	count	file (review 2026-11-01)
+uberon.obo relationship RO:0002160	208	/tmp/obo/uberon.obo
+uberon.obo relationship in_taxon	4979	/tmp/obo/uberon.obo
+uberon.obo relationship never_in_taxon	3059	/tmp/obo/uberon.obo
+CL terms carried by uberon.obo	1484	/tmp/obo/uberon.obo
+of these, with a taxon axiom of their own	37	/tmp/obo/uberon.obo
+UBERON:0001091 relationship: never_in_taxon NCBITaxon:8782 ! Aves		/tmp/obo/uberon.obo
+UBERON:0001091 relationship: never_in_taxon NCBITaxon:9257 {source="PMID:10210685"} ! Ornithorhynchus		/tmp/obo/uberon.obo
+UBERON:0001091 relationship: never_in_taxon NCBITaxon:9259 {source="https://github.com/obophenotype/uberon/issues/3752"} ! Tachyglossidae		/tmp/obo/uberon.obo
+UBERON:0001091 relationship: never_in_taxon NCBITaxon:9761 ! Mysticeti		/tmp/obo/uberon.obo
+UBERON:0001091 property_value: taxon_notes "absent in living platypus, present in toothed Miocene platypus Obduron dicksoni" xsd:string {source="PMID:10210685"}		/tmp/obo/uberon.obo
+disjoint_from pairs with both terms used in rounds 2 and 3	29	OBO files

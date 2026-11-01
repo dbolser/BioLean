@@ -1,0 +1,30 @@
+PROTO	L01	round trip of loop glucose: 'glucose [CHEBI:17234] →− amount of glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)]' is reported as loop glucose, not as an effect
+PROTO	L02	round trip of loop glucose
+PROTO	L03	round trip of loop calcium
+PROTO	L08	round trip of loop thyroid (with the proposed arm -258)
+PROTO	L10	round trip of loop HPA: a three-node round trip is found
+PROTO	L11	crosses [HPA]: 'dexamethasone [CHEBI:41879] →− amount of cortisol [CHEBI:17650]' kept as an effect, labelled
+PROTO	L15	round trip of loop ANP
+PROTO	L17	round trip of loop leptin (the asymmetry is still not stated)
+PROTO	P02	round trip of loop thrombin+: a positive round trip, true either way; now named
+PROTO	P04	round trip of loop depolarisation+
+PROTO	N02	cycle (no asserted loop): no asserted loop, so it stays a flagged effect and is not called homeostasis
+PROTO	N04	crosses [glucose]: still derives 'epinephrine [CHEBI:33568] →+ amount of insulin ⊓ located in (blood) ⊓ part of (pancreatic beta cell) [PR:000009054&RO:0001025=(UBERON:0000178)&BFO:0000050=(CL:0000169)]' (wrong), now labelled as crossing the glucose loop
+PROTO	N05	crosses [glucose]: 'glucagon [PR:P01275] →+ amount of insulin ⊓ located in (blood) ⊓ part of (pancreatic beta cell) [PR:000009054&RO:0001025=(UBERON:0000178)&BFO:0000050=(CL:0000169)]' kept (right)
+PROTO	X03	plain: a chain through blood glucose with no arm of the loop is not labelled
+PROTO	C02	(Lean mirror of closure case C02) round trip of loop glucose: 'glucose [CHEBI:17234] →− amount of insulin ⊓ located in (blood) ⊓ part of (pancreatic beta cell) [PR:000009054&RO:0001025=(UBERON:0000178)&BFO:0000050=(CL:0000169)]' (a sign clash with -200) is the glucose loop wound one and a half times
+PROTO	P03	loose reading: round trip of loop thrombin+ (wrong: 'prothrombin [PR:000007299] →− amount of prothrombin [PR:000007299]' is the protein C brake, a negative loop); strict: cycle (no asserted loop); with the protein C loop asserted: round trip of loop proteinC-
+PROTO	L18	round trip of loop isoleucine once the end-product loop is asserted; without it, cycle (no asserted loop)
+PROTO	G	a revisit guard blocks L01 and L10 (false) and P02 and P04 (true positive loops) alike, and leaves N04 (false) alone
+PROTO	F	close(-200, -53) gives a negative loop at b=0.800; close(P02 arms) a positive loop. closeT(-52, -53, blood glucose is_a glucose) gives the same loop with the arms linked by the kernel (b=0.800); unrelated arms do not typecheck. Neither is homeostatic: that needs a set point or an assertion
+PROTO	X02	the arms close a positive loop, so the asserted homeostasis claim disagrees: flagged
+PROTO	X01	the arm check finds 0 arm pairs for 'insulin [PR:000009054] holds amount of calcium ⊓ located in (blood) [CHEBI:29108&RO:0001025=(UBERON:0000178)] near a set point' among the textbook glucose and calcium arms (the insulin loop has 2, the PTH loop 1): visible as unsupported by arms
+PROTO	P01	loop oxytocin+: positive, held uterine smooth muscle contraction [GO:0070471], regulators [oxytocin]; toCore gives nothing, so the core can no longer be told a positive loop is homeostasis
+PROTO	T01	loop glucose: negative, held amount of glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)], regulators [insulin, glucagon], homeostatic; toCore gives 2 homeostasis claims and forgets the directions (swapping them maps to the same claims)
+PROTO	T02	loop calcium: negative, held amount of calcium ⊓ located in (blood) [CHEBI:29108&RO:0001025=(UBERON:0000178)], regulators [parathyroid hormone, calcitonin], homeostatic
+PROTO	S01	loop temperature: negative, held body temperature trait [OBA:VT0005535], regulators [hypothalamus ⊓ in taxon (Mammalia)], homeostatic, set point body temperature trait [OBA:VT0005535] of Homo sapiens [NCBITaxon:9606] ∈ [37, 37] °C: the set point is a core measure claim tied to the loop
+PROTO	S02	Pyrogen [NCIT:C71583] →+ set point of loop temperature
+PROTO	S03	fever is 'Pyrogen [NCIT:C71583] →+ set point of loop temperature', heat stroke is 'hot environment [BLN:hot_environment] →+ body temperature trait [OBA:VT0005535]': now different claims
+PROTO	T04	reduced plasma volume [BLN:hypovolemia] →− set point of loop osmolality (Kondo 2004: hypovolemia lowers the Na threshold for AVP release)
+PROTO	P08	round trip of loop toggle+ once asserted (signed); close gives a loop of sign positive from two negative arms; toCore gives nothing
+PROTO	P06	two loops, 'LH' negative and 'LH-surge' positive under a placeholder condition; the switch itself is still not a claim

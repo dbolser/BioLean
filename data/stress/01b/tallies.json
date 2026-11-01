@@ -1,0 +1,544 @@
+{
+ "core_marks": {
+  "PASS": 19,
+  "SILENT": 43,
+  "INEXPRESSIBLE": 16,
+  "FAIL": 7
+ },
+ "by_group": {
+  "p01|mark": {
+   "PASS": 8,
+   "SILENT": 13,
+   "INEXPRESSIBLE": 8,
+   "FAIL": 4
+  },
+  "p01|mark_b": {
+   "SILENT": 11,
+   "PASS": 16,
+   "INEXPRESSIBLE": 2,
+   "FAIL": 4
+  },
+  "p01|mark_bk": {
+   "PASS": 26,
+   "INEXPRESSIBLE": 2,
+   "SILENT": 1,
+   "FAIL": 4
+  },
+  "p01 withheld|mark": {
+   "INEXPRESSIBLE": 6,
+   "SILENT": 11,
+   "FAIL": 1
+  },
+  "p01 withheld|mark_b": {
+   "SILENT": 12,
+   "FAIL": 5,
+   "PASS": 1
+  },
+  "p01 withheld|mark_bk": {
+   "FAIL": 12,
+   "SILENT": 5,
+   "PASS": 1
+  },
+  "new withheld|mark": {
+   "SILENT": 12,
+   "FAIL": 1,
+   "INEXPRESSIBLE": 1,
+   "PASS": 1
+  },
+  "new withheld|mark_b": {
+   "SILENT": 11,
+   "PASS": 1,
+   "FAIL": 2,
+   "INEXPRESSIBLE": 1
+  },
+  "new withheld|mark_bk": {
+   "FAIL": 10,
+   "PASS": 2,
+   "SILENT": 2,
+   "INEXPRESSIBLE": 1
+  },
+  "new given|mark": {
+   "SILENT": 5,
+   "PASS": 9,
+   "INEXPRESSIBLE": 1
+  },
+  "new given|mark_b": {
+   "PASS": 12,
+   "FAIL": 1,
+   "SILENT": 1,
+   "INEXPRESSIBLE": 1
+  },
+  "new given|mark_bk": {
+   "PASS": 14,
+   "INEXPRESSIBLE": 1
+  },
+  "textbook|mark": {
+   "FAIL": 1,
+   "SILENT": 2,
+   "PASS": 1
+  },
+  "textbook|mark_b": {
+   "-": 4
+  },
+  "textbook|mark_bk": {
+   "-": 4
+  }
+ },
+ "scorecard": {
+  "b_pred": {
+   "S": 14,
+   "R": 14,
+   "C": 1,
+   "W": 4
+  },
+  "b_meas": {
+   "S": 12,
+   "R": 16,
+   "C": 1,
+   "W": 4
+  },
+  "bk_pred": {
+   "R": 26,
+   "S": 2,
+   "C": 1,
+   "W": 4
+  },
+  "bk_meas": {
+   "R": 26,
+   "C": 1,
+   "S": 2,
+   "W": 4
+  },
+  "c_pred": {
+   "R": 4,
+   "S": 22,
+   "W": 6,
+   "?": 1
+  },
+  "c_meas": {
+   "R": 3,
+   "S": 25,
+   "W": 5
+  }
+ },
+ "sketch": {
+  "program01_rows": 33,
+  "new_rows": 30,
+  "all_rows": 81,
+  "program01": {
+   "b": {
+    "S": 11,
+    "R": 16,
+    "C": 1,
+    "X": 1,
+    "W": 4
+   },
+   "k": {
+    "R": 26,
+    "C": 1,
+    "X": 1,
+    "S": 1,
+    "W": 4
+   }
+  },
+  "program01_predict": {
+   "b": {
+    "S": 8,
+    "R": 3
+   },
+   "k": {
+    "R": 6,
+    "S": 1,
+    "W": 4
+   }
+  },
+  "program01_withheld": {
+   "b": {
+    "S": 12,
+    "W": 5,
+    "R": 1
+   },
+   "k": {
+    "W": 12,
+    "S": 5,
+    "R": 1
+   }
+  },
+  "new_minus": {
+   "b": {
+    "S": 11,
+    "R": 1,
+    "W": 2,
+    "X": 1
+   },
+   "k": {
+    "W": 10,
+    "R": 2,
+    "S": 2,
+    "X": 1
+   }
+  },
+  "new_plus": {
+   "b": {
+    "R": 12,
+    "W": 1,
+    "S": 1,
+    "X": 1
+   },
+   "k": {
+    "R": 14,
+    "X": 1
+   }
+  },
+  "narrowing_changes": {
+   "b": [],
+   "k": []
+  },
+  "coherence": {
+   "b": {
+    "rows_with_violations": [],
+    "pairs": 58949,
+    "violations": 0,
+    "record_vs_default": 0,
+    "bracket": 0,
+    "rows_bracket": []
+   },
+   "k": {
+    "rows_with_violations": [
+     "U1",
+     "U2",
+     "LT1",
+     "N1",
+     "N1-",
+     "N2",
+     "N2-",
+     "N3",
+     "N3-",
+     "N4",
+     "N4-",
+     "L1",
+     "L1-",
+     "L2",
+     "L2-",
+     "L3",
+     "L3-",
+     "L4",
+     "L4-",
+     "L5",
+     "L5-",
+     "L6",
+     "L6-",
+     "L8",
+     "L8-",
+     "L9",
+     "L9-",
+     "CV1",
+     "CV1-",
+     "CV2",
+     "CV2-",
+     "CV3",
+     "CV3-",
+     "CV4",
+     "CV4-",
+     "A1",
+     "A1-",
+     "NT1",
+     "LT2",
+     "CVT1",
+     "CVT2",
+     "RMT1",
+     "RM1",
+     "RM2",
+     "RM3",
+     "RM5",
+     "D01-",
+     "D01+",
+     "D02-",
+     "D02+",
+     "D03-",
+     "D03+",
+     "D04-",
+     "D04+",
+     "D05-",
+     "D05+",
+     "D06-",
+     "D06+",
+     "D07-",
+     "D07+",
+     "D08-",
+     "D08+",
+     "D09-",
+     "D09+",
+     "D10-",
+     "D10+",
+     "D11-",
+     "D14-",
+     "D14+",
+     "D15-",
+     "D15+"
+    ],
+    "pairs": 58949,
+    "violations": 2977,
+    "record_vs_default": 2220,
+    "bracket": 757,
+    "rows_bracket": [
+     "CV1",
+     "CV2",
+     "CV3",
+     "CV4",
+     "D10+"
+    ]
+   },
+   "kagree": {
+    "rows_with_violations": [
+     "CV1",
+     "CV2",
+     "CV3",
+     "CV4",
+     "D10+"
+    ],
+    "pairs": 58949,
+    "violations": 757,
+    "record_vs_default": 0,
+    "bracket": 757,
+    "rows_bracket": [
+     "CV1",
+     "CV2",
+     "CV3",
+     "CV4",
+     "D10+"
+    ]
+   },
+   "knarrow": {
+    "rows_with_violations": [],
+    "pairs": 58949,
+    "violations": 0,
+    "record_vs_default": 0,
+    "bracket": 0,
+    "rows_bracket": []
+   }
+  },
+  "kagree_letter_changes": [],
+  "sensitivity": {
+   "I-": {
+    "b": 0,
+    "k": 25
+   },
+   "I+": {
+    "b": 0,
+    "k": 0
+   },
+   "II-": {
+    "b": 0,
+    "k": 0
+   },
+   "II+": {
+    "b": 0,
+    "k": 0
+   },
+   "III-": {
+    "b": 0,
+    "k": 1
+   },
+   "III+": {
+    "b": 0,
+    "k": 0
+   },
+   "default-": {
+    "b": 0,
+    "k": 26
+   },
+   "default+": {
+    "b": 0,
+    "k": 0
+   },
+   "record-": {
+    "b": 21,
+    "k": 26
+   },
+   "record+": {
+    "b": 0,
+    "k": 0
+   }
+  },
+  "predict_all": {
+   "rows": 26,
+   "true": 9,
+   "k_R": 8,
+   "k_W": 14,
+   "k_S": 3,
+   "k_X": 1,
+   "always_yes_R": 9,
+   "always_yes_W": 16,
+   "nearest_R": 9,
+   "nearest_W": 16,
+   "nearest_S": 0,
+   "nearest_letters": {
+    "NT1": "R",
+    "LT2": "R",
+    "LT3": "R",
+    "CVT1": "R",
+    "CVT2": "R",
+    "RMT1": "R",
+    "RM1": "W",
+    "RM2": "W",
+    "RM3": "W",
+    "RM4": "R",
+    "RM5": "W",
+    "D01-": "W",
+    "D02-": "W",
+    "D03-": "W",
+    "D04-": "W",
+    "D05-": "R",
+    "D06-": "W",
+    "D07-": "W",
+    "D08-": "W",
+    "D09-": "W",
+    "D10-": "W",
+    "D11-": "W",
+    "D12-": "W",
+    "D14-": "W",
+    "D15-": "R"
+   },
+   "k_letters": {
+    "NT1": "R",
+    "LT2": "R",
+    "LT3": "S",
+    "CVT1": "R",
+    "CVT2": "R",
+    "RMT1": "R",
+    "RM1": "W",
+    "RM2": "W",
+    "RM3": "W",
+    "RM4": "R",
+    "RM5": "W",
+    "D01-": "W",
+    "D02-": "W",
+    "D03-": "W",
+    "D04-": "W",
+    "D05-": "R",
+    "D06-": "W",
+    "D07-": "S",
+    "D08-": "W",
+    "D09-": "W",
+    "D10-": "W",
+    "D11-": "W",
+    "D12-": "S",
+    "D13-": "X",
+    "D14-": "W",
+    "D15-": "R"
+   }
+  },
+  "kf": {
+   "all": {
+    "R": 18,
+    "C": 23,
+    "W": 26,
+    "S": 11,
+    "X": 3
+   },
+   "program01": {
+    "R": 11,
+    "C": 14,
+    "S": 3,
+    "X": 1,
+    "W": 4
+   },
+   "new_plus": {
+    "C": 9,
+    "R": 4,
+    "S": 1,
+    "X": 1
+   },
+   "program01_O_as_written": {
+    "C": 14,
+    "S": 2,
+    "X": 1,
+    "R": 2
+   },
+   "letters": {
+    "U1": "R",
+    "U2": "R",
+    "LT1": "R",
+    "N1": "C",
+    "N1-": "W",
+    "N2": "C",
+    "N2-": "W",
+    "N3": "S",
+    "N3-": "S",
+    "N4": "C",
+    "N4-": "W",
+    "L1": "C",
+    "L1-": "W",
+    "L2": "C",
+    "L2-": "W",
+    "L3": "C",
+    "L3-": "W",
+    "L4": "S",
+    "L4-": "S",
+    "L5": "C",
+    "L5-": "S",
+    "L6": "C",
+    "L6-": "W",
+    "L7": "X",
+    "L8": "C",
+    "L8-": "S",
+    "L9": "C",
+    "L9-": "S",
+    "CV1": "C",
+    "CV1-": "W",
+    "CV2": "C",
+    "CV2-": "W",
+    "CV3": "C",
+    "CV3-": "W",
+    "CV4": "C",
+    "CV4-": "W",
+    "H1": "R",
+    "H1-": "W",
+    "A1": "R",
+    "A1-": "R",
+    "NT1": "R",
+    "LT2": "R",
+    "LT3": "S",
+    "CVT1": "R",
+    "CVT2": "R",
+    "RMT1": "R",
+    "RM1": "W",
+    "RM2": "W",
+    "RM3": "W",
+    "RM4": "R",
+    "RM5": "W",
+    "D01-": "W",
+    "D01+": "C",
+    "D02-": "W",
+    "D02+": "C",
+    "D03-": "W",
+    "D03+": "C",
+    "D04-": "W",
+    "D04+": "C",
+    "D05-": "R",
+    "D05+": "R",
+    "D06-": "W",
+    "D06+": "C",
+    "D07-": "S",
+    "D07+": "S",
+    "D08-": "W",
+    "D08+": "C",
+    "D09-": "W",
+    "D09+": "C",
+    "D10-": "W",
+    "D10+": "C",
+    "D11-": "W",
+    "D11+": "R",
+    "D12-": "S",
+    "D12+": "R",
+    "D13-": "X",
+    "D13+": "X",
+    "D14-": "W",
+    "D14+": "C",
+    "D15-": "R",
+    "D15+": "R"
+   }
+  }
+ }
+}

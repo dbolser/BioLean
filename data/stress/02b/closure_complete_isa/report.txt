@@ -1,0 +1,453 @@
+m2 statements 1185 (superseded by round 3: 84), round 3 statements 216 of 243 rel/notRel/effect (unquantified; 69 records some/most)
+statements loaded: 1401  (rel 1056, notRel 30, effect 315)
+refinement axioms loaded: 184 (e ⊓ ∃r.f is_a e, belief 999/1000)
+depth 1: +1108 facts (total 2693)
+depth 2: +879 facts (total 3572)
+depth 3: +311 facts (total 3883)
+depth 4: +22 facts (total 3905)
+
+asserted 1401, derived novel 2320; by rule {'relChain': 541, 'relTrans': 710, 'viaAmount': 224, 'isaInheritEffect': 232, 'isaInherit': 368, 'isaGeneralise': 231, 'viaActivity': 4, 'notRelSub': 10}
+clashes (rel and notRel both derived): 0
+novel by depth {1: 1108, 2: 879, 3: 311, 4: 22}
+
+=== guards on effect chains (flags; nothing is dropped) ===
+derived effect facts 460, flagged 169; chain conclusions (viaAmount, viaActivity) 228, flagged 143
+by flag {'feedback': 169, 'shared_cause': 8} ; by combination {'none': 291, 'feedback': 161, 'feedback+shared_cause': 8}
+named loops (chains crossing each): glucose / insulin 87; glucose / glucagon 34; ATP / broken down 15; calcium / calcitonin 12; calcium / parathyroid hormone 10; antibodies / viruses 4; sodium / membrane depolarization 4; voltage-gated sodium channel activity / membrane depolarization 3
+sign clashes (a →+ t and a →− t both in the closure): 93; with a flagged side 93
+
+--- feedback: 169 (first five, shallowest) ---
+glucose [CHEBI:17234] →− amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])   (viaAmount, b=0.64)
+  glucose [CHEBI:17234] →+ amount(insulin [PR:000009054])   [the-body-s-systems-m45537-52]
+  insulin [PR:000009054] →− amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])   [the-body-s-systems-m45537-53]
+  feedback because: glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] →+ amount(insulin [PR:000009054])
+
+antibodies [GO:0019814] →− amount(antibodies ⊓ located in (immune system) [GO:0019814&RO:0001025=(UBERON:0002405)])   (viaAmount, b=0.64)
+  antibodies [GO:0019814] →− amount(viruses [NCBITaxon:10239])   [cell-structure-and-function-m45433-65]
+  viruses [NCBITaxon:10239] →+ amount(antibodies ⊓ located in (immune system) [GO:0019814&RO:0001025=(UBERON:0002405)])   [cell-structure-and-function-m45433-63]
+  feedback because: antibodies ⊓ located in (immune system) [GO:0019814&RO:0001025=(UBERON:0002405)] →− amount(viruses [NCBITaxon:10239])
+
+broken down [GO:0006007] →− process(ATP biosynthetic process [GO:0006754])   (viaAmount, b=0.64)
+  broken down [GO:0006007] →+ amount(ATP [CHEBI:15422])   [how-cells-obtain-energy-m45438-49]
+  ATP [CHEBI:15422] →− process(ATP biosynthetic process [GO:0006754])   [how-cells-obtain-energy-m45437-246]
+  feedback because: ATP [CHEBI:15422] →− process(broken down [GO:0006007])
+
+broken down [GO:0006007] →− process(cell death [GO:0008219])   (viaAmount, b=0.64)
+  broken down [GO:0006007] →+ amount(ATP [CHEBI:15422])   [how-cells-obtain-energy-m45438-49]
+  ATP [CHEBI:15422] →− process(cell death [GO:0008219])   [how-cells-obtain-energy-m45439-64]
+  feedback because: ATP [CHEBI:15422] →− process(broken down [GO:0006007])
+
+glycolytic process [GO:0006096] →− process(broken down [GO:0006007])   (viaAmount, b=0.64)
+  glycolytic process [GO:0006096] →+ amount(ATP [CHEBI:15422])   [how-cells-obtain-energy-m45440-75]
+  ATP [CHEBI:15422] →− process(broken down [GO:0006007])   [how-cells-obtain-energy-m45437-244]
+  feedback because: broken down [GO:0006007] →+ amount(ATP [CHEBI:15422])
+
+
+--- parthood: 0 (first five, shallowest) ---
+
+--- shared_cause: 8 (first five, shallowest) ---
+calcium [CHEBI:29108] →− amount(calcitonin ⊓ located in (blood) [PR:P01258&RO:0001025=(UBERON:0000178)])   (viaAmount, b=0.51)
+  calcium [CHEBI:29108] →− amount(parathyroid hormone ⊓ located in (UBERON:0000178) [PR:000013429&RO:0001025=(UBERON:0000178)])   [the-body-s-systems-m45537-141]
+  parathyroid hormone ⊓ located in (UBERON:0000178) [PR:000013429&RO:0001025=(UBERON:0000178)] →+ amount(calcitonin ⊓ located in (blood) [PR:P01258&RO:0001025=(UBERON:0000178)])   (viaAmount, b=0.64)
+    parathyroid hormone ⊓ located in (UBERON:0000178) [PR:000013429&RO:0001025=(UBERON:0000178)] →+ amount(calcium ion ⊓ located in (blood) [CHEBI:29108&RO:0001025=(UBERON:0000178)])   (isaInheritEffect, b=0.80)
+      parathyroid hormone ⊓ located in (UBERON:0000178) [PR:000013429&RO:0001025=(UBERON:0000178)] is_a parathyroid hormone [PR:000013429]   [refine:PR:000013429&RO:0001025=(UBERON:0000178)]
+      parathyroid hormone [PR:000013429] →+ amount(calcium ion ⊓ located in (blood) [CHEBI:29108&RO:0001025=(UBERON:0000178)])   [the-body-s-systems-m45537-140]
+    calcium ion ⊓ located in (blood) [CHEBI:29108&RO:0001025=(UBERON:0000178)] →+ amount(calcitonin ⊓ located in (blood) [PR:P01258&RO:0001025=(UBERON:0000178)])   (isaInheritEffect, b=0.80)
+      calcium ion ⊓ located in (blood) [CHEBI:29108&RO:0001025=(UBERON:0000178)] is_a calcium [CHEBI:29108]   [refine:CHEBI:29108&RO:0001025=(UBERON:0000178)]
+      calcium [CHEBI:29108] →+ amount(calcitonin ⊓ located in (blood) [PR:P01258&RO:0001025=(UBERON:0000178)])   [the-body-s-systems-m45537-134]
+  shared_cause because: calcium [CHEBI:29108] →+ amount(calcitonin ⊓ located in (blood) [PR:P01258&RO:0001025=(UBERON:0000178)])
+
+insulin [PR:000009054] →− process(glucose import [GO:0098708])   (viaAmount, b=0.51)
+  insulin [PR:000009054] →− amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])   [the-body-s-systems-m45537-53]
+  glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] →+ process(glucose import [GO:0098708])   (isaInheritEffect, b=0.64)
+    glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] is_a glucose [CHEBI:17234]   [refine:CHEBI:17234&RO:0001025=(UBERON:0000178)]
+    glucose [CHEBI:17234] →+ process(glucose import [GO:0098708])   (viaAmount, b=0.64)
+      glucose [CHEBI:17234] →+ amount(insulin [PR:000009054])   [the-body-s-systems-m45537-52]
+      insulin [PR:000009054] →+ process(glucose import [GO:0098708])   [the-body-s-systems-m45537-202]
+  shared_cause because: insulin [PR:000009054] →+ process(glucose import [GO:0098708])
+
+calcium [CHEBI:29108] →+ amount(parathyroid hormone ⊓ located in (UBERON:0000178) [PR:000013429&RO:0001025=(UBERON:0000178)])   (viaAmount, b=0.51)
+  calcium [CHEBI:29108] →+ amount(calcitonin ⊓ located in (blood) [PR:P01258&RO:0001025=(UBERON:0000178)])   [the-body-s-systems-m45537-134]
+  calcitonin ⊓ located in (blood) [PR:P01258&RO:0001025=(UBERON:0000178)] →+ amount(parathyroid hormone ⊓ located in (UBERON:0000178) [PR:000013429&RO:0001025=(UBERON:0000178)])   (viaAmount, b=0.64)
+    calcitonin ⊓ located in (blood) [PR:P01258&RO:0001025=(UBERON:0000178)] →− amount(calcium ion ⊓ located in (blood) [CHEBI:29108&RO:0001025=(UBERON:0000178)])   (isaInheritEffect, b=0.80)
+      calcitonin ⊓ located in (blood) [PR:P01258&RO:0001025=(UBERON:0000178)] is_a calcitonin [PR:P01258]   [refine:PR:P01258&RO:0001025=(UBERON:0000178)]
+      calcitonin [PR:P01258] →− amount(calcium ion ⊓ located in (blood) [CHEBI:29108&RO:0001025=(UBERON:0000178)])   [the-body-s-systems-m45537-135]
+    calcium ion ⊓ located in (blood) [CHEBI:29108&RO:0001025=(UBERON:0000178)] →− amount(parathyroid hormone ⊓ located in (UBERON:0000178) [PR:000013429&RO:0001025=(UBERON:0000178)])   (isaInheritEffect, b=0.80)
+      calcium ion ⊓ located in (blood) [CHEBI:29108&RO:0001025=(UBERON:0000178)] is_a calcium [CHEBI:29108]   [refine:CHEBI:29108&RO:0001025=(UBERON:0000178)]
+      calcium [CHEBI:29108] →− amount(parathyroid hormone ⊓ located in (UBERON:0000178) [PR:000013429&RO:0001025=(UBERON:0000178)])   [the-body-s-systems-m45537-141]
+  shared_cause because: calcium [CHEBI:29108] →− amount(parathyroid hormone ⊓ located in (UBERON:0000178) [PR:000013429&RO:0001025=(UBERON:0000178)])
+
+glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] →− process(glucose import [GO:0098708])   (viaAmount, b=0.41)
+  glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] →+ amount(insulin [PR:000009054])   (isaInheritEffect, b=0.80)
+    glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] is_a glucose [CHEBI:17234]   [refine:CHEBI:17234&RO:0001025=(UBERON:0000178)]
+    glucose [CHEBI:17234] →+ amount(insulin [PR:000009054])   [the-body-s-systems-m45537-52]
+  insulin [PR:000009054] →− process(glucose import [GO:0098708])   (viaAmount, b=0.51)
+    insulin [PR:000009054] →− amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])   [the-body-s-systems-m45537-53]
+    glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] →+ process(glucose import [GO:0098708])   (isaInheritEffect, b=0.64)
+      glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] is_a glucose [CHEBI:17234]   [refine:CHEBI:17234&RO:0001025=(UBERON:0000178)]
+      glucose [CHEBI:17234] →+ process(glucose import [GO:0098708])   (viaAmount, b=0.64)
+        glucose [CHEBI:17234] →+ amount(insulin [PR:000009054])   [the-body-s-systems-m45537-52]
+        insulin [PR:000009054] →+ process(glucose import [GO:0098708])   [the-body-s-systems-m45537-202]
+  shared_cause because: insulin [PR:000009054] →+ process(glucose import [GO:0098708])
+
+epinephrine [CHEBI:33568] →− process(glucose import [GO:0098708])   (viaAmount, b=0.33)
+  epinephrine [CHEBI:33568] →+ amount(insulin [PR:000009054])   (viaAmount, b=0.64)
+    epinephrine [CHEBI:33568] →+ amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])   [the-body-s-systems-m45537-181]
+    glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] →+ amount(insulin [PR:000009054])   (isaInheritEffect, b=0.80)
+      glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] is_a glucose [CHEBI:17234]   [refine:CHEBI:17234&RO:0001025=(UBERON:0000178)]
+      glucose [CHEBI:17234] →+ amount(insulin [PR:000009054])   [the-body-s-systems-m45537-52]
+  insulin [PR:000009054] →− process(glucose import [GO:0098708])   (viaAmount, b=0.51)
+    insulin [PR:000009054] →− amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])   [the-body-s-systems-m45537-53]
+    glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] →+ process(glucose import [GO:0098708])   (isaInheritEffect, b=0.64)
+      glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] is_a glucose [CHEBI:17234]   [refine:CHEBI:17234&RO:0001025=(UBERON:0000178)]
+      glucose [CHEBI:17234] →+ process(glucose import [GO:0098708])   (viaAmount, b=0.64)
+        glucose [CHEBI:17234] →+ amount(insulin [PR:000009054])   [the-body-s-systems-m45537-52]
+        insulin [PR:000009054] →+ process(glucose import [GO:0098708])   [the-body-s-systems-m45537-202]
+  shared_cause because: insulin [PR:000009054] →+ process(glucose import [GO:0098708])
+
+PIN ok   #derived_effects -> 460
+PIN ok   #flagged -> 169
+PIN ok   #sign_clashes -> 93
+
+=== statements flagged false as written: 9, corrected 9, open 0; derived facts resting on at least one: 0 of 2320 ===
+
+=== deepest novel facts (excluding plain inverses) ===
+insulin ⊓ located in (blood) ⊓ part of (pancreatic beta cell) [PR:000009054&RO:0001025=(UBERON:0000178)&BFO:0000050=(CL:0000169)] →+ process(cellular respiration [GO:0045333])   (viaAmount, b=0.41)
+  insulin ⊓ located in (blood) ⊓ part of (pancreatic beta cell) [PR:000009054&RO:0001025=(UBERON:0000178)&BFO:0000050=(CL:0000169)] →− amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])   (isaInheritEffect, b=0.80)
+    insulin ⊓ located in (blood) ⊓ part of (pancreatic beta cell) [PR:000009054&RO:0001025=(UBERON:0000178)&BFO:0000050=(CL:0000169)] is_a insulin ⊓ located in (blood) [PR:000009054&RO:0001025=(UBERON:0000178)]   [refine:PR:000009054&RO:0001025=(UBERON:0000178)&BFO:0000050=(CL:0000169)]
+    insulin ⊓ located in (blood) [PR:000009054&RO:0001025=(UBERON:0000178)] →− amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])   (isaInheritEffect, b=0.80)
+      insulin ⊓ located in (blood) [PR:000009054&RO:0001025=(UBERON:0000178)] is_a insulin [PR:000009054]   [refine:PR:000009054&RO:0001025=(UBERON:0000178)]
+      insulin [PR:000009054] →− amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])   [the-body-s-systems-m45537-53]
+  glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] →− process(cellular respiration [GO:0045333])   (viaAmount, b=0.51)
+    glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] →+ amount(insulin [PR:000009054])   (isaInheritEffect, b=0.80)
+      glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] is_a glucose [CHEBI:17234]   [refine:CHEBI:17234&RO:0001025=(UBERON:0000178)]
+      glucose [CHEBI:17234] →+ amount(insulin [PR:000009054])   [the-body-s-systems-m45537-52]
+    insulin [PR:000009054] →− process(cellular respiration [GO:0045333])   (viaAmount, b=0.64)
+      insulin [PR:000009054] →− amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])   [the-body-s-systems-m45537-53]
+      glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] →+ process(cellular respiration [GO:0045333])   (isaInheritEffect, b=0.80)
+        glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] is_a glucose [CHEBI:17234]   [refine:CHEBI:17234&RO:0001025=(UBERON:0000178)]
+        glucose [CHEBI:17234] →+ process(cellular respiration [GO:0045333])   [the-body-s-systems-m45535-166]
+
+glucagon ⊓ located in (blood) ⊓ part of (pancreatic alpha cell) [PR:P01275&RO:0001025=(UBERON:0000178)&BFO:0000050=(CL:0000171)] →− process(cellular respiration [GO:0045333])   (viaAmount, b=0.41)
+  glucagon ⊓ located in (blood) ⊓ part of (pancreatic alpha cell) [PR:P01275&RO:0001025=(UBERON:0000178)&BFO:0000050=(CL:0000171)] →+ amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])   (isaInheritEffect, b=0.80)
+    glucagon ⊓ located in (blood) ⊓ part of (pancreatic alpha cell) [PR:P01275&RO:0001025=(UBERON:0000178)&BFO:0000050=(CL:0000171)] is_a glucagon ⊓ located in (blood) [PR:P01275&RO:0001025=(UBERON:0000178)]   [refine:PR:P01275&RO:0001025=(UBERON:0000178)&BFO:0000050=(CL:0000171)]
+    glucagon ⊓ located in (blood) [PR:P01275&RO:0001025=(UBERON:0000178)] →+ amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])   (isaInheritEffect, b=0.80)
+      glucagon ⊓ located in (blood) [PR:P01275&RO:0001025=(UBERON:0000178)] is_a glucagon [PR:P01275]   [refine:PR:P01275&RO:0001025=(UBERON:0000178)]
+      glucagon [PR:P01275] →+ amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])   [the-body-s-systems-m45537-201]
+  glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] →− process(cellular respiration [GO:0045333])   (viaAmount, b=0.51)
+    glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] →+ amount(insulin [PR:000009054])   (isaInheritEffect, b=0.80)
+      glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] is_a glucose [CHEBI:17234]   [refine:CHEBI:17234&RO:0001025=(UBERON:0000178)]
+      glucose [CHEBI:17234] →+ amount(insulin [PR:000009054])   [the-body-s-systems-m45537-52]
+    insulin [PR:000009054] →− process(cellular respiration [GO:0045333])   (viaAmount, b=0.64)
+      insulin [PR:000009054] →− amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])   [the-body-s-systems-m45537-53]
+      glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] →+ process(cellular respiration [GO:0045333])   (isaInheritEffect, b=0.80)
+        glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] is_a glucose [CHEBI:17234]   [refine:CHEBI:17234&RO:0001025=(UBERON:0000178)]
+        glucose [CHEBI:17234] →+ process(cellular respiration [GO:0045333])   [the-body-s-systems-m45535-166]
+
+glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] →− process(glucose import [GO:0098708])   (viaAmount, b=0.41)
+  glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] →+ amount(insulin [PR:000009054])   (isaInheritEffect, b=0.80)
+    glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] is_a glucose [CHEBI:17234]   [refine:CHEBI:17234&RO:0001025=(UBERON:0000178)]
+    glucose [CHEBI:17234] →+ amount(insulin [PR:000009054])   [the-body-s-systems-m45537-52]
+  insulin [PR:000009054] →− process(glucose import [GO:0098708])   (viaAmount, b=0.51)
+    insulin [PR:000009054] →− amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])   [the-body-s-systems-m45537-53]
+    glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] →+ process(glucose import [GO:0098708])   (isaInheritEffect, b=0.64)
+      glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] is_a glucose [CHEBI:17234]   [refine:CHEBI:17234&RO:0001025=(UBERON:0000178)]
+      glucose [CHEBI:17234] →+ process(glucose import [GO:0098708])   (viaAmount, b=0.64)
+        glucose [CHEBI:17234] →+ amount(insulin [PR:000009054])   [the-body-s-systems-m45537-52]
+        insulin [PR:000009054] →+ process(glucose import [GO:0098708])   [the-body-s-systems-m45537-202]
+
+epinephrine [CHEBI:33568] →− process(glucose import [GO:0098708])   (viaAmount, b=0.33)
+  epinephrine [CHEBI:33568] →+ amount(insulin [PR:000009054])   (viaAmount, b=0.64)
+    epinephrine [CHEBI:33568] →+ amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])   [the-body-s-systems-m45537-181]
+    glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] →+ amount(insulin [PR:000009054])   (isaInheritEffect, b=0.80)
+      glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] is_a glucose [CHEBI:17234]   [refine:CHEBI:17234&RO:0001025=(UBERON:0000178)]
+      glucose [CHEBI:17234] →+ amount(insulin [PR:000009054])   [the-body-s-systems-m45537-52]
+  insulin [PR:000009054] →− process(glucose import [GO:0098708])   (viaAmount, b=0.51)
+    insulin [PR:000009054] →− amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])   [the-body-s-systems-m45537-53]
+    glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] →+ process(glucose import [GO:0098708])   (isaInheritEffect, b=0.64)
+      glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] is_a glucose [CHEBI:17234]   [refine:CHEBI:17234&RO:0001025=(UBERON:0000178)]
+      glucose [CHEBI:17234] →+ process(glucose import [GO:0098708])   (viaAmount, b=0.64)
+        glucose [CHEBI:17234] →+ amount(insulin [PR:000009054])   [the-body-s-systems-m45537-52]
+        insulin [PR:000009054] →+ process(glucose import [GO:0098708])   [the-body-s-systems-m45537-202]
+
+glucagon [PR:P01275] →− process(glucose import [GO:0098708])   (viaAmount, b=0.33)
+  glucagon [PR:P01275] →+ amount(insulin [PR:000009054])   (viaAmount, b=0.64)
+    glucagon [PR:P01275] →+ amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])   [the-body-s-systems-m45537-201]
+    glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] →+ amount(insulin [PR:000009054])   (isaInheritEffect, b=0.80)
+      glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] is_a glucose [CHEBI:17234]   [refine:CHEBI:17234&RO:0001025=(UBERON:0000178)]
+      glucose [CHEBI:17234] →+ amount(insulin [PR:000009054])   [the-body-s-systems-m45537-52]
+  insulin [PR:000009054] →− process(glucose import [GO:0098708])   (viaAmount, b=0.51)
+    insulin [PR:000009054] →− amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])   [the-body-s-systems-m45537-53]
+    glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] →+ process(glucose import [GO:0098708])   (isaInheritEffect, b=0.64)
+      glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] is_a glucose [CHEBI:17234]   [refine:CHEBI:17234&RO:0001025=(UBERON:0000178)]
+      glucose [CHEBI:17234] →+ process(glucose import [GO:0098708])   (viaAmount, b=0.64)
+        glucose [CHEBI:17234] →+ amount(insulin [PR:000009054])   [the-body-s-systems-m45537-52]
+        insulin [PR:000009054] →+ process(glucose import [GO:0098708])   [the-body-s-systems-m45537-202]
+
+glucagon ⊓ located in (blood) [PR:P01275&RO:0001025=(UBERON:0000178)] →− process(glucose import [GO:0098708])   (viaAmount, b=0.33)
+  glucagon ⊓ located in (blood) [PR:P01275&RO:0001025=(UBERON:0000178)] →+ amount(insulin [PR:000009054])   (viaAmount, b=0.64)
+    glucagon ⊓ located in (blood) [PR:P01275&RO:0001025=(UBERON:0000178)] →+ amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])   (isaInheritEffect, b=0.80)
+      glucagon ⊓ located in (blood) [PR:P01275&RO:0001025=(UBERON:0000178)] is_a glucagon [PR:P01275]   [refine:PR:P01275&RO:0001025=(UBERON:0000178)]
+      glucagon [PR:P01275] →+ amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])   [the-body-s-systems-m45537-201]
+    glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] →+ amount(insulin [PR:000009054])   (isaInheritEffect, b=0.80)
+      glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] is_a glucose [CHEBI:17234]   [refine:CHEBI:17234&RO:0001025=(UBERON:0000178)]
+      glucose [CHEBI:17234] →+ amount(insulin [PR:000009054])   [the-body-s-systems-m45537-52]
+  insulin [PR:000009054] →− process(glucose import [GO:0098708])   (viaAmount, b=0.51)
+    insulin [PR:000009054] →− amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])   [the-body-s-systems-m45537-53]
+    glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] →+ process(glucose import [GO:0098708])   (isaInheritEffect, b=0.64)
+      glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] is_a glucose [CHEBI:17234]   [refine:CHEBI:17234&RO:0001025=(UBERON:0000178)]
+      glucose [CHEBI:17234] →+ process(glucose import [GO:0098708])   (viaAmount, b=0.64)
+        glucose [CHEBI:17234] →+ amount(insulin [PR:000009054])   [the-body-s-systems-m45537-52]
+        insulin [PR:000009054] →+ process(glucose import [GO:0098708])   [the-body-s-systems-m45537-202]
+
+glucagon ⊓ located in (blood) ⊓ part of (pancreatic alpha cell) [PR:P01275&RO:0001025=(UBERON:0000178)&BFO:0000050=(CL:0000171)] →− process(glucose import [GO:0098708])   (viaAmount, b=0.33)
+  glucagon ⊓ located in (blood) ⊓ part of (pancreatic alpha cell) [PR:P01275&RO:0001025=(UBERON:0000178)&BFO:0000050=(CL:0000171)] →+ amount(insulin [PR:000009054])   (isaInheritEffect, b=0.64)
+    glucagon ⊓ located in (blood) ⊓ part of (pancreatic alpha cell) [PR:P01275&RO:0001025=(UBERON:0000178)&BFO:0000050=(CL:0000171)] is_a glucagon [PR:P01275]   (relTrans, b=1.00)
+      glucagon ⊓ located in (blood) ⊓ part of (pancreatic alpha cell) [PR:P01275&RO:0001025=(UBERON:0000178)&BFO:0000050=(CL:0000171)] is_a glucagon ⊓ located in (blood) [PR:P01275&RO:0001025=(UBERON:0000178)]   [refine:PR:P01275&RO:0001025=(UBERON:0000178)&BFO:0000050=(CL:0000171)]
+      glucagon ⊓ located in (blood) [PR:P01275&RO:0001025=(UBERON:0000178)] is_a glucagon [PR:P01275]   [refine:PR:P01275&RO:0001025=(UBERON:0000178)]
+    glucagon [PR:P01275] →+ amount(insulin [PR:000009054])   (viaAmount, b=0.64)
+      glucagon [PR:P01275] →+ amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])   [the-body-s-systems-m45537-201]
+      glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] →+ amount(insulin [PR:000009054])   (isaInheritEffect, b=0.80)
+        glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] is_a glucose [CHEBI:17234]   [refine:CHEBI:17234&RO:0001025=(UBERON:0000178)]
+        glucose [CHEBI:17234] →+ amount(insulin [PR:000009054])   [the-body-s-systems-m45537-52]
+  insulin [PR:000009054] →− process(glucose import [GO:0098708])   (viaAmount, b=0.51)
+    insulin [PR:000009054] →− amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])   [the-body-s-systems-m45537-53]
+    glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] →+ process(glucose import [GO:0098708])   (isaInheritEffect, b=0.64)
+      glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] is_a glucose [CHEBI:17234]   [refine:CHEBI:17234&RO:0001025=(UBERON:0000178)]
+      glucose [CHEBI:17234] →+ process(glucose import [GO:0098708])   (viaAmount, b=0.64)
+        glucose [CHEBI:17234] →+ amount(insulin [PR:000009054])   [the-body-s-systems-m45537-52]
+        insulin [PR:000009054] →+ process(glucose import [GO:0098708])   [the-body-s-systems-m45537-202]
+
+insulin ⊓ located in (blood) ⊓ part of (pancreatic beta cell) [PR:000009054&RO:0001025=(UBERON:0000178)&BFO:0000050=(CL:0000169)] →+ amount(insulin [PR:000009054])   (viaAmount, b=0.41)
+  insulin ⊓ located in (blood) ⊓ part of (pancreatic beta cell) [PR:000009054&RO:0001025=(UBERON:0000178)&BFO:0000050=(CL:0000169)] →− amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])   (isaInheritEffect, b=0.80)
+    insulin ⊓ located in (blood) ⊓ part of (pancreatic beta cell) [PR:000009054&RO:0001025=(UBERON:0000178)&BFO:0000050=(CL:0000169)] is_a insulin ⊓ located in (blood) [PR:000009054&RO:0001025=(UBERON:0000178)]   [refine:PR:000009054&RO:0001025=(UBERON:0000178)&BFO:0000050=(CL:0000169)]
+    insulin ⊓ located in (blood) [PR:000009054&RO:0001025=(UBERON:0000178)] →− amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])   (isaInheritEffect, b=0.80)
+      insulin ⊓ located in (blood) [PR:000009054&RO:0001025=(UBERON:0000178)] is_a insulin [PR:000009054]   [refine:PR:000009054&RO:0001025=(UBERON:0000178)]
+      insulin [PR:000009054] →− amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])   [the-body-s-systems-m45537-53]
+  glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] →− amount(insulin [PR:000009054])   (isaInheritEffect, b=0.51)
+    glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] is_a glucose [CHEBI:17234]   [refine:CHEBI:17234&RO:0001025=(UBERON:0000178)]
+    glucose [CHEBI:17234] →− amount(insulin [PR:000009054])   (viaAmount, b=0.51)
+      glucose [CHEBI:17234] →− amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])   (viaAmount, b=0.64)
+        glucose [CHEBI:17234] →+ amount(insulin [PR:000009054])   [the-body-s-systems-m45537-52]
+        insulin [PR:000009054] →− amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])   [the-body-s-systems-m45537-53]
+      glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] →+ amount(insulin [PR:000009054])   (isaInheritEffect, b=0.80)
+        glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] is_a glucose [CHEBI:17234]   [refine:CHEBI:17234&RO:0001025=(UBERON:0000178)]
+        glucose [CHEBI:17234] →+ amount(insulin [PR:000009054])   [the-body-s-systems-m45537-52]
+
+glucagon ⊓ located in (blood) ⊓ part of (pancreatic alpha cell) [PR:P01275&RO:0001025=(UBERON:0000178)&BFO:0000050=(CL:0000171)] →− amount(insulin [PR:000009054])   (viaAmount, b=0.41)
+  glucagon ⊓ located in (blood) ⊓ part of (pancreatic alpha cell) [PR:P01275&RO:0001025=(UBERON:0000178)&BFO:0000050=(CL:0000171)] →+ amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])   (isaInheritEffect, b=0.80)
+    glucagon ⊓ located in (blood) ⊓ part of (pancreatic alpha cell) [PR:P01275&RO:0001025=(UBERON:0000178)&BFO:0000050=(CL:0000171)] is_a glucagon ⊓ located in (blood) [PR:P01275&RO:0001025=(UBERON:0000178)]   [refine:PR:P01275&RO:0001025=(UBERON:0000178)&BFO:0000050=(CL:0000171)]
+    glucagon ⊓ located in (blood) [PR:P01275&RO:0001025=(UBERON:0000178)] →+ amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])   (isaInheritEffect, b=0.80)
+      glucagon ⊓ located in (blood) [PR:P01275&RO:0001025=(UBERON:0000178)] is_a glucagon [PR:P01275]   [refine:PR:P01275&RO:0001025=(UBERON:0000178)]
+      glucagon [PR:P01275] →+ amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])   [the-body-s-systems-m45537-201]
+  glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] →− amount(insulin [PR:000009054])   (isaInheritEffect, b=0.51)
+    glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] is_a glucose [CHEBI:17234]   [refine:CHEBI:17234&RO:0001025=(UBERON:0000178)]
+    glucose [CHEBI:17234] →− amount(insulin [PR:000009054])   (viaAmount, b=0.51)
+      glucose [CHEBI:17234] →− amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])   (viaAmount, b=0.64)
+        glucose [CHEBI:17234] →+ amount(insulin [PR:000009054])   [the-body-s-systems-m45537-52]
+        insulin [PR:000009054] →− amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])   [the-body-s-systems-m45537-53]
+      glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] →+ amount(insulin [PR:000009054])   (isaInheritEffect, b=0.80)
+        glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] is_a glucose [CHEBI:17234]   [refine:CHEBI:17234&RO:0001025=(UBERON:0000178)]
+        glucose [CHEBI:17234] →+ amount(insulin [PR:000009054])   [the-body-s-systems-m45537-52]
+
+insulin ⊓ located in (blood) ⊓ part of (pancreatic beta cell) [PR:000009054&RO:0001025=(UBERON:0000178)&BFO:0000050=(CL:0000169)] →− process(glycogen catabolic process ⊓ occurs in (blood) [GO:0005980&BFO:0000066=(UBERON:0000178)])   (viaAmount, b=0.41)
+  insulin ⊓ located in (blood) ⊓ part of (pancreatic beta cell) [PR:000009054&RO:0001025=(UBERON:0000178)&BFO:0000050=(CL:0000169)] →− amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])   (isaInheritEffect, b=0.80)
+    insulin ⊓ located in (blood) ⊓ part of (pancreatic beta cell) [PR:000009054&RO:0001025=(UBERON:0000178)&BFO:0000050=(CL:0000169)] is_a insulin ⊓ located in (blood) [PR:000009054&RO:0001025=(UBERON:0000178)]   [refine:PR:000009054&RO:0001025=(UBERON:0000178)&BFO:0000050=(CL:0000169)]
+    insulin ⊓ located in (blood) [PR:000009054&RO:0001025=(UBERON:0000178)] →− amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])   (isaInheritEffect, b=0.80)
+      insulin ⊓ located in (blood) [PR:000009054&RO:0001025=(UBERON:0000178)] is_a insulin [PR:000009054]   [refine:PR:000009054&RO:0001025=(UBERON:0000178)]
+      insulin [PR:000009054] →− amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])   [the-body-s-systems-m45537-53]
+  glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] →+ process(glycogen catabolic process ⊓ occurs in (blood) [GO:0005980&BFO:0000066=(UBERON:0000178)])   (isaInheritEffect, b=0.51)
+    glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] is_a glucose [CHEBI:17234]   [refine:CHEBI:17234&RO:0001025=(UBERON:0000178)]
+    glucose [CHEBI:17234] →+ process(glycogen catabolic process ⊓ occurs in (blood) [GO:0005980&BFO:0000066=(UBERON:0000178)])   (viaAmount, b=0.51)
+      glucose [CHEBI:17234] →− amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])   (viaAmount, b=0.64)
+        glucose [CHEBI:17234] →+ amount(insulin [PR:000009054])   [the-body-s-systems-m45537-52]
+        insulin [PR:000009054] →− amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])   [the-body-s-systems-m45537-53]
+      glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] →− process(glycogen catabolic process ⊓ occurs in (blood) [GO:0005980&BFO:0000066=(UBERON:0000178)])   (isaInheritEffect, b=0.80)
+        glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] is_a glucose [CHEBI:17234]   [refine:CHEBI:17234&RO:0001025=(UBERON:0000178)]
+        glucose [CHEBI:17234] →− process(glycogen catabolic process ⊓ occurs in (blood) [GO:0005980&BFO:0000066=(UBERON:0000178)])   [how-cells-obtain-energy-m45444-12]
+
+glucagon ⊓ located in (blood) ⊓ part of (pancreatic alpha cell) [PR:P01275&RO:0001025=(UBERON:0000178)&BFO:0000050=(CL:0000171)] →+ process(glycogen catabolic process ⊓ occurs in (blood) [GO:0005980&BFO:0000066=(UBERON:0000178)])   (viaAmount, b=0.41)
+  glucagon ⊓ located in (blood) ⊓ part of (pancreatic alpha cell) [PR:P01275&RO:0001025=(UBERON:0000178)&BFO:0000050=(CL:0000171)] →+ amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])   (isaInheritEffect, b=0.80)
+    glucagon ⊓ located in (blood) ⊓ part of (pancreatic alpha cell) [PR:P01275&RO:0001025=(UBERON:0000178)&BFO:0000050=(CL:0000171)] is_a glucagon ⊓ located in (blood) [PR:P01275&RO:0001025=(UBERON:0000178)]   [refine:PR:P01275&RO:0001025=(UBERON:0000178)&BFO:0000050=(CL:0000171)]
+    glucagon ⊓ located in (blood) [PR:P01275&RO:0001025=(UBERON:0000178)] →+ amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])   (isaInheritEffect, b=0.80)
+      glucagon ⊓ located in (blood) [PR:P01275&RO:0001025=(UBERON:0000178)] is_a glucagon [PR:P01275]   [refine:PR:P01275&RO:0001025=(UBERON:0000178)]
+      glucagon [PR:P01275] →+ amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])   [the-body-s-systems-m45537-201]
+  glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] →+ process(glycogen catabolic process ⊓ occurs in (blood) [GO:0005980&BFO:0000066=(UBERON:0000178)])   (isaInheritEffect, b=0.51)
+    glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] is_a glucose [CHEBI:17234]   [refine:CHEBI:17234&RO:0001025=(UBERON:0000178)]
+    glucose [CHEBI:17234] →+ process(glycogen catabolic process ⊓ occurs in (blood) [GO:0005980&BFO:0000066=(UBERON:0000178)])   (viaAmount, b=0.51)
+      glucose [CHEBI:17234] →− amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])   (viaAmount, b=0.64)
+        glucose [CHEBI:17234] →+ amount(insulin [PR:000009054])   [the-body-s-systems-m45537-52]
+        insulin [PR:000009054] →− amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])   [the-body-s-systems-m45537-53]
+      glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] →− process(glycogen catabolic process ⊓ occurs in (blood) [GO:0005980&BFO:0000066=(UBERON:0000178)])   (isaInheritEffect, b=0.80)
+        glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] is_a glucose [CHEBI:17234]   [refine:CHEBI:17234&RO:0001025=(UBERON:0000178)]
+        glucose [CHEBI:17234] →− process(glycogen catabolic process ⊓ occurs in (blood) [GO:0005980&BFO:0000066=(UBERON:0000178)])   [how-cells-obtain-energy-m45444-12]
+
+insulin ⊓ located in (blood) ⊓ part of (pancreatic beta cell) [PR:000009054&RO:0001025=(UBERON:0000178)&BFO:0000050=(CL:0000169)] →− amount(glucagon ⊓ located in (blood) ⊓ part of (pancreatic alpha cell) [PR:P01275&RO:0001025=(UBERON:0000178)&BFO:0000050=(CL:0000171)])   (viaAmount, b=0.41)
+  insulin ⊓ located in (blood) ⊓ part of (pancreatic beta cell) [PR:000009054&RO:0001025=(UBERON:0000178)&BFO:0000050=(CL:0000169)] →− amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])   (isaInheritEffect, b=0.80)
+    insulin ⊓ located in (blood) ⊓ part of (pancreatic beta cell) [PR:000009054&RO:0001025=(UBERON:0000178)&BFO:0000050=(CL:0000169)] is_a insulin ⊓ located in (blood) [PR:000009054&RO:0001025=(UBERON:0000178)]   [refine:PR:000009054&RO:0001025=(UBERON:0000178)&BFO:0000050=(CL:0000169)]
+    insulin ⊓ located in (blood) [PR:000009054&RO:0001025=(UBERON:0000178)] →− amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])   (isaInheritEffect, b=0.80)
+      insulin ⊓ located in (blood) [PR:000009054&RO:0001025=(UBERON:0000178)] is_a insulin [PR:000009054]   [refine:PR:000009054&RO:0001025=(UBERON:0000178)]
+      insulin [PR:000009054] →− amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])   [the-body-s-systems-m45537-53]
+  glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] →+ amount(glucagon ⊓ located in (blood) ⊓ part of (pancreatic alpha cell) [PR:P01275&RO:0001025=(UBERON:0000178)&BFO:0000050=(CL:0000171)])   (isaInheritEffect, b=0.51)
+    glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] is_a glucose [CHEBI:17234]   [refine:CHEBI:17234&RO:0001025=(UBERON:0000178)]
+    glucose [CHEBI:17234] →+ amount(glucagon ⊓ located in (blood) ⊓ part of (pancreatic alpha cell) [PR:P01275&RO:0001025=(UBERON:0000178)&BFO:0000050=(CL:0000171)])   (viaAmount, b=0.51)
+      glucose [CHEBI:17234] →− amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])   (viaAmount, b=0.64)
+        glucose [CHEBI:17234] →+ amount(insulin [PR:000009054])   [the-body-s-systems-m45537-52]
+        insulin [PR:000009054] →− amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])   [the-body-s-systems-m45537-53]
+      glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] →− amount(glucagon ⊓ located in (blood) ⊓ part of (pancreatic alpha cell) [PR:P01275&RO:0001025=(UBERON:0000178)&BFO:0000050=(CL:0000171)])   (isaInheritEffect, b=0.80)
+        glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] is_a glucose [CHEBI:17234]   [refine:CHEBI:17234&RO:0001025=(UBERON:0000178)]
+        glucose [CHEBI:17234] →− amount(glucagon ⊓ located in (blood) ⊓ part of (pancreatic alpha cell) [PR:P01275&RO:0001025=(UBERON:0000178)&BFO:0000050=(CL:0000171)])   [the-body-s-systems-m45537-199]
+
+
+hubs excluded: ['ATP', 'Mitochondria', 'sugars', 'glycolytic process', 'chloroplast', 'photosynthesis', 'this transfer', 'meiotic cell cycle', 'brain', 'oxygen', 'light reactions of photosynthesis', 'digestion'] ...
+novel facts after dropping inverses-of-asserted and hub lifts: 1851; by rule {'relChain': 424, 'isaInheritEffect': 201, 'relTrans': 573, 'isaInherit': 258, 'isaGeneralise': 189, 'viaAmount': 195, 'viaActivity': 4, 'notRelSub': 7}
+
+=== information content (threshold 2.5) ===
+min-IC bin:         <1    <2    <3    <4    <5    <6    <7    <8    <9    9+ 1 end  none   all
+asserted            65    61   128   113   184   199   159    98    65    84   197    48  1401   median 5.08  mean 5.09
+derived (novel)    276   285   229   155   262   243   200   160    49    88   297    76  2320   median 4.05  mean 4.05
+
+--- top 25 derived by min IC (non-trivial) ---
+12.30  d4 viaAmount        calcium [CHEBI:29108] →+ amount(calcium ion ⊓ located in (blood) [CHEBI:29108&RO:0001025=(UBERON:0000178)])
+12.30  d2 viaAmount        neurotransmitters [CHEBI:25512] →− amount(aldosterone ⊓ located in (blood) [CHEBI:27584&RO:0001025=(UBERON:0000178)])
+12.30  d2 viaAmount        calcium [CHEBI:29108] →− amount(calcium ion ⊓ located in (blood) [CHEBI:29108&RO:0001025=(UBERON:0000178)])
+12.30  d2 relTrans         ATP ⊓ part of (red blood cells) [CHEBI:15422&BFO:0000050=(CL:0000232)] has part adenine [CHEBI:16708]
+12.30  d1 isaInheritEffect sodium ion ⊓ part of (neuron) [CHEBI:29101&BFO:0000050=(CL:0000540)] →− amount(aldosterone ⊓ located in (blood) [CHEBI:27584&RO:0001025=(UBERON:0000178)])
+12.30  d1 isaInheritEffect sodium ion ⊓ located in (blood) [CHEBI:29101&RO:0001025=(UBERON:0000178)] →− amount(aldosterone ⊓ located in (blood) [CHEBI:27584&RO:0001025=(UBERON:0000178)])
+12.30  d1 viaActivity      neurotransmitters [CHEBI:25512] →+ amount(sodium ion ⊓ part of (neuron) [CHEBI:29101&BFO:0000050=(CL:0000540)])
+12.30  d1 isaInherit       ATP ⊓ part of (red blood cells) [CHEBI:15422&BFO:0000050=(CL:0000232)] has part adenosine monophosphate (AMP) [CHEBI:16027]
+12.30  d1 relTrans         ATP [CHEBI:15422] has part adenine [CHEBI:16708]
+12.30  d1 relTrans         NAD+ ⊓ located in (liver) ⊓ in taxon (Mammalia) [CHEBI:15846&RO:0001025=(UBERON:0002107)&RO:0002162=(NCBITaxon:40674)] is_a NAD+ [CHEBI:15846]
+12.30  d1 relTrans         FAD+ ⊓ located in (brain) ⊓ in taxon (NCBITaxon:40674) [CHEBI:16238&RO:0001025=(UBERON:0000955)&RO:0002162=(NCBITaxon:40674)] is_a FAD+ [CHEBI:16238]
+11.60  d2 relTrans         ATP ⊓ part of (red blood cells) [CHEBI:15422&BFO:0000050=(CL:0000232)] has part 2-deoxy-D-ribose [CHEBI:28816]
+11.60  d2 relTrans         NAD+ ⊓ located in (liver) ⊓ in taxon (Mammalia) [CHEBI:15846&RO:0001025=(UBERON:0002107)&RO:0002162=(NCBITaxon:40674)] is_a Coenzymes [CHEBI:23354]
+11.60  d1 isaInherit       ATP ⊓ part of (red blood cells) [CHEBI:15422&BFO:0000050=(CL:0000232)] has part phosphate group [CHEBI:32958]
+11.60  d1 isaInherit       ATP [CHEBI:15422] has part 2-deoxy-D-ribose [CHEBI:28816]
+11.60  d1 isaInherit       adenosine monophosphate (AMP) [CHEBI:16027] has part 2-deoxy-D-ribose [CHEBI:28816]
+11.60  d1 isaInherit       adenosine monophosphate (AMP) [CHEBI:16027] has part phosphate group [CHEBI:32958]
+11.60  d1 relTrans         CHEBI:15846&RO:0001025=(UBERON:0002107) [CHEBI:15846&RO:0001025=(UBERON:0002107)] is_a Coenzymes [CHEBI:23354]
+11.60  d1 relChain         peptidoglycan [CHEBI:8005] overlaps food [CHEBI:33290]
+11.20  d2 relTrans         deoxyribonucleic acid ⊓ in taxon (NCBITaxon:2759) [CHEBI:16991&RO:0002162=(NCBITaxon:2759)] has part 2-deoxy-D-ribose [CHEBI:28816]
+11.20  d2 relTrans         deoxyribonucleic acid ⊓ in taxon (NCBITaxon:2759) [CHEBI:16991&RO:0002162=(NCBITaxon:2759)] has part phosphate group [CHEBI:32958]
+11.20  d2 relTrans         messenger RNA [CHEBI:33699] has part hydroxy group [CHEBI:43176]
+11.20  d2 isaInherit       NAD+ ⊓ located in (liver) ⊓ in taxon (Mammalia) [CHEBI:15846&RO:0001025=(UBERON:0002107)&RO:0002162=(NCBITaxon:40674)] derives from Vitamins [CHEBI:33229]
+11.20  d2 isaInherit       CHEBI:15846&RO:0001025=(UBERON:0002107) [CHEBI:15846&RO:0001025=(UBERON:0002107)] derives from Vitamins [CHEBI:33229]
+11.20  d1 notRelSub        ¬messenger RNA [CHEBI:33699] has part thymine [CHEBI:17821]
+
+--- bottom 15 derived by min IC (trivial) ---
+ 0.00  d1 isaInherit       animal cell ⊓ in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] derives from cells [CL:0000000]
+ 0.00  d1 isaInherit       transfer RNA [CHEBI:17843] located in cells [CL:0000000]
+ 0.00  d1 isaInherit       messenger RNA [CHEBI:33699] located in cells [CL:0000000]
+ 0.00  d1 relChain         cells [CL:0000000] overlaps endomembrane system [GO:0012505]
+ 0.00  d1 isaInherit       plant cell ⊓ in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] capable of ATP biosynthetic process [GO:0006754]
+ 0.00  d1 isaInherit       plant cell ⊓ in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] capable of phagocytosis [GO:0006909]
+ 0.00  d1 isaInherit       plant cell ⊓ in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] capable of transmembrane transport [GO:0055085]
+ 0.00  d1 isaInherit       animal cell ⊓ in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] capable of ATP biosynthetic process [GO:0006754]
+ 0.00  d1 isaInherit       animal cell ⊓ in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] capable of phagocytosis [GO:0006909]
+ 0.00  d1 isaInherit       animal cell ⊓ in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] capable of transmembrane transport [GO:0055085]
+ 0.00  d1 isaGeneralise    cells [CL:0000000] capable of endocytosis [GO:0006897]
+ 0.00  d1 isaInherit       Animal cells [CL:0000548] capable of exocytosis [GO:0006887]
+ 0.00  d1 isaInherit       Animal cells [CL:0000548] capable of endocytosis [GO:0006897]
+ 0.00  d1 relChain         plant cell ⊓ in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] capable of part of cell cycle [GO:0007049]
+ 0.00  d1 relChain         cells [CL:0000000] has part structure that is capable of transmembrane transport [GO:0055085]
+
+IC >= 2.5 keeps 1243 of 2320; trivial (<2.5) 727; unjudged (an end has no IC, bound >= 2.5) 350
+of the 1243 ends-min keepers, 1079 also pass on the derivation bottleneck (min IC over every entity in the proof)
+hub list keeps 1851: of those IC-trivial 555, IC-kept 978, unjudged 318
+hub list removes 469: of those IC-kept 265, IC-trivial 172, unjudged 32
+hub terms with IC >= 2.5: 20 of 25; with no IC: 0
+hub terms (degree, IC): ATP (38, 12.3), brain (30, 2.0), plasma membrane (26, 2.3), cells (21, 0.0), nucleus (21, 2.2), chloroplast (20, 4.6), glucose (18, 9.2), cytoplasm (18, 1.3), sugars (17, 3.6), photosynthesis (17, 7.0), RNA (16, 7.8), prokaryotic cell (16, 6.7), oxygen (15, 11.2), DNA (14, 11.2), Mitochondria (14, 4.1), Calvin cycle (14, 10.1), mitotic nuclear division (14, 6.5), ribosomes (13, 5.4), this transfer (13, 7.5), arise from (13, 5.3), messenger RNA (12, 11.2), glycolytic process (12, 7.4), light reactions of photosynthesis (12, 7.4), digestion (11, 6.6), meiotic cell cycle (11, 5.0)
+
+=== random sample of interesting novel facts ===
+glycolysis ⊓ occurs in (skeletal muscle) [GO:0006096&BFO:0000066=(UBERON:0014892)] →− process(cell death [GO:0008219])   (isaInheritEffect, b=0.64)
+  glycolysis ⊓ occurs in (skeletal muscle) [GO:0006096&BFO:0000066=(UBERON:0014892)] is_a glycolytic process [GO:0006096]   [refine:GO:0006096&BFO:0000066=(UBERON:0014892)]
+  glycolytic process [GO:0006096] →− process(cell death [GO:0008219])   (viaAmount, b=0.64)
+    glycolytic process [GO:0006096] →+ amount(ATP [CHEBI:15422])   [how-cells-obtain-energy-m45440-75]
+    ATP [CHEBI:15422] →− process(cell death [GO:0008219])   [how-cells-obtain-energy-m45439-64]
+
+photosynthesis ⊓ in taxon (NCBITaxon:2759) [GO:0015979&RO:0002162=(NCBITaxon:2759)] has part Calvin cycle [GO:0019253]   (isaInherit, b=0.80)
+  photosynthesis ⊓ in taxon (NCBITaxon:2759) [GO:0015979&RO:0002162=(NCBITaxon:2759)] is_a photosynthesis [GO:0015979]   [refine:GO:0015979&RO:0002162=(NCBITaxon:2759)]
+  photosynthesis [GO:0015979] has part Calvin cycle [GO:0019253]   [photosynthesis-m45448-88]
+
+ganglion ⊓ in taxon (Platyhelminthes) [UBERON:0000045&RO:0002162=(NCBITaxon:6157)] has part DNA [CHEBI:16991]   (relTrans, b=0.80)
+  ganglion ⊓ in taxon (Platyhelminthes) [UBERON:0000045&RO:0002162=(NCBITaxon:6157)] has part neuron [CL:0000540]   (isaInherit, b=0.80)
+    ganglion ⊓ in taxon (Platyhelminthes) [UBERON:0000045&RO:0002162=(NCBITaxon:6157)] is_a ganglion [UBERON:0000045]   [refine:UBERON:0000045&RO:0002162=(NCBITaxon:6157)]
+    ganglion [UBERON:0000045] has part neuron [CL:0000540]   [the-body-s-systems-m45539-21]
+  neuron [CL:0000540] has part DNA [CHEBI:16991]   (relTrans, b=0.80)
+    neuron [CL:0000540] has part Mitochondria [GO:0005739]   [the-body-s-systems-m45539-356]
+    Mitochondria [GO:0005739] has part DNA [CHEBI:16991]   [cell-structure-and-function-m45432-257]
+
+superior vena cava [UBERON:0001585] →− amount(carbon dioxide [CHEBI:16526])   (isaInheritEffect, b=0.80)
+  superior vena cava [UBERON:0001585] is_a veins [UBERON:0001638]   [the-body-s-systems-m45536-239]
+  veins [UBERON:0001638] →− amount(carbon dioxide [CHEBI:16526])   (isaInheritEffect, b=0.80)
+    veins [UBERON:0001638] is_a blood vessel [UBERON:0001981]   [the-body-s-systems-m45536-244]
+    blood vessel [UBERON:0001981] →− amount(carbon dioxide [CHEBI:16526])   [the-body-s-systems-m45536-4]
+
+a process [GO:0006119] →− process(ATP biosynthetic process [GO:0006754])   (viaAmount, b=0.64)
+  a process [GO:0006119] →+ amount(ATP [CHEBI:15422])   [how-cells-obtain-energy-m45440-70]
+  ATP [CHEBI:15422] →− process(ATP biosynthetic process [GO:0006754])   [how-cells-obtain-energy-m45437-246]
+
+arteries [UBERON:0001637] connected to inferior vena cava [UBERON:0001072]   (isaInherit, b=0.80)
+  arteries [UBERON:0001637] is_a blood vessel [UBERON:0001981]   [the-body-s-systems-m45536-219]
+  blood vessel [UBERON:0001981] connected to inferior vena cava [UBERON:0001072]   [the-body-s-systems-m45534-193]
+
+Oxygen ⊓ in taxon (these microorganisms) [CHEBI:15379&RO:0002162=(NCBITaxon:1485)] →+ process(this transfer [GO:0022904])   (isaInheritEffect, b=0.80)
+  Oxygen ⊓ in taxon (these microorganisms) [CHEBI:15379&RO:0002162=(NCBITaxon:1485)] is_a oxygen [CHEBI:15379]   [refine:CHEBI:15379&RO:0002162=(NCBITaxon:1485)]
+  oxygen [CHEBI:15379] →+ process(this transfer [GO:0022904])   [how-cells-obtain-energy-m45439-20]
+
+binary fission ⊓ in taxon (prokaryote) [GO:0043093&RO:0002162=(NCBITaxon:2)] →+ process(growth [GO:0040007])   (isaInheritEffect, b=0.80)
+  binary fission ⊓ in taxon (prokaryote) [GO:0043093&RO:0002162=(NCBITaxon:2)] is_a arise from [GO:0051301]   [reproduction-at-the-cellular-level-m45463-12]
+  arise from [GO:0051301] →+ process(growth [GO:0040007])   [reproduction-at-the-cellular-level-m45454-9]
+
+muscle organ [UBERON:0001630] overlaps skeletal muscle [UBERON:0001134]   (relChain, b=0.80)
+  muscle organ [UBERON:0001630] has part myofilament [GO:0036379]   (relTrans, b=0.80)
+    muscle organ [UBERON:0001630] has part muscle cells [CL:0000187]   [the-body-s-systems-m45538-290]
+    muscle cells [CL:0000187] has part myofilament [GO:0036379]   [the-body-s-systems-m45538-291]
+  myofilament [GO:0036379] part of skeletal muscle [UBERON:0001134]   (relTrans, b=0.80)
+    myofilament [GO:0036379] part of sarcomere [GO:0030017]   [the-body-s-systems-m45538-293]
+    sarcomere [GO:0030017] part of skeletal muscle [UBERON:0001134]   [the-body-s-systems-m45538-318]
+
+statins [CHEBI:87631] →− process(absorbs nutrients [GO:0050892])   (viaAmount, b=0.64)
+  statins [CHEBI:87631] →− amount(cholesterol [CHEBI:16113])   [how-cells-obtain-energy-m45437-202]
+  cholesterol [CHEBI:16113] →+ process(absorbs nutrients [GO:0050892])   (isaInheritEffect, b=0.80)
+    cholesterol [CHEBI:16113] is_a lipid [CHEBI:18059]   [how-cells-obtain-energy-m45444-30]
+    lipid [CHEBI:18059] →+ process(absorbs nutrients [GO:0050892])   [the-body-s-systems-m45535-186]
+
+parasympathetic [UBERON:0000011] overlaps peripheral nervous system [UBERON:0000010]   (relChain, b=0.80)
+  parasympathetic [UBERON:0000011] part of autonomic nervous system [UBERON:0002410]   [the-body-s-systems-m45539-406]
+  autonomic nervous system [UBERON:0002410] part of peripheral nervous system [UBERON:0000010]   [the-body-s-systems-m45539-384]
+
+glycolytic process ⊓ in taxon (Mammalia) [GO:0006096&RO:0002162=(NCBITaxon:40674)] →+ process(muscle cell contraction [GO:0006936])   (isaInheritEffect, b=0.64)
+  glycolytic process ⊓ in taxon (Mammalia) [GO:0006096&RO:0002162=(NCBITaxon:40674)] is_a glycolytic process [GO:0006096]   [refine:GO:0006096&RO:0002162=(NCBITaxon:40674)]
+  glycolytic process [GO:0006096] →+ process(muscle cell contraction [GO:0006936])   (viaAmount, b=0.64)
+    glycolytic process [GO:0006096] →+ amount(ATP [CHEBI:15422])   [how-cells-obtain-energy-m45440-75]
+    ATP [CHEBI:15422] →+ process(muscle cell contraction [GO:0006936])   [how-cells-obtain-energy-m45438-18]
+
+statins [CHEBI:87631] →− process(synthesizes cholesterol [GO:0006695])   (viaActivity, b=0.64)
+  statins [CHEBI:87631] →− activity(HMG-CoA reductase [PR:000008636])   [how-cells-obtain-energy-m45437-203]
+  HMG-CoA reductase [PR:000008636] →+ process(synthesizes cholesterol [GO:0006695])   [how-cells-obtain-energy-m45437-205]
+
+These reactions ⊓ in taxon (eukaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2759)] →− process(broken down [GO:0006007])   (isaInheritEffect, b=0.64)
+  These reactions ⊓ in taxon (eukaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2759)] is_a this transfer [GO:0022904]   [refine:GO:0022904&RO:0002162=(NCBITaxon:2759)]
+  this transfer [GO:0022904] →− process(broken down [GO:0006007])   (viaAmount, b=0.64)
+    this transfer [GO:0022904] →+ amount(ATP [CHEBI:15422])   [how-cells-obtain-energy-m45439-63]
+    ATP [CHEBI:15422] →− process(broken down [GO:0006007])   [how-cells-obtain-energy-m45437-244]
+
+cell wall [GO:0005618] has part carbon atoms [CHEBI:27594]   (relTrans, b=0.80)
+  cell wall [GO:0005618] has part peptidoglycan [CHEBI:8005]   [cell-structure-and-function-m45432-224]
+  peptidoglycan [CHEBI:8005] has part carbon atoms [CHEBI:27594]   (relTrans, b=0.80)
+    peptidoglycan [CHEBI:8005] has part sugars [CHEBI:16646]   [cell-structure-and-function-m45429-22]
+    sugars [CHEBI:16646] has part carbon atoms [CHEBI:27594]   [photosynthesis-m45453-2]
+
+
+=== path query: cancer nodes 4 -> energy-metabolism nodes 15 ===
+DNA repair genes [GO:0006281] →− phenotype(cancer [HP:0002664]) -> DNA repair genes [GO:0006281] occurs in cells [CL:0000000] -> metabolic reactions [GO:0008152] occurs in cells [CL:0000000]
+
+DNA repair genes [GO:0006281] →− phenotype(cancer [HP:0002664]) -> DNA repair genes [GO:0006281] occurs in cells [CL:0000000] -> cells [CL:0000000] capable of ATP biosynthetic process [GO:0006754]
+
+DNA repair genes [GO:0006281] →− phenotype(cancer [HP:0002664]) -> DNA repair genes [GO:0006281] occurs in cells [CL:0000000] -> cells [CL:0000000] has part cytoplasm [GO:0005737] -> glycolytic process [GO:0006096] occurs in cytoplasm [GO:0005737]
+
+DNA repair genes [GO:0006281] →− phenotype(cancer [HP:0002664]) -> DNA repair genes [GO:0006281] occurs in cells [CL:0000000] -> cells [CL:0000000] has part cytoplasm [GO:0005737] -> glucose [CHEBI:17234] located in cytoplasm [GO:0005737] -> glucose [CHEBI:17234] →+ process(cellular respiration [GO:0045333])
+
+DNA repair genes [GO:0006281] →− phenotype(cancer [HP:0002664]) -> DNA repair genes [GO:0006281] occurs in cells [CL:0000000] -> cells [CL:0000000] has part plasma membrane [GO:0005886] -> plasma membrane [GO:0005886] →− process(cell death [GO:0008219]) -> ATP [CHEBI:15422] →− process(cell death [GO:0008219])
+

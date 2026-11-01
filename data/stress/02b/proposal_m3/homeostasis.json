@@ -1,0 +1,5839 @@
+[
+ {
+  "id": "how-cells-obtain-energy-m45437-238",
+  "module": "m45437",
+  "source": "In a most efficient and elegant way, cells have evolved to use the products of their own reactions for feedback inhibition of enzyme activity.",
+  "claim": "Cells have evolved to use their own products for feedback inhibition (evolutionary framing)",
+  "entities": [],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "class_level_loop",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "how-cells-obtain-energy-m45437-239",
+  "module": "m45437",
+  "source": "Feedback inhibition involves the use of a reaction product to regulate its own further production ().",
+  "claim": "Feedback inhibition is the use of a reaction product to regulate its own further production",
+  "entities": [
+   {
+    "text": "Feedback inhibition",
+    "curie": "GO:0043086",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "definition_only",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "how-cells-obtain-energy-m45437-242",
+  "module": "m45437",
+  "source": "The production of both amino acids and nucleotides is controlled through feedback inhibition.",
+  "claim": "Amino acid production is controlled through feedback inhibition",
+  "entities": [
+   {
+    "text": "production of ... amino acids",
+    "curie": "GO:0008652",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "negative regulation of catalytic activity",
+    "curie": "GO:0043086",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "class_level_loop",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "how-cells-obtain-energy-m45437-243",
+  "module": "m45437",
+  "source": "The production of both amino acids and nucleotides is controlled through feedback inhibition.",
+  "claim": "Nucleotide production is controlled through feedback inhibition",
+  "entities": [
+   {
+    "text": "production of ... nucleotides",
+    "curie": "GO:0009165",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "negative regulation of catalytic activity",
+    "curie": "GO:0043086",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "class_level_loop",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "how-cells-obtain-energy-m45437-244~loop",
+  "module": "m45437",
+  "source": "Additionally, ATP is an allosteric regulator of some of the enzymes involved in the catabolic breakdown of sugar, the process that creates ATP.",
+  "claim": "ATP is an allosteric regulator of some enzymes of sugar catabolism",
+  "entities": [
+   {
+    "text": "ATP",
+    "curie": "CHEBI:15422",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "catabolic breakdown of sugar",
+    "curie": "GO:0006007",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "homeostasis",
+   "quant": null,
+   "subject": "GO:0006007",
+   "relation": null,
+   "object": "CHEBI:15422",
+   "sign": null,
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": {
+   "sign": "neg",
+   "teddy": "TEDDY_0000034",
+   "held": "CHEBI:15422",
+   "regulators": [
+    [
+     "GO:0006007",
+     "pos"
+    ],
+    [
+     "CHEBI:16761",
+     "pos"
+    ]
+   ],
+   "homeostatic": true,
+   "extra_nodes": []
+  },
+  "action": "add"
+ },
+ {
+  "id": "how-cells-obtain-energy-m45437-299",
+  "module": "m45437",
+  "source": "feedback inhibition: a mechanism of enzyme activity regulation in which the product of a reaction or the final product of a series of sequential reactions inhibits an enzyme for an earlier step in the reaction series",
+  "claim": "Feedback inhibition is enzyme regulation where a product of a reaction series inhibits an enzyme for an earlier step",
+  "entities": [
+   {
+    "text": "feedback inhibition",
+    "curie": "GO:0043086",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "definition_only",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "how-cells-obtain-energy-m45444-63",
+  "module": "m45444",
+  "source": "The substrates, intermediates, and products move between pathways and do so in response to finely tuned feedback inhibition loops that keep metabolism overall on an even keel.",
+  "claim": "Feedback inhibition loops keep metabolism on an even keel",
+  "entities": [
+   {
+    "text": "feedback inhibition loops",
+    "curie": "GO:0043086",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "metabolism",
+    "curie": "GO:0008152",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "class_level_loop",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "how-cells-obtain-energy-m45444-64",
+  "module": "m45444",
+  "source": "The substrates, intermediates, and products move between pathways and do so in response to finely tuned feedback inhibition loops that keep metabolism overall on an even keel.",
+  "claim": "Substrates, intermediates and products move between pathways",
+  "entities": [
+   {
+    "text": "substrates, intermediates, and products",
+    "curie": "CHEBI:25212",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "process_description",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "photosynthesis-m45448-84~loop",
+  "module": "m45448",
+  "source": "On a hot, dry day, plants close their stomata to conserve water.",
+  "claim": "hot dry conditions cause plants to close their stomata",
+  "entities": [
+   {
+    "text": "plants",
+    "curie": "NCBITaxon:33090",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "close their stomata",
+    "curie": "GO:0090332",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "homeostasis",
+   "quant": null,
+   "subject": "GO:0090332",
+   "relation": null,
+   "object": "CHEBI:15377",
+   "sign": null,
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:33090",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "loop": {
+   "sign": "neg",
+   "teddy": "TEDDY_0000034",
+   "held": "CHEBI:15377",
+   "regulators": [
+    [
+     "GO:0090332",
+     "neg"
+    ]
+   ],
+   "homeostatic": true,
+   "extra_nodes": [
+    "GO:0010148"
+   ]
+  },
+  "action": "add"
+ },
+ {
+  "id": "the-body-s-systems-m45534-1",
+  "module": "m45534",
+  "source": "Homeostasis refers to the relatively stable state inside the body of an animal.",
+  "claim": "Homeostasis is the relatively stable internal state of an animal body",
+  "entities": [
+   {
+    "text": "Homeostasis",
+    "curie": "GO:0042592",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "body of an animal",
+    "curie": "UBERON:0000468",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "definition_only",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45534-3",
+  "module": "m45534",
+  "source": "Examples of internal conditions maintained homeostatically are the level of blood glucose, body temperature, blood calcium level.",
+  "claim": "Blood glucose level is maintained homeostatically",
+  "entities": [
+   {
+    "text": "blood glucose",
+    "curie": "CHEBI:17234",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "maintained homeostatically",
+    "curie": "GO:0042593",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "homeostasis",
+   "quant": null,
+   "subject": "GO:0042593",
+   "relation": null,
+   "object": "CHEBI:17234",
+   "sign": null,
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000178",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "loop": null,
+  "action": "replace"
+ },
+ {
+  "id": "the-body-s-systems-m45534-4",
+  "module": "m45534",
+  "source": "Examples of internal conditions maintained homeostatically are the level of blood glucose, body temperature, blood calcium level.",
+  "claim": "Body temperature is maintained homeostatically",
+  "entities": [
+   {
+    "text": "body temperature",
+    "curie": "PATO:0000146",
+    "ontology": "PATO",
+    "verified": true
+   },
+   {
+    "text": "maintained homeostatically",
+    "curie": "GO:0001659",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "homeostasis",
+   "quant": null,
+   "subject": "GO:0001659",
+   "relation": null,
+   "object": "OBA:VT0005535",
+   "sign": null,
+   "target": "phenotype",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "loop": null,
+  "action": "replace"
+ },
+ {
+  "id": "the-body-s-systems-m45534-5",
+  "module": "m45534",
+  "source": "Examples of internal conditions maintained homeostatically are the level of blood glucose, body temperature, blood calcium level.",
+  "claim": "Blood calcium level is maintained homeostatically",
+  "entities": [
+   {
+    "text": "blood calcium",
+    "curie": "CHEBI:29108",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "maintained homeostatically",
+    "curie": "GO:0055074",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "homeostasis",
+   "quant": null,
+   "subject": "GO:0055074",
+   "relation": null,
+   "object": "CHEBI:29108",
+   "sign": null,
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000178",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "loop": null,
+  "action": "replace"
+ },
+ {
+  "id": "the-body-s-systems-m45534-6",
+  "module": "m45534",
+  "source": "These conditions remain stable because of physiologic processes that result in negative feedback relationships.",
+  "claim": "Homeostatic conditions remain stable because of negative feedback processes",
+  "entities": [
+   {
+    "text": "physiologic processes",
+    "curie": "GO:0042592",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "negative feedback relationships",
+    "curie": null,
+    "ontology": "GO",
+    "verified": false
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "class_level_loop",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45534-9",
+  "module": "m45534",
+  "source": "The signals that restore the normal levels are examples of negative feedback.",
+  "claim": "Signals that restore normal levels are negative feedback",
+  "entities": [
+   {
+    "text": "negative feedback",
+    "curie": null,
+    "ontology": "GO",
+    "verified": false
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "definition_only",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45534-10",
+  "module": "m45534",
+  "source": "When homeostatic mechanisms fail, the results can be unfavorable for the animal.",
+  "claim": "Failure of homeostatic mechanisms harms the animal",
+  "entities": [
+   {
+    "text": "homeostatic mechanisms",
+    "curie": "GO:0042592",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45534-11",
+  "module": "m45534",
+  "source": "Homeostatic mechanisms keep the body in dynamic equilibrium by constantly adjusting to the changes that the body’s systems encounter.",
+  "claim": "Homeostatic mechanisms keep the body in dynamic equilibrium by constantly adjusting to changes",
+  "entities": [
+   {
+    "text": "Homeostatic mechanisms",
+    "curie": "GO:0042592",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "multicellular organism",
+    "curie": "UBERON:0000468",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "process_description",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45534-12",
+  "module": "m45534",
+  "source": "Even an animal that is apparently inactive is maintaining this homeostatic equilibrium.",
+  "claim": "An inactive animal still maintains homeostatic equilibrium",
+  "entities": [
+   {
+    "text": "Metazoa",
+    "curie": "NCBITaxon:33208",
+    "ontology": "NCBITaxon",
+    "verified": true
+   },
+   {
+    "text": "homeostatic equilibrium",
+    "curie": "GO:0042592",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "process_description",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45534-13",
+  "module": "m45534",
+  "source": "Two examples of factors that are regulated homeostatically are temperature and water content.",
+  "claim": "Temperature is regulated homeostatically",
+  "entities": [
+   {
+    "text": "temperature",
+    "curie": "PATO:0000146",
+    "ontology": "PATO",
+    "verified": true
+   },
+   {
+    "text": "regulated homeostatically",
+    "curie": "GO:0001659",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "homeostasis",
+   "quant": null,
+   "subject": "GO:0001659",
+   "relation": null,
+   "object": "OBA:VT0005535",
+   "sign": null,
+   "target": "phenotype",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "loop": null,
+  "action": "replace"
+ },
+ {
+  "id": "the-body-s-systems-m45534-14",
+  "module": "m45534",
+  "source": "Two examples of factors that are regulated homeostatically are temperature and water content.",
+  "claim": "Water content is regulated homeostatically",
+  "entities": [
+   {
+    "text": "water content",
+    "curie": "CHEBI:15377",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "regulated homeostatically",
+    "curie": "GO:0050891",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "homeostasis",
+   "quant": null,
+   "subject": "GO:0050891",
+   "relation": null,
+   "object": "CHEBI:15377",
+   "sign": null,
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "loop": null,
+  "action": "replace"
+ },
+ {
+  "id": "the-body-s-systems-m45534-15",
+  "module": "m45534",
+  "source": "The processes that maintain homeostasis of these two factors are called thermoregulation and osmoregulation.",
+  "claim": "Thermoregulation is the process that maintains temperature homeostasis",
+  "entities": [
+   {
+    "text": "thermoregulation",
+    "curie": "GO:0001659",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "temperature",
+    "curie": "PATO:0000146",
+    "ontology": "PATO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "definition_only",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45534-16",
+  "module": "m45534",
+  "source": "The processes that maintain homeostasis of these two factors are called thermoregulation and osmoregulation.",
+  "claim": "Osmoregulation is the process that maintains water homeostasis",
+  "entities": [
+   {
+    "text": "osmoregulation",
+    "curie": "GO:0050891",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "water content",
+    "curie": "CHEBI:15377",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "definition_only",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45534-17",
+  "module": "m45534",
+  "source": "The goal of homeostasis is the maintenance of equilibrium around a specific value of some aspect of the body or its cells called a set point.",
+  "claim": "A set point is the specific value around which homeostasis maintains equilibrium",
+  "entities": [
+   {
+    "text": "homeostatic process",
+    "curie": "GO:0042592",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "set point",
+    "curie": null,
+    "ontology": "PATO",
+    "verified": false
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "definition_only",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45534-18",
+  "module": "m45534",
+  "source": "While there are normal fluctuations from the set point, the body’s systems will usually attempt to go back to this point.",
+  "claim": "Body systems return a fluctuating variable toward the set point",
+  "entities": [
+   {
+    "text": "body’s systems",
+    "curie": "UBERON:0000467",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "set point",
+    "curie": null,
+    "ontology": "PATO",
+    "verified": false
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "class_level_loop",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45534-19",
+  "module": "m45534",
+  "source": "A change in the internal or external environment is called a stimulus and is detected by a receptor; the response of the system is to adjust the activities of the system so the value moves back toward the set point.",
+  "claim": "A stimulus is a change in the internal or external environment",
+  "entities": [
+   {
+    "text": "stimulus",
+    "curie": null,
+    "ontology": "other",
+    "verified": false
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "definition_only",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45534-20",
+  "module": "m45534",
+  "source": "A change in the internal or external environment is called a stimulus and is detected by a receptor; the response of the system is to adjust the activities of the system so the value moves back toward the set point.",
+  "claim": "A stimulus is detected by a receptor",
+  "entities": [
+   {
+    "text": "stimulus",
+    "curie": null,
+    "ontology": "other",
+    "verified": false
+   },
+   {
+    "text": "receptor",
+    "curie": null,
+    "ontology": "other",
+    "verified": false
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "ungrounded_entity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45534-21",
+  "module": "m45534",
+  "source": "A change in the internal or external environment is called a stimulus and is detected by a receptor; the response of the system is to adjust the activities of the system so the value moves back toward the set point.",
+  "claim": "The system responds by adjusting its activities so the value moves back toward the set point",
+  "entities": [
+   {
+    "text": "receptor",
+    "curie": null,
+    "ontology": "other",
+    "verified": false
+   },
+   {
+    "text": "set point",
+    "curie": null,
+    "ontology": "PATO",
+    "verified": false
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "class_level_loop",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45534-23",
+  "module": "m45534",
+  "source": "If glucose levels in the blood rise after a meal, adjustments are made to lower them and to get the nutrient into tissues that need it or to store it for later use.",
+  "claim": "A rise in blood glucose after a meal triggers adjustments that lower blood glucose",
+  "entities": [
+   {
+    "text": "glucose levels in the blood",
+    "curie": "CHEBI:17234",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "blood",
+    "curie": "UBERON:0000178",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "homeostasis",
+   "quant": null,
+   "subject": "GO:0042593",
+   "relation": null,
+   "object": "CHEBI:17234",
+   "sign": null,
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000178",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "loop": null,
+  "action": "replace"
+ },
+ {
+  "id": "the-body-s-systems-m45534-24",
+  "module": "m45534",
+  "source": "If glucose levels in the blood rise after a meal, adjustments are made to lower them and to get the nutrient into tissues that need it or to store it for later use.",
+  "claim": "After a meal glucose is moved into tissues or stored",
+  "entities": [
+   {
+    "text": "the nutrient",
+    "curie": "CHEBI:17234",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "tissues",
+    "curie": "UBERON:0000479",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "process_description",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45534-77",
+  "module": "m45534",
+  "source": "The hypothalamus maintains the set point for body temperature through reflexes that cause vasodilation or vasoconstriction and shivering or sweating.",
+  "claim": "The hypothalamus maintains the body temperature set point",
+  "entities": [
+   {
+    "text": "hypothalamus",
+    "curie": "UBERON:0001898",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "body temperature",
+    "curie": "PATO:0000146",
+    "ontology": "PATO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "homeostasis",
+   "quant": null,
+   "subject": "UBERON:0001898",
+   "relation": null,
+   "object": "OBA:VT0005535",
+   "sign": null,
+   "target": "phenotype",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:40674",
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": {
+   "sign": "neg",
+   "teddy": "TEDDY_0000034",
+   "held": "OBA:VT0005535",
+   "regulators": [
+    [
+     "UBERON:0001898",
+     "neg"
+    ]
+   ],
+   "homeostatic": true,
+   "extra_nodes": []
+  },
+  "action": "replace"
+ },
+ {
+  "id": "the-body-s-systems-m45534-78",
+  "module": "m45534",
+  "source": "The hypothalamus maintains the set point for body temperature through reflexes that cause vasodilation or vasoconstriction and shivering or sweating.",
+  "claim": "Hypothalamic reflexes cause vasodilation or vasoconstriction",
+  "entities": [
+   {
+    "text": "hypothalamus",
+    "curie": "UBERON:0001898",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "vasodilation",
+    "curie": "GO:0042311",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "vasoconstriction",
+    "curie": "GO:0042310",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "disjunction",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45534-79",
+  "module": "m45534",
+  "source": "The hypothalamus maintains the set point for body temperature through reflexes that cause vasodilation or vasoconstriction and shivering or sweating.",
+  "claim": "Hypothalamic reflexes cause shivering or sweating",
+  "entities": [
+   {
+    "text": "hypothalamus",
+    "curie": "UBERON:0001898",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "shivering reflex",
+    "curie": "NBO:0000441",
+    "ontology": "other",
+    "verified": true
+   },
+   {
+    "text": "sweat secretion",
+    "curie": "GO:0160269",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "disjunction",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45534-80",
+  "module": "m45534",
+  "source": "The sympathetic nervous system under control of the hypothalamus directs the responses that effect the changes in temperature loss or gain that return the body to the set point.",
+  "claim": "The sympathetic nervous system is under control of the hypothalamus",
+  "entities": [
+   {
+    "text": "sympathetic nervous system",
+    "curie": "UBERON:0000013",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "hypothalamus",
+    "curie": "UBERON:0001898",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45534-82",
+  "module": "m45534",
+  "source": "The set point may be adjusted in some instances.",
+  "claim": "The temperature set point can be adjusted",
+  "entities": [
+   {
+    "text": "set point",
+    "curie": null,
+    "ontology": "PATO",
+    "verified": false
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "set_point_shift",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45534-84",
+  "module": "m45534",
+  "source": "During an infection, compounds called pyrogens are produced and circulate to the hypothalamus resetting the thermostat to a higher value.",
+  "claim": "Pyrogens circulate to the hypothalamus",
+  "entities": [
+   {
+    "text": "pyrogens",
+    "curie": "NCIT:C71583",
+    "ontology": "other",
+    "verified": true
+   },
+   {
+    "text": "hypothalamus",
+    "curie": "UBERON:0001898",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "process_description",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45534-85",
+  "module": "m45534",
+  "source": "During an infection, compounds called pyrogens are produced and circulate to the hypothalamus resetting the thermostat to a higher value.",
+  "claim": "Pyrogens reset the hypothalamic set point to a higher value",
+  "entities": [
+   {
+    "text": "pyrogens",
+    "curie": "NCIT:C71583",
+    "ontology": "other",
+    "verified": true
+   },
+   {
+    "text": "thermostat",
+    "curie": "UBERON:0001898",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "set_point_shift",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45534-86",
+  "module": "m45534",
+  "source": "This allows the body’s temperature to increase to a new homeostatic equilibrium point in what is commonly called a fever.",
+  "claim": "A raised set point lets body temperature rise to a new equilibrium called fever",
+  "entities": [
+   {
+    "text": "body’s temperature",
+    "curie": "PATO:0000146",
+    "ontology": "PATO",
+    "verified": true
+   },
+   {
+    "text": "fever generation",
+    "curie": "GO:0001660",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "set_point_shift",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45534-185",
+  "module": "m45534",
+  "source": "Homeostasis is a dynamic equilibrium that is maintained in body tissues and organs.",
+  "claim": "Homeostasis is a dynamic equilibrium maintained in body tissues and organs",
+  "entities": [
+   {
+    "text": "Homeostasis",
+    "curie": "GO:0042592",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "body tissues",
+    "curie": "UBERON:0000479",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "organs",
+    "curie": "UBERON:0000062",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "definition_only",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45534-187",
+  "module": "m45534",
+  "source": "It is an equilibrium because body functions are kept within a normal range, with some fluctuations around a set point.",
+  "claim": "In homeostasis body functions are kept within a normal range around a set point",
+  "entities": [
+   {
+    "text": "equilibrium",
+    "curie": "GO:0042592",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "set point",
+    "curie": null,
+    "ontology": "PATO",
+    "verified": false
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "definition_only",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45534-190~loop",
+  "module": "m45534",
+  "source": "The kidneys are the main osmoregulatory organs in mammalian systems; they function to filter blood and maintain the dissolved ion concentrations of body fluids.",
+  "claim": "The kidneys maintain dissolved ion concentrations of body fluids",
+  "entities": [
+   {
+    "text": "kidneys",
+    "curie": "UBERON:0002113",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "dissolved ion",
+    "curie": "CHEBI:24870",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "body fluids",
+    "curie": "UBERON:0006314",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "monoatomic ion homeostasis",
+    "curie": "GO:0050801",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "homeostasis",
+   "quant": null,
+   "subject": "UBERON:0002113",
+   "relation": null,
+   "object": "CHEBI:24870",
+   "sign": null,
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": "NCBITaxon:40674",
+    "anatomy": "UBERON:0006314",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "loop": null,
+  "action": "add"
+ },
+ {
+  "id": "the-body-s-systems-m45534-214",
+  "module": "m45534",
+  "source": "The body has a sensor that detects a deviation of the state of the cells or the body from the set point.",
+  "claim": "The body has a sensor that detects deviation from the set point",
+  "entities": [
+   {
+    "text": "multicellular organism",
+    "curie": "UBERON:0000468",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "sensor",
+    "curie": null,
+    "ontology": "other",
+    "verified": false
+   },
+   {
+    "text": "set point",
+    "curie": null,
+    "ontology": "PATO",
+    "verified": false
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "ungrounded_entity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45534-217",
+  "module": "m45534",
+  "source": "Those effectors cause a negative feedback response that moves the state of the body in a direction back toward the set point.",
+  "claim": "Effectors cause a negative feedback response that moves the body back toward the set point",
+  "entities": [
+   {
+    "text": "effectors",
+    "curie": null,
+    "ontology": "other",
+    "verified": false
+   },
+   {
+    "text": "negative feedback response",
+    "curie": null,
+    "ontology": "GO",
+    "verified": false
+   },
+   {
+    "text": "set point",
+    "curie": null,
+    "ontology": "PATO",
+    "verified": false
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "class_level_loop",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45534-232",
+  "module": "m45534",
+  "source": "set point: the target value of a physiological state in homeostasis",
+  "claim": "A set point is the target value of a physiological state in homeostasis",
+  "entities": [
+   {
+    "text": "set point",
+    "curie": null,
+    "ontology": "PATO",
+    "verified": false
+   },
+   {
+    "text": "homeostatic process",
+    "curie": "GO:0042592",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "definition_only",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45536-30",
+  "module": "m45536",
+  "source": "How often a breath is taken and how much air is inhaled or exhaled is regulated by the respiratory center in the brain in response to signals it receives about the carbon dioxide content of the blood.",
+  "claim": "Breathing rate and depth are regulated by the respiratory center in the brain",
+  "entities": [
+   {
+    "text": "breath",
+    "curie": "GO:0003016",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "respiratory center in the brain",
+    "curie": "UBERON:0000955",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "homeostasis",
+   "quant": null,
+   "subject": "UBERON:0000955",
+   "relation": null,
+   "object": "CHEBI:16526",
+   "sign": null,
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000178",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "loop": {
+   "sign": "neg",
+   "teddy": "TEDDY_0000034",
+   "held": "CHEBI:16526",
+   "regulators": [
+    [
+     "UBERON:0000955",
+     "neg"
+    ]
+   ],
+   "homeostatic": true,
+   "extra_nodes": [
+    "GO:0007585"
+   ]
+  },
+  "action": "replace"
+ },
+ {
+  "id": "the-body-s-systems-m45536-31",
+  "module": "m45536",
+  "source": "How often a breath is taken and how much air is inhaled or exhaled is regulated by the respiratory center in the brain in response to signals it receives about the carbon dioxide content of the blood.",
+  "claim": "The respiratory center responds to signals about blood carbon dioxide content",
+  "entities": [
+   {
+    "text": "carbon dioxide content of the blood",
+    "curie": "CHEBI:16526",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "respiratory center",
+    "curie": "UBERON:0000955",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "respiratory system process",
+    "curie": "GO:0003016",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "CHEBI:16526",
+   "relation": null,
+   "object": "GO:0007585",
+   "sign": "pos",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000178",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "replace"
+ },
+ {
+  "id": "the-body-s-systems-m45537-12",
+  "module": "m45537",
+  "source": "Maintaining homeostasis within the body requires the coordination of many different systems and organs.",
+  "claim": "Homeostasis requires coordination of many systems and organs",
+  "entities": [],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45537-22",
+  "module": "m45537",
+  "source": "Examples of endocrine organs include the pancreas, which produces the hormones insulin and glucagon to regulate blood-glucose levels, the adrenal glands, which produce hormones such as epinephrine and norepinephrine that regulate responses to stress, and the thyroid gland, which produces thyroid hormones that regulate metabolic rates.",
+  "claim": "Insulin and glucagon regulate blood-glucose levels",
+  "entities": [
+   {
+    "text": "insulin",
+    "curie": "PR:000009054",
+    "ontology": "PR",
+    "verified": true
+   },
+   {
+    "text": "glucagon",
+    "curie": "PR:P01275",
+    "ontology": "PR",
+    "verified": true
+   },
+   {
+    "text": "glucose",
+    "curie": "CHEBI:17234",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "blood",
+    "curie": "UBERON:0000178",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "homeostasis",
+   "quant": null,
+   "subject": "PR:000009054",
+   "relation": null,
+   "object": "CHEBI:17234",
+   "sign": null,
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000178",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": {
+   "sign": "neg",
+   "teddy": "TEDDY_0000034",
+   "held": "CHEBI:17234",
+   "regulators": [
+    [
+     "PR:000009054",
+     "neg"
+    ],
+    [
+     "PR:P01275",
+     "pos"
+    ]
+   ],
+   "homeostatic": true,
+   "extra_nodes": []
+  },
+  "action": "replace"
+ },
+ {
+  "id": "the-body-s-systems-m45537-22#2",
+  "module": "m45537",
+  "source": "Examples of endocrine organs include the pancreas, which produces the hormones insulin and glucagon to regulate blood-glucose levels, the adrenal glands, which produce hormones such as epinephrine and norepinephrine that regulate responses to stress, and the thyroid gland, which produces thyroid hormones that regulate metabolic rates.",
+  "claim": "Insulin and glucagon regulate blood-glucose levels",
+  "entities": [
+   {
+    "text": "insulin",
+    "curie": "PR:000009054",
+    "ontology": "PR",
+    "verified": true
+   },
+   {
+    "text": "glucagon",
+    "curie": "PR:P01275",
+    "ontology": "PR",
+    "verified": true
+   },
+   {
+    "text": "glucose",
+    "curie": "CHEBI:17234",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "blood",
+    "curie": "UBERON:0000178",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "homeostasis",
+   "quant": null,
+   "subject": "PR:P01275",
+   "relation": null,
+   "object": "CHEBI:17234",
+   "sign": null,
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000178",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": {
+   "sign": "neg",
+   "teddy": "TEDDY_0000034",
+   "held": "CHEBI:17234",
+   "regulators": [
+    [
+     "PR:000009054",
+     "neg"
+    ],
+    [
+     "PR:P01275",
+     "pos"
+    ]
+   ],
+   "homeostatic": true,
+   "extra_nodes": []
+  },
+  "action": "add"
+ },
+ {
+  "id": "the-body-s-systems-m45537-25",
+  "module": "m45537",
+  "source": "Examples of endocrine organs include the pancreas, which produces the hormones insulin and glucagon to regulate blood-glucose levels, the adrenal glands, which produce hormones such as epinephrine and norepinephrine that regulate responses to stress, and the thyroid gland, which produces thyroid hormones that regulate metabolic rates.",
+  "claim": "Epinephrine and norepinephrine regulate responses to stress",
+  "entities": [
+   {
+    "text": "epinephrine",
+    "curie": "CHEBI:33568",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "norepinephrine",
+    "curie": "CHEBI:33569",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "response to stress",
+    "curie": "GO:0006950",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45537-28",
+  "module": "m45537",
+  "source": "Examples of endocrine organs include the pancreas, which produces the hormones insulin and glucagon to regulate blood-glucose levels, the adrenal glands, which produce hormones such as epinephrine and norepinephrine that regulate responses to stress, and the thyroid gland, which produces thyroid hormones that regulate metabolic rates.",
+  "claim": "Thyroid hormones regulate metabolic rate",
+  "entities": [
+   {
+    "text": "thyroid hormone",
+    "curie": "CHEBI:60311",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "metabolic process",
+    "curie": "GO:0008152",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45537-55",
+  "module": "m45537",
+  "source": "If the pancreas is functioning properly, the blood-glucose level will be within a normal range.",
+  "claim": "If the pancreas functions properly, blood glucose after a glucose load is within a normal range",
+  "entities": [
+   {
+    "text": "pancreas",
+    "curie": "UBERON:0001264",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "glucose",
+    "curie": "CHEBI:17234",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "blood",
+    "curie": "UBERON:0000178",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "set_point_no_value",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45537-78",
+  "module": "m45537",
+  "source": "In up-regulation, the number of receptors increases in response to prolonged low hormone levels, making the cell more sensitive to the hormone and allowing for more cellular activity.",
+  "claim": "Up-regulation is an increase in receptor number in response to prolonged low hormone levels",
+  "entities": [
+   {
+    "text": "receptor",
+    "curie": "GO:0038023",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "hormone",
+    "curie": "CHEBI:24621",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "class_level_loop",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45537-79",
+  "module": "m45537",
+  "source": "In up-regulation, the number of receptors increases in response to prolonged low hormone levels, making the cell more sensitive to the hormone and allowing for more cellular activity.",
+  "claim": "Prolonged low hormone levels increase the number of receptors for that hormone",
+  "entities": [
+   {
+    "text": "hormone",
+    "curie": "CHEBI:24621",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "receptor",
+    "curie": "GO:0038023",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "ungrounded_entity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45537-80",
+  "module": "m45537",
+  "source": "In up-regulation, the number of receptors increases in response to prolonged low hormone levels, making the cell more sensitive to the hormone and allowing for more cellular activity.",
+  "claim": "More receptors make the cell more sensitive to the hormone",
+  "entities": [
+   {
+    "text": "receptor",
+    "curie": "GO:0038023",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "ungrounded_entity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45537-81",
+  "module": "m45537",
+  "source": "In up-regulation, the number of receptors increases in response to prolonged low hormone levels, making the cell more sensitive to the hormone and allowing for more cellular activity.",
+  "claim": "More receptors allow more cellular activity in response to the hormone",
+  "entities": [
+   {
+    "text": "receptor",
+    "curie": "GO:0038023",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "cellular response to hormone stimulus",
+    "curie": "GO:0032870",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45537-82",
+  "module": "m45537",
+  "source": "When the number of receptors decreases in response to rising hormone levels, called down-regulation, cellular activity is reduced.",
+  "claim": "Down-regulation is a decrease in receptor number in response to rising hormone levels",
+  "entities": [
+   {
+    "text": "receptor",
+    "curie": "GO:0038023",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "hormone",
+    "curie": "CHEBI:24621",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "class_level_loop",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45537-83",
+  "module": "m45537",
+  "source": "When the number of receptors decreases in response to rising hormone levels, called down-regulation, cellular activity is reduced.",
+  "claim": "Rising hormone levels decrease the number of receptors for that hormone",
+  "entities": [
+   {
+    "text": "hormone",
+    "curie": "CHEBI:24621",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "receptor",
+    "curie": "GO:0038023",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "ungrounded_entity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45537-84",
+  "module": "m45537",
+  "source": "When the number of receptors decreases in response to rising hormone levels, called down-regulation, cellular activity is reduced.",
+  "claim": "Fewer receptors reduce cellular activity in response to the hormone",
+  "entities": [
+   {
+    "text": "receptor",
+    "curie": "GO:0038023",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "cellular response to hormone stimulus",
+    "curie": "GO:0032870",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "ungrounded_entity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45537-134~loop",
+  "module": "m45537",
+  "source": "Calcitonin is released in response to rising calcium ion concentrations in the blood and has the effect of reducing those levels.",
+  "claim": "Rising blood calcium concentration stimulates calcitonin release",
+  "entities": [
+   {
+    "text": "calcium ion",
+    "curie": "CHEBI:29108",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "blood",
+    "curie": "UBERON:0000178",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "calcitonin",
+    "curie": "PR:P01258",
+    "ontology": "PR",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "homeostasis",
+   "quant": null,
+   "subject": "PR:P01258",
+   "relation": null,
+   "object": "CHEBI:29108",
+   "sign": null,
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000178",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": {
+   "sign": "neg",
+   "teddy": "TEDDY_0000034",
+   "held": "CHEBI:29108",
+   "regulators": [
+    [
+     "PR:000013429",
+     "pos"
+    ],
+    [
+     "PR:P01258",
+     "neg"
+    ]
+   ],
+   "homeostatic": true,
+   "extra_nodes": []
+  },
+  "action": "add"
+ },
+ {
+  "id": "the-body-s-systems-m45537-140~loop",
+  "module": "m45537",
+  "source": "Parathyroid hormone increases blood calcium concentrations when calcium ion levels fall below normal.",
+  "claim": "Parathyroid hormone increases blood calcium concentration",
+  "entities": [
+   {
+    "text": "parathyroid hormone",
+    "curie": "PR:000013429",
+    "ontology": "PR",
+    "verified": true
+   },
+   {
+    "text": "calcium ion",
+    "curie": "CHEBI:29108",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "blood",
+    "curie": "UBERON:0000178",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "homeostasis",
+   "quant": null,
+   "subject": "PR:000013429",
+   "relation": null,
+   "object": "CHEBI:29108",
+   "sign": null,
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000178",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": {
+   "sign": "neg",
+   "teddy": "TEDDY_0000034",
+   "held": "CHEBI:29108",
+   "regulators": [
+    [
+     "PR:000013429",
+     "pos"
+    ],
+    [
+     "PR:P01258",
+     "neg"
+    ]
+   ],
+   "homeostatic": true,
+   "extra_nodes": []
+  },
+  "action": "add"
+ },
+ {
+  "id": "the-body-s-systems-m45537-150",
+  "module": "m45537",
+  "source": "The main mineralocorticoid is aldosterone, which regulates the concentration of ions in urine, sweat, and saliva.",
+  "claim": "Aldosterone regulates ion concentration in urine",
+  "entities": [
+   {
+    "text": "aldosterone",
+    "curie": "CHEBI:27584",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "ion",
+    "curie": "CHEBI:24870",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "urine",
+    "curie": "UBERON:0001088",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "signless_regulation",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45537-151",
+  "module": "m45537",
+  "source": "The main mineralocorticoid is aldosterone, which regulates the concentration of ions in urine, sweat, and saliva.",
+  "claim": "Aldosterone regulates ion concentration in sweat",
+  "entities": [
+   {
+    "text": "aldosterone",
+    "curie": "CHEBI:27584",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "ion",
+    "curie": "CHEBI:24870",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "sweat",
+    "curie": "UBERON:0001089",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45537-152",
+  "module": "m45537",
+  "source": "The main mineralocorticoid is aldosterone, which regulates the concentration of ions in urine, sweat, and saliva.",
+  "claim": "Aldosterone regulates ion concentration in saliva",
+  "entities": [
+   {
+    "text": "aldosterone",
+    "curie": "CHEBI:27584",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "ion",
+    "curie": "CHEBI:24870",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "saliva",
+    "curie": "UBERON:0001836",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45537-157",
+  "module": "m45537",
+  "source": "The glucocorticoids maintain proper blood-glucose levels between meals.",
+  "claim": "Glucocorticoids maintain blood-glucose levels between meals",
+  "entities": [
+   {
+    "text": "glucocorticoid",
+    "curie": "CHEBI:24261",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "glucose",
+    "curie": "CHEBI:17234",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "blood",
+    "curie": "UBERON:0000178",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "homeostasis",
+   "quant": null,
+   "subject": "CHEBI:24261",
+   "relation": null,
+   "object": "CHEBI:17234",
+   "sign": null,
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000178",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "loop": null,
+  "action": "replace"
+ },
+ {
+  "id": "the-body-s-systems-m45537-198",
+  "module": "m45537",
+  "source": "These hormones regulate blood-glucose levels.",
+  "claim": "Glucagon and insulin regulate blood-glucose levels",
+  "entities": [
+   {
+    "text": "glucagon",
+    "curie": "PR:P01275",
+    "ontology": "PR",
+    "verified": true
+   },
+   {
+    "text": "insulin",
+    "curie": "PR:000009054",
+    "ontology": "PR",
+    "verified": true
+   },
+   {
+    "text": "glucose",
+    "curie": "CHEBI:17234",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "blood",
+    "curie": "UBERON:0000178",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "glucose homeostasis",
+    "curie": "GO:0042593",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "homeostasis",
+   "quant": null,
+   "subject": "PR:000009054",
+   "relation": null,
+   "object": "CHEBI:17234",
+   "sign": null,
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000178",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": {
+   "sign": "neg",
+   "teddy": "TEDDY_0000034",
+   "held": "CHEBI:17234",
+   "regulators": [
+    [
+     "PR:000009054",
+     "neg"
+    ],
+    [
+     "PR:P01275",
+     "pos"
+    ]
+   ],
+   "homeostatic": true,
+   "extra_nodes": []
+  },
+  "action": "replace"
+ },
+ {
+  "id": "the-body-s-systems-m45537-198#2",
+  "module": "m45537",
+  "source": "These hormones regulate blood-glucose levels.",
+  "claim": "Glucagon and insulin regulate blood-glucose levels",
+  "entities": [
+   {
+    "text": "glucagon",
+    "curie": "PR:P01275",
+    "ontology": "PR",
+    "verified": true
+   },
+   {
+    "text": "insulin",
+    "curie": "PR:000009054",
+    "ontology": "PR",
+    "verified": true
+   },
+   {
+    "text": "glucose",
+    "curie": "CHEBI:17234",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "blood",
+    "curie": "UBERON:0000178",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "glucose homeostasis",
+    "curie": "GO:0042593",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "homeostasis",
+   "quant": null,
+   "subject": "PR:P01275",
+   "relation": null,
+   "object": "CHEBI:17234",
+   "sign": null,
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000178",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": {
+   "sign": "neg",
+   "teddy": "TEDDY_0000034",
+   "held": "CHEBI:17234",
+   "regulators": [
+    [
+     "PR:000009054",
+     "neg"
+    ],
+    [
+     "PR:P01275",
+     "pos"
+    ]
+   ],
+   "homeostatic": true,
+   "extra_nodes": []
+  },
+  "action": "add"
+ },
+ {
+  "id": "the-body-s-systems-m45537-226",
+  "module": "m45537",
+  "source": "The heart has endocrine cells in the walls of the atria that release a hormone in response to increased blood volume.",
+  "claim": "Increased blood volume stimulates atrial endocrine cells to release a hormone",
+  "entities": [
+   {
+    "text": "blood volume",
+    "curie": "OBA:0003648",
+    "ontology": "other",
+    "verified": true
+   },
+   {
+    "text": "cardiac atrium",
+    "curie": "UBERON:0002081",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "atrial natriuretic peptide",
+    "curie": "PR:P01160",
+    "ontology": "PR",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "OBA:0003648",
+   "relation": null,
+   "object": "PR:P01160",
+   "sign": "pos",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "replace"
+ },
+ {
+  "id": "the-body-s-systems-m45537-226~loop",
+  "module": "m45537",
+  "source": "The heart has endocrine cells in the walls of the atria that release a hormone in response to increased blood volume.",
+  "claim": "Increased blood volume stimulates atrial endocrine cells to release a hormone",
+  "entities": [
+   {
+    "text": "blood volume",
+    "curie": "OBA:0003648",
+    "ontology": "other",
+    "verified": true
+   },
+   {
+    "text": "cardiac atrium",
+    "curie": "UBERON:0002081",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "atrial natriuretic peptide",
+    "curie": "PR:P01160",
+    "ontology": "PR",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "homeostasis",
+   "quant": null,
+   "subject": "PR:P01160",
+   "relation": null,
+   "object": "OBA:0003648",
+   "sign": null,
+   "target": "phenotype",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": {
+   "sign": "neg",
+   "teddy": "TEDDY_0000034",
+   "held": "OBA:0003648",
+   "regulators": [
+    [
+     "PR:P01160",
+     "neg"
+    ]
+   ],
+   "homeostatic": true,
+   "extra_nodes": []
+  },
+  "action": "add"
+ },
+ {
+  "id": "the-body-s-systems-m45537-236",
+  "module": "m45537",
+  "source": "Two of these hormones regulate ion concentrations and blood volume or pressure.",
+  "claim": "Two kidney hormones regulate ion concentration and blood volume or pressure",
+  "entities": [
+   {
+    "text": "kidney",
+    "curie": "UBERON:0002113",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "hormone",
+    "curie": "CHEBI:24621",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "ion homeostasis",
+    "curie": "GO:0050801",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "blood pressure",
+    "curie": "OBA:VT0000183",
+    "ontology": "other",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "class_level_loop",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45537-238~loop",
+  "module": "m45537",
+  "source": "Erythropoietin (EPO) is released by kidneys in response to low oxygen levels.",
+  "claim": "Low oxygen levels stimulate erythropoietin release",
+  "entities": [
+   {
+    "text": "oxygen",
+    "curie": "CHEBI:15379",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "erythropoietin",
+    "curie": "PR:000007141",
+    "ontology": "PR",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "homeostasis",
+   "quant": null,
+   "subject": "PR:000007141",
+   "relation": null,
+   "object": "CHEBI:15379",
+   "sign": null,
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000178",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "loop": {
+   "sign": "neg",
+   "teddy": "TEDDY_0000034",
+   "held": "CHEBI:15379",
+   "regulators": [
+    [
+     "PR:000007141",
+     "pos"
+    ]
+   ],
+   "homeostatic": true,
+   "extra_nodes": [
+    "GO:0030218"
+   ]
+  },
+  "action": "add"
+ },
+ {
+  "id": "the-body-s-systems-m45537-239",
+  "module": "m45537",
+  "source": "Erythropoietin (EPO) is released by kidneys in response to low oxygen levels.",
+  "claim": "Erythropoietin is abbreviated EPO",
+  "entities": [
+   {
+    "text": "EPO",
+    "curie": "PR:000007141",
+    "ontology": "PR",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "definition_only",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45537-251~loop",
+  "module": "m45537",
+  "source": "Adipose tissue, or fat tissue, produces the hormone leptin in response to food intake.",
+  "claim": "Food intake stimulates leptin production",
+  "entities": [
+   {
+    "text": "food intake",
+    "curie": "GO:0042755",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "leptin",
+    "curie": "PR:000009758",
+    "ontology": "PR",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "homeostasis",
+   "quant": null,
+   "subject": "PR:000009758",
+   "relation": null,
+   "object": "GO:0042755",
+   "sign": null,
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "loop": {
+   "sign": "neg",
+   "teddy": "TEDDY_0000034",
+   "held": "GO:0042755",
+   "regulators": [
+    [
+     "PR:000009758",
+     "neg"
+    ]
+   ],
+   "homeostatic": true,
+   "extra_nodes": []
+  },
+  "action": "add"
+ },
+ {
+  "id": "the-body-s-systems-m45537-252",
+  "module": "m45537",
+  "source": "Adipose tissue, or fat tissue, produces the hormone leptin in response to food intake.",
+  "claim": "Adipose tissue is also called fat tissue",
+  "entities": [
+   {
+    "text": "fat tissue",
+    "curie": "UBERON:0001013",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "definition_only",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45537-253",
+  "module": "m45537",
+  "source": "Leptin produces a feeling of satiety after eating, reducing the urge for further eating.",
+  "claim": "Leptin produces a feeling of satiety after eating",
+  "entities": [
+   {
+    "text": "leptin",
+    "curie": "PR:000009758",
+    "ontology": "PR",
+    "verified": true
+   },
+   {
+    "text": "satiety",
+    "curie": "GO:0032098",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "ungrounded_entity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45537-254",
+  "module": "m45537",
+  "source": "Leptin produces a feeling of satiety after eating, reducing the urge for further eating.",
+  "claim": "Leptin reduces the urge for further eating",
+  "entities": [
+   {
+    "text": "leptin",
+    "curie": "PR:000009758",
+    "ontology": "PR",
+    "verified": true
+   },
+   {
+    "text": "feeding behavior",
+    "curie": "GO:0007631",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "PR:000009758",
+   "relation": null,
+   "object": "GO:0042755",
+   "sign": "neg",
+   "target": "process",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "replace"
+ },
+ {
+  "id": "the-body-s-systems-m45537-255",
+  "module": "m45537",
+  "source": "Hormone production and release are primarily controlled by negative feedback, as described in the discussion on homeostasis.",
+  "claim": "Hormone production and release are primarily controlled by negative feedback",
+  "entities": [
+   {
+    "text": "hormone secretion",
+    "curie": "GO:0046879",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "class_level_loop",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45537-256",
+  "module": "m45537",
+  "source": "In this way, the concentration of hormones in blood is maintained within a narrow range.",
+  "claim": "Negative feedback keeps blood hormone concentration within a narrow range",
+  "entities": [
+   {
+    "text": "hormone",
+    "curie": "CHEBI:24621",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "blood",
+    "curie": "UBERON:0000178",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "class_level_loop",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45537-258",
+  "module": "m45537",
+  "source": "Increasing levels of these hormones in the blood then give feedback to the hypothalamus and anterior pituitary to inhibit further signaling to the thyroid gland ().",
+  "claim": "Rising blood thyroid hormone inhibits the hypothalamus and anterior pituitary from further signaling to the thyroid",
+  "entities": [
+   {
+    "text": "thyroid hormone",
+    "curie": "CHEBI:60311",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "hypothalamus",
+    "curie": "UBERON:0001898",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "anterior pituitary",
+    "curie": "UBERON:0002196",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "thyroid gland",
+    "curie": "UBERON:0002046",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "CHEBI:60311",
+   "relation": null,
+   "object": "PR:P01222",
+   "sign": "neg",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "replace"
+ },
+ {
+  "id": "the-body-s-systems-m45537-258#2",
+  "module": "m45537",
+  "source": "Increasing levels of these hormones in the blood then give feedback to the hypothalamus and anterior pituitary to inhibit further signaling to the thyroid gland ().",
+  "claim": "Rising blood thyroid hormone inhibits the hypothalamus and anterior pituitary from further signaling to the thyroid",
+  "entities": [
+   {
+    "text": "thyroid hormone",
+    "curie": "CHEBI:60311",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "hypothalamus",
+    "curie": "UBERON:0001898",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "anterior pituitary",
+    "curie": "UBERON:0002196",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "thyroid gland",
+    "curie": "UBERON:0002046",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "CHEBI:60311",
+   "relation": null,
+   "object": "CHEBI:35940",
+   "sign": "neg",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "medium"
+  },
+  "loop": null,
+  "action": "add"
+ },
+ {
+  "id": "the-body-s-systems-m45537-258~loop",
+  "module": "m45537",
+  "source": "Increasing levels of these hormones in the blood then give feedback to the hypothalamus and anterior pituitary to inhibit further signaling to the thyroid gland ().",
+  "claim": "Rising blood thyroid hormone inhibits the hypothalamus and anterior pituitary from further signaling to the thyroid",
+  "entities": [
+   {
+    "text": "thyroid hormone",
+    "curie": "CHEBI:60311",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "hypothalamus",
+    "curie": "UBERON:0001898",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "anterior pituitary",
+    "curie": "UBERON:0002196",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "thyroid gland",
+    "curie": "UBERON:0002046",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "homeostasis",
+   "quant": null,
+   "subject": "UBERON:0002196",
+   "relation": null,
+   "object": "CHEBI:60311",
+   "sign": null,
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0002046",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": {
+   "sign": "neg",
+   "teddy": "TEDDY_0000034",
+   "held": "CHEBI:60311",
+   "regulators": [
+    [
+     "UBERON:0002196",
+     "pos"
+    ],
+    [
+     "PR:P01222",
+     "pos"
+    ]
+   ],
+   "homeostatic": true,
+   "extra_nodes": []
+  },
+  "action": "add"
+ },
+ {
+  "id": "the-body-s-systems-m45537-260",
+  "module": "m45537",
+  "source": "Increasing levels of these hormones in the blood result in feedback to the hypothalamus and anterior pituitary to inhibit further signaling to the thyroid gland.",
+  "claim": "Rising blood thyroid hormone inhibits hypothalamic and anterior pituitary signaling to the thyroid",
+  "entities": [
+   {
+    "text": "thyroid hormone",
+    "curie": "CHEBI:60311",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "hypothalamus",
+    "curie": "UBERON:0001898",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "anterior pituitary",
+    "curie": "UBERON:0002196",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "CHEBI:18258",
+   "relation": null,
+   "object": "PR:P01222",
+   "sign": "neg",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "replace"
+ },
+ {
+  "id": "the-body-s-systems-m45537-260#2",
+  "module": "m45537",
+  "source": "Increasing levels of these hormones in the blood result in feedback to the hypothalamus and anterior pituitary to inhibit further signaling to the thyroid gland.",
+  "claim": "Rising blood thyroid hormone inhibits hypothalamic and anterior pituitary signaling to the thyroid",
+  "entities": [
+   {
+    "text": "thyroid hormone",
+    "curie": "CHEBI:60311",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "hypothalamus",
+    "curie": "UBERON:0001898",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "anterior pituitary",
+    "curie": "UBERON:0002196",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "CHEBI:30660",
+   "relation": null,
+   "object": "PR:P01222",
+   "sign": "neg",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "add"
+ },
+ {
+  "id": "the-body-s-systems-m45537-260~loop",
+  "module": "m45537",
+  "source": "Increasing levels of these hormones in the blood result in feedback to the hypothalamus and anterior pituitary to inhibit further signaling to the thyroid gland.",
+  "claim": "Rising blood thyroid hormone inhibits hypothalamic and anterior pituitary signaling to the thyroid",
+  "entities": [
+   {
+    "text": "thyroid hormone",
+    "curie": "CHEBI:60311",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "hypothalamus",
+    "curie": "UBERON:0001898",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "anterior pituitary",
+    "curie": "UBERON:0002196",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "homeostasis",
+   "quant": null,
+   "subject": "PR:P01222",
+   "relation": null,
+   "object": "CHEBI:18258",
+   "sign": null,
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0002046",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": {
+   "sign": "neg",
+   "teddy": "TEDDY_0000034",
+   "held": "CHEBI:18258",
+   "regulators": [
+    [
+     "PR:P01222",
+     "pos"
+    ],
+    [
+     "UBERON:0002196",
+     "pos"
+    ]
+   ],
+   "homeostatic": true,
+   "extra_nodes": []
+  },
+  "action": "add"
+ },
+ {
+  "id": "the-body-s-systems-m45537-262",
+  "module": "m45537",
+  "source": "Goiter, a disease caused by iodine deficiency, results in the inability of the thyroid gland to form T3 and T4.",
+  "claim": "Iodine deficiency causes goiter",
+  "entities": [
+   {
+    "text": "iodine deficiency",
+    "curie": null,
+    "ontology": "other",
+    "verified": false
+   },
+   {
+    "text": "goiter",
+    "curie": "MONDO:0005397",
+    "ontology": "MONDO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "ungrounded_entity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45537-263",
+  "module": "m45537",
+  "source": "Goiter, a disease caused by iodine deficiency, results in the inability of the thyroid gland to form T3 and T4.",
+  "claim": "Goiter results in inability of the thyroid gland to form T3 and T4",
+  "entities": [
+   {
+    "text": "goiter",
+    "curie": "MONDO:0005397",
+    "ontology": "MONDO",
+    "verified": true
+   },
+   {
+    "text": "thyroid gland",
+    "curie": "UBERON:0002046",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "triiodothyronine",
+    "curie": "CHEBI:18258",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "thyroxine",
+    "curie": "CHEBI:30660",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "MONDO:0005397",
+   "relation": null,
+   "object": "CHEBI:30660",
+   "sign": "neg",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "replace"
+ },
+ {
+  "id": "the-body-s-systems-m45537-263#2",
+  "module": "m45537",
+  "source": "Goiter, a disease caused by iodine deficiency, results in the inability of the thyroid gland to form T3 and T4.",
+  "claim": "Goiter results in inability of the thyroid gland to form T3 and T4",
+  "entities": [
+   {
+    "text": "goiter",
+    "curie": "MONDO:0005397",
+    "ontology": "MONDO",
+    "verified": true
+   },
+   {
+    "text": "thyroid gland",
+    "curie": "UBERON:0002046",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "triiodothyronine",
+    "curie": "CHEBI:18258",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "thyroxine",
+    "curie": "CHEBI:30660",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "MONDO:0005397",
+   "relation": null,
+   "object": "CHEBI:18258",
+   "sign": "neg",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "low"
+  },
+  "loop": null,
+  "action": "add"
+ },
+ {
+  "id": "the-body-s-systems-m45537-310",
+  "module": "m45537",
+  "source": "Goiter, a disease caused by iodine deficiency, results in the inability of the thyroid gland to form T3 and T4.",
+  "claim": "Iodine deficiency causes goiter",
+  "entities": [
+   {
+    "text": "iodine deficiency",
+    "curie": null,
+    "ontology": "other",
+    "verified": false
+   },
+   {
+    "text": "goiter",
+    "curie": "MONDO:0005397",
+    "ontology": "MONDO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "ungrounded_entity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45537-311",
+  "module": "m45537",
+  "source": "Goiter, a disease caused by iodine deficiency, results in the inability of the thyroid gland to form T3 and T4.",
+  "claim": "Goiter results in inability of the thyroid gland to form T3 and T4",
+  "entities": [
+   {
+    "text": "goiter",
+    "curie": "MONDO:0005397",
+    "ontology": "MONDO",
+    "verified": true
+   },
+   {
+    "text": "thyroid gland",
+    "curie": "UBERON:0002046",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "triiodothyronine",
+    "curie": "CHEBI:18258",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "thyroxine",
+    "curie": "CHEBI:30660",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "MONDO:0005397",
+   "relation": null,
+   "object": "CHEBI:30660",
+   "sign": "neg",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "replace"
+ },
+ {
+  "id": "the-body-s-systems-m45537-264",
+  "module": "m45537",
+  "source": "The body typically attempts to compensate by producing greater amounts of TSH.",
+  "claim": "In goiter the body compensates by producing more TSH",
+  "entities": [
+   {
+    "text": "goiter",
+    "curie": "MONDO:0005397",
+    "ontology": "MONDO",
+    "verified": true
+   },
+   {
+    "text": "thyroid-stimulating hormone",
+    "curie": "PR:P01222",
+    "ontology": "PR",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "MONDO:0005397",
+   "relation": null,
+   "object": "PR:P01222",
+   "sign": "pos",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "replace"
+ },
+ {
+  "id": "the-body-s-systems-m45537-312",
+  "module": "m45537",
+  "source": "The body typically attempts to compensate by producing greater amounts of TSH.",
+  "claim": "In goiter the body compensates by producing more TSH",
+  "entities": [
+   {
+    "text": "goiter",
+    "curie": "MONDO:0005397",
+    "ontology": "MONDO",
+    "verified": true
+   },
+   {
+    "text": "thyroid-stimulating hormone",
+    "curie": "PR:P01222",
+    "ontology": "PR",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "effect",
+   "quant": null,
+   "subject": "MONDO:0005397",
+   "relation": null,
+   "object": "PR:P01222",
+   "sign": "pos",
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "replace"
+ },
+ {
+  "id": "the-body-s-systems-m45537-268",
+  "module": "m45537",
+  "source": "Hormone levels are primarily controlled through negative feedback, in which rising levels of a hormone inhibit its further release.",
+  "claim": "Hormone levels are primarily controlled by negative feedback",
+  "entities": [
+   {
+    "text": "hormone secretion",
+    "curie": "GO:0046879",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "class_level_loop",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45537-269",
+  "module": "m45537",
+  "source": "Hormone levels are primarily controlled through negative feedback, in which rising levels of a hormone inhibit its further release.",
+  "claim": "Rising levels of a hormone inhibit its further release",
+  "entities": [
+   {
+    "text": "hormone",
+    "curie": "CHEBI:24621",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "hormone secretion",
+    "curie": "GO:0046879",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "class_level_loop",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45537-325",
+  "module": "m45537",
+  "source": "The number of receptors can increase in response to rising hormone levels, called up-regulation, making the cell more sensitive to the hormone and allowing for more cellular activity.",
+  "claim": "Up-regulation is an increase in receptor number in response to rising hormone levels",
+  "entities": [
+   {
+    "text": "receptor",
+    "curie": "GO:0038023",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "hormone",
+    "curie": "CHEBI:24621",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "class_level_loop",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45537-326",
+  "module": "m45537",
+  "source": "The number of receptors can increase in response to rising hormone levels, called up-regulation, making the cell more sensitive to the hormone and allowing for more cellular activity.",
+  "claim": "Rising hormone levels can increase the number of receptors",
+  "entities": [
+   {
+    "text": "hormone",
+    "curie": "CHEBI:24621",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "receptor",
+    "curie": "GO:0038023",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "ungrounded_entity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45537-327",
+  "module": "m45537",
+  "source": "The number of receptors can increase in response to rising hormone levels, called up-regulation, making the cell more sensitive to the hormone and allowing for more cellular activity.",
+  "claim": "More receptors make the cell more sensitive to the hormone and allow more cellular activity",
+  "entities": [
+   {
+    "text": "receptor",
+    "curie": "GO:0038023",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "cellular response to hormone stimulus",
+    "curie": "GO:0032870",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45537-328",
+  "module": "m45537",
+  "source": "The number of receptors can also decrease in response to rising hormone levels, called down-regulation, leading to reduced cellular activity.",
+  "claim": "Down-regulation is a decrease in receptor number in response to rising hormone levels",
+  "entities": [
+   {
+    "text": "receptor",
+    "curie": "GO:0038023",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "hormone",
+    "curie": "CHEBI:24621",
+    "ontology": "CHEBI",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "class_level_loop",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45537-329",
+  "module": "m45537",
+  "source": "The number of receptors can also decrease in response to rising hormone levels, called down-regulation, leading to reduced cellular activity.",
+  "claim": "Rising hormone levels can decrease the number of receptors",
+  "entities": [
+   {
+    "text": "hormone",
+    "curie": "CHEBI:24621",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "receptor",
+    "curie": "GO:0038023",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "ungrounded_entity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45537-330",
+  "module": "m45537",
+  "source": "The number of receptors can also decrease in response to rising hormone levels, called down-regulation, leading to reduced cellular activity.",
+  "claim": "Fewer receptors lead to reduced cellular activity",
+  "entities": [
+   {
+    "text": "receptor",
+    "curie": "GO:0038023",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "cellular response to hormone stimulus",
+    "curie": "GO:0032870",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "ungrounded_entity",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45537-333",
+  "module": "m45537",
+  "source": "Blood-glucose levels are regulated by hormones produced by the pancreas: insulin and glucagon.",
+  "claim": "Insulin and glucagon from the pancreas regulate blood-glucose levels",
+  "entities": [
+   {
+    "text": "insulin",
+    "curie": "PR:000009054",
+    "ontology": "PR",
+    "verified": true
+   },
+   {
+    "text": "glucagon",
+    "curie": "PR:P01275",
+    "ontology": "PR",
+    "verified": true
+   },
+   {
+    "text": "pancreas",
+    "curie": "UBERON:0001264",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "glucose",
+    "curie": "CHEBI:17234",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "blood",
+    "curie": "UBERON:0000178",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "homeostasis",
+   "quant": null,
+   "subject": "PR:000009054",
+   "relation": null,
+   "object": "CHEBI:17234",
+   "sign": null,
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000178",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": {
+   "sign": "neg",
+   "teddy": "TEDDY_0000034",
+   "held": "CHEBI:17234",
+   "regulators": [
+    [
+     "PR:000009054",
+     "neg"
+    ],
+    [
+     "PR:P01275",
+     "pos"
+    ]
+   ],
+   "homeostatic": true,
+   "extra_nodes": []
+  },
+  "action": "replace"
+ },
+ {
+  "id": "the-body-s-systems-m45537-333#2",
+  "module": "m45537",
+  "source": "Blood-glucose levels are regulated by hormones produced by the pancreas: insulin and glucagon.",
+  "claim": "Insulin and glucagon from the pancreas regulate blood-glucose levels",
+  "entities": [
+   {
+    "text": "insulin",
+    "curie": "PR:000009054",
+    "ontology": "PR",
+    "verified": true
+   },
+   {
+    "text": "glucagon",
+    "curie": "PR:P01275",
+    "ontology": "PR",
+    "verified": true
+   },
+   {
+    "text": "pancreas",
+    "curie": "UBERON:0001264",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "glucose",
+    "curie": "CHEBI:17234",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "blood",
+    "curie": "UBERON:0000178",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "homeostasis",
+   "quant": null,
+   "subject": "PR:P01275",
+   "relation": null,
+   "object": "CHEBI:17234",
+   "sign": null,
+   "target": "amount",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": "UBERON:0000178",
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": {
+   "sign": "neg",
+   "teddy": "TEDDY_0000034",
+   "held": "CHEBI:17234",
+   "regulators": [
+    [
+     "PR:000009054",
+     "neg"
+    ],
+    [
+     "PR:P01275",
+     "pos"
+    ]
+   ],
+   "homeostatic": true,
+   "extra_nodes": []
+  },
+  "action": "add"
+ },
+ {
+  "id": "the-body-s-systems-m45539-84",
+  "module": "m45539",
+  "source": "This opening allows sodium ions to enter the neuron and results in depolarization of the membrane—a decrease in the voltage across the neuron membrane.",
+  "claim": "Depolarization is a decrease in the voltage across the neuron membrane",
+  "entities": [
+   {
+    "text": "membrane depolarization",
+    "curie": "GO:0051899",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "definition_only",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45539-88",
+  "module": "m45539",
+  "source": "If it is strong enough (that is, if the threshold of excitation, a depolarization to around –60mV is reached), then depolarization creates a positive feedback loop: as more Na+ ions enter the cell, the axon becomes further depolarized, opening even more sodium channels at further distances from the cell body.",
+  "claim": "Above threshold, Na+ entry further depolarizes the axon, which opens more sodium channels (positive feedback)",
+  "entities": [
+   {
+    "text": "sodium ion",
+    "curie": "CHEBI:29101",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "membrane depolarization",
+    "curie": "GO:0051899",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "voltage-gated sodium channel activity",
+    "curie": "GO:0005248",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "axon",
+    "curie": "GO:0030424",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "positive_loop",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": {
+   "sign": "pos",
+   "teddy": "TEDDY_0000035",
+   "held": "GO:0051899",
+   "regulators": [
+    [
+     "GO:0005248",
+     "pos"
+    ],
+    [
+     "CHEBI:29101",
+     "pos"
+    ]
+   ],
+   "homeostatic": false,
+   "extra_nodes": []
+  },
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45539-96",
+  "module": "m45539",
+  "source": "This change in the membrane potential causes voltage-gated K+ channels to open, and K+ begins to leave the cell, repolarizing it.",
+  "claim": "K+ leaves the cell through open voltage-gated K+ channels",
+  "entities": [
+   {
+    "text": "potassium ion",
+    "curie": "CHEBI:29103",
+    "ontology": "CHEBI",
+    "verified": true
+   },
+   {
+    "text": "voltage-gated potassium channel activity",
+    "curie": "GO:0005249",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "process_description",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45539-102",
+  "module": "m45539",
+  "source": "It travels in only one direction because the sodium channels have been inactivated and unavailable until the membrane potential is near the resting potential again; at this point they are reset to closed and can be opened again.",
+  "claim": "Inactivated sodium channels prevent the action potential from travelling backwards",
+  "entities": [
+   {
+    "text": "voltage-gated sodium channel activity",
+    "curie": "GO:0005248",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "action potential",
+    "curie": "GO:0001508",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "process_description",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45539-103",
+  "module": "m45539",
+  "source": "It travels in only one direction because the sodium channels have been inactivated and unavailable until the membrane potential is near the resting potential again; at this point they are reset to closed and can be opened again.",
+  "claim": "Sodium channels remain unavailable until the membrane potential is near resting, then reset to closed and can reopen",
+  "entities": [
+   {
+    "text": "voltage-gated sodium channel activity",
+    "curie": "GO:0005248",
+    "ontology": "GO",
+    "verified": true
+   },
+   {
+    "text": "resting membrane potential",
+    "curie": "GO:0060075",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "sequence_or_ordering",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45539-230",
+  "module": "m45539",
+  "source": "It receives sensory and motor inputs from the body and also receives feedback from the cortex.",
+  "claim": "The thalamus receives sensory and motor inputs from the body",
+  "entities": [
+   {
+    "text": "thalamus",
+    "curie": "UBERON:0001897",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "sensory perception",
+    "curie": "GO:0007600",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "other",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45539-231",
+  "module": "m45539",
+  "source": "It receives sensory and motor inputs from the body and also receives feedback from the cortex.",
+  "claim": "The thalamus receives feedback from the cortex",
+  "entities": [
+   {
+    "text": "thalamus",
+    "curie": "UBERON:0001897",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "cerebral cortex",
+    "curie": "UBERON:0000956",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "not_homeostasis",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45539-232",
+  "module": "m45539",
+  "source": "This feedback mechanism can modulate conscious awareness of sensory and motor inputs depending on the attention and arousal state of the animal.",
+  "claim": "Cortico-thalamic feedback modulates conscious awareness of sensory and motor inputs depending on attention and arousal",
+  "entities": [
+   {
+    "text": "thalamus",
+    "curie": "UBERON:0001897",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "cerebral cortex",
+    "curie": "UBERON:0000956",
+    "ontology": "UBERON",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "none",
+   "quant": null,
+   "subject": null,
+   "relation": null,
+   "object": null,
+   "sign": null,
+   "target": null,
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": "not_homeostasis",
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": null,
+  "action": "none"
+ },
+ {
+  "id": "the-body-s-systems-m45539-236",
+  "module": "m45539",
+  "source": "Among other functions, the hypothalamus is the body’s thermostat—it makes sure the body temperature is kept at appropriate levels.",
+  "claim": "The hypothalamus keeps body temperature at appropriate levels (thermostat)",
+  "entities": [
+   {
+    "text": "hypothalamus",
+    "curie": "UBERON:0001898",
+    "ontology": "UBERON",
+    "verified": true
+   },
+   {
+    "text": "thermoregulation",
+    "curie": "GO:0001659",
+    "ontology": "GO",
+    "verified": true
+   }
+  ],
+  "m3": {
+   "ctor": "homeostasis",
+   "quant": null,
+   "subject": "UBERON:0001898",
+   "relation": null,
+   "object": "OBA:VT0005535",
+   "sign": null,
+   "target": "phenotype",
+   "mediator": null,
+   "mediator_target": null,
+   "n": null,
+   "lo": null,
+   "hi": null,
+   "unit": null,
+   "quality": null,
+   "context": {
+    "taxon": null,
+    "anatomy": null,
+    "cellType": null,
+    "component": null,
+    "stage": null,
+    "condition": null
+   },
+   "blocker": null,
+   "curie_changes": [],
+   "confidence": "high"
+  },
+  "loop": {
+   "sign": "neg",
+   "teddy": "TEDDY_0000034",
+   "held": "OBA:VT0005535",
+   "regulators": [
+    [
+     "UBERON:0001898",
+     "neg"
+    ]
+   ],
+   "homeostatic": true,
+   "extra_nodes": []
+  },
+  "action": "replace"
+ }
+]
