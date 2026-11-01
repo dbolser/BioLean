@@ -1,0 +1,52 @@
+ROW	S01	PASS	SIGNOR and GO-CAM give one claim (same: yes); fused b=0.92 d=0.00 established, PMIDs [2550426, 16956584, 14986111]	S01
+ROW	S02	FAIL	derives preproinsulin (human) [PR:P01308] →+ amount of glucose [CHEBI:17234] at b=0.64 d=0.00 unsupported; textbook m45537-53 says insulin lowers blood glucose; nothing flags the clash	S02
+ROW	S03	SILENT	subject calcium vs glucose (meets: no); no rule makes Ca2+ a mediator; BTO beta cell dropped	S03
+ROW	S04	PASS	no fusion, no contradiction: subject CHEBI:17925 vs CHEBI:17234 (core is_a links them: no); right for the wrong reason	S04
+ROW	S05	PASS	SIGNOR and GO-CAM fuse: b=0.92 d=0.00 established; subject is the textbook's glucagon entity (meets: yes)	S05
+ROW	S06	PASS	SIGNOR and GO-CAM fuse: b=0.88 d=0.00 established; meets textbook PTH PR:000013429: no	S06
+ROW	S07	FAIL	b=0.80 d=0.00 established on PMID [1560825], a rat V1a receptor paper	S07
+ROW	S08	SILENT	vasopressin (CHEBI:9937) and AVP (PR:P01185) claims: same no; the core's is_a links only the two ChEBI ids	S08
+ROW	S09	SILENT	protein SCN1A vs GO function GO:0005248: meets no; prototype enablesInherit fuses them at b=0.88 d=0.00 established	S09
+ROW	S10	SILENT	SIGNOR-C264 has no OBO id: same claim no; with the M1 complex map: same yes, fused b=0.88 d=0.00 established	S10
+ROW	S11	SILENT	M0's complex placeholder cannot be an activity target (decide), so M0 drops the edge; mapped to GO:0046933 it is stated (b=0.80 d=0.00 established) but meets textbook m45452-91: no	S11
+ROW	S12	FAIL	b=0.80 d=0.00 established for metformin raising G6PC1; the cited sentence says it lowers it; PCK1 edge from the same paper b=0.80 d=0.00 established; with PubTator3's 10 signed items (option I): b=0.47 d=0.41 contested	S12
+ROW	S13	PASS	stated as Claim.rel causally influences, b=0.80 d=0.00 established; does not chain with effects	S13
+ROW	S14	SILENT	chain b=0.64 d=0.00 unsupported rests on PMIDs [31160049] twice; sharedAxioms = []; prototype PMID lint: [31160049]	S14
+ROW	G02	SILENT	chain to preproinsulin (human) [PR:P01308] →+ activity of solute carrier family 2, facilitated glucose transporter member 4 (human) [PR:P14672]: b=0.40 d=0.00 unsupported; stops at an activity; the model's GLUT4 fact is solute carrier family 2, facilitated glucose transporter member 4 (human) [PR:P14672] involved in glucose homeostasis [GO:0042593]; prototype is_a + widenProcess turn the textbook claim into preproinsulin (human) [PR:P01308] →+ D-glucose transmembrane transport [GO:1904659] (b=0.80 d=0.00 established), which the chain still does not meet	G02
+ROW	G03	PASS	chain derives calcium [CHEBI:29108] →− activity of parathyroid hormone (human) [PR:P01270]: right sign, b=0.51 d=0.00 unsupported	G03
+ROW	G04	SILENT	G03 ends in activity of PR:P01270; textbook m45537-141 is amount of PR:000013429 in blood: same no; PMID 38632411 on two steps, sharedAxioms = []	G03
+ROW	G05	SILENT	chain to parathyroid hormone (human) [PR:P01270] →+ activity of transient receptor potential cation channel subfamily V member 5 (human) [PR:Q9NQA5]: b=0.40 d=0.00 unsupported; no step to blood calcium; subject meets textbook PTH: no	G05
+ROW	G06	FAIL	b=0.80 d=0.00 established on PMID [11029056], a paper on MAP2c localisation	G06
+ROW	G07	FAIL	SIGNOR and GO-CAM fuse: b=0.88 d=0.00 established, up from b=0.80 d=0.00 established on the good paper alone; the axioms keep S07's wrong paper: PMIDs [1560825, 33742150]	G07
+ROW	G08	PASS	same subject as textbook calcitonin (meets: yes); no fusion, no contradiction	G08
+ROW	G09	FAIL	both lifted to class level: cytoplasm b=0.80 d=0.00 established, extracellular b=0.80 d=0.00 established	G09
+ROW	G10	FAIL	zebrafish term accepted, b=0.80 d=0.00 established; no link to CL:0000169	G10
+ROW	G11	SILENT	proton transmembrane transporter activity ⊓ enabled by (protein-containing complex) [GO:0015078&RO:0002333=(GO:0032991)] has output ATP(4-) [CHEBI:30616]: subject and object differ from textbook m45439-74; core is_a ATP(4-) to ATP: no	G11
+ROW	G12	SILENT	unsigned rel vs textbook m45452-91 effect: same no	G12
+ROW	R01	FAIL	class claim on all of GO:1904659: b=0.94 d=0.00 established; GLUT2 efflux (R02) is a counterexample; core is_a D-glucopyranose to glucose: no	R01
+ROW	R02	SILENT	placeholder process, rel vs textbook effect: meets no	R02
+ROW	R03	SILENT	complex placeholders; meets S01: no	R03
+ROW	R04	SILENT	textbook has_output passes to GO:0042776 by is_a (b=0.80 d=0.00 established) but objects differ: same no	R04
+ROW	R05	INEXPRESSIBLE	a DefinedSet becomes one opaque placeholder; the core has no union of entities	R05
+ROW	R06	FAIL	the glucagon peptide GCG(53-81) is stated as Glucagon binds to Glucagon receptor [Reactome:R-HSA-163625] has input glucagon ⊓ located in (extracellular fluid) [PR:P01275&RO:0001025=(GO:0005576)]	R06
+ROW	R07	FAIL	inferred-from-mouse reaction as nine human curated items: b=0.97 d=0.00 established; M1 (one crossSpecies item): b=0.30 d=0.00 unsupported	R07
+ROW	R08	SILENT	rel with compartments vs textbook effect: meets no	R08
+ROW	O01	PASS	stated as Claim.rel enables, b=0.80 d=0.00 established	O01
+ROW	O02	PASS	extension kept as refinements: parathyroid hormone (human) [PR:P01270] enables hormone activity ⊓ has input (parathyroid hormone/parathyroid hormone-related peptide receptor (human)) ⊓ part of (adenylate cyclase-activating G protein-coupled receptor signaling pathway) [GO:0005179&RO:0002233=(PR:Q03431)&BFO:0000050=(GO:0007189)]; same PMID as GO-CAM S06g: yes	O02
+ROW	O03	PASS	stated in worm context, unsigned: b=0.80 d=0.00 established	O03
+ROW	O04	FAIL	clash of 3 positive rows and 1 NOT row: b=0.70 d=0.23 unsupported; an isoform difference read as a contradiction	O04
+ROW	T01	FAIL	textbook insulin claims rest on PR:000009054 (OLS4: preproinsulin), b=0.80 d=0.00 established	T01
+ROW	T02	FAIL	textbook glucagon is PR:P01275 (OLS4: pro-glucagon (human))	T02
+ROW	Y01	SILENT	curated b=0.80 d=0.00 established and textbook b=0.80 d=0.00 established, opposite signs, nothing flags it; prototype effectClash (outside the core): b=0.44 d=0.44 contested	Y01
+ROW	Y02	PASS	entered as refuting evidence: b=0.44 d=0.44 contested	Y02
+ROW	Y03	SILENT	Taxa.human and e_NCBITaxon_9606 share a curie but are different entities (decide), so claims built on the two never fuse; no wrong claim is drawn	Y03
+ROW	Y04	SILENT	Curie.encode PR:P01308 = none; core is_a PR:P01308 to PR:000009054: no	Y04
+ROW	M01	PASS	b=0.80 d=0.00 established; the evidence is rat cells: with Evidence.taxon filled, the core lint taxonConsistent says no	M01
+ROW	M02	PASS	b=0.80 d=0.00 established	M01
+ROW	M03	PASS	b=0.82 d=0.00 established in C. elegans from two papers; no curated source states it	M03
+ROW	M04	PASS	b=0.41 d=0.41 contested in mice	M04
+ROW	M05	FAIL	b=0.83 d=0.08 established in people with type 2 diabetes; with the meta-analysis as observational (M1): b=0.50 d=0.25 contested	M05
+ROW	M06	PASS	mouse to human by transport: b=0.12 d=0.00 unsupported	M06
+ROW	M07	SILENT	the diabetes claim and the human claim never meet: same no; no rule across an organism condition	M07
+ROW	M08	PASS	no chain, which is right; the signed worm step can be stated (b=0.70 d=0.00 unsupported, one paper) and the human mechanism as a mediatedBy hypothesis, but the worm protein is not the human one and no rule links orthologs	M08
+ROW	M09	PASS	exit answer: b=0.12 d=0.00 unsupported; rests on 3 statements, PMIDs [23900241, 27312235, 27304507]	M09

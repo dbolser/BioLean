@@ -1,0 +1,17 @@
+task	fold	pos	neg	test_pos	test_neg	solution	score(tp,fn,tn,fp)	test_pos_hit	test_neg_hit	mark
+P31b	0	2	9	has_abundant(c130,c49)		has_abundant(V0,V1):- high_demand(V0,V2),capable_of(V1,V2).	2 0 9 0	1		PASS
+P31b	1	2	9	has_abundant(c128,c46)		has_abundant(V0,V1):- high_demand(V0,V2),capable_of(V1,V2).	2 0 9 0	1		PASS
+P31b	2	2	9	has_abundant(c129,c28)		has_abundant(V0,V1):- high_demand(V0,V2),capable_of(V1,V2).	2 0 9 0	1		PASS
+P31	0	2	3	has_abundant(c130,c49)		has_abundant(V0,V1):- high_demand(V0,V2),capable_of(V1,V2).	2 0 3 0	1		PASS
+P31	1	2	3	has_abundant(c128,c46)		has_abundant(V0,V1):- high_demand(V0,V2),capable_of(V1,V2).	2 0 3 0	1		PASS
+P31	2	2	3	has_abundant(c129,c28)		has_abundant(V0,V1):- high_demand(V0,V2),capable_of(V1,V2).	2 0 3 0	1		PASS
+P32	0	2	3	has_abundant(c130,c49)		NO_SOLUTION		0		SILENT
+P32	1	2	3	has_abundant(c128,c46)		NO_SOLUTION		0		SILENT
+P32	2	2	3	has_abundant(c129,c28)		NO_SOLUTION		0		SILENT
+P32	noneg	3	0		has_abundant(c8,c28);has_abundant(c8,c49);has_abundant(c8,c46)	has_abundant(V0,V1):- capable_of(V1,V3),capable_of(V0,V2).	3 0 0 0		111	FAIL
+P18	noisy	56	31	has_input(c195,c134)		NO_SOLUTION		0		SILENT
+P18	exact	56	31	has_input(c195,c134)		has_input(V0,V1):- derives_from(V1,V2),has_output(V0,V2). has_input(V0,V1):- has_output(V0,V1),occurs_in(V2,V1). has_input(V0,V1):- has_output(V0,V2),has_part(V1,V2). has_input(V0,V1):- derives_from(V2,V1),has_output(V0,V2).	6 50 31 0	1		PASS
+P23	0-noisy	5	1	involved_in(c107,c90)		NO_SOLUTION		0		SILENT
+P23	0-exact	5	1	involved_in(c107,c90)		involved_in(V0,V1):- capable_of(V0,V1). involved_in(V0,V1):- capable_of(V2,V1),is_a(V2,V0).	2 3 1 0	0		SILENT
+P23	1-noisy	6	1			NO_SOLUTION				SILENT
+P23	1-exact	6	1			involved_in(V0,V1):- capable_of(V0,V1). involved_in(V0,V1):- capable_of(V2,V1),is_a(V2,V0). involved_in(V0,V1):- part_of(V0,V2),capable_of(V2,V1).	3 3 1 0			PASS

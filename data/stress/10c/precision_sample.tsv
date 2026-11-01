@@ -1,0 +1,61 @@
+learner	head	subject	object	pca	support	rule	also_closure	n_predictions
+mine	connected_to	ribonucleotide [CHEBI:26561]	nucleotides [CHEBI:36976]	1.00	2	connected_to(x,y) <= has_part(x,z), has_part(y,z)	no	1000
+mine	connected_to	prokaryotic cell [CL:0000520]	rough endoplasmic reticulum [GO:0005791]	1.00	2	connected_to(x,y) <= has_part(x,z), has_part(y,z)	no	1000
+mine	connected_to	centrioles [GO:0005814]	flagellum [GO:0031514]	1.00	2	connected_to(x,y) <= has_part(x,z), has_part(y,z)	no	1000
+mine	connected_to	organ [UBERON:0000062]	multicellular bodies of animals ⊓ in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)]	1.00	2	connected_to(x,y) <= has_part(x,z), has_part(y,z)	no	1000
+mine	connected_to	hypothalamus [UBERON:0001898]	spinal cord [UBERON:0002240]	0.50	2	connected_to(x,y) <= part_of(x,z), connected_to(y,z)	no	1000
+mine	eff_pos_amount	methanogenesis [GO:0015948]	methane [CHEBI:16183]	0.50	3	eff_pos_amount(x,y) <= has_output(x,y)	no	1000
+mine	eff_pos_amount	main bronchus [UBERON:0002182]	oxygen [CHEBI:15379]	1.00	2	eff_pos_amount(x,y) <= part_of(x,z), eff_pos_amount(z,y)	no	1000
+mine	happens_during	proteins [CHEBI:36080]	endomembrane system [GO:0012505]	1.00	2	happens_during(x,y) <= has_part(z,x), part_of(z,y)	no	1000
+mine	happens_during	prophase II [GO:0007136]	meiotic cell cycle [GO:0051321]	1.00	2	happens_during(x,y) <= has_part(z,x), part_of(z,y)	no	1000
+mine	happens_during	motor cortex [UBERON:0001384]	brain [UBERON:0000955]	1.00	2	happens_during(x,y) <= has_part(z,x), part_of(z,y)	no	1000
+mine	has_input	nuclear membrane ⊓ in taxon (NCBITaxon:2759) [GO:0005635&RO:0002162=(NCBITaxon:2759)]	messenger RNA [CHEBI:33699]	0.67	2	has_input(x,messenger RNA) <= in_taxon(x,protist cells)	no	1000
+mine	has_input	transported into mitochondria ⊓ in taxon (NCBITaxon:2759) [GO:0006850&RO:0002162=(NCBITaxon:2759)]	messenger RNA [CHEBI:33699]	0.67	2	has_input(x,messenger RNA) <= in_taxon(x,protist cells)	no	1000
+mine	has_output	alternative mRNA splicing, via spliceosome [GO:0000380]	proteins [CHEBI:36080]	0.67	4	has_output(x,y) <= isa*(z,x), has_output(z,y)	no	1000
+mine	has_output	ion channel activity [GO:0005216]	sodium ion ⊓ part of (neuron) [CHEBI:29101&BFO:0000050=(CL:0000540)]	0.60	3	has_output(x,y) <= eff_pos_amount(x,y)	no	1000
+mine	has_output	Vasodilation [GO:0042311]	blood ⊓ located in (body surface) [UBERON:0000178&RO:0001025=(UBERON:0002097)]	0.60	3	has_output(x,y) <= eff_pos_amount(x,y)	no	1000
+mine	has_part	polypeptide [CHEBI:15841]	large proteins ⊓ located in (muscles) [CHEBI:36080&RO:0001025=(UBERON:0002385)]	0.60	3	has_part(x,y) <= has_part(x,z), derives_from(y,z)	no	1000
+mine	has_part	esophagus [UBERON:0001043]	mucus [UBERON:0000912]	0.50	2	has_part(x,y) <= connected_to(x,z), has_part(z,y)	no	1000
+mine	has_part	spinal cord [UBERON:0002240]	cerebellum [UBERON:0002037]	0.50	2	has_part(x,y) <= connected_to(x,z), has_part(z,y)	no	1000
+mine	located_in	nucleotides [CHEBI:36976]	nucleus [GO:0005634]	0.50	2	located_in(x,y) <= has_part(z,x), located_in(z,y)	no	1000
+mine	located_in	polymer [CHEBI:60027]	nucleoid [GO:0009295]	0.60	3	located_in(x,y) <= isa*(z,x), located_in(z,y)	no	1000
+mine	occurs_in	this reaction [GO:0009060]	Mitochondria [GO:0005739]	1.00	2	occurs_in(x,Mitochondria) <= has_input(x,oxygen)	no	1000
+mine	part_of	hydrogencarbonate [CHEBI:17544]	pancreatic juices [UBERON:0000326]	0.56	28	part_of(x,y) <= has_part(y,x)	no	1000
+mine	part_of	cells [CL:0000000]	leaves ⊓ in taxon (NCBITaxon:33090) [PO:0025034&RO:0002162=(NCBITaxon:33090)]	0.56	28	part_of(x,y) <= has_part(y,x)	no	1000
+mine	part_of	nucleus [GO:0005634]	skeletal muscle fiber [CL:0008002]	0.56	28	part_of(x,y) <= has_part(y,x)	no	1000
+mine	part_of	chloroplast [GO:0009507]	plants [NCBITaxon:33090]	0.56	28	part_of(x,y) <= has_part(y,x)	no	1000
+mine	part_of	carbohydrate biosynthetic process [GO:0016051]	Calvin cycle [GO:0019253]	0.56	28	part_of(x,y) <= has_part(y,x)	no	1000
+mine	part_of	telomeric_repeat [SO:0001496]	telomere [SO:0000624]	0.56	28	part_of(x,y) <= has_part(y,x)	no	1000
+mine	part_of	skull [UBERON:0003129]	axial skeleton [UBERON:0005944]	0.56	28	part_of(x,y) <= has_part(y,x)	no	1000
+mine	part_of	rib cage [UBERON:0003252]	axial skeleton [UBERON:0005944]	0.56	28	part_of(x,y) <= has_part(y,x)	no	1000
+mine	part_of	spinal canal [UBERON:0006692]	vertebra [UBERON:0002412]	0.56	28	part_of(x,y) <= has_part(y,x)	no	1000
+amie	eff_pos_amount	hydrolysis [GO:0016887]	ADP [CHEBI:16761]	0.50	3	?a  <has_output>  ?b   => ?a  <eff_pos_amount>  ?b	no	759
+amie	eff_pos_amount	mitotic nuclear division [GO:0140014]	nucleus [GO:0005634]	0.50	3	?a  <has_output>  ?b   => ?a  <eff_pos_amount>  ?b	no	759
+amie	eff_pos_phenotype	contract ⊓ occurs in (atria) ⊓ occurs in (cardiac muscle cells) [GO:0060048&BFO:0000066=(UBERON:0002081)&BFO:0000066=(CL:0000746)]	blood pressure [OBA:VT0000183]	1.00	3	?h  <eff_pos_phenotype>  ?b  ?a  <isa*>  ?h   => ?a  <eff_pos_phenotype>  ?b	yes	759
+amie	eff_pos_phenotype	autoimmune disease [MONDO:0007179]	Pain [HP:0012531]	1.00	3	?g  <eff_pos_phenotype>  ?b  ?g  <isa*>  ?a   => ?a  <eff_pos_phenotype>  ?b	no	759
+amie	happens_during	phospholipid [CHEBI:16247]	nucleus [GO:0005634]	1.00	2	?g  <has_part>  ?a  ?g  <part_of>  ?b   => ?a  <happens_during>  ?b	no	759
+amie	has_output	potassium [CHEBI:29103]	aldosterone ⊓ located in (blood) [CHEBI:27584&RO:0001025=(UBERON:0000178)]	0.60	3	?a  <eff_pos_amount>  ?b   => ?a  <has_output>  ?b	no	759
+amie	has_output	voltage-gated sodium channel activity [GO:0005248]	sodium [CHEBI:29101]	0.60	3	?a  <eff_pos_amount>  ?b   => ?a  <has_output>  ?b	no	759
+amie	has_output	anterior pituitary [UBERON:0002196]	triiodothyronine ⊓ located in (thyroid gland) [CHEBI:18258&RO:0001025=(UBERON:0002046)]	0.60	3	?a  <eff_pos_amount>  ?b   => ?a  <has_output>  ?b	no	759
+amie	has_part	cells [CL:0000000]	Lysosomes ⊓ in taxon (NCBITaxon:33208) [GO:0005764&RO:0002162=(NCBITaxon:33208)]	0.62	28	?b  <part_of>  ?a   => ?a  <has_part>  ?b	no	759
+amie	has_part	mitotic phase [GO:0000087]	cytoplasmic contents are separated [GO:0000910]	0.62	28	?b  <part_of>  ?a   => ?a  <has_part>  ?b	no	759
+amie	has_part	heart [UBERON:0000948]	bicuspid valve [UBERON:0002135]	0.62	28	?b  <part_of>  ?a   => ?a  <has_part>  ?b	no	759
+amie	has_part	brain [UBERON:0000955]	cerebral cortex ⊓ in taxon (Mammalia) [UBERON:0000956&RO:0002162=(NCBITaxon:40674)]	0.62	28	?b  <part_of>  ?a   => ?a  <has_part>  ?b	no	759
+amie	located_in	ribose [CHEBI:33942]	cells [CL:0000000]	0.50	2	?g  <has_part>  ?a  ?g  <located_in>  ?b   => ?a  <located_in>  ?b	no	759
+amie	located_in	proteins [CHEBI:36080]	epithelial tissue [UBERON:0000483]	0.50	2	?g  <has_part>  ?a  ?g  <located_in>  ?b   => ?a  <located_in>  ?b	no	759
+amie	located_in	nucleotides [CHEBI:36976]	nucleoid [GO:0009295]	0.50	2	?g  <has_part>  ?a  ?g  <located_in>  ?b   => ?a  <located_in>  ?b	no	759
+amie	occurs_in	chromatin organization [GO:0006325]	blood [UBERON:0000178]	0.67	2	?a  <has_input>  ?h  ?h  <located_in>  ?b   => ?a  <occurs_in>  ?b	no	759
+amie	part_of	adenosine monophosphate (AMP) [CHEBI:16027]	ATP [CHEBI:15422]	0.56	28	?b  <has_part>  ?a   => ?a  <part_of>  ?b	no	759
+amie	part_of	phospholipid [CHEBI:16247]	plasma membrane [GO:0005886]	0.56	28	?b  <has_part>  ?a   => ?a  <part_of>  ?b	no	759
+amie	part_of	hydrogencarbonate [CHEBI:17544]	pancreatic juices [UBERON:0000326]	0.56	28	?b  <has_part>  ?a   => ?a  <part_of>  ?b	no	759
+amie	part_of	nitrogenous base [CHEBI:18282]	nucleotides [CHEBI:36976]	0.56	28	?b  <has_part>  ?a   => ?a  <part_of>  ?b	no	759
+amie	part_of	neurotransmitters [CHEBI:25512]	synaptic vesicle [GO:0008021]	0.56	28	?b  <has_part>  ?a   => ?a  <part_of>  ?b	no	759
+amie	part_of	These atoms [CHEBI:49637]	NADPH [CHEBI:16474]	0.56	28	?b  <has_part>  ?a   => ?a  <part_of>  ?b	no	759
+amie	part_of	microtubule [GO:0005874]	flagellum [GO:0031514]	0.56	28	?b  <has_part>  ?a   => ?a  <part_of>  ?b	no	759
+amie	part_of	plasma membrane [GO:0005886]	eukaryotic [CL:0000255]	0.56	28	?b  <has_part>  ?a   => ?a  <part_of>  ?b	no	759
+amie	part_of	myofibril [GO:0030016]	skeletal muscle fiber [CL:0008002]	0.56	28	?b  <has_part>  ?a   => ?a  <part_of>  ?b	no	759
+amie	part_of	membrane-bound organelle [GO:0043231]	eukaryotic [CL:0000255]	0.56	28	?b  <has_part>  ?a   => ?a  <part_of>  ?b	no	759
+amie	part_of	FtsZ [PR:000022726]	cytoskeleton [GO:0005856]	0.70	7	?g  <isa*>  ?a  ?g  <part_of>  ?b   => ?a  <part_of>  ?b	no	759
+amie	part_of	ascending colon [UBERON:0001156]	colon [UBERON:0001155]	0.56	28	?b  <has_part>  ?a   => ?a  <part_of>  ?b	no	759
+amie	part_of	bone [UBERON:0001474]	rib cage [UBERON:0003252]	0.70	7	?g  <isa*>  ?a  ?g  <part_of>  ?b   => ?a  <part_of>  ?b	no	759
+amie	part_of	blood vessel [UBERON:0001981]	circulatory system [UBERON:0001009]	0.56	28	?b  <has_part>  ?a   => ?a  <part_of>  ?b	no	759

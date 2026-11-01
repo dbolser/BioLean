@@ -95,6 +95,10 @@ Last updated 2026-10-28 (after M3).
 
 ## Open decisions
 
+Every open decision now has a program of work with a stress set run against today's core
+(2026-10-30 to 11-01): [docs/programs/README.md](docs/programs/README.md). The core, what lies
+outside it, and the 58 proposed extensions are in [docs/formal-system.md](docs/formal-system.md).
+
 | decision | options | leaning |
 |---|---|---|
 | structural claims | decided: generic `Claim.rel r a b`, typed by RO domain/range (M1) | done |

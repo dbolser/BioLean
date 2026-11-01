@@ -1,0 +1,61 @@
+learner	head	subject	object	judgement	reason
+mine	connected_to	ribonucleotide [CHEBI:26561]	nucleotides [CHEBI:36976]	false	a ribonucleotide is a nucleotide (is_a), not connected to one
+mine	connected_to	prokaryotic cell [CL:0000520]	rough endoplasmic reticulum [GO:0005791]	false	prokaryotes have no ER
+mine	connected_to	centrioles [GO:0005814]	flagellum [GO:0031514]	unclear	centrioles become basal bodies that anchor flagella
+mine	connected_to	organ [UBERON:0000062]	multicellular bodies of animals ⊓ in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)]	false	an organ is part of the body, not connected to it
+mine	connected_to	hypothalamus [UBERON:0001898]	spinal cord [UBERON:0002240]	unclear	joined through the brainstem; some direct hypothalamospinal fibres
+mine	eff_pos_amount	methanogenesis [GO:0015948]	methane [CHEBI:16183]	true	methanogenesis makes methane
+mine	eff_pos_amount	main bronchus [UBERON:0002182]	oxygen [CHEBI:15379]	false	parthood read as causation: airways carry oxygen, they do not raise it
+mine	happens_during	proteins [CHEBI:36080]	endomembrane system [GO:0012505]	false	category error: a molecule does not happen during an organelle system
+mine	happens_during	prophase II [GO:0007136]	meiotic cell cycle [GO:0051321]	true	prophase II happens during the meiotic cell cycle
+mine	happens_during	motor cortex [UBERON:0001384]	brain [UBERON:0000955]	false	category error: a structure does not happen during anything
+mine	has_input	nuclear membrane ⊓ in taxon (NCBITaxon:2759) [GO:0005635&RO:0002162=(NCBITaxon:2759)]	messenger RNA [CHEBI:33699]	false	category error: a membrane has no input
+mine	has_input	transported into mitochondria ⊓ in taxon (NCBITaxon:2759) [GO:0006850&RO:0002162=(NCBITaxon:2759)]	messenger RNA [CHEBI:33699]	false	mRNA is not imported into mitochondria in general
+mine	has_output	alternative mRNA splicing, via spliceosome [GO:0000380]	proteins [CHEBI:36080]	false	splicing makes mRNA, not protein
+mine	has_output	ion channel activity [GO:0005216]	sodium ion ⊓ part of (neuron) [CHEBI:29101&BFO:0000050=(CL:0000540)]	unclear	a channel passes sodium; output is a loose reading
+mine	has_output	Vasodilation [GO:0042311]	blood ⊓ located in (body surface) [UBERON:0000178&RO:0001025=(UBERON:0002097)]	false	vasodilation moves blood to the surface; blood is not its output
+mine	has_part	polypeptide [CHEBI:15841]	large proteins ⊓ located in (muscles) [CHEBI:36080&RO:0001025=(UBERON:0002385)]	false	reversed: proteins have polypeptides as parts
+mine	has_part	esophagus [UBERON:0001043]	mucus [UBERON:0000912]	unclear	oesophageal glands secrete mucus; has part is loose
+mine	has_part	spinal cord [UBERON:0002240]	cerebellum [UBERON:0002037]	false	the cerebellum is part of the brain
+mine	located_in	nucleotides [CHEBI:36976]	nucleus [GO:0005634]	false	nucleotides are found throughout the cell
+mine	located_in	polymer [CHEBI:60027]	nucleoid [GO:0009295]	false	not every polymer is in the nucleoid
+mine	occurs_in	this reaction [GO:0009060]	Mitochondria [GO:0005739]	scope	aerobic respiration occurs in mitochondria in eukaryotes; bacteria respire at the plasma membrane (the book's scope only; was "true" before review)
+mine	part_of	hydrogencarbonate [CHEBI:17544]	pancreatic juices [UBERON:0000326]	false	inversion: pancreatic juice has bicarbonate, not every bicarbonate is in pancreatic juice
+mine	part_of	cells [CL:0000000]	leaves ⊓ in taxon (NCBITaxon:33090) [PO:0025034&RO:0002162=(NCBITaxon:33090)]	false	not every cell is part of a leaf
+mine	part_of	nucleus [GO:0005634]	skeletal muscle fiber [CL:0008002]	false	inversion: not every nucleus is part of a skeletal muscle fibre
+mine	part_of	chloroplast [GO:0009507]	plants [NCBITaxon:33090]	false	algae have chloroplasts too: not every chloroplast is part of a plant
+mine	part_of	carbohydrate biosynthetic process [GO:0016051]	Calvin cycle [GO:0019253]	false	reversed: the Calvin cycle is part of carbohydrate synthesis
+mine	part_of	telomeric_repeat [SO:0001496]	telomere [SO:0000624]	true	telomeric repeats make up telomeres
+mine	part_of	skull [UBERON:0003129]	axial skeleton [UBERON:0005944]	true	the skull is part of the axial skeleton
+mine	part_of	rib cage [UBERON:0003252]	axial skeleton [UBERON:0005944]	true	the rib cage is part of the axial skeleton
+mine	part_of	spinal canal [UBERON:0006692]	vertebra [UBERON:0002412]	false	the canal runs through the vertebral column, not part of one vertebra
+amie	eff_pos_amount	hydrolysis [GO:0016887]	ADP [CHEBI:16761]	true	ATP hydrolysis makes ADP
+amie	eff_pos_amount	mitotic nuclear division [GO:0140014]	nucleus [GO:0005634]	true	mitosis makes two nuclei from one
+amie	eff_pos_phenotype	contract ⊓ occurs in (atria) ⊓ occurs in (cardiac muscle cells) [GO:0060048&BFO:0000066=(UBERON:0002081)&BFO:0000066=(CL:0000746)]	blood pressure [OBA:VT0000183]	true	contraction raises pressure
+amie	eff_pos_phenotype	autoimmune disease [MONDO:0007179]	Pain [HP:0012531]	false	not every autoimmune disease is painful
+amie	happens_during	phospholipid [CHEBI:16247]	nucleus [GO:0005634]	false	category error: a molecule does not happen during
+amie	has_output	potassium [CHEBI:29103]	aldosterone ⊓ located in (blood) [CHEBI:27584&RO:0001025=(UBERON:0000178)]	false	category error: potassium triggers aldosterone release; a chemical has no output
+amie	has_output	voltage-gated sodium channel activity [GO:0005248]	sodium [CHEBI:29101]	unclear	a channel passes sodium; output is a loose reading
+amie	has_output	anterior pituitary [UBERON:0002196]	triiodothyronine ⊓ located in (thyroid gland) [CHEBI:18258&RO:0001025=(UBERON:0002046)]	false	the pituitary makes TSH, not T3
+amie	has_part	cells [CL:0000000]	Lysosomes ⊓ in taxon (NCBITaxon:33208) [GO:0005764&RO:0002162=(NCBITaxon:33208)]	false	inversion: not every cell has an animal lysosome
+amie	has_part	mitotic phase [GO:0000087]	cytoplasmic contents are separated [GO:0000910]	true	M phase includes cytokinesis
+amie	has_part	heart [UBERON:0000948]	bicuspid valve [UBERON:0002135]	scope	the heart has a bicuspid (mitral) valve in mammals and birds, not in fish (the book's scope only; was "true" before review)
+amie	has_part	brain [UBERON:0000955]	cerebral cortex ⊓ in taxon (Mammalia) [UBERON:0000956&RO:0002162=(NCBITaxon:40674)]	false	inversion: not every brain has a mammalian cerebral cortex
+amie	located_in	ribose [CHEBI:33942]	cells [CL:0000000]	false	ribose is not only in cells
+amie	located_in	proteins [CHEBI:36080]	epithelial tissue [UBERON:0000483]	false	proteins are not only in epithelia
+amie	located_in	nucleotides [CHEBI:36976]	nucleoid [GO:0009295]	false	nucleotides are throughout the cell
+amie	occurs_in	chromatin organization [GO:0006325]	blood [UBERON:0000178]	false	chromatin organisation does not occur in blood
+amie	part_of	adenosine monophosphate (AMP) [CHEBI:16027]	ATP [CHEBI:15422]	false	free AMP is not part of ATP
+amie	part_of	phospholipid [CHEBI:16247]	plasma membrane [GO:0005886]	false	inversion: not every phospholipid is in the plasma membrane
+amie	part_of	hydrogencarbonate [CHEBI:17544]	pancreatic juices [UBERON:0000326]	false	inversion: not every bicarbonate is in pancreatic juice
+amie	part_of	nitrogenous base [CHEBI:18282]	nucleotides [CHEBI:36976]	false	inversion: free bases exist
+amie	part_of	neurotransmitters [CHEBI:25512]	synaptic vesicle [GO:0008021]	false	not every neurotransmitter is in a synaptic vesicle
+amie	part_of	These atoms [CHEBI:49637]	NADPH [CHEBI:16474]	false	not every hydrogen atom is part of NADPH
+amie	part_of	microtubule [GO:0005874]	flagellum [GO:0031514]	false	not every microtubule is in a flagellum
+amie	part_of	plasma membrane [GO:0005886]	eukaryotic [CL:0000255]	false	prokaryotes have plasma membranes too
+amie	part_of	myofibril [GO:0030016]	skeletal muscle fiber [CL:0008002]	false	cardiac muscle cells have myofibrils too
+amie	part_of	membrane-bound organelle [GO:0043231]	eukaryotic [CL:0000255]	scope	membrane-bound organelles belong to eukaryotic cells in the book's scope; some bacteria have membrane-bound compartments (was "true" before review)
+amie	part_of	FtsZ [PR:000022726]	cytoskeleton [GO:0005856]	true	FtsZ is a bacterial cytoskeletal protein
+amie	part_of	ascending colon [UBERON:0001156]	colon [UBERON:0001155]	true	the ascending colon is part of the colon
+amie	part_of	bone [UBERON:0001474]	rib cage [UBERON:0003252]	false	upward: not every bone is part of the rib cage (I21)
+amie	part_of	blood vessel [UBERON:0001981]	circulatory system [UBERON:0001009]	true	blood vessels are part of the circulatory system

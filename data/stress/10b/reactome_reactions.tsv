@@ -1,0 +1,138 @@
+reaction	name	class	inferred	go_bp	n_pmid	pmids
+R-HSA-110011	Binding of Grb10 to the insulin receptor	Reaction	False		2	12493740 14615605
+R-HSA-1183032	Expression of GLUT4	BlackBoxEvent	False		1	8325954
+R-HSA-1268022	TOMM40 complex translocates proteins from the cytosol to the mitochondrial intermembrane space	Reaction	True		0	
+R-HSA-1299476	MPP cleaves targeting peptide (presequence) of inner membrane precursors	Reaction	True		0	
+R-HSA-1299482	TIMM23 SORT inserts proteins into inner membrane	Reaction	True		0	
+R-HSA-1299487	Precursor proteins enter TIMM23 SORT	Reaction	True		1	23811401
+R-HSA-1449574	SLC2A4 (GLUT4) vesicle fuses with the plasma membrane	BlackBoxEvent	True		0	
+R-HSA-1592247	Expression of ATP5B	BlackBoxEvent	False		2	12745923 16890199
+R-HSA-163625	Glucagon binds to Glucagon receptor	Reaction	False		4	11946536 15464082 2826231 8144028
+R-HSA-164832	ATPase synthesizes ATP	Reaction	False	GO:0006754	0	
+R-HSA-164834	Enzyme-bound ATP is released	Reaction	False	GO:0042776	0	
+R-HSA-164840	ADP and Pi bind to ATPase	Reaction	False	GO:0006754	0	
+R-HSA-189242	SLC2A2 tetramer transports Fru, Gal, Glc from cytosol to extracellular region	Reaction	False		4	9354798 9751501 1701966 8457197
+R-HSA-211289	MAFA-, NKX2-2-, PAX6-, and PDX1-dependent synthesis of insulin precursor protein	BlackBoxEvent	True		0	
+R-HSA-211476	HNF1A-dependent synthesis of GLUT2 protein	BlackBoxEvent	True		0	
+R-HSA-264976	Proinsulin binds zinc and calcium forming Proinsulin:zinc:calcium	Reaction	False		4	14704853 2669954 16158220 10521251
+R-HSA-264997	P4HB mediates disulfide bond formation in Proinsulin	Reaction	False		2	21308844 31184304
+R-HSA-265010	Proinsulin translocates from the endoplasmic reticulum to the Golgi	BlackBoxEvent	False		1	3896518
+R-HSA-265153	Proinsulin:Zinc:Calcium complex translocates to immature secretory granule	BlackBoxEvent	False		0	
+R-HSA-265160	Insulin secretory granule translocates to cell cortex	BlackBoxEvent	True		0	
+R-HSA-265166	Exocytosis of Insulin	BlackBoxEvent	True	GO:0030073	9	12403834 17900700 16443778 12684222 8997178 18162464 14514350 7641683 11873862
+R-HSA-373739	Ankyrins link voltage-gated sodium and potassium channels to spectrin and L1	Reaction	True		0	
+R-HSA-379044	Liganded Gs-activating GPCR acts as a GEF for Gs	Reaction	False		5	9651336 12106601 3127824 12860470 2553705
+R-HSA-379048	Liganded Gq/11-activating GPCRs act as GEFs for Gq/11	Reaction	False		4	1905813 3086311 8664309 10191087
+R-HSA-380073	Liganded Gi-activating GPCR acts as a GEF for Gi	Reaction	False		3	2748346 2534964 8015379
+R-HSA-381612	GLP1R binds GLP1	Reaction	False		7	8404634 7589461 12034449 18287102 19861722 8138058 17444618
+R-HSA-381706	GLP1R:GLP1 activates G(s)	Reaction	True		1	19859570
+R-HSA-381798	PCSK1 hydrolyzes Proglucagon to Glucagon-like Peptide-1	BlackBoxEvent	True		1	12651102
+R-HSA-381799	Synthesis of Preproglucagon in intestinal L cells	BlackBoxEvent	False		5	12810581 3841689 12540594 16219666 16728727
+R-HSA-383313	Glucagon-like Peptide 1 is secreted from intestinal L cells	BlackBoxEvent	False		9	17681422 16219666 14719035 12540594 12810581 18519800 19001044 15619630 17065399
+R-HSA-388468	AVP(20-28) binds AVPR1A,B	Reaction	False		4	7929452 8106369 2991279 4065330
+R-HSA-392263	AVP(20-28) binds AVPR2	Reaction	False		3	1534149 2991279 4065330
+R-HSA-400459	Signal peptidase hydrolyzes preproGLP-1 to proGLP-1	Reaction	True		0	
+R-HSA-419843	CALCA(83-119) binds CALCR	Reaction	False		2	6148938 1331173
+R-HSA-420123	Glucagon-like receptor 2 binds GLP2	Reaction	False		3	9990065 15471943 10322410
+R-HSA-420265	AMY1-3 bind IAPP(34-70)	Reaction	False		3	9620797 1331173 2608057
+R-HSA-420489	Parathyroid hormone receptor can bind parathyroid hormone	Reaction	False		10	8397094 8732687 6950381 3616618 12559132 12098667 8386612 8770894 7797535 8082781
+R-HSA-420724	CASR binds Ca2+	Reaction	False		3	7759551 9144337 11208605
+R-HSA-421416	Proglucagon translocates from the ER Lumen to secretory granules	BlackBoxEvent	False		1	3900195
+R-HSA-422048	Acyl Ghrelin and C-Ghrelin are secreted	BlackBoxEvent	False		8	11600536 15126574 14599721 11756331 11089560 12553549 17595255 12354137
+R-HSA-432065	p-S256-Aquaporin-2 passively transports water into cell	Reaction	False		4	7510718 19144687 8140421 7535000
+R-HSA-432188	AVP:AVPR2 Complex binds inactive heterotrimeric G(s) complex	Reaction	False		2	9756892 8621513
+R-HSA-432195	AVP:AVPR2:heterotrimeric G(s) complex exchanges GDP for GTP	Reaction	False		2	10649434 11968001
+R-HSA-432232	Phosphorylation of Aquaporin-2 by Protein Kinase A (PKA)	Reaction	False		0	
+R-HSA-432237	Translocation of Aquaporin-2 from intracellular vesicles to the apical plasma membrane	BlackBoxEvent	False		3	17156409 8683474 16120822
+R-HSA-450095	GLUT2 (SLC2A2) transports Glc from cytosol to extracellular region	Reaction	False		3	8457197 9751501 9354798
+R-HSA-499981	Transport of Extracellular Glucose to the Cytosol by GLUT1 and GLUT2	Reaction	False		9	8027028 8987985 7929812 17380317 7593639 9751501 11780755 8457197 7589840
+R-HSA-507868	Aquaporins passively transport water into cells	Reaction	False		54	16596446 11231887 19383790 8140421 19857466 16325777 18555844 11076974 15948717 23359558 18678926 1510932 18511455 18948439 15703994 8621489 16407156 19170255 7530250 21251984 12801959 11952783 18202181 18501347 17374283 19144687 11532455 9405233 10564231 14514735 14592814 9829975 18762715 8855281 18768791 7678419 19590626 7510718 14701836 3049610 20147624 1373524 11034202 17178220 11027599 9369468 7535000 9806845 11001937 17920625 11573934 10510269 12084581 19574955
+R-HSA-507870	Aquaporins passively transport water out of cells	Reaction	False		51	16596446 11231887 19383790 8140421 19857466 16325777 18555844 11076974 15948717 18678926 15703994 8621489 19170255 7530250 21251984 12801959 11952783 18202181 18501347 17374283 19144687 11532455 9405233 10564231 14514735 14592814 9829975 18762715 8855281 18768791 7678419 19590626 7510718 14701836 3049610 20147624 1373524 11034202 17178220 11027599 9369468 7535000 9806845 11001937 17920625 11573934 10510269 12084581 18948439 18511455 1510932
+R-HSA-5576895	SCNAs:SNCBs transport Na+ from extracellular region to cytosol	Reaction	False		9	21566136 14500339 1309946 11290418 18184654 21817159 23804213 22514276 19406745
+R-HSA-5621425	Defective AVP mutants do not bind AVPR1A,B	FailedReaction	False		7	10369876 8514868 9467595 8103767 14673472 7714110 12107248
+R-HSA-5638222	Defective SLC2A2 does not transport Fru, Gal, Glc from cytosol to extracellular region	FailedReaction	False		3	10987651 9354798 11044475
+R-HSA-6807875	ARFGAP, cargo, v-SNAREs and p24 proteins bind nascent COPI complex	Reaction	False		31	19296914 9380700 8001155 8128252 19015319 11689559 18809720 10052452 11461920 25436559 10761932 11172815 17253781 11703931 14654841 17760859 17927562 9990005 22094269 9405360 21219331 16633337 18182008 20427317 9671725 11726511 8991093 9244307 11748249 8636227 19109418
+R-HSA-6807877	ARFGAPs stimulate ARF GTPase activity	Reaction	False		2	8253837 20637885
+R-HSA-6809003	ERGIC-to-Golgi vesicles bind dynein:dynactin 	Reaction	False		4	11461920 8991093 9671725 9380700
+R-HSA-6809006	Vesicle is tethered through binding GOLGA2:GORASP1, GOLGB1 and the COG complex	Reaction	False		14	15728195 17274799 9150144 11035033 11306556 10903204 9490716 11285137 7691276 16723730 18086915 24806965 15878873 10679020
+R-HSA-6809010	COPI vesicle uncoating	BlackBoxEvent	False		2	24119662 19758564
+R-HSA-6809011	cis-Golgi t-SNAREs bind YKT6 on tethered vesicle	Reaction	False		3	9382863 14742712 12388752
+R-HSA-744886	The Ligand:GPCR:Gs complex dissociates	Reaction	False		1	18577758
+R-HSA-744887	Liganded Gs-activating GPCRs bind inactive heterotrimeric Gs	Reaction	False		0	
+R-HSA-74707	Binding of IRS to insulin receptor	Reaction	False		2	15316008 9609109
+R-HSA-74711	Phosphorylation of IRS	Reaction	False		1	16814735
+R-HSA-74712	Dissociation of IRS-P from insulin receptor	Reaction	False		1	15069075
+R-HSA-74715	Autophosphorylation of insulin receptor	Reaction	False		1	3166375
+R-HSA-74716	Insulin binds the insulin receptor	Reaction	False		2	11737239 7781591
+R-HSA-74718	Internalisation of the insulin receptor	BlackBoxEvent	False	GO:0031623	3	9609114 8760075 18406720
+R-HSA-74726	Dissociation of insulin from insulin receptor	Reaction	False		0	
+R-HSA-74730	Insulin degradation	BlackBoxEvent	False		6	8300632 11779865 16574064 19321446 17051221 29596046
+R-HSA-74733	Insulin receptor de-phosphorylation	Reaction	False		4	8995282 16271887 9609117 18406720
+R-HSA-74734	Re-integration of insulin receptor into plasma membrane	BlackBoxEvent	False		1	2986535
+R-HSA-74740	Binding of SHC1 to insulin receptor	Reaction	False		1	10218944
+R-HSA-74742	Phosphorylation of SHC1	Reaction	False		1	11075717
+R-HSA-74743	Dissociation of p-Y427-SHC1 from insulin receptor	Reaction	False		0	
+R-HSA-749448	Liganded Gq-activating GPCRs bind inactive heterotrimeric Gq	Reaction	False		0	
+R-HSA-749452	The Ligand:GPCR:Gq complex dissociates	Reaction	False		1	18577758
+R-HSA-749454	The Ligand:GPCR:Gi complex dissociates	Reaction	False		1	18577758
+R-HSA-749456	Liganded Gi-activating GPCRs bind inactive heterotrimeric G-protein Gi	Reaction	False		0	
+R-HSA-825631	Glucagon:GCGR mediates GTP-GDP exchange	Reaction	False		1	23863937
+R-HSA-879584	SLCO3A1 isoform 1 has a broad substrate specificity	Reaction	False		1	16971491
+R-HSA-879782	Expression of AVP	BlackBoxEvent	True		1	2991279
+R-HSA-8857925	Inhibition of PP2A activity by phosphorylation of the catalytic subunit at tyrosine Y307	Reaction	False		1	1325671
+R-HSA-8866268	ADBRK1,2 phosphorylate AVPR2	Reaction	False		1	15671180
+R-HSA-8866269	ARRB bind GPCRs	Reaction	False		8	8553074 12958364 24680432 26829388 12464600 7822302 17456551 19853559
+R-HSA-8866283	ARBB recruits GPCRs into clathrin-coated pits	Reaction	False		4	18199683 9169477 11588219 10097102
+R-HSA-8867754	F- and N- BAR domain proteins bind the clathrin-coated pit	Reaction	False		9	17512409 17540576 20448150 16326391 12057195 15649145 12952949 20946875 15252009
+R-HSA-8867756	CLASP proteins and cargo are recruited to the nascent clathrin-coated pit	Reaction	False		4	21187331 17018281 19696796 23536704
+R-HSA-8868071	Clathrin recruits PIK3C2A	Reaction	False		0	
+R-HSA-8868072	Clathrin-associated PIK3C2A phosphorylates PI(4)P to PI(3,4)P2	Reaction	False		0	
+R-HSA-8868230	SNX9 recruits components of the actin polymerizing machinery	Reaction	False		8	11889126 21841790 18790740 17681954 11577110 11532990 11517213 17609109
+R-HSA-8868236	BAR domain proteins recruit dynamin	Reaction	False		7	21927001 23297414 23861397 12952949 21927000 15318165 9635431
+R-HSA-8868648	SYNJ hydrolyze PI(4,5)P2 to PI(4)P	Reaction	False		2	18093523 20826345
+R-HSA-8868651	Endophilins recruit synaptojanins to the clathrin-coated pit	Reaction	False		14	10542231 24966051 19536138 19575674 14622578 11082044 9428629 14622579 25107275 17765681 22099461 17158794 15260957 21316588
+R-HSA-8868658	HSPA8-mediated ATP hydrolysis promotes vesicle uncoating	Reaction	False		1	9100026
+R-HSA-8868659	Clathrin recruits auxilins to the clathrin-coated vesicle	Reaction	False		7	10625686 8524399 20826345 15502813 15502812 16798879 11470803
+R-HSA-8868660	Auxilin recruits HSPA8:ATP to the clathrin-coated vesicle	Reaction	False		2	21278753 21482805
+R-HSA-8868661	Dynamin-mediated GTP hydrolysis promotes vesicle scission	Reaction	False		7	10559861 21927001 21962517 21927000 15318165 9635431 7877694
+R-HSA-8869438	Dissociation of clathrin-associated proteins	BlackBoxEvent	False		1	11231140
+R-HSA-8871193	Dissociation of AAK1 and dephosphorylation of AP-2 mu2	BlackBoxEvent	False		0	
+R-HSA-8871194	RAB5 and GAPVD1 bind AP-2	Reaction	False		5	19603039 2115402 25341920 16410077 9427626
+R-HSA-8949580	F1Fo ATP synthase dimerizes	Reaction	False		7	18323778 24098383 20833715 25285856 22864911 17121862 21836051
+R-HSA-8981570	GLUT4 (SLC2A4) tetramer transports Glc from extracellular region to cytosol	Reaction	False	GO:1904659	4	1756912 11994746 1918382 2656669
+R-HSA-8981574	GLUT2 (SLC2A2) tetramer transports Glc from extracellular region to cytosol	Reaction	False	GO:1904659	5	10987651 9354798 9751501 11780755 8457197
+R-HSA-8986181	PITRM1 proteolyzes mitochondrial targeting peptides (presequences)	BlackBoxEvent	False		5	16849325 23041349 21750375 26697887 19962426
+R-HSA-9023159	Carboxypeptidase E hydrolyzes Insulin(57-89) to yield C-peptide (Insulin(57-87))	Reaction	True		1	11462236
+R-HSA-9023163	Carboxypeptidase E cleaves Insulin(25-56) to yield Insulin(25-54)	Reaction	True		1	11462236
+R-HSA-9023171	Insulin secretory granule translocates across the cortical actin network	BlackBoxEvent	True		0	
+R-HSA-9023173	Insulin secretory granule docks at the plasma membrane	BlackBoxEvent	True		0	
+R-HSA-9023178	PCSK2 cleaves Insulin(57-110) to yield Insulin(90-110) and C-peptide (Insulin(57-89))	Reaction	True		3	9166668 8916141 1528899
+R-HSA-9023196	PCSK1 cleaves proinsulin to yield Insulin(25-56) and Insulin(57-110)	Reaction	True		2	14617756 9207799
+R-HSA-9023632	DPP4(39-766) hydrolyzes Glucagon-like Peptide-1 (GLP-1)	Reaction	False		5	14719797 7883856 15584901 8798518 8100523
+R-HSA-9023633	DPP4(1-766) hydrolyzes Glucagon-like Peptide-1 (GLP-1)	Reaction	False		4	14719797 15584901 8798518 8100523
+R-HSA-9035517	Defective AVP mutants do not bind AVPR2	FailedReaction	False		7	10369876 8514868 9467595 8103767 14673472 7714110 12107248
+R-HSA-9623168	FOXO1,FOXO1:PPARGC1A,FOXO3,FOXO4,FOXO6 bind G6PC gene promoter	Reaction	True		0	
+R-HSA-9623281	FOXO1:PPARGC1A,FOXO4 binds PCK1 gene promoter	Reaction	True		0	
+R-HSA-9623415	FOXO1,FOXO3,FOXO4 bind IGFBP1 gene promoter	Reaction	False		1	10102273
+R-HSA-9667563	AVPR2 bind desmopressin	Reaction	False		3	6401806 16333859 2115785
+R-HSA-9667569	AVPR1A,2 bind AVPR antagonists	Reaction	False		11	16672911 30303493 24766294 17699341 9884074 9651149 9459574 17105757 20973922 18508290 15327388
+R-HSA-9667619	AVPR1A,B,2 bind atosiban	Reaction	False		4	4061066 20463780 30962532 7802081
+R-HSA-9702354	CALCA(83-119) binds CALCA antibodies	Reaction	False		6	29171818 32266704 26432182 25297013 29255900 32145209
+R-HSA-9702818	CALCR binds erenumab	Reaction	False		3	32851644 32636324 26559125
+R-HSA-9702849	CALCR binds gepants	Reaction	False		6	31800988 31311674 17665333 20573757 23153230 31556018
+R-HSA-9703895	CASR binds CASR agonists	Reaction	False		7	21148030 23121374 29614098 23674604 20555319 27071541 24235081
+R-HSA-9733292	AMY1-3 bind pramlintide	Reaction	False		2	24169554 9212325
+R-HSA-976734	Amyloid fibrils have additional components	Reaction	False		4	10583407 20807650 2409350 118839
+R-HSA-9769307	NPAS4 represses INS gene expression	BlackBoxEvent	True		0	
+R-HSA-977136	Amyloid precursor proteins form ordered fibrils	Polymerisation	False		27	18449172 8159701 3094007 11467836 18484335 1837051 9006323 15962837 3053705 10391242 8464497 3142462 2900981 11401442 8490014 1849145 279930 8097946 9862427 8870004 10411933 1270801 2195544 2118650 3035556 3080684 9054935
+R-HSA-9838035	CLPXP binds mitochondrial matrix proteins	Reaction	False		3	31056398 34704252 26058080
+R-HSA-9838081	LONP1 degrades mitochondrial matrix proteins	BlackBoxEvent	False		2	24520911 30120231
+R-HSA-9838093	LONP1 binds mitochondrial matrix proteins	Reaction	False		1	17579211
+R-HSA-9838289	CLPXP degrades mitochondrial matrix proteins	BlackBoxEvent	False		1	15522782
+R-HSA-9839105	AFG3L2 degrades mitochondrial matrix proteins	BlackBoxEvent	False		1	14623864
+R-HSA-9839149	AFG3L2 binds mitochondrial matrix proteins	Reaction	False		0	
+R-HSA-9988097	SEC61 translocon:TRAP translocates soluble ER-targeted protein into the ER lumen	BlackBoxEvent	True	GO:0006616	0	
+R-NUL-9023165	Pcsk1 (rat) cleaves human proinsulin to yield Insulin(25-56) and Insulin(57-110)	Reaction	False		2	3283564 1429623
+R-NUL-9023166	Carboxypeptidase E (rat Carboxypeptidase H) cleaves Insulin(25-56) to yield Insulin(25-54)	Reaction	False		1	2822027
+R-NUL-9023180	Pcsk2 (rat) cleaves human Insulin(57-110) to yield Insulin(90-110) and C-peptide (Insulin(57-89))	Reaction	False		3	7626024 3283564 1429623
+R-NUL-9023186	Carboxypeptidase E (rat Carboxypeptidase H) cleaves C-peptide (Insulin(57-89)) to yield C-peptide (Insulin(57-87))	Reaction	False		1	2822027

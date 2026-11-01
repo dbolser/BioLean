@@ -1,0 +1,4 @@
+SCORE 3 3 1 0
+RULE involved_in(V0,V1):- capable_of(V0,V1).
+RULE involved_in(V0,V1):- capable_of(V2,V1),is_a(V2,V0).
+RULE involved_in(V0,V1):- part_of(V0,V2),capable_of(V2,V1).

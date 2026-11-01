@@ -1,0 +1,677 @@
+reaction	role	entity	name	schema	class	reason
+R-HSA-110011	input	R-HSA-110009	GRB10 [cytosol]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-110011	input	R-HSA-74678	Insulin:p-6Y-Insulin receptor [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-110011	output	R-HSA-110010	GRB10:INSR [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-1183032	input	R-HSA-5640175	SLC2A4 gene (GLUT4 gene) [nucleoplasm]	EntityWithAccessionedSequence	lossless	gene (Ensembl reference) as Kind.gene
+R-HSA-1183032	output	R-HSA-70384	GLUT4 / SLC2A4 tetramer [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-1183032	regulator	R-HSA-381289	CEBPA [nucleoplasm]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-1183032	regulator	R-HSA-381226	PPARG:RXRA:Corepressor Complex [nucleoplasm]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-1268022	input	R-HSA-1268006	Cargo of TOMM40 [cytosol]	CandidateSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-1268022	output	R-HSA-1268010	Cargo of TOMM40 [mitochondrial intermembrane space]	CandidateSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-1268022	catalyst	R-HSA-1252240	TOMM40 Complex [mitochondrial outer membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-1299476	input	R-HSA-1299473	TIMM23 SORT:Precursor Cargo [mitochondrial inner membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-1299476	input	R-ALL-113521	H2O [mitochondrial matrix]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-1299476	output	R-HSA-1299469	TIMM23 SORT:Cargo [mitochondrial inner membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-1299476	output	R-HSA-8986177	Mitochondrial targeting peptides (from inner membrane proteins) [mitochondrial matrix]	CandidateSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-1299476	catalyst	R-HSA-1299458	Mitochondrial processing peptidase [mitochondrial matrix]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-1299482	input	R-HSA-1299469	TIMM23 SORT:Cargo [mitochondrial inner membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-1299482	output	R-HSA-1299464	Cargo of TIMM23 SORT [mitochondrial inner membrane]	CandidateSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-1299482	output	R-HSA-1252242	TIMM23 Complex [mitochondrial inner membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-1299482	catalyst	R-HSA-1299469	TIMM23 SORT:Cargo [mitochondrial inner membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-1299487	input	R-HSA-1268004	Precursor Cargo of TIMM23 SORT [mitochondrial intermembrane space]	CandidateSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-1299487	input	R-HSA-1252242	TIMM23 Complex [mitochondrial inner membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-1299487	output	R-HSA-1299473	TIMM23 SORT:Precursor Cargo [mitochondrial inner membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-1449574	input	R-HSA-376345	SNAP23 [plasma membrane]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-1449574	input	R-ALL-113592	ATP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-1449574	input	R-HSA-1449630	VAMP2 [cytoplasmic vesicle membrane]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-1449574	input	R-HSA-1449566	SLC2A4:ASPSCR1 [cytoplasmic vesicle membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-1449574	input	R-HSA-2263479	STX4:STXBP3 (MUNC18C) [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-1449574	output	R-HSA-70383	SLC2A4 [plasma membrane]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-1449574	output	R-ALL-29370	ADP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-1449574	output	R-HSA-1449628	VAMP2:STX4:SNAP23 [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-1449574	output	R-HSA-1449582	ASPSCR1 [cytoplasmic vesicle membrane]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-1449574	output	R-HSA-2263472	p-Y521-STXBP3 [plasma membrane]	EntityWithAccessionedSequence	lossy	modified chain (phospho-site): residue lost
+R-HSA-1592247	input	R-HSA-2466389	ATP5B gene [nucleoplasm]	EntityWithAccessionedSequence	lossless	gene (Ensembl reference) as Kind.gene
+R-HSA-1592247	output	R-HSA-164576	ATP5F1B [mitochondrial matrix]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-1592247	regulator	R-HSA-446159	ESRRA [nucleoplasm]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-1592247	regulator	R-HSA-2466375	ATP5B gene:NRF1:PPARGC1B [nucleoplasm]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-163625	input	R-HSA-9820623	GCGR [plasma membrane]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-163625	input	R-HSA-163626	GCG(53-81) [extracellular region]	EntityWithAccessionedSequence	lossy	cleavage product or processed chain (named with coordinates): needs a PR term
+R-HSA-163625	output	R-HSA-163627	GCGR:GCG(53-81) [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-163625	catalyst	R-HSA-9820623	GCGR [plasma membrane]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-164832	input	R-HSA-164838	ATPase:ADP:Pi [mitochondrial inner membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-164832	output	R-HSA-164835	ATPase:ATP [mitochondrial inner membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-164832	output	R-ALL-113521	H2O [mitochondrial matrix]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-164832	catalyst	R-HSA-164838	ATPase:ADP:Pi [mitochondrial inner membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-164834	input	R-ALL-163953	H+ [mitochondrial intermembrane space]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-164834	input	R-ALL-163953	H+ [mitochondrial intermembrane space]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-164834	input	R-ALL-163953	H+ [mitochondrial intermembrane space]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-164834	input	R-HSA-164835	ATPase:ATP [mitochondrial inner membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-164834	output	R-HSA-74186	F1Fo ATP synthase [mitochondrial inner membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-164834	output	R-ALL-113529	H+ [mitochondrial matrix]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-164834	output	R-ALL-113529	H+ [mitochondrial matrix]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-164834	output	R-ALL-113529	H+ [mitochondrial matrix]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-164834	output	R-ALL-113593	ATP [mitochondrial matrix]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-164834	catalyst	R-HSA-164835	ATPase:ATP [mitochondrial inner membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-164840	input	R-ALL-113548	Pi [mitochondrial matrix]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-164840	input	R-ALL-113581	ADP [mitochondrial matrix]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-164840	input	R-HSA-74186	F1Fo ATP synthase [mitochondrial inner membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-164840	output	R-HSA-164838	ATPase:ADP:Pi [mitochondrial inner membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-189242	input	R-ALL-189246	Fru, Gal, Glc [cytosol]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-189242	output	R-ALL-189219	Fru, Gal, Glc [extracellular region]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-189242	catalyst	R-HSA-70422	GLUT2 / SLC2A2 tetramer [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-211289	input	R-HSA-8931792	INS gene [nucleoplasm]	EntityWithAccessionedSequence	lossless	gene (Ensembl reference) as Kind.gene
+R-HSA-211289	output	R-HSA-264893	INS(25-110) [endoplasmic reticulum lumen]	EntityWithAccessionedSequence	lossy	cleavage product or processed chain (named with coordinates): needs a PR term
+R-HSA-211289	regulator	R-HSA-186537	NKX2-2 [nucleoplasm]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-211289	regulator	R-HSA-211283	MAFA [nucleoplasm]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-211289	regulator	R-HSA-211179	PDX1 [nucleoplasm]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-211289	regulator	R-HSA-3009044	PAX6 [nucleoplasm]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-211289	regulator	R-HSA-8931797	RFX6:INS gene [nucleoplasm]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-211476	input	R-HSA-9606135	SLC2A2 gene [nucleoplasm]	EntityWithAccessionedSequence	lossless	gene (Ensembl reference) as Kind.gene
+R-HSA-211476	output	R-HSA-70421	SLC2A2 [plasma membrane]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-211476	regulator	R-HSA-3004629	HNF1A [nucleoplasm]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-264976	input	R-HSA-264890	6xHC-INS(25-110) [Golgi lumen]	EntityWithAccessionedSequence	lossy	cleavage product or processed chain (named with coordinates): needs a PR term
+R-HSA-264976	input	R-HSA-264890	6xHC-INS(25-110) [Golgi lumen]	EntityWithAccessionedSequence	lossy	cleavage product or processed chain (named with coordinates): needs a PR term
+R-HSA-264976	input	R-HSA-264890	6xHC-INS(25-110) [Golgi lumen]	EntityWithAccessionedSequence	lossy	cleavage product or processed chain (named with coordinates): needs a PR term
+R-HSA-264976	input	R-HSA-264890	6xHC-INS(25-110) [Golgi lumen]	EntityWithAccessionedSequence	lossy	cleavage product or processed chain (named with coordinates): needs a PR term
+R-HSA-264976	input	R-HSA-264890	6xHC-INS(25-110) [Golgi lumen]	EntityWithAccessionedSequence	lossy	cleavage product or processed chain (named with coordinates): needs a PR term
+R-HSA-264976	input	R-HSA-264890	6xHC-INS(25-110) [Golgi lumen]	EntityWithAccessionedSequence	lossy	cleavage product or processed chain (named with coordinates): needs a PR term
+R-HSA-264976	input	R-ALL-216667	Zn2+ [Golgi lumen]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-264976	input	R-ALL-216667	Zn2+ [Golgi lumen]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-264976	input	R-ALL-167012	Ca2+ [Golgi lumen]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-264976	output	R-HSA-264908	6xProinsulin:2xZn2+:1xCa2+ [Golgi lumen]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-264997	input	R-HSA-264893	INS(25-110) [endoplasmic reticulum lumen]	EntityWithAccessionedSequence	lossy	cleavage product or processed chain (named with coordinates): needs a PR term
+R-HSA-264997	input	R-HSA-3341287	HC53,56-P4HB [endoplasmic reticulum lumen]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-264997	output	R-HSA-265075	6xHC-INS(25-110) [endoplasmic reticulum lumen]	EntityWithAccessionedSequence	lossy	cleavage product or processed chain (named with coordinates): needs a PR term
+R-HSA-264997	output	R-HSA-174692	P4HB [endoplasmic reticulum lumen]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-264997	catalyst	R-HSA-3341287	HC53,56-P4HB [endoplasmic reticulum lumen]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-265010	input	R-HSA-265075	6xHC-INS(25-110) [endoplasmic reticulum lumen]	EntityWithAccessionedSequence	lossy	cleavage product or processed chain (named with coordinates): needs a PR term
+R-HSA-265010	output	R-HSA-264890	6xHC-INS(25-110) [Golgi lumen]	EntityWithAccessionedSequence	lossy	cleavage product or processed chain (named with coordinates): needs a PR term
+R-HSA-265153	input	R-HSA-264908	6xProinsulin:2xZn2+:1xCa2+ [Golgi lumen]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-265153	output	R-HSA-265073	6xProinsulin:2xZn2+:1xCa2+ [secretory granule lumen]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-265160	input	R-HSA-264931	6xInsulin:2xZn2+:Ca2+ [secretory granule lumen]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-265160	output	R-HSA-264931	6xInsulin:2xZn2+:Ca2+ [secretory granule lumen]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-265160	catalyst	R-HSA-3878118	KIF5B-like proteins [cytosol]	CandidateSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-265166	input	R-ALL-74016	Ca2+ [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-265166	input	R-ALL-74016	Ca2+ [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-265166	input	R-ALL-74016	Ca2+ [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-265166	input	R-HSA-265191	STX1A:STXBP1 [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-265166	input	R-HSA-386977	6xInsulin:2xZn2+:Ca2+ (docked granule) [secretory granule lumen]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-265166	input	R-HSA-2029017	SNAP25 [plasma membrane]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-265166	input	R-HSA-265011	C Peptide [secretory granule lumen]	EntityWithAccessionedSequence	lossy	cleavage product or processed chain (named with coordinates): needs a PR term
+R-HSA-265166	input	R-HSA-265193	SYT5 [secretory granule membrane]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-265166	input	R-HSA-376363	VAMP2 [secretory granule membrane]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-265166	output	R-ALL-74112	Ca2+ [extracellular region]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-265166	output	R-ALL-74112	Ca2+ [extracellular region]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-265166	output	R-ALL-74112	Ca2+ [extracellular region]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-265166	output	R-ALL-74112	Ca2+ [extracellular region]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-265166	output	R-HSA-265157	INS(57-87) [extracellular region]	EntityWithAccessionedSequence	lossy	cleavage product or processed chain (named with coordinates): needs a PR term
+R-HSA-265166	output	R-HSA-2980862	STXBP1 [plasma membrane]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-265166	output	R-ALL-158417	Zn2+ [extracellular region]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-265166	output	R-ALL-158417	Zn2+ [extracellular region]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-265166	output	R-HSA-74674	Insulin [extracellular region]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-265166	output	R-HSA-74674	Insulin [extracellular region]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-265166	output	R-HSA-74674	Insulin [extracellular region]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-265166	output	R-HSA-74674	Insulin [extracellular region]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-265166	output	R-HSA-74674	Insulin [extracellular region]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-265166	output	R-HSA-74674	Insulin [extracellular region]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-265166	output	R-HSA-265202	SNARE Complex [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-265166	catalyst	R-HSA-387383	Core SNARE Complex [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-265166	regulator	R-HSA-400095	Voltage-gated Calcium Channels Type Cav1 (closed) [plasma membrane]	CandidateSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-265166	regulator	R-HSA-446505	Potassium Channel, open (pancreatic beta cell) [plasma membrane]	GenomeEncodedEntity	lossy	GenomeEncodedEntity: no reference id
+R-HSA-265166	regulator	R-HSA-400076	G-alpha(i,o):GTP [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-373739	input	R-HSA-443633	KCNQ2,3, SCNAs:SCNBs [plasma membrane]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-373739	input	R-HSA-443650	NFASC:NRCAM:ANK1-3:SPTA:SPTB:F-actin [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-373739	output	R-HSA-373687	NFASC:NRCAM:ANK1-3:SPTA:SPTB:F-actin:KCNQ2,3, SCNAs:SCNBs [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-379044	input	R-ALL-29438	GTP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-379044	input	R-HSA-744885	Ligand:GPCR complexes that activate Gs:Heterotrimeric G-protein Gs (inactive) [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-379044	output	R-ALL-29420	GDP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-379044	output	R-HSA-744890	GPCR:ligand complexes that act on Gs:Heterotrimeric G-protein Gs (active) [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-379044	catalyst	R-HSA-9660817	Ade-Rib:ADORA2B:Heterotrimeric G-protein Gs:GDP [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-379048	input	R-ALL-29438	GTP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-379048	input	R-HSA-749451	Ligand:GPCR complexes that activate Gq/11:Heterotrimeric G-protein Gq (inactive) [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-379048	output	R-ALL-29420	GDP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-379048	output	R-HSA-749447	Ligand:GPCR complexes that activate Gq/11:Heterotrimeric G-protein Gq (active) [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-379048	catalyst	R-HSA-9664302	LTC4:CyslTR1,2 [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-380073	input	R-ALL-29438	GTP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-380073	input	R-HSA-749455	Ligand:GPCR complexes that activate Gi:Heterotrimeric G-protein Gi (inactive) [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-380073	output	R-HSA-749445	Ligand:GPCR complexes that activate Gi:Heterotrimeric G-protein Gi (active) [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-380073	output	R-ALL-29420	GDP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-380073	catalyst	R-HSA-749455	Ligand:GPCR complexes that activate Gi:Heterotrimeric G-protein Gi (inactive) [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-380073	regulator	R-HSA-8949487	GPSM1, GPSM3,(GPSM2, PCP2) [cytosol]	CandidateSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-381612	input	R-HSA-422314	GLP1R:Heterotrimeric G(s):GDP [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-381612	input	R-HSA-381662	mature GLP1 [extracellular region]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-381612	output	R-HSA-422310	GLP1:GLP1R:Heterotrimeric G(s):GDP [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-381612	catalyst	R-HSA-381662	mature GLP1 [extracellular region]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-381706	input	R-ALL-29438	GTP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-381706	input	R-HSA-422310	GLP1:GLP1R:Heterotrimeric G(s):GDP [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-381706	output	R-ALL-29420	GDP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-381706	output	R-HSA-422311	GLP-1:GLP-1R:Heterotrimeric G(s):GTP [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-381706	catalyst	R-HSA-422310	GLP1:GLP1R:Heterotrimeric G(s):GDP [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-381798	input	R-HSA-421418	GCG(21-180) [secretory granule lumen]	EntityWithAccessionedSequence	lossy	cleavage product or processed chain (named with coordinates): needs a PR term
+R-HSA-381798	output	R-HSA-879886	mature GLP-1 [secretory granule lumen]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-381798	catalyst	R-HSA-378974	PC1:calcium cofactor [secretory granule lumen]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-381799	input	R-HSA-5653043	GCG gene [nucleoplasm]	EntityWithAccessionedSequence	lossless	gene (Ensembl reference) as Kind.gene
+R-HSA-381799	output	R-HSA-400456	GCG(1-180) [endoplasmic reticulum lumen]	EntityWithAccessionedSequence	lossy	cleavage product or processed chain (named with coordinates): needs a PR term
+R-HSA-381799	regulator	R-HSA-400521	CDX2 [nucleoplasm]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-381799	regulator	R-HSA-201922	hTCF-4:Beta-catenin [nucleoplasm]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-381799	regulator	R-HSA-3009044	PAX6 [nucleoplasm]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-383313	input	R-HSA-879886	mature GLP-1 [secretory granule lumen]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-383313	output	R-HSA-381662	mature GLP1 [extracellular region]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-383313	regulator	R-HSA-375358	GRP(24-50) [extracellular region]	EntityWithAccessionedSequence	lossy	cleavage product or processed chain (named with coordinates): needs a PR term
+R-HSA-383313	regulator	R-HSA-400543	FFAR4:FFAR4 ligands [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-383313	regulator	R-HSA-400532	Gustducin [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-383313	regulator	R-HSA-400420	FFAR1:FFAR1 ligands [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-383313	regulator	R-HSA-400490	LEP [extracellular region]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-383313	regulator	R-HSA-400482	GPR119:monoacylglycerol [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-388468	input	R-HSA-388458	AVPR1A,B [plasma membrane]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-388468	input	R-HSA-388474	AVP(20-28) [extracellular region]	EntityWithAccessionedSequence	lossy	cleavage product or processed chain (named with coordinates): needs a PR term
+R-HSA-388468	output	R-HSA-388502	AVPR1A,B:AVP(20-28) [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-392263	input	R-HSA-388474	AVP(20-28) [extracellular region]	EntityWithAccessionedSequence	lossy	cleavage product or processed chain (named with coordinates): needs a PR term
+R-HSA-392263	input	R-HSA-388431	AVPR2 [plasma membrane]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-392263	output	R-HSA-392261	AVPR2:AVP(20-28) [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-400459	input	R-HSA-400456	GCG(1-180) [endoplasmic reticulum lumen]	EntityWithAccessionedSequence	lossy	cleavage product or processed chain (named with coordinates): needs a PR term
+R-HSA-400459	output	R-HSA-381774	GCG(21-180) [endoplasmic reticulum lumen]	EntityWithAccessionedSequence	lossy	cleavage product or processed chain (named with coordinates): needs a PR term
+R-HSA-400459	catalyst	R-HSA-264960	Signal Peptidase [endoplasmic reticulum membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-419843	input	R-HSA-419781	CALCA(85-116) [extracellular region]	EntityWithAccessionedSequence	lossy	cleavage product or processed chain (named with coordinates): needs a PR term
+R-HSA-419843	input	R-HSA-419798	CALCR [plasma membrane]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-419843	output	R-HSA-419848	CALCR:CALCA(83-119) [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-420123	input	R-HSA-420063	GLP2R [plasma membrane]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-420123	input	R-HSA-420211	GCG(146-178) [extracellular region]	EntityWithAccessionedSequence	lossy	cleavage product or processed chain (named with coordinates): needs a PR term
+R-HSA-420123	output	R-HSA-420087	GLP2R:GCG(146-178) [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-420265	input	R-HSA-420237	AMY1-3 [plasma membrane]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-420265	input	R-HSA-420076	IAPP(34-70) [extracellular region]	EntityWithAccessionedSequence	lossy	cleavage product or processed chain (named with coordinates): needs a PR term
+R-HSA-420265	output	R-HSA-420147	AMY1-3:IAPP(34-70) [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-420489	input	R-HSA-420569	PTH1R,PTH2R ligands [extracellular region]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-420489	input	R-HSA-420554	PTH1R,PTH2R [plasma membrane]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-420489	output	R-HSA-420503	PTH1R,PTH2R:PTH1R,PTH2R ligands [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-420724	input	R-HSA-420719	CASR [plasma membrane]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-420724	input	R-ALL-74112	Ca2+ [extracellular region]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-420724	output	R-HSA-420743	CASR:Ca2+ [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-421416	input	R-HSA-381774	GCG(21-180) [endoplasmic reticulum lumen]	EntityWithAccessionedSequence	lossy	cleavage product or processed chain (named with coordinates): needs a PR term
+R-HSA-421416	output	R-HSA-421418	GCG(21-180) [secretory granule lumen]	EntityWithAccessionedSequence	lossy	cleavage product or processed chain (named with coordinates): needs a PR term
+R-HSA-422048	input	R-HSA-422053	GHRL-1(52-117) [secretory granule lumen]	EntityWithAccessionedSequence	lossy	cleavage product or processed chain (named with coordinates): needs a PR term
+R-HSA-422048	input	R-HSA-422059	Acyl Ghrelin [secretory granule lumen]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-422048	output	R-HSA-422052	GHRL-1(52-117) [extracellular region]	EntityWithAccessionedSequence	lossy	cleavage product or processed chain (named with coordinates): needs a PR term
+R-HSA-422048	output	R-HSA-422096	Acyl Ghrelin [extracellular region]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-422048	regulator	R-HSA-422070	GH1 [extracellular region]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-422048	regulator	R-HSA-163626	GCG(53-81) [extracellular region]	EntityWithAccessionedSequence	lossy	cleavage product or processed chain (named with coordinates): needs a PR term
+R-HSA-422048	regulator	R-HSA-74674	Insulin [extracellular region]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-422048	regulator	R-HSA-400490	LEP [extracellular region]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-422048	regulator	R-HSA-2404178	IGF1 [extracellular region]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-432065	input	R-ALL-109276	H2O [extracellular region]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-432065	output	R-ALL-29356	H2O [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-432065	catalyst	R-HSA-432226	p-S256-AQP2 tetramer [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-432188	input	R-HSA-432200	G-alpha(s):GDP:G-beta:G-gamma [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-432188	input	R-HSA-392261	AVPR2:AVP(20-28) [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-432188	output	R-HSA-432197	AVPR2:AVP:G-alpha(s):GDP:G-beta:G-gamma [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-432195	input	R-ALL-29438	GTP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-432195	input	R-HSA-432197	AVPR2:AVP:G-alpha(s):GDP:G-beta:G-gamma [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-432195	output	R-HSA-432187	AVPR2:AVP:G-alpha(s):GTP:G-beta:G-gamma [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-432195	output	R-ALL-29420	GDP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-432232	input	R-ALL-113592	ATP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-432232	input	R-ALL-113592	ATP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-432232	input	R-ALL-113592	ATP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-432232	input	R-ALL-113592	ATP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-432232	input	R-HSA-432228	AQP2 tetramer [transport vesicle membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-432232	output	R-HSA-432217	p-S256-AQP2 tetramer [transport vesicle membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-432232	output	R-ALL-29370	ADP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-432232	output	R-ALL-29370	ADP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-432232	output	R-ALL-29370	ADP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-432232	output	R-ALL-29370	ADP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-432232	catalyst	R-HSA-111920	PKA catalytic subunit [cytosol]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-432237	input	R-HSA-432217	p-S256-AQP2 tetramer [transport vesicle membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-432237	output	R-HSA-432226	p-S256-AQP2 tetramer [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-432237	catalyst	R-HSA-2028701	MYO5B:RABFIP2:RAB11A [cytoplasmic vesicle membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-450095	input	R-ALL-70113	Glc [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-450095	output	R-ALL-70115	Glc [extracellular region]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-450095	catalyst	R-HSA-70422	GLUT2 / SLC2A2 tetramer [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-499981	input	R-ALL-70115	Glc [extracellular region]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-499981	output	R-ALL-70113	Glc [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-499981	catalyst	R-HSA-500048	GLUT1,2 [plasma membrane]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-507868	input	R-ALL-109276	H2O [extracellular region]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-507868	output	R-ALL-29356	H2O [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-507868	catalyst	R-HSA-8862069	AQP0,1,2,3,4,5,7,8,9,10,11,12A [plasma membrane]	CandidateSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-507870	input	R-ALL-29356	H2O [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-507870	output	R-ALL-109276	H2O [extracellular region]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-507870	catalyst	R-HSA-8862069	AQP0,1,2,3,4,5,7,8,9,10,11,12A [plasma membrane]	CandidateSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-5576895	input	R-ALL-74113	Na+ [extracellular region]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-5576895	output	R-ALL-83910	Na+ [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-5576895	catalyst	R-HSA-443632	SCNAs:SCNBs [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-5576895	regulator	R-HSA-5216063	RANGRF [cytosol]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-5576895	regulator	R-HSA-5578833	FGF11-14 [cytosol]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-5576895	regulator	R-HSA-444601	CAMK2 heteromer:CALM:4xCa2+ [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-5576895	regulator	R-HSA-9612560	Class I antiarrhythmics:SCNAs:SCNBs [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-5621425	input	R-HSA-388458	AVPR1A,B [plasma membrane]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-5621425	input	R-HSA-5621383	AVP mutants [extracellular region]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-5638222	input	R-ALL-189246	Fru, Gal, Glc [cytosol]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-5638222	catalyst	R-HSA-5638256	SLC2A2 mutants [plasma membrane]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-6807875	input	R-HSA-427190	Ankyrin [cytosol]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-6807875	input	R-HSA-6807812	p24 dimers [endoplasmic reticulum-Golgi intermediate compartment membrane]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-6807875	input	R-HSA-420053	Spectrin tetramer [cytosol]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-6807875	input	R-HSA-5688558	PalmC-YKT6 [endoplasmic reticulum-Golgi intermediate compartment membrane]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-6807875	input	R-HSA-6807822	RAB1:GTP:GBF1:USO1:ARF:GTP:coatomer [endoplasmic reticulum-Golgi intermediate compartment membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-6807875	input	R-HSA-6807832	ARFGAP1,2,3 [cytosol]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-6807875	input	R-HSA-6807816	ERGIC-to-cis-Golgi cargo [endoplasmic reticulum-Golgi intermediate compartment membrane]	CandidateSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-6807875	output	R-HSA-6807825	RAB1:GTP:GBF1:USO1:ARF:GTP:coatomer:ARFGAP1,2,3:PalmC-YKT6:p24 dimers:cargo:spectrin:ankyrin [endoplasmic reticulum-Golgi intermediate compartment membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-6807877	input	R-HSA-6807825	RAB1:GTP:GBF1:USO1:ARF:GTP:coatomer:ARFGAP1,2,3:PalmC-YKT6:p24 dimers:cargo:spectrin:ankyrin [endoplasmic reticulum-Golgi intermediate compartment membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-6807877	output	R-HSA-6807832	ARFGAP1,2,3 [cytosol]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-6807877	output	R-HSA-6807786	ARF:GDP [cytosol]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-6807877	output	R-HSA-6808903	RAB1:GTP:USO1:coatomer:PalmC-YKT6:p24 dimers:cargo:spectrin:anykrin [transport vesicle]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-6807877	output	R-HSA-6807751	GBF1 [cytosol]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-6807877	catalyst	R-HSA-6807825	RAB1:GTP:GBF1:USO1:ARF:GTP:coatomer:ARFGAP1,2,3:PalmC-YKT6:p24 dimers:cargo:spectrin:ankyrin [endoplasmic reticulum-Golgi intermediate compartment membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-6809003	input	R-HSA-2029135	Dynein:Dynactin:microtubule [cytosol]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-6809003	input	R-HSA-6808903	RAB1:GTP:USO1:coatomer:PalmC-YKT6:p24 dimers:cargo:spectrin:anykrin [transport vesicle]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-6809003	output	R-HSA-6808904	RAB1:GTP:USO1 coatomer:PalmC-YKT6:p24 dimers:cargo:anykrin:spectrin:dynein:dynactin:microtubules [transport vesicle]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-6809006	input	R-HSA-6808904	RAB1:GTP:USO1 coatomer:PalmC-YKT6:p24 dimers:cargo:anykrin:spectrin:dynein:dynactin:microtubules [transport vesicle]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-6809006	input	R-HSA-6810505	GOLGB1 homodimer [Golgi membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-6809006	input	R-HSA-6808815	TMEM115 [Golgi membrane]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-6809006	input	R-HSA-6808819	COG complex [Golgi membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-6809006	input	R-HSA-6808820	GOLGA2:GORASP1 [Golgi membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-6809006	output	R-HSA-6808912	RAB1:GTP:USO1:coatomer:PalmC-YKT6:p24 dimers:cargo:spectrin:anykrin:COG complex:GOLGA2:GORASP1:GOLGB1:TMEM115 [Golgi membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-6809006	output	R-HSA-2029135	Dynein:Dynactin:microtubule [cytosol]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-6809010	input	R-HSA-6808913	RAB1:GTP:USO1:coatomer:p24 dimers:cargo:spectrin:ankyrin:COG complex:GOLGA2:GORASP1:TMEM115:cis-SNARE complex [Golgi membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-6809010	output	R-HSA-6809000	cis-Golgi cis SNARE bundle [Golgi membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-6809010	output	R-HSA-6810505	GOLGB1 homodimer [Golgi membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-6809010	output	R-HSA-5694296	RAB1:GDP [cytosol]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-6809010	output	R-HSA-6808909	ERGIC-to-cis-Golgi cargo [Golgi membrane]	CandidateSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-6809010	output	R-HSA-6807805	coatomer [cytosol]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-6809010	output	R-HSA-6808815	TMEM115 [Golgi membrane]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-6809010	output	R-HSA-5694302	USO1 homodimer [cytosol]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-6809010	output	R-HSA-6808819	COG complex [Golgi membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-6809010	output	R-HSA-420053	Spectrin tetramer [cytosol]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-6809010	output	R-HSA-6808820	GOLGA2:GORASP1 [Golgi membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-6809010	output	R-HSA-6808871	p24 dimers [Golgi membrane]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-6809010	output	R-HSA-427190	Ankyrin [cytosol]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-6809011	input	R-HSA-6807834	cis-Golgi t-SNARES [Golgi membrane]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-6809011	input	R-HSA-6808912	RAB1:GTP:USO1:coatomer:PalmC-YKT6:p24 dimers:cargo:spectrin:anykrin:COG complex:GOLGA2:GORASP1:GOLGB1:TMEM115 [Golgi membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-6809011	output	R-HSA-6808913	RAB1:GTP:USO1:coatomer:p24 dimers:cargo:spectrin:ankyrin:COG complex:GOLGA2:GORASP1:TMEM115:cis-SNARE complex [Golgi membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-744886	input	R-HSA-744890	GPCR:ligand complexes that act on Gs:Heterotrimeric G-protein Gs (active) [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-744886	output	R-HSA-167434	G-protein beta-gamma complex [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-744886	output	R-HSA-164358	G alpha (s):GTP [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-744886	output	R-HSA-790205	Ligands of GPCRs that activate Gs [extracellular region]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-744886	output	R-HSA-790204	GPCRs that activate Gs [plasma membrane]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-744887	input	R-HSA-391179	Heterotrimeric G-protein Gs (inactive) [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-744887	input	R-HSA-391181	Ligand:GPCR complexes that activate Gs [plasma membrane]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-744887	output	R-HSA-744885	Ligand:GPCR complexes that activate Gs:Heterotrimeric G-protein Gs (inactive) [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-74707	input	R-HSA-74678	Insulin:p-6Y-Insulin receptor [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-74707	input	R-HSA-198273	IRS1,2 [cytosol]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-74707	output	R-HSA-74699	IRS:Insulin:p-6Y-Insulin receptor [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-74707	regulator	R-HSA-110010	GRB10:INSR [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-74711	input	R-HSA-74699	IRS:Insulin:p-6Y-Insulin receptor [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-74711	input	R-ALL-113592	ATP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-74711	output	R-ALL-29370	ADP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-74711	output	R-HSA-74695	p-Y-IRS:Insulin:p-6Y-Insulin receptor [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-74711	catalyst	R-HSA-74699	IRS:Insulin:p-6Y-Insulin receptor [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-74712	input	R-HSA-74695	p-Y-IRS:Insulin:p-6Y-Insulin receptor [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-74712	output	R-HSA-74678	Insulin:p-6Y-Insulin receptor [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-74712	output	R-HSA-112322	p-Y-IRS1,p-Y-IRS2 [cytosol]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-74715	input	R-HSA-74703	Insulin:Insulin receptor [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-74715	input	R-ALL-113592	ATP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-74715	input	R-ALL-113592	ATP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-74715	input	R-ALL-113592	ATP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-74715	input	R-ALL-113592	ATP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-74715	input	R-ALL-113592	ATP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-74715	input	R-ALL-113592	ATP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-74715	input	R-ALL-113592	ATP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-74715	input	R-ALL-113592	ATP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-74715	input	R-ALL-113592	ATP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-74715	input	R-ALL-113592	ATP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-74715	input	R-ALL-113592	ATP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-74715	input	R-ALL-113592	ATP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-74715	output	R-ALL-29370	ADP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-74715	output	R-ALL-29370	ADP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-74715	output	R-ALL-29370	ADP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-74715	output	R-ALL-29370	ADP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-74715	output	R-ALL-29370	ADP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-74715	output	R-ALL-29370	ADP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-74715	output	R-ALL-29370	ADP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-74715	output	R-ALL-29370	ADP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-74715	output	R-ALL-29370	ADP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-74715	output	R-ALL-29370	ADP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-74715	output	R-ALL-29370	ADP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-74715	output	R-ALL-29370	ADP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-74715	output	R-HSA-74678	Insulin:p-6Y-Insulin receptor [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-74715	catalyst	R-HSA-74703	Insulin:Insulin receptor [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-74716	input	R-HSA-74674	Insulin [extracellular region]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-74716	input	R-HSA-74675	Insulin receptor [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-74716	output	R-HSA-74703	Insulin:Insulin receptor [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-74718	input	R-HSA-74678	Insulin:p-6Y-Insulin receptor [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-74718	output	R-HSA-74702	Insulin:p-6Y-insulin receptor [endosome membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-74726	input	R-HSA-74702	Insulin:p-6Y-insulin receptor [endosome membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-74726	output	R-HSA-77384	p-6Y-insulin receptor [endosome membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-74726	output	R-HSA-77385	insulin [endosome lumen]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-74730	input	R-HSA-77385	insulin [endosome lumen]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-74730	catalyst	R-HSA-9816126	IDE, CTSD [endosome lumen]	CandidateSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-74733	input	R-ALL-29356	H2O [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-74733	input	R-ALL-29356	H2O [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-74733	input	R-ALL-29356	H2O [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-74733	input	R-ALL-29356	H2O [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-74733	input	R-ALL-29356	H2O [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-74733	input	R-ALL-29356	H2O [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-74733	input	R-ALL-29356	H2O [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-74733	input	R-ALL-29356	H2O [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-74733	input	R-ALL-29356	H2O [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-74733	input	R-ALL-29356	H2O [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-74733	input	R-ALL-29356	H2O [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-74733	input	R-ALL-29356	H2O [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-74733	input	R-HSA-77384	p-6Y-insulin receptor [endosome membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-74733	output	R-ALL-29372	Pi [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-74733	output	R-ALL-29372	Pi [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-74733	output	R-ALL-29372	Pi [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-74733	output	R-ALL-29372	Pi [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-74733	output	R-ALL-29372	Pi [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-74733	output	R-ALL-29372	Pi [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-74733	output	R-ALL-29372	Pi [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-74733	output	R-ALL-29372	Pi [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-74733	output	R-ALL-29372	Pi [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-74733	output	R-ALL-29372	Pi [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-74733	output	R-ALL-29372	Pi [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-74733	output	R-ALL-29372	Pi [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-74733	output	R-HSA-74706	insulin receptor [endosome membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-74733	catalyst	R-HSA-9815892	PTPN1, PTPRF [endosome membrane]	CandidateSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-74734	input	R-HSA-74706	insulin receptor [endosome membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-74734	output	R-HSA-74675	Insulin receptor [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-74740	input	R-HSA-74680	SHC1 [cytosol]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-74740	input	R-HSA-74678	Insulin:p-6Y-Insulin receptor [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-74740	output	R-HSA-74681	Insulin:p-6Y-Insulin receptor:SHC1 [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-74740	regulator	R-HSA-110010	GRB10:INSR [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-74742	input	R-ALL-113592	ATP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-74742	input	R-HSA-74681	Insulin:p-6Y-Insulin receptor:SHC1 [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-74742	output	R-HSA-74685	Insulin:p-6Y-Insulin receptor:p-Y427-SHC1 [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-74742	output	R-ALL-29370	ADP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-74742	catalyst	R-HSA-74681	Insulin:p-6Y-Insulin receptor:SHC1 [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-74743	input	R-HSA-74685	Insulin:p-6Y-Insulin receptor:p-Y427-SHC1 [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-74743	output	R-HSA-74684	p-Y427-SHC1 [cytosol]	EntityWithAccessionedSequence	lossy	modified chain (phospho-site): residue lost
+R-HSA-74743	output	R-HSA-74678	Insulin:p-6Y-Insulin receptor [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-749448	input	R-HSA-380110	Ligand:GPCR complexes that activate Gq/11 [plasma membrane]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-749448	input	R-HSA-114557	Heterotrimeric G-protein Gq/11 (inactive) [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-749448	output	R-HSA-749451	Ligand:GPCR complexes that activate Gq/11:Heterotrimeric G-protein Gq (inactive) [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-749452	input	R-HSA-749447	Ligand:GPCR complexes that activate Gq/11:Heterotrimeric G-protein Gq (active) [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-749452	output	R-HSA-791493	GPCRs that activate Gq/11 [plasma membrane]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-749452	output	R-HSA-791492	Ligands of GPCRs that activate Gq/11 [extracellular region]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-749452	output	R-HSA-167434	G-protein beta-gamma complex [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-749452	output	R-HSA-114534	G-protein alpha (q/11): GTP [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-749454	input	R-HSA-749445	Ligand:GPCR complexes that activate Gi:Heterotrimeric G-protein Gi (active) [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-749454	output	R-HSA-380091	Ligand:GPCR complexes that activate Gi [plasma membrane]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-749454	output	R-HSA-167434	G-protein beta-gamma complex [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-749454	output	R-HSA-392161	G alpha (i): GTP [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-749456	input	R-HSA-392165	Heterotrimeric G-protein Gi (inactive) [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-749456	input	R-HSA-380091	Ligand:GPCR complexes that activate Gi [plasma membrane]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-749456	output	R-HSA-749455	Ligand:GPCR complexes that activate Gi:Heterotrimeric G-protein Gi (inactive) [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-825631	input	R-ALL-29438	GTP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-825631	input	R-HSA-164384	G-protein with G(s) alpha:GDP [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-825631	output	R-ALL-29420	GDP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-825631	output	R-HSA-164358	G alpha (s):GTP [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-825631	output	R-HSA-164386	G-beta:G-gamma dimer [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-825631	catalyst	R-HSA-163627	GCGR:GCG(53-81) [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-879584	input	R-HSA-879529	SLCO3A1 substrates [extracellular region]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-879584	output	R-HSA-879563	SLCO3A1 substrates [cytosol]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-879584	catalyst	R-HSA-879536	SLCO3A1-1 [plasma membrane]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-879782	input	R-HSA-5641219	AVP gene [nucleoplasm]	EntityWithAccessionedSequence	lossless	gene (Ensembl reference) as Kind.gene
+R-HSA-879782	output	R-HSA-388474	AVP(20-28) [extracellular region]	EntityWithAccessionedSequence	lossy	cleavage product or processed chain (named with coordinates): needs a PR term
+R-HSA-879782	regulator	R-HSA-5663184	p-S90-BMAL1:p-T451,T461-CLOCK:AVP gene [nucleoplasm]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8857925	input	R-HSA-196206	PP2A [cytosol]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8857925	input	R-ALL-113592	ATP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-8857925	output	R-ALL-29370	ADP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-8857925	output	R-HSA-8857938	p-Y307-PP2A [cytosol]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8857925	catalyst	R-HSA-8857936	Activated SRC,LCK,EGFR,INSR [plasma membrane]	CandidateSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-8857925	regulator	R-ALL-1806240	PI5P [plasma membrane]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-8866268	input	R-ALL-113592	ATP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-8866268	input	R-HSA-392261	AVPR2:AVP(20-28) [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8866268	output	R-HSA-8866248	p-AVPR2:AVP(20-28) [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8866268	output	R-ALL-29370	ADP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-8866268	catalyst	R-HSA-8866229	ADBRK1,2 [cytosol]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-8866269	input	R-HSA-1911410	ARRB [cytosol]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-8866269	input	R-HSA-8866250	ARRB-binding GPCRs [plasma membrane]	CandidateSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-8866269	output	R-HSA-8866263	ARRB:ARRB-binding GPCRs [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8866283	input	R-HSA-8856806	PI(4,5)P2:p-T156 AP-2:clathrin:FCHO1,2:ITSNs:EPS15:REPS1:SGIP1:NECAPs:AAK1 [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8866283	input	R-HSA-8866263	ARRB:ARRB-binding GPCRs [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8866283	output	R-HSA-8866265	ARBBs:ARBB-binding GPCRs:clathrin-coated pit [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8866283	regulator	R-HSA-8866245	UBQLN2:UIM-containing proteins [cytosol]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8867754	input	R-HSA-8868040	SNX9,18 [cytosol]	CandidateSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-8867754	input	R-HSA-8868042	TRIP10 dimer [cytosol]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8867754	input	R-HSA-8868045	FNBP1L dimer [cytosol]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8867754	input	R-HSA-8868621	PACSIN dimers [cytosol]	CandidateSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-8867754	input	R-HSA-8868046	FNBP1 dimer [cytosol]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8867754	input	R-HSA-8868606	AMPH:BIN1 [cytosol]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8867754	input	R-HSA-8867746	SH3GLs [cytosol]	CandidateSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-8867754	input	R-HSA-8868051	PI(4,5)P2:p-T156 AP-2:clathrin:FCHO1,2:ITSNs:EPS15:REPS1:SGIP1:NECAPs:AAK1:CLASP proteins:cargo:PIK3C2A [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8867754	output	R-HSA-8862270	FCHO1,2 dimer [cytosol]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-8867754	output	R-HSA-1604624	PIK3C2A [cytosol]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-8867754	output	R-HSA-8867751	PI(4,5)P2:p-T156 AP-2:clathrin:ITSNs:EPS15:REPS1:SGIP1:NECAPs:AAK1:CLASP proteins:cargo:F-BAR proteins:BAR domain proteins [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8867756	input	R-HSA-8867603	CLASP proteins:cargo [plasma membrane]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-8867756	input	R-HSA-8856806	PI(4,5)P2:p-T156 AP-2:clathrin:FCHO1,2:ITSNs:EPS15:REPS1:SGIP1:NECAPs:AAK1 [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8867756	output	R-HSA-8867753	PI(4,5)P2:p-T156 AP-2:clathrin:FCHO1,2:ITSNs:EPS15:REPS1:SGIP1:NECAPs:AAK1:CLASP proteins:cargo [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8868071	input	R-HSA-8867753	PI(4,5)P2:p-T156 AP-2:clathrin:FCHO1,2:ITSNs:EPS15:REPS1:SGIP1:NECAPs:AAK1:CLASP proteins:cargo [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8868071	input	R-HSA-1604624	PIK3C2A [cytosol]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-8868071	output	R-HSA-8868051	PI(4,5)P2:p-T156 AP-2:clathrin:FCHO1,2:ITSNs:EPS15:REPS1:SGIP1:NECAPs:AAK1:CLASP proteins:cargo:PIK3C2A [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8868072	input	R-ALL-113592	ATP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-8868072	input	R-ALL-392417	PI4P [plasma membrane]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-8868072	output	R-ALL-29370	ADP [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-8868072	output	R-ALL-202247	PI(3,4)P2 [plasma membrane]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-8868072	catalyst	R-HSA-8868051	PI(4,5)P2:p-T156 AP-2:clathrin:FCHO1,2:ITSNs:EPS15:REPS1:SGIP1:NECAPs:AAK1:CLASP proteins:cargo:PIK3C2A [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8868230	input	R-HSA-8868713	ARP2/3 complex [cytosol]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8868230	input	R-HSA-8868219	HIP1 dimer [cytosol]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8868230	input	R-HSA-8868221	HIP1R dimer [cytosol]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8868230	input	R-HSA-202986	f-actin [plasma membrane]	Polymer	lossy	Polymer: no reference id
+R-HSA-8868230	input	R-HSA-8868228	WASL,CTTN [cytosol]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-8868230	input	R-HSA-8867751	PI(4,5)P2:p-T156 AP-2:clathrin:ITSNs:EPS15:REPS1:SGIP1:NECAPs:AAK1:CLASP proteins:cargo:F-BAR proteins:BAR domain proteins [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8868230	output	R-HSA-8868232	PI(4,5)P2:p-T156 AP-2:clathrin:ITSNs:EPS15:REPS1:SGIP1:NECAPs:AAK1:CLASP proteins:cargo:F-BAR proteins:BAR domain proteins:ARP2/3 complex:WASL:f-actin:HIP dimers [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8868236	input	R-HSA-8868232	PI(4,5)P2:p-T156 AP-2:clathrin:ITSNs:EPS15:REPS1:SGIP1:NECAPs:AAK1:CLASP proteins:cargo:F-BAR proteins:BAR domain proteins:ARP2/3 complex:WASL:f-actin:HIP dimers [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8868236	input	R-HSA-8868235	DNM:GTP [cytosol]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8868236	output	R-HSA-8868234	PI(4,5)P2:p-T156 AP-2:clathrin:ITSNs:EPS15:REPS1:SGIP1:NECAPs:AAK1:CLASP proteins:cargo:F-BAR proteins:BAR domain proteins:ARP2/3 complex:WASL:f-actin:HIP dimers:DNM:GTP [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8868648	input	R-HSA-8868634	PI(4,5)P2:p-T156 AP-2:clathrin:ITSNs:EPS15:REPS1:SGIP1:NECAPs:AAK1:CLASP proteins:cargo:F-BAR proteins:BAR domain proteins:ARP2/3 complex:WASL:f-actin:HIP dimers:DNM:GTP:SYNJs [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8868648	input	R-ALL-29356	H2O [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-8868648	output	R-ALL-29372	Pi [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-8868648	output	R-HSA-8868629	PI(4)P:p-T156 AP-2:clathrin:ITSNs:EPS15:REPS1:SGIP1:NECAPs:AAK1:CLASP proteins:cargo:F-BAR proteins:BAR domain proteins:ARP2/3 complex:WASL:f-actin:HIP dimers:DNM:GTP:SYNJs [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8868648	catalyst	R-HSA-8868634	PI(4,5)P2:p-T156 AP-2:clathrin:ITSNs:EPS15:REPS1:SGIP1:NECAPs:AAK1:CLASP proteins:cargo:F-BAR proteins:BAR domain proteins:ARP2/3 complex:WASL:f-actin:HIP dimers:DNM:GTP:SYNJs [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8868651	input	R-HSA-8868234	PI(4,5)P2:p-T156 AP-2:clathrin:ITSNs:EPS15:REPS1:SGIP1:NECAPs:AAK1:CLASP proteins:cargo:F-BAR proteins:BAR domain proteins:ARP2/3 complex:WASL:f-actin:HIP dimers:DNM:GTP [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8868651	input	R-HSA-1806173	SYNJs,OCRL [cytosol]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-8868651	output	R-HSA-8868634	PI(4,5)P2:p-T156 AP-2:clathrin:ITSNs:EPS15:REPS1:SGIP1:NECAPs:AAK1:CLASP proteins:cargo:F-BAR proteins:BAR domain proteins:ARP2/3 complex:WASL:f-actin:HIP dimers:DNM:GTP:SYNJs [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8868658	input	R-ALL-29356	H2O [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-8868658	input	R-HSA-8868627	PI(4)P:p-T156 AP-2:clathrin:ITSNs:EPS15:REPS1:SGIP1:NECAPs:AAK1:CLASP proteins:cargo:F-BAR proteins:BAR domain proteins:ARP2/3 complex:WASL:f-actin:HIP dimers:DNM:GDP:SYNJs:auxilin:HSPA8:ATP [clathrin-coated endocytic vesicle membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8868658	output	R-HSA-8868617	clathrin:HSPA8:ADP [cytosol]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8868658	output	R-ALL-29372	Pi [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-8868658	output	R-HSA-8868620	PI(4)P:p-T156 AP-2:ITSNs:EPS15:REPS1:SGIP1:NECAPs:AAK1:CLASP proteins:cargo:F-BAR proteins:BAR domain proteins:ARP2/3 complex:WASL:f-actin:HIP dimers:DNM:GDP:SYNJs:auxilin [clathrin-coated endocytic vesicle membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8868658	catalyst	R-HSA-8868627	PI(4)P:p-T156 AP-2:clathrin:ITSNs:EPS15:REPS1:SGIP1:NECAPs:AAK1:CLASP proteins:cargo:F-BAR proteins:BAR domain proteins:ARP2/3 complex:WASL:f-actin:HIP dimers:DNM:GDP:SYNJs:auxilin:HSPA8:ATP [clathrin-coated endocytic vesicle membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8868659	input	R-HSA-8868618	GAK,DNAJC6 [cytosol]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-8868659	input	R-HSA-8868624	PI(4)P:p-T156 AP-2:clathrin:ITSNs:EPS15:REPS1:SGIP1:NECAPs:AAK1:CLASP proteins:cargo:F-BAR proteins:BAR domain proteins:ARP2/3 complex:WASL:f-actin:HIP dimers:DNM:GDP:SYNJs [clathrin-coated endocytic vesicle membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8868659	output	R-HSA-8868626	PI(4)P:p-T156 AP-2:clathrin:ITSNs:EPS15:REPS1:SGIP1:NECAPs:AAK1:CLASP proteins:cargo:F-BAR proteins:BAR domain proteins:ARP2/3 complex:WASL:f-actin:HIP dimers:DNM:GDP:SYNJs:auxilin [clathrin-coated endocytic vesicle membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8868660	input	R-HSA-8868626	PI(4)P:p-T156 AP-2:clathrin:ITSNs:EPS15:REPS1:SGIP1:NECAPs:AAK1:CLASP proteins:cargo:F-BAR proteins:BAR domain proteins:ARP2/3 complex:WASL:f-actin:HIP dimers:DNM:GDP:SYNJs:auxilin [clathrin-coated endocytic vesicle membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8868660	input	R-HSA-5251937	HSPA8:ATP [cytosol]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8868660	output	R-HSA-8868627	PI(4)P:p-T156 AP-2:clathrin:ITSNs:EPS15:REPS1:SGIP1:NECAPs:AAK1:CLASP proteins:cargo:F-BAR proteins:BAR domain proteins:ARP2/3 complex:WASL:f-actin:HIP dimers:DNM:GDP:SYNJs:auxilin:HSPA8:ATP [clathrin-coated endocytic vesicle membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8868661	input	R-ALL-29356	H2O [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-8868661	input	R-HSA-8868629	PI(4)P:p-T156 AP-2:clathrin:ITSNs:EPS15:REPS1:SGIP1:NECAPs:AAK1:CLASP proteins:cargo:F-BAR proteins:BAR domain proteins:ARP2/3 complex:WASL:f-actin:HIP dimers:DNM:GTP:SYNJs [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8868661	output	R-ALL-29372	Pi [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-8868661	output	R-HSA-8868624	PI(4)P:p-T156 AP-2:clathrin:ITSNs:EPS15:REPS1:SGIP1:NECAPs:AAK1:CLASP proteins:cargo:F-BAR proteins:BAR domain proteins:ARP2/3 complex:WASL:f-actin:HIP dimers:DNM:GDP:SYNJs [clathrin-coated endocytic vesicle membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8868661	catalyst	R-HSA-8868629	PI(4)P:p-T156 AP-2:clathrin:ITSNs:EPS15:REPS1:SGIP1:NECAPs:AAK1:CLASP proteins:cargo:F-BAR proteins:BAR domain proteins:ARP2/3 complex:WASL:f-actin:HIP dimers:DNM:GTP:SYNJs [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8869438	input	R-HSA-8871150	PI(4)P:p-T156 AP-2:ITSNs:EPS15:REPS1:SGIP1:NECAPs:CLASP proteins:cargo:F-BAR proteins:BAR domain proteins:ARP2/3 complex:WASL:f-actin:HIP dimers:DNM:GDP:SYNJs:auxilinGGC-RAB5:GTP:GAPVD1 [clathrin-coated endocytic vesicle membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8869438	output	R-HSA-8862265	REPS1 [cytosol]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-8869438	output	R-HSA-8868219	HIP1 dimer [cytosol]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8869438	output	R-HSA-8862268	SGIP1 [cytosol]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-8869438	output	R-HSA-8868221	HIP1R dimer [cytosol]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8869438	output	R-HSA-8868606	AMPH:BIN1 [cytosol]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8869438	output	R-HSA-8868040	SNX9,18 [cytosol]	CandidateSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-8869438	output	R-HSA-8868713	ARP2/3 complex [cytosol]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8869438	output	R-HSA-8868042	TRIP10 dimer [cytosol]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8869438	output	R-HSA-8868618	GAK,DNAJC6 [cytosol]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-8869438	output	R-HSA-8868045	FNBP1L dimer [cytosol]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8869438	output	R-HSA-8868621	PACSIN dimers [cytosol]	CandidateSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-8869438	output	R-HSA-8863469	NECAPs [cytosol]	CandidateSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-8869438	output	R-HSA-182920	EPS15 [cytosol]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-8869438	output	R-HSA-8868046	FNBP1 dimer [cytosol]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8869438	output	R-HSA-202986	f-actin [plasma membrane]	Polymer	lossy	Polymer: no reference id
+R-HSA-8869438	output	R-ALL-8868704	PI4P [clathrin-coated endocytic vesicle membrane]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-8869438	output	R-HSA-1806173	SYNJs,OCRL [cytosol]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-8869438	output	R-HSA-8868609	DNM:GDP [cytosol]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8869438	output	R-HSA-8867746	SH3GLs [cytosol]	CandidateSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-8869438	output	R-HSA-8862274	ITSNs [cytosol]	CandidateSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-8869438	output	R-HSA-8868228	WASL,CTTN [cytosol]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-8869438	output	R-HSA-167712	AP-2 Complex [cytosol]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8869438	output	R-HSA-8871142	GGC-RAB5:GTP:GAPVD1 [clathrin-coated endocytic vesicle membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8869438	output	R-HSA-8868710	CLASP proteins:cargo [clathrin-coated endocytic vesicle membrane]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-8871193	input	R-HSA-8871149	PI(4)P:p-T156 AP-2:ITSNs:EPS15:REPS1:SGIP1:NECAPs:AAK1:CLASP proteins:cargo:F-BAR proteins:BAR domain proteins:ARP2/3 complex:WASL:f-actin:HIP dimers:DNM:GDP:SYNJs:auxilin [clathrin-coated endocytic vesicle membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8871193	output	R-HSA-8854795	AAK1 [cytosol]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-8871193	output	R-HSA-8871150	PI(4)P:p-T156 AP-2:ITSNs:EPS15:REPS1:SGIP1:NECAPs:CLASP proteins:cargo:F-BAR proteins:BAR domain proteins:ARP2/3 complex:WASL:f-actin:HIP dimers:DNM:GDP:SYNJs:auxilinGGC-RAB5:GTP:GAPVD1 [clathrin-coated endocytic vesicle membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8871194	input	R-HSA-8868620	PI(4)P:p-T156 AP-2:ITSNs:EPS15:REPS1:SGIP1:NECAPs:AAK1:CLASP proteins:cargo:F-BAR proteins:BAR domain proteins:ARP2/3 complex:WASL:f-actin:HIP dimers:DNM:GDP:SYNJs:auxilin [clathrin-coated endocytic vesicle membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8871194	input	R-HSA-8871139	GGC-RAB5:GDP:GAPVD1 [clathrin-coated endocytic vesicle membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8871194	output	R-HSA-8871149	PI(4)P:p-T156 AP-2:ITSNs:EPS15:REPS1:SGIP1:NECAPs:AAK1:CLASP proteins:cargo:F-BAR proteins:BAR domain proteins:ARP2/3 complex:WASL:f-actin:HIP dimers:DNM:GDP:SYNJs:auxilin [clathrin-coated endocytic vesicle membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8949580	input	R-HSA-74186	F1Fo ATP synthase [mitochondrial inner membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8949580	input	R-HSA-74186	F1Fo ATP synthase [mitochondrial inner membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8949580	output	R-HSA-8949570	F1Fo ATP synthase dimer [mitochondrial inner membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8981570	input	R-ALL-70115	Glc [extracellular region]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-8981570	output	R-ALL-70113	Glc [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-8981570	catalyst	R-HSA-70384	GLUT4 / SLC2A4 tetramer [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8981574	input	R-ALL-70115	Glc [extracellular region]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-8981574	output	R-ALL-70113	Glc [cytosol]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-8981574	catalyst	R-HSA-70422	GLUT2 / SLC2A2 tetramer [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-8986181	input	R-HSA-8986144	Mitochondrial targeting peptides [mitochondrial matrix]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-8986181	catalyst	R-HSA-8986159	PITRM1 [mitochondrial matrix]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-9023159	input	R-HSA-9023172	INS(57-89) [secretory granule lumen]	EntityWithAccessionedSequence	lossy	cleavage product or processed chain (named with coordinates): needs a PR term
+R-HSA-9023159	input	R-ALL-351603	H2O [secretory granule lumen]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-9023159	input	R-ALL-351603	H2O [secretory granule lumen]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-9023159	output	R-ALL-9817769	L-Lys [secretory granule lumen]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-9023159	output	R-HSA-265011	C Peptide [secretory granule lumen]	EntityWithAccessionedSequence	lossy	cleavage product or processed chain (named with coordinates): needs a PR term
+R-HSA-9023159	output	R-ALL-9817767	L-Arg [secretory granule lumen]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-9023159	catalyst	R-HSA-9023198	CPE:Zn2+ [secretory granule membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-9023163	input	R-HSA-9023182	6x2xHC-INS(25-56):4xHC-INS(57-110):2xZn2+:1xCa2+ [secretory granule lumen]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-9023163	input	R-ALL-351603	H2O [secretory granule lumen]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-9023163	input	R-ALL-351603	H2O [secretory granule lumen]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-9023163	output	R-HSA-9023156	6x2xHC-INS(25-54):4xHC-INS(57-110):2xZn2+:1xCa2+ [secretory granule lumen]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-9023163	catalyst	R-HSA-9023198	CPE:Zn2+ [secretory granule membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-9023171	input	R-HSA-264931	6xInsulin:2xZn2+:Ca2+ [secretory granule lumen]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-9023171	output	R-HSA-9023192	6xInsulin:2xZn2+:Ca2+ (post actin network) [secretory granule lumen]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-9023171	catalyst	R-HSA-8931616	MYO5A:MYRIP:RAB27A [cytosol]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-9023173	input	R-HSA-9023192	6xInsulin:2xZn2+:Ca2+ (post actin network) [secretory granule lumen]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-9023173	output	R-HSA-386977	6xInsulin:2xZn2+:Ca2+ (docked granule) [secretory granule lumen]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-9023173	catalyst	R-HSA-387383	Core SNARE Complex [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-9023173	regulator	R-HSA-8932938	TMEM27 [secretory granule membrane]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-9023178	input	R-HSA-9023156	6x2xHC-INS(25-54):4xHC-INS(57-110):2xZn2+:1xCa2+ [secretory granule lumen]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-9023178	input	R-ALL-351603	H2O [secretory granule lumen]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-9023178	output	R-HSA-9023172	INS(57-89) [secretory granule lumen]	EntityWithAccessionedSequence	lossy	cleavage product or processed chain (named with coordinates): needs a PR term
+R-HSA-9023178	output	R-HSA-9023172	INS(57-89) [secretory granule lumen]	EntityWithAccessionedSequence	lossy	cleavage product or processed chain (named with coordinates): needs a PR term
+R-HSA-9023178	output	R-HSA-9023172	INS(57-89) [secretory granule lumen]	EntityWithAccessionedSequence	lossy	cleavage product or processed chain (named with coordinates): needs a PR term
+R-HSA-9023178	output	R-HSA-9023172	INS(57-89) [secretory granule lumen]	EntityWithAccessionedSequence	lossy	cleavage product or processed chain (named with coordinates): needs a PR term
+R-HSA-9023178	output	R-HSA-9023172	INS(57-89) [secretory granule lumen]	EntityWithAccessionedSequence	lossy	cleavage product or processed chain (named with coordinates): needs a PR term
+R-HSA-9023178	output	R-HSA-9023172	INS(57-89) [secretory granule lumen]	EntityWithAccessionedSequence	lossy	cleavage product or processed chain (named with coordinates): needs a PR term
+R-HSA-9023178	output	R-HSA-264931	6xInsulin:2xZn2+:Ca2+ [secretory granule lumen]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-9023178	catalyst	R-HSA-265156	PCSK2 [secretory granule lumen]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-9023196	input	R-ALL-351603	H2O [secretory granule lumen]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-9023196	input	R-HSA-265073	6xProinsulin:2xZn2+:1xCa2+ [secretory granule lumen]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-9023196	output	R-HSA-9023182	6x2xHC-INS(25-56):4xHC-INS(57-110):2xZn2+:1xCa2+ [secretory granule lumen]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-9023196	catalyst	R-HSA-378974	PC1:calcium cofactor [secretory granule lumen]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-9023632	input	R-HSA-381662	mature GLP1 [extracellular region]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-9023632	output	R-HSA-400520	GLP-1 (Cleaved at N-terminus) [extracellular region]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-9023632	catalyst	R-HSA-400517	DPP4(39-766) [extracellular region]	EntityWithAccessionedSequence	lossy	cleavage product or processed chain (named with coordinates): needs a PR term
+R-HSA-9023633	input	R-HSA-381662	mature GLP1 [extracellular region]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-9023633	output	R-HSA-400520	GLP-1 (Cleaved at N-terminus) [extracellular region]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-9023633	catalyst	R-HSA-400527	DPP4(1-766) [plasma membrane]	EntityWithAccessionedSequence	lossy	cleavage product or processed chain (named with coordinates): needs a PR term
+R-HSA-9035517	input	R-HSA-388431	AVPR2 [plasma membrane]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-9035517	input	R-HSA-5621383	AVP mutants [extracellular region]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-9623168	input	R-HSA-9623256	FOXO1,FOXO1:PPARGC1A,FOXO3,FOXO4,FOXO6 [nucleoplasm]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-9623168	input	R-HSA-9623253	G6PC gene [nucleoplasm]	EntityWithAccessionedSequence	lossless	gene (Ensembl reference) as Kind.gene
+R-HSA-9623168	output	R-HSA-9623250	FOXO1,FOXO1:PPARGC1A,FOXO3,FOXO4,FOXO6:G6PC gene [nucleoplasm]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-9623168	regulator	R-HSA-74674	Insulin [extracellular region]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-9623281	input	R-HSA-5640206	PCK1 gene [nucleoplasm]	EntityWithAccessionedSequence	lossless	gene (Ensembl reference) as Kind.gene
+R-HSA-9623281	input	R-HSA-9623398	FOXO1:PPARGC1A,FOXO3,FOXO4 [nucleoplasm]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-9623281	output	R-HSA-9623320	FOXO1:PPARGC1A,FOXO3,FOXO4:PCK1 gene [nucleoplasm]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-9623281	regulator	R-HSA-74674	Insulin [extracellular region]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-9623415	input	R-HSA-5642259	IGFPB1 gene [nucleoplasm]	EntityWithAccessionedSequence	lossless	gene (Ensembl reference) as Kind.gene
+R-HSA-9623415	input	R-HSA-9617987	FOXO1,FOXO3,FOXO4 [nucleoplasm]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-9623415	output	R-HSA-9623423	FOXO1,FOXO3,FOXO4:IGFBP1 gene [nucleoplasm]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-9623415	regulator	R-HSA-74674	Insulin [extracellular region]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-9667563	input	R-HSA-388431	AVPR2 [plasma membrane]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-9667563	input	R-ALL-9667393	desmopressin [extracellular region]	ProteinDrug	lossless	drug with ChEBI or IUPHAR id
+R-HSA-9667563	output	R-HSA-9667561	AVPR2:desmopressin [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-9667569	input	R-ALL-9667595	AVPR antagonists [extracellular region]	CandidateSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-9667569	input	R-HSA-9667622	AVPR1A,2 [plasma membrane]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-9667569	output	R-HSA-9667602	AVPR1A,2:AVPR antagonists [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-9667619	input	R-HSA-5621452	AVPR1A,B, 2 [plasma membrane]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-9667619	input	R-ALL-9667607	atosiban [extracellular region]	ProteinDrug	lossless	drug with ChEBI or IUPHAR id
+R-HSA-9667619	output	R-HSA-9667621	AVPR1A,B,2:atosiban [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-9702354	input	R-ALL-9702346	CALCA antibodies [extracellular region]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-9702354	input	R-HSA-419781	CALCA(85-116) [extracellular region]	EntityWithAccessionedSequence	lossy	cleavage product or processed chain (named with coordinates): needs a PR term
+R-HSA-9702354	output	R-HSA-9702364	CALCA(83-119):CALCA antibodies [extracellular region]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-9702818	input	R-ALL-9702842	erenumab [extracellular region]	ProteinDrug	lossless	drug with ChEBI or IUPHAR id
+R-HSA-9702818	input	R-HSA-419798	CALCR [plasma membrane]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-9702818	output	R-HSA-9702810	CALCR:erenumab [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-9702849	input	R-ALL-9702821	gepants [extracellular region]	CandidateSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-9702849	input	R-HSA-419798	CALCR [plasma membrane]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-9702849	output	R-HSA-9702814	CALCR:gepants [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-9703895	input	R-ALL-9703850	CASR agonists [extracellular region]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-9703895	input	R-HSA-420719	CASR [plasma membrane]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-9703895	output	R-HSA-9703908	CASR:CASR agonists [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-9733292	input	R-HSA-420237	AMY1-3 [plasma membrane]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-9733292	input	R-ALL-9733283	pramlintide [extracellular region]	ChemicalDrug	lossless	drug with ChEBI or IUPHAR id
+R-HSA-9733292	output	R-HSA-9733275	AMY1-3:pramlintide [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-976734	input	R-HSA-1011570	HSPG2(22-4391) [extracellular region]	EntityWithAccessionedSequence	lossy	cleavage product or processed chain (named with coordinates): needs a PR term
+R-HSA-976734	input	R-HSA-9711070	APOE-4 [extracellular region]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-HSA-976734	input	R-HSA-976776	Serum amyloid P-component homopentamer [extracellular region]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-976734	input	R-HSA-977144	Amyloid fibril main peptide chains [extracellular region]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-976734	input	R-ALL-977180	GAG [plasma membrane]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-976734	output	R-HSA-977084	Amyloid fibrils [plasma membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-9769307	input	R-HSA-8931792	INS gene [nucleoplasm]	EntityWithAccessionedSequence	lossless	gene (Ensembl reference) as Kind.gene
+R-HSA-9769307	output	R-HSA-264893	INS(25-110) [endoplasmic reticulum lumen]	EntityWithAccessionedSequence	lossy	cleavage product or processed chain (named with coordinates): needs a PR term
+R-HSA-9769307	regulator	R-HSA-9770109	(NPAS4:ARNTL,NPAS4:ARNT,NPAS4:ARNT2):INS gene [nucleoplasm]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-977136	input	R-HSA-977175	Amyloid fibril monomers [extracellular region]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-977136	output	R-HSA-977144	Amyloid fibril main peptide chains [extracellular region]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-9838035	input	R-HSA-9837981	Substrate of CLPXP (mitrochondrial matrix) [mitochondrial matrix]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-9838035	input	R-HSA-9838085	CLPXP [mitochondrial matrix]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-9838035	output	R-HSA-9838070	CLPXP:substrate protein (mitochondrial matrix) [mitochondrial matrix]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-9838081	input	R-ALL-113593	ATP [mitochondrial matrix]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-9838081	input	R-HSA-9837986	LONP1:substrate protein (mitochondrial matrix) [mitochondrial matrix]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-9838081	input	R-ALL-113521	H2O [mitochondrial matrix]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-9838081	output	R-ALL-113548	Pi [mitochondrial matrix]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-9838081	output	R-ALL-113581	ADP [mitochondrial matrix]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-9838081	output	R-HSA-9838005	LONP1 hexamer [mitochondrial matrix]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-9838081	catalyst	R-HSA-9837986	LONP1:substrate protein (mitochondrial matrix) [mitochondrial matrix]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-9838093	input	R-HSA-9837979	Substrate of LONP1 (mitochondrial matrix) [mitochondrial matrix]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-9838093	input	R-HSA-9838005	LONP1 hexamer [mitochondrial matrix]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-9838093	output	R-HSA-9837986	LONP1:substrate protein (mitochondrial matrix) [mitochondrial matrix]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-9838289	input	R-ALL-113593	ATP [mitochondrial matrix]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-9838289	input	R-ALL-113521	H2O [mitochondrial matrix]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-9838289	input	R-HSA-9838070	CLPXP:substrate protein (mitochondrial matrix) [mitochondrial matrix]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-9838289	output	R-ALL-113548	Pi [mitochondrial matrix]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-9838289	output	R-ALL-113581	ADP [mitochondrial matrix]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-9838289	output	R-HSA-9838085	CLPXP [mitochondrial matrix]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-9838289	catalyst	R-HSA-9838070	CLPXP:substrate protein (mitochondrial matrix) [mitochondrial matrix]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-9839105	input	R-HSA-9839083	AFG3L2:substrate protein (mitochondrial matrix) [mitochondrial inner membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-9839105	input	R-ALL-113593	ATP [mitochondrial matrix]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-9839105	input	R-ALL-113521	H2O [mitochondrial matrix]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-9839105	output	R-ALL-113548	Pi [mitochondrial matrix]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-9839105	output	R-ALL-113581	ADP [mitochondrial matrix]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-HSA-9839105	output	R-HSA-9838620	AFG3L2:Zn2+ hexamer [mitochondrial inner membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-9839105	catalyst	R-HSA-9839083	AFG3L2:substrate protein (mitochondrial matrix) [mitochondrial inner membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-9839149	input	R-HSA-9838620	AFG3L2:Zn2+ hexamer [mitochondrial inner membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-9839149	input	R-HSA-9839078	Substrate of AFG3L2 (mitochondrial matrix) [mitochondrial matrix]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-9839149	output	R-HSA-9839083	AFG3L2:substrate protein (mitochondrial matrix) [mitochondrial inner membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-9988097	input	R-HSA-9988086	SEC61 translocon:TRAP:nascent soluble ER polypeptide minus signal peptide:80S ribosome:mRNA [endoplasmic reticulum membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-9988097	output	R-HSA-264969	Translocon:TRAP [endoplasmic reticulum membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-9988097	output	R-HSA-72392	40S ribosomal complex [cytosol]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-9988097	output	R-HSA-9988081	soluble ER protein [endoplasmic reticulum lumen]	DefinedSet	inexpressible	set of alternatives (union of entities): no type for it
+R-HSA-9988097	output	R-HSA-72499	60S ribosomal complex [cytosol]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-HSA-9988097	output	R-HSA-72323	mRNA [cytosol]	GenomeEncodedEntity	lossy	GenomeEncodedEntity: no reference id
+R-HSA-9988097	catalyst	R-HSA-9988086	SEC61 translocon:TRAP:nascent soluble ER polypeptide minus signal peptide:80S ribosome:mRNA [endoplasmic reticulum membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-NUL-9023165	input	R-ALL-351603	H2O [secretory granule lumen]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-NUL-9023165	input	R-HSA-265073	6xProinsulin:2xZn2+:1xCa2+ [secretory granule lumen]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-NUL-9023165	output	R-HSA-9023182	6x2xHC-INS(25-56):4xHC-INS(57-110):2xZn2+:1xCa2+ [secretory granule lumen]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-NUL-9023165	catalyst	R-RNO-9023175	Pcsk1:Ca2+ [secretory granule lumen]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-NUL-9023166	input	R-HSA-9023188	2xHC-INS(25-56):4xHC-INS(57-110) [secretory granule lumen]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-NUL-9023166	input	R-ALL-351603	H2O [secretory granule lumen]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-NUL-9023166	input	R-ALL-351603	H2O [secretory granule lumen]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-NUL-9023166	output	R-HSA-9023154	2xHC-INS(25-54):4xHC-INS(57-110) [secretory granule lumen]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-NUL-9023166	catalyst	R-RNO-9023183	Cpe:Zn2+ [secretory granule membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-NUL-9023180	input	R-HSA-9023154	2xHC-INS(25-54):4xHC-INS(57-110) [secretory granule lumen]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-NUL-9023180	input	R-ALL-351603	H2O [secretory granule lumen]	SimpleEntity	lossless	chemical (ChEBI) in a compartment: CHEBI.inCtx {component}
+R-NUL-9023180	output	R-HSA-9023172	INS(57-89) [secretory granule lumen]	EntityWithAccessionedSequence	lossy	cleavage product or processed chain (named with coordinates): needs a PR term
+R-NUL-9023180	output	R-HSA-9023172	INS(57-89) [secretory granule lumen]	EntityWithAccessionedSequence	lossy	cleavage product or processed chain (named with coordinates): needs a PR term
+R-NUL-9023180	output	R-HSA-9023172	INS(57-89) [secretory granule lumen]	EntityWithAccessionedSequence	lossy	cleavage product or processed chain (named with coordinates): needs a PR term
+R-NUL-9023180	output	R-HSA-9023172	INS(57-89) [secretory granule lumen]	EntityWithAccessionedSequence	lossy	cleavage product or processed chain (named with coordinates): needs a PR term
+R-NUL-9023180	output	R-HSA-9023172	INS(57-89) [secretory granule lumen]	EntityWithAccessionedSequence	lossy	cleavage product or processed chain (named with coordinates): needs a PR term
+R-NUL-9023180	output	R-HSA-9023172	INS(57-89) [secretory granule lumen]	EntityWithAccessionedSequence	lossy	cleavage product or processed chain (named with coordinates): needs a PR term
+R-NUL-9023180	output	R-HSA-264931	6xInsulin:2xZn2+:Ca2+ [secretory granule lumen]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)
+R-NUL-9023180	catalyst	R-RNO-9023190	Pcsk2 [secretory granule lumen]	EntityWithAccessionedSequence	lossless	whole chain (UniProt as PR) in a compartment
+R-NUL-9023186	input	R-HSA-9023172	INS(57-89) [secretory granule lumen]	EntityWithAccessionedSequence	lossy	cleavage product or processed chain (named with coordinates): needs a PR term
+R-NUL-9023186	output	R-HSA-265011	C Peptide [secretory granule lumen]	EntityWithAccessionedSequence	lossy	cleavage product or processed chain (named with coordinates): needs a PR term
+R-NUL-9023186	catalyst	R-RNO-9023183	Cpe:Zn2+ [secretory granule membrane]	Complex	lossy	Reactome complex: no OBO id (GO CC or ComplexPortal by hand)

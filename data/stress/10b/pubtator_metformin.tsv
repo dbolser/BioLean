@@ -1,0 +1,29 @@
+partner	label	relation_type	count
+ALL	all relations in the file		40411999
+ALL	relations with metformin		92701
+Disease	partner class		52814
+Chemical	partner class		19787
+Gene	partner class		19702
+SNP	partner class		157
+DNAMutation	partner class		141
+ProteinMutation	partner class		100
+Disease|MESH:D000375	Aging (MeSH)	none	0
+Disease|MESH:D008136	Longevity (MeSH)	none	0
+Disease|MESH:D019588	Aging, Premature	treat	15
+Disease|MESH:D019588	Aging, Premature	associate	3
+Disease|MESH:D003643	Death	treat	136
+Disease|MESH:D003643	Death	cause	40
+Disease|MESH:D003643	Death	associate	11
+Disease|MESH:D003924	Diabetes Mellitus, Type 2	treat	9107
+Disease|MESH:D003924	Diabetes Mellitus, Type 2	associate	162
+Disease|MESH:D003924	Diabetes Mellitus, Type 2	cause	8
+Gene|5562	PRKAA1 (AMPK alpha-1)	positive_correlate	237
+Gene|5562	PRKAA1 (AMPK alpha-1)	associate	101
+Gene|5562	PRKAA1 (AMPK alpha-1)	negative_correlate	6
+Gene|5563	PRKAA2 (AMPK alpha-2)	positive_correlate	494
+Gene|5563	PRKAA2 (AMPK alpha-2)	associate	150
+Gene|5563	PRKAA2 (AMPK alpha-2)	negative_correlate	3
+Gene|4719	NDUFS1	associate	1
+Gene|2538	G6PC1	negative_correlate	9
+Gene|2538	G6PC1	associate	2
+Gene|2538	G6PC1	positive_correlate	1

@@ -1,0 +1,5 @@
+SCORE 6 50 31 0
+RULE has_input(V0,V1):- derives_from(V1,V2),has_output(V0,V2).
+RULE has_input(V0,V1):- has_output(V0,V1),occurs_in(V2,V1).
+RULE has_input(V0,V1):- has_output(V0,V2),has_part(V1,V2).
+RULE has_input(V0,V1):- derives_from(V2,V1),has_output(V0,V2).

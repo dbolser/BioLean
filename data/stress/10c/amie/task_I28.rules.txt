@@ -1,0 +1,115 @@
+Assuming 9 as type relation
+Loading files... 
+  Starting task_I28.tsv
+  Finished task_I28.tsv, still running: 0
+Loaded 1715 facts in 43 ms using -6 MB
+Using recursivity limit 3
+Default mining assistant that defines support by counting support on both head variables
+No minimum threshold on standard confidence
+Filtering on PCA confidence with minimum threshold 0.1
+Constants in the arguments of relations are disabled
+Lossless (query refinement) heuristics enabled
+MRT calls: 0
+Starting the mining phase... Using 112 threads
+Rule	Head Coverage	Std Confidence	PCA Confidence	Positive Examples	Body size	PCA Body size	Functional variable
+?b  <interacts_with>  ?a   => ?a  <interacts_with>  ?b	0.333333333	0.333333333	1	2	6	2	-1
+?a  <has_output>  ?b   => ?a  <eff_pos_amount>  ?b	0.081081081	0.046153846	0.5	3	65	6	-1
+?b  <capable_of>  ?a   => ?a  <occurs_in>  ?b	0.055555556	0.032967033	0.15	3	91	20	-1
+?b  <connected_to>  ?a   => ?a  <connected_to>  ?b	0.125	0.125	0.222222222	4	32	18	-2
+?b  <isa*>  ?a   => ?a  <connected_to>  ?b	0.0625	0.005899705	0.222222222	2	339	9	-2
+?a  <part_of>  ?b   => ?a  <happens_during>  ?b	0.057142857	0.015625	0.4	2	128	5	-1
+?b  <eff_pos_process>  ?a   => ?a  <has_input>  ?b	0.052631579	0.023076923	0.214285714	3	130	14	-1
+?a  <eff_pos_amount>  ?b   => ?a  <has_output>  ?b	0.046153846	0.081081081	0.6	3	37	5	-1
+?b  <occurs_in>  ?a   => ?a  <capable_of>  ?b	0.032967033	0.055555556	0.136363636	3	54	22	-1
+?b  <has_input>  ?a   => ?a  <eff_pos_process>  ?b	0.023076923	0.052631579	0.15	3	57	20	-1
+?a  <happens_during>  ?b   => ?a  <part_of>  ?b	0.015625	0.057142857	0.4	2	35	5	-1
+?b  <has_part>  ?a   => ?a  <part_of>  ?b	0.21875	0.117647059	0.56	28	238	50	-1
+?b  <part_of>  ?a   => ?a  <has_part>  ?b	0.117647059	0.21875	0.622222222	28	128	45	-2
+?g  <has_part>  ?a  ?g  <part_of>  ?b   => ?a  <happens_during>  ?b	0.057142857	0.041666667	1	2	48	2	-1
+?g  <derives_from>  ?b  ?a  <has_output>  ?g   => ?a  <has_input>  ?b	0.035087719	0.5	1	2	4	2	-1
+?g  <eff_pos_phenotype>  ?b  ?g  <isa*>  ?a   => ?a  <eff_pos_phenotype>  ?b	0.076923077	0.1875	1	3	16	3	-1
+?g  <isa*>  ?a  ?g  <occurs_in>  ?b   => ?a  <occurs_in>  ?b	0.037037037	0.153846154	0.333333333	2	13	6	-1
+?g  <has_output>  ?b  ?g  <occurs_in>  ?a   => ?a  <produces>  ?b	0.037735849	0.064516129	0.166666667	2	31	12	-2
+?a  <has_output>  ?h  ?b  <produces>  ?h   => ?a  <occurs_in>  ?b	0.055555556	0.096774194	0.166666667	3	31	18	-1
+?a  <has_input>  ?h  ?b  <has_input>  ?h   => ?a  <has_part>  ?b	0.016806723	0.025641026	0.1	4	156	40	-2
+?a  <eff_pos_process>  ?g  ?g  <isa*>  ?b   => ?a  <eff_pos_process>  ?b	0.015384615	0.125	0.125	2	16	16	-1
+?a  <eff_pos_process>  ?h  ?h  <has_input>  ?b   => ?a  <has_output>  ?b	0.030769231	0.066666667	0.285714286	2	30	7	-1
+?g  <connected_to>  ?b  ?a  <connected_to>  ?g   => ?a  <connected_to>  ?b	0.125	0.173913043	0.173913043	4	23	23	-2
+?b  <derives_from>  ?h  ?a  <has_input>  ?h   => ?a  <has_output>  ?b	0.030769231	0.25	0.4	2	8	5	-1
+?g  <has_output>  ?b  ?g  <part_of>  ?a   => ?a  <has_output>  ?b	0.061538462	0.2	0.333333333	4	20	12	-1
+?g  <has_output>  ?b  ?g  <has_part>  ?a   => ?a  <has_output>  ?b	0.030769231	0.090909091	0.285714286	2	22	7	-1
+?h  <has_input>  ?b  ?a  <part_of>  ?h   => ?a  <has_input>  ?b	0.070175439	0.285714286	0.444444444	4	14	9	-1
+?h  <has_output>  ?b  ?a  <has_part>  ?h   => ?a  <has_output>  ?b	0.030769231	0.181818182	0.25	2	11	8	-1
+?g  <connected_to>  ?a  ?g  <part_of>  ?b   => ?a  <connected_to>  ?b	0.0625	0.4	0.5	2	5	4	-2
+?g  <derives_from>  ?b  ?a  <located_in>  ?g   => ?a  <located_in>  ?b	0.02739726	0.666666667	0.666666667	2	3	3	-1
+?h  <involved_in>  ?a  ?b  <isa*>  ?h   => ?a  <has_input>  ?b	0.035087719	0.333333333	0.333333333	2	6	6	-1
+?h  <has_input>  ?b  ?a  <has_part>  ?h   => ?a  <has_input>  ?b	0.070175439	0.333333333	0.666666667	4	12	6	-1
+?b  <derives_from>  ?h  ?a  <has_output>  ?h   => ?a  <has_input>  ?b	0.035087719	0.4	0.666666667	2	5	3	-1
+?g  <has_input>  ?b  ?g  <has_part>  ?a   => ?a  <has_input>  ?b	0.070175439	0.307692308	0.4	4	13	10	-1
+?b  <connected_to>  ?h  ?a  <part_of>  ?h   => ?a  <connected_to>  ?b	0.0625	0.074074074	0.4	2	27	5	-2
+?g  <capable_of>  ?b  ?g  <derives_from>  ?a   => ?a  <capable_of>  ?b	0.032967033	0.5	0.6	3	6	5	-1
+?a  <occurs_in>  ?h  ?h  <produces>  ?b   => ?a  <has_output>  ?b	0.030769231	0.222222222	0.4	2	9	5	-1
+?g  <capable_of>  ?b  ?g  <isa*>  ?a   => ?a  <capable_of>  ?b	0.021978022	0.117647059	0.222222222	2	17	9	-1
+?a  <connected_to>  ?h  ?b  <connected_to>  ?h   => ?a  <connected_to>  ?b	0.125	0.111111111	0.19047619	4	36	21	-2
+?g  <isa*>  ?a  ?g  <located_in>  ?b   => ?a  <located_in>  ?b	0.04109589	0.09375	0.6	3	32	5	-1
+?g  <eff_pos_process>  ?b  ?g  <has_part>  ?a   => ?a  <eff_pos_process>  ?b	0.030769231	0.095238095	0.307692308	4	42	13	-1
+?g  <eff_pos_process>  ?a  ?g  <eff_pos_process>  ?b   => ?a  <eff_pos_process>  ?b	0.015384615	0.010526316	0.111111111	2	190	18	-1
+?h  <eff_pos_amount>  ?b  ?a  <part_of>  ?h   => ?a  <eff_pos_amount>  ?b	0.054054054	0.222222222	1	2	9	2	-1
+?a  <has_input>  ?h  ?b  <has_input>  ?h   => ?a  <part_of>  ?b	0.03125	0.025641026	0.105263158	4	156	38	-1
+?b  <has_part>  ?h  ?a  <isa*>  ?h   => ?a  <part_of>  ?b	0.046875	0.051282051	0.3	6	117	20	-1
+?g  <derives_from>  ?b  ?a  <has_part>  ?g   => ?a  <has_part>  ?b	0.012605042	0.3	1	3	10	3	-2
+?a  <happens_during>  ?g  ?g  <has_part>  ?b   => ?a  <happens_during>  ?b	0.057142857	0.25	0.25	2	8	8	-1
+?a  <isa*>  ?h  ?h  <part_of>  ?b   => ?a  <part_of>  ?b	0.0546875	0.212121212	0.5	7	33	14	-1
+?g  <isa*>  ?a  ?g  <part_of>  ?b   => ?a  <part_of>  ?b	0.0546875	0.259259259	0.7	7	27	10	-1
+?a  <isa*>  ?h  ?h  <located_in>  ?b   => ?a  <located_in>  ?b	0.054794521	0.148148148	0.444444444	4	27	9	-1
+?a  <has_output>  ?h  ?b  <has_output>  ?h   => ?a  <part_of>  ?b	0.0390625	0.028089888	0.104166667	5	178	48	-1
+?a  <has_part>  ?h  ?h  <occurs_in>  ?b   => ?a  <occurs_in>  ?b	0.037037037	0.285714286	0.4	2	7	5	-1
+?a  <happens_during>  ?h  ?b  <has_part>  ?h   => ?a  <happens_during>  ?b	0.057142857	0.25	0.25	2	8	8	-1
+?h  <happens_during>  ?b  ?a  <has_part>  ?h   => ?a  <part_of>  ?b	0.015625	0.5	0.5	2	4	4	-1
+?g  <derives_from>  ?a  ?g  <has_part>  ?b   => ?a  <has_part>  ?b	0.008403361	0.166666667	0.166666667	2	12	12	-2
+?g  <isa*>  ?a  ?b  <isa*>  ?g   => ?a  <connected_to>  ?b	0.0625	0.035087719	1	2	57	2	-2
+?a  <has_part>  ?g  ?g  <interacts_with>  ?b   => ?a  <has_part>  ?b	0.008403361	0.4	0.666666667	2	5	3	-2
+?h  <eff_pos_phenotype>  ?b  ?a  <isa*>  ?h   => ?a  <eff_pos_phenotype>  ?b	0.076923077	0.230769231	1	3	13	3	-1
+?g  <has_input>  ?a  ?g  <occurs_in>  ?b   => ?a  <located_in>  ?b	0.02739726	0.074074074	0.666666667	2	27	3	-1
+?a  <isa*>  ?h  ?h  <occurs_in>  ?b   => ?a  <occurs_in>  ?b	0.037037037	0.133333333	0.4	2	15	5	-1
+?a  <capable_of>  ?g  ?g  <occurs_in>  ?b   => ?a  <has_part>  ?b	0.008403361	0.074074074	0.125	2	27	16	-2
+?a  <has_part>  ?h  ?b  <has_part>  ?h   => ?a  <connected_to>  ?b	0.0625	0.006825939	0.133333333	2	293	15	-2
+?g  <has_part>  ?a  ?g  <has_part>  ?b   => ?a  <interacts_with>  ?b	0.333333333	0.003642987	0.125	2	549	16	-1
+?a  <happens_during>  ?h  ?b  <part_of>  ?h   => ?a  <happens_during>  ?b	0.057142857	0.125	0.125	2	16	16	-1
+?g  <derives_from>  ?b  ?a  <occurs_in>  ?g   => ?a  <occurs_in>  ?b	0.074074074	0.333333333	0.333333333	4	12	12	-1
+?g  <eff_pos_amount>  ?b  ?g  <part_of>  ?a   => ?a  <eff_pos_amount>  ?b	0.054054054	1	1	2	2	2	-1
+?g  <has_part>  ?a  ?g  <occurs_in>  ?b   => ?a  <occurs_in>  ?b	0.037037037	0.222222222	0.666666667	2	9	3	-1
+?a  <happens_during>  ?g  ?g  <part_of>  ?b   => ?a  <happens_during>  ?b	0.057142857	0.111111111	0.111111111	2	18	18	-1
+?b  <derives_from>  ?h  ?a  <occurs_in>  ?h   => ?a  <occurs_in>  ?b	0.074074074	1	1	4	4	4	-1
+?a  <has_input>  ?h  ?h  <located_in>  ?b   => ?a  <occurs_in>  ?b	0.037037037	0.117647059	0.666666667	2	17	3	-1
+?g  <derives_from>  ?b  ?a  <has_input>  ?g   => ?a  <has_output>  ?b	0.030769231	0.666666667	0.666666667	2	3	3	-1
+?h  <has_output>  ?b  ?a  <isa*>  ?h   => ?a  <has_output>  ?b	0.076923077	0.147058824	0.416666667	5	34	12	-1
+?h  <has_output>  ?b  ?a  <part_of>  ?h   => ?a  <has_output>  ?b	0.076923077	0.2	0.333333333	5	25	15	-1
+?g  <has_output>  ?b  ?g  <isa*>  ?a   => ?a  <has_output>  ?b	0.061538462	0.222222222	0.666666667	4	18	6	-1
+?g  <has_input>  ?b  ?g  <part_of>  ?a   => ?a  <has_input>  ?b	0.070175439	0.333333333	0.363636364	4	12	11	-1
+?g  <eff_pos_process>  ?a  ?g  <has_output>  ?b   => ?a  <has_input>  ?b	0.035087719	0.333333333	0.5	2	6	4	-1
+?h  <capable_of>  ?b  ?a  <derives_from>  ?h   => ?a  <capable_of>  ?b	0.032967033	0.75	0.75	3	4	4	-1
+?g  <eff_pos_amount>  ?b  ?a  <occurs_in>  ?g   => ?a  <has_output>  ?b	0.030769231	0.666666667	1	2	3	2	-1
+?a  <has_part>  ?h  ?h  <located_in>  ?b   => ?a  <located_in>  ?b	0.02739726	0.047619048	0.25	2	42	8	-1
+?h  <capable_of>  ?b  ?a  <isa*>  ?h   => ?a  <capable_of>  ?b	0.032967033	0.088235294	0.25	3	34	12	-1
+?b  <derives_from>  ?h  ?a  <located_in>  ?h   => ?a  <located_in>  ?b	0.02739726	1	1	2	2	2	-1
+?b  <derives_from>  ?h  ?a  <part_of>  ?h   => ?a  <part_of>  ?b	0.015625	1	1	2	2	2	-1
+?g  <has_part>  ?a  ?g  <located_in>  ?b   => ?a  <located_in>  ?b	0.02739726	0.047619048	0.5	2	42	4	-1
+?h  <capable_of>  ?b  ?a  <has_part>  ?h   => ?a  <capable_of>  ?b	0.065934066	0.12244898	0.333333333	6	49	18	-1
+?g  <capable_of>  ?b  ?g  <has_part>  ?a   => ?a  <capable_of>  ?b	0.065934066	0.085714286	0.3	6	70	20	-1
+?g  <derives_from>  ?b  ?a  <part_of>  ?g   => ?a  <part_of>  ?b	0.015625	0.5	0.5	2	4	4	-1
+?h  <eff_pos_process>  ?b  ?a  <has_part>  ?h   => ?a  <eff_pos_process>  ?b	0.030769231	0.06779661	0.285714286	4	59	14	-1
+?a  <eff_pos_amount>  ?h  ?b  <eff_pos_amount>  ?h   => ?a  <part_of>  ?b	0.015625	0.026315789	0.166666667	2	76	12	-1
+?b  <derives_from>  ?h  ?a  <has_part>  ?h   => ?a  <has_part>  ?b	0.012605042	0.6	1	3	5	3	-2
+?a  <has_part>  ?h  ?b  <interacts_with>  ?h   => ?a  <has_part>  ?b	0.008403361	0.5	0.5	2	4	4	-2
+?b  <happens_during>  ?h  ?a  <part_of>  ?h   => ?a  <has_part>  ?b	0.008403361	0.125	0.285714286	2	16	7	-2
+?a  <derives_from>  ?h  ?h  <has_part>  ?b   => ?a  <has_part>  ?b	0.008403361	0.666666667	0.666666667	2	3	3	-2
+?a  <occurs_in>  ?h  ?b  <occurs_in>  ?h   => ?a  <has_part>  ?b	0.008403361	0.016528926	0.153846154	2	121	13	-2
+?h  <eff_pos_process>  ?b  ?a  <eff_pos_process>  ?h   => ?a  <eff_pos_process>  ?b	0.015384615	0.125	0.125	2	16	16	-1
+?g  <connected_to>  ?a  ?g  <has_part>  ?b   => ?a  <has_part>  ?b	0.008403361	0.285714286	0.285714286	2	7	7	-2
+?g  <occurs_in>  ?a  ?g  <occurs_in>  ?b   => ?a  <has_part>  ?b	0.012605042	0.054545455	0.142857143	3	55	21	-2
+?a  <capable_of>  ?h  ?b  <capable_of>  ?h   => ?a  <has_part>  ?b	0.025210084	0.037735849	0.125	6	159	48	-2
+?g  <isa*>  ?b  ?g  <part_of>  ?a   => ?a  <has_part>  ?b	0.025210084	0.222222222	0.461538462	6	27	13	-2
+Mining done in 0.42 s
+Total time 0.50 s
+98 rules mined.

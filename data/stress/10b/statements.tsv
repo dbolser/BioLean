@@ -1,0 +1,53 @@
+statement	source	case	loss_under_M0
+S01s	SIGNOR	S01	none
+S01g	GO-CAM	S01	none
+S02a	SIGNOR	S02	BTO context dropped
+S02b	SIGNOR	S02	relocalization read as amount
+S03	SIGNOR	S03	relocalization read as amount; BTO context dropped
+S04	SIGNOR	S04	BTO context dropped; precursor for the product (GLP-1)
+S05s	SIGNOR	S05	bare up-regulates read as activity
+S05g	GO-CAM	S05	chain id read as precursor
+S06s	SIGNOR	S06	bare up-regulates read as activity
+S06g	GO-CAM	S06	none
+S07	SIGNOR	S07	bare up-regulates read as activity; BTO context dropped
+S08	SIGNOR	S08	BTO context dropped
+S09	SIGNOR	S09	relocalization read as amount
+S10	SIGNOR	S10	complex with no OBO id
+S11	SIGNOR	S11	dropped by M0: activity of a complex (the core can state it as GO:0046933)
+S12	SIGNOR	S12	none
+S12pck	SIGNOR	S12	none
+S13	SIGNOR	S13	none
+S14b	SIGNOR	S14	none
+M01	SIGNOR	M01	species of the experiment dropped (rat cells, human protein)
+M02	SIGNOR	M02	none
+G02a	GO-CAM	G02	none
+G02b	GO-CAM	G02	none
+G02c	GO-CAM	G02	none
+G02d	GO-CAM	G02	none
+G03a	GO-CAM	G03	none
+G03b	GO-CAM	G03	none
+G03c	GO-CAM	G03	none
+G05a	GO-CAM	G05	none
+G05b	GO-CAM	G05	none
+G06	GO-CAM	G06	none
+G07g	GO-CAM	G07	chain id read as precursor
+G08	GO-CAM	G08	none
+G09a	GO-CAM	G09	instance location lifted to class
+G09b	GO-CAM	G09	instance location lifted to class
+G10	GO-CAM	G10	zebrafish term in a human model
+G11	GO-CAM	G11	no PMID; generic enabler
+G12	GO-CAM	G12	no PMID
+R01in	Reactome	R01	reaction read as its broader GO term
+R01out	Reactome	R01	reaction read as its broader GO term
+R02	Reactome	R02	none
+R03	Reactome	R03	complex with no OBO id
+R04	Reactome	R04	no PMID
+R05	Reactome	R05	inexpressible: a set
+R06	Reactome	R06	chain id read as precursor
+R07	Reactome	R07	inferred from mouse, counted as human
+R08	Reactome	R08	none
+O01	GOA	O01	none
+O02	GOA	O02	none
+O03	GOA	O03	none
+O04yes	GOA	O04	gene-product form dropped (one row, P30988-2)
+O04no	GOA	O04	none

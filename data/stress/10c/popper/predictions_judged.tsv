@@ -1,0 +1,72 @@
+source	subject	object	judgement	reason
+P23 fold 1, part_of rule	ribosomal RNA [CHEBI:18111]	synthesize proteins [GO:0006412]	true	
+P23 fold 1, part_of rule	Lysosomes ⊓ in taxon (NCBITaxon:33208) [GO:0005764&RO:0002162=(NCBITaxon:33208)]	ATP biosynthetic process [GO:0006754]	false	a whole (the cell) makes ATP; this part does not
+P23 fold 1, part_of rule	Lysosomes ⊓ in taxon (NCBITaxon:33208) [GO:0005764&RO:0002162=(NCBITaxon:33208)]	phagocytosis [GO:0006909]	true	
+P23 fold 1, part_of rule	Lysosomes ⊓ in taxon (NCBITaxon:33208) [GO:0005764&RO:0002162=(NCBITaxon:33208)]	transmembrane transport [GO:0055085]	true	
+P23 fold 1, part_of rule	lumen [GO:0005788]	lipid biosynthetic process [GO:0008610]	false	lipids are made on the ER membrane facing the cytosol, not in the lumen
+P23 fold 1, part_of rule	lumen [GO:0005788]	protein modification process [GO:0036211]	true	
+P23 fold 1, part_of rule	plasma membrane [GO:0005886]	protein transport [GO:0015031]	true	
+P23 fold 1, part_of rule	sodium:potassium-exchanging ATPase [GO:0005890]	transmembrane transport [GO:0055085]	true	
+P23 fold 1, part_of rule	microvillus [GO:0005902]	transmembrane transport [GO:0055085]	true	
+P23 fold 1, part_of rule	microvilli ⊓ part of (cells that specialize in absorption) [GO:0005902&BFO:0000050=(CL:0000584)]	transmembrane transport [GO:0055085]	true	
+P23 fold 1, part_of rule	nucleoid [GO:0009295]	binary fission [GO:0043093]	true	
+P23 fold 1, part_of rule	stroma [GO:0009570]	photosynthesis [GO:0015979]	true	
+P23 fold 1, part_of rule	thylakoids [GO:0009579]	photosynthesis [GO:0015979]	true	
+P23 fold 1, part_of rule	desmosome ⊓ in taxon (NCBITaxon:33208) [GO:0030057&RO:0002162=(NCBITaxon:33208)]	ATP biosynthetic process [GO:0006754]	false	a whole (the cell) makes ATP; this part does not
+P23 fold 1, part_of rule	desmosome ⊓ in taxon (NCBITaxon:33208) [GO:0030057&RO:0002162=(NCBITaxon:33208)]	phagocytosis [GO:0006909]	false	desmosomes are cell junctions: no transport or phagocytosis role
+P23 fold 1, part_of rule	desmosome ⊓ in taxon (NCBITaxon:33208) [GO:0030057&RO:0002162=(NCBITaxon:33208)]	transmembrane transport [GO:0055085]	false	desmosomes are cell junctions: no transport or phagocytosis role
+P23 fold 1, part_of rule	ion channel [GO:0034702]	transmembrane transport [GO:0055085]	true	
+P23 fold 1, part_of rule	renal glomerulus [UBERON:0000074]	filter [GO:0003094]	true	
+P23 fold 1, part_of rule	skeletal muscle [UBERON:0001134]	locomotion [GO:0040011]	true	
+P23 fold 1, part_of rule	amygdala [UBERON:0001876]	hearing [GO:0007605]	false	the temporal lobe hears; the amygdala and hippocampus inside it do not
+P23 fold 1, part_of rule	hippocampus [UBERON:0002421]	hearing [GO:0007605]	false	the temporal lobe hears; the amygdala and hippocampus inside it do not
+P18 exact, rule 0	alternative mRNA splicing, via spliceosome ⊓ in taxon (NCBITaxon:2759) [GO:0000380&RO:0002162=(NCBITaxon:2759)]	food [CHEBI:33290]	false	output read as input through has_part or a reversed derives_from
+P18 exact, rule 0	alternative mRNA splicing, via spliceosome ⊓ in taxon (NCBITaxon:2759) [GO:0000380&RO:0002162=(NCBITaxon:2759)]	plasma membrane [GO:0005886]	false	output read as input through has_part or a reversed derives_from
+P18 exact, rule 0	alternative mRNA splicing, via spliceosome ⊓ in taxon (NCBITaxon:2759) [GO:0000380&RO:0002162=(NCBITaxon:2759)]	tight junction [GO:0005923]	false	output read as input through has_part or a reversed derives_from
+P18 exact, rule 0	alternative mRNA splicing, via spliceosome ⊓ in taxon (NCBITaxon:2759) [GO:0000380&RO:0002162=(NCBITaxon:2759)]	electron transport chain [GO:0009767]	false	output read as input through has_part or a reversed derives_from
+P18 exact, rule 0	starch catabolic process [GO:0005983]	glycogen [CHEBI:28087]	false	output read as input through has_part or a reversed derives_from
+P18 exact, rule 0	DNA replication [GO:0006260]	prokaryotic cell [CL:0000520]	false	output read as input through has_part or a reversed derives_from
+P18 exact, rule 0	DNA replication [GO:0006260]	nucleosome [GO:0000786]	unclear	nucleosomes are taken apart and rebuilt
+P18 exact, rule 0	DNA replication [GO:0006260]	chromosome [GO:0005694]	true	the chromosome is the template
+P18 exact, rule 0	DNA replication [GO:0006260]	Mitochondria [GO:0005739]	false	output read as input through has_part or a reversed derives_from
+P18 exact, rule 0	DNA-templated transcription [GO:0006351]	translation initiation complex ⊓ in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)]	false	output read as input through has_part or a reversed derives_from
+P18 exact, rule 0	DNA-templated transcription termination [GO:0006353]	translation initiation complex ⊓ in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)]	false	output read as input through has_part or a reversed derives_from
+P18 exact, rule 0	DNA-templated transcription elongation [GO:0006354]	translation initiation complex ⊓ in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)]	false	output read as input through has_part or a reversed derives_from
+P18 exact, rule 0	synthesize proteins [GO:0006412]	food [CHEBI:33290]	false	output read as input through has_part or a reversed derives_from
+P18 exact, rule 0	synthesize proteins [GO:0006412]	plasma membrane [GO:0005886]	false	output read as input through has_part or a reversed derives_from
+P18 exact, rule 0	synthesize proteins [GO:0006412]	tight junction [GO:0005923]	false	output read as input through has_part or a reversed derives_from
+P18 exact, rule 0	synthesize proteins [GO:0006412]	electron transport chain [GO:0009767]	false	output read as input through has_part or a reversed derives_from
+P18 exact, rule 0	cell cycle [GO:0007049]	leaves ⊓ in taxon (NCBITaxon:33090) [PO:0025034&RO:0002162=(NCBITaxon:33090)]	false	output read as input through has_part or a reversed derives_from
+P18 exact, rule 0	cell cycle [GO:0007049]	body [UBERON:0000468]	false	output read as input through has_part or a reversed derives_from
+P18 exact, rule 0	cell cycle [GO:0007049]	tissues [UBERON:0000479]	false	output read as input through has_part or a reversed derives_from
+P18 exact, rule 0	gene expression [GO:0010467]	telomerase [GO:0005697]	false	output read as input through has_part or a reversed derives_from
+P18 exact, rule 0	photosynthesis [GO:0015979]	glycogen [CHEBI:28087]	false	output read as input through has_part or a reversed derives_from
+P18 exact, rule 0	photosynthesis [GO:0015979]	peptidoglycan [CHEBI:8005]	false	output read as input through has_part or a reversed derives_from
+P18 exact, rule 0	photosynthesis [GO:0015979]	plasma membrane [GO:0005886]	false	output read as input through has_part or a reversed derives_from
+P18 exact, rule 0	photosynthesis ⊓ occurs in (chloroplast) [GO:0015979&BFO:0000066=(GO:0009507)]	peptidoglycan [CHEBI:8005]	false	output read as input through has_part or a reversed derives_from
+P18 exact, rule 0	photosynthesis ⊓ occurs in (chloroplast) [GO:0015979&BFO:0000066=(GO:0009507)]	plasma membrane [GO:0005886]	false	output read as input through has_part or a reversed derives_from
+P18 exact, rule 0	photosynthesizing ⊓ in taxon (plants) [GO:0015979&RO:0002162=(NCBITaxon:33090)]	glycogen [CHEBI:28087]	false	output read as input through has_part or a reversed derives_from
+P18 exact, rule 0	photosynthesizing ⊓ in taxon (plants) [GO:0015979&RO:0002162=(NCBITaxon:33090)]	peptidoglycan [CHEBI:8005]	false	output read as input through has_part or a reversed derives_from
+P18 exact, rule 0	photosynthesizing ⊓ in taxon (plants) [GO:0015979&RO:0002162=(NCBITaxon:33090)]	plasma membrane [GO:0005886]	false	output read as input through has_part or a reversed derives_from
+P18 exact, rule 0	Calvin cycle [GO:0019253]	glycogen [CHEBI:28087]	false	output read as input through has_part or a reversed derives_from
+P18 exact, rule 0	Calvin cycle [GO:0019253]	peptidoglycan [CHEBI:8005]	false	output read as input through has_part or a reversed derives_from
+P18 exact, rule 0	Calvin cycle [GO:0019253]	plasma membrane [GO:0005886]	false	output read as input through has_part or a reversed derives_from
+P18 exact, rule 0	polysaccharide digestion [GO:0044245]	glycogen [CHEBI:28087]	true	glycogen is a polysaccharide that is digested
+P18 exact, rule 0	meiotic cell cycle [GO:0051321]	smooth muscle cells [CL:0000192]	false	output read as input through has_part or a reversed derives_from
+P18 exact, rule 0	meiotic cell cycle [GO:0051321]	eukaryotic [CL:0000255]	false	output read as input through has_part or a reversed derives_from
+P18 exact, rule 0	meiotic cell cycle [GO:0051321]	neuron [CL:0000540]	false	output read as input through has_part or a reversed derives_from
+P18 exact, rule 0	meiotic cell cycle [GO:0051321]	skeletal muscle fiber [CL:0008002]	false	output read as input through has_part or a reversed derives_from
+P18 exact, rule 0	meiotic cell cycle [GO:0051321]	neuronal cell body [GO:0043025]	false	output read as input through has_part or a reversed derives_from
+P18 exact, rule 0	mitotic nuclear division [GO:0140014]	smooth muscle cells [CL:0000192]	false	output read as input through has_part or a reversed derives_from
+P18 exact, rule 0	mitotic nuclear division [GO:0140014]	eukaryotic [CL:0000255]	false	output read as input through has_part or a reversed derives_from
+P18 exact, rule 0	mitotic nuclear division [GO:0140014]	neuron [CL:0000540]	false	output read as input through has_part or a reversed derives_from
+P18 exact, rule 0	mitotic nuclear division [GO:0140014]	skeletal muscle fiber [CL:0008002]	false	output read as input through has_part or a reversed derives_from
+P18 exact, rule 0	mitotic nuclear division [GO:0140014]	neuronal cell body [GO:0043025]	false	output read as input through has_part or a reversed derives_from
+P18 exact, rule 1	cell cycle [GO:0007049]	cells [CL:0000000]	true	the parent cell goes into the cell cycle
+P18 exact, rule 1	mitotic nuclear division [GO:0140014]	nucleus [GO:0005634]	true	the nucleus divides in mitosis
+P18 exact, rule 2	cell cycle [GO:0007049]	cells [CL:0000000]	true	a cell is the input of its own cycle
+P18 exact, rule 2	photosynthesis ⊓ occurs in (chloroplast) [GO:0015979&BFO:0000066=(GO:0009507)]	carbon dioxide [CHEBI:16526]	true	product carbon comes from the input (the true rule)
+P18 exact, rule 2	Calvin cycle [GO:0019253]	carbon dioxide [CHEBI:16526]	true	product carbon comes from the input (the true rule)
+P18 exact, rule 3	pyruvate decarboxylase activity [GO:0004737]	sugars [CHEBI:16646]	false	output read as input through has_part or a reversed derives_from
+P18 exact, rule 3	tricarboxylic acid cycle [GO:0006099]	sugars [CHEBI:16646]	false	output read as input through has_part or a reversed derives_from
+P18 exact, rule 3	cell cycle [GO:0007049]	cells [CL:0000000]	true	the parent cell goes into the cell cycle

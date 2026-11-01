@@ -1,0 +1,70 @@
+Assuming 9 as type relation
+Loading files... 
+  Starting cv_tb_fold4.tsv
+  Finished cv_tb_fold4.tsv, still running: 0
+Loaded 1463 facts in 42 ms using -5 MB
+Using recursivity limit 3
+Default mining assistant that defines support by counting support on both head variables
+No minimum threshold on standard confidence
+Filtering on PCA confidence with minimum threshold 0.1
+Constants in the arguments of relations are disabled
+Lossless (query refinement) heuristics enabled
+MRT calls: 0
+Starting the mining phase... Using 112 threads
+Rule	Head Coverage	Std Confidence	PCA Confidence	Positive Examples	Body size	PCA Body size	Functional variable
+?b  <interacts_with>  ?a   => ?a  <interacts_with>  ?b	0.5	0.5	1	2	4	2	-1
+?b  <eff_pos_process>  ?a   => ?a  <has_input>  ?b	0.068181818	0.029126214	0.230769231	3	103	13	-1
+?a  <has_output>  ?b   => ?a  <eff_pos_amount>  ?b	0.103448276	0.06122449	0.6	3	49	5	-1
+?b  <connected_to>  ?a   => ?a  <connected_to>  ?b	0.086956522	0.086956522	0.2	2	23	10	-2
+?a  <has_output>  ?b   => ?a  <has_input>  ?b	0.045454545	0.040816327	0.1	2	49	20	-1
+?b  <isa*>  ?a   => ?a  <connected_to>  ?b	0.086956522	0.005899705	0.285714286	2	339	7	-2
+?a  <eff_pos_amount>  ?b   => ?a  <has_output>  ?b	0.06122449	0.103448276	0.75	3	29	4	-1
+?b  <has_part>  ?a   => ?a  <part_of>  ?b	0.165137615	0.094240838	0.545454545	18	191	33	-1
+?b  <has_input>  ?a   => ?a  <eff_pos_process>  ?b	0.029126214	0.068181818	0.176470588	3	44	17	-1
+?b  <part_of>  ?a   => ?a  <has_part>  ?b	0.094240838	0.165137615	0.6	18	109	30	-2
+?b  <located_in>  ?h  ?a  <occurs_in>  ?h   => ?a  <has_input>  ?b	0.045454545	0.054054054	0.133333333	2	37	15	-1
+?a  <has_input>  ?h  ?h  <located_in>  ?b   => ?a  <occurs_in>  ?b	0.046511628	0.4	0.666666667	2	5	3	-1
+?h  <capable_of>  ?b  ?a  <derives_from>  ?h   => ?a  <capable_of>  ?b	0.04109589	1	1	3	3	3	-1
+?h  <has_output>  ?b  ?a  <part_of>  ?h   => ?a  <has_output>  ?b	0.040816327	0.090909091	0.285714286	2	22	7	-1
+?g  <happens_during>  ?b  ?a  <has_part>  ?g   => ?a  <part_of>  ?b	0.018348624	0.666666667	0.666666667	2	3	3	-1
+?a  <has_part>  ?h  ?b  <interacts_with>  ?h   => ?a  <has_part>  ?b	0.010471204	1	1	2	2	2	-2
+?b  <derives_from>  ?h  ?a  <located_in>  ?h   => ?a  <located_in>  ?b	0.03125	1	1	2	2	2	-1
+?g  <eff_pos_phenotype>  ?b  ?g  <isa*>  ?a   => ?a  <eff_pos_phenotype>  ?b	0.085714286	0.214285714	1	3	14	3	-1
+?g  <derives_from>  ?b  ?a  <has_part>  ?g   => ?a  <has_part>  ?b	0.015706806	0.6	1	3	5	3	-2
+?g  <has_output>  ?b  ?g  <isa*>  ?a   => ?a  <has_output>  ?b	0.081632653	0.25	0.666666667	4	16	6	-1
+?g  <has_part>  ?a  ?g  <part_of>  ?b   => ?a  <happens_during>  ?b	0.076923077	0.057142857	1	2	35	2	-1
+?g  <derives_from>  ?b  ?a  <located_in>  ?g   => ?a  <located_in>  ?b	0.03125	0.666666667	0.666666667	2	3	3	-1
+?h  <capable_of>  ?b  ?a  <has_part>  ?h   => ?a  <capable_of>  ?b	0.04109589	0.088235294	0.230769231	3	34	13	-1
+?g  <isa*>  ?a  ?g  <part_of>  ?b   => ?a  <part_of>  ?b	0.055045872	0.285714286	0.6	6	21	10	-1
+?h  <eff_pos_phenotype>  ?b  ?a  <isa*>  ?h   => ?a  <eff_pos_phenotype>  ?b	0.085714286	0.25	1	3	12	3	-1
+?g  <involved_in>  ?a  ?b  <isa*>  ?g   => ?a  <has_input>  ?b	0.045454545	0.333333333	0.333333333	2	6	6	-1
+?b  <happens_during>  ?h  ?a  <part_of>  ?h   => ?a  <has_part>  ?b	0.010471204	0.222222222	0.285714286	2	9	7	-2
+?a  <has_part>  ?h  ?h  <located_in>  ?b   => ?a  <located_in>  ?b	0.03125	0.064516129	0.285714286	2	31	7	-1
+?g  <has_output>  ?b  ?g  <occurs_in>  ?a   => ?a  <produces>  ?b	0.048780488	0.142857143	0.333333333	2	14	6	-2
+?g  <capable_of>  ?b  ?g  <derives_from>  ?a   => ?a  <capable_of>  ?b	0.04109589	0.75	1	3	4	3	-1
+?g  <isa*>  ?b  ?g  <part_of>  ?a   => ?a  <has_part>  ?b	0.031413613	0.285714286	0.545454545	6	21	11	-2
+?b  <derives_from>  ?h  ?a  <part_of>  ?h   => ?a  <part_of>  ?b	0.018348624	1	1	2	2	2	-1
+?g  <derives_from>  ?b  ?a  <part_of>  ?g   => ?a  <part_of>  ?b	0.018348624	0.666666667	0.666666667	2	3	3	-1
+?g  <has_part>  ?a  ?g  <has_part>  ?b   => ?a  <interacts_with>  ?b	0.5	0.005420054	0.133333333	2	369	15	-1
+?h  <has_output>  ?b  ?a  <isa*>  ?h   => ?a  <has_output>  ?b	0.102040816	0.166666667	0.454545455	5	30	11	-1
+?h  <eff_pos_amount>  ?b  ?a  <occurs_in>  ?h   => ?a  <has_output>  ?b	0.040816327	0.666666667	1	2	3	2	-1
+?a  <occurs_in>  ?h  ?h  <produces>  ?b   => ?a  <has_output>  ?b	0.040816327	0.222222222	0.5	2	9	4	-1
+?g  <has_output>  ?b  ?g  <part_of>  ?a   => ?a  <has_output>  ?b	0.040816327	0.2	0.333333333	2	10	6	-1
+?b  <derives_from>  ?h  ?a  <has_part>  ?h   => ?a  <has_part>  ?b	0.015706806	0.6	1	3	5	3	-2
+?a  <has_part>  ?g  ?g  <interacts_with>  ?b   => ?a  <has_part>  ?b	0.010471204	0.5	1	2	4	2	-2
+?g  <capable_of>  ?b  ?g  <has_part>  ?a   => ?a  <capable_of>  ?b	0.04109589	0.068181818	0.2	3	44	15	-1
+?b  <derives_from>  ?h  ?a  <occurs_in>  ?h   => ?a  <occurs_in>  ?b	0.069767442	1	1	3	3	3	-1
+?a  <isa*>  ?h  ?h  <part_of>  ?b   => ?a  <part_of>  ?b	0.055045872	0.206896552	0.461538462	6	29	13	-1
+?h  <eff_pos_process>  ?b  ?a  <has_part>  ?h   => ?a  <eff_pos_process>  ?b	0.029126214	0.068181818	0.272727273	3	44	11	-1
+?g  <eff_pos_process>  ?b  ?g  <has_part>  ?a   => ?a  <eff_pos_process>  ?b	0.029126214	0.1	0.333333333	3	30	9	-1
+?a  <isa*>  ?h  ?h  <located_in>  ?b   => ?a  <located_in>  ?b	0.046875	0.111111111	0.375	3	27	8	-1
+?h  <isa*>  ?a  ?b  <isa*>  ?h   => ?a  <connected_to>  ?b	0.086956522	0.035087719	1	2	57	2	-2
+?g  <has_part>  ?a  ?g  <located_in>  ?b   => ?a  <located_in>  ?b	0.03125	0.060606061	0.666666667	2	33	3	-1
+?b  <has_part>  ?h  ?a  <isa*>  ?h   => ?a  <part_of>  ?b	0.055045872	0.056603774	0.352941176	6	106	17	-1
+?g  <isa*>  ?a  ?g  <located_in>  ?b   => ?a  <located_in>  ?b	0.046875	0.1	0.6	3	30	5	-1
+?g  <derives_from>  ?b  ?a  <occurs_in>  ?g   => ?a  <occurs_in>  ?b	0.069767442	0.6	0.6	3	5	5	-1
+?a  <has_output>  ?h  ?b  <produces>  ?h   => ?a  <occurs_in>  ?b	0.069767442	0.12	0.230769231	3	25	13	-1
+?g  <has_input>  ?a  ?g  <occurs_in>  ?b   => ?a  <located_in>  ?b	0.03125	0.117647059	0.666666667	2	17	3	-1
+Mining done in 0.30 s
+Total time 0.38 s
+53 rules mined.

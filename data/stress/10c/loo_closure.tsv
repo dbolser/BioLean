@@ -1,0 +1,1267 @@
+statement	fact	rederived	rule	tree
+cell-structure-and-function-m45427-11	cells of the immune system [CL:0000738] →− amount(bacteria [NCBITaxon:2])	no		
+cell-structure-and-function-m45427-12	red blood cells [CL:0000232] capable of carry oxygen [GO:0015671]	no		
+cell-structure-and-function-m45427-4	body [UBERON:0000468] has part cells [CL:0000000]	yes	relTrans	body [UBERON:0000468] has part cells [CL:0000000]   (relTrans) |   body [UBERON:0000468] has part organ [UBERON:0000062]   (relTrans) |     body [UBERON:0000468] has part organ system [UBERON:0000467]   [cell-structure-and-function-m45428-10] |     organ system [UBERON:0000467] has part organ [UBERON:0000062]   [cell-structure-and-function-m45428-6] |   organ [UBERON:0000062] has part cells [CL:0000000]   (relTrans) |     organ [UBERON:0000062] has part tissues [UBERON:0000479]   [cell-structure-and-function-m45428-5] |     tissues [UBERON:0000479] has part cells [CL:0000000]   [cell-structure-and-function-m45428-4]
+cell-structure-and-function-m45428-10	body [UBERON:0000468] has part organ system [UBERON:0000467]	no		
+cell-structure-and-function-m45428-4	tissues [UBERON:0000479] has part cells [CL:0000000]	no		
+cell-structure-and-function-m45428-5	organ [UBERON:0000062] has part tissues [UBERON:0000479]	no		
+cell-structure-and-function-m45428-6	organ system [UBERON:0000467] has part organ [UBERON:0000062]	no		
+cell-structure-and-function-m45428-74	cells [CL:0000000] derives from cells [CL:0000000]	no		
+cell-structure-and-function-m45429-12	ribosomes [GO:0005840] capable of synthesize proteins [GO:0006412]	no		
+cell-structure-and-function-m45429-18	DNA [CHEBI:16991] located in nucleoid [GO:0009295]	no		
+cell-structure-and-function-m45429-19	nucleoid [GO:0009295] part of prokaryotic cell [CL:0000520]	no		
+cell-structure-and-function-m45429-21	cell wall ⊓ in taxon (NCBITaxon:2) [GO:0005618&RO:0002162=(NCBITaxon:2)] has part peptidoglycan [CHEBI:8005]	yes	isaInherit	cell wall ⊓ in taxon (NCBITaxon:2) [GO:0005618&RO:0002162=(NCBITaxon:2)] has part peptidoglycan [CHEBI:8005]   (isaInherit) |   cell wall ⊓ in taxon (NCBITaxon:2) [GO:0005618&RO:0002162=(NCBITaxon:2)] is_a cell wall [GO:0005618]   [refine:GO:0005618&RO:0002162=(NCBITaxon:2)] |   cell wall [GO:0005618] has part peptidoglycan [CHEBI:8005]   [cell-structure-and-function-m45432-224]
+cell-structure-and-function-m45429-22	peptidoglycan [CHEBI:8005] has part sugars [CHEBI:16646]	no		
+cell-structure-and-function-m45429-24	bacteria [NCBITaxon:2] has part polysaccharide capsule [GO:0042603]	no		
+cell-structure-and-function-m45429-26	cell wall [GO:0005618] →+ process(maintain its shape [GO:0008360])	no		
+cell-structure-and-function-m45429-27	cell wall [GO:0005618] →− phenotype(dehydration [PATO:0001801])	no		
+cell-structure-and-function-m45429-28	polysaccharide capsule [GO:0042603] →+ process(attach to surfaces [GO:0007155])	no		
+cell-structure-and-function-m45429-29	prokaryotic cell [CL:0000520] has part flagella [GO:0009288]	no		
+cell-structure-and-function-m45429-30	prokaryotic cell [CL:0000520] has part pili [GO:0009289]	no		
+cell-structure-and-function-m45429-32	flagella [GO:0009288] capable of locomotion [GO:0048870]	no		
+cell-structure-and-function-m45429-33	pili [GO:0009289] capable of conjugation [GO:0009291]	no		
+cell-structure-and-function-m45429-39	eukaryotic [CL:0000255] has part nucleus [GO:0005634]	no		
+cell-structure-and-function-m45429-40	eukaryotic [CL:0000255] has part membrane-bound organelle [GO:0043231]	no		
+cell-structure-and-function-m45429-5	cells [CL:0000000] has part plasma membrane [GO:0005886]	no		
+cell-structure-and-function-m45429-54	prokaryotic cell [CL:0000520] has part plasma membrane [GO:0005886]	no		
+cell-structure-and-function-m45429-55	prokaryotic cell [CL:0000520] has part cytoplasm [GO:0005737]	no		
+cell-structure-and-function-m45429-56	prokaryotic cell [CL:0000520] has part ribosomes [GO:0005840]	no		
+cell-structure-and-function-m45429-57	prokaryotic cell [CL:0000520] has part cell wall [GO:0005618]	no		
+cell-structure-and-function-m45429-58	prokaryotic cell [CL:0000520] has part DNA [CHEBI:16991]	yes	relTrans	prokaryotic cell [CL:0000520] has part DNA [CHEBI:16991]   (relTrans) |   prokaryotic cell [CL:0000520] has part chromosome [GO:0005694]   [cell-structure-and-function-m45429-73] |   chromosome [GO:0005694] has part DNA [CHEBI:16991]   [cell-structure-and-function-m45432-101]
+cell-structure-and-function-m45429-60	prokaryotic cell [CL:0000520] has part polysaccharide capsule [GO:0042603]	no		
+cell-structure-and-function-m45429-62	eukaryotic [CL:0000255] has part plasma membrane [GO:0005886]	no		
+cell-structure-and-function-m45429-7	cells [CL:0000000] has part cytoplasm [GO:0005737]	no		
+cell-structure-and-function-m45429-73	prokaryotic cell [CL:0000520] has part chromosome [GO:0005694]	no		
+cell-structure-and-function-m45432-100	chromosome [GO:0005694] located in nucleus [GO:0005634]	no		
+cell-structure-and-function-m45432-101	chromosome [GO:0005694] has part DNA [CHEBI:16991]	no		
+cell-structure-and-function-m45432-11	phospholipid [CHEBI:16247] has part fatty acid [CHEBI:35366]	no		
+cell-structure-and-function-m45432-112	nucleolus [GO:0005730] part of nucleus [GO:0005634]	no		
+cell-structure-and-function-m45432-114	ribosome assembly [GO:0042255] occurs in nucleolus [GO:0005730]	no		
+cell-structure-and-function-m45432-117	endoplasmic reticulum [GO:0005783] capable of protein modification process [GO:0036211]	no		
+cell-structure-and-function-m45432-118	endoplasmic reticulum [GO:0005783] capable of lipid biosynthetic process [GO:0008610]	no		
+cell-structure-and-function-m45432-119	protein modification process [GO:0036211] occurs in rough endoplasmic reticulum [GO:0005791]	no		
+cell-structure-and-function-m45432-120	lipid biosynthetic process [GO:0008610] occurs in smooth endoplasmic reticulum [GO:0005790]	no		
+cell-structure-and-function-m45432-121	lumen [GO:0005788] part of endoplasmic reticulum [GO:0005783]	no		
+cell-structure-and-function-m45432-122	membrane of the ER [GO:0005789] has part phospholipid [CHEBI:16247]	no		
+cell-structure-and-function-m45432-123	membrane of the ER [GO:0005789] continuous with nuclear membrane [GO:0005635]	no		
+cell-structure-and-function-m45432-124	rough endoplasmic reticulum [GO:0005791] has part ribosomes [GO:0005840]	no		
+cell-structure-and-function-m45432-125	ribosomes [GO:0005840] attached to rough endoplasmic reticulum [GO:0005791]	no		
+cell-structure-and-function-m45432-128	protein folding [GO:0006457] occurs in lumen [GO:0005788]	no		
+cell-structure-and-function-m45432-129	rough endoplasmic reticulum [GO:0005791] capable of phospholipid biosynthetic process [GO:0008654]	no		
+cell-structure-and-function-m45432-13	plasma membrane [GO:0005886] →− process(transmembrane transport [GO:0055085])	no		
+cell-structure-and-function-m45432-133	smooth endoplasmic reticulum [GO:0005790] continuous with rough endoplasmic reticulum [GO:0005791]	no		
+cell-structure-and-function-m45432-135	smooth endoplasmic reticulum [GO:0005790] capable of carbohydrate biosynthetic process [GO:0016051]	no		
+cell-structure-and-function-m45432-136	smooth endoplasmic reticulum [GO:0005790] capable of lipid biosynthetic process [GO:0008610]	no		
+cell-structure-and-function-m45432-137	smooth endoplasmic reticulum [GO:0005790] capable of steroid hormone biosynthetic process [GO:0120178]	no		
+cell-structure-and-function-m45432-138	smooth endoplasmic reticulum [GO:0005790] capable of detoxification [GO:1990748]	no		
+cell-structure-and-function-m45432-139	smooth endoplasmic reticulum [GO:0005790] capable of alcohol metabolism [GO:0006066]	no		
+cell-structure-and-function-m45432-14	plasma membrane [GO:0005886] enables active transport [GO:0022804]	no		
+cell-structure-and-function-m45432-140	calcium [CHEBI:29108] located in smooth endoplasmic reticulum [GO:0005790]	no		
+cell-structure-and-function-m45432-143	protein targeting [GO:0006605] occurs in Golgi apparatus [GO:0005794]	no		
+cell-structure-and-function-m45432-144	Golgi cisterna [GO:0031985] part of Golgi apparatus [GO:0005794]	no		
+cell-structure-and-function-m45432-145	receiving face [GO:0005801] adjacent to endoplasmic reticulum [GO:0005783]	no		
+cell-structure-and-function-m45432-148	protein modification process [GO:0036211] occurs in Golgi apparatus [GO:0005794]	no		
+cell-structure-and-function-m45432-15	passive transport [GO:0022803] occurs in plasma membrane [GO:0005886]	no		
+cell-structure-and-function-m45432-153	secretory vesicles [GO:0099503] capable of exocytosis [GO:0006887]	no		
+cell-structure-and-function-m45432-156	salivary glands [UBERON:0001044] capable of secretion [GO:0046903]	no		
+cell-structure-and-function-m45432-157	cells of the immune system [CL:0000738] capable of secretion [GO:0046903]	no		
+cell-structure-and-function-m45432-158	Golgi apparatus ⊓ in taxon (NCBITaxon:33090) [GO:0005794&RO:0002162=(NCBITaxon:33090)] capable of polysaccharide biosynthetic process [GO:0000271]	no		
+cell-structure-and-function-m45432-16	microvilli ⊓ part of (cells that specialize in absorption) [GO:0005902&BFO:0000050=(CL:0000584)] part of plasma membrane [GO:0005886]	yes	isaInherit	microvilli ⊓ part of (cells that specialize in absorption) [GO:0005902&BFO:0000050=(CL:0000584)] part of plasma membrane [GO:0005886]   (isaInherit) |   microvilli ⊓ part of (cells that specialize in absorption) [GO:0005902&BFO:0000050=(CL:0000584)] is_a microvillus [GO:0005902]   [refine:GO:0005902&BFO:0000050=(CL:0000584)] |   microvillus [GO:0005902] part of plasma membrane [GO:0005886]   [cell-structure-and-function-m45432-17]
+cell-structure-and-function-m45432-161	Digestive enzymes ⊓ in taxon (NCBITaxon:33208) [GO:0016787&RO:0002162=(NCBITaxon:33208)] →− amount(proteins ⊓ located in (lysosomes) [CHEBI:36080&RO:0001025=(GO:0005764)])	no		
+cell-structure-and-function-m45432-162	lysosomes ⊓ in taxon (NCBITaxon:2759 ⊓ has modifier (single-celled)) [GO:0005764&RO:0002162=(NCBITaxon:2759&RO:0002573=(PATO:0001994))] capable of digestion [GO:0007586]	no		
+cell-structure-and-function-m45432-163	lysosomes ⊓ in taxon (NCBITaxon:2759 ⊓ has modifier (single-celled)) [GO:0005764&RO:0002162=(NCBITaxon:2759&RO:0002573=(PATO:0001994))] capable of recycling of organelles [GO:0006914]	no		
+cell-structure-and-function-m45432-169	macrophages [CL:0000235] part of immune system [UBERON:0002405]	no		
+cell-structure-and-function-m45432-17	microvillus [GO:0005902] part of plasma membrane [GO:0005886]	no		
+cell-structure-and-function-m45432-175	vesicles [GO:0031982] capable of transport [GO:0006810]	no		
+cell-structure-and-function-m45432-178	vesicles [GO:0031982] capable of membrane fusion [GO:0061025]	no		
+cell-structure-and-function-m45432-179	plant vacuoles ⊓ in taxon (NCBITaxon:33090) [GO:0000325&RO:0002162=(NCBITaxon:33090)] capable of macromolecule catabolic process [GO:0009057]	no		
+cell-structure-and-function-m45432-18	microvillus [GO:0005902] →+ phenotype(surface area [PATO:0001323])	no		
+cell-structure-and-function-m45432-184	ribosomes [GO:0005840] has part large subunit [GO:0015934]	no		
+cell-structure-and-function-m45432-19	cells [CL:0000584] located in small intestine [UBERON:0002108]	no		
+cell-structure-and-function-m45432-190	immature red blood cells [CL:0000765] produces hemoglobin [CHEBI:35143]	no		
+cell-structure-and-function-m45432-191	hemoglobin [CHEBI:35143] capable of carry oxygen [GO:0015671]	no		
+cell-structure-and-function-m45432-192	Mitochondria [GO:0005739] capable of ATP biosynthetic process [GO:0006754]	no		
+cell-structure-and-function-m45432-197	Mitochondria [GO:0005739] has part ribosomes [GO:0005761]	no		
+cell-structure-and-function-m45432-198	mitochondrial membrane [GO:0031966] has part phospholipid [CHEBI:16247]	no		
+cell-structure-and-function-m45432-199	inner layer [GO:0005743] has part cristae [GO:0030061]	no		
+cell-structure-and-function-m45432-20	small intestine [UBERON:0002108] capable of absorbs nutrients [GO:0050892]	no		
+cell-structure-and-function-m45432-200	cristae [GO:0030061] →+ phenotype(surface area [PATO:0001323])	no		
+cell-structure-and-function-m45432-206	peroxisome [GO:0005777] capable of fatty acid oxidation [GO:0019395]	no		
+cell-structure-and-function-m45432-207	peroxisome [GO:0005777] capable of amino acid catabolic process [GO:0009063]	no		
+cell-structure-and-function-m45432-208	peroxisome [GO:0005777] capable of detoxification [GO:1990748]	no		
+cell-structure-and-function-m45432-209	peroxisome [GO:0005777] →− amount(Alcohol ⊓ part of (liver cells) [CHEBI:16236&BFO:0000050=(CL:0000182)])	no		
+cell-structure-and-function-m45432-210	fatty acid oxidation [GO:0019395] has output hydrogen peroxide [CHEBI:16240]	no		
+cell-structure-and-function-m45432-211	hydrogen peroxide [CHEBI:16240] located in peroxisome [GO:0005777]	no		
+cell-structure-and-function-m45432-213	peroxisomal enzymes [GO:0004096] →− amount(hydrogen peroxide [CHEBI:16240])	no		
+cell-structure-and-function-m45432-215	animal cell ⊓ in taxon (NCBITaxon:33208) [CL:0000548&RO:0002162=(NCBITaxon:33208)] has part centrioles [GO:0005814]	no		
+cell-structure-and-function-m45432-217	plant cell ⊓ in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part plant cell wall [GO:0009505]	no		
+cell-structure-and-function-m45432-219	plant cell wall ⊓ in taxon (NCBITaxon:33090) [GO:0009505&RO:0002162=(NCBITaxon:33090)] adjacent to plasma membrane [GO:0005886]	no		
+cell-structure-and-function-m45432-22	celiac disease [MONDO:0005130] →+ process(immune response [GO:0006955])	no		
+cell-structure-and-function-m45432-223	fungal cells [CL:0000521] has part cell walls [GO:0009277]	no		
+cell-structure-and-function-m45432-224	cell wall [GO:0005618] has part peptidoglycan [CHEBI:8005]	no		
+cell-structure-and-function-m45432-225	plant cell wall ⊓ in taxon (NCBITaxon:33090) [GO:0009505&RO:0002162=(NCBITaxon:33090)] has part cellulose [CHEBI:18246]	yes	isaInherit	plant cell wall ⊓ in taxon (NCBITaxon:33090) [GO:0009505&RO:0002162=(NCBITaxon:33090)] has part cellulose [CHEBI:18246]   (isaInherit) |   plant cell wall ⊓ in taxon (NCBITaxon:33090) [GO:0009505&RO:0002162=(NCBITaxon:33090)] is_a plant cell wall [GO:0009505]   [refine:GO:0009505&RO:0002162=(NCBITaxon:33090)] |   plant cell wall [GO:0009505] has part cellulose [CHEBI:18246]   [cell-structure-and-function-m45432-323]
+cell-structure-and-function-m45432-228	chloroplast [GO:0009507] has part DNA [GO:0009508]	no		
+cell-structure-and-function-m45432-229	chloroplast [GO:0009507] capable of photosynthesis [GO:0015979]	no		
+cell-structure-and-function-m45432-230	chloroplast [GO:0009507] located in eukaryotic [CL:0000255]	no		
+cell-structure-and-function-m45432-231	photosynthesis [GO:0015979] has input carbon dioxide [CHEBI:16526]	no		
+cell-structure-and-function-m45432-232	photosynthesis [GO:0015979] has output glucose [CHEBI:17234]	no		
+cell-structure-and-function-m45432-233	plants [NCBITaxon:33090] capable of photosynthesis [GO:0015979]	no		
+cell-structure-and-function-m45432-235	chloroplast [GO:0009507] has part outer membrane [GO:0009707]	no		
+cell-structure-and-function-m45432-236	chloroplast [GO:0009507] has part thylakoids [GO:0009534]	no		
+cell-structure-and-function-m45432-237	granum [GO:0009542] has part thylakoids [GO:0009534]	no		
+cell-structure-and-function-m45432-239	chloroplast [GO:0009507] has part chlorophyll [CHEBI:28966]	no		
+cell-structure-and-function-m45432-24	immune response ⊓ in taxon (NCBITaxon:9606 ⊓ has modifier (celiac disease)) [GO:0006955&RO:0002162=(NCBITaxon:9606&RO:0002573=(MONDO:0005130))] →− amount(microvillus [GO:0005902])	no		
+cell-structure-and-function-m45432-240	chlorophyll [CHEBI:28966] capable of photosynthesis [GO:0015979]	no		
+cell-structure-and-function-m45432-242	bacteria [NCBITaxon:2] capable of photosynthesis [GO:0015979]	no		
+cell-structure-and-function-m45432-245	Mitochondria [GO:0005739] has part ribosomes [GO:0005840]	no		
+cell-structure-and-function-m45432-25	microvilli ⊓ in taxon (NCBITaxon:9606 ⊓ has modifier (celiac disease)) [GO:0005902&RO:0002162=(NCBITaxon:9606&RO:0002573=(MONDO:0005130))] →+ process(absorbs nutrients [GO:0050892])	no		
+cell-structure-and-function-m45432-252	gut ⊓ in taxon (NCBITaxon:9606) [UBERON:0000160&RO:0002162=(NCBITaxon:9606)] location of bacteria [NCBITaxon:2]	no		
+cell-structure-and-function-m45432-257	Mitochondria [GO:0005739] has part DNA [CHEBI:16991]	no		
+cell-structure-and-function-m45432-26	celiac disease [MONDO:0005130] →+ phenotype(malnutrition [HP:0004395])	no		
+cell-structure-and-function-m45432-261	Mitochondria [GO:0005739] derives from bacteria [NCBITaxon:2]	no		
+cell-structure-and-function-m45432-262	chloroplast [GO:0009507] derives from bacteria [NCBITaxon:1117]	no		
+cell-structure-and-function-m45432-265	central vacuole [GO:0042807] →+ process(cellular water homeostasis [GO:0009992])	no		
+cell-structure-and-function-m45432-266	central vacuole ⊓ in taxon (NCBITaxon:33090) [GO:0042807&RO:0002162=(NCBITaxon:33090)] →+ phenotype(turgor pressure [PATO:0001620])	no		
+cell-structure-and-function-m45432-27	celiac disease [MONDO:0005130] →+ phenotype(cramping [HP:0002027])	no		
+cell-structure-and-function-m45432-271	plant cell wall [GO:0009505] →− phenotype(wilted [PATO:0002461])	no		
+cell-structure-and-function-m45432-273	proteins ⊓ located in (seed) ⊓ happens during (GO:0048316) ⊓ in taxon (NCBITaxon:33090) [CHEBI:36080&RO:0001025=(PO:0009010)&RO:0002092=(GO:0048316)&RO:0002162=(NCBITaxon:33090)] located in central vacuole [GO:0042807]	no		
+cell-structure-and-function-m45432-275	extracellular matrix [GO:0031012] has part collagen [GO:0005581]	no		
+cell-structure-and-function-m45432-277	extracellular matrix [GO:0031012] →+ process(attach to surfaces [GO:0007155])	no		
+cell-structure-and-function-m45432-278	extracellular matrix [GO:0031012] →+ process(cell communication [GO:0007154])	no		
+cell-structure-and-function-m45432-28	celiac disease [MONDO:0005130] →+ phenotype(diarrhea [HP:0002014])	no		
+cell-structure-and-function-m45432-280	cells lining a blood vessel ⊓ located in (blood vessel) ⊓ in taxon (cellular organisms ⊓ has modifier (damaged)) [CL:0000115&RO:0001025=(UBERON:0001981)&RO:0002162=(NCBITaxon:131567&RO:0002573=(PATO:0001167))] cell expresses tissue factor [PR:000001940]	no		
+cell-structure-and-function-m45432-281	tissue factor [PR:000001940] →+ process(platelets to adhere (platelet activation) ⊓ occurs in (blood vessel) ⊓ occurs in (platelets) [GO:0030168&BFO:0000066=(UBERON:0001981)&BFO:0000066=(CL:0000233)])	no		
+cell-structure-and-function-m45432-282	tissue factor [PR:000001940] →+ process(constricting ⊓ occurs in (smooth muscle cells) [GO:0042310&BFO:0000066=(CL:0000192)])	no		
+cell-structure-and-function-m45432-290	plasmodesma ⊓ in taxon (NCBITaxon:33090) [GO:0009506&RO:0002162=(NCBITaxon:33090)] connected to cytoplasm [GO:0005737]	no		
+cell-structure-and-function-m45432-291	plasmodesma ⊓ in taxon (NCBITaxon:33090) [GO:0009506&RO:0002162=(NCBITaxon:33090)] →+ process(transport [GO:0006810])	no		
+cell-structure-and-function-m45432-293	tight junction [GO:0005923] has part proteins [CHEBI:36080]	no		
+cell-structure-and-function-m45432-294	tight junction [GO:0005923] →− process(paracellular transport [GO:0160184])	no		
+cell-structure-and-function-m45432-295	tight junction [GO:0005923] located in epithelial tissue [UBERON:0000483]	no		
+cell-structure-and-function-m45432-296	epithelial tissue [UBERON:0000483] part of skin [UBERON:0002097]	no		
+cell-structure-and-function-m45432-298	desmosome ⊓ in taxon (NCBITaxon:33208) [GO:0030057&RO:0002162=(NCBITaxon:33208)] part of cells [CL:0000000]	no		
+cell-structure-and-function-m45432-300	desmosome [GO:0030057] →+ process(attach to surfaces [GO:0007155])	no		
+cell-structure-and-function-m45432-302	gap junction [GO:0005921] →+ process(cell communication [GO:0007154])	no		
+cell-structure-and-function-m45432-31	cytoplasm [GO:0005737] has part organelles [GO:0043226]	no		
+cell-structure-and-function-m45432-311	ribosomes [GO:0005840] located in cytoplasm [GO:0005737]	no		
+cell-structure-and-function-m45432-313	Mitochondria [GO:0005739] capable of cellular respiration [GO:0045333]	no		
+cell-structure-and-function-m45432-314	Mitochondria [GO:0005739] produces ATP [CHEBI:15422]	no		
+cell-structure-and-function-m45432-315	peroxisome [GO:0005777] →− amount(fatty acid [CHEBI:35366])	no		
+cell-structure-and-function-m45432-318	animal cell ⊓ in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] has part centrosome [GO:0005813]	no		
+cell-structure-and-function-m45432-321	Lysosomes ⊓ in taxon (NCBITaxon:33208) [GO:0005764&RO:0002162=(NCBITaxon:33208)] part of cells [CL:0000000]	no		
+cell-structure-and-function-m45432-323	plant cell wall [GO:0009505] has part cellulose [CHEBI:18246]	no		
+cell-structure-and-function-m45432-324	plant cell wall [GO:0009505] →+ process(maintain its shape [GO:0008360])	no		
+cell-structure-and-function-m45432-325	photosynthesis [GO:0015979] occurs in chloroplast [GO:0009507]	no		
+cell-structure-and-function-m45432-326	central vacuole ⊓ in taxon (NCBITaxon:33090) [GO:0042807&RO:0002162=(NCBITaxon:33090)] →+ process(growth [GO:0016049])	no		
+cell-structure-and-function-m45432-330	microfilaments [GO:0005884] →+ process(maintain its shape [GO:0008360])	no		
+cell-structure-and-function-m45432-331	microfilaments [GO:0005884] →+ process(locomotion [GO:0048870])	no		
+cell-structure-and-function-m45432-335	microtubule [GO:0005874] →+ process(vesicle-mediated transport [GO:0016192])	no		
+cell-structure-and-function-m45432-338	extracellular matrix ⊓ in taxon (NCBITaxon:33208) [GO:0031012&RO:0002162=(NCBITaxon:33208)] →+ process(cell communication [GO:0007154])	yes	isaInheritEffect	extracellular matrix ⊓ in taxon (NCBITaxon:33208) [GO:0031012&RO:0002162=(NCBITaxon:33208)] →+ process(cell communication [GO:0007154])   (isaInheritEffect) |   extracellular matrix ⊓ in taxon (NCBITaxon:33208) [GO:0031012&RO:0002162=(NCBITaxon:33208)] is_a extracellular matrix [GO:0031012]   [refine:GO:0031012&RO:0002162=(NCBITaxon:33208)] |   extracellular matrix [GO:0031012] →+ process(cell communication [GO:0007154])   [cell-structure-and-function-m45432-278]
+cell-structure-and-function-m45432-339	animal cell ⊓ in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] has part tight junction [GO:0005923]	no		
+cell-structure-and-function-m45432-34	organic molecules [CHEBI:50860] located in cytoplasm [GO:0005737]	no		
+cell-structure-and-function-m45432-340	plant cell ⊓ in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] has part plasmodesma [GO:0009506]	no		
+cell-structure-and-function-m45432-344	animal cell ⊓ in taxon (NCBITaxon:33208) [CL:0000000&RO:0002162=(NCBITaxon:33208)] has part lysosomes [GO:0005764]	no		
+cell-structure-and-function-m45432-35	glucose [CHEBI:17234] located in cytoplasm [GO:0005737]	no		
+cell-structure-and-function-m45432-355	cell wall ⊓ in taxon (plants) [GO:0005618&RO:0002162=(NCBITaxon:33090)] has part cellulose [CHEBI:18246]	no		
+cell-structure-and-function-m45432-358	chromatin [GO:0000785] part of chromosome [GO:0005694]	no		
+cell-structure-and-function-m45432-359	chromosome [GO:0005694] has part chromatin [GO:0000785]	no		
+cell-structure-and-function-m45432-36	polysaccharide [CHEBI:18154] located in cytoplasm [GO:0005737]	no		
+cell-structure-and-function-m45432-363	cytosol [GO:0005829] part of cytoplasm [GO:0005737]	no		
+cell-structure-and-function-m45432-37	sodium [CHEBI:29101] located in cytoplasm [GO:0005737]	no		
+cell-structure-and-function-m45432-375	DNA [CHEBI:16991] located in nucleus [GO:0005634]	no		
+cell-structure-and-function-m45432-38	metabolic reactions [GO:0008152] occurs in cytoplasm [GO:0005737]	no		
+cell-structure-and-function-m45432-39	synthesize proteins [GO:0006412] occurs in cytoplasm [GO:0005737]	no		
+cell-structure-and-function-m45432-42	ions [CHEBI:24870] located in cytoplasm [GO:0005737]	no		
+cell-structure-and-function-m45432-43	cytoskeleton [GO:0005856] →+ process(maintain its shape [GO:0008360])	no		
+cell-structure-and-function-m45432-44	cytoskeleton [GO:0005856] →+ process(organelle localization [GO:0051640])	no		
+cell-structure-and-function-m45432-45	cytoskeleton [GO:0005856] →+ process(vesicle-mediated transport [GO:0016192])	no		
+cell-structure-and-function-m45432-46	cytoskeleton [GO:0005856] →+ process(locomotion [GO:0048870])	no		
+cell-structure-and-function-m45432-48	cytoskeleton [GO:0005856] has part microfilaments [GO:0005884]	no		
+cell-structure-and-function-m45432-51	microfilaments [GO:0005884] capable of arise from [GO:0051301]	no		
+cell-structure-and-function-m45432-53	muscle cells [CL:0000187] has part microfilaments [GO:0005884]	no		
+cell-structure-and-function-m45432-54	microfilaments [GO:0005884] →+ process(muscle cell contraction ⊓ occurs in (CL:0000187) [GO:0006936&BFO:0000066=(CL:0000187)])	no		
+cell-structure-and-function-m45432-56	intermediate filament [GO:0005882] →+ process(maintain its shape [GO:0008360])	no		
+cell-structure-and-function-m45432-57	intermediate filament [GO:0005882] →+ process(organelle localization [GO:0051640])	no		
+cell-structure-and-function-m45432-62	microtubule [GO:0005874] →+ process(organelle localization [GO:0051640])	no		
+cell-structure-and-function-m45432-63	microtubule [GO:0005874] →+ process(chromosome segregation [GO:0007059])	no		
+cell-structure-and-function-m45432-64	flagellum [GO:0031514] has part microtubule [GO:0005874]	no		
+cell-structure-and-function-m45432-68	centrosome [GO:0005813] has part centrioles [GO:0005814]	no		
+cell-structure-and-function-m45432-70	centrioles [GO:0005814] has part microtubule [GO:0005874]	no		
+cell-structure-and-function-m45432-71	replicates itself [GO:0051298] precedes arise from [GO:0051301]	no		
+cell-structure-and-function-m45432-72	centrioles [GO:0005814] →+ process(chromosome segregation [GO:0007059])	no		
+cell-structure-and-function-m45432-76	plant cell ⊓ in taxon (NCBITaxon:33090) [CL:0000000&RO:0002162=(NCBITaxon:33090)] capable of arise from [GO:0051301]	no		
+cell-structure-and-function-m45432-78	flagellum [GO:0031514] capable of locomotion [GO:0048870]	no		
+cell-structure-and-function-m45432-8	plasma membrane [GO:0005886] has part phospholipid [CHEBI:16247]	no		
+cell-structure-and-function-m45432-82	cilium [GO:0005929] capable of locomotion [GO:0048870]	no		
+cell-structure-and-function-m45432-87	endomembrane system [GO:0012505] capable of protein transport [GO:0015031]	no		
+cell-structure-and-function-m45432-88	endomembrane system [GO:0012505] has part nuclear membrane [GO:0005635]	no		
+cell-structure-and-function-m45432-89	plasma membrane [GO:0005886] part of endomembrane system [GO:0012505]	no		
+cell-structure-and-function-m45432-91	nucleus [GO:0005634] has part chromatin [GO:0000785]	no		
+cell-structure-and-function-m45432-92	nucleus [GO:0005634] →+ process(ribosome biogenesis [GO:0042254])	no		
+cell-structure-and-function-m45432-93	nucleus [GO:0005634] →+ process(synthesize proteins [GO:0006412])	no		
+cell-structure-and-function-m45432-95	nuclear membrane [GO:0005635] part of nucleus [GO:0005634]	no		
+cell-structure-and-function-m45432-96	nuclear membrane [GO:0005635] has part phospholipid [CHEBI:16247]	no		
+cell-structure-and-function-m45432-97	nuclear membrane [GO:0005635] has part pores [GO:0005643]	no		
+cell-structure-and-function-m45432-98	pores [GO:0005643] →+ process(nucleocytoplasmic transport [GO:0006913])	no		
+cell-structure-and-function-m45433-10	cell recognition [GO:0008037] →+ process(immune response [GO:0006955])	no		
+cell-structure-and-function-m45433-11	plasma membrane [GO:0005886] has function receptors [GO:0038023]	no		
+cell-structure-and-function-m45433-14	receptors [GO:0038023] →+ process(cell surface receptor signaling pathway [GO:0007166])	no		
+cell-structure-and-function-m45433-15	metabolic reactions [GO:0008152] has output ATP [CHEBI:15422]	no		
+cell-structure-and-function-m45433-16	receptors [GO:0038023] →+ process(signal transduction [GO:0007165])	no		
+cell-structure-and-function-m45433-17	viruses [NCBITaxon:10239] capable of viral entry into host cell [GO:0046718]	no		
+cell-structure-and-function-m45433-19	HIV [NCBITaxon:12721] capable of viral entry into host cell [GO:0046718]	no		
+cell-structure-and-function-m45433-3	cells [CL:0000000] capable of transmembrane transport [GO:0055085]	no		
+cell-structure-and-function-m45433-36	plasma membrane ⊓ in taxon (NCBITaxon:33208) [GO:0005886&RO:0002162=(NCBITaxon:33208)] has part cholesterol [CHEBI:16113]	no		
+cell-structure-and-function-m45433-43	plasma membrane [GO:0005886] has quality hydrophilic [PATO:0001887]	no		
+cell-structure-and-function-m45433-44	plasma membrane [GO:0005886] has quality hydrophobic [PATO:0001885]	no		
+cell-structure-and-function-m45433-46	plasma membrane [GO:0005886] has part proteins [CHEBI:36080]	no		
+cell-structure-and-function-m45433-51	plasma membrane [GO:0005886] has part sugars [CHEBI:16646]	no		
+cell-structure-and-function-m45433-52	sugars [CHEBI:16646] located in recognition sites [GO:0009986]	no		
+cell-structure-and-function-m45433-55	sugars [CHEBI:16646] →+ process(cell recognition [GO:0008037])	no		
+cell-structure-and-function-m45433-57	HIV ⊓ part of (T-helper cells) [NCBITaxon:12721&BFO:0000050=(CL:0000912)] capable of viral entry into host cell [GO:0046718]	yes	isaInherit	HIV ⊓ part of (T-helper cells) [NCBITaxon:12721&BFO:0000050=(CL:0000912)] capable of viral entry into host cell [GO:0046718]   (isaInherit) |   HIV ⊓ part of (T-helper cells) [NCBITaxon:12721&BFO:0000050=(CL:0000912)] is_a HIV [NCBITaxon:12721]   [refine:NCBITaxon:12721&BFO:0000050=(CL:0000912)] |   HIV [NCBITaxon:12721] capable of viral entry into host cell [GO:0046718]   [cell-structure-and-function-m45433-19]
+cell-structure-and-function-m45433-58	HIV ⊓ located in (central nervous system) [NCBITaxon:12721&RO:0001025=(UBERON:0001017)] capable of viral entry into host cell [GO:0046718]	yes	isaInherit	HIV ⊓ located in (central nervous system) [NCBITaxon:12721&RO:0001025=(UBERON:0001017)] capable of viral entry into host cell [GO:0046718]   (isaInherit) |   HIV ⊓ located in (central nervous system) [NCBITaxon:12721&RO:0001025=(UBERON:0001017)] is_a HIV [NCBITaxon:12721]   [refine:NCBITaxon:12721&RO:0001025=(UBERON:0001017)] |   HIV [NCBITaxon:12721] capable of viral entry into host cell [GO:0046718]   [cell-structure-and-function-m45433-19]
+cell-structure-and-function-m45433-63	viruses [NCBITaxon:10239] →+ amount(antibodies ⊓ located in (immune system) [GO:0019814&RO:0001025=(UBERON:0002405)])	no		
+cell-structure-and-function-m45433-64	antigens [CHEBI:59132] →+ process(antibody production [GO:0002377])	no		
+cell-structure-and-function-m45433-65	antibodies [GO:0019814] →− amount(viruses [NCBITaxon:10239])	no		
+cell-structure-and-function-m45433-69	HIV [NCBITaxon:12721] →− process(immune response [GO:0006955])	no		
+cell-structure-and-function-m45433-8	plasma membrane [GO:0005886] →+ process(cell recognition [GO:0008037])	no		
+cell-structure-and-function-m45434-1	plasma membrane [GO:0005886] capable of transmembrane transport [GO:0055085]	no		
+cell-structure-and-function-m45434-13	plasma membrane [GO:0005886] has quality asymmetric [PATO:0000616]	no		
+cell-structure-and-function-m45434-16	sugars [CHEBI:16646] →+ activity(binding [GO:0005488])	no		
+cell-structure-and-function-m45434-17	sugars [CHEBI:16646] →+ phenotype(selectively permeable [PATO:0000970])	no		
+cell-structure-and-function-m45434-2	plasma membrane [GO:0005886] has quality selectively permeable [PATO:0000970]	no		
+cell-structure-and-function-m45434-21	vitamins A [CHEBI:12777] capable of transmembrane transport [GO:0055085]	no		
+cell-structure-and-function-m45434-3	plasma membrane [GO:0005886] →− process(cell death [GO:0008219])	no		
+cell-structure-and-function-m45434-47	receptors [GO:0038023] →+ process(import into cell [GO:0098657])	no		
+cell-structure-and-function-m45434-52	osmosis [GO:0006833] has participant water [CHEBI:15377]	no		
+cell-structure-and-function-m45434-64	osmosis [GO:0006833] occurs in cells [CL:0000000]	no		
+cell-structure-and-function-m45434-70	import into cell ⊓ occurs in (cell) ⊓ surrounded by (hypotonic solution) [GO:0098657&BFO:0000066=(CL:0000000)&RO:0002219=(PATO:0001656)] has participant water [CHEBI:15377]	no		
+cell-structure-and-function-m45434-75	water leaves the cell ⊓ occurs in (cell) ⊓ surrounded by (hypertonic solution) [GO:0140352&BFO:0000066=(CL:0000000)&RO:0002219=(PATO:0001657)] has participant water [CHEBI:15377]	no		
+cell-structure-and-function-m45434-86	plants [NCBITaxon:33090] has part cell wall [GO:0005618]	no		
+cell-structure-and-function-m45434-87	cell wall [GO:0005618] →− process(cell lysis [GO:0019835])	no		
+cell-structure-and-function-m45434-90	import into cell ⊓ occurs in (CL:0000000) ⊓ in taxon (NCBITaxon:33090) [GO:0098657&BFO:0000066=(CL:0000000)&RO:0002162=(NCBITaxon:33090)] has participant water [CHEBI:15377]	no		
+cell-structure-and-function-m45434-91	water ⊓ in taxon (NCBITaxon:33090) [CHEBI:15377&RO:0002162=(NCBITaxon:33090)] →+ phenotype(turgor pressure [PATO:0001620])	no		
+cell-structure-and-function-m45434-92	turgor pressure ⊓ in taxon (NCBITaxon:33090) [PATO:0001620&RO:0002162=(NCBITaxon:33090)] →+ phenotype(stiffness [PATO:0001545])	no		
+cell-structure-and-function-m45435-1	active transport [GO:0022804] has input ATP [CHEBI:15422]	no		
+cell-structure-and-function-m45435-14	membrane potential [PATO:0001462] →+ process(sodium ion import across plasma membrane [GO:0098719])	no		
+cell-structure-and-function-m45435-16	membrane potential [PATO:0001462] →+ process(potassium ion import across plasma membrane [GO:1990573])	no		
+cell-structure-and-function-m45435-24	active transport [GO:0022804] →+ process(ion homeostasis [GO:0050801])	no		
+cell-structure-and-function-m45435-26	poisons [CHEBI:64909] →− activity(active transport [GO:0022804])	no		
+cell-structure-and-function-m45435-29	Primary active transport [GO:0015399] →+ phenotype(membrane potential [PATO:0001462])	no		
+cell-structure-and-function-m45435-30	Primary active transport [GO:0015399] has input ATP [CHEBI:15422]	no		
+cell-structure-and-function-m45435-33	sodium-potassium pump [GO:0005391] →+ process(potassium ion import across plasma membrane [GO:1990573])	no		
+cell-structure-and-function-m45435-34	sodium-potassium pump [GO:0005391] →+ process(sodium ion export across plasma membrane [GO:0036376])	no		
+cell-structure-and-function-m45435-35	sodium-potassium pump [GO:0005391] →+ phenotype(membrane potential [PATO:0001462])	no		
+cell-structure-and-function-m45435-38	ATP synthesis coupled proton transport [GO:0042776] occurs in Mitochondria [GO:0005739]	no		
+cell-structure-and-function-m45435-4	eukaryotic [CL:0000255] capable of endocytosis [GO:0006897]	no		
+cell-structure-and-function-m45435-44	neutrophil [CL:0000775] capable of phagocytosis [GO:0006909]	no		
+cell-structure-and-function-m45435-5	cells [CL:0000000] capable of phagocytosis [GO:0006909]	no		
+cell-structure-and-function-m45435-54	receptor-mediated endocytosis [GO:0006898] →− amount(LDL ⊓ located in (blood) [CHEBI:39026&RO:0001025=(UBERON:0000178)])	no		
+cell-structure-and-function-m45435-55	familial hypercholesterolemia [MONDO:0005439] →− activity(LDL receptors [GO:0005041])	no		
+cell-structure-and-function-m45435-57	familial hypercholesterolemia ⊓ in taxon (NCBITaxon:9606) [MONDO:0005439&RO:0002162=(NCBITaxon:9606)] →+ amount(cholesterol ⊓ located in (blood) [CHEBI:16113&RO:0001025=(UBERON:0000178)])	no		
+cell-structure-and-function-m45435-58	familial hypercholesterolemia [MONDO:0005439] →− process(clear [GO:0030301])	no		
+cell-structure-and-function-m45435-6	endocytosis [GO:0006897] has input ATP [CHEBI:15422]	no		
+cell-structure-and-function-m45435-76	eukaryotic [CL:0000255] capable of exocytosis [GO:0006887]	no		
+how-cells-obtain-energy-m45436-5	metabolized (broken down) [GO:0009056] occurs in cells [CL:0000000]	no		
+how-cells-obtain-energy-m45436-7	large proteins ⊓ located in (muscles) [CHEBI:36080&RO:0001025=(UBERON:0002385)] derives from amino acids [CHEBI:33709]	no		
+how-cells-obtain-energy-m45436-8	carbohydrate catabolic process [GO:0016052] has output simple sugars [CHEBI:35381]	no		
+how-cells-obtain-energy-m45436-9	simple sugars [CHEBI:35381] →+ phenotype(energy [PATO:0001021])	no		
+how-cells-obtain-energy-m45437-11	photosynthesizing ⊓ in taxon (plants) [GO:0015979&RO:0002162=(NCBITaxon:33090)] has output sugars [CHEBI:16646]	yes	isaInherit	photosynthesizing ⊓ in taxon (plants) [GO:0015979&RO:0002162=(NCBITaxon:33090)] has output sugars [CHEBI:16646]   (isaInherit) |   photosynthesizing ⊓ in taxon (plants) [GO:0015979&RO:0002162=(NCBITaxon:33090)] is_a photosynthesis [GO:0015979]   [refine:GO:0015979&RO:0002162=(NCBITaxon:33090)] |   photosynthesis [GO:0015979] has output sugars [CHEBI:16646]   [photosynthesis-m45448-42]
+how-cells-obtain-energy-m45437-12	photosynthesizing ⊓ in taxon (plants) [GO:0015979&RO:0002162=(NCBITaxon:33090)] has output glucose [CHEBI:17234]	yes	isaInherit	photosynthesizing ⊓ in taxon (plants) [GO:0015979&RO:0002162=(NCBITaxon:33090)] has output glucose [CHEBI:17234]   (isaInherit) |   photosynthesizing ⊓ in taxon (plants) [GO:0015979&RO:0002162=(NCBITaxon:33090)] is_a photosynthesis [GO:0015979]   [refine:GO:0015979&RO:0002162=(NCBITaxon:33090)] |   photosynthesis [GO:0015979] has output glucose [CHEBI:17234]   [cell-structure-and-function-m45432-232]
+how-cells-obtain-energy-m45437-13	photosynthesizing ⊓ in taxon (plants) [GO:0015979&RO:0002162=(NCBITaxon:33090)] has input carbon dioxide [CHEBI:16526]	yes	isaInherit	photosynthesizing ⊓ in taxon (plants) [GO:0015979&RO:0002162=(NCBITaxon:33090)] has input carbon dioxide [CHEBI:16526]   (isaInherit) |   photosynthesizing ⊓ in taxon (plants) [GO:0015979&RO:0002162=(NCBITaxon:33090)] is_a photosynthesis [GO:0015979]   [refine:GO:0015979&RO:0002162=(NCBITaxon:33090)] |   photosynthesis [GO:0015979] has input carbon dioxide [CHEBI:16526]   [cell-structure-and-function-m45432-231]
+how-cells-obtain-energy-m45437-14	photosynthesizing ⊓ in taxon (plants) [GO:0015979&RO:0002162=(NCBITaxon:33090)] has output oxygen [CHEBI:15379]	yes	isaInherit	photosynthesizing ⊓ in taxon (plants) [GO:0015979&RO:0002162=(NCBITaxon:33090)] has output oxygen [CHEBI:15379]   (isaInherit) |   photosynthesizing ⊓ in taxon (plants) [GO:0015979&RO:0002162=(NCBITaxon:33090)] is_a photosynthesis [GO:0015979]   [refine:GO:0015979&RO:0002162=(NCBITaxon:33090)] |   photosynthesis [GO:0015979] has output oxygen [CHEBI:15379]   [photosynthesis-m45448-10]
+how-cells-obtain-energy-m45437-157	environmental temperature [PATO:0000146] →+ phenotype(reaction rates [PATO:0000161])	no		
+how-cells-obtain-energy-m45437-158	environmental temperature [PATO:0000146] →− activity(enzyme [GO:0003824])	no		
+how-cells-obtain-energy-m45437-162	extreme pH [PATO:0001842] →− activity(enzyme [GO:0003824])	no		
+how-cells-obtain-energy-m45437-17	light reactions of photosynthesis [GO:0019684] has input ATP [CHEBI:15422]	no		
+how-cells-obtain-energy-m45437-193	inhibitor molecules [CHEBI:23924] →− activity(enzyme [GO:0003824])	no		
+how-cells-obtain-energy-m45437-199	enzyme [GO:0003824] involved in metabolic reactions [GO:0008152]	no		
+how-cells-obtain-energy-m45437-20	broken down [GO:0006007] has input glucose [CHEBI:17234]	no		
+how-cells-obtain-energy-m45437-202	statins [CHEBI:87631] →− amount(cholesterol [CHEBI:16113])	yes	viaActivity	statins [CHEBI:87631] →− amount(cholesterol [CHEBI:16113])   (viaActivity) |   statins [CHEBI:87631] →− activity(HMG-CoA reductase [PR:000008636])   [how-cells-obtain-energy-m45437-203] |   HMG-CoA reductase [PR:000008636] →+ amount(cholesterol [CHEBI:16113])   [how-cells-obtain-energy-m45437-204]
+how-cells-obtain-energy-m45437-203	statins [CHEBI:87631] →− activity(HMG-CoA reductase [PR:000008636])	no		
+how-cells-obtain-energy-m45437-204	HMG-CoA reductase [PR:000008636] →+ amount(cholesterol [CHEBI:16113])	no		
+how-cells-obtain-energy-m45437-205	HMG-CoA reductase [PR:000008636] →+ process(synthesizes cholesterol [GO:0006695])	no		
+how-cells-obtain-energy-m45437-206	acetaminophen [CHEBI:46195] →− activity(cyclooxygenase [PR:P23219-1])	no		
+how-cells-obtain-energy-m45437-207	acetaminophen [CHEBI:46195] →− phenotype(Fever [HP:0001945])	no		
+how-cells-obtain-energy-m45437-208	acetaminophen [CHEBI:46195] →− phenotype(Pain [HP:0012531])	no		
+how-cells-obtain-energy-m45437-22	this reaction [GO:0009060] has input oxygen [CHEBI:15379]	no		
+how-cells-obtain-energy-m45437-222	these molecules [CHEBI:23357] →+ activity(enzyme [GO:0003824])	no		
+how-cells-obtain-energy-m45437-227	Coenzymes [CHEBI:23354] derives from Vitamins [CHEBI:33229]	no		
+how-cells-obtain-energy-m45437-229	Vitamin C [CHEBI:29073] →+ process(building ... collagen [GO:0032964])	no		
+how-cells-obtain-energy-m45437-23	this reaction [GO:0009060] has output carbon dioxide [CHEBI:16526]	no		
+how-cells-obtain-energy-m45437-230	collagen [GO:0005581] part of connective tissue [UBERON:0002384]	no		
+how-cells-obtain-energy-m45437-240	products [CHEBI:25212] →− process(metabolic reactions [GO:0008152])	no		
+how-cells-obtain-energy-m45437-241	products [CHEBI:25212] →− activity(enzyme [GO:0003824])	no		
+how-cells-obtain-energy-m45437-244	ATP [CHEBI:15422] →− process(broken down [GO:0006007])	no		
+how-cells-obtain-energy-m45437-245	broken down [GO:0006007] has output ATP [CHEBI:15422]	yes	isaInherit	broken down [GO:0006007] has output ATP [CHEBI:15422]   (isaInherit) |   broken down [GO:0006007] is_a metabolic reactions [GO:0008152]   [how-cells-obtain-energy-m45437-26] |   metabolic reactions [GO:0008152] has output ATP [CHEBI:15422]   [cell-structure-and-function-m45433-15]
+how-cells-obtain-energy-m45437-246	ATP [CHEBI:15422] →− process(ATP biosynthetic process [GO:0006754])	no		
+how-cells-obtain-energy-m45437-247	ADP [CHEBI:16761] →+ activity(enzyme [GO:0003824])	no		
+how-cells-obtain-energy-m45437-248	ADP [CHEBI:16761] →+ process(broken down [GO:0006007])	no		
+how-cells-obtain-energy-m45437-31	metabolic reactions [GO:0008152] has part anabolism [GO:0009058]	no		
+how-cells-obtain-energy-m45437-6	metabolic reactions [GO:0008152] occurs in cells [CL:0000000]	no		
+how-cells-obtain-energy-m45437-9	sugars [CHEBI:16646] →+ phenotype(energy [PATO:0001021])	no		
+how-cells-obtain-energy-m45438-10	environmental temperature [PATO:0000146] →− process(protein folding [GO:0006457])	no		
+how-cells-obtain-energy-m45438-11	denature [GO:0030164] →+ process(cell death [GO:0008219])	no		
+how-cells-obtain-energy-m45438-18	ATP [CHEBI:15422] →+ process(muscle cell contraction [GO:0006936])	no		
+how-cells-obtain-energy-m45438-19	ATP [CHEBI:15422] has part adenosine monophosphate (AMP) [CHEBI:16027]	no		
+how-cells-obtain-energy-m45438-20	adenosine monophosphate (AMP) [CHEBI:16027] has part adenine [CHEBI:16708]	no		
+how-cells-obtain-energy-m45438-21	ribose [CHEBI:33942] part of RNA [CHEBI:33697]	no		
+how-cells-obtain-energy-m45438-28	hydrolysis [GO:0016887] has input ATP [CHEBI:15422]	no		
+how-cells-obtain-energy-m45438-31	glycolytic process [GO:0006096] part of broken down [GO:0006007]	no		
+how-cells-obtain-energy-m45438-32	living organisms [NCBITaxon:131567] capable of glycolytic process [GO:0006096]	no		
+how-cells-obtain-energy-m45438-33	glycolytic process [GO:0006096] occurs in cytoplasm [GO:0005737]	yes	relChain	glycolytic process [GO:0006096] occurs in cytoplasm [GO:0005737]   (relChain) |   glycolytic process [GO:0006096] part of broken down [GO:0006007]   [how-cells-obtain-energy-m45438-31] |   broken down [GO:0006007] occurs in cytoplasm [GO:0005737]   (isaInherit) |     broken down [GO:0006007] is_a metabolic reactions [GO:0008152]   [how-cells-obtain-energy-m45437-26] |     metabolic reactions [GO:0008152] occurs in cytoplasm [GO:0005737]   [cell-structure-and-function-m45432-38]
+how-cells-obtain-energy-m45438-34	glycolytic process [GO:0006096] has input glucose [CHEBI:17234]	no		
+how-cells-obtain-energy-m45438-35	glycolytic process [GO:0006096] has output pyruvate [CHEBI:15361]	no		
+how-cells-obtain-energy-m45438-40	glycolytic process [GO:0006096] has output ATP [CHEBI:15422]	no		
+how-cells-obtain-energy-m45438-42	mature mammalian red blood cells ⊓ in taxon (mammalian) [CL:0000232&RO:0002162=(NCBITaxon:40674)] capable of glycolytic process [GO:0006096]	no		
+how-cells-obtain-energy-m45438-43	glycolytic process ⊓ in taxon (Mammalia) [GO:0006096&RO:0002162=(NCBITaxon:40674)] →+ amount(ATP ⊓ part of (red blood cells) [CHEBI:15422&BFO:0000050=(CL:0000232)])	no		
+how-cells-obtain-energy-m45438-44	glycolytic process ⊓ in taxon (Mammalia) [GO:0006096&RO:0002162=(NCBITaxon:40674)] →− process(die ⊓ occurs in (these cells) [GO:0008219&BFO:0000066=(CL:0000232)])	no		
+how-cells-obtain-energy-m45438-48	hydrolysis [GO:0016887] has output ADP [CHEBI:16761]	no		
+how-cells-obtain-energy-m45438-49	broken down [GO:0006007] →+ amount(ATP [CHEBI:15422])	no		
+how-cells-obtain-energy-m45438-54	glycolytic process [GO:0006096] has input ATP [CHEBI:15422]	no		
+how-cells-obtain-energy-m45439-1	transported into mitochondria ⊓ in taxon (NCBITaxon:2759) [GO:0006850&RO:0002162=(NCBITaxon:2759)] has input pyruvate [CHEBI:15361]	no		
+how-cells-obtain-energy-m45439-10	citric acid cycle ⊓ in taxon (NCBITaxon:2759) [GO:0006099&RO:0002162=(NCBITaxon:2759)] occurs in mitochondrial matrix [GO:0005759]	no		
+how-cells-obtain-energy-m45439-103	tricarboxylic acid cycle [GO:0006099] has output high-energy electrons [CHEBI:10545]	no		
+how-cells-obtain-energy-m45439-107	proton transmembrane transport [GO:1902600] →+ process(proton motive force-driven ATP synthesis [GO:0015986])	no		
+how-cells-obtain-energy-m45439-11	pyruvate decarboxylation to acetyl-CoA [GO:0006086] occurs in mitochondrial matrix [GO:0005759]	no		
+how-cells-obtain-energy-m45439-111	broken down [GO:0006007] has input amino acids [CHEBI:33709]	no		
+how-cells-obtain-energy-m45439-116	cyanide poisoning [MONDO:0018754] →− process(proton transmembrane transport [GO:1902600])	no		
+how-cells-obtain-energy-m45439-117	cyanide [CHEBI:17514] →+ phenotype(extreme pH [PATO:0001842])	no		
+how-cells-obtain-energy-m45439-118	cyanide [CHEBI:17514] →− process(ATP biosynthetic process [GO:0006754])	no		
+how-cells-obtain-energy-m45439-121	this transfer [GO:0022904] has input oxygen [CHEBI:15379]	no		
+how-cells-obtain-energy-m45439-15	tricarboxylic acid cycle [GO:0006099] has output carbon dioxide [CHEBI:16526]	no		
+how-cells-obtain-energy-m45439-16	tricarboxylic acid cycle [GO:0006099] has output ATP [CHEBI:15422]	no		
+how-cells-obtain-energy-m45439-17	tricarboxylic acid cycle [GO:0006099] has output nicotinamide-adenine dinucleotide (NADH) [CHEBI:16908]	no		
+how-cells-obtain-energy-m45439-2	cellular respiration [GO:0045333] occurs in Mitochondria [GO:0005739]	no		
+how-cells-obtain-energy-m45439-20	oxygen [CHEBI:15379] →+ process(this transfer [GO:0022904])	no		
+how-cells-obtain-energy-m45439-21	tricarboxylic acid cycle [GO:0006099] has input acetyl group [CHEBI:40574]	no		
+how-cells-obtain-energy-m45439-3	oxygen [CHEBI:15379] →+ process(this reaction [GO:0009060])	no		
+how-cells-obtain-energy-m45439-33	a process [GO:0006119] has output ATP [CHEBI:15422]	no		
+how-cells-obtain-energy-m45439-34	These reactions ⊓ in taxon (eukaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2759)] occurs in inner layer [GO:0005743]	no		
+how-cells-obtain-energy-m45439-35	These reactions ⊓ in taxon (prokaryotic organisms) [GO:0022904&RO:0002162=(NCBITaxon:2)] occurs in plasma membrane [GO:0005886]	no		
+how-cells-obtain-energy-m45439-36	this transfer [GO:0022904] →+ process(H+ gradient [GO:0010248])	no		
+how-cells-obtain-energy-m45439-39	this transfer [GO:0022904] part of this reaction [GO:0009060]	no		
+how-cells-obtain-energy-m45439-4	pyruvate decarboxylation to acetyl-CoA [GO:0006086] has input pyruvate [CHEBI:15361]	no		
+how-cells-obtain-energy-m45439-44	this transfer [GO:0022904] has output water [CHEBI:15377]	no		
+how-cells-obtain-energy-m45439-46	this transfer [GO:0022904] has part protein complexes [GO:0098803]	no		
+how-cells-obtain-energy-m45439-50	this transfer [GO:0022904] →+ process(proton transmembrane transport [GO:1902600])	no		
+how-cells-obtain-energy-m45439-51	proton transmembrane transport [GO:1902600] →+ process(H+ gradient [GO:0010248])	no		
+how-cells-obtain-energy-m45439-52	cyanide [CHEBI:17514] →− activity(cytochrome c oxidase [GO:0004129])	no		
+how-cells-obtain-energy-m45439-53	cytochrome c oxidase [GO:0045277] part of this transfer [GO:0022904]	no		
+how-cells-obtain-energy-m45439-56	this transfer [GO:0022904] has input high-energy electrons [CHEBI:10545]	no		
+how-cells-obtain-energy-m45439-58	high-energy electrons [CHEBI:10545] →+ process(proton transmembrane transport [GO:1902600])	no		
+how-cells-obtain-energy-m45439-6	coenzyme A [CHEBI:15346] derives from vitamin B5 [CHEBI:7916]	no		
+how-cells-obtain-energy-m45439-63	this transfer [GO:0022904] →+ amount(ATP [CHEBI:15422])	no		
+how-cells-obtain-energy-m45439-64	ATP [CHEBI:15422] →− process(cell death [GO:0008219])	no		
+how-cells-obtain-energy-m45439-68	energy coupled proton transport, down electrochemical gradient [GO:0015985] occurs in ATP synthase [GO:0045259]	no		
+how-cells-obtain-energy-m45439-7	acetyl CoA [CHEBI:15351] has part acetyl group [CHEBI:40574]	no		
+how-cells-obtain-energy-m45439-72	ATP synthase [GO:0045259] →+ amount(ATP [CHEBI:15422])	no		
+how-cells-obtain-energy-m45439-73	proton motive force-driven ATP synthesis [GO:0015986] occurs in ATP synthase [GO:0045259]	no		
+how-cells-obtain-energy-m45439-74	proton motive force-driven ATP synthesis [GO:0015986] has output ATP [CHEBI:15422]	no		
+how-cells-obtain-energy-m45439-76	These atoms [CHEBI:49637] part of glucose [CHEBI:17234]	no		
+how-cells-obtain-energy-m45439-79	a process [GO:0006119] has part this transfer [GO:0022904]	no		
+how-cells-obtain-energy-m45439-86	NAD+ ⊓ located in (liver) ⊓ in taxon (Mammalia) [CHEBI:15846&RO:0001025=(UBERON:0002107)&RO:0002162=(NCBITaxon:40674)] has function this transfer [GO:0009055]	no		
+how-cells-obtain-energy-m45439-87	FAD+ ⊓ located in (brain) ⊓ in taxon (NCBITaxon:40674) [CHEBI:16238&RO:0001025=(UBERON:0000955)&RO:0002162=(NCBITaxon:40674)] has function this transfer [GO:0009055]	no		
+how-cells-obtain-energy-m45439-91	glycolytic process [GO:0006096] has input simple sugars [CHEBI:35381]	no		
+how-cells-obtain-energy-m45439-97	Mitochondrial diseases [MONDO:0044970] →− process(ATP biosynthetic process [GO:0006754])	no		
+how-cells-obtain-energy-m45439-98	Mitochondrial diseases [MONDO:0044970] has phenotype Muscle weakness [HP:0001324]	no		
+how-cells-obtain-energy-m45440-10	Metazoa [NCBITaxon:33208] capable of lactic acid fermentation [GO:0019661]	no		
+how-cells-obtain-energy-m45440-11	lactic acid fermentation ⊓ in taxon (Mammalia) [GO:0019244&RO:0002162=(NCBITaxon:40674)] occurs in red blood cells [CL:0000232]	no		
+how-cells-obtain-energy-m45440-15	lactate dehydrogenase [GO:0004457] part of lactic acid fermentation [GO:0019661]	no		
+how-cells-obtain-energy-m45440-17	acidic conditions [PATO:0001428] →− activity(lactate dehydrogenase [GO:0004457])	no		
+how-cells-obtain-energy-m45440-18	lactic acid [CHEBI:28358] →+ phenotype(Muscle stiffness [HP:0003552])	no		
+how-cells-obtain-energy-m45440-2	this reaction [GO:0009060] →+ amount(ATP [CHEBI:15422])	no		
+how-cells-obtain-energy-m45440-27	alcohol fermentation [GO:0019655] has output ethanol [CHEBI:16236]	no		
+how-cells-obtain-energy-m45440-30	pyruvate decarboxylase activity [GO:0004737] has output carbon dioxide [CHEBI:16526]	no		
+how-cells-obtain-energy-m45440-32	alcohol dehydrogenase (NAD+) activity [GO:0004022] has input nicotinamide-adenine dinucleotide (NADH) [CHEBI:16908]	no		
+how-cells-obtain-energy-m45440-33	Saccharomyces cerevisiae [NCBITaxon:4932] produces ethanol [CHEBI:16236]	no		
+how-cells-obtain-energy-m45440-37	Archaea [NCBITaxon:2157] capable of anaerobic respiration [GO:0009061]	no		
+how-cells-obtain-energy-m45440-38	methanogenesis [GO:0015948] has output methane [CHEBI:16183]	no		
+how-cells-obtain-energy-m45440-39	methanogens [NCBITaxon:28890] located in digestive tract [UBERON:0001555]	no		
+how-cells-obtain-energy-m45440-40	sulfate reduction [GO:0019420] has output hydrogen sulfide [CHEBI:16136]	no		
+how-cells-obtain-energy-m45440-47	Oxygen ⊓ in taxon (these microorganisms) [CHEBI:15379&RO:0002162=(NCBITaxon:1485)] →+ process(cell death [GO:0008219])	no		
+how-cells-obtain-energy-m45440-5	this transfer [GO:0022904] has input organic molecule [CHEBI:72695]	no		
+how-cells-obtain-energy-m45440-51	methods of fermentation [GO:0006113] →+ amount(NAD+ [CHEBI:15846])	no		
+how-cells-obtain-energy-m45440-69	oxygen [CHEBI:15379] →+ process(a process [GO:0006119])	no		
+how-cells-obtain-energy-m45440-70	a process [GO:0006119] →+ amount(ATP [CHEBI:15422])	no		
+how-cells-obtain-energy-m45440-73	lactic acid fermentation [GO:0019661] has output lactic acid [CHEBI:28358]	no		
+how-cells-obtain-energy-m45440-74	lactic acid fermentation [GO:0019661] →+ process(glycolytic process [GO:0006096])	no		
+how-cells-obtain-energy-m45440-75	glycolytic process [GO:0006096] →+ amount(ATP [CHEBI:15422])	no		
+how-cells-obtain-energy-m45440-78	methods of fermentation [GO:0006113] has input organic molecule [CHEBI:72695]	no		
+how-cells-obtain-energy-m45444-10	ATP [CHEBI:15422] →+ process(glycogen biosynthetic process [GO:0005978])	no		
+how-cells-obtain-energy-m45444-11	glycogen [CHEBI:28087] located in liver [UBERON:0002107]	no		
+how-cells-obtain-energy-m45444-12	glucose [CHEBI:17234] →− process(glycogen catabolic process ⊓ occurs in (blood) [GO:0005980&BFO:0000066=(UBERON:0000178)])	no		
+how-cells-obtain-energy-m45444-15	sucrose catabolic process [GO:0005987] occurs in small intestine [UBERON:0002108]	no		
+how-cells-obtain-energy-m45444-18	galactose [CHEBI:28260] part of lactose [CHEBI:17716]	no		
+how-cells-obtain-energy-m45444-28	urea [CHEBI:16199] located in urine [UBERON:0001088]	no		
+how-cells-obtain-energy-m45444-32	steroid hormones [CHEBI:26764] derives from cholesterol [CHEBI:16113]	no		
+how-cells-obtain-energy-m45444-33	synthesizes cholesterol [GO:0006695] has input acetyl CoA [CHEBI:15351]	no		
+how-cells-obtain-energy-m45444-38	Triglycerides [CHEBI:17855] has part glycerol [CHEBI:17754]	no		
+how-cells-obtain-energy-m45444-39	Metazoa [NCBITaxon:33208] capable of fatty acid biosynthetic process [GO:0006633]	no		
+how-cells-obtain-energy-m45444-41	glycolytic process [GO:0006096] has input glycerol [CHEBI:17754]	no		
+how-cells-obtain-energy-m45444-42	broken into two-carbon units [GO:0006635] has input fatty acid [CHEBI:35366]	no		
+how-cells-obtain-energy-m45444-55	broken down [GO:0006007] has input galactose [CHEBI:28260]	no		
+how-cells-obtain-energy-m45444-9	glycogen [CHEBI:28087] has part glucose [CHEBI:17234]	no		
+molbio-m45472-2	DNA [CHEBI:16991] located in strand of hair [UBERON:0001037]	no		
+molbio-m45472-3	DNA [CHEBI:16991] located in blood [UBERON:0000178]	no		
+molbio-m45472-4	DNA [CHEBI:16991] located in saliva [UBERON:0001836]	no		
+molbio-m45473-104	heterochromatin [GO:0000792] located in chromosome, centromeric region [GO:0000775]	no		
+molbio-m45473-105	heterochromatin [GO:0000792] located in chromosome, telomeric region [GO:0000781]	no		
+molbio-m45473-121	cytosine [CHEBI:16040] interacts with guanine [CHEBI:16235]	no		
+molbio-m45473-129	RNA [CHEBI:33697] involved in synthesize proteins [GO:0006412]	no		
+molbio-m45473-134	deoxyribonucleic acid ⊓ in taxon (NCBITaxon:2759) [CHEBI:16991&RO:0002162=(NCBITaxon:2759)] part of chromosome [GO:0005694]	no		
+molbio-m45473-138	chromosome condensation [GO:0030261] →+ process(chromosome segregation [GO:0007059])	no		
+molbio-m45473-14	DNA [CHEBI:16991] has part nucleotides [CHEBI:36976]	no		
+molbio-m45473-15	nucleotides [CHEBI:36976] has part 2-deoxy-D-ribose [CHEBI:28816]	no		
+molbio-m45473-16	nucleotides [CHEBI:36976] has part phosphate group [CHEBI:32958]	no		
+molbio-m45473-164	phosphate group [CHEBI:32958] has part phosphorus atom [CHEBI:28659]	no		
+molbio-m45473-17	nucleotides [CHEBI:36976] has part nitrogenous base [CHEBI:18282]	no		
+molbio-m45473-35	purines [CHEBI:26401] interacts with pyrimidines [CHEBI:39447]	no		
+molbio-m45473-36	adenine [CHEBI:16708] interacts with thymine [CHEBI:17821]	no		
+molbio-m45473-37	guanine [CHEBI:16235] interacts with cytosine [CHEBI:16040]	no		
+molbio-m45473-48	RNA [CHEBI:33697] located in cells [CL:0000000]	no		
+molbio-m45473-50	ribonucleotide [CHEBI:26561] has part nitrogenous base [CHEBI:18282]	no		
+molbio-m45473-51	ribonucleotide [CHEBI:26561] has part ribose [CHEBI:33942]	no		
+molbio-m45473-52	ribonucleotide [CHEBI:26561] has part phosphate group [CHEBI:32958]	no		
+molbio-m45473-53	RNA [CHEBI:33697] has part ribose [CHEBI:33942]	no		
+molbio-m45473-55	ribose [CHEBI:33942] has part hydroxy group [CHEBI:43176]	no		
+molbio-m45473-57	RNA [CHEBI:33697] has part adenine [CHEBI:16708]	no		
+molbio-m45473-58	RNA [CHEBI:33697] has part cytosine [CHEBI:16040]	no		
+molbio-m45473-59	RNA [CHEBI:33697] has part guanine [CHEBI:16235]	no		
+molbio-m45473-61	RNA [CHEBI:33697] has part uracil [CHEBI:17568]	no		
+molbio-m45473-64	synthesize proteins [GO:0006412] has input messenger RNA [CHEBI:33699]	no		
+molbio-m45473-65	synthesize proteins [GO:0006412] has input transfer RNA [CHEBI:17843]	no		
+molbio-m45473-66	synthesize proteins [GO:0006412] has input ribosomal RNA [CHEBI:18111]	no		
+molbio-m45473-69	chromatin organization [GO:0006325] has input DNA [CHEBI:16991]	no		
+molbio-m45473-76	chromosome ⊓ in taxon (prokaryote) [GO:0005694&RO:0002162=(NCBITaxon:2)] located in nucleoid [GO:0009295]	no		
+molbio-m45473-82	proteins [CHEBI:36080] →+ process(supercoiled structure [GO:0006265])	no		
+molbio-m45473-84	deoxyribonucleic acid ⊓ in taxon (NCBITaxon:2759) [CHEBI:16991&RO:0002162=(NCBITaxon:2759)] located in nucleus [GO:0005634]	yes	isaInherit	deoxyribonucleic acid ⊓ in taxon (NCBITaxon:2759) [CHEBI:16991&RO:0002162=(NCBITaxon:2759)] located in nucleus [GO:0005634]   (isaInherit) |   deoxyribonucleic acid ⊓ in taxon (NCBITaxon:2759) [CHEBI:16991&RO:0002162=(NCBITaxon:2759)] is_a DNA [CHEBI:16991]   [refine:CHEBI:16991&RO:0002162=(NCBITaxon:2759)] |   DNA [CHEBI:16991] located in nucleus [GO:0005634]   [cell-structure-and-function-m45432-375]
+molbio-m45473-86	nucleosome [GO:0000786] has part histone [PR:000041244]	no		
+molbio-m45473-87	nucleosome [GO:0000786] has part DNA [CHEBI:16991]	no		
+molbio-m45473-98	interphase [GO:0051325] part of cell cycle [GO:0007049]	no		
+molbio-m45475-104	DNA polymerase [GO:0003887] →+ process(DNA replication proofreading [GO:0045004])	no		
+molbio-m45475-112	nucleotide-excision repair [GO:0006289] →− amount(Thymine dimer [CHEBI:81145])	no		
+molbio-m45475-116	nucleotide-excision repair ⊓ in taxon (NCBITaxon:9606) [GO:0006289&RO:0002162=(NCBITaxon:9606)] →− phenotype(sensitivity to sunlight [HP:0000992])	no		
+molbio-m45475-117	nucleotide-excision repair ⊓ in taxon (NCBITaxon:9606) [GO:0006289&RO:0002162=(NCBITaxon:9606)] →− phenotype(skin cancers [HP:0008069])	no		
+molbio-m45475-120	DNA repair genes [GO:0006281] →− phenotype(cancer [HP:0002664])	no		
+molbio-m45475-126	Primase [GO:0003896] →+ process(DNA replication, synthesis of primer [GO:0006269])	no		
+molbio-m45475-135	telomerase [GO:0005697] has part RNA [CHEBI:33697]	no		
+molbio-m45475-139	DNA repair genes [GO:0006281] occurs in cells [CL:0000000]	no		
+molbio-m45475-19	DNA replication [GO:0006260] has participant proteins [CHEBI:36080]	no		
+molbio-m45475-2	DNA replication [GO:0006260] has output DNA [CHEBI:16991]	no		
+molbio-m45475-20	DNA replication [GO:0006260] has part DNA replication initiation [GO:0006270]	no		
+molbio-m45475-25	DNA replication initiation [GO:0006270] occurs in origin_of_replication [SO:0000296]	no		
+molbio-m45475-27	helicase [GO:0003678] →+ process(unwinds and opens the DNA helix [GO:0032392])	no		
+molbio-m45475-3	DNA replication [GO:0006260] part of S phase [GO:0051320]	no		
+molbio-m45475-33	DNA polymerase [GO:0003887] →+ process(DNA strand elongation [GO:0022616])	no		
+molbio-m45475-35	primer [SO:0000112] has part ribonucleotide [CHEBI:26561]	no		
+molbio-m45475-4	DNA replication [GO:0006260] precedes mitotic nuclear division [GO:0140014]	no		
+molbio-m45475-43	DNA replication, removal of RNA primer [GO:0043137] has input primer [SO:0000112]	no		
+molbio-m45475-45	DNA ligase [GO:0003909] →+ process(seals the gaps between Okazaki fragments [GO:0033567])	no		
+molbio-m45475-55	telomere [SO:0000624] part of chromosome [GO:0005694]	no		
+molbio-m45475-56	telomere [SO:0000624] has part telomeric_repeat [SO:0001496]	no		
+molbio-m45475-61	telomerase [GO:0005697] interacts with telomere [SO:0000624]	no		
+molbio-m45475-62	telomerase [GO:0003720] →+ process(adds bases to the end of the DNA strand [GO:0010833])	no		
+molbio-m45475-64	telomerase [GO:0003720] →+ process(telomere maintenance [GO:0000723])	no		
+molbio-m45475-69	telomerase ⊓ in taxon (human cells) [GO:0005697&RO:0002162=(NCBITaxon:9606)] located in cells [CL:0000000]	no		
+molbio-m45475-77	Telomerase-deficient ⊓ in taxon (Mus musculus) [GO:0003720&RO:0002162=(NCBITaxon:10090)] →− phenotype(tissue atrophy [PATO:0001623])	no		
+molbio-m45475-83	Telomerase reactivation ⊓ in taxon (Mus musculus ⊓ has modifier (telomerase-deficient)) [GO:0003720&RO:0002162=(NCBITaxon:10090&RO:0002573=(BLN:telomerase_deficient))] →− phenotype(Neurodegeneration [HP:0002180])	no		
+molbio-m45476-15	DNA-templated transcription ⊓ in taxon (NCBITaxon:2759) [GO:0006351&RO:0002162=(NCBITaxon:2759)] occurs in nucleus [GO:0005634]	no		
+molbio-m45476-2	DNA-templated transcription [GO:0006351] has input DNA [CHEBI:16991]	no		
+molbio-m45476-20	DNA-templated transcription ⊓ in taxon (prokaryotes, which include bacteria and archaea) [GO:0006351&RO:0002162=(NCBITaxon:2)] occurs in cytoplasm [GO:0005737]	no		
+molbio-m45476-3	DNA-templated transcription [GO:0006351] has output messenger RNA [CHEBI:33699]	yes	relChain	DNA-templated transcription [GO:0006351] has output messenger RNA [CHEBI:33699]   (relChain) |   DNA-templated transcription [GO:0006351] ends with DNA-templated transcription termination [GO:0006353]   [molbio-m45476-38] |   DNA-templated transcription termination [GO:0006353] has output messenger RNA [CHEBI:33699]   [molbio-m45476-64]
+molbio-m45476-31	RNA polymerase [GO:0003899] involved in DNA-templated transcription elongation [GO:0006354]	no		
+molbio-m45476-38	DNA-templated transcription [GO:0006351] ends with DNA-templated transcription termination [GO:0006353]	no		
+molbio-m45476-5	synthesize proteins [GO:0006412] has output proteins [CHEBI:36080]	no		
+molbio-m45476-63	DNA-templated transcription elongation [GO:0006354] has output messenger RNA [CHEBI:33699]	no		
+molbio-m45476-64	DNA-templated transcription termination [GO:0006353] has output messenger RNA [CHEBI:33699]	no		
+molbio-m45476-70	mRNA splicing, via spliceosome ⊓ in taxon (NCBITaxon:2759) [GO:0000398&RO:0002162=(NCBITaxon:2759)] has input messenger RNA [CHEBI:33699]	no		
+molbio-m45476-8	gene [SO:0000704] transcribed to messenger RNA [CHEBI:33699]	no		
+molbio-m45476-9	messenger RNA [CHEBI:33699] ribosomally translates to proteins [CHEBI:36080]	no		
+molbio-m45479-115	ribosomal RNA [CHEBI:18111] part of ribosomes [GO:0005840]	no		
+molbio-m45479-12	synthesize proteins [GO:0006412] has input ribosomes [GO:0005840]	no		
+molbio-m45479-16	ribosomes [GO:0005840] has part ribosomal RNA [CHEBI:18111]	no		
+molbio-m45479-17	ribosomes [GO:0005840] has part polypeptide [CHEBI:15841]	no		
+molbio-m45479-18	rRNA transcription ⊓ in taxon (NCBITaxon:2759) [GO:0009303&RO:0002162=(NCBITaxon:2759)] occurs in nucleolus [GO:0005730]	no		
+molbio-m45479-19	ribosome biogenesis ⊓ in taxon (NCBITaxon:2759) [GO:0042254&RO:0002162=(NCBITaxon:2759)] occurs in nucleolus [GO:0005730]	no		
+molbio-m45479-20	ribosome ⊓ in taxon (prokaryote) [GO:0005840&RO:0002162=(NCBITaxon:2)] located in cytoplasm [GO:0005737]	yes	isaInherit	ribosome ⊓ in taxon (prokaryote) [GO:0005840&RO:0002162=(NCBITaxon:2)] located in cytoplasm [GO:0005737]   (isaInherit) |   ribosome ⊓ in taxon (prokaryote) [GO:0005840&RO:0002162=(NCBITaxon:2)] is_a ribosomes [GO:0005840]   [refine:GO:0005840&RO:0002162=(NCBITaxon:2)] |   ribosomes [GO:0005840] located in cytoplasm [GO:0005737]   [cell-structure-and-function-m45432-311]
+molbio-m45479-21	ribosome ⊓ in taxon (NCBITaxon:2759) [GO:0005840&RO:0002162=(NCBITaxon:2759)] located in cytoplasm [GO:0005737]	yes	isaInherit	ribosome ⊓ in taxon (NCBITaxon:2759) [GO:0005840&RO:0002162=(NCBITaxon:2759)] located in cytoplasm [GO:0005737]   (isaInherit) |   ribosome ⊓ in taxon (NCBITaxon:2759) [GO:0005840&RO:0002162=(NCBITaxon:2759)] is_a ribosomes [GO:0005840]   [refine:GO:0005840&RO:0002162=(NCBITaxon:2759)] |   ribosomes [GO:0005840] located in cytoplasm [GO:0005737]   [cell-structure-and-function-m45432-311]
+molbio-m45479-22	ribosome ⊓ in taxon (NCBITaxon:2759) [GO:0005840&RO:0002162=(NCBITaxon:2759)] located in endoplasmic reticulum [GO:0005783]	no		
+molbio-m45479-24	ribosomes [GO:0005840] has part small subunit [GO:0015935]	no		
+molbio-m45479-26	small subunit [GO:0015935] molecularly interacts with messenger RNA [CHEBI:33699]	no		
+molbio-m45479-27	large subunit [GO:0015934] molecularly interacts with transfer RNA [CHEBI:17843]	no		
+molbio-m45479-36	tRNA aminoacylation for protein translation [GO:0006418] has input transfer RNA [CHEBI:17843]	no		
+molbio-m45479-38	messenger RNA [CHEBI:33699] transcribed from gene [SO:0000704]	no		
+molbio-m45479-5	synthesize proteins [GO:0006412] has output polypeptide [CHEBI:15841]	no		
+molbio-m45479-59	translation initiation complex ⊓ in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part small subunit [GO:0015935]	no		
+molbio-m45479-6	polypeptide [CHEBI:15841] has part amino acids [CHEBI:33709]	no		
+molbio-m45479-60	translation initiation complex ⊓ in taxon (NCBITaxon:562) [GO:0070992&RO:0002162=(NCBITaxon:562)] has part messenger RNA [CHEBI:33699]	no		
+molbio-m45479-76	translational elongation [GO:0006414] has input GTP [CHEBI:15996]	no		
+molbio-m45479-85	DNA-templated transcription [GO:0006351] has input nucleotides [CHEBI:36976]	no		
+molbio-m45480-10	cells [CL:0000000] capable of ATP biosynthetic process [GO:0006754]	no		
+molbio-m45480-3	gene expression [GO:0010467] has output RNA [CHEBI:33697]	no		
+molbio-m45480-30	lactose catabolic process ⊓ in taxon (Escherichia coli) [GO:0005990&RO:0002162=(NCBITaxon:562)] has input lactose [CHEBI:17716]	no		
+molbio-m45480-33	lactose ⊓ in taxon (NCBITaxon:562) [CHEBI:17716&RO:0002162=(NCBITaxon:562)] →+ process(lactose catabolic process [GO:0005990])	no		
+molbio-m45480-38	repressor ⊓ surrounded by (no lactose present) ⊓ in taxon (NCBITaxon:562) [PR:000023070&RO:0002219=(BLN:lactose_absent)&RO:0002162=(NCBITaxon:562)] →− process(DNA-templated transcription initiation [GO:0006352])	no		
+molbio-m45480-40	end product of lactose metabolism ⊓ surrounded by (lactose is present) ⊓ in taxon (NCBITaxon:562) [CHEBI:36229&RO:0002219=(CHEBI:17716)&RO:0002162=(NCBITaxon:562)] molecularly interacts with repressor [PR:000023070]	no		
+molbio-m45480-41	end product of lactose metabolism ⊓ surrounded by (lactose is present) ⊓ in taxon (NCBITaxon:562) [CHEBI:36229&RO:0002219=(CHEBI:17716)&RO:0002162=(NCBITaxon:562)] →− activity(repressor [PR:000023070])	no		
+molbio-m45480-44	eukaryotic cell ⊓ in taxon (NCBITaxon:2759) [CL:0000255&RO:0002162=(NCBITaxon:2759)] has part organelles [GO:0043226]	no		
+molbio-m45480-48	mRNA export from nucleus ⊓ in taxon (NCBITaxon:2759) [GO:0006406&RO:0002162=(NCBITaxon:2759)] has input messenger RNA [CHEBI:33699]	no		
+molbio-m45480-49	translation ⊓ in taxon (NCBITaxon:2759) [GO:0006412&RO:0002162=(NCBITaxon:2759)] occurs in cytoplasm [GO:0005737]	yes	isaInherit	translation ⊓ in taxon (NCBITaxon:2759) [GO:0006412&RO:0002162=(NCBITaxon:2759)] occurs in cytoplasm [GO:0005737]   (isaInherit) |   translation ⊓ in taxon (NCBITaxon:2759) [GO:0006412&RO:0002162=(NCBITaxon:2759)] is_a synthesize proteins [GO:0006412]   [refine:GO:0006412&RO:0002162=(NCBITaxon:2759)] |   synthesize proteins [GO:0006412] occurs in cytoplasm [GO:0005737]   [cell-structure-and-function-m45432-39]
+molbio-m45480-61	alternative mRNA splicing, via spliceosome ⊓ in taxon (NCBITaxon:2759) [GO:0000380&RO:0002162=(NCBITaxon:2759)] has output proteins [CHEBI:36080]	no		
+photosynthesis-m45448-10	photosynthesis [GO:0015979] has output oxygen [CHEBI:15379]	no		
+photosynthesis-m45448-108	photosynthesis [GO:0015979] has participant chlorophyll [CHEBI:28966]	no		
+photosynthesis-m45448-119	close their stomata [GO:0090332] →− amount(carbon dioxide ⊓ located in (PO:0025034) [CHEBI:16526&RO:0001025=(PO:0025034)])	no		
+photosynthesis-m45448-120	close their stomata [GO:0090332] →+ amount(oxygen ⊓ located in (PO:0025034) [CHEBI:15379&RO:0001025=(PO:0025034)])	no		
+photosynthesis-m45448-128	lions [NCBITaxon:9689] eats Metazoa [NCBITaxon:33208]	no		
+photosynthesis-m45448-132	chlorophyll [CHEBI:28966] involved in photosynthesis [GO:0015979]	yes	isaInherit	chlorophyll [CHEBI:28966] involved in photosynthesis [GO:0015979]   (isaInherit) |   chlorophyll [CHEBI:28966] is_a pigment [CHEBI:26130]   [photosynthesis-m45448-71] |   pigment [CHEBI:26130] involved in photosynthesis [GO:0015979]   [photosynthesis-m45448-76]
+photosynthesis-m45448-136	granum [GO:0009542] located in chloroplast [GO:0009507]	no		
+photosynthesis-m45448-138	light reactions of photosynthesis [GO:0019684] part of photosynthesis [GO:0015979]	no		
+photosynthesis-m45448-140	light reactions of photosynthesis [GO:0019684] has output ATP [CHEBI:15422]	no		
+photosynthesis-m45448-141	light reactions of photosynthesis [GO:0019684] has output NADPH [CHEBI:16474]	no		
+photosynthesis-m45448-146	stroma [GO:0009570] part of chloroplast [GO:0009507]	no		
+photosynthesis-m45448-148	thylakoids [GO:0009579] part of chloroplast [GO:0009507]	no		
+photosynthesis-m45448-149	light reactions of photosynthesis [GO:0019684] occurs in thylakoids [GO:0009579]	no		
+photosynthesis-m45448-32	deer [NCBITaxon:9850] eats plants [NCBITaxon:33090]	no		
+photosynthesis-m45448-33	wolf [NCBITaxon:9612] eats deer [NCBITaxon:9850]	no		
+photosynthesis-m45448-39	Metazoa [NCBITaxon:33208] eats plants [NCBITaxon:33090]	no		
+photosynthesis-m45448-42	photosynthesis [GO:0015979] has output sugars [CHEBI:16646]	no		
+photosynthesis-m45448-47	photosynthesis [GO:0015979] has input water [CHEBI:15377]	no		
+photosynthesis-m45448-55	photosynthesizing ⊓ in taxon (plants) [GO:0015979&RO:0002162=(NCBITaxon:33090)] occurs in PO:0025034 [PO:0025034]	no		
+photosynthesis-m45448-56	leaves ⊓ in taxon (NCBITaxon:33090) [PO:0025034&RO:0002162=(NCBITaxon:33090)] has part cells [CL:0000000]	no		
+photosynthesis-m45448-58	photosynthesizing ⊓ in taxon (plants) [GO:0015979&RO:0002162=(NCBITaxon:33090)] occurs in mesophyll [PO:0005645]	no		
+photosynthesis-m45448-60	mesophyll ⊓ in taxon (NCBITaxon:33090) [PO:0005645&RO:0002162=(NCBITaxon:33090)] part of PO:0025034 [PO:0025034]	no		
+photosynthesis-m45448-63	photosynthesis ⊓ in taxon (NCBITaxon:2759) [GO:0015979&RO:0002162=(NCBITaxon:2759)] occurs in chloroplast [GO:0009507]	yes	isaInherit	photosynthesis ⊓ in taxon (NCBITaxon:2759) [GO:0015979&RO:0002162=(NCBITaxon:2759)] occurs in chloroplast [GO:0009507]   (isaInherit) |   photosynthesis ⊓ in taxon (NCBITaxon:2759) [GO:0015979&RO:0002162=(NCBITaxon:2759)] is_a photosynthesis [GO:0015979]   [refine:GO:0015979&RO:0002162=(NCBITaxon:2759)] |   photosynthesis [GO:0015979] occurs in chloroplast [GO:0009507]   [cell-structure-and-function-m45432-325]
+photosynthesis-m45448-65	mesophyll cells ⊓ in taxon (NCBITaxon:33090) [PO:0004006&RO:0002162=(NCBITaxon:33090)] has part chloroplast [GO:0009507]	no		
+photosynthesis-m45448-66	chloroplast [GO:0009507] has part inner membrane [GO:0009706]	no		
+photosynthesis-m45448-68	chloroplast [GO:0009507] has part thylakoids [GO:0009579]	no		
+photosynthesis-m45448-70	chlorophyll [CHEBI:28966] located in thylakoid membrane [GO:0042651]	no		
+photosynthesis-m45448-76	pigment [CHEBI:26130] involved in photosynthesis [GO:0015979]	no		
+photosynthesis-m45448-78	granum [GO:0009542] has part thylakoids [GO:0009579]	no		
+photosynthesis-m45448-84	plants ⊓ surrounded by (hot, dry day) [NCBITaxon:33090&RO:0002219=(BLN:hot_dry_day)] capable of close their stomata [GO:0090332]	no		
+photosynthesis-m45448-85	close their stomata [GO:0090332] →− process(water loss [GO:0010148])	no		
+photosynthesis-m45448-87	photosynthesis [GO:0015979] has part light reactions of photosynthesis [GO:0019684]	no		
+photosynthesis-m45448-88	photosynthesis [GO:0015979] has part Calvin cycle [GO:0019253]	no		
+photosynthesis-m45448-89	light reactions of photosynthesis [GO:0019684] occurs in thylakoid membrane [GO:0042651]	no		
+photosynthesis-m45448-90	chlorophyll [CHEBI:28966] capable of absorb light [GO:0009765]	yes	isaInherit	chlorophyll [CHEBI:28966] capable of absorb light [GO:0009765]   (isaInherit) |   chlorophyll [CHEBI:28966] is_a pigment [CHEBI:26130]   [photosynthesis-m45448-71] |   pigment [CHEBI:26130] capable of absorb light [GO:0009765]   [photosynthesis-m45452-101]
+photosynthesis-m45448-92	light reactions of photosynthesis [GO:0019684] has input water [CHEBI:15377]	no		
+photosynthesis-m45448-93	light reactions of photosynthesis [GO:0019684] has output oxygen [CHEBI:15379]	no		
+photosynthesis-m45448-95	Calvin cycle [GO:0019253] occurs in stroma [GO:0009570]	no		
+photosynthesis-m45448-96	light reactions of photosynthesis [GO:0019684] →+ process(Calvin cycle [GO:0019253])	no		
+photosynthesis-m45448-97	Calvin cycle [GO:0019253] has part carbon fixation [GO:0015977]	no		
+photosynthesis-m45448-98	Calvin cycle [GO:0019253] has part carbohydrate biosynthetic process [GO:0016051]	no		
+photosynthesis-m45448-99	carbon fixation [GO:0015977] precedes carbohydrate biosynthetic process [GO:0016051]	no		
+photosynthesis-m45452-101	pigment [CHEBI:26130] capable of absorb light [GO:0009765]	no		
+photosynthesis-m45452-105	proton pumping [GO:0015988] →+ process(H+ gradient [GO:0010248])	no		
+photosynthesis-m45452-108	Calvin cycle [GO:0019253] has input ATP [CHEBI:15422]	no		
+photosynthesis-m45452-110	Calvin cycle [GO:0019253] has input NADPH [CHEBI:16474]	no		
+photosynthesis-m45452-113	plants [NCBITaxon:33090] produces oxygen [CHEBI:15379]	no		
+photosynthesis-m45452-120	electron transport chain [GO:0009767] →+ process(H+ gradient [GO:0010248])	no		
+photosynthesis-m45452-128	photosystem [GO:0009521] has part chlorophyll [CHEBI:28966]	no		
+photosynthesis-m45452-51	photosystem [GO:0009521] located in thylakoid membrane [GO:0042651]	no		
+photosynthesis-m45452-58	splitting of water [GO:0010242] has output high-energy electrons [CHEBI:10545]	no		
+photosynthesis-m45452-59	splitting of water [GO:0010242] has output oxygen [CHEBI:15379]	no		
+photosynthesis-m45452-60	splitting of water ⊓ occurs in (thylakoid space) [GO:0010242&BFO:0000066=(GO:0031977)] has output hydrogen ion [CHEBI:15378]	no		
+photosynthesis-m45452-64	hydrogen ion [CHEBI:15378] participates in light reactions of photosynthesis [GO:0019684]	no		
+photosynthesis-m45452-69	electron transport chain [GO:0009767] has part proteins [CHEBI:36080]	no		
+photosynthesis-m45452-70	electron transport chain [GO:0009767] occurs in thylakoid membrane [GO:0042651]	no		
+photosynthesis-m45452-71	electron transport chain [GO:0009767] →+ process(proton pumping [GO:0015988])	no		
+photosynthesis-m45452-78	ATP [CHEBI:15422] has part phosphate group [CHEBI:32958]	yes	isaInherit	ATP [CHEBI:15422] has part phosphate group [CHEBI:32958]   (isaInherit) |   ATP [CHEBI:15422] is_a nucleotides [CHEBI:36976]   [how-cells-obtain-energy-m45438-47] |   nucleotides [CHEBI:36976] has part phosphate group [CHEBI:32958]   [molbio-m45473-16]
+photosynthesis-m45452-79	NADPH [CHEBI:16474] has part These atoms [CHEBI:49637]	no		
+photosynthesis-m45452-84	energy coupled proton transport, down electrochemical gradient [GO:0015985] has output ATP [CHEBI:15422]	no		
+photosynthesis-m45452-86	ATP synthase [GO:0045259] located in membrane [GO:0016020]	no		
+photosynthesis-m45452-87	energy coupled proton transport, down electrochemical gradient [GO:0015985] occurs in Mitochondria [GO:0005739]	no		
+photosynthesis-m45452-89	ATP synthase [GO:0045259] located in thylakoid membrane [GO:0042651]	no		
+photosynthesis-m45452-90	ATP synthase ⊓ located in (mitochondrion) [GO:0045259&RO:0001025=(GO:0005739)] produces ATP [CHEBI:15422]	yes	isaInherit	ATP synthase ⊓ located in (mitochondrion) [GO:0045259&RO:0001025=(GO:0005739)] produces ATP [CHEBI:15422]   (isaInherit) |   ATP synthase ⊓ located in (mitochondrion) [GO:0045259&RO:0001025=(GO:0005739)] is_a ATP synthase [GO:0045259]   [refine:GO:0045259&RO:0001025=(GO:0005739)] |   ATP synthase [GO:0045259] produces ATP [CHEBI:15422]   [photosynthesis-m45452-92]
+photosynthesis-m45452-91	energy coupled proton transport, down electrochemical gradient [GO:0015985] →+ activity(ATP synthase [GO:0046933])	no		
+photosynthesis-m45452-92	ATP synthase [GO:0045259] produces ATP [CHEBI:15422]	no		
+photosynthesis-m45452-97	photosystem I electron transport [GO:0009773] has output NADPH [CHEBI:16474]	no		
+photosynthesis-m45453-1	carbohydrate biosynthetic process [GO:0016051] has input ATP [CHEBI:15422]	no		
+photosynthesis-m45453-101	plants [NCBITaxon:33090] capable of cellular respiration [GO:0045333]	no		
+photosynthesis-m45453-102	plants [NCBITaxon:33090] has part chloroplast [GO:0009507]	no		
+photosynthesis-m45453-11	carbohydrate biosynthetic process [GO:0016051] occurs in stroma [GO:0009570]	no		
+photosynthesis-m45453-117	cellular respiration [GO:0045333] has input sugars [CHEBI:16646]	no		
+photosynthesis-m45453-118	cellular respiration [GO:0045333] has input oxygen [CHEBI:15379]	no		
+photosynthesis-m45453-120	cellular respiration [GO:0045333] has output water [CHEBI:15377]	no		
+photosynthesis-m45453-18	RuBisCO [GO:0048492] located in stroma [GO:0009570]	no		
+photosynthesis-m45453-19	RuBP [CHEBI:16710] located in stroma [GO:0009570]	no		
+photosynthesis-m45453-2	sugars [CHEBI:16646] has part carbon atoms [CHEBI:27594]	no		
+photosynthesis-m45453-20	Calvin cycle [GO:0019253] has input carbon dioxide [CHEBI:16526]	no		
+photosynthesis-m45453-23	RuBisCO [GO:0048492] enables carbon fixation [GO:0015977]	no		
+photosynthesis-m45453-31	Calvin cycle [GO:0019253] has output ADP [CHEBI:16761]	no		
+photosynthesis-m45453-32	Calvin cycle [GO:0019253] has output NADP+ [CHEBI:18009]	no		
+photosynthesis-m45453-34	Calvin cycle [GO:0019253] has output G3P [CHEBI:29052]	no		
+photosynthesis-m45453-4	sugars [CHEBI:16646] derives from carbon dioxide [CHEBI:16526]	no		
+photosynthesis-m45453-49	photosystem [GO:0009521] capable of absorb light [GO:0009765]	no		
+photosynthesis-m45453-51	Calvin cycle [GO:0019253] has output sugars [CHEBI:16646]	no		
+photosynthesis-m45453-6	Calvin cycle [GO:0019253] part of photosynthesis [GO:0015979]	no		
+photosynthesis-m45453-60	light reactions of photosynthesis [GO:0019684] occurs in chloroplast [GO:0009507]	yes	relChain	light reactions of photosynthesis [GO:0019684] occurs in chloroplast [GO:0009507]   (relChain) |   light reactions of photosynthesis [GO:0019684] part of photosynthesis [GO:0015979]   [photosynthesis-m45448-138] |   photosynthesis [GO:0015979] occurs in chloroplast [GO:0009507]   [cell-structure-and-function-m45432-325]
+photosynthesis-m45453-7	Calvin cycle [GO:0019253] has output glucose [CHEBI:17234]	no		
+photosynthesis-m45453-71	plants [NCBITaxon:33090] has part Mitochondria [GO:0005739]	no		
+photosynthesis-m45453-76	cellular respiration [GO:0045333] has output carbon dioxide [CHEBI:16526]	no		
+photosynthesis-m45453-82	photosynthesis ⊓ occurs in (chloroplast) [GO:0015979&BFO:0000066=(GO:0009507)] has output sugars [CHEBI:16646]	yes	isaInherit	photosynthesis ⊓ occurs in (chloroplast) [GO:0015979&BFO:0000066=(GO:0009507)] has output sugars [CHEBI:16646]   (isaInherit) |   photosynthesis ⊓ occurs in (chloroplast) [GO:0015979&BFO:0000066=(GO:0009507)] is_a photosynthesis [GO:0015979]   [refine:GO:0015979&BFO:0000066=(GO:0009507)] |   photosynthesis [GO:0015979] has output sugars [CHEBI:16646]   [photosynthesis-m45448-42]
+photosynthesis-m45453-84	this reaction [GO:0009060] has input sugars [CHEBI:16646]	no		
+photosynthesis-m45453-86	electron transport chain [GO:0009767] occurs in chloroplast [GO:0009507]	no		
+photosynthesis-m45453-87	this transfer [GO:0022904] occurs in Mitochondria [GO:0005739]	no		
+photosynthesis-m45453-94	carbon fixation [GO:0015977] has input carbon dioxide [CHEBI:16526]	no		
+reproduction-at-the-cellular-level-m45454-1	body [UBERON:0000468] develops from zygote [CL:0010017]	no		
+reproduction-at-the-cellular-level-m45454-3	cell divisions ⊓ in taxon (NCBITaxon:9606) [GO:0051301&RO:0002162=(NCBITaxon:9606)] has output body [UBERON:0000468]	no		
+reproduction-at-the-cellular-level-m45454-9	arise from [GO:0051301] →+ process(growth [GO:0040007])	no		
+reproduction-at-the-cellular-level-m45455-1	arise from [GO:0051301] part of cell cycle [GO:0007049]	no		
+reproduction-at-the-cellular-level-m45455-16	chromosomes ⊓ in taxon (NCBITaxon:2759) [GO:0005694&RO:0002162=(NCBITaxon:2759)] located in nucleus [GO:0005634]	yes	isaInherit	chromosomes ⊓ in taxon (NCBITaxon:2759) [GO:0005694&RO:0002162=(NCBITaxon:2759)] located in nucleus [GO:0005634]   (isaInherit) |   chromosomes ⊓ in taxon (NCBITaxon:2759) [GO:0005694&RO:0002162=(NCBITaxon:2759)] is_a chromosome [GO:0005694]   [refine:GO:0005694&RO:0002162=(NCBITaxon:2759)] |   chromosome [GO:0005694] located in nucleus [GO:0005634]   [cell-structure-and-function-m45432-100]
+reproduction-at-the-cellular-level-m45455-26	gene [SO:0000704] part of chromosome [GO:0005694]	no		
+reproduction-at-the-cellular-level-m45455-45	nuclear membrane ⊓ in taxon (NCBITaxon:2759) [GO:0005635&RO:0002162=(NCBITaxon:2759)] surrounds chromosome [GO:0005694]	no		
+reproduction-at-the-cellular-level-m45455-9	genetic material ⊓ in taxon (prokaryotic cell) [SO:0001026&RO:0002162=(NCBITaxon:2)] located in nucleoid [GO:0009295]	no		
+reproduction-at-the-cellular-level-m45461-100	cell wall ⊓ in taxon (plants) [GO:0005618&RO:0002162=(NCBITaxon:33090)] surrounds plasma membrane [GO:0005886]	no		
+reproduction-at-the-cellular-level-m45461-13	interphase [GO:0051325] has part G1 [GO:0051318]	no		
+reproduction-at-the-cellular-level-m45461-130	checkpoints [GO:0000075] →− process(cell cycle [GO:0007049])	no		
+reproduction-at-the-cellular-level-m45461-131	checkpoints [GO:0044819] happens during G1 [GO:0051318]	no		
+reproduction-at-the-cellular-level-m45461-132	checkpoints [GO:0007095] happens during G2–M transition [GO:0000086]	no		
+reproduction-at-the-cellular-level-m45461-133	checkpoints [GO:0031577] happens during metaphase [GO:0000089]	no		
+reproduction-at-the-cellular-level-m45461-14	G1 [GO:0051318] part of interphase [GO:0051325]	no		
+reproduction-at-the-cellular-level-m45461-154	interphase ⊓ in taxon (eukaryotes) [GO:0051325&RO:0002162=(NCBITaxon:2759)] part of cell cycle [GO:0007049]	yes	isaInherit	interphase ⊓ in taxon (eukaryotes) [GO:0051325&RO:0002162=(NCBITaxon:2759)] part of cell cycle [GO:0007049]   (isaInherit) |   interphase ⊓ in taxon (eukaryotes) [GO:0051325&RO:0002162=(NCBITaxon:2759)] is_a interphase [GO:0051325]   [refine:GO:0051325&RO:0002162=(NCBITaxon:2759)] |   interphase [GO:0051325] part of cell cycle [GO:0007049]   [molbio-m45473-98]
+reproduction-at-the-cellular-level-m45461-164	kinetochore [GO:0000776] attached to mitotic spindle [GO:0072686]	no		
+reproduction-at-the-cellular-level-m45461-174	contractile ring ⊓ in taxon (animal cells) [GO:0005826&RO:0002162=(NCBITaxon:33208)] located in periphery of the cell [GO:0071944]	no		
+reproduction-at-the-cellular-level-m45461-178	cell plate ⊓ in taxon (plant cell) [GO:0009504&RO:0002162=(NCBITaxon:33090)] located in metaphase plate [GO:0070090]	no		
+reproduction-at-the-cellular-level-m45461-179	cell plate ⊓ in taxon (plant cell) [GO:0009504&RO:0002162=(NCBITaxon:33090)] derives from Golgi vesicles [GO:0005798]	no		
+reproduction-at-the-cellular-level-m45461-184	anaphase [GO:0000090] part of mitotic nuclear division [GO:0140014]	no		
+reproduction-at-the-cellular-level-m45461-188	cell plate [GO:0009504] →+ process(cell wall biogenesis [GO:0009832])	no		
+reproduction-at-the-cellular-level-m45461-190	centriole ⊓ in taxon (animal cell) [GO:0005814&RO:0002162=(NCBITaxon:33208)] located in centrosome [GO:0005813]	no		
+reproduction-at-the-cellular-level-m45461-192	cleavage furrow [GO:0032154] →+ process(cytoplasmic contents are separated [GO:0000910])	no		
+reproduction-at-the-cellular-level-m45461-196	G2 [GO:0051319] part of interphase [GO:0051325]	no		
+reproduction-at-the-cellular-level-m45461-199	kinetochore [GO:0000776] part of chromosome, centromeric region [GO:0000775]	no		
+reproduction-at-the-cellular-level-m45461-2	DNA replication [GO:0006260] precedes arise from [GO:0051301]	no		
+reproduction-at-the-cellular-level-m45461-202	metaphase [GO:0000089] part of mitotic nuclear division [GO:0140014]	no		
+reproduction-at-the-cellular-level-m45461-203	mitotic nuclear division [GO:0140014] part of cell cycle [GO:0007049]	no		
+reproduction-at-the-cellular-level-m45461-208	prometaphase [GO:0000236] part of mitotic nuclear division [GO:0140014]	no		
+reproduction-at-the-cellular-level-m45461-211	S phase [GO:0051320] part of interphase [GO:0051325]	no		
+reproduction-at-the-cellular-level-m45461-212	telophase [GO:0000093] part of mitotic nuclear division [GO:0140014]	no		
+reproduction-at-the-cellular-level-m45461-22	DNA replication [GO:0006260] happens during S phase [GO:0051320]	no		
+reproduction-at-the-cellular-level-m45461-27	replicates itself [GO:0051298] starts during S phase [GO:0051320]	no		
+reproduction-at-the-cellular-level-m45461-3	cell cycle [GO:0007049] has output cells [CL:0000000]	no		
+reproduction-at-the-cellular-level-m45461-32	centrioles [GO:0005814] →+ process(arise from [GO:0051301])	no		
+reproduction-at-the-cellular-level-m45461-39	replicates itself [GO:0051298] ends during G2 [GO:0051319]	no		
+reproduction-at-the-cellular-level-m45461-4	cell cycle [GO:0007049] has part interphase [GO:0051325]	no		
+reproduction-at-the-cellular-level-m45461-40	growth [GO:0016049] happens during G2 [GO:0051319]	no		
+reproduction-at-the-cellular-level-m45461-44	mitotic nuclear division [GO:0140014] part of mitotic phase [GO:0000087]	no		
+reproduction-at-the-cellular-level-m45461-47	cytoplasmic contents are separated [GO:0000910] part of mitotic phase [GO:0000087]	no		
+reproduction-at-the-cellular-level-m45461-49	mitotic nuclear division [GO:0140014] has part prophase [GO:0000088]	no		
+reproduction-at-the-cellular-level-m45461-5	growth [GO:0016049] happens during interphase [GO:0051325]	no		
+reproduction-at-the-cellular-level-m45461-52	prophase [GO:0000088] part of mitotic nuclear division [GO:0140014]	no		
+reproduction-at-the-cellular-level-m45461-54	nuclear envelope disassembly [GO:0007077] starts during prophase [GO:0000088]	no		
+reproduction-at-the-cellular-level-m45461-58	centrosome separation [GO:0051299] starts during prophase [GO:0000088]	no		
+reproduction-at-the-cellular-level-m45461-59	microtubule [GO:0005874] part of mitotic spindle [GO:0072686]	no		
+reproduction-at-the-cellular-level-m45461-6	DNA replication [GO:0006260] happens during interphase [GO:0051325]	no		
+reproduction-at-the-cellular-level-m45461-61	microtubule [GO:0005874] →+ process(centrosome separation [GO:0051299])	no		
+reproduction-at-the-cellular-level-m45461-62	chromosome condensation [GO:0007076] happens during prophase [GO:0000088]	no		
+reproduction-at-the-cellular-level-m45461-65	nuclear envelope disassembly [GO:0007077] happens during prometaphase [GO:0000236]	no		
+reproduction-at-the-cellular-level-m45461-66	mitotic spindle assembly [GO:0090307] happens during prometaphase [GO:0000236]	no		
+reproduction-at-the-cellular-level-m45461-68	chromosome condensation [GO:0007076] happens during prometaphase [GO:0000236]	no		
+reproduction-at-the-cellular-level-m45461-7	chromosome segregation [GO:0007059] happens during mitotic phase [GO:0000087]	no		
+reproduction-at-the-cellular-level-m45461-71	chromosomes are aligned at the metaphase plate [GO:0051310] happens during metaphase [GO:0000089]	no		
+reproduction-at-the-cellular-level-m45461-73	sister chromatid cohesion [GO:0007064] happens during metaphase [GO:0000089]	no		
+reproduction-at-the-cellular-level-m45461-74	chromosome condensation [GO:0007076] happens during metaphase [GO:0000089]	no		
+reproduction-at-the-cellular-level-m45461-75	sister chromatid separation [GO:0051306] happens during anaphase [GO:0000090]	no		
+reproduction-at-the-cellular-level-m45461-8	cytoplasmic contents are separated [GO:0000910] happens during mitotic phase [GO:0000087]	no		
+reproduction-at-the-cellular-level-m45461-82	mitotic spindle is broken down [GO:0051228] happens during telophase [GO:0000093]	no		
+reproduction-at-the-cellular-level-m45461-84	nuclear envelope reassembly [GO:0007084] happens during telophase [GO:0000093]	no		
+reproduction-at-the-cellular-level-m45461-88	cytoplasmic contents are separated [GO:0000910] part of arise from [GO:0051301]	no		
+reproduction-at-the-cellular-level-m45461-9	arise from [GO:0051301] happens during mitotic phase [GO:0000087]	no		
+reproduction-at-the-cellular-level-m45461-92	cytokinesis ⊓ in taxon (animal cells) [GO:0000910&RO:0002162=(NCBITaxon:33208)] preceded by anaphase [GO:0000090]	no		
+reproduction-at-the-cellular-level-m45461-93	contractile ring ⊓ in taxon (animal cells) [GO:0005826&RO:0002162=(NCBITaxon:33208)] has part microfilaments [GO:0005884]	no		
+reproduction-at-the-cellular-level-m45461-99	cell wall ⊓ in taxon (plants) [GO:0005618&RO:0002162=(NCBITaxon:33090)] →− process(cleavage furrow ... form [GO:0036089])	no		
+reproduction-at-the-cellular-level-m45462-12	control and repair mechanisms [GO:0051726] →− process(cell cycle [GO:0007049])	no		
+reproduction-at-the-cellular-level-m45462-36	retinoblastoma protein (RB1) [PR:000013773] →− process(cell cycle [GO:0007049])	no		
+reproduction-at-the-cellular-level-m45462-37	p53 [PR:000003035] →− process(cell cycle [GO:0007049])	no		
+reproduction-at-the-cellular-level-m45462-38	p21 [PR:000005274] →− process(cell cycle [GO:0007049])	no		
+reproduction-at-the-cellular-level-m45462-41	p53 [PR:000003035] participates in checkpoints [GO:0044819]	no		
+reproduction-at-the-cellular-level-m45462-43	p53 [PR:000003035] →+ process(DNA repair genes [GO:0006281])	no		
+reproduction-at-the-cellular-level-m45462-53	folic acid [CHEBI:27470] →+ process(growth ⊓ occurs in (tumor cells) [GO:0008283&BFO:0000066=(CL:0001063)])	no		
+reproduction-at-the-cellular-level-m45462-64	control and repair mechanisms [GO:0051726] →− process(arise from [GO:0051301])	no		
+reproduction-at-the-cellular-level-m45463-1	prokaryotic cell [CL:0000520] capable of binary fission [GO:0043093]	no		
+reproduction-at-the-cellular-level-m45463-17	circular DNA chromosome ⊓ in taxon (bacteria) [SO:0000958&RO:0002162=(NCBITaxon:2)] located in nucleoid [GO:0009295]	no		
+reproduction-at-the-cellular-level-m45463-19	proteins [PR:000000001] →+ process(packaging [GO:0051276])	no		
+reproduction-at-the-cellular-level-m45463-35	tubulin [PR:000028799] part of microtubule [GO:0005874]	no		
+reproduction-at-the-cellular-level-m45463-61	septum [GO:0000935] develops into cell wall [GO:0005618]	no		
+reproduction-at-the-cellular-level-m45463-67	FtsZ ⊓ in taxon (prokaryote) [PR:000022726&RO:0002162=(NCBITaxon:2)] part of cytoskeleton [GO:0005856]	no		
+reproduction-at-the-cellular-level-m45463-68	FtsZ ⊓ in taxon (prokaryote) [PR:000022726&RO:0002162=(NCBITaxon:2)] →+ process(binary fission [GO:0043093])	no		
+the-body-s-systems-m45533-2	multicellular bodies of animals ⊓ in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part tissues [UBERON:0000479]	yes	relTrans	multicellular bodies of animals ⊓ in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part tissues [UBERON:0000479]   (relTrans) |   multicellular bodies of animals ⊓ in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] has part organ system [UBERON:0000467]   (isaInherit) |     multicellular bodies of animals ⊓ in taxon (NCBITaxon:33208) [UBERON:0000468&RO:0002162=(NCBITaxon:33208)] is_a body [UBERON:0000468]   [refine:UBERON:0000468&RO:0002162=(NCBITaxon:33208)] |     body [UBERON:0000468] has part organ system [UBERON:0000467]   [cell-structure-and-function-m45428-10] |   organ system [UBERON:0000467] has part tissues [UBERON:0000479]   (relTrans) |     organ system [UBERON:0000467] has part organ [UBERON:0000062]   [cell-structure-and-function-m45428-6] |     organ [UBERON:0000062] has part tissues [UBERON:0000479]   [cell-structure-and-function-m45428-5]
+the-body-s-systems-m45533-3	tissues ⊓ in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)] part of organ [UBERON:0000062]	no		
+the-body-s-systems-m45533-4	organs ⊓ in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] part of organ system [UBERON:0000467]	no		
+the-body-s-systems-m45533-5	organ systems ⊓ in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] →+ process(homeostatic process [GO:0042592])	no		
+the-body-s-systems-m45533-6	organ systems ⊓ in taxon (NCBITaxon:33208) [UBERON:0000467&RO:0002162=(NCBITaxon:33208)] →+ amount(nutrients [CHEBI:33284])	no		
+the-body-s-systems-m45534-109	kidneys [UBERON:0002113] →− amount(water [CHEBI:15377])	no		
+the-body-s-systems-m45534-110	excreted [GO:0007588] →+ process(osmotic balance [GO:0050891])	no		
+the-body-s-systems-m45534-114	Disease [MONDO:0000001] →− process(osmotic balance [GO:0050891])	no		
+the-body-s-systems-m45534-125	renal system [UBERON:0001008] has part kidneys [UBERON:0002113]	no		
+the-body-s-systems-m45534-127	kidneys [UBERON:0002113] located in coelemic cavity lumen [UBERON:0002323]	no		
+the-body-s-systems-m45534-128	kidneys [UBERON:0002113] has part nephrons [UBERON:0001285]	yes	relTrans	kidneys [UBERON:0002113] has part nephrons [UBERON:0001285]   (relTrans) |   kidneys [UBERON:0002113] has part outer cortex [UBERON:0001225]   [the-body-s-systems-m45534-135] |   outer cortex [UBERON:0001225] has part nephrons [UBERON:0001285]   [the-body-s-systems-m45534-137]
+the-body-s-systems-m45534-129	nephrons [UBERON:0001285] capable of filter [GO:0003094]	no		
+the-body-s-systems-m45534-133	nephrons [UBERON:0001285] produces urine [UBERON:0001088]	no		
+the-body-s-systems-m45534-134	urine [UBERON:0001088] located in urinary bladder [UBERON:0001255]	no		
+the-body-s-systems-m45534-135	kidneys [UBERON:0002113] has part outer cortex [UBERON:0001225]	no		
+the-body-s-systems-m45534-136	renal pelvis [UBERON:0001224] part of ureter [UBERON:0000056]	no		
+the-body-s-systems-m45534-137	outer cortex [UBERON:0001225] has part nephrons [UBERON:0001285]	no		
+the-body-s-systems-m45534-140	renal pelvis [UBERON:0001224] connected to ureter [UBERON:0000056]	no		
+the-body-s-systems-m45534-142	ureter [UBERON:0000056] connected to urinary bladder [UBERON:0001255]	no		
+the-body-s-systems-m45534-147	renal glomerulus [UBERON:0000074] part of nephrons [UBERON:0001285]	no		
+the-body-s-systems-m45534-152	capillaries [UBERON:0001982] surrounds tubules [UBERON:0009773]	no		
+the-body-s-systems-m45534-155	reabsorption [GO:0070293] →− amount(ATP [CHEBI:15422])	no		
+the-body-s-systems-m45534-160	renal vein [UBERON:0001140] connected to inferior vena cava [UBERON:0001072]	no		
+the-body-s-systems-m45534-168	urinary bladder [UBERON:0001255] has part stretch receptors [CL:1000082]	no		
+the-body-s-systems-m45534-188	kidneys ⊓ in taxon (mammalian systems) [UBERON:0002113&RO:0002162=(NCBITaxon:40674)] capable of osmotic balance [GO:0050891]	no		
+the-body-s-systems-m45534-189	kidneys [UBERON:0002113] capable of filter [GO:0003094]	no		
+the-body-s-systems-m45534-190	kidneys [UBERON:0002113] →+ process(ion homeostasis [GO:0050801])	no		
+the-body-s-systems-m45534-192	blood vessel [UBERON:0001981] connected to aorta [UBERON:0000947]	no		
+the-body-s-systems-m45534-193	blood vessel [UBERON:0001981] connected to inferior vena cava [UBERON:0001072]	no		
+the-body-s-systems-m45534-2	organs ⊓ in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)] →+ process(homeostatic process [GO:0042592])	no		
+the-body-s-systems-m45534-57	circulatory system [UBERON:0001009] capable of maintain body temperature [GO:0001659]	no		
+the-body-s-systems-m45534-59	Vasodilation [GO:0042311] →+ amount(blood ⊓ located in (body surface) [UBERON:0000178&RO:0001025=(UBERON:0002097)])	no		
+the-body-s-systems-m45534-61	Vasodilation [GO:0042311] →− phenotype(environmental temperature [PATO:0000146])	no		
+the-body-s-systems-m45534-63	constricting [GO:0042310] →− process(blood flow [GO:0008015])	no		
+the-body-s-systems-m45534-67	arteries [UBERON:0001637] adjacent to veins [UBERON:0001638]	no		
+the-body-s-systems-m45534-75	nervous tissue [UBERON:0001016] →+ process(maintain body temperature [GO:0001659])	no		
+the-body-s-systems-m45534-76	maintain body temperature [GO:0001659] occurs in hypothalamus [UBERON:0001898]	no		
+the-body-s-systems-m45534-77	hypothalamus ⊓ located in (hypothalamus) ⊓ in taxon (NCBITaxon:7742) [UBERON:0001898&RO:0001025=(UBERON:0001898)&RO:0002162=(NCBITaxon:7742)] →+ phenotype(environmental temperature [PATO:0000146])	no		
+the-body-s-systems-m45534-81	sympathetic nervous system [UBERON:0000013] →+ process(maintain body temperature [GO:0001659])	no		
+the-body-s-systems-m45534-88	environmental temperature [PATO:0000146] →+ process(fight the infection [GO:0002376])	no		
+the-body-s-systems-m45535-105	small intestine [UBERON:0002108] has part duodenum [UBERON:0002114]	no		
+the-body-s-systems-m45535-108	pancreatic juices [UBERON:0000326] has part hydrogencarbonate [CHEBI:17544]	no		
+the-body-s-systems-m45535-109	hydrogencarbonate [CHEBI:17544] →− phenotype(extreme pH [PATO:0001842])	no		
+the-body-s-systems-m45535-113	bile [UBERON:0001970] located in gallbladder [UBERON:0002110]	no		
+the-body-s-systems-m45535-115	bile [UBERON:0001970] has part bile salts [CHEBI:22868]	no		
+the-body-s-systems-m45535-119	ileum [UBERON:0002116] connected to large intestine [UBERON:0000059]	no		
+the-body-s-systems-m45535-120	vermiform appendix [UBERON:0001154] located in ileocecal valve [UBERON:0000569]	no		
+the-body-s-systems-m45535-121	vermiform appendix ⊓ in taxon (humans) [UBERON:0001154&RO:0002162=(NCBITaxon:9606)] participates in fight the infection [GO:0002376]	no		
+the-body-s-systems-m45535-126	large intestine [UBERON:0000059] has part caecum [UBERON:0001153]	no		
+the-body-s-systems-m45535-129	bacteria or “intestinal flora” ⊓ located in (colon) [NCBITaxon:2&RO:0001025=(UBERON:0001155)] located in colon [UBERON:0001155]	no		
+the-body-s-systems-m45535-130	bacteria [NCBITaxon:2] →+ process(digestion [GO:0007586])	no		
+the-body-s-systems-m45535-131	colon [UBERON:0001155] has part ascending colon [UBERON:0001156]	no		
+the-body-s-systems-m45535-146	liver [UBERON:0002107] →+ process(digestion of fats [GO:0044241])	no		
+the-body-s-systems-m45535-147	liver [UBERON:0002107] capable of detoxifying [GO:0098754]	no		
+the-body-s-systems-m45535-154	gallbladder [UBERON:0002110] →+ amount(bile salts [CHEBI:22868])	no		
+the-body-s-systems-m45535-155	pancreas [UBERON:0001264] produces hydrogencarbonate [CHEBI:17544]	no		
+the-body-s-systems-m45535-16	digestion [GO:0007586] has start location mouth [UBERON:0000165]	no		
+the-body-s-systems-m45535-165	polysaccharide digestion [GO:0044245] has output glucose [CHEBI:17234]	no		
+the-body-s-systems-m45535-166	glucose [CHEBI:17234] →+ process(cellular respiration [GO:0045333])	no		
+the-body-s-systems-m45535-167	starch catabolic process [GO:0005983] has output glucose [CHEBI:17234]	no		
+the-body-s-systems-m45535-172	glycogen biosynthetic process [GO:0005978] has output glycogen [CHEBI:28087]	no		
+the-body-s-systems-m45535-176	Fats ⊓ in taxon (mammals) [CHEBI:18059&RO:0002162=(NCBITaxon:40674)] located in subcutaneous adipose tissue [UBERON:0002190]	no		
+the-body-s-systems-m45535-178	protein digestion [GO:0044256] has input proteins [CHEBI:36080]	no		
+the-body-s-systems-m45535-179	absorbs nutrients [GO:0050892] has input amino acids [CHEBI:33709]	no		
+the-body-s-systems-m45535-180	protein biosynthetic process [GO:0160307] has input amino acids [CHEBI:33709]	no		
+the-body-s-systems-m45535-183	lipid [CHEBI:18059] →+ process(sense of satiety or fullness [GO:0032098])	no		
+the-body-s-systems-m45535-186	lipid [CHEBI:18059] →+ process(absorbs nutrients [GO:0050892])	no		
+the-body-s-systems-m45535-212	glycogen biosynthetic process [GO:0005978] occurs in liver [UBERON:0002107]	no		
+the-body-s-systems-m45535-213	fatty acid biosynthetic process ⊓ in taxon (cellular organisms ⊓ has modifier (glycogen stores are full)) [GO:0006633&RO:0002162=(NCBITaxon:131567&RO:0002573=(BLN:glycogen_stores_full))] has input glucose [CHEBI:17234]	no		
+the-body-s-systems-m45535-214	fatty acid [CHEBI:35366] located in adipose tissue cells [CL:0000136]	no		
+the-body-s-systems-m45535-225	digestion [GO:0007586] occurs in mouth [UBERON:0000165]	no		
+the-body-s-systems-m45535-227	salivary amylase [PR:000037015] →− amount(sugars [CHEBI:16646])	no		
+the-body-s-systems-m45535-230	pepsin A-3 [PR:000031143] →− amount(protein ⊓ located in (stomach) [CHEBI:36080&RO:0001025=(UBERON:0000945)])	no		
+the-body-s-systems-m45535-234	sugars [CHEBI:16646] part of food [CHEBI:33290]	no		
+the-body-s-systems-m45535-237	Food intake ⊓ in taxon (cellular organisms ⊓ has modifier (food intake in more than necessary amounts)) [CHEBI:33290&RO:0002162=(NCBITaxon:131567&RO:0002573=(BLN:excess_food_intake))] →+ amount(glycogen ⊓ located in (liver) [CHEBI:28087&RO:0001025=(UBERON:0002107)])	no		
+the-body-s-systems-m45535-238	Food intake ⊓ in taxon (cellular organisms ⊓ has modifier (food intake in more than necessary amounts)) [CHEBI:33290&RO:0002162=(NCBITaxon:131567&RO:0002573=(BLN:excess_food_intake))] →+ process(lipid storage ⊓ occurs in (adipose tissue) [GO:0019915&BFO:0000066=(UBERON:0001013)])	no		
+the-body-s-systems-m45535-239	adipose tissue [UBERON:0001013] →+ phenotype(obesity [HP:0001513])	no		
+the-body-s-systems-m45535-246	organ [UBERON:0000062] →+ process(digestion [GO:0007586])	no		
+the-body-s-systems-m45535-259	salivary amylase [PR:000037015] located in saliva [UBERON:0001836]	no		
+the-body-s-systems-m45535-260	alpha-amylase activity [GO:0004556] has output maltose [CHEBI:17306]	no		
+the-body-s-systems-m45535-263	bile [UBERON:0001970] →+ process(digestion of fats [GO:0044241])	no		
+the-body-s-systems-m45535-265	colon [UBERON:0001155] part of large intestine [UBERON:0000059]	no		
+the-body-s-systems-m45535-268	esophagus [UBERON:0001043] connected to mouth [UBERON:0000165]	no		
+the-body-s-systems-m45535-27	digestion [GO:0007586] occurs in small intestine [UBERON:0002108]	no		
+the-body-s-systems-m45535-275	pancreas [UBERON:0001264] produces digestive juices [UBERON:0006911]	no		
+the-body-s-systems-m45535-276	pepsin A-3 [PR:000031143] located in stomach [UBERON:0000945]	no		
+the-body-s-systems-m45535-277	pepsin A-3 [PR:000031143] →+ process(protein digestion [GO:0044256])	no		
+the-body-s-systems-m45535-279	feces [UBERON:0001988] located in rectum [UBERON:0001052]	no		
+the-body-s-systems-m45535-28	liver [UBERON:0002107] produces bile [UBERON:0001970]	no		
+the-body-s-systems-m45535-280	salivary glands [UBERON:0001044] part of mouth [UBERON:0000165]	no		
+the-body-s-systems-m45535-283	stomach [UBERON:0000945] has part gastric digestive juices [UBERON:0001971]	no		
+the-body-s-systems-m45535-36	digestion [GO:0007586] occurs in mouth or oral cavity [UBERON:0000167]	no		
+the-body-s-systems-m45535-42	salivary glands [UBERON:0001044] produces saliva [UBERON:0001836]	no		
+the-body-s-systems-m45535-43	saliva [UBERON:0001836] has part mucus [UBERON:0000912]	no		
+the-body-s-systems-m45535-46	saliva [UBERON:0001836] has part lysozyme C [PR:000010013]	no		
+the-body-s-systems-m45535-47	lysozyme C [PR:000010013] →− amount(bacteria [NCBITaxon:2])	no		
+the-body-s-systems-m45535-48	saliva [UBERON:0001836] has part salivary amylase [PR:000037015]	no		
+the-body-s-systems-m45535-55	pharynx [UBERON:0006562] connected to esophagus [UBERON:0001043]	no		
+the-body-s-systems-m45535-56	esophagus [UBERON:0001043] connected to stomach [UBERON:0000945]	no		
+the-body-s-systems-m45535-57	trachea [UBERON:0003126] connected to lungs [UBERON:0002048]	no		
+the-body-s-systems-m45535-6	food [CHEBI:33290] has part proteins [CHEBI:36080]	no		
+the-body-s-systems-m45535-63	smooth muscles [UBERON:0001135] participates in peristalsis [GO:0030432]	no		
+the-body-s-systems-m45535-71	gastro-esophageal sphincter [UBERON:0004550] located in esophagus [UBERON:0001043]	no		
+the-body-s-systems-m45535-77	protein digestion [GO:0044256] occurs in stomach [UBERON:0000945]	no		
+the-body-s-systems-m45535-79	stomach [UBERON:0000945] produces gastric digestive juices [UBERON:0001971]	no		
+the-body-s-systems-m45535-80	protein digestion [GO:0044256] has participant pepsin A-3 [PR:000031143]	no		
+the-body-s-systems-m45535-93	stomach [UBERON:0000945] has part mucus [UBERON:0000912]	no		
+the-body-s-systems-m45535-96	protein digestion [GO:0044256] occurs in small intestine [UBERON:0002108]	no		
+the-body-s-systems-m45535-98	small intestine [UBERON:0002108] has part villi [UBERON:0001213]	no		
+the-body-s-systems-m45535-99	villi [UBERON:0001213] has part microvillus [GO:0005902]	no		
+the-body-s-systems-m45536-10	blood ⊓ in taxon (mammals) [UBERON:0000178&RO:0002162=(NCBITaxon:40674)] →+ amount(oxygen ⊓ located in (lungs) [CHEBI:15379&RO:0001025=(UBERON:0002048)])	no		
+the-body-s-systems-m45536-105	lungs [UBERON:0002048] →+ amount(oxygen [CHEBI:15379])	no		
+the-body-s-systems-m45536-11	blood ⊓ in taxon (mammals) [UBERON:0000178&RO:0002162=(NCBITaxon:40674)] →− amount(carbon dioxide ⊓ located in (lungs) [CHEBI:16526&RO:0001025=(UBERON:0002048)])	no		
+the-body-s-systems-m45536-114	heart [UBERON:0000948] has part atria [UBERON:0002081]	no		
+the-body-s-systems-m45536-12	respiratory system [UBERON:0001004] →+ amount(oxygen [CHEBI:15379])	no		
+the-body-s-systems-m45536-123	electrochemical signals [GO:0061337] →+ process(contract [GO:0060048])	no		
+the-body-s-systems-m45536-128	electrochemical signals [GO:0061337] occurs in sinoatrial node [UBERON:0002351]	no		
+the-body-s-systems-m45536-130	electrochemical signals [GO:0061337] →+ process(contract ⊓ occurs in (atria) [GO:0060048&BFO:0000066=(UBERON:0002081)])	no		
+the-body-s-systems-m45536-135	electrochemical signals [GO:0061337] →+ process(contract ⊓ occurs in (ventricles) [GO:0060048&BFO:0000066=(UBERON:0002082)])	no		
+the-body-s-systems-m45536-140	cardiomyocytes [CL:0000746] capable of pumping [GO:0060047]	no		
+the-body-s-systems-m45536-141	cardiomyocytes [CL:0000746] part of heart muscle [UBERON:0001133]	no		
+the-body-s-systems-m45536-144	cardiomyocytes [CL:0000746] has part intercalated disks [GO:0014704]	no		
+the-body-s-systems-m45536-145	intercalated disks [GO:0014704] part of heart muscle [UBERON:0001133]	no		
+the-body-s-systems-m45536-146	intercalated disks [GO:0014704] →+ process(electrochemical signals [GO:0061337])	no		
+the-body-s-systems-m45536-154	aorta [UBERON:0000947] connected to arteries [UBERON:0001637]	yes	isaInherit	aorta [UBERON:0000947] connected to arteries [UBERON:0001637]   (isaInherit) |   aorta [UBERON:0000947] is_a blood vessel [UBERON:0001981]   (relTrans) |     aorta [UBERON:0000947] is_a arteries [UBERON:0001637]   [the-body-s-systems-m45536-109] |     arteries [UBERON:0001637] is_a blood vessel [UBERON:0001981]   [the-body-s-systems-m45536-219] |   blood vessel [UBERON:0001981] connected to arteries [UBERON:0001637]   (isaGeneralise) |     blood vessel [UBERON:0001981] connected to aorta [UBERON:0000947]   [the-body-s-systems-m45534-192] |     aorta [UBERON:0000947] is_a arteries [UBERON:0001637]   [the-body-s-systems-m45536-109]
+the-body-s-systems-m45536-156	arteries [UBERON:0001637] →− phenotype(Pressure differences [PATO:0001025])	no		
+the-body-s-systems-m45536-159	arteries [UBERON:0001637] connected to arterioles [UBERON:0001980]	no		
+the-body-s-systems-m45536-160	arterioles [UBERON:0001980] located in muscle tissue [UBERON:0002385]	no		
+the-body-s-systems-m45536-161	arterioles [UBERON:0001980] connected to capillary beds [UBERON:0013141]	no		
+the-body-s-systems-m45536-162	capillary beds [UBERON:0013141] has part capillaries [UBERON:0001982]	no		
+the-body-s-systems-m45536-163	capillaries [UBERON:0001982] adjacent to cells [CL:0000000]	no		
+the-body-s-systems-m45536-167	capillaries [UBERON:0001982] connected to venules [UBERON:0001979]	no		
+the-body-s-systems-m45536-168	venules [UBERON:0001979] connected to veins [UBERON:0001638]	no		
+the-body-s-systems-m45536-172	veins [UBERON:0001638] has part valves [UBERON:0006675]	no		
+the-body-s-systems-m45536-175	Animal respiratory systems ⊓ in taxon (NCBITaxon:33208) [UBERON:0001004&RO:0002162=(NCBITaxon:33208)] capable of Gas exchange [GO:0007585]	no		
+the-body-s-systems-m45536-179	respiratory bronchioles [UBERON:0002188] connected to Alveolar ducts [UBERON:0002173]	no		
+the-body-s-systems-m45536-180	alveoli ⊓ located in (lung) [UBERON:0002299&RO:0001025=(UBERON:0002048)] →+ phenotype(surface area [PATO:0001323])	yes	isaInheritEffect	alveoli ⊓ located in (lung) [UBERON:0002299&RO:0001025=(UBERON:0002048)] →+ phenotype(surface area [PATO:0001323])   (isaInheritEffect) |   alveoli ⊓ located in (lung) [UBERON:0002299&RO:0001025=(UBERON:0002048)] is_a alveoli [UBERON:0002299]   [refine:UBERON:0002299&RO:0001025=(UBERON:0002048)] |   alveoli [UBERON:0002299] →+ phenotype(surface area [PATO:0001323])   [the-body-s-systems-m45536-209]
+the-body-s-systems-m45536-183	circulatory system [UBERON:0001009] has part blood vessel [UBERON:0001981]	yes	isaGeneralise	circulatory system [UBERON:0001009] has part blood vessel [UBERON:0001981]   (isaGeneralise) |   circulatory system [UBERON:0001009] has part arteries [UBERON:0001637]   [the-body-s-systems-m45536-80] |   arteries [UBERON:0001637] is_a blood vessel [UBERON:0001981]   [the-body-s-systems-m45536-219]
+the-body-s-systems-m45536-2	human circulatory system ⊓ in taxon (NCBITaxon:9606) [UBERON:0001009&RO:0002162=(NCBITaxon:9606)] has part blood vessel [UBERON:0001981]	yes	isaInherit	human circulatory system ⊓ in taxon (NCBITaxon:9606) [UBERON:0001009&RO:0002162=(NCBITaxon:9606)] has part blood vessel [UBERON:0001981]   (isaInherit) |   human circulatory system ⊓ in taxon (NCBITaxon:9606) [UBERON:0001009&RO:0002162=(NCBITaxon:9606)] is_a circulatory system [UBERON:0001009]   [refine:UBERON:0001009&RO:0002162=(NCBITaxon:9606)] |   circulatory system [UBERON:0001009] has part blood vessel [UBERON:0001981]   [the-body-s-systems-m45536-183]
+the-body-s-systems-m45536-202	main bronchus [UBERON:0002182] connected to trachea [UBERON:0003126]	no		
+the-body-s-systems-m45536-206	alveoli [UBERON:0002299] part of lungs [UBERON:0002048]	no		
+the-body-s-systems-m45536-207	alveoli [UBERON:0002299] connected to alveolar sacs [UBERON:0002169]	no		
+the-body-s-systems-m45536-209	alveoli [UBERON:0002299] →+ phenotype(surface area [PATO:0001323])	no		
+the-body-s-systems-m45536-212	electrochemical signals [GO:0061337] →+ process(contract ⊓ occurs in (atria) ⊓ occurs in (cardiac muscle cells) [GO:0060048&BFO:0000066=(UBERON:0002081)&BFO:0000066=(CL:0000746)])	no		
+the-body-s-systems-m45536-220	atria [UBERON:0002081] part of heart [UBERON:0000948]	no		
+the-body-s-systems-m45536-221	bicuspid valve [UBERON:0002135] part of heart [UBERON:0000948]	no		
+the-body-s-systems-m45536-222	bronchi [UBERON:0002185] connected to trachea [UBERON:0003126]	no		
+the-body-s-systems-m45536-224	bronchioles [UBERON:0002186] connected to main bronchus [UBERON:0002182]	no		
+the-body-s-systems-m45536-233	larynx [UBERON:0001737] located in throat [UBERON:0000341]	no		
+the-body-s-systems-m45536-234	nasal cavity [UBERON:0001707] part of respiratory system [UBERON:0001004]	no		
+the-body-s-systems-m45536-237	main bronchus [UBERON:0002182] part of lungs [UBERON:0002048]	no		
+the-body-s-systems-m45536-243	tricuspid valve [UBERON:0002134] part of heart [UBERON:0000948]	no		
+the-body-s-systems-m45536-245	ventricles [UBERON:0002082] part of heart [UBERON:0000948]	no		
+the-body-s-systems-m45536-3	blood vessel [UBERON:0001981] →+ amount(oxygen [CHEBI:15379])	no		
+the-body-s-systems-m45536-34	diaphragm [UBERON:0001103] →− phenotype(Pressure differences [PATO:0001025])	no		
+the-body-s-systems-m45536-37	nasal cavity [UBERON:0001707] located in nose [UBERON:0000004]	no		
+the-body-s-systems-m45536-38	nasal cavity [UBERON:0001707] →+ phenotype(environmental temperature [PATO:0000146])	no		
+the-body-s-systems-m45536-4	blood vessel [UBERON:0001981] →− amount(carbon dioxide [CHEBI:16526])	no		
+the-body-s-systems-m45536-46	trachea [UBERON:0003126] adjacent to esophagus [UBERON:0001043]	no		
+the-body-s-systems-m45536-47	trachea [UBERON:0003126] connected to pharynx [UBERON:0006562]	no		
+the-body-s-systems-m45536-48	trachea [UBERON:0003126] has part cartilage tissue [UBERON:0002418]	no		
+the-body-s-systems-m45536-53	trachea [UBERON:0003126] connected to bronchi [UBERON:0002185]	no		
+the-body-s-systems-m45536-54	bronchi [UBERON:0002185] connected to lungs [UBERON:0002048]	no		
+the-body-s-systems-m45536-56	main bronchus [UBERON:0002182] connected to bronchi [UBERON:0002185]	no		
+the-body-s-systems-m45536-58	bronchi [UBERON:0002185] has part cartilage tissue [UBERON:0002418]	no		
+the-body-s-systems-m45536-59	bronchi [UBERON:0002185] innervated by parasympathetic [UBERON:0000011]	no		
+the-body-s-systems-m45536-6	blood flow [GO:0008015] occurs in circulatory system [UBERON:0001009]	no		
+the-body-s-systems-m45536-60	parasympathetic [UBERON:0000011] →+ process(muscle contraction ⊓ occurs in (bronchi) [GO:0006939&BFO:0000066=(UBERON:0002185)])	no		
+the-body-s-systems-m45536-61	sympathetic nervous system [UBERON:0000013] →+ process(relaxation ⊓ occurs in (bronchi) [GO:0044557&BFO:0000066=(UBERON:0002185)])	no		
+the-body-s-systems-m45536-63	Alveolar ducts [UBERON:0002173] connected to respiratory bronchioles [UBERON:0002188]	no		
+the-body-s-systems-m45536-64	alveolar sacs [UBERON:0002169] connected to Alveolar ducts [UBERON:0002173]	no		
+the-body-s-systems-m45536-65	alveolar sacs [UBERON:0002169] has part alveoli [UBERON:0002299]	no		
+the-body-s-systems-m45536-66	Gas exchange [GO:0007585] occurs in alveoli [UBERON:0002299]	no		
+the-body-s-systems-m45536-68	alveoli [UBERON:0002299] adjacent to capillaries [UBERON:0001982]	no		
+the-body-s-systems-m45536-7	Pressure differences [PATO:0001025] →+ process(blood flow [GO:0008015])	no		
+the-body-s-systems-m45536-8	pumping [GO:0060047] →+ phenotype(Pressure differences [PATO:0001025])	no		
+the-body-s-systems-m45536-80	circulatory system [UBERON:0001009] has part arteries [UBERON:0001637]	no		
+the-body-s-systems-m45536-84	blood flow [GO:0008015] occurs in blood vessel [UBERON:0001981]	no		
+the-body-s-systems-m45536-88	circulatory fluid ⊓ located in (open circulatory system) [UBERON:0006314&RO:0001025=(UBERON:0009054)] adjacent to organ [UBERON:0000062]	no		
+the-body-s-systems-m45536-9	circulatory system [UBERON:0001009] capable of Gas exchange [GO:0007585]	no		
+the-body-s-systems-m45536-91	heart [UBERON:0000948] →+ process(blood flow [GO:0008015])	no		
+the-body-s-systems-m45536-97	heart [UBERON:0000948] has part atrium [UBERON:0002078]	no		
+the-body-s-systems-m45536-98	heart [UBERON:0000948] has part atrium [UBERON:0002079]	no		
+the-body-s-systems-m45537-1	endocrine system [UBERON:0000949] produces hormones [CHEBI:24621]	no		
+the-body-s-systems-m45537-104	anterior pituitary [UBERON:0002196] produces growth hormone [PR:000007968]	no		
+the-body-s-systems-m45537-105	anterior pituitary [UBERON:0002196] produces prolactin [PR:000013246]	no		
+the-body-s-systems-m45537-106	anterior pituitary [UBERON:0002196] produces thyroid-stimulating hormone [PR:P01222]	no		
+the-body-s-systems-m45537-107	anterior pituitary [UBERON:0002196] produces adrenocorticotropic hormone [CHEBI:3892]	no		
+the-body-s-systems-m45537-108	anterior pituitary [UBERON:0002196] produces follicle-stimulating hormone [PR:000007682]	no		
+the-body-s-systems-m45537-109	anterior pituitary [UBERON:0002196] produces luteinizing hormone [PR:P01229]	no		
+the-body-s-systems-m45537-110	growth hormone [PR:000007968] →+ process(synthesize proteins [GO:0006412])	no		
+the-body-s-systems-m45537-112	prolactin [PR:000013246] →+ amount(milk [UBERON:0001913])	no		
+the-body-s-systems-m45537-115	posterior pituitary [UBERON:0002198] part of brain [UBERON:0000955]	no		
+the-body-s-systems-m45537-117	posterior pituitary [UBERON:0002198] has part nerve fiber [UBERON:0006134]	no		
+the-body-s-systems-m45537-118	thyroid gland [UBERON:0002046] located in neck [UBERON:0000974]	no		
+the-body-s-systems-m45537-123	thyroid follicular cell [CL:0002258] produces thyroxine [CHEBI:30660]	no		
+the-body-s-systems-m45537-124	thyroid follicular cell [CL:0002258] produces triiodothyronine [CHEBI:18258]	no		
+the-body-s-systems-m45537-129	thyroid-stimulating hormone [PR:P01222] →+ amount(triiodothyronine ⊓ located in (thyroid gland) [CHEBI:18258&RO:0001025=(UBERON:0002046)])	no		
+the-body-s-systems-m45537-131	triiodothyronine [CHEBI:18258] →+ process(metabolic reactions [GO:0008152])	no		
+the-body-s-systems-m45537-133	thyroid gland [UBERON:0002046] produces calcitonin [PR:P01258]	no		
+the-body-s-systems-m45537-134	calcium [CHEBI:29108] →+ amount(calcitonin ⊓ located in (blood) [PR:P01258&RO:0001025=(UBERON:0000178)])	no		
+the-body-s-systems-m45537-135	calcitonin [PR:P01258] →− amount(calcium ion ⊓ located in (blood) [CHEBI:29108&RO:0001025=(UBERON:0000178)])	no		
+the-body-s-systems-m45537-138	parathyroid gland [UBERON:0001132] located in thyroid gland [UBERON:0002046]	no		
+the-body-s-systems-m45537-139	parathyroid gland [UBERON:0001132] produces parathyroid hormone [PR:000013429]	no		
+the-body-s-systems-m45537-140	parathyroid hormone [PR:000013429] →+ amount(calcium ion ⊓ located in (blood) [CHEBI:29108&RO:0001025=(UBERON:0000178)])	no		
+the-body-s-systems-m45537-141	calcium [CHEBI:29108] →− amount(parathyroid hormone ⊓ located in (UBERON:0000178) [PR:000013429&RO:0001025=(UBERON:0000178)])	no		
+the-body-s-systems-m45537-142	adrenal gland [UBERON:0002369] located in kidneys [UBERON:0002113]	no		
+the-body-s-systems-m45537-143	adrenal gland [UBERON:0002369] has part adrenal cortex [UBERON:0001235]	no		
+the-body-s-systems-m45537-144	adrenal gland [UBERON:0002369] has part adrenal medulla [UBERON:0001236]	no		
+the-body-s-systems-m45537-146	adrenal cortex [UBERON:0001235] produces mineralocorticoid [CHEBI:25354]	no		
+the-body-s-systems-m45537-147	adrenal cortex [UBERON:0001235] produces glucocorticoid [CHEBI:24261]	no		
+the-body-s-systems-m45537-148	adrenal cortex [UBERON:0001235] produces androgen [CHEBI:50113]	no		
+the-body-s-systems-m45537-153	sodium [CHEBI:29101] →− amount(aldosterone ⊓ located in (blood) [CHEBI:27584&RO:0001025=(UBERON:0000178)])	no		
+the-body-s-systems-m45537-154	blood volume [OBA:0003648] →− amount(aldosterone [CHEBI:27584])	no		
+the-body-s-systems-m45537-155	blood pressure [OBA:VT0000183] →− amount(aldosterone [CHEBI:27584])	no		
+the-body-s-systems-m45537-156	potassium [CHEBI:29103] →+ amount(aldosterone ⊓ located in (blood) [CHEBI:27584&RO:0001025=(UBERON:0000178)])	no		
+the-body-s-systems-m45537-158	glucocorticoid [CHEBI:24261] →+ process(gluconeogenesis [GO:0006094])	no		
+the-body-s-systems-m45537-161	testis [UBERON:0000473] produces androgen [CHEBI:50113]	yes	isaGeneralise	testis [UBERON:0000473] produces androgen [CHEBI:50113]   (isaGeneralise) |   testis [UBERON:0000473] produces testosterone [CHEBI:17347]   [the-body-s-systems-m45537-306] |   testosterone [CHEBI:17347] is_a androgen [CHEBI:50113]   [the-body-s-systems-m45537-206]
+the-body-s-systems-m45537-17	endocrine cell [CL:0000163] located in endocrine gland [UBERON:0002368]	no		
+the-body-s-systems-m45537-172	adrenal medulla [UBERON:0001236] produces epinephrine [CHEBI:33568]	no		
+the-body-s-systems-m45537-173	adrenal medulla [UBERON:0001236] produces norepinephrine [CHEBI:33569]	no		
+the-body-s-systems-m45537-176	epinephrine [CHEBI:33568] →+ process(response to stress [GO:0006950])	no		
+the-body-s-systems-m45537-178	epinephrine [CHEBI:33568] →+ phenotype(heart rate [OBA:1001087])	no		
+the-body-s-systems-m45537-18	endocrine cell [CL:0000163] part of endocrine system [UBERON:0000949]	no		
+the-body-s-systems-m45537-180	epinephrine [CHEBI:33568] →+ process(contract [GO:0060048])	no		
+the-body-s-systems-m45537-181	epinephrine [CHEBI:33568] →+ amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])	no		
+the-body-s-systems-m45537-182	epinephrine [CHEBI:33568] →+ process(glycolysis ⊓ occurs in (skeletal muscle) [GO:0006096&BFO:0000066=(UBERON:0014892)])	no		
+the-body-s-systems-m45537-183	epinephrine [CHEBI:33568] →+ process(lipid catabolism ⊓ occurs in (adipose tissue) [GO:0016042&BFO:0000066=(UBERON:0001013)])	no		
+the-body-s-systems-m45537-191	pancreas [UBERON:0001264] has part endocrine cell [CL:0000163]	no		
+the-body-s-systems-m45537-192	endocrine cell [CL:0000163] part of pancreatic islet [UBERON:0000006]	no		
+the-body-s-systems-m45537-194	pancreatic alpha cell [CL:0000171] part of pancreatic islet [UBERON:0000006]	no		
+the-body-s-systems-m45537-195	pancreatic alpha cell [CL:0000171] produces glucagon [PR:P01275]	no		
+the-body-s-systems-m45537-196	pancreatic beta cell [CL:0000169] part of pancreatic islet [UBERON:0000006]	no		
+the-body-s-systems-m45537-197	pancreatic beta cell [CL:0000169] produces insulin [PR:000009054]	no		
+the-body-s-systems-m45537-199	glucose [CHEBI:17234] →− amount(glucagon ⊓ located in (blood) ⊓ part of (pancreatic alpha cell) [PR:P01275&RO:0001025=(UBERON:0000178)&BFO:0000050=(CL:0000171)])	no		
+the-body-s-systems-m45537-20	pancreas [UBERON:0001264] produces insulin [PR:000009054]	no		
+the-body-s-systems-m45537-200	glucose [CHEBI:17234] →+ amount(insulin ⊓ located in (blood) ⊓ part of (pancreatic beta cell) [PR:000009054&RO:0001025=(UBERON:0000178)&BFO:0000050=(CL:0000169)])	no		
+the-body-s-systems-m45537-201	glucagon [PR:P01275] →+ amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])	no		
+the-body-s-systems-m45537-202	insulin [PR:000009054] →+ process(glucose import [GO:0098708])	no		
+the-body-s-systems-m45537-204	gonad [UBERON:0000991] produces steroid hormones [CHEBI:26764]	no		
+the-body-s-systems-m45537-209	androgen [CHEBI:50113] →+ process(growth [GO:0040007])	no		
+the-body-s-systems-m45537-21	pancreas [UBERON:0001264] produces glucagon [PR:P01275]	no		
+the-body-s-systems-m45537-211	androgen [CHEBI:50113] →+ site(strand of hair [UBERON:0001037])	no		
+the-body-s-systems-m45537-212	ovary [UBERON:0000992] produces estrogen [CHEBI:50114]	no		
+the-body-s-systems-m45537-213	ovary [UBERON:0000992] produces progesterone [CHEBI:17026]	no		
+the-body-s-systems-m45537-214	estrogen [CHEBI:50114] →+ site(breast [UBERON:0000310])	no		
+the-body-s-systems-m45537-216	estrogen [CHEBI:50114] →+ site(uterus [UBERON:0000995])	no		
+the-body-s-systems-m45537-225	heart [UBERON:0000948] has part endocrine cell [CL:0000163]	no		
+the-body-s-systems-m45537-227	atrial natriuretic peptide [PR:P01160] →− phenotype(blood volume [OBA:0003648])	no		
+the-body-s-systems-m45537-228	atrial natriuretic peptide [PR:P01160] →− phenotype(blood pressure [OBA:VT0000183])	no		
+the-body-s-systems-m45537-229	atrial natriuretic peptide [PR:P01160] →− amount(sodium ion ⊓ located in (blood) [CHEBI:29101&RO:0001025=(UBERON:0000178)])	no		
+the-body-s-systems-m45537-230	digestive tract [UBERON:0001555] produces hormones [CHEBI:24621]	no		
+the-body-s-systems-m45537-232	endocrine cell [CL:0000163] located in mucosa [UBERON:0000344]	no		
+the-body-s-systems-m45537-233	hormones [CHEBI:24621] →+ amount(gastric digestive juices [UBERON:0001971])	no		
+the-body-s-systems-m45537-237	kidneys [UBERON:0002113] produces erythropoietin [PR:000007141]	no		
+the-body-s-systems-m45537-238	oxygen [CHEBI:15379] →− amount(erythropoietin [PR:000007141])	no		
+the-body-s-systems-m45537-24	adrenal gland [UBERON:0002369] produces epinephrine [CHEBI:33568]	no		
+the-body-s-systems-m45537-240	erythropoietin [PR:000007141] →+ process(erythropoiesis ⊓ occurs in (bone marrow) [GO:0030218&BFO:0000066=(UBERON:0002371)])	no		
+the-body-s-systems-m45537-248	thymus [UBERON:0002370] produces thymosin [PR:P06454]	no		
+the-body-s-systems-m45537-250	adipose tissue [UBERON:0001013] produces leptin [PR:000009758]	no		
+the-body-s-systems-m45537-251	food intake [GO:0042755] →+ amount(leptin [PR:000009758])	no		
+the-body-s-systems-m45537-257	anterior pituitary [UBERON:0002196] →+ amount(thyroid hormone ⊓ located in (thyroid gland) [CHEBI:60311&RO:0001025=(UBERON:0002046)])	no		
+the-body-s-systems-m45537-259	anterior pituitary [UBERON:0002196] →+ amount(triiodothyronine ⊓ located in (thyroid gland) [CHEBI:18258&RO:0001025=(UBERON:0002046)])	no		
+the-body-s-systems-m45537-27	thyroid gland [UBERON:0002046] produces thyroid hormone [CHEBI:60311]	no		
+the-body-s-systems-m45537-278	thyroid gland [UBERON:0002046] produces thyroxine [CHEBI:30660]	no		
+the-body-s-systems-m45537-279	thyroid gland [UBERON:0002046] produces triiodothyronine [CHEBI:18258]	no		
+the-body-s-systems-m45537-288	adrenal medulla [UBERON:0001236] part of adrenal gland [UBERON:0002369]	no		
+the-body-s-systems-m45537-293	pancreatic islet [UBERON:0000006] has part pancreatic alpha cell [CL:0000171]	no		
+the-body-s-systems-m45537-295	pancreatic islet [UBERON:0000006] has part pancreatic beta cell [CL:0000169]	no		
+the-body-s-systems-m45537-298	heart [UBERON:0000948] produces atrial natriuretic peptide [PR:P01160]	no		
+the-body-s-systems-m45537-306	testis [UBERON:0000473] produces testosterone [CHEBI:17347]	no		
+the-body-s-systems-m45537-309	leptin [PR:000009758] →+ process(sense of satiety or fullness [GO:0032098])	no		
+the-body-s-systems-m45537-319	exocrine gland [UBERON:0002365] has part duct [UBERON:0000058]	no		
+the-body-s-systems-m45537-32	sweat gland [UBERON:0001820] produces sweat [UBERON:0001089]	no		
+the-body-s-systems-m45537-334	glucose [CHEBI:17234] →+ amount(insulin ⊓ located in (blood) [PR:000009054&RO:0001025=(UBERON:0000178)])	no		
+the-body-s-systems-m45537-336	glucose [CHEBI:17234] →− amount(glucagon ⊓ located in (blood) [PR:P01275&RO:0001025=(UBERON:0000178)])	no		
+the-body-s-systems-m45537-36	pancreas [UBERON:0001264] produces pancreatic juices [UBERON:0000326]	no		
+the-body-s-systems-m45537-40	diabetes mellitus [MONDO:0005015] disease has location pancreas [UBERON:0001264]	no		
+the-body-s-systems-m45537-41	gigantism [MONDO:0020479] disease has location pituitary gland [UBERON:0000007]	no		
+the-body-s-systems-m45537-42	acromegaly [MONDO:0019933] disease has location pituitary gland [UBERON:0000007]	no		
+the-body-s-systems-m45537-43	pituitary dwarfism [MONDO:0006909] disease has location pituitary gland [UBERON:0000007]	no		
+the-body-s-systems-m45537-44	goiter [MONDO:0005397] disease has location thyroid gland [UBERON:0002046]	no		
+the-body-s-systems-m45537-45	Graves disease [MONDO:0005364] disease has location thyroid gland [UBERON:0002046]	no		
+the-body-s-systems-m45537-46	Cushing disease [MONDO:0009050] disease has location adrenal gland [UBERON:0002369]	no		
+the-body-s-systems-m45537-47	Addison disease [MONDO:0100480] disease has location adrenal gland [UBERON:0002369]	no		
+the-body-s-systems-m45537-52	glucose [CHEBI:17234] →+ amount(insulin [PR:000009054])	no		
+the-body-s-systems-m45537-53	insulin [PR:000009054] →− amount(glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)])	no		
+the-body-s-systems-m45537-6	endocrine cell [CL:0000163] part of endocrine gland [UBERON:0002368]	no		
+the-body-s-systems-m45537-96	pituitary gland [UBERON:0000007] located in brain [UBERON:0000955]	no		
+the-body-s-systems-m45537-97	pituitary gland [UBERON:0000007] attached to hypothalamus [UBERON:0001898]	no		
+the-body-s-systems-m45537-98	hypothalamus [UBERON:0001898] produces oxytocin [CHEBI:7872]	no		
+the-body-s-systems-m45537-99	hypothalamus [UBERON:0001898] produces antidiuretic hormone [CHEBI:34543]	no		
+the-body-s-systems-m45538-102	appendicular skeleton [UBERON:0002091] has part pelvic girdle [UBERON:0007832]	no		
+the-body-s-systems-m45538-105	pectoral girdle [UBERON:0007831] has part clavicle [UBERON:0001105]	no		
+the-body-s-systems-m45538-107	pectoral girdle [UBERON:0007831] has part scapula [UBERON:0006849]	no		
+the-body-s-systems-m45538-109	upper limb [UBERON:0002102] has part humerus [UBERON:0000976]	no		
+the-body-s-systems-m45538-110	upper limb [UBERON:0002102] has part forearm [UBERON:0002386]	no		
+the-body-s-systems-m45538-111	upper limb [UBERON:0002102] has part hand [UBERON:0002398]	no		
+the-body-s-systems-m45538-117	hand [UBERON:0002398] has part wrist [UBERON:0004452]	no		
+the-body-s-systems-m45538-12	arthritis [HP:0001369] disease has location joint [UBERON:0000982]	no		
+the-body-s-systems-m45538-129	lower limb [UBERON:0002103] has part thigh [UBERON:0000376]	no		
+the-body-s-systems-m45538-174	rheumatoid arthritis [MONDO:0008383] →+ phenotype(joint swelling [HP:0001386])	no		
+the-body-s-systems-m45538-175	rheumatoid arthritis [MONDO:0008383] →+ phenotype(joint stiffness [HP:0001387])	no		
+the-body-s-systems-m45538-176	rheumatoid arthritis [MONDO:0008383] →+ phenotype(Pain [HP:0012531])	no		
+the-body-s-systems-m45538-197	medications ⊓ in taxon (NCBITaxon:9606 ⊓ has modifier (rheumatoid arthritis)) [CHEBI:23888&RO:0002162=(NCBITaxon:9606&RO:0002573=(MONDO:0008383))] →− phenotype(Pain [HP:0012531])	no		
+the-body-s-systems-m45538-198	medications ⊓ in taxon (NCBITaxon:9606 ⊓ has modifier (rheumatoid arthritis)) [CHEBI:23888&RO:0002162=(NCBITaxon:9606&RO:0002573=(MONDO:0008383))] →− process(inflammation [GO:0006954])	no		
+the-body-s-systems-m45538-201	aspirin [CHEBI:15365] →− process(inflammation [GO:0006954])	no		
+the-body-s-systems-m45538-202	corticosteroid [CHEBI:50858] →− process(inflammation [GO:0006954])	no		
+the-body-s-systems-m45538-206	antirheumatic drug [CHEBI:35842] →− process(immune response [GO:0006955])	no		
+the-body-s-systems-m45538-207	antirheumatic drug [CHEBI:35842] →− process(inflammation [GO:0006954])	no		
+the-body-s-systems-m45538-208	antirheumatic drug [CHEBI:35842] →− amount(T cell [CL:0000084])	no		
+the-body-s-systems-m45538-209	T cell [CL:0000084] part of immune system [UBERON:0002405]	no		
+the-body-s-systems-m45538-210	muscle organ [UBERON:0001630] capable of locomotion [GO:0040011]	no		
+the-body-s-systems-m45538-211	muscle organ [UBERON:0001630] capable of Gas exchange [GO:0007585]	no		
+the-body-s-systems-m45538-212	muscle organ [UBERON:0001630] capable of digestion [GO:0007586]	no		
+the-body-s-systems-m45538-215	skeletal muscle [UBERON:0001134] part of skeletal muscle [UBERON:0014892]	no		
+the-body-s-systems-m45538-216	skeletal muscle [UBERON:0014892] attached to bone [UBERON:0001474]	no		
+the-body-s-systems-m45538-217	skeletal muscle [UBERON:0014892] capable of locomotion [GO:0040011]	no		
+the-body-s-systems-m45538-222	skeletal muscle fiber [CL:0008002] has part nucleus [GO:0005634]	no		
+the-body-s-systems-m45538-223	smooth muscles [UBERON:0001135] located in intestine [UBERON:0000160]	no		
+the-body-s-systems-m45538-224	smooth muscles [UBERON:0001135] located in respiratory tract [UBERON:0000065]	no		
+the-body-s-systems-m45538-228	smooth muscle cells [CL:0000192] has part nucleus [GO:0005634]	no		
+the-body-s-systems-m45538-229	heart muscle [UBERON:0001133] located in heart [UBERON:0000948]	no		
+the-body-s-systems-m45538-230	contract [GO:0060048] →+ process(blood flow [GO:0008015])	no		
+the-body-s-systems-m45538-231	contract [GO:0060048] →+ phenotype(blood pressure [OBA:VT0000183])	no		
+the-body-s-systems-m45538-238	skeletal muscle fiber [CL:0008002] has part myofibril [GO:0030016]	no		
+the-body-s-systems-m45538-241	myofibril [GO:0030016] attached to sarcolemma [GO:0042383]	no		
+the-body-s-systems-m45538-245	myofibril [GO:0030016] has part myofilament [GO:0036379]	no		
+the-body-s-systems-m45538-247	thick filament [GO:0032982] has part contractile muscle proteins [GO:0016459]	no		
+the-body-s-systems-m45538-248	microfilaments [GO:0005884] has part actin [PR:P68133]	no		
+the-body-s-systems-m45538-249	thick filament [GO:0032982] part of sarcomere [GO:0030017]	yes	isaInherit	thick filament [GO:0032982] part of sarcomere [GO:0030017]   (isaInherit) |   thick filament [GO:0032982] is_a myofilament [GO:0036379]   [the-body-s-systems-m45538-246] |   myofilament [GO:0036379] part of sarcomere [GO:0030017]   [the-body-s-systems-m45538-293]
+the-body-s-systems-m45538-251	neuron [CL:0000540] →+ process(muscle contraction ⊓ occurs in (skeletal muscle fiber) [GO:0006936&BFO:0000066=(CL:0008002)])	no		
+the-body-s-systems-m45538-255	contractile muscle proteins [GO:0016459] interacts with actin [PR:P68133]	no		
+the-body-s-systems-m45538-263	muscle cell contraction [GO:0006936] has input ATP [CHEBI:15422]	no		
+the-body-s-systems-m45538-266	skeleton [UBERON:0004288] has part axial skeleton [UBERON:0005944]	no		
+the-body-s-systems-m45538-27	skeletal system [UBERON:0001434] has part axial skeleton [UBERON:0005944]	no		
+the-body-s-systems-m45538-271	hyoid bone [UBERON:0001685] located in neck [UBERON:0000974]	no		
+the-body-s-systems-m45538-273	vertebral column [UBERON:0001130] surrounds spinal cord [UBERON:0002240]	no		
+the-body-s-systems-m45538-275	rib cage [UBERON:0003252] has part sternum [UBERON:0000975]	no		
+the-body-s-systems-m45538-279	pelvic girdle [UBERON:0007832] connects lower limb [UBERON:0002103]	no		
+the-body-s-systems-m45538-28	axial skeleton [UBERON:0005944] has part skull [UBERON:0003129]	no		
+the-body-s-systems-m45538-282	fibrous joint [UBERON:0002209] has part connective tissue [UBERON:0002384]	no		
+the-body-s-systems-m45538-29	appendicular skeleton [UBERON:0002091] has part limb bone [UBERON:0002428]	no		
+the-body-s-systems-m45538-290	muscle organ [UBERON:0001630] has part muscle cells [CL:0000187]	no		
+the-body-s-systems-m45538-291	muscle cells [CL:0000187] has part myofilament [GO:0036379]	no		
+the-body-s-systems-m45538-292	myofilament [GO:0036379] has part actin [PR:P68133]	no		
+the-body-s-systems-m45538-293	myofilament [GO:0036379] part of sarcomere [GO:0030017]	no		
+the-body-s-systems-m45538-304	lower limb [UBERON:0002103] capable of locomotion [GO:0040011]	no		
+the-body-s-systems-m45538-305	auditory ossicle [UBERON:0001686] part of middle ear [UBERON:0001756]	no		
+the-body-s-systems-m45538-314	myofilament [GO:0036379] part of myofibril [GO:0030016]	no		
+the-body-s-systems-m45538-317	sarcolemma [GO:0042383] part of skeletal muscle fiber [CL:0008002]	no		
+the-body-s-systems-m45538-318	sarcomere [GO:0030017] part of skeletal muscle [UBERON:0001134]	no		
+the-body-s-systems-m45538-33	axial skeleton [UBERON:0005944] has part auditory ossicle [UBERON:0001686]	no		
+the-body-s-systems-m45538-34	axial skeleton [UBERON:0005944] has part hyoid bone [UBERON:0001685]	no		
+the-body-s-systems-m45538-35	axial skeleton [UBERON:0005944] has part vertebral column [UBERON:0001130]	no		
+the-body-s-systems-m45538-36	axial skeleton [UBERON:0005944] has part rib cage [UBERON:0003252]	no		
+the-body-s-systems-m45538-39	skull [UBERON:0003129] has part cranial bone [UBERON:0004766]	no		
+the-body-s-systems-m45538-40	skull [UBERON:0003129] has part facial bone [UBERON:0003462]	no		
+the-body-s-systems-m45538-67	vertebral column [UBERON:0001130] has part sacrum [UBERON:0003690]	no		
+the-body-s-systems-m45538-68	vertebral column [UBERON:0001130] has part coccyx [UBERON:0001350]	no		
+the-body-s-systems-m45538-69	vertebra [UBERON:0002412] has part spinal canal [UBERON:0006692]	no		
+the-body-s-systems-m45538-70	spinal cord [UBERON:0002240] located in spinal canal [UBERON:0006692]	no		
+the-body-s-systems-m45538-77	intervertebral disc [UBERON:0001066] has part fibrocartilage [UBERON:0001995]	no		
+the-body-s-systems-m45538-79	intervertebral disc [UBERON:0001066] part of joint [UBERON:0000982]	no		
+the-body-s-systems-m45538-82	rib cage [UBERON:0003252] has part rib [UBERON:0002228]	no		
+the-body-s-systems-m45538-96	rib [UBERON:0002228] part of rib cage [UBERON:0003252]	no		
+the-body-s-systems-m45538-98	appendicular skeleton [UBERON:0002091] has part upper limb [UBERON:0002102]	no		
+the-body-s-systems-m45538-99	appendicular skeleton [UBERON:0002091] has part pectoral girdle [UBERON:0007831]	no		
+the-body-s-systems-m45539-106	action potential [GO:0001508] →+ process(neurotransmitter secretion [GO:0007269])	no		
+the-body-s-systems-m45539-110	axon [GO:0030424] surrounded by myelin sheath [GO:0043209]	no		
+the-body-s-systems-m45539-114	glial cell [CL:0000125] produces myelin sheath [GO:0043209]	no		
+the-body-s-systems-m45539-115	axon [GO:0030424] has part node of Ranvier [GO:0033268]	no		
+the-body-s-systems-m45539-124	learning ⊓ in taxon (Passeriformes) [GO:0007612&RO:0002162=(NCBITaxon:9126)] →+ process(neurogenesis [GO:0022008])	no		
+the-body-s-systems-m45539-126	neuron ⊓ in taxon (Mammalia) [CL:0000540&RO:0002162=(NCBITaxon:40674)] →+ process(learning [GO:0007612])	no		
+the-body-s-systems-m45539-128	hippocampus [UBERON:0002421] capable of learning [GO:0007612]	no		
+the-body-s-systems-m45539-133	response to stress [GO:0006950] →− process(neurogenesis ⊓ occurs in (hippocampus) [GO:0022008&BFO:0000066=(UBERON:0002421)])	no		
+the-body-s-systems-m45539-144	glial cell [CL:0000125] →+ process(neural development [GO:0007399])	no		
+the-body-s-systems-m45539-145	glial cell [CL:0000125] →− amount(ions [CHEBI:24870])	no		
+the-body-s-systems-m45539-152	synaptic cleft [GO:0043083] adjacent to postsynaptic membrane [GO:0045211]	no		
+the-body-s-systems-m45539-154	synaptic vesicle [GO:0008021] has part neurotransmitters [CHEBI:25512]	no		
+the-body-s-systems-m45539-158	ligand-gated ion channel activity [GO:0015276] →+ amount(sodium [CHEBI:29101])	no		
+the-body-s-systems-m45539-162	central nervous system [UBERON:0001017] has part brain [UBERON:0000955]	no		
+the-body-s-systems-m45539-163	central nervous system [UBERON:0001017] surrounded by meninges [UBERON:0002360]	no		
+the-body-s-systems-m45539-165	dura mater [UBERON:0002363] part of meninges [UBERON:0002360]	no		
+the-body-s-systems-m45539-166	arachnoid mater [UBERON:0002362] part of meninges [UBERON:0002360]	no		
+the-body-s-systems-m45539-167	pia mater [UBERON:0002361] part of meninges [UBERON:0002360]	no		
+the-body-s-systems-m45539-168	pia mater [UBERON:0002361] surrounds brain [UBERON:0000955]	no		
+the-body-s-systems-m45539-171	brain [UBERON:0000955] surrounded by cerebrospinal fluid [UBERON:0001359]	no		
+the-body-s-systems-m45539-173	brain [UBERON:0000955] part of central nervous system [UBERON:0001017]	no		
+the-body-s-systems-m45539-174	brain [UBERON:0000955] has part cerebral cortex [UBERON:0000956]	no		
+the-body-s-systems-m45539-175	brain [UBERON:0000955] has part limbic system [UBERON:0000349]	no		
+the-body-s-systems-m45539-176	brain [UBERON:0000955] has part basal ganglia [UBERON:0002420]	no		
+the-body-s-systems-m45539-177	brain [UBERON:0000955] has part thalamus [UBERON:0001897]	no		
+the-body-s-systems-m45539-178	brain [UBERON:0000955] has part hypothalamus [UBERON:0001898]	no		
+the-body-s-systems-m45539-179	brain [UBERON:0000955] has part cerebellum [UBERON:0002037]	no		
+the-body-s-systems-m45539-180	brain [UBERON:0000955] has part brainstem [UBERON:0002298]	no		
+the-body-s-systems-m45539-181	brain [UBERON:0000955] has part retina [UBERON:0000966]	no		
+the-body-s-systems-m45539-182	cerebral cortex [UBERON:0000956] part of brain [UBERON:0000955]	no		
+the-body-s-systems-m45539-183	cerebral cortex [UBERON:0000956] part of cerebral hemisphere [UBERON:0001869]	no		
+the-body-s-systems-m45539-184	corpus callosum [UBERON:0002336] connects cerebral hemisphere [UBERON:0001869]	no		
+the-body-s-systems-m45539-199	cerebral hemisphere [UBERON:0001869] has part cerebral lobe [UBERON:0016526]	no		
+the-body-s-systems-m45539-2	visual system [UBERON:0002104] capable of vision [GO:0007601]	no		
+the-body-s-systems-m45539-20	ganglion ⊓ in taxon (Platyhelminthes) [UBERON:0000045&RO:0002162=(NCBITaxon:6157)] part of central nervous system [UBERON:0001017]	no		
+the-body-s-systems-m45539-201	frontal lobe ⊓ in taxon (Mammalia) [UBERON:0016525&RO:0002162=(NCBITaxon:40674)] part of cerebral cortex [UBERON:0000956]	yes	isaInherit	frontal lobe ⊓ in taxon (Mammalia) [UBERON:0016525&RO:0002162=(NCBITaxon:40674)] part of cerebral cortex [UBERON:0000956]   (isaInherit) |   frontal lobe ⊓ in taxon (Mammalia) [UBERON:0016525&RO:0002162=(NCBITaxon:40674)] is_a frontal lobe [UBERON:0016525]   [refine:UBERON:0016525&RO:0002162=(NCBITaxon:40674)] |   frontal lobe [UBERON:0016525] part of cerebral cortex [UBERON:0000956]   [the-body-s-systems-m45539-395]
+the-body-s-systems-m45539-202	frontal lobe [UBERON:0016525] part of brain [UBERON:0000955]	yes	relTrans	frontal lobe [UBERON:0016525] part of brain [UBERON:0000955]   (relTrans) |   frontal lobe [UBERON:0016525] part of cerebral cortex [UBERON:0000956]   [the-body-s-systems-m45539-395] |   cerebral cortex [UBERON:0000956] part of brain [UBERON:0000955]   [the-body-s-systems-m45539-182]
+the-body-s-systems-m45539-203	frontal lobe [UBERON:0016525] has part olfactory bulb [UBERON:0002264]	no		
+the-body-s-systems-m45539-204	olfactory bulb [UBERON:0002264] capable of olfaction [GO:0007608]	no		
+the-body-s-systems-m45539-205	frontal lobe [UBERON:0016525] has part motor cortex [UBERON:0001384]	no		
+the-body-s-systems-m45539-206	motor cortex [UBERON:0001384] capable of motor function [GO:0061744]	no		
+the-body-s-systems-m45539-21	ganglion [UBERON:0000045] has part neuron [CL:0000540]	no		
+the-body-s-systems-m45539-210	parietal lobe [UBERON:0001872] part of brain [UBERON:0000955]	yes	relTrans	parietal lobe [UBERON:0001872] part of brain [UBERON:0000955]   (relTrans) |   parietal lobe [UBERON:0001872] part of cerebral cortex [UBERON:0000956]   [the-body-s-systems-m45539-407] |   cerebral cortex [UBERON:0000956] part of brain [UBERON:0000955]   [the-body-s-systems-m45539-182]
+the-body-s-systems-m45539-212	parietal lobe [UBERON:0001872] capable of somatosensation [GO:0050975]	no		
+the-body-s-systems-m45539-213	parietal lobe [UBERON:0001872] capable of proprioception [GO:0019230]	no		
+the-body-s-systems-m45539-215	parietal lobe [UBERON:0001872] has part somatosensory cortex [UBERON:0008930]	no		
+the-body-s-systems-m45539-216	occipital lobe [UBERON:0002021] part of brain [UBERON:0000955]	yes	relTrans	occipital lobe [UBERON:0002021] part of brain [UBERON:0000955]   (relTrans) |   occipital lobe [UBERON:0002021] part of cerebral cortex [UBERON:0000956]   [the-body-s-systems-m45539-405] |   cerebral cortex [UBERON:0000956] part of brain [UBERON:0000955]   [the-body-s-systems-m45539-182]
+the-body-s-systems-m45539-217	occipital lobe [UBERON:0002021] capable of vision [GO:0007601]	no		
+the-body-s-systems-m45539-218	temporal lobe [UBERON:0001871] part of brain [UBERON:0000955]	yes	relTrans	temporal lobe [UBERON:0001871] part of brain [UBERON:0000955]   (relTrans) |   temporal lobe [UBERON:0001871] part of cerebral cortex [UBERON:0000956]   [the-body-s-systems-m45539-414] |   cerebral cortex [UBERON:0000956] part of brain [UBERON:0000955]   [the-body-s-systems-m45539-182]
+the-body-s-systems-m45539-219	temporal lobe [UBERON:0001871] capable of hearing [GO:0007605]	no		
+the-body-s-systems-m45539-22	peripheral nervous system [UBERON:0000010] in taxon Platyhelminthes [NCBITaxon:6157]	no		
+the-body-s-systems-m45539-220	temporal lobe [UBERON:0001871] has part hippocampus [UBERON:0002421]	no		
+the-body-s-systems-m45539-221	hippocampus [UBERON:0002421] capable of memory [GO:0007613]	no		
+the-body-s-systems-m45539-226	basal ganglia [UBERON:0002420] part of brain [UBERON:0000955]	no		
+the-body-s-systems-m45539-227	basal ganglia [UBERON:0002420] capable of motor function [GO:0061744]	no		
+the-body-s-systems-m45539-24	brain ⊓ in taxon (Insecta) [UBERON:0000955&RO:0002162=(NCBITaxon:50557)] part of nervous tissue [UBERON:0001016]	no		
+the-body-s-systems-m45539-242	limbic system [UBERON:0000349] capable of memory [GO:0007613]	no		
+the-body-s-systems-m45539-243	limbic system [UBERON:0000349] overlaps thalamus [UBERON:0001897]	no		
+the-body-s-systems-m45539-244	amygdala [UBERON:0001876] part of limbic system [UBERON:0000349]	no		
+the-body-s-systems-m45539-245	amygdala [UBERON:0001876] part of temporal lobe [UBERON:0001871]	no		
+the-body-s-systems-m45539-247	amygdala [UBERON:0001876] capable of fear response [GO:0042596]	no		
+the-body-s-systems-m45539-249	cerebellum [UBERON:0002037] part of brain [UBERON:0000955]	no		
+the-body-s-systems-m45539-251	cerebellum [UBERON:0002037] capable of motor coordination [GO:0050885]	no		
+the-body-s-systems-m45539-253	cerebellum [UBERON:0002037] capable of learning [GO:0007612]	no		
+the-body-s-systems-m45539-256	brainstem [UBERON:0002298] connects brain [UBERON:0000955]	no		
+the-body-s-systems-m45539-263	spinal cord [UBERON:0002240] connected to brainstem [UBERON:0002298]	no		
+the-body-s-systems-m45539-264	spinal cord [UBERON:0002240] located in vertebral column [UBERON:0001130]	no		
+the-body-s-systems-m45539-268	spinal cord [UBERON:0002240] connected to spinal nerve [UBERON:0001780]	no		
+the-body-s-systems-m45539-269	spinal nerve [UBERON:0001780] part of peripheral nervous system [UBERON:0000010]	no		
+the-body-s-systems-m45539-27	brain ⊓ in taxon (Vertebrata) [UBERON:0000955&RO:0002162=(NCBITaxon:7742)] part of central nervous system [UBERON:0001017]	yes	isaInherit	brain ⊓ in taxon (Vertebrata) [UBERON:0000955&RO:0002162=(NCBITaxon:7742)] part of central nervous system [UBERON:0001017]   (isaInherit) |   brain ⊓ in taxon (Vertebrata) [UBERON:0000955&RO:0002162=(NCBITaxon:7742)] is_a brain [UBERON:0000955]   [refine:UBERON:0000955&RO:0002162=(NCBITaxon:7742)] |   brain [UBERON:0000955] part of central nervous system [UBERON:0001017]   [the-body-s-systems-m45539-173]
+the-body-s-systems-m45539-271	axon ⊓ located in (spinal cord) [GO:0030424&RO:0001025=(UBERON:0002240)] part of white matter [UBERON:0002316]	no		
+the-body-s-systems-m45539-272	neuronal cell body [GO:0043025] part of gray matter [UBERON:0002020]	no		
+the-body-s-systems-m45539-28	peripheral nervous system ⊓ in taxon (Vertebrata) [UBERON:0000010&RO:0002162=(NCBITaxon:7742)] has part nerve [UBERON:0001021]	no		
+the-body-s-systems-m45539-281	peripheral nervous system [UBERON:0000010] connected to central nervous system [UBERON:0001017]	no		
+the-body-s-systems-m45539-282	peripheral nervous system [UBERON:0000010] has part autonomic nervous system [UBERON:0002410]	no		
+the-body-s-systems-m45539-286	autonomic nervous system [UBERON:0002410] connected to central nervous system [UBERON:0001017]	no		
+the-body-s-systems-m45539-295	autonomic nervous system [UBERON:0002410] has part sympathetic nervous system [UBERON:0000013]	no		
+the-body-s-systems-m45539-297	sympathetic nervous system [UBERON:0000013] capable of response to stress [GO:0006950]	no		
+the-body-s-systems-m45539-299	sympathetic nervous system [UBERON:0000013] →+ phenotype(heart rate [OBA:1001087])	no		
+the-body-s-systems-m45539-300	sympathetic nervous system [UBERON:0000013] →− process(digestion [GO:0007586])	no		
+the-body-s-systems-m45539-303	parasympathetic [UBERON:0000011] capable of digestion [GO:0007586]	no		
+the-body-s-systems-m45539-305	neuronal cell body [GO:0043025] located in brainstem [UBERON:0002298]	no		
+the-body-s-systems-m45539-306	parasympathetic [UBERON:0000011] →− phenotype(heart rate [OBA:1001087])	no		
+the-body-s-systems-m45539-307	parasympathetic [UBERON:0000011] →− phenotype(blood pressure [OBA:VT0000183])	no		
+the-body-s-systems-m45539-308	parasympathetic [UBERON:0000011] →+ process(digestion [GO:0007586])	no		
+the-body-s-systems-m45539-310	somatic nervous system [UBERON:0000012] has part cranial nerve [UBERON:0001785]	no		
+the-body-s-systems-m45539-311	somatic nervous system [UBERON:0000012] has part sensory nerves [CL:0000101]	no		
+the-body-s-systems-m45539-314	motor neuron [CL:0000100] →+ process(muscle cell contraction [GO:0006936])	no		
+the-body-s-systems-m45539-32	nervous tissue [UBERON:0001016] has part neuron [CL:0000540]	no		
+the-body-s-systems-m45539-325	glial cell [CL:0000125] part of nervous tissue [UBERON:0001016]	no		
+the-body-s-systems-m45539-332	brain [UBERON:0000955] surrounded by meninges [UBERON:0002360]	no		
+the-body-s-systems-m45539-334	cerebral cortex ⊓ in taxon (Mammalia) [UBERON:0000956&RO:0002162=(NCBITaxon:40674)] part of brain [UBERON:0000955]	yes	isaInherit	cerebral cortex ⊓ in taxon (Mammalia) [UBERON:0000956&RO:0002162=(NCBITaxon:40674)] part of brain [UBERON:0000955]   (isaInherit) |   cerebral cortex ⊓ in taxon (Mammalia) [UBERON:0000956&RO:0002162=(NCBITaxon:40674)] is_a cerebral cortex [UBERON:0000956]   [refine:UBERON:0000956&RO:0002162=(NCBITaxon:40674)] |   cerebral cortex [UBERON:0000956] part of brain [UBERON:0000955]   [the-body-s-systems-m45539-182]
+the-body-s-systems-m45539-338	spinal cord [UBERON:0002240] connected to brain [UBERON:0000955]	no		
+the-body-s-systems-m45539-355	neuron [CL:0000540] has part nucleus [GO:0005634]	yes	relTrans	neuron [CL:0000540] has part nucleus [GO:0005634]   (relTrans) |   neuron [CL:0000540] has part neuronal cell body [GO:0043025]   [the-body-s-systems-m45539-45] |   neuronal cell body [GO:0043025] has part nucleus [GO:0005634]   [the-body-s-systems-m45539-46]
+the-body-s-systems-m45539-356	neuron [CL:0000540] has part Mitochondria [GO:0005739]	yes	relTrans	neuron [CL:0000540] has part Mitochondria [GO:0005739]   (relTrans) |   neuron [CL:0000540] has part neuronal cell body [GO:0043025]   [the-body-s-systems-m45539-45] |   neuronal cell body [GO:0043025] has part Mitochondria [GO:0005739]   [the-body-s-systems-m45539-49]
+the-body-s-systems-m45539-358	neuron [CL:0000540] has part axon [GO:0030424]	no		
+the-body-s-systems-m45539-368	neuronal cell body [GO:0043025] located in sympathetic ganglion [UBERON:0001806]	no		
+the-body-s-systems-m45539-371	sympathetic nervous system [UBERON:0000013] →+ phenotype(blood pressure [OBA:VT0000183])	no		
+the-body-s-systems-m45539-373	sympathetic nervous system [UBERON:0000013] →− process(blood circulation ⊓ occurs in (skin) [GO:0008015&BFO:0000066=(UBERON:0002097)])	no		
+the-body-s-systems-m45539-377	parasympathetic [UBERON:0000011] →+ process(blood circulation ⊓ occurs in (skin) [GO:0008015&BFO:0000066=(UBERON:0002097)])	no		
+the-body-s-systems-m45539-384	autonomic nervous system [UBERON:0002410] part of peripheral nervous system [UBERON:0000010]	no		
+the-body-s-systems-m45539-387	brainstem [UBERON:0002298] part of brain [UBERON:0000955]	no		
+the-body-s-systems-m45539-395	frontal lobe [UBERON:0016525] part of cerebral cortex [UBERON:0000956]	no		
+the-body-s-systems-m45539-397	hippocampus [UBERON:0002421] part of temporal lobe [UBERON:0001871]	no		
+the-body-s-systems-m45539-398	hypothalamus [UBERON:0001898] part of brain [UBERON:0000955]	no		
+the-body-s-systems-m45539-399	limbic system [UBERON:0000349] part of brain [UBERON:0000955]	no		
+the-body-s-systems-m45539-401	meninges [UBERON:0002360] surrounds central nervous system [UBERON:0001017]	no		
+the-body-s-systems-m45539-405	occipital lobe [UBERON:0002021] part of cerebral cortex [UBERON:0000956]	no		
+the-body-s-systems-m45539-406	parasympathetic [UBERON:0000011] part of autonomic nervous system [UBERON:0002410]	no		
+the-body-s-systems-m45539-407	parietal lobe [UBERON:0001872] part of cerebral cortex [UBERON:0000956]	no		
+the-body-s-systems-m45539-409	somatic nervous system [UBERON:0000012] has part nerve [UBERON:0001021]	no		
+the-body-s-systems-m45539-411	sympathetic nervous system [UBERON:0000013] part of autonomic nervous system [UBERON:0002410]	no		
+the-body-s-systems-m45539-414	temporal lobe [UBERON:0001871] part of cerebral cortex [UBERON:0000956]	no		
+the-body-s-systems-m45539-415	thalamus [UBERON:0001897] part of brain [UBERON:0000955]	no		
+the-body-s-systems-m45539-45	neuron [CL:0000540] has part neuronal cell body [GO:0043025]	no		
+the-body-s-systems-m45539-46	neuronal cell body [GO:0043025] has part nucleus [GO:0005634]	no		
+the-body-s-systems-m45539-47	neuronal cell body [GO:0043025] has part smooth endoplasmic reticulum [GO:0005790]	no		
+the-body-s-systems-m45539-48	neuronal cell body [GO:0043025] has part Golgi apparatus [GO:0005794]	no		
+the-body-s-systems-m45539-49	neuronal cell body [GO:0043025] has part Mitochondria [GO:0005739]	no		
+the-body-s-systems-m45539-50	neuron [CL:0000540] has part dendrite [GO:0030425]	no		
+the-body-s-systems-m45539-51	dendrite [GO:0030425] part of neuron [CL:0000540]	no		
+the-body-s-systems-m45539-57	ion channel [GO:0034702] part of plasma membrane [GO:0005886]	no		
+the-body-s-systems-m45539-65	ion channel [GO:0034702] →+ process(resting membrane potential [GO:0060075])	no		
+the-body-s-systems-m45539-67	sodium:potassium-exchanging ATPase [GO:0005890] part of plasma membrane [GO:0005886]	no		
+the-body-s-systems-m45539-76	membrane depolarization [GO:0051899] →+ activity(voltage-gated sodium channel activity [GO:0005248])	no		
+the-body-s-systems-m45539-80	neurotransmitters [CHEBI:25512] →+ activity(ion channel activity [GO:0005216])	no		
+the-body-s-systems-m45539-82	ion channel activity [GO:0005216] →+ amount(sodium ion ⊓ part of (neuron) [CHEBI:29101&BFO:0000050=(CL:0000540)])	no		
+the-body-s-systems-m45539-83	sodium [CHEBI:29101] →+ process(membrane depolarization [GO:0051899])	no		
+the-body-s-systems-m45539-90	voltage-gated sodium channel activity [GO:0005248] →+ amount(sodium [CHEBI:29101])	no		
+the-body-s-systems-m45539-95	membrane depolarization [GO:0051899] →+ activity(voltage-gated potassium channel activity [GO:0005249])	no		
+the-body-s-systems-m45539-97	potassium [CHEBI:29103] →+ process(membrane repolarization [GO:0086009])	no		
+the-cellular-basis-of-inheritance-m45464-15	meiotic cell cycle [GO:0051321] has output haploid cell [CL:0000413]	no		
+the-cellular-basis-of-inheritance-m45464-16	haploid cell [CL:0000413] participates in sexual reproduction [GO:0019953]	no		
+the-cellular-basis-of-inheritance-m45465-110	meiotic cell cycle [GO:0051321] part of sexual reproduction [GO:0019953]	no		
+the-cellular-basis-of-inheritance-m45465-111	meiotic cell cycle [GO:0051321] →+ phenotype(haploid [PATO:0001375])	no		
+the-cellular-basis-of-inheritance-m45465-118	germ cell [CL:0000586] produces gametes [CL:0000300]	no		
+the-cellular-basis-of-inheritance-m45465-14	organism ⊓ in taxon (cellular organisms ⊓ has modifier (member of an asexual population)) [NCBITaxon:131567&RO:0002162=(NCBITaxon:131567&RO:0002573=(BLN:member_of_asexual_population))] capable of reproduction [GO:0022414]	no		
+the-cellular-basis-of-inheritance-m45465-39	bats ⊓ in taxon (bats) [NCBITaxon:9397&RO:0002162=(NCBITaxon:9397)] capable of echolocation [GO:0050959]	no		
+the-cellular-basis-of-inheritance-m45465-40	moths ⊓ in taxon (moths) [NCBITaxon:7088&RO:0002162=(NCBITaxon:7088)] has part ear [UBERON:0001690]	no		
+the-cellular-basis-of-inheritance-m45465-46	moths ⊓ in taxon (bats) [NCBITaxon:7088&RO:0002162=(NCBITaxon:9397)] →− process(echolocation [GO:0050959])	no		
+the-cellular-basis-of-inheritance-m45465-56	meiotic cell cycle [GO:0051321] →− phenotype(ploidy [PATO:0001374])	no		
+the-cellular-basis-of-inheritance-m45465-57	fertilization [GO:0009566] has input gametes [CL:0000300]	no		
+the-cellular-basis-of-inheritance-m45465-58	fertilization [GO:0009566] →+ phenotype(diploid [PATO:0001394])	no		
+the-cellular-basis-of-inheritance-m45465-68	gamete ⊓ in taxon (animals) [CL:0000300&RO:0002162=(NCBITaxon:33208)] develops from germ cell [CL:0000586]	no		
+the-cellular-basis-of-inheritance-m45465-81	gametophyte ⊓ in taxon (NCBITaxon:3193) [PO:0028003&RO:0002162=(NCBITaxon:3193)] produces gametes [CL:0000300]	no		
+the-cellular-basis-of-inheritance-m45465-84	fertilization [GO:0009566] has output zygote [CL:0010017]	no		
+the-cellular-basis-of-inheritance-m45465-86	meiosis ⊓ in taxon (NCBITaxon:3193) [GO:0051321&RO:0002162=(NCBITaxon:3193)] has output spore [PO:0025017]	no		
+the-cellular-basis-of-inheritance-m45465-91	meiotic cell cycle [GO:0051321] has output gametes [CL:0000300]	no		
+the-cellular-basis-of-inheritance-m45466-1	sexual reproduction [GO:0019953] has part fertilization [GO:0009566]	no		
+the-cellular-basis-of-inheritance-m45466-106	cytokinesis ⊓ in taxon (animal cells) [GO:0000910&RO:0002162=(NCBITaxon:33208)] has part cleavage furrow [GO:0032154]	no		
+the-cellular-basis-of-inheritance-m45466-107	cytokinesis ⊓ in taxon (plants) [GO:0000910&RO:0002162=(NCBITaxon:3193)] has part cell plate [GO:0009504]	no		
+the-cellular-basis-of-inheritance-m45466-113	meiosis II [GO:0007135] has output haploid cell [CL:0000413]	no		
+the-cellular-basis-of-inheritance-m45466-122	spindle assembly [GO:0051225] happens during prophase II [GO:0007136]	no		
+the-cellular-basis-of-inheritance-m45466-126	kinetochore [GO:0000776] attached to microtubule [GO:0005874]	no		
+the-cellular-basis-of-inheritance-m45466-129	meiotic sister chromatid segregation [GO:0045144] happens during anaphase II [GO:0007138]	no		
+the-cellular-basis-of-inheritance-m45466-132	nuclear envelope reformation [GO:0031468] happens during telophase II [GO:0007139]	no		
+the-cellular-basis-of-inheritance-m45466-133	cytoplasmic contents are separated [GO:0000910] has output haploid cell [CL:0000413]	no		
+the-cellular-basis-of-inheritance-m45466-147	synapsis [GO:0007129] happens during meiosis I [GO:0007127]	no		
+the-cellular-basis-of-inheritance-m45466-148	crossing over [GO:0007131] happens during meiosis I [GO:0007127]	no		
+the-cellular-basis-of-inheritance-m45466-151	homologous chromosome segregation [GO:0045143] happens during meiosis I [GO:0007127]	no		
+the-cellular-basis-of-inheritance-m45466-165	meiosis ⊓ in taxon (animals) [GO:0051321&RO:0002162=(NCBITaxon:33208)] part of sexual reproduction [GO:0019953]	yes	isaInherit	meiosis ⊓ in taxon (animals) [GO:0051321&RO:0002162=(NCBITaxon:33208)] part of sexual reproduction [GO:0019953]   (isaInherit) |   meiosis ⊓ in taxon (animals) [GO:0051321&RO:0002162=(NCBITaxon:33208)] is_a meiotic cell cycle [GO:0051321]   [refine:GO:0051321&RO:0002162=(NCBITaxon:33208)] |   meiotic cell cycle [GO:0051321] part of sexual reproduction [GO:0019953]   [the-cellular-basis-of-inheritance-m45465-110]
+the-cellular-basis-of-inheritance-m45466-17	haploid cell ⊓ in taxon (animals) [CL:0000413&RO:0002162=(NCBITaxon:33208)] located in gametes [CL:0000300]	no		
+the-cellular-basis-of-inheritance-m45466-18	fertilization [GO:0009566] has output diploid cell [CL:0000415]	no		
+the-cellular-basis-of-inheritance-m45466-181	homologous chromosome segregation [GO:0045143] →− phenotype(ploidy [PATO:0001374])	no		
+the-cellular-basis-of-inheritance-m45466-2	fertilization [GO:0009566] has input cells [CL:0000000]	no		
+the-cellular-basis-of-inheritance-m45466-202	meiosis I [GO:0007127] →− phenotype(ploidy [PATO:0001374])	no		
+the-cellular-basis-of-inheritance-m45466-203	chiasma [GO:0005712] output of crossing over [GO:0007131]	no		
+the-cellular-basis-of-inheritance-m45466-206	fertilization [GO:0009566] has input haploid cell [CL:0000413]	no		
+the-cellular-basis-of-inheritance-m45466-209	meiosis I [GO:0007127] part of meiotic cell cycle [GO:0051321]	no		
+the-cellular-basis-of-inheritance-m45466-21	mitotic nuclear division [GO:0140014] part of mitotic cell cycle [GO:0000278]	no		
+the-cellular-basis-of-inheritance-m45466-210	meiosis I [GO:0007127] has output haploid cell [CL:0000413]	no		
+the-cellular-basis-of-inheritance-m45466-211	meiosis II [GO:0007135] part of meiotic cell cycle [GO:0051321]	no		
+the-cellular-basis-of-inheritance-m45466-212	meiotic sister chromatid segregation [GO:0045144] happens during meiosis II [GO:0007135]	no		
+the-cellular-basis-of-inheritance-m45466-218	synapsis [GO:0007129] happens during prophase I [GO:0007128]	no		
+the-cellular-basis-of-inheritance-m45466-22	mitotic nuclear division [GO:0140014] has output nucleus [GO:0005634]	no		
+the-cellular-basis-of-inheritance-m45466-26	meiotic cell cycle [GO:0051321] has input nucleus [GO:0005634]	no		
+the-cellular-basis-of-inheritance-m45466-27	meiotic cell cycle [GO:0051321] has output nucleus [GO:0005634]	no		
+the-cellular-basis-of-inheritance-m45466-32	meiosis I [GO:0007127] has part prophase I [GO:0007128]	no		
+the-cellular-basis-of-inheritance-m45466-36	meiosis II [GO:0007135] has part prophase II [GO:0007136]	no		
+the-cellular-basis-of-inheritance-m45466-40	G1 [GO:0051318] has part growth [GO:0016049]	no		
+the-cellular-basis-of-inheritance-m45466-41	S phase [GO:0051320] has part DNA replication [GO:0006260]	no		
+the-cellular-basis-of-inheritance-m45466-50	nuclear envelope breakdown [GO:0051081] part of prophase I [GO:0007128]	no		
+the-cellular-basis-of-inheritance-m45466-55	crossing over [GO:0007131] happens during prophase I [GO:0007128]	no		
+the-cellular-basis-of-inheritance-m45466-58	chromosome condensation [GO:0030261] happens during prophase I [GO:0007128]	no		
+the-cellular-basis-of-inheritance-m45466-68	attachment of spindle microtubules to kinetochore [GO:0008608] happens during prometaphase I [GO:0098768]	no		
+the-cellular-basis-of-inheritance-m45466-73	nuclear envelope breakdown [GO:0051081] happens during prometaphase I [GO:0098768]	no		
+the-cellular-basis-of-inheritance-m45466-74	meiotic metaphase chromosome alignment [GO:0051311] happens during metaphase I [GO:0007132]	no		
+the-cellular-basis-of-inheritance-m45466-8	sexual reproduction [GO:0019953] has part meiosis [GO:0140013]	no		
+the-cellular-basis-of-inheritance-m45466-97	homologous chromosome segregation [GO:0045143] happens during anaphase I [GO:0007133]	no		
+the-cellular-basis-of-inheritance-m45466-98	sister chromatid cohesion [GO:0007062] happens during anaphase I [GO:0007133]	no		
+the-cellular-basis-of-inheritance-m45467-115	translocation [SO:1000044] causes or contributes to condition cancer [MONDO:0004992]	no		
+the-cellular-basis-of-inheritance-m45467-116	translocation [SO:1000044] causes or contributes to condition schizophrenia [MONDO:0005090]	no		
+the-cellular-basis-of-inheritance-m45467-119	aneuploidy [MONDO:0700064] →+ phenotype(lethal [PATO:0000718])	yes	isaInheritEffect	aneuploidy [MONDO:0700064] →+ phenotype(lethal [PATO:0000718])   (isaInheritEffect) |   aneuploidy [MONDO:0700064] is_a chromosomal disorder [MONDO:0019040]   [the-cellular-basis-of-inheritance-m45467-2] |   chromosomal disorder [MONDO:0019040] →+ phenotype(lethal [PATO:0000718])   [the-cellular-basis-of-inheritance-m45467-4]
+the-cellular-basis-of-inheritance-m45467-124	inversion [SO:1000030] →+ phenotype(death [PATO:0001422])	no		
+the-cellular-basis-of-inheritance-m45467-23	Jacobsen syndrome [MONDO:0007838] has phenotype distinctive facial features [HP:0001999]	no		
+the-cellular-basis-of-inheritance-m45467-24	Jacobsen syndrome [MONDO:0007838] disease has basis in feature deletion [SO:1000029]	no		
+the-cellular-basis-of-inheritance-m45467-27	translocation [SO:1000044] causes or contributes to condition chronic myelogenous leukemia [MONDO:0011996]	no		
+the-cellular-basis-of-inheritance-m45467-4	chromosomal disorder [MONDO:0019040] →+ phenotype(lethal [PATO:0000718])	no		
+the-cellular-basis-of-inheritance-m45467-41	monosomy ⊓ part of (zygote) ⊓ in taxon (NCBITaxon:9606 ⊓ has modifier (monosomic for one copy of an autosome)) [MONDO:0020639&BFO:0000050=(CL:0010017)&RO:0002162=(NCBITaxon:9606&RO:0002573=(BLN:autosome_monosomy))] →+ phenotype(lethal [PATO:0000718])	yes	isaInheritEffect	monosomy ⊓ part of (zygote) ⊓ in taxon (NCBITaxon:9606 ⊓ has modifier (monosomic for one copy of an autosome)) [MONDO:0020639&BFO:0000050=(CL:0010017)&RO:0002162=(NCBITaxon:9606&RO:0002573=(BLN:autosome_monosomy))] →+ phenotype(lethal [PATO:0000718])   (isaInheritEffect) |   monosomy ⊓ part of (zygote) ⊓ in taxon (NCBITaxon:9606 ⊓ has modifier (monosomic for one copy of an autosome)) [MONDO:0020639&BFO:0000050=(CL:0010017)&RO:0002162=(NCBITaxon:9606&RO:0002573=(BLN:autosome_monosomy))] is_a monosomy [MONDO:0020639]   (relTrans) |     monosomy ⊓ part of (zygote) ⊓ in taxon (NCBITaxon:9606 ⊓ has modifier (monosomic for one copy of an autosome)) [MONDO:0020639&BFO:0000050=(CL:0010017)&RO:0002162=(NCBITaxon:9606&RO:0002573=(BLN:autosome_monosomy))] is_a MONDO:0020639&BFO:0000050=(CL:0010017) [MONDO:0020639&BFO:0000050=(CL:0010017)]   [refine:MONDO:0020639&BFO:0000050=(CL:0010017)&RO:0002162=(NCBITaxon:9606&RO:0002573=(BLN:autosome_monosomy))] |     MONDO:0020639&BFO:0000050=(CL:0010017) [MONDO:0020639&BFO:0000050=(CL:0010017)] is_a monosomy [MONDO:0020639]   [refine:MONDO:0020639&BFO:0000050=(CL:0010017)] |   monosomy [MONDO:0020639] →+ phenotype(lethal [PATO:0000718])   (isaInheritEffect) |     monosomy [MONDO:0020639] is_a aneuploidy [MONDO:0700064]   [the-cellular-basis-of-inheritance-m45467-40] |     aneuploidy [MONDO:0700064] →+ phenotype(lethal [PATO:0000718])   [the-cellular-basis-of-inheritance-m45467-119]
+the-cellular-basis-of-inheritance-m45467-44	trisomy 13 [MONDO:0018068] →+ phenotype(viable [PATO:0000719])	no		
+the-cellular-basis-of-inheritance-m45467-49	trisomy 21 [MONDO:0700126] causes or contributes to condition Down syndrome [MONDO:0008608]	no		
+the-cellular-basis-of-inheritance-m45467-50	Down syndrome [MONDO:0008608] has phenotype distinctive facial features [HP:0001999]	no		
+the-cellular-basis-of-inheritance-m45467-51	Down syndrome [MONDO:0008608] has phenotype developmental delay [HP:0001263]	no		
+the-cellular-basis-of-inheritance-m45467-59	X inactivation [GO:0009048] →− process(gene expression [GO:0010467])	no		
+the-cellular-basis-of-inheritance-m45467-63	X inactivation ⊓ in taxon (cat ⊓ has modifier (tortoiseshell cat)) [GO:0009048&RO:0002162=(NCBITaxon:9685&RO:0002573=(BLN:tortoiseshell))] →+ phenotype(coat-color variegation [PATO:0001533])	no		
+the-cellular-basis-of-inheritance-m45467-71	triplo-X [MONDO:0018066] has phenotype female [PATO:0000383]	no		
+the-cellular-basis-of-inheritance-m45467-72	triplo-X [MONDO:0018066] has phenotype developmental delay [HP:0001263]	no		
+the-cellular-basis-of-inheritance-m45467-74	Klinefelter syndrome [MONDO:0006823] has phenotype small testes [HP:0008734]	no		
+the-cellular-basis-of-inheritance-m45467-77	Turner syndrome [MONDO:0019499] has phenotype short stature [HP:0004322]	no		
+the-cellular-basis-of-inheritance-m45467-83	triploid ⊓ in taxon (animals) [PATO:0001381&RO:0002162=(NCBITaxon:33208)] →+ phenotype(sterile [PATO:0000956])	no		
+the-cellular-basis-of-inheritance-m45467-88	deletion [SO:1000029] →+ phenotype(intellectual disability [HP:0001249])	no		
+the-cellular-basis-of-inheritance-m45467-90	Cri-du-chat [MONDO:0007404] disease has basis in feature deletion [SO:1000029]	no		
+the-cellular-basis-of-inheritance-m45467-91	Cri-du-chat [MONDO:0007404] has phenotype high-pitched cry [HP:0025430]	no		

@@ -1,0 +1,60 @@
+measure	facts	percent_of_claims
+facts	847	
+facts that are claims (not enabled_by)	693	100.0
+lossless	557	80.4
+rel-only	47	6.8
+false-as-class	80	11.5
+lossy	9	1.3
+no PMID on the fact (GO_REF or none)	197	28.4
+lossless and with a PMID	447	64.5
+lossless: activity or process part_of process: Claim.rel (involved_in / part_of)	190	27.4
+lossless: occurs_in: Claim.rel occurs_in (activity in component or cell)	138	19.9
+lossless: has_input / has_output: Claim.rel	115	16.6
+lossless: signed causal: Claim.effect enabler s (activity enabler) (direct flag only in note)	86	12.4
+false-as-class: location of an individual (component in anatomy, chemical in component): true in the model, false as a class-level claim	80	11.5
+rel-only: unsigned causal (causally upstream of): Claim.rel, does not chain with effects	31	4.5
+lossless: signed causal: Claim.effect enabler s (activity enabler)	28	4.0
+rel-only: unsigned causal (directly provides input for): Claim.rel, does not chain with effects	11	1.6
+rel-only: unsigned causal (transports or maintains localization of): Claim.rel, does not chain with effects	5	0.7
+lossy: term outside the target ontologies (EMAPA)	5	0.7
+lossy: term outside the target ontologies (ZFA)	4	0.6
+evidence ECO:0000314	466	
+evidence ECO:0000313	185	
+evidence ECO:0000250	63	
+evidence ECO:0000303	26	
+evidence ECO:0000363	7	
+evidence ECO:0000315	6	
+evidence ECO:0000304	3	
+evidence ECO:0000305	2	
+evidence ECO:0000318	2	
+evidence ECO:0007089	1	
+evidence ECO:0000269	1	
+model gomodel:613aae0000000885	0	PTPRM role in glucose transport activity through inhibition of CTNND1 (Human)
+model gomodel:6348a65d00002600	0	Negative regulation of white adipogenesis by OVOL2. (Human)
+model gomodel:64d5781900002033	0	Insulin-mediated activation of the ARF6-RAC1 axis in neurite outgrowth (Human)
+model gomodel:65692e7e00002024	0	BLVRB negatively regulates insulin signaling by mediating S-nitrosylation of INSR and IRS1
+model gomodel:66a3e0bb00001796	0	Signaling by Amylin mediated by IAPP ligand activating CALCR-RAMP1 (AMYR1) receptor comple
+model gomodel:66a3e0bb00001882	0	Signaling by Amylin mediated by IAPP ligand activating CALCR-RAMP2 (AMYR2) receptor comple
+model gomodel:66a3e0bb00001935	0	Signaling by Amylin mediated by IAPP ligand activating CALCR-RAMP3 (AMYR3)  receptor compl
+model gomodel:66b5638000001665	0	Signaling by Calcitonin mediated by CALCA/CT ligand activating CALCR-RAMP2  (AMYR2) recept
+model gomodel:66b5638000001772	0	Signaling by Calcitonin mediated by CALCA/CT ligand activating CALCR receptor (Human)
+model gomodel:66b5638000001825	0	Signaling by Amylin mediated by IAPP ligand activating CALCR  receptor (Human)
+model gomodel:66c7d41500000163	0	Signaling by Calcitonin/CGRP mediated by CALCA/CGRP1 ligand activating CALCR-RAMP1 (AMYR1)
+model gomodel:67b1629100001426	0	USP5 deubiquitnation of YTHDF1 after activation by insulin-MTOR axis (Human)
+model gomodel:67c10cc400004342	0	CASR-mediated signaling via G-alpha-i (inhibitory), inhibiting adenylate cyclase) followin
+model gomodel:67c10cc400004380	0	CASR-mediated signaling via G-alpha-q (phospholipase c-activating, IP3, DAG)  following ac
+model gomodel:67c10cc400004457	0	CASR-mediated signaling via G-alpha-i (inhibitory), inhibiting adenylate cyclase) promotes
+model gomodel:67c10cc400004508	0	"PTH1R-mediated signaling via G-alpha-s (""stimulatory"", activating adenylate cyclase) follo"
+model gomodel:67c10cc400004549	0	"PTH1R-mediated signaling via G-alpha-s (""stimulatory"", activating adenylate cyclase) follo"
+model gomodel:67e5e74400004286	0	"AVPR2 -mediated signaling G-alpha-s (""stimulatory"", activating adenylate cyclase) followin"
+model gomodel:684b6c8100002544	0	"MRGPRE-mediated signaling via G-alpha-s (""stimulatory"", activating adenylate cyclase) and "
+model gomodel:68d5ebd600000298	0	"GCGR-mediated signaling via G-alpha-s (""stimulatory"", activating adenylate cyclase) follow"
+model gomodel:68d5ebd600000330	0	GCGR-mediated signaling via G-alpha-i (inhibitory), inhibiting adenylate cyclase following
+model gomodel:69729a3800003304	0	 Processing, maturation and transport of vasopressin (AVP) hormone (Human).
+model gomodel:69ea894900001736	0	PTH synthesis and continuous delivery to osteoblasts promotes bone resorption (Human)
+model gomodel:69ea894900002023	0	PTH synthesis and delivery to renal distal tubule promotes calcium reabsorption (Human)
+model gomodel:69ea894900003047	0	PTH synthesis and delivery to proximal tubule inhibits renal phosphate ion absorption (Hum
+model gomodel:6a18a9ba00001280	0	Insulin synthesis and delivery to skeletal muscle promotes glucose uptake (Human) 
+model gomodel:6a18a9ba00003203	0	SPTBN4-mediated  intercalated disc targeting of CAMK2D and ANK3 involved in regulation of 
+model gomodel:R-HSA-163210	0	Formation of ATP by chemiosmotic coupling - imported from: Reactome
+model gomodel:R-HSA-381676	0	Glucagon-like Peptide-1 (GLP1) regulates insulin secretion - imported from: Reactome

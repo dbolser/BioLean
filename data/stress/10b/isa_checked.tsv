@@ -1,0 +1,16 @@
+a	b	b_is_ancestor_of_a	parents_of_a	checked
+PR:P01308	PR:000009054	True	PR:000009054 preproinsulin; PR:000029067 Homo sapiens protein	2026-11-01
+PR:000050340	PR:000050339	True	PR:000048036 proinsulin (human); PR:000050339 insulin hormone	2026-11-01
+PR:P01270	PR:000013429	True	PR:000013429 parathyroid hormone; PR:000029067 Homo sapiens protein	2026-11-01
+PR:P01275	PR:000019980	False	PR:000007891 pro-glucagon; PR:000029067 Homo sapiens protein	2026-11-01
+CHEBI:17925	CHEBI:17234	True	CHEBI:4167 D-glucopyranose	2026-11-01
+CHEBI:4167	CHEBI:17234	True	CHEBI:17634 D-glucose; CHEBI:37661 glucopyranose	2026-11-01
+CHEBI:17925	CHEBI:4167	True	CHEBI:4167 D-glucopyranose	2026-11-01
+CHEBI:30616	CHEBI:15422	False	CHEBI:61557 nucleoside 5'-triphoshate(4-)	2026-11-01
+CHEBI:34543	CHEBI:9937	True	CHEBI:9937 vasopressin	2026-11-01
+CHEBI:5931	CHEBI:5931	True	CHEBI:145810 insulin	2026-11-01
+GO:0098708	GO:1904659	True	GO:0140271 hexose import across plasma membrane; GO:1904659 D-glucose transmembrane transport	2026-11-01
+GO:0015986	GO:0006754	True	GO:0006754 ATP biosynthetic process	2026-11-01
+GO:0098703	GO:0070293	False	GO:0070509 calcium ion import; GO:0097553 calcium ion transmembrane import into cytosol; GO:0098659 inorganic cation import across plasma membrane; GO:1902656 calcium ion import into cytosol	2026-11-01
+GO:0042776	GO:0015986	True	GO:0006119 oxidative phosphorylation; GO:0015986 proton motive force-driven ATP synthesis	2026-11-01
+CL:0000169	CL:0000169	True	CL:0000168 insulin secreting cell; CL:0008024 pancreatic endocrine cell; UBERON:0000006 islet of Langerhans	2026-11-01

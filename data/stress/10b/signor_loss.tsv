@@ -1,0 +1,54 @@
+set	measure	edges	percent
+all human	edges	33381	100.0
+all human	claim-level lossless	9419	28.2
+all human	strictly lossless	226	0.7
+all human	claim: either end with no ontology id	9557	28.6
+all human	claim: BTO cell or tissue context dropped (claim wider than source)	12601	37.7
+all human	claim: activity or amount not said (bare up/down-regulates)	8705	26.1
+all human	claim: tgt: SIGNOR complex with no ontology id	3382	10.1
+all human	claim: src: SIGNOR complex with no ontology id	2330	7.0
+all human	claim: unsigned binding (form complex)	2326	7.0
+all human	claim: tgt: SIGNOR phenotype with no ontology id	1554	4.7
+all human	claim: src: SIGNOR proteinfamily with no ontology id	1124	3.4
+all human	claim: relocalization read as amount (compartment lost)	786	2.4
+all human	claim: tgt: SIGNOR proteinfamily with no ontology id	729	2.2
+all human	claim: no sign (unknown)	722	2.2
+all human	claim: no PMID	693	2.1
+all human	claim: src: SIGNOR chemical with no ontology id	411	1.2
+all human	claim: src: SIGNOR mirna with no ontology id	258	0.8
+all human	claim: src: SIGNOR stimulus with no ontology id	168	0.5
+all human	claim: activity of a non-protein target	123	0.4
+all human	claim: src: SIGNOR fusion protein with no ontology id	111	0.3
+all human	claim: src: SIGNOR phenotype with no ontology id	82	0.2
+all human	claim: tgt: SIGNOR stimulus with no ontology id	79	0.2
+all human	claim: tgt: SIGNOR mirna with no ontology id	38	0.1
+all human	claim: src: SIGNOR antibody with no ontology id	29	0.1
+all human	claim: tgt: SIGNOR fusion protein with no ontology id	24	0.1
+all human	claim: src: SIGNOR smallmolecule with no ontology id	24	0.1
+all human	claim: src: SIGNOR ncrna with no ontology id	7	0.0
+all human	claim: tgt: SIGNOR smallmolecule with no ontology id	5	0.0
+all human	claim: tgt: SIGNOR chemical with no ontology id	1	0.0
+all human	strict: direct flag only in note	27984	83.8
+all human	strict: mechanism only in note	19212	57.6
+all human	strict: residue or site only in note	8289	24.8
+stress entities	edges	473	100.0
+stress entities	claim-level lossless	94	19.9
+stress entities	strictly lossless	16	3.4
+stress entities	claim: either end with no ontology id	187	39.5
+stress entities	claim: BTO cell or tissue context dropped (claim wider than source)	146	30.9
+stress entities	claim: activity or amount not said (bare up/down-regulates)	132	27.9
+stress entities	claim: src: SIGNOR complex with no ontology id	120	25.4
+stress entities	claim: relocalization read as amount (compartment lost)	70	14.8
+stress entities	claim: tgt: SIGNOR complex with no ontology id	47	9.9
+stress entities	claim: unsigned binding (form complex)	20	4.2
+stress entities	claim: src: SIGNOR proteinfamily with no ontology id	9	1.9
+stress entities	claim: tgt: SIGNOR proteinfamily with no ontology id	9	1.9
+stress entities	claim: tgt: SIGNOR phenotype with no ontology id	7	1.5
+stress entities	claim: no sign (unknown)	7	1.5
+stress entities	claim: no PMID	5	1.1
+stress entities	claim: src: SIGNOR chemical with no ontology id	3	0.6
+stress entities	claim: src: SIGNOR phenotype with no ontology id	2	0.4
+stress entities	claim: src: SIGNOR stimulus with no ontology id	1	0.2
+stress entities	strict: direct flag only in note	383	81.0
+stress entities	strict: mechanism only in note	285	60.3
+stress entities	strict: residue or site only in note	130	27.5

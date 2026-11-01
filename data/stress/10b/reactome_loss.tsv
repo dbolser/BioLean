@@ -1,0 +1,47 @@
+level	measure	count	percent
+reaction	reactions	137	100.0
+reaction	inferred from another species	24	17.5
+reaction	no PMID on the reaction	29	21.2
+reaction	has a GO BP cross-reference	8	5.8
+reaction	BlackBoxEvent (steps omitted)	30	21.9
+reaction	every input and output lossless	11	8.0
+input/output	participants	575	100.0
+input/output	lossy	288	50.1
+input/output	lossless	203	35.3
+input/output	inexpressible	84	14.6
+input/output	lossy: Reactome complex: no OBO id (GO CC or ComplexPortal by hand)	236	41.0
+input/output	lossless: chemical (ChEBI) in a compartment: CHEBI.inCtx {component}	154	26.8
+input/output	inexpressible: set of alternatives (union of entities): no type for it	84	14.6
+input/output	lossy: cleavage product or processed chain (named with coordinates): needs a PR term	47	8.2
+input/output	lossless: whole chain (UniProt as PR) in a compartment	35	6.1
+input/output	lossless: gene (Ensembl reference) as Kind.gene	10	1.7
+input/output	lossless: drug with ChEBI or IUPHAR id	4	0.7
+input/output	lossy: modified chain (phospho-site): residue lost	2	0.3
+input/output	lossy: Polymer: no reference id	2	0.3
+input/output	lossy: GenomeEncodedEntity: no reference id	1	0.2
+all roles	output lossy: Reactome complex: no OBO id (GO CC or ComplexPortal by hand)	134	19.8
+all roles	input lossy: Reactome complex: no OBO id (GO CC or ComplexPortal by hand)	102	15.1
+all roles	input lossless: chemical (ChEBI) in a compartment: CHEBI.inCtx {component}	82	12.1
+all roles	output lossless: chemical (ChEBI) in a compartment: CHEBI.inCtx {component}	72	10.7
+all roles	input inexpressible: set of alternatives (union of entities): no type for it	52	7.7
+all roles	catalyst lossy: Reactome complex: no OBO id (GO CC or ComplexPortal by hand)	40	5.9
+all roles	output inexpressible: set of alternatives (union of entities): no type for it	32	4.7
+all roles	output lossy: cleavage product or processed chain (named with coordinates): needs a PR term	24	3.6
+all roles	input lossy: cleavage product or processed chain (named with coordinates): needs a PR term	23	3.4
+all roles	input lossless: whole chain (UniProt as PR) in a compartment	22	3.3
+all roles	regulator lossy: Reactome complex: no OBO id (GO CC or ComplexPortal by hand)	20	3.0
+all roles	regulator lossless: whole chain (UniProt as PR) in a compartment	15	2.2
+all roles	output lossless: whole chain (UniProt as PR) in a compartment	13	1.9
+all roles	catalyst inexpressible: set of alternatives (union of entities): no type for it	11	1.6
+all roles	input lossless: gene (Ensembl reference) as Kind.gene	10	1.5
+all roles	catalyst lossless: whole chain (UniProt as PR) in a compartment	6	0.9
+all roles	input lossless: drug with ChEBI or IUPHAR id	4	0.6
+all roles	regulator inexpressible: set of alternatives (union of entities): no type for it	3	0.4
+all roles	output lossy: modified chain (phospho-site): residue lost	2	0.3
+all roles	regulator lossy: cleavage product or processed chain (named with coordinates): needs a PR term	2	0.3
+all roles	catalyst lossy: cleavage product or processed chain (named with coordinates): needs a PR term	2	0.3
+all roles	regulator lossy: GenomeEncodedEntity: no reference id	1	0.1
+all roles	regulator lossless: chemical (ChEBI) in a compartment: CHEBI.inCtx {component}	1	0.1
+all roles	input lossy: Polymer: no reference id	1	0.1
+all roles	output lossy: Polymer: no reference id	1	0.1
+all roles	output lossy: GenomeEncodedEntity: no reference id	1	0.1

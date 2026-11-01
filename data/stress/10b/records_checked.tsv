@@ -1,0 +1,57 @@
+source	statement	record	found	source_says
+SIGNOR	S01s	INS up-regulates activity INSR PMID 2550426	True	up-regulates activity
+SIGNOR	S01s	INS up-regulates activity INSR PMID 16956584	True	up-regulates activity
+SIGNOR	S02a	INS up-regulates activity SLC2A4 PMID 9415393	True	up-regulates activity
+SIGNOR	S02b	SLC2A4 up-regulates quantity glucose PMID 17403369	True	up-regulates quantity
+SIGNOR	S03	calcium(2+) up-regulates quantity INS PMID 24843404	True	up-regulates quantity
+SIGNOR	S04	α-D-glucose up-regulates quantity GCG PMID 31693916	True	up-regulates quantity
+SIGNOR	S05s	GCG up-regulates GCGR PMID 22863277	True	up-regulates
+SIGNOR	S06s	PTH up-regulates PTH1R PMID 18981475	True	up-regulates
+SIGNOR	S07	AVP up-regulates AVPR2 PMID 1560825	True	up-regulates
+SIGNOR	S08	vasopressin up-regulates activity AVPR2 PMID 31160049	True	up-regulates activity
+SIGNOR	S09	SCN1A up-regulates quantity sodium(1+) PMID 27262167	True	up-regulates quantity
+SIGNOR	S10	ATP synthase up-regulates quantity ATP PMID 21874297	True	up-regulates quantity
+SIGNOR	S11	hydron up-regulates activity ATP synthase PMID 31115493	True	up-regulates activity
+SIGNOR	S12	metformin up-regulates quantity G6PC1 PMID 17909097	True	up-regulates quantity by expression
+SIGNOR	S12pck	metformin down-regulates quantity PCK1 PMID 17909097	True	down-regulates quantity
+SIGNOR	S13	INSR unknown FABP4 PMID 1648089	True	unknown
+SIGNOR	S14b	AVPR2 up-regulates activity GNAS PMID 31160049	True	up-regulates activity
+SIGNOR	M01	metformin up-regulates activity PRKAA1 PMID 11602624	True	up-regulates activity
+SIGNOR	M02	metformin down-regulates activity NDUFS1 PMID 24843020	True	down-regulates activity
+GO-CAM	S01g	6a18a9ba00001280 P01308 RO:0002629 P06213 14986111	True	lossless ECO:0000303
+GO-CAM	S05g	68d5ebd600000298 P01275-PRO_0000011256 RO:0002629 P47871 32193322	True	lossless ECO:0000314
+GO-CAM	S06g	69ea894900002023 P01270 RO:0002629 Q03431 35932760	True	lossless ECO:0000314
+GO-CAM	G02a	6a18a9ba00001280 P06213 RO:0002629 P35568 38056462	True	lossless ECO:0000314
+GO-CAM	G02b	6a18a9ba00001280 P35568 RO:0002629 P48736 7493946	True	lossless ECO:0000314
+GO-CAM	G02c	6a18a9ba00001280 P48736 RO:0002407 P14672 11277933	True	lossless ECO:0000314
+GO-CAM	G02d	6a18a9ba00001280 P14672 BFO:0000050 GO:0042593 14562105	True	lossless ECO:0000314
+GO-CAM	G03a	69ea894900002023 CHEBI:29108 RO:0012005 P41180 38632411	True	lossless ECO:0000314
+GO-CAM	G03b	69ea894900002023 P41180 RO:0002629 P63096 38632411	True	lossless ECO:0000314
+GO-CAM	G03c	69ea894900002023 P63096 RO:0002409 P01270 15331768	True	lossless ECO:0000314
+GO-CAM	G05a	69ea894900002023 Q03431 RO:0002629 P63092 19674967	True	lossless ECO:0000314
+GO-CAM	G05b	69ea894900002023 P63092 RO:0002407 P17612 10200251	True	lossless ECO:0000314
+GO-CAM	G06	69ea894900002023 P17612 RO:0002629 Q9NQA5 11029056	True	lossless ECO:0000314
+GO-CAM	G07g	67e5e74400004286 P01185-PRO_0000020515 RO:0002629 P30518 33742150	True	lossless ECO:0000314
+GO-CAM	G08	66b5638000001772 P01258 RO:0002629 P30988 32296767	True	lossless ECO:0000314
+GO-CAM	G09a	6a18a9ba00001280 CHEBI:17234 RO:0001025 GO:0005737 19251038	True	false-as-class ECO:0000314
+GO-CAM	G09b	6a18a9ba00001280 CHEBI:17234 RO:0001025 GO:0005576 19251038	True	false-as-class ECO:0000314
+GO-CAM	G10	6a18a9ba00001280 GO:0005886 BFO:0000050 ZFA:0009102 40811462	True	lossy ECO:0000314
+GO-CAM	G11	R-HSA-163210 GO:0015078 RO:0002234 CHEBI:30616 ECO:0000313	True	lossless ECO:0000313|ECO:0000313
+GO-CAM	G12	R-HSA-163210 GO:0015078 RO:0002411 GO:0046933 ECO:0000313	True	rel-only ECO:0000313
+Reactome	R01	R-HSA-8981570 inferred=False go=GO:1904659 4 PMIDs	True	GLUT4 (SLC2A4) tetramer transports Glc from extracellular region to cytosol; 4 PMIDs
+Reactome	R02	R-HSA-450095 inferred=False go=- 3 PMIDs	True	GLUT2 (SLC2A2) transports Glc from cytosol to extracellular region; 3 PMIDs
+Reactome	R03	R-HSA-74716 inferred=False go=- 2 PMIDs	True	Insulin binds the insulin receptor; 2 PMIDs
+Reactome	R04	R-HSA-164834 inferred=False go=GO:0042776 0 PMIDs	True	Enzyme-bound ATP is released; 0 PMIDs
+Reactome	R05	R-HSA-420489 inferred=False go=- 1 PMIDs	True	Parathyroid hormone receptor can bind parathyroid hormone; 10 PMIDs
+Reactome	R06	R-HSA-163625 inferred=False go=- 4 PMIDs	True	Glucagon binds to Glucagon receptor; 4 PMIDs
+Reactome	R07	R-HSA-265166 inferred=True go=GO:0030073 9 PMIDs	True	Exocytosis of Insulin; 9 PMIDs
+Reactome	R08	R-HSA-5576895 inferred=False go=- 3 PMIDs	True	SCNAs:SNCBs transport Na+ from extracellular region to cytosol; 9 PMIDs
+GOA	O01	P35498 enables GO:0005248 IMP PMID:14672992	True	
+GOA	O02	P01270 enables GO:0005179 IDA PMID:35932760	True	
+GOA	O04-yes	P30988 enables GO:0032841 IPI PMID:15563840	True	
+GOA	O04-yes	P30988 enables GO:0032841 IDA PMID:8078488	True	
+GOA	O04-yes	P30988 enables GO:0032841 IDA PMID:7769107	True	UniProtKB:P30988-2
+GOA	O04-no	P30988 NOT|enables GO:0032841 IDA PMID:15563840	True	
+GOA	O02	extension has_input(UniProtKB:Q03431),part_of(GO:0007189)	True	has_input(UniProtKB:Q03431),part_of(GO:0007189)
+SIGNOR	S12	"stored sentence holds ""inhibited the expression of the hepatic gluconeogenic genes pepck and g6pase"""	True	up-regulates quantity by expression
+GOA	O03	Q95ZQ4 involved_in GO:0008340 IMP PMID:15574588	True	WB

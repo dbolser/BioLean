@@ -1,0 +1,380 @@
+fold	background	learner	head	subject	object	pca	support	category	rule	also_closure
+0	textbook	mine	has_part	brain [UBERON:0000955]	cerebral cortex [UBERON:0000956]	0.31	18	inverse	has_part(x,y) <= part_of(y,x)	no
+0	textbook	mine	has_output	photosynthesizing ⊓ in taxon (plants) [GO:0015979&RO:0002162=(NCBITaxon:33090)]	sugars [CHEBI:16646]	0.50	2	core:isaInherit	has_output(x,y) <= isa*(x,z), has_output(z,y)	yes
+0	textbook	mine	has_output	photosynthesizing ⊓ in taxon (plants) [GO:0015979&RO:0002162=(NCBITaxon:33090)]	glucose [CHEBI:17234]	0.50	2	core:isaInherit	has_output(x,y) <= isa*(x,z), has_output(z,y)	yes
+0	textbook	mine	part_of	hypothalamus [UBERON:0001898]	brain [UBERON:0000955]	0.56	18	inverse	part_of(x,y) <= has_part(y,x)	no
+0	textbook	mine	part_of	frontal lobe ⊓ in taxon (Mammalia) [UBERON:0016525&RO:0002162=(NCBITaxon:40674)]	cerebral cortex [UBERON:0000956]	0.56	5	core:isaInherit	part_of(x,y) <= isa*(x,z), part_of(z,y)	yes
+0	textbook	mine	has_output	photosynthesis ⊓ occurs in (chloroplast) [GO:0015979&BFO:0000066=(GO:0009507)]	sugars [CHEBI:16646]	0.50	2	core:isaInherit	has_output(x,y) <= isa*(x,z), has_output(z,y)	yes
+0	textbook	mine	has_output	glycolytic process [GO:0006096]	ATP [CHEBI:15422]	0.50	2	implication	has_output(x,y) <= eff_pos_amount(x,y)	no
+0	textbook	mine	has_part	circulatory system [UBERON:0001009]	blood vessel [UBERON:0001981]	0.11	2	upward	has_part(x,y) <= isa*(z,x), has_part(z,y)	yes
+0	textbook	mine	has_part	chromosome [GO:0005694]	DNA [CHEBI:16991]	0.24	4	new path	has_part(x,y) <= part_of(z,x), isa*(z,y)	no
+0	textbook	mine	part_of	pancreatic beta cell [CL:0000169]	pancreatic islet [UBERON:0000006]	0.56	18	inverse	part_of(x,y) <= has_part(y,x)	no
+0	textbook	mine	has_part	brain [UBERON:0000955]	brainstem [UBERON:0002298]	0.31	18	inverse	has_part(x,y) <= part_of(y,x)	no
+0	textbook	mine	has_output	Calvin cycle [GO:0019253]	sugars [CHEBI:16646]	0.29	2	new path	has_output(x,y) <= has_part(z,x), has_output(z,y)	no
+0	textbook	mine	eff_pos_process	microfilaments [GO:0005884]	locomotion [GO:0048870]	0.22	2	new path	eff_pos_process(x,y) <= has_part(z,x), eff_pos_process(z,y)	no
+0	textbook	mine	located_in	circular DNA chromosome ⊓ in taxon (bacteria) [SO:0000958&RO:0002162=(NCBITaxon:2)]	nucleoid [GO:0009295]	0.67	2	taxon	located_in(x,nucleoid) <= in_taxon(x,bacteria)	no
+0	textbook	mine	part_of	limbic system [UBERON:0000349]	brain [UBERON:0000955]	0.56	18	inverse	part_of(x,y) <= has_part(y,x)	no
+0	textbook	mine	part_of	Calvin cycle [GO:0019253]	photosynthesis [GO:0015979]	0.56	18	inverse	part_of(x,y) <= has_part(y,x)	no
+0	textbook	mine	part_of	brain [UBERON:0000955]	central nervous system [UBERON:0001017]	0.71	5	upward	part_of(x,y) <= isa*(z,x), part_of(z,y)	no
+0	textbook	mine	part_of	dendrite [GO:0030425]	neuron [CL:0000540]	0.56	18	inverse	part_of(x,y) <= has_part(y,x)	no
+0	textbook	mine	part_of	prophase [GO:0000088]	mitotic nuclear division [GO:0140014]	0.56	18	inverse	part_of(x,y) <= has_part(y,x)	no
+0	textbook	mine	has_part	temporal lobe [UBERON:0001871]	hippocampus [UBERON:0002421]	0.31	18	inverse	has_part(x,y) <= part_of(y,x)	no
+0	textbook	mine	eff_pos_phenotype	alveoli ⊓ located in (lung) [UBERON:0002299&RO:0001025=(UBERON:0002048)]	surface area [PATO:0001323]	1.00	2	core:isaInherit	eff_pos_phenotype(x,y) <= isa*(x,z), eff_pos_phenotype(z,y)	yes
+0	textbook	amie	has_part	brain [UBERON:0000955]	cerebral cortex [UBERON:0000956]	0.58	18	amie	?b  <part_of>  ?a   => ?a  <has_part>  ?b	no
+0	textbook	amie	has_output	photosynthesizing ⊓ in taxon (plants) [GO:0015979&RO:0002162=(NCBITaxon:33090)]	sugars [CHEBI:16646]	0.50	2	amie	?h  <has_output>  ?b  ?a  <isa*>  ?h   => ?a  <has_output>  ?b	yes
+0	textbook	amie	has_output	photosynthesizing ⊓ in taxon (plants) [GO:0015979&RO:0002162=(NCBITaxon:33090)]	glucose [CHEBI:17234]	0.50	2	amie	?h  <has_output>  ?b  ?a  <isa*>  ?h   => ?a  <has_output>  ?b	yes
+0	textbook	amie	part_of	hypothalamus [UBERON:0001898]	brain [UBERON:0000955]	0.56	18	amie	?b  <has_part>  ?a   => ?a  <part_of>  ?b	no
+0	textbook	amie	part_of	frontal lobe ⊓ in taxon (Mammalia) [UBERON:0016525&RO:0002162=(NCBITaxon:40674)]	cerebral cortex [UBERON:0000956]	0.56	5	amie	?a  <isa*>  ?h  ?h  <part_of>  ?b   => ?a  <part_of>  ?b	yes
+0	textbook	amie	has_output	photosynthesis ⊓ occurs in (chloroplast) [GO:0015979&BFO:0000066=(GO:0009507)]	sugars [CHEBI:16646]	0.50	2	amie	?h  <has_output>  ?b  ?a  <isa*>  ?h   => ?a  <has_output>  ?b	yes
+0	textbook	amie	has_output	glycolytic process [GO:0006096]	ATP [CHEBI:15422]	0.50	2	amie	?a  <eff_pos_amount>  ?b   => ?a  <has_output>  ?b	no
+0	textbook	amie	has_part	chromosome [GO:0005694]	DNA [CHEBI:16991]	0.36	4	amie	?g  <isa*>  ?b  ?g  <part_of>  ?a   => ?a  <has_part>  ?b	no
+0	textbook	amie	part_of	pancreatic beta cell [CL:0000169]	pancreatic islet [UBERON:0000006]	0.56	18	amie	?b  <has_part>  ?a   => ?a  <part_of>  ?b	no
+0	textbook	amie	has_part	brain [UBERON:0000955]	brainstem [UBERON:0002298]	0.58	18	amie	?b  <part_of>  ?a   => ?a  <has_part>  ?b	no
+0	textbook	amie	has_output	Calvin cycle [GO:0019253]	sugars [CHEBI:16646]	0.29	2	amie	?g  <has_output>  ?b  ?g  <has_part>  ?a   => ?a  <has_output>  ?b	no
+0	textbook	amie	eff_pos_process	microfilaments [GO:0005884]	locomotion [GO:0048870]	0.22	2	amie	?g  <eff_pos_process>  ?b  ?g  <has_part>  ?a   => ?a  <eff_pos_process>  ?b	no
+0	textbook	amie	part_of	limbic system [UBERON:0000349]	brain [UBERON:0000955]	0.56	18	amie	?b  <has_part>  ?a   => ?a  <part_of>  ?b	no
+0	textbook	amie	part_of	Calvin cycle [GO:0019253]	photosynthesis [GO:0015979]	0.56	18	amie	?b  <has_part>  ?a   => ?a  <part_of>  ?b	no
+0	textbook	amie	part_of	brain [UBERON:0000955]	central nervous system [UBERON:0001017]	0.71	5	amie	?g  <isa*>  ?a  ?g  <part_of>  ?b   => ?a  <part_of>  ?b	no
+0	textbook	amie	part_of	dendrite [GO:0030425]	neuron [CL:0000540]	0.56	18	amie	?b  <has_part>  ?a   => ?a  <part_of>  ?b	no
+0	textbook	amie	part_of	prophase [GO:0000088]	mitotic nuclear division [GO:0140014]	0.56	18	amie	?b  <has_part>  ?a   => ?a  <part_of>  ?b	no
+0	textbook	amie	has_part	temporal lobe [UBERON:0001871]	hippocampus [UBERON:0002421]	0.58	18	amie	?b  <part_of>  ?a   => ?a  <has_part>  ?b	no
+0	textbook	amie	eff_pos_phenotype	alveoli ⊓ located in (lung) [UBERON:0002299&RO:0001025=(UBERON:0002048)]	surface area [PATO:0001323]	1.00	2	amie	?h  <eff_pos_phenotype>  ?b  ?a  <isa*>  ?h   => ?a  <eff_pos_phenotype>  ?b	yes
+1	textbook	mine	occurs_in	cellular respiration [GO:0045333]	Mitochondria [GO:0005739]	0.14	2	inverse	occurs_in(x,y) <= capable_of(y,x)	no
+1	textbook	mine	has_part	heart [UBERON:0000948]	atria [UBERON:0002081]	0.40	21	inverse	has_part(x,y) <= part_of(y,x)	no
+1	textbook	mine	has_part	chromosome [GO:0005694]	chromatin [GO:0000785]	0.40	21	inverse	has_part(x,y) <= part_of(y,x)	no
+1	textbook	mine	part_of	deoxyribonucleic acid ⊓ in taxon (NCBITaxon:2759) [CHEBI:16991&RO:0002162=(NCBITaxon:2759)]	chromosome [GO:0005694]	0.50	3	new path	part_of(x,y) <= isa*(x,z), has_part(y,z)	no
+1	textbook	mine	connected_to	trachea [UBERON:0003126]	lungs [UBERON:0002048]	0.40	2	new path	connected_to(x,y) <= connected_to(z,x), connected_to(z,y)	no
+1	textbook	mine	has_output	photosynthesizing ⊓ in taxon (plants) [GO:0015979&RO:0002162=(NCBITaxon:33090)]	oxygen [CHEBI:15379]	0.33	4	core:isaInherit	has_output(x,y) <= isa*(x,z), has_output(z,y)	yes
+1	textbook	mine	part_of	microvilli ⊓ part of (cells that specialize in absorption) [GO:0005902&BFO:0000050=(CL:0000584)]	plasma membrane [GO:0005886]	0.50	3	core:isaInherit	part_of(x,y) <= isa*(x,z), part_of(z,y)	yes
+1	textbook	mine	capable_of	HIV ⊓ part of (T-helper cells) [NCBITaxon:12721&BFO:0000050=(CL:0000912)]	viral entry into host cell [GO:0046718]	0.25	2	core:isaInherit	capable_of(x,y) <= isa*(x,z), capable_of(z,y)	yes
+1	textbook	mine	eff_pos_amount	broken down [GO:0006007]	ATP [CHEBI:15422]	0.40	2	implication	eff_pos_amount(x,y) <= has_output(x,y)	no
+1	textbook	mine	part_of	ribose [CHEBI:33942]	RNA [CHEBI:33697]	0.60	21	inverse	part_of(x,y) <= has_part(y,x)	no
+1	textbook	mine	has_part	mitotic nuclear division [GO:0140014]	prophase [GO:0000088]	0.40	21	inverse	has_part(x,y) <= part_of(y,x)	no
+1	textbook	mine	has_part	organ system [UBERON:0000467]	organ [UBERON:0000062]	0.30	3	new path	has_part(x,y) <= part_of(z,x), isa*(z,y)	no
+1	textbook	mine	eff_pos_phenotype	monosomy ⊓ part of (zygote) ⊓ in taxon (NCBITaxon:9606 ⊓ has modifier (monosomic for one copy of an autosome)) [MONDO:0020639&BFO:0000050=(CL:0010017)&RO:0002162=(NCBITaxon:9606&RO:0002573=(BLN:autosome_monosomy))]	lethal [PATO:0000718]	1.00	2	core:isaInherit	eff_pos_phenotype(x,y) <= isa*(x,z), eff_pos_phenotype(z,y)	yes
+1	textbook	mine	part_of	cerebral cortex ⊓ in taxon (Mammalia) [UBERON:0000956&RO:0002162=(NCBITaxon:40674)]	brain [UBERON:0000955]	0.50	3	new path	part_of(x,y) <= isa*(x,z), has_part(y,z)	yes
+1	textbook	mine	located_in	ribosome ⊓ in taxon (NCBITaxon:2759) [GO:0005840&RO:0002162=(NCBITaxon:2759)]	cytoplasm [GO:0005737]	0.38	3	core:isaInherit	located_in(x,y) <= isa*(x,z), located_in(z,y)	yes
+1	textbook	mine	part_of	hippocampus [UBERON:0002421]	temporal lobe [UBERON:0001871]	0.60	21	inverse	part_of(x,y) <= has_part(y,x)	no
+1	textbook	mine	part_of	thick filament [GO:0032982]	sarcomere [GO:0030017]	0.50	3	core:isaInherit	part_of(x,y) <= isa*(x,z), part_of(z,y)	yes
+1	textbook	amie	occurs_in	cellular respiration [GO:0045333]	Mitochondria [GO:0005739]	0.14	2	amie	?b  <capable_of>  ?a   => ?a  <occurs_in>  ?b	no
+1	textbook	amie	has_part	heart [UBERON:0000948]	atria [UBERON:0002081]	0.64	21	amie	?b  <part_of>  ?a   => ?a  <has_part>  ?b	no
+1	textbook	amie	has_part	chromosome [GO:0005694]	chromatin [GO:0000785]	0.64	21	amie	?b  <part_of>  ?a   => ?a  <has_part>  ?b	no
+1	textbook	amie	part_of	deoxyribonucleic acid ⊓ in taxon (NCBITaxon:2759) [CHEBI:16991&RO:0002162=(NCBITaxon:2759)]	chromosome [GO:0005694]	0.50	3	amie	?b  <has_part>  ?h  ?a  <isa*>  ?h   => ?a  <part_of>  ?b	no
+1	textbook	amie	connected_to	trachea [UBERON:0003126]	lungs [UBERON:0002048]	0.13	2	amie	?g  <connected_to>  ?a  ?g  <connected_to>  ?b   => ?a  <connected_to>  ?b	no
+1	textbook	amie	has_output	photosynthesizing ⊓ in taxon (plants) [GO:0015979&RO:0002162=(NCBITaxon:33090)]	oxygen [CHEBI:15379]	0.33	4	amie	?h  <has_output>  ?b  ?a  <isa*>  ?h   => ?a  <has_output>  ?b	yes
+1	textbook	amie	part_of	microvilli ⊓ part of (cells that specialize in absorption) [GO:0005902&BFO:0000050=(CL:0000584)]	plasma membrane [GO:0005886]	0.50	3	amie	?a  <isa*>  ?h  ?h  <part_of>  ?b   => ?a  <part_of>  ?b	yes
+1	textbook	amie	capable_of	HIV ⊓ part of (T-helper cells) [NCBITaxon:12721&BFO:0000050=(CL:0000912)]	viral entry into host cell [GO:0046718]	0.25	2	amie	?h  <capable_of>  ?b  ?a  <isa*>  ?h   => ?a  <capable_of>  ?b	yes
+1	textbook	amie	eff_pos_amount	broken down [GO:0006007]	ATP [CHEBI:15422]	0.40	2	amie	?a  <has_output>  ?b   => ?a  <eff_pos_amount>  ?b	no
+1	textbook	amie	part_of	ribose [CHEBI:33942]	RNA [CHEBI:33697]	0.60	21	amie	?b  <has_part>  ?a   => ?a  <part_of>  ?b	no
+1	textbook	amie	has_part	mitotic nuclear division [GO:0140014]	prophase [GO:0000088]	0.64	21	amie	?b  <part_of>  ?a   => ?a  <has_part>  ?b	no
+1	textbook	amie	has_part	organ system [UBERON:0000467]	organ [UBERON:0000062]	0.60	3	amie	?g  <isa*>  ?b  ?g  <part_of>  ?a   => ?a  <has_part>  ?b	no
+1	textbook	amie	eff_pos_phenotype	monosomy ⊓ part of (zygote) ⊓ in taxon (NCBITaxon:9606 ⊓ has modifier (monosomic for one copy of an autosome)) [MONDO:0020639&BFO:0000050=(CL:0010017)&RO:0002162=(NCBITaxon:9606&RO:0002573=(BLN:autosome_monosomy))]	lethal [PATO:0000718]	1.00	2	amie	?h  <eff_pos_phenotype>  ?b  ?a  <isa*>  ?h   => ?a  <eff_pos_phenotype>  ?b	yes
+1	textbook	amie	part_of	cerebral cortex ⊓ in taxon (Mammalia) [UBERON:0000956&RO:0002162=(NCBITaxon:40674)]	brain [UBERON:0000955]	0.50	3	amie	?a  <isa*>  ?h  ?h  <part_of>  ?b   => ?a  <part_of>  ?b	yes
+1	textbook	amie	located_in	ribosome ⊓ in taxon (NCBITaxon:2759) [GO:0005840&RO:0002162=(NCBITaxon:2759)]	cytoplasm [GO:0005737]	0.38	3	amie	?a  <isa*>  ?h  ?h  <located_in>  ?b   => ?a  <located_in>  ?b	yes
+1	textbook	amie	part_of	hippocampus [UBERON:0002421]	temporal lobe [UBERON:0001871]	0.60	21	amie	?b  <has_part>  ?a   => ?a  <part_of>  ?b	no
+1	textbook	amie	part_of	thick filament [GO:0032982]	sarcomere [GO:0030017]	0.50	3	amie	?a  <isa*>  ?h  ?h  <part_of>  ?b   => ?a  <part_of>  ?b	yes
+2	textbook	mine	has_part	peripheral nervous system [UBERON:0000010]	autonomic nervous system [UBERON:0002410]	0.31	17	inverse	has_part(x,y) <= part_of(y,x)	no
+2	textbook	mine	has_part	brain [UBERON:0000955]	hypothalamus [UBERON:0001898]	0.31	17	inverse	has_part(x,y) <= part_of(y,x)	no
+2	textbook	mine	part_of	light reactions of photosynthesis [GO:0019684]	photosynthesis [GO:0015979]	0.55	17	inverse	part_of(x,y) <= has_part(y,x)	no
+2	textbook	mine	has_part	neuron [CL:0000540]	dendrite [GO:0030425]	0.31	17	inverse	has_part(x,y) <= part_of(y,x)	no
+2	textbook	mine	part_of	myofilament [GO:0036379]	sarcomere [GO:0030017]	0.80	4	upward	part_of(x,y) <= isa*(z,x), part_of(z,y)	no
+2	textbook	mine	located_in	deoxyribonucleic acid ⊓ in taxon (NCBITaxon:2759) [CHEBI:16991&RO:0002162=(NCBITaxon:2759)]	nucleus [GO:0005634]	1.00	2	core:isaInherit	located_in(x,y) <= isa*(x,z), located_in(z,y)	yes
+2	textbook	mine	eff_pos_process	oxygen [CHEBI:15379]	this reaction [GO:0009060]	0.15	2	inverse	eff_pos_process(x,y) <= has_input(y,x)	no
+2	textbook	mine	part_of	DNA replication [GO:0006260]	S phase [GO:0051320]	0.55	17	inverse	part_of(x,y) <= has_part(y,x)	no
+2	textbook	mine	part_of	chromatin [GO:0000785]	chromosome [GO:0005694]	0.55	17	inverse	part_of(x,y) <= has_part(y,x)	no
+2	textbook	mine	has_part	RNA [CHEBI:33697]	ribose [CHEBI:33942]	0.31	17	inverse	has_part(x,y) <= part_of(y,x)	no
+2	textbook	mine	connected_to	trachea [UBERON:0003126]	bronchi [UBERON:0002185]	0.18	2	inverse	connected_to(x,y) <= connected_to(y,x)	no
+2	textbook	mine	part_of	brain ⊓ in taxon (Vertebrata) [UBERON:0000955&RO:0002162=(NCBITaxon:7742)]	central nervous system [UBERON:0001017]	0.50	4	core:isaInherit	part_of(x,y) <= isa*(x,z), part_of(z,y)	yes
+2	textbook	mine	capable_of	kidneys [UBERON:0002113]	filter [GO:0003094]	0.42	5	new path	capable_of(x,y) <= has_part(x,z), capable_of(z,y)	no
+2	textbook	mine	has_part	ATP [CHEBI:15422]	phosphate group [CHEBI:32958]	0.16	3	core:isaInherit	has_part(x,y) <= isa*(x,z), has_part(z,y)	yes
+2	textbook	mine	located_in	chromosome ⊓ in taxon (prokaryote) [GO:0005694&RO:0002162=(NCBITaxon:2)]	nucleoid [GO:0009295]	0.67	2	taxon	located_in(x,nucleoid) <= in_taxon(x,bacteria)	no
+2	textbook	mine	has_input	Calvin cycle [GO:0019253]	ATP [CHEBI:15422]	0.60	3	new path	has_input(x,y) <= has_part(x,z), has_input(z,y)	no
+2	textbook	mine	has_output	photosynthesis [GO:0015979]	sugars [CHEBI:16646]	1.00	2	feat	has_output(x,sugars) <= has_input(x,carbon dioxide)	no
+2	textbook	mine	part_of	sympathetic nervous system [UBERON:0000013]	autonomic nervous system [UBERON:0002410]	0.55	17	inverse	part_of(x,y) <= has_part(y,x)	no
+2	textbook	mine	has_part	organ [UBERON:0000062]	tissues [UBERON:0000479]	0.18	2	new path	has_part(x,y) <= part_of(z,x), isa*(z,y)	no
+2	textbook	mine	eff_pos_phenotype	chromosomal disorder [MONDO:0019040]	lethal [PATO:0000718]	1.00	2	upward	eff_pos_phenotype(x,y) <= isa*(z,x), eff_pos_phenotype(z,y)	no
+2	textbook	mine	part_of	organs ⊓ in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)]	organ system [UBERON:0000467]	0.18	2	new path	part_of(x,y) <= isa*(x,z), has_part(y,z)	no
+2	textbook	mine	part_of	thylakoids [GO:0009579]	chloroplast [GO:0009507]	0.55	17	inverse	part_of(x,y) <= has_part(y,x)	no
+2	textbook	mine	part_of	interphase ⊓ in taxon (eukaryotes) [GO:0051325&RO:0002162=(NCBITaxon:2759)]	cell cycle [GO:0007049]	0.50	4	core:isaInherit	part_of(x,y) <= isa*(x,z), part_of(z,y)	yes
+2	textbook	amie	has_part	peripheral nervous system [UBERON:0000010]	autonomic nervous system [UBERON:0002410]	0.61	17	amie	?b  <part_of>  ?a   => ?a  <has_part>  ?b	no
+2	textbook	amie	has_part	brain [UBERON:0000955]	hypothalamus [UBERON:0001898]	0.61	17	amie	?b  <part_of>  ?a   => ?a  <has_part>  ?b	no
+2	textbook	amie	part_of	light reactions of photosynthesis [GO:0019684]	photosynthesis [GO:0015979]	0.55	17	amie	?b  <has_part>  ?a   => ?a  <part_of>  ?b	no
+2	textbook	amie	has_part	neuron [CL:0000540]	dendrite [GO:0030425]	0.61	17	amie	?b  <part_of>  ?a   => ?a  <has_part>  ?b	no
+2	textbook	amie	part_of	myofilament [GO:0036379]	sarcomere [GO:0030017]	0.80	4	amie	?g  <isa*>  ?a  ?g  <part_of>  ?b   => ?a  <part_of>  ?b	no
+2	textbook	amie	located_in	deoxyribonucleic acid ⊓ in taxon (NCBITaxon:2759) [CHEBI:16991&RO:0002162=(NCBITaxon:2759)]	nucleus [GO:0005634]	1.00	2	amie	?a  <isa*>  ?h  ?h  <located_in>  ?b   => ?a  <located_in>  ?b	yes
+2	textbook	amie	eff_pos_process	oxygen [CHEBI:15379]	this reaction [GO:0009060]	0.15	2	amie	?b  <has_input>  ?a   => ?a  <eff_pos_process>  ?b	no
+2	textbook	amie	part_of	DNA replication [GO:0006260]	S phase [GO:0051320]	0.55	17	amie	?b  <has_part>  ?a   => ?a  <part_of>  ?b	no
+2	textbook	amie	part_of	chromatin [GO:0000785]	chromosome [GO:0005694]	0.55	17	amie	?b  <has_part>  ?a   => ?a  <part_of>  ?b	no
+2	textbook	amie	has_part	RNA [CHEBI:33697]	ribose [CHEBI:33942]	0.61	17	amie	?b  <part_of>  ?a   => ?a  <has_part>  ?b	no
+2	textbook	amie	connected_to	trachea [UBERON:0003126]	bronchi [UBERON:0002185]	0.18	2	amie	?b  <connected_to>  ?a   => ?a  <connected_to>  ?b	no
+2	textbook	amie	part_of	brain ⊓ in taxon (Vertebrata) [UBERON:0000955&RO:0002162=(NCBITaxon:7742)]	central nervous system [UBERON:0001017]	0.50	4	amie	?a  <isa*>  ?h  ?h  <part_of>  ?b   => ?a  <part_of>  ?b	yes
+2	textbook	amie	capable_of	kidneys [UBERON:0002113]	filter [GO:0003094]	0.42	5	amie	?h  <capable_of>  ?b  ?a  <has_part>  ?h   => ?a  <capable_of>  ?b	no
+2	textbook	amie	has_input	Calvin cycle [GO:0019253]	ATP [CHEBI:15422]	0.60	3	amie	?h  <has_input>  ?b  ?a  <has_part>  ?h   => ?a  <has_input>  ?b	no
+2	textbook	amie	has_output	photosynthesis [GO:0015979]	sugars [CHEBI:16646]	0.67	2	amie	?b  <derives_from>  ?h  ?a  <has_input>  ?h   => ?a  <has_output>  ?b	no
+2	textbook	amie	part_of	sympathetic nervous system [UBERON:0000013]	autonomic nervous system [UBERON:0002410]	0.55	17	amie	?b  <has_part>  ?a   => ?a  <part_of>  ?b	no
+2	textbook	amie	has_part	organ [UBERON:0000062]	tissues [UBERON:0000479]	0.25	2	amie	?g  <isa*>  ?b  ?g  <part_of>  ?a   => ?a  <has_part>  ?b	no
+2	textbook	amie	eff_pos_phenotype	chromosomal disorder [MONDO:0019040]	lethal [PATO:0000718]	1.00	2	amie	?g  <eff_pos_phenotype>  ?b  ?g  <isa*>  ?a   => ?a  <eff_pos_phenotype>  ?b	no
+2	textbook	amie	part_of	organs ⊓ in taxon (NCBITaxon:33208) [UBERON:0000062&RO:0002162=(NCBITaxon:33208)]	organ system [UBERON:0000467]	0.18	2	amie	?b  <has_part>  ?h  ?a  <isa*>  ?h   => ?a  <part_of>  ?b	no
+2	textbook	amie	part_of	thylakoids [GO:0009579]	chloroplast [GO:0009507]	0.55	17	amie	?b  <has_part>  ?a   => ?a  <part_of>  ?b	no
+2	textbook	amie	part_of	interphase ⊓ in taxon (eukaryotes) [GO:0051325&RO:0002162=(NCBITaxon:2759)]	cell cycle [GO:0007049]	0.50	4	amie	?a  <isa*>  ?h  ?h  <part_of>  ?b   => ?a  <part_of>  ?b	yes
+3	textbook	mine	part_of	cerebral cortex [UBERON:0000956]	brain [UBERON:0000955]	0.57	4	upward	part_of(x,y) <= isa*(z,x), part_of(z,y)	no
+3	textbook	mine	located_in	genetic material ⊓ in taxon (prokaryotic cell) [SO:0001026&RO:0002162=(NCBITaxon:2)]	nucleoid [GO:0009295]	0.67	2	taxon	located_in(x,nucleoid) <= in_taxon(x,bacteria)	no
+3	textbook	mine	has_part	photosynthesis [GO:0015979]	light reactions of photosynthesis [GO:0019684]	0.35	18	inverse	has_part(x,y) <= part_of(y,x)	no
+3	textbook	mine	capable_of	photosystem [GO:0009521]	absorb light [GO:0009765]	0.33	3	new path	capable_of(x,y) <= has_part(x,z), capable_of(z,y)	no
+3	textbook	mine	has_part	central nervous system [UBERON:0001017]	brain [UBERON:0000955]	0.35	18	inverse	has_part(x,y) <= part_of(y,x)	no
+3	textbook	mine	located_in	chromosomes ⊓ in taxon (NCBITaxon:2759) [GO:0005694&RO:0002162=(NCBITaxon:2759)]	nucleus [GO:0005634]	0.43	3	core:isaInherit	located_in(x,y) <= isa*(x,z), located_in(z,y)	yes
+3	textbook	mine	has_part	ribosomes [GO:0005840]	ribosomal RNA [CHEBI:18111]	0.35	18	inverse	has_part(x,y) <= part_of(y,x)	no
+3	textbook	mine	capable_of	chloroplast [GO:0009507]	photosynthesis [GO:0015979]	0.27	3	new path	capable_of(x,y) <= has_part(z,x), capable_of(z,y)	no
+3	textbook	mine	has_part	cell cycle [GO:0007049]	interphase [GO:0051325]	0.30	3	new path	has_part(x,y) <= part_of(z,x), isa*(z,y)	no
+3	textbook	mine	has_output	broken down [GO:0006007]	ATP [CHEBI:15422]	0.36	4	new path	has_output(x,y) <= part_of(z,x), has_output(z,y)	no
+3	textbook	mine	eff_pos_process	cytoskeleton [GO:0005856]	locomotion [GO:0048870]	0.22	2	new path	eff_pos_process(x,y) <= has_part(x,z), eff_pos_process(z,y)	no
+3	textbook	mine	eff_pos_process	microfilaments [GO:0005884]	maintain its shape [GO:0008360]	0.22	2	new path	eff_pos_process(x,y) <= has_part(z,x), eff_pos_process(z,y)	no
+3	textbook	mine	connected_to	bronchi [UBERON:0002185]	trachea [UBERON:0003126]	0.29	2	new path	connected_to(x,y) <= connected_to(z,x), connected_to(z,y)	no
+3	textbook	mine	part_of	autonomic nervous system [UBERON:0002410]	peripheral nervous system [UBERON:0000010]	0.55	18	inverse	part_of(x,y) <= has_part(y,x)	no
+3	textbook	mine	has_part	pancreatic islet [UBERON:0000006]	pancreatic beta cell [CL:0000169]	0.35	18	inverse	has_part(x,y) <= part_of(y,x)	no
+3	textbook	mine	part_of	cerebellum [UBERON:0002037]	brain [UBERON:0000955]	0.55	18	inverse	part_of(x,y) <= has_part(y,x)	no
+3	textbook	mine	part_of	meiosis II [GO:0007135]	meiotic cell cycle [GO:0051321]	0.10	3	new path	part_of(x,y) <= has_output(x,z), has_output(y,z)	no
+3	textbook	mine	has_part	S phase [GO:0051320]	DNA replication [GO:0006260]	0.35	18	inverse	has_part(x,y) <= part_of(y,x)	no
+3	textbook	mine	part_of	tissues ⊓ in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)]	organ [UBERON:0000062]	0.25	3	new path	part_of(x,y) <= isa*(x,z), has_part(y,z)	no
+3	textbook	mine	part_of	interphase [GO:0051325]	cell cycle [GO:0007049]	0.57	4	upward	part_of(x,y) <= isa*(z,x), part_of(z,y)	no
+3	textbook	mine	has_part	autonomic nervous system [UBERON:0002410]	sympathetic nervous system [UBERON:0000013]	0.35	18	inverse	has_part(x,y) <= part_of(y,x)	no
+3	textbook	mine	part_of	microvillus [GO:0005902]	plasma membrane [GO:0005886]	0.57	4	upward	part_of(x,y) <= isa*(z,x), part_of(z,y)	no
+3	textbook	amie	part_of	cerebral cortex [UBERON:0000956]	brain [UBERON:0000955]	0.57	4	amie	?g  <isa*>  ?a  ?g  <part_of>  ?b   => ?a  <part_of>  ?b	no
+3	textbook	amie	has_part	photosynthesis [GO:0015979]	light reactions of photosynthesis [GO:0019684]	0.60	18	amie	?b  <part_of>  ?a   => ?a  <has_part>  ?b	no
+3	textbook	amie	capable_of	photosystem [GO:0009521]	absorb light [GO:0009765]	0.33	3	amie	?h  <capable_of>  ?b  ?a  <has_part>  ?h   => ?a  <capable_of>  ?b	no
+3	textbook	amie	has_part	central nervous system [UBERON:0001017]	brain [UBERON:0000955]	0.60	18	amie	?b  <part_of>  ?a   => ?a  <has_part>  ?b	no
+3	textbook	amie	located_in	chromosomes ⊓ in taxon (NCBITaxon:2759) [GO:0005694&RO:0002162=(NCBITaxon:2759)]	nucleus [GO:0005634]	0.43	3	amie	?a  <isa*>  ?h  ?h  <located_in>  ?b   => ?a  <located_in>  ?b	yes
+3	textbook	amie	has_part	ribosomes [GO:0005840]	ribosomal RNA [CHEBI:18111]	0.60	18	amie	?b  <part_of>  ?a   => ?a  <has_part>  ?b	no
+3	textbook	amie	capable_of	chloroplast [GO:0009507]	photosynthesis [GO:0015979]	0.27	3	amie	?g  <capable_of>  ?b  ?g  <has_part>  ?a   => ?a  <capable_of>  ?b	no
+3	textbook	amie	has_part	cell cycle [GO:0007049]	interphase [GO:0051325]	0.38	3	amie	?g  <isa*>  ?b  ?g  <part_of>  ?a   => ?a  <has_part>  ?b	no
+3	textbook	amie	has_output	broken down [GO:0006007]	ATP [CHEBI:15422]	0.36	4	amie	?g  <has_output>  ?b  ?g  <part_of>  ?a   => ?a  <has_output>  ?b	no
+3	textbook	amie	eff_pos_process	cytoskeleton [GO:0005856]	locomotion [GO:0048870]	0.22	2	amie	?h  <eff_pos_process>  ?b  ?a  <has_part>  ?h   => ?a  <eff_pos_process>  ?b	no
+3	textbook	amie	eff_pos_process	microfilaments [GO:0005884]	maintain its shape [GO:0008360]	0.22	2	amie	?g  <eff_pos_process>  ?b  ?g  <has_part>  ?a   => ?a  <eff_pos_process>  ?b	no
+3	textbook	amie	connected_to	bronchi [UBERON:0002185]	trachea [UBERON:0003126]	0.15	2	amie	?b  <connected_to>  ?a   => ?a  <connected_to>  ?b	no
+3	textbook	amie	part_of	autonomic nervous system [UBERON:0002410]	peripheral nervous system [UBERON:0000010]	0.55	18	amie	?b  <has_part>  ?a   => ?a  <part_of>  ?b	no
+3	textbook	amie	has_part	pancreatic islet [UBERON:0000006]	pancreatic beta cell [CL:0000169]	0.60	18	amie	?b  <part_of>  ?a   => ?a  <has_part>  ?b	no
+3	textbook	amie	part_of	cerebellum [UBERON:0002037]	brain [UBERON:0000955]	0.55	18	amie	?b  <has_part>  ?a   => ?a  <part_of>  ?b	no
+3	textbook	amie	has_part	S phase [GO:0051320]	DNA replication [GO:0006260]	0.60	18	amie	?b  <part_of>  ?a   => ?a  <has_part>  ?b	no
+3	textbook	amie	part_of	tissues ⊓ in taxon (NCBITaxon:33208) [UBERON:0000479&RO:0002162=(NCBITaxon:33208)]	organ [UBERON:0000062]	0.25	3	amie	?b  <has_part>  ?h  ?a  <isa*>  ?h   => ?a  <part_of>  ?b	no
+3	textbook	amie	part_of	interphase [GO:0051325]	cell cycle [GO:0007049]	0.57	4	amie	?g  <isa*>  ?a  ?g  <part_of>  ?b   => ?a  <part_of>  ?b	no
+3	textbook	amie	has_part	autonomic nervous system [UBERON:0002410]	sympathetic nervous system [UBERON:0000013]	0.60	18	amie	?b  <part_of>  ?a   => ?a  <has_part>  ?b	no
+3	textbook	amie	part_of	microvillus [GO:0005902]	plasma membrane [GO:0005886]	0.57	4	amie	?g  <isa*>  ?a  ?g  <part_of>  ?b   => ?a  <part_of>  ?b	no
+4	textbook	mine	has_part	chloroplast [GO:0009507]	thylakoids [GO:0009579]	0.26	18	inverse	has_part(x,y) <= part_of(y,x)	no
+4	textbook	mine	has_output	light reactions of photosynthesis [GO:0019684]	oxygen [CHEBI:15379]	0.29	2	new path	has_output(x,y) <= part_of(x,z), has_output(z,y)	no
+4	textbook	mine	located_in	ribosome ⊓ in taxon (prokaryote) [GO:0005840&RO:0002162=(NCBITaxon:2)]	cytoplasm [GO:0005737]	0.38	3	core:isaInherit	located_in(x,y) <= isa*(x,z), located_in(z,y)	yes
+4	textbook	mine	has_output	meiotic cell cycle [GO:0051321]	haploid cell [CL:0000413]	0.33	2	new path	has_output(x,y) <= part_of(z,x), has_output(z,y)	no
+4	textbook	mine	part_of	frontal lobe [UBERON:0016525]	cerebral cortex [UBERON:0000956]	0.60	6	upward	part_of(x,y) <= isa*(z,x), part_of(z,y)	no
+4	textbook	mine	part_of	ribosomal RNA [CHEBI:18111]	ribosomes [GO:0005840]	0.55	18	inverse	part_of(x,y) <= has_part(y,x)	no
+4	textbook	mine	has_part	photosynthesis [GO:0015979]	Calvin cycle [GO:0019253]	0.26	18	inverse	has_part(x,y) <= part_of(y,x)	no
+4	textbook	mine	eff_pos_process	cytoskeleton [GO:0005856]	maintain its shape [GO:0008360]	0.27	3	new path	eff_pos_process(x,y) <= has_part(x,z), eff_pos_process(z,y)	no
+4	textbook	mine	part_of	brainstem [UBERON:0002298]	brain [UBERON:0000955]	0.55	18	inverse	part_of(x,y) <= has_part(y,x)	no
+4	textbook	mine	has_input	photosynthesis [GO:0015979]	carbon dioxide [CHEBI:16526]	0.67	2	feat	has_input(x,carbon dioxide) <= has_output(x,glucose)	no
+4	textbook	mine	has_part	brain [UBERON:0000955]	limbic system [UBERON:0000349]	0.26	18	inverse	has_part(x,y) <= part_of(y,x)	no
+4	textbook	mine	has_part	brain [UBERON:0000955]	cerebellum [UBERON:0002037]	0.26	18	inverse	has_part(x,y) <= part_of(y,x)	no
+4	textbook	mine	part_of	atria [UBERON:0002081]	heart [UBERON:0000948]	0.55	18	inverse	part_of(x,y) <= has_part(y,x)	no
+4	textbook	mine	capable_of	chlorophyll [CHEBI:28966]	absorb light [GO:0009765]	0.20	3	new path	capable_of(x,y) <= has_part(z,x), capable_of(z,y)	yes
+4	textbook	amie	has_part	chloroplast [GO:0009507]	thylakoids [GO:0009579]	0.60	18	amie	?b  <part_of>  ?a   => ?a  <has_part>  ?b	no
+4	textbook	amie	has_output	light reactions of photosynthesis [GO:0019684]	oxygen [CHEBI:15379]	0.29	2	amie	?h  <has_output>  ?b  ?a  <part_of>  ?h   => ?a  <has_output>  ?b	no
+4	textbook	amie	located_in	ribosome ⊓ in taxon (prokaryote) [GO:0005840&RO:0002162=(NCBITaxon:2)]	cytoplasm [GO:0005737]	0.38	3	amie	?a  <isa*>  ?h  ?h  <located_in>  ?b   => ?a  <located_in>  ?b	yes
+4	textbook	amie	has_output	meiotic cell cycle [GO:0051321]	haploid cell [CL:0000413]	0.33	2	amie	?g  <has_output>  ?b  ?g  <part_of>  ?a   => ?a  <has_output>  ?b	no
+4	textbook	amie	part_of	frontal lobe [UBERON:0016525]	cerebral cortex [UBERON:0000956]	0.60	6	amie	?g  <isa*>  ?a  ?g  <part_of>  ?b   => ?a  <part_of>  ?b	no
+4	textbook	amie	part_of	ribosomal RNA [CHEBI:18111]	ribosomes [GO:0005840]	0.55	18	amie	?b  <has_part>  ?a   => ?a  <part_of>  ?b	no
+4	textbook	amie	has_part	photosynthesis [GO:0015979]	Calvin cycle [GO:0019253]	0.60	18	amie	?b  <part_of>  ?a   => ?a  <has_part>  ?b	no
+4	textbook	amie	eff_pos_process	cytoskeleton [GO:0005856]	maintain its shape [GO:0008360]	0.27	3	amie	?h  <eff_pos_process>  ?b  ?a  <has_part>  ?h   => ?a  <eff_pos_process>  ?b	no
+4	textbook	amie	part_of	brainstem [UBERON:0002298]	brain [UBERON:0000955]	0.55	18	amie	?b  <has_part>  ?a   => ?a  <part_of>  ?b	no
+4	textbook	amie	has_part	brain [UBERON:0000955]	limbic system [UBERON:0000349]	0.60	18	amie	?b  <part_of>  ?a   => ?a  <has_part>  ?b	no
+4	textbook	amie	has_part	brain [UBERON:0000955]	cerebellum [UBERON:0002037]	0.60	18	amie	?b  <part_of>  ?a   => ?a  <has_part>  ?b	no
+4	textbook	amie	part_of	atria [UBERON:0002081]	heart [UBERON:0000948]	0.55	18	amie	?b  <has_part>  ?a   => ?a  <part_of>  ?b	no
+4	textbook	amie	capable_of	chlorophyll [CHEBI:28966]	absorb light [GO:0009765]	0.20	3	amie	?g  <capable_of>  ?b  ?g  <has_part>  ?a   => ?a  <capable_of>  ?b	yes
+0	onto	mine	has_part	brain [UBERON:0000955]	cerebral cortex [UBERON:0000956]	0.31	18	inverse	has_part(x,y) <= part_of(y,x)	no
+0	onto	mine	has_part	membrane of the ER [GO:0005789]	phospholipid [CHEBI:16247]	0.50	2	class	has_part(x,phospholipid) <= isa*(x,membrane)	no
+0	onto	mine	capable_of	cilium [GO:0005929]	locomotion [GO:0048870]	0.12	3	upward	capable_of(x,y) <= isa*(z,x), capable_of(z,y)	no
+0	onto	mine	has_output	photosynthesizing ⊓ in taxon (plants) [GO:0015979&RO:0002162=(NCBITaxon:33090)]	sugars [CHEBI:16646]	0.18	7	core:isaInherit	has_output(x,y) <= isa*(x,z), has_output(z,y)	yes
+0	onto	mine	eff_pos_process	extracellular matrix ⊓ in taxon (NCBITaxon:33208) [GO:0031012&RO:0002162=(NCBITaxon:33208)]	cell communication [GO:0007154]	0.12	2	class	eff_pos_process(x,cell communication) <= isa*(x,GO:0110165)	yes
+0	onto	mine	part_of	frontal lobe [UBERON:0016525]	brain [UBERON:0000955]	0.75	3	class	part_of(x,brain) <= isa*(x,cerebral lobe)	yes
+0	onto	mine	has_output	photosynthesizing ⊓ in taxon (plants) [GO:0015979&RO:0002162=(NCBITaxon:33090)]	glucose [CHEBI:17234]	0.18	7	core:isaInherit	has_output(x,y) <= isa*(x,z), has_output(z,y)	yes
+0	onto	mine	part_of	hypothalamus [UBERON:0001898]	brain [UBERON:0000955]	0.80	4	class	part_of(x,brain) <= isa*(x,UBERON:0000073)	no
+0	onto	mine	part_of	G2 [GO:0051319]	interphase [GO:0051325]	0.33	2	class	part_of(x,interphase) <= isa*(x,GO:0022403)	no
+0	onto	mine	part_of	frontal lobe ⊓ in taxon (Mammalia) [UBERON:0016525&RO:0002162=(NCBITaxon:40674)]	cerebral cortex [UBERON:0000956]	0.50	2	class	part_of(x,cerebral cortex) <= isa*(x,cerebral lobe)	yes
+0	onto	mine	part_of	mitotic nuclear division [GO:0140014]	cell cycle [GO:0007049]	0.18	3	class	part_of(x,cell cycle) <= isa*(x,GO:0008150)	no
+0	onto	mine	occurs_in	digestion [GO:0007586]	small intestine [UBERON:0002108]	0.10	3	upward	occurs_in(x,y) <= isa*(z,x), occurs_in(z,y)	no
+0	onto	mine	eff_pos_amount	lungs [UBERON:0002048]	oxygen [CHEBI:15379]	0.50	2	class	eff_pos_amount(x,oxygen) <= isa*(x,UBERON:0000061)	no
+0	onto	mine	has_part	eukaryotic [CL:0000255]	plasma membrane [GO:0005886]	0.10	9	core:isaInherit	has_part(x,y) <= isa*(x,z), has_part(z,y)	no
+0	onto	mine	has_output	photosynthesis ⊓ occurs in (chloroplast) [GO:0015979&BFO:0000066=(GO:0009507)]	sugars [CHEBI:16646]	0.18	7	core:isaInherit	has_output(x,y) <= isa*(x,z), has_output(z,y)	yes
+0	onto	mine	part_of	temporal lobe [UBERON:0001871]	cerebral cortex [UBERON:0000956]	0.50	2	class	part_of(x,cerebral cortex) <= isa*(x,cerebral lobe)	no
+0	onto	mine	located_in	DNA [CHEBI:16991]	nucleus [GO:0005634]	0.19	3	upward	located_in(x,y) <= isa*(z,x), located_in(z,y)	no
+0	onto	mine	part_of	anaphase [GO:0000090]	mitotic nuclear division [GO:0140014]	0.33	2	class	part_of(x,mitotic nuclear division) <= isa*(x,GO:0022403)	no
+0	onto	mine	eff_pos_process	polysaccharide capsule [GO:0042603]	attach to surfaces [GO:0007155]	0.12	2	class	eff_pos_process(x,attach to surfaces) <= isa*(x,GO:0110165)	no
+0	onto	mine	capable_of	endoplasmic reticulum [GO:0005783]	lipid biosynthetic process [GO:0008610]	0.12	3	upward	capable_of(x,y) <= isa*(z,x), capable_of(z,y)	no
+0	onto	mine	has_output	glycolytic process [GO:0006096]	ATP [CHEBI:15422]	0.50	2	implication	has_output(x,y) <= eff_pos_amount(x,y)	no
+0	onto	mine	part_of	pancreatic beta cell [CL:0000169]	pancreatic islet [UBERON:0000006]	1.00	2	class	part_of(x,pancreatic islet) <= isa*(x,CL:0000151)	no
+0	onto	mine	has_part	brain [UBERON:0000955]	brainstem [UBERON:0002298]	0.31	18	inverse	has_part(x,y) <= part_of(y,x)	no
+0	onto	mine	has_output	Calvin cycle [GO:0019253]	sugars [CHEBI:16646]	0.29	2	new path	has_output(x,y) <= has_part(z,x), has_output(z,y)	no
+0	onto	mine	happens_during	crossing over [GO:0007131]	meiosis I [GO:0007127]	0.40	2	class	happens_during(x,meiosis I) <= isa*(x,GO:1903046)	no
+0	onto	mine	eff_pos_process	microfilaments [GO:0005884]	locomotion [GO:0048870]	0.22	2	new path	eff_pos_process(x,y) <= has_part(z,x), eff_pos_process(z,y)	no
+0	onto	mine	located_in	polysaccharide [CHEBI:18154]	cytoplasm [GO:0005737]	0.29	4	class	located_in(x,cytoplasm) <= isa*(x,CHEBI:23367)	no
+0	onto	mine	located_in	circular DNA chromosome ⊓ in taxon (bacteria) [SO:0000958&RO:0002162=(NCBITaxon:2)]	nucleoid [GO:0009295]	0.67	2	taxon	located_in(x,nucleoid) <= in_taxon(x,bacteria)	no
+0	onto	mine	part_of	limbic system [UBERON:0000349]	brain [UBERON:0000955]	0.56	18	inverse	part_of(x,y) <= has_part(y,x)	no
+0	onto	mine	located_in	ribosomes [GO:0005840]	cytoplasm [GO:0005737]	0.19	3	upward	located_in(x,y) <= isa*(z,x), located_in(z,y)	no
+0	onto	mine	eff_pos_phenotype	Primary active transport [GO:0015399]	membrane potential [PATO:0001462]	0.60	3	upward	eff_pos_phenotype(x,y) <= isa*(z,x), eff_pos_phenotype(z,y)	no
+0	onto	mine	part_of	Calvin cycle [GO:0019253]	photosynthesis [GO:0015979]	0.56	18	inverse	part_of(x,y) <= has_part(y,x)	no
+0	onto	mine	occurs_in	translation ⊓ in taxon (NCBITaxon:2759) [GO:0006412&RO:0002162=(NCBITaxon:2759)]	cytoplasm [GO:0005737]	0.40	2	class	occurs_in(x,cytoplasm) <= isa*(x,GO:0009059)	yes
+0	onto	mine	part_of	brain [UBERON:0000955]	central nervous system [UBERON:0001017]	0.60	6	upward	part_of(x,y) <= isa*(z,x), part_of(z,y)	no
+0	onto	mine	capable_of	muscle organ [UBERON:0001630]	locomotion [GO:0040011]	0.12	3	upward	capable_of(x,y) <= isa*(z,x), capable_of(z,y)	no
+0	onto	mine	has_input	carbohydrate biosynthetic process [GO:0016051]	ATP [CHEBI:15422]	0.50	2	class	has_input(x,ATP) <= isa*(x,GO:0005975)	no
+0	onto	mine	part_of	dendrite [GO:0030425]	neuron [CL:0000540]	0.56	18	inverse	part_of(x,y) <= has_part(y,x)	no
+0	onto	mine	part_of	prophase [GO:0000088]	mitotic nuclear division [GO:0140014]	0.56	18	inverse	part_of(x,y) <= has_part(y,x)	no
+0	onto	mine	occurs_in	metabolic reactions [GO:0008152]	cells [CL:0000000]	0.10	3	upward	occurs_in(x,y) <= isa*(z,x), occurs_in(z,y)	no
+0	onto	mine	has_part	temporal lobe [UBERON:0001871]	hippocampus [UBERON:0002421]	0.31	18	inverse	has_part(x,y) <= part_of(y,x)	no
+0	onto	mine	has_output	meiosis II [GO:0007135]	haploid cell [CL:0000413]	0.67	2	class	has_output(x,haploid cell) <= isa*(x,reproduction)	no
+0	onto	mine	part_of	metaphase [GO:0000089]	mitotic nuclear division [GO:0140014]	0.33	2	class	part_of(x,mitotic nuclear division) <= isa*(x,GO:0022403)	no
+0	onto	mine	capable_of	neutrophil [CL:0000775]	phagocytosis [GO:0006909]	0.12	4	core:isaInherit	capable_of(x,y) <= isa*(x,z), capable_of(z,y)	no
+0	onto	mine	eff_pos_process	cell wall [GO:0005618]	maintain its shape [GO:0008360]	0.24	4	class	eff_pos_process(x,maintain its shape) <= isa*(x,GO:0110165)	no
+0	onto	mine	part_of	parietal lobe [UBERON:0001872]	cerebral cortex [UBERON:0000956]	0.50	2	class	part_of(x,cerebral cortex) <= isa*(x,cerebral lobe)	no
+0	onto	mine	eff_pos_phenotype	alveoli ⊓ located in (lung) [UBERON:0002299&RO:0001025=(UBERON:0002048)]	surface area [PATO:0001323]	0.60	3	core:isaInherit	eff_pos_phenotype(x,y) <= isa*(x,z), eff_pos_phenotype(z,y)	yes
+1	onto	mine	eff_pos_process	intermediate filament [GO:0005882]	organelle localization [GO:0051640]	0.10	2	class	eff_pos_process(x,organelle localization) <= isa*(x,GO:0110165)	no
+1	onto	mine	has_part	chromosome [GO:0005694]	chromatin [GO:0000785]	0.40	21	inverse	has_part(x,y) <= part_of(y,x)	no
+1	onto	mine	has_output	energy coupled proton transport, down electrochemical gradient [GO:0015985]	ATP [CHEBI:15422]	0.18	6	class	has_output(x,ATP) <= isa*(x,GO:0009987)	no
+1	onto	mine	part_of	arise from [GO:0051301]	cell cycle [GO:0007049]	0.18	3	class	part_of(x,cell cycle) <= isa*(x,GO:0008150)	no
+1	onto	mine	occurs_in	DNA repair genes [GO:0006281]	cells [CL:0000000]	0.12	6	core:isaInherit	occurs_in(x,y) <= isa*(x,z), occurs_in(z,y)	no
+1	onto	mine	happens_during	homologous chromosome segregation [GO:0045143]	meiosis I [GO:0007127]	0.50	2	class	happens_during(x,meiosis I) <= isa*(x,GO:1903046)	no
+1	onto	mine	has_part	mitotic nuclear division [GO:0140014]	prophase [GO:0000088]	0.40	21	inverse	has_part(x,y) <= part_of(y,x)	no
+1	onto	mine	eff_pos_phenotype	monosomy ⊓ part of (zygote) ⊓ in taxon (NCBITaxon:9606 ⊓ has modifier (monosomic for one copy of an autosome)) [MONDO:0020639&BFO:0000050=(CL:0010017)&RO:0002162=(NCBITaxon:9606&RO:0002573=(BLN:autosome_monosomy))]	lethal [PATO:0000718]	0.60	3	core:isaInherit	eff_pos_phenotype(x,y) <= isa*(x,z), eff_pos_phenotype(z,y)	yes
+1	onto	mine	part_of	thick filament [GO:0032982]	sarcomere [GO:0030017]	0.50	5	core:isaInherit	part_of(x,y) <= isa*(x,z), part_of(z,y)	yes
+1	onto	mine	has_output	tricarboxylic acid cycle [GO:0006099]	ATP [CHEBI:15422]	0.19	5	class	has_output(x,ATP) <= isa*(x,metabolic reactions)	no
+1	onto	mine	part_of	basal ganglia [UBERON:0002420]	brain [UBERON:0000955]	0.29	11	class	part_of(x,brain) <= isa*(x,UBERON:0000061)	no
+1	onto	mine	has_output	photosynthesizing ⊓ in taxon (plants) [GO:0015979&RO:0002162=(NCBITaxon:33090)]	oxygen [CHEBI:15379]	0.19	9	core:isaInherit	has_output(x,y) <= isa*(x,z), has_output(z,y)	yes
+1	onto	mine	eff_pos_amount	broken down [GO:0006007]	ATP [CHEBI:15422]	0.40	2	implication	eff_pos_amount(x,y) <= has_output(x,y)	no
+1	onto	mine	has_part	heart [UBERON:0000948]	atria [UBERON:0002081]	0.40	21	inverse	has_part(x,y) <= part_of(y,x)	no
+1	onto	mine	located_in	glucose [CHEBI:17234]	cytoplasm [GO:0005737]	0.27	4	class	located_in(x,cytoplasm) <= isa*(x,CHEBI:23367)	no
+1	onto	mine	has_part	cells [CL:0000000]	plasma membrane [GO:0005886]	0.10	8	upward	has_part(x,y) <= isa*(z,x), has_part(z,y)	no
+1	onto	mine	occurs_in	DNA-templated transcription ⊓ in taxon (prokaryotes, which include bacteria and archaea) [GO:0006351&RO:0002162=(NCBITaxon:2)]	cytoplasm [GO:0005737]	0.23	3	class	occurs_in(x,cytoplasm) <= isa*(x,GO:0044238)	no
+1	onto	mine	part_of	ribose [CHEBI:33942]	RNA [CHEBI:33697]	0.60	21	inverse	part_of(x,y) <= has_part(y,x)	no
+1	onto	mine	part_of	hippocampus [UBERON:0002421]	temporal lobe [UBERON:0001871]	0.60	21	inverse	part_of(x,y) <= has_part(y,x)	no
+1	onto	mine	part_of	G1 [GO:0051318]	interphase [GO:0051325]	0.25	2	class	part_of(x,interphase) <= isa*(x,GO:0022403)	no
+1	onto	mine	occurs_in	protein digestion [GO:0044256]	small intestine [UBERON:0002108]	0.12	6	core:isaInherit	occurs_in(x,y) <= isa*(x,z), occurs_in(z,y)	no
+1	onto	mine	occurs_in	cellular respiration [GO:0045333]	Mitochondria [GO:0005739]	0.14	2	inverse	occurs_in(x,y) <= capable_of(y,x)	no
+1	onto	mine	has_part	chloroplast [GO:0009507]	thylakoids [GO:0009534]	0.17	4	new path	has_part(x,y) <= part_of(z,x), isa*(y,z)	no
+1	onto	mine	connected_to	trachea [UBERON:0003126]	lungs [UBERON:0002048]	0.40	2	new path	connected_to(x,y) <= connected_to(z,x), connected_to(z,y)	no
+1	onto	mine	part_of	telophase [GO:0000093]	mitotic nuclear division [GO:0140014]	0.50	4	class	part_of(x,mitotic nuclear division) <= isa*(x,GO:0022403)	no
+1	onto	mine	has_input	synthesize proteins [GO:0006412]	transfer RNA [CHEBI:17843]	0.40	2	new path	has_input(x,y) <= involved_in(z,x), isa*(y,z)	no
+1	onto	mine	part_of	microvilli ⊓ part of (cells that specialize in absorption) [GO:0005902&BFO:0000050=(CL:0000584)]	plasma membrane [GO:0005886]	0.50	5	core:isaInherit	part_of(x,y) <= isa*(x,z), part_of(z,y)	yes
+1	onto	mine	capable_of	HIV ⊓ part of (T-helper cells) [NCBITaxon:12721&BFO:0000050=(CL:0000912)]	viral entry into host cell [GO:0046718]	1.00	2	class	capable_of(x,viral entry into host cell) <= isa*(x,viruses)	yes
+1	onto	mine	located_in	ribosome ⊓ in taxon (NCBITaxon:2759) [GO:0005840&RO:0002162=(NCBITaxon:2759)]	cytoplasm [GO:0005737]	0.29	2	class	located_in(x,cytoplasm) <= isa*(x,GO:0043232)	yes
+1	onto	mine	part_of	cerebral cortex ⊓ in taxon (Mammalia) [UBERON:0000956&RO:0002162=(NCBITaxon:40674)]	brain [UBERON:0000955]	0.50	5	core:isaInherit	part_of(x,y) <= isa*(x,z), part_of(z,y)	yes
+1	onto	mine	has_input	cellular respiration [GO:0045333]	oxygen [CHEBI:15379]	0.57	4	upward	has_input(x,y) <= isa*(z,x), has_input(z,y)	no
+1	onto	mine	eff_pos_phenotype	sodium-potassium pump [GO:0005391]	membrane potential [PATO:0001462]	0.60	3	core:isaInherit	eff_pos_phenotype(x,y) <= isa*(x,z), eff_pos_phenotype(z,y)	no
+2	onto	mine	capable_of	skeletal muscle [UBERON:0014892]	locomotion [GO:0040011]	0.14	2	class	capable_of(x,locomotion) <= isa*(x,UBERON:0010000)	no
+2	onto	mine	part_of	parietal lobe [UBERON:0001872]	brain [UBERON:0000955]	0.31	10	class	part_of(x,brain) <= isa*(x,UBERON:0000061)	yes
+2	onto	mine	has_part	peripheral nervous system [UBERON:0000010]	autonomic nervous system [UBERON:0002410]	0.31	17	inverse	has_part(x,y) <= part_of(y,x)	no
+2	onto	mine	has_part	brain [UBERON:0000955]	hypothalamus [UBERON:0001898]	0.31	17	inverse	has_part(x,y) <= part_of(y,x)	no
+2	onto	mine	has_input	light reactions of photosynthesis [GO:0019684]	ATP [CHEBI:15422]	0.12	3	new path	has_input(x,y) <= isa*(x,z), has_output(z,y)	no
+2	onto	mine	part_of	light reactions of photosynthesis [GO:0019684]	photosynthesis [GO:0015979]	0.55	17	inverse	part_of(x,y) <= has_part(y,x)	no
+2	onto	mine	has_part	neuron [CL:0000540]	dendrite [GO:0030425]	0.31	17	inverse	has_part(x,y) <= part_of(y,x)	no
+2	onto	mine	part_of	myofilament [GO:0036379]	sarcomere [GO:0030017]	0.50	4	upward	part_of(x,y) <= isa*(z,x), part_of(z,y)	no
+2	onto	mine	located_in	deoxyribonucleic acid ⊓ in taxon (NCBITaxon:2759) [CHEBI:16991&RO:0002162=(NCBITaxon:2759)]	nucleus [GO:0005634]	0.38	3	core:isaInherit	located_in(x,y) <= isa*(x,z), located_in(z,y)	yes
+2	onto	mine	eff_pos_process	oxygen [CHEBI:15379]	this reaction [GO:0009060]	0.15	2	inverse	eff_pos_process(x,y) <= has_input(y,x)	no
+2	onto	mine	occurs_in	synthesize proteins [GO:0006412]	cytoplasm [GO:0005737]	0.50	2	class	occurs_in(x,cytoplasm) <= isa*(x,GO:0009059)	no
+2	onto	mine	part_of	DNA replication [GO:0006260]	S phase [GO:0051320]	0.55	17	inverse	part_of(x,y) <= has_part(y,x)	no
+2	onto	mine	occurs_in	glycolytic process [GO:0006096]	cytoplasm [GO:0005737]	0.13	7	core:isaInherit	occurs_in(x,y) <= isa*(x,z), occurs_in(z,y)	yes
+2	onto	mine	part_of	chromatin [GO:0000785]	chromosome [GO:0005694]	0.55	17	inverse	part_of(x,y) <= has_part(y,x)	no
+2	onto	mine	capable_of	pigment [CHEBI:26130]	absorb light [GO:0009765]	0.16	5	upward	capable_of(x,y) <= isa*(z,x), capable_of(z,y)	no
+2	onto	mine	has_participant	import into cell ⊓ occurs in (cell) ⊓ surrounded by (hypotonic solution) [GO:0098657&BFO:0000066=(CL:0000000)&RO:0002219=(PATO:0001656)]	water [CHEBI:15377]	1.00	3	class	has_participant(x,water) <= isa*(x,transport)	no
+2	onto	mine	has_part	RNA [CHEBI:33697]	ribose [CHEBI:33942]	0.31	17	inverse	has_part(x,y) <= part_of(y,x)	no
+2	onto	mine	connected_to	trachea [UBERON:0003126]	bronchi [UBERON:0002185]	0.18	2	inverse	connected_to(x,y) <= connected_to(y,x)	no
+2	onto	mine	part_of	endocrine cell [CL:0000163]	pancreatic islet [UBERON:0000006]	0.50	4	upward	part_of(x,y) <= isa*(z,x), part_of(z,y)	no
+2	onto	mine	part_of	posterior pituitary [UBERON:0002198]	brain [UBERON:0000955]	0.80	4	class	part_of(x,brain) <= isa*(x,UBERON:0000073)	no
+2	onto	mine	part_of	temporal lobe [UBERON:0001871]	brain [UBERON:0000955]	0.31	10	class	part_of(x,brain) <= isa*(x,UBERON:0000061)	yes
+2	onto	mine	part_of	brain ⊓ in taxon (Vertebrata) [UBERON:0000955&RO:0002162=(NCBITaxon:7742)]	central nervous system [UBERON:0001017]	0.36	4	core:isaInherit	part_of(x,y) <= isa*(x,z), part_of(z,y)	yes
+2	onto	mine	capable_of	kidneys [UBERON:0002113]	filter [GO:0003094]	0.42	5	new path	capable_of(x,y) <= has_part(x,z), capable_of(z,y)	no
+2	onto	mine	has_part	cell wall ⊓ in taxon (plants) [GO:0005618&RO:0002162=(NCBITaxon:33090)]	cellulose [CHEBI:18246]	0.67	2	class	has_part(x,cellulose) <= isa*(x,cell wall)	no
+2	onto	mine	has_part	ATP [CHEBI:15422]	phosphate group [CHEBI:32958]	0.40	2	class	has_part(x,phosphate group) <= isa*(x,CHEBI:25608)	yes
+2	onto	mine	located_in	organic molecules [CHEBI:50860]	cytoplasm [GO:0005737]	0.29	2	upward	located_in(x,y) <= isa*(z,x), located_in(z,y)	no
+2	onto	mine	located_in	chromosome ⊓ in taxon (prokaryote) [GO:0005694&RO:0002162=(NCBITaxon:2)]	nucleoid [GO:0009295]	0.67	2	taxon	located_in(x,nucleoid) <= in_taxon(x,bacteria)	no
+2	onto	mine	eff_neg_phenotype	homologous chromosome segregation [GO:0045143]	ploidy [PATO:0001374]	1.00	2	class	eff_neg_phenotype(x,ploidy) <= isa*(x,reproduction)	no
+2	onto	mine	eff_neg_process	p53 [PR:000003035]	cell cycle [GO:0007049]	0.67	2	class	eff_neg_process(x,cell cycle) <= isa*(x,proteins)	no
+2	onto	mine	has_input	Calvin cycle [GO:0019253]	ATP [CHEBI:15422]	0.67	4	core:isaInherit	has_input(x,y) <= isa*(x,z), has_input(z,y)	no
+2	onto	mine	has_part	plasma membrane [GO:0005886]	phospholipid [CHEBI:16247]	0.10	3	class	has_part(x,phospholipid) <= isa*(x,GO:0110165)	no
+2	onto	mine	has_output	photosynthesis [GO:0015979]	sugars [CHEBI:16646]	1.00	2	feat	has_output(x,sugars) <= has_input(x,carbon dioxide)	no
+2	onto	mine	part_of	sympathetic nervous system [UBERON:0000013]	autonomic nervous system [UBERON:0002410]	0.55	17	inverse	part_of(x,y) <= has_part(y,x)	no
+2	onto	mine	has_part	skeletal muscle fiber [CL:0008002]	nucleus [GO:0005634]	0.18	2	class	has_part(x,nucleus) <= isa*(x,cells)	no
+2	onto	mine	eff_pos_phenotype	chromosomal disorder [MONDO:0019040]	lethal [PATO:0000718]	0.80	4	upward	eff_pos_phenotype(x,y) <= isa*(z,x), eff_pos_phenotype(z,y)	no
+2	onto	mine	eff_pos_process	microtubule [GO:0005874]	organelle localization [GO:0051640]	0.12	2	class	eff_pos_process(x,organelle localization) <= isa*(x,GO:0110165)	no
+2	onto	mine	located_in	chromosome [GO:0005694]	nucleus [GO:0005634]	0.29	2	upward	located_in(x,y) <= isa*(z,x), located_in(z,y)	no
+2	onto	mine	eff_pos_process	this transfer [GO:0022904]	H+ gradient [GO:0010248]	0.38	3	class	eff_pos_process(x,H+ gradient) <= isa*(x,GO:0009987)	no
+2	onto	mine	part_of	thylakoids [GO:0009579]	chloroplast [GO:0009507]	0.55	17	inverse	part_of(x,y) <= has_part(y,x)	no
+2	onto	mine	part_of	interphase ⊓ in taxon (eukaryotes) [GO:0051325&RO:0002162=(NCBITaxon:2759)]	cell cycle [GO:0007049]	0.36	4	core:isaInherit	part_of(x,y) <= isa*(x,z), part_of(z,y)	yes
+2	onto	mine	has_output	proton motive force-driven ATP synthesis [GO:0015986]	ATP [CHEBI:15422]	0.24	5	class	has_output(x,ATP) <= isa*(x,metabolic reactions)	no
+3	onto	mine	part_of	cerebral cortex [UBERON:0000956]	brain [UBERON:0000955]	0.55	18	inverse	part_of(x,y) <= has_part(y,x)	no
+3	onto	mine	located_in	genetic material ⊓ in taxon (prokaryotic cell) [SO:0001026&RO:0002162=(NCBITaxon:2)]	nucleoid [GO:0009295]	0.67	2	taxon	located_in(x,nucleoid) <= in_taxon(x,bacteria)	no
+3	onto	mine	has_part	photosynthesis [GO:0015979]	light reactions of photosynthesis [GO:0019684]	0.35	18	inverse	has_part(x,y) <= part_of(y,x)	no
+3	onto	mine	capable_of	photosystem [GO:0009521]	absorb light [GO:0009765]	0.33	3	new path	capable_of(x,y) <= has_part(x,z), capable_of(z,y)	no
+3	onto	mine	eff_pos_process	plant cell wall [GO:0009505]	maintain its shape [GO:0008360]	0.18	3	class	eff_pos_process(x,maintain its shape) <= isa*(x,GO:0110165)	no
+3	onto	mine	has_part	central nervous system [UBERON:0001017]	brain [UBERON:0000955]	0.35	18	inverse	has_part(x,y) <= part_of(y,x)	no
+3	onto	mine	located_in	chromosomes ⊓ in taxon (NCBITaxon:2759) [GO:0005694&RO:0002162=(NCBITaxon:2759)]	nucleus [GO:0005634]	0.23	5	core:isaInherit	located_in(x,y) <= isa*(x,z), located_in(z,y)	yes
+3	onto	mine	eff_pos_amount	blood vessel [UBERON:0001981]	oxygen [CHEBI:15379]	0.50	2	class	eff_pos_amount(x,oxygen) <= isa*(x,UBERON:0000061)	no
+3	onto	mine	has_part	ribosomes [GO:0005840]	ribosomal RNA [CHEBI:18111]	0.35	18	inverse	has_part(x,y) <= part_of(y,x)	no
+3	onto	mine	part_of	S phase [GO:0051320]	interphase [GO:0051325]	0.29	2	class	part_of(x,interphase) <= isa*(x,GO:0022403)	no
+3	onto	mine	eff_pos_amount	this reaction [GO:0009060]	ATP [CHEBI:15422]	0.50	2	class	eff_pos_amount(x,ATP) <= isa*(x,metabolic reactions)	no
+3	onto	mine	eff_pos_phenotype	alveoli [UBERON:0002299]	surface area [PATO:0001323]	1.00	3	upward	eff_pos_phenotype(x,y) <= isa*(z,x), eff_pos_phenotype(z,y)	no
+3	onto	mine	eff_pos_amount	glycolytic process [GO:0006096]	ATP [CHEBI:15422]	0.50	2	class	eff_pos_amount(x,ATP) <= isa*(x,metabolic reactions)	no
+3	onto	mine	has_input	muscle cell contraction [GO:0006936]	ATP [CHEBI:15422]	0.13	4	class	has_input(x,ATP) <= isa*(x,GO:0008150)	no
+3	onto	mine	eff_pos_amount	a process [GO:0006119]	ATP [CHEBI:15422]	0.50	2	class	eff_pos_amount(x,ATP) <= isa*(x,metabolic reactions)	no
+3	onto	mine	eff_pos_process	electron transport chain [GO:0009767]	H+ gradient [GO:0010248]	0.38	3	class	eff_pos_process(x,H+ gradient) <= isa*(x,GO:0009987)	no
+3	onto	mine	has_output	a process [GO:0006119]	ATP [CHEBI:15422]	0.17	4	class	has_output(x,ATP) <= isa*(x,metabolic reactions)	no
+3	onto	mine	capable_of	chloroplast [GO:0009507]	photosynthesis [GO:0015979]	0.27	3	new path	capable_of(x,y) <= has_part(z,x), capable_of(z,y)	no
+3	onto	mine	has_output	broken down [GO:0006007]	ATP [CHEBI:15422]	0.36	4	new path	has_output(x,y) <= part_of(z,x), has_output(z,y)	no
+3	onto	mine	capable_of	cells [CL:0000000]	phagocytosis [GO:0006909]	0.13	4	upward	capable_of(x,y) <= isa*(z,x), capable_of(z,y)	no
+3	onto	mine	has_output	metabolic reactions [GO:0008152]	ATP [CHEBI:15422]	0.40	4	upward	has_output(x,y) <= isa*(z,x), has_output(z,y)	no
+3	onto	mine	eff_pos_process	cytoskeleton [GO:0005856]	locomotion [GO:0048870]	0.22	2	new path	eff_pos_process(x,y) <= has_part(x,z), eff_pos_process(z,y)	no
+3	onto	mine	has_input	glycolytic process [GO:0006096]	ATP [CHEBI:15422]	0.40	2	class	has_input(x,ATP) <= isa*(x,GO:0005975)	no
+3	onto	mine	eff_pos_process	microfilaments [GO:0005884]	maintain its shape [GO:0008360]	0.22	2	new path	eff_pos_process(x,y) <= has_part(z,x), eff_pos_process(z,y)	no
+3	onto	mine	capable_of	Animal respiratory systems ⊓ in taxon (NCBITaxon:33208) [UBERON:0001004&RO:0002162=(NCBITaxon:33208)]	Gas exchange [GO:0007585]	0.11	2	class	capable_of(x,Gas exchange) <= isa*(x,UBERON:0000061)	no
+3	onto	mine	part_of	prometaphase [GO:0000236]	mitotic nuclear division [GO:0140014]	0.57	4	class	part_of(x,mitotic nuclear division) <= isa*(x,GO:0022403)	no
+3	onto	mine	part_of	autonomic nervous system [UBERON:0002410]	peripheral nervous system [UBERON:0000010]	0.55	18	inverse	part_of(x,y) <= has_part(y,x)	no
+3	onto	mine	connected_to	bronchi [UBERON:0002185]	trachea [UBERON:0003126]	0.29	2	new path	connected_to(x,y) <= connected_to(z,x), connected_to(z,y)	no
+3	onto	mine	has_part	pancreatic islet [UBERON:0000006]	pancreatic beta cell [CL:0000169]	0.35	18	inverse	has_part(x,y) <= part_of(y,x)	no
+3	onto	mine	eff_neg_process	medications ⊓ in taxon (NCBITaxon:9606 ⊓ has modifier (rheumatoid arthritis)) [CHEBI:23888&RO:0002162=(NCBITaxon:9606&RO:0002573=(MONDO:0008383))]	inflammation [GO:0006954]	1.00	3	class	eff_neg_process(x,inflammation) <= isa*(x,medications)	no
+3	onto	mine	part_of	cerebellum [UBERON:0002037]	brain [UBERON:0000955]	0.80	4	class	part_of(x,brain) <= isa*(x,UBERON:0000073)	no
+3	onto	mine	part_of	meiosis II [GO:0007135]	meiotic cell cycle [GO:0051321]	0.10	3	new path	part_of(x,y) <= has_output(x,z), has_output(y,z)	no
+3	onto	mine	capable_of	flagellum [GO:0031514]	locomotion [GO:0048870]	0.67	2	class	capable_of(x,locomotion) <= isa*(x,GO:0042995)	no
+3	onto	mine	has_part	S phase [GO:0051320]	DNA replication [GO:0006260]	0.35	18	inverse	has_part(x,y) <= part_of(y,x)	no
+3	onto	mine	capable_of	viruses [NCBITaxon:10239]	viral entry into host cell [GO:0046718]	0.13	4	upward	capable_of(x,y) <= isa*(z,x), capable_of(z,y)	no
+3	onto	mine	part_of	interphase [GO:0051325]	cell cycle [GO:0007049]	0.42	5	upward	part_of(x,y) <= isa*(z,x), part_of(z,y)	no
+3	onto	mine	has_input	active transport [GO:0022804]	ATP [CHEBI:15422]	0.67	4	upward	has_input(x,y) <= isa*(z,x), has_input(z,y)	no
+3	onto	mine	eff_pos_phenotype	aneuploidy [MONDO:0700064]	lethal [PATO:0000718]	1.00	3	upward	eff_pos_phenotype(x,y) <= isa*(z,x), eff_pos_phenotype(z,y)	yes
+3	onto	mine	located_in	sodium [CHEBI:29101]	cytoplasm [GO:0005737]	0.29	4	class	located_in(x,cytoplasm) <= isa*(x,CHEBI:23367)	no
+3	onto	mine	has_part	autonomic nervous system [UBERON:0002410]	sympathetic nervous system [UBERON:0000013]	0.35	18	inverse	has_part(x,y) <= part_of(y,x)	no
+3	onto	mine	part_of	microvillus [GO:0005902]	plasma membrane [GO:0005886]	0.42	5	upward	part_of(x,y) <= isa*(z,x), part_of(z,y)	no
+4	onto	mine	has_output	light reactions of photosynthesis [GO:0019684]	ATP [CHEBI:15422]	0.26	10	core:isaInherit	has_output(x,y) <= isa*(x,z), has_output(z,y)	no
+4	onto	mine	part_of	frontal lobe [UBERON:0016525]	cerebral cortex [UBERON:0000956]	0.80	4	class	part_of(x,cerebral cortex) <= isa*(x,cerebral lobe)	no
+4	onto	mine	eff_pos_process	intermediate filament [GO:0005882]	maintain its shape [GO:0008360]	0.17	3	class	eff_pos_process(x,maintain its shape) <= isa*(x,GO:0110165)	no
+4	onto	mine	capable_of	HIV [NCBITaxon:12721]	viral entry into host cell [GO:0046718]	0.22	2	class	capable_of(x,viral entry into host cell) <= isa*(x,NCBITaxon:1)	no
+4	onto	mine	occurs_in	metabolic reactions [GO:0008152]	cytoplasm [GO:0005737]	0.12	3	upward	occurs_in(x,y) <= isa*(z,x), occurs_in(z,y)	no
+4	onto	mine	capable_of	HIV ⊓ located in (central nervous system) [NCBITaxon:12721&RO:0001025=(UBERON:0001017)]	viral entry into host cell [GO:0046718]	0.22	2	class	capable_of(x,viral entry into host cell) <= isa*(x,NCBITaxon:1)	no
+4	onto	mine	has_part	ribonucleotide [CHEBI:26561]	phosphate group [CHEBI:32958]	0.40	2	class	has_part(x,phosphate group) <= isa*(x,CHEBI:25608)	no
+4	onto	mine	capable_of	chlorophyll [CHEBI:28966]	absorb light [GO:0009765]	0.20	3	new path	capable_of(x,y) <= has_part(z,x), capable_of(z,y)	yes
+4	onto	mine	has_output	light reactions of photosynthesis [GO:0019684]	oxygen [CHEBI:15379]	0.29	2	new path	has_output(x,y) <= part_of(x,z), has_output(z,y)	no
+4	onto	mine	part_of	ribosomal RNA [CHEBI:18111]	ribosomes [GO:0005840]	0.55	18	inverse	part_of(x,y) <= has_part(y,x)	no
+4	onto	mine	part_of	thalamus [UBERON:0001897]	brain [UBERON:0000955]	0.30	11	class	part_of(x,brain) <= isa*(x,UBERON:0000061)	no
+4	onto	mine	has_part	photosynthesis [GO:0015979]	Calvin cycle [GO:0019253]	0.26	18	inverse	has_part(x,y) <= part_of(y,x)	no
+4	onto	mine	eff_pos_process	cytoskeleton [GO:0005856]	maintain its shape [GO:0008360]	0.27	3	new path	eff_pos_process(x,y) <= has_part(x,z), eff_pos_process(z,y)	no
+4	onto	mine	has_output	meiosis I [GO:0007127]	haploid cell [CL:0000413]	0.67	2	class	has_output(x,haploid cell) <= isa*(x,GO:0022402)	no
+4	onto	mine	eff_pos_process	extracellular matrix [GO:0031012]	cell communication [GO:0007154]	0.11	2	class	eff_pos_process(x,cell communication) <= isa*(x,GO:0110165)	no
+4	onto	mine	has_input	this reaction [GO:0009060]	sugars [CHEBI:16646]	0.60	3	core:isaInherit	has_input(x,y) <= isa*(x,z), has_input(z,y)	no
+4	onto	mine	has_input	photosynthesis [GO:0015979]	carbon dioxide [CHEBI:16526]	0.67	2	feat	has_input(x,carbon dioxide) <= has_output(x,glucose)	no
+4	onto	mine	has_part	brain [UBERON:0000955]	cerebellum [UBERON:0002037]	0.26	18	inverse	has_part(x,y) <= part_of(y,x)	no
+4	onto	mine	has_input	glycolytic process [GO:0006096]	simple sugars [CHEBI:35381]	0.13	4	new path	has_input(x,y) <= isa*(x,z), has_output(z,y)	no
+4	onto	mine	eff_pos_amount	this transfer [GO:0022904]	ATP [CHEBI:15422]	0.80	4	class	eff_pos_amount(x,ATP) <= isa*(x,metabolic reactions)	no
+4	onto	mine	has_part	chloroplast [GO:0009507]	thylakoids [GO:0009579]	0.26	18	inverse	has_part(x,y) <= part_of(y,x)	no
+4	onto	mine	located_in	ribosome ⊓ in taxon (prokaryote) [GO:0005840&RO:0002162=(NCBITaxon:2)]	cytoplasm [GO:0005737]	0.33	2	class	located_in(x,cytoplasm) <= isa*(x,GO:0043232)	yes
+4	onto	mine	located_in	ions [CHEBI:24870]	cytoplasm [GO:0005737]	0.19	4	upward	located_in(x,y) <= isa*(z,x), located_in(z,y)	no
+4	onto	mine	has_participant	import into cell ⊓ occurs in (CL:0000000) ⊓ in taxon (NCBITaxon:33090) [GO:0098657&BFO:0000066=(CL:0000000)&RO:0002162=(NCBITaxon:33090)]	water [CHEBI:15377]	1.00	3	class	has_participant(x,water) <= isa*(x,transport)	no
+4	onto	mine	eff_pos_process	extracellular matrix [GO:0031012]	attach to surfaces [GO:0007155]	0.11	2	class	eff_pos_process(x,attach to surfaces) <= isa*(x,GO:0110165)	no
+4	onto	mine	part_of	brainstem [UBERON:0002298]	brain [UBERON:0000955]	0.55	18	inverse	part_of(x,y) <= has_part(y,x)	no
+4	onto	mine	has_output	DNA-templated transcription elongation [GO:0006354]	messenger RNA [CHEBI:33699]	1.00	2	class	has_output(x,messenger RNA) <= isa*(x,GO:0032774)	no
+4	onto	mine	part_of	atria [UBERON:0002081]	heart [UBERON:0000948]	0.55	18	inverse	part_of(x,y) <= has_part(y,x)	no
+4	onto	mine	has_output	meiotic cell cycle [GO:0051321]	haploid cell [CL:0000413]	0.33	2	new path	has_output(x,y) <= part_of(z,x), has_output(z,y)	no
+4	onto	mine	happens_during	synapsis [GO:0007129]	meiosis I [GO:0007127]	0.40	2	class	happens_during(x,meiosis I) <= isa*(x,GO:1903046)	no
+4	onto	mine	has_part	brain [UBERON:0000955]	limbic system [UBERON:0000349]	0.26	18	inverse	has_part(x,y) <= part_of(y,x)	no
+4	onto	mine	happens_during	nuclear envelope disassembly [GO:0007077]	prometaphase [GO:0000236]	0.29	2	class	happens_during(x,prometaphase) <= isa*(x,GO:1903047)	no

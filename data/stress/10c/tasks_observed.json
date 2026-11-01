@@ -1,0 +1,3121 @@
+[
+ {
+  "id": "I01",
+  "family": "deduction",
+  "probes": "part_of transitivity",
+  "hold": [
+   "the-body-s-systems-m45539-202"
+  ],
+  "pos": [
+   [
+    "part_of",
+    "UBERON:0016525",
+    "UBERON:0000955"
+   ]
+  ],
+  "neg": [],
+  "src": "OpenStax, the-body-s-systems-m45539-202 (frontal lobe part of brain)",
+  "synthetic": false,
+  "systems": {
+   "closure": {
+    "pos": [
+     true
+    ],
+    "neg": [],
+    "mark": "PASS",
+    "how": [
+     "relTrans"
+    ]
+   },
+   "mine": {
+    "pos": [
+     true
+    ],
+    "neg": [],
+    "mark": "PASS",
+    "pos_info": [
+     {
+      "rule": "part_of(x,brain) <= isa*(x,cerebral lobe)",
+      "rule_id": "part_of(x,UBERON:0000955)<=isa*(x,UBERON:0016526)",
+      "pca": 0.6,
+      "supp": 3,
+      "n": 5,
+      "cat": "class",
+      "judge": "TRUE"
+     }
+    ],
+    "neg_info": []
+   },
+   "mine_tb": {
+    "pos": [
+     false
+    ],
+    "neg": [],
+    "mark": "SILENT",
+    "pos_info": [
+     null
+    ],
+    "neg_info": []
+   },
+   "amie": {
+    "pos": [
+     false
+    ],
+    "neg": [],
+    "mark": "SILENT",
+    "pos_info": [
+     null
+    ],
+    "neg_info": [],
+    "n_rules": 98
+   }
+  }
+ },
+ {
+  "id": "I02",
+  "family": "deduction",
+  "probes": "has_part transitivity",
+  "hold": [
+   "the-body-s-systems-m45534-128"
+  ],
+  "pos": [
+   [
+    "has_part",
+    "UBERON:0002113",
+    "UBERON:0001285"
+   ]
+  ],
+  "neg": [],
+  "src": "OpenStax, the-body-s-systems-m45534-128 (kidney has nephrons)",
+  "synthetic": false,
+  "systems": {
+   "closure": {
+    "pos": [
+     true
+    ],
+    "neg": [],
+    "mark": "PASS",
+    "how": [
+     "relTrans"
+    ]
+   },
+   "mine": {
+    "pos": [
+     false
+    ],
+    "neg": [],
+    "mark": "SILENT",
+    "pos_info": [
+     {
+      "rule": "has_part(x,y) <= capable_of(x,z), capable_of(y,z)",
+      "rule_id": "has_part<=capable_of,~capable_of",
+      "pca": 0.139,
+      "supp": 5,
+      "n": 90,
+      "cat": "new path",
+      "judge": "FORM"
+     }
+    ],
+    "neg_info": []
+   },
+   "mine_tb": {
+    "pos": [
+     false
+    ],
+    "neg": [],
+    "mark": "SILENT",
+    "pos_info": [
+     {
+      "rule": "has_part(x,y) <= capable_of(x,z), capable_of(y,z)",
+      "rule_id": "has_part<=capable_of,~capable_of",
+      "pca": 0.139,
+      "supp": 5,
+      "n": 90,
+      "cat": "new path",
+      "judge": "FORM"
+     }
+    ],
+    "neg_info": []
+   },
+   "amie": {
+    "pos": [
+     false
+    ],
+    "neg": [],
+    "mark": "SILENT",
+    "pos_info": [
+     {
+      "rule": "?a  <capable_of>  ?h  ?b  <capable_of>  ?h   => ?a  <has_part>  ?b",
+      "pca": 0.104,
+      "supp": 5
+     }
+    ],
+    "neg_info": [],
+    "n_rules": 98
+   }
+  }
+ },
+ {
+  "id": "I03",
+  "family": "deduction",
+  "probes": "is_a inheritance of an effect (isaInheritEffect)",
+  "hold": [
+   "the-cellular-basis-of-inheritance-m45467-119"
+  ],
+  "pos": [
+   [
+    "eff_pos_phenotype",
+    "MONDO:0700064",
+    "PATO:0000718"
+   ]
+  ],
+  "neg": [],
+  "src": "OpenStax, the-cellular-basis-of-inheritance-m45467-119 (aneuploidy is often lethal)",
+  "synthetic": false,
+  "systems": {
+   "closure": {
+    "pos": [
+     true
+    ],
+    "neg": [],
+    "mark": "PASS",
+    "how": [
+     "isaInheritEffect"
+    ]
+   },
+   "mine": {
+    "pos": [
+     true
+    ],
+    "neg": [],
+    "mark": "PASS",
+    "pos_info": [
+     {
+      "rule": "eff_pos_phenotype(x,y) <= isa*(z,x), eff_pos_phenotype(z,y)",
+      "rule_id": "eff_pos_phenotype<=~isa*,eff_pos_phenotype",
+      "pca": 0.8,
+      "supp": 4,
+      "n": 380,
+      "cat": "upward",
+      "judge": "FORM"
+     }
+    ],
+    "neg_info": []
+   },
+   "mine_tb": {
+    "pos": [
+     true
+    ],
+    "neg": [],
+    "mark": "PASS",
+    "pos_info": [
+     {
+      "rule": "eff_pos_phenotype(x,y) <= isa*(x,z), eff_pos_phenotype(z,y)",
+      "rule_id": "eff_pos_phenotype<=isa*,eff_pos_phenotype",
+      "pca": 1.0,
+      "supp": 2,
+      "n": 13,
+      "cat": "core:isaInherit",
+      "judge": "TRUE"
+     }
+    ],
+    "neg_info": []
+   },
+   "amie": {
+    "pos": [
+     true
+    ],
+    "neg": [],
+    "mark": "PASS",
+    "pos_info": [
+     {
+      "rule": "?h  <eff_pos_phenotype>  ?b  ?a  <isa*>  ?h   => ?a  <eff_pos_phenotype>  ?b",
+      "pca": 1.0,
+      "supp": 2
+     }
+    ],
+    "neg_info": [],
+    "n_rules": 98
+   }
+  }
+ },
+ {
+  "id": "I04",
+  "family": "deduction",
+  "probes": "is_a inheritance of capable_of",
+  "hold": [
+   "photosynthesis-m45448-90"
+  ],
+  "pos": [
+   [
+    "capable_of",
+    "CHEBI:28966",
+    "GO:0009765"
+   ]
+  ],
+  "neg": [],
+  "src": "OpenStax, photosynthesis-m45448-90 (chlorophyll absorbs light)",
+  "synthetic": false,
+  "systems": {
+   "closure": {
+    "pos": [
+     true
+    ],
+    "neg": [],
+    "mark": "PASS",
+    "how": [
+     "isaInherit"
+    ]
+   },
+   "mine": {
+    "pos": [
+     false
+    ],
+    "neg": [],
+    "mark": "SILENT",
+    "pos_info": [
+     {
+      "rule": "capable_of(x,y) <= has_part(z,x), capable_of(z,y)",
+      "rule_id": "capable_of<=~has_part,capable_of",
+      "pca": 0.25,
+      "supp": 5,
+      "n": 70,
+      "cat": "new path",
+      "judge": "FORM"
+     }
+    ],
+    "neg_info": []
+   },
+   "mine_tb": {
+    "pos": [
+     false
+    ],
+    "neg": [],
+    "mark": "SILENT",
+    "pos_info": [
+     {
+      "rule": "capable_of(x,y) <= has_part(z,x), capable_of(z,y)",
+      "rule_id": "capable_of<=~has_part,capable_of",
+      "pca": 0.25,
+      "supp": 5,
+      "n": 70,
+      "cat": "new path",
+      "judge": "FORM"
+     }
+    ],
+    "neg_info": []
+   },
+   "amie": {
+    "pos": [
+     false
+    ],
+    "neg": [],
+    "mark": "SILENT",
+    "pos_info": [
+     {
+      "rule": "?g  <capable_of>  ?b  ?g  <has_part>  ?a   => ?a  <capable_of>  ?b",
+      "pca": 0.25,
+      "supp": 5
+     }
+    ],
+    "neg_info": [],
+    "n_rules": 97
+   }
+  }
+ },
+ {
+  "id": "I05",
+  "family": "deduction",
+  "probes": "RO chain occurs_in o part_of",
+  "hold": [
+   "photosynthesis-m45453-60"
+  ],
+  "pos": [
+   [
+    "occurs_in",
+    "GO:0019684",
+    "GO:0009507"
+   ]
+  ],
+  "neg": [],
+  "src": "OpenStax, photosynthesis-m45453-60 (light reactions in the chloroplast)",
+  "synthetic": false,
+  "systems": {
+   "closure": {
+    "pos": [
+     true
+    ],
+    "neg": [],
+    "mark": "PASS",
+    "how": [
+     "relChain"
+    ]
+   },
+   "mine": {
+    "pos": [
+     false
+    ],
+    "neg": [],
+    "mark": "SILENT",
+    "pos_info": [
+     {
+      "rule": "occurs_in(x,chloroplast) <= isa*(x,metabolic reactions)",
+      "rule_id": "occurs_in(x,GO:0009507)<=isa*(x,GO:0008152)",
+      "pca": 0.103,
+      "supp": 3,
+      "n": 97,
+      "cat": "class",
+      "judge": "LATTICE"
+     }
+    ],
+    "neg_info": []
+   },
+   "mine_tb": {
+    "pos": [
+     false
+    ],
+    "neg": [],
+    "mark": "SILENT",
+    "pos_info": [
+     null
+    ],
+    "neg_info": []
+   },
+   "amie": {
+    "pos": [
+     false
+    ],
+    "neg": [],
+    "mark": "SILENT",
+    "pos_info": [
+     null
+    ],
+    "neg_info": [],
+    "n_rules": 95
+   }
+  }
+ },
+ {
+  "id": "I06",
+  "family": "deduction",
+  "probes": "viaActivity chain (drug inhibits enzyme)",
+  "hold": [
+   "how-cells-obtain-energy-m45437-202"
+  ],
+  "pos": [
+   [
+    "eff_neg_amount",
+    "CHEBI:87631",
+    "CHEBI:16113"
+   ]
+  ],
+  "neg": [],
+  "src": "OpenStax, how-cells-obtain-energy-m45437-202 (statins lower cholesterol)",
+  "synthetic": false,
+  "systems": {
+   "closure": {
+    "pos": [
+     true
+    ],
+    "neg": [],
+    "mark": "PASS",
+    "how": [
+     "viaActivity"
+    ]
+   },
+   "mine": {
+    "pos": [
+     false
+    ],
+    "neg": [],
+    "mark": "SILENT",
+    "pos_info": [
+     null
+    ],
+    "neg_info": []
+   },
+   "mine_tb": {
+    "pos": [
+     false
+    ],
+    "neg": [],
+    "mark": "SILENT",
+    "pos_info": [
+     null
+    ],
+    "neg_info": []
+   },
+   "amie": {
+    "pos": [
+     false
+    ],
+    "neg": [],
+    "mark": "SILENT",
+    "pos_info": [
+     null
+    ],
+    "neg_info": [],
+    "n_rules": 98
+   }
+  }
+ },
+ {
+  "id": "I07",
+  "family": "class",
+  "probes": "cerebral lobes are parts of the cortex (true class rule)",
+  "hold": [
+   "the-body-s-systems-m45539-395"
+  ],
+  "pos": [
+   [
+    "part_of",
+    "UBERON:0016525",
+    "UBERON:0000956"
+   ]
+  ],
+  "neg": [],
+  "src": "OpenStax, the-body-s-systems-m45539-395 (frontal lobe part of cerebral cortex)",
+  "synthetic": false,
+  "systems": {
+   "closure": {
+    "pos": [
+     false
+    ],
+    "neg": [],
+    "mark": "SILENT",
+    "how": [
+     ""
+    ]
+   },
+   "mine": {
+    "pos": [
+     true
+    ],
+    "neg": [],
+    "mark": "PASS",
+    "pos_info": [
+     {
+      "rule": "part_of(x,cerebral cortex) <= isa*(x,cerebral lobe)",
+      "rule_id": "part_of(x,UBERON:0000956)<=isa*(x,UBERON:0016526)",
+      "pca": 0.8,
+      "supp": 4,
+      "n": 5,
+      "cat": "class",
+      "judge": "TRUE"
+     }
+    ],
+    "neg_info": []
+   },
+   "mine_tb": {
+    "pos": [
+     true
+    ],
+    "neg": [],
+    "mark": "PASS",
+    "pos_info": [
+     {
+      "rule": "part_of(x,y) <= isa*(z,x), part_of(z,y)",
+      "rule_id": "part_of<=~isa*,part_of",
+      "pca": 0.6,
+      "supp": 6,
+      "n": 27,
+      "cat": "upward",
+      "judge": "FORM"
+     }
+    ],
+    "neg_info": []
+   },
+   "amie": {
+    "pos": [
+     true
+    ],
+    "neg": [],
+    "mark": "PASS",
+    "pos_info": [
+     {
+      "rule": "?g  <isa*>  ?a  ?g  <part_of>  ?b   => ?a  <part_of>  ?b",
+      "pca": 0.6,
+      "supp": 6
+     }
+    ],
+    "neg_info": [],
+    "n_rules": 98
+   }
+  }
+ },
+ {
+  "id": "I08",
+  "family": "class",
+  "probes": "brain regions (class broader than the rule)",
+  "hold": [
+   "the-body-s-systems-m45539-415"
+  ],
+  "pos": [
+   [
+    "part_of",
+    "UBERON:0001897",
+    "UBERON:0000955"
+   ]
+  ],
+  "neg": [
+   [
+    "part_of",
+    "UBERON:0002240",
+    "UBERON:0000955"
+   ]
+  ],
+  "src": "OpenStax, the-body-s-systems-m45539-415 (thalamus part of brain); spinal cord is connected to, not part of, the brain (the-body-s-systems-m45539-338)",
+  "synthetic": false,
+  "systems": {
+   "closure": {
+    "pos": [
+     false
+    ],
+    "neg": [
+     false
+    ],
+    "mark": "SILENT",
+    "how": [
+     ""
+    ]
+   },
+   "mine": {
+    "pos": [
+     true
+    ],
+    "neg": [
+     false
+    ],
+    "mark": "PASS",
+    "pos_info": [
+     {
+      "rule": "part_of(x,y) <= has_part(y,x)",
+      "rule_id": "part_of<=~has_part",
+      "pca": 0.551,
+      "supp": 27,
+      "n": 238,
+      "cat": "inverse",
+      "judge": "FORM"
+     }
+    ],
+    "neg_info": [
+     {
+      "rule": "part_of(x,brain) <= isa*(x,UBERON:0000061)",
+      "rule_id": "part_of(x,UBERON:0000955)<=isa*(x,UBERON:0000061)",
+      "pca": 0.273,
+      "supp": 12,
+      "n": 210,
+      "cat": "class",
+      "judge": "LATTICE"
+     }
+    ]
+   },
+   "mine_tb": {
+    "pos": [
+     true
+    ],
+    "neg": [
+     false
+    ],
+    "mark": "PASS",
+    "pos_info": [
+     {
+      "rule": "part_of(x,y) <= has_part(y,x)",
+      "rule_id": "part_of<=~has_part",
+      "pca": 0.551,
+      "supp": 27,
+      "n": 238,
+      "cat": "inverse",
+      "judge": "FORM"
+     }
+    ],
+    "neg_info": [
+     null
+    ]
+   },
+   "amie": {
+    "pos": [
+     true
+    ],
+    "neg": [
+     false
+    ],
+    "mark": "PASS",
+    "pos_info": [
+     {
+      "rule": "?b  <has_part>  ?a   => ?a  <part_of>  ?b",
+      "pca": 0.551,
+      "supp": 27
+     }
+    ],
+    "neg_info": [
+     null
+    ],
+    "n_rules": 98
+   }
+  }
+ },
+ {
+  "id": "I09",
+  "family": "class",
+  "probes": "anti-inflammatory drugs (class too broad: medications)",
+  "hold": [
+   "the-body-s-systems-m45538-201"
+  ],
+  "pos": [
+   [
+    "eff_neg_process",
+    "CHEBI:15365",
+    "GO:0006954"
+   ]
+  ],
+  "neg": [
+   [
+    "eff_neg_process",
+    "CHEBI:27584",
+    "GO:0006954"
+   ]
+  ],
+  "src": "OpenStax, the-body-s-systems-m45538-201 (aspirin reduces inflammation); aldosterone promotes inflammation (Brown 2013, PMID 23774812)",
+  "synthetic": false,
+  "systems": {
+   "closure": {
+    "pos": [
+     false
+    ],
+    "neg": [
+     false
+    ],
+    "mark": "SILENT",
+    "how": [
+     ""
+    ]
+   },
+   "mine": {
+    "pos": [
+     true
+    ],
+    "neg": [
+     true
+    ],
+    "mark": "FAIL",
+    "pos_info": [
+     {
+      "rule": "eff_neg_process(x,inflammation) <= isa*(x,medications)",
+      "rule_id": "eff_neg_process(x,GO:0006954)<=isa*(x,CHEBI:23888)",
+      "pca": 1.0,
+      "supp": 3,
+      "n": 9,
+      "cat": "class",
+      "judge": "LATTICE"
+     }
+    ],
+    "neg_info": [
+     {
+      "rule": "eff_neg_process(x,inflammation) <= isa*(x,medications)",
+      "rule_id": "eff_neg_process(x,GO:0006954)<=isa*(x,CHEBI:23888)",
+      "pca": 1.0,
+      "supp": 3,
+      "n": 9,
+      "cat": "class",
+      "judge": "LATTICE"
+     }
+    ]
+   },
+   "mine_tb": {
+    "pos": [
+     false
+    ],
+    "neg": [
+     false
+    ],
+    "mark": "SILENT",
+    "pos_info": [
+     null
+    ],
+    "neg_info": [
+     null
+    ]
+   },
+   "amie": {
+    "pos": [
+     false
+    ],
+    "neg": [
+     false
+    ],
+    "mark": "SILENT",
+    "pos_info": [
+     null
+    ],
+    "neg_info": [
+     null
+    ],
+    "n_rules": 98
+   }
+  }
+ },
+ {
+  "id": "I10",
+  "family": "class",
+  "probes": "cell wall composition by lineage",
+  "hold": [
+   "cell-structure-and-function-m45432-323"
+  ],
+  "pos": [
+   [
+    "has_part",
+    "GO:0009505",
+    "CHEBI:18246"
+   ]
+  ],
+  "neg": [
+   [
+    "has_part",
+    "GO:0005618&RO:0002162=(NCBITaxon:2)",
+    "CHEBI:18246"
+   ],
+   [
+    "has_part",
+    "GO:0009277",
+    "CHEBI:18246"
+   ]
+  ],
+  "src": "OpenStax, cell-structure-and-function-m45432-323 (plant cell wall cellulose); bacterial walls are peptidoglycan (m45429-21); fungal walls are chitin (Gow 2017, PMID 28513415)",
+  "synthetic": false,
+  "systems": {
+   "closure": {
+    "pos": [
+     false
+    ],
+    "neg": [
+     false,
+     false
+    ],
+    "mark": "SILENT",
+    "how": [
+     ""
+    ]
+   },
+   "mine": {
+    "pos": [
+     true
+    ],
+    "neg": [
+     true,
+     true
+    ],
+    "mark": "FAIL",
+    "pos_info": [
+     {
+      "rule": "has_part(x,cellulose) <= isa*(x,cell wall)",
+      "rule_id": "has_part(x,CHEBI:18246)<=isa*(x,GO:0005618)",
+      "pca": 0.667,
+      "supp": 2,
+      "n": 5,
+      "cat": "class",
+      "judge": "LATTICE"
+     }
+    ],
+    "neg_info": [
+     {
+      "rule": "has_part(x,cellulose) <= isa*(x,cell wall)",
+      "rule_id": "has_part(x,CHEBI:18246)<=isa*(x,GO:0005618)",
+      "pca": 0.667,
+      "supp": 2,
+      "n": 5,
+      "cat": "class",
+      "judge": "LATTICE"
+     },
+     {
+      "rule": "has_part(x,cellulose) <= isa*(x,cell wall)",
+      "rule_id": "has_part(x,CHEBI:18246)<=isa*(x,GO:0005618)",
+      "pca": 0.667,
+      "supp": 2,
+      "n": 5,
+      "cat": "class",
+      "judge": "LATTICE"
+     }
+    ]
+   },
+   "mine_tb": {
+    "pos": [
+     false
+    ],
+    "neg": [
+     false,
+     false
+    ],
+    "mark": "SILENT",
+    "pos_info": [
+     {
+      "rule": "has_part(x,y) <= isa*(z,x), has_part(z,y)",
+      "rule_id": "has_part<=~isa*,has_part",
+      "pca": 0.158,
+      "supp": 3,
+      "n": 55,
+      "cat": "upward",
+      "judge": "FORM"
+     }
+    ],
+    "neg_info": [
+     null,
+     null
+    ]
+   },
+   "amie": {
+    "pos": [
+     false
+    ],
+    "neg": [
+     false,
+     false
+    ],
+    "mark": "SILENT",
+    "pos_info": [
+     null
+    ],
+    "neg_info": [
+     null,
+     null
+    ],
+    "n_rules": 98
+   }
+  }
+ },
+ {
+  "id": "I11",
+  "family": "class",
+  "probes": "phases of mitosis (ontology shape: the LGG is \"cell cycle phase\")",
+  "hold": [
+   "reproduction-at-the-cellular-level-m45461-202"
+  ],
+  "pos": [
+   [
+    "part_of",
+    "GO:0000089",
+    "GO:0140014"
+   ]
+  ],
+  "neg": [
+   [
+    "part_of",
+    "GO:0051320",
+    "GO:0140014"
+   ]
+  ],
+  "src": "OpenStax, reproduction-at-the-cellular-level-m45461-202 (metaphase is a stage of mitosis); S phase is part of interphase (m45461-211)",
+  "synthetic": false,
+  "systems": {
+   "closure": {
+    "pos": [
+     false
+    ],
+    "neg": [
+     false
+    ],
+    "mark": "SILENT",
+    "how": [
+     ""
+    ]
+   },
+   "mine": {
+    "pos": [
+     false
+    ],
+    "neg": [
+     false
+    ],
+    "mark": "SILENT",
+    "pos_info": [
+     {
+      "rule": "part_of(x,mitotic nuclear division) <= isa*(x,GO:0022403)",
+      "rule_id": "part_of(x,GO:0140014)<=isa*(x,GO:0022403)",
+      "pca": 0.444,
+      "supp": 4,
+      "n": 19,
+      "cat": "class",
+      "judge": "LATTICE"
+     }
+    ],
+    "neg_info": [
+     {
+      "rule": "part_of(x,mitotic nuclear division) <= isa*(x,GO:0022403)",
+      "rule_id": "part_of(x,GO:0140014)<=isa*(x,GO:0022403)",
+      "pca": 0.444,
+      "supp": 4,
+      "n": 19,
+      "cat": "class",
+      "judge": "LATTICE"
+     }
+    ]
+   },
+   "mine_tb": {
+    "pos": [
+     false
+    ],
+    "neg": [
+     false
+    ],
+    "mark": "SILENT",
+    "pos_info": [
+     null
+    ],
+    "neg_info": [
+     null
+    ]
+   },
+   "amie": {
+    "pos": [
+     false
+    ],
+    "neg": [
+     false
+    ],
+    "mark": "SILENT",
+    "pos_info": [
+     null
+    ],
+    "neg_info": [
+     null
+    ],
+    "n_rules": 98
+   }
+  }
+ },
+ {
+  "id": "I12",
+  "family": "class",
+  "probes": "islet cell types (class too broad: secretory cell)",
+  "hold": [
+   "the-body-s-systems-m45537-196"
+  ],
+  "pos": [
+   [
+    "part_of",
+    "CL:0000169",
+    "UBERON:0000006"
+   ]
+  ],
+  "neg": [
+   [
+    "part_of",
+    "CL:0002258",
+    "UBERON:0000006"
+   ]
+  ],
+  "src": "OpenStax, the-body-s-systems-m45537-196 (beta cells in the islets); thyroid follicular cells make thyroxine in the thyroid (m45537-123)",
+  "synthetic": false,
+  "systems": {
+   "closure": {
+    "pos": [
+     false
+    ],
+    "neg": [
+     false
+    ],
+    "mark": "SILENT",
+    "how": [
+     ""
+    ]
+   },
+   "mine": {
+    "pos": [
+     true
+    ],
+    "neg": [
+     true
+    ],
+    "mark": "FAIL",
+    "pos_info": [
+     {
+      "rule": "part_of(x,pancreatic islet) <= isa*(x,CL:0000151)",
+      "rule_id": "part_of(x,UBERON:0000006)<=isa*(x,CL:0000151)",
+      "pca": 1.0,
+      "supp": 2,
+      "n": 4,
+      "cat": "class",
+      "judge": "LATTICE"
+     }
+    ],
+    "neg_info": [
+     {
+      "rule": "part_of(x,pancreatic islet) <= isa*(x,CL:0000151)",
+      "rule_id": "part_of(x,UBERON:0000006)<=isa*(x,CL:0000151)",
+      "pca": 1.0,
+      "supp": 2,
+      "n": 4,
+      "cat": "class",
+      "judge": "LATTICE"
+     }
+    ]
+   },
+   "mine_tb": {
+    "pos": [
+     true
+    ],
+    "neg": [
+     false
+    ],
+    "mark": "PASS",
+    "pos_info": [
+     {
+      "rule": "part_of(x,y) <= has_part(y,x)",
+      "rule_id": "part_of<=~has_part",
+      "pca": 0.551,
+      "supp": 27,
+      "n": 238,
+      "cat": "inverse",
+      "judge": "FORM"
+     }
+    ],
+    "neg_info": [
+     null
+    ]
+   },
+   "amie": {
+    "pos": [
+     true
+    ],
+    "neg": [
+     false
+    ],
+    "mark": "PASS",
+    "pos_info": [
+     {
+      "rule": "?b  <has_part>  ?a   => ?a  <part_of>  ?b",
+      "pca": 0.551,
+      "supp": 27
+     }
+    ],
+    "neg_info": [
+     null
+    ],
+    "n_rules": 98
+   }
+  }
+ },
+ {
+  "id": "I13",
+  "family": "class",
+  "probes": "which reproductive processes halve ploidy",
+  "hold": [
+   "the-cellular-basis-of-inheritance-m45466-202"
+  ],
+  "pos": [
+   [
+    "eff_neg_phenotype",
+    "GO:0007127",
+    "PATO:0001374"
+   ]
+  ],
+  "neg": [
+   [
+    "eff_neg_phenotype",
+    "GO:0009566",
+    "PATO:0001374"
+   ]
+  ],
+  "src": "OpenStax, the-cellular-basis-of-inheritance-m45466-202 (meiosis I halves the chromosome number); fertilisation restores diploidy (m45465-58)",
+  "synthetic": false,
+  "systems": {
+   "closure": {
+    "pos": [
+     false
+    ],
+    "neg": [
+     false
+    ],
+    "mark": "SILENT",
+    "how": [
+     ""
+    ]
+   },
+   "mine": {
+    "pos": [
+     true
+    ],
+    "neg": [
+     true
+    ],
+    "mark": "FAIL",
+    "pos_info": [
+     {
+      "rule": "eff_neg_phenotype(x,ploidy) <= isa*(x,reproduction)",
+      "rule_id": "eff_neg_phenotype(x,PATO:0001374)<=isa*(x,GO:0022414)",
+      "pca": 1.0,
+      "supp": 2,
+      "n": 17,
+      "cat": "class",
+      "judge": "LATTICE"
+     }
+    ],
+    "neg_info": [
+     {
+      "rule": "eff_neg_phenotype(x,ploidy) <= isa*(x,reproduction)",
+      "rule_id": "eff_neg_phenotype(x,PATO:0001374)<=isa*(x,GO:0022414)",
+      "pca": 1.0,
+      "supp": 2,
+      "n": 17,
+      "cat": "class",
+      "judge": "LATTICE"
+     }
+    ]
+   },
+   "mine_tb": {
+    "pos": [
+     false
+    ],
+    "neg": [
+     false
+    ],
+    "mark": "SILENT",
+    "pos_info": [
+     null
+    ],
+    "neg_info": [
+     null
+    ]
+   },
+   "amie": {
+    "pos": [
+     false
+    ],
+    "neg": [
+     false
+    ],
+    "mark": "SILENT",
+    "pos_info": [
+     null
+    ],
+    "neg_info": [
+     null
+    ],
+    "n_rules": 98
+   }
+  }
+ },
+ {
+  "id": "I14",
+  "family": "class",
+  "probes": "tumour suppressors (needs an invented class)",
+  "hold": [
+   "reproduction-at-the-cellular-level-m45462-36"
+  ],
+  "pos": [
+   [
+    "eff_neg_process",
+    "PR:000013773",
+    "GO:0007049"
+   ]
+  ],
+  "neg": [
+   [
+    "eff_neg_process",
+    "PR:000007968",
+    "GO:0007049"
+   ]
+  ],
+  "src": "OpenStax, reproduction-at-the-cellular-level-m45462-36 (Rb halts the cell cycle; Weinberg 1995, PMID 7736585); growth hormone promotes growth (m45537-110 protein synthesis); GH acts as a cytokine that drives proliferation of immune cells (Jeay 2002, PMID 11911939)",
+  "synthetic": false,
+  "systems": {
+   "closure": {
+    "pos": [
+     false
+    ],
+    "neg": [
+     false
+    ],
+    "mark": "SILENT",
+    "how": [
+     ""
+    ]
+   },
+   "mine": {
+    "pos": [
+     false
+    ],
+    "neg": [
+     false
+    ],
+    "mark": "SILENT",
+    "pos_info": [
+     null
+    ],
+    "neg_info": [
+     null
+    ]
+   },
+   "mine_tb": {
+    "pos": [
+     false
+    ],
+    "neg": [
+     false
+    ],
+    "mark": "SILENT",
+    "pos_info": [
+     null
+    ],
+    "neg_info": [
+     null
+    ]
+   },
+   "amie": {
+    "pos": [
+     false
+    ],
+    "neg": [
+     false
+    ],
+    "mark": "SILENT",
+    "pos_info": [
+     null
+    ],
+    "neg_info": [
+     null
+    ],
+    "n_rules": 98
+   }
+  }
+ },
+ {
+  "id": "I15",
+  "family": "class",
+  "probes": "which metabolic processes make ATP (catabolic vs anabolic)",
+  "hold": [
+   "how-cells-obtain-energy-m45440-75"
+  ],
+  "pos": [
+   [
+    "eff_pos_amount",
+    "GO:0006096",
+    "CHEBI:15422"
+   ]
+  ],
+  "neg": [
+   [
+    "eff_pos_amount",
+    "GO:0005978",
+    "CHEBI:15422"
+   ],
+   [
+    "eff_pos_amount",
+    "GO:0006094",
+    "CHEBI:15422"
+   ]
+  ],
+  "src": "OpenStax, how-cells-obtain-energy-m45440-75 (glycolysis makes ATP); anabolic pathways consume energy (how-cells-obtain-energy m45437, anabolism); gluconeogenesis uses ATP and GTP (Reactome R-HSA-70263)",
+  "synthetic": false,
+  "systems": {
+   "closure": {
+    "pos": [
+     false
+    ],
+    "neg": [
+     false,
+     false
+    ],
+    "mark": "SILENT",
+    "how": [
+     ""
+    ]
+   },
+   "mine": {
+    "pos": [
+     true
+    ],
+    "neg": [
+     true,
+     true
+    ],
+    "mark": "FAIL",
+    "pos_info": [
+     {
+      "rule": "eff_pos_amount(x,ATP) <= isa*(x,metabolic reactions)",
+      "rule_id": "eff_pos_amount(x,CHEBI:15422)<=isa*(x,GO:0008152)",
+      "pca": 0.667,
+      "supp": 4,
+      "n": 97,
+      "cat": "class",
+      "judge": "LATTICE"
+     }
+    ],
+    "neg_info": [
+     {
+      "rule": "eff_pos_amount(x,ATP) <= isa*(x,metabolic reactions)",
+      "rule_id": "eff_pos_amount(x,CHEBI:15422)<=isa*(x,GO:0008152)",
+      "pca": 0.667,
+      "supp": 4,
+      "n": 97,
+      "cat": "class",
+      "judge": "LATTICE"
+     },
+     {
+      "rule": "eff_pos_amount(x,ATP) <= isa*(x,metabolic reactions)",
+      "rule_id": "eff_pos_amount(x,CHEBI:15422)<=isa*(x,GO:0008152)",
+      "pca": 0.667,
+      "supp": 4,
+      "n": 97,
+      "cat": "class",
+      "judge": "LATTICE"
+     }
+    ]
+   },
+   "mine_tb": {
+    "pos": [
+     true
+    ],
+    "neg": [
+     false,
+     false
+    ],
+    "mark": "PASS",
+    "pos_info": [
+     {
+      "rule": "eff_pos_amount(x,y) <= has_output(x,y)",
+      "rule_id": "eff_pos_amount<=has_output",
+      "pca": 0.5,
+      "supp": 2,
+      "n": 66,
+      "cat": "implication",
+      "judge": "TRUE"
+     }
+    ],
+    "neg_info": [
+     null,
+     null
+    ]
+   },
+   "amie": {
+    "pos": [
+     true
+    ],
+    "neg": [
+     false,
+     false
+    ],
+    "mark": "PASS",
+    "pos_info": [
+     {
+      "rule": "?a  <has_output>  ?b   => ?a  <eff_pos_amount>  ?b",
+      "pca": 0.5,
+      "supp": 2
+     }
+    ],
+    "neg_info": [
+     null,
+     null
+    ],
+    "n_rules": 95
+   }
+  }
+ },
+ {
+  "id": "I16",
+  "family": "class",
+  "probes": "a property of a species learned from its own contexts",
+  "hold": [
+   "cell-structure-and-function-m45433-19"
+  ],
+  "pos": [
+   [
+    "capable_of",
+    "NCBITaxon:12721",
+    "GO:0046718"
+   ]
+  ],
+  "neg": [],
+  "src": "OpenStax, cell-structure-and-function-m45433-19 (HIV enters host cells)",
+  "synthetic": false,
+  "systems": {
+   "closure": {
+    "pos": [
+     false
+    ],
+    "neg": [],
+    "mark": "SILENT",
+    "how": [
+     ""
+    ]
+   },
+   "mine": {
+    "pos": [
+     false
+    ],
+    "neg": [],
+    "mark": "SILENT",
+    "pos_info": [
+     {
+      "rule": "capable_of(x,viral entry into host cell) <= isa*(x,NCBITaxon:1)",
+      "rule_id": "capable_of(x,GO:0046718)<=isa*(x,NCBITaxon:1)",
+      "pca": 0.273,
+      "supp": 3,
+      "n": 28,
+      "cat": "class",
+      "judge": "LATTICE"
+     }
+    ],
+    "neg_info": []
+   },
+   "mine_tb": {
+    "pos": [
+     false
+    ],
+    "neg": [],
+    "mark": "SILENT",
+    "pos_info": [
+     null
+    ],
+    "neg_info": []
+   },
+   "amie": {
+    "pos": [
+     false
+    ],
+    "neg": [],
+    "mark": "SILENT",
+    "pos_info": [
+     null
+    ],
+    "neg_info": [],
+    "n_rules": 96
+   }
+  }
+ },
+ {
+  "id": "I17",
+  "family": "class",
+  "probes": "nucleus: a eukaryote rule with stated and unstated exceptions",
+  "hold": [
+   "the-body-s-systems-m45538-228"
+  ],
+  "pos": [
+   [
+    "has_part",
+    "CL:0000192",
+    "GO:0005634"
+   ]
+  ],
+  "neg": [
+   [
+    "has_part",
+    "CL:0000520",
+    "GO:0005634"
+   ],
+   [
+    "has_part",
+    "CL:0000232&RO:0002162=(NCBITaxon:40674)",
+    "GO:0005634"
+   ]
+  ],
+  "src": "OpenStax, the-body-s-systems-m45538-228 (smooth muscle cell has one nucleus); prokaryotes lack a nucleus (m45429-15, stated as a negation); mature mammalian red cells lack a nucleus (Ji 2011, PMID 21592797)",
+  "synthetic": false,
+  "systems": {
+   "closure": {
+    "pos": [
+     false
+    ],
+    "neg": [
+     false,
+     false
+    ],
+    "mark": "SILENT",
+    "how": [
+     ""
+    ]
+   },
+   "mine": {
+    "pos": [
+     false
+    ],
+    "neg": [
+     false,
+     false
+    ],
+    "mark": "SILENT",
+    "pos_info": [
+     null
+    ],
+    "neg_info": [
+     {
+      "rule": "has_part(x,nucleus) <= isa*(x,cells)",
+      "rule_id": "has_part(x,GO:0005634)<=isa*(x,CL:0000000)",
+      "pca": 0.273,
+      "supp": 3,
+      "n": 41,
+      "cat": "class",
+      "judge": "LATTICE"
+     },
+     {
+      "rule": "has_part(x,nucleus) <= isa*(x,cells)",
+      "rule_id": "has_part(x,GO:0005634)<=isa*(x,CL:0000000)",
+      "pca": 0.273,
+      "supp": 3,
+      "n": 41,
+      "cat": "class",
+      "judge": "LATTICE"
+     }
+    ]
+   },
+   "mine_tb": {
+    "pos": [
+     false
+    ],
+    "neg": [
+     false,
+     false
+    ],
+    "mark": "SILENT",
+    "pos_info": [
+     null
+    ],
+    "neg_info": [
+     null,
+     null
+    ]
+   },
+   "amie": {
+    "pos": [
+     false
+    ],
+    "neg": [
+     false,
+     false
+    ],
+    "mark": "SILENT",
+    "pos_info": [
+     null
+    ],
+    "neg_info": [
+     null,
+     null
+    ],
+    "n_rules": 98
+   }
+  }
+ },
+ {
+  "id": "I18",
+  "family": "path",
+  "probes": "an output that derives from y means y is an input",
+  "hold": [
+   "photosynthesis-m45453-20"
+  ],
+  "pos": [
+   [
+    "has_input",
+    "GO:0019253",
+    "CHEBI:16526"
+   ]
+  ],
+  "neg": [],
+  "src": "OpenStax, photosynthesis-m45453-20 (the Calvin cycle takes in CO2)",
+  "synthetic": false,
+  "systems": {
+   "closure": {
+    "pos": [
+     false
+    ],
+    "neg": [],
+    "mark": "SILENT",
+    "how": [
+     ""
+    ]
+   },
+   "mine": {
+    "pos": [
+     true
+    ],
+    "neg": [],
+    "mark": "PASS",
+    "pos_info": [
+     {
+      "rule": "has_input(x,y) <= has_output(x,z), derives_from(z,y)",
+      "rule_id": "has_input<=has_output,derives_from",
+      "pca": 0.667,
+      "supp": 2,
+      "n": 5,
+      "cat": "new path",
+      "judge": "TRUE"
+     }
+    ],
+    "neg_info": []
+   },
+   "mine_tb": {
+    "pos": [
+     true
+    ],
+    "neg": [],
+    "mark": "PASS",
+    "pos_info": [
+     {
+      "rule": "has_input(x,y) <= has_output(x,z), derives_from(z,y)",
+      "rule_id": "has_input<=has_output,derives_from",
+      "pca": 0.667,
+      "supp": 2,
+      "n": 5,
+      "cat": "new path",
+      "judge": "TRUE"
+     }
+    ],
+    "neg_info": []
+   },
+   "amie": {
+    "pos": [
+     true
+    ],
+    "neg": [],
+    "mark": "PASS",
+    "pos_info": [
+     {
+      "rule": "?g  <derives_from>  ?b  ?a  <has_output>  ?g   => ?a  <has_input>  ?b",
+      "pca": 0.667,
+      "supp": 2
+     }
+    ],
+    "neg_info": [],
+    "n_rules": 96
+   }
+  }
+ },
+ {
+  "id": "I19",
+  "family": "path",
+  "probes": "descent as analogy: an organelle does what its ancestor does",
+  "hold": [],
+  "pos": [],
+  "neg": [
+   [
+    "capable_of",
+    "GO:0005739",
+    "GO:0015979"
+   ]
+  ],
+  "src": "Mitochondria do not photosynthesise; the textbook gives mitochondria cellular respiration (m45432-313) and chloroplasts photosynthesis (m45432-229)",
+  "synthetic": false,
+  "systems": {
+   "closure": {
+    "pos": [],
+    "neg": [
+     false
+    ],
+    "mark": "PASS",
+    "how": []
+   },
+   "mine": {
+    "pos": [],
+    "neg": [
+     true
+    ],
+    "mark": "FAIL",
+    "pos_info": [],
+    "neg_info": [
+     {
+      "rule": "capable_of(x,y) <= derives_from(x,z), capable_of(z,y)",
+      "rule_id": "capable_of<=derives_from,capable_of",
+      "pca": 0.75,
+      "supp": 3,
+      "n": 4,
+      "cat": "new path",
+      "judge": "ANNOT"
+     }
+    ]
+   },
+   "mine_tb": {
+    "pos": [],
+    "neg": [
+     true
+    ],
+    "mark": "FAIL",
+    "pos_info": [],
+    "neg_info": [
+     {
+      "rule": "capable_of(x,y) <= derives_from(x,z), capable_of(z,y)",
+      "rule_id": "capable_of<=derives_from,capable_of",
+      "pca": 0.75,
+      "supp": 3,
+      "n": 4,
+      "cat": "new path",
+      "judge": "ANNOT"
+     }
+    ]
+   },
+   "amie": {
+    "pos": [],
+    "neg": [
+     true
+    ],
+    "mark": "FAIL",
+    "pos_info": [],
+    "neg_info": [
+     {
+      "rule": "?h  <capable_of>  ?b  ?a  <derives_from>  ?h   => ?a  <capable_of>  ?b",
+      "pca": 0.75,
+      "supp": 3
+     }
+    ],
+    "n_rules": 98
+   }
+  }
+ },
+ {
+  "id": "I20",
+  "family": "path",
+  "probes": "inverting a class-level has_part",
+  "hold": [
+   "cell-structure-and-function-m45432-112"
+  ],
+  "pos": [],
+  "neg": [
+   [
+    "part_of",
+    "CHEBI:16247",
+    "GO:0031966"
+   ]
+  ],
+  "src": "Not every phospholipid is part of a mitochondrial membrane (STATUS lesson 13); m45432-198 says the reverse direction only",
+  "synthetic": false,
+  "systems": {
+   "closure": {
+    "pos": [],
+    "neg": [
+     false
+    ],
+    "mark": "PASS",
+    "how": []
+   },
+   "mine": {
+    "pos": [],
+    "neg": [
+     true
+    ],
+    "mark": "FAIL",
+    "pos_info": [],
+    "neg_info": [
+     {
+      "rule": "part_of(x,y) <= has_part(y,x)",
+      "rule_id": "part_of<=~has_part",
+      "pca": 0.56,
+      "supp": 28,
+      "n": 238,
+      "cat": "inverse",
+      "judge": "FORM"
+     }
+    ]
+   },
+   "mine_tb": {
+    "pos": [],
+    "neg": [
+     true
+    ],
+    "mark": "FAIL",
+    "pos_info": [],
+    "neg_info": [
+     {
+      "rule": "part_of(x,y) <= has_part(y,x)",
+      "rule_id": "part_of<=~has_part",
+      "pca": 0.56,
+      "supp": 28,
+      "n": 238,
+      "cat": "inverse",
+      "judge": "FORM"
+     }
+    ]
+   },
+   "amie": {
+    "pos": [],
+    "neg": [
+     true
+    ],
+    "mark": "FAIL",
+    "pos_info": [],
+    "neg_info": [
+     {
+      "rule": "?b  <has_part>  ?a   => ?a  <part_of>  ?b",
+      "pca": 0.56,
+      "supp": 28
+     }
+    ],
+    "n_rules": 98
+   }
+  }
+ },
+ {
+  "id": "I21",
+  "family": "path",
+  "probes": "upward: a superclass takes a subclass's parthood",
+  "hold": [],
+  "pos": [],
+  "neg": [
+   [
+    "part_of",
+    "UBERON:0001474",
+    "UBERON:0003252"
+   ]
+  ],
+  "src": "Not every bone is part of the rib cage: the axial skeleton alone has skull, ear, hyoid, vertebral and rib bones (the-body-s-systems-m45538-267); the rule reads \"a rib is a bone, ribs are part of the rib cage\" upwards",
+  "synthetic": false,
+  "systems": {
+   "closure": {
+    "pos": [],
+    "neg": [
+     false
+    ],
+    "mark": "PASS",
+    "how": []
+   },
+   "mine": {
+    "pos": [],
+    "neg": [
+     true
+    ],
+    "mark": "FAIL",
+    "pos_info": [],
+    "neg_info": [
+     {
+      "rule": "part_of(x,y) <= isa*(z,x), part_of(z,y)",
+      "rule_id": "part_of<=~isa*,part_of",
+      "pca": 0.533,
+      "supp": 8,
+      "n": 768,
+      "cat": "upward",
+      "judge": "FORM"
+     }
+    ]
+   },
+   "mine_tb": {
+    "pos": [],
+    "neg": [
+     true
+    ],
+    "mark": "FAIL",
+    "pos_info": [],
+    "neg_info": [
+     {
+      "rule": "part_of(x,y) <= isa*(z,x), part_of(z,y)",
+      "rule_id": "part_of<=~isa*,part_of",
+      "pca": 0.7,
+      "supp": 7,
+      "n": 27,
+      "cat": "upward",
+      "judge": "FORM"
+     }
+    ]
+   },
+   "amie": {
+    "pos": [],
+    "neg": [
+     true
+    ],
+    "mark": "FAIL",
+    "pos_info": [],
+    "neg_info": [
+     {
+      "rule": "?g  <isa*>  ?a  ?g  <part_of>  ?b   => ?a  <part_of>  ?b",
+      "pca": 0.7,
+      "supp": 7
+     }
+    ],
+    "n_rules": 98
+   }
+  }
+ },
+ {
+  "id": "I22",
+  "family": "path",
+  "probes": "a whole does what its part does",
+  "hold": [
+   "cell-structure-and-function-m45432-229"
+  ],
+  "pos": [
+   [
+    "capable_of",
+    "GO:0009507",
+    "GO:0015979"
+   ]
+  ],
+  "neg": [],
+  "src": "OpenStax, cell-structure-and-function-m45432-229 (chloroplasts do photosynthesis)",
+  "synthetic": false,
+  "systems": {
+   "closure": {
+    "pos": [
+     false
+    ],
+    "neg": [],
+    "mark": "SILENT",
+    "how": [
+     ""
+    ]
+   },
+   "mine": {
+    "pos": [
+     false
+    ],
+    "neg": [],
+    "mark": "SILENT",
+    "pos_info": [
+     {
+      "rule": "capable_of(x,y) <= has_part(x,z), capable_of(z,y)",
+      "rule_id": "capable_of<=has_part,capable_of",
+      "pca": 0.267,
+      "supp": 4,
+      "n": 47,
+      "cat": "new path",
+      "judge": "SCOPE"
+     }
+    ],
+    "neg_info": []
+   },
+   "mine_tb": {
+    "pos": [
+     false
+    ],
+    "neg": [],
+    "mark": "SILENT",
+    "pos_info": [
+     {
+      "rule": "capable_of(x,y) <= has_part(x,z), capable_of(z,y)",
+      "rule_id": "capable_of<=has_part,capable_of",
+      "pca": 0.267,
+      "supp": 4,
+      "n": 47,
+      "cat": "new path",
+      "judge": "SCOPE"
+     }
+    ],
+    "neg_info": []
+   },
+   "amie": {
+    "pos": [
+     false
+    ],
+    "neg": [],
+    "mark": "SILENT",
+    "pos_info": [
+     {
+      "rule": "?h  <capable_of>  ?b  ?a  <has_part>  ?h   => ?a  <capable_of>  ?b",
+      "pca": 0.267,
+      "supp": 4
+     }
+    ],
+    "neg_info": [],
+    "n_rules": 98
+   }
+  }
+ },
+ {
+  "id": "I23",
+  "family": "path",
+  "probes": "organ part_of system, system capable_of P => organ involved in P (the brief's example)",
+  "hold": [],
+  "pos": [
+   [
+    "involved_in",
+    "UBERON:0001876",
+    "GO:0007613"
+   ]
+  ],
+  "neg": [],
+  "src": "The amygdala modulates memory consolidation (McGaugh 2004, PMID 15217324); m45539-244 amygdala part of limbic system, m45539-242 limbic system capable of memory",
+  "synthetic": false,
+  "systems": {
+   "closure": {
+    "pos": [
+     false
+    ],
+    "neg": [],
+    "mark": "SILENT",
+    "how": [
+     ""
+    ]
+   },
+   "mine": {
+    "pos": [
+     false
+    ],
+    "neg": [],
+    "mark": "SILENT",
+    "pos_info": [
+     null
+    ],
+    "neg_info": []
+   },
+   "mine_tb": {
+    "pos": [
+     false
+    ],
+    "neg": [],
+    "mark": "SILENT",
+    "pos_info": [
+     null
+    ],
+    "neg_info": []
+   },
+   "amie": {
+    "pos": [
+     false
+    ],
+    "neg": [],
+    "mark": "SILENT",
+    "pos_info": [
+     null
+    ],
+    "neg_info": [],
+    "n_rules": 98
+   }
+  }
+ },
+ {
+  "id": "I24",
+  "family": "path",
+  "probes": "parthood read as causation",
+  "hold": [],
+  "pos": [],
+  "neg": [
+   [
+    "eff_pos_amount",
+    "UBERON:0001707",
+    "CHEBI:15379"
+   ]
+  ],
+  "src": "The nasal cavity warms and humidifies air (the-body-s-systems-m45536-38); gas exchange occurs only in the alveoli (m45536-66); docs/holes.md \"parthood read as causation\"",
+  "synthetic": false,
+  "systems": {
+   "closure": {
+    "pos": [],
+    "neg": [
+     false
+    ],
+    "mark": "PASS",
+    "how": []
+   },
+   "mine": {
+    "pos": [],
+    "neg": [
+     true
+    ],
+    "mark": "FAIL",
+    "pos_info": [],
+    "neg_info": [
+     {
+      "rule": "eff_pos_amount(x,y) <= part_of(x,z), eff_pos_amount(z,y)",
+      "rule_id": "eff_pos_amount<=part_of,eff_pos_amount",
+      "pca": 1.0,
+      "supp": 2,
+      "n": 9,
+      "cat": "new path",
+      "judge": "FORM"
+     }
+    ]
+   },
+   "mine_tb": {
+    "pos": [],
+    "neg": [
+     true
+    ],
+    "mark": "FAIL",
+    "pos_info": [],
+    "neg_info": [
+     {
+      "rule": "eff_pos_amount(x,y) <= part_of(x,z), eff_pos_amount(z,y)",
+      "rule_id": "eff_pos_amount<=part_of,eff_pos_amount",
+      "pca": 1.0,
+      "supp": 2,
+      "n": 9,
+      "cat": "new path",
+      "judge": "FORM"
+     }
+    ]
+   },
+   "amie": {
+    "pos": [],
+    "neg": [
+     true
+    ],
+    "mark": "FAIL",
+    "pos_info": [],
+    "neg_info": [
+     {
+      "rule": "?h  <eff_pos_amount>  ?b  ?a  <part_of>  ?h   => ?a  <eff_pos_amount>  ?b",
+      "pca": 1.0,
+      "supp": 2
+     }
+    ],
+    "n_rules": 98
+   }
+  }
+ },
+ {
+  "id": "I25",
+  "family": "taxon",
+  "probes": "bacterial DNA sits in the nucleoid; bacterial ribosomes do not",
+  "hold": [
+   "molbio-m45473-76"
+  ],
+  "pos": [
+   [
+    "located_in",
+    "GO:0005694&RO:0002162=(NCBITaxon:2)",
+    "GO:0009295"
+   ]
+  ],
+  "neg": [
+   [
+    "located_in",
+    "GO:0005840&RO:0002162=(NCBITaxon:2)",
+    "GO:0009295"
+   ],
+   [
+    "located_in",
+    "GO:0005694&RO:0002162=(NCBITaxon:2)",
+    "GO:0005634"
+   ]
+  ],
+  "src": "OpenStax, molbio-m45473-76 (prokaryotic chromosome in the nucleoid); in E. coli only 10-15% of ribosomes lie within the dense nucleoid lobes (Bakshi 2012, PMID 22624875), so not every bacterial ribosome is in the nucleoid; prokaryotes have no nucleus (cell-structure-and-function-m45429-15), so their chromosome is not in one",
+  "synthetic": false,
+  "systems": {
+   "closure": {
+    "pos": [
+     false
+    ],
+    "neg": [
+     false,
+     true
+    ],
+    "mark": "FAIL",
+    "how": [
+     ""
+    ]
+   },
+   "mine": {
+    "pos": [
+     true
+    ],
+    "neg": [
+     true,
+     false
+    ],
+    "mark": "FAIL",
+    "pos_info": [
+     {
+      "rule": "located_in(x,nucleoid) <= in_taxon(x,bacteria)",
+      "rule_id": "located_in(x,GO:0009295)<=in_taxon(x,NCBITaxon:2)",
+      "pca": 0.667,
+      "supp": 2,
+      "n": 9,
+      "cat": "taxon",
+      "judge": "LATTICE"
+     }
+    ],
+    "neg_info": [
+     {
+      "rule": "located_in(x,nucleoid) <= in_taxon(x,bacteria)",
+      "rule_id": "located_in(x,GO:0009295)<=in_taxon(x,NCBITaxon:2)",
+      "pca": 0.667,
+      "supp": 2,
+      "n": 9,
+      "cat": "taxon",
+      "judge": "LATTICE"
+     },
+     {
+      "rule": "located_in(x,y) <= isa*(x,z), located_in(z,y)",
+      "rule_id": "located_in<=isa*,located_in",
+      "pca": 0.269,
+      "supp": 7,
+      "n": 182,
+      "cat": "core:isaInherit",
+      "judge": "TRUE"
+     }
+    ]
+   },
+   "mine_tb": {
+    "pos": [
+     true
+    ],
+    "neg": [
+     true,
+     true
+    ],
+    "mark": "FAIL",
+    "pos_info": [
+     {
+      "rule": "located_in(x,nucleoid) <= in_taxon(x,bacteria)",
+      "rule_id": "located_in(x,GO:0009295)<=in_taxon(x,NCBITaxon:2)",
+      "pca": 0.667,
+      "supp": 2,
+      "n": 9,
+      "cat": "taxon",
+      "judge": "LATTICE"
+     }
+    ],
+    "neg_info": [
+     {
+      "rule": "located_in(x,nucleoid) <= in_taxon(x,bacteria)",
+      "rule_id": "located_in(x,GO:0009295)<=in_taxon(x,NCBITaxon:2)",
+      "pca": 0.667,
+      "supp": 2,
+      "n": 9,
+      "cat": "taxon",
+      "judge": "LATTICE"
+     },
+     {
+      "rule": "located_in(x,y) <= isa*(x,z), located_in(z,y)",
+      "rule_id": "located_in<=isa*,located_in",
+      "pca": 0.5,
+      "supp": 4,
+      "n": 27,
+      "cat": "core:isaInherit",
+      "judge": "TRUE"
+     }
+    ]
+   },
+   "amie": {
+    "pos": [
+     false
+    ],
+    "neg": [
+     false,
+     true
+    ],
+    "mark": "FAIL",
+    "pos_info": [
+     null
+    ],
+    "neg_info": [
+     null,
+     {
+      "rule": "?a  <isa*>  ?h  ?h  <located_in>  ?b   => ?a  <located_in>  ?b",
+      "pca": 0.5,
+      "supp": 4
+     }
+    ],
+    "n_rules": 98
+   }
+  }
+ },
+ {
+  "id": "I26",
+  "family": "taxon",
+  "probes": "eukaryotic genetic material sits in the nucleus; eukaryotic ribosomes do not",
+  "hold": [
+   "reproduction-at-the-cellular-level-m45455-16"
+  ],
+  "pos": [
+   [
+    "located_in",
+    "GO:0005694&RO:0002162=(NCBITaxon:2759)",
+    "GO:0005634"
+   ]
+  ],
+  "neg": [
+   [
+    "located_in",
+    "GO:0005840&RO:0002162=(NCBITaxon:2759)",
+    "GO:0005634"
+   ]
+  ],
+  "src": "OpenStax, reproduction-at-the-cellular-level-m45455-16 (eukaryotic chromosomes in the nucleus); eukaryotic ribosomes are in the cytoplasm and on the ER (molbio-m45479-21, -22)",
+  "synthetic": false,
+  "systems": {
+   "closure": {
+    "pos": [
+     true
+    ],
+    "neg": [
+     false
+    ],
+    "mark": "PASS",
+    "how": [
+     "isaInherit"
+    ]
+   },
+   "mine": {
+    "pos": [
+     false
+    ],
+    "neg": [
+     false
+    ],
+    "mark": "SILENT",
+    "pos_info": [
+     {
+      "rule": "located_in(x,y) <= isa*(x,z), located_in(z,y)",
+      "rule_id": "located_in<=isa*,located_in",
+      "pca": 0.231,
+      "supp": 6,
+      "n": 182,
+      "cat": "core:isaInherit",
+      "judge": "TRUE"
+     }
+    ],
+    "neg_info": [
+     null
+    ]
+   },
+   "mine_tb": {
+    "pos": [
+     false
+    ],
+    "neg": [
+     false
+    ],
+    "mark": "SILENT",
+    "pos_info": [
+     {
+      "rule": "located_in(x,y) <= isa*(x,z), located_in(z,y)",
+      "rule_id": "located_in<=isa*,located_in",
+      "pca": 0.375,
+      "supp": 3,
+      "n": 27,
+      "cat": "core:isaInherit",
+      "judge": "TRUE"
+     }
+    ],
+    "neg_info": [
+     null
+    ]
+   },
+   "amie": {
+    "pos": [
+     false
+    ],
+    "neg": [
+     false
+    ],
+    "mark": "SILENT",
+    "pos_info": [
+     {
+      "rule": "?a  <isa*>  ?h  ?h  <located_in>  ?b   => ?a  <located_in>  ?b",
+      "pca": 0.375,
+      "supp": 3
+     }
+    ],
+    "neg_info": [
+     null
+    ],
+    "n_rules": 98
+   }
+  }
+ },
+ {
+  "id": "I27",
+  "family": "taxon",
+  "probes": "plant parts and the cell wall",
+  "hold": [
+   "cell-structure-and-function-m45432-355"
+  ],
+  "pos": [
+   [
+    "has_part",
+    "GO:0005618&RO:0002162=(NCBITaxon:33090)",
+    "CHEBI:18246"
+   ]
+  ],
+  "neg": [],
+  "src": "OpenStax, cell-structure-and-function-m45432-355 (plant cell walls contain cellulose)",
+  "synthetic": false,
+  "systems": {
+   "closure": {
+    "pos": [
+     false
+    ],
+    "neg": [],
+    "mark": "SILENT",
+    "how": [
+     ""
+    ]
+   },
+   "mine": {
+    "pos": [
+     true
+    ],
+    "neg": [],
+    "mark": "PASS",
+    "pos_info": [
+     {
+      "rule": "has_part(x,cellulose) <= isa*(x,cell wall)",
+      "rule_id": "has_part(x,CHEBI:18246)<=isa*(x,GO:0005618)",
+      "pca": 0.667,
+      "supp": 2,
+      "n": 5,
+      "cat": "class",
+      "judge": "LATTICE"
+     }
+    ],
+    "neg_info": []
+   },
+   "mine_tb": {
+    "pos": [
+     false
+    ],
+    "neg": [],
+    "mark": "SILENT",
+    "pos_info": [
+     null
+    ],
+    "neg_info": []
+   },
+   "amie": {
+    "pos": [
+     false
+    ],
+    "neg": [],
+    "mark": "SILENT",
+    "pos_info": [
+     null
+    ],
+    "neg_info": [],
+    "n_rules": 98
+   }
+  }
+ },
+ {
+  "id": "I28",
+  "family": "feature",
+  "probes": "CO2 in, sugar out",
+  "hold": [
+   "photosynthesis-m45453-51"
+  ],
+  "pos": [
+   [
+    "has_output",
+    "GO:0019253",
+    "CHEBI:16646"
+   ]
+  ],
+  "neg": [],
+  "src": "OpenStax, photosynthesis-m45453-51 (the Calvin cycle makes sugars)",
+  "synthetic": false,
+  "systems": {
+   "closure": {
+    "pos": [
+     false
+    ],
+    "neg": [],
+    "mark": "SILENT",
+    "how": [
+     ""
+    ]
+   },
+   "mine": {
+    "pos": [
+     true
+    ],
+    "neg": [],
+    "mark": "PASS",
+    "pos_info": [
+     {
+      "rule": "has_output(x,sugars) <= has_input(x,carbon dioxide)",
+      "rule_id": "has_output(x,CHEBI:16646)<=has_input(x,CHEBI:16526)",
+      "pca": 0.667,
+      "supp": 2,
+      "n": 4,
+      "cat": "feat",
+      "judge": "SCOPE"
+     }
+    ],
+    "neg_info": []
+   },
+   "mine_tb": {
+    "pos": [
+     true
+    ],
+    "neg": [],
+    "mark": "PASS",
+    "pos_info": [
+     {
+      "rule": "has_output(x,sugars) <= has_input(x,carbon dioxide)",
+      "rule_id": "has_output(x,CHEBI:16646)<=has_input(x,CHEBI:16526)",
+      "pca": 0.667,
+      "supp": 2,
+      "n": 4,
+      "cat": "feat",
+      "judge": "SCOPE"
+     }
+    ],
+    "neg_info": []
+   },
+   "amie": {
+    "pos": [
+     false
+    ],
+    "neg": [],
+    "mark": "SILENT",
+    "pos_info": [
+     {
+      "rule": "?b  <derives_from>  ?h  ?a  <has_input>  ?h   => ?a  <has_output>  ?b",
+      "pca": 0.4,
+      "supp": 2
+     }
+    ],
+    "neg_info": [],
+    "n_rules": 98
+   }
+  }
+ },
+ {
+  "id": "I29",
+  "family": "feature",
+  "probes": "glucose in, ATP up (catabolic only)",
+  "hold": [],
+  "pos": [],
+  "neg": [
+   [
+    "eff_pos_amount",
+    "GO:0006633&RO:0002162=(NCBITaxon:131567&RO:0002573=(BLN:glycogen_full))",
+    "CHEBI:15422"
+   ]
+  ],
+  "src": "Fatty acid synthesis consumes ATP and NADPH (Reactome R-HSA-75105); the textbook says excess glucose is stored as fat (how-cells-obtain-energy)",
+  "synthetic": false,
+  "systems": {
+   "closure": {
+    "pos": [],
+    "neg": [
+     false
+    ],
+    "mark": "PASS",
+    "how": []
+   },
+   "mine": {
+    "pos": [],
+    "neg": [
+     false
+    ],
+    "mark": "PASS",
+    "pos_info": [],
+    "neg_info": [
+     null
+    ]
+   },
+   "mine_tb": {
+    "pos": [],
+    "neg": [
+     false
+    ],
+    "mark": "PASS",
+    "pos_info": [],
+    "neg_info": [
+     null
+    ]
+   },
+   "amie": {
+    "pos": [],
+    "neg": [
+     false
+    ],
+    "mark": "PASS",
+    "pos_info": [],
+    "neg_info": [
+     null
+    ],
+    "n_rules": 98
+   }
+  }
+ },
+ {
+  "id": "I30",
+  "family": "invention",
+  "probes": "G1 organelle abundance, as the core holds it today",
+  "hold": [],
+  "pos": [
+   [
+    "has_abundant",
+    "CL:0000187",
+    "GO:0005739"
+   ]
+  ],
+  "neg": [],
+  "src": "OpenStax, cell-structure-and-function-m45432-203 (muscle cells have a very high concentration of mitochondria); not in Lean (no abundance constructor)",
+  "synthetic": false,
+  "systems": {
+   "closure": {
+    "pos": [
+     false
+    ],
+    "neg": [],
+    "mark": "INEXPRESSIBLE",
+    "how": [
+     ""
+    ]
+   },
+   "mine": {
+    "pos": [
+     false
+    ],
+    "neg": [],
+    "mark": "INEXPRESSIBLE",
+    "rules": []
+   },
+   "mine_tb": {
+    "pos": [
+     false
+    ],
+    "neg": [],
+    "mark": "INEXPRESSIBLE",
+    "rules": []
+   },
+   "amie": {
+    "pos": [
+     false
+    ],
+    "neg": [],
+    "mark": "INEXPRESSIBLE"
+   }
+  }
+ },
+ {
+  "id": "I31",
+  "family": "invention",
+  "probes": "G1 with the two invented predicates given by hand (synthetic facts)",
+  "hold": [],
+  "pos": [
+   [
+    "has_abundant",
+    "CL:0000187",
+    "GO:0005739"
+   ]
+  ],
+  "neg": [],
+  "src": "OpenStax, cell-structure-and-function-m45432-155, -189, -203; GO:0005794 definition on OLS4",
+  "synthetic": true,
+  "systems": {
+   "closure": {
+    "pos": [
+     false
+    ],
+    "neg": [],
+    "mark": "SILENT",
+    "how": [
+     ""
+    ]
+   },
+   "mine": {
+    "pos": [
+     false
+    ],
+    "neg": [],
+    "mark": "SILENT",
+    "pos_info": [
+     null
+    ],
+    "neg_info": []
+   },
+   "mine_tb": {
+    "pos": [
+     false
+    ],
+    "neg": [],
+    "mark": "SILENT",
+    "pos_info": [
+     null
+    ],
+    "neg_info": []
+   },
+   "amie": {
+    "pos": [
+     false
+    ],
+    "neg": [],
+    "mark": "SILENT",
+    "pos_info": [
+     null
+    ],
+    "neg_info": [],
+    "n_rules": 99
+   }
+  }
+ },
+ {
+  "id": "I32",
+  "family": "invention",
+  "probes": "G1 with capability as a proxy for demand (no invented demand predicate)",
+  "hold": [],
+  "pos": [],
+  "neg": [
+   [
+    "has_abundant",
+    "CL:0000000",
+    "GO:0005739"
+   ]
+  ],
+  "src": "Abundance is relative: a generic cell is not rich in mitochondria (m45432-203 contrasts muscle cells with others)",
+  "synthetic": true,
+  "systems": {
+   "closure": {
+    "pos": [],
+    "neg": [
+     false
+    ],
+    "mark": "PASS",
+    "how": []
+   },
+   "mine": {
+    "pos": [],
+    "neg": [
+     false
+    ],
+    "mark": "PASS",
+    "pos_info": [],
+    "neg_info": [
+     null
+    ]
+   },
+   "mine_tb": {
+    "pos": [],
+    "neg": [
+     false
+    ],
+    "mark": "PASS",
+    "pos_info": [],
+    "neg_info": [
+     null
+    ]
+   },
+   "amie": {
+    "pos": [],
+    "neg": [
+     false
+    ],
+    "mark": "PASS",
+    "pos_info": [],
+    "neg_info": [
+     null
+    ],
+    "n_rules": 100
+   }
+  }
+ },
+ {
+  "id": "I33",
+  "family": "invention",
+  "probes": "endosymbiosis over-generalised (holes.md: organelles derive from bacteria)",
+  "hold": [],
+  "pos": [],
+  "neg": [
+   [
+    "derives_from",
+    "GO:0005634",
+    "NCBITaxon:2"
+   ]
+  ],
+  "src": "Only mitochondria and plastids derive from bacteria (m45432-261, -262); the nucleus does not",
+  "synthetic": false,
+  "systems": {
+   "closure": {
+    "pos": [],
+    "neg": [
+     false
+    ],
+    "mark": "PASS",
+    "how": []
+   },
+   "mine": {
+    "pos": [],
+    "neg": [
+     false
+    ],
+    "mark": "PASS",
+    "pos_info": [],
+    "neg_info": [
+     null
+    ]
+   },
+   "mine_tb": {
+    "pos": [],
+    "neg": [
+     false
+    ],
+    "mark": "PASS",
+    "pos_info": [],
+    "neg_info": [
+     null
+    ]
+   },
+   "amie": {
+    "pos": [],
+    "neg": [
+     false
+    ],
+    "mark": "PASS",
+    "pos_info": [],
+    "neg_info": [
+     null
+    ],
+    "n_rules": 98
+   }
+  }
+ },
+ {
+  "id": "I34",
+  "family": "guard",
+  "probes": "one instance is not a rule (pancreas makes insulin)",
+  "hold": [],
+  "pos": [],
+  "neg": [
+   [
+    "produces",
+    "UBERON:0002046",
+    "PR:000009054"
+   ]
+  ],
+  "src": "The thyroid makes thyroid hormone, not insulin (the-body-s-systems-m45537-27); holes.md over-general \"endocrine gland produces insulin\"",
+  "synthetic": false,
+  "systems": {
+   "closure": {
+    "pos": [],
+    "neg": [
+     false
+    ],
+    "mark": "PASS",
+    "how": []
+   },
+   "mine": {
+    "pos": [],
+    "neg": [
+     false
+    ],
+    "mark": "PASS",
+    "pos_info": [],
+    "neg_info": [
+     null
+    ]
+   },
+   "mine_tb": {
+    "pos": [],
+    "neg": [
+     false
+    ],
+    "mark": "PASS",
+    "pos_info": [],
+    "neg_info": [
+     null
+    ]
+   },
+   "amie": {
+    "pos": [],
+    "neg": [
+     false
+    ],
+    "mark": "PASS",
+    "pos_info": [],
+    "neg_info": [
+     null
+    ],
+    "n_rules": 98
+   }
+  }
+ },
+ {
+  "id": "I35",
+  "family": "guard",
+  "probes": "synthetic: a class rule defeated by a stated negation",
+  "hold": [],
+  "pos": [],
+  "neg": [
+   [
+    "has_part",
+    "CL:0000520",
+    "GO:0005634"
+   ]
+  ],
+  "src": "Prokaryotes lack a nucleus (OpenStax m45429-15, a stated notRel); synthetic support pushes the cell-level class rule over threshold",
+  "synthetic": true,
+  "systems": {
+   "closure": {
+    "pos": [],
+    "neg": [
+     false
+    ],
+    "mark": "PASS",
+    "how": []
+   },
+   "mine": {
+    "pos": [],
+    "neg": [
+     false
+    ],
+    "mark": "PASS",
+    "pos_info": [],
+    "neg_info": [
+     {
+      "rule": "has_part(x,nucleus) <= isa*(x,cells)",
+      "rule_id": "has_part(x,GO:0005634)<=isa*(x,CL:0000000)",
+      "pca": 0.462,
+      "supp": 6,
+      "n": 42,
+      "cat": "class",
+      "judge": "LATTICE"
+     }
+    ]
+   },
+   "mine_tb": {
+    "pos": [],
+    "neg": [
+     false
+    ],
+    "mark": "PASS",
+    "pos_info": [],
+    "neg_info": [
+     null
+    ]
+   },
+   "amie": {
+    "pos": [],
+    "neg": [
+     false
+    ],
+    "mark": "PASS",
+    "pos_info": [],
+    "neg_info": [
+     null
+    ],
+    "n_rules": 98
+   }
+  }
+ },
+ {
+  "id": "I36",
+  "family": "guard",
+  "probes": "synthetic: the same sentence twice is one instance",
+  "hold": [],
+  "pos": [],
+  "neg": [
+   [
+    "produces",
+    "UBERON:0002046",
+    "PR:000009054"
+   ]
+  ],
+  "src": "Fact-level deduplication: two copies of \"pancreas produces insulin\" are one instance",
+  "synthetic": true,
+  "systems": {
+   "closure": {
+    "pos": [],
+    "neg": [
+     false
+    ],
+    "mark": "PASS",
+    "how": []
+   },
+   "mine": {
+    "pos": [],
+    "neg": [
+     false
+    ],
+    "mark": "PASS",
+    "pos_info": [],
+    "neg_info": [
+     null
+    ]
+   },
+   "mine_tb": {
+    "pos": [],
+    "neg": [
+     false
+    ],
+    "mark": "PASS",
+    "pos_info": [],
+    "neg_info": [
+     null
+    ]
+   },
+   "amie": {
+    "pos": [],
+    "neg": [
+     false
+    ],
+    "mark": "PASS",
+    "pos_info": [],
+    "neg_info": [
+     null
+    ],
+    "n_rules": 98
+   }
+  }
+ },
+ {
+  "id": "I37",
+  "family": "taxon",
+  "probes": "widen a taxon rule from instances (the core's own generalize, M4)",
+  "hold": [],
+  "pos": [
+   [
+    "located_in",
+    "GO:0005840&RO:0002162=(NCBITaxon:131567)",
+    "GO:0005737"
+   ]
+  ],
+  "neg": [
+   [
+    "located_in",
+    "GO:0005694&RO:0002162=(NCBITaxon:131567)",
+    "GO:0005634"
+   ]
+  ],
+  "src": "OpenStax, molbio-m45479-20, -21 (ribosomes are located in the cytoplasm in prokaryotes and in eukaryotes, so in all cellular organisms); prokaryotes lack a nucleus (cell-structure-and-function-m45429-15), so not every chromosome of a cellular organism is in a nucleus",
+  "synthetic": false,
+  "systems": {
+   "closure": {
+    "pos": [
+     false
+    ],
+    "neg": [
+     false
+    ],
+    "mark": "SILENT",
+    "how": [
+     ""
+    ]
+   },
+   "mine": {
+    "pos": [
+     false
+    ],
+    "neg": [
+     false
+    ],
+    "mark": "SILENT",
+    "pos_info": [
+     null
+    ],
+    "neg_info": [
+     null
+    ]
+   },
+   "mine_tb": {
+    "pos": [
+     false
+    ],
+    "neg": [
+     false
+    ],
+    "mark": "SILENT",
+    "pos_info": [
+     null
+    ],
+    "neg_info": [
+     null
+    ]
+   },
+   "amie": {
+    "pos": [
+     false
+    ],
+    "neg": [
+     false
+    ],
+    "mark": "SILENT",
+    "pos_info": [
+     null
+    ],
+    "neg_info": [
+     null
+    ],
+    "n_rules": 98
+   }
+  }
+ }
+]

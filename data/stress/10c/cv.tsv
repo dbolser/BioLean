@@ -1,0 +1,18 @@
+method	background	min_pca	predictions	hits	held_out	recall	precision_lower_bound	recall_with_closure
+closure (today)	textbook	-	-	36	1266	0.028	-	-
+mine	textbook	0.1	9934	97	1266	0.077	0.0098	0.089
+mine	textbook	0.3	4688	73	1266	0.058	0.0156	0.073
+mine	textbook	0.5	3051	45	1266	0.036	0.0147	0.055
+mine	textbook	0.8	555	6	1266	0.005	0.0108	0.031
+mine	textbook	1.0	526	5	1266	0.004	0.0095	0.030
+amie	textbook	0.1	8201	90	1266	0.071	0.0110	0.085
+amie	textbook	0.3	3863	73	1266	0.058	0.0189	0.073
+amie	textbook	0.5	2540	62	1266	0.049	0.0244	0.068
+amie	textbook	0.8	385	5	1266	0.004	0.0130	0.030
+amie	textbook	1.0	368	4	1266	0.003	0.0109	0.029
+closure (today)	onto	-	-	36	1266	0.028	-	-
+mine	onto	0.1	108962	192	1266	0.152	0.0018	0.160
+mine	onto	0.3	41654	114	1266	0.090	0.0027	0.105
+mine	onto	0.5	33816	71	1266	0.056	0.0021	0.077
+mine	onto	0.8	4499	16	1266	0.013	0.0036	0.039
+mine	onto	1.0	3875	10	1266	0.008	0.0026	0.035

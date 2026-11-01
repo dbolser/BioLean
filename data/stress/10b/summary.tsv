@@ -1,0 +1,39 @@
+measure	count	of
+cases PASS	18	52
+cases FAIL	14	52
+cases SILENT	19	52
+cases INEXPRESSIBLE	1	52
+statements reason: BTO context dropped	5	52
+statements reason: relocalization read as amount	3	52
+statements reason: bare up-regulates read as activity	3	52
+statements reason: chain id read as precursor	3	52
+statements reason: no PMID	3	52
+statements reason: complex with no OBO id	2	52
+statements reason: instance location lifted to class	2	52
+statements reason: reaction read as its broader GO term	2	52
+statements reason: precursor for the product (GLP-1)	1	52
+statements reason: dropped by M0: activity of a complex (the core can state it as GO:0046933)	1	52
+statements reason: species of the experiment dropped (rat cells, human protein)	1	52
+statements reason: zebrafish term in a human model	1	52
+statements reason: generic enabler	1	52
+statements reason: inexpressible: a set	1	52
+statements reason: inferred from mouse, counted as human	1	52
+statements reason: gene-product form dropped (one row, P30988-2)	1	52
+statements lossless	25	52
+statements lossy	25	52
+statements dropped	1	52
+statements inexpressible	1	52
+SIGNOR statements lossless	6	18
+GO-CAM statements lossless	13	20
+Reactome statements lossless	2	9
+GOA statements lossless	4	5
+cited paper names both ends (title or abstract)	35	43
+cited paper about another protein (title judgement)	5	43
+keyword test flags a wrong paper	3	5
+keyword test misses a wrong paper	2	5
+keyword test flags a pair that is not a wrong paper	5	38
+cases FAIL with fix layer outside	14	14
+cases INEXPRESSIBLE with fix layer core	1	1
+cases PASS with fix layer none	18	18
+cases SILENT with fix layer core	10	19
+cases SILENT with fix layer outside	9	19
