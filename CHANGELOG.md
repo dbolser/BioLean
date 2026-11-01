@@ -2,6 +2,28 @@
 
 Findings and decisions, dated. Code history is in `git log`; this records what we learned.
 
+## 2026-10-29 to 11-01 (decisions one at a time; thirteen programs of work)
+- Decisions. 1 (from instances to universals): deferred to research; Dan leans to option (k), common
+  descent as a defeasible default. 2 (feedback loops): a loop is a claim, `Claim.homeostasis`. 3 to 10:
+  "more research needed", each a program with a stress set run on today's core
+  (`docs/programs/README.md`). The formal system is written down in `docs/formal-system.md`.
+- Annotation fixes: 70 round-2 records with a taxon, anatomy or cell-type context promoted to round 3, so
+  the context is applied (centrosome clash gone); 9 statements false as written corrected with `most`,
+  `some` or a narrower subject (facts resting on them 337 to 0); 1 promoted record rejected by RO's domain.
+- E1 in Lean: experimental instances only widen the coverage gap (cellular organisms 24/25, Eukaryota
+  16/153).
+- Programs: 906 cases; 263 right, 161 wrong, 406 silent, 76 inexpressible. No core change recommended
+  now; 58 extensions prototyped or listed, none adopted. Findings that cut across programs: an end year
+  on evidence (03, 09, 10a); three competing union forms (05, 08, 10b); defeat would be the first
+  non-monotone rule (01b); M2's exit leans on double entry and illustrative items; M6's exit tests
+  nothing new.
+- design.md corrected: INDRA's belief score is noisy-OR, not a case of cumulative fusion.
+- Process faults, mine. `lake build` built only the core, so two textbook re-emits and the E1 theorems
+  were reported as building when they had not been compiled; `defaultTargets` now covers all four
+  libraries, and the two failures this exposed are fixed. Running twelve agents at once hit the usage
+  limit five times; resuming a workflow replays by call order, so finished agents re-ran until finished
+  results were passed in as arguments instead.
+
 ## 2026-10-29 (overnight: bracketing from real NCBI children)
 - Coverage now counts a target clade's real NCBI children. `import_isa.py` fetches the direct children of eight
   targets (cellular organisms, Eukaryota, Opisthokonta, Metazoa, Bacteria, Archaea, Viridiplantae, Mammalia) from

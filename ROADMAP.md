@@ -32,6 +32,9 @@ Context by entity refinement (bake-off winner, `docs/m2/judgement.md`), then the
   mouse and human cannot fuse (type-level). Rivals are a `Rivalry` over statements, not an id list.
   Chemiosmosis is contested in 1965 and established (Slater refuted) by 1974 as theorems, after two
   changes to illustrative items (`BioLean/Examples/Chemiosmosis.lean`, CHANGELOG).
+- **Caveat (2026-11-01):** on the real record of 62 checked papers, 'contested in 1965' holds but
+  'Slater refuted' fails in every year and 'established by 1974' hangs on two 1966 letters whose
+  direction needs checking (program 09). The example's theorems lean on double entry (program 03).
 
 ## M3. Quantity (built 2026-10-28)
 Counts, class sizes, intervals with units, yields, and `some`/`most` quantifiers; rules carry
@@ -55,11 +58,16 @@ over them.
   find definitions that contradict axioms.
 - **Exit:** at least one reported inconsistency confirmed by a curator, and the textbook axiom
   rate (15 percent) recomputed from imported axioms rather than OLS calls.
+- **Candidates (2026-11-01, program 04):** UBERON's tooth never_in Ornithorhynchus (juvenile
+  platypuses have teeth); GO's Calvin-cycle definition ('in the chloroplasts of C3 plants') against
+  cyanobacteria. Not yet reported.
 
 ## M6. Evidence weights
 ECO codes replacing the 8-way enum; per-claim base rates; averaging fusion for dependent sources;
 discounting for extraction reliability separate from study strength.
 - **Exit:** Ozempic verdicts unchanged in sign; the pseudo-count of every evidence kind documented.
+- **Status (2026-11-01):** this exit already passes today, so it tests nothing new. Program 10a
+  proposes wording B: fewer FAILs on its 51 cases, no right answer lost, no Ozempic sign flip.
 
 ## M7. Second textbook
 A molecular cell biology text. Open candidates: OpenStax *Biology 2e* (same licence, larger);
@@ -76,3 +84,6 @@ extraction targeted at gaps. Datalog search over statements with Lean checking (
 pattern). Holes in derivations fed to an ILP-style search over the ontology lattice.
 - **Exit:** a question not hand-curated (e.g. "does metformin extend lifespan in humans?")
   answered end to end with a verdict and an axiom list.
+- **Status (2026-11-01, program 10b):** 52 curated statements imported and compiled; metformin is
+  'unsupported' (0.12) on mouse data only. Errors enter at import (5 of 43 citations are about
+  another protein). The deciding core change is a rule across organism conditions.

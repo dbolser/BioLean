@@ -3,31 +3,33 @@
 Where BioLean stands, what we have learned, and what is open. Updated at milestones, not per
 commit. History of findings and decisions: [CHANGELOG.md](CHANGELOG.md). Direction: [ROADMAP.md](ROADMAP.md).
 
-Last updated 2026-10-28 (after M3).
+Last updated 2026-11-01 (after the thirteen decision programs).
 
 ## What exists
 
 | piece | state | where |
 |---|---|---|
-| Lean core: opinions over ℚ, fuse, chain, proved laws | built, `lake build` green | `BioLean/Belief.lean` |
+| Lean core: opinions over ℚ, fuse, chain, proved laws | built; `lake build` builds all four libraries (3,204 jobs) | `BioLean/Belief.lean` |
 | Claim shape: signed effect, mediatedBy, five targets, eleven entity kinds | built | `BioLean/Claim.lean`, `Ontology.lean` |
 | Relational claims `Claim.rel` / `Claim.notRel` over RO, typed by RO domain and range | built (M1) | `BioLean/Rel.lean`, `Claim.lean` |
 | RO imported as data: 642 relations, 164 property chains (126 enabled, 38 blocked after hand-check), 124 inverses, 45 transitive; release pinned | generated from ro.owl | `BioLean/RO.lean`, `scripts/ro/`, `docs/ro-chain-check.md` |
-| Ontology is_a imported as data: ancestor closure of the 1,158 used GO, UBERON, CL, ChEBI and NCBITaxon CURIEs (of 1,493 used), 2,911 terms and 4,060 edges, NCBITaxon via OLS4; search tree for fast `decide`; 9 retired used terms | generated | `BioLean/Ontology/IsA.lean`, `scripts/ontology/import_isa.py`, `Tests/IsA.lean` |
+| Ontology is_a imported as data: ancestor closure of the 1,158 used GO, UBERON, CL, ChEBI and NCBITaxon CURIEs (of 1,493 used), 3,588 terms and 4,897 edges after the M4 children and Sulfolobus, NCBITaxon via OLS4; search tree for fast `decide`; 9 retired used terms | generated | `BioLean/Ontology/IsA.lean`, `scripts/ontology/import_isa.py`, `Tests/IsA.lean` |
 | Derivation rules `relChain` (RO chains, transitivity, is_a laws), `relInv`, `notRelSub/Obj`, `clash` | built | `BioLean/Derivation.lean` |
 | Textbook example: produces, occurs_in lift, part_of transitivity, is_a inheritance, inherited negation | built, theorems check | `BioLean/Examples/Textbook.lean` |
-| The textbook as Lean, round 2 (Sonnet, structured): 1,594 emitted, 1,591 compile | generated, outside the lib build | `BioLean/Lib/TextbookClaimsR2/`, `docs/textbook-lean-check.md` |
+| The textbook as Lean, round 2 (Sonnet, structured): 1,594 emitted, 1,591 compile | generated, in the default build since 2026-10-31 | `BioLean/Lib/TextbookClaimsR2/`, `docs/textbook-lean-check.md` |
 | RO pinning tests | built, pass | `BioLean/Tests/RO.lean` |
 | Context (M2): entity refinement, `Ctx`/`inCtx`, transport between sibling taxa, protocol on Evidence; S1-S5 pass | built | `BioLean/Context.lean`, `Taxa.lean`, `Examples/Context.lean`, `Tests/Context.lean` |
 | Argument layer (M2): `hypothesis` kind, `noEffect`, `opinionAt` by year, `Rivalry`; chemiosmotic timeline as theorems | built | `BioLean/Rivalry.lean`, `Examples/Chemiosmosis.lean` |
 | Argument layer: hypothesis kind, noEffect, opinionAt, Rivalry; chemiosmotic history as theorems | built | `BioLean/Rivalry.lean`, `Examples/Chemiosmosis.lean` |
 | Generalise (M4): coverage over real NCBITaxon, bracketing and clade fraction; transcription case | built | `BioLean/Coverage.lean`, `Examples/Transcription.lean` |
 | Ontology is_a closure for every used CURIE, ten ontologies, as a Lean search tree | generated | `BioLean/Ontology/IsA.lean`, `scripts/ontology/` |
-| Round 3 textbook claims (quantity, context, life stage, weakenings): 410 compile; textbook 41.7 percent in Lean | generated | `BioLean/Lib/TextbookClaimsR3/` |
-| Closure guards (feedback, parthood, shared cause) and refinement edges; one real clash left (centrosome) | built | `scripts/search/closure.py`, `docs/closure-search.md` |
+| Round 3 textbook claims (quantity, context, life stage, weakenings): 480 compile, 1 rejected (`r3_skip.tsv`), after 70 round-2 records with context were promoted and 9 false-as-written statements corrected (`data/textbook/false_as_written.tsv`) | generated | `BioLean/Lib/TextbookClaimsR3/` |
+| Closure guards (feedback, parthood, shared cause), refinement edges, named loops; 0 clashes (centrosome fixed by context); 1,401 asserted, 2,223 derived | built | `scripts/search/closure.py`, `docs/closure-search.md` |
 | Quantity (M3): counts, cardinalities, intervals, yields, some/most; 6 arithmetic rules; 7 theorems | built | `BioLean/Examples/Quantity.lean` |
 | Closure search over the textbook; 60 derived facts certified | built | `scripts/search/`, `BioLean/Examples/Closure.lean`, `docs/closure-search.md` |
 | Statements with PMID evidence, swappable reliability table | built | `BioLean/Evidence.lean` |
+| Feedback loop as a claim, `Claim.homeostasis` (decision 2) | built; textbook sentences not yet annotated | `BioLean/Claim.lean`, `Examples/Homeostasis.lean` |
+| Decision programs: 13 programs, 906 stress cases on today's core (263 right, 161 wrong, 406 silent, 76 inexpressible), prototypes of 58 extensions, none adopted | built, all in the default build | `docs/programs/`, `BioLean/Stress/`, `BioLean/Proto/`, `data/stress/`, `docs/formal-system.md` |
 | Derivation (lit, viaActivity, viaAmount, both), axioms, verdicts, `Established` | built, `decide +kernel` | `BioLean/Derivation.lean` |
 | Demo: semaglutide reduces feeding, 12 statements, 66 verified quotes | built, theorems check | `BioLean/Examples/Ozempic.lean` |
 | Python pipeline: corpus → Claude extraction → grounding → Lean | runs; 15 of 22 abstracts extracted | `biolean/` |
@@ -92,6 +94,19 @@ Last updated 2026-10-28 (after M3).
 15. **Induction never closes.** `uncertainty_pos` is a type invariant, so a universal is never
     proved, only established. The coverage discount for `generalize` is a stated judgment; clade
     fraction is too harsh, phylogenetic bracketing is what biologists do.
+16. **The core held up under 906 stress cases.** No program recommends a core change now. Most
+    wrong answers come from data, annotation or import (dropped context, rounded numbers stored
+    as exact, a wrong subject term, one item entered on both rivals), and they are fixed outside
+    the core. Where the core is short it is silent far more often than wrong (406 against 161).
+17. **Evidence that never stops counting is the commonest core gap.** Three programs (03, 09,
+    10a) independently want an end year on evidence, for retraction and supersession. Slater's
+    intermediate is never refuted on the real record for this reason.
+18. **The next big formal choice is non-monotone.** Option (k) for universals (common descent as a
+    default) works only if a recorded loss defeats the default; fused, most cases come out
+    contested. That would be the first rule that withdraws a conclusion when a fact is added.
+19. **Two milestone exits were weaker than they looked.** M2's chemiosmosis theorems lean on
+    double-entered and illustrative items (programs 03, 09). M6's exit test already passes today,
+    so it cannot see what M6 adds (program 10a).
 
 ## Open decisions
 
@@ -108,10 +123,10 @@ outside it, and the 58 proposed extensions are in [docs/formal-system.md](docs/f
 | `isaInheritEffect` rule | a is_a b, b →s t ⊢ a →s t; sound, 56 uses in the closure; added in M2 (`Derivation.isaInheritEffect`, opinion `weakest`) | done |
 | `Target.disease` | one textbook claim (obesity causes T2D) needs a disease target | open, small |
 | caveated chains / trivial conclusions | decided in principle (Dan, 2026-10-28): use information content of the ontology term (Resnik: -log p from descendant count or annotation frequency) as the triviality threshold for conclusions, replacing the hub list in the closure search and the flat discount idea. Not implemented | open |
-| evidence kinds | keep 8-way enum vs ECO codes with a reliability map | ECO |
+| evidence kinds | keep the enum vs ECO codes with a reliability map | ECO; weights researched in [10a](docs/programs/10a-evidence-weights.md): only 'drop retracted papers' is safe today | open |
 | coverage measure for generalize | clade fraction vs phylogenetic bracketing | bracketing kept as is, its incoherence a theorem (`cellular_above_eukaryota`). How to get from instances to universals is deferred (Dan, 2026-10-29) to a program of work: `docs/programs/01-universals-and-descent.md` | deferred |
-| base rate per claim | fixed 1/2 vs per-claim prior | per claim, source undecided |
-| rivals | id list on Statement vs multinomial opinion over alternatives | built as `Rivalry` (one step, own beliefs); double counts evidence entered on both rivals; multinomial later |
+| base rate per claim | fixed 1/2 vs per-claim prior | per claim, source undecided; 03 and 10a propose conflicting forms (`docs/formal-system.md` 4.2) |
+| rivals | id list on Statement vs multinomial opinion over alternatives | built as `Rivalry`. Program [03](docs/programs/03-rivals-and-hypotheses.md): enter each item once (14 FAIL to 1); no frame type needed; open choice: an end year on Evidence | deferred to program |
 
 ## Known limits (not fixable inside the framework; must be stated)
 
