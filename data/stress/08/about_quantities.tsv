@@ -1,0 +1,26 @@
+id	trigger	kind	value	exact_by_nature	r3_claim
+cell-structure-and-function-m45428-20	about eight	one number	[8, 8]		.quant .most (.measure (e_CL_0000232.inCtx { taxon := e_NCBITaxon_9606 }) e_PATO_0001334 8 8 "µm")
+cell-structure-and-function-m45433-32	approximately 8	one number	[8, 8]		.measure (e_CL_0000232.inCtx { taxon := e_NCBITaxon_9606 }) e_PATO_0000915 8 8 "µm"
+cell-structure-and-function-m45433-33	approximately 8	not a quantity	.less		.less e_GO_0005886 e_CL_0000232 e_PATO_0000915
+how-cells-obtain-energy-m45439-93	about 34	one number	[(17/50), (17/50)]		.measure e_GO_0006007 e_PATO_0001029 (17/50) (17/50) "fraction"
+molbio-m45473-71	about 2	one number	[2, 2]		.measure (e_CHEBI_16991.inCtx { taxon := e_NCBITaxon_9606, cellType := e_CL_0000000 }) e_PATO_0000122 2 2 "m"
+molbio-m45473-77	about 1.6	one number	4600000		.count (e_SO_0001026.inCtx { taxon := e_NCBITaxon_562 }) e_SO_0000028 4600000
+molbio-m45473-78	about 1.6	one number	[(8/5), (8/5)]		.measure (e_SO_0001026.inCtx { taxon := e_NCBITaxon_562 }) e_PATO_0000122 (8/5) (8/5) "mm"
+molbio-m45473-96	approximately 700	one number	[700, 700]		.measure (e_GO_0000793.inCtx { taxon := e_NCBITaxon_2759, stage := e_GO_0051323 }) e_PATO_0000921 700 700 "nm"
+molbio-m45475-94	approximately 42	one number	4600000		.count (e_SO_0001026.inCtx { taxon := e_NCBITaxon_562 }) e_SO_0000028 4600000
+molbio-m45475-95	approximately 42	one number	1	a single circular chromosome	.count e_NCBITaxon_562 e_GO_0005694 1
+molbio-m45475-97	approximately 42	one number	[42, 42]		.measure (e_GO_0006260.inCtx { taxon := e_NCBITaxon_562 }) e_PATO_0001309 42 42 "min"
+molbio-m45475-98	approximately 42	one number	1	a single origin of replication	.count (e_GO_0005694.inCtx { taxon := e_NCBITaxon_562 }) e_SO_0000296 1
+molbio-m45475-100	approximately 1000	one number	[1000, 1000]		.measure (e_GO_0006260.inCtx { taxon := e_NCBITaxon_562 }) e_PATO_0000161 1000 1000 "nucleotides per second"
+molbio-m45479-7	approximately 50	one number	50		.atLeast e_CHEBI_15841 e_CHEBI_33709 50
+reproduction-at-the-cellular-level-m45461-123	approximately 11	one number	[11, 11]		.measure (e_GO_0051318.inCtx { taxon := e_NCBITaxon_9606, condition := some (.organism e_BLN_rapidly_dividing_24h_cell_cycle) }) e_PATO_0001309 11 11 "h"
+the-body-s-systems-m45536-16	approximately 15	one number	[15, 15]		.measure (e_GO_0003016.inCtx { taxon := e_NCBITaxon_9606, condition := some (.organism e_BLN_at_rest) }) e_PATO_0000044 15 15 "breaths/min"
+the-body-s-systems-m45536-17	about 900	one number	[900, 900]		.measure (e_GO_0003016.inCtx { taxon := e_NCBITaxon_9606, condition := some (.organism e_BLN_at_rest) }) e_PATO_0000044 900 900 "breaths/h"
+the-body-s-systems-m45536-45	about 25	range	[25, 30]		.measure (e_UBERON_0003126.inCtx { taxon := e_NCBITaxon_9606 }) e_PATO_0000122 25 30 "cm"
+the-body-s-systems-m45538-75	approximately 70	one number	[70, 70]		.measure (e_UBERON_0001130.inCtx { taxon := e_NCBITaxon_9606, lifeStage := e_UBERON_0000113 }) e_PATO_0000122 70 70 "cm"
+the-body-s-systems-m45539-36	around 100,000	one number	100000		.count (e_UBERON_0001016.inCtx { taxon := e_NCBITaxon_7227 }) e_CL_0000540 100000
+the-body-s-systems-m45539-37	around 100,000	one number	100000		.count (e_UBERON_0001016.inCtx { taxon := e_NCBITaxon_6705 }) e_CL_0000540 100000
+the-body-s-systems-m45539-40	around 86	one number	86000000000		.count (e_UBERON_0000955.inCtx { taxon := e_NCBITaxon_9606 }) e_CL_0000540 86000000000
+the-body-s-systems-m45539-62	approximately 70	one number	[(-70), (-70)]		.measure (e_CL_0000540.inCtx { stage := e_GO_0060075 }) e_PATO_0001462 (-70) (-70) "mV"
+the-body-s-systems-m45539-126	about 1,000	not a quantity	.effect		.effect (e_CL_0000540.inCtx { taxon := e_NCBITaxon_40674 }) .pos (.process e_GO_0007612)
+the-body-s-systems-m45539-127	about 1,000	one number	[1000, 1000]		.measure (e_GO_0022008.inCtx { taxon := e_NCBITaxon_40674, anatomy := e_UBERON_0002421 }) e_PATO_0000161 1000 1000 "neurons/day"

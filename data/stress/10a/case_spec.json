@@ -1,0 +1,663 @@
+[
+ {
+  "id": "K01",
+  "title": "Ozempic main claim",
+  "probes": "fusion of a clinical route with a mechanistic chain; the M6 regression",
+  "input": "BioLean.Lib.semaglutide_reduces_feeding = both (lit S7: 4 rct, 1 review, 1 mechanistic) (viaActivity S1 S2); semaglutide CHEBI:167574 -neg-> feeding behavior GO:0007631",
+  "correct": "established: semaglutide reduces food intake and body weight (STEP 1, Wilding 2021)",
+  "sources": [
+   "PMID:33567185"
+  ],
+  "synthetic": false,
+  "judgement": false
+ },
+ {
+  "id": "K02",
+  "title": "Ozempic mechanistic route alone",
+  "probes": "a threshold theorem 0.005 above theta = 0.8",
+  "input": "semaglutide_reduces_feeding_mechanistic = viaActivity (S1: 3 review + 2 inVitro, S = 13) (S2: 5 mechanistic + 1 review, S = 79/3); GLP1R PR:000008040",
+  "correct": "established: semaglutide is a GLP-1 analogue acting at GLP1R (Lau 2015); GLP1R activity reduces intake (verified quotes in S1, S2)",
+  "sources": [
+   "PMID:26308095",
+   "BioLean/Lib/GLP1Statements.lean"
+  ],
+  "synthetic": false,
+  "judgement": false
+ },
+ {
+  "id": "K03",
+  "title": "Sitagliptin reduces food intake",
+  "probes": "a 4-step mechanistic chain fused with clinical counter-evidence",
+  "input": "sitagliptin_reduces_feeding = both (viaAmount chain S5, S4, S3, S2) (lit S8: 4 refuting incl. SUSTAIN 2 PMID:28385659, 2 supporting); sitagliptin CHEBI:40237",
+  "correct": "refuted for intake and weight (judgement): 'Exenatide and liraglutide cause weight loss, whereas sitagliptin and vildagliptin do not' (Chia 2008). design.md presents the contested result as the failure mode made visible",
+  "sources": [
+   "PMID:18628530",
+   "PMID:28385659"
+  ],
+  "synthetic": false,
+  "judgement": true
+ },
+ {
+  "id": "K04",
+  "title": "Nausea mediates the anorectic effect",
+  "probes": "a real dispute (fair case)",
+  "input": "nausea_mediates = both (S9a: 5 mechanistic supports) (S9b: 5 mechanistic + 1 rct refutes); nausea HP:0002018",
+  "correct": "contested: aversion studies against intake suppression without malaise (verbatim quotes in S9a, S9b, e.g. Thiele 1997, McMahon 1998)",
+  "sources": [
+   "PMID:9124501",
+   "PMID:9458894",
+   "BioLean/Lib/GLP1Statements.lean"
+  ],
+  "synthetic": false,
+  "judgement": false
+ },
+ {
+  "id": "K05",
+  "title": "Chemiosmosis settled by 1974 (rivalry)",
+  "probes": "rivalry with in-vitro evidence; the M2 exit; uses two ILLUSTRATIVE pmid-0 items",
+  "input": "Examples.Chemiosmosis.coupling.asOf 1974: Jagendorf PMID:5220864, Mitchell & Moyle PMID:16742541, Hinkle PMID:4330063, Racker PMID:4272126 (inVitro, on both rivals); hypotheses PMID:13771349, PMID:13111237; GO:0022904 -pos-> GO:0006119 via hydron CHEBI:15378 against via C~I (BLN placeholder)",
+  "correct": "chemiosmosis established and the chemical intermediate refuted by the mid-1970s",
+  "sources": [
+   "PMID:5220864",
+   "PMID:16742541",
+   "PMID:4272126"
+  ],
+  "synthetic": false,
+  "judgement": false
+ },
+ {
+  "id": "W01",
+  "title": "HRT and coronary heart disease, 1997",
+  "probes": "observational studies plus a meta-analysis of observational studies that pools one of them",
+  "input": "estrogen CHEBI:50114 in human NCBITaxon:9606 -neg-> coronary artery atherosclerosis HP:0001677; NHS PMID:4047106, 1870648, 8672166 (observational S); Stampfer & Colditz PMID:1826173 (metaAnalysis of observational studies; its reference list includes PMID:4047106)",
+  "correct": "not established: observational evidence starts at low certainty (GRADE, Balshem 2011); RCTs later found no benefit",
+  "sources": [
+   "PMID:21208779",
+   "PMID:1826173",
+   "PMID:12904517"
+  ],
+  "synthetic": false,
+  "judgement": false
+ },
+ {
+  "id": "W02",
+  "title": "HRT and coronary heart disease, 2003",
+  "probes": "many weak items against strong ones; one trial reported twice",
+  "input": "W01 + Grodstein 2000 PMID:11119394 (observational S); HERS PMID:9718051, WHI PMID:12117397, WHI coronary outcomes PMID:12904517 (rct R; the last two are one trial)",
+  "correct": "refuted: estrogen plus progestin does not protect against CHD (Hulley 1998; Rossouw 2002; Manson 2003)",
+  "sources": [
+   "PMID:9718051",
+   "PMID:12117397",
+   "PMID:12904517"
+  ],
+  "synthetic": false,
+  "judgement": false
+ },
+ {
+  "id": "W03",
+  "title": "Vitamin E and myocardial infarction, 2008",
+  "probes": "two cohorts and one positive RCT against four null RCTs (two are one trial)",
+  "input": "vitamin E CHEBI:33234 in human -neg-> myocardial infarction HP:0001658; S: PMID:8479463, 8479464 (observational), CHAOS PMID:8622332 (rct); R (rct): HOPE PMID:10639540, HOPE-TOO PMID:15769967, WHS PMID:15998891, PHS II PMID:18997197",
+  "correct": "refuted: large RCTs show no cardiovascular benefit (HOPE 2000; WHS 2005; PHS II 2008)",
+  "sources": [
+   "PMID:18997197",
+   "PMID:15998891",
+   "PMID:10639540"
+  ],
+  "synthetic": false,
+  "judgement": false
+ },
+ {
+  "id": "W04",
+  "title": "IV magnesium after MI, 2002",
+  "probes": "a meta of small trials plus one trial against a mega-trial; size is invisible",
+  "input": "magnesium sulfate CHEBI:32599 in human with MI HP:0001658 -neg-> dead PATO:0001422; S: Teo 1991 PMID:1838289 (meta, 7 trials, 1,301 patients), LIMIT-2 PMID:1351547 (2,316); R: ISIS-4 PMID:7661937 (58,050), MAGIC PMID:12401244",
+  "correct": "refuted: no benefit from routine IV magnesium (ISIS-4 1995; MAGIC 2002); the meta was misleading (Egger & Smith 1995)",
+  "sources": [
+   "PMID:7661937",
+   "PMID:12401244",
+   "PMID:7549720"
+  ],
+  "synthetic": false,
+  "judgement": false
+ },
+ {
+  "id": "W05",
+  "title": "NXY-059 in stroke: SAINT I against SAINT II",
+  "probes": "a positive trial against a larger null trial: same kind, same weight",
+  "input": "disufenton CHEBI:135431 in human -neg-> cerebral infarct HP:0025722 (simplification: SAINT measured disability); SAINT I PMID:16467546 (S, 1,722 patients), SAINT II PMID:17687131 (R, 3,306)",
+  "correct": "refuted: 'NXY-059 is ineffective for the treatment of acute ischemic stroke' (Shuaib 2007)",
+  "sources": [
+   "PMID:16467546",
+   "PMID:17687131"
+  ],
+  "synthetic": false,
+  "judgement": false
+ },
+ {
+  "id": "W06",
+  "title": "27 observational items against one RCT",
+  "probes": "where many weak items outvote one strong item (27 x 2 = 54 against 11.3)",
+  "input": "SYNTHETIC claim estrogen in human -neg-> MI HP:0001658; 27 observational supports (synthetic PMIDs 90000000+), one rct refutes (89999999)",
+  "correct": "not established: 5 of 6 highly cited non-randomised studies were contradicted or initially stronger, against 9 of 39 RCTs (Ioannidis 2005)",
+  "sources": [
+   "PMID:16014596"
+  ],
+  "synthetic": true,
+  "judgement": false
+ },
+ {
+  "id": "W07",
+  "title": "Text-mined items pile up",
+  "probes": "cumulative fusion of many low-weight items has no plateau",
+  "input": "SYNTHETIC claim; 10 and 1,000 textMined supports (n = 6/7 each)",
+  "correct": "not established at 10 mentions (measured): Reach statements with 6 to 10 mentions were 119 of 159 correct (Bachman 2023, Table 2). At 1,000 mentions there is no measurement: INDRA's own model with its default Reach priors gives about 0.95 there, so 'not established' at 1,000 is a judgement",
+  "sources": [
+   "PMID:36938926"
+  ],
+  "synthetic": true,
+  "judgement": true
+ },
+ {
+  "id": "W08",
+  "title": "Beta-carotene and lung cancer",
+  "probes": "hypothesis weight 0; two RCTs refute (fair case)",
+  "input": "beta-carotene CHEBI:17579 in human -neg-> neoplasm of the lung HP:0100526; Peto 1981 PMID:7010181 (hypothesis); ATBC PMID:8127329, CARET PMID:8602180 (rct R)",
+  "correct": "refuted, possibly harmful in smokers (ATBC 1994; CARET 1996)",
+  "sources": [
+   "PMID:8127329",
+   "PMID:8602180"
+  ],
+  "synthetic": false,
+  "judgement": false
+ },
+ {
+  "id": "W09",
+  "title": "Smoking and lung cancer, 1958 (added in review)",
+  "probes": "observational evidence alone, right (fair case): does a scheme that distrusts observational studies lose it?",
+  "input": "tobacco smoke NCIT:C829 (typed as chemical) in human NCBITaxon:9606 -pos-> neoplasm of the lung HP:0100526; ten observational reports of seven studies: the five case-control studies of 1950, Wynder & Graham PMID:15415260, Doll & Hill PMID:14772469 (in full 1952 PMID:12997741), Levin PMID:15415261, Mills & Porter PMID:14772728, Schrek PMID:15398042; cohorts Hammond & Horn 1954 PMID:13174399 and 1958 PMID:12308037 (187,766 and 187,783 men, from the titles), British Doctors 1954 PMID:13160495 and 1956 PMID:13364389; asked in 1958. The full 1958 record held more studies",
+  "correct": "established by the late 1950s (judgement on this subset of the record): causation 'came to be generally accepted in respect of lung cancer by the late 1950s' (Doll 1998), after 'five case-control studies relating smoking to the development of lung cancer were published in 1950'",
+  "sources": [
+   "PMID:9654637",
+   "PMID:14772469",
+   "PMID:13160495"
+  ],
+  "synthetic": false,
+  "judgement": true
+ },
+ {
+  "id": "D01",
+  "title": "Ten papers from one lab (c-kit+ cardiac stem cells)",
+  "probes": "lab dependence; retracted papers keep voting",
+  "input": "stem cell CL:0000034 in heart UBERON:0000948 capable_of cardiac muscle cell differentiation GO:0055007; Anversa lab PMID:14505575, 18202313, 20522802, 21088285, 21403094, 21546606, 22275487, 22851539, 22955965 (mechanistic), 23281411 (review), 9 of 10 flagged Retracted Publication; R: van Berlo 2014 PMID:24805242 (mechanistic)",
+  "correct": "refuted (judgement): the claim of regeneration by endogenous c-kit+ cells is refuted, but van Berlo 2014 found a trace: c-kit+ cells 'did produce new cardiomyocytes within the heart, although at a percentage of approximately 0.03 or less', so the bare capability (capable_of) is shown at a trace; 'not established' is the other defensible reading. Nine of these ten lab papers are retracted",
+  "sources": [
+   "PMID:24805242",
+   "PMID:14505575"
+  ],
+  "synthetic": false,
+  "judgement": true
+ },
+ {
+  "id": "D02",
+  "title": "Four reports from one cohort (Nurses' Health Study)",
+  "probes": "cohort dependence",
+  "input": "claim as W01; NHS PMID:4047106, 1870648, 8672166, 11119394 (observational S)",
+  "correct": "not established: one cohort is one body of evidence, and RCTs later refuted the claim",
+  "sources": [
+   "PMID:4047106",
+   "PMID:11119394"
+  ],
+  "synthetic": false,
+  "judgement": false
+ },
+ {
+  "id": "D03",
+  "title": "A meta-analysis on its own primary trial",
+  "probes": "double counting where it is harmless (fair case)",
+  "input": "S7 (incl. O'Neil 2018 PMID:30122305) + Gao 2022 PMID:36188627 (metaAnalysis), whose eight included studies include O'Neil 2018 (full text checked)",
+  "correct": "established either way; the meta should replace its primaries",
+  "sources": [
+   "PMID:36188627",
+   "PMID:30122305"
+  ],
+  "synthetic": false,
+  "judgement": false
+ },
+ {
+  "id": "D04",
+  "title": "Magnesium 1991: a meta and six of its trials",
+  "probes": "double counting where the verdict is wrong",
+  "input": "claim as W04; Teo 1991 PMID:1838289 (meta) + six trials from its reference list (Europe PMC): PMID:6399346, 2868254, 2427458, 3548627, 2589170, 2195862 (rct S)",
+  "correct": "not established in 1991: 'Further large scale trials to confirm (or refute) these findings are desirable' (Teo 1991); ISIS-4 and MAGIC were null",
+  "sources": [
+   "PMID:1838289"
+  ],
+  "synthetic": false,
+  "judgement": false
+ },
+ {
+  "id": "D05",
+  "title": "MMR and autism, with the meta-analysis",
+  "probes": "right answer reached partly by double counting (fair case)",
+  "input": "MMR vaccine VO:0000731 (typed as chemical) in human -pos-> autism HP:0000717; Wakefield 1998 PMID:9500320 (observational S, 12 children, retracted); Taylor 1999 PMID:10376617, Madsen 2002 PMID:12421889, Hviid 2019 PMID:30831578 (observational R); Taylor 2014 PMID:24814559 (meta R; its references include Madsen 2002)",
+  "correct": "refuted: five cohort studies, 1,256,407 children, no association (Taylor 2014; Hviid 2019)",
+  "sources": [
+   "PMID:24814559",
+   "PMID:30831578",
+   "PMID:12421889"
+  ],
+  "synthetic": false,
+  "judgement": false
+ },
+ {
+  "id": "D06",
+  "title": "MMR and autism as of 2002",
+  "probes": "size invisible; a retracted case series still votes",
+  "input": "D05 cut to 2002: Wakefield 1998 (S), Taylor 1999 (R), Madsen 2002 (R)",
+  "correct": "refuted by 2002: Madsen followed 537,303 children; Wakefield described 12 (retracted 2010)",
+  "sources": [
+   "PMID:12421889",
+   "PMID:9500320",
+   "PMID:20137807"
+  ],
+  "synthetic": false,
+  "judgement": false
+ },
+ {
+  "id": "D07",
+  "title": "Reviews restating primaries (S1)",
+  "probes": "three reviews counted as independent (fair case)",
+  "input": "BioLean.Lib.S1: reviews PMID:35228448, 31031702, 30972641 + inVitro PMID:39665969, 35676825",
+  "correct": "established: semaglutide is a GLP-1 receptor agonist (Lau 2015)",
+  "sources": [
+   "PMID:26308095"
+  ],
+  "synthetic": false,
+  "judgement": false
+ },
+ {
+  "id": "D08",
+  "title": "One textbook, three sentences (46 chromosomes)",
+  "probes": "pmid 0 is never de-duplicated; sharedAxioms checks statement ids, not sources",
+  "input": "both of R3 reproduction-at-the-cellular-level-m45455-17, -46, -60 ('Human somatic cells have 46 chromosomes'): count (diploid cell CL:0000415 in human) chromosome GO:0005694 = 46",
+  "correct": "established (true), but one source: should weigh as one sentence (0.8)",
+  "sources": [
+   "data/textbook/claims/reproduction-at-the-cellular-level.json"
+  ],
+  "synthetic": false,
+  "judgement": false
+ },
+ {
+  "id": "D09",
+  "title": "Same PMID with both polarities",
+  "probes": "distinctEvidence keeps the first item, so order decides",
+  "input": "SYNTHETIC claim; [rct 70000001 supports, rct 70000001 refutes] and the reverse order",
+  "correct": "the result must not depend on order; the conflict should be flagged",
+  "sources": [
+   "BioLean/Evidence.lean"
+  ],
+  "synthetic": true,
+  "judgement": false
+ },
+ {
+  "id": "D10",
+  "title": "Same PMID twice, same polarity",
+  "probes": "existing de-duplication (fair case)",
+  "input": "SYNTHETIC claim; [rct 70000001 supports, rct 70000001 supports]",
+  "correct": "counted once: the opinion of one item",
+  "sources": [
+   "BioLean/Evidence.lean"
+  ],
+  "synthetic": true,
+  "judgement": false
+ },
+ {
+  "id": "R01",
+  "title": "STAP cells",
+  "probes": "no retraction status; weight of failed replications",
+  "input": "hydron CHEBI:15378 -pos-> cell dedifferentiation GO:0043697 in lymphocyte CL:0000542 in mouse; Obokata PMID:24476887, 24476891 (mechanistic S, both retracted; notice PMID:24990753); De Los Angeles PMID:26399835, Konno PMID:26399834 (inVitro R)",
+  "correct": "refuted: 'Failure to replicate the STAP cell phenomenon'; 'STAP cells are derived from ES cells' (2015)",
+  "sources": [
+   "PMID:26399835",
+   "PMID:26399834",
+   "PMID:24990753"
+  ],
+  "synthetic": false,
+  "judgement": false
+ },
+ {
+  "id": "R02",
+  "title": "Arsenic in GFAJ-1 DNA",
+  "probes": "retraction; replications as single in-vitro items",
+  "input": "DNA CHEBI:16991 in Halomonas sp. GFAJ-1 NCBITaxon:1118153 has_part arsenate(3-) CHEBI:29125; Wolfe-Simon PMID:21127214 (inVitro S, retracted); Reaves PMID:22773140, Erb PMID:22773139 (inVitro R)",
+  "correct": "refuted: 'Absence of detectable arsenate in DNA from arsenate-grown GFAJ-1 cells' (Reaves 2012); 'GFAJ-1 is an arsenate-resistant, phosphate-dependent organism' (Erb 2012)",
+  "sources": [
+   "PMID:22773140",
+   "PMID:22773139",
+   "PMID:21127214"
+  ],
+  "synthetic": false,
+  "judgement": false
+ },
+ {
+  "id": "R03",
+  "title": "Hwang SCNT papers after retraction (2007)",
+  "probes": "retraction cannot be stated",
+  "input": "embryonic stem cell CL:0002322 in human develops_from RO:0002202 SCNT blastocyst (BLN placeholder); Hwang PMID:14963337, 15905366 (inVitro S, both retracted)",
+  "correct": "no valid evidence by 2007: vacuous",
+  "sources": [
+   "PMID:14963337",
+   "PMID:15905366"
+  ],
+  "synthetic": false,
+  "judgement": false
+ },
+ {
+  "id": "R04",
+  "title": "SCNT done right: three independent labs",
+  "probes": "weight of independent in-vitro replications",
+  "input": "R03 claim; Tachibana 2013 PMID:23683578, Yamada 2014 PMID:24776804, Chung 2014 PMID:24746675 (inVitro S); the curator leaves out the Hwang papers",
+  "correct": "established: human ES cells derived by SCNT in three independent labs",
+  "sources": [
+   "PMID:23683578",
+   "PMID:24776804",
+   "PMID:24746675"
+  ],
+  "synthetic": false,
+  "judgement": false
+ },
+ {
+  "id": "R05",
+  "title": "Resveratrol activates SIRT1",
+  "probes": "a genuine, substrate-dependent dispute (fair case)",
+  "input": "resveratrol CHEBI:27881 -pos-> activity of SIRT1 PR:000014888; S: Howitz 2003 PMID:12939617, Hubbard 2013 PMID:23471411 (both Sinclair lab); R: Kaeberlein 2005 PMID:15684413, Borra 2005 PMID:15749705, Pacholec 2010 PMID:20061378 (all inVitro)",
+  "correct": "contested (judgement): activation is substrate-specific (Kaeberlein 2005; Hubbard 2013)",
+  "sources": [
+   "PMID:15684413",
+   "PMID:20061378",
+   "PMID:23471411"
+  ],
+  "synthetic": false,
+  "judgement": true
+ },
+ {
+  "id": "CAL01",
+  "title": "inVitro weight against measured replication, by polarity",
+  "probes": "calibration of inVitro r = 1/2",
+  "input": "inVitro pseudo-count 2 for both polarities; Errington 2021: 39 of 97 original positive effects and 12 of 15 original null effects replicated",
+  "correct": "each polarity's pseudo-count within a factor 2 of the measured rate's (positive 1.34, null 8)",
+  "sources": [
+   "PMID:34874005"
+  ],
+  "synthetic": false,
+  "judgement": false
+ },
+ {
+  "id": "CAL02",
+  "title": "RCT and observational weights against Ioannidis 2005",
+  "probes": "calibration of rct and observational",
+  "input": "rct n = 11.33, observational n = 2; Ioannidis 2005: 30 of 39 RCTs and 1 of 6 non-randomised studies neither contradicted nor initially stronger",
+  "correct": "each pseudo-count within a factor 2 of the measured rate's (rct 6.67, observational 0.4)",
+  "sources": [
+   "PMID:16014596"
+  ],
+  "synthetic": false,
+  "judgement": false
+ },
+ {
+  "id": "CAL03",
+  "title": "Text-mined belief against measured reader precision",
+  "probes": "calibration of textMined r = 3/10 by mention count",
+  "input": "textMinedN k for k = 1 to 10 (synthetic statements) against Bachman 2023 Table 2, Reach, 'Complete' rows, 'number correct (total curated)': 1 mention 57/119; 2 to 5 mentions 93/138; 6 to 10 mentions 119/159",
+  "correct": "mean belief per band at most measured precision plus 0.05; at 6 to 10 mentions the core gives 0.769 against a measured 0.748, so it passes only inside the 0.05 slack",
+  "sources": [
+   "PMID:36938926"
+  ],
+  "synthetic": false,
+  "judgement": false
+ },
+ {
+  "id": "A01",
+  "title": "NMN endurance, aged mouse to aged human",
+  "probes": "transport discount (fair case)",
+  "input": "ContextExamples.s2_transport: N4 (Das 2018 PMID:29570999, aged mouse, mechanistic) transported to aged human with one crossSpecies item; NMN CHEBI:16171",
+  "correct": "not established in humans from mouse data alone",
+  "sources": [
+   "PMID:29570999",
+   "BioLean/Examples/Context.lean"
+  ],
+  "synthetic": false,
+  "judgement": false
+ },
+ {
+  "id": "A02",
+  "title": "NMN in prediabetic women: one small RCT",
+  "probes": "one RCT alone reaches established",
+  "input": "ContextExamples.N5: Yoshino 2021 PMID:33888596 (one rct, 10 weeks, postmenopausal prediabetic overweight women); insulin resistance HP:0000855 in skeletal muscle",
+  "correct": "not established: one 10-week trial in one population (GRADE downgrades for imprecision and indirectness)",
+  "sources": [
+   "PMID:33888596",
+   "PMID:21208779"
+  ],
+  "synthetic": false,
+  "judgement": false
+ },
+ {
+  "id": "A03",
+  "title": "NXY-059: rat meta-analysis transported, plus human trials",
+  "probes": "animal against human evidence",
+  "input": "disufenton in rat NCBITaxon:10116, Macleod 2008 PMID:18635842 (meta of animal studies), transported to human with a crossSpecies item, then both with W05 (SAINT I, SAINT II)",
+  "correct": "refuted in humans; 'The reported efficacy of NXY-059 in animal models of stroke is confounded by low study quality' (Macleod 2008)",
+  "sources": [
+   "PMID:18635842",
+   "PMID:17687131"
+  ],
+  "synthetic": false,
+  "judgement": false
+ },
+ {
+  "id": "A04",
+  "title": "Is the mouse a good model?",
+  "probes": "evidence about a weight cannot be entered",
+  "input": "crossSpecies is 3/10 for every claim; Seok 2013 PMID:23401516 ('poorly mimic') and Takao 2015 PMID:25092317 ('greatly mimic') reanalyse the same data",
+  "correct": "transfer reliability depends on claim and system, and is itself disputed evidence",
+  "sources": [
+   "PMID:23401516",
+   "PMID:25092317"
+  ],
+  "synthetic": false,
+  "judgement": false
+ },
+ {
+  "id": "T01",
+  "title": "Adult human hippocampal neurogenesis, 2013",
+  "probes": "textbook and primary papers agree (fair case)",
+  "input": "neurogenesis GO:0022008 in human, post-juvenile adult stage UBERON:0000113, occurs_in hippocampal formation UBERON:0002421; textbook the-body-s-systems-m45539-123 ('neurogenesis ... continues into adulthood': no species or site, a simplification), Eriksson 1998 PMID:9809557, Spalding 2013 PMID:23746839 (observational)",
+  "correct": "accepted in 2013: '700 new neurons are added in each hippocampus per day' (Spalding 2013)",
+  "sources": [
+   "PMID:9809557",
+   "PMID:23746839"
+  ],
+  "synthetic": false,
+  "judgement": false
+ },
+ {
+  "id": "T02",
+  "title": "Neurogenesis, March 2018",
+  "probes": "textbook against one refuting primary paper",
+  "input": "T01 + Sorrells 2018 PMID:29513649 (observational R)",
+  "correct": "contested (judgement): 'reignited by two prominently published reports with opposite conclusions' (Kempermann 2018)",
+  "sources": [
+   "PMID:29513649",
+   "PMID:29681514"
+  ],
+  "synthetic": false,
+  "judgement": true
+ },
+ {
+  "id": "T03",
+  "title": "Neurogenesis, 2022",
+  "probes": "a live debate",
+  "input": "T02 + Boldrini 2018 PMID:29625071, Moreno-Jimenez 2019 PMID:30911133 (observational S), Kempermann 2018 PMID:29681514 (review S); Franjic 2022 PMID:34798047 (observational R)",
+  "correct": "contested (judgement from the cited sources)",
+  "sources": [
+   "PMID:30911133",
+   "PMID:34798047",
+   "PMID:29681514"
+  ],
+  "synthetic": false,
+  "judgement": true
+ },
+ {
+  "id": "T04",
+  "title": "One textbook sentence false as written ('All cells have DNA')",
+  "probes": "a single textbook item equals theta exactly",
+  "input": "R2 cell-structure-and-function-m45429-9: cell CL:0000000 has_part DNA CHEBI:16991, one textbook item",
+  "correct": "not established as a universal: mature mammalian red blood cells lose their DNA (data/textbook/false_as_written.tsv, checked = yes); a universals problem (program 01), not a weight problem: weights cannot see that a sentence is false, and a true sentence alone (m45455-17) is established today and should stay so (review pin)",
+  "sources": [
+   "data/textbook/false_as_written.tsv"
+  ],
+  "synthetic": false,
+  "judgement": false
+ },
+ {
+  "id": "C01",
+  "title": "Giardia 'has a mitochondrion' from curated rows",
+  "probes": "curated rows from a few pipelines fused as independent",
+  "input": "cell in Giardia lamblia ATCC 50803 NCBITaxon:184922 has_part mitochondrion GO:0005739. QuickGO: all 50 rows for the exact term, each one curatedDb item: 38 IBA (ECO:0000318, GO_REF:0000033) + 12 automatic under ECO:0000501 (6 ECO:0000256 GO_REF:0000117, 4 ECO:0000501 GO_REF:0000120, 1 ECO:0007322 GO_REF:0000044, 1 ECO:0000364 GO_REF:0000108); 0 experimental",
+  "correct": "not established (false): Giardia has mitosomes (Tovar 2003); in GO, mitosome GO:0032047 is not under mitochondrion",
+  "sources": [
+   "PMID:14614504",
+   "GO:0032047"
+  ],
+  "synthetic": false,
+  "judgement": false
+ },
+ {
+  "id": "C02",
+  "title": "Giardia curated rows against the primary paper",
+  "probes": "curated volume swamps an experiment",
+  "input": "C01 + Tovar 2003 PMID:14614504 (inVitro R). QuickGO has one experimental row on mitosome for Giardia, and it is negative: NOT located_in (IDA, Davids 2008 PMID:17964578, aurora kinase)",
+  "correct": "refuted (Tovar 2003: mitochondrial remnant organelles)",
+  "sources": [
+   "PMID:14614504"
+  ],
+  "synthetic": false,
+  "judgement": false
+ },
+ {
+  "id": "C03",
+  "title": "Transcription in Paramecium (0 experimental annotations)",
+  "probes": "inferred rows inside generalize (fair case)",
+  "input": "TranscriptionExample.inst paramecium (one rolled-up curatedDb item, no ECO code in its note; program 01 section 2: 2,937 rows by is_a, part_of, occurs_in: 2,785 IEA, 152 IBA, 0 experimental) and gen cellularOrganisms .bracketing eight",
+  "correct": "true: transcription occurs in all cellular organisms; Paramecium's GO evidence is inferred only",
+  "sources": [
+   "docs/programs/01-universals-and-descent.md",
+   "BioLean/Examples/Transcription.lean"
+  ],
+  "synthetic": false,
+  "judgement": false
+ },
+ {
+  "id": "C04",
+  "title": "IEA against EXP",
+  "probes": "the ECO code has nowhere to live",
+  "input": "two curatedDb items with notes 'IEA ECO:0000501' and 'EXP ECO:0000269'",
+  "correct": "different reliability: electronic annotations' reliability 'now rivals that of annotations inferred by curators when they use evidence other than experiments from primary literature' (Skunca 2012), so IEA is not EXP",
+  "sources": [
+   "PMID:22693439"
+  ],
+  "synthetic": false,
+  "judgement": false
+ },
+ {
+  "id": "O01",
+  "title": "46 against 48 human chromosomes, 1960",
+  "probes": "old evidence keeps voting; direct counts entered as 'observational'",
+  "input": "Rivalry: count (diploid cell CL:0000415 in human) chromosome GO:0005694 = 46 [Tjio & Levan 1956 doi:10.1111/j.1601-5223.1956.tb03010.x, Ford & Hamerton 1956 PMID:13378517] against = 48 [Painter 1923 doi:10.1002/jez.1400370303]; all observational",
+  "correct": "46 accepted soon after the 1956 discovery (Gartler 2006)",
+  "sources": [
+   "PMID:16847465",
+   "PMID:13378517"
+  ],
+  "synthetic": false,
+  "judgement": false
+ },
+ {
+  "id": "O02",
+  "title": "46 against 48, 2013",
+  "probes": "rivalry with textbook support (fair case)",
+  "input": "O01 + three textbook items (m45455-17, -46, -60) on the 46 statement",
+  "correct": "46 established, 48 refuted",
+  "sources": [
+   "PMID:16847465",
+   "data/textbook/claims/reproduction-at-the-cellular-level.json"
+  ],
+  "synthetic": false,
+  "judgement": false
+ },
+ {
+  "id": "O03",
+  "title": "Chemiosmosis as one claim, 1974",
+  "probes": "cumulative fusion never forgets; uses ILLUSTRATIVE pmid-0 items",
+  "input": "Examples.Chemiosmosis.oneClaim as of 1974: the chemiosmotic evidence + two illustrative refutations (1963 reviews as hypothesis, 1965 intermediate reports as inVitro)",
+  "correct": "established by the mid-1970s (as K05)",
+  "sources": [
+   "BioLean/Examples/Chemiosmosis.lean"
+  ],
+  "synthetic": false,
+  "judgement": false
+ },
+ {
+  "id": "B01",
+  "title": "Per-claim base rate",
+  "probes": "a prior cannot be stated or used",
+  "input": "Opinion.prob takes a base rate (default 1/2) but Statement has none and the verdict reads b and d only; test body: scntValid (R04) at a = 1/2 and a = 1/100",
+  "correct": "extraordinary claims need more evidence than routine ones (pre-study odds, Ioannidis 2005 PLoS Med)",
+  "sources": [
+   "PMID:16060722",
+   "BioLean/Belief.lean"
+  ],
+  "synthetic": false,
+  "judgement": false
+ },
+ {
+  "id": "B02",
+  "title": "GFAJ-1 in 2011, original paper alone",
+  "probes": "one in-vitro item stays unsupported (fair case)",
+  "input": "R02 cut to 2011: Wolfe-Simon PMID:21127214 (inVitro S)",
+  "correct": "not established: disputed at once (Redfield 2011 technical comment)",
+  "sources": [
+   "PMID:21127214",
+   "PMID:21622706"
+  ],
+  "synthetic": false,
+  "judgement": false
+ },
+ {
+  "id": "L01",
+  "title": "An RCT result read by a text-miner",
+  "probes": "extraction reliability mixed with study strength",
+  "input": "one Evidence item has one kind: rct (0.85) or textMined (0.3), never both",
+  "correct": "two factors: study strength times reader precision (Reach 57/119 at one mention, RLIMS-P 87/109; Bachman 2023 Table 2); under F the case passes by construction (the scheme has the factor), not by a measured value",
+  "sources": [
+   "PMID:36938926",
+   "docs/design.md"
+  ],
+  "synthetic": false,
+  "judgement": false
+ },
+ {
+  "id": "L02",
+  "title": "Drop a mis-read extraction from S8 (SUSTAIN 2)",
+  "probes": "an extraction error: a comparative trial (semaglutide better than sitagliptin) entered as refuting 'sitagliptin reduces intake' (fair case)",
+  "input": "S8 without PMID:28385659, fused with the mechanistic chain",
+  "correct": "the sitagliptin verdict should not hinge on one mis-read item",
+  "sources": [
+   "PMID:28385659"
+  ],
+  "synthetic": false,
+  "judgement": false
+ }
+]

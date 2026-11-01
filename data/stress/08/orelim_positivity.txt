@@ -1,0 +1,19 @@
+Program 08 review: or-elimination inside the core Derivation type.
+Written by scripts/stress/gaps_positivity.py. Expected: Lean refuses the declaration.
+
+--- OrElim.lean ---
+import BioLean.Derivation
+open BioLean
+
+/-- D-b's or-elimination written as a rule of a derivation type over the core `Claim`, the way
+`XDerivation.orElim` is written in `BioLean/Proto/SchemaGaps.lean`, but recursive in itself. -/
+inductive DerivationOr : Claim → Type
+  | lit (s : Statement) : DerivationOr s.claim
+  | orElim {p q r : Claim} (f : DerivationOr p → DerivationOr r) (g : DerivationOr q → DerivationOr r) :
+      DerivationOr r
+
+--- lake env lean (exit code 1) ---
+OrElim.lean:6:0: error: (kernel) arg #4 of 'DerivationOr.orElim' has a non positive occurrence of the datatypes being declared
+
+--- result ---
+REFUSED: non-positive occurrence (as expected)

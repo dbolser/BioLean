@@ -1,0 +1,102 @@
+OBS	D01	no Lean for m45428-11 or m45429-1 (no or, no union entity); CL places named cells: erythrocyte is_a eukaryotic cell in the closure
+OBS	D02	nothing derives enucleate erythrocyte is_a prokaryotic cell (CL:0000595 not in closure; no disjunctive syllogism)
+OBS	D03	R2 asserts 'the next pathway in glucose catabolism [GO:0006099] has output ATP [CHEBI:15422]', verdict established; R3 refused the record (blocker disjunction); coarsening to purine NTP derivable at b=4/5
+OBS	D04	R3 has two claims split by taxon: cytokinesis in Metazoa has part cleavage furrow; in plants (NCBITaxon:3193) has part cell plate
+OBS	D05	no Lean (subject ungrounded, or refused); coarsening 'happens during meiotic nuclear division' stateable as rel
+OBS	D06	R2 asserts 'ribosomes [GO:0005840] located in cytoplasm [GO:0005737]', verdict established; false for ribosomes on the plasma membrane's cytoplasmic side (GO:0009898 is part of the plasma membrane on OLS4; the closure is is_a only); m45432-183 (PM or ER) has no Lean
+OBS	D07	no Lean for m45433-53; two 'some part_of' claims stateable; exhaustive or not stateable
+OBS	D08	no Lean for -78/-79; split by condition stateable (heat: hypothalamus ->+ vasodilation); both disjuncts is_a GO:0097746
+OBS	D09	no Lean; split by taxon stateable (Mammalia has part hair, Aves has part feather)
+OBS	D10	no Lean; nothing derived (the or is a tautology)
+OBS	D11	no Lean; closure has GO:0043086 is_a GO:0050790 but not GO:0043085 (not imported)
+OBS	D12	no Lean (round 2 ungrounded); both halves of the split stateable as rel
+OBS	D13	R2 asserts 'DNA replication [GO:0006260] precedes mitotic nuclear division [GO:0140014]'; derived 'premeiotic DNA replication [GO:0006279] precedes mitotic nuclear division [GO:0140014]' verdict established
+OBS	D17	no Lean (round 2 blocker disjunction); each disjunct alone would stand established; a Rivalry reads them as exclusive: beliefs [0.44, 0.44]
+OBS	D14	no claim carries an opinion on A or B (INEXPRESSIBLE)
+OBS	D15	no claim carries an opinion on A or B (INEXPRESSIBLE)
+OBS	D16	no claim carries an opinion on A or B (INEXPRESSIBLE)
+OBS	A01	R3 'most: diameter [PATO:0001334] of red blood cells ⊓ in taxon (humans) [CL:0000232&RO:0002162=(NCBITaxon:9606)] ∈ [8, 8] µm' (point interval [8, 8], 'about' only in the text)
+OBS	A02	R3 [8, 8] µm established; with the data, compareIntervals derives 'red blood cells ⊓ in taxon (humans) [CL:0000232&RO:0002162=(NCBITaxon:9606)] < red blood cells ⊓ in taxon (humans) [CL:0000232&RO:0002162=(NCBITaxon:9606)] in thickness [PATO:0000915]' (b=3/5), no conflict flag
+OBS	A03	R3 [25, 30] cm established; with the data, only 'trachea ⊓ in taxon (humans) [UBERON:0003126&RO:0002162=(NCBITaxon:9606)] < trachea ⊓ in taxon (humans) [UBERON:0003126&RO:0002162=(NCBITaxon:9606)] in PATO:0000122 [PATO:0000122]' (b=1/2), no conflict flag
+OBS	A04	R3 count 4600000 established; Blattner's 4639221 on the same subject coexists, no rule relates them
+OBS	A05	perSet derives exactly 'replication fork [GO:0005657] has 2300000 × base_pair [SO:0000028]' (established); refuses the measured 4639221 (odd)
+OBS	A06	R3 rate [1000, 1000] and time [42, 42] min stored; no rule links count, time and rate
+OBS	A07	R3 [15, 15] breaths/min and [900, 900] breaths/h on one subject; no unit rule
+OBS	A08	R3 fly and lobster both exact count 100000 (equal); a 139255 brain count would coexist unflagged
+OBS	A09	R3 exact count 86000000000 established; no spread
+OBS	A10	compareIntervals refuses count claims (check_failure); no 'fewer' conclusion
+OBS	A11	R3 'polypeptide [CHEBI:15841] has ≥ 50 × dietary amino acids [CHEBI:33709]' established (every polypeptide has >= 50)
+OBS	A12	R3 Mammalia [1000, 1000] neurons/day established; no rule from clade measure to rat or human
+OBS	A13	m45428-21, -22 not in Lean; no rule divides measures
+OBS	A14	pigeonhole gives 'some: amino acid [CHEBI:33709] has ≥ 2 × sense codon (no SO term) [BIOLEAN:sense_codon]' (established)
+OBS	A15	perSet gives 'chromosome set (no GO term) [BIOLEAN:chromosome_set] has 23 × chromosome [GO:0005694]' (established)
+OBS	A16	netYield derives exactly 'a synthetic process [BLN:synthetic_process] nets 10 × ATP [CHEBI:15422]' (established)
+OBS	A17	pigeonhole fires on 22 vs 20: 'some: hole [BLN:hole] has ≥ 2 × item [BLN:item]' (established)
+OBS	A18	R3 keeps only 'plasma membrane [GO:0005886] < red blood cells [CL:0000232] in thickness [PATO:0000915]'; the 1000x ratio is dropped
+OBS	Aa	A01: [7.2, 8.8] overlaps the data, no absurd less. A02: absurd less still derived (b=3/5), lint flags it. A03: lint flags [25, 30] against 6.06 to 14.22. A04: countBetween holds Blattner's value. A05: perSet refuses countBetween. A09: countBetween [77.4, 94.6] billion holds Azevedo's 86.1 billion. A16, A17: no interval form for produces, consumes, cardinality
+OBS	C01	R3 subject 'CL:0000115&RO:0001025=(UBERON:0001981)&RO:0002162=(NCBITaxon:131567&RO:0002573=(PATO:0001167))' (damaged organism, not damaged cells)
+OBS	C02	R3 subject 'GO:0051318&RO:0002162=(NCBITaxon:9606&RO:0002573=(BLN:rapidly_dividing_24h_cell_cycle))' (a rapidly dividing human)
+OBS	C03	no Lean; stateable only by nesting two has_modifier on the cell-type filler
+OBS	C04	R3 drops 'aged'; one-state transport to rat gives b=6/25; two-state transport refused (aged mouse not a known taxon)
+OBS	C05	two nesting orders give two curies: NCBITaxon:10090&RO:0002573=(PATO:0001764)&RO:0002573=(BLN:telomerase_deficient) vs NCBITaxon:10090&RO:0002573=(BLN:telomerase_deficient)&RO:0002573=(PATO:0001764)
+OBS	C06	R3 subject 'GO:0006955&RO:0002162=(NCBITaxon:9606&RO:0002573=(MONDO:0005130))'
+OBS	C07	R3 subject 'GO:0009048&RO:0002092=(UBERON:0000068)&RO:0002162=(NCBITaxon:40674&RO:0002573=(PATO:0000383))'
+OBS	C08	R3 subject 'GO:0098657&BFO:0000066=(CL:0000000)&RO:0002219=(PATO:0001656)' (solution around the process)
+OBS	C09	R3 subject 'NCBITaxon:33090&RO:0002219=(BLN:hot_dry_day)'; no rule drops the condition
+OBS	C10	a drought claim does not reach the hot-dry-day subject (opaque BLN term, no is_a)
+OBS	C11	derived 'lactose ⊓ in taxon (Escherichia coli ⊓ surrounded by (glucose)) [CHEBI:17716&RO:0002162=(NCBITaxon:562&RO:0002219=(CHEBI:17234))] →+ lactose catabolic process [GO:0005990]' (established)
+OBS	C12	derived 'CHEBI:36229&RO:0002219=(CHEBI:17716)&RO:0002162=(NCBITaxon:562&RO:0002219=(CHEBI:17234))' (established); not an inCtx form (two conditions)
+OBS	C13	derivable for (cat & tortoiseshell) & male; not for (cat & male) & tortoiseshell: two curies, no rule between them
+OBS	C14	R3 target glucagon located in blood and part of alpha cell; secretion form stateable
+OBS	C15	R3 subject 'GO:0005697&BFO:0000050=(CL:0002371)&RO:0002490=(UBERON:0000113)' (cell type and life stage in two slots)
+PROTO	D14	D-b	or-intro from A (b 0.8): b=0.80 d=0.00 u=0.20
+PROTO	D15	D-b	two refuted disjuncts (d 0.8 each): b=0.00 d=0.64 u=0.36, unsupported
+PROTO	D16	D-d	exclusive frame coarsened: b=0.90 d=0.00 u=0.10 (established); comultiplication instead: b=0.70 d=0.20 u=0.10 (unsupported)
+PROTO	D01	D-c	stated cell is_a (prok ⊔ euk); derived 'cells [CL:0000000] has part plasma membrane [GO:0005886]' established, axioms [cell-structure-and-function-m45428-11, cell-structure-and-function-m45429-54, cell-structure-and-function-m45429-62]
+PROTO	D01	D-b	Claim-level or needs one is_a claim per disjunct and orElim; same result, two hypotheses
+PROTO	D02	D-b,D-c	no rule from 'not eukaryotic' to 'prokaryotic' (no general negation); nothing derived
+PROTO	D03	D-c	TCA has output (ATP ⊔ GTP) stated; coarsened to purine NTP, established
+PROTO	D03	D-b	orElim over the two disjuncts gives the same, b=0.80 d=0.00 u=0.20, axioms [how-cells-obtain-energy-m45439-28/or, isa:CHEBI:15422<CHEBI:26398, isa:CHEBI:15996<CHEBI:26398]
+PROTO	D05	D-c	stated 'chromosome nondisjunction [BLN:nondisjunction] happens during meiosis I or meiosis II [(GO:0007127|GO:0007135)]'; coarsened to meiotic nuclear division, established (subject still BLN)
+PROTO	D06	D-c	stated 'ribosomes [GO:0005840] located in cytoplasm or cytoplasmic side of plasma membrane or cytoplasmic side of endoplasmic reticulum membrane [(GO:0005737|(GO:0009898|GO:0098554))]' (true for all three places) and, for -183, 'some ribosomes located in PM side or ER side'
+PROTO	D07	D-c	stated 'carbohydrate [CHEBI:16646] part of glycoprotein or glycolipid [(CHEBI:17089|CHEBI:33563)]' (exhaustive); coarsened to part of a carbohydrate derivative, established
+PROTO	D09	D-c	stated 'UBERON:0000468&RO:0002162=((NCBITaxon:40674|NCBITaxon:8782)) has part (hair ⊔ adipose) ⊔ feather'; the union taxon is unknown to Taxa, so no transport or coverage
+PROTO	D08	D-c	stated 'hypothalamus [UBERON:0001898] →+ vasodilation or vasoconstriction [(GO:0042311|GO:0042310)]'; weaker than the split by condition; nothing derived
+PROTO	D12	D-a	no prototype needed: the split into two claims is stateable in today's core (stress file, d12_drought, d12_underwatered)
+PROTO	D11	D-c	union of GO:0043085 and GO:0043086 stateable; unionLub to GO:0050790 refused: GO:0043085 is not in the imported closure
+PROTO	D13	D-c	derived 'premeiotic DNA replication [GO:0006279] precedes mitotic nuclear division or meiotic nuclear division [(GO:0140014|GO:0140013)]' (true); coarsening to nuclear division established
+PROTO	D17	D-b	stated '(gene on chromosome 21 [BLN:chromosome_21_gene] < gene on chromosome 18 [BLN:chromosome_18_gene] in involvement in critical pathways [BLN:involvement_in_critical_pathways]) ∨ (gene on chromosome 21 [BLN:chromosome_21_gene] < gene on chromosome 18 [BLN:chromosome_18_gene] in effect of dosage on pathways [BLN:dosage_effect_on_pathways])' at b=0.80 d=0.00 u=0.20; neither disjunct is asserted (no statement carries it alone)
+PROTO	D17	D-c	not stateable: two claims with different predicates, no shared slot for a union
+PROTO	A01	A-b	about 8 µm (±10%) overlaps the data 6.2 to 8.2 µm: consistent, no clash
+PROTO	A02	A-b	about 8 µm (±10%) against 0.8 to 2.5 µm: clash flagged; the book value becomes b=0.61 d=0.23 u=0.15 (unsupported, was established)
+PROTO	A03	A-b	25 to 30 cm against 6.06 to 14.22 cm: clash flagged, book value b=0.66 d=0.16 u=0.16
+PROTO	A04	A-b	4.6 million (±0.05 million) contains 4,639,221: consistent
+PROTO	A05	A-b	per fork: [2275000, 2325000] from the book; exactly 4639221/2 from the data (no odd-number failure)
+PROTO	A06	A-b	derived rate ~57500/63 [45500/51, 77500/83] nt/s per fork; overlaps the book's about 1000: consistent
+PROTO	A07	A-b	15/min (±10%) gives ~900 [810, 990] per hour and ~21600 [19440, 23760] per day; both book values inside
+PROTO	A08	A-b	fly and lobster: overlap (consistent), equality no longer claimed. 139,255 (fly brain alone) is outside ±10% but inside the last-digit reading [50000, 150000]
+PROTO	A09	A-b	around 86 billion (±10%) overlaps 86.1 ± 8.1 billion: consistent
+PROTO	A10	A-b	derived 'UBERON:0001016&RO:0002162=(NCBITaxon:7227) has fewer CL:0000540 than UBERON:0000955&RO:0002162=(NCBITaxon:9606)' established
+PROTO	A11	A-b	unchanged: 'about 50' as a lower bound still refutes ChEBI's ten-residue polypeptides; the problem is 'typical', not 'about'
+PROTO	A12	A-b	unchanged: no rule from a clade measure to rat or human; and the convention decides: 700/day is outside ±10% of 1000, inside the last-digit reading
+PROTO	A13	A-b	derived ~250 [2250/11, 2750/9] red cells across the pin head (a width ratio); contains 250. The book says 'fit on'; by area that is about 49,000, and ratioA cannot tell a width from an area
+PROTO	A14	A-b	exact counts embed; pigeonholeA fires, established
+PROTO	A15	A-b	exact counts embed; perSetA gives exactly 23
+PROTO	A16	A-b	net ~10 [-9, 29]: sign unknown, no exact yield
+PROTO	A17	A-b	pigeonholeA refused: holes up to 22, items down to 19.8
+PROTO	A18	A-b	unchanged (the core's less is kept)
+PROTO	C06	C-b	same curie as the core (pinned)
+PROTO	C07	C-b	same curie as the core (pinned)
+PROTO	C15	C-b	unchanged (two core slots)
+PROTO	C01	C-b	subject 'CL:0000115&RO:0001025=(UBERON:0001981)&RO:0002573=(PATO:0001167)' (the cells are damaged)
+PROTO	C02	C-b	subject 'GO:0051318&BFO:0000066=(CL:0000000&RO:0002573=(BLN:rapidly_dividing))&RO:0002162=(NCBITaxon:9606)'; a state on the process itself is refused by fits (has_modifier domain)
+PROTO	C03	C-b	two cell states, one curie in either order: 'GO:0007049&BFO:0000066=(CL:0000000&RO:0002573=(BLN:grown_in_culture)&RO:0002573=(BLN:rapidly_dividing))&RO:0002162=(NCBITaxon:40674)'
+PROTO	C04	C-b	two-state transport to rat works: b=0.21 d=0.00 u=0.79
+PROTO	C05	C-b	both orders give 'NCBITaxon:10090&RO:0002573=(BLN:telomerase_deficient)&RO:0002573=(PATO:0001764)'
+PROTO	C08	C-b	subject 'GO:0098657&BFO:0000066=(CL:0000000&RO:0002219=(PATO:0001656))' (solution around the cell)
+PROTO	C10	C-b	drought claim specialises to hot and dry: b=0.60 d=0.00 u=0.40 (review weight)
+PROTO	C09	C-b	still nothing derives 'plants close stomata when hot' (dropAxiom refuses heat-only is_a hot-and-dry)
+PROTO	C11	C-b	still derived: lactose in E. coli on glucose ->+ lactose catabolism, established (wrong)
+PROTO	C12	C-b	derived for 'CHEBI:36229&RO:0002219=(CHEBI:17716)&RO:0002162=(NCBITaxon:562&RO:0002219=(CHEBI:17234))', established, a canonical inCtx2 form
+PROTO	C13	C-b	derived for male tortoiseshell cats, established, whichever order the states are written
+PROTO	C14	C-b	unchanged: the fix is the secretion reading, stateable in the core today (emitter)

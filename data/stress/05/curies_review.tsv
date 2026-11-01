@@ -1,0 +1,350 @@
+# every CURIE in the program 05 files, OLS4 api/v2, 2026-10-31, scripts/stress/grade_review_ols.py
+curie	ols4_label	obsolete	check	used_in
+CHEBI:16646	carbohydrate	False	ok	data/stress/05/cases.tsv
+CHEBI:18246	(1->4)-beta-D-glucan	False	ok	data/stress/05/cases.tsv
+CHEBI:28384	vitamin K	False	ok	data/stress/05/cases.tsv
+CHEBI:8005	peptidoglycan	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean,data/stress/05/cases.tsv
+CL:0000000	cell	False	ok	BioLean/Stress/GradeTerms.lean,data/stress/05/cases.tsv
+CL:0000255	eukaryotic cell	False	ok	BioLean/Stress/GradeTerms.lean,data/stress/05/cases.tsv,docs/programs/05-grade-terms.md
+CL:0000520	prokaryotic cell	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean,data/stress/05/cases.tsv,docs/programs/05-grade-terms.md
+CL:0000521	fungal cell	False	ok	BioLean/Stress/GradeTerms.lean,data/stress/05/cases.tsv,docs/programs/05-grade-terms.md
+CL:0000548	obsolete animal cell	True	ok OBSOLETE	BioLean/Stress/GradeTerms.lean,data/stress/05/cases.tsv,docs/programs/05-grade-terms.md
+CL:0000610	obsolete plant cell	True	ok OBSOLETE	docs/programs/05-grade-terms.md
+ECOCORE:00000023	autotroph	False	ok	BioLean/Stress/GradeTerms.lean
+ECOCORE:00000076	algae	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean,data/stress/05/cases.tsv
+GO:0005618	cell wall	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean,data/stress/05/cases.tsv
+GO:0005634	nucleus	False	ok	data/stress/05/cases.tsv
+GO:0005694	chromosome	False	ok	BioLean/Proto/TaxonUnion.lean,data/stress/05/cases.tsv
+GO:0005737	cytoplasm	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean,data/stress/05/cases.tsv,docs/programs/05-grade-terms.md
+GO:0005813	centrosome	False	ok	data/stress/05/cases.tsv
+GO:0005814	centriole	False	ok	BioLean/Stress/GradeTerms.lean,data/stress/05/cases.tsv
+GO:0005840	ribosome	False	ok	BioLean/Stress/GradeTerms.lean,data/stress/05/cases.tsv
+GO:0005886	plasma membrane	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean,data/stress/05/cases.tsv
+GO:0006096	glycolytic process	False	ok	data/stress/05/cases.tsv
+GO:0006351	DNA-templated transcription	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean,data/stress/05/cases.tsv
+GO:0009061	anaerobic respiration	False	ok	data/stress/05/cases.tsv
+GO:0009277	fungal-type cell wall	False	ok	data/stress/05/cases.tsv
+GO:0009288	bacterial-type flagellum	False	ok	BioLean/Stress/GradeTerms.lean,data/stress/05/cases.tsv
+GO:0009505	plant-type cell wall	False	ok	BioLean/Stress/GradeTerms.lean,data/stress/05/cases.tsv,docs/programs/05-grade-terms.md
+GO:0009507	chloroplast	False	ok	BioLean/Proto/TaxonUnion.lean,data/stress/05/cases.tsv
+GO:0015979	photosynthesis	False	ok	BioLean/Proto/TaxonUnion.lean,data/stress/05/cases.tsv
+GO:0020015	glycosome	False	ok	BioLean/Stress/GradeTerms.lean,data/stress/05/cases.tsv,docs/programs/05-grade-terms.md
+GO:0022904	respiratory electron transport chain	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean,data/stress/05/cases.tsv
+GO:0043093	FtsZ-dependent cytokinesis	False	ok	BioLean/Stress/GradeTerms.lean,data/stress/05/cases.tsv
+GO:0043231	intracellular membrane-bounded organelle	False	ok	data/stress/05/cases.tsv
+GO:0097589	archaeal-type flagellum	False	ok	BioLean/Stress/GradeTerms.lean,data/stress/05/cases.tsv
+NCBITaxon:1046325	Lumbricinae	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:1050931	Lumbricus terrestris complex	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:1117	Cyanobacteriota	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:1131320	Euglenaceae	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:1142	Synechocystis	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:1148	Synechocystis sp. PCC 6803	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:117570	Teleostomi	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:117571	Euteleostomi	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:118883	Sulfolobaceae	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:119195	Galeoidea	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:119197	Galeomorphii	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:119203	Selachii	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:1206794	Ecdysozoa	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:1206795	Lophotrochozoa	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:1224	Pseudomonadota	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:1236	Gammaproteobacteria	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:1292243	Continenticola	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:1292253	Geoplanoidea	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:131213	Chlorokybophyceae	False	ok	BioLean/Proto/TaxonUnion.lean
+NCBITaxon:131220	Klebsormidiophyceae	False	ok	BioLean/Proto/TaxonUnion.lean
+NCBITaxon:131221	Streptophytina	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:131567	cellular organisms	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean,data/stress/05/cases.tsv
+NCBITaxon:1329911	Toxicofera	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:1329912	Episquamata	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:1329950	Unidentata	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:1329961	Bifurcata	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:1338369	Dipnotetrapodomorpha	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:135617	Thiotrichaceae	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:135623	Vibrionales	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:13814	Marsileaceae	False	ok	BioLean/Stress/GradeTerms.lean
+NCBITaxon:13815	Marsilea	False	ok	BioLean/Stress/GradeTerms.lean
+NCBITaxon:1437010	Boreoeutheria	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:1437183	Mesangiospermae	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:1437201	Pentapetalae	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:147100	Rhabditophora	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:147537	Saccharomycotina	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:1485	Clostridium	False	ok	data/stress/05/cases.tsv
+NCBITaxon:1489341	Osteoglossocephalai	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:1521262	Polypodiidae <ferns>	False	ok	BioLean/Stress/GradeTerms.lean
+NCBITaxon:1639119	Plasmodiidae	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:1644056	Haloferacaceae	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:1779146	Heteroscleromorpha	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:1783272	Bacillati	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:1783275	Thermoproteati	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:178475	Niphatidae	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:178513	Amphimedon	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:1798711	Cyanobacteriota/Melainabacteria group	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:183924	Thermoprotei	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:183925	Methanobacteria	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:183963	Halobacteria	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:183967	Thermoplasmata	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:186623	Actinopteri	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:186625	Clupeocephala	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:186626	Otophysi	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:186627	Cypriniphysae	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:186634	Otomorpha	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:1890422	Gloeobacteraceae	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:1890424	Synechococcales	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:1890428	Merismopediaceae	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:197562	Pancrustacea	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:197563	Mandibulata	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:2	Bacteria	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean,data/stress/05/cases.tsv,docs/programs/05-grade-terms.md
+NCBITaxon:2022461	Candidatus Thiomargarita sp. Lot2	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean,data/stress/05/cases.tsv,docs/programs/05-grade-terms.md
+NCBITaxon:2049356	Monocercomonoides exilis	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:207598	Homininae	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:215451	Octopodiformes	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:2157	Archaea	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean,data/stress/05/cases.tsv,docs/programs/05-grade-terms.md
+NCBITaxon:2158	Methanobacteriales	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:2159	Methanobacteriaceae	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:216770	Orobancheae	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:2172	Methanobrevibacter	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:2173	Methanobrevibacter smithii	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:2235	Halobacteriales	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:2236	Halobacteriaceae	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:2239	Halobacterium	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:2242	Halobacterium salinarum	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:2246	Haloferax volcanii	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:2251	Haloferax	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:2281	Sulfolobales	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:2283794	Methanomada group	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:2283796	Thermoplasmatota	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:2284	Sulfolobus	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:2285	Sulfolobus acidocaldarius	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:2290931	Stenosarchaea group	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:2301	Thermoplasmatales	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:2302	Thermoplasma	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:2303	Thermoplasma acidophilum	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:241806	Polypodiopsida	False	ok	BioLean/Stress/GradeTerms.lean
+NCBITaxon:2570567	Spirocuta	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:2611341	Metamonada	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:2611352	Discoba	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:2640012	unclassified Synechocystis	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:2662611	Preaxostyla	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:2692248	core chlorophytes	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:2696291	Ochrophyta	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:2697495	Spiralia	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:2698737	Sar	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:2704141	Euglenophyceae	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:2704647	Metakinetoplastina	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:2704949	Trypanosomatida	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:2743709	Danionidae	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:2743711	Danioninae	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:2759	Eukaryota	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean,data/stress/05/cases.tsv
+NCBITaxon:2763	Rhodophyta	False	ok	BioLean/Proto/TaxonUnion.lean
+NCBITaxon:2803884	Crassiclitellata	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:2812636	CS clade	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:2825	Chrysophyceae	False	ok	BioLean/Proto/TaxonUnion.lean
+NCBITaxon:2830	Haptophyta	False	ok	BioLean/Proto/TaxonUnion.lean
+NCBITaxon:2833	Xanthophyceae	False	ok	BioLean/Proto/TaxonUnion.lean
+NCBITaxon:2836	Bacillariophyta	False	ok	BioLean/Proto/TaxonUnion.lean
+NCBITaxon:28376	Anolis	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:28377	Anolis carolinensis	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:2864	Dinophyceae	False	ok	BioLean/Proto/TaxonUnion.lean
+NCBITaxon:2870	Phaeophyceae	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:2877	Ectocarpales	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:2878	Ectocarpaceae	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:2879	Ectocarpus	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:2880	Ectocarpus siliculosus	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:28889	Thermoproteota	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:28890	Methanobacteriota	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean,data/stress/05/cases.tsv
+NCBITaxon:29197	Chlorarachniophyceae	False	ok	BioLean/Proto/TaxonUnion.lean
+NCBITaxon:3027	Cryptophyceae	False	ok	BioLean/Proto/TaxonUnion.lean
+NCBITaxon:302780	Polymastigidae	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:302781	Monocercomonoides	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:3028117	Cyanophyceae	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:3035	Euglenida	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:3038	Euglena	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:3039	Euglena gracilis	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:3041	Chlorophyta	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:3042	Chlamydomonadales	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:304573	Coleochaetophyceae	False	ok	BioLean/Proto/TaxonUnion.lean
+NCBITaxon:304574	Charophyceae	False	ok	BioLean/Proto/TaxonUnion.lean
+NCBITaxon:30483	Carcharhiniformes	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:3051	Chlamydomonadaceae	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:3052	Chlamydomonas	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:3055	Chlamydomonas reinhardtii	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:30727	Cyprinoidei	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:307595	Gloeobacterales	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:31262	Dugesiidae	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:314146	Euarchontoglires	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:314293	Simiiformes	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:314295	Hominoidea	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:3166	Chlorophyceae	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:3193	Embryophyta	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:32341	Sophophora	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:32346	melanogaster group	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:32351	melanogaster subgroup	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:32443	Teleostei	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:32519	Ostariophysi	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:32523	Tetrapoda	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:32524	Amniota	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:32525	Theria <mammals>	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:32561	Sauria	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:33071	Gloeobacter	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:33072	Gloeobacter violaceus	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:33090	Viridiplantae	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean,data/stress/05/cases.tsv
+NCBITaxon:33154	Opisthokonta	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:33208	Metazoa	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean,data/stress/05/cases.tsv
+NCBITaxon:33213	Bilateria	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:33317	Protostomia	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:33340	Neoptera	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:33392	Endopterygota	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:33511	Deuterostomia	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:33630	Alveolata	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:33634	Stramenopiles	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:3366610	Methanobacteriati	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:33682	Euglenozoa	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:3379134	Pseudomonadati	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:3398	Magnoliopsida	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:35493	Streptophyta	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:3699	Brassicales	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:3700	Brassicaceae	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:3701	Arabidopsis	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:3701028	Altocrustacea	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:3701030	Allotriocarida	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:3701061	Eumetabola	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:3701062	Aparaglossata	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:3701063	Panorpida	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:3702	Arabidopsis thaliana	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:376913	Haplorrhini	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:38254	Glaucocystophyceae	False	ok	BioLean/Proto/TaxonUnion.lean
+NCBITaxon:38410	Raphidophyceae	False	ok	BioLean/Proto/TaxonUnion.lean
+NCBITaxon:3843548			NOT FOUND 404	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean,docs/programs/05-grade-terms.md
+NCBITaxon:39119	Dictyochophyceae	False	ok	BioLean/Proto/TaxonUnion.lean
+NCBITaxon:39700	Trypanozoon	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:400682	Amphimedon queenslandica	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:40674	Mammalia	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:4143	Lamiales	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:41665	Neopterygii	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:4176	Epifagus	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:4177	Epifagus virginiana	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:418107	Laverania	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:42113	Clitellata	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:422676	Aconoidasida	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:43733	Muscomorpha	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:43738	Schizophora	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:43741	Acalyptratae	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:43746	Ephydroidea	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:43845	Drosophilinae	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:451864	Dikarya	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:46659	Thermoplasmataceae	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:46877	Drosophilini	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:4751	Fungi	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:480117	Cyclorrhapha	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:480118	Eremoneura	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:4890	Ascomycota	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:4891	Saccharomycetes	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:4892	Saccharomycetales	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:4893	Saccharomycetaceae	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:4930	Saccharomyces	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:4932	Saccharomyces cerevisiae	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:50557	Insecta	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:543	Enterobacteriaceae	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:55270	Schmidtea	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:561	Escherichia	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:562	Escherichia coli	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:5653	Kinetoplastea	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:5654	Trypanosomatidae	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:5690	Trypanosoma	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:5691	Trypanosoma brucei	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:569578	PX clade	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:5747	Eustigmatophyceae	False	ok	BioLean/Proto/TaxonUnion.lean
+NCBITaxon:5794	Apicomplexa	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:58023	Tracheophyta	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:58024	Spermatophyta	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:5819	Haemosporida	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:5820	Plasmodium <genus>	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:5833	Plasmodium falciparum	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:5884	Paramecium	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:6040	Porifera	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:6042	Demospongiae	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:6049	Haplosclerida	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:6072	Eumetazoa	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:6157	Platyhelminthes	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:6159	Tricladida	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:6340	Annelida	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:6381	Oligochaeta <segmented worms>	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:6391	Lumbricina	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:6392	Lumbricidae	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:6397	Lumbricus	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:6398	Lumbricus terrestris	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:641	Vibrionaceae	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:6447	Mollusca	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:6605	Cephalopoda	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:6606	Coleoidea	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:662	Vibrio	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:66288	Oxymonadida	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:6638	Octopoda	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:6643	Octopus	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:6645	Octopus vulgaris	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:6646	Incirrata	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:6647	Octopodidae	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:6656	Arthropoda	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:666	Vibrio cholerae	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:6960	Hexapoda	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:71240	eudicotyledons	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:71274	asterids	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:71275	rosids	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:7147	Diptera	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:716545	saccharomyceta	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:7203	Brachycera	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:7214	Drosophilidae	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:7215	Drosophila <flies,genus>	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:7227	Drosophila melanogaster	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:72273	Thiotrichales	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:74353	Salviniales	False	ok	BioLean/Stress/GradeTerms.lean
+NCBITaxon:7496	Pterygota <insects>	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:7711	Chordata	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:7742	Vertebrata <vertebrates>	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:7776	Gnathostomata <vertebrates>	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:7777	Chondrichthyes	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:7778	Elasmobranchii	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:7826	Scyliorhinidae	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:7829	Scyliorhinus	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:7830	Scyliorhinus canicula	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:78536	Euphyllophyta	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:7898	Actinopterygii	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:79327	Schmidtea mediterranea	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:7952	Cypriniformes	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:7954	Danio	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:7955	Danio rerio	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:82162	Phaeothamniophyceae	False	ok	BioLean/Proto/TaxonUnion.lean
+NCBITaxon:8287	Sarcopterygii	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:8457	Sauropsida	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:8504	Lepidosauria	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:8509	Squamata	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:8511	Iguania	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:85512	Dicondylia	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:8570	Serpentes	False	ok	BioLean/Proto/TaxonUnion.lean
+NCBITaxon:86650	Euglenales	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:88770	Panarthropoda	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:89593	Craniata <chordates>	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:90372	Thiomargarita	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:91347	Enterobacterales	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:91827	Gunneridae	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:91836	malvids	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:91888	lamiids	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:91896	Orobanchaceae	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:9347	Eutheria	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:9443	Primates	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:9526	Catarrhini	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:9604	Hominidae	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:9605	Homo	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:9606	Homo sapiens	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon:96475	Mesostigmatophyceae	False	ok	BioLean/Proto/TaxonUnion.lean
+NCBITaxon:980083	Camelineae	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean
+NCBITaxon_Union:0000004	Prokaryota	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean,data/stress/05/cases.tsv,docs/programs/05-grade-terms.md
+NCIT:C14263	Prokaryote	False	ok	BioLean/Proto/TaxonUnion.lean,data/stress/05/cases.tsv
+PO:0009002	plant cell	False	ok	docs/programs/05-grade-terms.md
+SO:0000296	origin_of_replication	False	ok	BioLean/Proto/TaxonUnion.lean,data/stress/05/cases.tsv
+UBERON:0000062	organ	False	ok	data/stress/05/cases.tsv
+UBERON:0000160	intestine	False	ok	data/stress/05/cases.tsv
+UBERON:0001555	digestive tract	False	ok	data/stress/05/cases.tsv
+UBERON:0006314	bodily fluid	False	ok	data/stress/05/cases.tsv
+UBERON:0009054	open circulatory system	False	ok	BioLean/Proto/TaxonUnion.lean,BioLean/Stress/GradeTerms.lean,data/stress/05/cases.tsv

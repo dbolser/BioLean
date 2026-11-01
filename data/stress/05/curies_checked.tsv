@@ -1,0 +1,151 @@
+# checked on OLS4 (api/v2), 2026-10-31, by scripts/stress/grade_ols.py
+curie	ontology	label	obsolete	source	check	note
+NCBITaxon:131567	ncbitaxon	cellular organisms	False	ncbitaxon	ok	
+NCBITaxon:2	ncbitaxon	Bacteria	False	ncbitaxon	ok	
+NCBITaxon:2157	ncbitaxon	Archaea	False	ncbitaxon	ok	
+NCBITaxon:2759	ncbitaxon	Eukaryota	False	ncbitaxon	ok	
+NCBITaxon:33208	ncbitaxon	Metazoa	False	ncbitaxon	ok	
+NCBITaxon:4751	ncbitaxon	Fungi	False	ncbitaxon	ok	
+NCBITaxon:33090	ncbitaxon	Viridiplantae	False	ncbitaxon	ok	
+NCBITaxon:3193	ncbitaxon	Embryophyta	False	ncbitaxon	ok	
+NCBITaxon:7742	ncbitaxon	Vertebrata <vertebrates>	False	ncbitaxon	ok	
+NCBITaxon:32523	ncbitaxon	Tetrapoda	False	ncbitaxon	ok	
+NCBITaxon:7898	ncbitaxon	Actinopterygii	False	ncbitaxon	ok	
+NCBITaxon:7777	ncbitaxon	Chondrichthyes	False	ncbitaxon	ok	
+NCBITaxon:7711	ncbitaxon	Chordata	False	ncbitaxon	ok	
+NCBITaxon:89593	ncbitaxon	Craniata <chordates>	False	ncbitaxon	ok	
+NCBITaxon:8509	ncbitaxon	Squamata	False	ncbitaxon	ok	
+NCBITaxon:8570	ncbitaxon	Serpentes	False	ncbitaxon	ok	
+NCBITaxon:3041	ncbitaxon	Chlorophyta	False	ncbitaxon	ok	
+NCBITaxon:2763	ncbitaxon	Rhodophyta	False	ncbitaxon	ok	
+NCBITaxon:2698737	ncbitaxon	Sar	False	ncbitaxon	ok	
+NCBITaxon:5794	ncbitaxon	Apicomplexa	False	ncbitaxon	ok	
+NCBITaxon:1117	ncbitaxon	Cyanobacteriota	False	ncbitaxon	ok	
+NCBITaxon:28890	ncbitaxon	Methanobacteriota	False	ncbitaxon	ok	
+NCBITaxon:1485	ncbitaxon	Clostridium	False	ncbitaxon	ok	
+NCBITaxon:6656	ncbitaxon	Arthropoda	False	ncbitaxon	ok	
+NCBITaxon:6447	ncbitaxon	Mollusca	False	ncbitaxon	ok	
+NCBITaxon:6040	ncbitaxon	Porifera	False	ncbitaxon	ok	
+NCBITaxon:6340	ncbitaxon	Annelida	False	ncbitaxon	ok	
+NCBITaxon:2725	ncbitaxon	unidentified prokaryotic organism	False	ncbitaxon	ok	
+NCBITaxon:102750	ncbitaxon	Ageratina altissima	False	ncbitaxon	ok	
+NCBITaxon:562	ncbitaxon	Escherichia coli	False	ncbitaxon	ok	
+NCBITaxon:2246	ncbitaxon	Haloferax volcanii	False	ncbitaxon	ok	
+NCBITaxon:2285	ncbitaxon	Sulfolobus acidocaldarius	False	ncbitaxon	ok	
+NCBITaxon:2303	ncbitaxon	Thermoplasma acidophilum	False	ncbitaxon	ok	
+NCBITaxon:666	ncbitaxon	Vibrio cholerae	False	ncbitaxon	ok	
+NCBITaxon:2173	ncbitaxon	Methanobrevibacter smithii	False	ncbitaxon	ok	
+NCBITaxon:1148	ncbitaxon	Synechocystis sp. PCC 6803	False	ncbitaxon	ok	
+NCBITaxon:5833	ncbitaxon	Plasmodium falciparum	False	ncbitaxon	ok	
+NCBITaxon:3055	ncbitaxon	Chlamydomonas reinhardtii	False	ncbitaxon	ok	
+NCBITaxon:400682	ncbitaxon	Amphimedon queenslandica	False	ncbitaxon	ok	
+NCBITaxon:7830	ncbitaxon	Scyliorhinus canicula	False	ncbitaxon	ok	
+NCBITaxon:28377	ncbitaxon	Anolis carolinensis	False	ncbitaxon	ok	
+NCBITaxon:7227	ncbitaxon	Drosophila melanogaster	False	ncbitaxon	ok	
+NCBITaxon:6645	ncbitaxon	Octopus vulgaris	False	ncbitaxon	ok	
+NCBITaxon:6398	ncbitaxon	Lumbricus terrestris	False	ncbitaxon	ok	
+NCBITaxon:79327	ncbitaxon	Schmidtea mediterranea	False	ncbitaxon	ok	
+NCBITaxon:4932	ncbitaxon	Saccharomyces cerevisiae	False	ncbitaxon	ok	
+NCBITaxon:9606	ncbitaxon	Homo sapiens	False	ncbitaxon	ok	
+NCBITaxon:3702	ncbitaxon	Arabidopsis thaliana	False	ncbitaxon	ok	
+NCBITaxon:7955	ncbitaxon	Danio rerio	False	ncbitaxon	ok	
+NCBITaxon:3039	ncbitaxon	Euglena gracilis	False	ncbitaxon	ok	
+NCBITaxon:2880	ncbitaxon	Ectocarpus siliculosus	False	ncbitaxon	ok	
+NCBITaxon:4177	ncbitaxon	Epifagus virginiana	False	ncbitaxon	ok	
+NCBITaxon:2242	ncbitaxon	Halobacterium salinarum	False	ncbitaxon	ok	
+CL:0000000	cl	cell	False	cl	ok	The definition of cell is intended to represent all cells, and thus a cell is defined as a material entity and not an anatomical structure, which impl
+CL:0000520	cl	prokaryotic cell	False	cl	ok	
+CL:0000255	cl	eukaryotic cell	False	cl	ok	Any cell that in taxon some Eukaryota. | equivalentClass {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#intersectionOf": ["http://purl.obolibrary.org/obo/CL_0000000", {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2002/07/owl#Restriction", "http://www.w3.org
+CL:0000521	cl	fungal cell	False	cl	ok	Any cell that in taxon some Fungi. | equivalentClass {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#intersectionOf": ["http://purl.obolibrary.org/obo/CL_0000000", {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2002/07/owl#Restriction", "http://www.w3.org
+CL:0000548	cl	obsolete animal cell	True	cl	ok OBSOLETE	OBSOLETE. A native cell that is part of some Metazoa. | replaced_by http://purl.obolibrary.org/obo/CL_0000000
+CL:0000610	cl	obsolete plant cell	True	cl	ok OBSOLETE	This term was obsoleted as it is redundant with PO:0009002 in the cell ontology (PO)
+PO:0009002	po	plant cell	False	po	ok	Applies to cells that are living or dead at maturity (e.g., fiber cell or tracheid) and includes any external encapsulating structures (if present) su
+GO:0005634	go	nucleus	False	go	ok	A membrane-bounded organelle of eukaryotic cells in which chromosomes are housed and replicated. In most cells, the nucleus contains all of the cell's
+GO:0005886	go	plasma membrane	False	go	ok	The membrane surrounding a cell that separates the cell from its external environment. It consists of a phospholipid bilayer and associated proteins.
+GO:0005737	go	cytoplasm	False	go	ok	The contents of a cell excluding the plasma membrane and nucleus, but including other subcellular structures.
+GO:0005840	go	ribosome	False	go	ok	An intracellular organelle, about 200 A in diameter, consisting of RNA and protein. It is the site of protein biosynthesis resulting from translation 
+GO:0005618	go	cell wall	False	go	ok	Not to be used for manual annotation. Please choose a more specific term: for bacteria, annotate to GO:0009274; peptidoglycan-based cell wall, for pla
+GO:0009505	go	plant-type cell wall	False	go	ok	A more or less rigid structure lying outside the cell membrane of a cell and composed of cellulose and pectin and other organic and inorganic substanc
+GO:0009277	go	fungal-type cell wall	False	go	ok	A rigid yet dynamic structure surrounding the plasma membrane that affords protection from stresses and contributes to cell morphogenesis, consisting 
+GO:0043231	go	intracellular membrane-bounded organelle	False	go	ok	Organized structure of distinctive morphology and function, bounded by a single or double lipid bilayer membrane and occurring within the cell. Includ | equivalentClass {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#intersectionOf": ["http://purl.obolibrary.org/obo/GO_0043227", {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2002/07/owl#Restriction", "http://www.w3.org
+GO:0043227	go	membrane-bounded organelle	False	go	ok	Organized structure of distinctive morphology and function, bounded by a single or double lipid bilayer membrane. Includes the nucleus, mitochondria,  | equivalentClass {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#intersectionOf": ["http://purl.obolibrary.org/obo/GO_0043226", {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2002/07/owl#Restriction", "http://www.w3.org
+GO:0009288	go	bacterial-type flagellum	False	go	ok	A motor complex composed of an extracellular helical protein filament coupled to a rotary motor embedded in the cell envelope.
+GO:0097589	go	archaeal-type flagellum	False	go	ok	A non-membrane-bounded organelle superficially similar to a bacterial-type flagellum; they both consist of filaments extending outside the cell, and r
+GO:0009289	go	pilus	False	go	ok	A proteinaceous hair-like appendage on the surface of bacteria ranging from 2-8 nm in diameter.
+GO:0005694	go	chromosome	False	go	ok	Chromosomes include parts that are not part of the chromatin. Examples include the kinetochore.
+GO:0009295	go	nucleoid	False	go	ok	The region of a virus, bacterial cell, mitochondrion or chloroplast to which the nucleic acid is confined.
+GO:0009507	go	chloroplast	False	go	ok	A chlorophyll-containing plastid with thylakoids organized into grana and frets, or stroma thylakoids, and embedded in a stroma.
+GO:0020011	go	apicoplast	False	go	ok	The plastid organelle found in apicomplexans.
+GO:0005813	go	centrosome	False	go	ok	A structure comprised of a core structure (in most organisms, a pair of centrioles) and peripheral material from which a microtubule-based structure, 
+GO:0005764	go	lysosome	False	go	ok	A small lytic vacuole that has cell cycle-independent morphology found in most animal cells and that contains a variety of hydrolases, most of which h
+GO:0005856	go	cytoskeleton	False	go	ok	A cellular structure that forms the internal framework of eukaryotic and prokaryotic cells. The cytoskeleton includes intermediate filaments, microfil
+GO:0022904	go	respiratory electron transport chain	False	go	ok	A process in which a series of electron carriers operate together to transfer electrons from donors such as NADH and FADH2 to any of several different
+GO:0005743	go	mitochondrial inner membrane	False	go	ok	The inner, i.e. lumen-facing, lipid bilayer of the mitochondrial envelope. It is highly folded to form cristae.
+GO:0006351	go	DNA-templated transcription	False	go	ok	The synthesis of an RNA transcript from a DNA template. | equivalentClass {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#intersectionOf": ["http://purl.obolibrary.org/obo/GO_0009059", {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2002/07/owl#Restriction", "http://www.w3.org
+GO:0043093	go	FtsZ-dependent cytokinesis	False	go	ok	Note that this term is intended for the annotation of prokaryotic gene products.
+GO:0051301	go	cell division	False	go	ok	Note that this term differs from 'cytokinesis ; GO:0000910' in that cytokinesis does not include nuclear division.
+GO:0015979	go	photosynthesis	False	go	ok	The synthesis by organisms of organic chemical compounds, especially carbohydrates, from carbon dioxide (CO2) using energy obtained from light rather 
+GO:0006096	go	glycolytic process	False	go	ok	The chemical reactions and pathways resulting in the breakdown of a carbohydrate into pyruvate, with the concomitant production of a small amount of A | equivalentClass {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#intersectionOf": ["http://purl.obolibrary.org/obo/GO_0016052", {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2002/07/owl#Restriction", "http://www.w3.org
+GO:0009061	go	anaerobic respiration	False	go	ok	The enzymatic release of energy from inorganic and organic compounds (especially carbohydrates and fats) which uses compounds other than oxygen (e.g. 
+GO:0015948	go	methanogenesis	False	go	ok	The chemical reactions and pathways resulting in the formation of methane, a colorless, odorless, flammable gas with the formula CH4. It is the simple | equivalentClass {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#intersectionOf": ["http://purl.obolibrary.org/obo/GO_0009058", {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2002/07/owl#Restriction", "http://www.w3.org
+GO:0140014	go	mitotic nuclear division	False	go	ok	A mitotic cell cycle process comprising the steps by which the nucleus of a eukaryotic cell divides; the process involves condensation of chromosomal  | equivalentClass {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#intersectionOf": ["http://purl.obolibrary.org/obo/GO_0000280", {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2002/07/owl#Restriction", "http://www.w3.org
+GO:0072686	go	mitotic spindle	False	go	ok	A spindle that forms as part of mitosis. Mitotic and meiotic spindles contain distinctive complements of proteins associated with microtubules.
+GO:0042651	go	thylakoid membrane	False	go	ok	The pigmented membrane of any thylakoid.
+GO:0009579	go	thylakoid	False	go	ok	A thylakoid is not considered an organelle, but some thylakoids are part of organelles.
+CHEBI:8005	chebi	peptidoglycan	False	chebi	ok	A peptidoglycosaminoglycan formed by alternating residues of β-(1→4)-linked <em>N</em>-acetylglucosamine and <em>N</em>-acetylmuramic acid {2-amino-3-
+CHEBI:18246	chebi	(1->4)-beta-D-glucan	False	chebi	ok	A β-<small>D</small>-glucan in which the glucose units are connected by (1→4) linkages.
+CHEBI:16991	chebi	deoxyribonucleic acid	False	chebi	ok	High molecular weight, linear polymers, composed of nucleotides containing deoxyribose and linked by phosphodiester bonds; DNA contain the genetic inf
+CHEBI:28384	chebi	vitamin K	False	chebi	ok	Any member of a group of fat-soluble 2-methyl-1,4-napthoquinones that exhibit biological activity against vitamin K deficiency. Vitamin K is required 
+PR:000022726	pr	cell division protein FtsZ	False	pr	ok	Category=gene.
+SO:0000296	so	origin_of_replication	False	so	ok	A region of nucleic acid from which replication initiates; includes sequences that are recognized by replication proteins, the site from which the fir
+SO:0001026	so	genome	False	so	ok	A genome is the sum of genetic material within a cell or virion. | equivalentClass {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#intersectionOf": ["http://purl.obolibrary.org/obo/SO_0001260", {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2002/07/owl#Restriction", "http://www.w3.org
+SO:0000155	so	plasmid	False	so	ok	This term is mapped to MGED. Do not obsolete without consulting MGED ontology.
+SO:0000958	so	circular_double_stranded_DNA_chromosome	False	so	ok	Structural unit composed of a self-replicating, double-stranded, circular DNA molecule. | equivalentClass {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#intersectionOf": ["http://purl.obolibrary.org/obo/SO_0000955", {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2002/07/owl#Restriction", "http://www.w3.org
+SO:0000340	so	chromosome	False	so	ok	This term is mapped to MGED. Do not obsolete without consulting MGED ontology.
+UBERON:0009054	uberon	open circulatory system	False	uberon	ok	The Open Circulatory System is a system in which fluid (called hemolymph) in a cavity called the hemocoel bathes the organs directly with oxygen and n
+UBERON:0001009	uberon	circulatory system	False	uberon	ok	Organ system that passes nutrients (such as amino acids and electrolytes), gases, hormones, blood cells, etc. to and from cells in the body to help fi
+UBERON:0007798	uberon	vascular system	False	uberon	ok	Anatomical system that consists of all blood and lymph vessels.
+UBERON:0000160	uberon	intestine	False	uberon	ok	Segment of the alimentary canal extending from the stomach to the anus and, in humans and other mammals, consists of two segments, the small intestine
+UBERON:0001555	uberon	digestive tract	False	uberon	ok	A tube extending from the mouth to the anus.
+NCIT:C14263	ncit	Prokaryote	False	ncit	ok	Organisms without a cell nucleus or any other membrane-bound organelles. Most prokaryotes are bacteria but the group includes both the Bacteria and th
+NCIT:C77914	ncit	Protista	False	ncit	ok	A taxonomic kingdom that includes algae, protozoa, slime molds, and water molds. Members of kingdom protista are aerobic and may be unicellular, multi
+ECOCORE:00000076	ecocore	algae	False	ecocore	ok	A polyphyletic group of diverse photosynthetic organisms that excludes vascular plants and mosses and includes cyanobacteria, seaweed, and some single
+ECOCORE:00000023	ecocore	autotroph	False	ecocore	ok	An organism which is capable of incorporating abiogenic (inorganic) carbon into its biomass. | equivalentClass {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2002/07/owl#Restriction", "http://www.w3.org/2002/07/owl#onProperty": "http://purl.obolibrary.org/obo/RO_0002215", "http://www.w3.org/2002/07/owl#someValuesFrom": "http://purl.obolibrary.org/obo/ECOCORE_00000009", "isObsolete": f
+RO:0002162	ro	in taxon	False	ro	ok	Connects a biological entity to its taxon of origin.
+RO:0002160	ro	obsolete only in taxon	True	ro	ok OBSOLETE	OBSOLETE. x only in taxon y if and only if x is in taxon y, and there is no other organism z such that y!=z and x is in taxon z. | replaced_by http://purl.obolibrary.org/obo/RO_0002162
+RO:0002161	ro	never in taxon	False	ro	ok	x never in taxon T if and only if T is a class, and x does not instantiate the class expression "in taxon some T". Note that this is a shortcut relati
+RO:0002175	ro	present in taxon	False	ro	ok	S present_in_taxon T if some instance of T has some S. This does not means that all instances of T have an S - it may only be certain life stages or s
+RO:0002504	ro	always present in taxon	False	ro	ok	S always_present_in_taxon T if every fully formed member of taxon T has part some S, or is an instance of S
+BFO:0000051	ro	has part	False	ro	ok	a core relation that holds between a whole and its part
+BFO:0000066	ro	occurs in	False	ro	ok	b occurs_in c =def b is a process and c is a material entity or immaterial entity& there exists a spatiotemporal region r and b occupies_spatiotempora
+NCBITaxon_Union:0000004	go	Prokaryota	False	go	ok	 | equivalentClass {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#unionOf": ["http://purl.obolibrary.org/obo/NCBITaxon_2", "http://purl.obolibrary.org/obo/NCBITaxon_2157"]}
+NCBITaxon_Union:0000023	go	Fungi or Bacteria or Archaea	False	go	ok	 | equivalentClass {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#unionOf": ["http://purl.obolibrary.org/obo/NCBITaxon_2", "http://purl.obolibrary.org/obo/NCBITaxon_2157", "http://purl.obolibrary.org/obo/NCBITaxon_4751"]}
+NCBITaxon_Union:0000000	go	Viridiplantae or Bacteria	False	go	ok	 | equivalentClass {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#unionOf": ["http://purl.obolibrary.org/obo/NCBITaxon_2", "http://purl.obolibrary.org/obo/NCBITaxon_33090"]}
+NCBITaxon_Union:0000002	go	Viridiplantae or Cyanobacteria	False	go	ok	The union of the taxa Viridiplantae and Cyanobacteria. | equivalentClass {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#unionOf": ["http://purl.obolibrary.org/obo/NCBITaxon_1117", "http://purl.obolibrary.org/obo/NCBITaxon_33090"]}
+NCBITaxon:5691	ncbitaxon	Trypanosoma brucei	False	ncbitaxon	ok	
+NCBITaxon:33072	ncbitaxon	Gloeobacter violaceus	False	ncbitaxon	ok	
+NCBITaxon:3038	ncbitaxon	Euglena	False	ncbitaxon	ok	
+NCBITaxon:5884	ncbitaxon	Paramecium	False	ncbitaxon	ok	
+NCBITaxon:2283796	ncbitaxon	Thermoplasmatota	False	ncbitaxon	ok	
+NCBITaxon:3366610	ncbitaxon	Methanobacteriati	False	ncbitaxon	ok	
+NCBITaxon:1783275	ncbitaxon	Thermoproteati	False	ncbitaxon	ok	
+NCBITaxon:8504	ncbitaxon	Lepidosauria	False	ncbitaxon	ok	
+GO:0005814	go	centriole	False	go	ok	In most eukaryotic cells, 'ciliary basal body' (GO:0036064) and 'centriole' (GO:0005814) represent a common entity that cycles through its function in
+GO:0008219	go	cell death	False	go	ok	This term should not be used for direct annotation, it is currently kept in GO as a placeholder for describing cell death phenotypes in uPHENO. When i
+CHEBI:15379	chebi	dioxygen	False	chebi	ok	
+CHEBI:16646	chebi	carbohydrate	False	chebi	ok	Any member of the class of organooxygen compounds that is a polyhydroxy-aldehyde or -ketone or a lactol resulting from their intramolecular condensati
+GO:0009274	go	peptidoglycan-based cell wall	False	go	ok	A protective structure outside the cytoplasmic membrane composed of peptidoglycan (also known as murein), a molecule made up of a glycan (sugar) backb
+GO:0030115	go	S-layer	False	go	ok	A crystalline protein layer surrounding some bacteria.
+NCBITaxon:2022461	ncbitaxon	Candidatus Thiomargarita sp. Lot2	False	ncbitaxon	ok	
+NCBITaxon:2049356	ncbitaxon	Monocercomonoides exilis	False	ncbitaxon	ok	
+NCBITaxon:33682	ncbitaxon	Euglenozoa	False	ncbitaxon	ok	
+NCBITaxon:2870	ncbitaxon	Phaeophyceae	False	ncbitaxon	ok	
+RO:0002215	ro	capable of	False	ro	ok	A relation between a material entity (such as a cell) and a process, in which the material entity has the ability to carry out the process. 
+GO:0016020	go	membrane	False	go	ok	A lipid bilayer along with all the proteins and protein complexes embedded in it and attached to it.
+NCBITaxon:13815	ncbitaxon	Marsilea	False	ncbitaxon	ok	
+GO:0020015	go	glycosome	False	go	ok	A membrane-bounded organelle found in organisms from the order Kinetoplastida that houses the enzymes of glycolysis.
+GO:0042579	go	microbody	False	go	ok	Cytoplasmic organelles, spherical or oval in shape, that are bounded by a single membrane and contain oxidative enzymes, especially those utilizing hy
+GO:0005777	go	peroxisome	False	go	ok	A small organelle enclosed by a single membrane, and found in most eukaryotic cells. Contains peroxidases and other enzymes involved in a variety of m
+GO:0005829	go	cytosol	False	go	ok	The part of the cytoplasm that does not contain organelles but which does contain other particulate matter, such as protein complexes.
+UBERON:0006314	uberon	bodily fluid	False	uberon	ok	Liquid components of living organisms. includes fluids that are excreted or secreted from the body as well as body water that normally is not. | equivalentClass {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#intersectionOf": ["http://purl.obolibrary.org/obo/UBERON_0000463", {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2002/07/owl#Restriction", "http://www.w3
+UBERON:0000062	uberon	organ	False	uberon	ok	Anatomical structure that performs a specific function or group of functions [WP].

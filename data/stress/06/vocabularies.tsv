@@ -1,0 +1,20 @@
+vocabulary	term_or_relation	id	what_it_says	checked	use_for_option
+RO	is agonist of	RO:0018027	ligand binding to a receptor activates some activity of the receptor; sub-property of RO:0002450 directly positively regulates activity of	OLS4 2026-10-31; data/ro.owl	d (as a rel claim); a bridge to effect(+, activity)
+RO	is inverse agonist of	RO:0018028	binding inhibits some activity of the receptor to below basal level; sub-property of RO:0002449	OLS4 2026-10-31; data/ro.owl	d; sign flip is safe here by definition
+RO	is antagonist of	RO:0018029	binding reduces some activity of the receptor to basal level; sub-property of RO:0002449 directly negatively regulates activity of	OLS4 2026-10-31; data/ro.owl	d; antagonism relative to an agonist
+RO	has muscle antagonist	RO:0002568	m1 and m2 insert on the same structure, act in opposition, m2 returns it to its initial position; sub-property of RO:0002567 biomechanically related to (domain and range UBERON:0000061); not declared symmetric	OLS4 2026-10-31; data/ro.owl	muscles only; inert in BioLean (no chain, inverse or transitivity)
+RO	is opposite of	RO:0002604	annotation property: x is opposite of y by a distance metric	OLS4 2026-10-31	h (opposite targets); not an object property, not imported
+RO	negatively correlated with	RO:0017004	symmetric; statistical	data/ro.owl	not antagonism
+RO	(none)	-	no relation between two regulators of a shared target; RO's regulation relations go from agent to target	data/ro.owl, 23 symmetric properties listed	a, b
+GO	receptor antagonist activity	GO:0048019	interacts with a receptor to decrease the ability of the receptor agonist to bind and activate the receptor	OLS4 2026-10-31	g: antagonism is an interaction with an agonist
+GO	negative regulation of heart rate by acetylcholine / positive regulation of heart rate by norepinephrine	GO:0003063 / GO:0003066	the per-effector opposition as two processes	OLS4 2026-10-31	a: GO's own pattern is per effector
+GO	baroreceptor response to increased systemic arterial blood pressure	GO:0001983	the loop that inhibits sympathetic impulses	OLS4 2026-10-31	e
+ChEBI	antagonist / agonist / inverse agonist	CHEBI:48706 / CHEBI:48705 / CHEBI:90847	pharmacological roles; inverse agonist 'exerts the opposite pharmacological effect'	OLS4 2026-10-31	d
+ChEBI	mu-opioid receptor antagonist / agonist	CHEBI:50137 / CHEBI:55322	roles named by receptor in the label only; no logical link to a PR receptor	OLS4 2026-10-31	d needs a hand table
+ChEBI	naloxone has_role central nervous system depressant	CHEBI:7459 RO:0000087 CHEBI:35488	a role I found no source for	OLS4 v2 2026-10-31	d: role import quality
+ChEMBL	mechanism action_type	-	AGONIST, ANTAGONIST, ...: naloxone ANTAGONIST at opioid receptors (CHEMBL2095181), morphine AGONIST at mu receptor (CHEMBL233)	ChEMBL API 2026-10-31	d (curated per-target sign)
+IUPHAR GtoPdb	interaction type	-	not reached: web services returned HTTP 401	2026-10-31	UNVERIFIED
+SIGNOR	effect vocabulary	-	not reached: connection refused	2026-10-31	UNVERIFIED
+IUPHAR terms paper	antagonism classes (competitive, functional/physiological, chemical)	PMID 14657418	paper exists (Neubig 2003); the class names are from memory, full text not read	Europe PMC 2026-10-31	UNVERIFIED
+UBERON	innervated by (RO:0002005) axioms	-	none on heart UBERON:0000948, sweat gland UBERON:0001820, adrenal medulla UBERON:0001236, saliva-secreting gland UBERON:0001044, bronchus UBERON:0002185	OLS4 v2 2026-10-31 (review)	i: dual innervation must be annotated
+MP	supination	MP:0008909	child of MP:0014320 abnormal autopod rotation: an abnormal phenotype, not a normal movement	OLS4 2026-10-31 (review)	muscles (M02)

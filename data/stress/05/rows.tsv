@@ -1,0 +1,257 @@
+# every row printed by the two Lean files, marked by scripts/stress/grade_cases.py, 2026-10-31
+file	case	option_raw	option	member	observed	truth	mark	source
+Stress.GradeTerms	G05-P01	a	a	Escherichia coli	concl b=4/5	T	PASS	OpenStax m45476-20
+Stress.GradeTerms	G05-P01	a	a	Halobacterium salinarum	silent: not is_a NCBITaxon:2	T	SILENT	OpenStax m45476-20; Albers2011
+Stress.GradeTerms	G05-P01	a	a	Sulfolobus acidocaldarius	silent: not is_a NCBITaxon:2	T	SILENT	OpenStax m45476-20; Albers2011
+Stress.GradeTerms	G05-P01	a	a	Haloferax volcanii	silent: not is_a NCBITaxon:2	T	SILENT	OpenStax m45476-20; Albers2011
+Stress.GradeTerms	G05-P01	a	a	Homo sapiens	silent: not is_a NCBITaxon:2	F	PASS	OpenStax m45480-85 (transcription in the nucleus)
+Stress.GradeTerms	G05-P01	a+	a+	Escherichia coli	concl b=4/5	T	PASS	OpenStax m45476-20
+Stress.GradeTerms	G05-P01	a+	a+	Halobacterium salinarum	concl b=4/5	T	PASS	OpenStax m45476-20; Albers2011
+Stress.GradeTerms	G05-P01	a+	a+	Homo sapiens	concl b=4/5	F	FAIL	OpenStax m45480-85 (transcription in the nucleus)
+Stress.GradeTerms	G05-P01	b0	b0	Escherichia coli	concl b=4/5	T	PASS	OpenStax m45476-20
+Stress.GradeTerms	G05-P01	b0	b0	Halobacterium salinarum	concl b=4/5	T	PASS	OpenStax m45476-20; Albers2011
+Stress.GradeTerms	G05-P01	b0	b0	Sulfolobus acidocaldarius	concl b=4/5	T	PASS	OpenStax m45476-20; Albers2011
+Stress.GradeTerms	G05-P01	b0	b0	Haloferax volcanii	concl b=4/5	T	PASS	OpenStax m45476-20; Albers2011
+Stress.GradeTerms	G05-P01	b0	b0	Homo sapiens	silent: in no part of NCBITaxon_Union:0000004	F	PASS	OpenStax m45480-85 (transcription in the nucleus)
+Stress.GradeTerms	G05-P01	g	g	Escherichia coli	concl b=4/5	T	PASS	OpenStax m45476-20
+Stress.GradeTerms	G05-P01	g	g	Halobacterium salinarum	concl b=4/5	T	PASS	OpenStax m45476-20; Albers2011
+Stress.GradeTerms	G05-P01	g	g	Homo sapiens	silent: in neither split statement	F	PASS	OpenStax m45480-85 (transcription in the nucleus)
+Stress.GradeTerms	G05-P02	a	a	Escherichia coli	concl b=4/5	T	PASS	OpenStax m45439-48
+Stress.GradeTerms	G05-P02	a	a	Sulfolobus acidocaldarius	silent: not is_a NCBITaxon:2	T	SILENT	Albers2011; Schafer1999
+Stress.GradeTerms	G05-P02	a	a	Halobacterium salinarum	silent: not is_a NCBITaxon:2	T	SILENT	Albers2011; Schafer1999
+Stress.GradeTerms	G05-P02	a	a	Homo sapiens	silent: not is_a NCBITaxon:2	F	PASS	OpenStax m45439-47 (inner mitochondrial membrane)
+Stress.GradeTerms	G05-P02	a+	a+	Escherichia coli	concl b=4/5	T	PASS	OpenStax m45439-48
+Stress.GradeTerms	G05-P02	a+	a+	Sulfolobus acidocaldarius	concl b=4/5	T	PASS	Albers2011; Schafer1999
+Stress.GradeTerms	G05-P02	a+	a+	Homo sapiens	concl b=4/5	F	FAIL	OpenStax m45439-47 (inner mitochondrial membrane)
+Stress.GradeTerms	G05-P02	b0	b0	Escherichia coli	concl b=4/5	T	PASS	OpenStax m45439-48
+Stress.GradeTerms	G05-P02	b0	b0	Sulfolobus acidocaldarius	concl b=4/5	T	PASS	Albers2011; Schafer1999
+Stress.GradeTerms	G05-P02	b0	b0	Halobacterium salinarum	concl b=4/5	T	PASS	Albers2011; Schafer1999
+Stress.GradeTerms	G05-P02	b0	b0	Homo sapiens	silent: in no part of NCBITaxon_Union:0000004	F	PASS	OpenStax m45439-47 (inner mitochondrial membrane)
+Stress.GradeTerms	G05-P03	a	a	Escherichia coli	concl b=4/5	T	PASS	OpenStax m45479-20
+Stress.GradeTerms	G05-P03	a	a	Halobacterium salinarum	silent: not is_a NCBITaxon:2	T	SILENT	Albers2011 (one membrane, no ER)
+Stress.GradeTerms	G05-P03	a	a	Sulfolobus acidocaldarius	silent: not is_a NCBITaxon:2	T	SILENT	Albers2011 (one membrane, no ER)
+Stress.GradeTerms	G05-P03	b0	b0	Escherichia coli	concl b=4/5	T	PASS	OpenStax m45479-20
+Stress.GradeTerms	G05-P03	b0	b0	Halobacterium salinarum	concl b=4/5	T	PASS	Albers2011 (one membrane, no ER)
+Stress.GradeTerms	G05-P03	b0	b0	Sulfolobus acidocaldarius	concl b=4/5	T	PASS	Albers2011 (one membrane, no ER)
+Stress.GradeTerms	G05-P04	a	a	Escherichia coli	silent: no taxon-to-CL:0000520 link	T	SILENT	Liao2021
+Stress.GradeTerms	G05-P04	a	a	Haloferax volcanii	silent: no taxon-to-CL:0000520 link	T	SILENT	Liao2021
+Stress.GradeTerms	G05-P04	a	a	Sulfolobus acidocaldarius	silent: no taxon-to-CL:0000520 link	F	PASS	Lindas2008 (Cdv, not FtsZ)
+Stress.GradeTerms	G05-P04	d	d	Escherichia coli	concl b=4/5	T	PASS	Liao2021
+Stress.GradeTerms	G05-P04	d	d	Haloferax volcanii	concl b=4/5	T	PASS	Liao2021
+Stress.GradeTerms	G05-P04	d	d	Sulfolobus acidocaldarius	concl b=4/5	F	FAIL	Lindas2008 (Cdv, not FtsZ)
+Stress.GradeTerms	G05-P05	a	a	Escherichia coli	silent: no taxon-to-CL:0000520 link	T	SILENT	OpenStax m45476-18
+Stress.GradeTerms	G05-P05	a	a	Halobacterium salinarum	silent: no taxon-to-CL:0000520 link	T	SILENT	OpenStax m45476-18; Albers2011
+Stress.GradeTerms	G05-P05	a	a	Sulfolobus acidocaldarius	silent: no taxon-to-CL:0000520 link	T	SILENT	OpenStax m45476-18; Albers2011
+Stress.GradeTerms	G05-P05	d	d	Escherichia coli	concl b=4/5	T	PASS	OpenStax m45476-18
+Stress.GradeTerms	G05-P05	d	d	Halobacterium salinarum	concl b=4/5	T	PASS	OpenStax m45476-18; Albers2011
+Stress.GradeTerms	G05-P05	d	d	Sulfolobus acidocaldarius	concl b=4/5	T	PASS	OpenStax m45476-18; Albers2011
+Stress.GradeTerms	G05-P06	a	a	Escherichia coli	silent: no taxon-to-CL:0000520 link	T	SILENT	OpenStax m45429-56 (consensus)
+Stress.GradeTerms	G05-P06	a	a	Halobacterium salinarum	silent: no taxon-to-CL:0000520 link	T	SILENT	OpenStax m45429-56 (consensus)
+Stress.GradeTerms	G05-P06	d	d	Escherichia coli	concl b=4/5	T	PASS	OpenStax m45429-56 (consensus)
+Stress.GradeTerms	G05-P06	d	d	Halobacterium salinarum	concl b=4/5	T	PASS	OpenStax m45429-56 (consensus)
+Stress.GradeTerms	G05-P07	a	a	Escherichia coli	silent: no taxon-to-CL:0000520 link	T	SILENT	Esko2009; GO:0009274
+Stress.GradeTerms	G05-P07	a	a	Halobacterium salinarum	silent: no taxon-to-CL:0000520 link	T	SILENT	Beveridge1996; Albers2011 (S-layer)
+Stress.GradeTerms	G05-P07	a	a	Thermoplasma acidophilum	silent: no taxon-to-CL:0000520 link	F	PASS	Darland1970
+Stress.GradeTerms	G05-P07	d	d	Escherichia coli	concl b=4/5	T	PASS	Esko2009; GO:0009274
+Stress.GradeTerms	G05-P07	d	d	Halobacterium salinarum	concl b=4/5	T	PASS	Beveridge1996; Albers2011 (S-layer)
+Stress.GradeTerms	G05-P07	d	d	Thermoplasma acidophilum	concl b=4/5	F	FAIL	Darland1970
+Stress.GradeTerms	G05-P08	a	a	Escherichia coli	silent: no taxon-to-CL:0000520 link	N	PASS	hedged: 'some prokaryotes'; nothing is due for one member
+Stress.GradeTerms	G05-P08	a	a	Halobacterium salinarum	silent: no taxon-to-CL:0000520 link	F	PASS	Jarrell2012 (archaellum)
+Stress.GradeTerms	G05-P08	d	d	Escherichia coli	concl b=4/5	not checked	UNVERIFIED	hedged sentence; E. coli flagella not checked
+Stress.GradeTerms	G05-P08	d	d	Halobacterium salinarum	concl b=4/5	F	FAIL	Jarrell2012 (archaellum)
+Stress.GradeTerms	G05-P19	a	a	Candidatus Thiomargarita sp. Lot2	silent: no taxon-to-CL:0000520 link	F	PASS	Volland2022
+Stress.GradeTerms	G05-P19	d	d	Candidatus Thiomargarita sp. Lot2	concl b=4/5	F	FAIL	Volland2022
+Stress.GradeTerms	G05-P09	a	a	Escherichia coli	concl b=4/5	T	PASS	Esko2009; GO:0009274
+Stress.GradeTerms	G05-P09	a	a	Halobacterium salinarum	concl b=4/5	F	FAIL	Beveridge1996
+Stress.GradeTerms	G05-P09	a	a	plant-type cell wall	concl b=4/5	F	FAIL	GO:0009505 definition (cellulose and pectin)
+Stress.GradeTerms	G05-P09	a-bact	a'	Escherichia coli	concl b=4/5	T	PASS	Esko2009; GO:0009274
+Stress.GradeTerms	G05-P09	a-bact	a'	Halobacterium salinarum	silent: not is_a NCBITaxon:2	F	PASS	Beveridge1996
+Stress.GradeTerms	G05-P09	a-bact	a'	plant-type cell wall	silent: context Bacteria	F	PASS	GO:0009505 definition (cellulose and pectin)
+Stress.GradeTerms	G05-P09	b0	b0	Escherichia coli	concl b=4/5	T	PASS	Esko2009; GO:0009274
+Stress.GradeTerms	G05-P09	b0	b0	Halobacterium salinarum	concl b=4/5	F	FAIL	Beveridge1996
+Stress.GradeTerms	G05-P10	a	a	Escherichia coli	silent: no rule narrows count	T	SILENT	Hawkins2013
+Stress.GradeTerms	G05-P10	a	a	Sulfolobus acidocaldarius	silent: no rule narrows count	F	PASS	Lundgren2004
+Stress.GradeTerms	G05-P10	a	a	Haloferax volcanii	silent: no rule narrows count	F	PASS	Hawkins2013
+Stress.GradeTerms	G05-P10	b0	b0	Sulfolobus acidocaldarius	silent: no rule narrows count	F	PASS	Lundgren2004
+Stress.GradeTerms	G05-P11	a	a	Gloeobacter violaceus	silent: no rule narrows count	T	SILENT	Nakamura2003b
+Stress.GradeTerms	G05-P11	a	a	Vibrio cholerae	silent: no rule narrows count	F	PASS	Heidelberg2000
+Stress.GradeTerms	G05-P11	b0	b0	Haloferax volcanii	silent: no rule narrows count	F	PASS	Hartman2010
+Stress.GradeTerms	G05-P12	a	a	Sulfolobus acidocaldarius	concl b=4/5	F	FAIL	Chen2005 (aerobic)
+Stress.GradeTerms	G05-P12	a	a	Halobacterium salinarum	concl b=4/5	T	PASS	Muller2005 (DMSO or TMAO as terminal electron acceptor, strain NRC-1)
+Stress.GradeTerms	G05-P12	a	a	Escherichia coli	silent: not is_a NCBITaxon:2157	N	PASS	hedged: 'some species of bacteria'
+Stress.GradeTerms	G05-P13	a	a	Gloeobacter violaceus	inexpressible: blocked: ungrounded_entity (character-defined group)		INEXPRESSIBLE	
+Stress.GradeTerms	G05-P13	a	a	Synechocystis sp. PCC 6803	inexpressible: blocked: ungrounded_entity (character-defined group)		INEXPRESSIBLE	
+Stress.GradeTerms	G05-P14	a	a	bridge statements	silent: blocked in round 2: ungrounded_entity		SILENT	expressible on the core, but blocked in round 2
+Stress.GradeTerms	G05-P14	d	d	Bacteria cell is_a prokaryotic cell	concl b=4/5		PASS	OpenStax m45428-13; Woese1990
+Stress.GradeTerms	G05-P14	d	d	Archaea cell is_a prokaryotic cell	concl b=4/5		PASS	OpenStax m45428-13; Woese1990
+Stress.GradeTerms	G05-P15	a	a	membership statements	silent: blocked in round 2: ungrounded_entity		SILENT	expressible on the core, but blocked in round 2
+Stress.GradeTerms	G05-P15	b0	b0	Bacteria is_a Prokaryota	concl b=9/10		PASS	GO NCBITaxon_Union:0000004; Woese1990
+Stress.GradeTerms	G05-P15	b0	b0	Archaea is_a Prokaryota	concl b=9/10		PASS	GO NCBITaxon_Union:0000004; Woese1990
+Stress.GradeTerms	G05-P16	a	a	covering axiom	inexpressible: no disjunction in Claim		INEXPRESSIBLE	
+Stress.GradeTerms	G05-P16	b0	b0	covering axiom	inexpressible: no disjunction in Claim		INEXPRESSIBLE	
+Stress.GradeTerms	G05-P16	d	d	covering axiom	inexpressible: no disjunction in Claim		INEXPRESSIBLE	
+Stress.GradeTerms	G05-P17	a	a	Escherichia coli	silent: most does not narrow	T	SILENT	OpenStax m45438-62
+Stress.GradeTerms	G05-P17	a	a	Sulfolobus acidocaldarius	silent: most does not narrow	T	SILENT	Brasen2014 (modified EMP/ED)
+Stress.GradeTerms	G05-P17	a	a	Homo sapiens	silent: most does not narrow	T	SILENT	OpenStax m45438-62
+Stress.GradeTerms	G05-P17	a-r2	a	Homo sapiens	concl b=4/5	T	PASS	OpenStax m45438-62
+Stress.GradeTerms	G05-P17	a-r2	a	Escherichia coli	silent: not is_a NCBITaxon:2759	T	SILENT	OpenStax m45438-62
+Stress.GradeTerms	G05-P18	a	a	Trypanosoma brucei	concl b=4/5	T	PASS	Opperdoes1977 (glycosome); GO:0020015 is_a microbody, part_of GO:0005737; OpenStax glossary m45432-361
+Stress.GradeTerms	G05-P18	a	a	Homo sapiens	concl b=4/5	T	PASS	OpenStax m45438-33
+Stress.GradeTerms	G05-P18	a	a	Escherichia coli	concl b=4/5	T	PASS	OpenStax m45438-33
+Stress.GradeTerms	G05-R01	a	a	Chlamydomonas reinhardtii	silent: some does not narrow	T	SILENT	Keeling2010
+Stress.GradeTerms	G05-R01	a	a	Plasmodium falciparum	silent: some does not narrow	F	PASS	Kohler1997; Keeling2010 (apicoplast, not a chloroplast; GO:0020011)
+Stress.GradeTerms	G05-R01	a	a	Homo sapiens	silent: some does not narrow	F	PASS	OpenStax m45432-241 context (animal cells have no chloroplasts; consensus)
+Stress.GradeTerms	G05-R01	a-r2	a	Chlamydomonas reinhardtii	concl b=4/5	T	PASS	Keeling2010
+Stress.GradeTerms	G05-R01	a-r2	a	Plasmodium falciparum	concl b=4/5	F	FAIL	Kohler1997; Keeling2010 (apicoplast, not a chloroplast; GO:0020011)
+Stress.GradeTerms	G05-R01	a-r2	a	Homo sapiens	concl b=4/5	F	FAIL	OpenStax m45432-241 context (animal cells have no chloroplasts; consensus)
+Stress.GradeTerms	G05-R02	a	a	Saccharomyces cerevisiae	silent: no taxon-to-CL:0000521 link	T	SILENT	GO:0009277 definition
+Stress.GradeTerms	G05-R02	a	a	Chlamydomonas reinhardtii	silent: protist half dropped	T	SILENT	Goodenough1985
+Stress.GradeTerms	G05-R02	a	a	Euglena	silent: protist half dropped	F	PASS	Cholewa2025
+Stress.GradeTerms	G05-R02	d-euk	d	Saccharomyces cerevisiae	concl b=4/5	T	PASS	GO:0009277 definition
+Stress.GradeTerms	G05-R03	a	a	Arabidopsis thaliana	concl b=4/5	T	PASS	GO:0009505 definition
+Stress.GradeTerms	G05-R03	a	a	Chlamydomonas reinhardtii	concl b=4/5	T	PASS	Goodenough1985
+Stress.GradeTerms	G05-R03	a	a	Saccharomyces cerevisiae	silent: not is_a NCBITaxon:33090	T	SILENT	GO:0009277 definition
+Stress.GradeTerms	G05-R03	a	a	Escherichia coli	silent: not is_a NCBITaxon:33090	T	SILENT	Esko2009; GO:0009274
+Stress.GradeTerms	G05-R03	a	a	Plasmodium falciparum	silent: not is_a NCBITaxon:33090	N	PASS	hedged: 'some protists'
+Stress.GradeTerms	G05-R04	a	a	Plasmodium falciparum	silent: protist dropped; animal cell term obsolete	T	SILENT	CL:0000255 definition; NCBI lineage
+Stress.GradeTerms	G05-R04	a	a	Saccharomyces cerevisiae	silent: fungal cell dropped	T	SILENT	CL:0000255 definition; NCBI lineage
+Stress.GradeTerms	G05-R04	a	a	Homo sapiens	silent: CL:0000548 obsolete, no edges	T	SILENT	CL:0000255 definition; NCBI lineage
+Stress.GradeTerms	G05-R04	d-euk	d	Plasmodium falciparum	concl b=4/5	T	PASS	CL:0000255 definition; NCBI lineage
+Stress.GradeTerms	G05-R04	d-euk	d	Saccharomyces cerevisiae	concl b=4/5	T	PASS	CL:0000255 definition; NCBI lineage
+Stress.GradeTerms	G05-R04	d-euk	d	Homo sapiens	concl b=4/5	T	PASS	CL:0000255 definition; NCBI lineage
+Stress.GradeTerms	G05-R05	a	a	-	inexpressible: similarity across groups		INEXPRESSIBLE	
+Stress.GradeTerms	G05-A01	a	a	chloroplast	concl b=4/5	T	PASS	Keeling2010
+Stress.GradeTerms	G05-A02	a	a	Chlamydomonas reinhardtii	concl b=4/5	T	PASS	Keeling2010
+Stress.GradeTerms	G05-A02	a	a	Arabidopsis thaliana	concl b=4/5	T	PASS	Keeling2010
+Stress.GradeTerms	G05-A02	a	a	Euglena	concl b=4/5	T	PASS	Keeling2010
+Stress.GradeTerms	G05-A02	a	a	Plasmodium falciparum	concl b=4/5	V	PASS	no photosynthesis in Plasmodium: the class is empty
+Stress.GradeTerms	G05-A03	a	a	-	inexpressible: blocked: unsupported_ontology (ECOCORE)		INEXPRESSIBLE	
+Stress.GradeTerms	G05-A04	a	a	Synechocystis sp. PCC 6803	inexpressible: no algae entity; vocabularies disagree on membership		INEXPRESSIBLE	
+Stress.GradeTerms	G05-A04	a	a	Chlamydomonas reinhardtii	inexpressible: no algae entity		INEXPRESSIBLE	
+Stress.GradeTerms	G05-I01	a	a	Drosophila melanogaster	inexpressible: blocked: ungrounded_entity (invertebrate)		INEXPRESSIBLE	
+Stress.GradeTerms	G05-I01	a	a	Octopus vulgaris	inexpressible: blocked: ungrounded_entity (invertebrate)		INEXPRESSIBLE	
+Stress.GradeTerms	G05-I01	a	a	Amphimedon queenslandica	inexpressible: blocked: ungrounded_entity (invertebrate)		INEXPRESSIBLE	
+Stress.GradeTerms	G05-I02	a	a	-	inexpressible: comparison with a grade		INEXPRESSIBLE	
+Stress.GradeTerms	G05-F01	a	a	Scyliorhinus canicula	inexpressible: blocked: ungrounded_entity		INEXPRESSIBLE	
+Stress.GradeTerms	G05-F02	a	a	Danio rerio	inexpressible: blocked: has_quality; fish has no taxon		INEXPRESSIBLE	
+Stress.GradeTerms	G05-F02	a	a	Scyliorhinus canicula	inexpressible: blocked; as Actinopterygii the shark is excluded		INEXPRESSIBLE	
+Stress.GradeTerms	G05-F02	a	a	Anolis carolinensis	inexpressible: blocked; lizards has no taxon		INEXPRESSIBLE	
+Stress.GradeTerms	G05-L01	a	a	Arabidopsis thaliana	concl b=4/5	T	PASS	Keeling2010
+Stress.GradeTerms	G05-L01	a	a	Chlamydomonas reinhardtii	concl b=4/5	T	PASS	Keeling2010
+Stress.GradeTerms	G05-L01	a	a	Epifagus virginiana	concl b=4/5	F	FAIL	Wolfe1992
+Stress.GradeTerms	G05-L02	a	a	Arabidopsis thaliana	concl b=4/5	T	PASS	GO:0009505 definition
+Stress.GradeTerms	G05-L02	a	a	Chlamydomonas reinhardtii	concl b=4/5	F	FAIL	Poulhazan2024; Goodenough1985
+Stress.GradeTerms	G05-L02	a-embryo	a'	Arabidopsis thaliana	concl b=4/5	T	PASS	GO:0009505 definition
+Stress.GradeTerms	G05-L02	a-embryo	a'	Chlamydomonas reinhardtii	silent: not is_a NCBITaxon:3193	F	PASS	Poulhazan2024; Goodenough1985
+Stress.GradeTerms	G05-L03	a	a	Arabidopsis thaliana	concl b=4/5	T	PASS	OpenStax m45437-11
+Stress.GradeTerms	G05-L03	a	a	Synechocystis sp. PCC 6803	silent: not is_a NCBITaxon:33090	T	SILENT	Mullineaux2014
+Stress.GradeTerms	G05-L04	a	a	Arabidopsis thaliana	concl b=4/5	T	PASS	GO:0009505 definition
+Stress.GradeTerms	G05-L04	a	a	Chlamydomonas reinhardtii	concl b=4/5	V	PASS	no plant-type wall: the class is empty
+Stress.GradeTerms	G05-C01	a	a	Homo sapiens	concl b=4/5	T	PASS	Azimzadeh2012
+Stress.GradeTerms	G05-C01	a	a	Schmidtea mediterranea	concl b=4/5	F	FAIL	Azimzadeh2012
+Stress.GradeTerms	G05-C02	a	a	Homo sapiens	silent: CL:0000548 obsolete, no edges	T	SILENT	OpenStax m45461-91 (consensus)
+Stress.GradeTerms	G05-C02	replaced_by	a'	prokaryotic cell	concl b=4/5	F	FAIL	Esko2009; GO:0009274
+Stress.GradeTerms	G05-C02	replaced_by	a'	clash with m45429-57	clash BioLean.Derivation.Verdict.contested		PASS	clash flags the bad rewrite as contested
+Stress.GradeTerms	G05-C03	a	a	Arabidopsis thaliana	concl b=4/5	T	PASS	OpenStax m45432-75 (consensus)
+Stress.GradeTerms	G05-C03	a	a	Chlamydomonas reinhardtii	concl b=4/5	F	FAIL	Dutcher2003
+Stress.GradeTerms	G05-C03	a	a	Marsilea	concl b=4/5	F	FAIL	Mizukami1966 (sperm basal bodies are centrioles)
+Stress.GradeTerms	G05-C03	a-embryo	a'	Arabidopsis thaliana	concl b=4/5	T	PASS	OpenStax m45432-75 (consensus)
+Stress.GradeTerms	G05-C03	a-embryo	a'	Chlamydomonas reinhardtii	silent: not is_a NCBITaxon:3193	F	PASS	Dutcher2003
+Stress.GradeTerms	G05-C03	a-embryo	a'	Marsilea	concl b=4/5	F	FAIL	Mizukami1966 (sperm basal bodies are centrioles)
+Stress.GradeTerms	G05-M01	a	a	statement	concl b=4/5	T	PASS	Conly1994
+Stress.GradeTerms	G05-M01	a	a	Methanobrevibacter smithii	silent: some does not narrow	N	PASS	an archaeon; the claim is hedged
+Stress.GradeTerms	G05-M02	a	a	Methanobrevibacter smithii	concl b=4/5	T	PASS	Samuel2007
+Stress.GradeTerms	G05-M02	a	a	Halobacterium salinarum	concl b=4/5	F	FAIL	Mullakhanbhai1975 (halobacteria need high salt)
+Stress.GradeTerms	G05-M02	a	a	Haloferax volcanii	concl b=4/5	F	FAIL	Mullakhanbhai1975
+Stress.GradeTerms	G05-M03	a	a	Clostridium	concl b=4/5	T	PASS	OpenStax m45440-45 (consensus)
+Stress.GradeTerms	G05-S03	g	g	Chlamydomonas reinhardtii	concl b=8/9		FAIL	right claim, belief 8/9 from one sentence (4/5 due): double count, no warning
+Stress.GradeTerms	G05-S05	a	a	generalise to cellular organisms	concl b=8/13	F	FAIL	OpenStax m45480-85
+Stress.GradeTerms	G05-S05	a	a	Homo sapiens	concl b=8/13	F	FAIL	OpenStax m45480-85
+Stress.GradeTerms	G05-S05	b0	b0	generalise to Prokaryota	silent: admissible = false: union unknown to Taxa.isA		SILENT	the union generalisation is right but refused
+Stress.GradeTerms	G05-S08	b0	b0	Taxa.known Prokaryota	false		SILENT	the union class is invisible to the taxon checks
+Stress.GradeTerms	G05-S08	b0	b0	taxonConsistent (E. coli evidence)	false		FAIL	E. coli evidence for a prokaryote claim is flagged inconsistent
+Stress.GradeTerms	G05-S08	b0	b0	generalize admissible	false		SILENT	generalising to the union is refused
+Stress.GradeTerms	G05-S08	b0	b0	transport E. coli to Halobacterium	allowed		PASS	siblings, so transport needs evidence: right
+Stress.GradeTerms	G05-R02	f	f	Chlamydomonas reinhardtii	concl b=4/5	T	PASS	Goodenough1985
+Stress.GradeTerms	G05-R02	f	f	Euglena	concl b=4/5	F	FAIL	Cholewa2025
+Stress.GradeTerms	G05-R02	f	f	Homo sapiens	silent: in no listed clade of protist (local grade)	N	PASS	not a protist
+Stress.GradeTerms	G05-I01	f	f	Drosophila melanogaster	concl b=4/5	T	PASS	Handke2013
+Stress.GradeTerms	G05-I01	f	f	Octopus vulgaris	concl b=4/5	F	FAIL	LePabic2014 (cephalopods: closed)
+Stress.GradeTerms	G05-I01	f	f	Amphimedon queenslandica	concl b=4/5	F	FAIL	MonahanEarley2013 (no blood vascular system before triploblasts)
+Stress.GradeTerms	G05-I01	f	f	Scyliorhinus canicula	silent: in no listed clade of invertebrate (local grade)	N	PASS	a vertebrate
+Stress.GradeTerms	G05-S09	f	f	Schmidtea mediterranea	silent: in no listed clade of invertebrate (local grade)		SILENT	an invertebrate (NCBI lineage), but its phylum is not listed
+Stress.GradeTerms	G05-I03	a	a	statement	concl b=4/5	T	PASS	UBERON:0009054 definition
+Proto.TaxonUnion	G05-P01	b	b	Escherichia coli	concl b=4/5	T	PASS	OpenStax m45476-20
+Proto.TaxonUnion	G05-P01	b	b	Halobacterium salinarum	concl b=4/5	T	PASS	OpenStax m45476-20; Albers2011
+Proto.TaxonUnion	G05-P01	b	b	Sulfolobus acidocaldarius	concl b=4/5	T	PASS	OpenStax m45476-20; Albers2011
+Proto.TaxonUnion	G05-P01	b	b	Haloferax volcanii	concl b=4/5	T	PASS	OpenStax m45476-20; Albers2011
+Proto.TaxonUnion	G05-P01	b	b	Homo sapiens	silent: not in Prokaryota	F	PASS	OpenStax m45480-85 (transcription in the nucleus)
+Proto.TaxonUnion	G05-P01	c	c	Haloferax volcanii	concl b=4/5	T	PASS	OpenStax m45476-20; Albers2011
+Proto.TaxonUnion	G05-P01	c	c	Homo sapiens	silent: not in prokaryote (complement)	F	PASS	OpenStax m45480-85 (transcription in the nucleus)
+Proto.TaxonUnion	G05-P01	g+b	b	Haloferax volcanii	concl b=4/5	T	PASS	OpenStax m45476-20; Albers2011
+Proto.TaxonUnion	G05-P02	b	b	Escherichia coli	concl b=4/5	T	PASS	OpenStax m45439-48
+Proto.TaxonUnion	G05-P02	b	b	Sulfolobus acidocaldarius	concl b=4/5	T	PASS	Albers2011; Schafer1999
+Proto.TaxonUnion	G05-P02	b	b	Halobacterium salinarum	concl b=4/5	T	PASS	Albers2011; Schafer1999
+Proto.TaxonUnion	G05-P02	b	b	Homo sapiens	silent: not in Prokaryota	F	PASS	OpenStax m45439-47 (inner mitochondrial membrane)
+Proto.TaxonUnion	G05-P09	b	b	Escherichia coli	concl b=4/5	T	PASS	Esko2009; GO:0009274
+Proto.TaxonUnion	G05-P09	b	b	Halobacterium salinarum	concl b=4/5	F	FAIL	Beveridge1996
+Proto.TaxonUnion	G05-P09	b	b	Haloferax volcanii	concl b=4/5	F	FAIL	Beveridge1996
+Proto.TaxonUnion	G05-P10	a+count	i	Escherichia coli	concl b=4/5	T	PASS	Hawkins2013
+Proto.TaxonUnion	G05-P10	b+count	b+i	Sulfolobus acidocaldarius	concl b=4/5	F	FAIL	Lundgren2004
+Proto.TaxonUnion	G05-P10	b+count	b+i	Haloferax volcanii	concl b=4/5	F	FAIL	Hawkins2013
+Proto.TaxonUnion	G05-P11	a+count	i	Gloeobacter violaceus	concl b=4/5	T	PASS	Nakamura2003b
+Proto.TaxonUnion	G05-P11	a+count	i	Vibrio cholerae	concl b=4/5	F	FAIL	Heidelberg2000
+Proto.TaxonUnion	G05-P11	b+count	b+i	Haloferax volcanii	concl b=4/5	F	FAIL	Hartman2010
+Proto.TaxonUnion	G05-R01	e	e	Chlamydomonas reinhardtii	concl b=4/5	T	PASS	Keeling2010
+Proto.TaxonUnion	G05-R01	e	e	Euglena	concl b=4/5	T	PASS	Keeling2010; Cholewa2025
+Proto.TaxonUnion	G05-R01	e	e	Plasmodium falciparum	silent: no photosynthesis statement	F	PASS	Kohler1997; Keeling2010 (apicoplast, not a chloroplast; GO:0020011)
+Proto.TaxonUnion	G05-R01	e	e	Homo sapiens	silent: not in protist	F	PASS	OpenStax m45432-241 context (animal cells have no chloroplasts; consensus)
+Proto.TaxonUnion	G05-R01	e-v	e	Chlamydomonas reinhardtii	silent: not in protist (minus Viridiplantae)	T	SILENT	Keeling2010
+Proto.TaxonUnion	G05-R02	c	c	Chlamydomonas reinhardtii	concl b=4/5	T	PASS	Goodenough1985
+Proto.TaxonUnion	G05-R02	c	c	Euglena	concl b=4/5	F	FAIL	Cholewa2025
+Proto.TaxonUnion	G05-R02	c	c	Homo sapiens	silent: not in protist	N	PASS	not a protist
+Proto.TaxonUnion	G05-R02	c	c	Saccharomyces cerevisiae	silent: not in protist	N	PASS	not a protist (the fungal half is a separate statement)
+Proto.TaxonUnion	G05-R03	b	b	Arabidopsis thaliana	concl b=4/5	T	PASS	GO:0009505 definition
+Proto.TaxonUnion	G05-R03	b	b	Saccharomyces cerevisiae	concl b=4/5	T	PASS	GO:0009277 definition
+Proto.TaxonUnion	G05-R03	b	b	Escherichia coli	concl b=4/5	T	PASS	Esko2009; GO:0009274
+Proto.TaxonUnion	G05-R03	b	b	Chlamydomonas reinhardtii	concl b=4/5	T	PASS	Goodenough1985
+Proto.TaxonUnion	G05-R03	b	b	Plasmodium falciparum	silent: not in plants, fungi or bacteria	N	PASS	hedged: 'some protists'
+Proto.TaxonUnion	G05-R03	b	b	Thermoplasma acidophilum	silent: not in plants, fungi or bacteria	N	PASS	not in the list (and wall-less, Darland1970)
+Proto.TaxonUnion	G05-I01	c	c	Drosophila melanogaster	concl b=4/5	T	PASS	Handke2013
+Proto.TaxonUnion	G05-I01	c	c	Octopus vulgaris	concl b=4/5	F	FAIL	LePabic2014 (cephalopods: closed)
+Proto.TaxonUnion	G05-I01	c	c	Amphimedon queenslandica	concl b=4/5	F	FAIL	MonahanEarley2013 (no blood vascular system before triploblasts)
+Proto.TaxonUnion	G05-I01	c	c	Scyliorhinus canicula	silent: not in invertebrate	N	PASS	a vertebrate
+Proto.TaxonUnion	G05-I01	c+some	h	Drosophila melanogaster	silent: some does not narrow	N	PASS	hedged: 'some invertebrates'; nothing is due for one member
+Proto.TaxonUnion	G05-I01	c+some	h	Octopus vulgaris	silent: some does not narrow	F	PASS	LePabic2014 (cephalopods: closed)
+Proto.TaxonUnion	G05-I01	c+some	h	Amphimedon queenslandica	silent: some does not narrow	F	PASS	MonahanEarley2013 (no blood vascular system before triploblasts)
+Proto.TaxonUnion	G05-F02	a-actino	a'	Scyliorhinus canicula	not a member of Actinopterygii	member of fish (book sense)	FAIL	Bernal2001 ('elasmobranch fishes')
+Proto.TaxonUnion	G05-F02	a-actino	a'	Danio rerio	member of Actinopterygii	member of fish (book sense)	PASS	NCBI lineage
+Proto.TaxonUnion	G05-F02	c	c	Scyliorhinus canicula	member of fish	member of fish (book sense)	PASS	Bernal2001 ('elasmobranch fishes')
+Proto.TaxonUnion	G05-F02	c	c	Danio rerio	member of fish	member of fish (book sense)	PASS	NCBI lineage
+Proto.TaxonUnion	G05-F02	c	c	Anolis carolinensis	not a member of fish	not a member of fish (book sense)	PASS	NCBI lineage (Tetrapoda)
+Proto.TaxonUnion	G05-F02	c	c	Homo sapiens	not a member of fish	not a member of fish (book sense)	PASS	NCBI lineage (Tetrapoda)
+Proto.TaxonUnion	G05-F02	c	c	Anolis carolinensis	member of lizard	member of lizard (book sense)	PASS	NCBI lineage (Iguania)
+Proto.TaxonUnion	G05-F01	c	c	Scyliorhinus canicula	member of fish	member of fish (book sense)	PASS	Bernal2001 ('elasmobranch fishes')
+Proto.TaxonUnion	G05-A04	b-euk	b	Synechocystis sp. PCC 6803	not a member of algae (eukaryotic)	not a member of algae (book sense)	PASS	OpenStax m45448-18 ('bacteria and algae')
+Proto.TaxonUnion	G05-A04	b-ecocore	b	Synechocystis sp. PCC 6803	member of algae (ECOCORE)	not a member of algae (book sense)	FAIL	OpenStax m45448-18 ('bacteria and algae')
+Proto.TaxonUnion	G05-A04	b-euk	b	Chlamydomonas reinhardtii	member of algae (eukaryotic)	member of algae (book sense)	PASS	NCBI lineage (Chlorophyta)
+Proto.TaxonUnion	G05-A04	b-euk	b	Ectocarpus siliculosus	member of algae (eukaryotic)	member of algae (book sense)	PASS	NCBI lineage (Phaeophyceae)
+Proto.TaxonUnion	G05-A04	b-ecocore	b	Chlamydomonas reinhardtii	member of algae (ECOCORE)	member of algae (book sense)	PASS	NCBI lineage (Chlorophyta)
+Proto.TaxonUnion	G05-A04	b-ncbi	b	Synechocystis sp. PCC 6803	not a member of algae (NCBI in-part)	not a member of algae (book sense)	PASS	OpenStax m45448-18 ('bacteria and algae')
+Proto.TaxonUnion	G05-A04	b-ncbi	b	Chlamydomonas reinhardtii	member of algae (NCBI in-part)	member of algae (book sense)	PASS	NCBI lineage (Chlorophyta)
+Proto.TaxonUnion	G05-A04	b-ncbi	b	Ectocarpus siliculosus	member of algae (NCBI in-part)	member of algae (book sense)	PASS	NCBI lineage (Phaeophyceae)
+Proto.TaxonUnion	G05-A04	b-ncbi	b	Euglena	member of algae (NCBI in-part)	member of algae (book sense)	PASS	Cholewa2025 (photoautotroph); NCBI in-part name on Euglenida
+Proto.TaxonUnion	G05-A04	b-ncbi	b	Plasmodium falciparum	not a member of algae (NCBI in-part)	not a member of algae (book sense)	PASS	Kohler1997 ('Protozoan parasites')
+Proto.TaxonUnion	G05-S01	c-partial	c	Amphimedon queenslandica	member of protist	not a member of protist (book sense)	FAIL	NCBI lineage (Metazoa)
+Proto.TaxonUnion	G05-S01	c	c	Amphimedon queenslandica	not a member of protist	not a member of protist (book sense)	PASS	NCBI lineage (Metazoa)
+Proto.TaxonUnion	G05-S04	b	b	virtualNode coverage	1		FAIL	judgement: one bacterium covers all of Bacteria
+Proto.TaxonUnion	G05-S04	b	b	minParts coverage	0		PASS	judgement: bracketing's own rule (one sample brackets nothing)
+Proto.TaxonUnion	G05-S04	b	b	meanParts coverage	1/4		PASS	judgement: weak but not zero
+Proto.TaxonUnion	G05-S05	b-virtualNode	b	generalise to Prokaryota	concl b=12/13		FAIL	judgement: 12/13 from three species is over-strong
+Proto.TaxonUnion	G05-S05	b-meanParts	b	generalise to Prokaryota	concl b=3/13		PASS	judgement: 3/13, weak
+Proto.TaxonUnion	G05-S05	b-minParts	b	generalise to Prokaryota	concl b=0		SILENT	judgement: 0, no credit for two archaea
+Proto.TaxonUnion	G05-S05	b	b	Homo sapiens	silent: not in Prokaryota	N	PASS	not a prokaryote
+Proto.TaxonUnion	G05-S06	c	c	pruned bracketing, protist	1/9		PASS	coherent: equals Eukaryota's bracketing
+Proto.TaxonUnion	G05-S06	a	a	bracketing, Eukaryota	1/9		PASS	core reference value
+Proto.TaxonUnion	G05-S07	e	e	cell ⊓ ¬∃has_part.nucleus	inexpressible: refine is existential only		INEXPRESSIBLE	
+Proto.TaxonUnion	G05-S09	c	c	Schmidtea mediterranea	member of invertebrate	member of invertebrate (book sense)	PASS	NCBI lineage (Metazoa, not Vertebrata)

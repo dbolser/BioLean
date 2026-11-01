@@ -1,0 +1,107 @@
+conclusion	pair_class
+HIV [NCBITaxon:12721] - malnutrition [HP:0004395] (from cell-structure-and-function-m45432-26, agent MONDO:0005130): new	C
+HIV [NCBITaxon:12721] - cramping [HP:0002027] (from cell-structure-and-function-m45432-27, agent MONDO:0005130): new	C
+HIV [NCBITaxon:12721] - diarrhea [HP:0002014] (from cell-structure-and-function-m45432-28, agent MONDO:0005130): new	C
+antirheumatic drug [CHEBI:35842] - malnutrition [HP:0004395] (from cell-structure-and-function-m45432-26, agent MONDO:0005130): new	C
+antirheumatic drug [CHEBI:35842] - cramping [HP:0002027] (from cell-structure-and-function-m45432-27, agent MONDO:0005130): new	C
+antirheumatic drug [CHEBI:35842] - diarrhea [HP:0002014] (from cell-structure-and-function-m45432-28, agent MONDO:0005130): new	C
+celiac disease [MONDO:0005130] + inflammatory response [GO:0006954] (from the-body-s-systems-m45538-207, agent CHEBI:35842): new	C
+celiac disease [MONDO:0005130] + amount of T cell [CL:0000084] (from the-body-s-systems-m45538-208, agent CHEBI:35842): new	C
+cell recognition [GO:0008037] + inflammatory response [GO:0006954] (from the-body-s-systems-m45538-207, agent CHEBI:35842): new	C
+cell recognition [GO:0008037] + amount of T cell [CL:0000084] (from the-body-s-systems-m45538-208, agent CHEBI:35842): new	C
+statins [CHEBI:87631] - synthesizes cholesterol [GO:0006695] (from how-cells-obtain-energy-m45437-205, agent PR:000008636): new	M
+HMG-CoA reductase [PR:000008636] + activity of HMG-CoA reductase [PR:000008636] (from how-cells-obtain-energy-m45437-203, agent CHEBI:87631): new	M
+cofactors [CHEBI:23357] - reaction rates [PATO:0000161] (from how-cells-obtain-energy-m45437-157, agent PATO:0000146): new	C
+cofactors [CHEBI:23357] + protein folding [GO:0006457] (from how-cells-obtain-energy-m45438-10, agent PATO:0000146): new	C
+cofactors [CHEBI:23357] - fight the infection [GO:0002376] (from the-body-s-systems-m45534-88, agent PATO:0000146): new	C
+cofactors [CHEBI:23357] + metabolic reactions [GO:0008152] (from how-cells-obtain-energy-m45437-240, agent CHEBI:25212): new	C
+ADP [CHEBI:16761] - reaction rates [PATO:0000161] (from how-cells-obtain-energy-m45437-157, agent PATO:0000146): new	C
+ADP [CHEBI:16761] + protein folding [GO:0006457] (from how-cells-obtain-energy-m45438-10, agent PATO:0000146): new	C
+ADP [CHEBI:16761] - fight the infection [GO:0002376] (from the-body-s-systems-m45534-88, agent PATO:0000146): new	C
+environmental temperature [PATO:0000146] - broken down [GO:0006007] (from how-cells-obtain-energy-m45437-248, agent CHEBI:16761): new	C
+pH [PATO:0001842] - broken down [GO:0006007] (from how-cells-obtain-energy-m45437-248, agent CHEBI:16761): new	C
+inhibitor molecule [CHEBI:23924] - broken down [GO:0006007] (from how-cells-obtain-energy-m45437-248, agent CHEBI:16761): new	C
+ADP [CHEBI:16761] + metabolic reactions [GO:0008152] (from how-cells-obtain-energy-m45437-240, agent CHEBI:25212): new	C
+products of the cellular metabolic reactions [CHEBI:25212] - broken down [GO:0006007] (from how-cells-obtain-energy-m45437-248, agent CHEBI:16761): new	C
+denature [GO:0030164] + passage [GO:0055085] (from cell-structure-and-function-m45432-13, agent GO:0005886): new	X
+denature [GO:0030164] - cell recognition [GO:0008037] (from cell-structure-and-function-m45433-8, agent GO:0005886): new	X
+denature [GO:0030164] + broken down [GO:0006007] (from how-cells-obtain-energy-m45437-244, agent CHEBI:15422): new	X
+denature [GO:0030164] + ATP biosynthetic process [GO:0006754] (from how-cells-obtain-energy-m45437-246, agent CHEBI:15422): new	X
+denature [GO:0030164] - muscle cell contraction [GO:0006936] (from how-cells-obtain-energy-m45438-18, agent CHEBI:15422): new	X
+denature [GO:0030164] - glycogen biosynthetic process [GO:0005978] (from how-cells-obtain-energy-m45444-10, agent CHEBI:15422): new	X
+hydrogencarbonate [CHEBI:17544] + activity of cytochrome c oxidase [GO:0004129] (from how-cells-obtain-energy-m45439-112, agent CHEBI:17514): new	C
+hydrogencarbonate [CHEBI:17544] + ATP biosynthetic process [GO:0006754] (from how-cells-obtain-energy-m45439-118, agent CHEBI:17514): new	C
+cyanide poisoning [MONDO:0018754] - H+ gradient [GO:0010248] (from how-cells-obtain-energy-m45439-133, agent GO:0022904): new	C
+cyanide poisoning [MONDO:0018754] - amount of ATP [CHEBI:15422] (from how-cells-obtain-energy-m45439-63, agent GO:0022904): new	C
+reabsorbed [GO:0070293] - H+ gradient [GO:0010248] (from how-cells-obtain-energy-m45439-133, agent GO:0022904): new	X
+reabsorbed [GO:0070293] - proton transmembrane transport [GO:1902600] (from how-cells-obtain-energy-m45439-50, agent GO:0022904): new	X
+centrioles [GO:0005814] + cell cycle [GO:0007049] (from reproduction-at-the-cellular-level-m45462-12, agent GO:0051726): new	X
+regulation of cell cycle [GO:0051726] - chromosome segregation [GO:0007059] (from cell-structure-and-function-m45432-72, agent GO:0005814): new	X
+bacteria [NCBITaxon:2] - maintained homeostatically [GO:0001659] (from the-body-s-systems-m45534-81, agent UBERON:0000013): new	C
+bacteria [NCBITaxon:2] - heart rate [OBA:1001087] (from the-body-s-systems-m45539-299, agent UBERON:0000013): new	C
+bacteria [NCBITaxon:2] - blood pressure [OBA:VT0000183] (from the-body-s-systems-m45539-371, agent UBERON:0000013): new	C
+bacteria [NCBITaxon:2] - relaxation ⊓ occurs in (bronchi) [GO:0044557&BFO:0000066=(UBERON:0002185)] (from the-body-s-systems-m45536-61, agent UBERON:0000013): new	C
+bacteria [NCBITaxon:2] + blood flow ⊓ occurs in (skin) [GO:0008015&BFO:0000066=(UBERON:0002097)] (from the-body-s-systems-m45539-373, agent UBERON:0000013): new	C
+organs [UBERON:0000062] - maintained homeostatically [GO:0001659] (from the-body-s-systems-m45534-81, agent UBERON:0000013): new	X
+organs [UBERON:0000062] - heart rate [OBA:1001087] (from the-body-s-systems-m45539-299, agent UBERON:0000013): new	X
+organs [UBERON:0000062] - blood pressure [OBA:VT0000183] (from the-body-s-systems-m45539-371, agent UBERON:0000013): new	X
+organs [UBERON:0000062] - relaxation ⊓ occurs in (bronchi) [GO:0044557&BFO:0000066=(UBERON:0002185)] (from the-body-s-systems-m45536-61, agent UBERON:0000013): new	X
+organs [UBERON:0000062] + blood flow ⊓ occurs in (skin) [GO:0008015&BFO:0000066=(UBERON:0002097)] (from the-body-s-systems-m45539-373, agent UBERON:0000013): new	X
+nasal cavity [UBERON:0001707] - amount of blood ⊓ located in (skin) [UBERON:0000178&RO:0001025=(UBERON:0002097)] (from the-body-s-systems-m45534-59, agent GO:0042311): new	C
+triiodothyronine [CHEBI:18258] + activity of enzyme [GO:0003824] (from how-cells-obtain-energy-m45437-241, agent CHEBI:25212): new	C
+epinephrine [CHEBI:33568] + blood pressure [OBA:VT0000183] (from the-body-s-systems-m45539-307, agent UBERON:0000011): new	A
+epinephrine [CHEBI:33568] - digestion [GO:0007586] (from the-body-s-systems-m45539-308, agent UBERON:0000011): new	A
+epinephrine [CHEBI:33568] - contraction of their smooth muscles ⊓ occurs in (bronchi) [GO:0006939&BFO:0000066=(UBERON:0002185)] (from the-body-s-systems-m45536-60, agent UBERON:0000011): new	A
+epinephrine [CHEBI:33568] - blood flow ⊓ occurs in (skin) [GO:0008015&BFO:0000066=(UBERON:0002097)] (from the-body-s-systems-m45539-377, agent UBERON:0000011): new	A
+parasympathetic [UBERON:0000011] - response to stress [GO:0006950] (from the-body-s-systems-m45537-176, agent CHEBI:33568): new	A
+parasympathetic [UBERON:0000011] - contracts [GO:0060048] (from the-body-s-systems-m45537-180, agent CHEBI:33568): new	A
+parasympathetic [UBERON:0000011] - amount of glucose ⊓ located in (blood) [CHEBI:17234&RO:0001025=(UBERON:0000178)] (from the-body-s-systems-m45537-181, agent CHEBI:33568): new	A
+parasympathetic [UBERON:0000011] - glycolytic process ⊓ occurs in (skeletal muscle) [GO:0006096&BFO:0000066=(UBERON:0014892)] (from the-body-s-systems-m45537-182, agent CHEBI:33568): new	A
+parasympathetic [UBERON:0000011] - lipid catabolism ⊓ occurs in (fat) [GO:0016042&BFO:0000066=(UBERON:0001013)] (from the-body-s-systems-m45537-183, agent CHEBI:33568): new	A
+acetaminophen [CHEBI:46195] - joint swelling [HP:0001386] (from the-body-s-systems-m45538-174, agent MONDO:0008383): new	C
+acetaminophen [CHEBI:46195] - joint stiffness [HP:0001387] (from the-body-s-systems-m45538-175, agent MONDO:0008383): new	C
+rheumatoid arthritis [MONDO:0008383] + activity of cyclooxygenase [PR:P23219-1] (from how-cells-obtain-energy-m45437-206, agent CHEBI:46195): new	C
+rheumatoid arthritis [MONDO:0008383] + Fever [HP:0001945] (from how-cells-obtain-energy-m45437-207, agent CHEBI:46195): new	C
+medications ⊓ in taxon (humans ⊓ has modifier (rheumatoid arthritis)) [CHEBI:23888&RO:0002162=(NCBITaxon:9606&RO:0002573=(MONDO:0008383))] - joint swelling [HP:0001386] (from the-body-s-systems-m45538-174, agent MONDO:0008383): new	C
+medications ⊓ in taxon (humans ⊓ has modifier (rheumatoid arthritis)) [CHEBI:23888&RO:0002162=(NCBITaxon:9606&RO:0002573=(MONDO:0008383))] - joint stiffness [HP:0001387] (from the-body-s-systems-m45538-175, agent MONDO:0008383): new	C
+rheumatoid arthritis [MONDO:0008383] + inflammatory response [GO:0006954] (from the-body-s-systems-m45538-198, agent CHEBI:23888&RO:0002162=(NCBITaxon:9606&RO:0002573=(MONDO:0008383))): new	C
+constricting [GO:0042310] - blood pressure [OBA:VT0000183] (from the-body-s-systems-m45538-231, agent GO:0060048): new	C
+contracts [GO:0060048] + blood volume [OBA:0003648] (from the-body-s-systems-m45537-227, agent PR:P01160): new	C
+contracts [GO:0060048] + amount of sodium ⊓ located in (blood) [CHEBI:29101&RO:0001025=(UBERON:0000178)] (from the-body-s-systems-m45537-229, agent PR:P01160): new	C
+atrial natriuretic peptide [PR:P01160] - blood flow [GO:0008015] (from the-body-s-systems-m45538-230, agent GO:0060048): new	C
+contracts [GO:0060048] + heart rate [OBA:1001087] (from the-body-s-systems-m45539-306, agent UBERON:0000011): new	C
+contracts [GO:0060048] - digestion [GO:0007586] (from the-body-s-systems-m45539-308, agent UBERON:0000011): new	C
+contracts [GO:0060048] - contraction of their smooth muscles ⊓ occurs in (bronchi) [GO:0006939&BFO:0000066=(UBERON:0002185)] (from the-body-s-systems-m45536-60, agent UBERON:0000011): new	C
+contracts [GO:0060048] - blood flow ⊓ occurs in (skin) [GO:0008015&BFO:0000066=(UBERON:0002097)] (from the-body-s-systems-m45539-377, agent UBERON:0000011): new	C
+parasympathetic [UBERON:0000011] - blood flow [GO:0008015] (from the-body-s-systems-m45538-230, agent GO:0060048): new	C
+parasympathetic [UBERON:0000011] - maintained homeostatically [GO:0001659] (from the-body-s-systems-m45534-81, agent UBERON:0000013): new	A
+parasympathetic [UBERON:0000011] - relaxation ⊓ occurs in (bronchi) [GO:0044557&BFO:0000066=(UBERON:0002185)] (from the-body-s-systems-m45536-61, agent UBERON:0000013): new	A
+sympathetic nervous system [UBERON:0000013] - contraction of their smooth muscles ⊓ occurs in (bronchi) [GO:0006939&BFO:0000066=(UBERON:0002185)] (from the-body-s-systems-m45536-60, agent UBERON:0000011): new	A
+atrial natriuretic peptide [PR:P01160] - maintained homeostatically [GO:0001659] (from the-body-s-systems-m45534-81, agent UBERON:0000013): new	C
+atrial natriuretic peptide [PR:P01160] - heart rate [OBA:1001087] (from the-body-s-systems-m45539-299, agent UBERON:0000013): new	C
+atrial natriuretic peptide [PR:P01160] + digestion [GO:0007586] (from the-body-s-systems-m45539-300, agent UBERON:0000013): new	C
+atrial natriuretic peptide [PR:P01160] - relaxation ⊓ occurs in (bronchi) [GO:0044557&BFO:0000066=(UBERON:0002185)] (from the-body-s-systems-m45536-61, agent UBERON:0000013): new	C
+atrial natriuretic peptide [PR:P01160] + blood flow ⊓ occurs in (skin) [GO:0008015&BFO:0000066=(UBERON:0002097)] (from the-body-s-systems-m45539-373, agent UBERON:0000013): new	C
+sympathetic nervous system [UBERON:0000013] + blood volume [OBA:0003648] (from the-body-s-systems-m45537-227, agent PR:P01160): new	C
+sympathetic nervous system [UBERON:0000013] + amount of sodium ⊓ located in (blood) [CHEBI:29101&RO:0001025=(UBERON:0000178)] (from the-body-s-systems-m45537-229, agent PR:P01160): new	C
+ATP [CHEBI:15422] - activity of enzyme [GO:0003824] (from how-cells-obtain-energy-m45437-247, agent CHEBI:16761): new	A
+ADP [CHEBI:16761] + ATP biosynthetic process [GO:0006754] (from how-cells-obtain-energy-m45437-246, agent CHEBI:15422): new	A
+ADP [CHEBI:16761] - muscle cell contraction [GO:0006936] (from how-cells-obtain-energy-m45438-18, agent CHEBI:15422): new	A
+ADP [CHEBI:16761] + kills [GO:0008219] (from how-cells-obtain-energy-m45439-64, agent CHEBI:15422): new	A
+ADP [CHEBI:16761] - glycogen biosynthetic process [GO:0005978] (from how-cells-obtain-energy-m45444-10, agent CHEBI:15422): new	A
+oxygen ⊓ in taxon (these microorganisms) [CHEBI:15379&RO:0002162=(NCBITaxon:1485)] + passage [GO:0055085] (from cell-structure-and-function-m45432-13, agent GO:0005886): new	X
+oxygen ⊓ in taxon (these microorganisms) [CHEBI:15379&RO:0002162=(NCBITaxon:1485)] - cell recognition [GO:0008037] (from cell-structure-and-function-m45433-8, agent GO:0005886): new	X
+oxygen ⊓ in taxon (these microorganisms) [CHEBI:15379&RO:0002162=(NCBITaxon:1485)] + broken down [GO:0006007] (from how-cells-obtain-energy-m45437-244, agent CHEBI:15422): new	X
+oxygen ⊓ in taxon (these microorganisms) [CHEBI:15379&RO:0002162=(NCBITaxon:1485)] + ATP biosynthetic process [GO:0006754] (from how-cells-obtain-energy-m45437-246, agent CHEBI:15422): new	X
+oxygen ⊓ in taxon (these microorganisms) [CHEBI:15379&RO:0002162=(NCBITaxon:1485)] - muscle cell contraction [GO:0006936] (from how-cells-obtain-energy-m45438-18, agent CHEBI:15422): new	X
+oxygen ⊓ in taxon (these microorganisms) [CHEBI:15379&RO:0002162=(NCBITaxon:1485)] - glycogen biosynthetic process [GO:0005978] (from how-cells-obtain-energy-m45444-10, agent CHEBI:15422): new	X
+hypothalamus ⊓ located in (hypothalamus) ⊓ in taxon (NCBITaxon:7742) [UBERON:0001898&RO:0001025=(UBERON:0001898)&RO:0002162=(NCBITaxon:7742)] - amount of blood ⊓ located in (skin) [UBERON:0000178&RO:0001025=(UBERON:0002097)] (from the-body-s-systems-m45534-59, agent GO:0042311): new	C
+sodium [CHEBI:29101] - membrane repolarization [GO:0086009] (from the-body-s-systems-m45539-97, agent CHEBI:29103): new	C
+potassium(1+) [CHEBI:29103] - membrane depolarization [GO:0051899] (from the-body-s-systems-m45539-83, agent CHEBI:29101): new	C
+epinephrine [CHEBI:33568] - glucose import [GO:0098708] (from the-body-s-systems-m45537-202, agent PR:000009054): new	A
+insulin [PR:000009054] - response to stress [GO:0006950] (from the-body-s-systems-m45537-176, agent CHEBI:33568): new	A
+insulin [PR:000009054] - heart rate [OBA:1001087] (from the-body-s-systems-m45537-178, agent CHEBI:33568): new	A
+insulin [PR:000009054] - contracts [GO:0060048] (from the-body-s-systems-m45537-180, agent CHEBI:33568): new	A
+insulin [PR:000009054] - glycolytic process ⊓ occurs in (skeletal muscle) [GO:0006096&BFO:0000066=(UBERON:0014892)] (from the-body-s-systems-m45537-182, agent CHEBI:33568): new	A
+insulin [PR:000009054] - lipid catabolism ⊓ occurs in (fat) [GO:0016042&BFO:0000066=(UBERON:0001013)] (from the-body-s-systems-m45537-183, agent CHEBI:33568): new	A
+glucagon [PR:P01275] - glucose import [GO:0098708] (from the-body-s-systems-m45537-202, agent PR:000009054): new	A
