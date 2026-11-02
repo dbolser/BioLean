@@ -23,7 +23,7 @@ touches the Lean core.
 - **What matters now.** Dan rates the sheet: 2 columns, about 2 hours, one command (below). No option needs a new
   constructor, rule, operator or type.
 
-## Dan: how to rate (3 steps)
+## Dan: how to rate (2 steps)
 
 Rate before reading further: the rest of this doc names rows and their IC. From the repo root (`~/Build/BioLean`):
 
@@ -31,8 +31,7 @@ Rate before reading further: the rest of this doc names rows and their IC. From 
    for interesting (as if true), then y, n or ? for true. It saves after every fact; q quits, and running it again
    carries on where you stopped. (The spreadsheet route still works: copy `rating_sheet_blind.tsv` to
    `rating_dan.tsv` and fill the two columns.)
-2. When all 100 are done, run the analysis.
-3. Run `python3 scripts/stress/ic_analysis.py`. Read section 0 of `data/stress/07/analysis_report.txt`.
+2. When all 100 are done, run `python3 scripts/stress/ic_analysis.py`. Read section 0 of `data/stress/07/analysis_report.txt`.
 
 Section 0 shows your agreement with the LLMs, your range of best cuts ("plateau"), and whether 2.4 and 2.5 are in it.
 `y`, `n`, `?`, `2.0` and a `.csv` save also work. Optional, 10 minutes: the 9 old facts in
