@@ -27,11 +27,11 @@ touches the Lean core.
 
 Rate before reading further: the rest of this doc names rows and their IC. From the repo root (`~/Build/BioLean`):
 
-1. `cp data/stress/07/rating_sheet_blind.tsv data/stress/07/rating_dan.tsv`
-2. Open `data/stress/07/rating_dan.tsv` in LibreOffice (tab-separated), with `data/stress/07/rubric.md` beside it.
-   Fill two columns: `interesting` (0 to 3, rated as if the fact were true) and `true` (yes, no or unsure). `note` is
-   optional. About a minute a row, so about 2 hours. Save in the same format. Several sittings are fine: empty rows
-   are skipped.
+1. In a terminal: `cd ~/Build/BioLean && python3 scripts/stress/rate.py`. It shows one fact at a time. Press 0 to 3
+   for interesting (as if true), then y, n or ? for true. It saves after every fact; q quits, and running it again
+   carries on where you stopped. (The spreadsheet route still works: copy `rating_sheet_blind.tsv` to
+   `rating_dan.tsv` and fill the two columns.)
+2. When all 100 are done, run the analysis.
 3. Run `python3 scripts/stress/ic_analysis.py`. Read section 0 of `data/stress/07/analysis_report.txt`.
 
 Section 0 shows your agreement with the LLMs, your range of best cuts ("plateau"), and whether 2.4 and 2.5 are in it.
