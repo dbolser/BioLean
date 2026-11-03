@@ -47,7 +47,7 @@ def main():
         if t == 'q': break
         if t == 'b': continue
         x['interesting'], x['true'] = k, {'y': 'yes', 'n': 'no', '?': 'unsure'}[t]
-        save(); i += 1
+        save(); i = next((n for n in range(i + 1, len(rows)) if not rows[n]['interesting']), len(rows))
     save()
     done = sum(1 for y in rows if y['interesting'])
     print(f'\n\nSaved {done} of {len(rows)} to {OUT}.' + (' All done: run  python3 scripts/stress/ic_analysis.py' if done == len(rows) else ' Run again to carry on.'))
