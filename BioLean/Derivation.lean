@@ -17,6 +17,17 @@ the biological analogue of `#print axioms`.
 
 namespace BioLean
 
+/-- How much of an association's opinion survives reading it as an effect (`fromAssoc`). A
+germline variant cannot be changed by the disease, so only linkage and confounding stand between
+association and cause: half. Anything else (a trait, an expression level, a cell state) can also
+run backwards: a fifth. A starting point, not a calibration, like `EvidenceModel.standard`. -/
+def assocWeight : Kind → ℚ
+  | .variant => 1 / 2
+  | _ => 1 / 5
+
+theorem assocWeight_nonneg (k : Kind) : 0 ≤ assocWeight k := by cases k <;> norm_num [assocWeight]
+theorem assocWeight_le_one (k : Kind) : assocWeight k ≤ 1 := by cases k <;> norm_num [assocWeight]
+
 /-- A claim with its subject left out: what `generalize` holds fixed while it widens the subject's
 taxon. `p.claim a` puts the subject back. -/
 inductive Predicate (k : Kind)
@@ -57,6 +68,10 @@ inductive Derivation : Claim → Type
       (aq : Derivation (.effect a s₁ (.phenotype q)))
       (qt : Derivation (.effect q s₂ t)) :
       Derivation (.effect a (s₁ * s₂) t)
+  /-- A signed association read as an effect: carriers of `x` have more `t`, so `x` raises `t`.
+  Never free: the opinion is discounted by `assocWeight` of the subject's kind. -/
+  | fromAssoc {k : Kind} {x : Entity k} {s : Sign} {t : Target}
+      (d : Derivation (.assoc x (some s) t)) : Derivation (.effect x s t)
   /-- Two independent derivations of the same claim. -/
   | both {c : Claim} (d₁ d₂ : Derivation c) : Derivation c
   /-- Compose two relations along an RO axiom: a property chain `r₁ ∘ r₂ ⊑ r₃`, transitivity
@@ -175,6 +190,8 @@ def opinionWith (lit : Statement → Opinion) (ev : Evidence → Opinion) :
   | _, .viaAmount am mt => (am.opinionWith lit ev).chain (mt.opinionWith lit ev)
   | _, .viaProcess ap pt => (ap.opinionWith lit ev).chain (pt.opinionWith lit ev)
   | _, .viaPhenotype aq qt => (aq.opinionWith lit ev).chain (qt.opinionWith lit ev)
+  | _, .fromAssoc (k := k) d =>
+      (d.opinionWith lit ev).discount (assocWeight k) (assocWeight_nonneg k) (assocWeight_le_one k)
   | _, .both d₁ d₂ => (d₁.opinionWith lit ev).fuse (d₂.opinionWith lit ev)
   | _, .relChain ab bc .. => (ab.opinionWith lit ev).weakest (bc.opinionWith lit ev)
   | _, .notRelSub ab bc .. => (ab.opinionWith lit ev).weakest (bc.opinionWith lit ev)
@@ -211,6 +228,7 @@ def axioms : {c : Claim} → Derivation c → List Statement
   | _, .viaAmount am mt => am.axioms ++ mt.axioms
   | _, .viaProcess ap pt => ap.axioms ++ pt.axioms
   | _, .viaPhenotype aq qt => aq.axioms ++ qt.axioms
+  | _, .fromAssoc d => d.axioms
   | _, .both d₁ d₂ => d₁.axioms ++ d₂.axioms
   | _, .relChain ab bc .. => ab.axioms ++ bc.axioms
   | _, .notRelSub ab bc .. => ab.axioms ++ bc.axioms
@@ -293,6 +311,7 @@ partial def render {c : Claim} (d : Derivation c) (indent : String := "") : Stri
   | .netYield m u .. => node "made − used" [render m (indent ++ "  "), render u (indent ++ "  ")]
   | .compareIntervals a b .. => node "disjoint intervals" [render a (indent ++ "  "), render b (indent ++ "  ")]
   | .weaken q d' => node s!"weaken to {repr q}" [render d' (indent ++ "  ")]
+  | .fromAssoc (k := k) d' => node s!"association read as effect, × {(assocWeight k).toDecimal}" [render d' (indent ++ "  ")]
   | .refineMono fg .. => node "refinement monotone" [render fg (indent ++ "  ")]
   | .isaInheritEffect ab bt => node "is_a inherits effect" [render ab (indent ++ "  "), render bt (indent ++ "  ")]
   | .transport _ T₂ d' e .. => node s!"transport to {T₂.label} (PMID {e.pmid}, {repr e.kind})" [render d' (indent ++ "  ")]

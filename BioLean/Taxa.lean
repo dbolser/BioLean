@@ -23,6 +23,10 @@ def mammalia      : Entity .taxon := ⟨"NCBITaxon:40674", "Mammalia"⟩
 def human         : Entity .taxon := ⟨"NCBITaxon:9606", "Homo sapiens"⟩
 def mouse         : Entity .taxon := ⟨"NCBITaxon:10090", "Mus musculus"⟩
 def rat           : Entity .taxon := ⟨"NCBITaxon:10116", "Rattus norvegicus"⟩
+def zebrafish     : Entity .taxon := ⟨"NCBITaxon:7955", "Danio rerio"⟩
+def fly           : Entity .taxon := ⟨"NCBITaxon:7227", "Drosophila melanogaster"⟩
+def worm          : Entity .taxon := ⟨"NCBITaxon:6239", "Caenorhabditis elegans"⟩
+def yeast         : Entity .taxon := ⟨"NCBITaxon:4932", "Saccharomyces cerevisiae"⟩
 
 /-- The ontology code of NCBITaxon. -/
 def code : Nat := 4

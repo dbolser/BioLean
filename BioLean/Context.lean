@@ -41,11 +41,15 @@ structure Ctx where
 
 namespace Ctx
 
-/-- Where a site locates an entity: processes and functions `occurs_in`, continuants `located_in`. -/
-def locRel (k : Kind) : Rel := if k.sort = .occurrent then Rel.occursIn else Rel.locatedIn
+/-- Where a site locates an entity: processes and functions `occurs_in`, a phenotype is
+`characteristic_of` it, other continuants are `located_in` it. -/
+def locRel (k : Kind) : Rel :=
+  if k.sort = .occurrent then Rel.occursIn else if k = .phenotype then Rel.characteristicOf else Rel.locatedIn
 
-/-- A cell type: processes `occurs_in` it, continuants are `part_of` it. -/
-def cellRel (k : Kind) : Rel := if k.sort = .occurrent then Rel.occursIn else Rel.partOf
+/-- A cell type: processes `occurs_in` it, a phenotype is `characteristic_of` it (a quality
+inheres in its bearer, it is not a part of it), other continuants are `part_of` it. -/
+def cellRel (k : Kind) : Rel :=
+  if k.sort = .occurrent then Rel.occursIn else if k = .phenotype then Rel.characteristicOf else Rel.partOf
 
 /-- A life stage: processes `happens_during` it, continuants `existence_overlaps` it. A cell does
 not happen, so `happens_during` is wrong for continuants. RO:0002490 is the weakest member of RO's

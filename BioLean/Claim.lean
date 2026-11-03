@@ -45,6 +45,18 @@ def arrow : Sign → String
 
 end Sign
 
+/-- Which aspect of a disease an effect acts on. They are different claims with different
+evidence: a TOLLIP allele lowers the risk of IPF and raises its mortality. RO keeps them apart too:
+RO:0019501 confers susceptibility (risk), RO:0003305 contributes to severity. -/
+inductive DiseaseAspect
+  /-- Getting the disease: susceptibility, incidence, onset. -/
+  | risk
+  /-- How bad it is when you have it. -/
+  | severity
+  /-- How fast it worsens: decline, exacerbation, mortality. -/
+  | progression
+  deriving DecidableEq, Repr
+
 /-- What an effect acts on. -/
 inductive Target
   /-- The activity of a protein, or a GO molecular function itself (the honest grounding for
@@ -58,8 +70,8 @@ inductive Target
   | phenotype (p : Entity .phenotype)
   /-- An anatomical site at which an effect is exerted. -/
   | site (a : Entity .anatomy)
-  /-- The risk or severity of a disease: "the MUC5B promoter variant raises the risk of IPF". -/
-  | disease (d : Entity .disease)
+  /-- One aspect of a disease: "the MUC5B promoter variant raises the risk of IPF". -/
+  | disease (d : Entity .disease) (aspect : DiseaseAspect := .risk)
 
 instance : ToString Target where
   toString
@@ -68,7 +80,9 @@ instance : ToString Target where
     | .process p => s!"{p}"
     | .phenotype p => s!"{p}"
     | .site a => s!"site {a}"
-    | .disease d => s!"{d}"
+    | .disease d .risk => s!"risk of {d}"
+    | .disease d .severity => s!"severity of {d}"
+    | .disease d .progression => s!"progression of {d}"
 
 instance : Repr Target := ⟨fun t _ => toString t⟩
 
@@ -122,6 +136,12 @@ inductive Claim
   says the effect is not `s`, which still allows the opposite sign, and a failure to see an effect
   is not a measurement that there is none. -/
   | noEffect {k : Kind} (agent : Entity k) (target : Target)
+  /-- `x` goes with `t`: carrying `x`, or having more of it, goes with more (`some .pos`) or less
+  (`some .neg`) of `t`, or with a difference of unstated direction (`none`). An association, not
+  an effect: it may be confounded, tag a nearby cause (linkage), or run backwards (the disease
+  changes `x`). RO:0003308 correlated with condition is `none`; RO:0019501 confers susceptibility
+  is `some .pos` on risk. `Derivation.fromAssoc` reads a signed one as an effect, at a discount. -/
+  | assoc {k : Kind} (x : Entity k) (dir : Option Sign) (t : Target)
   /-- `a r b` for an RO relation `r`: part_of, occurs_in, has_output, is_a, ... The kinds must fit
   RO's declared domain and range (`Rel.accepts`), checked by `decide` at construction. -/
   | rel {k₁ k₂ : Kind} (r : Rel) (a : Entity k₁) (b : Entity k₂)
@@ -161,6 +181,9 @@ partial def Claim.toString : Claim → String
     | .effect a s t => s!"{a} {s.arrow} {t}"
     | .mediatedBy a s t m => s!"{a} {s.arrow} {t}  via  {m}"
     | .noEffect a t => s!"{a} →0 {t}"
+    | .assoc x (some .pos) t => s!"{x} ~+ {t}"
+    | .assoc x (some .neg) t => s!"{x} ~− {t}"
+    | .assoc x none t => s!"{x} ~ {t}"
     | .rel r a b _ => s!"{a} {r} {b}"
     | .notRel r a b _ => s!"¬({a} {r} {b})"
     | .count w p n => s!"{w} has {n} × {p}"
@@ -180,7 +203,7 @@ instance : ToString Claim := ⟨Claim.toString⟩
 
 /-- The curie of a claim's subject: the agent, the first relatum, the whole or the process. -/
 def Claim.subjectCurie : Claim → String
-  | .effect a .. | .mediatedBy a .. | .noEffect a _ | .rel _ a .. | .notRel _ a .. => a.curie
+  | .effect a .. | .mediatedBy a .. | .noEffect a _ | .assoc a .. | .rel _ a .. | .notRel _ a .. => a.curie
   | .count w .. | .atLeast w .. | .countBetween w .. => w.curie
   | .cardinality c _ | .measure c .. | .atLeastMeasure c .. | .less c .. => c.curie
   | .produces p .. | .consumes p .. | .yield p .. => p.curie

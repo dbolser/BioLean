@@ -41,6 +41,7 @@ inductive ExpSystem
 claim: the same claim is tested at many doses, so they never make two claims different. `taxon`
 is checked against the claim by `Statement.taxonConsistent`. -/
 structure Evidence where
+  /-- 0 for evidence that is not a paper; `ref` then names it. -/
   pmid : Nat
   year : Nat
   kind : EvidenceKind
@@ -51,6 +52,8 @@ structure Evidence where
   strain : Option String := none
   system : Option ExpSystem := none
   taxon : Option (Entity .taxon) := none
+  /-- The record cited when it is not a paper: `UniProt:O14746`, `STRING:TOLLIP-IRAK1`, `R-HSA-913531`. -/
+  ref : String := ""
   deriving Repr
 
 /-- A claim with its evidence: the axiom form of BioLean. -/
@@ -99,14 +102,17 @@ def opinion [m : EvidenceModel] (e : Evidence) : Opinion :=
 def opinionAt [EvidenceModel] (e : Evidence) (year : Nat) : Opinion :=
   if e.year ≤ year then e.opinion else .vacuous
 
+/-- What makes two items one piece of evidence: the PMID, else the record `ref`. Empty for
+evidence that names neither (textbooks, ontology axioms), which is never deduplicated. -/
+def key (e : Evidence) : String := if e.pmid != 0 then s!"PMID:{e.pmid}" else e.ref
+
 end Evidence
 
 namespace Statement
 
-/-- The evidence with repeated PMIDs removed: one paper is one piece of evidence. PMID 0 marks
-non-paper evidence (textbooks, ontology axioms) and is never deduplicated. -/
+/-- The evidence with repeated papers and records removed: one paper is one piece of evidence. -/
 def distinctEvidence (s : Statement) : List Evidence :=
-  (s.evidence.foldl (fun acc e => if e.pmid != 0 && acc.any (·.pmid == e.pmid) then acc else acc ++ [e]) [])
+  (s.evidence.foldl (fun acc e => if e.key != "" && acc.any (·.key == e.key) then acc else acc ++ [e]) [])
 
 /-- Fuse the evidence for a statement into one opinion. Fusion assumes the items are
 independent, so repeated PMIDs are dropped first. Shared findings cited by several
