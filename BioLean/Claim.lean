@@ -58,6 +58,8 @@ inductive Target
   | phenotype (p : Entity .phenotype)
   /-- An anatomical site at which an effect is exerted. -/
   | site (a : Entity .anatomy)
+  /-- The risk or severity of a disease: "the MUC5B promoter variant raises the risk of IPF". -/
+  | disease (d : Entity .disease)
 
 instance : ToString Target where
   toString
@@ -66,6 +68,7 @@ instance : ToString Target where
     | .process p => s!"{p}"
     | .phenotype p => s!"{p}"
     | .site a => s!"site {a}"
+    | .disease d => s!"{d}"
 
 instance : Repr Target := ⟨fun t _ => toString t⟩
 
