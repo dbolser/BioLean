@@ -1,0 +1,184 @@
+{
+ "run_id": "study-2026-09-vertex-iga-nephropathy-google-cloud-gemini-3.1-pro-preview-multi_agent-r2",
+ "curated_by": "Claude Opus 5.5, 2026-10-30",
+ "entities": {
+  "DEFA4": {"kind": "protein", "curie": "UniProt:P12838", "run_labels": ["DEFA4"]},
+  "CARD9": {"kind": "protein", "curie": "UniProt:Q9H257", "run_labels": ["CARD9"]},
+  "TNFSF13": {"kind": "protein", "curie": "UniProt:O75888", "run_labels": ["TNFSF13", "TNFSF13 (APRIL)"]},
+  "CFH": {"kind": "protein", "curie": "UniProt:P08603", "run_labels": ["CFH"]},
+  "ITGAX": {"kind": "protein", "curie": "UniProt:P20702",
+            "run_labels": ["ITGAX", "ITGAX-expressing (CD11c+) myeloid cells", "Activated ITGAX+ macrophages and dendritic cells"]},
+  "intestinalMicrobiota": {"kind": "phenotype", "curie": "BLN:IntestinalMicrobiota",
+                           "label": "intestinal microbiota (the host's gut microbial load, as a trait)",
+                           "why_no_term": "searched 'intestinal microbiota', 'microbiota', 'microbiome', 'gut microbiota', 'gut flora', 'intestinal flora', 'dysbiosis', 'commensal', 'bacterial load'. NCIT:C93019 'Intestinal Flora' is exactly this node and IDO:0000515 'Microbiome' is close, but render.py gives NCIT and IDO terms no kind and rejects them; NCBITaxon:13613 'Microbiota' is a plant genus; GO:0048874 is the host process that regulates the microbiota, not the microbes; MP:0010377 'abnormal gut flora balance' is a mouse dysbiosis phenotype, not the microbiota the step names. Kind 'phenotype' because no target kind holds a population of organisms.",
+                           "run_labels": ["Intestinal microbiota", "altered gut flora"]},
+  "gdIgA1": {"kind": "phenotype", "curie": "OBA:2050057",
+             "run_labels": ["Galactose-deficient IgA1", "poorly glycosylated IgA1", "Excessive galactose-deficient IgA1 enters circulation"]},
+  "glomerularIgADeposition": {"kind": "phenotype", "curie": "HP:0000794",
+                              "run_labels": ["IgA1 immune complexes (context: renal glomerulus)", "Circulating Gd-IgA1 complexes deposit in the mesangium"]},
+  "complementAP": {"kind": "process", "curie": "GO:0006957", "run_labels": ["Complement alternative pathway"]},
+  "igan": {"kind": "disease", "curie": "MONDO:0005342", "run_labels": ["IgA glomerulonephritis"]}
+ },
+ "statements": [
+  {"id": "S1", "step": "H1_mucosal_dysbiosis.1", "text": "DEFA4 inhibits the intestinal microbiota",
+   "claim": {"effect": {"subject": "DEFA4", "sign": "neg", "target": {"phenotype": "intestinalMicrobiota"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "rs2738058", "category": "not_in_text", "reason": "GWAS row: rs2738058-T (intergenic in the defensin cluster, author-reported gene 'DEFA') with IgA nephropathy; says nothing about DEFA4 acting on the microbiota"},
+    {"ref": "P12838", "category": "not_this_entity", "reason": "antimicrobial activity against Gram-negative and Gram-positive bacteria and fungi in vitro; the intestinal microbiota is never named, and the record places DEFA4 in neutrophil granules"}
+   ]},
+  {"id": "S2", "step": "H1_mucosal_dysbiosis.2", "text": "the intestinal microbiota activates CARD9",
+   "claim": {"effect": {"subject": "intestinalMicrobiota", "sign": "pos", "target": {"activity": "CARD9"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "PMID:33052226", "category": "not_in_text", "reason": "review abstract: an altered gut microbiome affects host immune responses; CARD9 and C-type lectin receptors are not mentioned"}
+   ]},
+  {"id": "S3", "step": "H1_mucosal_dysbiosis.3", "text": "CARD9 raises TNFSF13 (APRIL)",
+   "claim": {"effect": {"subject": "CARD9", "sign": "pos", "target": {"amount": "TNFSF13"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "Q9H257", "category": "not_in_text", "reason": "CARD9 signalling stimulates expression of 'pro-inflammatory cytokines and chemokines' in general; TNFSF13/APRIL is never named"},
+    {"ref": "rs4077515", "category": "not_in_text", "reason": "GWAS row: CARD9 missense rs4077515-T with IgA nephropathy; says nothing about TNFSF13"}
+   ]},
+  {"id": "S4", "step": "H1_mucosal_dysbiosis.4", "text": "TNFSF13 raises galactose-deficient IgA1",
+   "claim": {"effect": {"subject": "TNFSF13", "sign": "pos", "target": {"phenotype": "gdIgA1"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "rs3803800", "category": "not_in_text", "reason": "GWAS row: TNFSF13 missense rs3803800-A with IgA nephropathy; says nothing about IgA1 or its glycosylation"},
+    {"ref": "O75888", "category": "not_in_text", "reason": "APRIL binds TACI and BCMA and may act in monocyte/macrophage processes; no B cells, IgA or glycosylation"},
+    {"ref": "CHEMBL:CHEMBL4594614", "category": "not_in_text", "reason": "sibeprenlimab targets TNFSF13 and reached phase 3; no indication, no IgA1"},
+    {"ref": "STRING:PMID:25305756", "category": "enrichment", "reason": "a paper title over-represented among the input genes (4 of 19); states no step"}
+   ]},
+  {"id": "S5", "step": "H1_mucosal_dysbiosis.5", "text": "galactose-deficient IgA1 causes IgA nephropathy",
+   "claim": {"effect": {"subject": "gdIgA1", "sign": "pos", "target": {"disease": "igan", "aspect": "risk"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "STRING:PMID:25305756", "category": "enrichment", "reason": "a paper title over-represented among the input genes; galactose-deficient IgA1 is not mentioned"},
+    {"ref": "PMID:33052226", "category": "not_in_text", "reason": "review abstract on infection, gut microbiome and IgA in IgAN; galactose-deficient IgA1 is not mentioned"}
+   ]},
+  {"id": "S6", "step": "H2_complement_infiltration.1", "text": "glomerular IgA1 immune-complex deposits activate the alternative complement pathway",
+   "claim": {"effect": {"subject": "glomerularIgADeposition", "sign": "pos", "target": {"process": "complementAP"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "PMID:30356754", "category": "not_in_text", "reason": "RT-qPCR of intragraft complement transcripts (C3, CFH, CFI, CD46/55/59) in recurrent IgAN and chronic antibody-mediated rejection; neither IgA deposits nor alternative-pathway activation is measured"}
+   ]},
+  {"id": "S7", "step": "H2_complement_infiltration.2", "text": "CFH inhibits the alternative complement pathway",
+   "claim": {"effect": {"subject": "CFH", "sign": "neg", "target": {"process": "complementAP"}}},
+   "evidence": [
+    {"ref": "P08603", "kind": "curatedDb",
+     "quote": "Accelerates the decay of the complement alternative pathway (AP) C3 convertase C3bBb, thus preventing local formation of more C3b"}
+   ],
+   "excluded": [
+    {"ref": "OT:CFH-MONDO_0005342", "category": "no_direction", "reason": "Open Targets association score; cannot carry a sign and does not name the complement pathway"},
+    {"ref": "rs6677604", "category": "not_in_text", "reason": "GWAS row: CFH intronic rs6677604-G with IgA nephropathy; says nothing about complement"},
+    {"ref": "R-HSA-977606", "category": "enrichment", "reason": "Reactome 'Regulation of Complement cascade' over-represented in the gene set (2 of 139)"}
+   ]},
+  {"id": "S8", "step": "H2_complement_infiltration.3", "text": "the alternative complement pathway activates ITGAX",
+   "claim": {"effect": {"subject": "complementAP", "sign": "pos", "target": {"activity": "ITGAX"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "OT:ITGAX-MONDO_0005342", "category": "no_direction", "reason": "Open Targets association score; cannot carry a sign and does not name complement"},
+    {"ref": "rs11574637", "category": "not_in_text", "reason": "GWAS row: rs11574637-T (ITGAX intron; author-reported genes ITGAM and ITGAX) with IgA nephropathy; says nothing about complement"},
+    {"ref": "P20702", "category": "not_in_text", "reason": "ITGAX is a fibrinogen and ICAM4 receptor for monocyte adhesion and chemotaxis; complement and iC3b are not mentioned"}
+   ]},
+  {"id": "S9", "step": "H2_complement_infiltration.4", "text": "ITGAX drives IgA nephropathy",
+   "claim": {"effect": {"subject": "ITGAX", "sign": "pos", "target": {"disease": "igan", "aspect": "risk"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "PMID:38716725", "category": "disease_feature", "reason": "scRNA-seq of IgAN kidneys infers a mesangial cell-macrophage interaction via an ITGAX/ITGAM/C3 axis: a feature of diseased tissue, with no IgAN-versus-control difference in ITGAX, so no association with getting IgAN; ITGAX is never perturbed (the blocking experiment targeted Cxcl12/Cxcr4)"}
+   ]}
+ ],
+ "unexpressed": [],
+ "hypotheses": {
+  "H1_mucosal_dysbiosis": {
+   "claims": [
+    {"subject": "DEFA4", "sign": "neg", "target": {"disease": "igan", "aspect": "risk"}},
+    {"subject": "CARD9", "sign": "pos", "target": {"disease": "igan", "aspect": "risk"}},
+    {"subject": "TNFSF13", "sign": "pos", "target": {"disease": "igan", "aspect": "risk"}}
+   ],
+   "note": "DEFA4's sign is from the mechanism ('mutations impacting DEFA4 function' alter the microbiota); the title gives DEFA4 no direction. Contexts (intestinal mucosa, dendritic cell, B cell) dropped as qualifiers."
+  },
+  "H2_complement_infiltration": {
+   "claims": [
+    {"subject": "CFH", "sign": "neg", "target": {"disease": "igan", "aspect": "risk"}},
+    {"subject": "ITGAX", "sign": "pos", "target": {"disease": "igan", "aspect": "risk"}}
+   ],
+   "note": "The chain starts at glomerular IgA deposits, not a gene, so the claims use the hypothesis's genes. 'Defective CFH' gives CFH sign neg; the mechanism names CFH 'genetic risk variants' but the chain starts at the protein. Aspect risk, as the step targets the disease itself, though the chain begins after deposits form and could be read as severity. Contexts (renal glomerulus, macrophage) dropped as qualifiers."
+  }
+ },
+ "findings": [
+  {"project": "hypothesis-agent", "category": "confidence_unjustified", "hypothesis": "H1_mucosal_dysbiosis",
+   "detail": "Rated confidence 'high' and support 'grounded', yet none of its eleven step citations states its step: every arm of H1 has no evidence."},
+  {"project": "hypothesis-agent", "category": "confidence_unjustified", "hypothesis": "H2_complement_infiltration",
+   "detail": "Rated confidence 'high' and support 'grounded', yet only one of nine step citations (P08603, CFH inhibits the alternative pathway) states its step; the steps that make it about IgAN and ITGAX are unsupported."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["H1_mucosal_dysbiosis.1"],
+   "detail": "DEFA4 inhibits the intestinal microbiota: P12838 gives only in-vitro antimicrobial activity against named bacteria and fungi, and says DEFA4 is stored in neutrophil granules, while the step places it in the intestinal mucosa."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["H1_mucosal_dysbiosis.2"],
+   "detail": "The only citation for microbiota activates CARD9 is a review abstract (PMID:33052226) that never names CARD9 or C-type lectin receptors."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["H1_mucosal_dysbiosis.3"],
+   "detail": "Q9H257 says CARD9 signalling stimulates 'pro-inflammatory cytokines and chemokines' but never names TNFSF13/APRIL; the step's specific target is the run's own."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["H1_mucosal_dysbiosis.4"],
+   "detail": "None of four citations for TNFSF13 raises Gd-IgA1 mentions IgA, B cells or glycosylation; O75888 says only that APRIL binds TACI and BCMA."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["H1_mucosal_dysbiosis.5"],
+   "detail": "Gd-IgA1 causes IgAN, the step the hypothesis rests on, cites a STRING literature-enrichment row and a review abstract, neither of which mentions galactose-deficient IgA1."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["H2_complement_infiltration.1"],
+   "detail": "PMID:30356754 measures intragraft complement transcripts in recurrent IgAN versus antibody-mediated rejection; it measures neither IgA deposits nor alternative-pathway activation."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["H2_complement_infiltration.3"],
+   "detail": "The note's mechanism (iC3b activates ITGAX) is uncited: P20702 describes ITGAX as a fibrinogen and ICAM4 receptor and never mentions complement or iC3b."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["H2_complement_infiltration.4"],
+   "detail": "PMID:38716725 infers an ITGAX/ITGAM/C3 ligand-receptor axis from scRNA-seq; the perturbation it reports blocked Cxcl12/Cxcr4, not ITGAX."},
+  {"project": "hypothesis-agent", "category": "gwas_row_at_mechanism_step",
+   "steps": ["H1_mucosal_dysbiosis.1", "H1_mucosal_dysbiosis.3", "H1_mucosal_dysbiosis.4", "H2_complement_infiltration.2", "H2_complement_infiltration.3"],
+   "detail": "Five GWAS rows (rs2738058, rs4077515, rs3803800, rs6677604, rs11574637) each report only variant-with-IgAN risk, yet are cited at mechanism steps between proteins and processes, so the run's genetic evidence states none of its steps."},
+  {"project": "hypothesis-agent", "category": "enrichment_as_evidence",
+   "steps": ["H1_mucosal_dysbiosis.4", "H1_mucosal_dysbiosis.5", "H2_complement_infiltration.2"],
+   "detail": "Gene-set results are cited as step evidence: STRING's enrichment of the paper PMID:25305756 among the input genes (the paper itself was never read) and Reactome's over-representation of 'Regulation of Complement cascade'."},
+  {"project": "hypothesis-agent", "category": "variant_gene_attribution", "steps": ["H1_mucosal_dysbiosis.1"],
+   "detail": "rs2738058 is intergenic in the defensin cluster, its closest genes are the pseudogenes DEFA9P/DEFA10P and its author-reported gene is 'DEFA'; the run assigns it to DEFA4 without saying why."},
+  {"project": "hypothesis-agent", "category": "signed_undirected_change", "steps": ["H1_mucosal_dysbiosis.1", "H1_mucosal_dysbiosis.2"],
+   "detail": "The chain signs the microbiota as a quantity (DEFA4 inhibits it, it activates CARD9), while the mechanism and H1.2's note speak of 'alterations' and 'altered gut flora' (dysbiosis), which has no sign; the composed arm therefore reads 'more gut microbes, more IgAN'."},
+  {"project": "hypothesis-agent", "category": "gene_as_cell_marker", "steps": ["H2_complement_infiltration.3", "H2_complement_infiltration.4"],
+   "detail": "The ITGAX node stands for 'ITGAX-expressing (CD11c+) myeloid cells' and 'ITGAX+ macrophages and dendritic cells', a cell population marked by ITGAX, so the ITGAX claim is really a claim about those cells, not about ITGAX activity."},
+  {"project": "hypothesis-agent", "category": "near_miss_citation", "steps": ["H1_mucosal_dysbiosis.2", "H1_mucosal_dysbiosis.3"],
+   "detail": "The closest cited text to H1.2 is in Q9H257 (cited at H1.3): C-type lectin receptors detect fungal PAMPs and trigger CARD9 activation, marked By similarity and naming fungi, not the intestinal microbiota; the same record says CARD9 regulates the gut mycobiota, the reverse direction."},
+  {"project": "hypothesis-agent", "category": "near_miss_citation", "steps": ["H2_complement_infiltration.2", "H2_complement_infiltration.3"],
+   "detail": "The run's own texts point at ITGAM rather than ITGAX: P08603 names CR3/ITGAM as CFH's receptor partner, rs11574637's author-reported genes are ITGAM and ITGAX, and PMID:38716725 names an ITGAX/ITGAM/C3 axis."},
+  {"project": "hypothesis-agent", "category": "chain_not_connected", "steps": ["H1_mucosal_dysbiosis.5", "H2_complement_infiltration.1"],
+   "detail": "The two hypotheses are successive stages of one story (Gd-IgA1, then deposited immune complexes, then complement) but no step links Gd-IgA1 to glomerular IgA deposits; H1 jumps straight to the disease and H2 starts from deposits."},
+  {"project": "hypothesis-agent", "category": "no_contradicting_citation",
+   "detail": "Neither hypothesis lists contradicting evidence and sources.json has no 'contradicting' citations, so nothing in the run tests its claims against counter-evidence."},
+  {"project": "hypothesis-agent", "category": "abstention_unverifiable",
+   "detail": "The abstention for OR4X1 and ZNF174 cites 'GWAS:OR4X1:no-association', 'GWAS:ZNF174:no-association' and 'STRING:no-edges', none of which is in sources.json, so it cannot be checked."},
+  {"project": "hypothesis-agent", "category": "chain_node_conflated", "steps": ["H1_mucosal_dysbiosis.1", "H1_mucosal_dysbiosis.2"],
+   "detail": "H1.1 and H1.2 meet at 'intestinal microbiota' only by lumping different microbes: the run's DEFA4 text (P12838) names mainly Gram-negative bacteria (fungi 'to a lesser extent'), while its CARD9 text (Q9H257) and H1's own falsification are about fungi (C-type lectin receptors sensing fungal PAMPs, 'commensal fungi'), so nothing shows DEFA4's targets are the microbes that trigger CARD9."},
+  {"project": "hypothesis-agent", "category": "variant_effect_unstated",
+   "steps": ["H1_mucosal_dysbiosis.1", "H1_mucosal_dysbiosis.3", "H1_mucosal_dysbiosis.4", "H2_complement_infiltration.2", "H2_complement_infiltration.3"],
+   "detail": "The mechanisms give each gene a direction (DEFA4 function impaired, CARD9 and TNFSF13 overactive, CFH 'risk variants fail to adequately suppress', ITGAX active), but none of the five GWAS rows says what its risk allele does to its gene (rs2738058 intergenic, rs6677604 a CFH intron whose closest genes are CFHR3 and KCNT2, rs11574637 an ITGAX intron, two missense rows with no function), so the genetic evidence could not sign any gene's claim even with a form for gene-level evidence."},
+  {"project": "both", "category": "aspect_ambiguous", "steps": ["H2_complement_infiltration.4"], "hypothesis": "H2_complement_infiltration",
+   "detail": "H2 begins 'once Gd-IgA1 immune complexes deposit', so CFH and ITGAX act after the disease process starts (severity), but the step targets IgAN itself; the run's steps carry no aspect, so the curator must guess (curated as risk)."},
+  {"project": "biolean", "category": "missing_term", "steps": ["H1_mucosal_dysbiosis.1", "H1_mucosal_dysbiosis.2"],
+   "detail": "BLN:IntestinalMicrobiota made because NCIT:C93019 'Intestinal Flora', which is exactly the node and is found by terms.py, is rejected by render.py (NCIT has no kind)."},
+  {"project": "biolean", "category": "no_form_for", "steps": ["H1_mucosal_dysbiosis.1"],
+   "detail": "An effect on a population of organisms (the gut microbiota) has no target kind (taxon has none); curated as a 'phenotype' (the host's gut microbial load) so the chain can compose."},
+  {"project": "biolean", "category": "kind_mismatch", "steps": ["H1_mucosal_dysbiosis.4", "H1_mucosal_dysbiosis.5"],
+   "detail": "The only term for Gd-IgA1 is OBA:2050057 'serum galactose-deficient IgA1 amount', a trait, so 'increases_amount' becomes a phenotype target, not an amount; no PR or CHEBI term exists for the Gd-IgA1 glycoform, and OBA's generated definition drops 'galactose-deficient'."},
+  {"project": "biolean", "category": "no_form_for",
+   "detail": "Gene-level evidence for a claim: the five GWAS rows are the run's direct gene-to-IgAN evidence, but no step states variant to IgAN, claims cannot carry evidence, and a bridge is not allowed because the arms already compose, so the genetic evidence weighs nothing."},
+  {"project": "biolean", "category": "no_form_for",
+   "detail": "The run's abstention (OR4X1 and ZNF174 judged unrelated, with evidence) has no place in curated.json."}
+ ],
+ "audit": [
+  {"item": "S9 (H2_complement_infiltration.4) excluded PMID:38716725", "error": "wrong_exclusion",
+   "before": "category association_only",
+   "after": "category disease_feature",
+   "reason": "The abstract reports no ITGAX difference between IgAN and controls. It infers, from scRNA-seq of IgAN kidneys, that mesangial cells talk to macrophages via an ITGAX/ITGAM/C3 axis: a feature of diseased tissue. association_only would mean it supports an association with getting IgAN (S9 is risk), which it does not. This follows the audit precedent for disease-tissue observations (alzheimers single_agent r3). Still excluded; counts unchanged."},
+  {"item": "findings: chain_node_conflated (H1.1, H1.2)", "error": "missed_finding",
+   "before": "none (the near_miss finding notes Q9H257 names fungi, but not that this breaks the H1.1-H1.2 link)",
+   "after": "hypothesis-agent finding chain_node_conflated",
+   "reason": "P12838 says DEFA4 acts mainly on Gram-negative bacteria. Q9H257 and H1's falsification ('commensal fungi') put CARD9's trigger in fungi. So the merged microbiota node joins two different microbe sets, and the DEFA4 arm composes only through that merge."},
+  {"item": "findings: variant_effect_unstated (H1, H2 genes)", "error": "missed_finding",
+   "before": "none (the gwas_row_at_mechanism_step and no_form_for findings imply the GWAS rows would count as gene evidence if the format allowed it)",
+   "after": "hypothesis-agent finding variant_effect_unstated",
+   "reason": "I grepped all five rows. None states the risk allele's effect on its gene: rs2738058 is intergenic, rs6677604 is a CFH intron whose closest genes are CFHR3/KCNT2, rs11574637 is an ITGAX intron, and the two missense rows say nothing about function. The genes' directions (CFH 'risk variants fail to suppress', CARD9/TNFSF13 overactive) are the run's assumption, so a gene-level evidence form would still not sign these claims."}
+ ]
+}

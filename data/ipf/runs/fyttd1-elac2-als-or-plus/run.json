@@ -1,0 +1,766 @@
+{
+ "run_id": "fyttd1-elac2-als-or-plus",
+ "model": "openrouter:anthropic/claude-opus-5",
+ "question": {
+  "arm": "multi_agent",
+  "budget": {
+   "max_delegations": 24,
+   "max_model_requests": 90,
+   "max_specialist_requests": 8,
+   "min_evidence_per_hypothesis": 2,
+   "min_hypotheses": 3,
+   "min_sources_per_hypothesis": 2,
+   "output_retries": 3
+  },
+  "data_policy": {
+   "max_age_seconds": 86400,
+   "mode": "live",
+   "snapshot_run_id": null
+  },
+  "disease": "amyotrophic lateral sclerosis",
+  "formalise": false,
+  "genes": [
+   "FYTTD1",
+   "ELAC2"
+  ],
+  "model": "openrouter:anthropic/claude-opus-5",
+  "specialist_model": "openrouter:anthropic/claude-opus-5",
+  "specialists": [
+   "chembl",
+   "expression",
+   "gwas",
+   "interactions",
+   "literature",
+   "model_organism",
+   "open_targets",
+   "pathways",
+   "single_cell",
+   "trials",
+   "uniprot"
+  ],
+  "tissue": {
+   "artifact_id": "sha256:84d37d81ae8842bee2fd58d06e14bc308757bb3900069f6cbac274124a53dc02",
+   "label": "spinal cord",
+   "uberon": "UBERON:0002240"
+  },
+  "use_network": true
+ },
+ "disease": "amyotrophic lateral sclerosis",
+ "genes_considered": [
+  "FYTTD1",
+  "ELAC2"
+ ],
+ "hypotheses": [
+  {
+   "hypothesis_id": "H1",
+   "title": "FYTTD1/UIF is a candidate effector of the ALS nucleocytoplasmic mRNA-export block, not a risk gene",
+   "genes": [
+    "FYTTD1"
+   ],
+   "mechanism": "FYTTD1 (UIF) is a nuclear mRNA export adapter that delivers transcripts to the nuclear pore via the DDX39B/UAP56-NFX1 pathway and co-associates with ALYREF/THOC4 (Q96QD9). ALS pathology converges on exactly this step: the C9orf72 GGGGCC expansion compromises nucleocytoplasmic transport (PMID:26308891, PMID:26308899), TDP-43 pathology disrupts nuclear pore complexes and transport (PMID:29311743), stress-granule assembly blocks transport (PMID:29628143), and C9orf72 repeats/DPRs sequester RRM-containing RNA-binding proteins including export adapters (PMID:24866055, PMID:27768896). The claim is deliberately downstream rather than genetic: FYTTD1 function is predicted to be lost or mislocalised in ALS motor neurons as a consequence of these insults, and its loss would aggravate mRNA retention, with the THOC2 precedent showing that crippling a TREX/export factor causes R-loops, DNA damage and adverse neurodevelopment (PMID:38331934). There is no ALS genetic evidence for FYTTD1 itself: the GWAS Catalog maps no ALS variant to it, Open Targets holds no association record, and the mouse knockout shows coat, haematology and adiposity phenotypes with nothing neuromuscular.",
+   "chain": [
+    {
+     "subject": {
+      "label": "C9orf72 repeat expansion / TDP-43 pathology",
+      "kind": "process",
+      "curie": "",
+      "grounding_evidence": ""
+     },
+     "relation": "inhibits",
+     "object": {
+      "label": "nucleocytoplasmic transport",
+      "kind": "process",
+      "curie": "",
+      "grounding_evidence": ""
+     },
+     "context": {
+      "tissue": {
+       "label": "spinal cord",
+       "kind": "tissue",
+       "curie": "",
+       "grounding_evidence": ""
+      },
+      "cell_type": null,
+      "disease_state": {
+       "label": "amyotrophic lateral sclerosis",
+       "kind": "disease",
+       "curie": "MONDO:0004976",
+       "grounding_evidence": ""
+      }
+     },
+     "note": "",
+     "polarity": "negative",
+     "evidence": [
+      "PMID:26308891",
+      "PMID:26308899",
+      "PMID:29311743"
+     ]
+    },
+    {
+     "subject": {
+      "label": "FYTTD1 (UIF)",
+      "kind": "protein",
+      "curie": "",
+      "grounding_evidence": ""
+     },
+     "relation": "required_for",
+     "object": {
+      "label": "mRNA export from nucleus to cytoplasm",
+      "kind": "process",
+      "curie": "",
+      "grounding_evidence": ""
+     },
+     "context": null,
+     "note": "",
+     "polarity": "positive",
+     "evidence": [
+      "Q96QD9",
+      "R-HSA-72202"
+     ]
+    },
+    {
+     "subject": {
+      "label": "loss of mRNA export adapter function",
+      "kind": "process",
+      "curie": "",
+      "grounding_evidence": ""
+     },
+     "relation": "leads_to",
+     "object": {
+      "label": "motor neuron degeneration",
+      "kind": "phenotype",
+      "curie": "",
+      "grounding_evidence": ""
+     },
+     "context": null,
+     "note": "Inferred by analogy from THOC2 in the same TREX/export module; no ALS-specific FYTTD1 data exist.",
+     "polarity": "positive",
+     "evidence": [
+      "PMID:38331934",
+      "PMID:27679854"
+     ]
+    }
+   ],
+   "supporting_evidence": [
+    "Q96QD9",
+    "PMID:27679854",
+    "PMID:26308891",
+    "PMID:26308899",
+    "PMID:29311743",
+    "PMID:29628143",
+    "PMID:24866055",
+    "PMID:27768896",
+    "PMID:38331934",
+    "R-HSA-159236",
+    "R-HSA-72202"
+   ],
+   "contradicting_evidence": [
+    "GWAS:FYTTD1:no-association",
+    "HPA:ENSG00000122068",
+    "AGR:MGI:1917955:MP:0000367",
+    "AGR:MGI:1917955:MP:0005562",
+    "AGR:MGI:1917955:MP:0005553",
+    "AGR:MGI:1917955:MP:0010024"
+   ],
+   "confidence": "low",
+   "support": "grounded",
+   "falsification": {
+    "description": "Knock down FYTTD1 in human iPSC-derived spinal motor neurons (control and C9orf72-expansion lines) and measure the poly(A) RNA nuclear/cytoplasmic ratio by FISH plus survival, alongside FYTTD1 immunostaining of ALS post-mortem motor neurons. If FYTTD1 loss neither increases nuclear mRNA retention nor sensitises C9orf72 neurons to degeneration, and FYTTD1 level/localisation is unchanged in ALS tissue, the hypothesis fails.",
+    "perturbation": {
+     "target": {
+      "label": "FYTTD1",
+      "kind": "gene",
+      "curie": "UniProtKB:Q96QD9",
+      "grounding_evidence": ""
+     },
+     "action": "knockdown"
+    },
+    "readout": {
+     "label": "nuclear-to-cytoplasmic poly(A) mRNA ratio",
+     "kind": "process",
+     "curie": "",
+     "grounding_evidence": ""
+    },
+    "expected": "positive",
+    "system": "iPSC-derived spinal motor neurons"
+   }
+  },
+  {
+   "hypothesis_id": "H2",
+   "title": "ELAC2 (RNase Z) sets the substrate pool for angiogenin-driven tRNA fragments implicated in motor neuron stress responses",
+   "genes": [
+    "ELAC2"
+   ],
+   "mechanism": "ELAC2 is the zinc-phosphodiesterase tRNase Z that removes the 3'-trailer from precursor tRNA in both nucleus and mitochondrion (Q9BQ52), and Reactome places it in tRNA processing and specifically in tsRNA/tRNA-fragment biogenesis (R-HSA-72306, R-HSA-6784531, R-HSA-9708296). The ALS-relevant arm of this pathway is established without ELAC2: angiogenin, a bona fide ALS gene, cleaves tRNA to drive stress-induced translational repression (PMID:19332886); tRNA fragments are implicated in human disease and in brain ageing and neurodegeneration (PMID:25220675, PMID:40294208, PMID:41320876); and CLP1 founder mutations link tRNA splicing and maturation directly to neurodegeneration (PMID:24766810). The hypothesis is that ELAC2-dependent 3'-end maturation determines the mature-tRNA and tRF pool available in motor neurons, so partial ELAC2 loss of function shifts that pool and lowers the threshold for stress-induced translational collapse, acting as a modifier rather than a primary cause. No ALS variant maps to ELAC2 in the GWAS Catalog, which is why the claim is framed as a modifier.",
+   "chain": [
+    {
+     "subject": {
+      "label": "ELAC2 (tRNase Z)",
+      "kind": "protein",
+      "curie": "",
+      "grounding_evidence": ""
+     },
+     "relation": "required_for",
+     "object": {
+      "label": "pre-tRNA 3'-end maturation",
+      "kind": "process",
+      "curie": "",
+      "grounding_evidence": ""
+     },
+     "context": null,
+     "note": "",
+     "polarity": "positive",
+     "evidence": [
+      "Q9BQ52",
+      "R-HSA-72306"
+     ]
+    },
+    {
+     "subject": {
+      "label": "pre-tRNA 3'-end maturation",
+      "kind": "process",
+      "curie": "",
+      "grounding_evidence": ""
+     },
+     "relation": "associated_with",
+     "object": {
+      "label": "tRNA-derived fragment (tsRNA/tRF) biogenesis",
+      "kind": "process",
+      "curie": "",
+      "grounding_evidence": ""
+     },
+     "context": null,
+     "note": "",
+     "polarity": "unknown",
+     "evidence": [
+      "R-HSA-9708296",
+      "PMID:25220675"
+     ]
+    },
+    {
+     "subject": {
+      "label": "angiogenin-generated tRNA fragments",
+      "kind": "other",
+      "curie": "",
+      "grounding_evidence": ""
+     },
+     "relation": "inhibits",
+     "object": {
+      "label": "stress-induced protein translation",
+      "kind": "process",
+      "curie": "",
+      "grounding_evidence": ""
+     },
+     "context": null,
+     "note": "",
+     "polarity": "negative",
+     "evidence": [
+      "PMID:19332886"
+     ]
+    },
+    {
+     "subject": {
+      "label": "disordered tRNA maturation",
+      "kind": "process",
+      "curie": "",
+      "grounding_evidence": ""
+     },
+     "relation": "leads_to",
+     "object": {
+      "label": "neurodegeneration",
+      "kind": "phenotype",
+      "curie": "",
+      "grounding_evidence": ""
+     },
+     "context": null,
+     "note": "Evidence is for CLP1 and tRF biology generally; no study tests ELAC2 in motor neurons.",
+     "polarity": "positive",
+     "evidence": [
+      "PMID:24766810",
+      "PMID:41320876"
+     ]
+    }
+   ],
+   "supporting_evidence": [
+    "Q9BQ52",
+    "R-HSA-9708296",
+    "R-HSA-72306",
+    "R-HSA-6784531",
+    "PMID:19332886",
+    "PMID:25220675",
+    "PMID:24766810",
+    "PMID:40294208",
+    "PMID:41320876"
+   ],
+   "contradicting_evidence": [
+    "GWAS:ELAC2:no-association",
+    "HPA:ENSG00000006744",
+    "AGR:MGI:1890496:phenotype-count"
+   ],
+   "confidence": "low",
+   "support": "grounded",
+   "falsification": {
+    "description": "Partially knock down ELAC2 in human iPSC-derived motor neurons and profile small RNAs (tRF/tsRNA) and polysome loading under oxidative stress, with survival as endpoint. If ELAC2 reduction does not alter the tRF pool or stress-induced translational repression, and does not reduce motor neuron survival, the hypothesis fails.",
+    "perturbation": {
+     "target": {
+      "label": "ELAC2",
+      "kind": "gene",
+      "curie": "UniProtKB:Q9BQ52",
+      "grounding_evidence": ""
+     },
+     "action": "knockdown"
+    },
+    "readout": {
+     "label": "tRNA-derived fragment abundance and motor neuron survival under stress",
+     "kind": "process",
+     "curie": "",
+     "grounding_evidence": ""
+    },
+    "expected": "positive",
+    "system": "iPSC-derived spinal motor neurons under oxidative stress"
+   }
+  },
+  {
+   "hypothesis_id": "H3",
+   "title": "ELAC2 loss as a mitochondrial-bioenergetic modifier: the only demonstrated organ-level consequence is OXPHOS failure in excitable tissue",
+   "genes": [
+    "ELAC2"
+   ],
+   "mechanism": "ELAC2 associates with mitochondrial DNA nucleoids and initiates mitochondrial RNA processing and ribosome assembly (Q9BQ52; R-HSA-6785470). Muscle-directed conditional deletion of mouse Elac2 (Ckmm-cre) produces abnormal mitochondrial physiology, abnormal ATP-synthesis-coupled electron transport, abnormal oxidative phosphorylation, abnormal cardiac echocardiography and abnormal cell physiology. Because motor neurons are high-ATP-demand cells and mitochondrial failure is a convergent feature of ALS, the testable claim is that reduced ELAC2 activity impairs mitochondrial translation and OXPHOS in motor neurons and so acts as a bioenergetic disease modifier. This hypothesis is distinct from H2 in compartment and readout (mitochondrial translation/respiration versus cytoplasmic tRF-mediated translational repression), and its caveats are explicit: the mouse phenotype is cardiac and skeletal-muscle in a Cre-transgene genotype, and no neuromuscular or motor phenotype is curated for the orthologue.",
+   "chain": [
+    {
+     "subject": {
+      "label": "ELAC2",
+      "kind": "protein",
+      "curie": "UniProtKB:Q9BQ52",
+      "grounding_evidence": ""
+     },
+     "relation": "required_for",
+     "object": {
+      "label": "mitochondrial RNA processing and ribosome assembly",
+      "kind": "process",
+      "curie": "",
+      "grounding_evidence": ""
+     },
+     "context": null,
+     "note": "",
+     "polarity": "positive",
+     "evidence": [
+      "Q9BQ52",
+      "R-HSA-6785470"
+     ]
+    },
+    {
+     "subject": {
+      "label": "Elac2 conditional deletion",
+      "kind": "gene",
+      "curie": "",
+      "grounding_evidence": ""
+     },
+     "relation": "decreases_amount",
+     "object": {
+      "label": "oxidative phosphorylation capacity",
+      "kind": "process",
+      "curie": "",
+      "grounding_evidence": ""
+     },
+     "context": {
+      "tissue": {
+       "label": "striated muscle (Ckmm-cre)",
+       "kind": "tissue",
+       "curie": "",
+       "grounding_evidence": ""
+      },
+      "cell_type": null,
+      "disease_state": null
+     },
+     "note": "Demonstrated in muscle and heart only; extrapolation to motor neurons is the untested part of the hypothesis.",
+     "polarity": "negative",
+     "evidence": [
+      "AGR:MGI:1890496:MP:0010959",
+      "AGR:MGI:1890496:MP:0010956"
+     ]
+    },
+    {
+     "subject": {
+      "label": "impaired mitochondrial ATP production",
+      "kind": "process",
+      "curie": "",
+      "grounding_evidence": ""
+     },
+     "relation": "leads_to",
+     "object": {
+      "label": "motor neuron degeneration",
+      "kind": "phenotype",
+      "curie": "",
+      "grounding_evidence": ""
+     },
+     "context": null,
+     "note": "Inference; no ALS-specific evidence for ELAC2.",
+     "polarity": "positive",
+     "evidence": [
+      "AGR:MGI:1890496:MP:0006036",
+      "AGR:MGI:1890496:MP:0005621"
+     ]
+    }
+   ],
+   "supporting_evidence": [
+    "Q9BQ52",
+    "R-HSA-6785470",
+    "AGR:MGI:1890496:MP:0006036",
+    "AGR:MGI:1890496:MP:0010956",
+    "AGR:MGI:1890496:MP:0010959",
+    "AGR:MGI:1890496:MP:0011925",
+    "AGR:MGI:1890496:MP:0005621"
+   ],
+   "contradicting_evidence": [
+    "GWAS:ELAC2:no-association",
+    "AGR:MGI:1890496:MP:0009381",
+    "AGR:MGI:1890496:MP:0031369",
+    "AGR:MGI:1890496:phenotype-count",
+    "HPA:ENSG00000006744"
+   ],
+   "confidence": "low",
+   "support": "grounded",
+   "falsification": {
+    "description": "Delete Elac2 conditionally in mouse motor neurons (ChAT-Cre) and in iPSC-derived motor neurons; measure mt-tRNA 3'-processing, oxygen consumption rate, neuromuscular junction integrity and grip strength. If mitochondrial respiration and motor function are unaffected despite demonstrable loss of mt-tRNA processing, the bioenergetic-modifier claim is refuted.",
+    "perturbation": {
+     "target": {
+      "label": "ELAC2",
+      "kind": "gene",
+      "curie": "UniProtKB:Q9BQ52",
+      "grounding_evidence": ""
+     },
+     "action": "knockout"
+    },
+    "readout": {
+     "label": "mitochondrial oxygen consumption rate",
+     "kind": "process",
+     "curie": "",
+     "grounding_evidence": ""
+    },
+    "expected": "negative",
+    "system": "ChAT-Cre conditional Elac2 mouse; iPSC-derived motor neurons"
+   }
+  },
+  {
+   "hypothesis_id": "H4",
+   "title": "FYTTD1 haploinsufficiency lowers mRNA-export capacity and the threshold for ALS",
+   "genes": [
+    "FYTTD1"
+   ],
+   "mechanism": "[Hand-added by Claude Code, not produced by the agent run.] FYTTD1 (UIF) is a TREX adaptor that hands mRNA to NXF1 for export (Q96QD9; R-HSA-159236). ALS already erodes this step: C9orf72 and TDP-43 pathology damage nucleocytoplasmic transport (PMID:26308891, PMID:26308899, PMID:29311743). Motor neurons depend on exporting long transcripts for axonal local translation, so a heterozygous loss-of-function allele lowers export capacity and the threshold at which these insults become lethal. UIF and ALYREF are partly redundant, so this is a modifier needing a second hit, not a monogenic cause. Outside this run's evidence, so cited in prose only and not verified by `verify`: GLE1 loss-of-function variants in ALS (Kaneb et al. 2015) as the mRNA-export precedent; UIF/ALYREF redundancy (Hautbergue et al. 2009).",
+   "chain": [
+    {
+     "subject": {
+      "label": "FYTTD1",
+      "kind": "gene",
+      "curie": "UniProtKB:Q96QD9",
+      "grounding_evidence": ""
+     },
+     "relation": "required_for",
+     "object": {
+      "label": "mRNA export from nucleus to cytoplasm",
+      "kind": "process",
+      "curie": "",
+      "grounding_evidence": ""
+     },
+     "context": null,
+     "note": "",
+     "polarity": "positive",
+     "evidence": [
+      "Q96QD9",
+      "R-HSA-159236"
+     ]
+    },
+    {
+     "subject": {
+      "label": "C9orf72 repeat expansion / TDP-43 pathology",
+      "kind": "process",
+      "curie": "",
+      "grounding_evidence": ""
+     },
+     "relation": "inhibits",
+     "object": {
+      "label": "nucleocytoplasmic transport",
+      "kind": "process",
+      "curie": "",
+      "grounding_evidence": ""
+     },
+     "context": null,
+     "note": "",
+     "polarity": "negative",
+     "evidence": [
+      "PMID:26308891",
+      "PMID:26308899",
+      "PMID:29311743"
+     ]
+    },
+    {
+     "subject": {
+      "label": "reduced mRNA export capacity",
+      "kind": "process",
+      "curie": "",
+      "grounding_evidence": ""
+     },
+     "relation": "leads_to",
+     "object": {
+      "label": "motor neuron degeneration",
+      "kind": "phenotype",
+      "curie": "",
+      "grounding_evidence": ""
+     },
+     "context": null,
+     "note": "Second-hit model: the loss only matters on an ALS background.",
+     "polarity": "positive",
+     "evidence": [
+      "PMID:27679854"
+     ]
+    }
+   ],
+   "supporting_evidence": [
+    "Q96QD9",
+    "R-HSA-159236",
+    "PMID:26308891",
+    "PMID:26308899",
+    "PMID:29311743",
+    "PMID:27679854"
+   ],
+   "contradicting_evidence": [
+    "GWAS:FYTTD1:no-association",
+    "HPA:ENSG00000122068",
+    "AGR:MGI:1917955:MP:0000367"
+   ],
+   "confidence": "low",
+   "support": "speculative",
+   "falsification": {
+    "description": "Heterozygous FYTTD1 knockout in control and TDP-43-stressed iPSC motor neurons: poly(A) FISH nuclear/cytoplasmic ratio and survival. If survival does not fall more on the stressed background, it fails.",
+    "perturbation": {
+     "target": {
+      "label": "FYTTD1",
+      "kind": "gene",
+      "curie": "UniProtKB:Q96QD9",
+      "grounding_evidence": ""
+     },
+     "action": "knockdown"
+    },
+    "readout": {
+     "label": "motor neuron survival",
+     "kind": "phenotype",
+     "curie": "",
+     "grounding_evidence": ""
+    },
+    "expected": "negative",
+    "system": "iPSC-derived spinal motor neurons"
+   }
+  },
+  {
+   "hypothesis_id": "H5",
+   "title": "FYTTD1 loss leaves RNA unshielded, causing R-loops and DNA damage in motor neurons",
+   "genes": [
+    "FYTTD1"
+   ],
+   "mechanism": "[Hand-added by Claude Code, not produced by the agent run.] TREX loading during transcription keeps the new RNA from re-annealing to its DNA template. Crippling the TREX factor THOC2 causes R-loop accumulation, DNA damage and adverse neurodevelopment (PMID:38331934). If FYTTD1 loss does the same, motor neurons accumulate R-loops, the lesion that senataxin clears, linking it to the R-loop and DNA-damage arm of ALS. Speculative: no data show UIF loss itself causes R-loops. Outside this run's evidence, so cited in prose only and not verified by `verify`: SETX/ALS4 R-loop resolution; R-loops in C9orf72 and FUS ALS.",
+   "chain": [
+    {
+     "subject": {
+      "label": "FYTTD1",
+      "kind": "gene",
+      "curie": "UniProtKB:Q96QD9",
+      "grounding_evidence": ""
+     },
+     "relation": "required_for",
+     "object": {
+      "label": "co-transcriptional mRNA packaging by TREX",
+      "kind": "process",
+      "curie": "",
+      "grounding_evidence": ""
+     },
+     "context": null,
+     "note": "",
+     "polarity": "positive",
+     "evidence": [
+      "Q96QD9",
+      "PMID:27679854"
+     ]
+    },
+    {
+     "subject": {
+      "label": "loss of TREX function",
+      "kind": "process",
+      "curie": "",
+      "grounding_evidence": ""
+     },
+     "relation": "increases_amount",
+     "object": {
+      "label": "R-loops",
+      "kind": "other",
+      "curie": "",
+      "grounding_evidence": ""
+     },
+     "context": null,
+     "note": "Shown for THOC2, assumed for FYTTD1.",
+     "polarity": "positive",
+     "evidence": [
+      "PMID:38331934"
+     ]
+    },
+    {
+     "subject": {
+      "label": "R-loop-driven DNA damage",
+      "kind": "process",
+      "curie": "",
+      "grounding_evidence": ""
+     },
+     "relation": "leads_to",
+     "object": {
+      "label": "motor neuron degeneration",
+      "kind": "phenotype",
+      "curie": "",
+      "grounding_evidence": ""
+     },
+     "context": null,
+     "note": "",
+     "polarity": "positive",
+     "evidence": [
+      "PMID:38331934"
+     ]
+    }
+   ],
+   "supporting_evidence": [
+    "Q96QD9",
+    "PMID:27679854",
+    "PMID:38331934"
+   ],
+   "contradicting_evidence": [
+    "AGR:MGI:1917955:MP:0000367"
+   ],
+   "confidence": "low",
+   "support": "speculative",
+   "falsification": {
+    "description": "FYTTD1 knockdown in iPSC motor neurons; S9.6 R-loop and gammaH2AX staining, with RNase H1 overexpression as rescue. No R-loop rise, or no rescue of survival by RNase H1, kills it.",
+    "perturbation": {
+     "target": {
+      "label": "FYTTD1",
+      "kind": "gene",
+      "curie": "UniProtKB:Q96QD9",
+      "grounding_evidence": ""
+     },
+     "action": "knockdown"
+    },
+    "readout": {
+     "label": "R-loops",
+     "kind": "other",
+     "curie": "",
+     "grounding_evidence": ""
+    },
+    "expected": "positive",
+    "system": "iPSC-derived spinal motor neurons"
+   }
+  },
+  {
+   "hypothesis_id": "H6",
+   "title": "In C9orf72 carriers FYTTD1 loss is protective: less repeat RNA exported, fewer DPRs",
+   "genes": [
+    "FYTTD1"
+   ],
+   "mechanism": "[Hand-added by Claude Code, not produced by the agent run.] C9orf72 repeat RNA must leave the nucleus to be RAN-translated into toxic dipeptide repeats, which then sequester RNA-binding proteins and disrupt membrane-less organelles (PMID:24866055, PMID:27768896). Its export goes through the NXF1 adaptor route that FYTTD1 feeds (Q96QD9). Reducing one such adaptor, SRSF1, lowers DPRs and protects neurons. If FYTTD1 also carries the repeat RNA, its loss is protective in C9 carriers: the opposite sign to H4. One experiment separates them. Outside this run's evidence, so cited in prose only and not verified by `verify`: SRSF1 depletion is neuroprotective in C9 models (Hautbergue et al. 2017).",
+   "chain": [
+    {
+     "subject": {
+      "label": "FYTTD1",
+      "kind": "gene",
+      "curie": "UniProtKB:Q96QD9",
+      "grounding_evidence": ""
+     },
+     "relation": "required_for",
+     "object": {
+      "label": "NXF1-dependent mRNA export",
+      "kind": "process",
+      "curie": "",
+      "grounding_evidence": ""
+     },
+     "context": null,
+     "note": "",
+     "polarity": "positive",
+     "evidence": [
+      "Q96QD9",
+      "R-HSA-72202"
+     ]
+    },
+    {
+     "subject": {
+      "label": "C9orf72 dipeptide repeat proteins",
+      "kind": "process",
+      "curie": "",
+      "grounding_evidence": ""
+     },
+     "relation": "inhibits",
+     "object": {
+      "label": "RNA-binding protein and membrane-less organelle function",
+      "kind": "process",
+      "curie": "",
+      "grounding_evidence": ""
+     },
+     "context": null,
+     "note": "",
+     "polarity": "negative",
+     "evidence": [
+      "PMID:24866055",
+      "PMID:27768896"
+     ]
+    },
+    {
+     "subject": {
+      "label": "reduced export of C9orf72 repeat RNA",
+      "kind": "process",
+      "curie": "",
+      "grounding_evidence": ""
+     },
+     "relation": "decreases_amount",
+     "object": {
+      "label": "C9orf72 dipeptide repeat proteins",
+      "kind": "other",
+      "curie": "",
+      "grounding_evidence": ""
+     },
+     "context": null,
+     "note": "Assumed by analogy with SRSF1; not in this run's evidence.",
+     "polarity": "negative",
+     "evidence": []
+    }
+   ],
+   "supporting_evidence": [
+    "Q96QD9",
+    "R-HSA-72202",
+    "PMID:24866055",
+    "PMID:27768896"
+   ],
+   "contradicting_evidence": [],
+   "confidence": "low",
+   "support": "speculative",
+   "falsification": {
+    "description": "Heterozygous FYTTD1 knockout in C9orf72-expansion iPSC motor neurons: cytoplasmic repeat RNA (FISH), poly-GP DPR by MSD assay, survival. If DPRs do not fall and survival does not rise, it fails; if survival falls, H4 wins.",
+    "perturbation": {
+     "target": {
+      "label": "FYTTD1",
+      "kind": "gene",
+      "curie": "UniProtKB:Q96QD9",
+      "grounding_evidence": ""
+     },
+     "action": "knockdown"
+    },
+    "readout": {
+     "label": "motor neuron survival",
+     "kind": "phenotype",
+     "curie": "",
+     "grounding_evidence": ""
+    },
+    "expected": "positive",
+    "system": "iPSC-derived spinal motor neurons (C9orf72 expansion)"
+   }
+  }
+ ],
+ "unexplained_genes": [],
+ "abstention": null
+}

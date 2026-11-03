@@ -1,0 +1,335 @@
+{
+ "run_id": "study-2026-09-vertex-dcm-vertex-openai-deepseek-aideepseek-v3.2-maas-single_agent-r2",
+ "model": "vertex-openai:deepseek-ai/deepseek-v3.2-maas",
+ "question": {
+  "arm": "single_agent",
+  "budget": {
+   "max_delegations": 22,
+   "max_model_requests": 80,
+   "max_specialist_requests": 8,
+   "min_evidence_per_hypothesis": 2,
+   "min_hypotheses": 3,
+   "min_sources_per_hypothesis": 2,
+   "output_retries": 3
+  },
+  "data_policy": {
+   "max_age_seconds": 1209600.0,
+   "mode": "cache-preferred",
+   "snapshot_run_id": null
+  },
+  "disease": "dilated cardiomyopathy",
+  "formalise": false,
+  "genes": [
+   "LMNA",
+   "MYH7",
+   "TTN",
+   "TNNT2",
+   "RBM20",
+   "ABCB9",
+   "OR8J3"
+  ],
+  "model": "vertex-openai:deepseek-ai/deepseek-v3.2-maas",
+  "specialist_model": "",
+  "specialists": [
+   "chembl",
+   "expression",
+   "gwas",
+   "interactions",
+   "literature",
+   "model_organism",
+   "open_targets",
+   "pathways",
+   "single_cell",
+   "trials",
+   "uniprot"
+  ],
+  "tissue": {
+   "artifact_id": "sha256:800509ecbac0454ae2ea23025dca99af683b39382fb316f74354fab347c8b954",
+   "label": "heart",
+   "uberon": "UBERON:0000948"
+  },
+  "use_network": true
+ },
+ "abstention": null,
+ "disease": "dilated cardiomyopathy",
+ "genes_considered": [
+  "LMNA",
+  "MYH7",
+  "TTN",
+  "TNNT2",
+  "RBM20",
+  "ABCB9",
+  "OR8J3"
+ ],
+ "hypotheses": [
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "OT:MYH7-MONDO_0005021",
+      "OT:TTN-MONDO_0005021",
+      "STRING:GOCC:0030017",
+      "STRING:GO:0045214"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "impaired sarcomere contraction"
+     },
+     "polarity": "unknown",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "MYH7 and TTN truncating variants"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "rs2042995",
+      "rs16866400"
+     ],
+     "note": "",
+     "object": {
+      "curie": "MONDO:0005021",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "dilated cardiomyopathy"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "impaired sarcomere contraction"
+     }
+    }
+   ],
+   "confidence": "medium",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Knock-in mice carrying MYH7 and TTN truncating variants seen in human DCM should show normal sarcomere contraction force in isolated cardiomyocytes measured by atomic force microscopy or traction force microscopy.",
+    "expected": "unknown",
+    "perturbation": null,
+    "readout": null,
+    "system": ""
+   },
+   "genes": [
+    "MYH7",
+    "TTN"
+   ],
+   "hypothesis_id": "hyp1",
+   "mechanism": "Truncating variants in the sarcomere proteins MYH7 and TTN disrupt the mechanical integrity and force generation of cardiac sarcomeres. This leads to impaired contractile function, progressive ventricular dilation, and heart failure characteristic of dilated cardiomyopathy. The GWAS signals at TTN variants support a population-level genetic risk.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "OT:MYH7-MONDO_0005021",
+    "OT:TTN-MONDO_0005021",
+    "rs2042995",
+    "rs16866400",
+    "STRING:GOCC:0030017",
+    "STRING:GO:0045214"
+   ],
+   "title": "Sarcomere force-generation failure via MYH7 and TTN truncating variants"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "OT:RBM20-MONDO_0005021",
+      "STRING:MYH7-RBM20",
+      "STRING:RBM20-TTN",
+      "STRING:RBM20-TNNT2"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "mis‑splicing of cardiac sarcomere transcripts"
+     },
+     "polarity": "unknown",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "RBM20 loss‑of‑function"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "OT:MYH7-MONDO_0005021",
+      "OT:TTN-MONDO_0005021",
+      "OT:TNNT2-MONDO_0005021"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "altered sarcomere protein isoforms"
+     },
+     "polarity": "unknown",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "mis‑splicing of cardiac sarcomere transcripts"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "STRING:GO:0045214"
+     ],
+     "note": "",
+     "object": {
+      "curie": "MONDO:0005021",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "dilated cardiomyopathy"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "altered sarcomere protein isoforms"
+     }
+    }
+   ],
+   "confidence": "medium",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "RBM20‑knockout mice should show no change in splicing patterns of TTN, MYH7, and TNNT2 in cardiac tissue as measured by RNA‑seq of exon‑junction counts.",
+    "expected": "unknown",
+    "perturbation": null,
+    "readout": null,
+    "system": ""
+   },
+   "genes": [
+    "RBM20"
+   ],
+   "hypothesis_id": "hyp2",
+   "mechanism": "RBM20 is a cardiac‑specific RNA‑binding protein that regulates alternative splicing of key sarcomere genes, including TTN, MYH7, and TNNT2. Loss‑of‑function mutations in RBM20 cause aberrant splicing, producing abnormal protein isoforms that compromise sarcomere assembly and stability, ultimately driving dilated cardiomyopathy.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "OT:RBM20-MONDO_0005021",
+    "STRING:MYH7-RBM20",
+    "STRING:RBM20-TTN",
+    "STRING:RBM20-TNNT2",
+    "OT:MYH7-MONDO_0005021",
+    "OT:TTN-MONDO_0005021",
+    "OT:TNNT2-MONDO_0005021",
+    "STRING:GO:0045214"
+   ],
+   "title": "Splicing‑mediated sarcomere dysregulation via RBM20 loss‑of‑function"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "OT:LMNA-MONDO_0005021",
+      "OT:LMNA-constraint"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "nuclear envelope fragility"
+     },
+     "polarity": "unknown",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "LMNA dominant‑negative variants"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "STRING:GO:0048738"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "cardiomyocyte death and fibrosis"
+     },
+     "polarity": "unknown",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "nuclear envelope fragility"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "OT:LMNA-MONDO_0005021"
+     ],
+     "note": "",
+     "object": {
+      "curie": "MONDO:0005021",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "dilated cardiomyopathy"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "cardiomyocyte death and fibrosis"
+     }
+    }
+   ],
+   "confidence": "medium",
+   "contradicting_evidence": [
+    "GWAS:LMNA:no-association"
+   ],
+   "falsification": {
+    "description": "Induced pluripotent stem cell‑derived cardiomyocytes from LMNA‑DCM patients should show normal nuclear envelope integrity under mechanical stretch, measured by lamin A/C immunofluorescence and nuclear rupture assays.",
+    "expected": "unknown",
+    "perturbation": null,
+    "readout": null,
+    "system": ""
+   },
+   "genes": [
+    "LMNA"
+   ],
+   "hypothesis_id": "hyp3",
+   "mechanism": "Dominant‑negative LMNA variants disrupt the nuclear lamina, making cardiomyocyte nuclei mechanically fragile. Repeated contraction‑induced nuclear stress leads to DNA damage, apoptosis, and replacement fibrosis, which weakens the ventricular wall and dilates the chamber. This is a distinct mechanism from sarcomere defects, explaining the earlier arrhythmias and faster progression seen in laminopathies.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "OT:LMNA-MONDO_0005021",
+    "OT:LMNA-constraint",
+    "STRING:GO:0048738"
+   ],
+   "title": "Nuclear‑lamina fragility‑driven cardiomyocyte loss via LMNA dominant‑negative variants"
+  }
+ ],
+ "unexplained_genes": [
+  "TNNT2",
+  "ABCB9",
+  "OR8J3"
+ ]
+}

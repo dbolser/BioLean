@@ -1,0 +1,143 @@
+{
+ "run_id": "study-2026-09-vertex-psoriasis-google-cloud-gemini-3.1-pro-preview-multi_agent-r1",
+ "curated_by": "Claude Opus 5.5, 2026-10-30",
+ "entities": {
+  "IL12B": {"kind": "protein", "curie": "UniProt:P29460", "run_labels": ["IL12B"]},
+  "IL23R": {"kind": "protein", "curie": "UniProt:Q5VWK5", "run_labels": ["IL23R"]},
+  "TYK2": {"kind": "protein", "curie": "UniProt:P29597", "run_labels": ["TYK2"]},
+  "TRAF3IP2": {"kind": "protein", "curie": "UniProt:O43734", "run_labels": ["TRAF3IP2"]},
+  "psoriasis": {"kind": "disease", "curie": "MONDO:0005083", "run_labels": ["psoriasis"]}
+ },
+ "statements": [
+  {"id": "S1", "step": "hyp_IL23_TRAF3IP2_psoriasis.1", "text": "IL12B binds IL23R",
+   "claim": {"rel": {"relation": "RO:0002436", "a": "IL12B", "b": "IL23R"}},
+   "evidence": [
+    {"ref": "STRING:IL12B-IL23R", "kind": "curatedDb",
+     "quote": "STRING links IL12B and IL23R with combined score 0.99 (experimental 0.93, database 0.65, text-mining 0.46)"}
+   ],
+   "excluded": [
+    {"ref": "R-HSA-9020933", "category": "enrichment", "reason": "Reactome 'Interleukin-23 signaling' over-represented in the run's gene set (3 of 11 entities); names neither IL12B nor IL23R and states no binding"},
+    {"ref": "rs918520", "category": "not_in_text", "reason": "GWAS row: rs918520-G (intergenic, mapped gene IL12B) associated with psoriasis; says nothing about IL12B binding IL23R"},
+    {"ref": "rs80174646", "category": "not_in_text", "reason": "GWAS row: rs80174646 (IL23R intron, risk allele '?', no effect size) associated with a pooled five-disease pleiotropy trait; says nothing about binding"}
+   ]},
+  {"id": "S2", "step": "hyp_IL23_TRAF3IP2_psoriasis.2", "text": "IL23R activates TYK2",
+   "claim": {"effect": {"subject": "IL23R", "sign": "pos", "target": {"activity": "TYK2"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "STRING:IL23R-TYK2", "category": "no_direction", "reason": "STRING edge (experimental 0.00, database 0.80, text-mining 0.90) cannot carry the sign of a signed 'activates' step"},
+    {"ref": "STRING:GOCC:0072536", "category": "enrichment", "reason": "COMPARTMENTS 'interleukin-23 receptor complex' enriched in IL12B, IL23R, TYK2; co-annotation, no activation or direction"},
+    {"ref": "CHEMBL:CHEMBL1201835-CHEMBL2364154-1838", "category": "not_in_text", "reason": "ChEMBL: CHEMBL1201835 is an 'Interleukin-23 inhibitor' of target CHEMBL2364154; names neither IL23R nor TYK2"},
+    {"ref": "CHEMBL:CHEMBL1201835-EFO_0000676", "category": "not_in_text", "reason": "ChEMBL indication: CHEMBL1201835 at phase 4 for psoriasis; names no gene of the step"}
+   ]},
+  {"id": "S3", "step": "hyp_IL23_TRAF3IP2_psoriasis.3", "text": "TYK2 activates TRAF3IP2",
+   "claim": {"effect": {"subject": "TYK2", "sign": "pos", "target": {"activity": "TRAF3IP2"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "STRING:TRAF3IP2-TYK2", "category": "no_direction", "reason": "STRING edge from text-mining only (0.48; experimental and database 0.00); cannot carry a sign, and would be textMined even for binding"},
+    {"ref": "STRING:GO:2000318", "category": "enrichment", "reason": "GO 'positive regulation of T-helper 17 type immune response' enriched in IL12B, IL23R, TYK2; TRAF3IP2 is not among the input genes"},
+    {"ref": "rs34536443", "category": "not_in_text", "reason": "GWAS row: rs34536443-G (TYK2 missense) associated with psoriasis, OR 1.88; says nothing about TRAF3IP2"},
+    {"ref": "CHEMBL:CHEMBL4435170-CHEMBL3553-8904", "category": "not_in_text", "reason": "ChEMBL: CHEMBL4435170 is a TYK2 negative allosteric modulator; names TYK2 but not TRAF3IP2"},
+    {"ref": "CHEMBL:CHEMBL4435170-EFO_0000676", "category": "not_in_text", "reason": "ChEMBL indication: CHEMBL4435170 at phase 4 for psoriasis; names neither TYK2 nor TRAF3IP2"}
+   ]},
+  {"id": "S4", "step": "hyp_IL23_TRAF3IP2_psoriasis.4", "text": "TRAF3IP2 leads to psoriasis",
+   "claim": {"effect": {"subject": "TRAF3IP2", "sign": "pos", "target": {"disease": "psoriasis", "aspect": "risk"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "rs33980500", "category": "association_only", "reason": "GWAS row: rs33980500-T (TRAF3IP2 missense) associated with psoriasis, OR 1.52; a variant association, which gives no direction for TRAF3IP2 activity, for a causal step about the protein"}
+   ]}
+ ],
+ "unexpressed": [],
+ "hypotheses": {
+  "hyp_IL23_TRAF3IP2_psoriasis": {
+   "claims": [
+    {"subject": "IL12B", "sign": "pos", "target": {"disease": "psoriasis", "aspect": "risk"}},
+    {"subject": "IL23R", "sign": "pos", "target": {"disease": "psoriasis", "aspect": "risk"}},
+    {"subject": "TYK2", "sign": "pos", "target": {"disease": "psoriasis", "aspect": "risk"}},
+    {"subject": "TRAF3IP2", "sign": "pos", "target": {"disease": "psoriasis", "aspect": "risk"}}
+   ],
+   "note": "one linear chain over four genes, so one claim per gene, each 'drives psoriasis' as the title and mechanism state; the chain starts at IL12B, but its first step is an unsigned binding, so IL12B's claim cannot compose"
+  }
+ },
+ "findings": [
+  {"project": "hypothesis-agent", "category": "evidence_supports_nodes_not_edges", "hypothesis": "hyp_IL23_TRAF3IP2_psoriasis",
+   "detail": "Of 14 citations only one (STRING IL12B-IL23R, for the binding step) states its step. The GWAS rows and ChEMBL records bear on single genes and psoriasis, not on the gene-to-gene edges they are cited for, and the three set enrichments (Reactome IL-23 signalling, COMPARTMENTS IL-23 receptor complex, GO Th17 response) name no disease at all. The mechanism's 'each node is supported by strong genetic associations and validated therapeutic interventions' fails even node by node: only TYK2 is named by a drug record (the IL-23 inhibitor's target is not named), IL23R and TRAF3IP2 have no drug record, and IL23R's only genetic row is a five-disease pleiotropy trait with no risk allele."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["hyp_IL23_TRAF3IP2_psoriasis.1", "hyp_IL23_TRAF3IP2_psoriasis.3"],
+   "detail": "GWAS rows rs918520 (IL12B), rs80174646 (IL23R) and rs34536443 (TYK2) are cited for protein-protein steps (IL12B binds IL23R; TYK2 activates TRAF3IP2) that a variant-disease association cannot state."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["hyp_IL23_TRAF3IP2_psoriasis.2", "hyp_IL23_TRAF3IP2_psoriasis.3"],
+   "detail": "Both ChEMBL pairs (an IL-23 inhibitor and a TYK2 negative allosteric modulator, each at phase 4 for psoriasis) are cited for gene-to-gene activation steps; at most they bear on IL-23 or TYK2 driving psoriasis, a claim no step of the chain makes."},
+  {"project": "hypothesis-agent", "category": "step_skips_intermediates", "steps": ["hyp_IL23_TRAF3IP2_psoriasis.3"],
+   "detail": "'TYK2 activates TRAF3IP2' compresses TYK2 -> Th17 commitment -> IL-17 secretion -> IL-17 receptor signalling in other (skin) cells -> TRAF3IP2, as the step's own note says; the intermediates (Th17, IL-17) are not chain nodes and the only citation linking TYK2 and TRAF3IP2 is a text-mined STRING edge (0.48)."},
+  {"project": "hypothesis-agent", "category": "step_partner_questionable", "steps": ["hyp_IL23_TRAF3IP2_psoriasis.2"],
+   "detail": "Not used as evidence (not cited by the run): the corpus UniProt text pairs TYK2 with the IL12RB1 chain ('a TYK2-associated receptor chain (IFNAR1, IL12RB1, IL10RB or IL13RA1)') and says IL23R 'Interacts with JAK2', so 'IL23R activates TYK2' skips IL12RB1, a receptor chain the run never names; the run's only direct citation, STRING IL23R-TYK2, has experimental score 0.00."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["hyp_IL23_TRAF3IP2_psoriasis.2", "hyp_IL23_TRAF3IP2_psoriasis.3", "hyp_IL23_TRAF3IP2_psoriasis.4"],
+   "detail": "The run cites 4, 5 and 1 sources for the three signed steps, and none states its step, so after curation they carry no evidence and every composed arm rests on unsupported statements; only the unsigned binding step is supported."},
+  {"project": "hypothesis-agent", "category": "unsigned_first_step", "steps": ["hyp_IL23_TRAF3IP2_psoriasis.1"],
+   "detail": "The chain starts at IL12B with 'binds' (polarity unknown), so IL12B, the first gene of the hypothesis, has no signed route to psoriasis even though the mechanism treats IL-23 as the driver."},
+  {"project": "hypothesis-agent", "category": "association_cited_for_effect", "steps": ["hyp_IL23_TRAF3IP2_psoriasis.4"],
+   "detail": "The only citation for 'TRAF3IP2 leads to psoriasis' is the rs33980500-T association (OR 1.52, missense); it gives no direction for TRAF3IP2 activity, and the run does not say whether the risk allele gains or loses function."},
+  {"project": "hypothesis-agent", "category": "confidence_consistent", "hypothesis": "hyp_IL23_TRAF3IP2_psoriasis",
+   "detail": "The run's confidence 'low' agrees with the curation (no signed step supported), but its support label 'grounded' and the mechanism's 'strong genetic associations and validated therapeutic interventions' do not."},
+  {"project": "hypothesis-agent", "category": "contradicting_evidence_not_sought", "hypothesis": "hyp_IL23_TRAF3IP2_psoriasis",
+   "detail": "contradicting_evidence is empty and sources.json holds no 'contradicting' citation, so nothing in the run tests the chain against counter-evidence."},
+  {"project": "hypothesis-agent", "category": "pleiotropy_trait_cited", "steps": ["hyp_IL23_TRAF3IP2_psoriasis.1"],
+   "detail": "rs80174646 is cited from a five-disease pleiotropy analysis (ankylosing spondylitis, Crohn's, psoriasis, PSC, UC) with risk allele '?' and no effect size; even for an IL23R-psoriasis step it would be undirected and not psoriasis-specific."},
+  {"project": "biolean", "category": "no_form_for", "hypothesis": "hyp_IL23_TRAF3IP2_psoriasis",
+   "detail": "No form for a drug-target record joined to a drug-indication record (ChEMBL TYK2 negative allosteric modulator + phase 4 for psoriasis): together they would state 'TYK2 activity -> psoriasis' (pos, a phase 4 indication), but each record alone names only one end, and evidence is one quote from one source."},
+  {"project": "biolean", "category": "no_form_for", "steps": ["hyp_IL23_TRAF3IP2_psoriasis.4"],
+   "detail": "The run's strongest data (four GWAS hits, p 9e-31 to 1e-143, two of them missense) cannot attach to any statement, because every step is about a protein and BioLean has no form linking a coding variant's association to its gene's effect without a stated allele function."},
+  {"project": "biolean", "category": "no_form_for", "hypothesis": "hyp_IL23_TRAF3IP2_psoriasis",
+   "detail": "The run's abstention (EGFL8, GLE1, UHRF2: 'insufficient_evidence', with six evidence ids) has no place in curated.json, and its evidence ids (GWAS:GLE1:no-association, GWAS:UHRF2:no-association, OT:EGFL8-MONDO_0005083, rs3117182, PMID:34626176, AGR:MGI:1932094:MP:0002152) are not in sources.json, so it cannot be checked."},
+  {"project": "biolean", "category": "rule_missing", "steps": ["hyp_IL23_TRAF3IP2_psoriasis.1"],
+   "detail": "A ligand-receptor 'binds' is a rel and never composes, so a chain that starts with a ligand binding its receptor (IL12B binds IL23R) cuts the ligand off from every arm; there is no rule for 'ligand binding activates receptor', which is right without a source but costs the hypothesis's first gene its route."},
+  {"project": "biolean", "category": "guide_ambiguity", "hypothesis": "hyp_IL23_TRAF3IP2_psoriasis",
+   "detail": "The guide says claims are 'one per gene it is about' but the subject is 'the node its chain starts from'; for a four-gene linear chain these differ, and I made one claim per gene, which turns sub-paths of the same chain into extra arms."},
+  {"project": "hypothesis-agent", "category": "budget_not_met", "hypothesis": "hyp_IL23_TRAF3IP2_psoriasis",
+   "detail": "The budget asks for min_hypotheses 3, but the run returns one hypothesis; the other three genes (EGFL8, GLE1, UHRF2) go to the abstention."},
+  {"project": "hypothesis-agent", "category": "ungrounded_label", "hypothesis": "hyp_IL23_TRAF3IP2_psoriasis",
+   "detail": "The run grounds only psoriasis (MONDO:0005083); all four gene nodes, and the falsification's TYK2 and TRAF3IP2, have an empty curie, though each symbol resolves to one UniProt entry."},
+  {"project": "hypothesis-agent", "category": "abstention_by_mechanism_fit", "hypothesis": "hyp_IL23_TRAF3IP2_psoriasis",
+   "detail": "The abstention grants that EGFL8 'has a significant genome-wide association with psoriasis' but declines it for lacking a link 'to the established IL-23/Th17 disease mechanism', i.e. for not fitting the run's one hypothesis rather than for want of evidence of its own."},
+  {"project": "hypothesis-agent", "category": "falsification_bypasses_step", "steps": ["hyp_IL23_TRAF3IP2_psoriasis.3"],
+   "detail": "The falsification knocks out TYK2 'in a human psoriatic skin organoid co-cultured with Th17 cells' without saying in which cells; by the run's own mechanism TYK2 acts in the IL-23-responsive T cells (Th17 commitment, IL-17 secretion) and TRAF3IP2 in skin cells, so an organoid knockout leaves the IL-17 route to TRAF3IP2 intact, and supplying already-committed Th17 cells bypasses the commitment that step 3 compresses."},
+  {"project": "hypothesis-agent", "category": "variant_direction_unlinked", "steps": ["hyp_IL23_TRAF3IP2_psoriasis.3"],
+   "detail": "The rs34536443 row names G as the risk allele at frequency 0.953, so the minor (missense) allele is the protective one; the run never says what either allele does to TYK2, so the row cannot sign TYK2's effect even had a step claimed it."},
+  {"project": "biolean", "category": "evidence_weighting", "steps": ["hyp_IL23_TRAF3IP2_psoriasis.1"],
+   "detail": "S1 is 'established' (b 4/5) from a single STRING edge: one curatedDb record clears the 0.8 threshold alone, so the run's only established statement rests on one database row."}
+ ],
+ "audit": [
+  {"item": "findings: evidence_supports_nodes_not_edges (hyp_IL23_TRAF3IP2_psoriasis)", "error": "other",
+   "before": "the rest are gene-level GWAS hits, drug records and set enrichments that support each gene's link to psoriasis ... describes nodes, not the chain",
+   "after": "GWAS rows and ChEMBL records bear on single genes and psoriasis; the three enrichments name no disease; the mechanism's node-level claim fails for IL12B, IL23R and TRAF3IP2",
+   "reason": "False as written. R-HSA-9020933, STRING:GOCC:0072536 and STRING:GO:2000318 are over-representation rows that never mention psoriasis, so they support no gene's link to it. And 'each node is supported by ... validated therapeutic interventions' is not even true per node: only the TYK2 ChEMBL record names a gene (the IL-23 inhibitor's target CHEMBL2364154 is unnamed), and IL23R's only genetic row is a pleiotropy trait with risk allele '?'."},
+  {"item": "findings: no_citation (hyp_IL23_TRAF3IP2_psoriasis.2, .3, .4)", "error": "other",
+   "before": "category no_citation",
+   "after": "category citation_does_not_state_step; detail names the 4, 5 and 1 citations",
+   "reason": "The run cites 4, 5 and 1 sources for these steps. no_citation says the run cited nothing, which is false and would miscount when findings are pooled across runs; what fails is that no citation states its step."},
+  {"item": "findings: no_form_for (four GWAS hits, hyp_IL23_TRAF3IP2_psoriasis.4)", "error": "other",
+   "before": "p 1e-31 to 1e-143",
+   "after": "p 9e-31 to 1e-143",
+   "reason": "The weakest of the four rows is rs34536443 at p = 9e-31 (sources.json), not 1e-31."},
+  {"item": "findings: no_form_for (abstention)", "error": "other",
+   "before": "says six evidence ids, lists five (GWAS:UHRF2:no-association missing)",
+   "after": "lists all six",
+   "reason": "run.json abstention.evidence has six ids; GWAS:UHRF2:no-association is also absent from sources.json."},
+  {"item": "findings: budget_not_met (hyp_IL23_TRAF3IP2_psoriasis)", "error": "missed_finding",
+   "before": "", "after": "added",
+   "reason": "question.budget.min_hypotheses is 3 and the run returns one hypothesis; the sibling psoriasis curations record the same gap."},
+  {"item": "findings: ungrounded_label (hyp_IL23_TRAF3IP2_psoriasis)", "error": "missed_finding",
+   "before": "", "after": "added",
+   "reason": "Every gene node in run.json, in the chain and in the falsification, has curie ''; only psoriasis is grounded. The curator grounded them but did not record the run-side gap."},
+  {"item": "findings: abstention_by_mechanism_fit", "error": "missed_finding",
+   "before": "", "after": "added",
+   "reason": "The abstention's own text gives EGFL8 a significant psoriasis GWAS signal and rejects it only for not fitting the IL-23/Th17 mechanism the run already chose. The curator recorded the abstention only as an unverifiable BioLean gap, not its reasoning."},
+  {"item": "findings: falsification_bypasses_step (hyp_IL23_TRAF3IP2_psoriasis.3)", "error": "missed_finding",
+   "before": "", "after": "added",
+   "reason": "The falsification is read against the run's own mechanism (TYK2 in the IL-23-responsive T cells, TRAF3IP2 'within skin cells'). Its organoid design supplies committed Th17 cells and does not place the knockout, so it need not test step 3."},
+  {"item": "findings: variant_direction_unlinked (rs34536443, hyp_IL23_TRAF3IP2_psoriasis.3)", "error": "missed_finding",
+   "before": "", "after": "added",
+   "reason": "The row's riskFrequency is 0.953 for the G risk allele, so the minor missense allele is protective. The curator's allele-function finding covered only rs33980500 and TRAF3IP2."},
+  {"item": "findings: evidence_weighting (S1)", "error": "missed_finding",
+   "before": "", "after": "added",
+   "reason": "render reports S1 'established' (b 4/5) from one STRING edge. It is the run's only established statement, and other audits flag the same one-record weighting."}
+ ]
+}

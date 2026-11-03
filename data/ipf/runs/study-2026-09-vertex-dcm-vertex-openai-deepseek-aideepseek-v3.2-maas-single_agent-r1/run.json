@@ -1,0 +1,400 @@
+{
+ "run_id": "study-2026-09-vertex-dcm-vertex-openai-deepseek-aideepseek-v3.2-maas-single_agent-r1",
+ "model": "vertex-openai:deepseek-ai/deepseek-v3.2-maas",
+ "question": {
+  "arm": "single_agent",
+  "budget": {
+   "max_delegations": 22,
+   "max_model_requests": 80,
+   "max_specialist_requests": 8,
+   "min_evidence_per_hypothesis": 2,
+   "min_hypotheses": 3,
+   "min_sources_per_hypothesis": 2,
+   "output_retries": 3
+  },
+  "data_policy": {
+   "max_age_seconds": 1209600.0,
+   "mode": "cache-preferred",
+   "snapshot_run_id": null
+  },
+  "disease": "dilated cardiomyopathy",
+  "formalise": false,
+  "genes": [
+   "LMNA",
+   "MYH7",
+   "TTN",
+   "TNNT2",
+   "RBM20",
+   "ABCB9",
+   "OR8J3"
+  ],
+  "model": "vertex-openai:deepseek-ai/deepseek-v3.2-maas",
+  "specialist_model": "",
+  "specialists": [
+   "chembl",
+   "expression",
+   "gwas",
+   "interactions",
+   "literature",
+   "model_organism",
+   "open_targets",
+   "pathways",
+   "single_cell",
+   "trials",
+   "uniprot"
+  ],
+  "tissue": {
+   "artifact_id": "sha256:800509ecbac0454ae2ea23025dca99af683b39382fb316f74354fab347c8b954",
+   "label": "heart",
+   "uberon": "UBERON:0000948"
+  },
+  "use_network": true
+ },
+ "abstention": null,
+ "disease": "dilated cardiomyopathy",
+ "genes_considered": [
+  "LMNA",
+  "MYH7",
+  "TTN",
+  "TNNT2",
+  "RBM20",
+  "ABCB9",
+  "OR8J3"
+ ],
+ "hypotheses": [
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "P02545"
+     ],
+     "note": "Lamins provide structural integrity to the nuclear envelope and are required for cardiac homeostasis",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "nuclear mechanical integrity"
+     },
+     "polarity": "positive",
+     "relation": "required_for",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "LMNA protein"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:PPR1285401",
+      "PMID:42373902"
+     ],
+     "note": "LMNA variants cause dysregulation in metabolism and proliferation pathways in cardiomyocytes; lamin A re-expression ameliorates cardiac dysfunction in mice",
+     "object": {
+      "curie": "MONDO:0005021",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "dilated cardiomyopathy"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "LMNA variants"
+     }
+    }
+   ],
+   "confidence": "medium",
+   "contradicting_evidence": [
+    "GWAS:LMNA:no-association"
+   ],
+   "falsification": {
+    "description": "Introduce a known pathogenic LMNA variant into human iPSC-derived cardiomyocytes and show that it does not alter nuclear envelope integrity, sarcomere organization, or contractile function compared to isogenic controls.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "UniProtKB:P02545",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "LMNA"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "process",
+     "label": "sarcomere organization"
+    },
+    "system": "human iPSC-derived cardiomyocytes"
+   },
+   "genes": [
+    "LMNA"
+   ],
+   "hypothesis_id": "h1",
+   "mechanism": "Pathogenic variants in LMNA disrupt nuclear lamina structural integrity, leading to nuclear fragility and impaired mechanotransduction in cardiomyocytes. This compromises cardiomyocyte function and survival, ultimately causing dilated cardiomyopathy with conduction system disease and heart failure.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "P02545",
+    "PMID:PPR1285401",
+    "PMID:42373902"
+   ],
+   "title": "Nuclear lamina disruption through LMNA mutations causes cardiomyocyte fragility and dilated cardiomyopathy"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "P12883",
+      "P45379",
+      "Q8WZ42"
+     ],
+     "note": "MYH7 is the cardiac myosin heavy chain forming thick filaments; TNNT2 is troponin T in the thin filament; TTN is the giant elastic protein connecting Z-disk to M-line",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "sarcomere assembly and contraction"
+     },
+     "polarity": "positive",
+     "relation": "required_for",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "MYH7, TNNT2, TTN proteins"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:22335739",
+      "rs2042995",
+      "rs16866400",
+      "rs12988307"
+     ],
+     "note": "TTN truncations cause dilated cardiomyopathy; GWAS variants in TTN are associated with DCM",
+     "object": {
+      "curie": "MONDO:0005021",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "dilated cardiomyopathy"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "sarcomere gene variants"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "HPA:ENSG00000092054",
+      "HPA:ENSG00000118194",
+      "HPA:ENSG00000155657"
+     ],
+     "note": "All three genes are highly expressed in heart muscle and cardiomyocytes",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "cell_type",
+      "label": "cardiomyocytes"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "MYH7, TNNT2, TTN"
+     }
+    }
+   ],
+   "confidence": "high",
+   "contradicting_evidence": [
+    "GWAS:MYH7:no-association",
+    "GWAS:TNNT2:no-association"
+   ],
+   "falsification": {
+    "description": "Generate a mouse model with combined heterozygous truncating mutations in TTN, MYH7, and TNNT2. If the triple mutant shows no more severe cardiac dilation or dysfunction than wild-type mice after 6 months, the hypothesis that these sarcomere genes act together in DCM pathogenesis is falsified.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "TTN, MYH7, TNNT2"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "phenotype",
+     "label": "left ventricular dilation"
+    },
+    "system": "mouse model"
+   },
+   "genes": [
+    "MYH7",
+    "TTN",
+    "TNNT2"
+   ],
+   "hypothesis_id": "h2",
+   "mechanism": "Mutations in sarcomere structural genes (MYH7, TTN, TNNT2) disrupt the assembly or function of the contractile apparatus in cardiomyocytes. This leads to impaired force generation, altered calcium sensitivity, and sarcomere disarray, triggering compensatory hypertrophy followed by dilation and systolic dysfunction characteristic of dilated cardiomyopathy.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "P12883",
+    "P45379",
+    "Q8WZ42",
+    "PMID:22335739",
+    "rs2042995",
+    "rs16866400",
+    "rs12988307",
+    "HPA:ENSG00000092054",
+    "HPA:ENSG00000118194",
+    "HPA:ENSG00000155657"
+   ],
+   "title": "Sarcomere assembly disruption through MYH7, TTN, and TNNT2 mutations impairs cardiac contractility and causes dilated cardiomyopathy"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "Q5T481"
+     ],
+     "note": "RBM20 is an RNA-binding protein that regulates alternative splicing of cardiac genes including TTN",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "TTN splicing"
+     },
+     "polarity": "positive",
+     "relation": "required_for",
+     "subject": {
+      "curie": "UniProtKB:Q5T481",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "RBM20"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:42462460",
+      "PMID:PPR1251737"
+     ],
+     "note": "RBM20 variants mapped in DCM patients; multimodal phenotyping defines variant-to-function maps",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "abnormal TTN isoform expression"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "RBM20 variants"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:22335739"
+     ],
+     "note": "Abnormal TTN isoforms contribute to dilated cardiomyopathy",
+     "object": {
+      "curie": "MONDO:0005021",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "dilated cardiomyopathy"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "abnormal TTN splicing"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "HPA:ENSG00000203867"
+     ],
+     "note": "RBM20 is expressed in heart muscle and cardiomyocytes",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "cell_type",
+      "label": "cardiomyocytes"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "UniProtKB:Q5T481",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "RBM20"
+     }
+    }
+   ],
+   "confidence": "medium",
+   "contradicting_evidence": [
+    "GWAS:RBM20:no-association"
+   ],
+   "falsification": {
+    "description": "Introduce a pathogenic RBM20 variant into cardiomyocytes and show that it does not alter the splicing pattern of TTN or other known RBM20 targets compared to wild-type controls.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "knockdown",
+     "target": {
+      "curie": "UniProtKB:Q5T481",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "RBM20"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "process",
+     "label": "TTN splicing pattern"
+    },
+    "system": "human iPSC-derived cardiomyocytes"
+   },
+   "genes": [
+    "RBM20"
+   ],
+   "hypothesis_id": "h3",
+   "mechanism": "Pathogenic variants in the splicing regulator RBM20 disrupt its normal function in regulating alternative splicing of cardiac genes, particularly TTN. This leads to expression of abnormal titin isoforms with altered elastic properties, impairing sarcomere function and contributing to the development of dilated cardiomyopathy.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "Q5T481",
+    "PMID:42462460",
+    "PMID:PPR1251737",
+    "PMID:22335739",
+    "HPA:ENSG00000203867"
+   ],
+   "title": "Splicing dysregulation through RBM20 mutations alters titin isoforms and causes dilated cardiomyopathy"
+  }
+ ],
+ "unexplained_genes": [
+  "ABCB9",
+  "OR8J3"
+ ]
+}

@@ -1,0 +1,166 @@
+{
+ "run_id": "study-2026-09-vertex-amd-google-cloud-gemini-3.1-pro-preview-single_agent-r1",
+ "curated_by": "Claude Opus 5.5, 2026-10-30",
+ "entities": {
+  "LIPC": {"kind": "protein", "curie": "UniProt:P11150", "run_labels": ["LIPC"]},
+  "CETP": {"kind": "protein", "curie": "UniProt:P11597", "run_labels": ["CETP"]},
+  "ARMS2": {"kind": "protein", "curie": "UniProt:P0C7Q2", "run_labels": ["ARMS2"]},
+  "C3": {"kind": "protein", "curie": "UniProt:P01024", "run_labels": ["C3"]},
+  "TNFRSF10A": {"kind": "protein", "curie": "UniProt:O00220", "run_labels": ["TNFRSF10A"]},
+  "lipidMetabolism": {"kind": "process", "curie": "GO:0006629", "run_labels": ["lipid metabolism"]},
+  "complementActivation": {"kind": "process", "curie": "GO:0006956", "run_labels": ["complement activation"]},
+  "apoptoticProcess": {"kind": "process", "curie": "GO:0006915", "run_labels": ["apoptosis"]},
+  "rpeCell": {"kind": "cellType", "curie": "CL:0002586", "run_labels": ["retinal pigment epithelium"]},
+  "amd": {"kind": "disease", "curie": "MONDO:0005150", "run_labels": ["age-related macular degeneration"]}
+ },
+ "statements": [
+  {"id": "S1", "step": "lipid_metabolism.1", "text": "LIPC raises lipid metabolism (it catalyzes lipid hydrolysis)",
+   "sign_note": "the run gives polarity unknown; the cited UniProt text says LIPC catalyzes the hydrolysis of triglycerides and phospholipids, which is lipid metabolism, so pos",
+   "claim": {"effect": {"subject": "LIPC", "sign": "pos", "target": {"process": "lipidMetabolism"}}},
+   "evidence": [
+    {"ref": "P11150", "kind": "curatedDb",
+     "quote": "Catalyzes the hydrolysis of triglycerides and phospholipids present in circulating plasma lipoproteins"}
+   ],
+   "excluded": [
+    {"ref": "rs2414577", "category": "not_in_text", "reason": "GWAS row: rs2414577-C (near LIPC) and AMD; says nothing about LIPC acting on lipid metabolism"}
+   ]},
+  {"id": "S2", "step": "lipid_metabolism.3", "text": "lipid metabolism is associated with AMD (no direction)",
+   "claim": {"assoc": {"subject": "lipidMetabolism", "direction": "none", "target": {"disease": "amd", "aspect": "risk"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "OT:CETP-MONDO_0005150", "category": "not_this_entity", "reason": "Open Targets score for the gene CETP with AMD, not for lipid metabolism; an OT score has no direction either"},
+    {"ref": "OT:LIPC-MONDO_0005150", "category": "not_this_entity", "reason": "Open Targets score for the gene LIPC with AMD, not for lipid metabolism; an OT score has no direction either"}
+   ]},
+  {"id": "S3", "step": "complement_activation.1", "text": "ARMS2 binds C3",
+   "claim": {"rel": {"relation": "RO:0002436", "a": "ARMS2", "b": "C3"}},
+   "evidence": [
+    {"ref": "STRING:C3-ARMS2", "kind": "curatedDb",
+     "quote": "STRING links C3 and ARMS2 with combined score 0.70 (experimental 0.24, database 0.00, text-mining 0.62)"}
+   ],
+   "excluded": []},
+  {"id": "S4", "step": "complement_activation.2", "text": "C3 activates complement activation",
+   "claim": {"effect": {"subject": "C3", "sign": "pos", "target": {"process": "complementActivation"}}},
+   "evidence": [
+    {"ref": "P01024", "kind": "curatedDb",
+     "quote": "it then recruits the serine protease complement C2b to form the C5 convertase, which cleaves and activate C5, the next component of the complement pathways"}
+   ],
+   "excluded": [
+    {"ref": "rs11569415", "category": "not_in_text", "reason": "GWAS row: rs11569415-A (C3 intron) and AMD; says nothing about C3 activating complement"}
+   ]},
+  {"id": "S5", "step": "tnfrsf10a_apoptosis.1", "text": "TNFRSF10A activates apoptosis",
+   "claim": {"effect": {"subject": "TNFRSF10A", "sign": "pos", "target": {"process": "apoptoticProcess"}}},
+   "evidence": [
+    {"ref": "O00220", "kind": "curatedDb",
+     "quote": "The adapter molecule FADD recruits caspase-8 to the activated receptor. The resulting death-inducing signaling complex (DISC) performs caspase-8 proteolytic activation which initiates the subsequent cascade of caspases (aspartate-specific cysteine proteases) mediating apoptosis"}
+   ],
+   "excluded": []}
+ ],
+ "unexpressed": [
+  {"step": "lipid_metabolism.2", "category": "no_sign",
+   "reason": "CETP leads_to 'lipid metabolism' with polarity unknown; the mechanism says only that variants 'alter' lipid handling, and no cited text gives CETP a direction on lipid metabolism",
+   "evidence": [],
+   "excluded": [
+    {"ref": "P11597", "category": "not_in_text", "reason": "UniProt: CETP transfers neutral lipids between lipoproteins and 'regulates' reverse cholesterol transport; that is lipid transport (GO:0006869, GO:0043691), not lipid metabolism, and 'regulates' has no direction"},
+    {"ref": "rs17231506", "category": "not_in_text", "reason": "GWAS row: rs17231506-T (near CETP) and AMD; says nothing about CETP acting on lipid metabolism"},
+    {"ref": "STRING:hsa04979", "category": "enrichment", "reason": "KEGG 'Cholesterol metabolism' over-represented in the gene set (CETP, LIPC); an enrichment, no direction"}
+   ]},
+  {"step": "complement_activation.3", "category": "no_sign",
+   "reason": "complement activation leads_to AMD (context: retinal pigment epithelium) with polarity unknown; the mechanism says complement hyperactivation drives AMD, but no cited text states the link or its direction",
+   "evidence": [],
+   "excluded": [
+    {"ref": "rs36212733", "category": "not_this_entity", "reason": "GWAS row: rs36212733-C (ARMS2/HTRA1 locus) raises AMD; a variant, not complement activation"},
+    {"ref": "OT:C3-MONDO_0005150", "category": "not_this_entity", "reason": "Open Targets score for the gene C3 with AMD, not for complement activation; no direction"}
+   ]},
+  {"step": "tnfrsf10a_apoptosis.2", "category": "no_sign",
+   "reason": "apoptosis leads_to AMD (context: retinal pigment epithelium) with polarity unknown; the mechanism says RPE apoptosis contributes to geographic atrophy, but no cited text mentions apoptosis",
+   "evidence": [],
+   "excluded": [
+    {"ref": "rs13278062", "category": "not_this_entity", "reason": "GWAS row: rs13278062-T (near TNFRSF10A) and AMD; a variant, not apoptosis"},
+    {"ref": "OT:TNFRSF10A-MONDO_0005150", "category": "not_this_entity", "reason": "Open Targets score for the gene TNFRSF10A with AMD, not for apoptosis; no direction"},
+    {"ref": "PMID:42171393", "category": "not_in_text", "reason": "alcohol intake and AMD, with TNFRSF10A as a colocalised locus; its scRNA-seq of retina and RPE/choroid puts TNFRSF10A expression mainly in endothelial cells; no mention of apoptosis"}
+   ]}
+ ],
+ "hypotheses": {
+  "lipid_metabolism": {
+   "no_claim_reason": "the title ('Altered lipid metabolism promotes drusen formation') and mechanism ('variants in these genes alter local lipid handling') give no direction for LIPC or CETP; only the falsification test implies one, for CETP (inhibiting it is expected to reduce drusen)"},
+  "complement_activation": {
+   "claims": [
+    {"subject": "ARMS2", "sign": "pos", "target": {"disease": "amd", "aspect": "risk"}},
+    {"subject": "C3", "sign": "pos", "target": {"disease": "amd", "aspect": "risk"}}
+   ],
+   "note": "signs from the title ('ARMS2 and C3 mediate complement-induced RPE damage') and the mechanism (complement hyperactivation damages the RPE, driving AMD); the mechanism blames 'their pathogenic variants' without saying whether they raise or lower ARMS2 or C3; the chain starts at the proteins"},
+  "tnfrsf10a_apoptosis": {
+   "claims": [
+    {"subject": "TNFRSF10A", "sign": "pos", "target": {"disease": "amd", "aspect": "risk"}}
+   ],
+   "note": "sign from the title ('TNFRSF10A drives RPE apoptosis') and mechanism ('increased activation of this receptor ... leads to apoptosis of RPE cells'); the mechanism speaks of geographic atrophy, the late form, but the chain's last step is plain leads_to AMD, so risk"}
+ },
+ "findings": [
+  {"project": "hypothesis-agent", "category": "polarity_unknown", "steps": ["complement_activation.3", "tnfrsf10a_apoptosis.2"],
+   "detail": "Both steps that reach AMD from a mechanism have polarity 'unknown', although the mechanisms state them as positive ('driving macular degeneration', 'contributing to the geographic atrophy'), so no arm of any hypothesis can reach the disease."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["lipid_metabolism.1", "lipid_metabolism.2", "complement_activation.2", "complement_activation.3", "tnfrsf10a_apoptosis.2"],
+   "detail": "All five GWAS rows (rs2414577, rs17231506, rs11569415, rs36212733, rs13278062) are cited at mechanism steps (gene to process, process to AMD); each reports only a variant-AMD association and states none of those steps."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["lipid_metabolism.3", "complement_activation.3", "tnfrsf10a_apoptosis.2"],
+   "detail": "Open Targets gene-AMD scores (CETP, LIPC, C3, TNFRSF10A) are cited for process-to-AMD steps; they score genes, not lipid metabolism, complement activation or apoptosis, and carry no direction."},
+  {"project": "hypothesis-agent", "category": "variant_step_missing", "steps": ["lipid_metabolism.1", "lipid_metabolism.2", "complement_activation.2", "complement_activation.3", "tnfrsf10a_apoptosis.2"],
+   "detail": "The run's strongest evidence is five signed GWAS rows (rs36212733-C beta increase; rs2414577-C, rs17231506-T, rs11569415-A, rs13278062-T beta decrease), but no chain has a variant step, so this evidence supports nothing the run states."},
+  {"project": "hypothesis-agent", "category": "ungrounded_label", "steps": ["lipid_metabolism.1", "complement_activation.2", "tnfrsf10a_apoptosis.1", "complement_activation.3"],
+   "detail": "The run leaves 'lipid metabolism', 'complement activation', 'apoptosis', 'retinal pigment epithelium' and the falsification readout 'drusen' as kind 'other' with no CURIE, though exact terms exist (GO:0006629, GO:0006956, GO:0006915, CL:0002586, HP:0011510)."},
+  {"project": "hypothesis-agent", "category": "vague_node", "steps": ["lipid_metabolism.1", "lipid_metabolism.2"],
+   "detail": "The shared node 'lipid metabolism' joins LIPC (lipid hydrolysis, a lipid metabolic process) and CETP (lipid transfer between lipoproteins, which GO files under lipid transport), so the hub hides two different mechanisms and the CETP step has no stated direction."},
+  {"project": "hypothesis-agent", "category": "hypothesis_undirected", "hypothesis": "lipid_metabolism",
+   "detail": "The title and mechanism say only that variants 'alter' lipid handling, so the hypothesis makes no directional claim for LIPC or CETP; the falsification test alone implies CETP promotes drusen, and nothing gives LIPC a direction."},
+  {"project": "hypothesis-agent", "category": "falsification_infeasible", "hypothesis": "lipid_metabolism",
+   "detail": "Curator knowledge, not from a cited text: wild-type mice have no CETP, so 'inhibit CETP in a mouse model of AMD' needs a CETP-transgenic mouse, which the run does not mention."},
+  {"project": "hypothesis-agent", "category": "unsigned_link", "steps": ["complement_activation.1"], "hypothesis": "complement_activation",
+   "detail": "ARMS2 enters the chain only by binding C3, which has no direction, so the chain never says whether ARMS2 raises or lowers complement activation and the ARMS2 claim cannot compose."},
+  {"project": "hypothesis-agent", "category": "context_not_supported", "steps": ["tnfrsf10a_apoptosis.2"],
+   "detail": "The only paper the run cites (PMID:42171393) places TNFRSF10A expression in endothelial cells of AMD tissue, not in the retinal pigment epithelium the hypothesis is about, and never mentions apoptosis."},
+  {"project": "hypothesis-agent", "category": "context_inconsistent", "steps": ["complement_activation.2", "complement_activation.3", "tnfrsf10a_apoptosis.1", "tnfrsf10a_apoptosis.2"],
+   "detail": "The RPE context sits only on the disease step of each chain, not on the step that produces complement activation or apoptosis; if that context is read as limiting the step (a refinement), the chains would not connect even if the disease steps had signs."},
+  {"project": "hypothesis-agent", "category": "no_contradicting_evidence",
+   "detail": "No hypothesis cites any supporting or contradicting evidence outside its chain (both lists are empty for all three), so nothing against any hypothesis was sought."},
+  {"project": "hypothesis-agent", "category": "abstention_unchecked",
+   "detail": "The abstention for MCF2L2 and CACNA1E cites GWAS:MCF2L2:no-association, GWAS:CACNA1E:no-association and OT:CACNA1E-MONDO_0005150, none of which is in sources.json, so the abstention's grounds cannot be read."},
+  {"project": "biolean", "category": "no_form_for",
+   "detail": "The format has no place for a run's abstention (genes covered, reason, cited evidence), so an abstention can be neither checked nor counted."},
+  {"project": "biolean", "category": "rule_missing", "hypothesis": "lipid_metabolism",
+   "detail": "The guide takes a claim's sign from the title or mechanism only; it does not say whether a falsification's expected direction (inhibit CETP, drusen fall) may supply the sign, so lipid_metabolism gets no claim."},
+  {"project": "biolean", "category": "source_reading",
+   "detail": "GWAS Catalog rows label an allele 'riskAlleleName' while the beta says 'decrease' for a case-control trait (rs2414577-C, rs17231506-T, rs11569415-A, rs13278062-T), and give the beta in 'unit' with no statement that it is a log odds ratio; a curator converting these to allele directions needs a rule for both."},
+  {"project": "biolean", "category": "evidence_weighting", "steps": ["complement_activation.1"],
+   "detail": "STRING C3-ARMS2 counts as curatedDb because its experimental channel (0.24) clears the 0.15 threshold, though text-mining (0.62) supplies most of the combined 0.70 score."},
+  {"project": "biolean", "category": "kind_mismatch", "steps": ["lipid_metabolism.1"],
+   "detail": "An enzyme that catalyzes one reaction class within a broad process (LIPC, lipid hydrolysis) becomes 'LIPC raises lipid metabolism'; participation (RO:0000056) would say it better, but the guide maps a leads_to step to an effect."},
+  {"project": "hypothesis-agent", "category": "context_not_supported", "steps": ["lipid_metabolism.1", "lipid_metabolism.2"], "hypothesis": "lipid_metabolism",
+   "detail": "The mechanism says the variants alter 'local lipid handling in the retina', but both texts the run cites place LIPC and CETP in blood: LIPC acts on 'circulating plasma lipoproteins' and CETP is 'Secreted in plasma' and moves lipids between plasma lipoproteins; nothing cited puts either in the retina."},
+  {"project": "hypothesis-agent", "category": "chain_skips_title_link", "hypothesis": "lipid_metabolism",
+   "detail": "The title's own claim, altered lipid metabolism promotes drusen formation, is not a step: the chain jumps from 'lipid metabolism' to an unsigned association with AMD, and drusen appears only as the falsification readout."},
+  {"project": "hypothesis-agent", "category": "variant_gene_assignment", "steps": ["lipid_metabolism.1", "complement_activation.3"],
+   "detail": "The run treats each GWAS row as evidence for its 'mapped gene' without checking: the rs2414577 record's Ensembl context puts the variant inside ALDH1A2 (distance 0), 22-44 kb from LIPC, and rs36212733 lies in ARMS2 while the record flags HTRA1 (3-6 kb away) as the closest gene, so position alone does not tie either signal to the gene the run names, and no cited text does."},
+  {"project": "biolean", "category": "rule_conflict", "steps": ["complement_activation.3", "tnfrsf10a_apoptosis.2"],
+   "detail": "The guide defines no_sign as 'a causal step with no direction anywhere', but its leads_to rule sends a step to no_sign whenever no cited text gives the direction; these two steps have a direction in the mechanism and none in a cited text, so the two rules disagree on them."}
+ ],
+ "audit": [
+  {"item": "unexpressed tnfrsf10a_apoptosis.2, excluded PMID:42171393", "error": "other",
+   "before": "not_in_text: 'alcohol intake and AMD, with TNFRSF10A as a colocalised locus and endothelial-enriched expression; no mention of apoptosis or RPE'",
+   "after": "not_in_text: 'alcohol intake and AMD, with TNFRSF10A as a colocalised locus; its scRNA-seq of retina and RPE/choroid puts TNFRSF10A expression mainly in endothelial cells; no mention of apoptosis'",
+   "reason": "the abstract does mention the RPE: it integrates scRNA-seq 'from human retina and retinal pigment epithelium/choroid tissues'. The exclusion stands, since nothing states apoptosis leads to AMD, but the reason was false."},
+  {"item": "findings: lipid_metabolism context", "error": "missed_finding",
+   "before": "no finding",
+   "after": "hypothesis-agent context_not_supported (lipid_metabolism.1, .2): the mechanism's 'local lipid handling in the retina' against cited texts that place LIPC on 'circulating plasma lipoproteins' and CETP 'Secreted in plasma'",
+   "reason": "both UniProt texts the run cites put the two proteins' activity in plasma; nothing cited puts it in the retina, which is the core of the mechanism."},
+  {"item": "findings: lipid_metabolism title link", "error": "missed_finding",
+   "before": "drusen mentioned only in the ungrounded_label finding",
+   "after": "hypothesis-agent chain_skips_title_link (lipid_metabolism)",
+   "reason": "the title claims lipid metabolism promotes drusen, but no step has drusen; the chain goes straight from lipid metabolism to an unsigned association with AMD."},
+  {"item": "findings: GWAS variant-to-gene assignment", "error": "missed_finding",
+   "before": "curator's reasons call rs2414577 'near LIPC' and rs36212733 'ARMS2/HTRA1 locus', with no finding",
+   "after": "hypothesis-agent variant_gene_assignment (lipid_metabolism.1, complement_activation.3)",
+   "reason": "the rs2414577 record's Ensembl context puts it inside ALDH1A2 (distance 0), 22-44 kb from LIPC; rs36212733 lies in ARMS2 but the record flags HTRA1 as the closest gene. The run cites both as its genes' evidence without saying so."},
+  {"item": "findings: no_sign rule", "error": "missed_finding",
+   "before": "no finding; complement_activation.3 and tnfrsf10a_apoptosis.2 are no_sign by the leads_to row",
+   "after": "biolean rule_conflict (complement_activation.3, tnfrsf10a_apoptosis.2)",
+   "reason": "the category table defines no_sign as 'no direction anywhere', while the leads_to row makes a step no_sign whenever no cited text gives a direction. These two steps have a direction in the mechanism, so the guide disagrees with itself here. The curator followed the leads_to row, which is the more specific rule, so the entries stay."}
+ ]
+}

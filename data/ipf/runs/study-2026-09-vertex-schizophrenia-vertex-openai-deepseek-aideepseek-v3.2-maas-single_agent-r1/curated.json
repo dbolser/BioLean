@@ -1,0 +1,765 @@
+{
+ "run_id": "study-2026-09-vertex-schizophrenia-vertex-openai-deepseek-aideepseek-v3.2-maas-single_agent-r1",
+ "curated_by": "Claude Opus 5.5, 2026-10-30",
+ "entities": {
+  "C4A": {
+   "kind": "protein",
+   "curie": "UniProt:P0C0L4",
+   "run_labels": [
+    "C4A gene",
+    "C4A protein"
+   ]
+  },
+  "CSMD1": {
+   "kind": "protein",
+   "curie": "UniProt:Q96PZ7",
+   "run_labels": [
+    "CSMD1"
+   ]
+  },
+  "CX3CR1": {
+   "kind": "protein",
+   "curie": "UniProt:P49238",
+   "run_labels": [
+    "CX3CR1",
+    "CX3CR1 deficiency"
+   ]
+  },
+  "C1QA": {
+   "kind": "protein",
+   "curie": "UniProt:P02745",
+   "run_labels": [
+    "C1QA"
+   ]
+  },
+  "NXPH3": {
+   "kind": "protein",
+   "curie": "UniProt:O95157",
+   "run_labels": [
+    "NXPH3",
+    "NXPH3 dysfunction"
+   ]
+  },
+  "schizophrenia": {
+   "kind": "disease",
+   "curie": "MONDO:0005090",
+   "run_labels": [
+    "schizophrenia"
+   ]
+  },
+  "synapsePruning": {
+   "kind": "process",
+   "curie": "GO:0098883",
+   "run_labels": [
+    "excessive synaptic pruning"
+   ]
+  },
+  "complementActivation": {
+   "kind": "process",
+   "curie": "GO:0006956",
+   "run_labels": [
+    "complement activation"
+   ]
+  },
+  "abnormalMicrogliaPhysiology": {
+   "kind": "phenotype",
+   "curie": "MP:0003691",
+   "run_labels": [
+    "impaired microglial function",
+    "impaired microglial function and complement activation"
+   ]
+  },
+  "impairedSynapticPhysiology": {
+   "kind": "phenotype",
+   "curie": "MP:0021010",
+   "run_labels": [
+    "synaptic dysfunction"
+   ]
+  },
+  "synapticMembraneAdhesion": {
+   "kind": "process",
+   "curie": "GO:0099560",
+   "run_labels": [
+    "synaptic adhesion and stability"
+   ]
+  },
+  "synapseMaintenance": {
+   "kind": "process",
+   "curie": "GO:0099558",
+   "run_labels": [
+    "synaptic adhesion and stability"
+   ]
+  },
+  "synapticConnectivity": {
+   "kind": "phenotype",
+   "curie": "BLN:SynapticConnectivity",
+   "label": "synaptic connectivity (the pattern and number of synaptic connections within a neural circuit)",
+   "why_no_term": "searched 'synaptic connectivity', 'connectivity' (all, and under GO, HP, MP), 'neuronal connectivity', 'neural connectivity', 'neural circuit', 'circuit', 'wiring', and every MP 'synapse' title: only synapse density, morphology, formation and transmission terms, which are different nodes",
+   "run_labels": [
+    "disrupted synaptic connectivity"
+   ]
+  }
+ },
+ "statements": [
+  {
+   "id": "S1",
+   "step": "H1.2",
+   "text": "C4A drives synapse pruning",
+   "claim": {
+    "effect": {
+     "subject": "C4A",
+     "sign": "pos",
+     "target": {
+      "process": "synapsePruning"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "PMID:26814963",
+     "kind": "mechanistic",
+     "taxon": "mouse",
+     "moved_from": "H1.1",
+     "quote": "In mice, C4 mediated synapse elimination during postnatal development."
+    }
+   ],
+   "excluded": [
+    {
+     "ref": "PMID:22632727",
+     "category": "not_this_entity",
+     "reason": "microglial engulfment of synapses depends on CR3/C3; C4 and C4A are never named"
+    },
+    {
+     "ref": "PMID:40112933",
+     "category": "not_in_text",
+     "reason": "CSMD1 domains inhibit the classical pathway C3 convertase; nothing on C4A or on synapse pruning"
+    }
+   ]
+  },
+  {
+   "id": "S2",
+   "step": "H1.3",
+   "text": "excessive synapse pruning causes schizophrenia",
+   "claim": {
+    "effect": {
+     "subject": "synapsePruning",
+     "sign": "pos",
+     "target": {
+      "disease": "schizophrenia",
+      "aspect": "risk"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "OT:CSMD1-MONDO_0005090",
+     "category": "not_this_entity",
+     "reason": "a CSMD1-schizophrenia association score; says nothing about synapse pruning"
+    },
+    {
+     "ref": "OT:C4A-MONDO_0005090",
+     "category": "not_this_entity",
+     "reason": "a C4A-schizophrenia association score; says nothing about synapse pruning"
+    }
+   ]
+  },
+  {
+   "id": "S3",
+   "step": "H2.1",
+   "text": "CX3CR1 is associated with schizophrenia (no direction given by the step)",
+   "claim": {
+    "assoc": {
+     "subject": "CX3CR1",
+     "direction": "none",
+     "target": {
+      "disease": "schizophrenia",
+      "aspect": "risk"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "OT:CX3CR1-MONDO_0005090",
+     "kind": "textMined",
+     "quote": "Open Targets 2026.06 scores the CX3CR1-schizophrenia association at 0.06 (literature 0.50)."
+    },
+    {
+     "ref": "PMID:42276261",
+     "kind": "observational",
+     "moved_from": "H2.2",
+     "quote": "In SZ individuals, blood CX3CR1 underexpression in the peripheral blood may serve as a peripheral biomarker"
+    }
+   ],
+   "excluded": [
+    {
+     "ref": "OT:C1QA-MONDO_0005090",
+     "category": "not_this_entity",
+     "reason": "a C1QA-schizophrenia score; the step's subject is CX3CR1"
+    }
+   ]
+  },
+  {
+   "id": "S4",
+   "step": "H2.2",
+   "text": "CX3CR1 loss impairs microglial function (CX3CR1 lowers abnormal microglial physiology)",
+   "sign_note": "inverted: the run's subject is CX3CR1 deficiency; its object 'impaired microglial function' is grounded as the abnormal-microglial-physiology phenotype, which the deficiency raises",
+   "claim": {
+    "effect": {
+     "subject": "CX3CR1",
+     "sign": "neg",
+     "target": {
+      "phenotype": "abnormalMicrogliaPhysiology"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "PMID:42276261",
+     "category": "not_in_text",
+     "reason": "reports CX3CR1 under-expression in schizophrenia blood and male brain, not that CX3CR1 loss impairs microglia (moved to H2.1)"
+    }
+   ]
+  },
+  {
+   "id": "S5",
+   "step": "H2.3",
+   "text": "C1QA activates complement",
+   "claim": {
+    "effect": {
+     "subject": "C1QA",
+     "sign": "pos",
+     "target": {
+      "process": "complementActivation"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "OT:C1QA-MONDO_0005090",
+     "category": "not_in_text",
+     "reason": "a C1QA-schizophrenia association score; says nothing about complement activation"
+    }
+   ]
+  },
+  {
+   "id": "S6",
+   "step": "H2.4",
+   "text": "impaired microglial function leads to synaptic dysfunction",
+   "sign_note": "not inverted: 'impaired microglial function' is grounded as the abnormal phenotype itself",
+   "claim": {
+    "effect": {
+     "subject": "abnormalMicrogliaPhysiology",
+     "sign": "pos",
+     "target": {
+      "phenotype": "impairedSynapticPhysiology"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "PMID:42276261",
+     "category": "not_in_text",
+     "reason": "names altered microglial function as a mediator of aberrant synaptic pruning, not of synaptic dysfunction"
+    }
+   ]
+  },
+  {
+   "id": "S7",
+   "step": "H2.4",
+   "text": "complement activation leads to synaptic dysfunction",
+   "claim": {
+    "effect": {
+     "subject": "complementActivation",
+     "sign": "pos",
+     "target": {
+      "phenotype": "impairedSynapticPhysiology"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "PMID:42276261",
+     "category": "not_in_text",
+     "reason": "names excessive complement activity as a mediator of aberrant synaptic pruning, not of synaptic dysfunction"
+    }
+   ]
+  },
+  {
+   "id": "S8",
+   "step": "H3.1",
+   "text": "NXPH3 is associated with schizophrenia (no direction given by the step)",
+   "claim": {
+    "assoc": {
+     "subject": "NXPH3",
+     "direction": "none",
+     "target": {
+      "disease": "schizophrenia",
+      "aspect": "risk"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "OT:NXPH3-MONDO_0005090",
+     "category": "other",
+     "reason": "the run cites it as chain, supporting and contradicting evidence; Open Targets scores NXPH3-schizophrenia at 0.0037 (literature 0.03): too weak to state the association, and a near-zero score is absence of evidence, not a reported null"
+    }
+   ]
+  },
+  {
+   "id": "S9",
+   "step": "H3.2",
+   "text": "NXPH3 is required for synaptic membrane adhesion (losing NXPH3 lowers it)",
+   "claim": {
+    "effect": {
+     "subject": "NXPH3",
+     "sign": "pos",
+     "target": {
+      "process": "synapticMembraneAdhesion"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "PMID:41333154",
+     "category": "not_in_text",
+     "reason": "says neurexophilins, as alpha-neurexin ligands, contribute to synaptic diversity; no NXPH3, no adhesion by neurexophilins"
+    }
+   ]
+  },
+  {
+   "id": "S10",
+   "step": "H3.2",
+   "text": "NXPH3 is required for synapse stability (losing NXPH3 lowers it)",
+   "claim": {
+    "effect": {
+     "subject": "NXPH3",
+     "sign": "pos",
+     "target": {
+      "process": "synapseMaintenance"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "PMID:41333154",
+     "category": "not_in_text",
+     "reason": "says neurexophilins contribute to synaptic diversity; no NXPH3 and nothing on synapse or neurexin stability"
+    }
+   ]
+  },
+  {
+   "id": "S11",
+   "step": "H3.3",
+   "text": "NXPH3 loss disrupts synaptic connectivity",
+   "sign_note": "inverted twice: the run's subject is NXPH3 dysfunction and its object is disrupted synaptic connectivity",
+   "claim": {
+    "effect": {
+     "subject": "NXPH3",
+     "sign": "pos",
+     "target": {
+      "phenotype": "synapticConnectivity"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": []
+  }
+ ],
+ "unexpressed": [
+  {
+   "step": "H1.1",
+   "category": "not_causal",
+   "reason": "'C4A gene increases C4A protein' is a gene and its own product; the note's real claim (risk alleles raise C4A expression) has no variant subject in the step",
+   "evidence": [
+    {
+     "ref": "PMID:26814963",
+     "kind": "observational",
+     "quote": "these alleles generated widely varying levels of C4A and C4B expression in the brain, with each common C4 allele associating with schizophrenia in proportion to its tendency to generate greater expression of C4A"
+    }
+   ],
+   "excluded": []
+  }
+ ],
+ "hypotheses": {
+  "H1": {
+   "claims": [
+    {
+     "subject": "C4A",
+     "sign": "pos",
+     "target": {
+      "disease": "schizophrenia",
+      "aspect": "risk"
+     }
+    },
+    {
+     "subject": "CSMD1",
+     "sign": "neg",
+     "target": {
+      "disease": "schizophrenia",
+      "aspect": "risk"
+     }
+    }
+   ],
+   "note": "the chain starts at 'C4A gene' (H1.1 restates expression); the mechanism names schizophrenia risk alleles raising C4A expression. CSMD1 ('unchecked by CSMD1 deficiency') is in no step"
+  },
+  "H2": {
+   "claims": [
+    {
+     "subject": "CX3CR1",
+     "sign": "neg",
+     "target": {
+      "disease": "schizophrenia",
+      "aspect": "risk"
+     }
+    },
+    {
+     "subject": "CX3CR1",
+     "sign": "neg",
+     "target": {
+      "phenotype": "impairedSynapticPhysiology"
+     }
+    },
+    {
+     "subject": "C1QA",
+     "sign": "pos",
+     "target": {
+      "disease": "schizophrenia",
+      "aspect": "risk"
+     }
+    },
+    {
+     "subject": "C1QA",
+     "sign": "pos",
+     "target": {
+      "phenotype": "impairedSynapticPhysiology"
+     }
+    }
+   ],
+   "note": "the causal chain ends at synaptic dysfunction; schizophrenia appears only in the unsigned association H2.1"
+  },
+  "H3": {
+   "claims": [
+    {
+     "subject": "NXPH3",
+     "sign": "neg",
+     "target": {
+      "disease": "schizophrenia",
+      "aspect": "risk"
+     }
+    },
+    {
+     "subject": "NXPH3",
+     "sign": "pos",
+     "target": {
+      "phenotype": "synapticConnectivity"
+     }
+    }
+   ],
+   "note": "the title names rare NXPH3 loss-of-function variants; the chain starts at the protein. Every step starts at NXPH3, and the causal steps end at synaptic connectivity"
+  }
+ },
+ "findings": [
+  {
+   "project": "hypothesis-agent",
+   "category": "gene_not_in_chain",
+   "hypothesis": "H1",
+   "detail": "CSMD1 is in H1's title, genes and mechanism ('unchecked by CSMD1 deficiency') but in no step, so its claim has no route; the cited PMID:40112933 states the link the chain needed (CSMD1 domains inhibit the classical pathway C3 convertase) and the chain never uses it."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "label_hides_claim",
+   "steps": [
+    "H1.1"
+   ],
+   "detail": "H1.1 'C4A gene increases C4A protein' restates expression; its real claim (schizophrenia risk alleles raise C4A expression) is only in the note, so the best-supported part of H1 cannot enter the chain."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_at_wrong_step",
+   "steps": [
+    "H1.1",
+    "H1.2"
+   ],
+   "detail": "PMID:26814963 states H1.2 ('In mice, C4 mediated synapse elimination') but the run cites it only at H1.1; moved, and it is the only support H1.2 has."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_does_not_state_step",
+   "steps": [
+    "H1.2"
+   ],
+   "detail": "PMID:22632727 shows retinogeniculate pruning depends on microglial CR3/C3 and never names C4 or C4A; PMID:40112933 is about CSMD1 inhibiting the C3 convertase and never mentions pruning."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_does_not_state_step",
+   "steps": [
+    "H1.3"
+   ],
+   "detail": "H1.3 (excessive pruning causes schizophrenia) cites only the CSMD1 and C4A Open Targets gene scores, which say nothing about pruning; the nearest text in the run, PMID:42276261's background 'Schizophrenia pathogenesis may involve aberrant synaptic pruning', gives no direction."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "evidence_without_step",
+   "hypothesis": "H1",
+   "detail": "Two cited texts state a direct C4-schizophrenia association (PMID:26814963: C4 alleles associate in proportion to C4A expression; PMID:42276261: C4 over-expression in schizophrenia brain), but H1 has no step that could hold it."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_context_ignored",
+   "steps": [
+    "H1.2"
+   ],
+   "detail": "PMID:22632727 reports that disrupting CR3/C3 signalling leaves sustained deficits in synaptic connectivity, i.e. complement-dependent pruning is needed for normal circuits; the run cites it for excessive pruning without saying so."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "falsification_off_chain",
+   "hypothesis": "H1",
+   "detail": "H1's falsification (CSMD1 knockout in C4-overexpressing mice) tests a CSMD1-C4 interaction that no step of the chain states."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "step_note_mismatch",
+   "steps": [
+    "H2.1"
+   ],
+   "detail": "H2.1's subject is CX3CR1 alone, but its note says 'Both associated' and it cites OT:C1QA, a record about C1QA."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_does_not_state_step",
+   "steps": [
+    "H2.2"
+   ],
+   "detail": "PMID:42276261 reports CX3CR1 under-expression in schizophrenia (blood; male brain), not that CX3CR1 loss impairs microglial function; it states H2.1 instead and was moved there."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_does_not_state_step",
+   "steps": [
+    "H2.3"
+   ],
+   "detail": "H2.3 (C1QA activates complement) cites only the C1QA-schizophrenia Open Targets score; no cited text states it."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_does_not_state_step",
+   "steps": [
+    "H2.4"
+   ],
+   "detail": "PMID:42276261 names excessive complement activity and altered microglial function as mediators of aberrant synaptic pruning, not of synaptic dysfunction; no H2 causal step is stated by its citations."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "chain_not_connected",
+   "steps": [
+    "H2.1",
+    "H2.2",
+    "H2.3"
+   ],
+   "detail": "H2.1 ends at schizophrenia and H2.2 starts at CX3CR1 deficiency; H2.2 ends at microglial function and H2.3 starts at C1QA: H2 is two parallel arms plus a disease association, not a chain."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "chain_ends_at_phenotype",
+   "hypothesis": "H2",
+   "detail": "H2's causal steps end at synaptic dysfunction and never reach schizophrenia; the disease appears only in the unsigned association H2.1."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "chain_not_connected",
+   "steps": [
+    "H3.1",
+    "H3.2",
+    "H3.3"
+   ],
+   "detail": "Every H3 step starts at NXPH3 (association, adhesion, connectivity): a star, not a chain, and the H3.2 end (adhesion and stability) is not H3.3's start."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "chain_ends_at_phenotype",
+   "hypothesis": "H3",
+   "detail": "H3's causal steps end at disrupted synaptic connectivity and never reach schizophrenia."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_does_not_state_step",
+   "steps": [
+    "H3.2"
+   ],
+   "detail": "PMID:41333154 says only that neurexophilins, as alpha-neurexin ligands, contribute to synaptic diversity; it never names NXPH3, and the note's 'Neurexophilins stabilize alpha-neurexins at synapses' is not in the text."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "no_citation",
+   "steps": [
+    "H3.3"
+   ],
+   "detail": "H3.3 cites nothing; its own note calls it speculative."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_role_conflict",
+   "steps": [
+    "H3.1"
+   ],
+   "detail": "OT:NXPH3 (score 0.0037) is cited as H3.1's chain evidence, as supporting evidence and as contradicting evidence for the same hypothesis; a near-zero score neither states the association nor reports a null, so it is excluded."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "confidence_unjustified",
+   "detail": "All three hypotheses are labelled support 'grounded', yet no causal step of H2 or H3 is stated by its citations, H3's only gene-disease record scores 0.00, and H1's last step has no support."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "ungrounded_label",
+   "detail": "Every node except schizophrenia has an empty CURIE in the run, including the five genes."
+  },
+  {
+   "project": "biolean",
+   "category": "missing_term",
+   "detail": "BLN:SynapticConnectivity: no GO, HP or MP term for synaptic connectivity (circuit wiring), the end node of H3."
+  },
+  {
+   "project": "biolean",
+   "category": "missing_term",
+   "detail": "'impaired microglial function' and 'synaptic dysfunction' have no HP terms; I used the mouse MP terms abnormal microglial cell physiology (MP:0003691) and impaired synaptic physiology (MP:0021010) for human nodes."
+  },
+  {
+   "project": "biolean",
+   "category": "evidence_kind_missing",
+   "detail": "The guide gives no evidence kind for an Open Targets association score; I used textMined because these rows carry only the literature (Europe PMC text-mining) datatype."
+  },
+  {
+   "project": "biolean",
+   "category": "evidence_weighting",
+   "detail": "Open Targets scores of 0.00, 0.06 and 0.51 enter with the same weight when kept; the format can only support, refute or exclude a record, so the 0.0037 NXPH3 row must be excluded and a 0.06 row counts as fully as a 0.51 one."
+  },
+  {
+   "project": "biolean",
+   "category": "no_form_for",
+   "detail": "H1's mechanism is a modifier claim (CSMD1 deficiency removes the check on C4A-driven pruning), and its falsification tests that interaction; BioLean has no form for one gene changing another's effect."
+  },
+  {
+   "project": "biolean",
+   "category": "no_form_for",
+   "detail": "PMID:26814963's mouse result is about mouse C4, the ortholog of both human C4A and C4B; taxon 'mouse' marks the species gap but not the paralog gap."
+  },
+  {
+   "project": "both",
+   "category": "bridge_not_added",
+   "hypothesis": "H2",
+   "detail": "PMID:26814963 states 'excessive complement activity in the development of schizophrenia', which as a bridge from complement activation would give C1QA a disease route; I did not add it because it bypasses H2's own end node (synaptic dysfunction) rather than filling a gap, so C1QA's disease claim stays without a route."
+  },
+  {
+   "project": "biolean",
+   "category": "rule_missing",
+   "steps": [
+    "H2.1"
+   ],
+   "detail": "PMID:42276261, moved to H2.1, gives a direction (CX3CR1 under-expressed in schizophrenia), but the guide takes a direction only from a text 'cited for the step', so H2.1 stays unsigned and the CX3CR1 disease claim has no route."
+  },
+  {
+   "project": "biolean",
+   "category": "rule_missing",
+   "steps": [
+    "H2.2",
+    "H2.4"
+   ],
+   "detail": "The guide does not say whether 'impaired X' with no GO process for X is loss of X (invert) or an undirected change (abnormal-X phenotype); I used the abnormal phenotype, which drops 'reduced'."
+  },
+  {
+   "project": "biolean",
+   "category": "rule_missing",
+   "steps": [
+    "H2.2",
+    "H2.3"
+   ],
+   "detail": "The run's structured context (cell_type microglia) is on H2.2 and H2.3 but not H2.4; the guide does not say when a context field 'limits the result', and refining would disconnect H2.3 from H2.4, so I dropped it."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "falsification_off_chain",
+   "hypothesis": "H2",
+   "detail": "H2's falsification (C1QA knockdown in CX3CR1 knockout mice, read out as microglial phagocytosis of synapses) tests a CX3CR1-C1QA interaction on a node, synaptic phagocytosis, that no step of the chain contains; the chain runs the two genes in parallel to synaptic dysfunction."
+  },
+  {
+   "project": "biolean",
+   "category": "source_role_hidden",
+   "steps": [
+    "H3.1"
+   ],
+   "detail": "sources.json gives each accession one cited_as role, so OT:NXPH3 shows only 'chain' although run.json also lists it in H3's contradicting_evidence; the contradicting role is visible only in run.json."
+  },
+  {
+   "project": "biolean",
+   "category": "evidence_counting",
+   "steps": [
+    "H2.4",
+    "H3.2"
+   ],
+   "detail": "Splitting a compound step lists one citation once per part (PMID:42276261 under S6 and S7, PMID:41333154 under S9 and S10), so the excluded count overstates the distinct judgements."
+  }
+ ],
+ "audit": [
+  {
+   "item": "entity abnormalSynapticPhysiology (H2.4 object 'synaptic dysfunction'; S6, S7, H2 claims 2 and 4)",
+   "error": "wrong_grounding",
+   "before": "abnormalSynapticPhysiology = MP:0021009 abnormal synaptic physiology ('any functional anomaly of the ... junction site')",
+   "after": "impairedSynapticPhysiology = MP:0021010 impaired synaptic physiology ('any functional impairment of a synapse')",
+   "reason": "'synaptic dysfunction' is a functional impairment; MP has an exact term for it, and the broader 'abnormal' parent also covers enhanced transmission. The curator searched only for an 'abnormal X' term (the guide's undirected-change wording) and reported that only the 'abnormal' MP term existed. The sign stays pos and the routes are unchanged."
+  },
+  {
+   "item": "finding missing_term (MP terms for human nodes)",
+   "error": "other",
+   "before": "... abnormal microglial cell physiology (MP:0003691) and abnormal synaptic physiology (MP:0021009) for human nodes.",
+   "after": "... abnormal microglial cell physiology (MP:0003691) and impaired synaptic physiology (MP:0021010) for human nodes.",
+   "reason": "follows the regrounding of 'synaptic dysfunction'"
+  },
+  {
+   "item": "S8 (H3.1) evidence OT:NXPH3-MONDO_0005090",
+   "error": "quote_does_not_state",
+   "before": "kept, kind textMined, polarity refutes: 'Open Targets 2026.06 scores the NXPH3-schizophrenia association at 0.00 (literature 0.03).'",
+   "after": "excluded, category other",
+   "reason": "the guide keeps a contradicting citation as refutes only when it states the opposite or reports a null ('no association'), otherwise excludes it. An Open Targets row exists only because some evidence was found (literature 0.03), so the record is a near-zero score, not a tested null. The curator judged it 'absence of evidence, not a tested null' and kept it as refuting anyway, which gave S8 disbelief 3/10 from a record that reports no test. Other curations of the same record (20260824T235535Z-e9ec87, 20260825T112130Z-8c8716) exclude it. S8 is now unsupported (belief 0, uncertainty 1); no arm changes, since S8 is unsigned."
+  },
+  {
+   "item": "finding citation_states_opposite (H3.1)",
+   "error": "other",
+   "before": "citation_states_opposite: OT:NXPH3 (score 0.00) is cited as H3.1's chain evidence, as supporting evidence and as contradicting evidence for the same hypothesis; kept at H3.1 as refuting.",
+   "after": "citation_role_conflict: OT:NXPH3 (score 0.0037) is cited as H3.1's chain evidence, as supporting evidence and as contradicting evidence for the same hypothesis; a near-zero score neither states the association nor reports a null, so it is excluded.",
+   "reason": "the record does not state the opposite of H3.1 and is no longer kept as refuting"
+  },
+  {
+   "item": "finding evidence_weighting (OT scores)",
+   "error": "other",
+   "before": "Open Targets scores of 0.00, 0.06 and 0.51 enter with the same textMined weight: the 0.00 NXPH3 row, kept as a refuting null, gives S8 disbelief 3/10, as much as a real text-mined hit; a near-zero score is absence of evidence, but the format can only support, refute or exclude it.",
+   "after": "Open Targets scores of 0.00, 0.06 and 0.51 enter with the same weight when kept; the format can only support, refute or exclude a record, so the 0.0037 NXPH3 row must be excluded and a 0.06 row counts as fully as a 0.51 one.",
+   "reason": "the NXPH3 row is now excluded, so it no longer gives S8 disbelief"
+  },
+  {
+   "item": "findings (falsification_off_chain H2)",
+   "error": "missed_finding",
+   "before": "none",
+   "after": "H2's falsification (C1QA knockdown in CX3CR1 knockout mice, read out as microglial phagocytosis of synapses) tests a CX3CR1-C1QA interaction on a node, synaptic phagocytosis, that no step of the chain contains; the chain runs the two genes in parallel to synaptic dysfunction.",
+   "reason": "the curator recorded this for H1 but not for H2, whose falsification has the same flaw"
+  },
+  {
+   "item": "findings (source_role_hidden, evidence_counting)",
+   "error": "missed_finding",
+   "before": "none",
+   "after": "two biolean findings: one cited_as role per accession hides OT:NXPH3's contradicting role; split steps count one exclusion twice",
+   "reason": "the guide says gaps in the format or tools are findings too; the curator raised both only as guide problems"
+  }
+ ]
+}

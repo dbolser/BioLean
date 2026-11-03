@@ -1,0 +1,385 @@
+{
+ "run_id": "study-2026-09-vertex-iga-nephropathy-google-cloud-gemini-3.1-pro-preview-single_agent-r2",
+ "model": "google-cloud:gemini-3.1-pro-preview",
+ "question": {
+  "arm": "single_agent",
+  "budget": {
+   "max_delegations": 22,
+   "max_model_requests": 80,
+   "max_specialist_requests": 8,
+   "min_evidence_per_hypothesis": 2,
+   "min_hypotheses": 3,
+   "min_sources_per_hypothesis": 2,
+   "output_retries": 3
+  },
+  "data_policy": {
+   "max_age_seconds": 1209600.0,
+   "mode": "cache-preferred",
+   "snapshot_run_id": null
+  },
+  "disease": "IgA glomerulonephritis",
+  "formalise": false,
+  "genes": [
+   "TNFSF13",
+   "ITGAX",
+   "DEFA4",
+   "CFH",
+   "CARD9",
+   "OR4X1",
+   "ZNF174"
+  ],
+  "model": "google-cloud:gemini-3.1-pro-preview",
+  "specialist_model": "",
+  "specialists": [
+   "chembl",
+   "expression",
+   "gwas",
+   "interactions",
+   "literature",
+   "model_organism",
+   "open_targets",
+   "pathways",
+   "single_cell",
+   "trials",
+   "uniprot"
+  ],
+  "tissue": {
+   "artifact_id": "sha256:9e1a3dbe284f9d27d8084643b44a06acf8cb32a68ab373cb3902387f5d069650",
+   "label": "kidney",
+   "uberon": "UBERON:0002113"
+  },
+  "use_network": true
+ },
+ "abstention": {
+  "evidence": [
+   "GWAS:OR4X1:no-association",
+   "GWAS:ZNF174:no-association",
+   "CHEMBL:no-target-OR4X1",
+   "CHEMBL:no-target-ZNF174",
+   "STRING:no-edges"
+  ],
+  "genes_covered": [
+   "OR4X1",
+   "ZNF174"
+  ],
+  "reason": "insufficient_evidence",
+  "statement": "OR4X1 (an odorant receptor) and ZNF174 (a zinc-finger transcriptional repressor) show no genetic association, drug targeting, or interaction with the known IgA nephropathy network. They appear to be unrelated to the disease.",
+  "support": "grounded",
+  "what_would_change_this": "A GWAS linking these loci to IgA nephropathy or a biochemical study showing they interact with complement regulators or mucosal immune pathways."
+ },
+ "disease": "IgA glomerulonephritis",
+ "genes_considered": [
+  "TNFSF13",
+  "ITGAX",
+  "DEFA4",
+  "CFH",
+  "CARD9",
+  "OR4X1",
+  "ZNF174"
+ ],
+ "hypotheses": [
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "O75888",
+      "CHEMBL:CHEMBL1742986-CHEMBL3713436-5867"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "B cell"
+     },
+     "polarity": "positive",
+     "relation": "activates",
+     "subject": {
+      "curie": "UniProtKB:O75888",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "TNFSF13"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "AGR:MGI:1916833:MP:0001807"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "IgA"
+     },
+     "polarity": "positive",
+     "relation": "increases_amount",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "B cell"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "CHEMBL:CHEMBL1742986-EFO_0004194",
+      "rs3803800"
+     ],
+     "note": "",
+     "object": {
+      "curie": "MONDO:0005342",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "IgA glomerulonephritis"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "IgA"
+     }
+    }
+   ],
+   "confidence": "high",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Inhibit TNFSF13 in an IgA nephropathy animal model and observe if it reduces the levels of pathogenic IgA and decreases glomerular deposition.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "inhibit",
+     "target": {
+      "curie": "UniProtKB:O75888",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "TNFSF13"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "other",
+     "label": "IgA"
+    },
+    "system": ""
+   },
+   "genes": [
+    "TNFSF13"
+   ],
+   "hypothesis_id": "hyp-1",
+   "mechanism": "TNFSF13 (APRIL) is a cytokine that stimulates B-cell activation and class-switch recombination. In IgA nephropathy, elevated TNFSF13 activity leads to the overproduction of poorly O-glycosylated IgA1, which deposits in the kidney. Inhibitors of TNFSF13, such as atacicept, are in late-stage clinical trials to reduce pathogenic IgA levels and prevent glomerular damage.",
+   "support": "speculative",
+   "supporting_evidence": [],
+   "title": "TNFSF13 promotes pathogenic IgA overproduction"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "P08603",
+      "AGR:MGI:88385:MP:0011566"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "complement alternative pathway"
+     },
+     "polarity": "negative",
+     "relation": "inhibits",
+     "subject": {
+      "curie": "UniProtKB:P08603",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "CFH"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "AGR:MGI:88385:MP:0002743",
+      "rs6677604"
+     ],
+     "note": "",
+     "object": {
+      "curie": "MONDO:0005342",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "IgA glomerulonephritis"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "complement alternative pathway"
+     }
+    }
+   ],
+   "confidence": "high",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Restore normal CFH function in a CFH-deficient model of IgA nephropathy to confirm it decreases alternative pathway complement activation and alleviates glomerular damage.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "restore",
+     "target": {
+      "curie": "UniProtKB:P08603",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "CFH"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "other",
+     "label": "complement alternative pathway"
+    },
+    "system": ""
+   },
+   "genes": [
+    "CFH"
+   ],
+   "hypothesis_id": "hyp-2",
+   "mechanism": "Complement factor H (CFH) acts as an essential soluble inhibitor of the complement alternative pathway. In IgA nephropathy, deposited IgA immune complexes trigger complement activation. Genetic variants that reduce CFH function result in poorly regulated complement amplification on renal surfaces, driving inflammation and glomerular injury.",
+   "support": "speculative",
+   "supporting_evidence": [],
+   "title": "CFH deficiency impairs complement regulation, exacerbating glomerular injury"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "Q9H257",
+      "AGR:MGI:2685628:MP:0002419"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "innate immune response"
+     },
+     "polarity": "positive",
+     "relation": "activates",
+     "subject": {
+      "curie": "UniProtKB:Q9H257",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "CARD9"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "P20702",
+      "AGR:MGI:96609:MP:0001606"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "innate immune response"
+     },
+     "polarity": "positive",
+     "relation": "activates",
+     "subject": {
+      "curie": "UniProtKB:P20702",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "ITGAX"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "P12838"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "innate immune response"
+     },
+     "polarity": "positive",
+     "relation": "activates",
+     "subject": {
+      "curie": "UniProtKB:P12838",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "DEFA4"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "STRING:PMID:25305756",
+      "rs4077515",
+      "rs7190997",
+      "rs2738058"
+     ],
+     "note": "",
+     "object": {
+      "curie": "MONDO:0005342",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "IgA glomerulonephritis"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "innate immune response"
+     }
+    }
+   ],
+   "confidence": "medium",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Knock out CARD9 or ITGAX in an animal model exposed to mucosal pathogens and measure whether the production of galactose-deficient IgA and ensuing nephropathy are altered.",
+    "expected": "unknown",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "UniProtKB:Q9H257",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "CARD9"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "other",
+     "label": "IgA"
+    },
+    "system": ""
+   },
+   "genes": [
+    "CARD9",
+    "ITGAX",
+    "DEFA4"
+   ],
+   "hypothesis_id": "hyp-3",
+   "mechanism": "The pathogenesis of IgA nephropathy is closely tied to mucosal immune responses against intestinal pathogens. CARD9, ITGAX, and DEFA4 are crucial for innate immune sensing and defense in mucosal tissues. Alterations in these host-defense mechanisms disrupt intestinal homeostasis, triggering aberrant mucosal immune responses that generate the pathogenic, poorly O-glycosylated IgA1 underlying the disease.",
+   "support": "speculative",
+   "supporting_evidence": [],
+   "title": "CARD9, ITGAX, and DEFA4 modulate mucosal innate immunity, linking intestinal defense to pathogenic IgA production"
+  }
+ ],
+ "unexplained_genes": []
+}

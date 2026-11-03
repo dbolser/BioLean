@@ -1,0 +1,264 @@
+{
+ "run_id": "study-2026-09-vertex-psoriasis-google-cloud-gemini-3.1-pro-preview-multi_agent-r3",
+ "model": "google-cloud:gemini-3.1-pro-preview",
+ "question": {
+  "arm": "multi_agent",
+  "budget": {
+   "max_delegations": 22,
+   "max_model_requests": 80,
+   "max_specialist_requests": 8,
+   "min_evidence_per_hypothesis": 2,
+   "min_hypotheses": 3,
+   "min_sources_per_hypothesis": 2,
+   "output_retries": 3
+  },
+  "data_policy": {
+   "max_age_seconds": 1209600.0,
+   "mode": "cache-preferred",
+   "snapshot_run_id": null
+  },
+  "disease": "psoriasis",
+  "formalise": false,
+  "genes": [
+   "IL12B",
+   "EGFL8",
+   "TRAF3IP2",
+   "TYK2",
+   "IL23R",
+   "GLE1",
+   "UHRF2"
+  ],
+  "model": "google-cloud:gemini-3.1-pro-preview",
+  "specialist_model": "google-cloud:gemini-3.1-pro-preview",
+  "specialists": [
+   "chembl",
+   "expression",
+   "gwas",
+   "interactions",
+   "literature",
+   "model_organism",
+   "open_targets",
+   "pathways",
+   "single_cell",
+   "trials",
+   "uniprot"
+  ],
+  "tissue": {
+   "artifact_id": "sha256:f385590ff844b25a944f5da376243ab0b087745c3c64fa7c5e465db4f49ffa43",
+   "label": "skin of body",
+   "uberon": "UBERON:0002097"
+  },
+  "use_network": true
+ },
+ "abstention": {
+  "evidence": [
+   "Q99944",
+   "Q53GS7",
+   "Q96PU4",
+   "rs3117182",
+   "reactome:coverage"
+  ],
+  "genes_covered": [
+   "EGFL8",
+   "GLE1",
+   "UHRF2"
+  ],
+  "reason": "no_shared_mechanism",
+  "statement": "While EGFL8 has a strong genome-wide significant association with psoriasis (rs3117182), it shares no functional pathways, protein-protein interactions, or established mechanisms with the core IL-23/IL-17 signaling network (IL12B, IL23R, TYK2, TRAF3IP2). Furthermore, GLE1 and UHRF2 lack both genetic associations and relevant biological interactions in this disease context, primarily functioning in mRNA export and ubiquitin ligase activity respectively. Therefore, these genes do not participate in a shared causal mechanism with the immune-related genes in this list.",
+  "support": "grounded",
+  "what_would_change_this": "Discovery of protein-protein interactions between EGFL8 and the IL-23 receptor complex, or evidence that GLE1 and UHRF2 regulate transcripts or proteins critical for Th17 cell differentiation in the skin."
+ },
+ "disease": "psoriasis",
+ "genes_considered": [
+  "IL12B",
+  "EGFL8",
+  "TRAF3IP2",
+  "TYK2",
+  "IL23R",
+  "GLE1",
+  "UHRF2"
+ ],
+ "hypotheses": [
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "STRING:IL12B-IL23R"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "IL23R"
+     },
+     "polarity": "unknown",
+     "relation": "binds",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "IL12B"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "STRING:IL23R-TYK2",
+      "R-HSA-9020933"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "TYK2"
+     },
+     "polarity": "positive",
+     "relation": "activates",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "IL23R"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "STRING:GO:2000318"
+     ],
+     "note": "TYK2 mediates IL-23 signaling which positively regulates Th17 immune responses",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "cell_type",
+      "label": "T-helper 17 cell"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "TYK2"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "rs34536443",
+      "CHEMBL:CHEMBL1201835",
+      "CHEMBL:CHEMBL4435170"
+     ],
+     "note": "",
+     "object": {
+      "curie": "MONDO:0005083",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "psoriasis"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "cell_type",
+      "label": "T-helper 17 cell"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Treating IL-23-injected mice (a standard psoriasis model) with a selective TYK2 inhibitor will abrogate epidermal hyperplasia and Th17 cell infiltration in the skin.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "inhibit",
+     "target": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "TYK2"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "phenotype",
+     "label": "epidermal hyperplasia"
+    },
+    "system": ""
+   },
+   "genes": [
+    "IL12B",
+    "IL23R",
+    "TYK2"
+   ],
+   "hypothesis_id": "hyp1_il23_axis",
+   "mechanism": "The IL-23 cytokine, which incorporates the IL12B-encoded p40 subunit, binds to its specific receptor complex comprising IL23R. This receptor complex requires the Janus kinase TYK2 to transduce intracellular signals. Activation of TYK2 downstream of IL-23 drives the differentiation and expansion of Th17 cells, leading to the excessive inflammation characteristic of psoriasis. This mechanism is strongly supported by genetic associations and the clinical efficacy of targeted therapies like Ustekinumab and Deucravacitinib.",
+   "support": "speculative",
+   "supporting_evidence": [],
+   "title": "IL-23 receptor signaling through TYK2 drives psoriasis pathogenesis"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "rs33980500",
+      "OT:TRAF3IP2-MONDO_0005083",
+      "CHEMBL:CHEMBL2107455"
+     ],
+     "note": "",
+     "object": {
+      "curie": "MONDO:0005083",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "psoriasis"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "TRAF3IP2"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Knockdown of TRAF3IP2 in human keratinocytes followed by IL-17 stimulation will fail to induce downstream pro-inflammatory marker expression compared to wild-type cells.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "knockdown",
+     "target": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "TRAF3IP2"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "process",
+     "label": "pro-inflammatory cytokine production"
+    },
+    "system": ""
+   },
+   "genes": [
+    "TRAF3IP2"
+   ],
+   "hypothesis_id": "hyp2_traf3ip2_il17",
+   "mechanism": "TRAF3IP2 (also known as ACT1) serves as an essential intracellular adaptor protein for the Interleukin-17 (IL-17) receptor. In psoriasis, the overactive IL-23/Th17 axis results in high levels of IL-17, which signals through its receptor and requires TRAF3IP2 to trigger downstream inflammatory cascades in skin cells. Genetic variants in TRAF3IP2 strongly predispose individuals to psoriasis by altering this critical signal transduction pathway.",
+   "support": "speculative",
+   "supporting_evidence": [],
+   "title": "TRAF3IP2 mediates downstream IL-17 inflammatory signaling in psoriasis"
+  }
+ ],
+ "unexplained_genes": []
+}

@@ -1,0 +1,692 @@
+{
+ "run_id": "study-2026-09-vertex-amd-google-cloud-gemini-3.1-pro-preview-multi_agent-r1",
+ "curated_by": "Claude Opus 5.5, 2026-10-30",
+ "entities": {
+  "CETP": {
+   "kind": "protein",
+   "curie": "UniProt:P11597",
+   "run_labels": [
+    "CETP"
+   ]
+  },
+  "LIPC": {
+   "kind": "protein",
+   "curie": "UniProt:P11150",
+   "run_labels": [
+    "LIPC"
+   ]
+  },
+  "ARMS2": {
+   "kind": "protein",
+   "curie": "UniProt:P0C7Q2",
+   "run_labels": [
+    "ARMS2"
+   ]
+  },
+  "C3": {
+   "kind": "protein",
+   "curie": "UniProt:P01024",
+   "run_labels": [
+    "C3"
+   ]
+  },
+  "TNFRSF10A": {
+   "kind": "protein",
+   "curie": "UniProt:O00220",
+   "run_labels": [
+    "TNFRSF10A"
+   ]
+  },
+  "cholesterolMetabolism": {
+   "kind": "process",
+   "curie": "GO:0008203",
+   "run_labels": [
+    "cholesterol metabolism"
+   ]
+  },
+  "complementActivation": {
+   "kind": "process",
+   "curie": "GO:0006956",
+   "run_labels": [
+    "complement activation"
+   ]
+  },
+  "apoptosis": {
+   "kind": "process",
+   "curie": "GO:0006915",
+   "run_labels": [
+    "apoptosis"
+   ]
+  },
+  "retinalEndothelialCell": {
+   "kind": "cellType",
+   "curie": "CL:0002585",
+   "run_labels": [
+    "retinal blood vessel endothelial cell"
+   ]
+  },
+  "retinalEndothelialApoptosis": {
+   "kind": "process",
+   "refines": {
+    "base": "apoptosis",
+    "ctx": {
+     "cellType": "retinalEndothelialCell"
+    }
+   },
+   "run_labels": [
+    "apoptosis (step context: retinal blood vessel endothelial cell)",
+    "apoptosis of retinal endothelial cells (title)"
+   ]
+  },
+  "amd": {
+   "kind": "disease",
+   "curie": "MONDO:0005150",
+   "run_labels": [
+    "age-related macular degeneration"
+   ]
+  }
+ },
+ "statements": [
+  {
+   "id": "S1",
+   "step": "h1_cholesterol.1",
+   "text": "CETP drives cholesterol metabolism",
+   "claim": {
+    "effect": {
+     "subject": "CETP",
+     "sign": "pos",
+     "target": {
+      "process": "cholesterolMetabolism"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "P11597",
+     "kind": "curatedDb",
+     "quote": "Allows the net movement of cholesteryl ester from high density lipoproteins/HDL to triglyceride-rich very low density lipoproteins/VLDL"
+    }
+   ],
+   "excluded": [
+    {
+     "ref": "STRING:hsa04979",
+     "category": "enrichment",
+     "reason": "KEGG 'Cholesterol metabolism' over-represented in the CETP+LIPC gene set (2 of 48 genes); membership, no effect stated"
+    },
+    {
+     "ref": "STRING:CETP-LIPC",
+     "category": "not_in_text",
+     "reason": "a CETP-LIPC network edge (mostly text-mining); names no cholesterol process"
+    }
+   ],
+   "note": "UniProt also says CETP 'Regulates the reverse cholesterol transport', which is undirected; the quoted span gives the direction (CETP carries out cholesteryl ester transfer)"
+  },
+  {
+   "id": "S2",
+   "step": "h1_cholesterol.2",
+   "text": "LIPC drives cholesterol metabolism",
+   "claim": {
+    "effect": {
+     "subject": "LIPC",
+     "sign": "pos",
+     "target": {
+      "process": "cholesterolMetabolism"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "P11150",
+     "category": "not_in_text",
+     "reason": "UniProt says LIPC hydrolyses triglycerides and phospholipids in plasma lipoproteins; cholesterol is not named"
+    },
+    {
+     "ref": "STRING:hsa04979",
+     "category": "enrichment",
+     "reason": "KEGG 'Cholesterol metabolism' over-represented in the CETP+LIPC gene set (2 of 48 genes); membership, no effect stated"
+    },
+    {
+     "ref": "STRING:CETP-LIPC",
+     "category": "not_in_text",
+     "reason": "a CETP-LIPC network edge (mostly text-mining); names no cholesterol process"
+    }
+   ]
+  },
+  {
+   "id": "S3",
+   "step": "h1_cholesterol.3",
+   "text": "cholesterol metabolism is associated with AMD (no direction)",
+   "claim": {
+    "assoc": {
+     "subject": "cholesterolMetabolism",
+     "direction": "none",
+     "target": {
+      "disease": "amd",
+      "aspect": "risk"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "rs17231506",
+     "category": "not_this_entity",
+     "reason": "a variant-AMD association (rs17231506-T, beta decrease, near CETP); says nothing about cholesterol metabolism"
+    },
+    {
+     "ref": "rs2414577",
+     "category": "not_this_entity",
+     "reason": "a variant-AMD association (rs2414577-C, beta decrease; lies in ALDH1A2, mapped to LIPC); says nothing about cholesterol metabolism"
+    },
+    {
+     "ref": "STRING:DOID:10871",
+     "category": "enrichment",
+     "reason": "DISEASES 'Age related macular degeneration' over-represented in the five-gene set; no process named"
+    }
+   ]
+  },
+  {
+   "id": "S4",
+   "step": "h2_complement.1",
+   "text": "ARMS2 is associated with C3 (no direction)",
+   "claim": {
+    "assoc": {
+     "subject": "ARMS2",
+     "direction": "none",
+     "target": {
+      "activity": "C3"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "STRING:C3-ARMS2",
+     "kind": "curatedDb",
+     "quote": "STRING links C3 and ARMS2 with combined score 0.70 (experimental 0.24, database 0.00, text-mining 0.62)"
+    }
+   ],
+   "excluded": [
+    {
+     "ref": "rs36212733",
+     "category": "not_in_text",
+     "reason": "an ARMS2/HTRA1-locus variant associated with AMD (rs36212733-C, beta increase); C3 not named"
+    },
+    {
+     "ref": "rs10490924",
+     "category": "not_in_text",
+     "reason": "an ARMS2/HTRA1-locus variant associated with AMD (rs10490924-T, OR 2.76); C3 not named"
+    }
+   ],
+   "note": "the STRING edge is kept: h2_complement.1 is an unsigned association, so the text need only name both ends; kind curatedDb because the experiments channel (0.24) passes the guide's 0.15 threshold, though the guide states that threshold for binds statements only"
+  },
+  {
+   "id": "S5",
+   "step": "h2_complement.2",
+   "text": "C3 drives complement activation",
+   "claim": {
+    "effect": {
+     "subject": "C3",
+     "sign": "pos",
+     "target": {
+      "process": "complementActivation"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "P01024",
+     "kind": "curatedDb",
+     "quote": "In the alternative complement pathway, recruits the serine protease CFB to form the C5 convertase that cleaves and activates C5"
+    }
+   ],
+   "excluded": [
+    {
+     "ref": "CXG:ENSG00000125730:CL_0000057:MONDO_0012419",
+     "category": "not_in_text",
+     "reason": "C3 detected in more fibroblasts from AMD-7 (HTRA1) donors than normal (63.3% vs 11.8%); an expression difference, complement activation not stated"
+    }
+   ],
+   "note": "the step's context (fibroblast, AMD) is dropped: it records where the cited single-cell data saw C3, not a limit on the C3-to-complement step"
+  },
+  {
+   "id": "S6",
+   "step": "h2_complement.3",
+   "text": "complement activation is associated with AMD (no direction)",
+   "claim": {
+    "assoc": {
+     "subject": "complementActivation",
+     "direction": "none",
+     "target": {
+      "disease": "amd",
+      "aspect": "risk"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "CHEMBL:CHEMBL4298211",
+     "category": "not_in_text",
+     "reason": "pegcetacoplan targets C3 and is approved; no indication, no AMD, no complement activation stated"
+    },
+    {
+     "ref": "rs11569415",
+     "category": "not_this_entity",
+     "reason": "a C3 intronic variant associated with AMD (rs11569415-A, beta decrease); about a variant, not complement activation"
+    },
+    {
+     "ref": "rs2230199",
+     "category": "not_this_entity",
+     "reason": "a C3 missense variant associated with advanced AMD (OR 1.43, allele not reported); about a variant, not complement activation"
+    }
+   ]
+  },
+  {
+   "id": "S7",
+   "step": "h3_apoptosis.1",
+   "text": "TNFRSF10A drives apoptosis of retinal blood vessel endothelial cells",
+   "claim": {
+    "effect": {
+     "subject": "TNFRSF10A",
+     "sign": "pos",
+     "target": {
+      "process": "retinalEndothelialApoptosis"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "O00220",
+     "category": "not_in_text",
+     "reason": "UniProt function text: TNFRSF10A recruits FADD and caspase-8 to mediate apoptosis, with no cell type; it does not state apoptosis of retinal endothelial cells"
+    },
+    {
+     "ref": "CXG:ENSG00000104689:CL_0002585:MONDO_0003004",
+     "category": "not_in_text",
+     "reason": "TNFRSF10A detected in 2.5% of 161 retinal endothelial cells from macular degeneration donors vs 4.4% normal; expression only, apoptosis not stated"
+    }
+   ],
+   "note": "the step's context (retinal blood vessel endothelial cell) is kept as a refinement: the title ('apoptosis of retinal endothelial cells') and the falsification (knockout 'in retinal blood vessel endothelial cells') make the cell type the point of H3"
+  },
+  {
+   "id": "S8",
+   "step": "h3_apoptosis.2",
+   "text": "apoptosis is associated with AMD (no direction)",
+   "claim": {
+    "assoc": {
+     "subject": "apoptosis",
+     "direction": "none",
+     "target": {
+      "disease": "amd",
+      "aspect": "risk"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "PMID:26691988",
+     "category": "not_in_text",
+     "reason": "AMD GWAS abstract (52 variants, 34 loci; CFH, CFI, TIMP3, SLC16A8, MMP9); neither apoptosis nor TNFRSF10A is named"
+    },
+    {
+     "ref": "rs13278062",
+     "category": "not_this_entity",
+     "reason": "a TNFRSF10A-locus variant associated with AMD (rs13278062-T, beta decrease); about a variant, not apoptosis"
+    }
+   ]
+  }
+ ],
+ "unexpressed": [],
+ "hypotheses": {
+  "h1_cholesterol": {
+   "claims": [
+    {
+     "subject": "CETP",
+     "sign": "pos",
+     "target": {
+      "disease": "amd",
+      "aspect": "risk"
+     }
+    },
+    {
+     "subject": "LIPC",
+     "sign": "pos",
+     "target": {
+      "disease": "amd",
+      "aspect": "risk"
+     }
+    }
+   ],
+   "note": "sign from the title ('drive macular degeneration'); the mechanism says only 'dysregulation', so the direction of each gene's activity is not stated. The chain is a fork: CETP and LIPC each feed cholesterol metabolism, which has an unsigned link to AMD"
+  },
+  "h2_complement": {
+   "claims": [
+    {
+     "subject": "ARMS2",
+     "sign": "pos",
+     "target": {
+      "disease": "amd",
+      "aspect": "risk"
+     }
+    },
+    {
+     "subject": "C3",
+     "sign": "pos",
+     "target": {
+      "disease": "amd",
+      "aspect": "risk"
+     }
+    }
+   ],
+   "note": "sign from the title ('promote macular degeneration'). The mechanism credits 'genetic variants in ARMS2 and C3', but the chain starts at the proteins, so the subjects are the proteins"
+  },
+  "h3_apoptosis": {
+   "claims": [
+    {
+     "subject": "TNFRSF10A",
+     "sign": "pos",
+     "target": {
+      "disease": "amd",
+      "aspect": "progression"
+     }
+    }
+   ],
+   "note": "title 'exacerbates', mechanism 'drives the clinical progression' -> progression; the chain's last step (h3_apoptosis.2, 'contributes to macular tissue loss and AMD') reads as risk. h3_apoptosis.1 targets apoptosis of retinal endothelial cells (a refinement) and h3_apoptosis.2 starts at apoptosis in general, so the chain does not connect"
+  }
+ },
+ "findings": [
+  {
+   "project": "hypothesis-agent",
+   "category": "unsigned_link_to_disease",
+   "steps": [
+    "h1_cholesterol.3",
+    "h2_complement.3",
+    "h3_apoptosis.2"
+   ],
+   "detail": "every hypothesis reaches AMD only through an associated_with step with polarity 'unknown', so none of the five gene claims has a route, whatever the earlier steps say"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "polarity_in_note_only",
+   "steps": [
+    "h2_complement.3",
+    "h3_apoptosis.2"
+   ],
+   "detail": "the notes state a direction ('Overactivation of the complement system causes chronic retinal inflammation'; 'Increased cell death ... contributes to macular tissue loss and AMD') that the structured polarity field leaves 'unknown'; the prose direction is lost in the structured output"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_does_not_state_step",
+   "steps": [
+    "h1_cholesterol.3",
+    "h2_complement.3",
+    "h3_apoptosis.2"
+   ],
+   "detail": "process-to-AMD steps cite GWAS Catalog rows for single variants near CETP, LIPC, C3 and TNFRSF10A; each row states a variant-AMD association and names no process"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "evidence_without_step",
+   "steps": [
+    "h1_cholesterol.3",
+    "h2_complement.1",
+    "h2_complement.3",
+    "h3_apoptosis.2"
+   ],
+   "detail": "the run's strongest evidence (seven genome-wide GWAS rows: rs17231506-T decrease, rs2414577-C decrease, rs36212733-C increase, rs10490924-T OR 2.76, rs11569415-A decrease, rs2230199 OR 1.43 allele unreported, rs13278062-T decrease) has no variant step to attach to, so none of it reaches a claim"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "variant_gene_attribution",
+   "steps": [
+    "h1_cholesterol.3"
+   ],
+   "detail": "rs2414577 is cited as a LIPC variant, but the record's Ensembl context places it inside ALDH1A2 (distance 0), while its functional class is intergenic and LIPC lies 22 kb (Ensembl) or 44 kb (NCBI) away; rs17231506 is intergenic, 1.3 kb from CETP"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "variant_gene_attribution",
+   "steps": [
+    "h2_complement.1"
+   ],
+   "detail": "rs36212733 and rs10490924 sit in ARMS2 and HTRA1-AS1, and the rs10490924 study reports ARMS2 and HTRA1 as genes; the run treats the locus as ARMS2 alone"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_does_not_state_step",
+   "steps": [
+    "h1_cholesterol.2"
+   ],
+   "detail": "LIPC's UniProt text (and the run's own note) says it hydrolyses triglycerides and phospholipids in lipoproteins; it never mentions cholesterol, yet the step is LIPC leads_to cholesterol metabolism"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "mechanism_not_cited",
+   "steps": [
+    "h2_complement.1"
+   ],
+   "detail": "the only ARMS2-C3 link cited is one STRING edge (combined 0.70, mostly text-mining 0.62, experiments 0.24); it states an unsigned link and nothing more, and nothing cited puts ARMS2 in the complement pathway, as the mechanism and the step note ('functionally interacts') claim"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_does_not_state_step",
+   "steps": [
+    "h2_complement.3"
+   ],
+   "detail": "the ChEMBL record says only that pegcetacoplan targets C3 and is approved; it names no indication, so it does not link complement activation to AMD"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "evidence_disease_mismatch",
+   "steps": [
+    "h2_complement.2"
+   ],
+   "detail": "the step's context says AMD (MONDO:0005150), but the cited single-cell record compares donors with AMD 7 (MONDO:0012419, the HTRA1-caused form; 430 cells) against normal"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "evidence_misread",
+   "steps": [
+    "h3_apoptosis.1"
+   ],
+   "detail": "the single-cell record cited for 'expressed in retinal endothelial cells' shows TNFRSF10A in 2.5% of 161 disease cells against 4.4% of normal ones (lower in disease, low overall), and its disease is macular degeneration (MONDO:0003004), not AMD; the run does not mention this"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "chain_is_fork",
+   "steps": [
+    "h1_cholesterol.1",
+    "h1_cholesterol.2"
+   ],
+   "detail": "h1_cholesterol.2 starts at LIPC, not at the object of h1_cholesterol.1: the 'chain' is two parallel gene steps into one node, which is fine for composition but not a sequence"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "chain_not_connected",
+   "detail": "h3_apoptosis.1 ends at apoptosis of retinal blood vessel endothelial cells (its context, the title and the falsification), but h3_apoptosis.2 starts at apoptosis in general ('the retinal vasculature or RPE'), so the chain breaks; no cited text puts TNFRSF10A or apoptosis in either cell",
+   "steps": [
+    "h3_apoptosis.1",
+    "h3_apoptosis.2"
+   ]
+  },
+  {
+   "project": "both",
+   "category": "confidence_consistent",
+   "detail": "the run rated all three hypotheses 'low' and 'speculative' and listed no supporting or contradicting evidence; curation agrees: 3 of 21 citations state a step (UniProt function text for CETP and C3, and the ARMS2-C3 STRING edge) and no claim has a route"
+  },
+  {
+   "project": "biolean",
+   "category": "rule_missing",
+   "steps": [
+    "h1_cholesterol.1",
+    "h1_cholesterol.2"
+   ],
+   "detail": "STRING:hsa04979 is an enrichment record but carries KEGG pathway membership (CETP, LIPC in 'Cholesterol metabolism'); Reactome membership counts as curatedDb while this is excluded by form"
+  },
+  {
+   "project": "biolean",
+   "category": "rule_missing",
+   "steps": [
+    "h2_complement.1"
+   ],
+   "detail": "the evidence-kind table gives STRING edges a kind only for binds statements (or text-mining-only edges); an unsigned protein-protein associated_with step has no rule. The edge is kept as curatedDb on its 0.24 experiments channel, and alone it makes the association 'established' (b = 0.8)"
+  },
+  {
+   "project": "biolean",
+   "category": "rule_missing",
+   "steps": [
+    "h2_complement.2",
+    "h3_apoptosis.1"
+   ],
+   "detail": "the guide does not say whether a step's structured context (cell_type, disease_state) limits the result when it was copied from a cited single-cell record. Here it is kept as a refinement at h3_apoptosis.1, where the title and falsification name the same cell, and dropped at h2_complement.2, where neither names fibroblasts"
+  },
+  {
+   "project": "biolean",
+   "category": "no_form_for",
+   "detail": "gene-level genetic evidence: a GWAS row supports 'the CETP locus is associated with AMD' (unsigned for the gene), but a statement can only take the variant as subject, and nothing connects a variant to its gene without a direction"
+  },
+  {
+   "project": "biolean",
+   "category": "no_form_for",
+   "detail": "the run's abstention (MCF2L2, CACNA1E: 'insufficient_evidence', citing GWAS no-association and an Open Targets score of 0.00) has no place in curated.json, and its three records are not in sources.json, so it cannot be checked"
+  },
+  {
+   "project": "biolean",
+   "category": "grounding_grain",
+   "steps": [
+    "h1_cholesterol.1",
+    "h1_cholesterol.2",
+    "h1_cholesterol.3"
+   ],
+   "detail": "the run's 'cholesterol metabolism' comes from the KEGG pathway (lipoprotein handling incl. CETP, LIPC); GO:0008203 (its exact synonym) is defined as chemical reactions of cholesterol, a narrower node"
+  },
+  {
+   "project": "biolean",
+   "category": "tool_search_miss",
+   "detail": "terms.py 'C3' --kind protein does not return UniProt:P01024 (15 fuzzy hits like SHC3, SMC3); it is found only as 'complement C3', though the guide says to search the gene symbol"
+  },
+  {
+   "project": "biolean",
+   "category": "evidence_weighting",
+   "steps": [
+    "h1_cholesterol.1",
+    "h2_complement.1",
+    "h2_complement.2"
+   ],
+   "detail": "one record makes a statement 'established' (b = 0.8): a UniProt function sentence for the gene-to-process steps h1_cholesterol.1 and h2_complement.2, and a STRING edge scored mostly by text-mining for h2_complement.1; for h1_cholesterol.1 that sentence states cholesteryl ester transfer, a part of cholesterol handling, not the whole process"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "aspect_mismatch",
+   "hypothesis": "h3_apoptosis",
+   "steps": [
+    "h3_apoptosis.2"
+   ],
+   "detail": "H3 claims progression ('exacerbates', 'drives the clinical progression'), but its only step to AMD says apoptosis 'contributes to macular tissue loss and AMD', with no progression wording, so even a signed h3_apoptosis.2 would not reach the claim"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_does_not_state_step",
+   "steps": [
+    "h3_apoptosis.2"
+   ],
+   "detail": "the only literature cited for apoptosis-to-AMD is the abstract of PMID:26691988, an AMD GWAS that names CFH, CFI, TIMP3, SLC16A8 and MMP9 but neither apoptosis nor TNFRSF10A"
+  }
+ ],
+ "audit": [
+  {
+   "item": "S7 (h3_apoptosis.1), entities apoptosis / retinalEndothelialApoptosis",
+   "error": "wrong_merge",
+   "before": "TNFRSF10A →+ apoptosis (GO:0006915), the step's context dropped; one node shared with h3_apoptosis.2",
+   "after": "TNFRSF10A →+ retinalEndothelialApoptosis: GO:0006915 refined with cellType CL:0002585 (retinal blood vessel endothelial cell); h3_apoptosis.2 keeps base apoptosis",
+   "reason": "The guide keeps a qualifier when it is the point of the step or the step's context limits it. Here the step's context, the title ('TRAIL-induced apoptosis of retinal endothelial cells') and the falsification ('Knockout of TNFRSF10A in retinal blood vessel endothelial cells') all name that cell. The curator's reason (the context was copied from the CELLxGENE record) is not a rule in the guide. Compare the 20260825T000740Z-c7b373 audit (somatosensory refinement from title and falsification). h3_apoptosis.2 widens to 'the retinal vasculature or RPE', so the chain now breaks between the two steps. No arm changes: h3_apoptosis.2 is unsigned either way."
+  },
+  {
+   "item": "S7 (h3_apoptosis.1) evidence O00220",
+   "error": "quote_does_not_state",
+   "before": "kept, curatedDb, quote 'The adapter molecule FADD recruits caspase-8 ... mediating apoptosis'",
+   "after": "excluded, not_in_text",
+   "reason": "Follows from the refinement. The UniProt function text states apoptosis in general and names no cell, so it does not state apoptosis of retinal endothelial cells (same reasoning as the c7b373 audit for a whole-body record under a site refinement). S7 goes from established (b 4/5) to unsupported."
+  },
+  {
+   "item": "S4 (h2_complement.1) STRING:C3-ARMS2",
+   "error": "wrong_exclusion",
+   "before": "excluded, other: 'the guide admits STRING edges only as evidence for binds statements'",
+   "after": "kept, kind curatedDb, quote 'STRING links C3 and ARMS2 with combined score 0.70 (experimental 0.24, database 0.00, text-mining 0.62)'",
+   "reason": "h2_complement.1 is an unsigned assoc, so the guide's keep rule asks only that the text name both ends, which this edge does. The kind table's 'binds only' is a gap in kinds, not a ground to exclude. Precedents: the alzheimers multi_agent-r1 audit restored an OT score for an unsigned assoc; 20260825T112130Z-e77e3a keeps a STRING edge (experimental 0.41) as curatedDb for an unsigned protein-protein assoc; the sibling AMD single_agent-r1 curation keeps this same edge as curatedDb. S4 goes from unsupported to established (b 4/5); it cannot compose (unsigned), and the weighting problem stays a finding."
+  },
+  {
+   "item": "finding cell_type_not_carried (h3_apoptosis)",
+   "error": "other",
+   "before": "the title is about apoptosis of retinal endothelial cells, but h3_apoptosis.2 widens it to 'the retinal vasculature or RPE' and no cited text puts TNFRSF10A or apoptosis in either cell",
+   "after": "h3_apoptosis.1 ends at apoptosis of retinal blood vessel endothelial cells (its context, the title and the falsification), but h3_apoptosis.2 starts at apoptosis in general ('the retinal vasculature or RPE'), so the chain breaks; no cited text puts TNFRSF10A or apoptosis in either cell",
+   "reason": "follows from the S7 refinement: the widening is now a break in the chain, recorded as chain_not_connected"
+  },
+  {
+   "item": "finding citation_does_not_state_step (h2_complement.1)",
+   "error": "other",
+   "before": "the only ARMS2-C3 link cited is a STRING edge scored mostly by text-mining (0.62, experiments 0.24); nothing cited puts ARMS2 in the complement pathway, as the mechanism claims",
+   "after": "the only ARMS2-C3 link cited is one STRING edge (combined 0.70, mostly text-mining 0.62, experiments 0.24); it states an unsigned link and nothing more, and nothing cited puts ARMS2 in the complement pathway, as the mechanism and the step note ('functionally interacts') claim",
+   "reason": "the edge now states the unsigned step (S4 audit above); the finding's point is that the mechanism's complement-pathway claim has no citation"
+  },
+  {
+   "item": "finding confidence_consistent",
+   "error": "other",
+   "before": "the run rated all three hypotheses 'low' and 'speculative' and listed no supporting or contradicting evidence; curation agrees: 3 of 21 citations state a step (all UniProt function text for gene-to-process steps) and no claim has a route",
+   "after": "the run rated all three hypotheses 'low' and 'speculative' and listed no supporting or contradicting evidence; curation agrees: 3 of 21 citations state a step (UniProt function text for CETP and C3, and the ARMS2-C3 STRING edge) and no claim has a route",
+   "reason": "follows from the S4 and S7 changes: the kept set changed, the count did not"
+  },
+  {
+   "item": "finding rule_missing (STRING edge, h2_complement.1)",
+   "error": "other",
+   "before": "the evidence-kind table gives STRING edges a kind only for binds statements; an unsigned protein-protein associated_with step has no rule, so the edge was excluded as 'other' (kept as curatedDb on its 0.24 experiments channel, it alone made the association 'established', b = 0.8)",
+   "after": "the evidence-kind table gives STRING edges a kind only for binds statements (or text-mining-only edges); an unsigned protein-protein associated_with step has no rule. The edge is kept as curatedDb on its 0.24 experiments channel, and alone it makes the association 'established' (b = 0.8)",
+   "reason": "follows from restoring the edge"
+  },
+  {
+   "item": "finding rule_missing (contexts)",
+   "error": "other",
+   "before": "the guide does not say whether a step's structured context (cell_type, disease_state) limits the result; here it was copied from the cited single-cell record, so it was dropped rather than made a refinement",
+   "after": "the guide does not say whether a step's structured context (cell_type, disease_state) limits the result when it was copied from a cited single-cell record. Here it is kept as a refinement at h3_apoptosis.1, where the title and falsification name the same cell, and dropped at h2_complement.2, where neither names fibroblasts",
+   "reason": "follows from the S7 refinement"
+  },
+  {
+   "item": "finding evidence_weighting",
+   "error": "other",
+   "before": "{\"steps\": [\"h1_cholesterol.1\", \"h2_complement.2\", \"h3_apoptosis.1\"], \"detail\": \"one UniProt function sentence makes a gene-to-process statement 'established' (b = 0.8); for h1_cholesterol.1 that sentence states cholesteryl ester transfer, a part of cholesterol metabolism, not the whole process\"}",
+   "after": "{\"steps\": [\"h1_cholesterol.1\", \"h2_complement.1\", \"h2_complement.2\"], \"detail\": \"one record makes a statement 'established' (b = 0.8): a UniProt function sentence for the gene-to-process steps h1_cholesterol.1 and h2_complement.2, and a STRING edge scored mostly by text-mining for h2_complement.1; for h1_cholesterol.1 that sentence states cholesteryl ester transfer, a part of cholesterol handling, not the whole process\"}",
+   "reason": "follows from the S4 and S7 changes: S7 no longer keeps O00220, S4 now keeps the STRING edge"
+  },
+  {
+   "item": "findings: h3_apoptosis aspect",
+   "error": "missed_finding",
+   "before": "none (only in the hypothesis note)",
+   "after": "{\"project\": \"hypothesis-agent\", \"category\": \"aspect_mismatch\", \"hypothesis\": \"h3_apoptosis\", \"steps\": [\"h3_apoptosis.2\"], \"detail\": \"H3 claims progression ('exacerbates', 'drives the clinical progression'), but its only step to AMD says apoptosis 'contributes to macular tissue loss and AMD', with no progression wording, so even a signed h3_apoptosis.2 would not reach the claim\"}",
+   "reason": "a claim whose aspect the chain never reaches is a result; the curator noted it in the H3 note but recorded no finding"
+  },
+  {
+   "item": "findings: h3_apoptosis.2 PMID:26691988",
+   "error": "missed_finding",
+   "before": "none",
+   "after": "{\"project\": \"hypothesis-agent\", \"category\": \"citation_does_not_state_step\", \"steps\": [\"h3_apoptosis.2\"], \"detail\": \"the only literature cited for apoptosis-to-AMD is the abstract of PMID:26691988, an AMD GWAS that names CFH, CFI, TIMP3, SLC16A8 and MMP9 but neither apoptosis nor TNFRSF10A\"}",
+   "reason": "the exclusion was recorded but no finding; the other run-side citation failures each have one"
+  },
+  {
+   "item": "hypotheses.h3_apoptosis note",
+   "error": "other",
+   "before": "title 'exacerbates', mechanism 'drives the clinical progression' -> progression; the chain's last step (h3_apoptosis.2, 'contributes to macular tissue loss and AMD') reads as risk",
+   "after": "title 'exacerbates', mechanism 'drives the clinical progression' -> progression; the chain's last step (h3_apoptosis.2, 'contributes to macular tissue loss and AMD') reads as risk. h3_apoptosis.1 targets apoptosis of retinal endothelial cells (a refinement) and h3_apoptosis.2 starts at apoptosis in general, so the chain does not connect",
+   "reason": "follows from the S7 refinement"
+  },
+  {
+   "item": "finding variant_gene_attribution (h1_cholesterol.3)",
+   "error": "other",
+   "before": "rs2414577 is cited as a LIPC variant, but the record places it inside ALDH1A2 (distance 0) and 22-46 kb from LIPC; rs17231506 is intergenic, 1.3 kb from CETP",
+   "after": "rs2414577 is cited as a LIPC variant, but the record's Ensembl context places it inside ALDH1A2 (distance 0), while its functional class is intergenic and LIPC lies 22 kb (Ensembl) or 44 kb (NCBI) away; rs17231506 is intergenic, 1.3 kb from CETP",
+   "reason": "the distances were wrong: 46 kb is LIPC-AS1, not LIPC (LIPC is 21,941 bp by Ensembl, 43,552 bp by NCBI); and only the Ensembl context puts the variant in ALDH1A2, while the row's functionalClass is intergenic_variant"
+  }
+ ]
+}

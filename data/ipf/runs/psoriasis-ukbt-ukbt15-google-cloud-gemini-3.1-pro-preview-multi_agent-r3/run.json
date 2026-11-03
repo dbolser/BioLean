@@ -1,0 +1,208 @@
+{
+ "run_id": "psoriasis-ukbt-ukbt15-google-cloud-gemini-3.1-pro-preview-multi_agent-r3",
+ "model": "google-cloud:gemini-3.1-pro-preview",
+ "question": {
+  "arm": "multi_agent",
+  "budget": {
+   "max_delegations": 22,
+   "max_model_requests": 80,
+   "max_specialist_requests": 8,
+   "min_evidence_per_hypothesis": 2,
+   "min_hypotheses": 4,
+   "min_sources_per_hypothesis": 2,
+   "output_retries": 3
+  },
+  "data_policy": {
+   "max_age_seconds": 1209600.0,
+   "mode": "cache-preferred",
+   "snapshot_run_id": null
+  },
+  "disease": "psoriasis",
+  "formalise": false,
+  "genes": [
+   "ADAR",
+   "DVL2",
+   "ZBP1",
+   "CARS2",
+   "KHK",
+   "AP1G2",
+   "USP6",
+   "EIF2AK4",
+   "HELZ2",
+   "GUCA1C",
+   "IL11",
+   "UTP20",
+   "IFNW1",
+   "MAN2A2",
+   "SP100"
+  ],
+  "model": "google-cloud:gemini-3.1-pro-preview",
+  "specialist_model": "google-cloud:gemini-3.1-pro-preview",
+  "specialists": [
+   "chembl",
+   "expression",
+   "gwas",
+   "interactions",
+   "literature",
+   "model_organism",
+   "open_targets",
+   "pathways",
+   "single_cell",
+   "trials",
+   "uniprot"
+  ],
+  "tissue": {
+   "artifact_id": "sha256:f385590ff844b25a944f5da376243ab0b087745c3c64fa7c5e465db4f49ffa43",
+   "label": "skin of body",
+   "uberon": "UBERON:0002097"
+  },
+  "use_network": true
+ },
+ "abstention": {
+  "evidence": [
+   "PMID:PPR1233591",
+   "GWAS:SP100:no-association",
+   "HPA:ENSG00000138472",
+   "HPA:ENSG00000138030",
+   "HPA:ENSG00000177047"
+  ],
+  "genes_covered": [
+   "DVL2",
+   "ZBP1",
+   "CARS2",
+   "KHK",
+   "AP1G2",
+   "USP6",
+   "EIF2AK4",
+   "HELZ2",
+   "GUCA1C",
+   "IL11",
+   "UTP20",
+   "IFNW1",
+   "MAN2A2",
+   "SP100"
+  ],
+  "reason": "insufficient_evidence",
+  "statement": "There is insufficient evidence connecting the remaining 14 genes to psoriasis. ZBP1 has been explicitly investigated in the context of psoriatic keratinocyte death, but PANoptosis in psoriasis was found to occur independently of ZBP1 (PMID:PPR1233591). Additionally, while SP100 has a generic genetic association score in Open Targets, the GWAS Catalog reports exactly zero variants linking SP100 to psoriasis (GWAS:SP100:no-association). The rest of the genes have no primary literature linking them to the disease, and Human Protein Atlas data shows they are either strictly enriched in irrelevant tissues—such as GUCA1C in the retina (HPA:ENSG00000138472) and KHK in the intestine and liver (HPA:ENSG00000138030)—or not detected at all (IFNW1; HPA:ENSG00000177047).",
+  "support": "grounded",
+  "what_would_change_this": "Discovery of genome-wide significant variants linking these genes to psoriasis risk, or direct experimental evidence of their differential expression and causal involvement in psoriatic keratinocytes."
+ },
+ "disease": "psoriasis",
+ "genes_considered": [
+  "ADAR",
+  "DVL2",
+  "ZBP1",
+  "CARS2",
+  "KHK",
+  "AP1G2",
+  "USP6",
+  "EIF2AK4",
+  "HELZ2",
+  "GUCA1C",
+  "IL11",
+  "UTP20",
+  "IFNW1",
+  "MAN2A2",
+  "SP100"
+ ],
+ "hypotheses": [
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "P55265"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "A-to-I RNA editing"
+     },
+     "polarity": "positive",
+     "relation": "required_for",
+     "subject": {
+      "curie": "UniProtKB:P55265",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "ADAR"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:42424135"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "type I interferon signaling pathway"
+     },
+     "polarity": "negative",
+     "relation": "inhibits",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "A-to-I RNA editing"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:42424135"
+     ],
+     "note": "",
+     "object": {
+      "curie": "MONDO:0005083",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "psoriasis"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "type I interferon signaling pathway"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Knockdown of ADAR in primary human epidermal keratinocytes followed by measurement of type I interferon signaling pathway activity, expecting a marked increase in signaling and expression of interferon-stimulated genes.",
+    "expected": "positive",
+    "perturbation": {
+     "action": "knockdown",
+     "target": {
+      "curie": "UniProtKB:P55265",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "ADAR"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "process",
+     "label": "type I interferon signaling pathway"
+    },
+    "system": "human epidermal keratinocytes"
+   },
+   "genes": [
+    "ADAR"
+   ],
+   "hypothesis_id": "hyp_ADAR_psoriasis",
+   "mechanism": "The ADAR enzyme is responsible for the A-to-I RNA editing of endogenous double-stranded RNA (dsRNA). Loss-of-function variants in ADAR1 result in defective RNA editing, which causes an aberrant accumulation of unedited dsRNA within cells. This accumulation acts as an innate immune trigger, provoking an exaggerated type I interferon response that drives a distinct, interferon-dependent subtype of psoriasis.",
+   "support": "speculative",
+   "supporting_evidence": [],
+   "title": "ADAR loss-of-function drives an interferon-dependent subtype of psoriasis"
+  }
+ ],
+ "unexplained_genes": []
+}

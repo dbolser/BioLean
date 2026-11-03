@@ -1,0 +1,446 @@
+{
+ "run_id": "study-2026-09-vertex-crohn-vertex-openai-deepseek-aideepseek-v3.2-maas-single_agent-r2",
+ "model": "vertex-openai:deepseek-ai/deepseek-v3.2-maas",
+ "question": {
+  "arm": "single_agent",
+  "budget": {
+   "max_delegations": 22,
+   "max_model_requests": 80,
+   "max_specialist_requests": 8,
+   "min_evidence_per_hypothesis": 2,
+   "min_hypotheses": 3,
+   "min_sources_per_hypothesis": 2,
+   "output_retries": 3
+  },
+  "data_policy": {
+   "max_age_seconds": 1209600.0,
+   "mode": "cache-preferred",
+   "snapshot_run_id": null
+  },
+  "disease": "Crohn disease",
+  "formalise": false,
+  "genes": [
+   "IL12B",
+   "IL23R",
+   "NOD2",
+   "LACC1",
+   "GPR35",
+   "MEIS1",
+   "TRIM4"
+  ],
+  "model": "vertex-openai:deepseek-ai/deepseek-v3.2-maas",
+  "specialist_model": "",
+  "specialists": [
+   "chembl",
+   "expression",
+   "gwas",
+   "interactions",
+   "literature",
+   "model_organism",
+   "open_targets",
+   "pathways",
+   "single_cell",
+   "trials",
+   "uniprot"
+  ],
+  "tissue": {
+   "artifact_id": "sha256:2ae293c5c9c86e431f18191576a5cfddb9903117c31c2687c8a4b0abe5211411",
+   "label": "colon",
+   "uberon": "UBERON:0001155"
+  },
+  "use_network": true
+ },
+ "abstention": null,
+ "disease": "Crohn disease",
+ "genes_considered": [
+  "IL12B",
+  "IL23R",
+  "NOD2",
+  "LACC1",
+  "GPR35",
+  "MEIS1",
+  "TRIM4"
+ ],
+ "hypotheses": [
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "P29460",
+      "Q5VWK5",
+      "STRING:IL12B-IL23R"
+     ],
+     "note": "IL12B is a subunit of IL-23 cytokine",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "IL-23 cytokine complex"
+     },
+     "polarity": "positive",
+     "relation": "increases_amount",
+     "subject": {
+      "curie": "UniProtKB:P29460",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "IL12B"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "Q5VWK5",
+      "STRING:GOCC:0072536"
+     ],
+     "note": "IL23R binds IL-23",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "IL-23 signaling"
+     },
+     "polarity": "positive",
+     "relation": "activates",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "IL-23 cytokine complex"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "STRING:GO:0032740",
+      "STRING:GO:2000330",
+      "PMID:17068223"
+     ],
+     "note": "IL-23 signaling promotes Th17 differentiation and IL-17 production",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "Th17-mediated inflammation"
+     },
+     "polarity": "unknown",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "IL-23 signaling"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:17068223",
+      "rs7517847",
+      "rs11209026"
+     ],
+     "note": "IL23R variants confer risk for Crohn's disease",
+     "object": {
+      "curie": "MONDO:0005011",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "Crohn disease"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "Th17-mediated inflammation"
+     }
+    }
+   ],
+   "confidence": "high",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "In a Crohn's disease mouse model, simultaneously knockout IL12B and IL23R in intestinal immune cells; if this does not reduce Th17 cells in the lamina propria and attenuate intestinal inflammation compared to wild-type, the hypothesis fails.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "IL12B and IL23R"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "other",
+     "label": "Th17 cell count in intestinal lamina propria"
+    },
+    "system": "DSS-induced colitis mouse model"
+   },
+   "genes": [
+    "IL12B",
+    "IL23R"
+   ],
+   "hypothesis_id": "hyp1",
+   "mechanism": "IL12B encodes a subunit of the IL-23 cytokine. IL-23 binds its receptor IL23R, activating signaling that promotes differentiation and maintenance of Th17 cells, which produce pro‑inflammatory IL‑17. Genetic variants in IL23R (and the IL12B locus) increase IL‑23/Th17 pathway activity, driving excessive intestinal inflammation characteristic of Crohn's disease.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "P29460",
+    "Q5VWK5",
+    "STRING:IL12B-IL23R",
+    "STRING:GOCC:0072536",
+    "STRING:GO:0032740",
+    "PMID:17068223",
+    "rs7517847",
+    "rs11209026"
+   ],
+   "title": "IL‑12B/IL‑23R axis drives Th17‑mediated intestinal inflammation"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "Q9HC29",
+      "PMID:11385576"
+     ],
+     "note": "NOD2 senses bacterial muramyl dipeptide (MDP)",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "Bacterial peptidoglycan detection"
+     },
+     "polarity": "positive",
+     "relation": "required_for",
+     "subject": {
+      "curie": "UniProtKB:Q9HC29",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "NOD2"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "Q9HC29",
+      "STRING:GO:0045087"
+     ],
+     "note": "NOD2 activates NF‑κB and MAPK signaling",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "Innate immune response"
+     },
+     "polarity": "positive",
+     "relation": "activates",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "Bacterial peptidoglycan detection"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "Q8IV20",
+      "STRING:NOD2-LACC1",
+      "PMID:40089498"
+     ],
+     "note": "LACC1 associates with NOD2 signaling complex and enhances cytokine production",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "Enhanced cytokine secretion"
+     },
+     "polarity": "positive",
+     "relation": "increases_amount",
+     "subject": {
+      "curie": "UniProtKB:Q8IV20",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "LACC1"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "rs2066847",
+      "rs5743293",
+      "rs1373904",
+      "PMID:40089498"
+     ],
+     "note": "Loss‑of‑function variants in NOD2 and LACC1 impair bacterial clearance and dysregulate macrophage metabolism, leading to chronic inflammation",
+     "object": {
+      "curie": "MONDO:0005011",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "Crohn disease"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "Dysregulated bacterial sensing and macrophage function"
+     }
+    }
+   ],
+   "confidence": "high",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "In macrophages from Crohn's patients carrying NOD2 risk variants, restore wild‑type LACC1 expression; if this does not normalize bacterial clearance and reduce TNF‑α secretion upon MDP stimulation, the hypothesis fails.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "restore",
+     "target": {
+      "curie": "UniProtKB:Q8IV20",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "LACC1"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "other",
+     "label": "TNF‑α secretion after MDP stimulation"
+    },
+    "system": "Primary macrophages from Crohn's patients with NOD2 variants"
+   },
+   "genes": [
+    "NOD2",
+    "LACC1"
+   ],
+   "hypothesis_id": "hyp2",
+   "mechanism": "NOD2 senses bacterial peptidoglycan and initiates innate immune signaling. LACC1 physically interacts with the NOD2 complex and regulates macrophage purine metabolism and endoplasmic‑reticulum stress response. Crohn's‑associated loss‑of‑function variants in NOD2 and LACC1 together impair bacterial clearance, dysregulate macrophage effector functions, and promote chronic intestinal inflammation.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "Q9HC29",
+    "Q8IV20",
+    "STRING:NOD2-LACC1",
+    "STRING:GO:0045087",
+    "PMID:11385576",
+    "PMID:40089498",
+    "rs2066847",
+    "rs5743293",
+    "rs1373904"
+   ],
+   "title": "NOD2‑LACC1 module disrupts macrophage bacterial sensing and metabolism"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "Q9HC97",
+      "rs34236350",
+      "rs3749171"
+     ],
+     "note": "GPR35 variants are associated with Crohn's disease risk",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "GPR35 signaling dysregulation"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "GPR35 risk variants"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "Q9HC97",
+      "PMID:40623474"
+     ],
+     "note": "GPR35 binds kynurenic acid (KYNA), a tryptophan metabolite, and modulates adipose tissue browning and anti‑inflammatory gene expression",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "Metabolic‑immune crosstalk"
+     },
+     "polarity": "positive",
+     "relation": "required_for",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "GPR35 signaling dysregulation"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:40623474"
+     ],
+     "note": "In Crohn's disease, altered KYNA–GPR35 axis disrupts mesenteric adipose tissue homeostasis, promoting mesenteritis and colitis",
+     "object": {
+      "curie": "MONDO:0005011",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "Crohn disease"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "Disrupted metabolic‑immune crosstalk"
+     }
+    }
+   ],
+   "confidence": "medium",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "In a mouse model of Crohn's‑like colitis, administer a GPR35 agonist; if this does not increase white‑adipose‑tissue browning and reduce intestinal inflammation, the hypothesis fails.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "activate",
+     "target": {
+      "curie": "UniProtKB:Q9HC97",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "GPR35"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "other",
+     "label": "Intestinal inflammation score"
+    },
+    "system": "DSS‑induced colitis mouse model"
+   },
+   "genes": [
+    "GPR35"
+   ],
+   "hypothesis_id": "hyp3",
+   "mechanism": "GPR35 is an orphan GPCR that binds kynurenic acid (KYNA), a tryptophan metabolite. Crohn's‑associated GPR35 variants alter receptor function, disrupting KYNA‑mediated signaling in mesenteric adipose tissue. This impairs white‑adipose‑tissue browning and anti‑inflammatory gene expression, leading to mesenteritis and exacerbation of intestinal inflammation.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "Q9HC97",
+    "rs34236350",
+    "rs3749171",
+    "PMID:40623474"
+   ],
+   "title": "GPR35‑kynurenic acid axis disrupts mesenteric adipose homeostasis"
+  }
+ ],
+ "unexplained_genes": [
+  "MEIS1",
+  "TRIM4"
+ ]
+}

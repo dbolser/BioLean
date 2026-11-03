@@ -1,0 +1,429 @@
+{
+ "run_id": "study-2026-09-vertex-iga-nephropathy-google-cloud-gemini-3.1-pro-preview-multi_agent-r3",
+ "model": "google-cloud:gemini-3.1-pro-preview",
+ "question": {
+  "arm": "multi_agent",
+  "budget": {
+   "max_delegations": 22,
+   "max_model_requests": 80,
+   "max_specialist_requests": 8,
+   "min_evidence_per_hypothesis": 2,
+   "min_hypotheses": 3,
+   "min_sources_per_hypothesis": 2,
+   "output_retries": 3
+  },
+  "data_policy": {
+   "max_age_seconds": 1209600.0,
+   "mode": "cache-preferred",
+   "snapshot_run_id": null
+  },
+  "disease": "IgA glomerulonephritis",
+  "formalise": false,
+  "genes": [
+   "TNFSF13",
+   "ITGAX",
+   "DEFA4",
+   "CFH",
+   "CARD9",
+   "OR4X1",
+   "ZNF174"
+  ],
+  "model": "google-cloud:gemini-3.1-pro-preview",
+  "specialist_model": "google-cloud:gemini-3.1-pro-preview",
+  "specialists": [
+   "chembl",
+   "expression",
+   "gwas",
+   "interactions",
+   "literature",
+   "model_organism",
+   "open_targets",
+   "pathways",
+   "single_cell",
+   "trials",
+   "uniprot"
+  ],
+  "tissue": {
+   "artifact_id": "sha256:9e1a3dbe284f9d27d8084643b44a06acf8cb32a68ab373cb3902387f5d069650",
+   "label": "kidney",
+   "uberon": "UBERON:0002113"
+  },
+  "use_network": true
+ },
+ "abstention": {
+  "evidence": [
+   "GWAS:OR4X1:no-association",
+   "GWAS:ZNF174:no-association",
+   "STRING:no-edges"
+  ],
+  "genes_covered": [
+   "OR4X1",
+   "ZNF174"
+  ],
+  "reason": "no_shared_mechanism",
+  "statement": "There is no functional, genetic, or literature evidence linking the olfactory receptor OR4X1 or the zinc finger ZNF174 to IgA glomerulonephritis or to the other immune-related genes in this list. Both GWAS and Open Targets yield no disease association, and STRING reports no protein-protein interactions connecting them to the IgAN-associated network.",
+  "support": "grounded",
+  "what_would_change_this": "Identification of robust genome-wide significant associations for variants in OR4X1 or ZNF174 with IgA nephropathy, or functional data linking these specific proteins to mesangial cell pathology or IgA class switching."
+ },
+ "disease": "IgA glomerulonephritis",
+ "genes_considered": [
+  "TNFSF13",
+  "ITGAX",
+  "DEFA4",
+  "CFH",
+  "CARD9",
+  "OR4X1",
+  "ZNF174"
+ ],
+ "hypotheses": [
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "PMID:38716725",
+      "rs11574637"
+     ],
+     "note": "",
+     "object": {
+      "curie": "ENSEMBL:ENSG00000187796",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "CARD9"
+     },
+     "polarity": "positive",
+     "relation": "activates",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "ITGAX"
+     }
+    },
+    {
+     "context": {
+      "cell_type": null,
+      "disease_state": null,
+      "tissue": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "tissue",
+       "label": "gut"
+      }
+     },
+     "evidence": [
+      "PMID:33052226",
+      "rs4077515"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "TNFSF13"
+     },
+     "polarity": "positive",
+     "relation": "increases_amount",
+     "subject": {
+      "curie": "ENSEMBL:ENSG00000187796",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "CARD9"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "rs3803800",
+      "PMID:33052226"
+     ],
+     "note": "",
+     "object": {
+      "curie": "MONDO:0005342",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "IgA glomerulonephritis"
+     },
+     "polarity": "unknown",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "TNFSF13"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Knock out Card9 in a mouse model of mucosal infection and measure Tnfsf13 expression in Itgax+ dendritic cells and circulating galactose-deficient IgA1 levels.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "ENSEMBL:ENSG00000187796",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "CARD9"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "gene",
+     "label": "TNFSF13"
+    },
+    "system": ""
+   },
+   "genes": [
+    "CARD9",
+    "ITGAX",
+    "TNFSF13"
+   ],
+   "hypothesis_id": "h1_card9_itgax_tnfsf13",
+   "mechanism": "Mucosal infections in the gut involve antigen sensing by ITGAX (CD11c) positive dendritic cells. This process initiates CARD9-dependent innate immune signaling. CARD9 activation upregulates the expression and secretion of TNFSF13 (APRIL), a cytokine that drives B-cell class switching to IgA. The resulting overproduction of poorly O-galactosylated IgA1 is the primary systemic driver of IgA glomerulonephritis.",
+   "support": "speculative",
+   "supporting_evidence": [],
+   "title": "Intestinal ITGAX+ antigen-presenting cells activate CARD9 to drive TNFSF13-mediated IgA overproduction"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "OT:CFH-MONDO_0005342",
+      "rs6677604",
+      "PMID:36316518"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "Complement cascade"
+     },
+     "polarity": "negative",
+     "relation": "inhibits",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "CFH"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "R-HSA-166658"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "iC3b"
+     },
+     "polarity": "positive",
+     "relation": "increases_amount",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "Complement cascade"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:38716725"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "ITGAX"
+     },
+     "polarity": "unknown",
+     "relation": "binds",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "iC3b"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "macrophage"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [
+      "rs11574637"
+     ],
+     "note": "",
+     "object": {
+      "curie": "MONDO:0005342",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "IgA glomerulonephritis"
+     },
+     "polarity": "unknown",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "ITGAX"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Inhibit ITGAX with a blocking antibody in a Cfh-deficient IgA nephropathy mouse model and assess glomerular macrophage infiltration and kidney damage.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "inhibit",
+     "target": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "ITGAX"
+     }
+    },
+    "readout": {
+     "curie": "MONDO:0005342",
+     "grounding_evidence": "",
+     "kind": "disease",
+     "label": "IgA glomerulonephritis"
+    },
+    "system": ""
+   },
+   "genes": [
+    "CFH",
+    "ITGAX"
+   ],
+   "hypothesis_id": "h2_cfh_itgax",
+   "mechanism": "The deposition of IgA immune complexes in the kidney triggers the alternative complement pathway. CFH normally regulates this cascade, but genetic variants impair its inhibitory function, leading to unchecked generation of complement cleavage fragments like iC3b. iC3b binds to its receptor CR4 (which contains ITGAX) on infiltrating macrophages in the glomerulus, driving local inflammation and exacerbating IgA glomerulonephritis.",
+   "support": "speculative",
+   "supporting_evidence": [],
+   "title": "CFH defects unleash complement-mediated iC3b generation which hyperactivates ITGAX+ myeloid cells in the glomerulus"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "HPA:ENSG00000164821"
+     ],
+     "note": "",
+     "object": {
+      "curie": "UniProtKB:P12838",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "DEFA4"
+     },
+     "polarity": "positive",
+     "relation": "increases_amount",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "neutrophil degranulation"
+     }
+    },
+    {
+     "context": {
+      "cell_type": null,
+      "disease_state": null,
+      "tissue": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "tissue",
+       "label": "kidney"
+      }
+     },
+     "evidence": [
+      "rs2738058",
+      "OT:DEFA4-MONDO_0005342"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "phenotype",
+      "label": "glomerular injury"
+     },
+     "polarity": "unknown",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "UniProtKB:P12838",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "DEFA4"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "rs2738058"
+     ],
+     "note": "",
+     "object": {
+      "curie": "MONDO:0005342",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "IgA glomerulonephritis"
+     },
+     "polarity": "unknown",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "phenotype",
+      "label": "glomerular injury"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Knock out Defa4 in a mouse model of IgA nephropathy and measure mesangial cell proliferation and proteinuria.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "UniProtKB:P12838",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "DEFA4"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "phenotype",
+     "label": "glomerular injury"
+    },
+    "system": ""
+   },
+   "genes": [
+    "DEFA4"
+   ],
+   "hypothesis_id": "h3_defa4",
+   "mechanism": "Systemic triggers or mucosal infections lead to the activation of neutrophils, which express high levels of the antimicrobial peptide DEFA4. During glomerular inflammation in IgA nephropathy, infiltrating neutrophils degranulate and release DEFA4 into the kidney. DEFA4 directly promotes endothelial damage and mesangial cell activation, accelerating the progression of IgA glomerulonephritis.",
+   "support": "speculative",
+   "supporting_evidence": [],
+   "title": "Neutrophil-derived DEFA4 exacerbates glomerular injury following systemic activation"
+  }
+ ],
+ "unexplained_genes": []
+}

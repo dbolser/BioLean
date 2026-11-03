@@ -1,0 +1,410 @@
+{
+ "run_id": "study-2026-09-vertex-schizophrenia-google-cloud-gemini-3.1-pro-preview-multi_agent-r2",
+ "model": "google-cloud:gemini-3.1-pro-preview",
+ "question": {
+  "arm": "multi_agent",
+  "budget": {
+   "max_delegations": 22,
+   "max_model_requests": 80,
+   "max_specialist_requests": 8,
+   "min_evidence_per_hypothesis": 2,
+   "min_hypotheses": 3,
+   "min_sources_per_hypothesis": 2,
+   "output_retries": 3
+  },
+  "data_policy": {
+   "max_age_seconds": 1209600.0,
+   "mode": "cache-preferred",
+   "snapshot_run_id": null
+  },
+  "disease": "schizophrenia",
+  "formalise": false,
+  "genes": [
+   "CSMD1",
+   "NXPH3",
+   "C4A",
+   "CX3CR1",
+   "CCDC136",
+   "C1QA",
+   "C4B"
+  ],
+  "model": "google-cloud:gemini-3.1-pro-preview",
+  "specialist_model": "google-cloud:gemini-3.1-pro-preview",
+  "specialists": [
+   "chembl",
+   "expression",
+   "gwas",
+   "interactions",
+   "literature",
+   "model_organism",
+   "open_targets",
+   "pathways",
+   "single_cell",
+   "trials",
+   "uniprot"
+  ],
+  "tissue": {
+   "artifact_id": "sha256:9083451a13b7e45058362501bb03fd93944d7aa79ffc0248bc2cf8b1520b9652",
+   "label": "brain",
+   "uberon": "UBERON:0000955"
+  },
+  "use_network": true
+ },
+ "abstention": {
+  "evidence": [
+   "GWAS:CCDC136:no-association",
+   "GWAS:NXPH3:no-association",
+   "OT:NXPH3-MONDO_0005090",
+   "Q96JN2",
+   "O95157"
+  ],
+  "genes_covered": [
+   "CCDC136",
+   "NXPH3"
+  ],
+  "reason": "no_shared_mechanism",
+  "statement": "CCDC136 and NXPH3 do not share the complement-mediated synaptic pruning mechanism linking the other genes to schizophrenia, and they lack solid evidence of a genetic association with the disease. CCDC136 is primarily involved in acrosome formation in spermatogenesis and has no GWAS signal for schizophrenia. NXPH3 is a secreted neurexin ligand, but it also lacks any GWAS associations or meaningful target evidence scores for schizophrenia in Open Targets.",
+  "support": "grounded",
+  "what_would_change_this": "Robust GWAS signals linking variations in these specific genes to schizophrenia risk, or biochemical evidence that their products interact with the microglial complement axis at the synapse."
+ },
+ "disease": "schizophrenia",
+ "genes_considered": [
+  "CSMD1",
+  "NXPH3",
+  "C4A",
+  "CX3CR1",
+  "CCDC136",
+  "C1QA",
+  "C4B"
+ ],
+ "hypotheses": [
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "R-HSA-166663",
+      "PMID:41992032"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "C4A"
+     },
+     "polarity": "positive",
+     "relation": "activates",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "C1QA"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "microglia"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [
+      "PMID:26814963"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "synaptic pruning"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "C4A"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:26814963"
+     ],
+     "note": "",
+     "object": {
+      "curie": "MONDO:0005090",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "schizophrenia"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "synaptic pruning"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Knockout of C4A in a developmental mouse model will rescue the excessive microglial synaptic pruning phenotype.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "C4A"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "process",
+     "label": "synaptic pruning"
+    },
+    "system": ""
+   },
+   "genes": [
+    "C1QA",
+    "C4A",
+    "C4B"
+   ],
+   "hypothesis_id": "h1_c4a_c1qa_pruning",
+   "mechanism": "The classical complement cascade initiates when C1QA binds to synapses, leading to the deposition of C4A and C4B. In schizophrenia, complex variations in C4A increase its expression, which marks excessive numbers of synapses for engulfment. Microglia recognize these complement tags, resulting in over-pruning of neural circuits and the characteristic synaptic loss in schizophrenia.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "PMID:26814963",
+    "PMID:41992032",
+    "R-HSA-166663",
+    "R-HSA-174577"
+   ],
+   "title": "C1QA and C4A/B drive excessive microglial synaptic pruning in schizophrenia"
+  },
+  {
+   "chain": [
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "astrocyte"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [
+      "PMID:40112933",
+      "R-HSA-977606"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "classical complement cascade"
+     },
+     "polarity": "negative",
+     "relation": "inhibits",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "CSMD1"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:40112933"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "synaptic pruning"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "classical complement cascade"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:40112933",
+      "OT:CSMD1-MONDO_0005090"
+     ],
+     "note": "",
+     "object": {
+      "curie": "MONDO:0005090",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "schizophrenia"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "synaptic pruning"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Knockout of CSMD1 in a mouse model will result in increased classical complement activation at synapses and subsequent increased synaptic pruning.",
+    "expected": "positive",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "CSMD1"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "process",
+     "label": "synaptic pruning"
+    },
+    "system": ""
+   },
+   "genes": [
+    "CSMD1"
+   ],
+   "hypothesis_id": "h2_csmd1_inhibition",
+   "mechanism": "CSMD1 acts as an inhibitor of the classical complement pathway and is predominantly expressed at synapses and by astrocytes. Genetic risk variants in CSMD1 impair this regulatory function. Without adequate CSMD1-mediated inhibition, the complement cascade becomes hyperactive at the synapse, driving excessive microglial pruning and leading to schizophrenia.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "PMID:40112933",
+    "OT:CSMD1-MONDO_0005090",
+    "R-HSA-977606"
+   ],
+   "title": "Loss of CSMD1 complement inhibition promotes synaptic over-pruning"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "PMID:42276261"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "microglial activation"
+     },
+     "polarity": "negative",
+     "relation": "inhibits",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "CX3CR1"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:22632727"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "synaptic pruning"
+     },
+     "polarity": "positive",
+     "relation": "activates",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "microglial activation"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:42276261"
+     ],
+     "note": "",
+     "object": {
+      "curie": "MONDO:0005090",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "schizophrenia"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "synaptic pruning"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Knockout of CX3CR1 will lead to unchecked microglial activation and an increase in synaptic pruning in the developing brain.",
+    "expected": "positive",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "CX3CR1"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "process",
+     "label": "synaptic pruning"
+    },
+    "system": ""
+   },
+   "genes": [
+    "CX3CR1"
+   ],
+   "hypothesis_id": "h3_cx3cr1_dysregulation",
+   "mechanism": "The CX3CR1 receptor on microglia normally receives regulatory signals from neurons via CX3CL1, keeping the microglia in a resting state. In schizophrenia, disruption of this axis causes microglia to become over-activated. This leads them to indiscriminately sculpt and prune neural circuits in a complement-dependent manner, contributing to pathology.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "PMID:42276261",
+    "PMID:22632727",
+    "OT:CX3CR1-MONDO_0005090"
+   ],
+   "title": "Disruption of CX3CR1 signaling disinhibits microglial pruning"
+  }
+ ],
+ "unexplained_genes": []
+}

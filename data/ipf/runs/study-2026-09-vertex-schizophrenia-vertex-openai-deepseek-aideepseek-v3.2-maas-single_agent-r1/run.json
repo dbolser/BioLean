@@ -1,0 +1,409 @@
+{
+ "run_id": "study-2026-09-vertex-schizophrenia-vertex-openai-deepseek-aideepseek-v3.2-maas-single_agent-r1",
+ "model": "vertex-openai:deepseek-ai/deepseek-v3.2-maas",
+ "question": {
+  "arm": "single_agent",
+  "budget": {
+   "max_delegations": 22,
+   "max_model_requests": 80,
+   "max_specialist_requests": 8,
+   "min_evidence_per_hypothesis": 2,
+   "min_hypotheses": 3,
+   "min_sources_per_hypothesis": 2,
+   "output_retries": 3
+  },
+  "data_policy": {
+   "max_age_seconds": 1209600.0,
+   "mode": "cache-preferred",
+   "snapshot_run_id": null
+  },
+  "disease": "schizophrenia",
+  "formalise": false,
+  "genes": [
+   "CSMD1",
+   "NXPH3",
+   "C4A",
+   "CX3CR1",
+   "CCDC136",
+   "C1QA",
+   "C4B"
+  ],
+  "model": "vertex-openai:deepseek-ai/deepseek-v3.2-maas",
+  "specialist_model": "",
+  "specialists": [
+   "chembl",
+   "expression",
+   "gwas",
+   "interactions",
+   "literature",
+   "model_organism",
+   "open_targets",
+   "pathways",
+   "single_cell",
+   "trials",
+   "uniprot"
+  ],
+  "tissue": {
+   "artifact_id": "sha256:9083451a13b7e45058362501bb03fd93944d7aa79ffc0248bc2cf8b1520b9652",
+   "label": "brain",
+   "uberon": "UBERON:0000955"
+  },
+  "use_network": true
+ },
+ "abstention": null,
+ "disease": "schizophrenia",
+ "genes_considered": [
+  "CSMD1",
+  "NXPH3",
+  "C4A",
+  "CX3CR1",
+  "CCDC136",
+  "C1QA",
+  "C4B"
+ ],
+ "hypotheses": [
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "PMID:26814963"
+     ],
+     "note": "Risk alleles increase C4A expression",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "C4A protein"
+     },
+     "polarity": "positive",
+     "relation": "increases_amount",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "C4A gene"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:22632727",
+      "PMID:40112933"
+     ],
+     "note": "C4A mediates synaptic pruning via complement activation; CSMD1 normally inhibits classical complement pathway",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "excessive synaptic pruning"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "C4A protein"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "OT:CSMD1-MONDO_0005090",
+      "OT:C4A-MONDO_0005090"
+     ],
+     "note": "Both are genetically associated with schizophrenia",
+     "object": {
+      "curie": "MONDO:0005090",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "schizophrenia"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "excessive synaptic pruning"
+     }
+    }
+   ],
+   "confidence": "medium",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "In a mouse model with C4 overexpression, show that CSMD1 knockout does not exacerbate synaptic loss in prefrontal cortex, measured by synapse density using electron microscopy.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "CSMD1"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "phenotype",
+     "label": "synapse density"
+    },
+    "system": "C4-overexpressing mouse"
+   },
+   "genes": [
+    "C4A",
+    "CSMD1"
+   ],
+   "hypothesis_id": "H1",
+   "mechanism": "Increased C4A expression due to schizophrenia risk alleles drives excessive complement-mediated synaptic pruning. CSMD1, a complement inhibitor expressed at synapses, normally counteracts this pruning; loss-of-function variants in CSMD1 reduce inhibitory control, leading to pathological synapse elimination in prefrontal cortex circuits.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "OT:CSMD1-MONDO_0005090",
+    "OT:C4A-MONDO_0005090",
+    "PMID:26814963",
+    "PMID:40112933"
+   ],
+   "title": "Complement dysregulation: C4A-mediated excessive synaptic pruning unchecked by CSMD1 deficiency"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "OT:CX3CR1-MONDO_0005090",
+      "OT:C1QA-MONDO_0005090"
+     ],
+     "note": "Both associated with schizophrenia in literature",
+     "object": {
+      "curie": "MONDO:0005090",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "schizophrenia"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "CX3CR1"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "microglia"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [
+      "PMID:42276261"
+     ],
+     "note": "CX3CR1 is fractalkine receptor on microglia; disruption impairs microglial surveillance and synaptic maintenance",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "impaired microglial function"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "CX3CR1 deficiency"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "microglia"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [
+      "OT:C1QA-MONDO_0005090"
+     ],
+     "note": "C1QA is part of complement C1 complex initiating classical pathway",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "complement activation"
+     },
+     "polarity": "positive",
+     "relation": "activates",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "C1QA"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:42276261"
+     ],
+     "note": "Microglial dysfunction and complement overactivation converge to disrupt synaptic homeostasis",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "synaptic dysfunction"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "impaired microglial function and complement activation"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "In CX3CR1 knockout mice, show that C1QA knockdown does not further impair microglial phagocytosis of synaptic material in hippocampal slices.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "knockdown",
+     "target": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "C1QA"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "process",
+     "label": "microglial phagocytosis of synapses"
+    },
+    "system": "CX3CR1 KO mouse hippocampal slice"
+   },
+   "genes": [
+    "CX3CR1",
+    "C1QA"
+   ],
+   "hypothesis_id": "H2",
+   "mechanism": "CX3CR1 deficiency on microglia impairs their normal surveillance and synaptic maintenance functions. Concurrently, C1QA-mediated complement activation promotes excessive synaptic tagging for elimination. Together, these disruptions in microglial function and complement signaling lead to synaptic dysfunction in cortical circuits relevant to schizophrenia.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "OT:CX3CR1-MONDO_0005090",
+    "OT:C1QA-MONDO_0005090",
+    "PMID:42276261"
+   ],
+   "title": "Microglial dysfunction: CX3CR1 impairment plus C1QA-mediated complement activation disrupt synaptic homeostasis"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "OT:NXPH3-MONDO_0005090"
+     ],
+     "note": "Very low association score (0.00) with schizophrenia",
+     "object": {
+      "curie": "MONDO:0005090",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "schizophrenia"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "NXPH3"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:41333154"
+     ],
+     "note": "Neurexophilins stabilize alpha-neurexins at synapses",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "synaptic adhesion and stability"
+     },
+     "polarity": "positive",
+     "relation": "required_for",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "NXPH3"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [],
+     "note": "Speculative: rare variants in NXPH3 could disrupt synaptic organization in specific cortical circuits",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "disrupted synaptic connectivity"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "NXPH3 dysfunction"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [
+    "OT:NXPH3-MONDO_0005090"
+   ],
+   "falsification": {
+    "description": "Sequence NXPH3 in large schizophrenia cohorts (>10,000 cases) and show no enrichment of rare damaging variants compared to controls.",
+    "expected": "negative",
+    "perturbation": null,
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "gene",
+     "label": "NXPH3 variant burden"
+    },
+    "system": "schizophrenia case-control cohort"
+   },
+   "genes": [
+    "NXPH3"
+   ],
+   "hypothesis_id": "H3",
+   "mechanism": "NXPH3 encodes neurexophilin-3, which stabilizes alpha-neurexins at synapses. Rare loss-of-function variants in NXPH3 could disrupt synaptic adhesion and stability in prefrontal or hippocampal circuits, contributing to aberrant connectivity in schizophrenia. However, current genetic evidence does not support common variant association.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "OT:NXPH3-MONDO_0005090",
+    "PMID:41333154"
+   ],
+   "title": "Synaptic adhesion defect: rare NXPH3 variants disrupt neurexin stabilization at synapses"
+  }
+ ],
+ "unexplained_genes": [
+  "CCDC136",
+  "C4B"
+ ]
+}

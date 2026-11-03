@@ -1,0 +1,247 @@
+{
+ "P16455": {
+  "cited_as": "chain",
+  "in_ledger": true,
+  "source": "uniprot",
+  "statement": "Involved in the cellular defense against the biological effects of O6-methylguanine (O6-MeG) and O4-methylthymine (O4-MeT) in DNA. Repairs the methylated nucleobase in DNA by stoichiometrically transferring the methyl group to a cysteine residue in the enzyme. This is a suicide reaction: the enzyme is irreversibly inactivated Location: Nucleus",
+  "url": "https://www.uniprot.org/uniprotkb/P16455",
+  "text": "Involved in the cellular defense against the biological effects of O6-methylguanine (O6-MeG) and O4-methylthymine (O4-MeT) in DNA. Repairs the methylated nucleobase in DNA by stoichiometrically transferring the methyl group to a cysteine residue in the enzyme. This is a suicide reaction: the enzyme is irreversibly inactivated Location: Nucleus\nentryType: UniProtKB reviewed (Swiss-Prot)\nprimaryAccession: P16455\nuniProtkbId: MGMT_HUMAN\nproteinDescription.recommendedName.fullName.value: Methylated-DNA--protein-cysteine methyltransferase\nproteinDescription.recommendedName.ecNumbers.value: 2.1.1.63\nproteinDescription.alternativeNames.fullName.value: 6-O-methylguanine-DNA methyltransferase\nproteinDescription.alternativeNames.shortNames.value: MGMT\nproteinDescription.alternativeNames.fullName.value: O-6-methylguanine-DNA-alkyltransferase\ncomments.texts.value: Involved in the cellular defense against the biological effects of O6-methylguanine (O6-MeG) and O4-methylthymine (O4-MeT) in DNA. Repairs the methylated nucleobase in DNA by stoichiometrically transferring the methyl group to a cysteine residue in the enzyme. This is a suicide reaction: the enzyme is irreversibly inactivated\ncomments.commentType: FUNCTION\ncomments.commentType: SUBCELLULAR LOCATION\ncomments.subcellularLocations.location.value: Nucleus\ncomments.subcellularLocations.location.id: SL-0191\nsequence.length: 207\nextraAttributes.uniParcId: UPI00001112F1"
+ },
+ "R-HSA-5657655": {
+  "cited_as": "chain",
+  "in_ledger": true,
+  "source": "reactome",
+  "statement": "Pathway 'MGMT-mediated DNA damage reversal' is over-represented in this gene set: 1 of 2 pathway entities matched, FDR 0.000369.",
+  "url": "https://reactome.org/PathwayBrowser/#/R-HSA-5657655",
+  "text": "Pathway 'MGMT-mediated DNA damage reversal' is over-represented in this gene set: 1 of 2 pathway entities matched, FDR 0.000369.\nstId: R-HSA-5657655\ndbId: 5657655\nname: MGMT-mediated DNA damage reversal\nspecies.dbId: 48887\nspecies.taxId: 9606\nspecies.name: Homo sapiens\nllp: True\nentities.resource: TOTAL\nentities.total: 2\nentities.found: 1\nentities.ratio: 0.00012306934957848748\nentities.pValue: 0.00012306934957850846\nentities.fdr: 0.0003692080487355254\nreactions.resource: TOTAL\nreactions.total: 2\nreactions.found: 2\nreactions.ratio: 0.00012430853378084405\ninDisease: False"
+ },
+ "R-HSA-73942": {
+  "cited_as": "chain",
+  "in_ledger": true,
+  "source": "reactome",
+  "statement": "Pathway 'DNA Damage Reversal' is over-represented in this gene set: 1 of 19 pathway entities matched, FDR 0.00117.",
+  "url": "https://reactome.org/PathwayBrowser/#/R-HSA-73942",
+  "text": "Pathway 'DNA Damage Reversal' is over-represented in this gene set: 1 of 19 pathway entities matched, FDR 0.00117.\nstId: R-HSA-73942\ndbId: 73942\nname: DNA Damage Reversal\nspecies.dbId: 48887\nspecies.taxId: 9606\nspecies.name: Homo sapiens\nllp: False\nentities.resource: TOTAL\nentities.total: 19\nentities.found: 1\nentities.ratio: 0.001169158820995631\nentities.pValue: 0.0011691588209956638\nentities.fdr: 0.0011691588209956638\nreactions.resource: TOTAL\nreactions.total: 16\nreactions.found: 2\nreactions.ratio: 0.0009944682702467524\ninDisease: False"
+ },
+ "PMID:39518982": {
+  "cited_as": "chain",
+  "in_ledger": true,
+  "source": "europepmc",
+  "statement": "Linking Environmental Genotoxins to Neurodegenerative Diseases Through Transcriptional Mutagenesis. International journal of molecular sciences 2024; cited 3 times.",
+  "url": "https://europepmc.org/article/MED/39518982",
+  "text": "Linking Environmental Genotoxins to Neurodegenerative Diseases Through Transcriptional Mutagenesis.\n\nNumerous lines of evidence suggest that DNA damage contributes to the initiation, progression, and severity of neurodegenerative diseases. However, the molecular mechanisms responsible for this relationship remain unclear. This review integrates historical data with contemporary findings to propose that DNA damage exacerbates neurodegenerative diseases by inducing transcription errors. First, we describe the scientific rationale and basic biological concepts that underpin this hypothesis. Then, we provide epidemiological, cellular, and molecular data to support this idea, and we describe new and recently published observations that suggest that the former high incidence of neurodegenerative disease in Guam may have been driven by DNA damage-induced transcription errors. Finally, we explore the long-term implications of these findings on our understanding of the impact of genotoxic stress on human aging and disease.",
+  "year": 2024,
+  "pubtypes": [
+   "review-article",
+   "Review",
+   "Journal Article"
+  ]
+ },
+ "CXG:ENSG00000170430:CL_4030059:MONDO_0004976": {
+  "cited_as": "chain",
+  "in_ledger": true,
+  "source": "cellxgene",
+  "statement": "In CZ CELLxGENE Discover brain single-cell data, MGMT (ENSG00000170430) is detected in 1.1% of 1,982 cells annotated L2/3 intratelencephalic projecting glutamatergic neuron (CL:4030059) from donors annotated amyotrophic lateral sclerosis (MONDO:0004976), against 0.7% of 268,705 such cells from donors annotated normal (PATO:0000461).",
+  "url": "https://cellxgene.cziscience.com/gene-expression?genes=MGMT&tissues=UBERON%3A0000955",
+  "text": "In CZ CELLxGENE Discover brain single-cell data, MGMT (ENSG00000170430) is detected in 1.1% of 1,982 cells annotated L2/3 intratelencephalic projecting glutamatergic neuron (CL:4030059) from donors annotated amyotrophic lateral sclerosis (MONDO:0004976), against 0.7% of 268,705 such cells from donors annotated normal (PATO:0000461).\n: 0.010595358224016145"
+ },
+ "CXG:ENSG00000170430:CL_4023011:MONDO_0004976": {
+  "cited_as": "chain",
+  "in_ledger": true,
+  "source": "cellxgene",
+  "statement": "In CZ CELLxGENE Discover brain single-cell data, MGMT (ENSG00000170430) is detected in 0.41% of 244 cells annotated lamp5 GABAergic cortical interneuron (CL:4023011) from donors annotated amyotrophic lateral sclerosis (MONDO:0004976), against 1.2% of 163,218 such cells from donors annotated normal (PATO:0000461).",
+  "url": "https://cellxgene.cziscience.com/gene-expression?genes=MGMT&tissues=UBERON%3A0000955",
+  "text": "In CZ CELLxGENE Discover brain single-cell data, MGMT (ENSG00000170430) is detected in 0.41% of 244 cells annotated lamp5 GABAergic cortical interneuron (CL:4023011) from donors annotated amyotrophic lateral sclerosis (MONDO:0004976), against 1.2% of 163,218 such cells from donors annotated normal (PATO:0000461).\n: 0.004098360655737705"
+ },
+ "CXG:ENSG00000170430:CL_0000115:MONDO_0004976": {
+  "cited_as": "chain",
+  "in_ledger": true,
+  "source": "cellxgene",
+  "statement": "In CZ CELLxGENE Discover brain single-cell data, MGMT (ENSG00000170430) is detected in 15.2% of 1,595 cells annotated endothelial cell (CL:0000115) from donors annotated amyotrophic lateral sclerosis (MONDO:0004976), against 12.8% of 82,931 such cells from donors annotated normal (PATO:0000461).",
+  "url": "https://cellxgene.cziscience.com/gene-expression?genes=MGMT&tissues=UBERON%3A0000955",
+  "text": "In CZ CELLxGENE Discover brain single-cell data, MGMT (ENSG00000170430) is detected in 15.2% of 1,595 cells annotated endothelial cell (CL:0000115) from donors annotated amyotrophic lateral sclerosis (MONDO:0004976), against 12.8% of 82,931 such cells from donors annotated normal (PATO:0000461).\n: 0.15172413793103448"
+ },
+ "PMID:19847258": {
+  "cited_as": "chain",
+  "in_ledger": true,
+  "source": "europepmc",
+  "statement": "The DNA-damage response in human biology and disease. Nature 2009; cited 4750 times.",
+  "url": "https://europepmc.org/article/MED/19847258",
+  "text": "The DNA-damage response in human biology and disease.\n\nThe prime objective for every life form is to deliver its genetic material, intact and unchanged, to the next generation. This must be achieved despite constant assaults by endogenous and environmental agents on the DNA. To counter this threat, life has evolved several systems to detect DNA damage, signal its presence and mediate its repair. Such responses, which have an impact on a wide range of cellular events, are biologically significant because they prevent diverse human diseases. Our improving understanding of DNA-damage responses is providing new avenues for disease management.",
+  "year": 2009,
+  "pubtypes": [
+   "Research Support, Non-U.S. Gov't",
+   "research-article",
+   "Review",
+   "Journal Article"
+  ]
+ },
+ "AGR:MGI:96977:MP:0008873": {
+  "cited_as": "chain",
+  "in_ledger": true,
+  "source": "alliance",
+  "statement": "In the model organism Mus musculus, the genotype Mgmt<sup>tm1Mse</sup>/Mgmt<sup>tm1Mse</sup> of Mgmt -- the orthologue of human MGMT -- shows increased physiological sensitivity to xenobiotic (MP:0008873); curated by MGI from PMID:9560238. This is a model-organism phenotype, not a human observation.",
+  "url": "https://www.alliancegenome.org/gene/MGI:96977",
+  "text": "In the model organism Mus musculus, the genotype Mgmt<sup>tm1Mse</sup>/Mgmt<sup>tm1Mse</sup> of Mgmt -- the orthologue of human MGMT -- shows increased physiological sensitivity to xenobiotic (MP:0008873); curated by MGI from PMID:9560238. This is a model-organism phenotype, not a human observation.\n: MP:0008873"
+ },
+ "AGR:MGI:96977:MP:0009763": {
+  "cited_as": "chain",
+  "in_ledger": true,
+  "source": "alliance",
+  "statement": "In the model organism Mus musculus, the genotype Mgmt<sup>tm1Mse</sup>/Mgmt<sup>tm1Mse</sup> of Mgmt -- the orthologue of human MGMT -- shows increased susceptibility to induced morbidity/mortality (MP:0009763); curated by MGI from PMID:9560238. This is a model-organism phenotype, not a human observation.",
+  "url": "https://www.alliancegenome.org/gene/MGI:96977",
+  "text": "In the model organism Mus musculus, the genotype Mgmt<sup>tm1Mse</sup>/Mgmt<sup>tm1Mse</sup> of Mgmt -- the orthologue of human MGMT -- shows increased susceptibility to induced morbidity/mortality (MP:0009763); curated by MGI from PMID:9560238. This is a model-organism phenotype, not a human observation.\n: MP:0009763"
+ },
+ "AGR:MGI:96977:MP:0005165": {
+  "cited_as": "chain",
+  "in_ledger": true,
+  "source": "alliance",
+  "statement": "In the model organism Mus musculus, the genotype Mgmt<sup>tm1Lds</sup>/Mgmt<sup>tm1Lds</sup> of Mgmt -- the orthologue of human MGMT -- shows increased susceptibility to injury (MP:0005165); curated by MGI from PMID:17098815. This is a model-organism phenotype, not a human observation.",
+  "url": "https://www.alliancegenome.org/gene/MGI:96977",
+  "text": "In the model organism Mus musculus, the genotype Mgmt<sup>tm1Lds</sup>/Mgmt<sup>tm1Lds</sup> of Mgmt -- the orthologue of human MGMT -- shows increased susceptibility to injury (MP:0005165); curated by MGI from PMID:17098815. This is a model-organism phenotype, not a human observation.\n: MP:0005165"
+ },
+ "OT:MGMT-constraint": {
+  "cited_as": "chain",
+  "in_ledger": true,
+  "source": "opentargets",
+  "statement": "MGMT loss-of-function constraint score 3.84e-05 (gnomAD decile bin 5 of 6, lower is more constrained).",
+  "url": "https://platform.opentargets.org/target/ENSG00000170430",
+  "text": "MGMT loss-of-function constraint score 3.84e-05 (gnomAD decile bin 5 of 6, lower is more constrained).\nconstraintType: lof\nscore: 3.844199818558991e-05\nupperBin6: 5"
+ },
+ "OT:MGMT-MONDO_0004976": {
+  "cited_as": "chain",
+  "in_ledger": true,
+  "source": "opentargets",
+  "statement": "Open Targets 2026.09 scores the MGMT-amyotrophic lateral sclerosis association at 0.16 (literature 0.06, genetic_association 0.26).",
+  "url": "https://platform.opentargets.org/target/ENSG00000170430",
+  "text": "Open Targets 2026.09 scores the MGMT-amyotrophic lateral sclerosis association at 0.16 (literature 0.06, genetic_association 0.26).\nscore: 0.15709406748719307\ndatatypeScores.id: literature\ndatatypeScores.score: 0.06062421009515888\ndatatypeScores.id: genetic_association\ndatatypeScores.score: 0.2553766018718626\ndisease.id: MONDO_0004976\ndisease.name: amyotrophic lateral sclerosis"
+ },
+ "STRING:TP53-MGMT": {
+  "cited_as": "chain",
+  "in_ledger": true,
+  "source": "string",
+  "statement": "STRING links TP53 and MGMT with combined score 0.86 (experimental 0.47, database 0.00, text-mining 0.76).",
+  "url": "https://string-db.org/cgi/network?identifiers=TP53%0dMGMT&species=9606",
+  "text": "STRING links TP53 and MGMT with combined score 0.86 (experimental 0.47, database 0.00, text-mining 0.76).\nstringId_A: 9606.ENSP00000269305\nstringId_B: 9606.ENSP00000302111\npreferredName_A: TP53\npreferredName_B: MGMT\nncbiTaxonId: 9606\nscore: 0.864\nnscore: 0\nfscore: 0\npscore: 0\nascore: 0\nescore: 0.47\ndscore: 0\ntscore: 0.755"
+ },
+ "STRING:MLH1-MGMT": {
+  "cited_as": "chain",
+  "in_ledger": true,
+  "source": "string",
+  "statement": "STRING links MLH1 and MGMT with combined score 0.82 (experimental 0.07, database 0.00, text-mining 0.80).",
+  "url": "https://string-db.org/cgi/network?identifiers=MLH1%0dMGMT&species=9606",
+  "text": "STRING links MLH1 and MGMT with combined score 0.82 (experimental 0.07, database 0.00, text-mining 0.80).\nstringId_A: 9606.ENSP00000231790\nstringId_B: 9606.ENSP00000302111\npreferredName_A: MLH1\npreferredName_B: MGMT\nncbiTaxonId: 9606\nscore: 0.824\nnscore: 0.086\nfscore: 0\npscore: 0\nascore: 0.075\nescore: 0.074\ndscore: 0\ntscore: 0.802"
+ },
+ "STRING:GO:0006974": {
+  "cited_as": "chain",
+  "in_ledger": true,
+  "source": "string",
+  "statement": "[Process] 'DNA damage response' is enriched in the gene set: 7 of 797 background genes, FDR 0.00043.",
+  "url": "https://string-db.org/",
+  "text": "[Process] 'DNA damage response' is enriched in the gene set: 7 of 797 background genes, FDR 0.00043.\ncategory: Process\nterm: GO:0006974\nnumber_of_genes: 7\nnumber_of_genes_in_background: 797\nncbiTaxonId: 9606\ninputGenes: MLH1\ninputGenes: CDK2\ninputGenes: TP53\ninputGenes: MGMT\ninputGenes: PCNA\ninputGenes: TRIP12\ninputGenes: CDKN1A\npreferredNames: MLH1\npreferredNames: CDK2\npreferredNames: TP53\npreferredNames: MGMT\npreferredNames: PCNA\npreferredNames: TRIP12\npreferredNames: CDKN1A\np_value: 5.24e-08\nfdr: 0.00043\ndescription: DNA damage response"
+ },
+ "STRING:TP53-CDKN1A": {
+  "cited_as": "chain",
+  "in_ledger": true,
+  "source": "string",
+  "statement": "STRING links TP53 and CDKN1A with combined score 1.00 (experimental 1.00, database 0.90, text-mining 0.96).",
+  "url": "https://string-db.org/cgi/network?identifiers=TP53%0dCDKN1A&species=9606",
+  "text": "STRING links TP53 and CDKN1A with combined score 1.00 (experimental 1.00, database 0.90, text-mining 0.96).\nstringId_A: 9606.ENSP00000269305\nstringId_B: 9606.ENSP00000384849\npreferredName_A: TP53\npreferredName_B: CDKN1A\nncbiTaxonId: 9606\nscore: 0.999\nnscore: 0\nfscore: 0\npscore: 0\nascore: 0\nescore: 0.999\ndscore: 0.9\ntscore: 0.959"
+ },
+ "STRING:MGMT-CDKN1A": {
+  "cited_as": "chain",
+  "in_ledger": true,
+  "source": "string",
+  "statement": "STRING links MGMT and CDKN1A with combined score 0.87 (experimental 0.80, database 0.00, text-mining 0.39).",
+  "url": "https://string-db.org/cgi/network?identifiers=MGMT%0dCDKN1A&species=9606",
+  "text": "STRING links MGMT and CDKN1A with combined score 0.87 (experimental 0.80, database 0.00, text-mining 0.39).\nstringId_A: 9606.ENSP00000302111\nstringId_B: 9606.ENSP00000384849\npreferredName_A: MGMT\npreferredName_B: CDKN1A\nncbiTaxonId: 9606\nscore: 0.874\nnscore: 0\nfscore: 0\npscore: 0\nascore: 0\nescore: 0.802\ndscore: 0\ntscore: 0.393"
+ },
+ "STRING:GOCC:0070557": {
+  "cited_as": "chain",
+  "in_ledger": true,
+  "source": "string",
+  "statement": "[COMPARTMENTS] 'PCNA-p21 complex' is enriched in the gene set: 2 of 2 background genes, FDR 0.00049.",
+  "url": "https://string-db.org/",
+  "text": "[COMPARTMENTS] 'PCNA-p21 complex' is enriched in the gene set: 2 of 2 background genes, FDR 0.00049.\ncategory: COMPARTMENTS\nterm: GOCC:0070557\nnumber_of_genes: 2\nnumber_of_genes_in_background: 2\nncbiTaxonId: 9606\ninputGenes: PCNA\ninputGenes: CDKN1A\npreferredNames: PCNA\npreferredNames: CDKN1A\np_value: 1.7e-06\nfdr: 0.00049\ndescription: PCNA-p21 complex"
+ },
+ "STRING:CDK2-MGMT": {
+  "cited_as": "chain",
+  "in_ledger": true,
+  "source": "string",
+  "statement": "STRING links CDK2 and MGMT with combined score 0.85 (experimental 0.80, database 0.00, text-mining 0.27).",
+  "url": "https://string-db.org/cgi/network?identifiers=CDK2%0dMGMT&species=9606",
+  "text": "STRING links CDK2 and MGMT with combined score 0.85 (experimental 0.80, database 0.00, text-mining 0.27).\nstringId_A: 9606.ENSP00000266970\nstringId_B: 9606.ENSP00000302111\npreferredName_A: CDK2\npreferredName_B: MGMT\nncbiTaxonId: 9606\nscore: 0.849\nnscore: 0\nfscore: 0\npscore: 0\nascore: 0\nescore: 0.802\ndscore: 0\ntscore: 0.272"
+ },
+ "STRING:PCNA-CDKN1A": {
+  "cited_as": "chain",
+  "in_ledger": true,
+  "source": "string",
+  "statement": "STRING links PCNA and CDKN1A with combined score 1.00 (experimental 1.00, database 0.90, text-mining 0.83).",
+  "url": "https://string-db.org/cgi/network?identifiers=PCNA%0dCDKN1A&species=9606",
+  "text": "STRING links PCNA and CDKN1A with combined score 1.00 (experimental 1.00, database 0.90, text-mining 0.83).\nstringId_A: 9606.ENSP00000368458\nstringId_B: 9606.ENSP00000384849\npreferredName_A: PCNA\npreferredName_B: CDKN1A\nncbiTaxonId: 9606\nscore: 0.999\nnscore: 0\nfscore: 0\npscore: 0\nascore: 0.066\nescore: 0.999\ndscore: 0.9\ntscore: 0.833"
+ },
+ "STRING:GO:0006275": {
+  "cited_as": "chain",
+  "in_ledger": true,
+  "source": "string",
+  "statement": "[Process] 'Regulation of DNA replication' is enriched in the gene set: 4 of 119 background genes, FDR 0.00043.",
+  "url": "https://string-db.org/",
+  "text": "[Process] 'Regulation of DNA replication' is enriched in the gene set: 4 of 119 background genes, FDR 0.00043.\ncategory: Process\nterm: GO:0006275\nnumber_of_genes: 4\nnumber_of_genes_in_background: 119\nncbiTaxonId: 9606\ninputGenes: CDK2\ninputGenes: TP53\ninputGenes: PCNA\ninputGenes: CDKN1A\npreferredNames: CDK2\npreferredNames: TP53\npreferredNames: PCNA\npreferredNames: CDKN1A\np_value: 4.61e-07\nfdr: 0.00043\ndescription: Regulation of DNA replication"
+ },
+ "CXG:ENSG00000170430:CL_0000129:MONDO_0004976": {
+  "cited_as": "chain",
+  "in_ledger": true,
+  "source": "cellxgene",
+  "statement": "In CZ CELLxGENE Discover brain single-cell data, MGMT (ENSG00000170430) is detected in 14.9% of 4,903 cells annotated microglial cell (CL:0000129) from donors annotated amyotrophic lateral sclerosis (MONDO:0004976), against 16.1% of 263,183 such cells from donors annotated normal (PATO:0000461).",
+  "url": "https://cellxgene.cziscience.com/gene-expression?genes=MGMT&tissues=UBERON%3A0000955",
+  "text": "In CZ CELLxGENE Discover brain single-cell data, MGMT (ENSG00000170430) is detected in 14.9% of 4,903 cells annotated microglial cell (CL:0000129) from donors annotated amyotrophic lateral sclerosis (MONDO:0004976), against 16.1% of 263,183 such cells from donors annotated normal (PATO:0000461).\n: 0.14868447889047523"
+ },
+ "R-HSA-73894": {
+  "cited_as": "supporting",
+  "in_ledger": true,
+  "source": "reactome",
+  "statement": "Pathway 'DNA Repair' is over-represented in this gene set: 1 of 414 pathway entities matched, FDR 0.0255.",
+  "url": "https://reactome.org/PathwayBrowser/#/R-HSA-73894",
+  "text": "Pathway 'DNA Repair' is over-represented in this gene set: 1 of 414 pathway entities matched, FDR 0.0255.\nstId: R-HSA-73894\ndbId: 73894\nname: DNA Repair\nspecies.dbId: 48887\nspecies.taxId: 9606\nspecies.name: Homo sapiens\nllp: False\nentities.resource: TOTAL\nentities.total: 414\nentities.found: 1\nentities.ratio: 0.025475355362746907\nentities.pValue: 0.02547535536274692\nentities.fdr: 0.02547535536274692\nreactions.resource: TOTAL\nreactions.total: 350\nreactions.found: 2\nreactions.ratio: 0.021753993411647708\ninDisease: False"
+ },
+ "AGR:MGI:96977:MP:0002024": {
+  "cited_as": "supporting",
+  "in_ledger": true,
+  "source": "alliance",
+  "statement": "In the model organism Mus musculus, the genotype Mgmt<sup>tm1Mse</sup>/Mgmt<sup>tm1Mse</sup> of Mgmt -- the orthologue of human MGMT -- shows increased T cell derived lymphoma incidence (MP:0002024); curated by MGI from PMID:9560238. This is a model-organism phenotype, not a human observation.",
+  "url": "https://www.alliancegenome.org/gene/MGI:96977",
+  "text": "In the model organism Mus musculus, the genotype Mgmt<sup>tm1Mse</sup>/Mgmt<sup>tm1Mse</sup> of Mgmt -- the orthologue of human MGMT -- shows increased T cell derived lymphoma incidence (MP:0002024); curated by MGI from PMID:9560238. This is a model-organism phenotype, not a human observation.\n: MP:0002024"
+ },
+ "STRING:MGMT-PCNA": {
+  "cited_as": "supporting",
+  "in_ledger": true,
+  "source": "string",
+  "statement": "STRING links MGMT and PCNA with combined score 0.88 (experimental 0.80, database 0.00, text-mining 0.41).",
+  "url": "https://string-db.org/cgi/network?identifiers=MGMT%0dPCNA&species=9606",
+  "text": "STRING links MGMT and PCNA with combined score 0.88 (experimental 0.80, database 0.00, text-mining 0.41).\nstringId_A: 9606.ENSP00000302111\nstringId_B: 9606.ENSP00000368458\npreferredName_A: MGMT\npreferredName_B: PCNA\nncbiTaxonId: 9606\nscore: 0.877\nnscore: 0.042\nfscore: 0\npscore: 0\nascore: 0\nescore: 0.802\ndscore: 0\ntscore: 0.407"
+ },
+ "GWAS:MGMT:no-association": {
+  "cited_as": "contradicting",
+  "in_ledger": true,
+  "source": "gwascatalog",
+  "statement": "GWAS Catalog lists the gene MGMT but maps no variant to it among the 169 curated associations for amyotrophic lateral sclerosis (MONDO_0004976). A variant is matched on the catalogue's own mapping, so one the authors attributed to MGMT but that maps to a neighbouring gene would not appear here.",
+  "url": "https://www.ebi.ac.uk/gwas/genes/MGMT",
+  "text": "GWAS Catalog lists the gene MGMT but maps no variant to it among the 169 curated associations for amyotrophic lateral sclerosis (MONDO_0004976). A variant is matched on the catalogue's own mapping, so one the authors attributed to MGMT but that maps to a neighbouring gene would not appear here.\n: 0"
+ },
+ "HPA:ENSG00000170430": {
+  "cited_as": "contradicting",
+  "in_ledger": true,
+  "source": "hpa",
+  "statement": "Tissue enhanced (specificity score None). Enriched in liver 125.9. Single-cell: Hepatocytes 649.2 nCPM. Subcellular: Nucleoplasm.",
+  "url": "https://www.proteinatlas.org/ENSG00000170430",
+  "text": "Tissue enhanced (specificity score None). Enriched in liver 125.9. Single-cell: Hepatocytes 649.2 nCPM. Subcellular: Nucleoplasm.\nGene: MGMT\nEnsembl: ENSG00000170430\nGene description: O-6-methylguanine-DNA methyltransferase\nRNA tissue specificity: Tissue enhanced\nRNA tissue specific nTPM.liver: 125.9\nRNA single cell type specificity: Cell type enhanced\nRNA single cell type specific nCPM.Hepatocytes: 649.2\nSubcellular location: Nucleoplasm"
+ },
+ "AGR:MGI:96977:MP:0009142": {
+  "cited_as": "contradicting",
+  "in_ledger": true,
+  "source": "alliance",
+  "statement": "In the model organism Mus musculus, the genotype Mgmt<sup>tm1b(EUCOMM)Wtsi</sup>/Mgmt<sup>tm1b(EUCOMM)Wtsi</sup> of Mgmt -- the orthologue of human MGMT -- shows decreased prepulse inhibition (MP:0009142); curated by MGI from MGI:5576271. This is a model-organism phenotype, not a human observation.",
+  "url": "https://www.alliancegenome.org/gene/MGI:96977",
+  "text": "In the model organism Mus musculus, the genotype Mgmt<sup>tm1b(EUCOMM)Wtsi</sup>/Mgmt<sup>tm1b(EUCOMM)Wtsi</sup> of Mgmt -- the orthologue of human MGMT -- shows decreased prepulse inhibition (MP:0009142); curated by MGI from MGI:5576271. This is a model-organism phenotype, not a human observation.\n: MP:0009142"
+ }
+}

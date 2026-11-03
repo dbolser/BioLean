@@ -1,0 +1,1475 @@
+{
+ "run_id": "20260825T112130Z-0df74a",
+ "curated_by": "Claude Opus 5.5, 2026-10-30",
+ "entities": {
+  "AD": {
+   "kind": "disease",
+   "curie": "MONDO:0004975",
+   "run_labels": [
+    "Alzheimer's disease",
+    "Alzheimer's disease pathology"
+   ]
+  },
+  "APOE": {
+   "kind": "protein",
+   "curie": "UniProt:P02649",
+   "run_labels": [
+    "APOE-containing lipoproteins"
+   ]
+  },
+  "apoe4": {
+   "kind": "variant",
+   "curie": "BLN:APOE-e4",
+   "label": "APOE e4 allele (encodes the APOE4 isoform)",
+   "why_no_term": "searched 'APOE4', 'apolipoprotein E' under PR, 'epsilon 4', 'isoform E4': no PR isoform term, no allele term; e4 has no single dbSNP id and the cited GWAS row (rs429358) gives no allele",
+   "run_labels": [
+    "APOE4"
+   ]
+  },
+  "TREM2": {
+   "kind": "protein",
+   "curie": "UniProt:Q9NZC2",
+   "run_labels": [
+    "TREM2",
+    "TREM2–DAP12 receptor complex",
+    "functional TREM2 signaling complexes",
+    "TREM2–PLCG2 signaling",
+    "sustained TREM2–PLCG2 microglial response"
+   ]
+  },
+  "PLCG2": {
+   "kind": "protein",
+   "curie": "UniProt:P16885",
+   "run_labels": [
+    "PLCG2",
+    "TREM2–PLCG2 signaling",
+    "sustained TREM2–PLCG2 microglial response",
+    "balanced PLCG2 activation and INPP5D inhibition"
+   ]
+  },
+  "INPP5D": {
+   "kind": "protein",
+   "curie": "UniProt:Q92835",
+   "run_labels": [
+    "INPP5D",
+    "balanced PLCG2 activation and INPP5D inhibition"
+   ]
+  },
+  "MS4A4A": {
+   "kind": "protein",
+   "curie": "UniProt:Q96JQ5",
+   "run_labels": [
+    "MS4A4A"
+   ]
+  },
+  "ABI3": {
+   "kind": "protein",
+   "curie": "UniProt:Q9P2A4",
+   "run_labels": [
+    "ABI3"
+   ]
+  },
+  "LPIN2": {
+   "kind": "protein",
+   "curie": "UniProt:Q92539",
+   "run_labels": [
+    "LPIN2"
+   ]
+  },
+  "abClearanceCatabolic": {
+   "kind": "process",
+   "curie": "GO:0150094",
+   "run_labels": [
+    "microglial Aβ42 uptake and degradation",
+    "productive TREM2-dependent amyloid clearance",
+    "reduced productive amyloid clearance"
+   ]
+  },
+  "abClearance": {
+   "kind": "process",
+   "curie": "GO:0097242",
+   "run_labels": [
+    "Aβ clearance"
+   ]
+  },
+  "dag": {
+   "kind": "chemical",
+   "curie": "CHEBI:18035",
+   "run_labels": [
+    "DAG and IP3"
+   ]
+  },
+  "erMembrane": {
+   "kind": "component",
+   "curie": "GO:0005789"
+  },
+  "dagER": {
+   "kind": "chemical",
+   "refines": {
+    "base": "dag",
+    "ctx": {
+     "component": "erMembrane"
+    }
+   },
+   "run_labels": [
+    "biosynthetic DAG"
+   ]
+  },
+  "ip3": {
+   "kind": "chemical",
+   "curie": "CHEBI:16595",
+   "run_labels": [
+    "DAG and IP3"
+   ]
+  },
+  "pi3kSignaling": {
+   "kind": "process",
+   "curie": "GO:0043491",
+   "run_labels": [
+    "PI3K signaling"
+   ]
+  },
+  "microglia": {
+   "kind": "cellType",
+   "curie": "CL:0000129"
+  },
+  "cellChemotaxis": {
+   "kind": "process",
+   "curie": "GO:0060326"
+  },
+  "endocytosis": {
+   "kind": "process",
+   "curie": "GO:0006897"
+  },
+  "microgliaChemotaxis": {
+   "kind": "process",
+   "refines": {
+    "base": "cellChemotaxis",
+    "ctx": {
+     "cellType": "microglia"
+    }
+   },
+   "run_labels": [
+    "microglial chemotaxis and endocytosis",
+    "deficient microglial chemotaxis and endocytosis"
+   ]
+  },
+  "microgliaEndocytosis": {
+   "kind": "process",
+   "refines": {
+    "base": "endocytosis",
+    "ctx": {
+     "cellType": "microglia"
+    }
+   },
+   "run_labels": [
+    "microglial chemotaxis and endocytosis",
+    "deficient microglial chemotaxis and endocytosis"
+   ]
+  },
+  "microgliaActivation": {
+   "kind": "process",
+   "curie": "GO:0001774",
+   "run_labels": [
+    "protective microglial plaque response"
+   ]
+  },
+  "cytoskeletonOrg": {
+   "kind": "process",
+   "curie": "GO:0007010",
+   "run_labels": [
+    "ABI3-dependent cytoskeletal remodeling"
+   ]
+  },
+  "plaqueEncasement": {
+   "kind": "process",
+   "curie": "BLN:MicroglialPlaqueEncasement",
+   "label": "microglial encasement of amyloid plaques",
+   "why_no_term": "searched 'encasement', 'plaque', 'amyloid plaque' under GO, 'amyloid' under MP: only HP senile plaques and MP amyloid deposition, nothing for microglia wrapping plaques",
+   "run_labels": [
+    "microglial plaque encasement and compaction",
+    "loss of plaque encasement and compaction"
+   ]
+  },
+  "plaqueCompaction": {
+   "kind": "process",
+   "curie": "BLN:AmyloidPlaqueCompaction",
+   "label": "amyloid plaque compaction",
+   "why_no_term": "searched 'compaction', 'plaque', 'amyloid' under MP: only cardiac noncompaction and MP amyloid deposition levels, nothing for plaque compaction",
+   "run_labels": [
+    "microglial plaque encasement and compaction",
+    "loss of plaque encasement and compaction"
+   ]
+  },
+  "phospholipidMetabolism": {
+   "kind": "process",
+   "curie": "GO:0006644",
+   "run_labels": [
+    "LPIN2-dependent phospholipid remodeling",
+    "failure of sustained microglial lipid remodeling"
+   ]
+  }
+ },
+ "statements": [
+  {
+   "id": "S1",
+   "step": "H1.1",
+   "text": "APOE (in lipoproteins) binds TREM2",
+   "claim": {
+    "rel": {
+     "relation": "RO:0002436",
+     "a": "APOE",
+     "b": "TREM2"
+    }
+   },
+   "evidence": [
+    {
+     "ref": "Q9NZC2",
+     "kind": "curatedDb",
+     "quote": "Acts as a receptor for lipoprotein particles such as LDL, VLDL, and HDL and for apolipoproteins such as APOA1, APOA2, APOB, APOE, APOE2, APOE3, APOE4, and CLU"
+    },
+    {
+     "ref": "STRING:APOE-TREM2",
+     "kind": "curatedDb",
+     "quote": "STRING links APOE and TREM2 with combined score 1.00 (experimental 0.58, database 0.00, text-mining 0.99)"
+    }
+   ],
+   "excluded": []
+  },
+  {
+   "id": "S2",
+   "step": "H1.2",
+   "text": "TREM2 is required for microglial uptake and degradation of Abeta42 (losing TREM2 lowers it)",
+   "claim": {
+    "effect": {
+     "subject": "TREM2",
+     "sign": "pos",
+     "target": {
+      "process": "abClearanceCatabolic"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "Q9NZC2",
+     "kind": "curatedDb",
+     "quote": "Acts as a receptor for amyloid-beta protein 42, a cleavage product of the amyloid-beta precursor protein APP, and mediates its uptake and degradation by microglia"
+    }
+   ],
+   "excluded": []
+  },
+  {
+   "id": "S3",
+   "step": "H1.3",
+   "text": "the APOE e4 allele lowers productive (TREM2-dependent) Abeta clearance",
+   "claim": {
+    "effect": {
+     "subject": "apoe4",
+     "sign": "neg",
+     "target": {
+      "process": "abClearanceCatabolic"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "rs429358",
+     "category": "not_in_text",
+     "reason": "GWAS row: allele '?' associated with AD age of onset (OR 3.32); says nothing about Abeta clearance"
+    },
+    {
+     "ref": "PMID:8346443",
+     "category": "not_in_text",
+     "reason": "e4 gene dose raises AD risk and lowers onset age in families; nothing about Abeta clearance"
+    }
+   ]
+  },
+  {
+   "id": "S4",
+   "step": "H1.4",
+   "text": "productive Abeta clearance lowers Alzheimer's disease risk",
+   "sign_note": "inverted: the run's subject is 'reduced productive amyloid clearance' (+)",
+   "claim": {
+    "effect": {
+     "subject": "abClearanceCatabolic",
+     "sign": "neg",
+     "target": {
+      "disease": "AD",
+      "aspect": "risk"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "PMID:27025652",
+     "category": "undirected",
+     "reason": "'an imbalance between production and clearance of Abeta42' initiates AD: names clearance (all routes, not uptake and degradation) and AD, but not that less clearance raises risk; its APOE4 sentence is about H1.3 and general clearance"
+    },
+    {
+     "ref": "PMID:33667416",
+     "category": "not_in_text",
+     "reason": "Abeta accumulates in the earliest phase and APOE alleles associate with AD; nothing about clearance"
+    }
+   ]
+  },
+  {
+   "id": "S5",
+   "step": "H2.1",
+   "text": "TREM2 (with its adaptor DAP12) activates PLCG2",
+   "claim": {
+    "effect": {
+     "subject": "TREM2",
+     "sign": "pos",
+     "target": {
+      "activity": "PLCG2"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "STRING:TREM2-PLCG2",
+     "category": "no_direction",
+     "reason": "STRING edge (database 0.50, text-mining 0.58, experiments 0) carries no sign; the step is 'activates'"
+    },
+    {
+     "ref": "R-HSA-2172127",
+     "category": "enrichment",
+     "reason": "'DAP12 interactions' over-represented in the gene set; no step stated"
+    },
+    {
+     "ref": "R-HSA-2424491",
+     "category": "enrichment",
+     "reason": "'DAP12 signaling' over-represented in the gene set; no step stated"
+    }
+   ]
+  },
+  {
+   "id": "S6",
+   "step": "H2.2",
+   "text": "PLCG2 raises DAG",
+   "claim": {
+    "effect": {
+     "subject": "PLCG2",
+     "sign": "pos",
+     "target": {
+      "amount": "dag"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "P16885",
+     "kind": "curatedDb",
+     "quote": "The production of the second messenger molecules diacylglycerol (DAG) and inositol 1,4,5-trisphosphate (IP3) is mediated by activated phosphatidylinositol-specific phospholipase C enzymes"
+    }
+   ],
+   "excluded": []
+  },
+  {
+   "id": "S7",
+   "step": "H2.2",
+   "text": "PLCG2 raises IP3",
+   "claim": {
+    "effect": {
+     "subject": "PLCG2",
+     "sign": "pos",
+     "target": {
+      "amount": "ip3"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "P16885",
+     "kind": "curatedDb",
+     "quote": "The production of the second messenger molecules diacylglycerol (DAG) and inositol 1,4,5-trisphosphate (IP3) is mediated by activated phosphatidylinositol-specific phospholipase C enzymes"
+    }
+   ],
+   "excluded": [
+    {
+     "ref": "R-HSA-1855204",
+     "category": "enrichment",
+     "reason": "'Synthesis of IP3 and IP4 in the cytosol' over-represented in the gene set"
+    }
+   ]
+  },
+  {
+   "id": "S8",
+   "step": "H2.3",
+   "text": "INPP5D inhibits PI3K signaling",
+   "claim": {
+    "effect": {
+     "subject": "INPP5D",
+     "sign": "neg",
+     "target": {
+      "process": "pi3kSignaling"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "Q92835",
+     "kind": "curatedDb",
+     "quote": "hydrolyzes the 5-phosphate of phosphatidylinositol-3,4,5-trisphosphate (PtdIns(3,4,5)P3) to produce PtdIns(3,4)P2, thereby negatively regulating the PI3K (phosphoinositide 3-kinase) pathways"
+    }
+   ],
+   "excluded": [
+    {
+     "ref": "HPA:ENSG00000168918",
+     "category": "no_direction",
+     "reason": "expression level (microglia 1021 nCPM); no effect on PI3K signaling"
+    }
+   ]
+  },
+  {
+   "id": "S9",
+   "step": "H2.4",
+   "text": "PLCG2 activation is required for microglial chemotaxis",
+   "claim": {
+    "effect": {
+     "subject": "PLCG2",
+     "sign": "pos",
+     "target": {
+      "process": "microgliaChemotaxis"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "AGR:MGI:97616:MP:0010740",
+     "category": "no_direction",
+     "reason": "MGI 'abnormal dendritic cell chemotaxis' in Plcg2 mutant mice: no direction, and dendritic cells, not microglia"
+    },
+    {
+     "ref": "AGR:MGI:1913150:MP:0003691",
+     "category": "not_this_entity",
+     "reason": "Trem2 knockout 'abnormal microglial cell physiology': about TREM2, not PLCG2 or INPP5D, and undirected"
+    }
+   ]
+  },
+  {
+   "id": "S10",
+   "step": "H2.4",
+   "text": "PLCG2 activation is required for microglial endocytosis",
+   "claim": {
+    "effect": {
+     "subject": "PLCG2",
+     "sign": "pos",
+     "target": {
+      "process": "microgliaEndocytosis"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "AGR:MGI:97616:MP:0030951",
+     "category": "no_direction",
+     "reason": "MGI 'abnormal endocytosis' in Plcg2 mutant mice: no direction, cell type not given"
+    }
+   ]
+  },
+  {
+   "id": "S11",
+   "step": "H2.4",
+   "text": "INPP5D lowers microglial chemotaxis",
+   "sign_note": "inverted: the run's subject is 'INPP5D inhibition' (required for, +), read as inhibition of INPP5D, as the mechanism ('excessive INPP5D braking reduces ... chemotaxis, endocytosis') and the falsification test (INPP5D inhibition improves Abeta uptake) say",
+   "claim": {
+    "effect": {
+     "subject": "INPP5D",
+     "sign": "neg",
+     "target": {
+      "process": "microgliaChemotaxis"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": []
+  },
+  {
+   "id": "S12",
+   "step": "H2.4",
+   "text": "INPP5D lowers microglial endocytosis",
+   "sign_note": "inverted: the run's subject is 'INPP5D inhibition' (required for, +), read as inhibition of INPP5D, as in the mechanism",
+   "claim": {
+    "effect": {
+     "subject": "INPP5D",
+     "sign": "neg",
+     "target": {
+      "process": "microgliaEndocytosis"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": []
+  },
+  {
+   "id": "S13",
+   "step": "H2.5",
+   "text": "microglial chemotaxis lowers Alzheimer's disease risk",
+   "sign_note": "inverted: the run's subject is 'deficient microglial chemotaxis and endocytosis' (+)",
+   "claim": {
+    "effect": {
+     "subject": "microgliaChemotaxis",
+     "sign": "neg",
+     "target": {
+      "disease": "AD",
+      "aspect": "risk"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "rs72824905",
+     "category": "not_in_text",
+     "reason": "GWAS row: rs72824905-G (PLCG2) OR 0.73 for AD; nothing about chemotaxis or endocytosis"
+    },
+    {
+     "ref": "rs10933431",
+     "category": "not_in_text",
+     "reason": "GWAS row: rs10933431-G (INPP5D) OR 0.93 for AD; nothing about chemotaxis or endocytosis"
+    },
+    {
+     "ref": "rs75932628",
+     "category": "not_in_text",
+     "reason": "GWAS row: rs75932628-T (TREM2) OR 2.22 for AD; nothing about chemotaxis or endocytosis"
+    },
+    {
+     "ref": "STRING:PMID:28714976",
+     "category": "enrichment",
+     "reason": "a paper's gene list over-represented in the gene set (5 of 23)"
+    }
+   ]
+  },
+  {
+   "id": "S14",
+   "step": "H2.5",
+   "text": "microglial endocytosis lowers Alzheimer's disease risk",
+   "sign_note": "inverted: the run's subject is 'deficient microglial chemotaxis and endocytosis' (+)",
+   "claim": {
+    "effect": {
+     "subject": "microgliaEndocytosis",
+     "sign": "neg",
+     "target": {
+      "disease": "AD",
+      "aspect": "risk"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": []
+  },
+  {
+   "id": "S15",
+   "step": "H3.1",
+   "text": "MS4A4A raises functional TREM2",
+   "claim": {
+    "effect": {
+     "subject": "MS4A4A",
+     "sign": "pos",
+     "target": {
+      "amount": "TREM2"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "PMID:PMC12738020",
+     "kind": "inVitro",
+     "quote": "Microglial MS4A4A elevates TREM2 signaling"
+    },
+    {
+     "ref": "PMID:41435829",
+     "kind": "mechanistic",
+     "taxon": "mouse",
+     "polarity": "refutes",
+     "quote": "MS4A4A and MS4A6A are negative regulators of both the transmembrane and soluble TREM2 proteins"
+    }
+   ],
+   "excluded": [
+    {
+     "ref": "Q96JQ5",
+     "category": "not_in_text",
+     "reason": "'may be involved in signal transduction as a component of a multimeric receptor complex'; no TREM2"
+    },
+    {
+     "ref": "STRING:MS4A4A-TREM2",
+     "category": "no_direction",
+     "reason": "STRING edge, text-mining only (0.57); carries no sign"
+    }
+   ]
+  },
+  {
+   "id": "S16",
+   "step": "H3.2",
+   "text": "TREM2 activates the microglial (plaque) response",
+   "claim": {
+    "effect": {
+     "subject": "TREM2",
+     "sign": "pos",
+     "target": {
+      "process": "microgliaActivation"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "Q9NZC2",
+     "kind": "crossSpecies",
+     "quote": "Binding to amyloid-beta 42 mediates microglial activation"
+    },
+    {
+     "ref": "PMID:28602351",
+     "kind": "mechanistic",
+     "taxon": "mouse",
+     "quote": "Activation is initiated in a Trem2-independent manner that involves downregulation of microglia checkpoints, followed by activation of a Trem2-dependent program"
+    }
+   ],
+   "excluded": []
+  },
+  {
+   "id": "S17",
+   "step": "H3.3",
+   "text": "the protective microglial plaque response lowers Alzheimer's disease pathology",
+   "claim": {
+    "effect": {
+     "subject": "microgliaActivation",
+     "sign": "neg",
+     "target": {
+      "disease": "AD",
+      "aspect": "severity"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "PMID:28602351",
+     "kind": "hypothesis",
+     "moved_from": "H3.2",
+     "quote": "This unique microglia-type has the potential to restrict neurodegeneration"
+    }
+   ],
+   "excluded": [
+    {
+     "ref": "PMID:PMC12738020",
+     "category": "not_in_text",
+     "reason": "title only: MS4A4A 'reduces amyloid pathology'; the subject is MS4A4A, not the microglial response"
+    },
+    {
+     "ref": "rs1582763",
+     "category": "not_in_text",
+     "reason": "GWAS row: rs1582763-A (MS4A4A) OR 0.91 for AD; nothing about microglial responses"
+    }
+   ]
+  },
+  {
+   "id": "S18",
+   "step": "H4.1",
+   "text": "TREM2 signaling activates (ABI3-dependent) cytoskeletal remodeling",
+   "claim": {
+    "effect": {
+     "subject": "TREM2",
+     "sign": "pos",
+     "target": {
+      "process": "cytoskeletonOrg"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "STRING:ABI3-TREM2",
+     "category": "no_direction",
+     "reason": "STRING edge, text-mining only (0.63); carries no sign, and the step's ends are TREM2 and cytoskeletal remodeling"
+    },
+    {
+     "ref": "Q9P2A4",
+     "category": "not_in_text",
+     "reason": "ABI3 'may inhibit tumor metastasis', 'in vitro, reduces cell motility'; no TREM2, PLCG2 or remodeling"
+    }
+   ]
+  },
+  {
+   "id": "S19",
+   "step": "H4.1",
+   "text": "PLCG2 signaling activates (ABI3-dependent) cytoskeletal remodeling",
+   "claim": {
+    "effect": {
+     "subject": "PLCG2",
+     "sign": "pos",
+     "target": {
+      "process": "cytoskeletonOrg"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "STRING:ABI3-PLCG2",
+     "category": "no_direction",
+     "reason": "STRING edge, text-mining only (0.65); carries no sign"
+    }
+   ]
+  },
+  {
+   "id": "S20",
+   "step": "H4.2",
+   "text": "cytoskeletal remodeling is required for microglial plaque encasement",
+   "claim": {
+    "effect": {
+     "subject": "cytoskeletonOrg",
+     "sign": "pos",
+     "target": {
+      "process": "plaqueEncasement"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "AGR:MGI:1913860:no-phenotypes",
+     "category": "other",
+     "reason": "contradicting citation: no Abi3 phenotype annotation is missing data, not a null result, and no statement has ABI3 as subject"
+    }
+   ]
+  },
+  {
+   "id": "S21",
+   "step": "H4.2",
+   "text": "cytoskeletal remodeling is required for plaque compaction",
+   "claim": {
+    "effect": {
+     "subject": "cytoskeletonOrg",
+     "sign": "pos",
+     "target": {
+      "process": "plaqueCompaction"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "PMID:42092345",
+     "category": "not_in_text",
+     "reason": "the Abi3 S212F variant 'regulates cytoskeletal dynamics' and 'reduced dense-core plaque compaction': two effects of the variant, not remodeling causing compaction"
+    }
+   ]
+  },
+  {
+   "id": "S22",
+   "step": "H4.3",
+   "text": "microglial plaque encasement lowers Alzheimer's disease pathology",
+   "sign_note": "inverted: the run's subject is 'loss of plaque encasement and compaction' (+)",
+   "claim": {
+    "effect": {
+     "subject": "plaqueEncasement",
+     "sign": "neg",
+     "target": {
+      "disease": "AD",
+      "aspect": "severity"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "rs616338",
+     "category": "not_in_text",
+     "reason": "GWAS row: rs616338-T (ABI3) OR 1.31 for AD; nothing about plaque encasement"
+    }
+   ]
+  },
+  {
+   "id": "S23",
+   "step": "H4.3",
+   "text": "plaque compaction lowers Alzheimer's disease pathology",
+   "sign_note": "inverted: the run's subject is 'loss of plaque encasement and compaction' (+)",
+   "claim": {
+    "effect": {
+     "subject": "plaqueCompaction",
+     "sign": "neg",
+     "target": {
+      "disease": "AD",
+      "aspect": "severity"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "PMID:42092345",
+     "category": "not_in_text",
+     "reason": "less compaction came with lower dense-core burden and unchanged total Abeta; it does not say loss of compaction worsens pathology"
+    }
+   ]
+  },
+  {
+   "id": "S24",
+   "step": "H5.1",
+   "text": "LPIN2 raises biosynthetic DAG (DAG in the ER membrane, kept apart from PLCG2's signalling DAG as the run's H5.2 note asks)",
+   "claim": {
+    "effect": {
+     "subject": "LPIN2",
+     "sign": "pos",
+     "target": {
+      "amount": "dagER"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "Q92539",
+     "kind": "crossSpecies",
+     "quote": "catalyzes the conversion of phosphatidic acid to diacylglycerol during triglyceride, phosphatidylcholine and phosphatidylethanolamine biosynthesis in the endoplasmic reticulum membrane"
+    }
+   ],
+   "excluded": [
+    {
+     "ref": "HPA:ENSG00000101577",
+     "category": "no_direction",
+     "reason": "expression level (microglia 333.7 nCPM); no effect on DAG"
+    },
+    {
+     "ref": "GWAS:LPIN2:no-association",
+     "category": "other",
+     "reason": "contradicting citation: no curated LPIN2-AD association; bears on no step (none links LPIN2 to AD) and the hypothesis already calls LPIN2 non-genetic"
+    }
+   ]
+  },
+  {
+   "id": "S25",
+   "step": "H5.2",
+   "text": "LPIN2-dependent phospholipid remodeling is required for the sustained TREM2 response",
+   "claim": {
+    "effect": {
+     "subject": "phospholipidMetabolism",
+     "sign": "pos",
+     "target": {
+      "activity": "TREM2"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "Q92539",
+     "category": "not_in_text",
+     "reason": "LPIN2 makes DAG for triglyceride and phospholipid synthesis; nothing about TREM2 or PLCG2 signaling"
+    },
+    {
+     "ref": "AGR:MGI:1891341:MP:0002702",
+     "category": "not_in_text",
+     "reason": "Lpin2 knockout mice have lower circulating free fatty acids; nothing about TREM2 or PLCG2"
+    },
+    {
+     "ref": "AGR:MGI:1891341:MP:0002644",
+     "category": "not_in_text",
+     "reason": "Lpin2 knockout mice have lower circulating triglycerides; nothing about TREM2 or PLCG2"
+    }
+   ]
+  },
+  {
+   "id": "S26",
+   "step": "H5.2",
+   "text": "LPIN2-dependent phospholipid remodeling is required for the sustained PLCG2 response",
+   "claim": {
+    "effect": {
+     "subject": "phospholipidMetabolism",
+     "sign": "pos",
+     "target": {
+      "activity": "PLCG2"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "P16885",
+     "category": "not_in_text",
+     "reason": "PLC enzymes produce DAG and IP3; nothing about lipid remodeling sustaining PLCG2"
+    }
+   ]
+  },
+  {
+   "id": "S27",
+   "step": "H5.3",
+   "text": "sustained microglial lipid remodeling supports Abeta clearance",
+   "sign_note": "inverted: the run's subject is 'failure of sustained microglial lipid remodeling' (-)",
+   "claim": {
+    "effect": {
+     "subject": "phospholipidMetabolism",
+     "sign": "pos",
+     "target": {
+      "process": "abClearance"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "Q9NZC2",
+     "category": "not_in_text",
+     "reason": "TREM2 binds lipids and mediates Abeta42 uptake; nothing about lipid remodeling driving clearance"
+    }
+   ]
+  },
+  {
+   "id": "B1",
+   "step": "bridge",
+   "for": [
+    "H5"
+   ],
+   "text": "LPIN2 drives phospholipid metabolism (the run's 'LPIN2-dependent' qualifier, stated by its cited UniProt text)",
+   "claim": {
+    "effect": {
+     "subject": "LPIN2",
+     "sign": "pos",
+     "target": {
+      "process": "phospholipidMetabolism"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "Q92539",
+     "kind": "crossSpecies",
+     "quote": "catalyzes the conversion of phosphatidic acid to diacylglycerol during triglyceride, phosphatidylcholine and phosphatidylethanolamine biosynthesis"
+    }
+   ],
+   "excluded": []
+  }
+ ],
+ "unexpressed": [],
+ "hypotheses": {
+  "H1": {
+   "claims": [
+    {
+     "subject": "apoe4",
+     "sign": "pos",
+     "target": {
+      "disease": "AD",
+      "aspect": "risk"
+     }
+    },
+    {
+     "subject": "TREM2",
+     "sign": "neg",
+     "target": {
+      "disease": "AD",
+      "aspect": "risk"
+     }
+    }
+   ],
+   "note": "the APOE claim is on the e4 allele, where the causal chain starts (H1.3); H1.1 (APOE binds TREM2) is a rel and isoform-neutral. TREM2's sign is the mechanism's: TREM2 supports productive Abeta clearance, whose loss raises risk."
+  },
+  "H2": {
+   "claims": [
+    {
+     "subject": "TREM2",
+     "sign": "neg",
+     "target": {
+      "disease": "AD",
+      "aspect": "risk"
+     }
+    },
+    {
+     "subject": "PLCG2",
+     "sign": "neg",
+     "target": {
+      "disease": "AD",
+      "aspect": "risk"
+     }
+    },
+    {
+     "subject": "INPP5D",
+     "sign": "pos",
+     "target": {
+      "disease": "AD",
+      "aspect": "risk"
+     }
+    }
+   ],
+   "note": "signs from the title ('protective TREM2–DAP12 signaling') and mechanism ('insufficient PLCG2 output or excessive INPP5D braking reduces ... chemotaxis, endocytosis')."
+  },
+  "H3": {
+   "claims": [
+    {
+     "subject": "MS4A4A",
+     "sign": "neg",
+     "target": {
+      "disease": "AD",
+      "aspect": "severity"
+     }
+    },
+    {
+     "subject": "TREM2",
+     "sign": "neg",
+     "target": {
+      "disease": "AD",
+      "aspect": "severity"
+     }
+    }
+   ],
+   "note": "the chain ends at 'Alzheimer's disease pathology', read as severity; the hypothesis makes no risk claim. TREM2's sign from the title ('protective TREM2 microglial state')."
+  },
+  "H4": {
+   "claims": [
+    {
+     "subject": "ABI3",
+     "sign": "neg",
+     "target": {
+      "disease": "AD",
+      "aspect": "severity"
+     }
+    }
+   ],
+   "note": "the chain starts at TREM2–PLCG2 signaling, so the claim is ABI3's (the hypothesis's own gene). ABI3 appears only as a qualifier ('ABI3-dependent cytoskeletal remodeling'), so no statement starts at ABI3. Ends at 'Alzheimer's disease pathology', read as severity."
+  },
+  "H5": {
+   "claims": [
+    {
+     "subject": "LPIN2",
+     "sign": "pos",
+     "target": {
+      "process": "abClearance"
+     }
+    }
+   ],
+   "note": "no disease claim: the title calls LPIN2 a 'non-genetic modifier of microglial TREM2–PLCG2 responses' and neither title nor mechanism gives a direction on AD. The chain ends at Abeta clearance; the sign is the mechanism's ('reduced LPIN2 ... impairing sustained Abeta phagocytosis')."
+  }
+ },
+ "findings": [
+  {
+   "project": "hypothesis-agent",
+   "category": "chain_not_connected",
+   "steps": [
+    "H1.2",
+    "H1.3"
+   ],
+   "detail": "H1.2 ends at Abeta uptake and degradation; H1.3 starts at APOE4, so the APOE4 arm never passes through TREM2 binding (H1.1), the hypothesis's actual mechanism."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "chain_not_connected",
+   "steps": [
+    "H1.2",
+    "H1.3",
+    "H1.4"
+   ],
+   "detail": "'microglial Abeta42 uptake and degradation', 'productive TREM2-dependent amyloid clearance' and 'reduced productive amyloid clearance' are one node (GO:0150094) under three labels; merged."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_does_not_state_step",
+   "steps": [
+    "H1.3"
+   ],
+   "detail": "Neither H1.3 citation mentions clearance: rs429358 is an age-of-onset row with allele '?', PMID:8346443 is e4 dose versus AD risk; both support APOE4 -> AD, which is no step of the chain."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_at_wrong_step",
+   "steps": [
+    "H1.3",
+    "H1.4"
+   ],
+   "detail": "PMID:27025652 says APOE4 'has been found to impair Abeta clearance from the brain', nearest to H1.3, but the run cited it at H1.4; and it is general clearance, not the TREM2-dependent uptake the run's own H1.3 note calls unproven."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "confidence_unjustified",
+   "hypothesis": "H1",
+   "detail": "Confidence 'high', yet the run's own note says H1.3 is the unproven step, and no cited text states H1.3 or H1.4."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_does_not_test_isoform",
+   "steps": [
+    "H1.1"
+   ],
+   "detail": "The TREM2 UniProt text lists APOE2, APOE3 and APOE4 as ligands alike; the binding step is isoform-neutral and cannot carry the APOE4-specific claim."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "ungrounded_label",
+   "detail": "Almost every node has an empty CURIE, and the disease is written 'EFO:MONDO_0004975', a malformed CURIE for MONDO:0004975."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "kind_mismatch",
+   "steps": [
+    "H2.2",
+    "H5.1",
+    "H1.1"
+   ],
+   "detail": "DAG and IP3 are typed 'process' (they are chemicals), and 'APOE-containing lipoproteins' is typed 'protein' (a particle)."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_does_not_state_step",
+   "steps": [
+    "H2.1"
+   ],
+   "detail": "TREM2 activates PLCG2 rests on a STRING edge with no experimental channel and two Reactome enrichment rows; nothing states activation."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "chain_not_connected",
+   "steps": [
+    "H2.2",
+    "H2.3"
+   ],
+   "detail": "H2.2 ends at DAG and IP3; H2.3 starts at INPP5D."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "chain_not_connected",
+   "steps": [
+    "H2.3",
+    "H2.4"
+   ],
+   "detail": "H2.3 ends at PI3K signaling; H2.4 starts at 'balanced PLCG2 activation and INPP5D inhibition', so PI3K signaling leads nowhere."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "ambiguous_subject",
+   "steps": [
+    "H2.4"
+   ],
+   "detail": "'balanced PLCG2 activation and INPP5D inhibition' can mean inhibition of INPP5D or by INPP5D, and 'balanced' implies a set point; the INPP5D sign was taken from the mechanism and falsification test."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_does_not_state_step",
+   "steps": [
+    "H2.4"
+   ],
+   "detail": "The three MGI annotations are undirected 'abnormal' phenotypes, one in dendritic cells and one for Trem2 rather than PLCG2 or INPP5D."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_does_not_state_step",
+   "steps": [
+    "H2.5",
+    "H3.3",
+    "H4.3"
+   ],
+   "detail": "GWAS rows (rs72824905, rs10933431, rs75932628, rs1582763, rs616338) are cited for process-to-disease steps; they state gene-level variant associations, which support no step of any chain."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "confidence_unjustified",
+   "hypothesis": "H2",
+   "detail": "Confidence 'high', but only the dead-end steps H2.2 and H2.3 have a citation that states them; H2.1, H2.4 and H2.5 have none."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_states_opposite",
+   "steps": [
+    "H3.1"
+   ],
+   "detail": "PMID:41435829 (knockout, overexpression, antibodies, NHP and mouse) finds MS4A4A negatively regulates TREM2; the only support is a title-only conference abstract (PMC12738020). The run did flag it as contradicting."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_does_not_state_step",
+   "steps": [
+    "H3.3"
+   ],
+   "detail": "PMC12738020 is cited at H3.3, but its title states the hypothesis's overall claim (MS4A4A 'reduces amyloid pathology'), not that the microglial response lowers pathology; no step runs from MS4A4A to pathology, so it supports only H3.1."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "ungrounded_label",
+   "steps": [
+    "H3.2",
+    "H3.3"
+   ],
+   "detail": "'protective microglial plaque response' is vague; grounded as microglial cell activation (GO:0001774), with 'protective' being the claim H3.3 makes."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "contradicting_evidence_meets_falsification",
+   "hypothesis": "H3",
+   "detail": "H3 is falsified 'if deletion consistently increases functional surface TREM2 and plaque compaction'; the run's own contradicting citation PMID:41435829 already reports that MS4A4A knockout and degrading antibodies raise TREM2, and that MS4A4A 'limits microglia viability, phagocytosis, and lysosomal function', against the mechanism's 'protective phagocytic state'. The run keeps confidence 'medium' and support 'grounded'."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "malformed_accession",
+   "steps": [
+    "H3.1",
+    "H3.3"
+   ],
+   "detail": "The run cites 'PMID:PMC12738020', a PMC id under a PMID prefix; the record is a conference abstract (pubType 'Abstract', journal supplement) with only a title, which the mechanism calls 'one disease-model report'."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "gene_only_as_qualifier",
+   "hypothesis": "H4",
+   "detail": "ABI3 appears only as a qualifier ('ABI3-dependent cytoskeletal remodeling'), never as a step's subject, so the hypothesis's own gene has no route to the disease."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_does_not_state_step",
+   "steps": [
+    "H4.1"
+   ],
+   "detail": "H4.1 cites only text-mined STRING edges and the ABI3 UniProt entry; the run's own note admits no direct step was shown."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_states_opposite",
+   "hypothesis": "H4",
+   "detail": "The cited ABI3 UniProt text says ABI3 'in vitro, reduces cell motility', against the mechanism's claim that ABI3 organises remodeling needed for microglial migration (no step carries migration)."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_does_not_state_step",
+   "steps": [
+    "H4.2",
+    "H4.3"
+   ],
+   "detail": "PMID:42092345 shows Abi3 S212F reduces dense-core compaction while lowering dense-core burden and leaving total Abeta unchanged; it supports neither remodeling -> compaction nor loss of compaction -> more pathology."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "contradicting_evidence_weak",
+   "hypothesis": "H4",
+   "detail": "The contradicting AGR record (no Abi3 phenotype) is absence of annotation, not a null result, and the run's own chain citation PMID:42092345 reports an Abi3 mouse with phenotypes."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "strongest_evidence_not_a_step",
+   "hypothesis": "H4",
+   "detail": "PMID:42092345, cited at H4.2 and H4.3, states the one link with a direction that involves ABI3 ('Abi3S212F produced a dysfunctional microglial state that reduced dense-core plaque compaction'), the mechanism's 'risk alleles weaken this response, producing less compact plaques'; no step carries ABI3 or its risk allele, so it supports nothing."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "confidence_unjustified",
+   "hypothesis": "H4",
+   "detail": "Confidence 'medium' and support 'grounded', yet no cited text states any of H4.1, H4.2 or H4.3, and the hypothesis's own gene appears only as a qualifier."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "falsification_inconsistent",
+   "hypothesis": "H4",
+   "detail": "The falsification describes introducing the ABI3 risk allele 'despite matched ABI3 expression', but labels the perturbation action 'knockout'."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "chain_not_connected",
+   "steps": [
+    "H5.1",
+    "H5.2"
+   ],
+   "detail": "H5.1 ends at DAG; H5.2 starts at 'LPIN2-dependent phospholipid remodeling', so the run's own steps give LPIN2 no route past DAG (bridge B1 supplies one)."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "chain_not_connected",
+   "steps": [
+    "H5.2",
+    "H5.3"
+   ],
+   "detail": "H5.2 ends at the TREM2–PLCG2 response; H5.3 starts again from lipid remodeling (H5.2's subject), skipping the response."
+  },
+  {
+   "project": "both",
+   "category": "bridge_from_cited_text",
+   "hypothesis": "H5",
+   "detail": "Bridge B1 (LPIN2 -> phospholipid metabolism) comes from the run's own LPIN2 UniProt citation (PC and PE biosynthesis); it makes explicit the 'LPIN2-dependent' qualifier the chain never states as a step, and treats biosynthesis as part of the run's 'remodeling'."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "chain_ends_at_phenotype",
+   "hypothesis": "H5",
+   "detail": "The chain ends at Abeta clearance and never reaches Alzheimer's disease; the hypothesis gives no disease direction."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_does_not_state_step",
+   "steps": [
+    "H5.2",
+    "H5.3"
+   ],
+   "detail": "No citation for H5.2 or H5.3 mentions lipid remodeling acting on TREM2, PLCG2 or clearance; the run's own note calls H5.2 speculative, yet the hypothesis is labelled 'grounded'."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_at_no_step",
+   "hypothesis": "H1",
+   "detail": "Supporting citation R-HSA-9029569 (NR1H3/NR1H2 cholesterol efflux pathway enrichment) is cited at no step and states none."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_at_no_step",
+   "hypothesis": "H3",
+   "detail": "Supporting citation AGR:MGI:3643932:MP:0002451 (Ms4a4a knockout, 'abnormal macrophage physiology') is cited at no step and states none."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "gene_unexplained",
+   "detail": "RNPS1 is listed as unexplained; no hypothesis places it."
+  },
+  {
+   "project": "biolean",
+   "category": "missing_term",
+   "detail": "BLN:APOE-e4: no PR term for the APOE4 isoform and no allele term for APOE e4, which has no single dbSNP id."
+  },
+  {
+   "project": "biolean",
+   "category": "missing_term",
+   "detail": "BLN:MicroglialPlaqueEncasement and BLN:AmyloidPlaqueCompaction: no GO, HP or MP term for microglia wrapping plaques or for plaque compaction."
+  },
+  {
+   "project": "biolean",
+   "category": "no_form_for",
+   "steps": [
+    "H4.1",
+    "H4.2",
+    "H5.2",
+    "H1.3"
+   ],
+   "detail": "A gene-dependent process ('ABI3-dependent cytoskeletal remodeling', 'LPIN2-dependent phospholipid remodeling', 'TREM2-dependent clearance') has no node or ctx form; dropping the gene removes ABI3 from H4 entirely."
+  },
+  {
+   "project": "biolean",
+   "category": "no_form_for",
+   "steps": [
+    "H2.1"
+   ],
+   "detail": "A protein complex ('TREM2–DAP12 receptor complex') has no entity form; grounded as TREM2."
+  },
+  {
+   "project": "biolean",
+   "category": "no_form_for",
+   "steps": [
+    "H2.4"
+   ],
+   "detail": "A set point ('balanced' activation and inhibition, too much or too little both harmful) has no form; split into monotone effects."
+  },
+  {
+   "project": "biolean",
+   "category": "no_form_for",
+   "steps": [
+    "H5.2",
+    "H5.3"
+   ],
+   "detail": "'sustained' (a response that lasts under chronic stimulation) cannot be held; dropped."
+  },
+  {
+   "project": "biolean",
+   "category": "no_form_for",
+   "steps": [
+    "H2.2",
+    "H5.1"
+   ],
+   "detail": "Metabolite pools ('biosynthetic DAG' versus signalling DAG, which the run itself says differ) have no direct form: a pool is defined by its pathway, but ctx has no slot for a chemical's pathway (stage is happens_during, for processes). Biosynthetic DAG is held as DAG refined to the ER membrane, the place the cited LPIN2 text gives, standing in for the pathway."
+  },
+  {
+   "project": "biolean",
+   "category": "rule_missing",
+   "steps": [
+    "H1.3",
+    "H1.4",
+    "H2.4"
+   ],
+   "detail": "No rule for a citation that states the step for a parent process or cell class (Abeta clearance in general versus by uptake and degradation; myeloid versus microglial chemotaxis); parent_disease covers diseases only."
+  },
+  {
+   "project": "biolean",
+   "category": "evidence_kind_missing",
+   "steps": [
+    "H3.1"
+   ],
+   "detail": "PMC12738020 is a conference abstract with only a title; its design is unknown, so 'inVitro' is a placeholder."
+  },
+  {
+   "project": "biolean",
+   "category": "kind_mismatch",
+   "steps": [
+    "H3.1"
+   ],
+   "detail": "Taxon has no non-human primate; PMID:41435829 spans macrophages, microglia, NHPs and a mouse model, recorded as mouse."
+  },
+  {
+   "project": "biolean",
+   "category": "evidence_weighting",
+   "steps": [
+    "H5.1"
+   ],
+   "detail": "The LPIN2 UniProt function text carries no 'By similarity' marker, but its evidence code (ECO:0000250 from Q99PI5) shows it is inferred from another species; recorded as crossSpecies only by reading the metadata."
+  },
+  {
+   "project": "biolean",
+   "category": "evidence_weighting",
+   "steps": [
+    "H2.2"
+   ],
+   "detail": "The PLCG2 UniProt quote names the enzyme class ('phosphatidylinositol-specific phospholipase C enzymes'), not PLCG2 itself; kept as the entry's own function text."
+  }
+ ],
+ "audit": [
+  {
+   "item": "entity dag; S24 (H5.1)",
+   "error": "wrong_merge",
+   "before": "dag (CHEBI:18035) carried both PLCG2's 'DAG and IP3' (H2.2) and LPIN2's 'biosynthetic DAG' (H5.1); S24 target amount dag",
+   "after": "new dagER = dag refined to component erMembrane (GO:0005789) for 'biosynthetic DAG'; S24 target amount dagER, quote extended to the ER-membrane biosynthesis clause",
+   "reason": "The run's H5.2 note and mechanism say LPIN2's biosynthetic DAG differs from PLCG2's signalling DAG, and the falsification makes that difference the point of H5. The guide says not to merge different things and to keep a qualifier the step's note limits the result to. The curator noted the difference yet merged. The cited Q92539 text places the reaction in the ER membrane, so a component refinement can hold the pool. No route runs through DAG, so no belief changes."
+  },
+  {
+   "item": "finding no_form_for metabolite pools (H2.2, H5.1)",
+   "error": "other",
+   "before": "'Metabolite pools ... are one CHEBI node; merged.'",
+   "after": "rewritten: no direct form (ctx has no pathway slot for a chemical); biosynthetic DAG held as DAG refined to the ER membrane, standing in for the pathway",
+   "reason": "follows the split; the old detail was false once a component refinement is used."
+  },
+  {
+   "item": "finding for PMC12738020 at H3",
+   "error": "wrong_evidence_kind",
+   "before": "category citation_at_no_step, hypothesis H3: 'supports only H3.1'",
+   "after": "category citation_does_not_state_step, steps H3.3",
+   "reason": "citation_at_no_step is for supporting citations no step cites; PMC12738020 is a chain citation cited at H3.1 and H3.3. The real problem is that it does not state H3.3."
+  },
+  {
+   "item": "findings H3 (PMID:41435829 vs the H3 falsification)",
+   "error": "missed_finding",
+   "before": "",
+   "after": "finding contradicting_evidence_meets_falsification, H3",
+   "reason": "H3 is falsified if deleting MS4A4A raises functional TREM2 and plaque compaction. The run's own contradicting citation PMID:41435829 already reports the TREM2 half (knockout and degrading antibodies raise TREM2) and says MS4A4A limits microglial phagocytosis and lysosomal function, against the 'protective phagocytic state'. Confidence stays 'medium', support 'grounded'."
+  },
+  {
+   "item": "findings H3.1, H3.3 (the 'PMID:PMC12738020' accession)",
+   "error": "missed_finding",
+   "before": "",
+   "after": "finding malformed_accession",
+   "reason": "The run cites a PMC id under a PMID prefix, and treats a title-only conference abstract (pubType 'Abstract', journal supplement) as 'one disease-model report'. The curator flagged the malformed disease CURIE but not this."
+  },
+  {
+   "item": "findings H4 (PMID:42092345)",
+   "error": "missed_finding",
+   "before": "",
+   "after": "finding strongest_evidence_not_a_step, H4",
+   "reason": "The paper states the ABI3-variant-to-compaction link the mechanism relies on, with a direction ('risk alleles ... producing less compact plaques'). No step carries ABI3 or its allele, so it supports nothing. The curator's findings record only what the paper does not show."
+  },
+  {
+   "item": "findings H4 (confidence)",
+   "error": "missed_finding",
+   "before": "",
+   "after": "finding confidence_unjustified, H4",
+   "reason": "H4 is rated 'medium' and 'grounded', yet no cited text states H4.1, H4.2 or H4.3, and the hypothesis's own gene (ABI3) appears only as a qualifier. H1 and H2 got this finding; H4 is as bad and lacked one."
+  },
+  {
+   "item": "findings H4 (falsification)",
+   "error": "missed_finding",
+   "before": "",
+   "after": "finding falsification_inconsistent, H4",
+   "reason": "The falsification introduces the ABI3 risk allele 'despite matched ABI3 expression' but labels the perturbation action 'knockout'. A sibling AD curation flagged the same kind of action/description mismatch."
+  }
+ ]
+}

@@ -1,0 +1,420 @@
+{
+ "run_id": "study-2026-09-vertex-restless-legs-google-cloud-gemini-3.1-pro-preview-single_agent-r2",
+ "model": "google-cloud:gemini-3.1-pro-preview",
+ "question": {
+  "arm": "single_agent",
+  "budget": {
+   "max_delegations": 22,
+   "max_model_requests": 80,
+   "max_specialist_requests": 8,
+   "min_evidence_per_hypothesis": 2,
+   "min_hypotheses": 3,
+   "min_sources_per_hypothesis": 2,
+   "output_retries": 3
+  },
+  "data_policy": {
+   "max_age_seconds": 1209600.0,
+   "mode": "cache-preferred",
+   "snapshot_run_id": null
+  },
+  "disease": "restless legs syndrome",
+  "formalise": false,
+  "genes": [
+   "ACO1",
+   "MEIS1",
+   "GLIPR1",
+   "PTPRD",
+   "GABARAPL2",
+   "BTBD9"
+  ],
+  "model": "google-cloud:gemini-3.1-pro-preview",
+  "specialist_model": "",
+  "specialists": [
+   "chembl",
+   "expression",
+   "gwas",
+   "interactions",
+   "literature",
+   "model_organism",
+   "open_targets",
+   "pathways",
+   "single_cell",
+   "trials",
+   "uniprot"
+  ],
+  "tissue": {
+   "artifact_id": "sha256:9083451a13b7e45058362501bb03fd93944d7aa79ffc0248bc2cf8b1520b9652",
+   "label": "brain",
+   "uberon": "UBERON:0000955"
+  },
+  "use_network": true
+ },
+ "abstention": {
+  "evidence": [
+   "GWAS:GLIPR1:no-association",
+   "GWAS:GABARAPL2:no-association",
+   "CHEMBL:no-target-GLIPR1",
+   "CHEMBL:no-mechanism-GABARAPL2"
+  ],
+  "genes_covered": [
+   "GLIPR1",
+   "GABARAPL2"
+  ],
+  "reason": "insufficient_evidence",
+  "statement": "There is no documented genetic, functional, or clinical evidence linking GLIPR1 or GABARAPL2 to restless legs syndrome. They lack GWAS associations, ChEMBL compound links for the disease, and their molecular functions do not intersect with established RLS pathways like iron homeostasis or synaptic excitability.",
+  "support": "grounded",
+  "what_would_change_this": "Identification of genome-wide significant variants in either gene associating with RLS, or experimental evidence linking their known roles (e.g., GABARAPL2 in autophagy) to RLS pathology."
+ },
+ "disease": "restless legs syndrome",
+ "genes_considered": [
+  "ACO1",
+  "MEIS1",
+  "GLIPR1",
+  "PTPRD",
+  "GABARAPL2",
+  "BTBD9"
+ ],
+ "hypotheses": [
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "STRING:ACO1-BTBD9"
+     ],
+     "note": "",
+     "object": {
+      "curie": "UniProtKB:P21399",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "ACO1"
+     },
+     "polarity": "unknown",
+     "relation": "binds",
+     "subject": {
+      "curie": "UniProtKB:Q96Q07",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "BTBD9"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "Q96Q07"
+     ],
+     "note": "",
+     "object": {
+      "curie": "UniProtKB:P21399",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "ACO1"
+     },
+     "polarity": "negative",
+     "relation": "decreases_amount",
+     "subject": {
+      "curie": "UniProtKB:Q96Q07",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "BTBD9"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "P21399",
+      "AGR:MGI:87879:MP:0005637"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "iron homeostasis"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "UniProtKB:P21399",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "ACO1"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:30363981"
+     ],
+     "note": "",
+     "object": {
+      "curie": "MONDO:0005391",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "restless legs syndrome"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "iron homeostasis"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Knockdown BTBD9 in neural progenitor cells and measure ACO1 protein levels by Western blot.",
+    "expected": "unknown",
+    "perturbation": {
+     "action": "knockdown",
+     "target": {
+      "curie": "UniProtKB:Q96Q07",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "BTBD9"
+     }
+    },
+    "readout": {
+     "curie": "UniProtKB:P21399",
+     "grounding_evidence": "",
+     "kind": "protein",
+     "label": "ACO1"
+    },
+    "system": ""
+   },
+   "genes": [
+    "BTBD9",
+    "ACO1"
+   ],
+   "hypothesis_id": "hyp1-btbd9-aco1",
+   "mechanism": "BTBD9 is a BTB domain-containing protein that likely functions as an E3 ubiquitin ligase adaptor. Experimental evidence links it to the iron sensor ACO1. By binding and promoting the degradation of ACO1, BTBD9 regulates cellular iron homeostasis. Variants in BTBD9 may alter this interaction or degradation rate, leading to the brain iron deficiency characteristic of Restless Legs Syndrome.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "STRING:ACO1-BTBD9",
+    "Q96Q07",
+    "P21399",
+    "AGR:MGI:87879:MP:0005637",
+    "PMID:30363981",
+    "rs10947738",
+    "rs4714163"
+   ],
+   "title": "BTBD9 regulates ACO1 to modulate brain iron homeostasis in Restless Legs Syndrome"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "P23468",
+      "PMID:22286174"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "inhibitory synapse development"
+     },
+     "polarity": "positive",
+     "relation": "required_for",
+     "subject": {
+      "curie": "UniProtKB:P23468",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "PTPRD"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "rs34602324",
+      "rs6477358"
+     ],
+     "note": "",
+     "object": {
+      "curie": "MONDO:0005391",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "restless legs syndrome"
+     },
+     "polarity": "negative",
+     "relation": "inhibits",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "inhibitory synapse development"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "rs34602324",
+      "rs6477358",
+      "OT:PTPRD-MONDO_0005391"
+     ],
+     "note": "",
+     "object": {
+      "curie": "MONDO:0005391",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "restless legs syndrome"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "UniProtKB:P23468",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "PTPRD"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Overexpress PTPRD in cultured cortical neurons and measure the density of inhibitory synapses.",
+    "expected": "unknown",
+    "perturbation": {
+     "action": "overexpress",
+     "target": {
+      "curie": "UniProtKB:P23468",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "PTPRD"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "process",
+     "label": "inhibitory synapse development"
+    },
+    "system": ""
+   },
+   "genes": [
+    "PTPRD"
+   ],
+   "hypothesis_id": "hyp2-ptprd-synapse",
+   "mechanism": "PTPRD is a receptor-type tyrosine-protein phosphatase that functions bidirectionally at the synapse. It selectively controls the development of inhibitory synapses through trans-synaptic interactions. Deficits in PTPRD function lead to a reduction in inhibitory tone, increasing network excitability, which predisposes individuals to Restless Legs Syndrome.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "P23468",
+    "PMID:22286174",
+    "rs34602324",
+    "rs6477358",
+    "OT:PTPRD-MONDO_0005391",
+    "AGR:MGI:97812:MP:0003008"
+   ],
+   "title": "PTPRD limits Restless Legs Syndrome risk by promoting inhibitory synapse development"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "PMID:42309051"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "cerebellar output"
+     },
+     "polarity": "negative",
+     "relation": "inhibits",
+     "subject": {
+      "curie": "UniProtKB:O00470",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "MEIS1"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:42309051"
+     ],
+     "note": "",
+     "object": {
+      "curie": "MONDO:0005391",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "restless legs syndrome"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "cerebellar output"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "rs113851554",
+      "OT:MEIS1-MONDO_0005391"
+     ],
+     "note": "",
+     "object": {
+      "curie": "MONDO:0005391",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "restless legs syndrome"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "UniProtKB:O00470",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "MEIS1"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Knockout MEIS1 in a mouse model and record cerebellar output firing rates using in vivo electrophysiology.",
+    "expected": "unknown",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "UniProtKB:O00470",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "MEIS1"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "process",
+     "label": "cerebellar output"
+    },
+    "system": ""
+   },
+   "genes": [
+    "MEIS1"
+   ],
+   "hypothesis_id": "hyp3-meis1-cerebellum",
+   "mechanism": "MEIS1 is a transcription factor that plays a crucial role in central nervous system function. Loss of MEIS1 disinhibits cerebellar output, leading to abnormal motor phenotypes and altered sleep cycles. This excess cerebellar output directly contributes to the pathophysiology of Restless Legs Syndrome.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "PMID:42309051",
+    "rs113851554",
+    "rs1820989",
+    "AGR:MGI:104717:MP:0020478",
+    "OT:MEIS1-MONDO_0005391"
+   ],
+   "title": "MEIS1 restricts cerebellar output to prevent Restless Legs Syndrome"
+  }
+ ],
+ "unexplained_genes": []
+}

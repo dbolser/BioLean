@@ -1,0 +1,391 @@
+{
+ "run_id": "psoriasis-ukbt-n3-ukbt15-google-cloud-gemini-3.1-pro-preview-multi_agent-r1",
+ "model": "google-cloud:gemini-3.1-pro-preview",
+ "question": {
+  "arm": "multi_agent",
+  "budget": {
+   "max_delegations": 22,
+   "max_model_requests": 80,
+   "max_specialist_requests": 8,
+   "min_evidence_per_hypothesis": 2,
+   "min_hypotheses": 3,
+   "min_sources_per_hypothesis": 2,
+   "output_retries": 3
+  },
+  "data_policy": {
+   "max_age_seconds": 1209600.0,
+   "mode": "cache-preferred",
+   "snapshot_run_id": null
+  },
+  "disease": "psoriasis",
+  "formalise": false,
+  "genes": [
+   "ADAR",
+   "DVL2",
+   "ZBP1",
+   "CARS2",
+   "KHK",
+   "AP1G2",
+   "USP6",
+   "EIF2AK4",
+   "HELZ2",
+   "GUCA1C",
+   "IL11",
+   "UTP20",
+   "IFNW1",
+   "MAN2A2",
+   "SP100"
+  ],
+  "model": "google-cloud:gemini-3.1-pro-preview",
+  "specialist_model": "google-cloud:gemini-3.1-pro-preview",
+  "specialists": [
+   "chembl",
+   "expression",
+   "gwas",
+   "interactions",
+   "literature",
+   "model_organism",
+   "open_targets",
+   "pathways",
+   "single_cell",
+   "trials",
+   "uniprot"
+  ],
+  "tissue": {
+   "artifact_id": "sha256:f385590ff844b25a944f5da376243ab0b087745c3c64fa7c5e465db4f49ffa43",
+   "label": "skin of body",
+   "uberon": "UBERON:0002097"
+  },
+  "use_network": true
+ },
+ "abstention": {
+  "evidence": [
+   "PMID:PPR1233591",
+   "OT:SP100-MONDO_0005083",
+   "PMID:29871627",
+   "reactome:coverage"
+  ],
+  "genes_covered": [
+   "ZBP1",
+   "CARS2",
+   "KHK",
+   "AP1G2",
+   "USP6",
+   "HELZ2",
+   "GUCA1C",
+   "IL11",
+   "UTP20",
+   "IFNW1",
+   "MAN2A2",
+   "SP100"
+  ],
+  "reason": "insufficient_evidence",
+  "statement": "ZBP1 was explicitly investigated in the context of PANoptosis in psoriasis but was found to act independently of this keratinocyte death process. SP100 has a very weak genetic association score (0.04) with no mechanistic backing, and AP1G2 only appears as differentially expressed in RNA-seq studies without a demonstrated causal role. The remaining genes (CARS2, KHK, USP6, HELZ2, GUCA1C, IL11, UTP20, IFNW1, MAN2A2) lack functional connectivity to Wnt or interferon signaling networks in this context and have no robust primary literature connecting them to the pathogenesis of psoriasis.",
+  "support": "grounded",
+  "what_would_change_this": "Functional evidence demonstrating a direct pathogenic mechanism in keratinocytes or immune cells linking these specific genes to epidermal hyperplasia, dysregulated inflammation, or relevant Wnt/interferon signaling pathways."
+ },
+ "disease": "psoriasis",
+ "genes_considered": [
+  "ADAR",
+  "DVL2",
+  "ZBP1",
+  "CARS2",
+  "KHK",
+  "AP1G2",
+  "USP6",
+  "EIF2AK4",
+  "HELZ2",
+  "GUCA1C",
+  "IL11",
+  "UTP20",
+  "IFNW1",
+  "MAN2A2",
+  "SP100"
+ ],
+ "hypotheses": [
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "PMID:42424135",
+      "R-HSA-75064"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "mRNA Editing: A to I Conversion"
+     },
+     "polarity": "positive",
+     "relation": "activates",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "ADAR"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "R-HSA-913531"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "Interferon Signaling"
+     },
+     "polarity": "negative",
+     "relation": "inhibits",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "mRNA Editing: A to I Conversion"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:42424135",
+      "R-HSA-913531"
+     ],
+     "note": "",
+     "object": {
+      "curie": "MONDO:0005083",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "psoriasis"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "Interferon Signaling"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Restore functional ADAR expression in ADAR-deficient patient-derived keratinocytes and measure interferon pathway hyperactivation.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "restore",
+     "target": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "ADAR"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "other",
+     "label": "Interferon Signaling"
+    },
+    "system": ""
+   },
+   "genes": [
+    "ADAR"
+   ],
+   "hypothesis_id": "hyp1_ADAR",
+   "mechanism": "ADAR performs critical A-to-I RNA editing, which normally prevents endogenous double-stranded RNAs from activating innate immune sensors. Loss-of-function variants in ADAR impair this editing process, leading to the accumulation of immunogenic RNAs. This triggers an aberrant, interferon-dependent signaling cascade that drives epidermal inflammation and defines a distinct genetic subtype of psoriasis.",
+   "support": "speculative",
+   "supporting_evidence": [],
+   "title": "ADAR deficiency promotes an interferon-dependent psoriasis subtype"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "R-HSA-201688",
+      "O14641"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "WNT mediated activation of DVL"
+     },
+     "polarity": "positive",
+     "relation": "activates",
+     "subject": {
+      "curie": "UniProtKB:O14641",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "DVL2"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:34980884"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "Wnt/β-catenin signalling"
+     },
+     "polarity": "positive",
+     "relation": "activates",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "WNT mediated activation of DVL"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:34980884"
+     ],
+     "note": "",
+     "object": {
+      "curie": "MONDO:0005083",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "psoriasis"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "Wnt/β-catenin signalling"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Knockdown DVL2 in psoriatic keratinocytes to assess the reduction of canonical Wnt target gene expression and cellular hyperproliferation.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "knockdown",
+     "target": {
+      "curie": "UniProtKB:O14641",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "DVL2"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "other",
+     "label": "Wnt/β-catenin signalling"
+    },
+    "system": ""
+   },
+   "genes": [
+    "DVL2"
+   ],
+   "hypothesis_id": "hyp2_DVL2",
+   "mechanism": "DVL2 is a critical cytoplasmic transducer of canonical Wnt signals that leads to the stabilization of β-catenin. Aberrant Wnt/β-catenin signaling is known to disrupt keratinocyte proliferation and differentiation. Excessive signaling transduced via DVL2 therefore contributes directly to the epidermal hyperplasia characteristic of psoriasis pathogenesis.",
+   "support": "speculative",
+   "supporting_evidence": [],
+   "title": "DVL2 mediates pathogenic Wnt/β-catenin signaling in psoriasis"
+  },
+  {
+   "chain": [
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "other",
+       "label": "gamma-delta T cells"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [
+      "PMID:40073267",
+      "Q9P2K8"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "IL-17A"
+     },
+     "polarity": "negative",
+     "relation": "decreases_amount",
+     "subject": {
+      "curie": "UniProtKB:Q9P2K8",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "EIF2AK4"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:40073267"
+     ],
+     "note": "",
+     "object": {
+      "curie": "MONDO:0005083",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "psoriasis"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "IL-17A"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Knockout EIF2AK4 in a murine model of psoriasis and measure the secretion levels of IL-17A from epidermal gamma-delta T cells.",
+    "expected": "positive",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "UniProtKB:Q9P2K8",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "EIF2AK4"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "other",
+     "label": "IL-17A"
+    },
+    "system": ""
+   },
+   "genes": [
+    "EIF2AK4"
+   ],
+   "hypothesis_id": "hyp3_EIF2AK4",
+   "mechanism": "EIF2AK4 (GCN2) operates as a metabolic stress sensor that phosphorylates eIF2-alpha to attenuate global translation during nutrient deprivation. In epidermal gamma-delta T cells, this kinase restrains the excessive production of the pathogenic cytokine IL-17A. When metabolic stress signals are disrupted (such as during obesity), impaired EIF2AK4 function unleashes IL-17A secretion, severely exacerbating inflammatory psoriasis.",
+   "support": "speculative",
+   "supporting_evidence": [],
+   "title": "EIF2AK4 restrains IL-17A-driven inflammation in psoriasis"
+  }
+ ],
+ "unexplained_genes": []
+}

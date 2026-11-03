@@ -1,0 +1,196 @@
+{
+ "run_id": "study-2026-09-vertex-crohn-vertex-openai-deepseek-aideepseek-v3.2-maas-single_agent-r2",
+ "curated_by": "Claude Opus 5.5, 2026-10-30",
+ "entities": {
+  "IL12B": {"kind": "protein", "curie": "UniProt:P29460", "run_labels": ["IL12B"]},
+  "IL23R": {"kind": "protein", "curie": "UniProt:Q5VWK5"},
+  "il23Complex": {"kind": "component", "curie": "GO:0070743", "run_labels": ["IL-23 cytokine complex"]},
+  "il23Signaling": {"kind": "process", "curie": "GO:0038155", "run_labels": ["IL-23 signaling"]},
+  "th17Response": {"kind": "process", "curie": "GO:0072538", "run_labels": ["Th17-mediated inflammation"]},
+  "crohn": {"kind": "disease", "curie": "MONDO:0005011", "run_labels": ["Crohn disease"]},
+  "NOD2": {"kind": "protein", "curie": "UniProt:Q9HC29", "run_labels": ["NOD2"]},
+  "pgnDetection": {"kind": "process", "curie": "GO:0032499", "run_labels": ["Bacterial peptidoglycan detection"]},
+  "innateImmuneResponse": {"kind": "process", "curie": "GO:0045087", "run_labels": ["Innate immune response"]},
+  "LACC1": {"kind": "protein", "curie": "UniProt:Q8IV20", "run_labels": ["LACC1"]},
+  "cytokineProduction": {"kind": "process", "curie": "GO:0001816", "run_labels": ["Enhanced cytokine secretion"]},
+  "macrophageDysfunction": {"kind": "phenotype", "curie": "UPHENO:0085601",
+                            "run_labels": ["Dysregulated bacterial sensing and macrophage function"]},
+  "GPR35": {"kind": "protein", "curie": "UniProt:Q9HC97"},
+  "gpr35RiskVariants": {"kind": "variant", "curie": "BLN:GPR35-CrohnRiskVariants",
+                        "label": "GPR35 Crohn disease risk variants (a class, no single ID; the run cites rs34236350 and rs3749171 with no allele named)",
+                        "run_labels": ["GPR35 risk variants"]}
+ },
+ "statements": [
+  {"id": "S1", "step": "hyp1.2", "text": "the IL-23 complex activates IL-23-mediated signalling",
+   "claim": {"effect": {"subject": "il23Complex", "sign": "pos", "target": {"process": "il23Signaling"}}},
+   "evidence": [
+    {"ref": "P29460", "kind": "curatedDb", "moved_from": "hyp1.1",
+     "quote": "IL-23 binds to a heterodimeric receptor complex composed of IL12RB1 and IL23R, activates the Jak-Stat signaling cascade"},
+    {"ref": "Q5VWK5", "kind": "curatedDb",
+     "quote": "Binds IL23 and mediates T-cells, NK cells and possibly certain macrophage/myeloid cells stimulation probably through activation of the Jak-Stat signaling cascade"}
+   ],
+   "excluded": [
+    {"ref": "STRING:GOCC:0072536", "category": "enrichment", "reason": "COMPARTMENTS over-representation of 'interleukin-23 receptor complex' in a 2-gene set; states no activation"}
+   ]},
+  {"id": "S2", "step": "hyp1.4", "text": "the Th17 immune response raises the risk of Crohn disease",
+   "claim": {"effect": {"subject": "th17Response", "sign": "pos", "target": {"disease": "crohn", "aspect": "risk"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "PMID:17068223", "category": "not_in_text", "reason": "GWAS abstract: IL23R gene associates with Crohn disease; Th17 cells and Th17 inflammation are never mentioned"},
+    {"ref": "rs7517847", "category": "not_in_text", "reason": "GWAS row: rs7517847-A associates with Crohn disease (OR 1.40); a variant-disease association, nothing on Th17 inflammation"},
+    {"ref": "rs11209026", "category": "not_in_text", "reason": "GWAS row: rs11209026-G associates with Crohn disease (OR 2.66); a variant-disease association, nothing on Th17 inflammation"}
+   ]},
+  {"id": "S3", "step": "hyp2.1", "text": "NOD2 is required for detection of bacterial peptidoglycan",
+   "claim": {"effect": {"subject": "NOD2", "sign": "pos", "target": {"process": "pgnDetection"}}},
+   "evidence": [
+    {"ref": "Q9HC29", "kind": "curatedDb", "quote": "Pattern recognition receptor (PRR) that detects bacterial peptidoglycan fragments"}
+   ],
+   "excluded": [
+    {"ref": "PMID:11385576", "category": "not_in_text", "reason": "says the NOD2 leucine-rich repeat acts as a receptor for 'components of microbial pathogens'; peptidoglycan and MDP are not named (the paper predates them)"}
+   ]},
+  {"id": "S4", "step": "hyp2.2", "text": "detection of bacterial peptidoglycan activates the innate immune response",
+   "claim": {"effect": {"subject": "pgnDetection", "sign": "pos", "target": {"process": "innateImmuneResponse"}}},
+   "evidence": [
+    {"ref": "Q9HC29", "kind": "curatedDb",
+     "quote": "6-O-phospho-MDP-binding triggers oligomerization that facilitates the binding and subsequent activation of the proximal adapter receptor-interacting RIPK2 (PubMed:11087742, PubMed:17355968, PubMed:21887730, PubMed:23806334, PubMed:28436939). Following recruitment, RIPK2 undergoes 'Met-1'- (linear) and 'Lys-63'-linked polyubiquitination by E3 ubiquitin-protein ligases XIAP, BIRC2, BIRC3 and the LUBAC complex, becoming a scaffolding protein for downstream effectors, triggering activation of the NF-kappa-B and MAP kinases signaling (PubMed:11087742, PubMed:12514169, PubMed:12626759, PubMed:15198989, PubMed:21887730, PubMed:23322906, PubMed:23806334, PubMed:28436939). This in turn leads to the transcriptional activation of hundreds of genes involved in immune response"}
+   ],
+   "excluded": [
+    {"ref": "STRING:GO:0045087", "category": "enrichment", "reason": "over-representation of 'innate immune response': 5 of the run's own 7 input genes carry the term (754 genome-wide); states no activation"}
+   ]},
+  {"id": "S5", "step": "hyp2.3", "text": "LACC1 increases cytokine secretion (the run's increases_amount on a process, so a process target)",
+   "claim": {"effect": {"subject": "LACC1", "sign": "pos", "target": {"process": "cytokineProduction"}}},
+   "evidence": [
+    {"ref": "Q8IV20", "kind": "curatedDb",
+     "quote": "associates with the NOD2-signaling complex and promotes optimal NOD2-induced signaling, cytokine secretion and bacterial clearance"},
+    {"ref": "Q8IV20", "kind": "curatedDb", "polarity": "refutes",
+     "quote": "Through L-ornithine controls cellular polyamine pools likely triggering polyamine-mediated proinflammatory cytokine suppression"}
+   ],
+   "excluded": [
+    {"ref": "STRING:NOD2-LACC1", "category": "no_direction", "reason": "STRING edge, text-mining only (0.69; experimental and database 0); an edge carries no direction and no cytokine end"},
+    {"ref": "PMID:40089498", "category": "not_in_text", "reason": "LACC1 risk variants lower LACC1 in CD4+ T cells; knockdown alters T-cell metabolism and Treg differentiation; cytokine secretion is not mentioned"}
+   ]},
+  {"id": "S6", "step": "hyp2.4", "text": "abnormal macrophage function raises the risk of Crohn disease (macrophage part of a compound subject)",
+   "sign_note": "the run's subject is 'dysregulated', which has no direction; grounded as the abnormal-macrophage-function phenotype (the guide's 'abnormal X' rule, applied to a subject), effect pos as the run states",
+   "claim": {"effect": {"subject": "macrophageDysfunction", "sign": "pos", "target": {"disease": "crohn", "aspect": "risk"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "rs2066847", "category": "not_in_text", "reason": "GWAS row: NOD2 frameshift rs2066847-T associates with Crohn disease (OR 3.103, CI given as 1.497-1.618); nothing on macrophage function or bacterial sensing"},
+    {"ref": "rs5743293", "category": "not_in_text", "reason": "GWAS row from a five-disease pleiotropy analysis, allele '?', no effect size; nothing on macrophage function or bacterial sensing"},
+    {"ref": "rs1373904", "category": "not_in_text", "reason": "GWAS row near LACC1, allele '?', beta 'increase'; a variant-disease association, nothing on macrophage function"},
+    {"ref": "PMID:40089498", "category": "not_this_entity", "reason": "links LACC1 risk variants to colitis through T-cell metabolism and Treg differentiation, not macrophages or bacterial sensing"}
+   ]}
+ ],
+ "unexpressed": [
+  {"step": "hyp1.1", "category": "other_construct",
+   "reason": "IL12B increases the amount of the IL-23 complex: the IL-23 heterodimer has only a GO component term (GO:0070743), and render.py takes amount targets only for protein, chemical or gene (Lean's Target.amount takes any kind). The step is really subunit membership (the run's note: 'IL12B is a subunit of IL-23 cytokine')",
+   "evidence": [
+    {"ref": "P29460", "kind": "curatedDb", "quote": "Associates with IL23A to form the IL-23 interleukin, a heterodimeric cytokine"}
+   ],
+   "excluded": [
+    {"ref": "Q5VWK5", "category": "not_in_text", "reason": "IL23R entry: IL23R binds IL23; nothing on IL12B forming IL-23"},
+    {"ref": "STRING:IL12B-IL23R", "category": "no_direction", "reason": "STRING edge IL12B-IL23R (experimental 0.93); an undirected edge to the receptor, not IL12B raising IL-23"}
+   ]},
+  {"step": "hyp1.3", "category": "no_sign",
+   "reason": "leads_to with polarity 'unknown'; no cited text gives a direction from IL-23 signalling to a Th17 response (the run's own note says 'promotes', but its polarity field does not)",
+   "evidence": [],
+   "excluded": [
+    {"ref": "STRING:GO:0032740", "category": "enrichment", "reason": "'positive regulation of interleukin-17 production' over-represented in IL12B, NOD2, IL23R (3 of the run's own 7 genes); not a statement of the step"},
+    {"ref": "STRING:GO:2000330", "category": "enrichment", "reason": "'positive regulation of T-helper 17 cell lineage commitment' over-represented in IL12B, IL23R; not a statement of the step"},
+    {"ref": "PMID:17068223", "category": "not_in_text", "reason": "calls IL-23 'proinflammatory' but never mentions Th17 cells or a Th17 response"}
+   ]},
+  {"step": "hyp2.4", "category": "no_sign",
+   "reason": "bacterial-sensing part of the compound subject 'Dysregulated bacterial sensing and macrophage function': 'dysregulated' gives no direction and no 'abnormal bacterial sensing' phenotype exists (searched HP, MP, UPHENO: only response-to-bacterium and defense-response phenotypes). Citations judged under S6",
+   "evidence": [], "excluded": []},
+  {"step": "hyp3.1", "category": "no_sign",
+   "reason": "GPR35 risk variants lead to 'GPR35 signaling dysregulation': undirected; no abnormal-GPR35-signalling phenotype (UPHENO:0083098 'G protein-coupled receptor signaling pathway phenotype' is every GPCR, too broad)",
+   "evidence": [],
+   "excluded": [
+    {"ref": "Q9HC97", "category": "not_in_text", "reason": "GPR35 function text; no variants mentioned"},
+    {"ref": "rs34236350", "category": "not_in_text", "reason": "GWAS row, allele '?', beta 'increase' for Crohn disease; a variant-disease association, nothing on GPR35 signalling"},
+    {"ref": "rs3749171", "category": "not_in_text", "reason": "GWAS row from a five-disease pleiotropy analysis, allele '?', no effect size; nothing on GPR35 signalling"}
+   ]},
+  {"step": "hyp3.2", "category": "ungroundable",
+   "reason": "'Metabolic-immune crosstalk' is vague, not a missing term (searched crosstalk, immunometabolic, metabolic immune, adipose tissue homeostasis); the subject 'GPR35 signaling dysregulation' is also undirected",
+   "evidence": [],
+   "excluded": [
+    {"ref": "Q9HC97", "category": "not_in_text", "reason": "says KYNA-activated GPR35 stimulates lipid metabolism, thermogenic and anti-inflammatory gene expression in adipose tissue (By similarity); no dysregulation, no crosstalk node"},
+    {"ref": "PMID:40623474", "category": "not_in_text", "reason": "says KYNA induces mesenteric adipose browning via GPR35-ERK1/2-PGC-1a; no 'metabolic-immune crosstalk' node"}
+   ]},
+  {"step": "hyp3.3", "category": "ungroundable",
+   "reason": "subject 'Disrupted metabolic-immune crosstalk' is vague (would be inverted as loss-of-function wording if it were groundable)",
+   "evidence": [],
+   "excluded": [
+    {"ref": "PMID:40623474", "category": "not_in_text", "reason": "adding KYNA browned mesenteric fat and alleviated colitis in IL-10-/- and TNBS mice; a gain experiment on concrete nodes, never disrupted crosstalk or Crohn disease itself"}
+   ]}
+ ],
+ "hypotheses": {
+  "hyp1": {"claims": [
+    {"subject": "IL12B", "sign": "pos", "target": {"disease": "crohn", "aspect": "risk"}},
+    {"subject": "IL23R", "sign": "pos", "target": {"disease": "crohn", "aspect": "risk"}}],
+   "note": "the IL-23/IL23R axis drives Crohn disease (mechanism: variants 'increase IL-23/Th17 pathway activity'); the chain starts at IL12B; IL23R appears only in step notes, never as a node"},
+  "hyp2": {"claims": [
+    {"subject": "NOD2", "sign": "neg", "target": {"disease": "crohn", "aspect": "risk"}},
+    {"subject": "LACC1", "sign": "neg", "target": {"disease": "crohn", "aspect": "risk"}}],
+   "note": "sign from the mechanism: 'loss-of-function variants in NOD2 and LACC1 ... promote chronic intestinal inflammation'; the chain starts at the proteins, the mechanism names loss-of-function variants"},
+  "hyp3": {"claims": [
+    {"subject": "gpr35RiskVariants", "sign": "pos", "target": {"disease": "crohn", "aspect": "risk"}}],
+   "note": "the chain starts at 'GPR35 risk variants'; the mechanism makes KYNA-GPR35 signalling protective, so the variants act by loss of signalling"}
+ },
+ "findings": [
+  {"project": "hypothesis-agent", "category": "no_sign", "steps": ["hyp1.3"],
+   "detail": "The one link from IL-23 signalling to Th17 has polarity 'unknown' though its own note says 'promotes'; its citations are two STRING enrichments and a GWAS abstract that never names Th17, so hyp1 has no signed route."},
+  {"project": "hypothesis-agent", "category": "chain_not_connected", "hypothesis": "hyp1",
+   "detail": "IL23R, one of hyp1's two genes, is never a node of the chain (it appears only in the notes of hyp1.2 and hyp1.4), so the IL23R claim has no route."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["hyp1.4"],
+   "detail": "All three citations for 'Th17-mediated inflammation leads to Crohn disease' (PMID:17068223, rs7517847, rs11209026) are IL23R variant-disease associations: they back the step's note, not the step."},
+  {"project": "hypothesis-agent", "category": "citation_misread", "steps": ["hyp1.4"],
+   "detail": "The note says 'IL23R variants confer risk', but the cited PMID:17068223 says the coding variant rs11209026 (Arg381Gln) 'confers strong protection', and its GWAS row gives the common G allele (frequency 0.93) as the risk allele; the run never registers a protective IL23R allele."},
+  {"project": "hypothesis-agent", "category": "relation_mismatch", "steps": ["hyp1.1"],
+   "detail": "Subunit membership ('IL12B is a subunit of IL-23') is written as increases_amount; of its citations only IL12B's UniProt entry says so, while the IL23R entry and the IL12B-IL23R STRING edge are about the receptor."},
+  {"project": "hypothesis-agent", "category": "chain_not_connected", "steps": ["hyp2.2", "hyp2.3"],
+   "detail": "hyp2.2 ends at 'Innate immune response'; hyp2.3 starts at LACC1."},
+  {"project": "hypothesis-agent", "category": "chain_not_connected", "steps": ["hyp2.3", "hyp2.4"],
+   "detail": "hyp2.3 ends at 'Enhanced cytokine secretion'; hyp2.4 starts at 'Dysregulated bacterial sensing and macrophage function'."},
+  {"project": "hypothesis-agent", "category": "sign_undetermined", "hypothesis": "hyp2",
+   "detail": "The chain says NOD2 and LACC1 promote detection, innate immunity and cytokine secretion, then jumps to 'dysregulated' function causing Crohn disease, so it never says whether loss or gain causes disease; the mechanism asserts loss of function, while the cited PMID:11385576 proposes 'altering the recognition ... and/or over-activating NF-kB', which includes gain."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["hyp2.1"],
+   "detail": "PMID:11385576 is the NOD2-Crohn association paper; it says the leucine-rich repeat is a receptor for 'components of microbial pathogens', not peptidoglycan, and the run cites it for detection rather than for the disease association it reports."},
+  {"project": "hypothesis-agent", "category": "citation_states_opposite", "steps": ["hyp2.3"],
+   "detail": "The LACC1 UniProt entry the run cites says LACC1 promotes NOD2-induced cytokine secretion but also 'likely' triggers 'polyamine-mediated proinflammatory cytokine suppression'; the run uses only the first."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["hyp2.4"],
+   "detail": "The disease step cites three GWAS rows (variant-disease associations, two with no allele) and PMID:40089498, which is about T cells, not macrophages or bacterial sensing; nothing cited states dysregulated sensing or macrophage function causing Crohn disease."},
+  {"project": "hypothesis-agent", "category": "ungrounded_label", "steps": ["hyp3.2", "hyp3.3"],
+   "detail": "'Metabolic-immune crosstalk' is a vague node standing in for concrete ones the cited texts name (KYNA, mesenteric white-to-beige adipose browning, M2 macrophage polarisation, adipose thermogenic and anti-inflammatory gene expression), so expressible claims became inexpressible."},
+  {"project": "hypothesis-agent", "category": "sign_incoherent", "hypothesis": "hyp3",
+   "detail": "Read literally, 'GPR35 signaling dysregulation' is required_for (+) crosstalk and 'disrupted' crosstalk leads to (+) Crohn disease, so dysregulation would lower disease and the risk variants would be protective; the chain contradicts its own mechanism."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["hyp3.1"],
+   "detail": "The variant-to-signalling step cites GWAS rows that state only association with Crohn disease (no allele named; rs3749171 from a five-disease pleiotropy analysis) and a UniProt entry that never mentions variants; no text says the variants change GPR35 signalling."},
+  {"project": "hypothesis-agent", "category": "falsification_already_reported", "hypothesis": "hyp3",
+   "detail": "The proposed falsification (a GPR35 agonist should reduce colitis in mice) is what the cited PMID:40623474 already reports: KYNA browned mesenteric fat via GPR35-ERK1/2-PGC-1a and alleviated colitis in IL-10-/- and TNBS mice."},
+  {"project": "hypothesis-agent", "category": "enrichment_as_evidence", "steps": ["hyp1.2", "hyp1.3", "hyp2.2"],
+   "detail": "Four chain citations are STRING over-representation results computed on the run's own 7 input genes (GOCC:0072536, GO:0032740, GO:2000330, GO:0045087); they restate the genes' annotations and cannot support a causal step."},
+  {"project": "hypothesis-agent", "category": "source_record_inconsistent", "steps": ["hyp2.4"],
+   "detail": "The rs2066847 GWAS row gives odds ratio 3.103 with a confidence interval of 1.497-1.618, which does not contain it; the run passes the row on unchecked."},
+  {"project": "hypothesis-agent", "category": "gwas_allele_unknown", "steps": ["hyp2.4", "hyp3.1"],
+   "detail": "rs1373904 and rs34236350 have risk allele '?' with beta 'increase', and rs5743293 and rs3749171 have no allele and no effect size, so none gives a direction for any allele, yet they are cited as Crohn risk evidence."},
+  {"project": "hypothesis-agent", "category": "contradicting_evidence_ignored",
+   "detail": "contradicting_evidence is empty for all three hypotheses, though the run's own sources include a protective IL23R allele (PMID:17068223) and a cytokine-suppressing LACC1 role (Q8IV20)."},
+  {"project": "hypothesis-agent", "category": "confidence_unjustified", "hypothesis": "hyp1",
+   "detail": "Confidence 'high' and support 'grounded', yet no claim composes and the disease step is supported only by variant associations that do not state it."},
+  {"project": "hypothesis-agent", "category": "confidence_unjustified", "hypothesis": "hyp2",
+   "detail": "Confidence 'high' and support 'grounded', yet the chain breaks twice, its disease step has no supporting text, and the loss-of-function direction is never stated in a step."},
+  {"project": "hypothesis-agent", "category": "gene_unexplained",
+   "detail": "MEIS1 and TRIM4 are left unexplained; TRIM4 is one of the five genes in the innate-immune-response enrichment the run cites (STRING:GO:0045087) but no hypothesis uses it."},
+  {"project": "biolean", "category": "no_form_for", "steps": ["hyp1.1"],
+   "detail": "Amount of a protein complex: the IL-23 heterodimer has only a GO component term (GO:0070743), render.py allows amount targets only for protein, chemical or gene, while Lean's Target.amount takes any kind, so 'IL12B raises IL-23' cannot be stated."},
+  {"project": "biolean", "category": "rule_missing", "steps": ["hyp2.4", "hyp3.1", "hyp3.2"],
+   "detail": "The guide's undirected-change rule covers objects ('leads to abnormal X') but not undirected subjects ('dysregulated X leads to D'); I applied the 'abnormal X' phenotype rule to the subject (UPHENO:0085601, species-neutral, not in the guide's prefix table)."},
+  {"project": "biolean", "category": "rule_missing", "steps": ["hyp2.3"],
+   "detail": "The guide maps increases_amount to an amount target only; for a process object ('Enhanced cytokine secretion', GO:0001816) I used a process target."},
+  {"project": "biolean", "category": "evidence_weighting", "steps": ["hyp2.3"],
+   "detail": "Statement.distinctEvidence keeps one item per PMID or ref regardless of polarity, so S5's refuting Q8IV20 span is dropped and S5 fuses to b=4/5, d=0 although the record states both directions."},
+  {"project": "biolean", "category": "missing_term", "hypothesis": "hyp3",
+   "detail": "BLN:GPR35-CrohnRiskVariants stands for the run's class 'GPR35 risk variants'; no single ID, and neither cited rsID row names an allele."}
+ ],
+ "audit": [{"item": "S4 excluded STRING:GO:0045087", "error": "other", "before": "over-representation of 'innate immune response' in the run's own 5-gene input set; states no activation", "after": "over-representation of 'innate immune response': 5 of the run's own 7 input genes carry the term (754 genome-wide); states no activation", "reason": "the record's 'number_of_genes: 5' counts hits from the run's 7-gene input; '754 background genes' is the genome-wide term size, not a 5-gene input set"}]
+}

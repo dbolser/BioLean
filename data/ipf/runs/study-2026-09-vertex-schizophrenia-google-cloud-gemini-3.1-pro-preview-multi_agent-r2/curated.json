@@ -1,0 +1,203 @@
+{
+ "run_id": "study-2026-09-vertex-schizophrenia-google-cloud-gemini-3.1-pro-preview-multi_agent-r2",
+ "curated_by": "Claude Opus 5.5, 2026-10-30",
+ "entities": {
+  "C1QA": {"kind": "protein", "curie": "UniProt:P02745", "run_labels": ["C1QA"]},
+  "C4A": {"kind": "protein", "curie": "UniProt:P0C0L4", "run_labels": ["C4A"]},
+  "C4B": {"kind": "protein", "curie": "UniProt:P0C0L5", "run_labels": ["C4B"]},
+  "CSMD1": {"kind": "protein", "curie": "UniProt:Q96PZ7", "run_labels": ["CSMD1"]},
+  "CX3CR1": {"kind": "protein", "curie": "UniProt:P49238", "run_labels": ["CX3CR1", "CX3CR1 signaling"]},
+  "classicalComplement": {"kind": "process", "curie": "GO:0006958", "run_labels": ["classical complement cascade"]},
+  "microglialActivation": {"kind": "process", "curie": "GO:0001774", "run_labels": ["microglial activation"]},
+  "synapsePruning": {"kind": "process", "curie": "GO:0098883",
+                     "run_labels": ["synaptic pruning", "excessive microglial synaptic pruning", "synaptic over-pruning", "microglial pruning"]},
+  "schizophrenia": {"kind": "disease", "curie": "MONDO:0005090", "run_labels": ["schizophrenia"]}
+ },
+ "statements": [
+  {"id": "S1", "step": "h1_c4a_c1qa_pruning.1", "text": "C1QA activates C4A",
+   "claim": {"effect": {"subject": "C1QA", "sign": "pos", "target": {"activity": "C4A"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "R-HSA-166663", "category": "enrichment",
+     "reason": "'Initial triggering of complement' over-represented in the run's own gene set (3 of 127 entities); names neither C1QA nor C4A and gives no direction"},
+    {"ref": "PMID:41992032", "category": "not_in_text",
+     "reason": "arrayed CRISPR screen of SCZ genes in microglia-like cells; the hits named are CYFIP1, MSR1, TREM2, SYK, ITGB2, ITGAM, IRF8, never C1QA or C4A"}
+   ]},
+  {"id": "S2", "step": "h1_c4a_c1qa_pruning.2", "text": "C4A leads to synapse pruning",
+   "note": "the step's context (cell type: microglia) names the cells that prune, not a limit on the result; dropped, as the next step and the other chains use plain synaptic pruning",
+   "claim": {"effect": {"subject": "C4A", "sign": "pos", "target": {"process": "synapsePruning"}}},
+   "evidence": [
+    {"ref": "PMID:26814963", "kind": "mechanistic", "taxon": "mouse",
+     "quote": "In mice, C4 mediated synapse elimination during postnatal development",
+     "note": "mouse 'C4'; the text splits C4 into C4A and C4B only for human expression, so this supports C4B as much as C4A. 'Synapse elimination' is a GO synonym of synapse pruning; 'mediated' gives the direction"}
+   ],
+   "excluded": []},
+  {"id": "S3", "step": ["h1_c4a_c1qa_pruning.3", "h2_csmd1_inhibition.3", "h3_cx3cr1_dysregulation.3"],
+   "text": "synapse pruning is associated with schizophrenia (no direction)",
+   "sign_note": "the run gives polarity unknown in all three hypotheses; the one text that states the step says 'aberrant', which has no direction, so the association is unsigned",
+   "claim": {"assoc": {"subject": "synapsePruning", "direction": "none", "target": {"disease": "schizophrenia", "aspect": "risk"}}},
+   "evidence": [
+    {"ref": "PMID:42276261", "kind": "review",
+     "quote": "Schizophrenia pathogenesis may involve aberrant synaptic pruning",
+     "note": "cited at h3_cx3cr1_dysregulation.3; a hedged background sentence of an expression meta-analysis, not a result of the paper"}
+   ],
+   "excluded": [
+    {"ref": "PMID:26814963", "category": "not_in_text",
+     "reason": "cited at h1_c4a_c1qa_pruning.3; says complement 'may help explain the reduced numbers of synapses' in SCZ brains, a disease feature and a different node from the pruning process; never states pruning goes with SCZ"},
+    {"ref": "PMID:40112933", "category": "not_this_entity",
+     "reason": "cited at h2_csmd1_inhibition.3; states that CSMD1, not synapse pruning, is associated with schizophrenia risk; never mentions pruning"},
+    {"ref": "OT:CSMD1-MONDO_0005090", "category": "not_this_entity",
+     "reason": "cited at h2_csmd1_inhibition.3; an Open Targets score for CSMD1 and schizophrenia, not for synapse pruning (and an OT score carries no direction)"}
+   ]},
+  {"id": "S4", "step": "h2_csmd1_inhibition.1", "text": "CSMD1 inhibits classical complement activation",
+   "note": "the step's context (cell type: astrocyte) is where CSMD1 is expressed, not a limit on the result (the cited paper also finds it on neurons and synapses); dropped",
+   "claim": {"effect": {"subject": "CSMD1", "sign": "neg", "target": {"process": "classicalComplement"}}},
+   "evidence": [
+    {"ref": "PMID:40112933", "kind": "inVitro",
+     "quote": "CSMD1 encodes a complement classical pathway inhibitor",
+     "note": "the title; the design behind it is functional assays of two expressed CSMD1 SCR domains: 'Both domains inhibited the classical pathway C3 convertase by acting as factor I cofactors'"}
+   ],
+   "excluded": [
+    {"ref": "R-HSA-977606", "category": "enrichment",
+     "reason": "'Regulation of Complement cascade' over-represented in the run's own gene set (3 of 139 entities); names no gene and no direction"}
+   ]},
+  {"id": "S5", "step": "h2_csmd1_inhibition.2", "text": "classical complement activation leads to synapse pruning",
+   "claim": {"effect": {"subject": "classicalComplement", "sign": "pos", "target": {"process": "synapsePruning"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "PMID:40112933", "category": "not_in_text",
+     "reason": "about CSMD1's complement-regulatory activity and where it is expressed; never mentions synapse pruning, elimination or engulfment"}
+   ]},
+  {"id": "S6", "step": "h3_cx3cr1_dysregulation.1", "text": "CX3CR1 inhibits microglial cell activation",
+   "claim": {"effect": {"subject": "CX3CR1", "sign": "neg", "target": {"process": "microglialActivation"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "PMID:42276261", "category": "not_in_text",
+     "reason": "expression meta-analysis; says microglia are 'tightly regulated' by neuro-immune regulators, a class that includes CX3CR1, with no direction and no mention of microglial activation; it names neither end of the step as such"}
+   ]},
+  {"id": "S7", "step": "h3_cx3cr1_dysregulation.2", "text": "microglial cell activation leads to synapse pruning",
+   "claim": {"effect": {"subject": "microglialActivation", "sign": "pos", "target": {"process": "synapsePruning"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "PMID:22632727", "category": "not_in_text",
+     "reason": "shows microglia engulf presynaptic inputs during pruning, dependent on neural activity and CR3/C3 signalling; never mentions microglial activation ('activity-dependent' means neural activity)"}
+   ]}
+ ],
+ "unexpressed": [],
+ "hypotheses": {
+  "h1_c4a_c1qa_pruning": {
+   "claims": [
+    {"subject": "C1QA", "sign": "pos", "target": {"disease": "schizophrenia", "aspect": "risk"}},
+    {"subject": "C4A", "sign": "pos", "target": {"disease": "schizophrenia", "aspect": "risk"}},
+    {"subject": "C4B", "sign": "pos", "target": {"disease": "schizophrenia", "aspect": "risk"}},
+    {"subject": "C1QA", "sign": "pos", "target": {"process": "synapsePruning"}},
+    {"subject": "C4A", "sign": "pos", "target": {"process": "synapsePruning"}},
+    {"subject": "C4B", "sign": "pos", "target": {"process": "synapsePruning"}}
+   ],
+   "note": "title: 'C1QA and C4A/B drive excessive microglial synaptic pruning in schizophrenia'; one claim per gene on schizophrenia risk, and one per gene on synapse pruning, because the chain reaches schizophrenia only through an unsigned association, so its last signed node is pruning, which the title names. C4B is in the title and the gene list but in no step."},
+  "h2_csmd1_inhibition": {
+   "claims": [
+    {"subject": "CSMD1", "sign": "neg", "target": {"disease": "schizophrenia", "aspect": "risk"}},
+    {"subject": "CSMD1", "sign": "neg", "target": {"process": "synapsePruning"}}
+   ],
+   "note": "title: 'Loss of CSMD1 complement inhibition promotes synaptic over-pruning' (loss of X, so neg); the title names pruning, not the disease; the chain reaches schizophrenia only through an unsigned association, so a second claim targets pruning"},
+  "h3_cx3cr1_dysregulation": {
+   "claims": [
+    {"subject": "CX3CR1", "sign": "neg", "target": {"disease": "schizophrenia", "aspect": "risk"}},
+    {"subject": "CX3CR1", "sign": "neg", "target": {"process": "synapsePruning"}}
+   ],
+   "note": "title: 'Disruption of CX3CR1 signaling disinhibits microglial pruning' (loss of X, so neg); the mechanism says disruption 'contributes to pathology'; the chain reaches schizophrenia only through an unsigned association, so a second claim targets pruning"}
+ },
+ "findings": [
+  {"project": "hypothesis-agent", "category": "disease_link_unsigned",
+   "steps": ["h1_c4a_c1qa_pruning.3", "h2_csmd1_inhibition.3", "h3_cx3cr1_dysregulation.3"],
+   "detail": "all three chains reach schizophrenia through the same last step, 'synaptic pruning associated_with schizophrenia', with polarity unknown, so no claim on schizophrenia composes; the titles say 'excessive' and 'over-pruning', but no cited text says more pruning goes with schizophrenia (the one text that states the step says 'may involve aberrant synaptic pruning')"},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step",
+   "steps": ["h1_c4a_c1qa_pruning.1"],
+   "detail": "neither citation states C1QA activates C4A: R-HSA-166663 is an over-representation result of the run's own gene set, and PMID:41992032 is a CRISPR screen whose named hits do not include C1QA or C4A; the step has no support"},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step",
+   "steps": ["h2_csmd1_inhibition.2", "h2_csmd1_inhibition.3"],
+   "detail": "PMID:40112933 is cited for complement → pruning and for pruning ~ schizophrenia, but it never mentions pruning; it is good evidence only for h2_csmd1_inhibition.1, so H2's chain is supported at its first step only"},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step",
+   "steps": ["h3_cx3cr1_dysregulation.1", "h3_cx3cr1_dysregulation.2"],
+   "detail": "both mechanistic steps of H3 lack support: PMID:42276261 (expression meta-analysis) only says regulators including CX3CR1 'regulate' microglia, and PMID:22632727 never mentions microglial activation; its 'activity-dependent' pruning is neural activity, which the run seems to have read as microglial activation"},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step",
+   "steps": ["h1_c4a_c1qa_pruning.3", "h2_csmd1_inhibition.3"],
+   "detail": "the shared last step is cited three more times without being stated: PMID:26814963 names reduced synapse numbers as a feature of schizophrenia, and PMID:40112933 and OT:CSMD1-MONDO_0005090 are about CSMD1, not pruning"},
+  {"project": "hypothesis-agent", "category": "enrichment_as_edge_evidence",
+   "steps": ["h1_c4a_c1qa_pruning.1", "h2_csmd1_inhibition.1"],
+   "detail": "Reactome over-representation results for the run's own input gene list (R-HSA-166663, R-HSA-977606, and R-HSA-174577 in H1's supporting list) are cited as evidence for specific signed edges; the enrichment is computed from the genes being explained, so it is circular and carries no direction"},
+  {"project": "hypothesis-agent", "category": "gene_not_in_chain", "hypothesis": "h1_c4a_c1qa_pruning",
+   "detail": "C4B is in H1's title and gene list ('C4A/B'), but no step mentions it, so both C4B claims have no route; PMID:26814963 links schizophrenia to C4A expression, not C4B, and PMID:42276261 reports 'C4 overexpression' in schizophrenia brain without splitting C4A from C4B, so no cited text gives C4B its own role"},
+  {"project": "hypothesis-agent", "category": "citation_states_unstated_step", "hypothesis": "h1_c4a_c1qa_pruning",
+   "detail": "PMID:42276261, cited only at h3_cx3cr1_dysregulation.1 and .3, reports 'In brain tissue, SZ was associated with C4 overexpression' (an observational meta-analysis of 532 cases and 623 controls), a signed C4 amount ~ schizophrenia association in H1's direction that no step states and that bears on C4B as much as C4A"},
+  {"project": "hypothesis-agent", "category": "citation_states_unstated_step", "hypothesis": "h2_csmd1_inhibition",
+   "detail": "PMID:26814963 says 'These results implicate excessive complement activity in the development of schizophrenia', a signed complement → schizophrenia link (for complement in general, not the classical pathway node of h2_csmd1_inhibition.1) that no step states; H2's chain instead reaches schizophrenia only through the unsigned pruning association"},
+  {"project": "hypothesis-agent", "category": "mechanism_overstates_citation", "hypothesis": "h2_csmd1_inhibition",
+   "detail": "the mechanism says 'Genetic risk variants in CSMD1 impair this regulatory function', but its own cited paper (PMID:40112933) says 'understanding of ... how it impacts risk is lacking' and that its findings 'will help reveal the mechanism by which CSMD1 impacts schizophrenia risk'; no cited text gives the risk allele's effect on CSMD1, so the claim's neg sign is the run's assumption"},
+  {"project": "hypothesis-agent", "category": "citation_at_wrong_step", "steps": ["h2_csmd1_inhibition.2", "h3_cx3cr1_dysregulation.2"],
+   "detail": "the run's closest texts for complement → pruning are cited elsewhere: PMID:22632727 (cited at h3_cx3cr1_dysregulation.2, which it does not state) makes engulfment during pruning 'dependent upon ... complement receptor 3(CR3)/C3', and PMID:42276261's background has pruning 'mediated by excessive complement system activity'; h2_csmd1_inhibition.2 cites only PMID:40112933, which never mentions pruning. Neither text names the classical pathway (C3 and CR3 are shared by all complement pathways), so neither was moved to S5"},
+  {"project": "hypothesis-agent", "category": "citation_states_unstated_step", "hypothesis": "h1_c4a_c1qa_pruning",
+   "detail": "PMID:26814963, cited only for the pruning steps, states the direct signed association the chain never makes: 'each common C4 allele associating with schizophrenia in proportion to its tendency to generate greater expression of C4A'; a C4A amount → schizophrenia step would have had observational support, unlike the unsigned pruning link the chain uses"},
+  {"project": "hypothesis-agent", "category": "citation_states_unstated_step", "hypothesis": "h3_cx3cr1_dysregulation",
+   "detail": "PMID:42276261 reports CX3CR1 underexpressed in the peripheral blood of people with schizophrenia (and a male-specific difference in brain), an observational CX3CR1–schizophrenia association in the hypothesis's direction that no step states; the run cites the paper only for two steps it does not state"},
+  {"project": "hypothesis-agent", "category": "citation_at_no_step", "hypothesis": "h1_c4a_c1qa_pruning",
+   "detail": "R-HSA-174577 ('Activation of C3 and C5' over-represented, 2 of 7 entities) is a supporting citation no step cites, and it states no step"},
+  {"project": "hypothesis-agent", "category": "citation_at_no_step", "hypothesis": "h3_cx3cr1_dysregulation",
+   "detail": "OT:CX3CR1-MONDO_0005090 (overall score 0.06, literature only, no genetic evidence) is a supporting citation no step cites; it states no step and, if anything, shows CX3CR1 has almost no target evidence for schizophrenia"},
+  {"project": "hypothesis-agent", "category": "support_unjustified",
+   "steps": ["h1_c4a_c1qa_pruning.1", "h2_csmd1_inhibition.2", "h3_cx3cr1_dysregulation.1", "h3_cx3cr1_dysregulation.2"],
+   "detail": "all three hypotheses are labelled support 'grounded', yet four of six mechanistic steps have no citation that states them and the shared disease step is unsigned; confidence 'low' is fair, 'grounded' is not"},
+  {"project": "hypothesis-agent", "category": "entity_granularity", "steps": ["h1_c4a_c1qa_pruning.2"],
+   "detail": "the mouse evidence is about 'C4' (the text splits C4A and C4B only for human expression), yet the run assigns it to C4A alone, and H1's falsification test proposes a C4A knockout in a mouse"},
+  {"project": "hypothesis-agent", "category": "abstention_overstated",
+   "detail": "the abstention calls CCDC136 'primarily involved in acrosome formation', but the UniProt record (Q96JN2) says it 'May play a role in acrosome formation', inferred by similarity to mouse; NXPH3's description matches its record"},
+  {"project": "biolean", "category": "no_form_for",
+   "detail": "an abstention (CCDC136 and NXPH3: 'no shared mechanism') has no place in curated.json, and its five cited records (two GWAS no-association results, an OT score, two UniProt entries) are not in sources.json, so the abstention cannot be checked by render.py"},
+  {"project": "biolean", "category": "no_form_for", "steps": ["h1_c4a_c1qa_pruning.2"],
+   "detail": "one mouse gene (C4) orthologous to two human paralogs (C4A, C4B): the evidence can carry taxon mouse, but nothing records that it bears equally on C4B, so it attaches to C4A only"},
+  {"project": "biolean", "category": "evidence_weighting", "steps": ["h1_c4a_c1qa_pruning.3"],
+   "detail": "the only evidence for the shared disease step is a hedged background sentence ('may involve'); the kinds offer review (summarises other work) or hypothesis (proposed, untested) and it is both; recorded as review, it gives S3 belief 0.6, more than the in vitro assay result behind S4 (0.5)"},
+  {"project": "biolean", "category": "rule_missing",
+   "detail": "the phenotype-claim rule covers chains that never reach the disease; here all three chains reach schizophrenia only through an unsigned association, and the guide does not say whether the last signed node (synapse pruning, which the titles name) gets a claim; the curator added one per gene by analogy"},
+  {"project": "biolean", "category": "rule_missing", "steps": ["h1_c4a_c1qa_pruning.2", "h2_csmd1_inhibition.1"],
+   "detail": "the guide does not say whether a filled-in step context counts as a limit on the result; the microglia context (h1_c4a_c1qa_pruning.2, also in H1's title and falsification) and the astrocyte context (h2_csmd1_inhibition.1) were dropped as 'who prunes' and 'where it is expressed', and refining either would have cut its chain"},
+  {"project": "biolean", "category": "rule_missing",
+   "detail": "the bridge rule does not say whether a cited text may supply a direct gene → disease or complement → disease link that bypasses the chain rather than fills a gap in it (PMID:26814963 on C4A and on complement activity, PMID:42276261 on C4 and CX3CR1); none was added, following the MUC5B precedent in side-quest-ipf.md"},
+  {"project": "biolean", "category": "no_form_for", "steps": ["h1_c4a_c1qa_pruning.3", "h2_csmd1_inhibition.3", "h3_cx3cr1_dysregulation.3"],
+   "detail": "an exclusion on a statement that covers a step list has no field for the step that cited it, so S3's exclusions carry it in the reason text"}
+ ],
+ "audit": [
+  {"item": "S6 (h3_cx3cr1_dysregulation.1) excluded PMID:42276261", "error": "wrong_exclusion",
+   "before": "category undirected", "after": "category not_in_text",
+   "reason": "undirected is for a text that names both ends but gives no direction; this one names neither: CX3CR1 only as one member of the 'neuro-immune regulators' class, and microglia, not microglial activation (the curator's own reason says 'no mention of microglial activation'). Counts unchanged"},
+  {"item": "finding gene_not_in_chain (h1_c4a_c1qa_pruning)", "error": "other",
+   "before": "'the only cited text on C4 links schizophrenia to C4A expression, not C4B'",
+   "after": "names PMID:42276261's 'C4 overexpression' in schizophrenia brain, which does not split C4A from C4B",
+   "reason": "the run cites a second text on C4: PMID:42276261 reports 'SZ was associated with C4 overexpression' in brain, so the finding's 'only cited text' was false"},
+  {"item": "findings (h1_c4a_c1qa_pruning)", "error": "missed_finding",
+   "before": "none", "after": "citation_states_unstated_step: PMID:42276261 reports C4 overexpression in schizophrenia brain",
+   "reason": "the curator recorded the direct C4A and CX3CR1 associations but not this signed C4 ~ schizophrenia result from the same meta-analysis, which bears on both H1 C4 claims and is stated in no step"},
+  {"item": "findings (h2_csmd1_inhibition)", "error": "missed_finding",
+   "before": "none", "after": "citation_states_unstated_step: PMID:26814963 'implicate excessive complement activity in the development of schizophrenia'",
+   "reason": "a signed complement → disease link in a text the run cites, which H2's chain never uses; recorded as a finding, not a bridge, because it names complement in general (not GO:0006958) and would bypass the chain's pruning step"},
+  {"item": "findings (h2_csmd1_inhibition)", "error": "missed_finding",
+   "before": "none", "after": "mechanism_overstates_citation: risk variants 'impair' CSMD1, but PMID:40112933 says how CSMD1 impacts risk is unknown",
+   "reason": "the cited abstract says 'understanding of ... how it impacts risk is lacking'; the H2 claim's neg sign on schizophrenia rests on the run's assumption about the risk allele, not on a cited text"},
+  {"item": "findings (h2_csmd1_inhibition.2, h3_cx3cr1_dysregulation.2)", "error": "missed_finding",
+   "before": "none", "after": "citation_at_wrong_step: complement → pruning texts (PMID:22632727 CR3/C3, PMID:42276261 background) sit at other steps; h2.2 cites only PMID:40112933",
+   "reason": "the run had texts on complement-dependent pruning but cited them where they do not fit; checked for a move to S5 and rejected, since neither names the classical pathway (C3/CR3 are common to all pathways)"},
+  {"item": "findings (biolean)", "error": "missed_finding",
+   "before": "none", "after": "rule_missing: phenotype claim when the chain reaches the disease only through an unsigned association",
+   "reason": "the curator raised this as a guide problem but did not record it; the guide says gaps in the format or rules are findings (project biolean)"},
+  {"item": "findings (biolean)", "error": "missed_finding",
+   "before": "none", "after": "rule_missing: whether a filled-in step context limits the result (microglia at h1.2, astrocyte at h2.1)",
+   "reason": "raised as a guide problem, not recorded; the choice shaped which pruning node the chains share (precedent: nafld gemini audit)"},
+  {"item": "findings (biolean)", "error": "missed_finding",
+   "before": "none", "after": "rule_missing: whether a bridge may bypass the chain with a direct gene or complement → disease link from a cited text",
+   "reason": "raised as a guide problem, not recorded; it decides whether H1's C4A and H2's CSMD1 claims could compose"},
+  {"item": "findings (biolean)", "error": "missed_finding",
+   "before": "none", "after": "no_form_for: an exclusion on a step-list statement has no field for the step that cited it",
+   "reason": "raised as a guide problem, not recorded; S3's three exclusions carry the citing step only in free text"}
+ ]
+}

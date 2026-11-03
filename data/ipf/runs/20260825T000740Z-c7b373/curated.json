@@ -1,0 +1,794 @@
+{
+ "run_id": "20260825T000740Z-c7b373",
+ "curated_by": "Claude Opus 5.5, 2026-10-30",
+ "entities": {
+  "MEIS1": {
+   "kind": "protein",
+   "curie": "UniProt:O00470",
+   "run_labels": [
+    "MEIS1"
+   ]
+  },
+  "BTBD9": {
+   "kind": "protein",
+   "curie": "UniProt:Q96Q07",
+   "run_labels": [
+    "BTBD9 dysfunction"
+   ]
+  },
+  "PTPRD": {
+   "kind": "protein",
+   "curie": "UniProt:P23468",
+   "run_labels": [
+    "PTPRD dysfunction"
+   ]
+  },
+  "ACO1": {
+   "kind": "protein",
+   "curie": "UniProt:P21399",
+   "run_labels": [
+    "ACO1 dysfunction"
+   ]
+  },
+  "rls": {
+   "kind": "disease",
+   "curie": "MONDO:0005391",
+   "run_labels": [
+    "restless legs syndrome",
+    "restless legs syndrome susceptibility",
+    "restless legs syndrome and periodic limb movements"
+   ]
+  },
+  "sleepWakeDisturbance": {
+   "kind": "phenotype",
+   "curie": "HP:0006979",
+   "run_labels": [
+    "normal circadian sleep/wake cycle",
+    "disrupted circadian sleep/wake cycle"
+   ]
+  },
+  "abnSomatosensoryCortexMorph": {
+   "kind": "phenotype",
+   "curie": "MP:0000860",
+   "run_labels": [
+    "abnormal somatosensory-circuit morphology and electrophysiology"
+   ]
+  },
+  "abnNervousElectrophys": {
+   "kind": "phenotype",
+   "curie": "HP:0001311"
+  },
+  "somatosensorySystem": {
+   "kind": "anatomy",
+   "curie": "UBERON:0003942"
+  },
+  "somatosensoryElectrophysAbn": {
+   "kind": "phenotype",
+   "refines": {
+    "base": "abnNervousElectrophys",
+    "ctx": {
+     "anatomy": "somatosensorySystem"
+    }
+   },
+   "run_labels": [
+    "abnormal somatosensory-circuit morphology and electrophysiology"
+   ]
+  },
+  "abnSleepBehavior": {
+   "kind": "phenotype",
+   "curie": "MP:0011396",
+   "run_labels": [
+    "abnormal sleep behavior"
+   ]
+  },
+  "motorDeficit": {
+   "kind": "phenotype",
+   "curie": "HP:0004302",
+   "run_labels": [
+    "impaired motor function"
+   ]
+  },
+  "motorCircuitDisinhibition": {
+   "kind": "phenotype",
+   "curie": "BLN:MotorCircuitDisinhibition",
+   "label": "motor-circuit disinhibition (reduced inhibitory control of motor circuits)",
+   "why_no_term": "searched 'disinhibition' (only HP:0000734, behavioural impulse-control disinhibition, a different thing), 'motor circuit', 'hyperexcitability', 'neuronal excitability', 'motor neuron excitability', 'inhibition' (GO processes), 'sensorimotor': no term for reduced inhibition in motor circuits",
+   "run_labels": [
+    "motor-circuit disinhibition"
+   ]
+  },
+  "abnIronHomeostasis": {
+   "kind": "phenotype",
+   "curie": "HP:0011031",
+   "run_labels": [
+    "abnormal iron homeostasis"
+   ]
+  },
+  "nervousSystem": {
+   "kind": "anatomy",
+   "curie": "UBERON:0001016"
+  },
+  "neuralIronHomeostasisAbn": {
+   "kind": "phenotype",
+   "refines": {
+    "base": "abnIronHomeostasis",
+    "ctx": {
+     "anatomy": "nervousSystem"
+    }
+   },
+   "run_labels": [
+    "abnormal neural iron homeostasis"
+   ]
+  },
+  "abnCentralSensory": {
+   "kind": "phenotype",
+   "curie": "HP:0011730"
+  },
+  "sleepProcess": {
+   "kind": "process",
+   "curie": "GO:0030431"
+  },
+  "sleepSensoryDysfunction": {
+   "kind": "phenotype",
+   "refines": {
+    "base": "abnCentralSensory",
+    "ctx": {
+     "stage": "sleepProcess"
+    }
+   },
+   "run_labels": [
+    "sleep-dependent sensory-circuit dysfunction"
+   ]
+  },
+  "plms": {
+   "kind": "phenotype",
+   "curie": "HP:5200295",
+   "run_labels": [
+    "restless legs syndrome and periodic limb movements"
+   ]
+  }
+ },
+ "statements": [
+  {
+   "id": "S1",
+   "step": "H1_MEIS1_CIRCADIAN.1",
+   "text": "MEIS1 is required for the normal circadian sleep/wake cycle: losing MEIS1 disturbs the cycle",
+   "sign_note": "the run's required_for (+) on 'normal circadian sleep/wake cycle': a cycle has no amount, so losing MEIS1 gives an abnormal cycle (undirected change, HP 'Sleep-wake cycle disturbance', +), inverted for the loss: MEIS1 →− disturbance. Same meaning as the run's +",
+   "claim": {
+    "effect": {
+     "subject": "MEIS1",
+     "sign": "neg",
+     "target": {
+      "phenotype": "sleepWakeDisturbance"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "AGR:MGI:104717:MP:0020478",
+     "kind": "curatedDb",
+     "taxon": "mouse",
+     "quote": "the genotype Meis1<em1Rihw>/Meis1<em1Rihw> of Meis1 -- the orthologue of human MEIS1 -- shows abnormal circadian sleep/wake cycle"
+    }
+   ],
+   "excluded": []
+  },
+  {
+   "id": "S2",
+   "step": "H1_MEIS1_CIRCADIAN.2",
+   "text": "a disrupted (abnormal) circadian sleep/wake cycle raises the risk of restless legs syndrome",
+   "claim": {
+    "effect": {
+     "subject": "sleepWakeDisturbance",
+     "sign": "pos",
+     "target": {
+      "disease": "rls",
+      "aspect": "risk"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "rs113851554",
+     "category": "not_in_text",
+     "reason": "GWAS row: rs113851554-T (MEIS1 intron) associated with RLS; says nothing about the circadian sleep/wake cycle"
+    },
+    {
+     "ref": "rs1820989",
+     "category": "not_in_text",
+     "reason": "GWAS row: intergenic rs1820989-A (author-reported MEIS1, C1D, APLF) associated with RLS; says nothing about the circadian sleep/wake cycle"
+    }
+   ]
+  },
+  {
+   "id": "S3",
+   "step": "H2_BTBD9_SLEEP_SENSORY.1",
+   "text": "loss of BTBD9 causes abnormal primary somatosensory cortex morphology",
+   "sign_note": "inverted: the run's subject is 'BTBD9 dysfunction'",
+   "claim": {
+    "effect": {
+     "subject": "BTBD9",
+     "sign": "neg",
+     "target": {
+      "phenotype": "abnSomatosensoryCortexMorph"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "AGR:MGI:1916625:MP:0000860",
+     "kind": "curatedDb",
+     "taxon": "mouse",
+     "quote": "the genotype Btbd9<tm1c(EUCOMM)Wtsi>/Btbd9<tm1c(EUCOMM)Wtsi> Emx1<tm1(cre)Yql>/Emx1<+> of Btbd9 -- the orthologue of human BTBD9 -- shows abnormal primary somatosensory cortex morphology"
+    }
+   ],
+   "excluded": []
+  },
+  {
+   "id": "S4",
+   "step": "H2_BTBD9_SLEEP_SENSORY.1",
+   "text": "loss of BTBD9 causes abnormal electrophysiology of somatosensory circuits",
+   "sign_note": "inverted: the run's subject is 'BTBD9 dysfunction'",
+   "claim": {
+    "effect": {
+     "subject": "BTBD9",
+     "sign": "neg",
+     "target": {
+      "phenotype": "somatosensoryElectrophysAbn"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "AGR:MGI:1916625:MP:0002272",
+     "category": "not_in_text",
+     "reason": "MGI annotation of a whole-body Btbd9 tm1d knockout with 'abnormal nervous system electrophysiology': names no site, so it does not state the somatosensory-circuit change the step claims"
+    }
+   ]
+  },
+  {
+   "id": "S5",
+   "step": "H2_BTBD9_SLEEP_SENSORY.2",
+   "text": "loss of BTBD9 causes abnormal sleep behavior",
+   "sign_note": "inverted: the run's subject is 'BTBD9 dysfunction'",
+   "claim": {
+    "effect": {
+     "subject": "BTBD9",
+     "sign": "neg",
+     "target": {
+      "phenotype": "abnSleepBehavior"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "AGR:MGI:1916625:MP:0011396",
+     "kind": "curatedDb",
+     "taxon": "mouse",
+     "quote": "the genotype Btbd9<tm1c(EUCOMM)Wtsi>/Btbd9<tm1c(EUCOMM)Wtsi> Tg(Pcp2-cre)2Mpin/0 of Btbd9 -- the orthologue of human BTBD9 -- shows abnormal sleep behavior"
+    }
+   ],
+   "excluded": []
+  },
+  {
+   "id": "S6",
+   "step": "H3_PTPRD_MOTOR_CIRCUIT.1",
+   "text": "loss of PTPRD causes a motor function deficit",
+   "sign_note": "inverted: the run's subject is 'PTPRD dysfunction'",
+   "claim": {
+    "effect": {
+     "subject": "PTPRD",
+     "sign": "neg",
+     "target": {
+      "phenotype": "motorDeficit"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "AGR:MGI:97812:MP:0001522",
+     "kind": "curatedDb",
+     "taxon": "mouse",
+     "quote": "the genotype Ptprd<tm1Yiw>/Ptprd<tm1Yiw> of Ptprd -- the orthologue of human PTPRD -- shows impaired swimming"
+    }
+   ],
+   "excluded": []
+  },
+  {
+   "id": "S7",
+   "step": "H3_PTPRD_MOTOR_CIRCUIT.2",
+   "text": "motor-circuit disinhibition raises the risk of restless legs syndrome",
+   "claim": {
+    "effect": {
+     "subject": "motorCircuitDisinhibition",
+     "sign": "pos",
+     "target": {
+      "disease": "rls",
+      "aspect": "risk"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "rs34602324",
+     "category": "not_in_text",
+     "reason": "GWAS row: rs34602324-G (PTPRD intron) associated with RLS; says nothing about motor circuits or disinhibition"
+    },
+    {
+     "ref": "rs1836229",
+     "category": "not_in_text",
+     "reason": "GWAS row: rs1836229-A (PTPRD intron) associated with RLS; says nothing about motor circuits or disinhibition"
+    }
+   ]
+  },
+  {
+   "id": "S8",
+   "step": "H4_ACO1_IRON_MODIFIER.1",
+   "text": "loss of ACO1 causes abnormal iron homeostasis",
+   "sign_note": "inverted: the run's subject is 'ACO1 dysfunction'",
+   "claim": {
+    "effect": {
+     "subject": "ACO1",
+     "sign": "neg",
+     "target": {
+      "phenotype": "abnIronHomeostasis"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "AGR:MGI:87879:MP:0005637",
+     "kind": "curatedDb",
+     "taxon": "mouse",
+     "quote": "the genotype Aco1<tm1Roua>/Aco1<tm1Roua> of Aco1 -- the orthologue of human ACO1 -- shows abnormal iron homeostasis"
+    }
+   ],
+   "excluded": []
+  },
+  {
+   "id": "S9",
+   "step": "H4_ACO1_IRON_MODIFIER.2",
+   "text": "abnormal neural iron homeostasis raises the risk of restless legs syndrome",
+   "claim": {
+    "effect": {
+     "subject": "neuralIronHomeostasisAbn",
+     "sign": "pos",
+     "target": {
+      "disease": "rls",
+      "aspect": "risk"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "GWAS:ACO1:no-association",
+     "category": "not_this_entity",
+     "reason": "the run's contradicting citation: GWAS Catalog has no curated ACO1-variant association with RLS; that bears on ACO1 -> RLS (no statement has it), not on iron homeostasis -> RLS, and it is a catalogue absence, not a tested null"
+    }
+   ]
+  },
+  {
+   "id": "S10",
+   "step": "H2_BTBD9_SLEEP_SENSORY.3",
+   "text": "sleep-dependent sensory-circuit dysfunction raises the risk of restless legs syndrome",
+   "claim": {
+    "effect": {
+     "subject": "sleepSensoryDysfunction",
+     "sign": "pos",
+     "target": {
+      "disease": "rls",
+      "aspect": "risk"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "PMID:17637780",
+     "category": "not_in_text",
+     "reason": "GWAS abstract: intronic BTBD9 (and MEIS1, MAP2K5/LBXCOR1) variants associated with RLS; nothing on sensory circuits or sleep-dependent dysfunction"
+    },
+    {
+     "ref": "rs10947738",
+     "category": "not_in_text",
+     "reason": "GWAS row: rs10947738-A (BTBD9 intron) associated with RLS; nothing on sensory circuits"
+    },
+    {
+     "ref": "rs61192259",
+     "category": "not_in_text",
+     "reason": "GWAS row: rs61192259-A (author-reported BTBD9, GLO1) associated with RLS; nothing on sensory circuits"
+    },
+    {
+     "ref": "rs4714163",
+     "category": "not_in_text",
+     "reason": "GWAS row: rs4714163-T (BTBD9 intron, male-only study) associated with RLS; nothing on sensory circuits"
+    }
+   ]
+  },
+  {
+   "id": "S11",
+   "step": "H2_BTBD9_SLEEP_SENSORY.3",
+   "text": "sleep-dependent sensory-circuit dysfunction leads to periodic limb movements of sleep",
+   "claim": {
+    "effect": {
+     "subject": "sleepSensoryDysfunction",
+     "sign": "pos",
+     "target": {
+      "phenotype": "plms"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "PMID:17634447",
+     "category": "not_in_text",
+     "reason": "GWAS abstract: a BTBD9 intronic variant associated with RLS with periodic limb movements and with PLMS alone, and with lower serum ferritin; nothing on sensory circuits"
+    }
+   ]
+  }
+ ],
+ "unexpressed": [],
+ "hypotheses": {
+  "H1_MEIS1_CIRCADIAN": {
+   "claims": [
+    {
+     "subject": "MEIS1",
+     "sign": "neg",
+     "target": {
+      "disease": "rls",
+      "aspect": "risk"
+     }
+    }
+   ],
+   "note": "the title names 'MEIS1 risk variation' but the chain starts at MEIS1; sign neg because H1.1 makes MEIS1 required for the normal cycle and the title has the risk variation act by disrupting it. The mechanism text says the direction of MEIS1 expression change is not established"
+  },
+  "H2_BTBD9_SLEEP_SENSORY": {
+   "claims": [
+    {
+     "subject": "BTBD9",
+     "sign": "neg",
+     "target": {
+      "disease": "rls",
+      "aspect": "risk"
+     }
+    }
+   ],
+   "note": "the title names 'BTBD9 risk variation' but the chain starts at 'BTBD9 dysfunction' (loss of function, so neg); the mechanism says the direction of the risk allele is unresolved. The chain also concludes periodic limb movements; RLS is the run's disease"
+  },
+  "H3_PTPRD_MOTOR_CIRCUIT": {
+   "claims": [
+    {
+     "subject": "PTPRD",
+     "sign": "neg",
+     "target": {
+      "disease": "rls",
+      "aspect": "risk"
+     }
+    }
+   ],
+   "note": "the title names 'PTPRD risk variation' but the chain starts at 'PTPRD dysfunction' (neg); the mechanism only says the risk allele 'changes PTPRD activity'"
+  },
+  "H4_ACO1_IRON_MODIFIER": {
+   "claims": [
+    {
+     "subject": "ACO1",
+     "sign": "neg",
+     "target": {
+      "disease": "rls",
+      "aspect": "risk"
+     }
+    }
+   ],
+   "note": "title 'ACO1 dysfunction may modify RLS'; aspect risk because the chain ends at 'RLS susceptibility', though the mechanism calls it a modifier hypothesis"
+  }
+ },
+ "findings": [
+  {
+   "project": "hypothesis-agent",
+   "category": "chain_not_connected",
+   "steps": [
+    "H1_MEIS1_CIRCADIAN.1",
+    "H1_MEIS1_CIRCADIAN.2"
+   ],
+   "detail": "H1.1 ends at 'normal circadian sleep/wake cycle' (kind process), H1.2 starts at 'disrupted circadian sleep/wake cycle' (kind phenotype); same node in opposite states, curated as one node, HP:0006979 'Sleep-wake cycle disturbance' (the human match of MP:0020478, which the run's mechanism names)"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_does_not_state_step",
+   "steps": [
+    "H1_MEIS1_CIRCADIAN.2",
+    "H2_BTBD9_SLEEP_SENSORY.3",
+    "H3_PTPRD_MOTOR_CIRCUIT.2"
+   ],
+   "detail": "every step that reaches RLS cites only GWAS variant-RLS association rows or GWAS abstracts, none of which mention the step's subject (circadian cycle, sensory circuit, motor-circuit disinhibition); the steps' own notes concede this"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "variant_step_missing",
+   "hypothesis": "H1_MEIS1_CIRCADIAN",
+   "detail": "H1, H2 and H3 cite human GWAS risk alleles but no chain has a variant-to-gene step, so the only human evidence in the run cannot enter any arm"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "sign_unsupported",
+   "hypothesis": "H2_BTBD9_SLEEP_SENSORY",
+   "detail": "H1-H3 chains assert loss of gene function ('BTBD9 dysfunction', 'PTPRD dysfunction', 'MEIS1 required for'), while their mechanisms say the risk allele's direction is unresolved and no cited record gives a risk allele's effect on expression or function"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "chain_not_connected",
+   "steps": [
+    "H2_BTBD9_SLEEP_SENSORY.1",
+    "H2_BTBD9_SLEEP_SENSORY.2",
+    "H2_BTBD9_SLEEP_SENSORY.3"
+   ],
+   "detail": "H2.1 and H2.2 are parallel branches from 'BTBD9 dysfunction' ending at abnormal somatosensory morphology/electrophysiology and abnormal sleep behaviour; H2.3 starts at 'sleep-dependent sensory-circuit dysfunction' (abnormal central sensory function during sleep), which neither reaches"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "evidence_does_not_fit_mechanism",
+   "steps": [
+    "H2_BTBD9_SLEEP_SENSORY.1",
+    "H2_BTBD9_SLEEP_SENSORY.2"
+   ],
+   "detail": "the sleep phenotype is from a Purkinje-cell (Pcp2-cre) conditional knockout and the somatosensory cortex phenotype from a forebrain (Emx1-cre) one; no cited record shows a somatosensory circuit with a sleep phenotype, as the mechanism proposes"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_does_not_state_step",
+   "steps": [
+    "H2_BTBD9_SLEEP_SENSORY.1"
+   ],
+   "detail": "the electrophysiology record is a whole-body Btbd9 tm1d knockout with 'abnormal nervous system electrophysiology' and no site; the run relabels it 'somatosensory-circuit electrophysiology'"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "contradicting_evidence_ignored",
+   "hypothesis": "H2_BTBD9_SLEEP_SENSORY",
+   "detail": "PMID:17634447, which the run cites at H2.3, finds the BTBD9 variant associated with periodic limb movements without RLS and 'the absence of such an association for RLS without periodic limb movements', calling it a determinant of PLMS; the run lumps 'RLS and periodic limb movements' and builds a sensory mechanism without noting this"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "chain_not_connected",
+   "steps": [
+    "H3_PTPRD_MOTOR_CIRCUIT.1",
+    "H3_PTPRD_MOTOR_CIRCUIT.2"
+   ],
+   "detail": "H3.1 ends at 'impaired motor function' (a deficit), H3.2 starts at 'motor-circuit disinhibition' (excess activity); different nodes, arguably opposite in direction, and no step links them"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "label_broadened",
+   "steps": [
+    "H3_PTPRD_MOTOR_CIRCUIT.1"
+   ],
+   "detail": "the cited record shows impaired swimming in Ptprd-null mice; the run generalises it to 'impaired motor function' (kept, as swimming is a motor function, but the run itself calls it nonspecific)"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "chain_not_connected",
+   "steps": [
+    "H4_ACO1_IRON_MODIFIER.1",
+    "H4_ACO1_IRON_MODIFIER.2"
+   ],
+   "detail": "H4.1 ends at 'abnormal iron homeostasis' (a whole-body Aco1 knockout record), H4.2 starts at 'abnormal neural iron homeostasis'; the falsification (perturb ACO1 in neural cells while controlling systemic iron, measure brain iron) makes 'neural' the point, so they are different nodes and H4 has no route"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "no_citation",
+   "steps": [
+    "H4_ACO1_IRON_MODIFIER.2"
+   ],
+   "detail": "the step from iron homeostasis to RLS cites nothing, although PMID:17634447 (cited at H2.3) says iron depletion 'has been associated with the pathogenesis of RLS' (background, association only, so it would not have been kept)"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "evidence_unused",
+   "steps": [
+    "H2_BTBD9_SLEEP_SENSORY.3",
+    "H4_ACO1_IRON_MODIFIER.2"
+   ],
+   "detail": "PMID:17634447 reports serum ferritin decreased 13% per BTBD9 at-risk allele, an iron link the run uses in neither H2 nor the iron hypothesis H4"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "evidence_unused",
+   "hypothesis": "H1_MEIS1_CIRCADIAN",
+   "detail": "PMID:17637780 also reports the MEIS1 association and says MEIS1 is implicated in limb development (a developmental mechanism), but the run cites it only for BTBD9 at H2.3"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "gene_assignment_positional",
+   "steps": [
+    "H1_MEIS1_CIRCADIAN.2"
+   ],
+   "detail": "rs1820989 is intergenic (nearest LINC01812, FBXL12P1; author-reported MEIS1, C1D, APLF), 1.3 Mb from rs113851554, yet the mechanism says RLS variants 'map very strongly to MEIS1'; rs61192259 is also author-reported for GLO1"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "confidence_unjustified",
+   "hypothesis": "H1_MEIS1_CIRCADIAN",
+   "detail": "confidence 'high' and support 'grounded', but only H1.1 is stated by a citation (one mouse MGI annotation); H1.2, the link to RLS, cites only GWAS rows that do not mention the circadian cycle, so the arm's belief is 0"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "confidence_unjustified",
+   "hypothesis": "H2_BTBD9_SLEEP_SENSORY",
+   "detail": "confidence 'high', but only the mouse knockout-to-phenotype steps H2.1 (morphology) and H2.2 are supported; the link to RLS is uncited in substance and disconnected from them"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "confidence_unjustified",
+   "hypothesis": "H3_PTPRD_MOTOR_CIRCUIT",
+   "detail": "confidence 'medium' on one mouse impaired-swimming annotation and GWAS rows that do not state the motor-circuit step; no route from PTPRD to RLS"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "falsification_inconsistent",
+   "hypothesis": "H1_MEIS1_CIRCADIAN",
+   "detail": "H1 and H3 falsifications describe engineering or introducing the risk haplotype but label the perturbation action 'restore'"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "genes_unexplained",
+   "hypothesis": "H4_ACO1_IRON_MODIFIER",
+   "detail": "GLIPR1 and GABARAPL2 get no hypothesis (the run lists them as unexplained); ACO1 gets one despite no GWAS support"
+  },
+  {
+   "project": "both",
+   "category": "contradicting_evidence_claim_level",
+   "hypothesis": "H4_ACO1_IRON_MODIFIER",
+   "detail": "the run's contradicting citation (no GWAS Catalog ACO1-RLS association) bears on the hypothesis's gene-to-disease claim, which no step states, so it can only be excluded; it is also a catalogue absence, not a tested null, and the run fairly kept confidence low"
+  },
+  {
+   "project": "biolean",
+   "category": "missing_term",
+   "steps": [
+    "H3_PTPRD_MOTOR_CIRCUIT.2"
+   ],
+   "detail": "BLN:MotorCircuitDisinhibition: no ontology term for reduced inhibition in motor circuits (HP:0000734 'Disinhibition' is behavioural)"
+  },
+  {
+   "project": "biolean",
+   "category": "rule_missing",
+   "steps": [
+    "H1_MEIS1_CIRCADIAN.1"
+   ],
+   "detail": "'required_for normal X' maps to an effect on process X, and an MGI 'abnormal X' knockout annotation is then no_direction; the audit read 'required for normal X' as 'losing the gene gives abnormal X' (MEIS1 →− HP:0006979), as another RLS curation did, which keeps exactly the record that states it; the guide should say which"
+  },
+  {
+   "project": "biolean",
+   "category": "rule_missing",
+   "steps": [
+    "H1_MEIS1_CIRCADIAN.2"
+   ],
+   "detail": "'disrupted X' is in neither the loss-of-function list (invert) nor the undirected list (abnormal-X phenotype); the curator read it as loss of function, the audit as undirected, since a disrupted cycle is abnormal, not reduced, and the run's mechanism calls it 'an abnormal circadian sleep/wake cycle'"
+  },
+  {
+   "project": "biolean",
+   "category": "rule_missing",
+   "steps": [
+    "H1_MEIS1_CIRCADIAN.1",
+    "H2_BTBD9_SLEEP_SENSORY.1",
+    "H2_BTBD9_SLEEP_SENSORY.2",
+    "H3_PTPRD_MOTOR_CIRCUIT.1",
+    "H4_ACO1_IRON_MODIFIER.1"
+   ],
+   "detail": "no rule for HP versus MP when a human-gene step's phenotype comes from a mouse annotation; HP used where an exact equivalent exists (HP:0006979, HP:0001311, HP:0011031), MP otherwise (MP:0000860, MP:0011396)"
+  },
+  {
+   "project": "biolean",
+   "category": "corpus_artefact",
+   "steps": [
+    "H3_PTPRD_MOTOR_CIRCUIT.1"
+   ],
+   "detail": "HP:0004302 'Functional motor deficit' has no definition and its synonyms show as '\\1' in the corpus, so the grounding of 'impaired motor function' could not be checked against a definition"
+  },
+  {
+   "project": "biolean",
+   "category": "evidence_weighting",
+   "steps": [
+    "H1_MEIS1_CIRCADIAN.1",
+    "H2_BTBD9_SLEEP_SENSORY.1",
+    "H2_BTBD9_SLEEP_SENSORY.2"
+   ],
+   "detail": "an MGI annotation counts as curatedDb whatever the allele: a cell-type conditional knockout (Pcp2-cre, Emx1-cre) supports a whole-gene claim as strongly as a null, and the Alliance text never says an allele (including Meis1 em1Rihw at H1.1) is a loss of function"
+  },
+  {
+   "project": "biolean",
+   "category": "evidence_weighting",
+   "steps": [
+    "H1_MEIS1_CIRCADIAN.1",
+    "H2_BTBD9_SLEEP_SENSORY.1",
+    "H2_BTBD9_SLEEP_SENSORY.2",
+    "H3_PTPRD_MOTOR_CIRCUIT.1",
+    "H4_ACO1_IRON_MODIFIER.1"
+   ],
+   "detail": "one mouse MGI annotation alone makes each human-gene statement (S1, S3, S5, S6, S8) 'established' at belief 4/5, exactly the threshold; the taxon mismatch is flagged (taxonConsistent false) but not discounted"
+  }
+ ],
+ "audit": [
+  {
+   "item": "S1 (H1_MEIS1_CIRCADIAN.1), AGR:MGI:104717:MP:0020478",
+   "error": "wrong_exclusion",
+   "before": "MEIS1 →+ circadian sleep/wake cycle (GO:0042745), evidence []; the MGI record excluded as no_direction",
+   "after": "MEIS1 →− Sleep-wake cycle disturbance (HP:0006979) with a sign_note; the MGI record kept: curatedDb, taxon mouse, quote '... Meis1<em1Rihw>/Meis1<em1Rihw> ... shows abnormal circadian sleep/wake cycle'",
+   "reason": "The step's object is the *normal* cycle, so 'required for normal X' means that losing MEIS1 gives an abnormal cycle. A cycle has no amount, so this is the guide's undirected change (an effect, +, on the abnormal-X phenotype), inverted for the loss. The record states exactly that, and the run's mechanism quotes it the same way. The curator's own guide problem says this mapping would keep the record. This also matches how the curator treated the same MGI record type at S3, S5, S6 and S8, and how the multi_agent-r2 RLS curation handled the same MEIS1 record. S1 is now established at 4/5, like the others."
+  },
+  {
+   "item": "S2 (H1_MEIS1_CIRCADIAN.2), entity circadianSleepWake",
+   "error": "wrong_grounding",
+   "before": "circadianSleepWake (GO:0042745) →− risk of RLS; sign_note: 'disrupted' read as loss of the normal cycle",
+   "after": "sleepWakeDisturbance (HP:0006979 'Sleep-wake cycle disturbance') →+ risk of RLS; no inversion; GO:0042745 entity removed",
+   "reason": "A 'disrupted circadian sleep/wake cycle' (the run gives its kind as phenotype) is an abnormal cycle, not less cycling. The run's mechanism calls it 'an abnormal circadian sleep/wake cycle'. That is the guide's undirected change, and an abnormal-X term exists (HP:0006979, the human match of MP:0020478), so the step is an effect, +, on that term. 'Disrupted' is not in the loss-of-function list; by the curator's own account, they chose that reading because it connected H1. H1 still connects, because H1.1 now ends at the same phenotype. The arm is unchanged: S1 → S2, sign neg, belief 0."
+  },
+  {
+   "item": "S4 (H2_BTBD9_SLEEP_SENSORY.1), entity abnNervousElectrophys",
+   "error": "wrong_grounding",
+   "before": "target abnNervousElectrophys: HP:0001311 'Abnormal nervous system electrophysiology', with no site",
+   "after": "target somatosensoryElectrophysAbn: HP:0001311 refined with anatomy somatosensory system (UBERON:0003942)",
+   "reason": "The step's object is 'abnormal somatosensory-circuit morphology and electrophysiology'. The qualifier covers both parts, and it is the point of H2: the title says 'somatosensory-circuit dysfunction', and the falsification restores BTBD9 'in somatosensory neurons'. The curator kept the qualifier for morphology (MP:0000860) but dropped it for electrophysiology. That fitted the node to the record, not to the step."
+  },
+  {
+   "item": "S4 evidence AGR:MGI:1916625:MP:0002272",
+   "error": "quote_does_not_state",
+   "before": "kept: curatedDb, mouse, quote '... Btbd9<tm1d(EUCOMM)Wtsi>/Btbd9<tm1d(EUCOMM)Wtsi> ... shows abnormal nervous system electrophysiology'",
+   "after": "excluded, not_in_text",
+   "reason": "The record is a whole-body tm1d knockout with abnormal nervous-system electrophysiology and no site. It does not state a change in somatosensory circuits. S4 drops from established (4/5) to unsupported. The kept-evidence total stays at 5, because S1 gained one."
+  },
+  {
+   "item": "S9 (H4_ACO1_IRON_MODIFIER.2), entity abnIronHomeostasis",
+   "error": "wrong_merge",
+   "before": "'abnormal neural iron homeostasis' merged into abnIronHomeostasis (HP:0011031); H4 route S8 → S9, sign neg",
+   "after": "neuralIronHomeostasisAbn: HP:0011031 refined with anatomy nervous system (UBERON:0001016); H4 has no route",
+   "reason": "The run adds 'neural' only at H4.2; H4.1's record is a whole-body Aco1 knockout. The falsification ('perturb ACO1 in an adult neural lineage while controlling systemic iron, then measure brain iron') makes neural versus systemic iron the point of the hypothesis. The curator noted this but merged anyway, so H4 composed across the very gap the run sets out to test (compare the fyttd1-elac2-als-or-plus audit). The arm's belief was 0 either way; claims with no route go from 2 to 3."
+  },
+  {
+   "item": "unexpressed H2_BTBD9_SLEEP_SENSORY.3",
+   "error": "wrong_unexpressed",
+   "before": "unexpressed, ungroundable, 5 exclusions",
+   "after": "S10: sleepSensoryDysfunction →+ risk of RLS (PMID:17637780, rs10947738, rs61192259, rs4714163 excluded). S11: sleepSensoryDysfunction →+ Periodic limb movements of sleep, HP:5200295 (PMID:17634447 excluded). sleepSensoryDysfunction is HP:0011730 'Abnormal central sensory function' refined with stage sleep (GO:0030431)",
+   "reason": "'Sensory-circuit dysfunction' is an undirected change, and an abnormal-X term exists for it (HP:0011730: 'an abnormality of sensation related to CNS function'). 'Sleep-dependent' is a stage refinement. So the node is broad but not missing, and the step is expressible. The compound object splits into RLS and PLMS; the curator had already found HP:5200295. No citation mentions sensory circuits, so both statements are unsupported and no arm changes. Each citation is listed once, under the part it bears on most, so the exclusion count stays 11."
+  },
+  {
+   "item": "finding citation_does_not_state_step (H1_MEIS1_CIRCADIAN.1)",
+   "error": "other",
+   "before": "the MGI record 'gives no direction and does not say the allele is a loss of function'",
+   "after": "removed; the allele caveat moved into the evidence_weighting finding, which now lists H1.1 (Meis1 em1Rihw)",
+   "reason": "The record now states S1 and is kept. The allele caveat applies equally to the kept BTBD9, PTPRD and ACO1 records."
+  },
+  {
+   "item": "finding ungrounded_label (H2_BTBD9_SLEEP_SENSORY.3)",
+   "error": "other",
+   "before": "'sleep-dependent sensory-circuit dysfunction' is too vague to ground",
+   "after": "removed",
+   "reason": "The label is grounded now (S10, S11)."
+  },
+  {
+   "item": "findings chain_not_connected (H1, H2, H4), confidence_unjustified (H1, H2), rule_missing (H1.1, H1.2, HP/MP), evidence_weighting (both)",
+   "error": "other",
+   "before": "details written for the curator's groundings: GO:0042745, the merged iron node, H2.3 unexpressed, S4 kept; the H1 confidence finding said no citation states any of its steps",
+   "after": "details and step lists updated to the audited curation. H4 is now recorded as having no route; H1.1 is stated by one mouse record; the 'established on one record' statements are S1, S3, S5, S6 and S8",
+   "reason": "These follow from the changes above."
+  },
+  {
+   "item": "findings, H2_BTBD9_SLEEP_SENSORY.1",
+   "error": "missed_finding",
+   "before": "none",
+   "after": "hypothesis-agent citation_does_not_state_step: the electrophysiology record is a whole-body knockout with no site, which the run relabels 'somatosensory-circuit electrophysiology'",
+   "reason": "This is the run-side counterpart of the S4 correction."
+  },
+  {
+   "item": "findings, H2_BTBD9_SLEEP_SENSORY (PMID:17634447)",
+   "error": "missed_finding",
+   "before": "none",
+   "after": "hypothesis-agent contradicting_evidence_ignored: the cited abstract associates the BTBD9 variant with periodic limb movements without RLS, and reports 'the absence of such an association for RLS without periodic limb movements'",
+   "reason": "The run cites this paper for 'RLS and periodic limb movements' and builds a sensory mechanism, but its own source ties the locus to PLMS rather than to RLS's sensory component. The curator read the text (the exclusion reason mentions PLMS) but drew no finding from it."
+  }
+ ]
+}

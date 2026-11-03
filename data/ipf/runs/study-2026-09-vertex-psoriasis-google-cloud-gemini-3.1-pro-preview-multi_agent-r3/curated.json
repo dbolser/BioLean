@@ -1,0 +1,148 @@
+{
+ "run_id": "study-2026-09-vertex-psoriasis-google-cloud-gemini-3.1-pro-preview-multi_agent-r3",
+ "curated_by": "Claude Opus 5.5, 2026-10-30",
+ "entities": {
+  "IL12B": {"kind": "protein", "curie": "UniProt:P29460", "run_labels": ["IL12B"]},
+  "IL23R": {"kind": "protein", "curie": "UniProt:Q5VWK5", "run_labels": ["IL23R"]},
+  "TYK2": {"kind": "protein", "curie": "UniProt:P29597", "run_labels": ["TYK2"]},
+  "TRAF3IP2": {"kind": "protein", "curie": "UniProt:O43734", "run_labels": ["TRAF3IP2"]},
+  "th17CellAmount": {"kind": "phenotype", "curie": "OBA:0005025", "run_labels": ["T-helper 17 cell"]},
+  "psoriasis": {"kind": "disease", "curie": "MONDO:0005083", "run_labels": ["psoriasis"]}
+ },
+ "statements": [
+  {"id": "S1", "step": "hyp1_il23_axis.1", "text": "IL12B binds IL23R",
+   "claim": {"rel": {"relation": "RO:0002436", "a": "IL12B", "b": "IL23R"}},
+   "evidence": [
+    {"ref": "STRING:IL12B-IL23R", "kind": "curatedDb",
+     "quote": "STRING links IL12B and IL23R with combined score 0.99 (experimental 0.93, database 0.65, text-mining 0.46)."}
+   ],
+   "excluded": []},
+  {"id": "S2", "step": "hyp1_il23_axis.2", "text": "IL23R activates TYK2",
+   "claim": {"effect": {"subject": "IL23R", "sign": "pos", "target": {"activity": "TYK2"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "STRING:IL23R-TYK2", "category": "no_direction",
+     "reason": "a STRING edge (experimental 0.00, database 0.80, text-mining 0.90) names both proteins but cannot carry 'activates'"},
+    {"ref": "R-HSA-9020933", "category": "enrichment",
+     "reason": "'Interleukin-23 signaling' over-represented in the run's gene set (3 of 11 entities); says nothing of IL23R activating TYK2"}
+   ]},
+  {"id": "S5", "step": "hyp1_il23_axis.3", "text": "TYK2 raises the amount of T-helper 17 cells",
+   "note": "the run's object is the cell type 'T-helper 17 cell' with polarity positive; the mechanism reads it as 'differentiation and expansion of Th17 cells', so the effect is on the cell type's amount (OBA:0005025), a phenotype target",
+   "claim": {"effect": {"subject": "TYK2", "sign": "pos", "target": {"phenotype": "th17CellAmount"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "STRING:GO:2000318", "category": "enrichment",
+     "reason": "GO 'positive regulation of T-helper 17 type immune response' enriched among the run's own genes IL12B, IL23R, TYK2 (3 of 15); an over-representation result, not TYK2 driving Th17 cells"}
+   ]},
+  {"id": "S3", "step": "hyp1_il23_axis.4", "text": "the amount of T-helper 17 cells goes with psoriasis (direction not stated)",
+   "sign_note": "the run's polarity is unknown and no cited text names Th17 cells, so the direction is none",
+   "claim": {"assoc": {"subject": "th17CellAmount", "direction": "none", "target": {"disease": "psoriasis", "aspect": "risk"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "rs34536443", "category": "not_this_entity",
+     "reason": "GWAS row for the TYK2 missense allele rs34536443-G and psoriasis (OR 1.88); names no Th17 cells"},
+    {"ref": "CHEMBL:CHEMBL1201835", "category": "not_in_text",
+     "reason": "says only that ustekinumab targets IL12B and reached approval; names neither Th17 cells nor psoriasis"},
+    {"ref": "CHEMBL:CHEMBL4435170", "category": "not_in_text",
+     "reason": "says only that deucravacitinib targets TYK2 and reached approval; names neither Th17 cells nor psoriasis"}
+   ]},
+  {"id": "S4", "step": "hyp2_traf3ip2_il17.1", "text": "TRAF3IP2 raises the risk of psoriasis",
+   "claim": {"effect": {"subject": "TRAF3IP2", "sign": "pos", "target": {"disease": "psoriasis", "aspect": "risk"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "rs33980500", "category": "association_only",
+     "reason": "GWAS row: missense allele rs33980500-T (author-reported gene TRAF3IP2) goes with psoriasis, OR 1.52; an allele association, and the row does not say how the allele changes TRAF3IP2"},
+    {"ref": "OT:TRAF3IP2-MONDO_0005083", "category": "no_direction",
+     "reason": "an Open Targets association score (0.67) carries no sign"},
+    {"ref": "CHEMBL:CHEMBL2107455", "category": "not_in_text",
+     "reason": "says only that iguratimod targets TRAF3IP2 and reached approval; does not name psoriasis"}
+   ]}
+ ],
+ "unexpressed": [],
+ "hypotheses": {
+  "hyp1_il23_axis": {
+   "claims": [
+    {"subject": "IL12B", "sign": "pos", "target": {"disease": "psoriasis", "aspect": "risk"}},
+    {"subject": "IL23R", "sign": "pos", "target": {"disease": "psoriasis", "aspect": "risk"}},
+    {"subject": "TYK2", "sign": "pos", "target": {"disease": "psoriasis", "aspect": "risk"}}
+   ],
+   "note": "one claim per gene (IL12B, IL23R, TYK2); title and mechanism say IL-23 signalling through TYK2 drives psoriasis. The chain cannot compose: step 1 is binds (no sign), and step 4 (Th17 cell amount with psoriasis) is an unsigned association, so the signed steps 2 and 3 (IL23R to TYK2 activity, TYK2 to Th17 cell amount) reach no disease"
+  },
+  "hyp2_traf3ip2_il17": {
+   "claims": [
+    {"subject": "TRAF3IP2", "sign": "pos", "target": {"disease": "psoriasis", "aspect": "risk"}}
+   ],
+   "note": "a one-step chain, gene to disease; the IL-17 receptor signalling in the title has no step"
+  }
+ },
+ "findings": [
+  {"project": "hypothesis-agent", "category": "chain_unsigned", "hypothesis": "hyp1_il23_axis", "steps": ["hyp1_il23_axis.1", "hyp1_il23_axis.4"],
+   "detail": "the chain opens with an unsigned 'binds' step and closes with an 'associated_with' step of unknown polarity, so no claim of the hypothesis can reach psoriasis with a sign even if every citation held"},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["hyp1_il23_axis.2"],
+   "detail": "'IL23R activates TYK2' cites a STRING edge with no experimental channel (0.00) and a Reactome over-representation result; neither states activation"},
+  {"project": "hypothesis-agent", "category": "circular_evidence", "steps": ["hyp1_il23_axis.2", "hyp1_il23_axis.3"],
+   "detail": "two of the H1 citations are enrichment results computed on the run's own chosen genes (IL12B, IL23R, TYK2): they show the genes share annotations, not that one step causes the next"},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["hyp1_il23_axis.4"],
+   "detail": "'T-helper 17 cell associated with psoriasis' cites a TYK2-locus GWAS row and two drug-approval records (ustekinumab/IL12B, deucravacitinib/TYK2); none names Th17 cells, and the drug records do not name psoriasis"},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["hyp2_traf3ip2_il17.1"],
+   "detail": "'TRAF3IP2 leads to psoriasis (+)' cites an allele association, an unsigned Open Targets score and an iguratimod approval that does not name psoriasis; nothing states a direction for TRAF3IP2 itself"},
+  {"project": "hypothesis-agent", "category": "allele_direction_not_gene_direction", "steps": ["hyp2_traf3ip2_il17.1", "hyp1_il23_axis.4"],
+   "detail": "both GWAS rows name a missense risk allele (rs33980500-T, rs34536443-G with risk-allele frequency 0.953) but neither says whether the allele raises or lowers the protein's function, so the gene-level '+' of H2 (and of TYK2 in H1) does not follow from them"},
+  {"project": "hypothesis-agent", "category": "ambiguous_label", "steps": ["hyp1_il23_axis.3", "hyp1_il23_axis.4"],
+   "detail": "the node 'T-helper 17 cell' is a cell type used as an effect object with no quantity: the step note reads it as 'Th17 immune responses', the mechanism as 'differentiation and expansion of Th17 cells'; curated as the cell amount (OBA:0005025), the reading 'expansion' gives"},
+  {"project": "hypothesis-agent", "category": "chain_skips_mechanism", "hypothesis": "hyp2_traf3ip2_il17",
+   "detail": "the title and mechanism are about TRAF3IP2 as the IL-17 receptor adaptor in skin cells, but the chain is one step, TRAF3IP2 to psoriasis, so none of that mechanism is stated or checkable"},
+  {"project": "hypothesis-agent", "category": "mechanism_overstates_support", "hypothesis": "hyp1_il23_axis",
+   "detail": "the mechanism says it is 'strongly supported by genetic associations and the clinical efficacy of targeted therapies like Ustekinumab and Deucravacitinib', yet the cited ChEMBL rows give only target and approval stage (no indication, no efficacy) and the run itself rates confidence 'low' and support 'speculative'"},
+  {"project": "hypothesis-agent", "category": "better_source_available", "steps": ["hyp1_il23_axis.4"],
+   "detail": "the corpus definition of GO:0072538 'T-helper 17 type immune response' says the response 'is associated with pathological autoimmune conditions such as multiple sclerosis, arthritis and psoriasis', closer to the step than anything the run cited (not attached: it is a process, not the cell type, and the run did not cite it)"},
+  {"project": "hypothesis-agent", "category": "no_contradicting_evidence", "hypothesis": "hyp1_il23_axis",
+   "detail": "neither hypothesis lists supporting or contradicting evidence; every source is a chain citation, so there were no contradicting citations to judge"},
+  {"project": "biolean", "category": "rule_missing", "steps": ["hyp1_il23_axis.3"],
+   "detail": "the guide has no row for an effect on a cell type: render.py limits an amount target to chemical, protein or gene, and the grounding table lists HP/MP/PATO for phenotypes but not OBA, though render.py maps OBA to phenotype and OBA:0005025 'T-helper 17 cell amount' expresses the step as a phenotype target"},
+  {"project": "biolean", "category": "no_form_for",
+   "detail": "the run's abstention (EGFL8, GLE1, UHRF2: 'no shared mechanism') is a claim with its own evidence, and curated.json has no place to judge it"},
+  {"project": "biolean", "category": "abstention_not_fetched",
+   "detail": "sources.py fetches only hypothesis citations, so the abstention's evidence (Q99944, Q53GS7, Q96PU4, rs3117182, reactome:coverage) is not in sources.json and its claim that EGFL8 has a genome-wide psoriasis association (rs3117182) cannot be checked"},
+  {"project": "biolean", "category": "rule_missing", "hypothesis": "hyp1_il23_axis",
+   "detail": "the guide's claim subject is the chain's first node, but when the first step is 'binds' (a rel) that subject can never have a route, so the IL12B claim is no-route by construction rather than for want of evidence"},
+  {"project": "hypothesis-agent", "category": "chain_skips_node", "steps": ["hyp1_il23_axis.2"],
+   "detail": "'IL23R activates TYK2' skips IL12RB1: the corpus UniProt records of the run's own genes put TYK2 on 'a TYK2-associated receptor chain (IFNAR1, IL12RB1, IL10RB or IL13RA1)' (P29597) and say IL23R 'Interacts with JAK2' (Q5VWK5), and the cited STRING edge has experimental score 0.00"},
+  {"project": "hypothesis-agent", "category": "better_source_available", "hypothesis": "hyp2_traf3ip2_il17",
+   "detail": "the run had a UniProt specialist but cited no UniProt text; TRAF3IP2's record (O43734) states the title's mechanism ('Essential adapter molecule in IL17A-mediated signaling'), which no chain step or citation carries"}
+ ],
+ "audit": [
+  {"item": "unexpressed hyp1_il23_axis.3", "error": "wrong_unexpressed",
+   "before": "unexpressed, other_construct: 'needs an amount or differentiation target on a cell type'",
+   "after": "statement S5: TYK2 effect pos, target phenotype th17CellAmount (OBA:0005025 'T-helper 17 cell amount'); STRING:GO:2000318 still excluded as enrichment",
+   "reason": "BioLean has the form: OBA:0005025 is in the corpus and render.py maps OBA to phenotype, a valid effect target (other runs use OBA and UPHENO cell-number terms this way). 'leads_to (+) T-helper 17 cell' reads as more Th17 cells, and the mechanism says 'differentiation and expansion of Th17 cells'"},
+  {"item": "entity th17Cell / S3 subject", "error": "wrong_grounding",
+   "before": "th17Cell = CL:0000899 (cellType), subject of S3",
+   "after": "th17CellAmount = OBA:0005025 (phenotype), object of S5 and subject of S3",
+   "reason": "steps 3 and 4 use the same run label 'T-helper 17 cell' and the run chains them through it, so they are one node; grounding step 3 as the amount and step 4 as the cell type would break a link the run made. S3 stays an unsigned assoc, so composition is unchanged (no route)"},
+  {"item": "hypotheses.hyp1_il23_axis.note", "error": "other",
+   "before": "'step 3 has a cell type as object (unexpressed)'",
+   "after": "steps 2 and 3 are signed effects; the chain breaks at the binds step and the unsigned step 4",
+   "reason": "follows the S5 change; the reason for no route is now only the unsigned ends"},
+  {"item": "finding ungrounded_label (hyp1_il23_axis.3/.4)", "error": "other",
+   "before": "category ungrounded_label",
+   "after": "category ambiguous_label, naming the amount reading taken",
+   "reason": "the label was grounded (to CL:0000899, now OBA:0005025); the problem is that the run's note and mechanism give two readings"},
+  {"item": "finding biolean no_form_for (effect on a cell type)", "error": "wrong_unexpressed",
+   "before": "no_form_for: render.py limits amount to chemical/protein/gene; OBA:0005025 and GO:0072539 'each pick one reading the run did not make'",
+   "after": "rule_missing: the guide has no row for an effect on a cell type and does not list OBA, though render.py accepts OBA as a phenotype target",
+   "reason": "the form exists; what is missing is a guide rule pointing to it. The mechanism's 'expansion' is the amount reading"},
+  {"item": "finding biolean no_form_for (abstention)", "error": "other",
+   "before": "\"hypothesis\": \"hyp1_il23_axis\"",
+   "after": "no hypothesis field",
+   "reason": "the abstention covers EGFL8, GLE1 and UHRF2, not hyp1_il23_axis; the finding was attached to the wrong hypothesis"},
+  {"item": "findings", "error": "missed_finding",
+   "before": "none",
+   "after": "hypothesis-agent chain_skips_node on hyp1_il23_axis.2: corpus UniProt puts TYK2 on IL12RB1 and says IL23R 'Interacts with JAK2'",
+   "reason": "the run's own genes' UniProt records (P29597, Q5VWK5) show the step skips IL12RB1; the curator did not check them"},
+  {"item": "findings", "error": "missed_finding",
+   "before": "none",
+   "after": "hypothesis-agent better_source_available on hyp2_traf3ip2_il17: UniProt O43734 'Essential adapter molecule in IL17A-mediated signaling'",
+   "reason": "the H2 title's mechanism has a source in the corpus that the run (which had a UniProt specialist) did not cite"}
+ ]
+}

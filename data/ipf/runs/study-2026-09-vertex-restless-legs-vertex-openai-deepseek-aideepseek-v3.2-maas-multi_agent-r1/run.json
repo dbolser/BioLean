@@ -1,0 +1,189 @@
+{
+ "run_id": "study-2026-09-vertex-restless-legs-vertex-openai-deepseek-aideepseek-v3.2-maas-multi_agent-r1",
+ "model": "vertex-openai:deepseek-ai/deepseek-v3.2-maas",
+ "question": {
+  "arm": "multi_agent",
+  "budget": {
+   "max_delegations": 22,
+   "max_model_requests": 80,
+   "max_specialist_requests": 8,
+   "min_evidence_per_hypothesis": 2,
+   "min_hypotheses": 3,
+   "min_sources_per_hypothesis": 2,
+   "output_retries": 3
+  },
+  "data_policy": {
+   "max_age_seconds": 1209600.0,
+   "mode": "cache-preferred",
+   "snapshot_run_id": null
+  },
+  "disease": "restless legs syndrome",
+  "formalise": false,
+  "genes": [
+   "ACO1",
+   "MEIS1",
+   "GLIPR1",
+   "PTPRD",
+   "GABARAPL2",
+   "BTBD9"
+  ],
+  "model": "vertex-openai:deepseek-ai/deepseek-v3.2-maas",
+  "specialist_model": "vertex-openai:deepseek-ai/deepseek-v3.2-maas",
+  "specialists": [
+   "chembl",
+   "expression",
+   "gwas",
+   "interactions",
+   "literature",
+   "model_organism",
+   "open_targets",
+   "pathways",
+   "single_cell",
+   "trials",
+   "uniprot"
+  ],
+  "tissue": {
+   "artifact_id": "sha256:9083451a13b7e45058362501bb03fd93944d7aa79ffc0248bc2cf8b1520b9652",
+   "label": "brain",
+   "uberon": "UBERON:0000955"
+  },
+  "use_network": true
+ },
+ "abstention": null,
+ "disease": "restless legs syndrome",
+ "genes_considered": [
+  "ACO1",
+  "MEIS1",
+  "GLIPR1",
+  "PTPRD",
+  "GABARAPL2",
+  "BTBD9"
+ ],
+ "hypotheses": [
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [],
+     "note": "",
+     "object": {
+      "curie": "MONDO:0005391",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "restless legs syndrome"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "MEIS1"
+     }
+    }
+   ],
+   "confidence": "high",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "In a large population cohort, genotyping the MEIS1 variant rs113851554 should not show significant association with restless legs syndrome diagnosis. If this variant does not increase RLS risk with p<5e-8 and OR>1.2, the primary genetic association fails.",
+    "expected": "positive",
+    "perturbation": null,
+    "readout": null,
+    "system": ""
+   },
+   "genes": [
+    "MEIS1"
+   ],
+   "hypothesis_id": "h1",
+   "mechanism": "MEIS1 is a transcription factor with the strongest GWAS association to restless legs syndrome (rs113851554-T, p=1e-1371, beta=0.669). It regulates developmental genes and shows abnormal circadian sleep/wake cycle phenotypes in mouse models. MEIS1 variants may disrupt transcriptional programs in neural circuits controlling circadian rhythms and motor control, leading to RLS symptoms.",
+   "support": "speculative",
+   "supporting_evidence": [],
+   "title": "MEIS1 transcriptional dysregulation in neural circuits causes circadian and motor control defects in RLS"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [],
+     "note": "",
+     "object": {
+      "curie": "MONDO:0005391",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "restless legs syndrome"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "BTBD9"
+     }
+    }
+   ],
+   "confidence": "high",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "BTBD9 knockout mice should not show sleep behavior abnormalities, abnormal miniature excitatory postsynaptic currents, or motor cortex/somatosensory cortex defects. If BTBD9 disruption yields normal sleep patterns and synaptic physiology, the link to RLS pathophysiology is unsupported.",
+    "expected": "positive",
+    "perturbation": null,
+    "readout": null,
+    "system": ""
+   },
+   "genes": [
+    "BTBD9"
+   ],
+   "hypothesis_id": "h2",
+   "mechanism": "BTBD9 has strong GWAS association with RLS (rs10947738-A, p=1e-688, beta=0.282) and mouse models show multiple relevant neurological phenotypes including abnormal sleep behavior, abnormal miniature excitatory postsynaptic currents, and Purkinje cell morphology defects. BTBD9, containing BACK and BTB domains of unknown function, may regulate synaptic function or neuronal excitability in circuits controlling motor restlessness during sleep.",
+   "support": "speculative",
+   "supporting_evidence": [],
+   "title": "BTBD9 synaptic dysfunction leads to abnormal sleep behavior and neuronal excitability in RLS"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [],
+     "note": "",
+     "object": {
+      "curie": "MONDO:0005391",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "restless legs syndrome"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "PTPRD"
+     }
+    }
+   ],
+   "confidence": "medium",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "PTPRD variant rs34602324-G should not associate with RLS risk in replication cohorts. Additionally, PTPRD knockout should not affect synaptic differentiation or receptor-type tyrosine phosphatase signaling in neurons relevant to motor control.",
+    "expected": "positive",
+    "perturbation": null,
+    "readout": null,
+    "system": ""
+   },
+   "genes": [
+    "PTPRD"
+   ],
+   "hypothesis_id": "h3",
+   "mechanism": "PTPRD is a receptor-type tyrosine phosphatase involved in synaptic differentiation through interaction with IL1RAP/IL1RAPL1 and SLITRK2. It shows GWAS association with RLS (rs34602324-G, p=5e-162, beta=0.121) and is enriched in synaptic signaling pathways. PTPRD variants may disrupt synaptic adhesion and signaling in spinal cord or basal ganglia circuits, contributing to the sensory-motor symptoms of RLS.",
+   "support": "speculative",
+   "supporting_evidence": [],
+   "title": "PTPRD synaptic adhesion defects disrupt sensory-motor circuits in RLS"
+  }
+ ],
+ "unexplained_genes": [
+  "ACO1",
+  "GLIPR1",
+  "GABARAPL2"
+ ]
+}

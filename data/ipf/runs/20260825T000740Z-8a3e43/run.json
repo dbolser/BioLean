@@ -1,0 +1,686 @@
+{
+ "run_id": "20260825T000740Z-8a3e43",
+ "model": "openai:gpt-5.6-sol",
+ "question": {
+  "budget": {
+   "max_delegations": 14,
+   "max_model_requests": 60,
+   "min_evidence_per_hypothesis": 2,
+   "min_hypotheses": 3,
+   "min_sources_per_hypothesis": 2,
+   "output_retries": 3
+  },
+  "disease": "schizophrenia",
+  "genes": [
+   "CSMD1",
+   "NXPH3",
+   "C4A",
+   "CX3CR1",
+   "CCDC136",
+   "C1QA",
+   "C4B"
+  ],
+  "model": "openai:gpt-5.6-sol",
+  "specialist_model": "openai:gpt-5.6-sol",
+  "use_network": true
+ },
+ "disease": "schizophrenia",
+ "genes_considered": [
+  "CSMD1",
+  "NXPH3",
+  "C4A",
+  "CX3CR1",
+  "CCDC136",
+  "C1QA",
+  "C4B"
+ ],
+ "hypotheses": [
+  {
+   "chain": [
+    {
+     "context": {
+      "cell_type": null,
+      "disease_state": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "disease",
+       "label": "schizophrenia risk state"
+      },
+      "tissue": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "tissue",
+       "label": "developing cerebral cortex"
+      }
+     },
+     "evidence": [
+      "PMID:26814963",
+      "rs116385615",
+      "rs142520578",
+      "rs1150754",
+      "P0C0L4",
+      "P0C0L5"
+     ],
+     "note": "The available records support C4-locus association and synaptic localization, but do not uniformly distinguish C4A from C4B or establish the direction for every SNP.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "synaptic C4 activity"
+     },
+     "polarity": "positive",
+     "relation": "increases_amount",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "schizophrenia-associated C4A/C4B variation"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "microglia"
+      },
+      "disease_state": null,
+      "tissue": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "tissue",
+       "label": "developing brain"
+      }
+     },
+     "evidence": [
+      "PMID:22632727",
+      "STRING:GO:0006958",
+      "STRING:GO:0098883",
+      "P02745"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "microglial synapse elimination"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "C1QA and C4A/C4B classical complement activity"
+     }
+    },
+    {
+     "context": {
+      "cell_type": null,
+      "disease_state": {
+       "curie": "EFO:MONDO_0005090",
+       "grounding_evidence": "",
+       "kind": "disease",
+       "label": "schizophrenia"
+      },
+      "tissue": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "tissue",
+       "label": "cerebral cortex"
+      }
+     },
+     "evidence": [
+      "PMID:26814963"
+     ],
+     "note": "",
+     "object": {
+      "curie": "EFO:MONDO_0005090",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "schizophrenia"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "excessive developmental synapse elimination"
+     }
+    }
+   ],
+   "confidence": "high",
+   "contradicting_evidence": [
+    "PMID:38301948",
+    "PMID:42000733"
+   ],
+   "falsification": {
+    "description": "Generate isogenic human cortical organoid–microglia assembloids differing only in C4A/C4B copy number or predicted-expression haplotype. The hypothesis is falsified if higher-risk C4 dosage does not increase synaptic C4 deposition, microglial synapse engulfment, or loss of electrophysiologically functional synapses during maturation, despite confirmed C4 expression changes.",
+    "expected": "positive",
+    "perturbation": {
+     "action": "overexpress",
+     "target": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "C4A/C4B dosage"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "phenotype",
+     "label": "microglial synapse engulfment and functional synapse density"
+    },
+    "system": "isogenic human cortical organoid–microglia assembloid"
+   },
+   "genes": [
+    "C4A",
+    "C4B",
+    "C1QA",
+    "CX3CR1"
+   ],
+   "hypothesis_id": "H1",
+   "mechanism": "Schizophrenia-associated variation at the C4 locus increases effective C4 activity during circuit maturation, increasing complement marking and microglial elimination of synapses. C1QA supplies the classical-pathway initiation machinery and CX3CR1 regulates the pruning microglial state; the predicted outcome is reduced synapse density and dysconnected cortical circuits. The strongest historical claim favors C4A, but the returned locus-level SNP and copy-number records often implicate or map to both C4A and C4B, so paralogue specificity remains unresolved.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "PMID:26814963",
+    "PMID:22632727",
+    "rs116385615",
+    "rs142520578",
+    "rs1150754",
+    "STRING:GO:0006958",
+    "STRING:GO:0098883",
+    "P0C0L4",
+    "P0C0L5",
+    "P02745",
+    "HPA:ENSG00000168329",
+    "HPA:ENSG00000173372"
+   ],
+   "title": "Increased C4A/C4B dosage drives excessive complement-dependent synapse elimination"
+  },
+  {
+   "chain": [
+    {
+     "context": {
+      "cell_type": null,
+      "disease_state": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "disease",
+       "label": "schizophrenia risk state"
+      },
+      "tissue": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "tissue",
+       "label": "brain"
+      }
+     },
+     "evidence": [
+      "rs10503253",
+      "rs6986895"
+     ],
+     "note": "The direction from associated SNP to CSMD1 loss of function is a testable inference, not established by the GWAS records.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "reduced CSMD1 function"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "schizophrenia-associated CSMD1 variation"
+     }
+    },
+    {
+     "context": {
+      "cell_type": null,
+      "disease_state": null,
+      "tissue": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "tissue",
+       "label": "brain synapse"
+      }
+     },
+     "evidence": [
+      "PMID:40112933"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "classical complement pathway"
+     },
+     "polarity": "negative",
+     "relation": "inhibits",
+     "subject": {
+      "curie": "UniProt:Q96PZ7",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "CSMD1"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "microglia"
+      },
+      "disease_state": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "disease",
+       "label": "schizophrenia risk state"
+      },
+      "tissue": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "tissue",
+       "label": "developing brain"
+      }
+     },
+     "evidence": [
+      "PMID:40112933",
+      "PMID:22632727"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "abnormal complement-dependent synapse elimination"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "loss of CSMD1 complement restraint"
+     }
+    }
+   ],
+   "confidence": "medium",
+   "contradicting_evidence": [
+    "HPA:ENSG00000183117"
+   ],
+   "falsification": {
+    "description": "Knock down CSMD1 separately in neurons and astrocytes in human cortical organoid–microglia assembloids, then restore CSMD1 in the affected compartment. The hypothesis is falsified if CSMD1 loss does not increase C1Q/C4 synaptic deposition, microglial engulfment, or synapse loss, or if restoration fails to reverse those changes.",
+    "expected": "positive",
+    "perturbation": {
+     "action": "knockdown",
+     "target": {
+      "curie": "UniProt:Q96PZ7",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "CSMD1"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "phenotype",
+     "label": "C1Q/C4 synaptic deposition and microglial synapse engulfment"
+    },
+    "system": "cell-type-specific human cortical organoid–microglia assembloid"
+   },
+   "genes": [
+    "CSMD1",
+    "C1QA",
+    "C4A",
+    "C4B"
+   ],
+   "hypothesis_id": "H2",
+   "mechanism": "A subset of schizophrenia-associated CSMD1 alleles reduces CSMD1 abundance or function at neural membranes, weakening local inhibition of the classical complement pathway. This permits excessive C1Q/C4-dependent synapse handling even without a high-risk C4 haplotype. The relevant producing cell is unresolved: HPA strongly supports neuronal CSMD1, whereas a recent primary study emphasizes astrocytic and synaptic expression.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "PMID:40112933",
+    "rs10503253",
+    "rs6986895",
+    "PMID:22632727",
+    "Q96PZ7",
+    "HPA:ENSG00000183117"
+   ],
+   "title": "Reduced CSMD1 function removes a local brake on classical complement at synapses"
+  },
+  {
+   "chain": [
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "microglia"
+      },
+      "disease_state": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "disease",
+       "label": "first-episode psychosis or schizophrenia"
+      },
+      "tissue": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "tissue",
+       "label": "brain"
+      }
+     },
+     "evidence": [
+      "PMID:38301948",
+      "AGR:MGI:88223:MP:0008571",
+      "AGR:MGI:88223:MP:0002910",
+      "AGR:MGI:88223:MP:0002945"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "abnormal synaptic maturation"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "reduced C1QA availability"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "microglia"
+      },
+      "disease_state": null,
+      "tissue": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "tissue",
+       "label": "developing brain"
+      }
+     },
+     "evidence": [
+      "P49238",
+      "AGR:MGI:1333815:MP:0000136",
+      "AGR:MGI:1333815:MP:0003691"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "normal microglial physiology and synapse maturation"
+     },
+     "polarity": "positive",
+     "relation": "required_for",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "CX3CR1 signaling"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "microglia"
+      },
+      "disease_state": {
+       "curie": "EFO:MONDO_0005090",
+       "grounding_evidence": "",
+       "kind": "disease",
+       "label": "schizophrenia"
+      },
+      "tissue": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "tissue",
+       "label": "cerebral cortex"
+      }
+     },
+     "evidence": [
+      "STRING:GO:0098883",
+      "STRING:GO:0001774"
+     ],
+     "note": "",
+     "object": {
+      "curie": "EFO:MONDO_0005090",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "schizophrenia"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "mistimed microglial circuit maturation"
+     }
+    }
+   ],
+   "confidence": "medium",
+   "contradicting_evidence": [
+    "PMID:26814963"
+   ],
+   "falsification": {
+    "description": "Reduce C1QA or CX3CR1 selectively in microglia during a defined maturation window in human cortical assembloids. The hypothesis is falsified if the perturbation does not delay synapse elimination or produce persistent immature excitatory/inhibitory network connectivity, or if timed restoration of the affected pathway does not normalize those readouts.",
+    "expected": "positive",
+    "perturbation": {
+     "action": "knockdown",
+     "target": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "C1QA or CX3CR1"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "phenotype",
+     "label": "persistence of immature synapses and network connectivity"
+    },
+    "system": "developmentally timed human cortical organoid–microglia assembloid"
+   },
+   "genes": [
+    "C1QA",
+    "CX3CR1"
+   ],
+   "hypothesis_id": "H3",
+   "mechanism": "In a schizophrenia subgroup, reduced C1QA availability or impaired CX3CR1-dependent microglial physiology causes delayed or spatially inappropriate developmental pruning rather than global overpruning. The result is persistence of immature or miswired excitatory and inhibitory connections. This hypothesis explains lower measured C1q and is mechanistically distinct from the high-C4 overpruning model, although both could occur at different stages or in different patients.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "PMID:38301948",
+    "P49238",
+    "AGR:MGI:88223:MP:0008571",
+    "AGR:MGI:88223:MP:0002910",
+    "AGR:MGI:88223:MP:0002945",
+    "AGR:MGI:1333815:MP:0000136",
+    "AGR:MGI:1333815:MP:0003691",
+    "STRING:GO:0098883",
+    "STRING:GO:0001774",
+    "HPA:ENSG00000168329",
+    "HPA:ENSG00000173372"
+   ],
+   "title": "Low C1QA or impaired CX3CR1 signaling causes mistimed, incomplete microglial circuit maturation"
+  },
+  {
+   "chain": [
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "excitatory neuron"
+      },
+      "disease_state": null,
+      "tissue": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "tissue",
+       "label": "brain"
+      }
+     },
+     "evidence": [
+      "O95157",
+      "HPA:ENSG00000182575"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "alpha-neurexins"
+     },
+     "polarity": "unknown",
+     "relation": "binds",
+     "subject": {
+      "curie": "UniProt:O95157",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "NXPH3"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "neuron"
+      },
+      "disease_state": null,
+      "tissue": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "tissue",
+       "label": "brain"
+      }
+     },
+     "evidence": [
+      "AGR:MGI:1336188:MP:0001463",
+      "AGR:MGI:1336188:MP:0001488"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "phenotype",
+      "label": "abnormal spatial learning and startle processing"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "loss of NXPH3 signaling"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "neuron"
+      },
+      "disease_state": {
+       "curie": "EFO:MONDO_0005090",
+       "grounding_evidence": "",
+       "kind": "disease",
+       "label": "schizophrenia"
+      },
+      "tissue": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "tissue",
+       "label": "cerebral cortex"
+      }
+     },
+     "evidence": [
+      "O95157",
+      "AGR:MGI:1336188:MP:0001463",
+      "AGR:MGI:1336188:MP:0001488"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "phenotype",
+      "label": "schizophrenia-relevant cognitive and sensorimotor dysfunction"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "NXPH3-dependent synaptic circuit dysfunction"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [
+    "GWAS:NXPH3:no-association"
+   ],
+   "falsification": {
+    "description": "Knock out NXPH3 in isogenic human excitatory neurons and quantify alpha-neurexin-dependent synapse formation, transmission, and network responses; then rescue with secreted wild-type NXPH3. The hypothesis is falsified if knockout produces no reproducible synaptic or network phenotype, or if wild-type NXPH3 fails to rescue a confirmed phenotype.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "UniProt:O95157",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "NXPH3"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "phenotype",
+     "label": "alpha-neurexin-dependent synaptic transmission and network activity"
+    },
+    "system": "isogenic human excitatory-neuron culture or cortical organoid"
+   },
+   "genes": [
+    "NXPH3"
+   ],
+   "hypothesis_id": "H4",
+   "mechanism": "NXPH3 is a secreted alpha-neurexin ligand expressed in human excitatory neurons. Reduced or altered NXPH3 signaling could impair synaptic organization and circuit-level sensorimotor/cognitive processing, consistent with abnormal spatial learning and increased startle in Nxph3-null mice. This is biologically plausible but currently lacks direct catalogued human schizophrenia association in the returned evidence.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "O95157",
+    "HPA:ENSG00000182575",
+    "AGR:MGI:1336188:MP:0001463",
+    "AGR:MGI:1336188:MP:0001488"
+   ],
+   "title": "NXPH3 disruption produces a complement-independent neurexin synaptic-signaling defect"
+  }
+ ],
+ "unexplained_genes": [
+  "CCDC136"
+ ]
+}

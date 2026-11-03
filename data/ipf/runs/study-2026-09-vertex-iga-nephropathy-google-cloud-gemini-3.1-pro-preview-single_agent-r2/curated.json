@@ -1,0 +1,177 @@
+{
+ "run_id": "study-2026-09-vertex-iga-nephropathy-google-cloud-gemini-3.1-pro-preview-single_agent-r2",
+ "curated_by": "Claude Opus 5.5, 2026-10-30",
+ "entities": {
+  "TNFSF13": {"kind": "protein", "curie": "UniProt:O75888", "run_labels": ["TNFSF13"]},
+  "bCellActivation": {"kind": "process", "curie": "GO:0042113", "run_labels": ["B cell"]},
+  "iga": {"kind": "protein", "curie": "PR:000050176", "run_labels": ["IgA"],
+          "note": "the run's 'IgA' is the antibody isotype; GO:0071745 'IgA immunoglobulin complex' names it exactly but is a component, which cannot be an amount target, so the PR IgA heavy chain protein (both subclasses, any species) stands in, as in the sibling run single_agent-r3"},
+  "igan": {"kind": "disease", "curie": "MONDO:0005342", "run_labels": ["IgA glomerulonephritis"]},
+  "CFH": {"kind": "protein", "curie": "UniProt:P08603", "run_labels": ["CFH"]},
+  "complementAP": {"kind": "process", "curie": "GO:0006957", "run_labels": ["complement alternative pathway"]},
+  "CARD9": {"kind": "protein", "curie": "UniProt:Q9H257", "run_labels": ["CARD9"]},
+  "ITGAX": {"kind": "protein", "curie": "UniProt:P20702", "run_labels": ["ITGAX"]},
+  "DEFA4": {"kind": "protein", "curie": "UniProt:P12838", "run_labels": ["DEFA4"]},
+  "innateImmuneResponse": {"kind": "process", "curie": "GO:0045087", "run_labels": ["innate immune response"]}
+ },
+ "statements": [
+  {"id": "S1", "step": "hyp-1.1", "text": "TNFSF13 activates B cells (B cell activation)",
+   "claim": {"effect": {"subject": "TNFSF13", "sign": "pos", "target": {"process": "bCellActivation"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "O75888", "category": "not_in_text", "reason": "UniProt function: binds TACI and BCMA, tumour cell growth, may be involved in monocyte/macrophage processes; no B cells, no activation"},
+    {"ref": "CHEMBL:CHEMBL1742986-CHEMBL3713436-5867", "category": "not_in_text", "reason": "ChEMBL mechanism: atacicept is a decoy-receptor inhibitor of TNFSF13 (and TNFSF13B/BAFF); says nothing about B cells"}
+   ]},
+  {"id": "S2", "step": "hyp-1.2", "text": "B cells (activated) raise IgA",
+   "claim": {"effect": {"subject": "bCellActivation", "sign": "pos", "target": {"amount": "iga"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "AGR:MGI:1916833:MP:0001807", "category": "not_this_entity", "reason": "states that Tnfsf13 knockout mice have decreased IgA (TNFSF13 raises IgA, mouse); the subject is the gene, not B cells"}
+   ]},
+  {"id": "S3", "step": "hyp-1.3", "text": "IgA leads to IgA nephropathy",
+   "claim": {"effect": {"subject": "iga", "sign": "pos", "target": {"disease": "igan", "aspect": "risk"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "CHEMBL:CHEMBL1742986-EFO_0004194", "category": "not_in_text", "reason": "a drug-indication record (atacicept reached phase 3 for IgA nephropathy); names no IgA level and no cause"},
+    {"ref": "rs3803800", "category": "not_this_entity", "reason": "GWAS row for rs3803800-A (TNFSF13 locus) with IgA nephropathy, OR 1.21; about a variant, not IgA"}
+   ]},
+  {"id": "S4", "step": "hyp-2.1", "text": "CFH inhibits the complement alternative pathway",
+   "claim": {"effect": {"subject": "CFH", "sign": "neg", "target": {"process": "complementAP"}}},
+   "evidence": [
+    {"ref": "P08603", "kind": "curatedDb",
+     "quote": "Accelerates the decay of the complement alternative pathway (AP) C3 convertase C3bBb, thus preventing local formation of more C3b"}
+   ],
+   "excluded": [
+    {"ref": "AGR:MGI:88385:MP:0011566", "category": "no_direction", "reason": "MGI 'abnormal complement protein level' annotation (Cfh knockout with a Cfh transgene): no direction, and not the alternative pathway as such"}
+   ]},
+  {"id": "S5", "step": "hyp-2.2", "text": "complement alternative pathway activation leads to IgA nephropathy",
+   "claim": {"effect": {"subject": "complementAP", "sign": "pos", "target": {"disease": "igan", "aspect": "risk"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "AGR:MGI:88385:MP:0002743", "category": "not_this_entity", "reason": "Cfh knockout mice show glomerulonephritis: the subject is the gene, not the alternative pathway, and the object is the parent disease, not IgA nephropathy"},
+    {"ref": "rs6677604", "category": "not_this_entity", "reason": "GWAS row for rs6677604-G (CFH intron) with IgA nephropathy, OR 1.21; about a variant, not the alternative pathway, and gives no effect on CFH function"}
+   ]},
+  {"id": "S6", "step": "hyp-3.1", "text": "CARD9 activates the innate immune response",
+   "claim": {"effect": {"subject": "CARD9", "sign": "pos", "target": {"process": "innateImmuneResponse"}}},
+   "evidence": [
+    {"ref": "Q9H257", "kind": "curatedDb", "quote": "plays a key role in innate immune response against fungi by forming signaling complexes downstream of C-type lectin receptors (PubMed:26961233, PubMed:33558980). CARD9-mediated signals are essential for antifungal immunity"}
+   ],
+   "excluded": [
+    {"ref": "AGR:MGI:2685628:MP:0002419", "category": "no_direction", "reason": "MGI 'abnormal innate immunity' annotation for Card9 knockout mice: no direction"}
+   ]},
+  {"id": "S7", "step": "hyp-3.2", "text": "ITGAX activates the innate immune response",
+   "claim": {"effect": {"subject": "ITGAX", "sign": "pos", "target": {"process": "innateImmuneResponse"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "P20702", "category": "not_in_text", "reason": "UniProt function: fibrinogen receptor, cell-cell interaction during inflammatory responses, monocyte adhesion and chemotaxis; no innate immune response, no activation"},
+    {"ref": "AGR:MGI:96609:MP:0001606", "category": "not_in_text", "reason": "Itgax mutant mice show impaired hematopoiesis, not an innate immune phenotype"}
+   ]},
+  {"id": "S8", "step": "hyp-3.3", "text": "DEFA4 activates the innate immune response",
+   "claim": {"effect": {"subject": "DEFA4", "sign": "pos", "target": {"process": "innateImmuneResponse"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "P12838", "category": "not_in_text", "reason": "UniProt function: a host-defense peptide with antimicrobial activity (an effector); does not say it activates the innate immune response"}
+   ]},
+  {"id": "S9", "step": "hyp-3.4", "text": "the innate immune response leads to IgA nephropathy",
+   "claim": {"effect": {"subject": "innateImmuneResponse", "sign": "pos", "target": {"disease": "igan", "aspect": "risk"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "STRING:PMID:25305756", "category": "enrichment", "reason": "STRING publication enrichment: 4 input genes are in a paper titled 'Discovery of new risk loci for IgA nephropathy implicates genes involved in immunity against intestinal pathogens'; a gene-set result, not a statement that innate immunity causes IgAN"},
+    {"ref": "rs4077515", "category": "not_this_entity", "reason": "GWAS row for rs4077515-T (CARD9 missense) with IgA nephropathy, OR 1.14; about a variant, not the innate immune response"},
+    {"ref": "rs7190997", "category": "not_this_entity", "reason": "GWAS row for rs7190997-C (ITGAX intron; author-reported gene ITGAX-ITGAM) with IgA nephropathy, OR 1.223; about a variant, not the innate immune response"},
+    {"ref": "rs2738058", "category": "not_this_entity", "reason": "GWAS row for rs2738058-T (intergenic, DEFA cluster) with IgA nephropathy, OR 1.267; about a variant, not the innate immune response"}
+   ]}
+ ],
+ "unexpressed": [],
+ "hypotheses": {
+  "hyp-1": {"claims": [{"subject": "TNFSF13", "sign": "pos", "target": {"disease": "igan", "aspect": "risk"}}],
+            "note": "the title ends at IgA overproduction; the chain continues to IgA nephropathy, so the claim follows the chain"},
+  "hyp-2": {"claims": [{"subject": "CFH", "sign": "neg", "target": {"disease": "igan", "aspect": "risk"}}],
+            "note": "title: 'CFH deficiency ... exacerbating glomerular injury' (loss of CFH worsens disease, so neg). The title reads as severity, but the chain's last step says the pathway leads_to IgA nephropathy, so the claim takes the chain's aspect, risk. The mechanism names CFH variants; the chain starts at the protein."},
+  "hyp-3": {"no_claim_reason": "the title says the three genes 'modulate' mucosal innate immunity, the mechanism says 'alterations' in these defences trigger aberrant responses, and the falsification expects 'unknown': no direction for any gene's overall effect on IgA nephropathy, although each chain step is signed positive"}
+ },
+ "findings": [
+  {"project": "hypothesis-agent", "category": "ungrounded_label", "steps": ["hyp-1.1", "hyp-1.2", "hyp-1.3", "hyp-2.1", "hyp-2.2", "hyp-3.1", "hyp-3.2", "hyp-3.3", "hyp-3.4"],
+   "detail": "every intermediate node ('B cell', 'IgA', 'complement alternative pathway', 'innate immune response') is left as kind 'other' with no CURIE, although CL:0000236, GO:0071745, GO:0006957 and GO:0045087 exist."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["hyp-1.1"],
+   "detail": "neither cited text mentions B cells: UniProt TNFSF13 gives TACI/BCMA binding, tumour cell growth and monocyte/macrophage processes; the ChEMBL record gives atacicept as a TNFSF13 inhibitor."},
+  {"project": "hypothesis-agent", "category": "citation_states_other_step", "steps": ["hyp-1.2"],
+   "detail": "the MGI record (Tnfsf13 knockout mice have decreased IgA) states TNFSF13 raises IgA directly in mouse, which is the hypothesis title, but the run filed it under the B cell step, which it does not state; B cells appear in no cited text."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["hyp-1.3"],
+   "detail": "'IgA leads to IgA nephropathy' is cited to a ChEMBL drug indication (atacicept, phase 3 for IgAN) and a GWAS row for rs3803800-A; neither names IgA as a cause."},
+  {"project": "hypothesis-agent", "category": "drug_not_specific", "hypothesis": "hyp-1",
+   "detail": "the cited ChEMBL record itself says atacicept is a decoy receptor for both TNFSF13 (APRIL) and TNFSF13B (BAFF), and the indication record gives only the phase reached, not efficacy, so neither isolates a TNFSF13 effect on IgA nephropathy."},
+  {"project": "hypothesis-agent", "category": "confidence_unjustified", "hypothesis": "hyp-1",
+   "detail": "confidence 'high', yet none of its five citations states the step it is cited for; every step of its chain has empty evidence."},
+  {"project": "hypothesis-agent", "category": "confidence_unjustified", "hypothesis": "hyp-2",
+   "detail": "confidence 'high', yet only the first step (CFH inhibits the alternative pathway, UniProt) is supported; the disease step rests on a mouse Cfh-knockout glomerulonephritis annotation (gene not pathway, parent disease) and a CFH-locus GWAS row."},
+  {"project": "hypothesis-agent", "category": "confidence_support_mismatch",
+   "detail": "all three hypotheses set support 'speculative' while confidence is 'high', 'high' and 'medium': the run's two self-assessments disagree."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["hyp-2.2"],
+   "detail": "'complement alternative pathway leads to IgAN' is cited to Cfh knockout mice with glomerulonephritis (a gene, and the parent disease) and to rs6677604-G (a CFH-locus association); no text names the pathway as a cause of IgAN."},
+  {"project": "hypothesis-agent", "category": "aspect_mismatch", "hypothesis": "hyp-2",
+   "detail": "title and mechanism describe CFH deficiency as aggravating glomerular injury within IgAN (severity), and the falsification reads out glomerular damage, but the chain's last step says the pathway leads_to IgAN (cause, risk)."},
+  {"project": "hypothesis-agent", "category": "variant_direction_unlinked", "steps": ["hyp-2.2"], "hypothesis": "hyp-2",
+   "detail": "the mechanism invokes 'genetic variants that reduce CFH function', but the cited rs6677604 row gives only the G allele's OR 1.21 for IgAN, with no statement of what the allele does to CFH; the variant's direction is never connected to CFH function."},
+  {"project": "hypothesis-agent", "category": "sign_unstated", "hypothesis": "hyp-3",
+   "detail": "every chain step is signed positive (more CARD9/ITGAX/DEFA4 activity, more innate immunity, more IgAN), but the title says 'modulate', the mechanism 'alterations ... disrupt intestinal homeostasis' (which reads more like loss of defence causing disease) and the falsification expects 'unknown'; the chain commits to a sign the hypothesis does not."},
+  {"project": "hypothesis-agent", "category": "chain_skips_mechanism", "steps": ["hyp-3.1", "hyp-3.2", "hyp-3.3", "hyp-3.4"], "hypothesis": "hyp-3",
+   "detail": "steps 1 to 3 are parallel (each gene to innate immune response) and do connect through step 4, but the title's 'pathogenic IgA production' and 'intestinal defense' are absent, so the chain jumps from innate immune response straight to IgAN, while the falsification reads out IgA, a node the chain never reaches."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["hyp-3.2"],
+   "detail": "ITGAX UniProt text gives fibrinogen receptor, cell-cell interaction during inflammatory responses, monocyte adhesion and chemotaxis; the MGI record gives impaired hematopoiesis; neither names the innate immune response."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["hyp-3.3"],
+   "detail": "DEFA4 UniProt text describes an antimicrobial host-defense peptide (an effector), not something that activates the innate immune response; it is the step's only citation."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["hyp-3.4"],
+   "detail": "'innate immune response leads to IgAN' is cited to a STRING publication enrichment (a paper title) and three variant association rows; the only text linking immunity against intestinal pathogens to IgAN is that paper title, seen through an enrichment."},
+  {"project": "hypothesis-agent", "category": "weak_locus_to_gene", "steps": ["hyp-3.4"],
+   "detail": "rs2738058 is intergenic, its author-reported gene is 'DEFA' (the cluster), its closest genes are DEFA9P/DEFA10P and DEFA4 is 25.8 kb away and not closest; rs7190997's author-reported gene is 'ITGAX-ITGAM'; the run treats them as DEFA4 and ITGAX evidence."},
+  {"project": "hypothesis-agent", "category": "genetic_evidence_unused",
+   "detail": "the five GWAS rows give signed allele associations with IgAN (rs3803800-A OR 1.21 in TNFSF13, rs6677604-G OR 1.21 in CFH, rs4077515-T OR 1.14 in CARD9, rs7190997-C OR 1.223, rs2738058-T OR 1.267), but no chain has a variant node, so the run's only human genetic evidence is cited for process-to-disease steps it cannot state."},
+  {"project": "hypothesis-agent", "category": "mechanism_node_coarsened", "hypothesis": "hyp-1",
+   "detail": "the mechanism names poorly O-glycosylated IgA1 as the pathogenic species, but the chain node is plain 'IgA' and the only IgA-level citation is total IgA in mouse."},
+  {"project": "hypothesis-agent", "category": "no_contradicting_evidence",
+   "detail": "every hypothesis has empty supporting_evidence and contradicting_evidence lists; the run judged no contradicting citations."},
+  {"project": "hypothesis-agent", "category": "abstention_unverifiable",
+   "detail": "the abstention for OR4X1 and ZNF174 cites 'GWAS:OR4X1:no-association', 'CHEMBL:no-target-OR4X1', 'STRING:no-edges' and similar ids that are not in sources.json, so its 'grounded' support cannot be checked; it also reads absence of records as 'unrelated to the disease'."},
+  {"project": "biolean", "category": "no_form_for", "steps": ["hyp-1.1", "hyp-1.2"],
+   "detail": "a cell type as an effect target ('TNFSF13 activates B cell'): there is no cellType target kind, so 'B cell' was grounded as the process GO:0042113 B cell activation at both ends, which keeps the run's own link between the two steps."},
+  {"project": "biolean", "category": "kind_mismatch", "steps": ["hyp-1.2", "hyp-1.3"],
+   "detail": "'IgA' is exactly GO:0071745 IgA immunoglobulin complex, a component, which cannot be an amount target; grounded instead as PR:000050176 IgA heavy chain protein (both subclasses, any species), the protein that defines the isotype, as the sibling run single_agent-r3 did."},
+  {"project": "biolean", "category": "rule_missing", "steps": ["hyp-1.2"], "hypothesis": "hyp-1",
+   "detail": "a cited text that states a shortcut of the chain (MGI: Tnfsf13 knockout lowers IgA, i.e. TNFSF13 raises IgA) has no home: it states no run step, and a bridge is allowed only when an arm needs it to compose, which this arm does not; the run's best mechanistic citation for hyp-1 is therefore excluded."},
+  {"project": "biolean", "category": "no_form_for", "hypothesis": "hyp-3",
+   "detail": "a hypothesis whose chain is fully signed but whose title and mechanism give no direction gets no_claim_reason, so the three signed gene-to-IgAN routes are never composed; a claim 'sign from the chain, unconfirmed by the title' would let them be tested."},
+  {"project": "biolean", "category": "no_form_for",
+   "detail": "the run's abstention (two genes declined with cited reasons) has no place in curated.json, so it can only be recorded as a finding."},
+  {"project": "biolean", "category": "rule_missing", "hypothesis": "hyp-2",
+   "detail": "the guide says the claim targets 'the disease the chain concludes' but not whose aspect wins when the title (exacerbating, severity) and the chain's last step (leads_to, risk) disagree; the chain's was used."},
+  {"project": "biolean", "category": "evidence_weighting", "steps": ["hyp-2.1", "hyp-3.1"],
+   "detail": "S4 and S6 each reach 'established' (b = 4/5, exactly the 0.8 threshold) on a single UniProt function sentence; for S6 that sentence only says CARD9 'plays a key role in' the antifungal innate immune response, so one database summary line is enough to establish a statement."}
+ ],
+ "audit": [
+  {"item": "entities.iga", "error": "wrong_grounding",
+   "before": "PR:000050159 IgA1 immunoglobulin complex, circulating (human)",
+   "after": "PR:000050176 IgA heavy chain protein",
+   "reason": "the run's node is plain 'IgA' (the curator's own mechanism_node_coarsened finding says so); PR:000050159 adds the IgA1 subclass, 'circulating' and human-only, which repairs the node toward the mechanism and breaks equality with the sibling run single_agent-r3, which grounds the same label as PR:000050176"},
+  {"item": "S6 (hyp-3.1) evidence Q9H257", "error": "quote_does_not_state",
+   "before": "plays a key role in innate immune response against fungi",
+   "after": "plays a key role in innate immune response against fungi by forming signaling complexes downstream of C-type lectin receptors (PubMed:26961233, PubMed:33558980). CARD9-mediated signals are essential for antifungal immunity",
+   "reason": "'plays a key role in' names both ends but not the direction of 'activates'; the next sentence ('essential for', i.e. required_for, pos) gives it, so the shortest span that states the signed step runs through it"},
+  {"item": "findings: ungrounded_label", "error": "other",
+   "before": "steps hyp-1.1, 1.2, 1.3, 2.1, 2.2, 3.1, 3.4",
+   "after": "steps hyp-1.1, 1.2, 1.3, 2.1, 2.2, 3.1, 3.2, 3.3, 3.4",
+   "reason": "hyp-3.2 and hyp-3.3 also leave their object 'innate immune response' as kind 'other' with no CURIE"},
+  {"item": "findings: hyp-3 chain_not_connected", "error": "other",
+   "before": "category chain_not_connected, steps hyp-3.1 to 3.3",
+   "after": "category chain_skips_mechanism, steps hyp-3.1 to 3.4, detail adds the off-chain falsification readout (IgA)",
+   "reason": "each of steps 1 to 3 ends at 'innate immune response', which is step 4's subject, so every gene's route connects to IgAN; the defect is the missing IgA node from the title, not a broken link, and the wrong slug inflates the cross-run chain_not_connected count"},
+  {"item": "findings: biolean kind_mismatch (hyp-1.2, hyp-1.3)", "error": "wrong_grounding",
+   "before": "grounded as PR:000050159 IgA1 immunoglobulin complex, circulating (human)",
+   "after": "grounded as PR:000050176 IgA heavy chain protein",
+   "reason": "follows the regrounding of 'IgA'"},
+  {"item": "findings", "error": "missed_finding",
+   "before": "none",
+   "after": "biolean evidence_weighting for hyp-2.1 and hyp-3.1",
+   "reason": "a single UniProt function sentence takes S4 and S6 to b = 4/5, exactly the 'established' threshold, including CARD9's vague 'plays a key role in'"}
+ ]
+}

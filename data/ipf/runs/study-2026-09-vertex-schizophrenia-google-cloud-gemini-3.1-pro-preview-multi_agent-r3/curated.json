@@ -1,0 +1,183 @@
+{
+ "run_id": "study-2026-09-vertex-schizophrenia-google-cloud-gemini-3.1-pro-preview-multi_agent-r3",
+ "curated_by": "Claude Opus 5.5, 2026-10-30",
+ "entities": {
+  "CSMD1": {"kind": "protein", "curie": "UniProt:Q96PZ7", "run_labels": ["CSMD1"]},
+  "C4A": {"kind": "protein", "curie": "UniProt:P0C0L4", "run_labels": ["C4A"]},
+  "C4B": {"kind": "protein", "curie": "UniProt:P0C0L5", "run_labels": ["C4B"]},
+  "C1QA": {"kind": "protein", "curie": "UniProt:P02745", "run_labels": ["C1QA"]},
+  "CX3CR1": {"kind": "protein", "curie": "UniProt:P49238", "run_labels": ["CX3CR1"]},
+  "synapsePruning": {"kind": "process", "curie": "GO:0098883", "run_labels": ["Synapse pruning"]},
+  "microgliaActivation": {"kind": "process", "curie": "GO:0001774", "run_labels": ["Microglial cell activation"]},
+  "schizophrenia": {"kind": "disease", "curie": "MONDO:0005090", "run_labels": ["schizophrenia"]}
+ },
+ "statements": [
+  {"id": "S1", "step": "hyp-1.1", "text": "CSMD1 inhibits C4A",
+   "claim": {"effect": {"subject": "CSMD1", "sign": "neg", "target": {"activity": "C4A"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "PMID:40112933", "category": "not_this_entity",
+     "reason": "states that CSMD1 domains inhibit the classical pathway C3 convertase as factor I cofactors; never names C4A (GO:0005601 says the convertase contains a C4b fragment, but that is a second hop and not C4A-specific)"},
+    {"ref": "OT:CSMD1-MONDO_0005090", "category": "not_in_text",
+     "reason": "an Open Targets CSMD1-schizophrenia association score; does not name C4A, and an OT score carries no sign"}
+   ]},
+  {"id": "S2", "step": "hyp-1.2", "text": "C4A drives synapse pruning",
+   "claim": {"effect": {"subject": "C4A", "sign": "pos", "target": {"process": "synapsePruning"}}},
+   "evidence": [
+    {"ref": "PMID:26814963", "kind": "mechanistic", "taxon": "mouse",
+     "quote": "In mice, C4 mediated synapse elimination during postnatal development"}
+   ],
+   "excluded": [
+    {"ref": "PMID:42000733", "category": "undirected",
+     "reason": "background sentence says C4A 'is implicated in synaptic pruning': both ends, but 'implicated in' gives no direction"}
+   ],
+   "note": "the kept quote is about mouse C4, one gene co-orthologous to human C4A and C4B; 'synapse elimination' is a GO synonym of synapse pruning"},
+  {"id": "S3", "step": "hyp-1.3", "text": "C4B drives synapse pruning",
+   "claim": {"effect": {"subject": "C4B", "sign": "pos", "target": {"process": "synapsePruning"}}},
+   "evidence": [
+    {"ref": "PMID:26814963", "kind": "mechanistic", "taxon": "mouse",
+     "quote": "In mice, C4 mediated synapse elimination during postnatal development"},
+    {"ref": "PMID:42000733", "kind": "review", "polarity": "refutes",
+     "quote": "C4A, in contrast to C4B, is implicated in synaptic pruning"}
+   ],
+   "excluded": [],
+   "note": "the mouse quote is about mouse C4 (co-orthologous to C4A and C4B); the run's other citation for this step sets C4B apart as not implicated in pruning, a null for C4B, so it is kept as refuting"}
+  ,
+  {"id": "S4", "step": "hyp-2.1", "text": "C1QA drives microglial cell activation",
+   "claim": {"effect": {"subject": "C1QA", "sign": "pos", "target": {"process": "microgliaActivation"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "STRING:GO:0001774", "category": "enrichment",
+     "reason": "GO:0001774 over-represented in the run's own gene set (CX3CR1 and C1QA, 2 of 31 genes)"},
+    {"ref": "STRING:CX3CR1-C1QA", "category": "not_in_text",
+     "reason": "a STRING CX3CR1-C1QA edge (text-mining 0.55, experiments and databases 0); says nothing about microglial activation"}
+   ]},
+  {"id": "S5", "step": "hyp-2.2", "text": "CX3CR1 inhibits microglial cell activation",
+   "claim": {"effect": {"subject": "CX3CR1", "sign": "neg", "target": {"process": "microgliaActivation"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "PMID:42276261", "category": "undirected",
+     "reason": "lists CX3CR1 among neuro-immune regulators by which microglia 'are tightly regulated', with no direction; the results are expression differences in schizophrenia"}
+   ]},
+  {"id": "S6", "step": "hyp-2.3", "text": "microglial cell activation drives synapse pruning",
+   "claim": {"effect": {"subject": "microgliaActivation", "sign": "pos", "target": {"process": "synapsePruning"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "STRING:GO:0098883", "category": "enrichment",
+     "reason": "GO:0098883 over-represented in the run's own gene set (CX3CR1 and C1QA, 2 of 11 genes)"},
+    {"ref": "PMID:42276261", "category": "undirected",
+     "reason": "background says pathogenesis 'may involve aberrant synaptic pruning mediated by ... altered microglial function': hedged, unsigned at both ends, and microglial function rather than activation"}
+   ]},
+  {"id": "B1", "step": "bridge", "for": ["hyp-1"],
+   "text": "higher C4A expression goes with schizophrenia risk (stated by both papers the run cited for hyp-1.2 and hyp-1.3; the mechanism asserts it, but no step makes it)",
+   "claim": {"assoc": {"subject": "C4A", "direction": "pos", "target": {"disease": "schizophrenia", "aspect": "risk"}}},
+   "evidence": [
+    {"ref": "PMID:26814963", "kind": "observational", "moved_from": "hyp-1.2",
+     "quote": "each common C4 allele associating with schizophrenia in proportion to its tendency to generate greater expression of C4A"},
+    {"ref": "PMID:42000733", "kind": "review", "moved_from": "hyp-1.2",
+     "quote": "C4A, in contrast to C4B, is implicated in synaptic pruning and increased risk for schizophrenia"}
+   ],
+   "excluded": [],
+   "note": "an association, not an effect: risk tracks each allele's C4A expression. 'Increased risk' gives the direction that 'implicated in synaptic pruning' (S2) lacks. Neither text states it for C4B, so C4B gets no bridge"},
+  {"id": "B2", "step": "bridge", "for": ["hyp-2"],
+   "text": "lower CX3CR1 expression goes with schizophrenia (stated by the paper the run cited for hyp-2.2 and hyp-2.3; no step makes it)",
+   "claim": {"assoc": {"subject": "CX3CR1", "direction": "neg", "target": {"disease": "schizophrenia", "aspect": "risk"}}},
+   "evidence": [
+    {"ref": "PMID:42276261", "kind": "observational", "moved_from": "hyp-2.2",
+     "quote": "In SZ individuals, blood CX3CR1 underexpression"}
+   ],
+   "excluded": [],
+   "note": "case-control expression meta-analysis (pooled observational, so observational); the signed change is in peripheral blood, the brain change is male-specific and unsigned in the abstract"}
+ ],
+ "unexpressed": [],
+ "hypotheses": {
+  "hyp-1": {"claims": [
+    {"subject": "CSMD1", "sign": "neg", "target": {"disease": "schizophrenia", "aspect": "risk"}},
+    {"subject": "C4A", "sign": "pos", "target": {"disease": "schizophrenia", "aspect": "risk"}},
+    {"subject": "C4B", "sign": "pos", "target": {"disease": "schizophrenia", "aspect": "risk"}},
+    {"subject": "CSMD1", "sign": "neg", "target": {"process": "synapsePruning"}},
+    {"subject": "C4A", "sign": "pos", "target": {"process": "synapsePruning"}},
+    {"subject": "C4B", "sign": "pos", "target": {"process": "synapsePruning"}}
+   ],
+   "note": "title: loss of CSMD1 inhibition exacerbates C4A/C4B-mediated pruning, so CSMD1 is neg and C4A, C4B pos; 'predispose' gives risk. The mechanism names C4 structural variants, but the chain starts at the proteins. The chain ends at synapse pruning, so each gene also gets a claim on that end node. Bridge B1 (C4A ~+ schizophrenia risk, from the run's own citations) gives the C4A and CSMD1 disease claims a route that skips pruning; the C4B disease claim has none"},
+  "hyp-2": {"claims": [
+    {"subject": "C1QA", "sign": "pos", "target": {"disease": "schizophrenia", "aspect": "risk"}},
+    {"subject": "CX3CR1", "sign": "neg", "target": {"disease": "schizophrenia", "aspect": "risk"}},
+    {"subject": "C1QA", "sign": "pos", "target": {"process": "synapsePruning"}},
+    {"subject": "CX3CR1", "sign": "neg", "target": {"process": "synapsePruning"}}
+   ],
+   "note": "the title's 'CX3CR1 dysregulation' is undirected; the mechanism gives the direction (disrupted CX3CR1 removes a brake), so CX3CR1 is neg. The run names no aspect: risk is the default. The chain ends at synapse pruning, which the mechanism calls 'characteristic of schizophrenia'. Bridge B2 (lower blood CX3CR1 in schizophrenia, from PMID:42276261) gives the CX3CR1 disease claim a route; the C1QA disease claim has none"}
+ },
+ "findings": [
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["hyp-1.1"],
+   "detail": "PMID:40112933 shows CSMD1 inhibits the classical pathway C3 convertase as a factor I cofactor; it never names C4A, and the convertase's C4b fragment comes from either C4 isotype, so singling out C4A has no cited basis."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["hyp-1.1"],
+   "detail": "OT:CSMD1-MONDO_0005090, a gene-disease association score, is cited for a protein-protein inhibition step (CSMD1 inhibits C4A)."},
+  {"project": "hypothesis-agent", "category": "citation_states_opposite", "steps": ["hyp-1.3"],
+   "detail": "PMID:42000733 is cited for 'C4B leads to synapse pruning', but its background says 'C4A, in contrast to C4B, is implicated in synaptic pruning', i.e. C4B is not."},
+  {"project": "hypothesis-agent", "category": "contradicting_evidence_ignored", "hypothesis": "hyp-1",
+   "detail": "hyp-1 lists no contradicting evidence although its own citation PMID:42000733 sets C4B apart from pruning and reports only a non-significant negative C4B shift in first-episode psychosis."},
+  {"project": "hypothesis-agent", "category": "chain_not_connected", "steps": ["hyp-1.1", "hyp-1.3"],
+   "detail": "the title says CSMD1 loss exacerbates C4A/C4B-mediated pruning, but step 1 has CSMD1 inhibit only C4A, so the C4B step (hyp-1.3) is not reached from CSMD1."},
+  {"project": "hypothesis-agent", "category": "chain_ends_at_phenotype", "hypothesis": "hyp-1",
+   "detail": "the chain ends at synapse pruning and never reaches schizophrenia; no cited text states a signed pruning-to-schizophrenia link, so the disease claims reach it only through bridge B1 (C4A ~+ risk), which skips pruning, and C4B's not at all."},
+  {"project": "hypothesis-agent", "category": "chain_ends_at_phenotype", "hypothesis": "hyp-2",
+   "detail": "the chain ends at synapse pruning, which the mechanism calls 'characteristic of schizophrenia' (a disease feature, not a cause); PMID:42276261 only says pathogenesis 'may involve aberrant synaptic pruning', hedged and unsigned. Only the CX3CR1 disease claim has a route, through bridge B2, which skips the chain."},
+  {"project": "hypothesis-agent", "category": "cited_link_not_in_chain", "hypothesis": "hyp-1",
+   "detail": "PMID:26814963, cited for hyp-1.2, states 'each common C4 allele associating with schizophrenia in proportion to its tendency to generate greater expression of C4A', a signed C4A-schizophrenia association the mechanism asserts but the chain never uses (PMID:42000733 says the same: C4A 'is implicated in ... increased risk for schizophrenia'); added as bridge B1."},
+  {"project": "hypothesis-agent", "category": "cited_link_not_in_chain", "hypothesis": "hyp-2",
+   "detail": "PMID:42276261 reports CX3CR1 underexpression in schizophrenia blood (and a male-specific change in brain), a signed association in the hypothesis's direction, but no step uses it; the run cites the paper only for steps it does not state. Added as bridge B2."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["hyp-2.1", "hyp-2.3"],
+   "detail": "STRING enrichment of GO:0001774 and GO:0098883 in the run's own gene set (the hits are just CX3CR1 and C1QA) is cited as evidence for directed causal steps; this is circular and unsigned."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["hyp-2.1"],
+   "detail": "STRING:CX3CR1-C1QA is a text-mining-only edge (experiments 0, databases 0) between the two genes, cited for C1QA driving microglial activation."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["hyp-2.2", "hyp-2.3"],
+   "detail": "PMID:42276261 is a meta-analysis of expression differences; it names CX3CR1 as a microglial regulator and links microglia to pruning only with unsigned words ('regulated', 'altered', 'aberrant')."},
+  {"project": "hypothesis-agent", "category": "support_unjustified", "hypothesis": "hyp-2",
+   "detail": "hyp-2 is labelled support 'grounded', yet none of its four citations states any of its three steps (two enrichments, one text-mined edge, one expression meta-analysis)."},
+  {"project": "hypothesis-agent", "category": "support_unjustified", "hypothesis": "hyp-1",
+   "detail": "hyp-1 is labelled support 'grounded', yet its CSMD1 step has no stating citation and its only kept step evidence is one mouse sentence about C4 shared by both C4 steps; confidence 'low' is fair."},
+  {"project": "hypothesis-agent", "category": "citation_states_opposite", "hypothesis": "hyp-1",
+   "detail": "the mechanism says C4B expression, like C4A's, predisposes to schizophrenia, but both papers the run cites for the C4B step tie risk to C4A alone (PMID:26814963: 'in proportion to its tendency to generate greater expression of C4A'; PMID:42000733: 'C4A, in contrast to C4B, is implicated in ... increased risk'), so the C4B disease claim has no route and its own citations argue against it."},
+  {"project": "both", "category": "abstention_evidence_missing",
+   "detail": "the abstention for NXPH3 and CCDC136 cites GWAS:NXPH3:no-association, GWAS:CCDC136:no-association and OT:NXPH3-MONDO_0005090, none of which is in sources.json, so its claims (no GWAS hits, OT 0.00, no network edges) cannot be checked."},
+  {"project": "biolean", "category": "no_form_for",
+   "detail": "a run's abstention (genes covered, 'no shared mechanism', its evidence) has no place in curated.json, so it is neither checked nor counted."},
+  {"project": "biolean", "category": "no_form_for", "hypothesis": "hyp-2",
+   "detail": "the title claims an interaction (CX3CR1 loss amplifies C1QA-initiated activation); BioLean holds only two parallel edges into microglial activation, not one gene modulating another's effect."},
+  {"project": "biolean", "category": "no_form_for", "steps": ["hyp-1.1"],
+   "detail": "no route carries an effect on a complex (classical C3 convertase, GO:0005601: C2a plus C4b) to a member protein, so 'CSMD1 inhibits the convertase' cannot bear on 'CSMD1 inhibits C4A' even with a part-of bridge."},
+  {"project": "biolean", "category": "evidence_weighting", "steps": ["hyp-1.2", "hyp-1.3"],
+   "detail": "one mouse C4 sentence counts in full for both human paralogs C4A and C4B; taxon 'mouse' records the species but not that the mouse gene cannot tell the two human paralogs apart, though the run's other citation says they differ in pruning."},
+  {"project": "biolean", "category": "no_form_for", "hypothesis": "hyp-1",
+   "detail": "PMID:42276261 (cited at hyp-2) states 'In brain tissue, SZ was associated with C4 overexpression' for C4 as one gene; with no node for the C4A/C4B pair, this signed human link to the disease cannot be attached to either paralog or used as a bridge."},
+  {"project": "biolean", "category": "verdict_label", "steps": ["hyp-1.2"],
+   "detail": "the C4A arm has belief 7/10 from one mouse in vivo sentence, yet its verdict reads 'unsupported', the same word as the arms with belief 0; the verdict cannot tell some support below 0.8 from none."}
+ ],
+ "audit": [
+  {"item": "bridge B1 (hyp-1, C4A ~+ schizophrenia risk)", "error": "other",
+   "before": "no bridge; the link was recorded only as a cited_link_not_in_chain finding, because it 'bypasses the chain's end node rather than extending it'",
+   "after": "bridge B1: assoc C4A pos schizophrenia risk, evidence PMID:26814963 (observational) and PMID:42000733 (review), both moved_from hyp-1.2",
+   "reason": "the guide adds a bridge when an arm cannot compose and a text the run cited states the link; it has no 'extend only the end node' rule, and earlier curations bridge gene to disease directly (Alzheimer r2 S11). Both papers the run cited for hyp-1.2 and hyp-1.3 state it with a direction: risk tracks each allele's C4A expression, and C4A 'is implicated in ... increased risk'. The mechanism asserts the same link. It is an association, so assoc, discounted by fromAssoc. The C4A and CSMD1 disease claims now compose; C4B's still does not"},
+  {"item": "bridge B2 (hyp-2, CX3CR1 ~- schizophrenia risk)", "error": "other",
+   "before": "no bridge; recorded only as a cited_link_not_in_chain finding",
+   "after": "bridge B2: assoc CX3CR1 neg schizophrenia risk, evidence PMID:42276261 (observational, moved_from hyp-2.2), quote 'In SZ individuals, blood CX3CR1 underexpression'",
+   "reason": "the CX3CR1 disease claim cannot compose, and the paper the run cited at hyp-2.2 and hyp-2.3 states a signed case-control association in the claim's direction (lower CX3CR1 in schizophrenia). Same rule as B1. The expression meta-analysis pools observational data, so the kind is observational"},
+  {"item": "hypotheses hyp-1 and hyp-2 notes; findings chain_ends_at_phenotype (hyp-1, hyp-2) and cited_link_not_in_chain (hyp-1, hyp-2)", "error": "other",
+   "before": "notes and findings say no disease claim has a route, and that the cited links were not added",
+   "after": "say which disease claims now compose through B1 or B2, and that the links were added as bridges",
+   "reason": "follows from the two bridges; findings must match the corrected curation"},
+  {"item": "findings: no_form_for (abstention)", "error": "other",
+   "before": "\"hypothesis\": \"hyp-1\"",
+   "after": "no hypothesis field",
+   "reason": "the abstention covers NXPH3 and CCDC136 and is run-level; it has nothing to do with hyp-1"},
+  {"item": "findings: C4B disease claim contradicted by its own citations (hyp-1)", "error": "missed_finding",
+   "before": "findings cover only the C4B pruning step (citation_states_opposite on hyp-1.3)",
+   "after": "citation_states_opposite added for the mechanism's claim that C4B expression predisposes to schizophrenia",
+   "reason": "PMID:26814963 ties risk to C4A expression, and PMID:42000733 says 'C4A, in contrast to C4B, is implicated in ... increased risk for schizophrenia'; both are cited for the C4B step, so the run's own sources argue against the C4B disease claim, not only its pruning step"},
+  {"item": "findings: human 'C4' expression link (PMID:42276261)", "error": "missed_finding",
+   "before": "not recorded",
+   "after": "biolean no_form_for finding: 'In brain tissue, SZ was associated with C4 overexpression' names C4 as one gene, which no node can hold",
+   "reason": "a signed human C4-schizophrenia link in a cited text, left unused because BioLean has no entity for the C4A/C4B pair; the same paralog gap as the mouse C4 evidence, but for human data where taxon cannot flag it"}
+ ]
+}

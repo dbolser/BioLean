@@ -1,0 +1,174 @@
+{
+ "run_id": "study-2026-09-vertex-iga-nephropathy-google-cloud-gemini-3.1-pro-preview-single_agent-r3",
+ "curated_by": "Claude Opus 5.5, 2026-10-30",
+ "entities": {
+  "TNFSF13": {"kind": "protein", "curie": "UniProt:O75888", "run_labels": ["TNFSF13"]},
+  "IgA": {"kind": "protein", "curie": "PR:000050176", "run_labels": ["IgA"],
+          "note": "the run's 'IgA' is the antibody isotype; GO:0071745 'IgA immunoglobulin complex' names it exactly but is a component, which cannot be an amount target, so the PR IgA heavy chain protein (both subclasses) stands in"},
+  "igaNephropathy": {"kind": "disease", "curie": "MONDO:0005342", "run_labels": ["IgA glomerulonephritis"]},
+  "CFH": {"kind": "protein", "curie": "UniProt:P08603", "run_labels": ["CFH"]},
+  "complementActivation": {"kind": "process", "curie": "GO:0006956", "run_labels": ["Complement activation"]},
+  "DEFA4": {"kind": "protein", "curie": "UniProt:P12838", "run_labels": ["DEFA4"]},
+  "ITGAX": {"kind": "protein", "curie": "UniProt:P20702", "run_labels": ["ITGAX"]},
+  "CARD9": {"kind": "protein", "curie": "UniProt:Q9H257", "run_labels": ["CARD9"]},
+  "innateImmuneResponse": {"kind": "process", "curie": "GO:0045087", "run_labels": ["Innate immune response"]}
+ },
+ "statements": [
+  {"id": "S1", "step": "H1-TNFSF13-IgA.1", "text": "TNFSF13 (APRIL) raises the amount of IgA",
+   "claim": {"effect": {"subject": "TNFSF13", "sign": "pos", "target": {"amount": "IgA"}}},
+   "evidence": [
+    {"ref": "AGR:MGI:1916833:MP:0001807", "kind": "curatedDb", "taxon": "mouse",
+     "quote": "the genotype Tnfsf13<sup>tm1Geha</sup>/Tnfsf13<sup>tm1Geha</sup> of Tnfsf13 -- the orthologue of human TNFSF13 -- shows decreased IgA level"}
+   ],
+   "excluded": [
+    {"ref": "rs4227", "category": "not_in_text", "reason": "rs4227-G associates with IgA nephropathy (OR 1.23); names no IgA amount, and the variant sits in MPDU1 (author-reported gene), 26 kb from TNFSF13"},
+    {"ref": "rs3803800", "category": "not_in_text", "reason": "rs3803800-A (TNFSF13 missense) associates with IgA nephropathy (OR 1.21); says nothing about IgA amount"},
+    {"ref": "O75888", "category": "not_in_text", "reason": "UniProt function text: binds TACI and BCMA, tumour cell growth, monocyte/macrophage processes; IgA is never mentioned"}
+   ]},
+  {"id": "S2", "step": "H1-TNFSF13-IgA.2", "text": "IgA leads to IgA glomerulonephritis",
+   "claim": {"effect": {"subject": "IgA", "sign": "pos", "target": {"disease": "igaNephropathy", "aspect": "risk"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "CHEMBL:CHEMBL1742986-EFO_0004194", "category": "not_in_text", "reason": "a drug-indication record (compound reached phase 3 for IgA nephropathy); names no target and not IgA"},
+    {"ref": "CHEMBL:CHEMBL4594614-EFO_0004194", "category": "not_in_text", "reason": "a drug-indication record (compound reached phase 2 for IgA nephropathy); names no target and not IgA"}
+   ]},
+  {"id": "S3", "step": "H2-CFH-Complement.1", "text": "CFH inhibits complement activation",
+   "claim": {"effect": {"subject": "CFH", "sign": "neg", "target": {"process": "complementActivation"}}},
+   "evidence": [
+    {"ref": "P08603", "kind": "curatedDb",
+     "quote": "Acts as a soluble inhibitor of complement, where its binding to self markers such as glycan structures prevents complement activation"}
+   ],
+   "excluded": [
+    {"ref": "R-HSA-166658", "category": "enrichment", "reason": "'Complement cascade' over-represented in the gene set (2 of 163 entities); says nothing about CFH's direction"}
+   ]},
+  {"id": "S4", "step": "H2-CFH-Complement.2", "text": "complement activation leads to IgA glomerulonephritis",
+   "claim": {"effect": {"subject": "complementActivation", "sign": "pos", "target": {"disease": "igaNephropathy", "aspect": "risk"}}},
+   "evidence": [
+    {"ref": "PMID:36316518", "kind": "observational",
+     "quote": "Increased retinal drusen in IgA glomerulonephritis are further evidence for complement activation in disease pathogenesis."}
+   ],
+   "excluded": [
+    {"ref": "rs6677604", "category": "not_in_text", "reason": "rs6677604-G (CFH intron) associates with IgA nephropathy (OR 1.21); names no complement activation"},
+    {"ref": "AGR:MGI:88385:MP:0002743", "category": "not_in_text", "reason": "Cfh mutant mice show glomerulonephritis: a CFH-to-broader-disease record that names no complement activation and not IgA nephropathy"}
+   ]},
+  {"id": "S5", "step": "H3-Innate-Mucosal-IgA.1", "text": "DEFA4 is associated with the innate immune response (no direction)",
+   "claim": {"assoc": {"subject": "DEFA4", "direction": "none", "target": {"process": "innateImmuneResponse"}}},
+   "sign_note": "run polarity 'unknown'; no cited text gives a direction",
+   "evidence": [],
+   "excluded": [
+    {"ref": "P12838", "category": "not_in_text", "reason": "UniProt calls DEFA4 a host-defense antimicrobial peptide; it never names the innate immune response, and equating the two would be my inference"},
+    {"ref": "rs2738058", "category": "not_in_text", "reason": "rs2738058-T associates with IgA nephropathy; intergenic in the DEFA cluster (author-reported gene 'DEFA', DEFA4 26 kb away and not closest); names no immune process"}
+   ]},
+  {"id": "S6", "step": "H3-Innate-Mucosal-IgA.2", "text": "ITGAX is associated with the innate immune response (no direction)",
+   "claim": {"assoc": {"subject": "ITGAX", "direction": "none", "target": {"process": "innateImmuneResponse"}}},
+   "sign_note": "run polarity 'unknown'; no cited text gives a direction",
+   "evidence": [],
+   "excluded": [
+    {"ref": "P20702", "category": "not_in_text", "reason": "UniProt: fibrinogen receptor mediating cell-cell interaction during inflammatory responses, monocyte adhesion and chemotaxis; inflammatory response, not innate immune response, and no dendritic cells"},
+    {"ref": "rs7190997", "category": "not_in_text", "reason": "rs7190997-C (ITGAX intron, author-reported ITGAX-ITGAM) associates with IgA nephropathy; names no immune process"}
+   ]},
+  {"id": "S7", "step": "H3-Innate-Mucosal-IgA.3", "text": "more CARD9 goes with more innate immune response (CARD9 is essential for the antifungal innate response)",
+   "claim": {"assoc": {"subject": "CARD9", "direction": "pos", "target": {"process": "innateImmuneResponse"}}},
+   "sign_note": "run polarity 'unknown'; direction from the UniProt text cited for the step: CARD9 forms the signalling complexes of the innate immune response against fungi and its signals are 'essential for' antifungal immunity, the guide's required_for reading (losing CARD9 lowers the response), so pos",
+   "evidence": [
+    {"ref": "Q9H257", "kind": "curatedDb",
+     "quote": "plays a key role in innate immune response against fungi by forming signaling complexes downstream of C-type lectin receptors (PubMed:26961233, PubMed:33558980). CARD9-mediated signals are essential for antifungal immunity"}
+   ],
+   "excluded": [
+    {"ref": "rs4077515", "category": "not_in_text", "reason": "rs4077515-T (CARD9 missense) associates with IgA nephropathy (OR 1.14); names no immune process"}
+   ]},
+  {"id": "S8", "step": "H3-Innate-Mucosal-IgA.4", "text": "the innate immune response leads to IgA glomerulonephritis",
+   "claim": {"effect": {"subject": "innateImmuneResponse", "sign": "pos", "target": {"disease": "igaNephropathy", "aspect": "risk"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "STRING:PMID:25305756", "category": "enrichment", "reason": "a publication over-represented in the gene set (TNFSF13, CFH, CARD9, ITGAX; not DEFA4); the title is about risk loci in genes for immunity to intestinal pathogens, not innate immunity causing the disease"},
+    {"ref": "R-HSA-168249", "category": "enrichment", "reason": "'Innate Immune System' over-represented in the gene set (5 of 1387 entities); no link to the disease"}
+   ]}
+ ],
+ "unexpressed": [],
+ "hypotheses": {
+  "H1-TNFSF13-IgA": {
+   "claims": [{"subject": "TNFSF13", "sign": "pos", "target": {"disease": "igaNephropathy", "aspect": "risk"}}],
+   "note": "title: excess TNFSF13 drives pathogenic IgA; the chain starts at the protein. The cited GWAS variants never enter the chain"
+  },
+  "H2-CFH-Complement": {
+   "claims": [{"subject": "CFH", "sign": "neg", "target": {"disease": "igaNephropathy", "aspect": "risk"}}],
+   "note": "title is loss-of-function ('reduced CFH function unleashes complement activation'), so CFH lowers risk. The mechanism reads as severity (complement amplified on IgA complexes already deposited), but the chain's last step is plain leads_to the disease, curated as risk"
+  },
+  "H3-Innate-Mucosal-IgA": {
+   "no_claim_reason": "title and mechanism say only that DEFA4, ITGAX and CARD9 are 'dysregulated' and 'alter' mucosal IgA production; no direction for any gene, and the three gene steps have polarity 'unknown'"
+  }
+ },
+ "findings": [
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["H1-TNFSF13-IgA.1"],
+   "detail": "Of four citations for TNFSF13 raising IgA, only the MGI Tnfsf13 mouse annotation (decreased IgA level) states it; the UniProt TNFSF13 entry never mentions IgA and the two GWAS rows are variant-to-disease associations."},
+  {"project": "hypothesis-agent", "category": "variant_misattributed", "steps": ["H1-TNFSF13-IgA.1"],
+   "detail": "rs4227 lies in MPDU1 (distance 0, 3' UTR), its author-reported gene is MPDU1, and TNFSF13 is 26 kb away and not the closest gene, yet the run's summary line calls TNFSF13 its mapped gene."},
+  {"project": "hypothesis-agent", "category": "variant_misattributed", "steps": ["H3-Innate-Mucosal-IgA.1"],
+   "detail": "rs2738058 is intergenic in the alpha-defensin cluster (author-reported gene 'DEFA', closest genes DEFA9P/DEFA10P, DEFA4 26 kb away), yet the run's summary line calls DEFA4 its mapped gene."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["H1-TNFSF13-IgA.2"],
+   "detail": "IgA leading to IgA nephropathy is supported only by two ChEMBL drug-indication records, which name a compound and the disease but no target and not IgA; the step has no evidence."},
+  {"project": "hypothesis-agent", "category": "chain_skips_mechanism", "steps": ["H1-TNFSF13-IgA.2"],
+   "detail": "The mechanism runs through aberrantly glycosylated IgA1, immune complexes and mesangial deposition, but the chain jumps from 'IgA' straight to the disease named after IgA deposits, a step close to a restatement."},
+  {"project": "hypothesis-agent", "category": "confidence_unjustified", "hypothesis": "H1-TNFSF13-IgA",
+   "detail": "Confidence 'high', but the arm rests on one mouse annotation for TNFSF13 to IgA and nothing at all for IgA to the disease."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["H2-CFH-Complement.1"],
+   "detail": "A Reactome 'Complement cascade' over-representation (2 of 163 entities) is cited as evidence that CFH inhibits complement; only the UniProt CFH entry states it."},
+  {"project": "hypothesis-agent", "category": "evidence_misplaced", "steps": ["H2-CFH-Complement.2"],
+   "detail": "rs6677604 (CFH variant with IgA nephropathy) and the Cfh-mutant glomerulonephritis annotation bear on CFH to disease, a link the chain never states; neither names complement activation, so both are excluded from the step they were cited for."},
+  {"project": "hypothesis-agent", "category": "weak_evidence", "steps": ["H2-CFH-Complement.2"],
+   "detail": "The one citation that states complement activation in IgA nephropathy pathogenesis is a cross-sectional pilot study of retinal drusen (a proxy for complement), so the causal wording rests on a correlation."},
+  {"project": "hypothesis-agent", "category": "aspect_ambiguous", "hypothesis": "H2-CFH-Complement",
+   "detail": "The mechanism describes CFH failing to control complement on IgA complexes already deposited, which is severity, but the chain's step says complement activation leads to the disease, which is risk."},
+  {"project": "hypothesis-agent", "category": "no_direction", "hypothesis": "H3-Innate-Mucosal-IgA",
+   "detail": "All three gene steps are associated_with with polarity 'unknown' and the title says only 'dysregulated', so the hypothesis makes no signed claim and nothing composes."},
+  {"project": "hypothesis-agent", "category": "chain_title_mismatch", "hypothesis": "H3-Innate-Mucosal-IgA",
+   "detail": "The title concludes that the genes alter mucosal IgA production, but no step mentions IgA, the intestine or the mucosa; the chain goes from a generic innate immune response straight to the disease."},
+  {"project": "hypothesis-agent", "category": "falsification_inconsistent", "hypothesis": "H3-Innate-Mucosal-IgA",
+   "detail": "The falsification 'knocks out' a process ('Innate immune response') and expects knockouts of Card9, Itgax and Defa4 to raise polymeric IgA, a direction (the genes restrain IgA) that the title, mechanism and chain never state and that sits badly with innate immunity driving the disease."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["H3-Innate-Mucosal-IgA.1", "H3-Innate-Mucosal-IgA.2"],
+   "detail": "UniProt calls DEFA4 a host-defense antimicrobial peptide and ITGAX a mediator of inflammatory responses; neither text names the innate immune response, and the ITGAX entry never mentions dendritic cells, which the mechanism relies on."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["H3-Innate-Mucosal-IgA.4"],
+   "detail": "The step from innate immunity to IgA nephropathy cites only two enrichment results, and the STRING publication enrichment does not even include DEFA4 among its genes."},
+  {"project": "hypothesis-agent", "category": "confidence_unjustified", "hypothesis": "H3-Innate-Mucosal-IgA",
+   "detail": "Confidence 'medium' with one kept citation across four steps (CARD9 in innate immunity) and none for the step that reaches the disease."},
+  {"project": "hypothesis-agent", "category": "evidence_misplaced", "steps": ["H1-TNFSF13-IgA.1", "H2-CFH-Complement.2", "H3-Innate-Mucosal-IgA.1", "H3-Innate-Mucosal-IgA.2", "H3-Innate-Mucosal-IgA.3"],
+   "detail": "All six GWAS rows (risk allele and odds ratio for IgA nephropathy) are cited for gene-to-molecule or gene-to-process steps they cannot state; no chain has a gene or variant to disease step where the run's strongest human evidence would count."},
+  {"project": "hypothesis-agent", "category": "contradicting_evidence_absent",
+   "detail": "No hypothesis lists contradicting evidence and sources.json holds no contradicting citations, so the run never tested its chains against counter-evidence."},
+  {"project": "hypothesis-agent", "category": "ungrounded_label", "steps": ["H1-TNFSF13-IgA.1", "H2-CFH-Complement.1", "H3-Innate-Mucosal-IgA.4"],
+   "detail": "The run gives no CURIE for 'IgA', 'Complement activation' or 'Innate immune response', although GO:0006956 and GO:0045087 match exactly."},
+  {"project": "hypothesis-agent", "category": "abstention_unchecked",
+   "detail": "The abstention for OR4X1 and ZNF174 cites ids such as 'GWAS:OR4X1:no-association' and 'STRING:no-edges' that are not in sources.json, so it cannot be checked."},
+  {"project": "biolean", "category": "kind_mismatch", "steps": ["H1-TNFSF13-IgA.1", "H1-TNFSF13-IgA.2"],
+   "detail": "IgA, an antibody, is named exactly by GO:0071745 'IgA immunoglobulin complex', a component that BioLean cannot use as an amount target; PR:000050176 'IgA heavy chain protein' stands in for it."},
+  {"project": "biolean", "category": "no_form_for",
+   "detail": "Claim-level genetic evidence: the GWAS rows support 'gene locus raises IgA nephropathy risk' for TNFSF13, CFH, CARD9, ITGAX and the DEFA cluster, but when the chain starts at the protein there is no statement to hold them, so they can only be excluded."},
+  {"project": "biolean", "category": "rule_missing", "steps": ["H1-TNFSF13-IgA.1"],
+   "detail": "The AGR text names the allele (Tnfsf13 tm1Geha) but not whether it is a null; reading 'decreased IgA level' as TNFSF13 raising IgA assumes loss of function, and the guide has no rule for model-organism alleles of unstated type."},
+  {"project": "biolean", "category": "corpus_definition",
+   "detail": "The corpus definition of MONDO:0005342 IgA glomerulonephritis ('Inflammation of a specific segment of glomeruli within the kidney') never mentions IgA, so it cannot serve as a textbook bridge from IgA deposition."},
+  {"project": "biolean", "category": "evidence_weighting", "steps": ["H1-TNFSF13-IgA.1"],
+   "detail": "S1 comes out 'established' (belief 4/5) from a single mouse MGI annotation: the row reports taxonConsistent false, but the verdict does not discount the human claim for it, so one mouse line establishes a human step."},
+  {"project": "biolean", "category": "evidence_weighting", "steps": ["H2-CFH-Complement.2"],
+   "detail": "The drusen study is kept as observational evidence for an effect because its title states the causal role, but it measures a proxy (drusen), not complement activation; BioLean weighs it like any observational evidence."},
+  {"project": "hypothesis-agent", "category": "confidence_unjustified", "hypothesis": "H2-CFH-Complement",
+   "detail": "Confidence 'high', but the arm composes only to belief 2/5 (unsupported): the step to the disease rests on one cross-sectional drusen study, and no cited text says the risk allele rs6677604-G lowers CFH function, which is the direction the title claims."},
+  {"project": "hypothesis-agent", "category": "evidence_misplaced", "steps": ["H1-TNFSF13-IgA.2"],
+   "detail": "The two ChEMBL compounds cited for IgA to IgA nephropathy are TNFSF13 drugs: sibling IgAN runs fetched their mechanism records (CHEMBL1742986, a soluble decoy receptor inhibiting TNFSF13 and TNFSF13B; CHEMBL4594614, sibeprenlimab, which targets TNFSF13). This run cites only the indication rows, which drop the compound name and target, and puts them on a step about IgA that neither row could state."}
+ ],
+ "audit": [
+  {"item": "S7 (H3-Innate-Mucosal-IgA.3), Q9H257", "error": "wrong_sign",
+   "before": "assoc direction none; quote 'Adapter protein that plays a key role in innate immune response against fungi'; sign_note 'participation without a direction, so left unsigned'",
+   "after": "assoc direction pos; quote runs on to 'CARD9-mediated signals are essential for antifungal immunity'; sign_note names the sentence that gives the direction",
+   "reason": "The guide takes an unsigned association's direction from a text cited for the step. The same UniProt entry says CARD9 forms the signalling complexes of the innate response against fungi and that its signals are 'essential for' antifungal immunity. That is the guide's required_for reading (losing CARD9 lowers the response), so the direction is pos. The curator quoted only the 'key role' clause. Nothing composes either way, because H3 has no claim."},
+  {"item": "findings: H2-CFH-Complement confidence", "error": "missed_finding",
+   "before": "confidence_unjustified recorded for H1 and H3 only",
+   "after": "added confidence_unjustified for H2-CFH-Complement",
+   "reason": "H2 is rated 'high', but its arm composes only to belief 2/5 (unsupported). The disease step rests on one cross-sectional drusen study. The CFH GWAS row gives no CFH-function direction for its risk allele."},
+  {"item": "findings: ChEMBL records at H1-TNFSF13-IgA.2", "error": "missed_finding",
+   "before": "finding said only that the indication rows name no target",
+   "after": "added evidence_misplaced: both compounds are TNFSF13 drugs (per the mechanism records fetched in sibling IgAN runs), cited as indication rows on the IgA-to-disease step",
+   "reason": "This shows the run chose records that lose the information linking them to its own gene, and cited them for a step about IgA. Even with the target, a drug indication would not state IgA to disease. Recorded as a finding only, not as evidence, because this run's texts do not name the targets."}
+ ]
+}

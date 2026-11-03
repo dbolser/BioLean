@@ -1,0 +1,572 @@
+{
+ "run_id": "study-2026-09-crohn-openrouter-anthropicclaude-opus-5-multi_agent-r2",
+ "model": "openrouter:anthropic/claude-opus-5",
+ "question": {
+  "arm": "multi_agent",
+  "budget": {
+   "max_delegations": 22,
+   "max_model_requests": 80,
+   "max_specialist_requests": 8,
+   "min_evidence_per_hypothesis": 2,
+   "min_hypotheses": 3,
+   "min_sources_per_hypothesis": 2,
+   "output_retries": 3
+  },
+  "data_policy": {
+   "max_age_seconds": 1209600.0,
+   "mode": "cache-preferred",
+   "snapshot_run_id": null
+  },
+  "disease": "Crohn disease",
+  "formalise": false,
+  "genes": [
+   "IL12B",
+   "IL23R",
+   "NOD2",
+   "LACC1",
+   "GPR35",
+   "MEIS1",
+   "TRIM4"
+  ],
+  "model": "openrouter:anthropic/claude-opus-5",
+  "specialist_model": "openrouter:anthropic/claude-opus-5",
+  "specialists": [
+   "chembl",
+   "expression",
+   "gwas",
+   "interactions",
+   "literature",
+   "model_organism",
+   "open_targets",
+   "pathways",
+   "single_cell",
+   "trials",
+   "uniprot"
+  ],
+  "tissue": {
+   "artifact_id": "sha256:2ae293c5c9c86e431f18191576a5cfddb9903117c31c2687c8a4b0abe5211411",
+   "label": "colon",
+   "uberon": "UBERON:0001155"
+  },
+  "use_network": true
+ },
+ "abstention": {
+  "evidence": [
+   "GWAS:MEIS1:no-association",
+   "GWAS:TRIM4:no-association",
+   "OT:MEIS1-MONDO_0005011",
+   "OT:TRIM4-tractability",
+   "OT:MEIS1-constraint",
+   "Q9C037",
+   "HPA:ENSG00000143995",
+   "HPA:ENSG00000146833",
+   "AGR:MGI:104717:MP:0000266",
+   "AGR:ZFIN:ZDB-GENE-030131-857:phenotype-count",
+   "reactome:coverage",
+   "CXG:cohort:MONDO_0005011",
+   "CXG:ENSG00000143995:CL_0000034:MONDO_0005011",
+   "CXG:ENSG00000146833:CL_0000235:MONDO_0005011",
+   "PMID:16436634",
+   "PMID:34113837"
+  ],
+  "genes_covered": [
+   "MEIS1",
+   "TRIM4"
+  ],
+  "reason": "insufficient_evidence",
+  "statement": "MEIS1 and TRIM4 cannot be connected to Crohn disease on the evidence available, and the negative results are specific rather than merely absent. The GWAS Catalog knows variants mapped to both genes yet reports no Crohn disease association for either among the 1607 curated associations for the trait. Open Targets scores MEIS1 at 0.00 overall for Crohn disease, with only an rna_expression component (0.01) and no genetic evidence, and holds no Crohn disease association record for TRIM4 at all. Targeted literature searching returned no primary paper in which either gene is the studied gene in IBD, intestinal inflammation, or as a fine-mapped/eQTL candidate at an IBD locus. Neither gene has any STRING edge to IL12B, IL23R, NOD2 or LACC1, and Reactome places neither in a pathway shared with the IL-23 axis; TRIM4's only enrichment membership is the generic 'innate immune response' term, and one of the seven submitted identifiers was absent from Reactome entirely. Functionally they are also off-mechanism: TRIM4 is a cytoplasmic E3 ligase that K63-ubiquitinates RIG-I to boost interferon induction, and MEIS1 is a nucleoplasmic TALE homeodomain transcription factor whose mouse knockout phenotypes are cardiovascular, haematopoietic and neural, with no intestinal term. Neither is intestine-enriched in HPA. Single-cell colon data do show lower MEIS1 detection in Crohn stem cells and fibroblasts and lower TRIM4 in Crohn macrophages and T cells, but the atlas itself warns that the diseased and normal cells come from different studies, so those differences are batch-confounded and cannot carry a causal claim. Most likely these two genes are locus-neighbourhood or transcriptomic-signature passengers, not Crohn effector genes.",
+  "support": "grounded",
+  "what_would_change_this": "A genome-wide significant Crohn or IBD association at 2p14 (MEIS1) or 7q22 (TRIM4) with a credible set that colocalises with a cis-eQTL for the gene in gut or immune tissue; or a within-study case-control single-cell/bulk dataset confirming the reduced MEIS1 in colonic stem cells and fibroblasts with matched sampling; or a conditional mouse knockout of Meis1 or Trim4 producing a spontaneous or induced intestinal inflammatory phenotype. A demonstration that TRIM4-dependent RIG-I ubiquitination modulates NOD2 or IL-23 output in intestinal myeloid cells would also reopen the case."
+ },
+ "disease": "Crohn disease",
+ "genes_considered": [
+  "IL12B",
+  "IL23R",
+  "NOD2",
+  "LACC1",
+  "GPR35",
+  "MEIS1",
+  "TRIM4"
+ ],
+ "hypotheses": [
+  {
+   "chain": [
+    {
+     "context": {
+      "cell_type": null,
+      "disease_state": {
+       "curie": "MONDO:0005011",
+       "grounding_evidence": "",
+       "kind": "disease",
+       "label": "Crohn disease"
+      },
+      "tissue": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "tissue",
+       "label": "colon"
+      }
+     },
+     "evidence": [
+      "rs7517847",
+      "rs11465804",
+      "rs11209026",
+      "PMID:17068223"
+     ],
+     "note": "rs11209026 (R381Q) is the protective coding allele; the catalogue reports OR 2.66 for the risk allele, i.e. loss of receptor function is protective.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "IL-23 receptor signalling in mucosal T cells"
+     },
+     "polarity": "positive",
+     "relation": "increases_amount",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "IL23R risk haplotype (rs7517847-A, rs11465804-T)"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "STRING:IL12B-IL23R",
+      "STRING:GO:2000330",
+      "R-HSA-9020933",
+      "rs755374",
+      "rs6556412"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "IL-23 heterodimer formation and Th17 lineage commitment"
+     },
+     "polarity": "positive",
+     "relation": "required_for",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "IL12B (p40 subunit of IL-12/IL-23)"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "STRING:GO:0032740",
+      "AGR:MGI:2181693:MP:0008539",
+      "CHEMBL:CHEMBL1201835-EFO_0000384",
+      "CHEMBL:CHEMBL3990014-EFO_0000384"
+     ],
+     "note": "Il23r-null mice are protected from induced colitis; p40/p19 blockade is approved or phase 3/4 in Crohn disease.",
+     "object": {
+      "curie": "MONDO:0005011",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "Crohn disease"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "IL-23-driven IL-17 production"
+     }
+    }
+   ],
+   "confidence": "high",
+   "contradicting_evidence": [
+    "OT:IL23R-safety",
+    "CHEMBL:no-mechanism-IL23R",
+    "NCT07697456"
+   ],
+   "falsification": {
+    "description": "In an IL-23-responsive human Crohn mucosal ex vivo or organoid/T-cell co-culture system, block IL23R directly (antibody or knockdown) and measure IL-17A output and mucosal transcriptional inflammation. If IL-17A and downstream inflammatory signature do not fall when IL23R is inhibited in the tissues of carriers of the IL23R/IL12B risk haplotypes, the claim that these loci act through receptor-level IL-23 signalling is wrong; equally, failure of a receptor-directed (rather than ligand-directed) agent to reproduce p19/p40 antibody efficacy in Crohn disease would falsify the receptor step.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "inhibit",
+     "target": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "IL23R"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "process",
+     "label": "mucosal IL-17A production"
+    },
+    "system": "human Crohn mucosal explant / T-cell co-culture"
+   },
+   "genes": [
+    "IL12B",
+    "IL23R"
+   ],
+   "hypothesis_id": "H1",
+   "mechanism": "IL12B (p40, shared by IL-12 and IL-23) and IL23R form the IL-23 receptor-ligand pair and are the only pair in this list with experimentally supported interaction (STRING combined 0.99, experimental 0.93). Crohn risk alleles at both loci (rs755374, rs6556412; rs7517847, rs11465804, and the protective coding rs11209026) shift IL-23 signalling and hence Th17 lineage commitment and IL-17 production, which STRING and Reactome both flag as the dominant enriched process in this set. That this axis is causal and not merely correlated is shown by pharmacology: p40- and p19-directed antibodies (ustekinumab CHEMBL1201835, mirikizumab CHEMBL3990014 phase 4 in Crohn; risankizumab, guselkumab, brazikumab phase 3) and by Il23r-knockout mice being protected from induced colitis.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "rs7517847",
+    "rs11465804",
+    "rs11209026",
+    "rs755374",
+    "rs6556412",
+    "STRING:IL12B-IL23R",
+    "STRING:GO:2000330",
+    "STRING:GO:0032740",
+    "R-HSA-9020933",
+    "R-HSA-447115",
+    "AGR:MGI:2181693:MP:0008539",
+    "OT:IL12B-MONDO_0005011",
+    "OT:IL23R-MONDO_0005011",
+    "CHEMBL:CHEMBL1201835-EFO_0000384",
+    "CHEMBL:CHEMBL3990014-EFO_0000384",
+    "CHEMBL:CHEMBL3990029-EFO_0000384",
+    "PMID:17068223",
+    "PMID:21102463"
+   ],
+   "title": "IL12B/IL23R risk alleles raise IL-23-driven Th17 signalling in gut mucosa; the only node in this list with a validated drug axis"
+  },
+  {
+   "chain": [
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "macrophage"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [
+      "rs2066847",
+      "rs2066844",
+      "Q9HC29",
+      "PMID:11385576"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "MDP-triggered RIPK2/NF-kB signalling and ATG16L1-dependent autophagy"
+     },
+     "polarity": "negative",
+     "relation": "decreases_amount",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "NOD2 loss-of-function variant (rs2066847)"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "macrophage"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [
+      "Q8IV20",
+      "PMID:27478939",
+      "PMID:27959965",
+      "AGR:MGI:2445077:MP:0002451",
+      "AGR:MGI:2445077:MP:0008642"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "optimal NOD2-induced cytokine secretion and bacterial clearance"
+     },
+     "polarity": "positive",
+     "relation": "required_for",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "LACC1/FAMIN"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "CXG:ENSG00000179630:CL_0000235:MONDO_0005011",
+      "rs3764147",
+      "rs1373904"
+     ],
+     "note": "Detection-rate difference comes from separate diseased and normal studies (CXG:cohort:MONDO_0005011), so direction is a hypothesis, not a differential-expression result.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "Crohn disease mucosal inflammation"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "LACC1 expression in colonic macrophages"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:23128233",
+      "AGR:MGI:2429397:MP:0001790",
+      "PMID:29538758"
+     ],
+     "note": "",
+     "object": {
+      "curie": "MONDO:0005011",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "Crohn disease"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "defective myeloid bacterial handling"
+     }
+    }
+   ],
+   "confidence": "medium",
+   "contradicting_evidence": [
+    "STRING:NOD2-LACC1",
+    "HPA:ENSG00000179630",
+    "PMID:40089498",
+    "OT:LACC1-tractability"
+   ],
+   "falsification": {
+    "description": "In primary human macrophages (or Lacc1-null mouse BMDMs) stimulated with muramyl dipeptide, knock out LACC1 and measure NOD2-dependent output (IL-1beta/TNF secretion and intracellular bacterial killing). If LACC1 loss leaves MDP-induced NOD2 signalling and bacterial clearance unchanged - i.e. the two genes act in parallel rather than in series - the convergent-module claim fails and the LACC1 contribution must be assigned to a T-cell-intrinsic mechanism instead (as PMID:40089498 suggests).",
+    "expected": "negative",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "UniProtKB:Q8IV20",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "LACC1"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "process",
+     "label": "MDP-induced IL-1beta secretion and intracellular bacterial clearance"
+    },
+    "system": "primary human/mouse macrophages + MDP"
+   },
+   "genes": [
+    "NOD2",
+    "LACC1"
+   ],
+   "hypothesis_id": "H2",
+   "mechanism": "NOD2 is the cytosolic sensor of 6-O-phospho-muramyl dipeptide that oligomerises, recruits RIPK2 and drives NF-kB/MAPK cytokine output and ATG16L1-dependent autophagy; LACC1/FAMIN is a purine-nucleoside phosphorylase/deaminase that sets macrophage purine and arginine/polyamine metabolism and, per UniProt curation, associates with the NOD2 signalling complex to promote optimal NOD2-induced cytokine secretion and bacterial clearance. Crohn risk alleles at both loci (NOD2 rs2066847 frameshift OR 3.10, rs2066844, rs2076756; LACC1 rs3764147, rs1373904) would therefore blunt the same myeloid pathway, and Lacc1-null mice show abnormal macrophage physiology with decreased circulating IL-1beta. Single-cell colon data place LACC1 predominantly in macrophages (17.3% of Crohn macrophages vs 12.4% normal), the cell type this module predicts.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "rs2066847",
+    "rs2066844",
+    "rs2076756",
+    "rs3764147",
+    "rs1373904",
+    "Q9HC29",
+    "Q8IV20",
+    "PMID:11385576",
+    "PMID:27478939",
+    "PMID:27959965",
+    "PMID:29538758",
+    "AGR:MGI:2445077:MP:0002451",
+    "AGR:MGI:2445077:MP:0008642",
+    "AGR:MGI:2429397:MP:0001790",
+    "AGR:MGI:2429397:MP:0008713",
+    "CXG:ENSG00000179630:CL_0000235:MONDO_0005011",
+    "OT:NOD2-MONDO_0005011",
+    "OT:LACC1-MONDO_0005011",
+    "STRING:NOD2-LACC1"
+   ],
+   "title": "NOD2 and LACC1 converge on a myeloid peptidoglycan-sensing/immunometabolic module: impaired NOD2-LACC1 signalling degrades bacterial handling in macrophages"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "rs34236350",
+      "rs3749172",
+      "OT:GPR35-MONDO_0005011",
+      "PMID:28658209"
+     ],
+     "note": "",
+     "object": {
+      "curie": "MONDO:0005011",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "Crohn disease"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "GPR35 Crohn risk variants (rs34236350, rs3749172)"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "Q9HC97"
+     ],
+     "note": "Couples Gi/Go (adenylate cyclase inhibition) or G12/G13 (Rho activation) depending on context; internalises to outer mitochondrial membrane.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "kynurenic acid / 5-HIAA / lysophosphatidic acid"
+     },
+     "polarity": "unknown",
+     "relation": "binds",
+     "subject": {
+      "curie": "UniProtKB:Q9HC97",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "GPR35"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "colonocyte"
+      },
+      "disease_state": null,
+      "tissue": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "tissue",
+       "label": "colon"
+      }
+     },
+     "evidence": [
+      "HPA:ENSG00000178623",
+      "AGR:MGI:1929509:MP:0008537",
+      "AGR:MGI:1929509:MP:0013956",
+      "CXG:ENSG00000178623:CL_0011108:MONDO_0005011"
+     ],
+     "note": "Direction is contested: the tm1(KOMP)Vlcg allele shows DECREASED colitis susceptibility (AGR:MGI:1929509:MP:0008539), the opposite sign to em1Niess.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "colonic mucosal integrity / resistance to induced colitis"
+     },
+     "polarity": "positive",
+     "relation": "required_for",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "GPR35 expression in colonocytes"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:40623474",
+      "PMID:36076306"
+     ],
+     "note": "Mesenteric kynurenic acid regulates colitis via white adipose browning; the paper does not prove the effect is GPR35-dependent rather than AHR/NMDA-mediated.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "mesenteritis and colitis in Crohn disease"
+     },
+     "polarity": "unknown",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "kynurenic acid-GPR35 axis"
+     }
+    }
+   ],
+   "confidence": "medium",
+   "contradicting_evidence": [
+    "AGR:MGI:1929509:MP:0008539",
+    "AGR:MGI:1929509:MP:0013299",
+    "CXG:ENSG00000178623:CL_0000034:MONDO_0005011",
+    "CHEMBL:no-mechanism-GPR35"
+   ],
+   "falsification": {
+    "description": "Generate intestinal-epithelium-restricted Gpr35 deletion (Vil-Cre) on a single genetic background and run DSS colitis alongside littermate controls and a myeloid-restricted deletion, reading colon length, histology and barrier permeability; in parallel test whether kynurenic acid protection is lost in the epithelial knockout. If epithelial Gpr35 deletion changes neither colitis severity nor kynurenic acid responsiveness - i.e. the phenotype maps entirely to myeloid cells or vanishes on a controlled background - the epithelium-intrinsic hypothesis is dead, and the opposing em1Niess/tm1(KOMP)Vlcg results are explained by allele design rather than cell type.",
+    "expected": "positive",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "UniProtKB:Q9HC97",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "GPR35"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "phenotype",
+     "label": "colon length and epithelial barrier permeability in DSS colitis"
+    },
+    "system": "Vil-Cre conditional Gpr35 mouse, DSS colitis"
+   },
+   "genes": [
+    "GPR35"
+   ],
+   "hypothesis_id": "H3",
+   "mechanism": "GPR35 carries genome-wide significant Crohn association (rs34236350 p=1e-32; rs3749172-A OR 1.45) and an Open Targets genetic score of 0.86 with essentially zero literature support - a purely genetic signal. Unlike every other gene here it is intestine-enhanced and colonocyte-dominant in HPA, and it is a receptor for the tryptophan metabolite kynurenic acid, LPA and 5-HIAA coupling to Gi/Go or G12/G13. The hypothesis is that risk variation alters epithelial GPR35 sensing of microbiota- and host-derived tryptophan/serotonin metabolites, changing colonocyte barrier maintenance and neutrophil/macrophage recruitment. Critically, the two independent mouse alleles disagree on direction: Gpr35-em1Niess mice are more susceptible to induced colitis with shortened colon, while Gpr35-tm1(KOMP)Vlcg mice are less susceptible - so whether GPR35 is protective or pathogenic in gut is genuinely open, and that contradiction is the interesting content here.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "rs34236350",
+    "rs3749172",
+    "OT:GPR35-MONDO_0005011",
+    "OT:GPR35-tractability",
+    "PMID:28658209",
+    "PMID:40623474",
+    "PMID:36076306",
+    "Q9HC97",
+    "HPA:ENSG00000178623",
+    "CXG:ENSG00000178623:CL_0011108:MONDO_0005011",
+    "CXG:ENSG00000178623:CL_0000584:MONDO_0005011",
+    "AGR:MGI:1929509:MP:0008537",
+    "AGR:MGI:1929509:MP:0013956",
+    "CHEMBL:no-mechanism-GPR35",
+    "CHEMBL:target-CHEMBL1293267"
+   ],
+   "title": "GPR35 is an epithelium-intrinsic Crohn risk gene: a colonocyte metabolite receptor whose genetics is strong but whose direction of effect is unresolved"
+  }
+ ],
+ "unexplained_genes": []
+}

@@ -1,0 +1,181 @@
+{
+ "run_id": "study-2026-09-vertex-dcm-vertex-openai-deepseek-aideepseek-v3.2-maas-single_agent-r2",
+ "curated_by": "Claude Opus 5.5, 2026-10-30",
+ "entities": {
+  "dcm": {"kind": "disease", "curie": "MONDO:0005021", "run_labels": ["dilated cardiomyopathy"]},
+  "ttnTruncating": {"kind": "variant", "curie": "BLN:TTN-truncatingVariant", "label": "TTN truncating variant (any truncating allele)",
+                    "run_labels": ["MYH7 and TTN truncating variants"]},
+  "myh7Truncating": {"kind": "variant", "curie": "BLN:MYH7-truncatingVariant", "label": "MYH7 truncating variant (any truncating allele)",
+                     "run_labels": ["MYH7 and TTN truncating variants"]},
+  "lmnaDominantNegative": {"kind": "variant", "curie": "BLN:LMNA-dominantNegativeVariant", "label": "LMNA dominant-negative variant (any such allele)",
+                           "run_labels": ["LMNA dominant‑negative variants"]},
+  "rbm20": {"kind": "protein", "curie": "UniProt:Q5T481", "run_labels": ["RBM20 loss‑of‑function"]},
+  "cardiacMuscleContraction": {"kind": "process", "curie": "GO:0060048", "run_labels": ["impaired sarcomere contraction"]},
+  "alternativeSplicing": {"kind": "process", "curie": "GO:0000380", "run_labels": ["mis‑splicing of cardiac sarcomere transcripts"]},
+  "abnormalSarcomereIsoforms": {"kind": "phenotype", "curie": "BLN:AbnormalSarcomereProteinIsoforms",
+                                "label": "abnormal isoform composition of sarcomere proteins",
+                                "why_no_term": "searched 'isoform' (label table and all ontology titles), 'sarcomere' (all prefixes, --prefix MP, --prefix HP), 'splicing' (MP, HP, UPHENO): only HP:0020201 / MP:0004090 abnormal sarcomere morphology (structure, not isoform composition) and transferrin / creatine kinase isoform terms",
+                                "run_labels": ["altered sarcomere protein isoforms"]},
+  "increasedFragility": {"kind": "phenotype", "curie": "PATO:0002055"},
+  "nuclearEnvelope": {"kind": "component", "curie": "GO:0005635"},
+  "nuclearEnvelopeFragility": {"kind": "phenotype", "refines": {"base": "increasedFragility", "ctx": {"component": "nuclearEnvelope"}},
+                               "run_labels": ["nuclear envelope fragility"]},
+  "cellDeath": {"kind": "process", "curie": "GO:0008219"},
+  "cardiomyocyte": {"kind": "cellType", "curie": "CL:0000746"},
+  "cardiomyocyteDeath": {"kind": "process", "refines": {"base": "cellDeath", "ctx": {"cellType": "cardiomyocyte"}},
+                         "run_labels": ["cardiomyocyte death and fibrosis"]},
+  "myocardialFibrosis": {"kind": "phenotype", "curie": "HP:0001685", "run_labels": ["cardiomyocyte death and fibrosis"]}
+ },
+ "statements": [
+  {"id": "S1", "step": "hyp1.2", "text": "sarcomere (cardiac muscle) contraction lowers the risk of dilated cardiomyopathy; impaired contraction raises it",
+   "claim": {"effect": {"subject": "cardiacMuscleContraction", "sign": "neg", "target": {"disease": "dcm", "aspect": "risk"}}},
+   "sign_note": "inverted: the run's subject is impaired sarcomere contraction, polarity positive",
+   "evidence": [],
+   "excluded": [
+    {"ref": "rs2042995", "category": "not_in_text", "reason": "GWAS row: rs2042995-T (a TTN missense variant) associated with DCM, OR 1.11; says nothing about sarcomere contraction"},
+    {"ref": "rs16866400", "category": "not_in_text", "reason": "GWAS row: rs16866400-A (TTN intron variant) associated with DCM, beta 0.096 (decrease); says nothing about sarcomere contraction"}
+   ]},
+  {"id": "S2", "step": "hyp2.3", "text": "abnormal sarcomere protein isoforms raise the risk of dilated cardiomyopathy",
+   "claim": {"effect": {"subject": "abnormalSarcomereIsoforms", "sign": "pos", "target": {"disease": "dcm", "aspect": "risk"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "STRING:GO:0045214", "category": "enrichment", "reason": "'Sarcomere organization' over-represented among MYH7, TTN, TNNT2; no isoforms, no disease"}
+   ]},
+  {"id": "S3", "step": "hyp3.3", "text": "cardiomyocyte death raises the risk of dilated cardiomyopathy",
+   "claim": {"effect": {"subject": "cardiomyocyteDeath", "sign": "pos", "target": {"disease": "dcm", "aspect": "risk"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "OT:LMNA-MONDO_0005021", "category": "not_in_text", "reason": "Open Targets LMNA-DCM association score 0.86; no cardiomyocyte death"}
+   ]},
+  {"id": "S4", "step": "hyp3.3", "text": "myocardial fibrosis raises the risk of dilated cardiomyopathy",
+   "claim": {"effect": {"subject": "myocardialFibrosis", "sign": "pos", "target": {"disease": "dcm", "aspect": "risk"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "OT:LMNA-MONDO_0005021", "category": "not_in_text", "reason": "Open Targets LMNA-DCM association score 0.86; no fibrosis"}
+   ]}
+ ],
+ "unexpressed": [
+  {"step": "hyp1.1", "category": "no_sign",
+   "reason": "polarity unknown and no cited text gives a direction; compound subject would split into TTN truncating variant and MYH7 truncating variant, each to cardiac muscle contraction (GO:0060048). The label 'impaired' implies a direction (neg) the polarity field withholds",
+   "evidence": [],
+   "excluded": [
+    {"ref": "OT:MYH7-MONDO_0005021", "category": "not_in_text", "reason": "Open Targets MYH7-DCM association score 0.72; no truncating variants, no contraction"},
+    {"ref": "OT:TTN-MONDO_0005021", "category": "not_in_text", "reason": "Open Targets TTN-DCM association score 0.84; no truncating variants, no contraction"},
+    {"ref": "STRING:GOCC:0030017", "category": "enrichment", "reason": "'Sarcomere' compartment over-represented among MYH7, TTN, TNNT2"},
+    {"ref": "STRING:GO:0045214", "category": "enrichment", "reason": "'Sarcomere organization' over-represented among MYH7, TTN, TNNT2"}
+   ]},
+  {"step": "hyp2.1", "category": "no_sign",
+   "reason": "polarity unknown, and 'mis-splicing' is an undirected change with no HP or MP 'abnormal splicing' term; would be RBM20 (inverted from loss-of-function) to alternative mRNA splicing (GO:0000380)",
+   "evidence": [],
+   "excluded": [
+    {"ref": "OT:RBM20-MONDO_0005021", "category": "not_in_text", "reason": "Open Targets RBM20-DCM association score 0.71; no splicing"},
+    {"ref": "STRING:MYH7-RBM20", "category": "not_in_text", "reason": "STRING edge, text-mining 0.79, experimental 0.06, database 0; an undirected link, no splicing"},
+    {"ref": "STRING:RBM20-TTN", "category": "not_in_text", "reason": "STRING edge, text-mining 0.91, experimental 0.11, database 0; an undirected link, no splicing"},
+    {"ref": "STRING:RBM20-TNNT2", "category": "not_in_text", "reason": "STRING edge, text-mining 0.80, experimental 0, database 0; an undirected link, no splicing"}
+   ]},
+  {"step": "hyp2.2", "category": "no_sign",
+   "reason": "polarity unknown; both ends are undirected changes ('mis-splicing', 'altered isoforms'), and no cited text gives a direction",
+   "evidence": [],
+   "excluded": [
+    {"ref": "OT:MYH7-MONDO_0005021", "category": "not_in_text", "reason": "Open Targets MYH7-DCM association score; no splicing, no isoforms"},
+    {"ref": "OT:TTN-MONDO_0005021", "category": "not_in_text", "reason": "Open Targets TTN-DCM association score; no splicing, no isoforms"},
+    {"ref": "OT:TNNT2-MONDO_0005021", "category": "not_in_text", "reason": "Open Targets TNNT2-DCM association score; no splicing, no isoforms"}
+   ]},
+  {"step": "hyp3.1", "category": "no_sign",
+   "reason": "polarity unknown and no cited text gives a direction; would be LMNA dominant-negative variant to nuclear envelope fragility (PATO:0002055 increased fragility in GO:0005635 nuclear envelope). The label 'fragility' implies a direction (pos) the polarity field withholds",
+   "evidence": [],
+   "excluded": [
+    {"ref": "OT:LMNA-MONDO_0005021", "category": "not_in_text", "reason": "Open Targets LMNA-DCM association score 0.86; no variants named, no nuclear envelope"},
+    {"ref": "OT:LMNA-constraint", "category": "not_in_text", "reason": "gnomAD loss-of-function constraint for LMNA; says LMNA is LoF-intolerant, nothing on dominant-negative variants or the nuclear envelope"},
+    {"ref": "GWAS:LMNA:no-association", "category": "other", "reason": "run's contradicting citation: GWAS Catalog has no LMNA variant associated with DCM; it bears on the hypothesis claim (LMNA variant to DCM), but no statement of the run links an LMNA variant to DCM, so it has nowhere to attach"}
+   ]},
+  {"step": "hyp3.2", "category": "no_sign",
+   "reason": "polarity unknown and no cited text gives a direction; compound object would split into cardiomyocyte death (GO:0008219 in CL:0000746) and myocardial fibrosis (HP:0001685), both of which imply a direction (pos) the polarity field withholds",
+   "evidence": [],
+   "excluded": [
+    {"ref": "STRING:GO:0048738", "category": "enrichment", "reason": "'Cardiac muscle tissue development' over-represented among MYH7, LMNA, TTN, TNNT2; no nuclear envelope, no cell death, no fibrosis"}
+   ]}
+ ],
+ "hypotheses": {
+  "hyp1": {"claims": [
+    {"subject": "ttnTruncating", "sign": "pos", "target": {"disease": "dcm", "aspect": "risk"}},
+    {"subject": "myh7Truncating", "sign": "pos", "target": {"disease": "dcm", "aspect": "risk"}}],
+   "note": "the chain starts at the compound 'MYH7 and TTN truncating variants': one claim per gene. hyp1.1 is unsigned, so neither claim has a route"},
+  "hyp2": {"claims": [
+    {"subject": "rbm20", "sign": "neg", "target": {"disease": "dcm", "aspect": "risk"}}],
+   "note": "title: RBM20 loss-of-function causes DCM, so RBM20 is neg on risk. hyp2.1 and hyp2.2 are unsigned, so no route"},
+  "hyp3": {"claims": [
+    {"subject": "lmnaDominantNegative", "sign": "pos", "target": {"disease": "dcm", "aspect": "risk"}}],
+   "note": "chain starts at the variant class. The mechanism also claims faster progression and earlier arrhythmias, which no step carries. hyp3.1 and hyp3.2 are unsigned, so no route"}
+ },
+ "findings": [
+  {"project": "hypothesis-agent", "category": "unsigned_steps", "steps": ["hyp1.1", "hyp2.1", "hyp2.2", "hyp3.1", "hyp3.2"],
+   "detail": "every step before the last one in every chain has polarity 'unknown', and only the final step into DCM is signed, so no hypothesis composes from its gene to the disease"},
+  {"project": "hypothesis-agent", "category": "polarity_contradicts_label", "steps": ["hyp1.1", "hyp3.1", "hyp3.2"],
+   "detail": "these steps are marked polarity 'unknown' yet their labels state a direction ('impaired sarcomere contraction', 'nuclear envelope fragility', 'cardiomyocyte death and fibrosis'), and hyp1's own falsification test assumes the variants reduce contraction force"},
+  {"project": "hypothesis-agent", "category": "ungrounded_label",
+   "detail": "the run gave a CURIE only to dilated cardiomyopathy (MONDO:0005021); all eight other node labels are kind 'other' with no CURIE"},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["hyp1.1", "hyp1.2", "hyp2.1", "hyp2.2", "hyp2.3", "hyp3.1", "hyp3.2", "hyp3.3"],
+   "detail": "none of the 14 records cited in the chains states any step: they are Open Targets gene-DCM association scores, STRING gene-set enrichments, text-mined STRING edges, a LoF constraint score and two GWAS rows, none of which names a mechanism node (contraction, splicing, isoforms, nuclear envelope, cell death, fibrosis)"},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["hyp1.2"],
+   "detail": "the two GWAS rows cited for 'impaired sarcomere contraction leads to DCM' are common TTN-locus variants (rs2042995 missense, rs16866400 intronic); they state variant-DCM associations, not contraction, and neither is a truncating variant, so they do not bear on hyp1's truncating-variant claim either"},
+  {"project": "hypothesis-agent", "category": "citation_direction_unread", "steps": ["hyp1.2"],
+   "detail": "the rs16866400 row reports beta 0.0957 with direction 'decrease' for the A allele on DCM (while also naming A as the 'risk allele'); the run cites it as support for a risk mechanism without reading or reconciling the direction"},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["hyp2.1"],
+   "detail": "the RBM20 edges to MYH7, TTN and TNNT2 are text-mining co-mention scores (experimental at most 0.11, database 0); they are cited as if they showed RBM20 splices those transcripts"},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["hyp3.1"],
+   "detail": "the LMNA loss-of-function constraint score is cited for a dominant-negative mechanism; LoF intolerance says nothing about dominant-negative action or nuclear envelope fragility"},
+  {"project": "hypothesis-agent", "category": "contradicting_evidence_ignored", "hypothesis": "hyp3",
+   "detail": "the run lists the GWAS Catalog null result for LMNA and DCM as contradicting, yet keeps confidence 'medium' and the mechanism never addresses it (it could have argued that common-variant GWAS does not test rare dominant-negative variants, but does not)"},
+  {"project": "hypothesis-agent", "category": "confidence_unjustified", "hypothesis": "hyp1",
+   "detail": "confidence 'medium' and support 'grounded' with no cited text stating any step, and no cited text mentioning truncating variants in either gene"},
+  {"project": "hypothesis-agent", "category": "confidence_unjustified", "hypothesis": "hyp2",
+   "detail": "confidence 'medium' and support 'grounded' with no cited text mentioning splicing or isoforms"},
+  {"project": "hypothesis-agent", "category": "confidence_unjustified", "hypothesis": "hyp3",
+   "detail": "confidence 'medium' and support 'grounded' with no cited text mentioning the nuclear envelope, cell death or fibrosis, and a contradicting null GWAS result"},
+  {"project": "hypothesis-agent", "category": "questionable_entity", "hypothesis": "hyp1",
+   "detail": "curator's note, not from the cited texts: TTN truncating variants are a known DCM cause, but DCM-linked MYH7 variants are mostly missense, so pairing 'MYH7 and TTN truncating variants' as one subject is doubtful, and nothing the run cites names truncating variants"},
+  {"project": "hypothesis-agent", "category": "step_restates_definition", "steps": ["hyp1.2"],
+   "detail": "the MONDO definition of DCM names contractile dysfunction as a defining feature, so 'impaired sarcomere contraction leads to DCM' is close to a hallmark, not a cause"},
+  {"project": "hypothesis-agent", "category": "gene_list_inconsistent", "hypothesis": "hyp2",
+   "detail": "hyp2's mechanism and evidence use TNNT2 as an RBM20 splicing target (STRING:RBM20-TNNT2, OT:TNNT2-MONDO_0005021), but the run lists TNNT2 as unexplained"},
+  {"project": "hypothesis-agent", "category": "decoy_genes_left_unexplained",
+   "detail": "no hypothesis was built for ABCB9 or OR8J3, and none of the run's sources mentions them: the run did not invent mechanisms for genes with no evidence"},
+  {"project": "hypothesis-agent", "category": "falsification_unstructured",
+   "detail": "every falsification test has expected 'unknown', perturbation and readout null and system empty; only the free-text description says what would refute the hypothesis"},
+  {"project": "hypothesis-agent", "category": "mechanism_beyond_chain", "hypothesis": "hyp3",
+   "detail": "the mechanism claims LMNA explains earlier arrhythmias and faster progression, but no step reaches arrhythmia or progression; the chain ends at DCM risk"},
+  {"project": "biolean", "category": "rule_missing", "steps": ["hyp1.1", "hyp3.1", "hyp3.2"],
+   "detail": "the guide says 'leads_to' with unknown polarity is no_sign unless a cited text gives the direction, but does not say whether a directional object label ('impaired X', 'X fragility', 'X death') supplies it; I applied the table, and under the label reading hyp1 (variant -> - contraction -> - risk) and hyp3 (+ -> + -> +) would compose as claimed, though still with no kept evidence"},
+  {"project": "biolean", "category": "no_form_for", "hypothesis": "hyp3",
+   "detail": "a contradicting citation about the hypothesis claim itself (no GWAS association between any LMNA variant and DCM) has no statement to attach to when the run has no direct gene-to-disease step; the format has no place for evidence on a claim, so it could only be excluded as 'other'"},
+  {"project": "biolean", "category": "rule_missing", "steps": ["hyp1.2"],
+   "detail": "the guide says a GWAS row with an allele and an odds ratio or beta gives the direction for that allele, but the rs16866400 row names A as the 'risk allele' while its beta direction is 'decrease'; the guide does not say which wins (moot here, since the row states no step)"},
+  {"project": "biolean", "category": "missing_term", "steps": ["hyp2.2", "hyp2.3"],
+   "detail": "no ontology term for abnormal isoform composition of sarcomere proteins (titin isoform shift and the like); made BLN:AbnormalSarcomereProteinIsoforms"},
+  {"project": "biolean", "category": "missing_term", "steps": ["hyp1.1", "hyp3.1"],
+   "detail": "gene-specific variant classes have no ID, so per the guide they are BLN:TTN-truncatingVariant, BLN:MYH7-truncatingVariant and BLN:LMNA-dominantNegativeVariant; render.py warns on BLN variant classes without a missing_term finding even though the guide prescribes this form"},
+  {"project": "biolean", "category": "missing_term", "steps": ["hyp2.1"],
+   "detail": "no HP or MP term for abnormal (alternative) mRNA splicing exists in the corpus, only FYPO (yeast), ZP (zebrafish) and UPHENO grouping classes, so 'mis-splicing' cannot become an effect on an 'abnormal X' phenotype under the undirected-change rule"},
+  {"project": "biolean", "category": "grounding_by_refinement", "steps": ["hyp3.1", "hyp3.2", "hyp3.3"],
+   "detail": "no term for 'nuclear envelope fragility' or 'cardiomyocyte death'; grounded as refinements (PATO:0002055 increased fragility in GO:0005635 nuclear envelope; GO:0008219 cell death in CL:0000746 cardiac muscle cell), which works but means other runs' 'cardiomyocyte apoptosis' (GO:0010659) will be a different node"},
+  {"project": "hypothesis-agent", "category": "specialists_unused",
+   "detail": "the run had literature, UniProt, model-organism, expression and pathway specialists, yet all 15 records it cites are Open Targets scores (6), STRING edges or enrichments (6) and GWAS Catalog rows (3): no paper, UniProt entry or mouse record, so no cited record could state a contraction, splicing, isoform, nuclear-envelope or cell-death step"},
+  {"project": "hypothesis-agent", "category": "citation_reused_by_gene", "steps": ["hyp1.1", "hyp2.2", "hyp2.3", "hyp3.1", "hyp3.3"],
+   "detail": "the same gene-level records are cited for unrelated steps: OT:MYH7 and OT:TTN for hyp1.1 (variants to contraction) and hyp2.2 (mis-splicing to isoforms), STRING:GO:0045214 for hyp1.1 and hyp2.3, OT:LMNA for hyp3.1 and hyp3.3; the citations follow the genes named, not what each step says"},
+  {"project": "both", "category": "unexpressed_is_run_output", "steps": ["hyp1.1", "hyp2.1", "hyp2.2", "hyp3.1", "hyp3.2"],
+   "detail": "5 of 8 steps are unexpressed (no_sign) because the run set polarity 'unknown' and cites nothing that gives a direction, not because BioLean lacks a form; the report counts them with BioLean's expressivity gaps, so a reader of the counts cannot tell the two apart"},
+  {"project": "biolean", "category": "evidence_counting", "steps": ["hyp3.3"],
+   "detail": "hyp3.3 is split into S3 and S4, so its one citation (OT:LMNA-MONDO_0005021) is excluded under each and counted twice: the report's 20 exclusions are 19 distinct step-citation judgements"}
+ ],
+ "audit": [
+  {"item": "findings (specialists_unused)", "error": "missed_finding", "before": "absent", "after": "added (hypothesis-agent)",
+   "reason": "the question enabled literature, uniprot, model_organism and other specialists, but sources.json holds only opentargets (6), string (6) and gwascatalog (3) records; this is why no step could be supported, which the existing citation_does_not_state_step finding describes but does not explain"},
+  {"item": "findings (citation_reused_by_gene)", "error": "missed_finding", "before": "absent", "after": "added (hypothesis-agent)",
+   "reason": "run.json cites OT:MYH7-MONDO_0005021 and OT:TTN-MONDO_0005021 at hyp1.1 and hyp2.2, STRING:GO:0045214 at hyp1.1 and hyp2.3, OT:LMNA-MONDO_0005021 at hyp3.1 and hyp3.3: one record for steps with different subjects and objects shows citations were attached by gene, not by content"},
+  {"item": "findings (unexpressed_is_run_output)", "error": "missed_finding", "before": "absent", "after": "added (both)",
+   "reason": "all five unexpressed steps are no_sign from the run's 'unknown' polarity; the sibling AMD audit recorded the same count-conflation finding, and without it the 5 unexpressed steps read as BioLean gaps"},
+  {"item": "findings (evidence_counting)", "error": "missed_finding", "before": "only in the curator's guide_problems", "after": "added (biolean)",
+   "reason": "the guide says format and tool gaps are findings too; the split of hyp3.3 lists OT:LMNA-MONDO_0005021 under S3 and S4, so the excluded count (20) overstates the distinct judgements (19)"}
+ ]
+}

@@ -1,0 +1,342 @@
+{
+ "run_id": "study-2026-09-vertex-schizophrenia-vertex-openai-deepseek-aideepseek-v3.2-maas-multi_agent-r2",
+ "model": "vertex-openai:deepseek-ai/deepseek-v3.2-maas",
+ "question": {
+  "arm": "multi_agent",
+  "budget": {
+   "max_delegations": 22,
+   "max_model_requests": 80,
+   "max_specialist_requests": 8,
+   "min_evidence_per_hypothesis": 2,
+   "min_hypotheses": 3,
+   "min_sources_per_hypothesis": 2,
+   "output_retries": 3
+  },
+  "data_policy": {
+   "max_age_seconds": 1209600.0,
+   "mode": "cache-preferred",
+   "snapshot_run_id": null
+  },
+  "disease": "schizophrenia",
+  "formalise": false,
+  "genes": [
+   "CSMD1",
+   "NXPH3",
+   "C4A",
+   "CX3CR1",
+   "CCDC136",
+   "C1QA",
+   "C4B"
+  ],
+  "model": "vertex-openai:deepseek-ai/deepseek-v3.2-maas",
+  "specialist_model": "vertex-openai:deepseek-ai/deepseek-v3.2-maas",
+  "specialists": [
+   "chembl",
+   "expression",
+   "gwas",
+   "interactions",
+   "literature",
+   "model_organism",
+   "open_targets",
+   "pathways",
+   "single_cell",
+   "trials",
+   "uniprot"
+  ],
+  "tissue": {
+   "artifact_id": "sha256:9083451a13b7e45058362501bb03fd93944d7aa79ffc0248bc2cf8b1520b9652",
+   "label": "brain",
+   "uberon": "UBERON:0000955"
+  },
+  "use_network": true
+ },
+ "abstention": null,
+ "disease": "schizophrenia",
+ "genes_considered": [
+  "CSMD1",
+  "NXPH3",
+  "C4A",
+  "CX3CR1",
+  "CCDC136",
+  "C1QA",
+  "C4B"
+ ],
+ "hypotheses": [
+  {
+   "chain": [
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "microglia"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [],
+     "note": "CSMD1 encodes a complement inhibitor; its downregulation would lead to excessive complement activation.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "complement cascade overactivation"
+     },
+     "polarity": "unknown",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "CSMD1"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [],
+     "note": "C4A and C4B produce complement component C4, which is cleaved to C4b, part of the C3 convertase.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "complement cascade overactivation"
+     },
+     "polarity": "positive",
+     "relation": "increases_amount",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "C4A"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [],
+     "note": "C4B also produces complement component C4; increased expression leads to more C4b.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "complement cascade overactivation"
+     },
+     "polarity": "positive",
+     "relation": "increases_amount",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "C4B"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [],
+     "note": "C1QA is part of the C1 complex that cleaves C4; increased activity could enhance complement activation.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "complement cascade overactivation"
+     },
+     "polarity": "positive",
+     "relation": "activates",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "C1QA"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [],
+     "note": "Excessive complement activation leads to synaptic pruning and neuronal damage.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "schizophrenia"
+     },
+     "polarity": "unknown",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "complement cascade overactivation"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Knock out CSMD1, C4A, C4B, and C1QA in microglia and measure synaptic density and cognitive function in a mouse model; if synaptic loss and schizophrenia-like behaviors do not occur, the complement overactivation hypothesis is falsified.",
+    "expected": "unknown",
+    "perturbation": null,
+    "readout": null,
+    "system": ""
+   },
+   "genes": [
+    "CSMD1",
+    "C4A",
+    "C4B",
+    "C1QA"
+   ],
+   "hypothesis_id": "complement_synaptic_pruning",
+   "mechanism": "CSMD1, a complement inhibitor, is downregulated in schizophrenia, while C4A, C4B, and C1QA are upregulated or hyperactive, leading to excessive complement cascade activation in microglia. This drives aberrant synaptic pruning and neuronal damage, contributing to schizophrenia pathology.",
+   "support": "speculative",
+   "supporting_evidence": [],
+   "title": "Complement cascade overactivation drives aberrant synaptic pruning in schizophrenia"
+  },
+  {
+   "chain": [
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "microglia"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [],
+     "note": "CX3CR1 is the receptor for fractalkine (CX3CL1); its dysfunction impairs microglial synaptic surveillance and pruning.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "impaired microglial synaptic pruning"
+     },
+     "polarity": "unknown",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "CX3CR1"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [],
+     "note": "Impaired pruning leads to either excessive or insufficient synaptic elimination, disrupting neural circuits.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "schizophrenia"
+     },
+     "polarity": "unknown",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "impaired microglial synaptic pruning"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Restore CX3CR1 signaling in microglia of a schizophrenia mouse model and measure synaptic density and behavioral phenotypes; if no rescue of synaptic abnormalities or behaviors occurs, the CX3CR1-microglial pruning hypothesis is falsified.",
+    "expected": "unknown",
+    "perturbation": null,
+    "readout": null,
+    "system": ""
+   },
+   "genes": [
+    "CX3CR1"
+   ],
+   "hypothesis_id": "cx3cr1_microglial_pruning",
+   "mechanism": "CX3CR1, a microglial receptor for fractalkine, is dysregulated in schizophrenia, impairing microglial synaptic surveillance and pruning. This leads to aberrant synaptic connectivity and circuit dysfunction underlying schizophrenia symptoms.",
+   "support": "speculative",
+   "supporting_evidence": [],
+   "title": "CX3CR1 dysfunction impairs microglial synaptic pruning in schizophrenia"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [],
+     "note": "NXPH3 encodes a neurexin family member involved in synapse formation and maintenance.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "synapse formation and maintenance"
+     },
+     "polarity": "positive",
+     "relation": "required_for",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "NXPH3"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [],
+     "note": "CCDC136 is a coiled-coil domain protein of unknown function, possibly involved in neuronal structure.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "neuronal structure"
+     },
+     "polarity": "positive",
+     "relation": "required_for",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "CCDC136"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [],
+     "note": "Synaptic and neuronal structural deficits lead to circuit dysfunction.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "schizophrenia"
+     },
+     "polarity": "unknown",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "synaptic and neuronal structural deficits"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Knock down NXPH3 and CCDC136 in neuronal cultures and measure synapse number and dendritic complexity; if no deficit in synapse formation or neuronal structure is observed, the synaptic structural hypothesis is falsified.",
+    "expected": "unknown",
+    "perturbation": null,
+    "readout": null,
+    "system": ""
+   },
+   "genes": [
+    "NXPH3",
+    "CCDC136"
+   ],
+   "hypothesis_id": "synaptic_structural_deficit",
+   "mechanism": "NXPH3 and CCDC136 are involved in synapse formation and neuronal structural integrity. Their dysfunction leads to synaptic and neuronal structural deficits, contributing to circuit abnormalities in schizophrenia.",
+   "support": "speculative",
+   "supporting_evidence": [],
+   "title": "NXPH3 and CCDC16 dysfunction disrupt synaptic and neuronal structure in schizophrenia"
+  }
+ ],
+ "unexplained_genes": []
+}

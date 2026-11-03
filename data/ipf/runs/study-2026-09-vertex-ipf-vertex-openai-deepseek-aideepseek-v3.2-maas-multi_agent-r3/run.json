@@ -1,0 +1,285 @@
+{
+ "run_id": "study-2026-09-vertex-ipf-vertex-openai-deepseek-aideepseek-v3.2-maas-multi_agent-r3",
+ "model": "vertex-openai:deepseek-ai/deepseek-v3.2-maas",
+ "question": {
+  "arm": "multi_agent",
+  "budget": {
+   "max_delegations": 22,
+   "max_model_requests": 80,
+   "max_specialist_requests": 8,
+   "min_evidence_per_hypothesis": 2,
+   "min_hypotheses": 3,
+   "min_sources_per_hypothesis": 2,
+   "output_retries": 3
+  },
+  "data_policy": {
+   "max_age_seconds": 1209600.0,
+   "mode": "cache-preferred",
+   "snapshot_run_id": null
+  },
+  "disease": "idiopathic pulmonary fibrosis",
+  "formalise": false,
+  "genes": [
+   "MUC5B",
+   "TERT",
+   "SFTPC",
+   "TOLLIP",
+   "DSP",
+   "FAM13A"
+  ],
+  "model": "vertex-openai:deepseek-ai/deepseek-v3.2-maas",
+  "specialist_model": "vertex-openai:deepseek-ai/deepseek-v3.2-maas",
+  "specialists": [
+   "chembl",
+   "expression",
+   "gwas",
+   "interactions",
+   "literature",
+   "model_organism",
+   "open_targets",
+   "pathways",
+   "single_cell",
+   "trials",
+   "uniprot"
+  ],
+  "tissue": {
+   "artifact_id": "sha256:b60166c2e7c764626dc8c52ea5c533f337e6565d01db16e75436369428752338",
+   "label": "lung",
+   "uberon": "UBERON:0002048"
+  },
+  "use_network": true
+ },
+ "abstention": null,
+ "disease": "idiopathic pulmonary fibrosis",
+ "genes_considered": [
+  "MUC5B",
+  "TERT",
+  "SFTPC",
+  "TOLLIP",
+  "DSP",
+  "FAM13A"
+ ],
+ "hypotheses": [
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "rs35705950",
+      "STRING:SFTPC-MUC5B",
+      "STRING:TOLLIP-MUC5B"
+     ],
+     "note": "The rs35705950 variant is the strongest known genetic risk factor for IPF (OR 5.06). It lies in the promoter region shared by MUC5B and TOLLIP, suggesting a cis-regulatory element that coordinately dysregulates both genes.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "IPF susceptibility"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "MUC5B promoter variant rs35705950-T"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "rs35705950"
+     ],
+     "note": "TOLLIP is involved in autophagy and immune regulation; the promoter variant may reduce TOLLIP expression, impairing clearance of damaged alveolar cells.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "defective autophagy"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "TOLLIP dysregulation"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": null,
+   "genes": [
+    "MUC5B",
+    "TOLLIP"
+   ],
+   "hypothesis_id": "hyp1",
+   "mechanism": "The rs35705950 promoter variant (shared by MUC5B and TOLLIP) increases MUC5B expression in the distal airways, leading to mucus plugging and impaired mucociliary clearance, while simultaneously reducing TOLLIP-mediated autophagy, causing accumulation of damaged alveolar type II cells. Together these defects promote fibrotic remodeling.",
+   "support": "speculative",
+   "supporting_evidence": [],
+   "title": "Promoter variant drives mucin overexpression and impaired autophagy via MUC5B/TOLLIP co-regulation"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "rs2736100",
+      "rs7725218"
+     ],
+     "note": "TERT variants reduce telomerase activity, leading to telomere shortening in alveolar epithelial progenitor cells.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "telomere shortening"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "TERT dysfunction"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "GWAS:SFTPC:no-association"
+     ],
+     "note": "SFTPC mutations cause protein misfolding and ER stress in alveolar type II cells, but GWAS shows no common variant association; this mechanism is relevant for rare familial cases.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "ER stress"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "SFTPC mutation"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "STRING:TERT-SFTPC"
+     ],
+     "note": "TERT and SFTPC are linked in literature (text-mining score 0.48); both affect alveolar type II cell homeostasis.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "alveolar epithelial cell senescence/apoptosis"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "combined epithelial dysfunction"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": null,
+   "genes": [
+    "TERT",
+    "SFTPC"
+   ],
+   "hypothesis_id": "hyp2",
+   "mechanism": "TERT loss-of-function variants cause telomere shortening, while SFTPC mutations (rare, not GWAS-associated) induce ER stress in alveolar type II cells. Both pathways converge on epithelial cell senescence and apoptosis, depleting the regenerative capacity of the alveolar epithelium and triggering aberrant fibroblast activation.",
+   "support": "speculative",
+   "supporting_evidence": [],
+   "title": "Telomere shortening and surfactant protein misfolding converge on alveolar epithelial failure"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "rs2076295"
+     ],
+     "note": "DSP variant rs2076295 (OR 1.49) disrupts desmosomal adhesion between alveolar epithelial cells.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "impaired epithelial barrier integrity"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "DSP dysfunction"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "rs2609259",
+      "rs2013701"
+     ],
+     "note": "FAM13A variants (Rho-GAP domain) may dysregulate Rho GTPase signaling in fibroblasts or epithelial cells.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "abnormal cytoskeletal dynamics"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "FAM13A dysregulation"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "STRING:PMID:34490311"
+     ],
+     "note": "TERT, DSP, and FAM13A are co-mentioned in literature on IPF/COPD/CPFE overlap, suggesting shared pathways in fibrotic lung disease.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "fibrotic remodeling"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "combined cytoskeletal and signaling defects"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": null,
+   "genes": [
+    "DSP",
+    "FAM13A"
+   ],
+   "hypothesis_id": "hyp3",
+   "mechanism": "DSP variants weaken epithelial cell-cell junctions, while FAM13A variants perturb Rho GTPase signaling. The loss of epithelial barrier integrity combined with dysregulated cytoskeletal dynamics in fibroblasts promotes persistent fibroblast activation and excessive extracellular matrix deposition.",
+   "support": "speculative",
+   "supporting_evidence": [],
+   "title": "Desmosomal adhesion defect plus Rho signaling dysregulation drive fibroblast activation"
+  }
+ ],
+ "unexplained_genes": []
+}

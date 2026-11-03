@@ -1,0 +1,186 @@
+{
+ "STRING:RAB40AL-CUL5": {
+  "cited_as": "chain",
+  "in_ledger": true,
+  "source": "string",
+  "statement": "STRING links RAB40AL and CUL5 with combined score 0.99 (experimental 0.98, database 0.00, text-mining 0.22).",
+  "url": "https://string-db.org/cgi/network?identifiers=RAB40AL%0dCUL5&species=9606",
+  "text": "STRING links RAB40AL and CUL5 with combined score 0.99 (experimental 0.98, database 0.00, text-mining 0.22).\nstringId_A: 9606.ENSP00000218249\nstringId_B: 9606.ENSP00000376808\npreferredName_A: RAB40AL\npreferredName_B: CUL5\nncbiTaxonId: 9606\nscore: 0.986\nnscore: 0\nfscore: 0\npscore: 0\nascore: 0\nescore: 0.984\ndscore: 0\ntscore: 0.219"
+ },
+ "STRING:RAB40AL-ELOC": {
+  "cited_as": "chain",
+  "in_ledger": true,
+  "source": "string",
+  "statement": "STRING links RAB40AL and ELOC with combined score 0.99 (experimental 0.99, database 0.00, text-mining 0.20).",
+  "url": "https://string-db.org/cgi/network?identifiers=RAB40AL%0dELOC&species=9606",
+  "text": "STRING links RAB40AL and ELOC with combined score 0.99 (experimental 0.99, database 0.00, text-mining 0.20).\nstringId_A: 9606.ENSP00000218249\nstringId_B: 9606.ENSP00000478121\npreferredName_A: RAB40AL\npreferredName_B: ELOC\nncbiTaxonId: 9606\nscore: 0.991\nnscore: 0\nfscore: 0\npscore: 0\nascore: 0.054\nescore: 0.99\ndscore: 0\ntscore: 0.202"
+ },
+ "STRING:GO:0031466": {
+  "cited_as": "chain",
+  "in_ledger": true,
+  "source": "string",
+  "statement": "[Component] 'Cul5-RING ubiquitin ligase complex' is enriched in the gene set: 4 of 18 background genes, FDR 6.75e-07.",
+  "url": "https://string-db.org/",
+  "text": "[Component] 'Cul5-RING ubiquitin ligase complex' is enriched in the gene set: 4 of 18 background genes, FDR 6.75e-07.\ncategory: Component\nterm: GO:0031466\nnumber_of_genes: 4\nnumber_of_genes_in_background: 18\nncbiTaxonId: 9606\ninputGenes: RAB40C\ninputGenes: RAB40A\ninputGenes: CUL5\ninputGenes: ELOC\npreferredNames: RAB40C\npreferredNames: RAB40A\npreferredNames: CUL5\npreferredNames: ELOC\np_value: 3.82e-10\nfdr: 6.75e-07\ndescription: Cul5-RING ubiquitin ligase complex"
+ },
+ "STRING:GO:0043161": {
+  "cited_as": "chain",
+  "in_ledger": true,
+  "source": "string",
+  "statement": "[Process] 'Proteasome-mediated ubiquitin-dependent protein catabolic process' is enriched in the gene set: 5 of 376 background genes, FDR 0.0034.",
+  "url": "https://string-db.org/",
+  "text": "[Process] 'Proteasome-mediated ubiquitin-dependent protein catabolic process' is enriched in the gene set: 5 of 376 background genes, FDR 0.0034.\ncategory: Process\nterm: GO:0043161\nnumber_of_genes: 5\nnumber_of_genes_in_background: 376\nncbiTaxonId: 9606\ninputGenes: RAB40C\ninputGenes: RAB40A\ninputGenes: CUL5\ninputGenes: RAB40B\ninputGenes: ELOC\npreferredNames: RAB40C\npreferredNames: RAB40A\npreferredNames: CUL5\npreferredNames: RAB40B\npreferredNames: ELOC\np_value: 1.1e-06\nfdr: 0.0034\ndescription: Proteasome-mediated ubiquitin-dependent protein catabolic process"
+ },
+ "STRING:GO:0120184": {
+  "cited_as": "chain",
+  "in_ledger": true,
+  "source": "string",
+  "statement": "[Process] 'Negative regulation of focal adhesion disassembly' is enriched in the gene set: 2 of 3 background genes, FDR 0.0044.",
+  "url": "https://string-db.org/",
+  "text": "[Process] 'Negative regulation of focal adhesion disassembly' is enriched in the gene set: 2 of 3 background genes, FDR 0.0044.\ncategory: Process\nterm: GO:0120184\nnumber_of_genes: 2\nnumber_of_genes_in_background: 3\nncbiTaxonId: 9606\ninputGenes: RAB40A\ninputGenes: CUL5\npreferredNames: RAB40A\npreferredNames: CUL5\np_value: 2.83e-06\nfdr: 0.0044\ndescription: Negative regulation of focal adhesion disassembly"
+ },
+ "STRING:GO:0150118": {
+  "cited_as": "chain",
+  "in_ledger": true,
+  "source": "string",
+  "statement": "[Process] 'Negative regulation of cell-substrate junction organization' is enriched in the gene set: 3 of 20 background genes, FDR 0.0028.",
+  "url": "https://string-db.org/",
+  "text": "[Process] 'Negative regulation of cell-substrate junction organization' is enriched in the gene set: 3 of 20 background genes, FDR 0.0028.\ncategory: Process\nterm: GO:0150118\nnumber_of_genes: 3\nnumber_of_genes_in_background: 20\nncbiTaxonId: 9606\ninputGenes: RAB40C\ninputGenes: RAB40A\ninputGenes: CUL5\npreferredNames: RAB40C\npreferredNames: RAB40A\npreferredNames: CUL5\np_value: 2.28e-07\nfdr: 0.0028\ndescription: Negative regulation of cell-substrate junction organization"
+ },
+ "P0C0E4": {
+  "cited_as": "chain",
+  "in_ledger": true,
+  "source": "uniprot",
+  "statement": "May act as substrate-recognition component of the ECS(RAB40) E3 ubiquitin ligase complex which mediates the ubiquitination and subsequent proteasomal degradation of target proteins (By similarity). The Rab40 subfamily belongs to the Rab family that are key regulators of intracellular membrane trafficking, from the formation of transport vesicles to their fusion with membranes. Rabs cycle between an inactive GDP-bound form and an active GTP-bound form that is able to recruit to membranes different sets of downstream effectors directly responsible for vesicle formation, movement, tethering and fusion (By similarity) Domains: SOCS box. Location: Membrane, Cytoplasm, Mitochondrion",
+  "url": "https://www.uniprot.org/uniprotkb/P0C0E4",
+  "text": "May act as substrate-recognition component of the ECS(RAB40) E3 ubiquitin ligase complex which mediates the ubiquitination and subsequent proteasomal degradation of target proteins (By similarity). The Rab40 subfamily belongs to the Rab family that are key regulators of intracellular membrane trafficking, from the formation of transport vesicles to their fusion with membranes. Rabs cycle between an inactive GDP-bound form and an active GTP-bound form that is able to recruit to membranes different sets of downstream effectors directly responsible for vesicle formation, movement, tethering and fusion (By similarity) Domains: SOCS box. Location: Membrane, Cytoplasm, Mitochondrion\nentryType: UniProtKB reviewed (Swiss-Prot)\nprimaryAccession: P0C0E4\nuniProtkbId: RB40L_HUMAN\nproteinDescription.recommendedName.fullName.value: Ras-related protein Rab-40A-like\nproteinDescription.recommendedName.ecNumbers.evidences.evidenceCode: ECO:0000250\nproteinDescription.recommendedName.ecNumbers.evidences.source: UniProtKB\nproteinDescription.recommendedName.ecNumbers.evidences.id: Q96S21\nproteinDescription.recommendedName.ecNumbers.value: 3.6.5.2\nproteinDescription.alternativeNames.fullName.evidences.evidenceCode: ECO:0000303\nproteinDescription.alternativeNames.fullName.evidences.source: PubMed\nproteinDescription.alternativeNames.fullName.evidences.id: 12145744\nproteinDescription.alternativeNames.fullName.value: Ras-like GTPase\ncomments.texts.evidences.evidenceCode: ECO:0000250\ncomments.texts.evidences.source: UniProtKB\ncomments.texts.evidences.id: Q8WXH6\ncomments.texts.evidences.evidenceCode: ECO:0000250\ncomments.texts.evidences.source: UniProtKB\ncomments.texts.evidences.id: Q96S21\ncomments.texts.value: May act as substrate-recognition component of the ECS(RAB40) E3 ubiquitin ligase complex which mediates the ubiquitination and subsequent proteasomal degradation of target proteins (By similarity). The Rab40 subfamily belongs to the Rab family that are key regulators of intracellular membrane trafficking, from the formation of transport vesicles to their fusion with membranes. Rabs cycle between an inactive GDP-bound form and an active GTP-bound form that is able to recruit to membranes different sets of downstream effectors directly responsible for vesicle formation, movement, tethering and fusion (By similarity)\ncomments.commentType: FUNCTION\ncomments.commentType: SUBCELLULAR LOCATION\ncomments.subcellularLocations.location.evidences.evidenceCode: ECO:0000305\ncomments.subcellularLocations.location.value: Membrane\ncomments.subcellularLocations.location.id: SL-0162\ncomments.subcellularLocations.topology.evidences.evidenceCode: ECO:0000305\ncomments.subcellularLocations.topology.value: Lipid-anchor\ncomments.subcellularLocations.topology.id: SL-9901\ncomments.subcellularLocations.orientation.evidences.evidenceCode: ECO:0000305\ncomments.subcellularLocations.orientation.value: Cytoplasmic side\ncomments.subcellularLocations.orientation.id: SL-9910\ncomments.subcellularLocations.location.evidences.evidenceCode: ECO:0000269\ncomments.subcellularLocations.location.evidences.source: PubMed\ncomments.subcellularLocations.location.evidences.id: 22581972\ncomments.subcellularLocations.location.value: Cytoplasm\ncomments.subcellularLocations.location.id: SL-0086\ncomments.subcellularLocations.location.evidences.evidenceCode: ECO:0000269\ncomments.subcellularLocations.location.evidences.source: PubMed\ncomments.subcellularLocations.location.evidences.id: 12145744\ncomments.subcellularLocations.location.evidences.evidenceCode: ECO:0000269\ncomments.subcellularLocations.location.evidences.source: PubMed\ncomments.subcellularLocations.location.evidences.id: 22581972\ncomments.subcellularLocations.location.value: Mitochondrion\ncomments.subcellularLocations.location.id: SL-0173\nfeatures.type: Domain\nfeatures.location.start.value: 175\nfeatures.location.start.modifier: EXACT\nfeatures.location.end.value: 228\nfeatures.location.end.modifier: EXACT\nfeatures.description: SOCS box\nfeatures.evidences.evidenceCode: ECO:0000255\nfeatures.evidences.source: PROSITE-ProRule\nfeatures.evidences.id: PRU00194\nsequence.length: 278\nextraAttributes.uniParcId: UPI000013C751"
+ },
+ "STRING:RAB40AL-ISCA1": {
+  "cited_as": "chain",
+  "in_ledger": true,
+  "source": "string",
+  "statement": "STRING links RAB40AL and ISCA1 with combined score 0.96 (experimental 0.96, database 0.00, text-mining 0.00).",
+  "url": "https://string-db.org/cgi/network?identifiers=RAB40AL%0dISCA1&species=9606",
+  "text": "STRING links RAB40AL and ISCA1 with combined score 0.96 (experimental 0.96, database 0.00, text-mining 0.00).\nstringId_A: 9606.ENSP00000218249\nstringId_B: 9606.ENSP00000365159\npreferredName_A: RAB40AL\npreferredName_B: ISCA1\nncbiTaxonId: 9606\nscore: 0.963\nnscore: 0\nfscore: 0\npscore: 0\nascore: 0\nescore: 0.963\ndscore: 0\ntscore: 0"
+ },
+ "STRING:RAB40A-ISCA1": {
+  "cited_as": "chain",
+  "in_ledger": true,
+  "source": "string",
+  "statement": "STRING links RAB40A and ISCA1 with combined score 0.91 (experimental 0.91, database 0.00, text-mining 0.00).",
+  "url": "https://string-db.org/cgi/network?identifiers=RAB40A%0dISCA1&species=9606",
+  "text": "STRING links RAB40A and ISCA1 with combined score 0.91 (experimental 0.91, database 0.00, text-mining 0.00).\nstringId_A: 9606.ENSP00000361716\nstringId_B: 9606.ENSP00000365159\npreferredName_A: RAB40A\npreferredName_B: ISCA1\nncbiTaxonId: 9606\nscore: 0.908\nnscore: 0\nfscore: 0\npscore: 0\nascore: 0\nescore: 0.908\ndscore: 0\ntscore: 0"
+ },
+ "STRING:ISCA1-RAB40B": {
+  "cited_as": "chain",
+  "in_ledger": true,
+  "source": "string",
+  "statement": "STRING links ISCA1 and RAB40B with combined score 0.91 (experimental 0.91, database 0.00, text-mining 0.00).",
+  "url": "https://string-db.org/cgi/network?identifiers=ISCA1%0dRAB40B&species=9606",
+  "text": "STRING links ISCA1 and RAB40B with combined score 0.91 (experimental 0.91, database 0.00, text-mining 0.00).\nstringId_A: 9606.ENSP00000365159\nstringId_B: 9606.ENSP00000461785\npreferredName_A: ISCA1\npreferredName_B: RAB40B\nncbiTaxonId: 9606\nscore: 0.911\nnscore: 0\nfscore: 0\npscore: 0\nascore: 0.062\nescore: 0.91\ndscore: 0\ntscore: 0"
+ },
+ "STRING:GO:0016567": {
+  "cited_as": "chain",
+  "in_ledger": true,
+  "source": "string",
+  "statement": "[Process] 'Protein ubiquitination' is enriched in the gene set: 6 of 592 background genes, FDR 0.0028.",
+  "url": "https://string-db.org/",
+  "text": "[Process] 'Protein ubiquitination' is enriched in the gene set: 6 of 592 background genes, FDR 0.0028.\ncategory: Process\nterm: GO:0016567\nnumber_of_genes: 6\nnumber_of_genes_in_background: 592\nncbiTaxonId: 9606\ninputGenes: RAB40AL\ninputGenes: RAB40C\ninputGenes: RAB40A\ninputGenes: CUL5\ninputGenes: RAB40B\ninputGenes: ELOC\npreferredNames: RAB40AL\npreferredNames: RAB40C\npreferredNames: RAB40A\npreferredNames: CUL5\npreferredNames: RAB40B\npreferredNames: ELOC\np_value: 3.09e-07\nfdr: 0.0028\ndescription: Protein ubiquitination"
+ },
+ "CHEMBL:CHEMBL290916-MONDO_0004976": {
+  "cited_as": "chain",
+  "in_ledger": true,
+  "source": "chembl",
+  "statement": "ChEMBL records compound CHEMBL290916 as reaching clinical phase 4 for the indication exactly annotated to MONDO:0004976 'amyotrophic lateral sclerosis' (MeSH D000690 'Amyotrophic Lateral Sclerosis').",
+  "url": "https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL290916",
+  "text": "ChEMBL records compound CHEMBL290916 as reaching clinical phase 4 for the indication exactly annotated to MONDO:0004976 'amyotrophic lateral sclerosis' (MeSH D000690 'Amyotrophic Lateral Sclerosis').\ndrugind_id: 138364\nefo_id: MONDO:0004976\nefo_term: amyotrophic lateral sclerosis\nmax_phase_for_ind: 4.0\nmesh_heading: Amyotrophic Lateral Sclerosis\nmesh_id: D000690\nmolecule_chembl_id: CHEMBL290916\nparent_molecule_chembl_id: CHEMBL290916"
+ },
+ "STRING:GO:0005768": {
+  "cited_as": "chain",
+  "in_ledger": true,
+  "source": "string",
+  "statement": "[Component] 'Endosome' is enriched in the gene set: 6 of 1096 background genes, FDR 0.0054.",
+  "url": "https://string-db.org/",
+  "text": "[Component] 'Endosome' is enriched in the gene set: 6 of 1096 background genes, FDR 0.0054.\ncategory: Component\nterm: GO:0005768\nnumber_of_genes: 6\nnumber_of_genes_in_background: 1096\nncbiTaxonId: 9606\ninputGenes: RAB40AL\ninputGenes: RAB40C\ninputGenes: FYCO1\ninputGenes: RAB40A\ninputGenes: RAB40B\ninputGenes: LRPAP1\npreferredNames: RAB40AL\npreferredNames: RAB40C\npreferredNames: FYCO1\npreferredNames: RAB40A\npreferredNames: RAB40B\npreferredNames: LRPAP1\np_value: 1.09e-05\nfdr: 0.0054\ndescription: Endosome"
+ },
+ "STRING:GO:0008021": {
+  "cited_as": "chain",
+  "in_ledger": true,
+  "source": "string",
+  "statement": "[Component] 'Synaptic vesicle' is enriched in the gene set: 4 of 231 background genes, FDR 0.0054.",
+  "url": "https://string-db.org/",
+  "text": "[Component] 'Synaptic vesicle' is enriched in the gene set: 4 of 231 background genes, FDR 0.0054.\ncategory: Component\nterm: GO:0008021\nnumber_of_genes: 4\nnumber_of_genes_in_background: 231\nncbiTaxonId: 9606\ninputGenes: RAB40AL\ninputGenes: RAB40C\ninputGenes: RAB40A\ninputGenes: RAB40B\npreferredNames: RAB40AL\npreferredNames: RAB40C\npreferredNames: RAB40A\npreferredNames: RAB40B\np_value: 6.09e-06\nfdr: 0.0054\ndescription: Synaptic vesicle"
+ },
+ "STRING:GO:0006887": {
+  "cited_as": "chain",
+  "in_ledger": true,
+  "source": "string",
+  "statement": "[Process] 'Exocytosis' is enriched in the gene set: 4 of 244 background genes, FDR 0.0084.",
+  "url": "https://string-db.org/",
+  "text": "[Process] 'Exocytosis' is enriched in the gene set: 4 of 244 background genes, FDR 0.0084.\ncategory: Process\nterm: GO:0006887\nnumber_of_genes: 4\nnumber_of_genes_in_background: 244\nncbiTaxonId: 9606\ninputGenes: RAB40AL\ninputGenes: RAB40C\ninputGenes: RAB40A\ninputGenes: RAB40B\npreferredNames: RAB40AL\npreferredNames: RAB40C\npreferredNames: RAB40A\npreferredNames: RAB40B\np_value: 7.53e-06\nfdr: 0.0084\ndescription: Exocytosis"
+ },
+ "STRING:RAB40AL-FYCO1": {
+  "cited_as": "chain",
+  "in_ledger": true,
+  "source": "string",
+  "statement": "STRING links RAB40AL and FYCO1 with combined score 0.85 (experimental 0.00, database 0.00, text-mining 0.85).",
+  "url": "https://string-db.org/cgi/network?identifiers=RAB40AL%0dFYCO1&species=9606",
+  "text": "STRING links RAB40AL and FYCO1 with combined score 0.85 (experimental 0.00, database 0.00, text-mining 0.85).\nstringId_A: 9606.ENSP00000218249\nstringId_B: 9606.ENSP00000296137\npreferredName_A: RAB40AL\npreferredName_B: FYCO1\nncbiTaxonId: 9606\nscore: 0.846\nnscore: 0\nfscore: 0\npscore: 0\nascore: 0\nescore: 0\ndscore: 0\ntscore: 0.846"
+ },
+ "STRING:GO:0001953": {
+  "cited_as": "supporting",
+  "in_ledger": true,
+  "source": "string",
+  "statement": "[Process] 'Negative regulation of cell-matrix adhesion' is enriched in the gene set: 3 of 39 background genes, FDR 0.0036.",
+  "url": "https://string-db.org/",
+  "text": "[Process] 'Negative regulation of cell-matrix adhesion' is enriched in the gene set: 3 of 39 background genes, FDR 0.0036.\ncategory: Process\nterm: GO:0001953\nnumber_of_genes: 3\nnumber_of_genes_in_background: 39\nncbiTaxonId: 9606\ninputGenes: RAB40C\ninputGenes: RASA1\ninputGenes: CUL5\npreferredNames: RAB40C\npreferredNames: RASA1\npreferredNames: CUL5\np_value: 1.47e-06\nfdr: 0.0036\ndescription: Negative regulation of cell-matrix adhesion"
+ },
+ "OT:RAB40AL-tractability": {
+  "cited_as": "supporting",
+  "in_ledger": true,
+  "source": "opentargets",
+  "statement": "RAB40AL tractability buckets met: GO CC med conf (AB), Database Ubiquitination (PR).",
+  "url": "https://platform.opentargets.org/target/ENSG00000102128",
+  "text": "RAB40AL tractability buckets met: GO CC med conf (AB), Database Ubiquitination (PR).\nid: ENSG00000102128\napprovedSymbol: RAB40AL\napprovedName: RAB40A like\nbiotype: protein_coding\nfunctionDescriptions: May act as substrate-recognition component of the ECS(RAB40) E3 ubiquitin ligase complex which mediates the ubiquitination and subsequent proteasomal degradation of target proteins (By similarity). The Rab40 subfamily belongs to the Rab family that are key regulators of intracellular membrane trafficking, from the formation of transport vesicles to their fusion with membranes. Rabs cycle between an inactive GDP-bound form and an active GTP-bound form that is able to recruit to membranes different sets of downstream effectors directly responsible for vesicle formation, movement, tethering and fusion (By similarity). .\ntractability.label: Approved Drug\ntractability.modality: SM\ntractability.value: False\ntractability.label: Advanced Clinical\ntractability.modality: SM\ntractability.value: False\ntractability.label: Phase 1 Clinical\ntractability.modality: SM\ntractability.value: False\ntractability.label: Structure with Ligand\ntractability.modality: SM\ntractability.value: False\ntractability.label: High-Quality Ligand\ntractability.modality: SM\ntractability.value: False\ntractability.label: High-Quality Pocket\ntractability.modality: SM\ntractability.value: False\ntractability.label: Med-Quality Pocket\ntractability.modality: SM\ntractability.value: False\ntractability.label: Druggable Family\ntractability.modality: SM\ntractability.value: False\ntractability.label: Approved Drug\ntractability.modality: AB\ntractability.value: False\ntractability.label: Advanced Clinical\ntractability.modality: AB\ntractability.value: False\ntractability.label: Phase 1 Clinical\ntractability.modality: AB\ntractability.value: False\ntractability.label: UniProt loc high conf\ntractability.modality: AB\ntractability.value: False\ntractability.label: GO CC high conf\ntractability.modality: AB\ntractability.value: False\ntractability.label: UniProt loc med conf\ntractability.modality: AB\ntractability.value: False\ntractability.label: UniProt SigP or TMHMM\ntractability.modality: AB\ntractability.value: False\ntractability.label: GO CC med conf\ntractability.modality: AB\ntractability.value: True\ntractability.label: Human Protein Atlas loc\ntractability.modality: AB\ntractability.value: False\ntractability.label: Approved Drug\ntractability.modality: PR\ntractability.value: False\ntractability.label: Advanced Clinical\ntractability.modality: PR\ntractability.value: False\ntractability.label: Phase 1 Clinical\ntractability.modality: PR\ntractability.value: False\ntractability.label: Literature\ntractability.modality: PR\ntractability.value: False\ntractability.label: UniProt Ubiquitination\ntractability.modality: PR\ntractability.value: False\ntractability.label: Database Ubiquitination\ntractability.modality: PR\ntractability.value: True\ntractability.label: Half-life Data\ntractability.modality: PR\ntractability.value: False\ntractability.label: Small Molecule Binder\ntractability.modality: PR\ntractability.value: False\ntractability.label: Approved Drug\ntractability.modality: OC\ntractability.value: False\ntractability.label: Advanced Clinical\ntractability.modality: OC\ntractability.value: False\ntractability.label: Phase 1 Clinical\ntractability.modality: OC\ntractability.value: False\ngeneticConstraint.constraintType: syn\ngeneticConstraint.score: 1.8486000299453735\ngeneticConstraint.constraintType: mis\ngeneticConstraint.score: 1.5785000324249268\ngeneticConstraint.constraintType: lof\ndrugAndClinicalCandidates.count: 0\nassociatedDiseases.count: 0"
+ },
+ "HPA:ENSG00000102128": {
+  "cited_as": "contradicting",
+  "in_ledger": true,
+  "source": "hpa",
+  "statement": "Not detected (specificity score None). No tissue-specific enrichment. Single-cell: Sertoli cells 2.8 nCPM. Subcellular: Vesicles.",
+  "url": "https://www.proteinatlas.org/ENSG00000102128",
+  "text": "Not detected (specificity score None). No tissue-specific enrichment. Single-cell: Sertoli cells 2.8 nCPM. Subcellular: Vesicles.\nGene: RAB40AL\nGene synonym: RAR2\nGene synonym: RLGP\nEnsembl: ENSG00000102128\nGene description: RAB40A like\nRNA tissue specificity: Not detected\nRNA single cell type specificity: Cell type enriched\nRNA single cell type specific nCPM.Sertoli cells: 2.8\nSubcellular location: Vesicles"
+ },
+ "CXG:ENSG00000102128:CL_0002453:MONDO_0004976:not-detected": {
+  "cited_as": "contradicting",
+  "in_ledger": true,
+  "source": "cellxgene",
+  "statement": "CZ CELLxGENE Discover has profiled 6,442 brain cells annotated oligodendrocyte precursor cell (CL:0002453) from donors annotated amyotrophic lateral sclerosis (MONDO:0004976) and detects no RAB40AL (ENSG00000102128) transcript in any of them, against 0.024% of 458,868 such cells from donors annotated normal (PATO:0000461).",
+  "url": "https://cellxgene.cziscience.com/gene-expression?genes=RAB40AL&tissues=UBERON%3A0000955",
+  "text": "CZ CELLxGENE Discover has profiled 6,442 brain cells annotated oligodendrocyte precursor cell (CL:0002453) from donors annotated amyotrophic lateral sclerosis (MONDO:0004976) and detects no RAB40AL (ENSG00000102128) transcript in any of them, against 0.024% of 458,868 such cells from donors annotated normal (PATO:0000461).\n: 6442"
+ },
+ "GWAS:RAB40AL:no-association": {
+  "cited_as": "contradicting",
+  "in_ledger": true,
+  "source": "gwascatalog",
+  "statement": "GWAS Catalog lists the gene RAB40AL but maps no variant to it among the 169 curated associations for amyotrophic lateral sclerosis (MONDO_0004976). A variant is matched on the catalogue's own mapping, so one the authors attributed to RAB40AL but that maps to a neighbouring gene would not appear here.",
+  "url": "https://www.ebi.ac.uk/gwas/genes/RAB40AL",
+  "text": "GWAS Catalog lists the gene RAB40AL but maps no variant to it among the 169 curated associations for amyotrophic lateral sclerosis (MONDO_0004976). A variant is matched on the catalogue's own mapping, so one the authors attributed to RAB40AL but that maps to a neighbouring gene would not appear here.\n: 0"
+ },
+ "AGR:MGI:2183451:MP:0005642": {
+  "cited_as": "contradicting",
+  "in_ledger": true,
+  "source": "alliance",
+  "statement": "In the model organism Mus musculus, the genotype Rab40b<sup>em1(IMPC)J</sup>/Rab40b<sup>em1(IMPC)J</sup> of Rab40b -- the orthologue of human RAB40AL -- shows decreased mean corpuscular hemoglobin concentration (MP:0005642); curated by MGI from MGI:5576271. This is a model-organism phenotype, not a human observation.",
+  "url": "https://www.alliancegenome.org/gene/MGI:2183451",
+  "text": "In the model organism Mus musculus, the genotype Rab40b<sup>em1(IMPC)J</sup>/Rab40b<sup>em1(IMPC)J</sup> of Rab40b -- the orthologue of human RAB40AL -- shows decreased mean corpuscular hemoglobin concentration (MP:0005642); curated by MGI from MGI:5576271. This is a model-organism phenotype, not a human observation.\n: MP:0005642"
+ },
+ "reactome:coverage": {
+  "cited_as": "contradicting",
+  "in_ledger": true,
+  "source": "reactome",
+  "statement": "1 of 1 identifiers are absent from Reactome, so any shared-pathway conclusion is drawn from the rest. Analysis token MjAyNjEwMDExMzMyMTZfNDczOTk%3D.",
+  "url": "https://reactome.org/",
+  "text": "1 of 1 identifiers are absent from Reactome, so any shared-pathway conclusion is drawn from the rest. Analysis token MjAyNjEwMDExMzMyMTZfNDczOTk%3D.\n: 1"
+ }
+}

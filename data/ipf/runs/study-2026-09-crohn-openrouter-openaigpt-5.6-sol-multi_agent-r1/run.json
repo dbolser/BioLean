@@ -1,0 +1,524 @@
+{
+ "run_id": "study-2026-09-crohn-openrouter-openaigpt-5.6-sol-multi_agent-r1",
+ "model": "openrouter:openai/gpt-5.6-sol",
+ "question": {
+  "arm": "multi_agent",
+  "budget": {
+   "max_delegations": 22,
+   "max_model_requests": 80,
+   "max_specialist_requests": 8,
+   "min_evidence_per_hypothesis": 2,
+   "min_hypotheses": 3,
+   "min_sources_per_hypothesis": 2,
+   "output_retries": 3
+  },
+  "data_policy": {
+   "max_age_seconds": 1209600.0,
+   "mode": "cache-preferred",
+   "snapshot_run_id": null
+  },
+  "disease": "Crohn disease",
+  "formalise": false,
+  "genes": [
+   "IL12B",
+   "IL23R",
+   "NOD2",
+   "LACC1",
+   "GPR35",
+   "MEIS1",
+   "TRIM4"
+  ],
+  "model": "openrouter:openai/gpt-5.6-sol",
+  "specialist_model": "openrouter:openai/gpt-5.6-sol",
+  "specialists": [
+   "chembl",
+   "expression",
+   "gwas",
+   "interactions",
+   "literature",
+   "model_organism",
+   "open_targets",
+   "pathways",
+   "single_cell",
+   "trials",
+   "uniprot"
+  ],
+  "tissue": {
+   "artifact_id": "sha256:2ae293c5c9c86e431f18191576a5cfddb9903117c31c2687c8a4b0abe5211411",
+   "label": "colon",
+   "uberon": "UBERON:0001155"
+  },
+  "use_network": true
+ },
+ "abstention": {
+  "evidence": [
+   "GWAS:MEIS1:no-association",
+   "GWAS:TRIM4:no-association",
+   "OT:MEIS1-MONDO_0005011",
+   "OT:TRIM4-tractability"
+  ],
+  "genes_covered": [
+   "MEIS1",
+   "TRIM4"
+  ],
+  "reason": "insufficient_evidence",
+  "statement": "MEIS1 and TRIM4 cannot presently be linked causally to Crohn disease from the returned evidence. GWAS Catalog reports no Crohn association for either gene, Open Targets scores MEIS1–Crohn at 0.00 and returns no TRIM4–Crohn association, and neither protein joined the disease-relevant within-set interaction module; generic immune annotation for TRIM4 is not sufficient to infer Crohn causality.",
+  "support": "grounded",
+  "what_would_change_this": "A replicated genome-wide significant Crohn association fine-mapped to MEIS1 or TRIM4, together with allele-specific expression or perturbation evidence in disease-relevant intestinal cells showing a reproducible effect on inflammation, barrier integrity, or microbial handling, would overturn this abstention."
+ },
+ "disease": "Crohn disease",
+ "genes_considered": [
+  "IL12B",
+  "IL23R",
+  "NOD2",
+  "LACC1",
+  "GPR35",
+  "MEIS1",
+  "TRIM4"
+ ],
+ "hypotheses": [
+  {
+   "chain": [
+    {
+     "context": {
+      "cell_type": null,
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [
+      "P29460",
+      "Q5VWK5",
+      "STRING:IL12B-IL23R"
+     ],
+     "note": "IL23R associates with IL12RB1 to form the IL-23 receptor; STRING independently supports the IL12B–IL23R functional link.",
+     "object": {
+      "curie": "UniProt:Q5VWK5",
+      "grounding_evidence": "Q5VWK5",
+      "kind": "protein",
+      "label": "IL23R receptor complex"
+     },
+     "polarity": "unknown",
+     "relation": "binds",
+     "subject": {
+      "curie": "UniProt:P29460",
+      "grounding_evidence": "P29460",
+      "kind": "protein",
+      "label": "IL-23 containing the IL12B-encoded p40 subunit"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "CL:0000084",
+       "grounding_evidence": "Q5VWK5",
+       "kind": "cell_type",
+       "label": "IL-23-responsive immune cell"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [
+      "Q5VWK5",
+      "R-HSA-9020933",
+      "STRING:GO:0032740"
+     ],
+     "note": "Reactome and STRING independently identify IL-23 signaling and positive regulation of IL-17 production as enriched processes.",
+     "object": {
+      "curie": "Reactome:R-HSA-9020933",
+      "grounding_evidence": "R-HSA-9020933",
+      "kind": "process",
+      "label": "JAK-STAT and IL-17-associated inflammatory program"
+     },
+     "polarity": "positive",
+     "relation": "activates",
+     "subject": {
+      "curie": "UniProt:Q5VWK5",
+      "grounding_evidence": "Q5VWK5",
+      "kind": "protein",
+      "label": "Activated IL23R receptor complex"
+     }
+    },
+    {
+     "context": {
+      "cell_type": null,
+      "disease_state": {
+       "curie": "MONDO:0005011",
+       "grounding_evidence": "PMID:17068223",
+       "kind": "disease",
+       "label": "Crohn disease"
+      },
+      "tissue": {
+       "curie": "UBERON:0000160",
+       "grounding_evidence": "PMID:17068223",
+       "kind": "tissue",
+       "label": "intestine"
+      }
+     },
+     "evidence": [
+      "PMID:17068223",
+      "rs11209026",
+      "rs6556412"
+     ],
+     "note": "Both genes carry strong Crohn associations, but the noncoding IL12B assignment remains less causally resolved than the receptor coding/author-reported association.",
+     "object": {
+      "curie": "MONDO:0005011",
+      "grounding_evidence": "PMID:17068223",
+      "kind": "disease",
+      "label": "Crohn disease intestinal inflammation"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "Reactome:R-HSA-9020933",
+      "grounding_evidence": "R-HSA-9020933",
+      "kind": "process",
+      "label": "Persistent IL-23 inflammatory signaling"
+     }
+    }
+   ],
+   "confidence": "high",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Generate isogenic human intestinal immune-cell/organoid co-cultures carrying the Crohn-risk versus protective IL12B and IL23R alleles, stimulate with IL-23, and quantify phospho-STAT3, IL-17-family cytokines, and epithelial injury. The hypothesis is falsified if the risk alleles do not increase or prolong IL-23-dependent signaling and injury, or if selective IL23R blockade fails to normalize those readouts.",
+    "expected": "positive",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "HGNC:IL12B;HGNC:IL23R",
+      "grounding_evidence": "rs6556412",
+      "kind": "gene",
+      "label": "IL12B/IL23R risk alleles and IL23R blockade"
+     }
+    },
+    "readout": {
+     "curie": "GO:0032740",
+     "grounding_evidence": "STRING:GO:0032740",
+     "kind": "phenotype",
+     "label": "phospho-STAT3, IL-17 cytokines, and epithelial injury"
+    },
+    "system": "Isogenic human intestinal organoid–immune-cell co-culture"
+   },
+   "genes": [
+    "IL12B",
+    "IL23R"
+   ],
+   "hypothesis_id": "H1",
+   "mechanism": "Crohn-associated variation at IL12B and IL23R alters the strength of the IL-23 receptor axis. Excess or prolonged IL23R/JAK-STAT signaling in responsive immune cells is predicted to sustain IL-17-associated intestinal inflammation; the physical receptor-ligand module and pathway enrichment make this the most coherent subset in the list.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "PMID:17068223",
+    "PMID:18587394",
+    "PMID:21102463",
+    "rs11209026",
+    "rs6556412",
+    "STRING:IL12B-IL23R",
+    "R-HSA-9020933",
+    "P29460",
+    "Q5VWK5"
+   ],
+   "title": "IL12B-containing IL-23 drives IL23R-dependent pathogenic cytokine signaling"
+  },
+  {
+   "chain": [
+    {
+     "context": {
+      "cell_type": null,
+      "disease_state": null,
+      "tissue": {
+       "curie": "UBERON:0005409",
+       "grounding_evidence": "Q9HC29",
+       "kind": "tissue",
+       "label": "gastrointestinal tract"
+      }
+     },
+     "evidence": [
+      "Q9HC29"
+     ],
+     "note": "NOD2 recognizes phosphorylated MDP and oligomerizes to recruit RIPK2.",
+     "object": {
+      "curie": "UniProt:Q9HC29",
+      "grounding_evidence": "Q9HC29",
+      "kind": "protein",
+      "label": "NOD2"
+     },
+     "polarity": "positive",
+     "relation": "activates",
+     "subject": {
+      "curie": "CHEBI:60539",
+      "grounding_evidence": "Q9HC29",
+      "kind": "process",
+      "label": "Bacterial muramyl dipeptide"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "CL:0000235",
+       "grounding_evidence": "Q8IV20",
+       "kind": "cell_type",
+       "label": "macrophage"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [
+      "Q8IV20",
+      "STRING:NOD2-LACC1"
+     ],
+     "note": "LACC1 associates with the NOD2 signaling complex and regulates purine metabolism, redox balance, autophagy, and antibacterial function.",
+     "object": {
+      "curie": "GO:0045087",
+      "grounding_evidence": "Q8IV20",
+      "kind": "process",
+      "label": "NOD2-complex cytokine signaling, autophagy, and bacterial clearance"
+     },
+     "polarity": "positive",
+     "relation": "activates",
+     "subject": {
+      "curie": "UniProt:Q8IV20",
+      "grounding_evidence": "Q8IV20",
+      "kind": "protein",
+      "label": "LACC1 metabolic activity"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "CL:0000235",
+       "grounding_evidence": "Q8IV20",
+       "kind": "cell_type",
+       "label": "intestinal macrophage or epithelial cell"
+      },
+      "disease_state": {
+       "curie": "MONDO:0005011",
+       "grounding_evidence": "PMID:11385576",
+       "kind": "disease",
+       "label": "Crohn disease"
+      },
+      "tissue": {
+       "curie": "UBERON:0000160",
+       "grounding_evidence": "Q9HC29",
+       "kind": "tissue",
+       "label": "intestine"
+      }
+     },
+     "evidence": [
+      "PMID:11385576",
+      "rs2066847",
+      "rs3764147",
+      "AGR:MGI:2429397:MP:0008260",
+      "AGR:MGI:2445077:MP:0002451",
+      "AGR:MGI:2445077:MP:0003186"
+     ],
+     "note": "Mouse perturbations independently produce abnormal autophagy, cytokine secretion, macrophage physiology, and redox activity.",
+     "object": {
+      "curie": "MONDO:0005011",
+      "grounding_evidence": "PMID:11385576",
+      "kind": "disease",
+      "label": "Crohn disease through microbial persistence, dysbiosis, and intestinal inflammation"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "GO:0045087",
+      "grounding_evidence": "Q9HC29",
+      "kind": "process",
+      "label": "Reduced NOD2–LACC1 antibacterial defense"
+     }
+    }
+   ],
+   "confidence": "high",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Introduce the NOD2 rs2066847 and LACC1 rs3764147 risk alleles singly and together into isogenic human intestinal macrophages co-cultured with ileal organoids, then challenge with MDP and invasive bacteria. The hypothesis is falsified if the double-risk state does not reduce RIPK2/NF-kappa-B signaling, autophagic flux, metabolic/redox fitness, or bacterial clearance relative to protective alleles, or if restoring LACC1 cannot rescue the NOD2-linked defect.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "dbSNP:rs2066847;dbSNP:rs3764147",
+      "grounding_evidence": "rs2066847",
+      "kind": "gene",
+      "label": "NOD2 rs2066847 and LACC1 rs3764147"
+     }
+    },
+    "readout": {
+     "curie": "MP:0008260",
+     "grounding_evidence": "AGR:MGI:2429397:MP:0008260",
+     "kind": "phenotype",
+     "label": "bacterial clearance and autophagic flux"
+    },
+    "system": "Isogenic human intestinal macrophage–ileal organoid co-culture"
+   },
+   "genes": [
+    "NOD2",
+    "LACC1"
+   ],
+   "hypothesis_id": "H2",
+   "mechanism": "NOD2 senses bacterial peptidoglycan and recruits RIPK2 to coordinate NF-kappa-B/MAPK signaling and autophagy, while LACC1 associates with the NOD2 complex and supplies the metabolic/redox state needed for cytokine responses, autophagy, and bacterial clearance. Crohn-risk alleles are predicted to weaken this coupled defense program, allowing microbial persistence or dysbiosis that produces secondary chronic intestinal inflammation.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "PMID:11385576",
+    "PMID:27478939",
+    "PMID:40089498",
+    "rs2066847",
+    "rs3764147",
+    "Q9HC29",
+    "Q8IV20",
+    "STRING:NOD2-LACC1",
+    "AGR:MGI:2429397:MP:0008260",
+    "AGR:MGI:2429397:MP:0003009",
+    "AGR:MGI:2445077:MP:0002451",
+    "AGR:MGI:2445077:MP:0003186"
+   ],
+   "title": "NOD2–LACC1 failure couples defective bacterial sensing to macrophage immunometabolic dysfunction"
+  },
+  {
+   "chain": [
+    {
+     "context": {
+      "cell_type": {
+       "curie": "CL:0000763",
+       "grounding_evidence": "Q9HC97",
+       "kind": "cell_type",
+       "label": "myeloid cell"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [
+      "Q9HC97"
+     ],
+     "note": "Ligand identity and downstream coupling are context-dependent.",
+     "object": {
+      "curie": "UniProt:Q9HC97",
+      "grounding_evidence": "Q9HC97",
+      "kind": "protein",
+      "label": "GPR35"
+     },
+     "polarity": "positive",
+     "relation": "activates",
+     "subject": {
+      "curie": "CHEBI:18344",
+      "grounding_evidence": "Q9HC97",
+      "kind": "drug",
+      "label": "Kynurenic acid, lysophosphatidic acid, or 5-hydroxyindoleacetic acid"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "CL:0000235",
+       "grounding_evidence": "Q9HC97",
+       "kind": "cell_type",
+       "label": "macrophage or neutrophil"
+      },
+      "disease_state": null,
+      "tissue": {
+       "curie": "UBERON:0001155",
+       "grounding_evidence": "AGR:MGI:1929509:MP:0013956",
+       "kind": "tissue",
+       "label": "colon"
+      }
+     },
+     "evidence": [
+      "Q9HC97",
+      "AGR:MGI:1929509:MP:0008721"
+     ],
+     "note": "The direction may differ between macrophages, neutrophils, and other intestinal compartments.",
+     "object": {
+      "curie": "GO:0006935",
+      "grounding_evidence": "Q9HC97",
+      "kind": "process",
+      "label": "chemotaxis, inflammatory-cell recruitment, and bacterial clearance"
+     },
+     "polarity": "unknown",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "UniProt:Q9HC97",
+      "grounding_evidence": "Q9HC97",
+      "kind": "process",
+      "label": "GPR35 signaling"
+     }
+    },
+    {
+     "context": {
+      "cell_type": null,
+      "disease_state": {
+       "curie": "MONDO:0005011",
+       "grounding_evidence": "rs3749172",
+       "kind": "disease",
+       "label": "Crohn disease"
+      },
+      "tissue": {
+       "curie": "UBERON:0001155",
+       "grounding_evidence": "AGR:MGI:1929509:MP:0013956",
+       "kind": "tissue",
+       "label": "colon"
+      }
+     },
+     "evidence": [
+      "PMID:23128233",
+      "rs3749172",
+      "AGR:MGI:1929509:MP:0008537",
+      "AGR:MGI:1929509:MP:0008539"
+     ],
+     "note": "Human genetics supports the locus, but mouse knockouts report both increased and decreased induced-colitis susceptibility.",
+     "object": {
+      "curie": "MONDO:0005011",
+      "grounding_evidence": "rs3749172",
+      "kind": "disease",
+      "label": "Crohn disease susceptibility"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "dbSNP:rs3749172",
+      "grounding_evidence": "rs3749172",
+      "kind": "process",
+      "label": "Crohn-associated alteration of GPR35 signaling"
+     }
+    }
+   ],
+   "confidence": "medium",
+   "contradicting_evidence": [
+    "AGR:MGI:1929509:MP:0008539"
+   ],
+   "falsification": {
+    "description": "Engineer the human rs3749172 risk and protective alleles in intestinal myeloid cells and compare ligand-dependent G-protein signaling, chemotaxis, bacterial clearance, and epithelial injury in colon organoid co-culture. The hypothesis is falsified if the alleles produce no reproducible difference across these readouts and cell-specific GPR35 perturbation does not alter experimental colitis severity in a matched in-vivo model.",
+    "expected": "unknown",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "dbSNP:rs3749172",
+      "grounding_evidence": "rs3749172",
+      "kind": "gene",
+      "label": "GPR35 rs3749172"
+     }
+    },
+    "readout": {
+     "curie": "MP:0008721",
+     "grounding_evidence": "AGR:MGI:1929509:MP:0008721",
+     "kind": "phenotype",
+     "label": "myeloid chemotaxis, bacterial clearance, and epithelial injury"
+    },
+    "system": "Allele-edited human colon organoid–myeloid co-culture with matched cell-specific mouse validation"
+   },
+   "genes": [
+    "GPR35"
+   ],
+   "hypothesis_id": "H3",
+   "mechanism": "GPR35 is a metabolite-responsive GPCR that regulates Gi/G12/13 signaling, chemotaxis, neutrophil recruitment, macrophage transcription, and bacterial clearance. The Crohn-associated locus may alter the magnitude or cell-context of GPR35 signaling, thereby shifting mucosal leukocyte recruitment and injury; however, opposite knockout-colitis phenotypes indicate that protective versus pathogenic effects depend on cell type, allele, or experimental context.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "PMID:23128233",
+    "rs3749172",
+    "Q9HC97",
+    "AGR:MGI:1929509:MP:0008537",
+    "AGR:MGI:1929509:MP:0013956",
+    "AGR:MGI:1929509:MP:0008721"
+   ],
+   "title": "GPR35 risk variation alters metabolite sensing and inflammatory-cell recruitment in the colon"
+  }
+ ],
+ "unexplained_genes": []
+}
