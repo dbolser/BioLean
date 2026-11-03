@@ -4,7 +4,7 @@
 
 Keys: 0 1 2 3 = interesting (as if true), then y n ? = true. b = back one, s = skip, q = quit.
 Writes data/stress/07/rating_dan.tsv, which scripts/stress/ic_analysis.py reads."""
-import csv, os, sys, termios, tty, textwrap
+import csv, os, re, sys, termios, tty, textwrap
 
 D = 'data/stress/07'
 SHEET, OUT = f'{D}/rating_sheet_blind.tsv', f'{D}/rating_dan.tsv'
@@ -35,7 +35,7 @@ def main():
         print('BioLean derived this fact:\n')
         print('    \033[1m' + w(x['fact']) + '\033[0m\n')
         print('It got there by joining these textbook sentences:\n')
-        for p in x['premise_sentences'].split(' | '): print('    ' + w(p) + '\n')
+        for p in x['premise_sentences'].split(' | '): print('    ' + w(re.sub(r'^(\(\d+\)) \S+: ', r'\1 ', p)) + '\n')
         print(HELP + '\n')
         print('interesting? ', end='', flush=True)
         k = key('0123bsq')
