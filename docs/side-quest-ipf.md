@@ -210,7 +210,7 @@ Full tables: `data/ipf/report.md`. By model, over 70 runs:
 - **The run's confidence label carries no information.** Claims the runs rated "high" have a mean
   best belief of 0.06, "medium" 0.14, "low" 0.11.
 - **No hypothesis is established.** Of 385 claims, 188 have a route; the best arm is under 0.2
-  for 153 of them. The 5 "established" arms are single database facts about a gene and a phenotype
+  for 154 of them. The 5 "established" arms are single database facts about a gene and a phenotype
   or process, 4 of them mouse knockout annotations; none reaches a disease.
 - **Grounding does not rescue the chains.** Consecutive steps that share a node: 201 of 469 by
   label, 167 after grounding. Gemini's label links drop (some were compound or vague labels), GPT's
@@ -230,41 +230,68 @@ Full tables: `data/ipf/report.md`. By model, over 70 runs:
 
 ### What it means for hypothesis-agent
 
-Findings by theme (1,446 findings; counts are approximate, clustered by category):
+Findings by theme (1,488 findings about hypothesis-agent, including 43 that bear on both projects).
+Agents grouped them: five coders each took a batch and named themes from the detail text, then one
+agent per project merged the themes. Every finding is in exactly one theme (checked in code). Raw
+groups in `data/ipf/findings/`. "Most from" counts findings, and Gemini has the most runs (33).
 
-| theme | findings | runs | fix (structural, in the harness) |
-|---|---|---|---|
-| citation does not state its step | 312 | 65 of 70, every model | run `checks.py` direction check on every result; reject a step whose citations are only association scores, enrichments or expression |
-| chain does not connect, or never reaches the disease | 260 | 66 | node ids in `CausalStep`; the termination check rejects a chain whose object ≠ next subject, or that never reaches the disease (`ModelRetry` gives the reason) |
-| labels: ungrounded, wrong kind or disease, a feature cited as a cause | 136 | 65 | run `formalise` on every result; no free-text compound nodes |
-| citation on no step, or the wrong step | 113 | 44 | the termination check: every supporting citation must sit on a step |
-| signs flipped, unknown, or only implied | 111 | 60 | sign-product check against the hypothesis's stated direction; require a sign when a cited text gives one |
-| contradicting evidence ignored | 110 | 55 | contradicting evidence as accessions, not prose; a citation listed as support that states the opposite fails |
-| confidence label not justified | 89 | 57 | compute confidence from the evidence, or drop the label |
-| genes left unexplained, budget not met | 72 | 46 | |
-| falsification inconsistent with the chain | 42 | 32 | the perturbation's action must match the falsification text |
-| variant-to-gene attribution | 21 | 15 | |
+| theme | findings | runs | most from | example | fix |
+|---|---|---|---|---|---|
+| Chain does not reach the disease | 249 | 67 | DeepSeek 77, Gemini 70 | IPF run: H1.1 ends at ER stress, H1.2 restarts at TOLLIP and H1.3 starts at 'proteotoxic stress', so TOLLIP has no route to IPF. | Validate that each step's object is the next step's subject, that the last node is the disease CURIE, and that the last step is not one of the disease's own defining features; reject chains that fail. |
+| Good evidence sits at no step | 146 | 52 | Gemini 51, Opus 46 | IgA nephropathy run: rs6677604 and the Cfh-mutant glomerulonephritis annotation bear on CFH to disease, a link no step makes, so they support nothing. | Reject supporting citations that are not attached to a step, and when a source states a link between two run entities, offer that link as a step. |
+| Database records cited as causal steps | 145 | 55 | Gemini 81, Opus 24 | IgA nephropathy run: a Reactome 'Complement cascade' over-representation (2 of 163 entities) is cited as evidence that CFH inhibits complement. | Tag every source with a record type and allow each type only on the step kinds it can state (for example gene-level records only on gene-to-disease steps, enrichment and expression never on causal steps). |
+| Cited text does not state the step | 144 | 57 | Gemini 66, Opus 29 | Crohn run: PMID:36076306 is about stem cells primed with KYNA and IFN-gamma acting through IDO-1, not a kynurenic acid-GPR35 axis. | Require a verbatim quote span per step and check automatically that the quote is in the source and names both the subject and the object. |
+| Node grounding and typing errors | 116 | 63 | Gemini 44, DeepSeek 35 | Alzheimer's run: every node has an empty CURIE except the disease, written as the malformed 'EFO:MONDO_0004975'. | Ground every node through an ontology lookup that sets the CURIE and kind, and reject empty, malformed or compound nodes. |
+| Counter-evidence missing or misfiled | 104 | 56 | Gemini 40, Opus 28 | Schizophrenia run: GWAS:C1QA:no-association is listed as supporting and also as contradicting H1. | Run a counter-evidence search per step in the tool, check every contradicting accession resolves in sources.json, and reject a citation listed as both support and contradiction. |
+| Gene coverage, budget and abstentions unchecked | 91 | 50 | DeepSeek 40, Gemini 38 | Alzheimer's run: H3 cites 'GWAS:LPIN2:no-association' and H2 'AGR:MGI:1913860:no-phenotypes', neither in sources.json, so neither can be checked. | At the end of a run, check every input gene is in a step or a valid abstention, check abstention accessions resolve in sources.json, and fail runs below budget. |
+| Steps left unsigned | 82 | 47 | Gemini 38, DeepSeek 32 | Schizophrenia run: 'Sensorimotor gating deficit associated with schizophrenia' has polarity 'unknown' though the label implies one, so H5 has no route. | Make polarity a required field, allow 'unknown' only with a stated reason, and reject 'associated_with' inside causal chains. |
+| Confidence labels overstated | 82 | 50 | Gemini 27, DeepSeek 20 | Schizophrenia run: almost every entity has an empty CURIE, yet every hypothesis says support 'grounded'. | Compute confidence and support from chain connectivity and the share of steps with a checked quote, instead of taking the model's label. |
+| GWAS variant and allele handling | 75 | 37 | Gemini 40, GPT 17 | Schizophrenia run: a C4/MHC risk variant carries an OR, but nothing states whether the allele raises or lowers C4A, so the gene-level sign is assumed. | Add a required variant-to-gene step type with risk allele, mapped-gene method (eQTL, coding, position) and effect direction, and allow GWAS rows only on that step and variant-to-disease. |
+| Mechanism prose beyond the sources | 62 | 37 | Gemini 24, Opus 17 | Mechanism prose gives IL23R signalling straight through TYK2, skipping IL12RB1, which no cited record supports. | Generate the mechanism text from the chain steps, or require each prose sentence to point to a step and its quote. |
+| Signs unsupported or contradictory | 54 | 28 | Opus 20, Gemini 13 | Knockout phenotypes encoded as the gene's own effect, so a loss-of-function step on a bare gene subject composes to the opposite of the mechanism. | Compute the composed chain sign in the tool and reject hypotheses whose stated direction differs; require the sign to come from the step's quote. |
+| Falsification tests misdesigned or not new | 53 | 39 | DeepSeek 24, Gemini 23 | A hypothesis and its falsification test restate a retrieved paper's title and its already-reported experiment. | Make the falsification test point to a chain step id with an expected direction taken from that step's sign, and check it against retrieved paper titles for novelty. |
+| Evidence from the wrong context | 45 | 32 | Gemini 26, Opus 8 | Schizophrenia run: H2.2's object is first-episode psychosis, broader than schizophrenia (66 of 113 later diagnosed). | Add required species, tissue, disease and aspect fields per step and compare them with the source's metadata, flagging mismatches. |
+| One-offs and non-defects | 40 | 27 | Gemini 21, DeepSeek 17 | Curator note that a low-confidence label matched weak evidence, or that abstention on decoy genes was honest. | Normalise source ids at fetch time, and keep positive curator notes out of the defect findings by giving them their own category. |
 
-All are current and none is specific to one model, though rates differ (DeepSeek for unsigned and
-uncited steps, Gemini for flipped signs through linked chains).
+Every theme appears in runs from more than one model. The first four all go away with the same
+structural change in the termination check: node ids, a path from gene to disease, a sign product,
+and citations on steps with a quote that names both ends.
 
 ### What it means for BioLean
 
-Findings by theme (627 findings, keyword-clustered, approximate). What I would do about each:
+Findings by theme (585 findings), grouped the same way:
 
-| theme | findings | what to do |
-|---|---|---|
-| evidence weighting | 87 | **Dan's call; see program 10a on main.** curatedDb (0.8) equals the establishment threshold, so one UniProt sentence or one mouse knockout establishes a claim. Mouse evidence fails the taxon lint but still counts toward the verdict. Human co-segregation (lod 11) is only "observational" (0.5), below a mouse paper's background sentence |
-| missing ontology terms | 76 | 66 local `BLN:` terms: R-loops, nuclear mechanical integrity, telomere damage, tRNA fragments. An ontology gap, not BioLean's |
-| evidence kinds | 56 | a mixed-design abstract has one kind; no kind for an Open Targets score, "By similarity", or an unstated system. Fits the open ECO decision |
-| null results and claim-level evidence | 55 | a null GWAS or "no abnormal phenotype" has no statement to refute when no step reaches the disease. `Claim.noEffect` exists; the curation format and composer need it, and evidence attached to a hypothesis claim |
-| undirected change ("abnormal X", "required for normal Y") | 52 | an unsigned effect, or "abnormal X" phenotype terms (MP has them, HP mostly not) |
-| conditions and context | 50 | partly done (`condition`); still no cargo, target-gene or transcript slot ("TTN splicing") |
-| variants and alleles | 47 | allele dosage (two copies), haplotypes, protein-change vs nucleotide naming |
-| sets, families, complexes | 39 | split distributive lists (done); a complex as a target has no form |
-| a feature or definition cited as a cause | 23 | MONDO "characterized by" is has_phenotype, not an effect: correct to refuse, but worth a `Claim.rel` |
-| subsumption | 15 | no is_a step for disease or process targets (IPF ⊂ pulmonary fibrosis) |
-| loops, modifiers, second hits | 12 | `Claim.homeostasis` on main covers negative loops; second hits and modifiers need a two-cause claim |
+| theme | findings | runs | most from | example | fix |
+|---|---|---|---|---|---|
+| Missing terms and approximate grounding | 80 | 44 | DeepSeek 31, Gemini 21 | 'Tissue damage' has NCIT:C50773 and MPATH:1 in the corpus, but render.py accepts neither prefix, so the node is left ungroundable. | Give render.py kinds for NCIT, PW, MPATH and ECOCORE terms, split the SO mapping by term type, fix the bad corpus entries, and add a grounding field (exact, broader, BLN) on each node. |
+| Taxon, species and study design on evidence | 55 | 36 | Gemini 23, Opus 15 | One mouse C4 result supports both human C4A and C4B statements, and the taxon flag cannot say the mouse gene is the ortholog of both, so the same quote counts twice. | Make taxon a structured field (source species, ortholog or paralogue mapping, unknown or inferred), allow a list of designs per span, and add a phenotype-species rule enforced by the checker. |
+| Context, hierarchy and node grain | 49 | 38 | Gemini 25, Opus 9 | H1's only composed arm (INPP5D to Abeta clearance to AD) depends on merging 'plaque clearance' and 'microglial amyloid-beta clearance' as GO:0097242, borrowing H5.3. | Let composition follow refinement-to-base and is_a or part_of links with a discount, and record each split or merge as an explicit node mapping the report shows. |
+| Variants and the variant-to-gene link | 48 | 32 | Gemini 20, GPT 11 | The APOE e4 allele is a two-SNP haplotype with no dbSNP ID, so it is recorded as one BLN variant and loses that it is a pair. | Add a variant node type (allele, haplotype, class, copy number) with a gene field and a declared effect (gain, loss, risk allele), plus a member-of or acts-through link that composes into gene-level routes. |
+| Sign rules from wording and sources | 48 | 34 | DeepSeek 20, GPT 13 | 'LIPC leads_to lipid metabolism dysregulation (unknown)' matches both the unknown-polarity no_sign rule and the 'dysregulates X gives effect pos on abnormal-X' rule. | Encode the sign rules as one ordered table in the checker, with an explicit precedence and full loss-of-function word list, and require an allele-type field on model-organism evidence. |
+| Relation and target kinds | 48 | 33 | Gemini 22, DeepSeek 13 | An associated_with step whose object is a cellular component has no assoc target, so it becomes a rel RO:0001025 (located in), which the relation table does not list. | Widen the allowed subject and target kinds per relation and add the missing relations (translocates, located-in) to the relation table in code. |
+| Claim-level evidence and bridges | 42 | 31 | Gemini 14, DeepSeek 11 | PMID:42601455 (PLCG2 loss-of-function variants raise AD risk tenfold) has nowhere to go because no step states it and a bridge equal to the whole claim is not a bridge. | Add an evidence slot on claims (supports or refutes) and let definitions be a 'definitional' evidence kind on steps, separate from bridges. |
+| Evidence-kind table gaps | 38 | 29 | Gemini 19, DeepSeek 9 | Open Targets association scores have no row; recorded as curatedDb on a first pass, one OT score alone made 'FAM13A goes with IPF' established. | Add those rows to the kind table in code, with a hedged or proxy modifier that lowers weight, and have the checker reject sources whose type has no row. |
+| Abstentions and missing curated.json fields | 37 | 29 | Gemini 28, DeepSeek 7 | The run abstains on RBM27 and SMIM32 citing six accessions (GWAS no-association, HPA, AGR) that are not in sources.json, so the abstention cannot be checked. | Add an abstention block (genes, reason, cited accessions) and the missing exclusion fields to the curated.json schema, and make sources.py fetch every accession the run cites anywhere. |
+| Kind weights ignore strength | 33 | 28 | Gemini 14, Opus 11 | STRING C3-ARMS2 counts as curatedDb because its experimental channel (0.24) clears 0.15, though text-mining (0.62) supplies most of the 0.70 score, and it reaches belief 0.8. | Weight evidence by strength (sample size, p-value, STRING channel that drives the score), cap a single database record below the established threshold, and apply the taxon discount in the fusion. |
+| Unsigned, null and per-gene claims and verdicts | 30 | 22 | Opus 9, DeepSeek 8 | An MGI 'no abnormal phenotype detected' record (MP:0002169) is a null with no named phenotype and cannot refute a specific phenotype step. | Allow unsigned and null claims and statements, weigh null records separately, allow per-gene no-claim reasons, and add verdict labels (partial, refuted, unsigned, disconnected) to the report. |
+| Binding, complexes and interactions | 24 | 17 | Gemini 11, Opus 5 | IL12B acts through the IL-23 heterodimer binding IL12RB1 and IL23R; with no complex node it was recorded as IL12B interacting with IL23R. | Add a complex node with member genes, let binds compose when a cited text gives a direction, and add a modifier or conditional-effect statement form. |
+| Claim construction and disease aspect | 22 | 21 | Gemini 9, DeepSeek 8 | 'Exacerbating IgA glomerulonephritis' fits both severity and progression in the aspect table; the curator chose severity and the audit chose progression. | Derive claim subject, sign and aspect from the chain in code with a checked override field, and add an aspect field to evidence so routes compose only across matching aspects. |
+| Pipeline tool gaps | 16 | 13 | Gemini 6, Opus 5 | sources.json gives OT:NXPH3 only the 'chain' role though run.json also lists it in H3's contradicting_evidence. | Let sources.py store a list of cited_as roles and parse contradicting_evidence, check every evidence ref against the run's citations, render notes, search synonyms in terms.py, and drop unsigned_association. |
+| Double counting of shared sources | 15 | 14 | Opus 5, DeepSeek 4 | distinctEvidence keeps one item per PMID regardless of polarity, so S5's refuting Q8IV20 span is dropped and S5 fuses to b=4/5, d=0. | Add a provenance or source-group key to evidence, fuse within a group once, and make distinctEvidence key on (source, polarity) rather than source alone. |
+
+My notes on these:
+
+- **Weights are your call** (program 10a on main). curatedDb (0.8) equals the establishment
+  threshold, so one UniProt sentence or one mouse knockout establishes a claim. Mouse evidence fails
+  the taxon lint but still counts toward the verdict. Human co-segregation (lod 11) is only
+  "observational" (0.5).
+- **One theme found a bug, now fixed.** `distinctEvidence` kept one item per paper or record
+  whatever its polarity, so a record that both supports and refutes lost its refutation. It now
+  keeps one per (record, polarity). Main has the same rule for PMIDs. Two statements changed:
+  LACC1 → cytokine production went from established (0.8) to contested (0.44 / 0.44).
+- **Null results** are now an open decision in `STATUS.md` on main (branch `todo/null-results`).
+- Several themes are about my tools (`render.py`, `sources.py`, the guide), not the Lean core:
+  missing prefixes, abstentions, sign-rule precedence, pipeline gaps.
 
 ### Cost
 
@@ -275,8 +302,8 @@ a cheaper model plus the checks above in hypothesis-agent itself.
 
 ### Caveats
 
-Curation is by agents, calibrated on one run and audited once. Theme counts are clustered by
-category keywords and are approximate. The 1,282 notes on the curation guide itself are not yet
+Curation is by agents, calibrated on one run and audited once. Themes were grouped by agents,
+once, and not checked by a second pass. The 1,282 notes on the curation guide itself are not yet
 folded into a version 3.
 
 ## Next, if this continues

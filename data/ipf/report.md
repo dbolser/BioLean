@@ -42,7 +42,7 @@
 
 Claims: 385; with a route 188; only through another hypothesis's steps 14; only with a bridge 17; using an association 15; sign differs 19; phenotype targets 69.
 Arm verdicts: {'unsupported': 212, 'established': 5, 'contested': 4, 'refuted': 2}
-Best belief per routed claim: {'0.0-0.2': 153, '0.2-0.4': 11, '0.4-0.6': 13, '0.6-0.8': 8, '0.8-1.0': 5}
+Best belief per routed claim: {'0.0-0.2': 154, '0.2-0.4': 10, '0.4-0.6': 13, '0.6-0.8': 8, '0.8-1.0': 5}
 Statements: 735; forms {'effect': 560, 'assoc': 122, 'other': 53}; with no evidence 346; failing the taxon lint 83
 Entities: 926; local BLN terms 66; refinements 53; by prefix {'UniProt': 329, 'GO': 270, 'MONDO': 78, 'BLN': 66, 'HP': 43, 'CL': 30, 'MP': 30, 'dbSNP': 30, 'CHEBI': 19, 'UBERON': 13, 'UPHENO': 5, 'PATO': 3}
 
