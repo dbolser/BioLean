@@ -1,0 +1,392 @@
+{
+ "run_id": "20260825T000740Z-c7b373",
+ "model": "openai:gpt-5.6-sol",
+ "question": {
+  "budget": {
+   "max_delegations": 14,
+   "max_model_requests": 60,
+   "min_evidence_per_hypothesis": 2,
+   "min_hypotheses": 3,
+   "min_sources_per_hypothesis": 2,
+   "output_retries": 3
+  },
+  "disease": "restless legs syndrome",
+  "genes": [
+   "ACO1",
+   "MEIS1",
+   "GLIPR1",
+   "PTPRD",
+   "GABARAPL2",
+   "BTBD9"
+  ],
+  "model": "openai:gpt-5.6-sol",
+  "specialist_model": "openai:gpt-5.6-sol",
+  "use_network": true
+ },
+ "disease": "restless legs syndrome",
+ "genes_considered": [
+  "ACO1",
+  "MEIS1",
+  "GLIPR1",
+  "PTPRD",
+  "GABARAPL2",
+  "BTBD9"
+ ],
+ "hypotheses": [
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "AGR:MGI:104717:MP:0020478"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "normal circadian sleep/wake cycle"
+     },
+     "polarity": "positive",
+     "relation": "required_for",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "MEIS1"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "rs113851554",
+      "rs1820989"
+     ],
+     "note": "Proposed causal step; human GWAS establishes locus association but not this mechanism.",
+     "object": {
+      "curie": "EFO:MONDO_0005391",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "restless legs syndrome"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "phenotype",
+      "label": "disrupted circadian sleep/wake cycle"
+     }
+    }
+   ],
+   "confidence": "high",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Engineer the human MEIS1 RLS-risk haplotype in isogenic circadian-competent neural cultures or a knock-in mouse and measure rest-phase neural activity, sleep timing, and limb movements; the hypothesis is falsified if the verified allele has no effect on circadian programs or rest-phase motor activity.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "restore",
+     "target": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "MEIS1 RLS-risk haplotype"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "phenotype",
+     "label": "rest-phase circadian and limb-movement phenotype"
+    },
+    "system": "isogenic neural cultures and MEIS1 risk-haplotype knock-in mouse"
+   },
+   "genes": [
+    "MEIS1"
+   ],
+   "hypothesis_id": "H1_MEIS1_CIRCADIAN",
+   "mechanism": "RLS-associated variants map very strongly to MEIS1, while disruption of the mouse orthologue produces an abnormal circadian sleep/wake cycle. The falsifiable claim is that the risk locus changes MEIS1-dependent neural timing programs, increasing motor or sensory symptoms specifically during the normal rest phase; positional mapping alone does not establish the causal variant, direction of expression change, or responsible cell type.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "rs113851554",
+    "rs1820989",
+    "AGR:MGI:104717:MP:0020478"
+   ],
+   "title": "MEIS1 risk variation promotes RLS by disrupting circadian sleep–wake control"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "AGR:MGI:1916625:MP:0000860",
+      "AGR:MGI:1916625:MP:0002272"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "phenotype",
+      "label": "abnormal somatosensory-circuit morphology and electrophysiology"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "BTBD9 dysfunction"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "AGR:MGI:1916625:MP:0011396"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "phenotype",
+      "label": "abnormal sleep behavior"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "BTBD9 dysfunction"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:17637780",
+      "PMID:17634447",
+      "rs10947738",
+      "rs61192259",
+      "rs4714163"
+     ],
+     "note": "Proposed mechanism connecting the associated locus to disease.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "restless legs syndrome and periodic limb movements"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "sleep-dependent sensory-circuit dysfunction"
+     }
+    }
+   ],
+   "confidence": "high",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Restore BTBD9 selectively in somatosensory neurons of Btbd9-deficient mice and quantify sleep-stage electrophysiology and periodic limb movements; failure of verified rescue to normalize either readout would falsify the proposed somatosensory sleep-circuit mechanism.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "restore",
+     "target": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "BTBD9 in somatosensory neurons"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "phenotype",
+     "label": "sleep-stage sensory electrophysiology and periodic limb movements"
+    },
+    "system": "conditional Btbd9-deficient mouse"
+   },
+   "genes": [
+    "BTBD9"
+   ],
+   "hypothesis_id": "H2_BTBD9_SLEEP_SENSORY",
+   "mechanism": "BTBD9 has replicated human association with RLS and periodic limb movements, and Btbd9-deficient mice show abnormal sleep behavior, nervous-system electrophysiology, and somatosensory-cortex morphology. The causal hypothesis is that altered BTBD9 function destabilizes sensory gating during sleep, generating uncomfortable limb sensations and periodic movements; the molecular substrate and direction of the risk allele remain unresolved.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "PMID:17637780",
+    "PMID:17634447",
+    "rs10947738",
+    "rs61192259",
+    "rs4714163",
+    "AGR:MGI:1916625:MP:0000860",
+    "AGR:MGI:1916625:MP:0002272",
+    "AGR:MGI:1916625:MP:0011396"
+   ],
+   "title": "BTBD9 risk variation promotes RLS through sleep and somatosensory-circuit dysfunction"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "AGR:MGI:97812:MP:0001522"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "phenotype",
+      "label": "impaired motor function"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "PTPRD dysfunction"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "rs34602324",
+      "rs1836229"
+     ],
+     "note": "Proposed disease mechanism; the available animal phenotype is not specific to RLS.",
+     "object": {
+      "curie": "EFO:MONDO_0005391",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "restless legs syndrome"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "motor-circuit disinhibition"
+     }
+    }
+   ],
+   "confidence": "medium",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Introduce the PTPRD RLS-risk haplotype into isogenic human motor-neuron/sensory-neuron circuits and test spontaneous activity during low-input rest-like conditions; the hypothesis is falsified if the verified haplotype produces no reproducible electrophysiologic or motor-output change.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "restore",
+     "target": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "PTPRD RLS-risk haplotype"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "phenotype",
+     "label": "rest-like sensorimotor circuit excitability"
+    },
+    "system": "isogenic human sensorimotor neuronal co-culture"
+   },
+   "genes": [
+    "PTPRD"
+   ],
+   "hypothesis_id": "H3_PTPRD_MOTOR_CIRCUIT",
+   "mechanism": "Independent RLS GWAS records map strongly to PTPRD, and Ptprd-null mice have impaired swimming, supporting a role in neural motor function. The falsifiable claim is that an RLS risk allele changes PTPRD activity in a motor or sensorimotor circuit, increasing rest-associated motor disinhibition; however, impaired swimming is nonspecific and the GWAS assignments remain positional.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "rs34602324",
+    "rs1836229",
+    "AGR:MGI:97812:MP:0001522"
+   ],
+   "title": "PTPRD risk variation promotes RLS by impairing motor-circuit function"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "AGR:MGI:87879:MP:0005637"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "phenotype",
+      "label": "abnormal iron homeostasis"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "ACO1 dysfunction"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [],
+     "note": "Proposed modifier mechanism; direct human genetic support was not found.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "restless legs syndrome susceptibility"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "abnormal neural iron homeostasis"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [
+    "GWAS:ACO1:no-association"
+   ],
+   "falsification": {
+    "description": "Perturb ACO1 in an adult neural lineage while controlling systemic iron, then measure brain iron and rest-phase limb movements; the hypothesis is falsified if verified ACO1 disruption changes neither neural iron handling nor the movement phenotype.",
+    "expected": "positive",
+    "perturbation": {
+     "action": "knockdown",
+     "target": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "ACO1 in adult neural cells"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "phenotype",
+     "label": "brain iron and rest-phase limb movements"
+    },
+    "system": "adult conditional Aco1 mouse"
+   },
+   "genes": [
+    "ACO1"
+   ],
+   "hypothesis_id": "H4_ACO1_IRON_MODIFIER",
+   "mechanism": "Loss of mouse Aco1 causes abnormal iron homeostasis, making ACO1 a biologically plausible link to the iron-sensitive component of RLS. However, the GWAS Catalog reports no ACO1–RLS association, so this is better framed as a rare-variant, environmental-interaction, or downstream modifier hypothesis rather than a common inherited RLS locus.",
+   "support": "partial",
+   "supporting_evidence": [
+    "AGR:MGI:87879:MP:0005637"
+   ],
+   "title": "ACO1 dysfunction may modify RLS through disturbed iron homeostasis"
+  }
+ ],
+ "unexplained_genes": [
+  "GLIPR1",
+  "GABARAPL2"
+ ]
+}

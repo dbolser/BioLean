@@ -1,0 +1,1425 @@
+{
+ "run_id": "fyttd1-elac2-als-or-plus",
+ "curated_by": "Claude Opus 5.5 (pilot curator), 2026-10-30",
+ "upgraded_by": "Claude Opus 5.5 (v2 upgrade), 2026-10-30",
+ "entities": {
+  "c9Hre": {
+   "kind": "variant",
+   "curie": "BLN:C9orf72-G4C2-repeat-expansion",
+   "label": "C9orf72 GGGGCC hexanucleotide repeat expansion",
+   "run_labels": [
+    "C9orf72 repeat expansion / TDP-43 pathology"
+   ]
+  },
+  "tdp43Proteinopathy": {
+   "kind": "disease",
+   "curie": "MONDO:0700038",
+   "run_labels": [
+    "C9orf72 repeat expansion / TDP-43 pathology"
+   ]
+  },
+  "nct": {
+   "kind": "process",
+   "curie": "GO:0006913",
+   "run_labels": [
+    "nucleocytoplasmic transport"
+   ]
+  },
+  "FYTTD1": {
+   "kind": "protein",
+   "curie": "UniProt:Q96QD9",
+   "run_labels": [
+    "FYTTD1 (UIF)",
+    "FYTTD1"
+   ]
+  },
+  "fyttd1InC9": {
+   "kind": "protein",
+   "refines": {
+    "base": "FYTTD1",
+    "ctx": {
+     "condition": "c9Hre"
+    }
+   },
+   "note": "H6 claims FYTTD1 loss only in C9orf72 carriers, so its claim is about FYTTD1 refined by that condition"
+  },
+  "mrnaExport": {
+   "kind": "process",
+   "curie": "GO:0006406",
+   "run_labels": [
+    "mRNA export from nucleus to cytoplasm",
+    "loss of mRNA export adapter function",
+    "NXF1-dependent mRNA export"
+   ]
+  },
+  "als": {
+   "kind": "disease",
+   "curie": "MONDO:0004976",
+   "run_labels": [
+    "amyotrophic lateral sclerosis"
+   ]
+  },
+  "mrnaExportInAls": {
+   "kind": "process",
+   "refines": {
+    "base": "mrnaExport",
+    "ctx": {
+     "condition": "als"
+    }
+   },
+   "run_labels": [
+    "reduced mRNA export capacity"
+   ],
+   "note": "H4.3's own note limits the step to an ALS background ('the loss only matters on an ALS background')"
+  },
+  "neurodegeneration": {
+   "kind": "phenotype",
+   "curie": "HP:0002180",
+   "run_labels": [
+    "neurodegeneration"
+   ]
+  },
+  "motorNeuron": {
+   "kind": "cellType",
+   "curie": "CL:0000100"
+  },
+  "mnDegeneration": {
+   "kind": "phenotype",
+   "refines": {
+    "base": "neurodegeneration",
+    "ctx": {
+     "cellType": "motorNeuron"
+    }
+   },
+   "run_labels": [
+    "motor neuron degeneration"
+   ]
+  },
+  "ELAC2": {
+   "kind": "protein",
+   "curie": "UniProt:Q9BQ52",
+   "run_labels": [
+    "ELAC2 (tRNase Z)",
+    "ELAC2",
+    "Elac2 conditional deletion"
+   ]
+  },
+  "trna3End": {
+   "kind": "process",
+   "curie": "GO:0042780",
+   "run_labels": [
+    "pre-tRNA 3'-end maturation"
+   ]
+  },
+  "trnaProcessing": {
+   "kind": "process",
+   "curie": "GO:0008033",
+   "run_labels": [
+    "disordered tRNA maturation"
+   ]
+  },
+  "mitoRnaProcessing": {
+   "kind": "process",
+   "curie": "GO:0000963",
+   "run_labels": [
+    "mitochondrial RNA processing and ribosome assembly"
+   ]
+  },
+  "mitoRibosomeAssembly": {
+   "kind": "process",
+   "curie": "GO:0061668",
+   "run_labels": [
+    "mitochondrial RNA processing and ribosome assembly"
+   ]
+  },
+  "oxPhos": {
+   "kind": "process",
+   "curie": "GO:0006119",
+   "run_labels": [
+    "impaired mitochondrial ATP production"
+   ]
+  },
+  "striatedMuscle": {
+   "kind": "anatomy",
+   "curie": "UBERON:0002036",
+   "run_labels": [
+    "striated muscle (Ckmm-cre)"
+   ]
+  },
+  "muscleOxPhos": {
+   "kind": "process",
+   "refines": {
+    "base": "oxPhos",
+    "ctx": {
+     "anatomy": "striatedMuscle"
+    }
+   },
+   "run_labels": [
+    "oxidative phosphorylation capacity"
+   ]
+  },
+  "trfBiogenesis": {
+   "kind": "process",
+   "curie": "GO:0140891",
+   "run_labels": [
+    "tRNA-derived fragment (tsRNA/tRF) biogenesis"
+   ]
+  },
+  "tiRna": {
+   "kind": "chemical",
+   "curie": "BLN:AngiogeninTiRNA",
+   "label": "angiogenin-induced tRNA-derived fragments (tiRNAs)",
+   "why_no_term": "searched tRNA fragment/half/derived across all prefixes, CHEBI and SO: GO has only the process GO:0140891, CHEBI only the generic RNA fragment CHEBI:82726, SO nothing for this molecule class",
+   "run_labels": [
+    "angiogenin-generated tRNA fragments"
+   ]
+  },
+  "translation": {
+   "kind": "process",
+   "curie": "GO:0006412",
+   "run_labels": [
+    "stress-induced protein translation"
+   ]
+  },
+  "mrnaPackaging": {
+   "kind": "process",
+   "curie": "BLN:CotranscriptionalMrnaPackagingByTrex",
+   "label": "co-transcriptional mRNA packaging by TREX",
+   "why_no_term": "searched mRNA packaging, mRNP, ribonucleoprotein complex assembly, transcription-coupled: GO has TREX only as the component GO:0000346 and only the broad GO:0022618 protein-RNA complex assembly, which drops the co-transcriptional TREX loading that is the point",
+   "run_labels": [
+    "co-transcriptional mRNA packaging by TREX"
+   ]
+  },
+  "trex": {
+   "kind": "component",
+   "curie": "GO:0000346",
+   "run_labels": [
+    "loss of TREX function"
+   ]
+  },
+  "rLoop": {
+   "kind": "chemical",
+   "curie": "BLN:RLoop",
+   "label": "R-loop (RNA-DNA hybrid with a displaced DNA strand)",
+   "why_no_term": "searched R-loop across all prefixes: GO:0062176 is R-loop processing (their removal), FYPO terms are fission-yeast phenotypes; no term for the structure as a molecular species",
+   "run_labels": [
+    "R-loops"
+   ]
+  },
+  "dnaDamage": {
+   "kind": "process",
+   "curie": "BLN:DnaDamage",
+   "label": "DNA damage",
+   "why_no_term": "searched DNA damage: GO has only responses (GO:0006974 etc.), and NCIT:C16507 'DNA Damage' is an NCIT record the checker assigns no kind and so cannot ground; no groundable node for DNA damage itself",
+   "run_labels": [
+    "R-loop-driven DNA damage"
+   ]
+  },
+  "dpr": {
+   "kind": "protein",
+   "curie": "BLN:C9orf72DipeptideRepeatProteins",
+   "label": "C9orf72 dipeptide repeat proteins (DPRs)",
+   "why_no_term": "searched dipeptide repeat across PR and all prefixes: only WBPhenotype 'dipeptide repeat protein toxicity'; no protein term for the DPR species",
+   "run_labels": [
+    "C9orf72 dipeptide repeat proteins"
+   ]
+  },
+  "mlOrganelleAssembly": {
+   "kind": "process",
+   "curie": "GO:0140694",
+   "run_labels": [
+    "RNA-binding protein and membrane-less organelle function"
+   ]
+  }
+ },
+ "statements": [
+  {
+   "id": "H1s1a",
+   "step": "H1.1",
+   "text": "The C9orf72 GGGGCC repeat expansion inhibits nucleocytoplasmic transport (first half of the compound subject)",
+   "claim": {
+    "effect": {
+     "subject": "c9Hre",
+     "sign": "neg",
+     "target": {
+      "process": "nct"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "PMID:26308891",
+     "kind": "inVitro",
+     "quote": "The C9orf72 repeat expansion disrupts nucleocytoplasmic transport",
+     "note": "Drosophila in vivo plus patient iPSC-derived neurons; kind is keyed to the human iPSC in-vitro span, so no taxon is needed (the fly in-vivo part could instead carry taxon fly, per guide v2)"
+    },
+    {
+     "ref": "PMID:26308899",
+     "kind": "inVitro",
+     "quote": "GGGGCC repeat expansion in C9orf72 compromises nucleocytoplasmic transport",
+     "note": "transgenic Drosophila plus mammalian cells and patient iPSC-derived neurons; kind is the human in-vitro part"
+    }
+   ],
+   "excluded": [
+    {
+     "ref": "PMID:29311743",
+     "category": "not_this_entity",
+     "reason": "attributes the transport defect to aggregated and mutant TDP-43; C9orf72 appears only as a genotype with nuclear pore pathology in post-mortem brain"
+    }
+   ]
+  },
+  {
+   "id": "H1s1b",
+   "step": "H1.1",
+   "text": "TDP-43 pathology (TDP-43 proteinopathy) inhibits nucleocytoplasmic transport (second half of the compound subject)",
+   "claim": {
+    "effect": {
+     "subject": "tdp43Proteinopathy",
+     "sign": "neg",
+     "target": {
+      "process": "nct"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "PMID:29311743",
+     "kind": "inVitro",
+     "quote": "TDP-43 pathology disrupts nuclear pore complexes and nucleocytoplasmic transport",
+     "note": "mouse primary cortical neurons, human fibroblasts and iPSC-derived neurons"
+    }
+   ],
+   "excluded": [
+    {
+     "ref": "PMID:26308891",
+     "category": "not_this_entity",
+     "reason": "states the transport defect for the C9orf72 repeat expansion, not TDP-43 pathology"
+    },
+    {
+     "ref": "PMID:26308899",
+     "category": "not_this_entity",
+     "reason": "states the transport defect for the C9orf72 repeat expansion, not TDP-43 pathology"
+    }
+   ]
+  },
+  {
+   "id": "H1s2",
+   "step": "H1.2",
+   "text": "FYTTD1 is required for mRNA export from the nucleus (required_for: losing FYTTD1 lowers export)",
+   "claim": {
+    "effect": {
+     "subject": "FYTTD1",
+     "sign": "pos",
+     "target": {
+      "process": "mrnaExport"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "Q96QD9",
+     "kind": "curatedDb",
+     "quote": "Required for mRNA export from the nucleus to the cytoplasm"
+    }
+   ],
+   "excluded": [
+    {
+     "ref": "R-HSA-72202",
+     "category": "enrichment",
+     "reason": "a Reactome over-representation result for the run's gene set ('1 of 90 pathway entities matched'); it does not name FYTTD1 or say it is required"
+    }
+   ]
+  },
+  {
+   "id": "H1s3",
+   "step": "H1.3",
+   "text": "Loss of mRNA export adapter function leads to motor neuron degeneration, so mRNA export lowers motor neuron degeneration",
+   "sign_note": "the run's subject is the loss of the function (leads_to, positive); grounded as the export process itself, so the same claim carries sign neg",
+   "claim": {
+    "effect": {
+     "subject": "mrnaExport",
+     "sign": "neg",
+     "target": {
+      "phenotype": "mnDegeneration"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "PMID:38331934",
+     "category": "not_this_entity",
+     "reason": "a hypomorphic THOC2 (TREX core subunit, not an export adapter) mouse with R-loops, DNA damage and cell death in the developing brain; no motor neurons, no export readout"
+    },
+    {
+     "ref": "PMID:27679854",
+     "category": "not_in_text",
+     "reason": "TREX review: TREX prevents DNA damage and its role in ALS 'emerges'; says nothing about loss of export causing motor neuron degeneration"
+    }
+   ]
+  },
+  {
+   "id": "H2s1",
+   "step": "H2.1",
+   "text": "ELAC2 is required for pre-tRNA 3'-end processing (required_for: losing ELAC2 lowers it)",
+   "claim": {
+    "effect": {
+     "subject": "ELAC2",
+     "sign": "pos",
+     "target": {
+      "process": "trna3End"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "Q9BQ52",
+     "kind": "curatedDb",
+     "quote": "Involved in tRNA maturation, by removing a 3'-trailer from precursor tRNA"
+    }
+   ],
+   "excluded": [
+    {
+     "ref": "R-HSA-72306",
+     "category": "enrichment",
+     "reason": "a Reactome over-representation result ('tRNA processing', 1 of 189 entities matched); it does not name ELAC2 or a 3'-end step"
+    }
+   ]
+  },
+  {
+   "id": "H2s2",
+   "step": "H2.2",
+   "text": "Pre-tRNA 3'-end maturation is associated with tRNA-derived fragment (tsRNA/tRF) biogenesis",
+   "claim": {
+    "assoc": {
+     "subject": "trna3End",
+     "direction": "none",
+     "target": {
+      "process": "trfBiogenesis"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "R-HSA-9708296",
+     "category": "enrichment",
+     "reason": "a Reactome over-representation result naming only the tRF biogenesis pathway ('1 of 4 entities matched'); it states no link from 3'-end maturation"
+    },
+    {
+     "ref": "PMID:25220675",
+     "category": "not_in_text",
+     "reason": "a general tRNA-fragment review; never mentions 3'-end processing or a direction from maturation to tRF biogenesis"
+    }
+   ]
+  },
+  {
+   "id": "H2s3",
+   "step": "H2.3",
+   "text": "Angiogenin-induced tRNA-derived fragments (tiRNAs) inhibit stress-induced protein translation",
+   "claim": {
+    "effect": {
+     "subject": "tiRna",
+     "sign": "neg",
+     "target": {
+      "process": "translation"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "PMID:19332886",
+     "kind": "inVitro",
+     "quote": "transfection of angiogenin-induced tiRNAs promotes phospho-eIF2alpha-independent translational arrest"
+    }
+   ],
+   "excluded": []
+  },
+  {
+   "id": "H2s4",
+   "step": "H2.4",
+   "text": "Disordered (defective) tRNA maturation leads to neurodegeneration, so tRNA maturation lowers neurodegeneration",
+   "sign_note": "the run's subject is 'disordered tRNA maturation' (leads_to, positive), read as defective maturation as in the cited CLP1 paper; grounded as tRNA processing (synonym 'tRNA maturation'), so the claim carries sign neg",
+   "claim": {
+    "effect": {
+     "subject": "trnaProcessing",
+     "sign": "neg",
+     "target": {
+      "phenotype": "neurodegeneration"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "PMID:24766810",
+     "kind": "observational",
+     "quote": "Our data link tRNA maturation to neuronal development and neurodegeneration through defective CLP1 function in humans",
+     "note": "the quoted span is the human founder-mutation families; CLP1/TSEN pre-tRNA splicing, not ELAC2 3'-end processing"
+    },
+    {
+     "ref": "PMID:40294208",
+     "kind": "review",
+     "quote": "defects in tRNA processing may lead to neurological disorders",
+     "note": "a run supporting citation cited at no step; states H2.4 (tRNA-processing defect to neurodegeneration) better than PMID:41320876, so attached here"
+    }
+   ],
+   "excluded": [
+    {
+     "ref": "PMID:41320876",
+     "category": "not_in_text",
+     "reason": "review of tRNA-derived small RNAs 'implicated' in brain ageing and neurodegeneration, including ALS; nothing on defective tRNA maturation causing neurodegeneration"
+    }
+   ]
+  },
+  {
+   "id": "H3s1a",
+   "step": "H3.1",
+   "text": "ELAC2 is required for mitochondrial RNA processing (first half of the compound object; required_for)",
+   "claim": {
+    "effect": {
+     "subject": "ELAC2",
+     "sign": "pos",
+     "target": {
+      "process": "mitoRnaProcessing"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "Q9BQ52",
+     "kind": "curatedDb",
+     "quote": "Associates with mitochondrial DNA complexes at the nucleoids to initiate RNA processing and ribosome assembly"
+    }
+   ],
+   "excluded": [
+    {
+     "ref": "R-HSA-6785470",
+     "category": "enrichment",
+     "reason": "a Reactome over-representation result ('tRNA processing in the mitochondrion', 1 of 45 matched); it does not name ELAC2"
+    }
+   ]
+  },
+  {
+   "id": "H3s1b",
+   "step": "H3.1",
+   "text": "ELAC2 is required for mitochondrial ribosome assembly (second half of the compound object; required_for)",
+   "claim": {
+    "effect": {
+     "subject": "ELAC2",
+     "sign": "pos",
+     "target": {
+      "process": "mitoRibosomeAssembly"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "Q9BQ52",
+     "kind": "curatedDb",
+     "quote": "Associates with mitochondrial DNA complexes at the nucleoids to initiate RNA processing and ribosome assembly"
+    }
+   ],
+   "excluded": [
+    {
+     "ref": "R-HSA-6785470",
+     "category": "enrichment",
+     "reason": "a Reactome over-representation result for tRNA processing in the mitochondrion; it names neither ELAC2 nor ribosome assembly"
+    }
+   ]
+  },
+  {
+   "id": "H3s2",
+   "step": "H3.2",
+   "text": "Elac2 conditional deletion in striated muscle lowers oxidative phosphorylation there, so ELAC2 raises oxidative phosphorylation in striated muscle",
+   "sign_note": "the run's subject is the Elac2 deletion (decreases_amount, negative); grounded as ELAC2 itself, so the same claim carries sign pos. decreases_amount on a process is read as a process target. The run's context (striated muscle, Ckmm-cre) is kept as a refinement because the step's own note limits the result to muscle and heart",
+   "claim": {
+    "effect": {
+     "subject": "ELAC2",
+     "sign": "pos",
+     "target": {
+      "process": "muscleOxPhos"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "AGR:MGI:1890496:MP:0010959",
+     "category": "no_direction",
+     "reason": "MGI annotation 'abnormal oxidative phosphorylation' in Ckmm-cre muscle knockout mice; 'abnormal' has no direction, the step claims a decrease"
+    },
+    {
+     "ref": "AGR:MGI:1890496:MP:0010956",
+     "category": "no_direction",
+     "reason": "MGI annotation 'abnormal mitochondrial ATP synthesis coupled electron transport' in muscle knockout mice; no direction"
+    }
+   ]
+  },
+  {
+   "id": "H3s3",
+   "step": "H3.3",
+   "text": "Impaired mitochondrial ATP production leads to motor neuron degeneration, so oxidative phosphorylation lowers motor neuron degeneration",
+   "sign_note": "the run's subject is 'impaired mitochondrial ATP production' (leads_to, positive); grounded as oxidative phosphorylation, so the claim carries sign neg",
+   "claim": {
+    "effect": {
+     "subject": "oxPhos",
+     "sign": "neg",
+     "target": {
+      "phenotype": "mnDegeneration"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "AGR:MGI:1890496:MP:0006036",
+     "category": "not_in_text",
+     "reason": "MGI 'abnormal mitochondrial physiology' in Elac2 muscle knockout mice; nothing on ATP production causing motor neuron degeneration"
+    },
+    {
+     "ref": "AGR:MGI:1890496:MP:0005621",
+     "category": "not_in_text",
+     "reason": "MGI 'abnormal cell physiology' in Elac2 muscle knockout mice; nothing about motor neurons"
+    }
+   ]
+  },
+  {
+   "id": "H4s1",
+   "step": "H4.1",
+   "text": "FYTTD1 is required for mRNA export from the nucleus (required_for: losing FYTTD1 lowers export)",
+   "claim": {
+    "effect": {
+     "subject": "FYTTD1",
+     "sign": "pos",
+     "target": {
+      "process": "mrnaExport"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "Q96QD9",
+     "kind": "curatedDb",
+     "quote": "Required for mRNA export from the nucleus to the cytoplasm"
+    }
+   ],
+   "excluded": [
+    {
+     "ref": "R-HSA-159236",
+     "category": "enrichment",
+     "reason": "a Reactome over-representation result ('Transport of Mature mRNA derived from an Intron-Containing Transcript', 1 of 81 matched); it does not name FYTTD1"
+    }
+   ]
+  },
+  {
+   "id": "H4s2a",
+   "step": "H4.2",
+   "text": "The C9orf72 GGGGCC repeat expansion inhibits nucleocytoplasmic transport (first half of the compound subject)",
+   "claim": {
+    "effect": {
+     "subject": "c9Hre",
+     "sign": "neg",
+     "target": {
+      "process": "nct"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "PMID:26308891",
+     "kind": "inVitro",
+     "quote": "The C9orf72 repeat expansion disrupts nucleocytoplasmic transport",
+     "note": "Drosophila in vivo plus patient iPSC-derived neurons; kind is the human in-vitro part"
+    },
+    {
+     "ref": "PMID:26308899",
+     "kind": "inVitro",
+     "quote": "GGGGCC repeat expansion in C9orf72 compromises nucleocytoplasmic transport",
+     "note": "transgenic Drosophila plus patient iPSC-derived neurons; kind is the human in-vitro part"
+    }
+   ],
+   "excluded": [
+    {
+     "ref": "PMID:29311743",
+     "category": "not_this_entity",
+     "reason": "attributes the transport defect to aggregated and mutant TDP-43, not the C9orf72 expansion"
+    }
+   ]
+  },
+  {
+   "id": "H4s2b",
+   "step": "H4.2",
+   "text": "TDP-43 pathology (TDP-43 proteinopathy) inhibits nucleocytoplasmic transport (second half of the compound subject)",
+   "claim": {
+    "effect": {
+     "subject": "tdp43Proteinopathy",
+     "sign": "neg",
+     "target": {
+      "process": "nct"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "PMID:29311743",
+     "kind": "inVitro",
+     "quote": "TDP-43 pathology disrupts nuclear pore complexes and nucleocytoplasmic transport"
+    }
+   ],
+   "excluded": [
+    {
+     "ref": "PMID:26308891",
+     "category": "not_this_entity",
+     "reason": "C9orf72 repeat expansion, not TDP-43 pathology"
+    },
+    {
+     "ref": "PMID:26308899",
+     "category": "not_this_entity",
+     "reason": "C9orf72 repeat expansion, not TDP-43 pathology"
+    }
+   ]
+  },
+  {
+   "id": "H4s3",
+   "step": "H4.3",
+   "text": "Reduced mRNA export capacity on an ALS background leads to motor neuron degeneration, so mRNA export (in ALS) lowers motor neuron degeneration",
+   "sign_note": "inverted: the run's subject is 'reduced mRNA export capacity' (leads_to, positive); grounded as mRNA export, so the claim carries sign neg. The step's note limits the result to an ALS background, kept as the condition refinement mrnaExportInAls",
+   "claim": {
+    "effect": {
+     "subject": "mrnaExportInAls",
+     "sign": "neg",
+     "target": {
+      "phenotype": "mnDegeneration"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "PMID:27679854",
+     "category": "not_in_text",
+     "reason": "TREX review; mentions ALS only as a field where TREX activity 'emerges', nothing on reduced export causing motor neuron degeneration"
+    }
+   ]
+  },
+  {
+   "id": "H6s1",
+   "step": "H6.1",
+   "text": "FYTTD1 is required for NXF1-dependent mRNA export (required_for; the NXF1 qualifier is dropped)",
+   "claim": {
+    "effect": {
+     "subject": "FYTTD1",
+     "sign": "pos",
+     "target": {
+      "process": "mrnaExport"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "Q96QD9",
+     "kind": "curatedDb",
+     "quote": "Required for mRNA export from the nucleus to the cytoplasm"
+    }
+   ],
+   "excluded": [
+    {
+     "ref": "R-HSA-72202",
+     "category": "enrichment",
+     "reason": "a Reactome over-representation result ('Transport of Mature Transcript to Cytoplasm', 1 of 90 matched); it does not name FYTTD1 or NXF1"
+    }
+   ]
+  },
+  {
+   "id": "H5s1",
+   "step": "H5.1",
+   "text": "FYTTD1 is required for co-transcriptional mRNA packaging by TREX (required_for)",
+   "claim": {
+    "effect": {
+     "subject": "FYTTD1",
+     "sign": "pos",
+     "target": {
+      "process": "mrnaPackaging"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "Q96QD9",
+     "category": "not_in_text",
+     "reason": "UniProt says FYTTD1 'Associates with spliced and unspliced mRNAs simultaneously with ALYREF/THOC4', not that it is required for co-transcriptional packaging"
+    },
+    {
+     "ref": "PMID:27679854",
+     "category": "not_in_text",
+     "reason": "TREX review; never names FYTTD1 or UIF, so it does not state FYTTD1's role in packaging"
+    }
+   ]
+  },
+  {
+   "id": "H5s2",
+   "step": "H5.2",
+   "text": "Loss of TREX function raises R-loops, so TREX lowers R-loops",
+   "sign_note": "inverted: the run's subject is 'loss of TREX function' (increases_amount R-loops, positive); grounded as the TREX complex, so the claim carries sign neg",
+   "claim": {
+    "effect": {
+     "subject": "trex",
+     "sign": "neg",
+     "target": {
+      "amount": "rLoop"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "PMID:38331934",
+     "kind": "mechanistic",
+     "taxon": "mouse",
+     "quote": "compromised THOC2/TREX function resulting in R-loop accumulation",
+     "note": "hypomorphic Thoc2 mouse; THOC2 is the largest TREX subunit, so the step is read for the TREX complex"
+    }
+   ],
+   "excluded": []
+  },
+  {
+   "id": "H5s3",
+   "step": "H5.3",
+   "text": "R-loop-driven DNA damage leads to motor neuron degeneration",
+   "claim": {
+    "effect": {
+     "subject": "dnaDamage",
+     "sign": "pos",
+     "target": {
+      "phenotype": "mnDegeneration"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "PMID:38331934",
+     "category": "not_in_text",
+     "reason": "reports 'DNA damage and consequent cell death' in the developing mouse brain, not DNA damage causing motor neuron degeneration"
+    }
+   ]
+  },
+  {
+   "id": "H6s2a",
+   "step": "H6.2",
+   "text": "C9orf72 dipeptide repeat proteins impair membrane-less organelle assembly/function (organelle half of the compound object)",
+   "claim": {
+    "effect": {
+     "subject": "dpr",
+     "sign": "neg",
+     "target": {
+      "process": "mlOrganelleAssembly"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "PMID:27768896",
+     "kind": "inVitro",
+     "quote": "C9orf72 Dipeptide Repeats Impair the Assembly, Dynamics, and Function of Membrane-Less Organelles",
+     "note": "DPR interactome plus altered phase separation of LCD proteins in vitro; Drosophila genetics also shown"
+    }
+   ],
+   "excluded": []
+  }
+ ],
+ "unexpressed": [
+  {
+   "step": "H6.2",
+   "category": "compound_entity",
+   "reason": "the object joins two things; the other half, 'RNA-binding protein function', names no specific RNA-binding protein, so it cannot be grounded or split out. The membrane-less organelle half is expressed as statement H6s2a",
+   "evidence": [],
+   "excluded": []
+  },
+  {
+   "step": "H6.3",
+   "category": "other_construct",
+   "reason": "the subject is the export of one cargo (C9orf72 repeat RNA); a process refinement has no cargo or participant field, so BioLean cannot express 'reduced export of C9orf72 repeat RNA'. The object, DPRs, now has a BLN term (dpr), but the subject fits no form",
+   "evidence": [
+    {
+     "ref": "PMID:24866055",
+     "kind": "hypothesis",
+     "moved_from": "H6.2",
+     "quote": "licensing of expanded C9orf72 pre-messenger RNA for nuclear export by inappropriate association with messenger RNA export adaptor protein(s) leading to cytoplasmic repeat associated non-ATG translation and formation of potentially toxic dipeptide repeat protein",
+     "note": "cited by the run at H6.2 but proposes H6.3; a mechanism proposed, not tested here"
+    }
+   ],
+   "excluded": []
+  }
+ ],
+ "hypotheses": {
+  "H1": {
+   "claims": [
+    {
+     "subject": "FYTTD1",
+     "sign": "neg",
+     "target": {
+      "disease": "als",
+      "aspect": "severity"
+     }
+    },
+    {
+     "subject": "FYTTD1",
+     "sign": "neg",
+     "target": {
+      "phenotype": "mnDegeneration"
+     }
+    }
+   ],
+   "note": "title: an effector, 'not a risk gene'; mechanism: FYTTD1 'loss would aggravate' mRNA retention and motor neuron degeneration, read as FYTTD1 lowering ALS severity. The chain ends at motor neuron degeneration, a phenotype, not ALS, so a second claim targets that phenotype (v2)"
+  },
+  "H2": {
+   "claims": [
+    {
+     "subject": "ELAC2",
+     "sign": "neg",
+     "target": {
+      "disease": "als",
+      "aspect": "severity"
+     }
+    },
+    {
+     "subject": "ELAC2",
+     "sign": "neg",
+     "target": {
+      "phenotype": "neurodegeneration"
+     }
+    }
+   ],
+   "note": "mechanism: 'partial ELAC2 loss of function ... lowers the threshold for stress-induced translational collapse, acting as a modifier'; aspect read as severity. The chain ends at neurodegeneration in general, not ALS, so a second claim targets that phenotype (v2)"
+  },
+  "H3": {
+   "claims": [
+    {
+     "subject": "ELAC2",
+     "sign": "neg",
+     "target": {
+      "disease": "als",
+      "aspect": "severity"
+     }
+    },
+    {
+     "subject": "ELAC2",
+     "sign": "neg",
+     "target": {
+      "phenotype": "mnDegeneration"
+     }
+    }
+   ],
+   "note": "mechanism: 'reduced ELAC2 activity impairs mitochondrial translation and OXPHOS in motor neurons and so acts as a bioenergetic disease modifier'; aspect read as severity. The chain ends at motor neuron degeneration, not ALS, so a second claim targets that phenotype (v2)"
+  },
+  "H4": {
+   "claims": [
+    {
+     "subject": "FYTTD1",
+     "sign": "neg",
+     "target": {
+      "disease": "als",
+      "aspect": "risk"
+     }
+    },
+    {
+     "subject": "FYTTD1",
+     "sign": "neg",
+     "target": {
+      "phenotype": "mnDegeneration"
+     }
+    }
+   ],
+   "note": "hand-added. 'FYTTD1 haploinsufficiency lowers ... the threshold for ALS', read as risk; a second-hit modifier that only acts on an ALS background. The chain ends at motor neuron degeneration, not ALS, so a second claim targets that phenotype (v2)"
+  },
+  "H5": {
+   "claims": [
+    {
+     "subject": "FYTTD1",
+     "sign": "neg",
+     "target": {
+      "phenotype": "mnDegeneration"
+     }
+    }
+   ],
+   "note": "hand-added. Asserts FYTTD1 loss -> R-loops -> DNA damage -> motor neuron degeneration; the chain ends at a phenotype and never reaches ALS, so (v2) the claim targets the phenotype. FYTTD1 lowers motor neuron degeneration (its loss raises it). v1 gave no_claim_reason because v1 claims had to end at a disease; v2 allows a phenotype target"
+  },
+  "H6": {
+   "claims": [
+    {
+     "subject": "fyttd1InC9",
+     "sign": "pos",
+     "target": {
+      "disease": "als",
+      "aspect": "risk"
+     }
+    }
+   ],
+   "note": "hand-added. 'In C9orf72 carriers FYTTD1 loss is protective': FYTTD1 raises ALS risk but only in C9orf72 carriers, so (v2) the claim subject is FYTTD1 refined by that condition (fyttd1InC9), the deliberate opposite of H4. The chain never reaches a phenotype or ALS (its steps end at DPRs and organelle function)"
+  }
+ },
+ "findings": [
+  {
+   "project": "hypothesis-agent",
+   "category": "chain_ends_at_phenotype",
+   "steps": [
+    "H1.3",
+    "H2.4",
+    "H3.3",
+    "H4.3",
+    "H5.3"
+   ],
+   "detail": "the chains of H1-H5 end at 'motor neuron degeneration' or 'neurodegeneration' and H6's ends at DPRs/organelle function; no step reaches ALS, so each hypothesis now carries a v2 second claim targeting the phenotype end node, and only those phenotype claims compose"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "chain_not_connected",
+   "steps": [
+    "H1.1",
+    "H1.2"
+   ],
+   "detail": "H1.1 ends at nucleocytoplasmic transport and H1.2 starts at FYTTD1; the mechanism's key link, that C9orf72/TDP-43 insults make FYTTD1 lost or mislocalised, is not a step and nothing cited states it"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "chain_not_connected",
+   "steps": [
+    "H1.2",
+    "H1.3"
+   ],
+   "detail": "H1.2 ends at 'mRNA export from nucleus to cytoplasm', H1.3 starts at 'loss of mRNA export adapter function'; merged as one node (mRNA export), the loss carried by the sign"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_does_not_state_step",
+   "steps": [
+    "H1.3",
+    "H4.3"
+   ],
+   "detail": "the only steps reaching a phenotype cite a THOC2 neurodevelopment mouse (PMID:38331934) and a TREX review (PMID:27679854); neither mentions motor neurons or export loss causing degeneration, so these steps keep no evidence"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_does_not_state_step",
+   "steps": [
+    "H1.2",
+    "H2.1",
+    "H2.2",
+    "H3.1",
+    "H4.1",
+    "H6.1"
+   ],
+   "detail": "every Reactome citation (R-HSA-72202, 159236, 72306, 9708296, 6785470) is a gene-set over-representation result ('1 of N pathway entities matched') naming neither the gene nor its role; the run cites them as curated function statements. In v2 all are excluded under the new 'enrichment' category"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "compound_entity",
+   "steps": [
+    "H1.1",
+    "H4.2"
+   ],
+   "detail": "'C9orf72 repeat expansion / TDP-43 pathology' joins two causes; each cited paper states only one half, so the step splits into two statements with different evidence"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "ungrounded_label",
+   "steps": [
+    "H1.1",
+    "H3.2",
+    "H6.2",
+    "H6.3"
+   ],
+   "detail": "nearly every node has an empty curie, and kinds are inconsistent: the C9orf72 repeat expansion is a 'process', the Elac2 deletion a 'gene', and 'C9orf72 dipeptide repeat proteins' is a 'process' in H6.2 and 'other' in H6.3"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "chain_not_connected",
+   "steps": [
+    "H2.2",
+    "H2.3"
+   ],
+   "detail": "H2.2 ends at tRF biogenesis and H2.3 starts at angiogenin-generated tRNA fragments; the title's claim that ELAC2 sets angiogenin's substrate pool is never a step and nothing cited links ELAC2 to angiogenin"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "chain_not_connected",
+   "steps": [
+    "H2.3",
+    "H2.4"
+   ],
+   "detail": "H2.3 ends at stress-induced translation and H2.4 starts at disordered tRNA maturation; the translational-collapse arm never reaches neurodegeneration"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "chain_not_connected",
+   "steps": [
+    "H2.1",
+    "H2.4"
+   ],
+   "detail": "H2.1's step is pre-tRNA 3'-end processing (GO:0042780) but the disease-facing step H2.4 uses tRNA maturation in general (GO:0008033), cited to CLP1/TSEN pre-tRNA splicing, not 3'-end processing; the two do not compose"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_states_claim_not_made",
+   "steps": [
+    "H2.3"
+   ],
+   "detail": "the mechanism calls angiogenin 'a bona fide ALS gene' citing PMID:19332886, which never mentions ALS"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "unsigned_evidence_for_signed_step",
+   "steps": [
+    "H3.2"
+   ],
+   "detail": "'decreases_amount' of oxidative phosphorylation cites MGI 'abnormal' phenotypes, which carry no direction (v2: excluded as no_direction); decreases_amount is also applied to a process"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "chain_not_connected",
+   "steps": [
+    "H3.1",
+    "H3.2"
+   ],
+   "detail": "H3.1 ends at mitochondrial RNA processing and ribosome assembly, H3.2 starts again at the gene (Elac2 deletion); the link from processing to OXPHOS is missing, so the chain fans out from ELAC2"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "chain_not_connected",
+   "steps": [
+    "H3.2",
+    "H3.3"
+   ],
+   "detail": "H3.2 ends at 'oxidative phosphorylation capacity' in striated muscle (the step's context), H3.3 starts at 'impaired mitochondrial ATP production' with no tissue; the muscle result is a refinement (muscleOxPhos), so the chain breaks exactly where the run's own note says the motor-neuron extrapolation is untested"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_does_not_state_step",
+   "steps": [
+    "H3.3"
+   ],
+   "detail": "cites Elac2 muscle-knockout phenotypes ('abnormal mitochondrial physiology', 'abnormal cell physiology') for ATP failure causing motor neuron degeneration; nothing about neurons"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "confidence_unjustified",
+   "steps": [
+    "H1.3",
+    "H2.4",
+    "H3.3"
+   ],
+   "detail": "H1, H2 and H3 are marked support 'grounded', yet the step of each that reaches a phenotype is uncited (H1.3, H3.3) or rests on a different gene (H2.4, CLP1); confidence 'low' is right, 'grounded' is not"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "context_not_in_evidence",
+   "steps": [
+    "H1.1"
+   ],
+   "detail": "the step's context is spinal cord in ALS, but the evidence is Drosophila, iPSC-derived neurons, fibroblasts and post-mortem brain"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "source_typo_copied",
+   "steps": [
+    "H1.2",
+    "H6.1"
+   ],
+   "detail": "the cited UniProt function text says 'DDX39B/UAP56-NFX1 pathway', but the same Q96QD9 record's Subunit line says NXF1, and NFX1 (Q12986) is an unrelated transcription factor; 'NFX1' is a UniProt typo for NXF1, which H1's mechanism copies verbatim and H6.1's label gets right"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "hand_added",
+   "steps": [
+    "H4.1",
+    "H4.2",
+    "H4.3",
+    "H5.1",
+    "H5.2",
+    "H5.3",
+    "H6.1",
+    "H6.2",
+    "H6.3"
+   ],
+   "detail": "H4 to H6 were hand-added by Claude Code, not produced by the agent; they reuse the run's evidence, H5 and H6 are largely unexpressed, and H6.3 cites nothing in-run"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "chain_not_connected",
+   "steps": [
+    "H4.1",
+    "H4.2",
+    "H4.3"
+   ],
+   "detail": "H4.2 (C9orf72/TDP-43 inhibit transport) is a side branch: it neither follows FYTTD1 -> export nor feeds export -> degeneration, because the 'second hit' is an interaction, not a link"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_on_wrong_step",
+   "steps": [
+    "H6.2",
+    "H6.3"
+   ],
+   "detail": "PMID:24866055, cited by the run at H6.2, proposes H6.3 (export adaptors license C9orf72 repeat RNA export, leading to RAN translation and DPRs); in v2 it is moved to H6.3's evidence (kind hypothesis), while H6.3 itself cited nothing in-run"
+  },
+  {
+   "project": "both",
+   "category": "rival_claims_resolved_by_condition",
+   "steps": [
+    "H4.1",
+    "H6.1"
+   ],
+   "detail": "H4 (FYTTD1 lowers ALS, unconditional) and H6 (FYTTD1 raises ALS in C9orf72 carriers) are deliberate rivals; v2 expresses H6's subject as fyttd1InC9 (FYTTD1 refined by the C9orf72 condition), so they are no longer a flat contradiction but claims about different subjects"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "contradicting_evidence_noted",
+   "steps": [],
+   "detail": "the run's contradicting citations (now in sources.json) are hypothesis/gene-level: null GWAS for FYTTD1 and ELAC2 (no ALS variant mapped), low-tissue-specificity expression (HPA, not enriched in spinal cord), and non-neuromuscular mouse knockout phenotypes (Fyttd1: coat, haemoglobin, creatinine, body fat; Elac2: prostate). They support H1's 'not a risk gene' framing and weaken H4's risk claim, but none state the opposite of any statement's subject->target, so none attach as refutes"
+  },
+  {
+   "project": "biolean",
+   "category": "rule_missing",
+   "steps": [
+    "H1.3",
+    "H3.3",
+    "H4.3"
+   ],
+   "detail": "MONDO defines ALS by 'degeneration of motor neurons', but a 'characterized by' definition is has_phenotype, not a signed effect, so no bridge from motor neuron degeneration to ALS (risk or severity) was added; every disease claim has no route"
+  },
+  {
+   "project": "biolean",
+   "category": "sign_stored_differs_from_run",
+   "steps": [
+    "H1.3",
+    "H2.4",
+    "H3.2",
+    "H3.3",
+    "H4.3",
+    "H5.2"
+   ],
+   "detail": "loss-of-function subjects ('loss of', 'reduced', 'impaired', 'disordered', 'deletion') were grounded as the thing itself with the sign inverted and a sign_note, so the stored sign differs from the run's polarity field; by the guide this is not a sign-change finding"
+  },
+  {
+   "project": "biolean",
+   "category": "taxon_support_wider_than_believed",
+   "steps": [
+    "H1.1",
+    "H4.2",
+    "H2.4"
+   ],
+   "detail": "render.py's TAXA set includes fly, zebrafish, worm and yeast, not only human/mouse/rat as the v1 curation assumed; so Drosophila (PMID:26308891, 26308899) and zebrafish (PMID:24766810) in-vivo results could carry a taxon. Here the kept quotes are the human in-vitro/genetic spans, so no taxon was needed, but the v1 finding that they 'cannot carry a taxon' was wrong"
+  },
+  {
+   "project": "biolean",
+   "category": "missing_term",
+   "steps": [
+    "H1.1",
+    "H4.2"
+   ],
+   "detail": "the C9orf72 GGGGCC repeat expansion has no ID in the corpus; recorded as BLN:C9orf72-G4C2-repeat-expansion"
+  },
+  {
+   "project": "biolean",
+   "category": "kind_mismatch",
+   "steps": [
+    "H1.1",
+    "H4.2"
+   ],
+   "detail": "'TDP-43 pathology' (aggregated, mislocalised TDP-43) has no lesion or process term; grounded to the disease MONDO:0700038 TDP-43 proteinopathy and used as an effect subject"
+  },
+  {
+   "project": "biolean",
+   "category": "missing_term",
+   "steps": [
+    "H2.3",
+    "H5.1",
+    "H5.2",
+    "H5.3",
+    "H6.2"
+   ],
+   "detail": "v2 BLN terms made for missing molecular/structural nodes: BLN:AngiogeninTiRNA (angiogenin tiRNAs), BLN:RLoop (R-loops), BLN:DnaDamage (DNA damage), BLN:C9orf72DipeptideRepeatProteins (DPRs), and BLN:CotranscriptionalMrnaPackagingByTrex (TREX co-transcriptional packaging); none has a fitting ontology term"
+  },
+  {
+   "project": "biolean",
+   "category": "no_form_for",
+   "steps": [
+    "H6.3"
+   ],
+   "detail": "a process restricted to one cargo (nuclear export of C9orf72 repeat RNA); a refinement has no cargo or participant field, so H6.3 stays unexpressed (other_construct)"
+  },
+  {
+   "project": "biolean",
+   "category": "condition_refinement_works",
+   "steps": [
+    "H4.2",
+    "H4.3",
+    "H6.1"
+   ],
+   "detail": "v2 condition refinement does express a genotype/disease background on a subject: fyttd1InC9 (FYTTD1 in C9orf72 carriers) and mrnaExportInAls (reduced export on an ALS background) both elaborate via Ctx.condition := organism. They do not compose with the unconditioned statements, so the arms still show no route, which is the faithful result; the v1 claim that render.py cannot use condition was too strong"
+  },
+  {
+   "project": "biolean",
+   "category": "no_form_for",
+   "steps": [
+    "H4.1",
+    "H4.2"
+   ],
+   "detail": "a second-hit interaction (FYTTD1 loss matters only together with C9orf72/TDP-43 transport damage); arms are single paths and cannot combine two causes"
+  },
+  {
+   "project": "biolean",
+   "category": "rule_missing",
+   "steps": [
+    "H1.1",
+    "H1.2",
+    "H2.1",
+    "H2.4"
+   ],
+   "detail": "chains do not pass through is_a: mRNA export from nucleus is a kind of nucleocytoplasmic transport, tRNA 3'-end processing a kind of tRNA processing, but statements on the parent and the child do not compose"
+  },
+  {
+   "project": "biolean",
+   "category": "kind_render_ok",
+   "steps": [
+    "H1.3",
+    "H3.3",
+    "H4.3"
+   ],
+   "detail": "refining the phenotype Neurodegeneration by cell type now renders as 'Neurodegeneration characteristic of (motor neuron)' (RO:0000052, HP:0002180&RO:0000052=(CL:0000100)), which reads correctly (a quality inheres in its bearer); the v1 concern that it rendered as 'part of' (BFO:0000050) is resolved by Context.lean's cellRel"
+  },
+  {
+   "project": "biolean",
+   "category": "evidence_kind_missing",
+   "steps": [
+    "H1.2",
+    "H2.1",
+    "H3.1"
+   ],
+   "detail": "v2 added the 'enrichment' exclusion category, which now correctly excludes every Reactome over-representation hit; but the evidence-kind table still maps all Reactome to curatedDb, so there is no evidence KIND for an over-representation result that one might try to keep (none kept here)"
+  },
+  {
+   "project": "biolean",
+   "category": "no_form_for",
+   "steps": [],
+   "detail": "the run's hypothesis-level contradicting evidence (null GWAS, non-neuromuscular knockout phenotypes, non-specific expression) bears on the gene->disease claim, which is not a statement, so there is no statement to attach refutes/null evidence to; Claim.noEffect exists in Lean but not in the curation format"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "chain_not_connected",
+   "steps": [
+    "H6.1",
+    "H6.2",
+    "H6.3"
+   ],
+   "detail": "H6's steps are out of causal order (repeat-RNA export -> DPRs is H6.3, DPRs -> RBP/organelle function is H6.2); H6.1 ends at bulk mRNA export while H6.3 starts at export of one cargo; and no step goes from RBP/organelle function to neurons or ALS"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "chain_not_connected",
+   "steps": [
+    "H5.1",
+    "H5.2",
+    "H5.3"
+   ],
+   "detail": "H5.1 ends at mRNA packaging by TREX and H5.2 starts at loss of TREX function, evidenced by the THOC2 core subunit not the FYTTD1 adaptor; H5.2 ends at R-loops and H5.3 starts at R-loop-driven DNA damage, so R-loops -> DNA damage is never a step"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "cited_link_not_a_step",
+   "steps": [
+    "H1.1",
+    "H4.2"
+   ],
+   "detail": "the run's own citations tie transport defects to ALS (PMID:26308891 'Nucleocytoplasmic transport defects may be a fundamental pathway for ALS and FTD'; PMID:29311743 'TDP-43-mediated nucleocytoplasmic transport defects as a common disease mechanism in ALS/FTD'), but no step makes transport -> ALS, and FYTTD1's chains go to mRNA export, not transport; no bridge added"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_at_no_step",
+   "steps": [],
+   "detail": "PMID:29628143 (stress-granule assembly disrupts transport), R-HSA-6784531 (tRNA processing in nucleus enrichment) and AGR:MGI:1890496:MP:0011925 (Elac2 KO heart echocardiography) are supporting citations at no step; PMID:40294208, also supporting, was attached to H2.4 in v2"
+  },
+  {
+   "project": "biolean",
+   "category": "ncit_not_grounded",
+   "steps": [
+    "H5.3"
+   ],
+   "detail": "NCIT:C16507 'DNA Damage' exists in the corpus but render.py assigns no kind to NCIT records (PREFIX_KIND has no NCIT), so it cannot be grounded; a concrete node with an available term had to use a BLN term instead"
+  },
+  {
+   "project": "biolean",
+   "category": "checker_guide_mismatch",
+   "steps": [
+    "H2.2"
+   ],
+   "detail": "render.py still lists 'unsigned_association' in UNEXPRESSED_CATEGORIES, so it would accept such an unexpressed entry, but guide v2 says an unsigned association must be an assoc statement (direction none); the checker does not enforce the v2 rule"
+  }
+ ],
+ "audit": [
+  {
+   "item": "H3.2 (H3s2), entities oxPhos / muscleOxPhos / striatedMuscle",
+   "error": "wrong_merge",
+   "before": "H3.2's object 'oxidative phosphorylation capacity' (run context: striated muscle, Ckmm-cre) grounded as plain oxPhos (GO:0006119) and merged with H3.3's 'impaired mitochondrial ATP production'; the context was dropped",
+   "after": "H3s2 targets muscleOxPhos, oxPhos refined by anatomy striatedMuscle (UBERON:0002036); oxPhos keeps only H3.3's label; text and sign_note updated",
+   "reason": "the step's own note says 'Demonstrated in muscle and heart only; extrapolation to motor neurons is the untested part of the hypothesis', so the tissue is the point of the step. Dropping it made ELAC2 -> OXPHOS -> motor neuron degeneration compose across the very gap the run declares. No arm changes (no route reaches ALS either way)"
+  },
+  {
+   "item": "finding chain_not_connected H3.2/H3.3",
+   "error": "other",
+   "before": "merged as oxidative phosphorylation (GO:0006119), whose definition is ATP synthesis by the respiratory chain",
+   "after": "same base term, but the muscle result is a refinement, so the chain breaks where the run says the motor neuron extrapolation is untested",
+   "reason": "follows the H3.2 refinement above"
+  },
+  {
+   "item": "finding chain_ends_at_phenotype",
+   "error": "other",
+   "before": "every chain ends at 'motor neuron degeneration' or 'neurodegeneration'",
+   "after": "H1 to H5 end at those phenotypes; H6's chain never reaches a phenotype (ends at DPRs and RBP/organelle function)",
+   "reason": "H6.2 ends at 'RNA-binding protein and membrane-less organelle function' and H6.3 at 'C9orf72 dipeptide repeat proteins'; the finding (and the curator's summary) overstated"
+  },
+  {
+   "item": "finding label_conflicts_with_source (H1.2, H6.1)",
+   "error": "other",
+   "before": "UniProt says NFX1, H6.1 says NXF1; 'different gene symbols, never reconciled', blamed on the agent",
+   "after": "category source_typo_copied: 'NFX1' is a UniProt typo for NXF1 (Q96QD9's own Subunit line names NXF1; NFX1 is Q12986, an unrelated transcription factor); H1's mechanism copies the typo, H6.1 is right",
+   "reason": "checked with terms.py UniProt:Q96QD9, NXF1 and NFX1; the finding presented a source typo as two conflicting genes"
+  },
+  {
+   "item": "findings H6.1-H6.3",
+   "error": "other",
+   "before": "none",
+   "after": "added chain_not_connected: H6 steps out of causal order, bulk export vs one-cargo export, no step to neurons or ALS",
+   "reason": "missed finding"
+  },
+  {
+   "item": "findings H5.1-H5.3",
+   "error": "other",
+   "before": "none",
+   "after": "added chain_not_connected: packaging vs loss of TREX function (THOC2, not FYTTD1), and R-loops -> DNA damage never a step",
+   "reason": "missed finding; H5 is wholly unexpressed, so its connection gaps were otherwise unrecorded"
+  },
+  {
+   "item": "findings H1.1/H4.2 transport-to-ALS link",
+   "error": "other",
+   "before": "none",
+   "after": "added cited_link_not_a_step: PMID:26308891 and PMID:29311743 state transport defects -> ALS, but no step makes it and FYTTD1's chains do not reach transport",
+   "reason": "missed finding; qualifies 'no step reaches ALS': the run's own citations offered a disease link it never made a step. No bridge added because no arm can use it"
+  },
+  {
+   "item": "findings supporting_evidence at no step",
+   "error": "other",
+   "before": "none",
+   "after": "added citation_at_no_step for PMID:29628143, PMID:40294208, R-HSA-6784531, AGR:MGI:1890496:MP:0011925",
+   "reason": "missed finding; these citations were never checked against any step"
+  },
+  {
+   "item": "H1.1 (H1s1a), evidence PMID:26308891 note",
+   "error": "other",
+   "before": "note read 'the fly part cannot carry a taxon, so kind is the human in-vitro part'",
+   "after": "note reads the kind is keyed to the human iPSC in-vitro span, so no taxon is needed (the fly in-vivo part could instead carry taxon fly, per guide v2)",
+   "reason": "the note stated a falsehood that contradicts guide v2 (TAXA includes fly) and the curation's own taxon_support_wider_than_believed finding; the inVitro kind choice (human iPSC reading) stands, only its wrong justification was corrected. No render/belief change"
+  }
+ ]
+}

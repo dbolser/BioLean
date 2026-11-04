@@ -1,0 +1,465 @@
+{
+ "run_id": "study-2026-09-vertex-dcm-vertex-openai-moonshotaikimi-k2-thinking-maas-multi_agent-r3",
+ "curated_by": "Claude Opus 5.5, 2026-10-30",
+ "entities": {
+  "LMNA": {
+   "kind": "protein",
+   "curie": "UniProt:P02545",
+   "run_labels": [
+    "Lamin A/C"
+   ]
+  },
+  "nuclearEnvelopeOrganization": {
+   "kind": "process",
+   "curie": "GO:0006998",
+   "run_labels": [
+    "Nuclear envelope"
+   ]
+  },
+  "TTN": {
+   "kind": "protein",
+   "curie": "UniProt:Q8WZ42",
+   "run_labels": [
+    "Titin"
+   ]
+  },
+  "RBM20": {
+   "kind": "protein",
+   "curie": "UniProt:Q5T481",
+   "run_labels": [
+    "RBM20",
+    "RBM20 malfunction"
+   ]
+  },
+  "MYH7": {
+   "kind": "protein",
+   "curie": "UniProt:P12883"
+  },
+  "TNNT2": {
+   "kind": "protein",
+   "curie": "UniProt:P45379"
+  },
+  "dcm": {
+   "kind": "disease",
+   "curie": "MONDO:0005021",
+   "run_labels": [
+    "Dilated cardiomyopathy"
+   ]
+  }
+ },
+ "statements": [
+  {
+   "id": "S1",
+   "step": "h002.1",
+   "text": "lamin A/C is required for the nuclear envelope, expressed as nuclear envelope organization: losing LMNA lowers it",
+   "claim": {
+    "effect": {
+     "subject": "LMNA",
+     "sign": "pos",
+     "target": {
+      "process": "nuclearEnvelopeOrganization"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "P02545",
+     "kind": "curatedDb",
+     "quote": "Lamins provide a framework for the nuclear envelope"
+    }
+   ],
+   "excluded": []
+  },
+  {
+   "id": "S2",
+   "step": "h002.2",
+   "text": "titin leads to dilated cardiomyopathy (positive, as the run states it)",
+   "claim": {
+    "effect": {
+     "subject": "TTN",
+     "sign": "pos",
+     "target": {
+      "disease": "dcm",
+      "aspect": "risk"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "PMID:22335739",
+     "category": "not_this_entity",
+     "reason": "states that TTN truncating mutations cause DCM, a variant class whose effect on titin the abstract leaves undefined ('Defining the functional effects of TTN truncating mutations should improve...'); it gives no direction for titin itself, and a loss-of-function reading would oppose the step's positive sign"
+    }
+   ]
+  },
+  {
+   "id": "S3",
+   "step": "h003.1",
+   "text": "RBM20 is required for titin (target: titin activity; losing RBM20 lowers it)",
+   "claim": {
+    "effect": {
+     "subject": "RBM20",
+     "sign": "pos",
+     "target": {
+      "activity": "TTN"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "Q5T481",
+     "category": "not_in_text",
+     "reason": "says RBM20 represses splicing and its exon skipping 'is essential for TTN isoform transition': which titin isoform is made, not that losing RBM20 lowers titin's activity (or amount)"
+    }
+   ]
+  },
+  {
+   "id": "S4",
+   "step": "h003.2",
+   "text": "loss of RBM20 function leads to dilated cardiomyopathy",
+   "sign_note": "inverted: the run's subject is 'RBM20 malfunction' with positive polarity",
+   "claim": {
+    "effect": {
+     "subject": "RBM20",
+     "sign": "neg",
+     "target": {
+      "disease": "dcm",
+      "aspect": "risk"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "PMID:41817671",
+     "category": "undirected",
+     "reason": "the source is a title only (no abstract): a single case of 'RBM20-related dilated cardiomyopathy'; it names both ends but gives no direction (malfunction, loss or gain) for RBM20"
+    }
+   ]
+  }
+ ],
+ "unexpressed": [],
+ "hypotheses": {
+  "h001": {
+   "claims": [
+    {
+     "subject": "MYH7",
+     "sign": "neg",
+     "target": {
+      "disease": "dcm",
+      "aspect": "risk"
+     }
+    },
+    {
+     "subject": "TTN",
+     "sign": "neg",
+     "target": {
+      "disease": "dcm",
+      "aspect": "risk"
+     }
+    },
+    {
+     "subject": "TNNT2",
+     "sign": "neg",
+     "target": {
+      "disease": "dcm",
+      "aspect": "risk"
+     }
+    }
+   ],
+   "note": "the chain is empty, so the subjects are the three proteins the title names; sign neg from 'MYH7, TTN, and TNNT2 dysfunction' drives DCM; the mechanism speaks of 'causative variants'. Any route is borrowed from another hypothesis"
+  },
+  "h002": {
+   "claims": [
+    {
+     "subject": "LMNA",
+     "sign": "neg",
+     "target": {
+      "disease": "dcm",
+      "aspect": "risk"
+     }
+    },
+    {
+     "subject": "LMNA",
+     "sign": "pos",
+     "target": {
+      "process": "nuclearEnvelopeOrganization"
+     }
+    },
+    {
+     "subject": "TTN",
+     "sign": "neg",
+     "target": {
+      "disease": "dcm",
+      "aspect": "risk"
+     }
+    }
+   ],
+   "note": "the title says nuclear envelope and sarcomere defects cause DCM, so each gene's overall sign is neg; the LMNA branch ends at the nuclear envelope (h002.1) and never reaches DCM, hence the second, process claim; the mechanism names 'LMNA mutations' and 'TTN truncations'"
+  },
+  "h003": {
+   "claims": [
+    {
+     "subject": "RBM20",
+     "sign": "neg",
+     "target": {
+      "disease": "dcm",
+      "aspect": "risk"
+     }
+    }
+   ],
+   "note": "the title ('regulates DCM') has no direction; RBM20's sign is from the mechanism ('RBM20 deficiency') and from h003.2 ('RBM20 malfunction'); the mechanism names 'RBM20 mutations'. No TTN claim: the chain starts at RBM20, and the mechanism gives TTN's role only as 'splicing defects in TTN' and disrupted 'isoform switching of titin', a change of isoform, with no direction on titin's amount or activity"
+  }
+ },
+ "findings": [
+  {
+   "project": "hypothesis-agent",
+   "category": "empty_chain",
+   "hypothesis": "h001",
+   "detail": "h001 has no chain steps, no supporting and no contradicting evidence, so MYH7 and TNNT2 appear in no step of the run at all; the run nonetheless lists them as explained rather than in unexplained_genes."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "budget_minimum_not_met",
+   "hypothesis": "h001",
+   "detail": "the run's budget sets min_evidence_per_hypothesis and min_sources_per_hypothesis to 2, yet h001 carries zero evidence and zero sources."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_in_prose_only",
+   "hypothesis": "h001",
+   "detail": "h001's mechanism cites PMID:22335739 and PMID:42496620 only in prose; PMID:42496620 ('TNNT2 mutations affect DCM progression in children') is on no step or evidence list, so it has no text in sources.json and cannot be checked."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_in_prose_only",
+   "hypothesis": "h002",
+   "detail": "h002's only support for LMNA causing DCM is 'PMID:PPR1285401' in the mechanism prose: a Europe PMC preprint id written as a PMID, on no step or evidence list, so it has no text here and cannot be checked."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "chain_not_connected",
+   "steps": [
+    "h002.1",
+    "h002.2"
+   ],
+   "detail": "h002.1 ends at 'Nuclear envelope' and h002.2 starts at 'Titin'; the mechanism calls them two independent pathways converging on 'cardiomyocyte mechanical failure', but that node is in no step, so the LMNA branch never reaches DCM."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "chain_ends_at_phenotype",
+   "steps": [
+    "h002.1"
+   ],
+   "hypothesis": "h002",
+   "detail": "the LMNA branch of h002 ends at the nuclear envelope (expressed as nuclear envelope organization); the chain reaches DCM only through the separate titin step."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "sign_flip",
+   "steps": [
+    "h002.2"
+   ],
+   "detail": "h002.2 says 'Titin' leads to DCM with positive polarity, while h001 and h002 say titin dysfunction or truncations cause DCM; read as written, the TTN claims of h001 and h002, and the RBM20 route of h003 through h003.1, all compose with the opposite sign through this one step."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_does_not_state_step",
+   "steps": [
+    "h002.2"
+   ],
+   "detail": "PMID:22335739 states that TTN truncating mutations cause DCM, not that titin raises DCM risk; it leaves the truncations' functional effect undefined, and a loss-of-function reading would make it oppose the step."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "chain_not_connected",
+   "steps": [
+    "h003.1",
+    "h003.2"
+   ],
+   "detail": "h003.1 ends at 'Titin' but h003.2 restarts from 'RBM20 malfunction', so the titin-to-DCM link the title's 'RBM20-TTN splicing axis' rests on is never stated in h003; the only titin-to-DCM step in the run is h002.2, which has the opposite sign."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_does_not_state_step",
+   "steps": [
+    "h003.2"
+   ],
+   "detail": "PMID:41817671 is a single-case report whose source text is its title only; 'RBM20-related dilated cardiomyopathy' names both ends but gives no direction and no test of RBM20 malfunction causing DCM."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_does_not_state_step",
+   "steps": [
+    "h003.1"
+   ],
+   "detail": "Q5T481 says RBM20 is a splicing repressor whose exon skipping 'is essential for TTN isoform transition'; the step flattens this into 'RBM20 required_for Titin', which the text does not state: losing RBM20 changes which titin isoform is made, not whether titin is there or active."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "confidence_unjustified",
+   "hypothesis": "h003",
+   "detail": "h003 is rated confidence 'high' while its own support field says 'speculative', its chain is disconnected, its only DCM citation is a title-only single-case report, and its RBM20-to-titin citation states isoform switching, not the step."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "confidence_unjustified",
+   "hypothesis": "h002",
+   "detail": "h002 is rated 'medium' with support 'speculative', a disconnected chain, an LMNA branch that never reaches DCM, and a titin step whose sign opposes its own mechanism."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "ungrounded_label",
+   "steps": [
+    "h002.1",
+    "h002.2",
+    "h003.2"
+   ],
+   "detail": "'Lamin A/C', 'Nuclear envelope', 'Titin' and 'RBM20 malfunction' have empty CURIEs; 'Nuclear envelope' is a cellular component given kind protein, and 'RBM20 malfunction' is a loss-of-function state given kind protein."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "no_falsification",
+   "detail": "all three hypotheses have falsification null and no contradicting evidence, and the run cites no contradicting source at all."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "unexplained_genes",
+   "detail": "ABCB9 and OR8J3 are left in unexplained_genes, and no source mentions them; that abstention is consistent with what the run cites."
+  },
+  {
+   "project": "biolean",
+   "category": "no_form_for",
+   "steps": [
+    "h002.1"
+   ],
+   "detail": "no target kind for a cellular component (an effect on the nuclear envelope's integrity or structure); I expressed h002.1 through the GO process 'nuclear envelope organization' (GO:0006998) rather than the component GO:0005635."
+  },
+  {
+   "project": "biolean",
+   "category": "no_form_for",
+   "steps": [
+    "h003.1"
+   ],
+   "detail": "no target for a protein's isoform composition or splicing pattern (RBM20 drives TTN isoform transition); the target can only be titin amount or activity, and I used activity, which is coarser than the cited text."
+  },
+  {
+   "project": "biolean",
+   "category": "tool_gap",
+   "hypothesis": "h002",
+   "detail": "scripts/ipf/sources.py collects only chain, supporting and contradicting accessions, so citations made only in a hypothesis's mechanism prose (PMID:42496620, PMID:PPR1285401) have no text and cannot be judged or listed as excluded."
+  },
+  {
+   "project": "biolean",
+   "category": "rule_missing",
+   "steps": [
+    "h002.2",
+    "h003.2"
+   ],
+   "detail": "the guide's loss-of-function list (loss, reduced, impaired, deficiency) does not say whether 'malfunction', 'dysfunction', 'defect' or 'truncation' count, nor whether to apply the inversion to a cited text's subject when deciding between 'refutes' and an exclusion; I inverted 'RBM20 malfunction' and the h001 title's 'dysfunction', but did not invert 'truncations of titin' in PMID:22335739."
+  },
+  {
+   "project": "biolean",
+   "category": "evidence_weighting",
+   "steps": [
+    "h002.2"
+   ],
+   "detail": "one flipped step (h002.2) produces sign-flipped arms for h001 and h002 (TTN) and for h003 (RBM20, via h003.1), so a per-arm sign-flip count multiplies a single step's error by three."
+  },
+  {
+   "project": "biolean",
+   "category": "source_text_title_only",
+   "steps": [
+    "h003.2"
+   ],
+   "detail": "PMID:41817671 has a title but no abstract; no exclusion category says 'title only', so I used 'undirected' and put the title-only fact in the reason."
+  },
+  {
+   "project": "biolean",
+   "category": "evidence_weighting",
+   "steps": [
+    "h002.1"
+   ],
+   "detail": "a single UniProt function sentence (curatedDb), 'Lamins provide a framework for the nuclear envelope', gives S1 belief 4/5 and the verdict 'established' on its own."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "mechanism_overstates_citation",
+   "hypothesis": "h002",
+   "detail": "h002's mechanism says TTN truncations cause DCM 'by destabilizing sarcomere architecture (PMID:22335739)', but that abstract ends 'Defining the functional effects of TTN truncating mutations should improve our understanding'; it also says lamin A/C is essential for the nuclear envelope 'in cardiac cells (P02545)', which P02545 does not say, and asserts co-occurrence of LMNA and TTN variants in patients with no citation."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "mechanism_overstates_citation",
+   "hypothesis": "h003",
+   "detail": "h003's mechanism says 'RBM20 mutations cause DCM characterized by malignant ventricular arrhythmia and subendocardial fibrosis (PMID:41817671)', a general claim about RBM20 DCM drawn from the title of one case report."
+  }
+ ],
+ "audit": [
+  {
+   "item": "S3 (h003.1) evidence Q5T481",
+   "error": "quote_does_not_state",
+   "before": "{\"ref\": \"Q5T481\", \"kind\": \"curatedDb\", \"quote\": \"RBM20-mediated exon skipping is hormone-dependent and is essential for TTN isoform transition in both cardiac and skeletal muscles\"}",
+   "after": "excluded, not_in_text",
+   "reason": "The claim is RBM20 →+ titin activity (losing RBM20 lowers it). The span's object is 'TTN isoform transition', a different node from titin activity, and the same record calls RBM20 a repressor that excludes exons. Losing the isoform switch does not say titin activity falls. The curator's own finding called the text 'narrower', but it does not entail the claim at all."
+  },
+  {
+   "item": "hypotheses h003 claim TTN →− DCM",
+   "error": "wrong_hypothesis_claim",
+   "before": "[{\"subject\": \"RBM20\", \"sign\": \"neg\", \"target\": {\"disease\": \"dcm\", \"aspect\": \"risk\"}}, {\"subject\": \"TTN\", \"sign\": \"neg\", \"target\": {\"disease\": \"dcm\", \"aspect\": \"risk\"}}]",
+   "after": "[{\"subject\": \"RBM20\", \"sign\": \"neg\", \"target\": {\"disease\": \"dcm\", \"aspect\": \"risk\"}}]",
+   "reason": "The title says 'regulates' (no sign) and the chain starts from RBM20 in both steps. The mechanism's only words on TTN are 'splicing defects in TTN' and disrupted 'isoform switching of titin': an isoform change, not a loss of titin. The guide gives no claim when no direction is stated. The claim added a fourth sign-flipped arm through S2 that h003 does not assert."
+  },
+  {
+   "item": "finding step_coarser_than_citation (h003.1)",
+   "error": "other",
+   "before": "{\"project\": \"hypothesis-agent\", \"category\": \"step_coarser_than_citation\", \"steps\": [\"h003.1\"], \"detail\": \"the cited UniProt text says RBM20 represses splicing and is essential for TTN isoform transition; the step flattens this into 'RBM20 required_for Titin', which BioLean can only hold as titin amount or activity.\"}",
+   "after": "{\"project\": \"hypothesis-agent\", \"category\": \"citation_does_not_state_step\", \"steps\": [\"h003.1\"], \"detail\": \"Q5T481 says RBM20 is a splicing repressor whose exon skipping 'is essential for TTN isoform transition'; the step flattens this into 'RBM20 required_for Titin', which the text does not state: losing RBM20 changes which titin isoform is made, not whether titin is there or active.\"}",
+   "reason": "follows the S3 exclusion: the text is not a finer version of the step, it is a different claim"
+  },
+  {
+   "item": "finding sign_flip (h002.2)",
+   "error": "other",
+   "before": "{\"project\": \"hypothesis-agent\", \"category\": \"sign_flip\", \"steps\": [\"h002.2\"], \"detail\": \"h002.2 says 'Titin' leads to DCM with positive polarity, while h001, h002 and h003 all say titin defects or truncations cause DCM; read as written, every TTN claim in the run composes with the opposite sign through this one step.\"}",
+   "after": "{\"project\": \"hypothesis-agent\", \"category\": \"sign_flip\", \"steps\": [\"h002.2\"], \"detail\": \"h002.2 says 'Titin' leads to DCM with positive polarity, while h001 and h002 say titin dysfunction or truncations cause DCM; read as written, the TTN claims of h001 and h002, and the RBM20 route of h003 through h003.1, all compose with the opposite sign through this one step.\"}",
+   "reason": "follows the removal of the h003 TTN claim"
+  },
+  {
+   "item": "finding evidence_weighting (h002.2)",
+   "error": "other",
+   "before": "{\"project\": \"biolean\", \"category\": \"evidence_weighting\", \"steps\": [\"h002.2\"], \"detail\": \"one flipped step (h002.2) produces sign-flipped arms for h001, h002 and h003 (and a fourth via h003.1), so a per-arm sign-flip count multiplies a single step's error.\"}",
+   "after": "{\"project\": \"biolean\", \"category\": \"evidence_weighting\", \"steps\": [\"h002.2\"], \"detail\": \"one flipped step (h002.2) produces sign-flipped arms for h001 and h002 (TTN) and for h003 (RBM20, via h003.1), so a per-arm sign-flip count multiplies a single step's error by three.\"}",
+   "reason": "follows the removal of the h003 TTN claim: 3 flipped arms, not 4"
+  },
+  {
+   "item": "finding evidence_weighting (h002.1, h003.1)",
+   "error": "other",
+   "before": "{\"project\": \"biolean\", \"category\": \"evidence_weighting\", \"steps\": [\"h002.1\", \"h003.1\"], \"detail\": \"a single UniProt function sentence (curatedDb) gives belief 4/5 and the verdict 'established' on its own, for S1 and for S3, even though S3's text supports only TTN isoform transition, a narrower claim than the 'titin activity' target it lands on.\"}",
+   "after": "{\"project\": \"biolean\", \"category\": \"evidence_weighting\", \"steps\": [\"h002.1\"], \"detail\": \"a single UniProt function sentence (curatedDb), 'Lamins provide a framework for the nuclear envelope', gives S1 belief 4/5 and the verdict 'established' on its own.\"}",
+   "reason": "follows the S3 exclusion: S3 no longer carries evidence"
+  },
+  {
+   "item": "finding confidence_unjustified (h003)",
+   "error": "other",
+   "before": "{\"project\": \"hypothesis-agent\", \"category\": \"confidence_unjustified\", \"hypothesis\": \"h003\", \"detail\": \"h003 is rated confidence 'high' while its own support field says 'speculative', its chain is disconnected, and its only DCM citation is a title-only single-case report.\"}",
+   "after": "{\"project\": \"hypothesis-agent\", \"category\": \"confidence_unjustified\", \"hypothesis\": \"h003\", \"detail\": \"h003 is rated confidence 'high' while its own support field says 'speculative', its chain is disconnected, its only DCM citation is a title-only single-case report, and its RBM20-to-titin citation states isoform switching, not the step.\"}",
+   "reason": "follows the S3 exclusion: no cited text states any h003 step"
+  },
+  {
+   "item": "findings mechanism_overstates_citation (h002)",
+   "error": "missed_finding",
+   "before": "",
+   "after": "{\"project\": \"hypothesis-agent\", \"category\": \"mechanism_overstates_citation\", \"hypothesis\": \"h002\", \"detail\": \"h002's mechanism says TTN truncations cause DCM 'by destabilizing sarcomere architecture (PMID:22335739)', but that abstract ends 'Defining the functional effects of TTN truncating mutations should improve our understanding'; it also says lamin A/C is essential for the nuclear envelope 'in cardiac cells (P02545)', which P02545 does not say, and asserts co-occurrence of LMNA and TTN variants in patients with no citation.\"}",
+   "reason": "the mechanism attributes to its citations claims their texts do not make; the curator flagged the steps but not the prose"
+  },
+  {
+   "item": "findings mechanism_overstates_citation (h003)",
+   "error": "missed_finding",
+   "before": "",
+   "after": "{\"project\": \"hypothesis-agent\", \"category\": \"mechanism_overstates_citation\", \"hypothesis\": \"h003\", \"detail\": \"h003's mechanism says 'RBM20 mutations cause DCM characterized by malignant ventricular arrhythmia and subendocardial fibrosis (PMID:41817671)', a general claim about RBM20 DCM drawn from the title of one case report.\"}",
+   "reason": "the mechanism attributes to its citations claims their texts do not make; the curator flagged the steps but not the prose"
+  }
+ ]
+}

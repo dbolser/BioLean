@@ -1,0 +1,829 @@
+{
+ "run_id": "20260825T001904Z-300a86",
+ "model": "anthropic:claude-opus-5",
+ "question": {
+  "budget": {
+   "max_delegations": 14,
+   "max_model_requests": 60,
+   "min_evidence_per_hypothesis": 2,
+   "min_hypotheses": 3,
+   "min_sources_per_hypothesis": 2,
+   "output_retries": 3
+  },
+  "disease": "Alzheimer's disease",
+  "genes": [
+   "TREM2",
+   "RNPS1",
+   "INPP5D",
+   "APOE",
+   "MS4A4A",
+   "LPIN2",
+   "PLCG2",
+   "ABI3"
+  ],
+  "model": "anthropic:claude-opus-5",
+  "specialist_model": "anthropic:claude-haiku-4-5",
+  "use_network": true
+ },
+ "disease": "Alzheimer's disease",
+ "genes_considered": [
+  "TREM2",
+  "RNPS1",
+  "INPP5D",
+  "APOE",
+  "MS4A4A",
+  "LPIN2",
+  "PLCG2",
+  "ABI3"
+ ],
+ "hypotheses": [
+  {
+   "chain": [
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "microglia"
+      },
+      "disease_state": null,
+      "tissue": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "tissue",
+       "label": "brain"
+      }
+     },
+     "evidence": [
+      "STRING:APOE-TREM2"
+     ],
+     "note": "Strongest edge in the set and the only one with experimental support (0.58).",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "TREM2"
+     },
+     "polarity": "unknown",
+     "relation": "binds",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "APOE"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "R-HSA-2172127",
+      "R-HSA-2424491"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "DAP12 signalling"
+     },
+     "polarity": "positive",
+     "relation": "activates",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "TREM2"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "STRING:TREM2-PLCG2",
+      "R-HSA-1855204"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "PLCG2"
+     },
+     "polarity": "positive",
+     "relation": "activates",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "DAP12 signalling"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "R-HSA-1855204",
+      "AGR:MGI:97616:MP:0014469"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "IP3/Ca2+ second messengers"
+     },
+     "polarity": "positive",
+     "relation": "increases_amount",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "PLCG2"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "microglia"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [
+      "PMID:42582107",
+      "STRING:INPP5D-PLCG2"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "PI3K/PIP3 signalling downstream of CD22"
+     },
+     "polarity": "negative",
+     "relation": "inhibits",
+     "subject": {
+      "curie": "ENSEMBL:ENSG00000168918",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "INPP5D"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:42357928",
+      "rs72824905"
+     ],
+     "note": "Higher signalling gain (P522R carriers) is protective; loss-of-function (R47H) raises risk.",
+     "object": {
+      "curie": "EFO:MONDO_0004975",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "Alzheimer's disease"
+     },
+     "polarity": "negative",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "microglial plaque-clearance and compaction program"
+     }
+    }
+   ],
+   "confidence": "high",
+   "contradicting_evidence": [
+    "STRING:TREM2-INPP5D and STRING:TREM2-PLCG2 edges are largely text-mining derived (experimental support 0.00), so the physical wiring of the triangle is weaker than the co-citation suggests.",
+    "PMID:42601455 reports PLCG2 downregulation acting in *neuronal* cultures to increase AD hallmarks, which places part of the PLCG2 effect outside microglia and outside the DAP12 axis."
+   ],
+   "falsification": {
+    "description": "In human iPSC-microglia carrying TREM2 R47H, restore signalling by knocking down INPP5D and measure Ca2+ flux, PI(3,4,5)P3 and amyloid-plaque uptake. If the TREM2/PLCG2/INPP5D genes act on one shared rheostat, INPP5D knockdown should rescue the R47H phagocytosis and Ca2+ deficit; if each risk gene acts through an independent mechanism, no rescue occurs.",
+    "expected": "positive",
+    "perturbation": {
+     "action": "knockdown",
+     "target": {
+      "curie": "ENSEMBL:ENSG00000168918",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "INPP5D"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "process",
+     "label": "microglial amyloid-beta uptake"
+    },
+    "system": "human iPSC-derived microglia, TREM2 R47H isogenic pair"
+   },
+   "genes": [
+    "TREM2",
+    "PLCG2",
+    "INPP5D",
+    "APOE"
+   ],
+   "hypothesis_id": "H1",
+   "mechanism": "APOE-bound lipids/amyloid ligate TREM2, which signals through DAP12 to activate PLCγ2, generating IP3 and Ca2+ and driving the disease-associated microglial program (phagocytosis, plaque compaction, synapse protection). INPP5D/SHIP1 hydrolyses PI(3,4,5)P3 downstream of ITIM receptors such as CD22 and is the inhibitory brake on this axis. Alzheimer's risk alleles are distributed on both arms of the same rheostat: TREM2 R47H (rs75932628, OR 2.22) and ABI3 rs616338 raise risk by weakening the response, while PLCG2 P522R (rs72824905, OR 0.73) and INPP5D rs10933431 (OR 0.93) lower it by increasing signalling flux or de-repressing it. Net risk therefore tracks the integrated gain of the DAP12→PLCγ2→Ca2+ arm rather than any one gene.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "R-HSA-2172127",
+    "R-HSA-2424491",
+    "R-HSA-1855204",
+    "STRING:TREM2-PLCG2",
+    "STRING:INPP5D-PLCG2",
+    "STRING:TREM2-INPP5D",
+    "STRING:APOE-TREM2",
+    "STRING:PMID:28714976",
+    "rs75932628",
+    "rs72824905",
+    "rs10933431",
+    "PMID:42582107",
+    "PMID:42357928",
+    "PMID:41633359",
+    "AGR:MGI:1913150:MP:0003691",
+    "AGR:MGI:97616:MP:0014469",
+    "OT:TREM2-MONDO_0004975",
+    "OT:PLCG2-MONDO_0004975",
+    "OT:INPP5D-MONDO_0004975"
+   ],
+   "title": "TREM2/DAP12–PLCG2 signalling sets the microglial activation threshold; INPP5D is the brake and coding variants shift it in either direction"
+  },
+  {
+   "chain": [
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "microglia"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [
+      "PMID:41435829",
+      "STRING:MS4A4A-TREM2"
+     ],
+     "note": "Direction contested: PMID:41785844 describes MS4A4A elevating TREM2 signalling to reduce amyloid. Recorded as a contradiction rather than resolved.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "TREM2"
+     },
+     "polarity": "negative",
+     "relation": "decreases_amount",
+     "subject": {
+      "curie": "UniProt:Q96JQ5",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "MS4A4A"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "rs1582763",
+      "rs7232"
+     ],
+     "note": "OR 0.91 and 0.90, p=4e-42 and 2e-54.",
+     "object": {
+      "curie": "EFO:MONDO_0004975",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "Alzheimer's disease"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "rs1582763 protective allele"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "Q9P2A4",
+      "PMID:42092345"
+     ],
+     "note": "UniProt records only 'reduces cell motility in vitro' and an SH3 domain; the WAVE-complex assignment is inference.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "actin-dependent microglial motility and process extension"
+     },
+     "polarity": "positive",
+     "relation": "required_for",
+     "subject": {
+      "curie": "UniProt:Q9P2A4",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "ABI3"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:42092345",
+      "rs616338"
+     ],
+     "note": "",
+     "object": {
+      "curie": "EFO:MONDO_0004975",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "Alzheimer's disease"
+     },
+     "polarity": "negative",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "microglial encapsulation of plaques"
+     }
+    }
+   ],
+   "confidence": "medium",
+   "contradicting_evidence": [
+    "The literature summary states MS4A4A *elevates* TREM2 signalling to reduce amyloid pathology (PMID:41785844) while PMID:41435829 states MS4A4A/MS4A6A *negatively* regulate TREM2 — the direction of the MS4A4A→TREM2 arrow is unresolved and may be dose- or isoform-dependent.",
+    "AGR:MGI:1913860:no-phenotypes — the Alliance holds no phenotype annotation for mouse Abi3 at all, so the cytoskeletal claim rests on the human variant knock-in paper alone."
+   ],
+   "falsification": {
+    "description": "Cross the Abi3 S212F knock-in and an Ms4a4a knockout onto a TREM2-null amyloid mouse (App NL-G-F; Trem2-/-). If MS4A4A and ABI3 act only as modifiers of TREM2, neither perturbation should change plaque compaction or microglial barrier formation on the Trem2-null background, whereas both do so on Trem2-WT. Any residual effect on the null background falsifies the 'modifier-only' claim.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "UniProt:Q96JQ5",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "MS4A4A"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "phenotype",
+     "label": "plaque compaction / microglial plaque coverage"
+    },
+    "system": "App NL-G-F ; Trem2-/- mouse"
+   },
+   "genes": [
+    "MS4A4A",
+    "ABI3",
+    "TREM2"
+   ],
+   "hypothesis_id": "H2",
+   "mechanism": "MS4A4A is a membrane tetraspanning protein of a multimeric receptor complex that, with MS4A6A, negatively regulates TREM2 levels and microglial state; ABI3 is a cytoplasmic SH3-domain WAVE-regulatory-complex component controlling actin-dependent motility and process extension. Neither carries an obvious catalytic function of its own, and both converge on TREM2 output: MS4A4A upstream at the level of receptor abundance (rs1582763/rs7232 are eQTL-like protective alleles, OR ~0.9), ABI3 downstream at the level of the cytoskeletal execution of phagocytosis and plaque encapsulation (rs616338 S209F, OR 1.31). The two genes therefore explain risk without needing a distinct pathway: they retune the same TREM2-dependent barrier around plaques.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "PMID:41435829",
+    "PMID:41785844",
+    "PMID:42092345",
+    "rs7232",
+    "rs1582763",
+    "rs616338",
+    "rs11655466",
+    "STRING:MS4A4A-TREM2",
+    "STRING:ABI3-TREM2",
+    "Q96JQ5",
+    "Q9P2A4",
+    "OT:MS4A4A-MONDO_0004975",
+    "OT:ABI3-MONDO_0004975"
+   ],
+   "title": "MS4A4A and ABI3 are modifiers that set TREM2 surface/effector output rather than independent risk pathways"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "Q92539"
+     ],
+     "note": "Mg2+-dependent phosphatidate phosphatase converting PA to diacylglycerol at the ER membrane; also a PPARGC1A coactivator.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "phosphatidic acid"
+     },
+     "polarity": "negative",
+     "relation": "decreases_amount",
+     "subject": {
+      "curie": "UniProt:Q92539",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "LPIN2"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "HPA:ENSG00000101577"
+     ],
+     "note": "333.7 nCPM in microglia despite being liver-enhanced at tissue level — the observation that motivates this hypothesis.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "cell_type",
+      "label": "microglia"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "UniProt:Q92539",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "LPIN2"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "R-HSA-9029569",
+      "R-HSA-9024446"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "LXR (NR1H2/NR1H3) cholesterol transport and efflux"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "APOE"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:42602355",
+      "PMID:8346443"
+     ],
+     "note": "",
+     "object": {
+      "curie": "EFO:MONDO_0004975",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "Alzheimer's disease"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "microglial lipid stress"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [
+    "GWAS:LPIN2:no-association — GWAS Catalog reports no LPIN2 variant associated with Alzheimer's disease among 6716 curated associations, so there is no human genetic support for this arm.",
+    "The Europe PMC search found no publication linking LPIN2 to neurodegeneration, microglial lipid handling or amyloid/tau pathology.",
+    "Lpin2-/- mice show ataxia, cerebellar abnormality and anemia (AGR:MGI:1891341:MP:0001393) but no annotated inflammatory or amyloid phenotype, so the neural phenotype may be cerebellar and non-microglial."
+   ],
+   "falsification": {
+    "description": "Knock out Lpin2 selectively in microglia (Cx3cr1-CreER) in an App NL-G-F mouse and quantify lipid-droplet-accumulating microglia (PLIN2+ / BODIPY+ fraction), phagocytic capacity and plaque burden. If LPIN2 sets the microglial lipid burden, the knockout should increase droplet-laden microglia and plaque load; no change in droplet content falsifies the hypothesis and confines LPIN2's brain role to the cerebellar phenotype already recorded.",
+    "expected": "positive",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "UniProt:Q92539",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "LPIN2"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "cell_type",
+     "label": "lipid-droplet-accumulating microglia"
+    },
+    "system": "App NL-G-F mouse, microglia-conditional"
+   },
+   "genes": [
+    "APOE",
+    "LPIN2",
+    "TREM2"
+   ],
+   "hypothesis_id": "H3",
+   "mechanism": "The set is enriched for LXR (NR1H2/NR1H3) cholesterol-transport and efflux signalling as well as DAP12 signalling, which suggests a second, lipid-metabolic axis. APOE is the principal brain lipid carrier and TREM2 is described as an immunometabolic hub responding to lipid stress. LPIN2 — which has no Alzheimer's GWAS signal and no disease literature but is a magnesium-dependent phosphatidate phosphatase and PPARGC1A coactivator, and is substantially expressed in human microglia (333.7 nCPM) — is proposed to set the phosphatidate/diacylglycerol balance that determines whether a lipid-laden microglial cell forms droplets and becomes dysfunctional. On this view LPIN2 is a cell-intrinsic determinant of the lipid-droplet-accumulating microglial state that TREM2 loss also produces, and would modify amyloid pathology without ever appearing in a GWAS.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "R-HSA-9029569",
+    "R-HSA-9024446",
+    "Q92539",
+    "HPA:ENSG00000101577",
+    "PMID:42602355",
+    "PMID:8346443",
+    "STRING:APOE-TREM2",
+    "AGR:MGI:1891341:MP:0002702",
+    "AGR:MGI:1891341:MP:0002644",
+    "AGR:MGI:1891341:MP:0001393",
+    "AGR:MGI:88057:MP:0008916"
+   ],
+   "title": "Lipid load, not immune signalling, is the shared substrate: APOE and LPIN2 set the microglial lipid burden that TREM2 must sense"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "Q15287"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "UPF2-dependent nonsense-mediated decay and alternative splicing"
+     },
+     "polarity": "positive",
+     "relation": "required_for",
+     "subject": {
+      "curie": "UniProt:Q15287",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "RNPS1"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "Q15287"
+     ],
+     "note": "Speculative: no record ties RNPS1 to these specific transcripts. This is the arrow the falsifying experiment tests.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "NMD-sensitive microglial risk transcripts (INPP5D, PLCG2)"
+     },
+     "polarity": "negative",
+     "relation": "decreases_amount",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "UPF2-dependent nonsense-mediated decay and alternative splicing"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "OT:RNPS1-MONDO_0004975",
+      "GWAS:RNPS1:no-association"
+     ],
+     "note": "Recorded as a near-null association; the honest reading is that this arrow does not exist.",
+     "object": {
+      "curie": "EFO:MONDO_0004975",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "Alzheimer's disease"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "UniProt:Q15287",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "RNPS1"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [
+    "GWAS:RNPS1:no-association and OT:RNPS1-MONDO_0004975 (score 0.01) both argue against any causal role; the Europe PMC search returned no RNPS1–neurodegeneration paper.",
+    "RNPS1 is in the most constrained gnomAD bin (OT:RNPS1-constraint, bin 0), which is compatible with essentiality rather than with disease-specific modulation."
+   ],
+   "falsification": {
+    "description": "Knock down RNPS1 in human iPSC-derived microglia and RNA-seq with isoform-level and NMD-target analysis. If RNPS1 is a trans-regulator of the risk module, INPP5D and PLCG2 transcript abundance or isoform ratios shift measurably and phagocytic function follows; if only general housekeeping transcripts change and the AD risk genes are unaffected, RNPS1 should be dropped from the list as a co-expression artefact.",
+    "expected": "unknown",
+    "perturbation": {
+     "action": "knockdown",
+     "target": {
+      "curie": "UniProt:Q15287",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "RNPS1"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "gene",
+     "label": "INPP5D and PLCG2 transcript isoform abundance"
+    },
+    "system": "human iPSC-derived microglia"
+   },
+   "genes": [
+    "RNPS1",
+    "INPP5D",
+    "PLCG2"
+   ],
+   "hypothesis_id": "H4",
+   "mechanism": "RNPS1 is the one gene with no Alzheimer's GWAS signal, essentially no Open Targets association (0.01), no STRING edge to any other member, no Reactome mapping, and low tissue specificity with nucleoplasmic localisation. The only principled way it could belong is indirectly: as an auxiliary exon-junction-complex and ASAP/PSAP component it governs UPF2-dependent nonsense-mediated decay and substrate-specific alternative splicing, so RNPS1 activity would set the steady-state abundance and isoform choice of the microglial risk transcripts themselves (INPP5D, PLCG2 and other NMD-sensitive targets), making it a trans-regulator rather than a risk locus. The alternative and more parsimonious reading is that RNPS1 entered this list via a blood-expression or co-expression module — STRING flags 'blood' as the only tissue enriched across the set — and has no causal role in Alzheimer's disease.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "Q15287",
+    "HPA:ENSG00000205937",
+    "OT:RNPS1-MONDO_0004975",
+    "OT:RNPS1-constraint",
+    "GWAS:RNPS1:no-association",
+    "STRING:BTO:0000089"
+   ],
+   "title": "RNPS1 is a peripheral-blood/expression-panel artefact, not a microglial risk gene — it belongs to the list through NMD control of transcript abundance, if at all"
+  },
+  {
+   "chain": [
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "microglia"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [
+      "PMID:41633359"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "RIPK1 kinase"
+     },
+     "polarity": "negative",
+     "relation": "inhibits",
+     "subject": {
+      "curie": "ENSEMBL:ENSG00000168918",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "INPP5D"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:41633359"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "proinflammatory mediators"
+     },
+     "polarity": "positive",
+     "relation": "increases_amount",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "RIPK1 kinase"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "microglia"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [
+      "PMID:42582107"
+     ],
+     "note": "Opposite therapeutic sign to the RIPK1 step above; both are held simultaneously and are the reason the falsifying experiment measures both readouts.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "microglial amyloid-beta clearance"
+     },
+     "polarity": "negative",
+     "relation": "inhibits",
+     "subject": {
+      "curie": "ENSEMBL:ENSG00000168918",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "INPP5D"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "HPA:ENSG00000168918"
+     ],
+     "note": "1021.1 nCPM — the highest microglial enrichment in the set.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "cell_type",
+      "label": "microglia"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "ENSEMBL:ENSG00000168918",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "INPP5D"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "CHEMBL:CHEMBL3989954",
+      "OT:INPP5D-tractability"
+     ],
+     "note": "Phase 3 in a non-CNS indication; listed as evidence of tractability, not of efficacy in AD.",
+     "object": {
+      "curie": "ENSEMBL:ENSG00000168918",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "INPP5D"
+     },
+     "polarity": "positive",
+     "relation": "activates",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "drug",
+      "label": "rosiptor (SHIP1 modulator)"
+     }
+    }
+   ],
+   "confidence": "medium",
+   "contradicting_evidence": [
+    "The two INPP5D papers imply opposite therapeutic directions: PMID:41633359 makes INPP5D protective (repressing RIPK1 and proinflammatory mediators, so inhibition would be harmful) while PMID:42582107 makes INPP5D the transducer of CD22-mediated suppression of Aβ clearance (so inhibition would be beneficial).",
+    "Inpp5d mouse phenotypes recorded by the Alliance are B- and T-cell, not microglial (AGR:MGI:107357:MP:0002144, MP:0005463), raising a peripheral-immune off-target concern for systemic SHIP1 modulation.",
+    "ClinicalTrials.gov returned no Alzheimer's trial targeting INPP5D, TREM2, PLCG2 or APOE, so this direction is entirely untested in humans."
+   ],
+   "falsification": {
+    "description": "Dose an App NL-G-F or 5xFAD mouse with a SHIP1 inhibitor and measure, in the same animals, plaque-associated Aβ clearance and RIPK1-dependent proinflammatory transcript induction. If the CD22 arm dominates, Aβ burden falls without a proportionate inflammatory rise; if the RIPK1 arm dominates, inflammatory mediators rise and pathology worsens. Either outcome kills one half of this hypothesis.",
+    "expected": "unknown",
+    "perturbation": {
+     "action": "inhibit",
+     "target": {
+      "curie": "ENSEMBL:ENSG00000168918",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "INPP5D"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "phenotype",
+     "label": "amyloid-beta plaque burden"
+    },
+    "system": "App NL-G-F mouse"
+   },
+   "genes": [
+    "INPP5D",
+    "TREM2",
+    "PLCG2"
+   ],
+   "hypothesis_id": "H5",
+   "mechanism": "Unlike TREM2 and ABI3, INPP5D is an enzyme with advanced clinical tractability — the SHIP1 modulator rosiptor reached phase 3 for another indication — and it is the most microglia-enriched gene in the set (1021 nCPM). Two independent mechanisms converge on it: it represses RIPK1 kinase and thereby the transcription of diverse proinflammatory mediators and late-onset AD risk factors, and it transduces CD22 inhibition of amyloid-beta clearance. These arms have opposite therapeutic signs — inhibiting SHIP1 should improve Aβ clearance but could de-repress RIPK1-driven inflammation — so the direction of any INPP5D-directed therapy is the key open question, and the protective common allele rs10933431 (OR 0.93) does not by itself say which arm it works through. No trial has yet tested any of these targets in Alzheimer's disease.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "PMID:41633359",
+    "PMID:42582107",
+    "OT:INPP5D-MONDO_0004975",
+    "OT:INPP5D-tractability",
+    "CHEMBL:CHEMBL3989954",
+    "HPA:ENSG00000168918",
+    "rs10933431",
+    "AGR:MGI:107357:MP:0002144",
+    "AGR:MGI:107357:MP:0005463",
+    "STRING:INPP5D-PLCG2"
+   ],
+   "title": "INPP5D disinhibition is the tractable node: SHIP1 sits at the intersection of the RIPK1-inflammatory and CD22-phagocytic arms and already has a phase-3 small molecule"
+  }
+ ],
+ "unexplained_genes": []
+}

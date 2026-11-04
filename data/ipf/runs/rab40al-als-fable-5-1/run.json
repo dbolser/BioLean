@@ -1,0 +1,539 @@
+{
+ "run_id": "rab40al-als-fable-5-1",
+ "model": "scripted-offline:claude-fable-5-1",
+ "question": {
+  "arm": "multi_agent",
+  "budget": {
+   "max_delegations": 14,
+   "max_model_requests": 60,
+   "max_specialist_requests": 8,
+   "min_evidence_per_hypothesis": 2,
+   "min_hypotheses": 3,
+   "min_sources_per_hypothesis": 2,
+   "output_retries": 3
+  },
+  "data_policy": {
+   "max_age_seconds": 86400,
+   "mode": "cache-preferred",
+   "snapshot_run_id": null
+  },
+  "disease": "amyotrophic lateral sclerosis",
+  "formalise": false,
+  "genes": [
+   "RAB40AL"
+  ],
+  "model": "scripted-offline:claude-fable-5-1",
+  "specialist_model": "scripted-offline:claude-fable-5-1",
+  "specialists": [
+   "chembl",
+   "expression",
+   "gwas",
+   "interactions",
+   "literature",
+   "model_organism",
+   "open_targets",
+   "pathways",
+   "single_cell",
+   "trials",
+   "uniprot"
+  ],
+  "tissue": {
+   "artifact_id": "sha256:9083451a13b7e45058362501bb03fd93944d7aa79ffc0248bc2cf8b1520b9652",
+   "label": "brain",
+   "uberon": "UBERON:0000955"
+  },
+  "use_network": true
+ },
+ "abstention": null,
+ "disease": "amyotrophic lateral sclerosis",
+ "genes_considered": [
+  "RAB40AL"
+ ],
+ "hypotheses": [
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "STRING:RAB40AL-CUL5",
+      "STRING:RAB40AL-ELOC",
+      "STRING:GO:0031466"
+     ],
+     "note": "With ELOC: the Cul5-RING ligase complex is the strongest enrichment in the neighbourhood (FDR 7e-7).",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "CUL5"
+     },
+     "polarity": "unknown",
+     "relation": "binds",
+     "subject": {
+      "curie": "UniProtKB:P0C0E4",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "RAB40AL"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "STRING:GO:0043161",
+      "STRING:GO:0120184",
+      "STRING:GO:0150118",
+      "P0C0E4"
+     ],
+     "note": "Substrate identity is inferred from the paralogues RAB40B/C (p190RhoGAP, Rap2 and other adhesion regulators in the literature); none of that is in the ledger. The enrichment terms are the receipt.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "ubiquitin-dependent turnover of focal-adhesion and RhoA regulators"
+     },
+     "polarity": "positive",
+     "relation": "required_for",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "ECS(RAB40AL) Cul5-RING ubiquitin ligase"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "motor neuron"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [],
+     "note": "Direction depends on which substrate accumulates; a RhoGAP would lower RhoA activity, a RhoGEF would raise it. Either is a departure from the set point.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "RhoA/actin imbalance at the growth cone"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "accumulated focal-adhesion and RhoA regulators"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [],
+     "note": "Dying-back axonopathy is an established ALS mechanism (KIF5A, DCTN1, TUBA4A); not in the ledger.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "distal motor axon retraction"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "RhoA/actin imbalance at the growth cone"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [],
+     "note": "",
+     "object": {
+      "curie": "MONDO:0004976",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "amyotrophic lateral sclerosis"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "distal motor axon retraction"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [
+    "HPA:ENSG00000102128",
+    "CXG:ENSG00000102128:CL_0002453:MONDO_0004976:not-detected",
+    "GWAS:RAB40AL:no-association"
+   ],
+   "falsification": {
+    "description": "Step one, because every source says the gene is off in the CNS: quantify RAB40AL in iPSC-derived motor neurons with a paralogue-discriminating assay (primers or long reads across the sites where it differs from RAB40A). If absent, the hypothesis is dead before any perturbation. If present, CRISPR knockout and diGly ubiquitin-remnant proteomics: if no focal-adhesion or RhoA regulator loses ubiquitination and accumulates, and neurite retraction under trophic withdrawal is unchanged, the hypothesis is dead.",
+    "expected": "positive",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "UniProtKB:P0C0E4",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "RAB40AL"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "process",
+     "label": "abundance of Cul5-dependent focal-adhesion and RhoA regulator substrates"
+    },
+    "system": "human iPSC-derived motor neurons"
+   },
+   "genes": [
+    "RAB40AL"
+   ],
+   "hypothesis_id": "H1",
+   "mechanism": "RAB40AL is the substrate receptor of a Cul5-Elongin B/C RING ligase, and its STRING neighbourhood is enriched for negative regulation of focal-adhesion assembly and disassembly: through the paralogues, RAB40-Cul5 complexes are known to ubiquitinate regulators of RhoA and the actin cytoskeleton. The claim is that in motor neurons RAB40AL does the same job on at least one such regulator, and that a hypomorphic or absent RAB40AL lets that substrate accumulate, tipping the RhoA/actin balance the growth cone and the distal axon depend on. The end state is the dying-back axonopathy ALS already shows with KIF5A and DCTN1 -- a different route to the same lesion. X-linkage would make the effect hemizygous in men, who carry the excess ALS risk.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "STRING:RAB40AL-CUL5",
+    "STRING:RAB40AL-ELOC",
+    "STRING:GO:0031466",
+    "STRING:GO:0043161",
+    "STRING:GO:0120184",
+    "STRING:GO:0150118",
+    "STRING:GO:0001953",
+    "P0C0E4",
+    "OT:RAB40AL-tractability"
+   ],
+   "title": "Loss of the ECS(RAB40AL) Cul5 ligase stabilises a cytoskeletal substrate that distal motor axons cannot tolerate"
+  },
+  {
+   "chain": [
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "other",
+       "label": "mitochondrion"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [
+      "STRING:RAB40AL-ISCA1",
+      "STRING:RAB40A-ISCA1",
+      "STRING:ISCA1-RAB40B",
+      "P0C0E4"
+     ],
+     "note": "Experimental score 0.96, and the same edge for RAB40A and RAB40B. UniProt annotates RAB40AL to the mitochondrion.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "ISCA1"
+     },
+     "polarity": "unknown",
+     "relation": "binds",
+     "subject": {
+      "curie": "UniProtKB:P0C0E4",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "RAB40AL"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "STRING:GO:0016567",
+      "STRING:RAB40AL-CUL5"
+     ],
+     "note": "The hypothesis proper: the interaction is degradative rather than regulatory. Not shown for any RAB40 member.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "ISCA1"
+     },
+     "polarity": "negative",
+     "relation": "decreases_amount",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "ECS(RAB40AL) Cul5-RING ubiquitin ligase"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [],
+     "note": "ISCA1's role is textbook, not in the ledger.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "[4Fe-4S] cluster assembly for respiratory complexes and aconitase"
+     },
+     "polarity": "positive",
+     "relation": "required_for",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "ISCA1"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "motor neuron"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [
+      "CHEMBL:CHEMBL290916-MONDO_0004976"
+     ],
+     "note": "Edaravone (CHEMBL290916), a radical scavenger, is approved for ALS: the oxidative-stress axis is treatable.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "oxidative stress in motor neurons"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "mitochondrial Fe-S cluster deficiency"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [],
+     "note": "",
+     "object": {
+      "curie": "MONDO:0004976",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "amyotrophic lateral sclerosis"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "oxidative stress in motor neurons"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [
+    "HPA:ENSG00000102128",
+    "CXG:ENSG00000102128:CL_0002453:MONDO_0004976:not-detected",
+    "AGR:MGI:2183451:MP:0005642"
+   ],
+   "falsification": {
+    "description": "Express wild-type RAB40AL against a SOCS-box-deleted variant that cannot recruit Cul5, in HEK293 and in iPSC-derived motor neurons. Measure ISCA1 half-life by cycloheximide chase and mitochondrial aconitase and complex II activity. If ISCA1 stability and Fe-S enzyme activity are indifferent to RAB40AL and to its SOCS box, the hypothesis is dead. The mouse Rab40b knockout's lone phenotype -- reduced MCHC, an iron-handling trait -- is the one thin hint that the family touches iron biology at all.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "overexpress",
+     "target": {
+      "curie": "UniProtKB:P0C0E4",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "RAB40AL"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "protein",
+     "label": "ISCA1"
+    },
+    "system": "HEK293 and human iPSC-derived motor neurons"
+   },
+   "genes": [
+    "RAB40AL"
+   ],
+   "hypothesis_id": "H2",
+   "mechanism": "UniProt places RAB40AL at the mitochondrion, and STRING carries an experimental interaction with ISCA1, the iron-sulfur cluster assembly protein that matures [4Fe-4S] clusters for respiratory complexes I and II and for aconitase -- an edge that recurs for RAB40A and RAB40B, so it is a family property rather than a one-off. The claim is that ECS(RAB40AL) ubiquitinates ISCA1 and sets its level; without RAB40AL, ISCA1 is mis-set, Fe-S enzyme activity falls, electron transport leaks and motor neurons, already the most ROS-exposed cells in the cord, take the hit. Edaravone's approval shows that this axis is a treatable one in ALS.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "STRING:RAB40AL-ISCA1",
+    "STRING:RAB40A-ISCA1",
+    "STRING:ISCA1-RAB40B",
+    "STRING:GO:0016567",
+    "P0C0E4",
+    "CHEMBL:CHEMBL290916-MONDO_0004976"
+   ],
+   "title": "RAB40AL at the mitochondrion controls ISCA1 turnover, and Fe-S cluster deficiency drives oxidative stress in motor neurons"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "STRING:GO:0005768",
+      "STRING:GO:0008021",
+      "STRING:GO:0006887",
+      "P0C0E4"
+     ],
+     "note": "Enrichment terms for the neighbourhood; UniProt gives the generic Rab role in vesicle formation, movement, tethering and fusion.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "endosome and synaptic-vesicle compartments"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "UniProtKB:P0C0E4",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "RAB40AL"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "STRING:RAB40AL-FYCO1"
+     ],
+     "note": "Text-mining 0.85, experimental 0. The link that most needs testing.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "FYCO1"
+     },
+     "polarity": "unknown",
+     "relation": "binds",
+     "subject": {
+      "curie": "UniProtKB:P0C0E4",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "RAB40AL"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [],
+     "note": "FYCO1 biology from the literature, not the ledger.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "kinesin-dependent axonal autophagosome transport"
+     },
+     "polarity": "positive",
+     "relation": "required_for",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "FYCO1"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "motor neuron"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "clearance of p62 and TDP-43 cargo from the distal axon"
+     },
+     "polarity": "positive",
+     "relation": "required_for",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "kinesin-dependent axonal autophagosome transport"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [],
+     "note": "The proteostasis/autophagy axis is an established secondary ALS mechanism (SQSTM1, OPTN, TBK1, UBQLN2, VCP).",
+     "object": {
+      "curie": "MONDO:0004976",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "amyotrophic lateral sclerosis"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "stalled autophagosomes in the distal axon"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [
+    "HPA:ENSG00000102128",
+    "CXG:ENSG00000102128:CL_0002453:MONDO_0004976:not-detected",
+    "reactome:coverage"
+   ],
+   "falsification": {
+    "description": "In iPSC-derived motor neurons expressing LC3-GFP, knock down RAB40AL (or express a GDP-locked T-to-N mutant) and live-image autophagosome motility in the axon. If FYCO1 localisation and anterograde autophagosome run length and flux are unchanged, and distal p62 does not accumulate, the hypothesis is dead. A co-immunoprecipitation of RAB40AL with FYCO1 that fails would kill it one step earlier.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "knockdown",
+     "target": {
+      "curie": "UniProtKB:P0C0E4",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "RAB40AL"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "process",
+     "label": "anterograde autophagosome run length in the axon"
+    },
+    "system": "human iPSC-derived motor neurons, LC3-GFP live imaging"
+   },
+   "genes": [
+    "RAB40AL"
+   ],
+   "hypothesis_id": "H3",
+   "mechanism": "RAB40AL is a Rab, and its neighbourhood is enriched for endosome, synaptic vesicle and exocytosis; its single trafficking-specific edge is to FYCO1, the Rab7-LC3-PI3P adaptor that couples autophagosomes to kinesin for transport along the axon. The claim is that GTP-RAB40AL contributes to FYCO1 recruitment or positioning, and that without it autophagosomes stall in the distal axon, where p62 and TDP-43 cargo accumulates. This is the same compartment that C9orf72 (a Rab GEF), ALS2 (a Rab5 GEF), OPTN, SQSTM1 and TBK1 converge on, which is why a Rab with no ALS literature can still be worth a look. The FYCO1 edge is text-mining only, and this is the weakest of the three.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "STRING:RAB40AL-FYCO1",
+    "STRING:GO:0005768",
+    "STRING:GO:0008021",
+    "STRING:GO:0006887",
+    "P0C0E4"
+   ],
+   "title": "RAB40AL positions autophagosomes in the axon through FYCO1, and its loss stalls cargo clearance distally"
+  }
+ ],
+ "unexplained_genes": []
+}

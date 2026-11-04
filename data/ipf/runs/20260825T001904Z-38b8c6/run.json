@@ -1,0 +1,774 @@
+{
+ "run_id": "20260825T001904Z-38b8c6",
+ "model": "anthropic:claude-opus-5",
+ "question": {
+  "budget": {
+   "max_delegations": 14,
+   "max_model_requests": 60,
+   "min_evidence_per_hypothesis": 2,
+   "min_hypotheses": 3,
+   "min_sources_per_hypothesis": 2,
+   "output_retries": 3
+  },
+  "disease": "restless legs syndrome",
+  "genes": [
+   "ACO1",
+   "MEIS1",
+   "GLIPR1",
+   "PTPRD",
+   "GABARAPL2",
+   "BTBD9"
+  ],
+  "model": "anthropic:claude-opus-5",
+  "specialist_model": "anthropic:claude-haiku-4-5",
+  "use_network": true
+ },
+ "disease": "restless legs syndrome",
+ "genes_considered": [
+  "ACO1",
+  "MEIS1",
+  "GLIPR1",
+  "PTPRD",
+  "GABARAPL2",
+  "BTBD9"
+ ],
+ "hypotheses": [
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "rs113851554",
+      "OT:MEIS1-MONDO_0005391"
+     ],
+     "note": "Effect direction on expression is inferred from the mouse loss-of-function models, not measured in the GWAS record itself.",
+     "object": {
+      "curie": "UniProt:O00470",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "MEIS1"
+     },
+     "polarity": "negative",
+     "relation": "decreases_amount",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "rs113851554 risk allele at MEIS1"
+     }
+    },
+    {
+     "context": {
+      "cell_type": null,
+      "disease_state": null,
+      "tissue": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "tissue",
+       "label": "cerebellum"
+      }
+     },
+     "evidence": [
+      "PMID:42309051"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "inhibition of cerebellar output"
+     },
+     "polarity": "positive",
+     "relation": "required_for",
+     "subject": {
+      "curie": "UniProt:O00470",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "MEIS1"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "AGR:MGI:104717:MP:0020478",
+      "AGR:MGI:104717:DOID:0050425"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "phenotype",
+      "label": "abnormal circadian sleep/wake cycle"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "loss of MEIS1"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "AGR:MGI:1916625:MP:0011396",
+      "AGR:MGI:1916625:DOID:0050425"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "phenotype",
+      "label": "abnormal sleep behavior"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "loss of BTBD9"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:17634447",
+      "STRING:DOID:0050425"
+     ],
+     "note": "",
+     "object": {
+      "curie": "EFO:MONDO_0005391",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "restless legs syndrome"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "phenotype",
+      "label": "abnormal sleep/motor output"
+     }
+    }
+   ],
+   "confidence": "high",
+   "contradicting_evidence": [
+    "STRING:MEIS1-BTBD9 links the two proteins with combined score 0.77 but from text-mining alone (experimental 0.00), i.e. co-citation in RLS papers rather than physical or functional interaction — the network evidence for a shared complex is circular."
+   ],
+   "falsification": {
+    "description": "Conditionally delete Meis1 in cerebellar nuclei (or the relevant inhibitory afferents) in adult mice and record EMG-synchronised polysomnography plus rest-phase limb movements. If the hypothesis is right, periodic limb movements and sleep fragmentation increase relative to littermate controls, and matched Btbd9 conditional deletion in the same nucleus produces a comparable increase. If neither manipulation changes limb-movement frequency despite verified knockout, the circuit claim fails.",
+    "expected": "positive",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "UniProt:O00470",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "MEIS1"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "phenotype",
+     "label": "periodic limb movements during rest phase"
+    },
+    "system": "conditional knockout mouse, cerebellar nuclei"
+   },
+   "genes": [
+    "MEIS1",
+    "BTBD9"
+   ],
+   "hypothesis_id": "H1",
+   "mechanism": "The two strongest RLS loci carry non-coding risk alleles that reduce expression of a homeodomain transcription factor (MEIS1) and a BTB/BACK adaptor (BTBD9). In mice, loss of either gene reproduces core disease features: Meis1 nulls show an abnormal circadian sleep/wake cycle and are curated as an RLS model; Btbd9 nulls show abnormal sleep behaviour, abnormal brain physiology and are also curated as an RLS model. Recent work shows MEIS1 loss disinhibits cerebellar output, giving a concrete circuit lesion — loss of inhibitory control over a motor output nucleus — that can generate periodic limb movements and the urge to move. The two genes converge on the same phenotype through separate molecular routes; STRING links them only by text-mining, not by experiment, so a shared complex is not required by the evidence.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "rs113851554",
+    "rs10947738",
+    "rs61192259",
+    "rs9296249",
+    "AGR:MGI:104717:MP:0020478",
+    "AGR:MGI:104717:DOID:0050425",
+    "AGR:MGI:1916625:MP:0011396",
+    "AGR:MGI:1916625:DOID:0050425",
+    "AGR:MGI:1916625:MP:0014812",
+    "PMID:42309051",
+    "PMID:17637780",
+    "PMID:17634447",
+    "OT:MEIS1-MONDO_0005391",
+    "OT:BTBD9-MONDO_0005391",
+    "STRING:DOID:0050425"
+   ],
+   "title": "MEIS1 and BTBD9 hypofunction produces the RLS phenotype through disinhibited motor output and disturbed sleep-wake architecture, not through a shared protein complex"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "P21399"
+     ],
+     "note": "Binding occurs only under iron deprivation; under iron repletion ACO1 switches to cytosolic aconitase activity.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "iron-responsive element in ferritin/TFRC mRNA"
+     },
+     "polarity": "unknown",
+     "relation": "binds",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "ACO1 (IRP1)"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "AGR:MGI:87879:MP:0005637",
+      "AGR:MGI:87879:MP:0020369"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "iron homeostasis"
+     },
+     "polarity": "positive",
+     "relation": "required_for",
+     "subject": {
+      "curie": "UniProt:P21399",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "ACO1"
+     }
+    },
+    {
+     "context": {
+      "cell_type": null,
+      "disease_state": null,
+      "tissue": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "tissue",
+       "label": "brain"
+      }
+     },
+     "evidence": [
+      "PMID:32094092",
+      "PMID:30363981"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "phenotype",
+      "label": "RLS-like motor behaviour"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "brain iron deficiency"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "NCT00685815"
+     ],
+     "note": "Trial completed; the registry records status, not efficacy, so this arrow is a therapeutic hypothesis under test rather than a demonstrated effect.",
+     "object": {
+      "curie": "EFO:MONDO_0005391",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "restless legs syndrome"
+     },
+     "polarity": "negative",
+     "relation": "inhibits",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "drug",
+      "label": "iron repletion (ferric carboxymaltose)"
+     }
+    }
+   ],
+   "confidence": "medium",
+   "contradicting_evidence": [
+    "The GWAS Catalog returns no genome-wide significant RLS variant mapped to ACO1, while Open Targets nevertheless assigns ACO1 a genetic_association score of 0.38 — the two sources disagree on whether ACO1 has human genetic support for RLS.",
+    "Reactome found no over-representation of iron uptake/transport pathways in this gene set, so the iron theme is carried by ACO1 alone rather than by the set."
+   ],
+   "falsification": {
+    "description": "Cross Aco1-null mice onto a marginally iron-restricted diet and measure regional brain non-heme iron, striatal ferritin/transferrin receptor ratio, and rest-phase limb movements against wild-type littermates on the same diet. The hypothesis predicts that Aco1 loss lowers usable brain iron and increases limb movements at a systemic iron status that leaves wild-types unaffected. If brain iron and motor behaviour are indistinguishable from wild-type, the ACO1 arm is dead.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "UniProt:P21399",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "ACO1"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "phenotype",
+     "label": "regional brain non-heme iron"
+    },
+    "system": "iron-restricted Aco1-null mouse"
+   },
+   "genes": [
+    "ACO1",
+    "BTBD9"
+   ],
+   "hypothesis_id": "H2",
+   "mechanism": "ACO1 (IRP1) is a bifunctional cytosolic iron sensor that, under low iron, binds iron-responsive elements to block ferritin translation and stabilise transferrin receptor mRNA, thereby setting cellular iron set-point. Aco1 mutant mice show abnormal iron homeostasis and altered tissue iron levels. RLS is characterised by regional brain iron deficiency, and an animal model with the RLS brain-iron pattern shows RLS-like motor behaviour reversible by dopaminergic treatment; iron repletion (ferric carboxymaltose) has been trialled clinically. We propose that ACO1 variants shift the neuronal iron set-point so that a given systemic iron status yields a lower usable brain iron pool, and that BTBD9 sits on the same axis — STRING's only experimentally supported edge in this set is ACO1–BTBD9.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "P21399",
+    "AGR:MGI:87879:MP:0005637",
+    "AGR:MGI:87879:MP:0020369",
+    "OT:ACO1-MONDO_0005391",
+    "OT:ACO1-tractability",
+    "OT:ACO1-constraint",
+    "PMID:30363981",
+    "PMID:21226925",
+    "PMID:32094092",
+    "STRING:ACO1-BTBD9",
+    "NCT00685815",
+    "AGR:MGI:1916625:MP:0005266"
+   ],
+   "title": "ACO1 is the iron arm of RLS: an IRE-binding iron sensor whose dysfunction reproduces the brain-iron-deficiency state that dopaminergic and iron therapy target"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "P23468"
+     ],
+     "note": "Trans-synaptic binding; PTPRD carries 8 fibronectin III and 2 Ig-like C2 domains plus two phosphatase domains.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "IL1RAPL1 / SLITRK2"
+     },
+     "polarity": "unknown",
+     "relation": "binds",
+     "subject": {
+      "curie": "UniProt:P23468",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "PTPRD"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "brain excitatory and inhibitory neurons"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [
+      "P23468",
+      "R-HSA-8849932",
+      "R-HSA-6794362"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "pre- and post-synaptic differentiation"
+     },
+     "polarity": "positive",
+     "relation": "required_for",
+     "subject": {
+      "curie": "UniProt:P23468",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "PTPRD"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "rs34602324",
+      "rs1836229",
+      "rs4626664",
+      "OT:PTPRD-MONDO_0005391"
+     ],
+     "note": "",
+     "object": {
+      "curie": "EFO:MONDO_0005391",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "restless legs syndrome"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "PTPRD locus variation"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:40561837"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "phenotype",
+      "label": "corpus callosum microstructure and ADHD-RLS comorbidity"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "PTPRD pleiotropy"
+     }
+    }
+   ],
+   "confidence": "medium",
+   "contradicting_evidence": [
+    "Ptprd-null mice show impaired swimming and reduced body weight but no curated sleep, locomotor or dopaminergic phenotype, so the mouse does not currently support an RLS-like readout for this gene.",
+    "Effect directions at PTPRD are inconsistent across variants (rs34602324 beta increase, rs6477358 and rs4596705 beta decrease), which is expected for a large locus with multiple independent signals but blocks any simple 'less PTPRD = more RLS' claim."
+   ],
+   "falsification": {
+    "description": "Measure excitatory and inhibitory synapse density and miniature postsynaptic currents in Ptprd-deficient cortical/sensorimotor neurons carrying the RLS risk haplotype (isogenic human iPSC neurons edited at rs34602324 versus reference), alongside in vivo limb-movement recording in Ptprd conditional knockouts. The hypothesis predicts a shifted E/I synapse ratio in risk-allele neurons. If synapse density, E/I ratio and mEPSC/mIPSC frequency are unchanged by the risk allele, the synaptic-organisation mechanism fails and PTPRD's association must run through some other function.",
+    "expected": "unknown",
+    "perturbation": {
+     "action": "knockdown",
+     "target": {
+      "curie": "UniProt:P23468",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "PTPRD"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "phenotype",
+     "label": "excitatory/inhibitory synapse density ratio"
+    },
+    "system": "isogenic human iPSC-derived cortical neurons"
+   },
+   "genes": [
+    "PTPRD"
+   ],
+   "hypothesis_id": "H3",
+   "mechanism": "PTPRD is a receptor tyrosine phosphatase that bidirectionally induces pre- and post-synaptic differentiation via trans-synaptic binding to IL1RAP, IL1RAPL1 and SLITRK2, and it is the only gene in this set with strong brain expression, highest in excitatory and inhibitory neurons. Its RLS association is broad and replicated across many independent variants with effect directions in both directions, consistent with a locus that tunes synaptic organisation rather than switching a pathway off. We propose that PTPRD risk alleles alter the balance of excitatory and inhibitory synapse formation in sensorimotor and callosal circuits, producing the sensory urge component and the ADHD comorbidity, independently of brain iron status.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "P23468",
+    "rs34602324",
+    "rs6477358",
+    "rs1836229",
+    "rs4626664",
+    "rs1975197",
+    "OT:PTPRD-MONDO_0005391",
+    "PMID:40561837",
+    "R-HSA-8849932",
+    "R-HSA-6794362",
+    "R-HSA-388844",
+    "AGR:MGI:97812:MP:0001522"
+   ],
+   "title": "PTPRD is a synaptic-adhesion locus acting through excitatory/inhibitory synapse organisation, a mechanism orthogonal to the iron axis"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "P60520"
+     ],
+     "note": "Real molecular function, but no link to RLS was found in literature, GWAS or Open Targets.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "autophagosome maturation and mitophagy"
+     },
+     "polarity": "positive",
+     "relation": "required_for",
+     "subject": {
+      "curie": "UniProt:P60520",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "GABARAPL2"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "R-HSA-71403",
+      "R-HSA-389542",
+      "R-HSA-9837999"
+     ],
+     "note": "These enrichments are single-gene artefacts: ACO1 alone supplies the match in each pathway.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "TCA cycle / NADPH regeneration / mitochondrial metabolism"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "UniProt:P21399",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "ACO1"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "STRING:DOID:0050425",
+      "STRING:MEIS1-BTBD9",
+      "STRING:PTPRD-BTBD9"
+     ],
+     "note": "Enrichment and edges are text-mining derived, i.e. these genes are linked because they are co-cited in RLS papers, not because they share a demonstrated pathway.",
+     "object": {
+      "curie": "EFO:MONDO_0005391",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "restless legs syndrome"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "MEIS1, PTPRD, BTBD9"
+     }
+    }
+   ],
+   "confidence": "medium",
+   "contradicting_evidence": [
+    "A null result in Europe PMC and GWAS Catalog is absence of evidence: GABARAPL2's role in autophagosome maturation and mitophagy (P60520) is a plausible route to iron recycling via ferritinophagy that nobody has tested in RLS, and would be missed by every source queried here."
+   ],
+   "falsification": {
+    "description": "Perform statistical fine-mapping and colocalisation of RLS GWAS signal with brain eQTLs at the GLIPR1 and GABARAPL2 loci. If either gene shows a colocalising eQTL with posterior probability supporting a shared causal variant with RLS risk, the passenger claim is falsified and that gene becomes a candidate effector. If no credible set at either locus overlaps an RLS association, the passenger claim stands.",
+    "expected": "unknown",
+    "perturbation": null,
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "other",
+     "label": "GWAS-eQTL colocalisation posterior probability"
+    },
+    "system": "human brain eQTL and RLS GWAS summary statistics"
+   },
+   "genes": [
+    "GABARAPL2",
+    "GLIPR1",
+    "ACO1",
+    "PTPRD",
+    "MEIS1",
+    "BTBD9"
+   ],
+   "hypothesis_id": "H4",
+   "mechanism": "Treated as a set, these six genes do not cohere. Reactome maps them onto NADPH regeneration, PPARalpha lipid metabolism, TCA cycle and mitochondrial protein degradation (all driven by ACO1 alone) and synaptic adhesion pathways (PTPRD alone); no iron-uptake and no autophagy pathway is over-represented. STRING's only disease enrichment is RLS itself, driven by MEIS1/PTPRD/BTBD9 and derived from co-citation. GABARAPL2 and GLIPR1 have no RLS GWAS variant, no Open Targets disease score and no primary literature tying them to RLS, iron or the MEIS1/BTBD9 network. The parsimonious claim is that they entered this list by genomic proximity, module co-membership or expression-QTL adjacency rather than by causal contribution — GLIPR1 is blood-vessel-enriched and GABARAPL2 is a ubiquitously expressed autophagy modifier whose homozygous mouse null is preweaning lethal, an unlikely profile for an adult-onset, non-degenerative sensorimotor disorder.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "R-HSA-389542",
+    "R-HSA-1989781",
+    "R-HSA-71403",
+    "R-HSA-9837999",
+    "R-HSA-8849932",
+    "STRING:DOID:0050425",
+    "STRING:MEIS1-BTBD9",
+    "STRING:PTPRD-BTBD9",
+    "P60520",
+    "P48060",
+    "OT:GABARAPL2-tractability",
+    "OT:GLIPR1-tractability",
+    "OT:GABARAPL2-constraint",
+    "OT:GLIPR1-constraint"
+   ],
+   "title": "GABARAPL2 and GLIPR1 are passengers, not drivers: the set fragments into an iron/metabolic module and a synaptic module with no shared pathway"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "STRING:ACO1-BTBD9",
+      "Q96Q07"
+     ],
+     "note": "STRING combined score 0.45, mostly experimental channel; the BTB/BACK domain pair predicts a CUL3 substrate-adaptor role but UniProt curates no function for BTBD9.",
+     "object": {
+      "curie": "UniProt:P21399",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "ACO1"
+     },
+     "polarity": "unknown",
+     "relation": "binds",
+     "subject": {
+      "curie": "UniProt:Q96Q07",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "BTBD9"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "Q96Q07"
+     ],
+     "note": "Predicted from BTB/BACK substrate-adaptor architecture; direction is the claim under test, not an observation.",
+     "object": {
+      "curie": "UniProt:P21399",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "ACO1"
+     },
+     "polarity": "negative",
+     "relation": "decreases_amount",
+     "subject": {
+      "curie": "UniProt:Q96Q07",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "BTBD9"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "AGR:MGI:1916625:MP:0005266",
+      "AGR:MGI:1916625:MP:0014812"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "phenotype",
+      "label": "abnormal metabolism and abnormal brain physiology"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "loss of BTBD9"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "AGR:MGI:1916625:MP:0011396"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "phenotype",
+      "label": "abnormal sleep behavior"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "loss of BTBD9"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "rs10947738",
+      "OT:BTBD9-MONDO_0005391"
+     ],
+     "note": "",
+     "object": {
+      "curie": "EFO:MONDO_0005391",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "restless legs syndrome"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "rs10947738 risk allele at BTBD9"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [
+    "UniProt records no curated function for BTBD9 (Q96Q07) at all, so the CUL3 substrate-adaptor role is inferred from domain architecture only.",
+    "The STRING ACO1-BTBD9 edge has combined score 0.45, the weakest in the network, and no publication in this ledger reports the interaction directly."
+   ],
+   "falsification": {
+    "description": "Immunoprecipitate BTBD9 from mouse brain lysate and test for ACO1/IRP1 in the pulldown, then measure IRP1 protein half-life and IRE-binding activity in Btbd9-null versus wild-type brain. The hypothesis predicts BTBD9-ACO1 co-precipitation and increased IRP1 abundance or IRE-binding activity when BTBD9 is lost. Absence of co-precipitation together with unchanged IRP1 levels and IRE-binding activity kills the convergence claim and returns H1 and H2 to being independent.",
+    "expected": "positive",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "UniProt:Q96Q07",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "BTBD9"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "protein",
+     "label": "ACO1/IRP1 protein abundance and IRE-binding activity"
+    },
+    "system": "Btbd9-null mouse brain"
+   },
+   "genes": [
+    "BTBD9",
+    "ACO1",
+    "MEIS1"
+   ],
+   "hypothesis_id": "H5",
+   "mechanism": "BTBD9 encodes a BTB/BACK adaptor with no curated function, the domain signature of a CUL3 substrate-adaptor. It is the only gene in the set with both a curated RLS mouse model (abnormal sleep behaviour, abnormal brain physiology, abnormal metabolism) and an experimentally supported STRING edge to ACO1. We propose that BTBD9 acts as a substrate adaptor targeting an iron-regulatory client — plausibly ACO1/IRP1 itself — for ubiquitin-dependent turnover, so that BTBD9 hypofunction dysregulates the IRP1 iron set-point in brain, while its independent effect on sleep architecture supplies the circadian gating that makes RLS symptoms nocturnal. This makes the iron arm (H2) and the sleep/motor arm (H1) two outputs of one node rather than parallel stories.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "STRING:ACO1-BTBD9",
+    "Q96Q07",
+    "AGR:MGI:1916625:MP:0005266",
+    "AGR:MGI:1916625:MP:0011396",
+    "AGR:MGI:1916625:MP:0014812",
+    "P21399",
+    "rs10947738",
+    "OT:BTBD9-MONDO_0005391"
+   ],
+   "title": "Convergence hypothesis: BTBD9 is the node where the iron set-point and the sleep/motor circuit arms meet"
+  }
+ ],
+ "unexplained_genes": []
+}

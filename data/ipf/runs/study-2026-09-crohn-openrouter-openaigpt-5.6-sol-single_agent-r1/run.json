@@ -1,0 +1,613 @@
+{
+ "run_id": "study-2026-09-crohn-openrouter-openaigpt-5.6-sol-single_agent-r1",
+ "model": "openrouter:openai/gpt-5.6-sol",
+ "question": {
+  "arm": "single_agent",
+  "budget": {
+   "max_delegations": 22,
+   "max_model_requests": 80,
+   "max_specialist_requests": 8,
+   "min_evidence_per_hypothesis": 2,
+   "min_hypotheses": 3,
+   "min_sources_per_hypothesis": 2,
+   "output_retries": 3
+  },
+  "data_policy": {
+   "max_age_seconds": 1209600.0,
+   "mode": "cache-preferred",
+   "snapshot_run_id": null
+  },
+  "disease": "Crohn disease",
+  "formalise": false,
+  "genes": [
+   "IL12B",
+   "IL23R",
+   "NOD2",
+   "LACC1",
+   "GPR35",
+   "MEIS1",
+   "TRIM4"
+  ],
+  "model": "openrouter:openai/gpt-5.6-sol",
+  "specialist_model": "",
+  "specialists": [
+   "chembl",
+   "expression",
+   "gwas",
+   "interactions",
+   "literature",
+   "model_organism",
+   "open_targets",
+   "pathways",
+   "single_cell",
+   "trials",
+   "uniprot"
+  ],
+  "tissue": {
+   "artifact_id": "sha256:2ae293c5c9c86e431f18191576a5cfddb9903117c31c2687c8a4b0abe5211411",
+   "label": "colon",
+   "uberon": "UBERON:0001155"
+  },
+  "use_network": true
+ },
+ "abstention": {
+  "evidence": [
+   "GWAS:MEIS1:no-association",
+   "GWAS:TRIM4:no-association",
+   "OT:MEIS1-MONDO_0005011",
+   "O00470",
+   "Q9C037",
+   "CXG:ENSG00000143995:CL_0000057:MONDO_0005011",
+   "CXG:ENSG00000146833:CL_0000235:MONDO_0005011",
+   "CXG:ENSG00000146833:CL_0000786:MONDO_0005011"
+  ],
+  "genes_covered": [
+   "MEIS1",
+   "TRIM4"
+  ],
+  "reason": "insufficient_evidence",
+  "statement": "No Crohn-specific causal mechanism is currently justified for MEIS1 or TRIM4 from the returned evidence. Both genes have general biological functions and are expressed in some colon cell populations, but GWAS Catalog reports no Crohn association for either; Open Targets scores MEIS1–Crohn at essentially zero, and the colon single-cell detection patterns for TRIM4 are mostly similar or lower in Crohn-associated samples, which is not evidence of causality.",
+  "support": "grounded",
+  "what_would_change_this": "A replicated Crohn GWAS/fine-mapping or rare-variant burden signal that resolves to MEIS1 or TRIM4, followed by allele-specific perturbation in disease-relevant intestinal fibroblast, epithelial, or immune cells showing a reproducible effect on barrier injury or inflammatory output with rescue by gene correction."
+ },
+ "disease": "Crohn disease",
+ "genes_considered": [
+  "IL12B",
+  "IL23R",
+  "NOD2",
+  "LACC1",
+  "GPR35",
+  "MEIS1",
+  "TRIM4"
+ ],
+ "hypotheses": [
+  {
+   "chain": [
+    {
+     "context": {
+      "cell_type": {
+       "curie": "CL:0000624",
+       "grounding_evidence": "CXG:ENSG00000162594:CL_0000624:MONDO_0005011",
+       "kind": "cell_type",
+       "label": "CD4-positive alpha-beta T cell"
+      },
+      "disease_state": {
+       "curie": "MONDO:0005011",
+       "grounding_evidence": "CXG:cohort:MONDO_0005011",
+       "kind": "disease",
+       "label": "Crohn disease"
+      },
+      "tissue": {
+       "curie": "UBERON:0000344",
+       "grounding_evidence": "CXG:tissues:MONDO_0005011",
+       "kind": "tissue",
+       "label": "intestinal mucosa"
+      }
+     },
+     "evidence": [
+      "STRING:IL12B-IL23R",
+      "R-HSA-9020933",
+      "P29460",
+      "Q5VWK5"
+     ],
+     "note": "IL12B encodes the shared p40 cytokine subunit; the input-set interaction and pathway records specifically connect IL12B with IL23R and IL-23 signaling.",
+     "object": {
+      "curie": "Reactome:R-HSA-9020933",
+      "grounding_evidence": "R-HSA-9020933",
+      "kind": "process",
+      "label": "IL23R receptor-complex activation"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "UniProt:P29460",
+      "grounding_evidence": "P29460",
+      "kind": "protein",
+      "label": "IL12B-containing IL-23"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "CL:0000624",
+       "grounding_evidence": "CXG:ENSG00000162594:CL_0000624:MONDO_0005011",
+       "kind": "cell_type",
+       "label": "CD4-positive alpha-beta T cell"
+      },
+      "disease_state": {
+       "curie": "MONDO:0005011",
+       "grounding_evidence": "CXG:cohort:MONDO_0005011",
+       "kind": "disease",
+       "label": "Crohn disease"
+      },
+      "tissue": {
+       "curie": "UBERON:0001155",
+       "grounding_evidence": "CXG:panel:UBERON_0001155",
+       "kind": "tissue",
+       "label": "colon"
+      }
+     },
+     "evidence": [
+      "STRING:GO:0032740",
+      "STRING:GO:2000330",
+      "Q5VWK5"
+     ],
+     "note": "",
+     "object": {
+      "curie": "GO:2000330",
+      "grounding_evidence": "STRING:GO:2000330",
+      "kind": "process",
+      "label": "T-helper 17 lineage commitment and IL-17 production"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "Reactome:R-HSA-9020933",
+      "grounding_evidence": "R-HSA-9020933",
+      "kind": "process",
+      "label": "IL23R signaling"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "CL:0000084",
+       "grounding_evidence": "CXG:ENSG00000162594:CL_0009051:MONDO_0005011",
+       "kind": "cell_type",
+       "label": "T cell"
+      },
+      "disease_state": {
+       "curie": "MONDO:0005011",
+       "grounding_evidence": "CXG:cohort:MONDO_0005011",
+       "kind": "disease",
+       "label": "Crohn disease"
+      },
+      "tissue": {
+       "curie": "UBERON:0001155",
+       "grounding_evidence": "CXG:panel:UBERON_0001155",
+       "kind": "tissue",
+       "label": "colon"
+      }
+     },
+     "evidence": [
+      "rs755374",
+      "rs11209026",
+      "OT:IL12B-MONDO_0005011",
+      "OT:IL23R-MONDO_0005011",
+      "CXG:ENSG00000162594:CL_0000624:MONDO_0005011"
+     ],
+     "note": "Human genetics strongly associates both genes with Crohn disease, and Open Targets reports clinical evidence for IL12B-directed intervention.",
+     "object": {
+      "curie": "MONDO:0005011",
+      "grounding_evidence": "OT:IL23R-MONDO_0005011",
+      "kind": "disease",
+      "label": "Crohn disease susceptibility and activity"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "GO:0032740",
+      "grounding_evidence": "STRING:GO:0032740",
+      "kind": "process",
+      "label": "persistent IL-23-responsive T-cell inflammation"
+     }
+    }
+   ],
+   "confidence": "high",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "In genotype-stratified Crohn ileal/colonic organoid–autologous immune-cell cultures, neutralize IL12B or knock out IL23R specifically in CD4 T cells, then challenge with microbial products. The hypothesis is falsified if both perturbations fail to reduce STAT3 activation, IL-17A-producing T-cell abundance, and epithelial inflammatory injury relative to matched controls despite verified target engagement.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "inhibit",
+     "target": {
+      "curie": "HGNC:IL12B|HGNC:IL23R",
+      "grounding_evidence": "STRING:IL12B-IL23R",
+      "kind": "gene",
+      "label": "IL12B or IL23R"
+     }
+    },
+    "readout": {
+     "curie": "GO:0032740",
+     "grounding_evidence": "STRING:GO:0032740",
+     "kind": "phenotype",
+     "label": "IL-17-producing T-cell response and epithelial injury"
+    },
+    "system": "Genotype-stratified human Crohn intestinal organoid–autologous CD4 T-cell co-culture"
+   },
+   "genes": [
+    "IL12B",
+    "IL23R"
+   ],
+   "hypothesis_id": "H1",
+   "mechanism": "IL12B and IL23R form the genetically and functionally coherent IL-23-axis subset in this list. The hypothesis is that increased or prolonged IL12B-containing IL-23 signaling through IL23R and JAK–STAT expands or stabilizes IL-17-producing intestinal T cells, sustaining Crohn inflammation; the enrichment of IL23R detection in Crohn-associated colon T-cell samples is consistent with, but does not prove, this direction.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "PMID:17068223",
+    "rs11209026",
+    "rs755374",
+    "STRING:IL12B-IL23R",
+    "R-HSA-9020933",
+    "OT:IL12B-MONDO_0005011",
+    "OT:IL23R-MONDO_0005011",
+    "CXG:ENSG00000162594:CL_0000624:MONDO_0005011",
+    "CHEMBL:CHEMBL1201835"
+   ],
+   "title": "IL12B-containing IL-23 activates IL23R-positive intestinal T cells to sustain pathogenic Th17 inflammation"
+  },
+  {
+   "chain": [
+    {
+     "context": {
+      "cell_type": {
+       "curie": "CL:0000235",
+       "grounding_evidence": "CXG:ENSG00000179630:CL_0000235:MONDO_0005011",
+       "kind": "cell_type",
+       "label": "macrophage"
+      },
+      "disease_state": {
+       "curie": "MONDO:0005011",
+       "grounding_evidence": "OT:NOD2-MONDO_0005011",
+       "kind": "disease",
+       "label": "Crohn disease"
+      },
+      "tissue": {
+       "curie": "UBERON:0000344",
+       "grounding_evidence": "Q9HC29",
+       "kind": "tissue",
+       "label": "intestinal mucosa"
+      }
+     },
+     "evidence": [
+      "Q9HC29",
+      "AGR:MGI:2429397:MP:0008260"
+     ],
+     "note": "NOD2 directly senses MDP and activates RIPK2/NF-kB/MAPK while also regulating ATG16L1-dependent autophagy.",
+     "object": {
+      "curie": "GO:0006914",
+      "grounding_evidence": "Q9HC29",
+      "kind": "process",
+      "label": "NOD2-RIPK2 signaling and autophagy"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "CHEBI:6791",
+      "grounding_evidence": "Q9HC29",
+      "kind": "gene",
+      "label": "bacterial muramyl dipeptide"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "CL:0000235",
+       "grounding_evidence": "CXG:ENSG00000179630:CL_0000235:MONDO_0005011",
+       "kind": "cell_type",
+       "label": "macrophage"
+      },
+      "disease_state": {
+       "curie": "MONDO:0005011",
+       "grounding_evidence": "CXG:cohort:MONDO_0005011",
+       "kind": "disease",
+       "label": "Crohn disease"
+      },
+      "tissue": {
+       "curie": "UBERON:0001155",
+       "grounding_evidence": "CXG:panel:UBERON_0001155",
+       "kind": "tissue",
+       "label": "colon"
+      }
+     },
+     "evidence": [
+      "Q8IV20",
+      "STRING:NOD2-LACC1",
+      "AGR:MGI:2445077:MP:0002451",
+      "AGR:MGI:2445077:MP:0010959"
+     ],
+     "note": "UniProt specifically reports association of LACC1 with the NOD2 signaling complex and support of macrophage bacterial clearance.",
+     "object": {
+      "curie": "GO:0045087",
+      "grounding_evidence": "STRING:GO:0045087",
+      "kind": "process",
+      "label": "optimal NOD2 cytokine signaling, autophagy, and bacterial clearance"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "UniProt:Q8IV20",
+      "grounding_evidence": "Q8IV20",
+      "kind": "process",
+      "label": "LACC1 macrophage immunometabolism"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "CL:0000235",
+       "grounding_evidence": "CXG:ENSG00000179630:CL_0000235:MONDO_0005011",
+       "kind": "cell_type",
+       "label": "macrophage"
+      },
+      "disease_state": {
+       "curie": "MONDO:0005011",
+       "grounding_evidence": "OT:LACC1-MONDO_0005011",
+       "kind": "disease",
+       "label": "Crohn disease"
+      },
+      "tissue": {
+       "curie": "UBERON:0000160",
+       "grounding_evidence": "Q9HC29",
+       "kind": "tissue",
+       "label": "intestine"
+      }
+     },
+     "evidence": [
+      "rs2066847",
+      "rs3764147",
+      "PMID:11385576",
+      "PMID:27478939",
+      "OT:NOD2-MONDO_0005011",
+      "OT:LACC1-MONDO_0005011"
+     ],
+     "note": "The proposed direction is defective early clearance followed by chronic inflammation; variant association alone does not establish this direction.",
+     "object": {
+      "curie": "MONDO:0005011",
+      "grounding_evidence": "OT:NOD2-MONDO_0005011",
+      "kind": "disease",
+      "label": "persistent intestinal microbial stimulation and Crohn inflammation"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "GO:0045087",
+      "grounding_evidence": "STRING:GO:0045087",
+      "kind": "process",
+      "label": "impaired NOD2-LACC1 microbial clearance"
+     }
+    }
+   ],
+   "confidence": "high",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Generate isogenic human monocyte-derived macrophages carrying Crohn-associated NOD2 and LACC1 risk alleles singly and together, challenge them with invasive bacteria or MDP, and compare them with corrected clones. The hypothesis is falsified if risk-allele cells show no defect in bacterial killing, autophagic flux, mitochondrial/redox adaptation, or resolution of cytokine signaling—and if LACC1 or NOD2 correction does not rescue any phenotype.",
+    "expected": "positive",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "HGNC:NOD2|HGNC:LACC1",
+      "grounding_evidence": "rs2066847",
+      "kind": "gene",
+      "label": "NOD2 and LACC1 Crohn-risk alleles"
+     }
+    },
+    "readout": {
+     "curie": "GO:0045087",
+     "grounding_evidence": "Q8IV20",
+     "kind": "phenotype",
+     "label": "intracellular bacterial burden"
+    },
+    "system": "Isogenic human monocyte-derived macrophages with single and double risk-allele edits"
+   },
+   "genes": [
+    "NOD2",
+    "LACC1"
+   ],
+   "hypothesis_id": "H2",
+   "mechanism": "NOD2 senses bacterial peptidoglycan, while LACC1 supports NOD2-induced signaling, macrophage bioenergetics, autophagy, and bacterial clearance. Crohn-associated variants are hypothesized to weaken or mistime this coupled response, permitting microbial persistence and a secondary chronic inflammatory reaction rather than simply causing constitutive cytokine excess.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "PMID:11385576",
+    "PMID:27478939",
+    "PMID:40089498",
+    "rs2066847",
+    "rs3764147",
+    "Q9HC29",
+    "Q8IV20",
+    "AGR:MGI:2429397:MP:0008260",
+    "AGR:MGI:2445077:MP:0002451",
+    "CXG:ENSG00000179630:CL_0000235:MONDO_0005011",
+    "OT:NOD2-MONDO_0005011",
+    "OT:LACC1-MONDO_0005011"
+   ],
+   "title": "NOD2 and LACC1 couple bacterial sensing to macrophage metabolism, autophagy, and clearance"
+  },
+  {
+   "chain": [
+    {
+     "context": {
+      "cell_type": {
+       "curie": "CL:0011108",
+       "grounding_evidence": "CXG:ENSG00000178623:CL_0011108:MONDO_0005011",
+       "kind": "cell_type",
+       "label": "colon epithelial cell"
+      },
+      "disease_state": {
+       "curie": "MONDO:0005011",
+       "grounding_evidence": "CXG:cohort:MONDO_0005011",
+       "kind": "disease",
+       "label": "Crohn disease"
+      },
+      "tissue": {
+       "curie": "UBERON:0001155",
+       "grounding_evidence": "CXG:panel:UBERON_0001155",
+       "kind": "tissue",
+       "label": "colon"
+      }
+     },
+     "evidence": [
+      "Q9HC97",
+      "CXG:ENSG00000178623:CL_0011108:MONDO_0005011"
+     ],
+     "note": "GPR35 has several context-dependent ligands and can couple to Gi/o or G12/13, so the downstream sign may differ by cell type.",
+     "object": {
+      "curie": "UniProt:Q9HC97",
+      "grounding_evidence": "Q9HC97",
+      "kind": "process",
+      "label": "GPR35 G-protein signaling"
+     },
+     "polarity": "unknown",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "CHEBI:18344",
+      "grounding_evidence": "Q9HC97",
+      "kind": "gene",
+      "label": "microbial/host metabolites including kynurenic acid and 5-HIAA"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "CL:0000066",
+       "grounding_evidence": "CXG:ENSG00000178623:CL_0000235:MONDO_0005011",
+       "kind": "cell_type",
+       "label": "epithelial or myeloid cell"
+      },
+      "disease_state": {
+       "curie": "MONDO:0005011",
+       "grounding_evidence": "OT:GPR35-MONDO_0005011",
+       "kind": "disease",
+       "label": "Crohn disease"
+      },
+      "tissue": {
+       "curie": "UBERON:0001155",
+       "grounding_evidence": "CXG:panel:UBERON_0001155",
+       "kind": "tissue",
+       "label": "colon"
+      }
+     },
+     "evidence": [
+      "Q9HC97",
+      "AGR:MGI:1929509:MP:0008721",
+      "AGR:MGI:1929509:MP:0008751",
+      "AGR:MGI:1929509:MP:0013956"
+     ],
+     "note": "Mouse phenotypes support an effect on colitis but disagree on whether loss is protective or harmful.",
+     "object": {
+      "curie": "GO:0006954",
+      "grounding_evidence": "AGR:MGI:1929509:MP:0008721",
+      "kind": "process",
+      "label": "altered chemokines, interleukins, leukocyte recruitment, and epithelial injury"
+     },
+     "polarity": "unknown",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "UniProt:Q9HC97",
+      "grounding_evidence": "Q9HC97",
+      "kind": "process",
+      "label": "altered GPR35 signaling"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "CL:0011108",
+       "grounding_evidence": "CXG:ENSG00000178623:CL_0011108:MONDO_0005011",
+       "kind": "cell_type",
+       "label": "colon epithelial cell"
+      },
+      "disease_state": {
+       "curie": "MONDO:0005011",
+       "grounding_evidence": "OT:GPR35-MONDO_0005011",
+       "kind": "disease",
+       "label": "Crohn disease"
+      },
+      "tissue": {
+       "curie": "UBERON:0000160",
+       "grounding_evidence": "CXG:tissues:MONDO_0005011",
+       "kind": "tissue",
+       "label": "intestine"
+      }
+     },
+     "evidence": [
+      "rs34236350",
+      "rs2975780",
+      "rs3749172",
+      "PMID:28658209",
+      "OT:GPR35-MONDO_0005011"
+     ],
+     "note": "The GWAS variants are mapped to or reported at GPR35; causal-gene assignment and effect direction still require allele-specific functional validation.",
+     "object": {
+      "curie": "MONDO:0005011",
+      "grounding_evidence": "OT:GPR35-MONDO_0005011",
+      "kind": "disease",
+      "label": "Crohn disease susceptibility"
+     },
+     "polarity": "unknown",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "HGNC:GPR35",
+      "grounding_evidence": "rs3749172",
+      "kind": "gene",
+      "label": "GPR35 locus variation"
+     }
+    }
+   ],
+   "confidence": "medium",
+   "contradicting_evidence": [
+    "AGR:MGI:1929509:MP:0013299",
+    "AGR:MGI:1929509:MP:0008539",
+    "AGR:MGI:1929509:MP:0008537"
+   ],
+   "falsification": {
+    "description": "Edit the leading Crohn-associated GPR35 allele into otherwise isogenic human colon organoids and macrophages, expose both compartments to kynurenic acid, 5-HIAA, and lysophosphatidic acid, and test them separately and in co-culture. The hypothesis is falsified if the allele causes no reproducible change in G-protein signaling, epithelial barrier integrity, chemokine/cytokine output, or immune-cell recruitment in either compartment, and GPR35 antagonism or correction cannot reverse any effect.",
+    "expected": "unknown",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "HGNC:GPR35",
+      "grounding_evidence": "rs34236350",
+      "kind": "gene",
+      "label": "Crohn-associated GPR35 allele"
+     }
+    },
+    "readout": {
+     "curie": "GO:0006954",
+     "grounding_evidence": "Q9HC97",
+     "kind": "phenotype",
+     "label": "epithelial barrier integrity and inflammatory-cell recruitment"
+    },
+    "system": "Isogenic human colon organoid–macrophage co-culture with compartment-specific GPR35 editing"
+   },
+   "genes": [
+    "GPR35"
+   ],
+   "hypothesis_id": "H3",
+   "mechanism": "GPR35 is a Crohn-associated GPCR that responds to kynurenic acid, 5-HIAA, and lysophosphatidic acid and can alter epithelial or myeloid inflammatory signaling. The hypothesis is that Crohn-risk variation changes the magnitude or compartmental balance of GPR35 signaling, thereby altering barrier responses, leukocyte recruitment, and cytokine production; the net direction is explicitly unresolved because different Gpr35 knockout colitis models give opposite results.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "rs34236350",
+    "rs2975780",
+    "rs3749172",
+    "PMID:28658209",
+    "Q9HC97",
+    "OT:GPR35-MONDO_0005011",
+    "CXG:ENSG00000178623:CL_0011108:MONDO_0005011",
+    "AGR:MGI:1929509:MP:0008721",
+    "AGR:MGI:1929509:MP:0013956"
+   ],
+   "title": "Crohn-associated GPR35 variation changes metabolite sensing in epithelial and myeloid compartments"
+  }
+ ],
+ "unexplained_genes": []
+}

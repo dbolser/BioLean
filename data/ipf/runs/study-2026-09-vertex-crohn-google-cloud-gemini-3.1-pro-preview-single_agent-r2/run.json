@@ -1,0 +1,429 @@
+{
+ "run_id": "study-2026-09-vertex-crohn-google-cloud-gemini-3.1-pro-preview-single_agent-r2",
+ "model": "google-cloud:gemini-3.1-pro-preview",
+ "question": {
+  "arm": "single_agent",
+  "budget": {
+   "max_delegations": 22,
+   "max_model_requests": 80,
+   "max_specialist_requests": 8,
+   "min_evidence_per_hypothesis": 2,
+   "min_hypotheses": 3,
+   "min_sources_per_hypothesis": 2,
+   "output_retries": 3
+  },
+  "data_policy": {
+   "max_age_seconds": 1209600.0,
+   "mode": "cache-preferred",
+   "snapshot_run_id": null
+  },
+  "disease": "Crohn disease",
+  "formalise": false,
+  "genes": [
+   "IL12B",
+   "IL23R",
+   "NOD2",
+   "LACC1",
+   "GPR35",
+   "MEIS1",
+   "TRIM4"
+  ],
+  "model": "google-cloud:gemini-3.1-pro-preview",
+  "specialist_model": "",
+  "specialists": [
+   "chembl",
+   "expression",
+   "gwas",
+   "interactions",
+   "literature",
+   "model_organism",
+   "open_targets",
+   "pathways",
+   "single_cell",
+   "trials",
+   "uniprot"
+  ],
+  "tissue": {
+   "artifact_id": "sha256:2ae293c5c9c86e431f18191576a5cfddb9903117c31c2687c8a4b0abe5211411",
+   "label": "colon",
+   "uberon": "UBERON:0001155"
+  },
+  "use_network": true
+ },
+ "abstention": {
+  "evidence": [
+   "GWAS:MEIS1:no-association",
+   "GWAS:TRIM4:no-association",
+   "CHEMBL:no-mechanism-MEIS1",
+   "CHEMBL:no-mechanism-TRIM4"
+  ],
+  "genes_covered": [
+   "MEIS1",
+   "TRIM4"
+  ],
+  "reason": "no_shared_mechanism",
+  "statement": "MEIS1 and TRIM4 are expressed in the colon but lack any genetic association with Crohn's disease in the GWAS Catalog, are not targeted by any drugs in clinical trials for the disease, and do not interact with the known Crohn's susceptibility genes in the set.",
+  "support": "grounded",
+  "what_would_change_this": "A reproducible genetic association linking MEIS1 or TRIM4 loci to Crohn's disease, or experimental evidence that they functionally regulate the immune or epithelial pathways affected by the other genes in the colon."
+ },
+ "disease": "Crohn disease",
+ "genes_considered": [
+  "IL12B",
+  "IL23R",
+  "NOD2",
+  "LACC1",
+  "GPR35",
+  "MEIS1",
+  "TRIM4"
+ ],
+ "hypotheses": [
+  {
+   "chain": [
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "other",
+       "label": "CD4-positive, alpha-beta T cell"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [
+      "STRING:IL12B-IL23R",
+      "P29460",
+      "Q5VWK5"
+     ],
+     "note": "",
+     "object": {
+      "curie": "UniProtKB:Q5VWK5",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "IL23R"
+     },
+     "polarity": "unknown",
+     "relation": "binds",
+     "subject": {
+      "curie": "UniProtKB:P29460",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "IL12B"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "other",
+       "label": "CD4-positive, alpha-beta T cell"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [
+      "Q5VWK5",
+      "R-HSA-9020933",
+      "CXG:ENSG00000162594:CL_0000624:MONDO_0005011"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "Interleukin-23 signaling"
+     },
+     "polarity": "positive",
+     "relation": "activates",
+     "subject": {
+      "curie": "UniProtKB:Q5VWK5",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "IL23R"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "rs11209026",
+      "CHEMBL:CHEMBL1201835-EFO_0000384"
+     ],
+     "note": "",
+     "object": {
+      "curie": "MONDO:0005011",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "Crohn disease"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "Interleukin-23 signaling"
+     }
+    }
+   ],
+   "confidence": "high",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Knocking out IL23R in human CD4+ T cells should prevent IL-23-induced activation and reduce the expression of Th17 signature cytokines in an in vitro intestinal inflammation model.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "UniProtKB:Q5VWK5",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "IL23R"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "other",
+     "label": "Interleukin-17 production"
+    },
+    "system": "Human intestinal organoid co-culture with T cells"
+   },
+   "genes": [
+    "IL12B",
+    "IL23R"
+   ],
+   "hypothesis_id": "H1_IL23_axis",
+   "mechanism": "IL12B is the shared p40 subunit of IL-12 and IL-23, which binds the interleukin-23 receptor (IL23R) on CD4+ T cells. This interaction triggers IL-23 signaling and promotes Th17 cell lineage commitment, driving robust local innate and adaptive immune responses. Excessive or dysregulated signaling through this axis promotes the chronic intestinal inflammation characteristic of Crohn's disease, making it a major therapeutic target for monoclonal antibodies like Ustekinumab.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "STRING:IL12B-IL23R",
+    "P29460",
+    "Q5VWK5",
+    "R-HSA-9020933",
+    "rs11209026",
+    "CHEMBL:CHEMBL1201835-EFO_0000384",
+    "CXG:ENSG00000162594:CL_0000624:MONDO_0005011"
+   ],
+   "title": "IL-23 receptor signaling drives intestinal inflammation."
+  },
+  {
+   "chain": [
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "other",
+       "label": "macrophage"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [
+      "Q8IV20",
+      "STRING:NOD2-LACC1",
+      "CXG:ENSG00000179630:CL_0000235:MONDO_0005011"
+     ],
+     "note": "",
+     "object": {
+      "curie": "UniProtKB:Q9HC29",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "NOD2"
+     },
+     "polarity": "unknown",
+     "relation": "binds",
+     "subject": {
+      "curie": "UniProtKB:Q8IV20",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "LACC1"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "other",
+       "label": "macrophage"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [
+      "Q9HC29"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "innate immune response"
+     },
+     "polarity": "positive",
+     "relation": "activates",
+     "subject": {
+      "curie": "UniProtKB:Q9HC29",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "NOD2"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "rs2066847",
+      "rs3764147"
+     ],
+     "note": "",
+     "object": {
+      "curie": "MONDO:0005011",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "Crohn disease"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "innate immune response"
+     }
+    }
+   ],
+   "confidence": "high",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Knockout of LACC1 in human macrophages should diminish NOD2-dependent NF-kappaB activation and cytokine release upon stimulation with muramyl dipeptide.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "UniProtKB:Q8IV20",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "LACC1"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "other",
+     "label": "NF-kappaB signaling"
+    },
+    "system": "Human macrophage cell line"
+   },
+   "genes": [
+    "NOD2",
+    "LACC1"
+   ],
+   "hypothesis_id": "H2_NOD2_sensing",
+   "mechanism": "NOD2 is an intracellular pattern recognition receptor that senses bacterial peptidoglycan fragments in the gut. LACC1 physically associates with the NOD2 signaling complex in macrophages, promoting optimal NOD2-induced signaling and downstream cytokine secretion. Genetic variants in these genes compromise bacterial clearance and trigger an aberrant NF-kappaB-driven inflammatory response, causing the dysbiosis and tissue damage seen in Crohn's disease.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "Q8IV20",
+    "Q9HC29",
+    "STRING:NOD2-LACC1",
+    "CXG:ENSG00000179630:CL_0000235:MONDO_0005011",
+    "rs2066847",
+    "rs3764147"
+   ],
+   "title": "LACC1 enhances NOD2-mediated bacterial sensing and immune activation."
+  },
+  {
+   "chain": [
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "other",
+       "label": "macrophage"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [
+      "Q9HC97",
+      "CXG:ENSG00000178623:CL_0000235:MONDO_0005011"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "macrophage chemotaxis"
+     },
+     "polarity": "positive",
+     "relation": "activates",
+     "subject": {
+      "curie": "UniProtKB:Q9HC97",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "GPR35"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "rs34236350",
+      "OT:GPR35-MONDO_0005011"
+     ],
+     "note": "",
+     "object": {
+      "curie": "MONDO:0005011",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "Crohn disease"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "macrophage chemotaxis"
+     }
+    }
+   ],
+   "confidence": "medium",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Inhibition of GPR35 in human macrophages should reduce chemotaxis and TNF-alpha secretion in response to lysophosphatidic acid.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "inhibit",
+     "target": {
+      "curie": "UniProtKB:Q9HC97",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "GPR35"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "other",
+     "label": "macrophage chemotaxis"
+    },
+    "system": "Human primary macrophages"
+   },
+   "genes": [
+    "GPR35"
+   ],
+   "hypothesis_id": "H3_GPR35_macrophages",
+   "mechanism": "GPR35 is a G-protein coupled receptor expressed in colon epithelial cells and macrophages. In macrophages, activation of GPR35 promotes intracellular signaling that induces TNF production and cellular chemotaxis. Aberrant activation of this pathway contributes to the excessive recruitment of inflammatory cells into the intestinal mucosa, fueling the pathogenesis of Crohn's disease.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "Q9HC97",
+    "CXG:ENSG00000178623:CL_0000235:MONDO_0005011",
+    "rs34236350",
+    "OT:GPR35-MONDO_0005011"
+   ],
+   "title": "GPR35 promotes macrophage chemotaxis and inflammation in the colon."
+  }
+ ],
+ "unexplained_genes": []
+}

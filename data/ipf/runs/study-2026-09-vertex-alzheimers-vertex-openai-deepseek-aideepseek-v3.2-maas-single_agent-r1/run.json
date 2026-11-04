@@ -1,0 +1,494 @@
+{
+ "run_id": "study-2026-09-vertex-alzheimers-vertex-openai-deepseek-aideepseek-v3.2-maas-single_agent-r1",
+ "model": "vertex-openai:deepseek-ai/deepseek-v3.2-maas",
+ "question": {
+  "arm": "single_agent",
+  "budget": {
+   "max_delegations": 22,
+   "max_model_requests": 80,
+   "max_specialist_requests": 8,
+   "min_evidence_per_hypothesis": 2,
+   "min_hypotheses": 3,
+   "min_sources_per_hypothesis": 2,
+   "output_retries": 3
+  },
+  "data_policy": {
+   "max_age_seconds": 1209600.0,
+   "mode": "cache-preferred",
+   "snapshot_run_id": null
+  },
+  "disease": "Alzheimer disease",
+  "formalise": false,
+  "genes": [
+   "TREM2",
+   "RNPS1",
+   "INPP5D",
+   "APOE",
+   "MS4A4A",
+   "LPIN2",
+   "PLCG2",
+   "ABI3"
+  ],
+  "model": "vertex-openai:deepseek-ai/deepseek-v3.2-maas",
+  "specialist_model": "",
+  "specialists": [
+   "chembl",
+   "expression",
+   "gwas",
+   "interactions",
+   "literature",
+   "model_organism",
+   "open_targets",
+   "pathways",
+   "single_cell",
+   "trials",
+   "uniprot"
+  ],
+  "tissue": {
+   "artifact_id": "sha256:9083451a13b7e45058362501bb03fd93944d7aa79ffc0248bc2cf8b1520b9652",
+   "label": "brain",
+   "uberon": "UBERON:0000955"
+  },
+  "use_network": true
+ },
+ "abstention": null,
+ "disease": "Alzheimer disease",
+ "genes_considered": [
+  "TREM2",
+  "RNPS1",
+  "INPP5D",
+  "APOE",
+  "MS4A4A",
+  "LPIN2",
+  "PLCG2",
+  "ABI3"
+ ],
+ "hypotheses": [
+  {
+   "chain": [
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "HPA:ENSG00000168918",
+       "kind": "cell_type",
+       "label": "Microglia"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [
+      "OT:TREM2-MONDO_0004975",
+      "PMID:28602351",
+      "Q9NZC2"
+     ],
+     "note": "Loss-of-function variants impair phagocytosis and activation",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "Microglial phagocytosis of amyloid-β"
+     },
+     "polarity": "negative",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "UniProtKB:Q9NZC2",
+      "grounding_evidence": "OT:TREM2-MONDO_0004975",
+      "kind": "gene",
+      "label": "TREM2"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "OT:INPP5D-MONDO_0004975",
+      "Q92835",
+      "STRING:TREM2-INPP5D"
+     ],
+     "note": "INPP5D (SHIP1) negatively regulates PI3K pathway; loss of function increases inflammation",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "Pro-inflammatory microglial activation"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "UniProtKB:Q92835",
+      "grounding_evidence": "OT:INPP5D-MONDO_0004975",
+      "kind": "gene",
+      "label": "INPP5D"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "OT:PLCG2-MONDO_0004975",
+      "PMID:28714976",
+      "P16885"
+     ],
+     "note": "Gain-of-function PLCG2 variants activate downstream signaling",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "Calcium signaling and immune activation"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "UniProtKB:P16885",
+      "grounding_evidence": "OT:PLCG2-MONDO_0004975",
+      "kind": "gene",
+      "label": "PLCG2"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "HPA:ENSG00000168918",
+       "kind": "cell_type",
+       "label": "Microglia"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [
+      "PMID:41633359",
+      "PMID:41315858",
+      "OT:ABI3-MONDO_0004975"
+     ],
+     "note": "ABI3 variants alter plaque structure and microglial response",
+     "object": {
+      "curie": "MONDO:0004975",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "Alzheimer disease"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "UniProtKB:Q9P2A4",
+      "grounding_evidence": "OT:ABI3-MONDO_0004975",
+      "kind": "gene",
+      "label": "ABI3"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "In a mouse Alzheimer model, simultaneous knockout of TREM2, INPP5D, and PLCG2 would be expected to worsen pathology if this hypothesis is correct; instead, if pathology improves, the hypothesis is falsified.",
+    "expected": "positive",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "UniProtKB:Q9NZC2",
+      "grounding_evidence": "OT:TREM2-MONDO_0004975",
+      "kind": "gene",
+      "label": "TREM2"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "phenotype",
+     "label": "Amyloid plaque load"
+    },
+    "system": "APP/PS1 mouse model"
+   },
+   "genes": [
+    "TREM2",
+    "INPP5D",
+    "PLCG2",
+    "ABI3"
+   ],
+   "hypothesis_id": "H1",
+   "mechanism": "Rare coding variants in TREM2, INPP5D, PLCG2, and ABI3 converge on microglial innate immune signaling, altering phagocytosis, PI3K regulation, calcium signaling, and plaque response, collectively disrupting the balance between protective clearance and harmful inflammation in Alzheimer's disease.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "OT:TREM2-MONDO_0004975",
+    "OT:INPP5D-MONDO_0004975",
+    "OT:PLCG2-MONDO_0004975",
+    "OT:ABI3-MONDO_0004975",
+    "PMID:28714976",
+    "Q9NZC2",
+    "Q92835",
+    "P16885",
+    "STRING:TREM2-INPP5D",
+    "STRING:INPP5D-PLCG2",
+    "HPA:ENSG00000168918",
+    "PMID:41633359",
+    "PMID:41315858",
+    "rs75932628",
+    "rs72824905",
+    "rs616338"
+   ],
+   "title": "Microglial innate immune signaling disruption by rare variants"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "rs429358",
+      "OT:APOE-MONDO_0004975",
+      "P02649",
+      "OT:APOE-safety"
+     ],
+     "note": "APOE4 isoform increases risk 3-15 fold, disrupts lipid transport",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "Cholesterol dysregulation in brain"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "UniProtKB:P02649",
+      "grounding_evidence": "OT:APOE-MONDO_0004975",
+      "kind": "gene",
+      "label": "APOE"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "HPA:ENSG00000168918",
+       "kind": "cell_type",
+       "label": "Microglia"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [
+      "Q9NZC2",
+      "PMID:28602351"
+     ],
+     "note": "TREM2 is receptor for amyloid-beta and apolipoproteins including APOE",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "OT:TREM2-MONDO_0004975",
+      "kind": "protein",
+      "label": "TREM2 signaling"
+     },
+     "polarity": "negative",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "UniProtKB:P02649",
+      "grounding_evidence": "OT:APOE-MONDO_0004975",
+      "kind": "gene",
+      "label": "APOE"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:41620758",
+      "OT:PLCG2-MONDO_0004975"
+     ],
+     "note": "Protective PLCG2 variants delay onset in APOE4 carriers",
+     "object": {
+      "curie": "MONDO:0004975",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "Alzheimer disease"
+     },
+     "polarity": "negative",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "UniProtKB:P16885",
+      "grounding_evidence": "OT:PLCG2-MONDO_0004975",
+      "kind": "gene",
+      "label": "PLCG2"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "If APOE4 knock-in mice show no difference in amyloid deposition or microglial activation compared to APOE3 when TREM2 is absent, the APOE-TREM2 interaction is not essential for the APOE4 risk effect.",
+    "expected": "positive",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "UniProtKB:Q9NZC2",
+      "grounding_evidence": "OT:TREM2-MONDO_0004975",
+      "kind": "gene",
+      "label": "TREM2"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "phenotype",
+     "label": "Amyloid burden"
+    },
+    "system": "APOE4 knock-in Alzheimer mouse model"
+   },
+   "genes": [
+    "APOE",
+    "TREM2",
+    "PLCG2"
+   ],
+   "hypothesis_id": "H2",
+   "mechanism": "The APOE ε4 allele disrupts lipid metabolism and cholesterol transport in the brain, impairing amyloid-β clearance and modulating TREM2-dependent microglial function, while PLCG2 protective variants can partially offset this risk by enhancing immune resilience.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "rs429358",
+    "OT:APOE-MONDO_0004975",
+    "P02649",
+    "OT:APOE-safety",
+    "Q9NZC2",
+    "PMID:28602351",
+    "OT:TREM2-MONDO_0004975",
+    "PMID:41620758",
+    "OT:PLCG2-MONDO_0004975",
+    "HPA:ENSG00000130203"
+   ],
+   "title": "APOE ε4 lipid dysregulation with TREM2/PLCG2 modulation"
+  },
+  {
+   "chain": [
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "HPA:ENSG00000168918",
+       "kind": "cell_type",
+       "label": "Microglia"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [
+      "OT:MS4A4A-MONDO_0004975",
+      "PMID:41435829",
+      "rs7232"
+     ],
+     "note": "MS4A4A negatively regulates TREM2 signaling",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "OT:TREM2-MONDO_0004975",
+      "kind": "protein",
+      "label": "TREM2 signaling"
+     },
+     "polarity": "negative",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "UniProtKB:Q96JQ5",
+      "grounding_evidence": "OT:MS4A4A-MONDO_0004975",
+      "kind": "gene",
+      "label": "MS4A4A"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "OT:MS4A4A-MONDO_0004975",
+      "Q96JQ5"
+     ],
+     "note": "MS4A4A is part of a multimeric receptor complex",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "Immune receptor signaling"
+     },
+     "polarity": "unknown",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "UniProtKB:Q96JQ5",
+      "grounding_evidence": "OT:MS4A4A-MONDO_0004975",
+      "kind": "gene",
+      "label": "MS4A4A"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "HPA:ENSG00000168918",
+       "kind": "cell_type",
+       "label": "Microglia"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [
+      "OT:INPP5D-MONDO_0004975",
+      "STRING:MS4A4A-INPP5D"
+     ],
+     "note": "INPP5D/SHIP1 downregulates PI3K signaling downstream of MS4A4A",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "PI3K pathway suppression"
+     },
+     "polarity": "negative",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "UniProtKB:Q92835",
+      "grounding_evidence": "OT:INPP5D-MONDO_0004975",
+      "kind": "gene",
+      "label": "INPP5D"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [
+    "PMID:PPR987754"
+   ],
+   "falsification": {
+    "description": "If Ms4a4a knockout in an Alzheimer mouse model does not alter TREM2 expression or microglial activation state, the proposed negative regulation is not functionally relevant in vivo.",
+    "expected": "positive",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "UniProtKB:Q96JQ5",
+      "grounding_evidence": "OT:MS4A4A-MONDO_0004975",
+      "kind": "gene",
+      "label": "MS4A4A"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "phenotype",
+     "label": "TREM2 protein levels"
+    },
+    "system": "5xFAD mouse"
+   },
+   "genes": [
+    "MS4A4A",
+    "INPP5D",
+    "TREM2"
+   ],
+   "hypothesis_id": "H3",
+   "mechanism": "MS4A4A, a membrane protein expressed in microglia, negatively regulates TREM2 signaling, with INPP5D/SHIP1 acting as a downstream phosphatase that suppresses PI3K activation; common variants in MS4A4A alter this inhibitory balance, affecting microglial response to amyloid pathology.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "OT:MS4A4A-MONDO_0004975",
+    "PMID:41435829",
+    "rs7232",
+    "OT:TREM2-MONDO_0004975",
+    "Q96JQ5",
+    "OT:INPP5D-MONDO_0004975",
+    "STRING:MS4A4A-INPP5D",
+    "HPA:ENSG00000110079",
+    "HPA:ENSG00000168918",
+    "rs983392"
+   ],
+   "title": "MS4A4A-TREM2 inhibitory axis in microglial regulation"
+  }
+ ],
+ "unexplained_genes": [
+  "RNPS1",
+  "LPIN2"
+ ]
+}

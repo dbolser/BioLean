@@ -1,0 +1,578 @@
+{
+ "run_id": "study-2026-09-vertex-restless-legs-vertex-openai-deepseek-aideepseek-v3.2-maas-single_agent-r2",
+ "curated_by": "Claude Opus 5.5, 2026-10-30",
+ "entities": {
+  "MEIS1": {
+   "kind": "protein",
+   "curie": "UniProt:O00470",
+   "run_labels": [
+    "MEIS1"
+   ]
+  },
+  "BTBD9": {
+   "kind": "protein",
+   "curie": "UniProt:Q96Q07",
+   "run_labels": [
+    "BTBD9"
+   ]
+  },
+  "PTPRD": {
+   "kind": "protein",
+   "curie": "UniProt:P23468",
+   "run_labels": [
+    "PTPRD"
+   ]
+  },
+  "rls": {
+   "kind": "disease",
+   "curie": "MONDO:0005391",
+   "run_labels": [
+    "restless legs syndrome"
+   ]
+  },
+  "brain": {
+   "kind": "anatomy",
+   "curie": "UBERON:0000955",
+   "run_labels": [
+    "brain"
+   ]
+  },
+  "synapticTransmission": {
+   "kind": "process",
+   "curie": "GO:0007268",
+   "run_labels": [
+    "synaptic transmission"
+   ]
+  },
+  "synapticPlasticity": {
+   "kind": "process",
+   "curie": "GO:0048167",
+   "run_labels": [
+    "synaptic plasticity"
+   ]
+  }
+ },
+ "statements": [
+  {
+   "id": "S1",
+   "step": "MEIS1-cerebellar-disinhibition.1",
+   "text": "MEIS1 is associated with restless legs syndrome (unsigned)",
+   "note": "the run's step reads 'restless legs syndrome associated_with MEIS1'; an association is symmetric, so the gene is written as subject and the disease as target",
+   "claim": {
+    "assoc": {
+     "subject": "MEIS1",
+     "direction": "none",
+     "target": {
+      "disease": "rls",
+      "aspect": "risk"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "OT:MEIS1-MONDO_0005391",
+     "kind": "observational",
+     "quote": "scores the MEIS1-restless legs syndrome association at 0.55"
+    },
+    {
+     "ref": "PMID:42309051",
+     "kind": "review",
+     "quote": "restless legs syndrome-associated gene MEIS1"
+    }
+   ],
+   "excluded": [
+    {
+     "ref": "AGR:MGI:104717:MP:0020478",
+     "category": "not_in_text",
+     "reason": "Meis1 mutant mice show abnormal circadian sleep/wake cycle; the record does not name restless legs syndrome"
+    }
+   ]
+  },
+  {
+   "id": "S2",
+   "step": "MEIS1-cerebellar-disinhibition.2",
+   "text": "MEIS1 is expressed in brain (the run's relation is 'translocates')",
+   "note": "the step's note describes tissue and neuron expression, so the step is read as expressed_in",
+   "claim": {
+    "rel": {
+     "relation": "RO:0002206",
+     "a": "MEIS1",
+     "b": "brain"
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "HPA:ENSG00000153707",
+     "category": "not_this_entity",
+     "reason": "this is the Human Protein Atlas record for PTPRD (Gene: PTPRD), not MEIS1; its brain and neuron values are PTPRD's"
+    }
+   ]
+  },
+  {
+   "id": "S3",
+   "step": "BTBD9-synaptic-dopamine.1",
+   "text": "BTBD9 is associated with restless legs syndrome (unsigned)",
+   "note": "the run's step reads 'restless legs syndrome associated_with BTBD9'; gene written as subject",
+   "claim": {
+    "assoc": {
+     "subject": "BTBD9",
+     "direction": "none",
+     "target": {
+      "disease": "rls",
+      "aspect": "risk"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "OT:BTBD9-MONDO_0005391",
+     "kind": "observational",
+     "quote": "scores the BTBD9-restless legs syndrome association at 0.48"
+    }
+   ],
+   "excluded": [
+    {
+     "ref": "AGR:MGI:1916625:MP:0011396",
+     "category": "not_in_text",
+     "reason": "Purkinje-cell conditional Btbd9 knockout mice show abnormal sleep behavior; the record does not name restless legs syndrome"
+    }
+   ]
+  },
+  {
+   "id": "S4",
+   "step": "BTBD9-synaptic-dopamine.2",
+   "text": "BTBD9 lowers synaptic transmission",
+   "sign_note": "the run's sign as written: subject BTBD9 (no loss wording), relation leads_to, polarity negative; the title says BTBD9 loss impairs transmission, which would be positive",
+   "claim": {
+    "effect": {
+     "subject": "BTBD9",
+     "sign": "neg",
+     "target": {
+      "process": "synapticTransmission"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "AGR:MGI:1916625:MP:0004753",
+     "category": "no_direction",
+     "reason": "MGI 'abnormal miniature excitatory postsynaptic currents' annotation: names both ends but carries no direction"
+    }
+   ]
+  },
+  {
+   "id": "S5",
+   "step": "PTPRD-synaptic-adhesion.1",
+   "text": "PTPRD is associated with restless legs syndrome (unsigned)",
+   "note": "the run's step reads 'restless legs syndrome associated_with PTPRD'; gene written as subject",
+   "claim": {
+    "assoc": {
+     "subject": "PTPRD",
+     "direction": "none",
+     "target": {
+      "disease": "rls",
+      "aspect": "risk"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "OT:PTPRD-MONDO_0005391",
+     "kind": "observational",
+     "quote": "scores the PTPRD-restless legs syndrome association at 0.39"
+    }
+   ],
+   "excluded": [
+    {
+     "ref": "P23468",
+     "category": "not_in_text",
+     "reason": "UniProt function text on pre- and post-synaptic differentiation via IL1RAP, IL1RAPL1 and SLITRK2; does not name restless legs syndrome"
+    }
+   ]
+  },
+  {
+   "id": "S6",
+   "step": "PTPRD-synaptic-adhesion.2",
+   "text": "PTPRD raises synaptic plasticity",
+   "note": "the one citation reports enhanced long-term potentiation (a narrower node than synaptic plasticity) in Ptprd tm1Yiw homozygous mice; the record does not say the allele is a loss, so it is excluded as undirected. The run's own note calls these knockout mice, which, if true, would run against the step's positive sign",
+   "claim": {
+    "effect": {
+     "subject": "PTPRD",
+     "sign": "pos",
+     "target": {
+      "process": "synapticPlasticity"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "AGR:MGI:97812:MP:0003008",
+     "category": "undirected",
+     "reason": "names Ptprd and enhanced long-term potentiation, but not what the tm1Yiw allele does to Ptprd (null, hypomorph or other), so it gives no direction for PTPRD's effect; 'knockout' is the run's word, not the record's"
+    }
+   ]
+  }
+ ],
+ "unexpressed": [],
+ "hypotheses": {
+  "MEIS1-cerebellar-disinhibition": {
+   "claims": [
+    {
+     "subject": "MEIS1",
+     "sign": "neg",
+     "target": {
+      "disease": "rls",
+      "aspect": "risk"
+     }
+    }
+   ],
+   "note": "title and mechanism: MEIS1 loss (haploinsufficiency) disinhibits cerebellar output and underlies RLS, so neg. The chain starts at the disease, so the subject is the hypothesis's own gene. The chain ends at an expression site (brain), not a phenotype or process, so there is no second claim; the cerebellar-output mechanism is in no step."
+  },
+  "BTBD9-synaptic-dopamine": {
+   "claims": [
+    {
+     "subject": "BTBD9",
+     "sign": "neg",
+     "target": {
+      "disease": "rls",
+      "aspect": "risk"
+     }
+    },
+    {
+     "subject": "BTBD9",
+     "sign": "pos",
+     "target": {
+      "process": "synapticTransmission"
+     }
+    }
+   ],
+   "note": "title: 'BTBD9 loss impairs synaptic transmission ... causing sleep-related motor symptoms'; mechanism names RLS. Disease claim neg; the chain ends at synaptic transmission, so a second claim BTBD9 →+ synaptic transmission (loss impairs it). The chain starts at the disease, so the subject is the hypothesis's own gene."
+  },
+  "PTPRD-synaptic-adhesion": {
+   "claims": [
+    {
+     "subject": "PTPRD",
+     "sign": "neg",
+     "target": {
+      "disease": "rls",
+      "aspect": "risk"
+     }
+    }
+   ],
+   "note": "the title names PTPRD variants that 'disrupt synaptic adhesion'; the mechanism says disrupted PTPRD-mediated adhesion could lead to RLS, read as loss of PTPRD function, so neg, with the protein as subject (no variant is named or grounded). The chain ends at synaptic plasticity, but the title and mechanism give it no direction ('altered synaptic plasticity'), so no second claim."
+  }
+ },
+ "findings": [
+  {
+   "project": "hypothesis-agent",
+   "category": "chain_reversed",
+   "steps": [
+    "MEIS1-cerebellar-disinhibition.1",
+    "BTBD9-synaptic-dopamine.1",
+    "PTPRD-synaptic-adhesion.1"
+   ],
+   "detail": "Every chain opens with 'restless legs syndrome associated_with <gene>', so the disease is the first node and no step leads from the gene back to the disease it is meant to explain."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "no_route",
+   "steps": [
+    "MEIS1-cerebellar-disinhibition.1",
+    "BTBD9-synaptic-dopamine.1",
+    "PTPRD-synaptic-adhesion.1"
+   ],
+   "detail": "The only gene-disease links are associations with polarity 'unknown', backed by Open Targets scores that carry no direction or allele, so none of the three disease claims has a route."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "confidence_unjustified",
+   "steps": [
+    "MEIS1-cerebellar-disinhibition.2",
+    "BTBD9-synaptic-dopamine.2",
+    "PTPRD-synaptic-adhesion.2"
+   ],
+   "detail": "All three hypotheses are 'medium' confidence and support 'grounded', yet only 4 of 10 citations support their step (all on unsigned associations), no causal step has a kept citation, one citation is for the wrong gene, and the run's own reading of another (PTPRD knockout, enhanced LTP) runs against its step."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "mechanism_not_in_chain",
+   "hypothesis": "MEIS1-cerebellar-disinhibition",
+   "detail": "The titled mechanism (MEIS1 loss -> cerebellar disinhibition -> motor restlessness) and the falsification readout (cerebellar inhibitory output) are in no chain step, although PMID:42309051's title states the first link; the chain holds only an association and an expression site."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_wrong_entity",
+   "steps": [
+    "MEIS1-cerebellar-disinhibition.2"
+   ],
+   "detail": "HPA:ENSG00000153707 is the Human Protein Atlas record for PTPRD (MEIS1 is ENSG00000143995), and the step's note reports PTPRD's brain and neuron values ('expressed in brain excitatory and inhibitory neurons') as MEIS1's."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "wrong_relation",
+   "steps": [
+    "MEIS1-cerebellar-disinhibition.2"
+   ],
+   "detail": "The relation 'translocates' (MEIS1 -> brain, object kind 'tissue') is used for what the note describes as tissue expression; curated as expressed_in (RO:0002206)."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_does_not_state_step",
+   "steps": [
+    "MEIS1-cerebellar-disinhibition.1"
+   ],
+   "detail": "AGR:MGI:104717:MP:0020478 (Meis1 mutant mice, abnormal circadian sleep/wake cycle) is cited for the RLS association but names no RLS."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "species_unstated",
+   "hypothesis": "MEIS1-cerebellar-disinhibition",
+   "detail": "PMID:42309051 studied zebrafish meis1b mutants, but the mechanism and note report it as 'Loss of MEIS1 leads to disinhibition of cerebellar output' with no species."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "uncited_claim",
+   "hypothesis": "MEIS1-cerebellar-disinhibition",
+   "detail": "The mechanism's 'the gene is highly constrained (LOF score 1)' has no source among the run's citations."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "chain_ends_at_expression",
+   "hypothesis": "MEIS1-cerebellar-disinhibition",
+   "detail": "The chain ends at an expression site (brain), not a phenotype or process, so it never reaches any node of the titled mechanism."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "sign_flip",
+   "steps": [
+    "BTBD9-synaptic-dopamine.2"
+   ],
+   "detail": "The step says BTBD9 leads_to synaptic transmission with polarity negative (BTBD9 lowers it), while the title says BTBD9 loss impairs it (BTBD9 raises it); the phenotype arm's sign differs from the claim."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_does_not_state_step",
+   "steps": [
+    "BTBD9-synaptic-dopamine.2"
+   ],
+   "detail": "AGR:MGI:1916625:MP:0004753 is an 'abnormal miniature excitatory postsynaptic currents' annotation with no direction, so nothing backs the step's negative polarity."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_does_not_state_step",
+   "steps": [
+    "BTBD9-synaptic-dopamine.1"
+   ],
+   "detail": "AGR:MGI:1916625:MP:0011396 (abnormal sleep behavior in a Purkinje-cell conditional Btbd9 knockout) is cited for the RLS association but names no RLS."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "mechanism_not_in_chain",
+   "hypothesis": "BTBD9-synaptic-dopamine",
+   "detail": "Dopamine signalling and D2 receptor trafficking are in the title, mechanism and falsification test but in no chain step and no citation."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "chain_ends_at_phenotype",
+   "hypothesis": "BTBD9-synaptic-dopamine",
+   "detail": "The chain ends at synaptic transmission and never reaches RLS; a second claim BTBD9 ->+ synaptic transmission was added from the title."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_does_not_state_step",
+   "steps": [
+    "PTPRD-synaptic-adhesion.1"
+   ],
+   "detail": "UniProt P23468 function text (synaptic differentiation via IL1RAP, IL1RAPL1, SLITRK2; marked by similarity, ECO:0000250 from Q64487) is cited for the RLS association but names no RLS."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "sign_flip",
+   "steps": [
+    "PTPRD-synaptic-adhesion.2"
+   ],
+   "detail": "The step says PTPRD ->+ synaptic plasticity, but its own note and the mechanism say PTPRD knockout mice show enhanced LTP, which would make PTPRD ->- plasticity; as at BTBD9-synaptic-dopamine.2, the polarity seems to encode the knockout's change, not the gene's effect. The cited MGI record itself does not say the allele is a knockout."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "contradicting_evidence_ignored",
+   "hypothesis": "PTPRD-synaptic-adhesion",
+   "detail": "contradicting_evidence is empty for all three hypotheses, though the run's own note reads its PTPRD-synaptic-adhesion.2 citation as knockout mice with enhanced LTP, which runs against that step's positive sign."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "mechanism_not_in_chain",
+   "hypothesis": "PTPRD-synaptic-adhesion",
+   "detail": "Synaptic adhesion (the title), sensory-motor integration and the falsification readout (excitatory synapse density in spinal cord) are in no chain step; the chain stops at synaptic plasticity."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "chain_ends_at_phenotype",
+   "hypothesis": "PTPRD-synaptic-adhesion",
+   "detail": "The chain ends at synaptic plasticity and never reaches RLS; no second claim, because the title and mechanism give no direction ('altered synaptic plasticity')."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "ungrounded_label",
+   "steps": [
+    "MEIS1-cerebellar-disinhibition.2",
+    "BTBD9-synaptic-dopamine.2",
+    "PTPRD-synaptic-adhesion.2"
+   ],
+   "detail": "The run left every end node without a CURIE (brain, synaptic transmission, synaptic plasticity); grounded here to UBERON:0000955, GO:0007268 and GO:0048167."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "genes_unexplained",
+   "detail": "ACO1, GLIPR1 and GABARAPL2 (three of the six input genes) got no hypothesis and are listed as unexplained."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "allele_type_unstated",
+   "steps": [
+    "MEIS1-cerebellar-disinhibition.1",
+    "BTBD9-synaptic-dopamine.1",
+    "BTBD9-synaptic-dopamine.2",
+    "PTPRD-synaptic-adhesion.2"
+   ],
+   "detail": "The run calls every MGI genotype 'knockout mice', but the records name alleles (Meis1 em1Rihw, Btbd9 tm1c with Pcp2-cre, Btbd9 Gt(RRE078)Byg, Ptprd tm1Yiw) and never say any is a null; for PTPRD-synaptic-adhesion.2 the step's direction depends on it."
+  },
+  {
+   "project": "biolean",
+   "category": "evidence_kind_missing",
+   "steps": [
+    "MEIS1-cerebellar-disinhibition.1",
+    "BTBD9-synaptic-dopamine.1",
+    "PTPRD-synaptic-adhesion.1"
+   ],
+   "detail": "The evidence-kind table has no row for an Open Targets association score; recorded as observational (its weight is the GWAS-derived genetic_association datatype), though it is an aggregate database score."
+  },
+  {
+   "project": "biolean",
+   "category": "rule_missing",
+   "steps": [
+    "MEIS1-cerebellar-disinhibition.2"
+   ],
+   "detail": "The run relation 'translocates' is not in the guide's relation table; read through the step's note as expressed_in."
+  },
+  {
+   "project": "biolean",
+   "category": "rule_missing",
+   "steps": [
+    "MEIS1-cerebellar-disinhibition.1",
+    "BTBD9-synaptic-dopamine.1",
+    "PTPRD-synaptic-adhesion.1"
+   ],
+   "detail": "The guide does not say what to do with an associated_with step whose subject is the disease; written with the gene as subject and the disease as target, since an association is symmetric."
+  },
+  {
+   "project": "biolean",
+   "category": "rule_missing",
+   "steps": [
+    "PTPRD-synaptic-adhesion.2"
+   ],
+   "detail": "The guide treats an MGI 'abnormal X' annotation as no_direction but says nothing about directed MP terms ('enhanced', 'reduced') on an allele whose type the record does not state (tm1Yiw). The curator read it as loss of PTPRD and kept it as refutes; the audit excluded it as undirected, as the DCM audit did. Other curations read em1, tm1c and Gt alleles as losses, so the runs are not consistent."
+  },
+  {
+   "project": "biolean",
+   "category": "no_form_for",
+   "steps": [
+    "PTPRD-synaptic-adhesion.2"
+   ],
+   "detail": "Evidence about a narrower node (long-term potentiation, GO:0060291) for a step about a broader one (synaptic plasticity) can only be kept as if it stated the step or excluded; there is no way to mark evidence as covering a subtype of the target. Here the record is excluded for another reason (allele type unstated), so the gap did not decide the result."
+  },
+  {
+   "project": "biolean",
+   "category": "term_grain",
+   "steps": [
+    "PTPRD-synaptic-adhesion.2"
+   ],
+   "detail": "GO has no plain 'synaptic plasticity' process; GO:0048167 'regulation of synaptic plasticity' (the process that modulates synaptic plasticity) is used as the node."
+  },
+  {
+   "project": "biolean",
+   "category": "no_form_for",
+   "hypothesis": "PTPRD-synaptic-adhesion",
+   "detail": "There is no per-claim place to record a phenotype claim the guide asks for but which has no stated sign; no_claim_reason is per hypothesis, so the reason sits in the hypothesis note."
+  },
+  {
+   "project": "biolean",
+   "category": "tool_check_missing",
+   "steps": [
+    "MEIS1-cerebellar-disinhibition.2"
+   ],
+   "detail": "render.py cannot see that a record (HPA:ENSG00000153707, PTPRD) is about a different gene than its step; a gene field in sources.json would let the checker flag such citations."
+  },
+  {
+   "project": "both",
+   "category": "unsigned_association_only",
+   "steps": [
+    "MEIS1-cerebellar-disinhibition.1",
+    "BTBD9-synaptic-dopamine.1",
+    "PTPRD-synaptic-adhesion.1"
+   ],
+   "detail": "All four kept supporting citations sit on unsigned associations, which cannot compose, so the run's only real support never reaches an arm; an allele-level GWAS row would have given a direction."
+  }
+ ],
+ "audit": [
+  {
+   "item": "S6 (PTPRD-synaptic-adhesion.2) evidence AGR:MGI:97812:MP:0003008",
+   "error": "quote_does_not_state",
+   "before": "kept: curatedDb, taxon mouse, polarity refutes, quote 'the genotype Ptprd<sup>tm1Yiw</sup>/Ptprd<sup>tm1Yiw</sup> of Ptprd -- the orthologue of human PTPRD -- shows enhanced long-term potentiation'",
+   "after": "excluded, category undirected",
+   "reason": "A refutes needs the text to state the opposite direction. The record names a genotype and a directed phenotype but never says tm1Yiw is a loss of Ptprd; the curator took 'knockout' from the run's own note, which tests the run against itself. The DCM audit (study-2026-09-vertex-dcm-google-cloud-gemini-3.1-pro-preview-multi_agent-r1) set the same case, a directed MP term on an allele of unstated type, to undirected. S6 goes from refuted (d 4/5, from one mouse row and two inferences: allele type, then LTP for all synaptic plasticity) to unsupported. Kept 5 -> 4, excluded 5 -> 6."
+  },
+  {
+   "item": "finding citation_states_opposite (PTPRD-synaptic-adhesion.2)",
+   "error": "other",
+   "before": "citation_states_opposite: AGR:MGI:97812:MP:0003008 says Ptprd tm1Yiw homozygous mice show enhanced long-term potentiation, so PTPRD restrains LTP, yet the step says PTPRD ->+ synaptic plasticity; the run's own note and mechanism describe the same record.",
+   "after": "sign_flip: The step says PTPRD ->+ synaptic plasticity, but its own note and the mechanism say PTPRD knockout mice show enhanced LTP, which would make PTPRD ->- plasticity; as at BTBD9-synaptic-dopamine.2, the polarity seems to encode the knockout's change, not the gene's effect. The cited MGI record itself does not say the allele is a knockout.",
+   "reason": "With the record excluded, the text no longer states the opposite; the contradiction is between the step's polarity and the run's own note and mechanism."
+  },
+  {
+   "item": "finding contradicting_evidence_ignored (PTPRD-synaptic-adhesion)",
+   "error": "other",
+   "before": "contradicting_evidence is empty for all three hypotheses, though the PTPRD chain's own citation runs against its step.",
+   "after": "contradicting_evidence is empty for all three hypotheses, though the run's own note reads its PTPRD-synaptic-adhesion.2 citation as knockout mice with enhanced LTP, which runs against that step's positive sign.",
+   "reason": "the citation does not itself state the opposite (allele type unstated); the run's reading of it does"
+  },
+  {
+   "item": "finding confidence_unjustified",
+   "error": "other",
+   "before": "All three hypotheses are 'medium' confidence and support 'grounded', yet only 4 of 10 citations support their step (all on unsigned associations), no causal step has a supporting citation, one citation is for the wrong gene and one states the opposite of its step.",
+   "after": "All three hypotheses are 'medium' confidence and support 'grounded', yet only 4 of 10 citations support their step (all on unsigned associations), no causal step has a kept citation, one citation is for the wrong gene, and the run's own reading of another (PTPRD knockout, enhanced LTP) runs against its step.",
+   "reason": "'one states the opposite of its step' is no longer what the curation records"
+  },
+  {
+   "item": "finding rule_missing (directed MP terms, PTPRD-synaptic-adhesion.2)",
+   "error": "other",
+   "before": "The guide treats an MGI 'abnormal X' annotation as no_direction but says nothing about directed MP terms ('enhanced', 'reduced') or whether a targeted-allele genotype (tm1Yiw) counts as loss of function; I read it as loss of PTPRD and kept it as refutes.",
+   "after": "The guide treats an MGI 'abnormal X' annotation as no_direction but says nothing about directed MP terms ('enhanced', 'reduced') on an allele whose type the record does not state (tm1Yiw). The curator read it as loss of PTPRD and kept it as refutes; the audit excluded it as undirected, as the DCM audit did. Other curations read em1, tm1c and Gt alleles as losses, so the runs are not consistent.",
+   "reason": "records the audit's choice and the cross-run inconsistency"
+  },
+  {
+   "item": "finding no_form_for (narrower node, PTPRD-synaptic-adhesion.2)",
+   "error": "other",
+   "before": "Evidence about a narrower node (long-term potentiation, GO:0060291) for a step about a broader one (synaptic plasticity) is kept as if it stated the step; there is no way to mark evidence as covering only a subtype of the target.",
+   "after": "Evidence about a narrower node (long-term potentiation, GO:0060291) for a step about a broader one (synaptic plasticity) can only be kept as if it stated the step or excluded; there is no way to mark evidence as covering a subtype of the target. Here the record is excluded for another reason (allele type unstated), so the gap did not decide the result.",
+   "reason": "the record is no longer kept"
+  },
+  {
+   "item": "finding evidence_weighting (S6)",
+   "error": "other",
+   "before": "One mouse MGI annotation (curatedDb, taxon mouse) gives S6 disbelief 4/5 and the verdict 'refuted' on a human claim; the taxon mismatch is flagged (taxonConsistent false) but not discounted.",
+   "after": "removed",
+   "reason": "S6 now has no kept evidence and is unsupported; the detail would misreport the result"
+  },
+  {
+   "item": "findings: allele_type_unstated",
+   "error": "missed_finding",
+   "before": "absent",
+   "after": "The run calls every MGI genotype 'knockout mice', but the records name alleles (Meis1 em1Rihw, Btbd9 tm1c with Pcp2-cre, Btbd9 Gt(RRE078)Byg, Ptprd tm1Yiw) and never say any is a null; for PTPRD-synaptic-adhesion.2 the step's direction depends on it.",
+   "reason": "the run's 'knockout' wording is what turns these records into directed evidence; the cited texts do not support it"
+  }
+ ]
+}

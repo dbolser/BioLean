@@ -1,0 +1,896 @@
+{
+ "run_id": "20260825T112130Z-0df74a",
+ "model": "openai:gpt-5.6-sol",
+ "question": {
+  "arm": "single_agent",
+  "budget": {
+   "max_delegations": 14,
+   "max_model_requests": 60,
+   "max_specialist_requests": 8,
+   "min_evidence_per_hypothesis": 2,
+   "min_hypotheses": 3,
+   "min_sources_per_hypothesis": 2,
+   "output_retries": 3
+  },
+  "disease": "Alzheimer's disease",
+  "genes": [
+   "TREM2",
+   "RNPS1",
+   "INPP5D",
+   "APOE",
+   "MS4A4A",
+   "LPIN2",
+   "PLCG2",
+   "ABI3"
+  ],
+  "model": "openai:gpt-5.6-sol",
+  "specialist_model": "",
+  "use_network": true
+ },
+ "disease": "Alzheimer's disease",
+ "genes_considered": [
+  "TREM2",
+  "RNPS1",
+  "INPP5D",
+  "APOE",
+  "MS4A4A",
+  "LPIN2",
+  "PLCG2",
+  "ABI3"
+ ],
+ "hypotheses": [
+  {
+   "chain": [
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "microglia"
+      },
+      "disease_state": {
+       "curie": "EFO:MONDO_0004975",
+       "grounding_evidence": "",
+       "kind": "disease",
+       "label": "Alzheimer's disease"
+      },
+      "tissue": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "tissue",
+       "label": "brain"
+      }
+     },
+     "evidence": [
+      "Q9NZC2",
+      "STRING:APOE-TREM2"
+     ],
+     "note": "",
+     "object": {
+      "curie": "UniProt:Q9NZC2",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "TREM2"
+     },
+     "polarity": "unknown",
+     "relation": "binds",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "APOE-containing lipoproteins"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "microglia"
+      },
+      "disease_state": {
+       "curie": "EFO:MONDO_0004975",
+       "grounding_evidence": "",
+       "kind": "disease",
+       "label": "Alzheimer's disease"
+      },
+      "tissue": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "tissue",
+       "label": "brain"
+      }
+     },
+     "evidence": [
+      "Q9NZC2"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "microglial Aβ42 uptake and degradation"
+     },
+     "polarity": "positive",
+     "relation": "required_for",
+     "subject": {
+      "curie": "UniProt:Q9NZC2",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "TREM2"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "microglia"
+      },
+      "disease_state": {
+       "curie": "EFO:MONDO_0004975",
+       "grounding_evidence": "",
+       "kind": "disease",
+       "label": "Alzheimer's disease"
+      },
+      "tissue": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "tissue",
+       "label": "brain"
+      }
+     },
+     "evidence": [
+      "rs429358",
+      "PMID:8346443"
+     ],
+     "note": "The proposed APOE4-versus-APOE3 effect on this specific TREM2-dependent process is the unproven causal step.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "productive TREM2-dependent amyloid clearance"
+     },
+     "polarity": "negative",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "APOE4"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:27025652",
+      "PMID:33667416"
+     ],
+     "note": "",
+     "object": {
+      "curie": "EFO:MONDO_0004975",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "Alzheimer's disease"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "reduced productive amyloid clearance"
+     }
+    }
+   ],
+   "confidence": "high",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "In isogenic human iPSC microglia carrying APOE3 or APOE4, quantify uptake and lysosomal degradation of matched APOE-lipoprotein/Aβ complexes before and after TREM2 knockout. The hypothesis is falsified if APOE4 does not reduce productive clearance relative to APOE3, or if any isoform difference persists unchanged after TREM2 knockout.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "UniProt:Q9NZC2",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "TREM2"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "process",
+     "label": "lysosomal degradation of Aβ42"
+    },
+    "system": "Isogenic APOE3/APOE4 human iPSC-derived microglia exposed to APOE-lipoprotein/Aβ complexes"
+   },
+   "genes": [
+    "APOE",
+    "TREM2"
+   ],
+   "hypothesis_id": "H1",
+   "mechanism": "APOE-containing lipoproteins bind TREM2, which also recognizes Aβ42 and supports its uptake and degradation by microglia. The hypothesis is that APOE4 shifts this interaction toward lipid stress and away from productive Aβ clearance, thereby weakening plaque containment and increasing Alzheimer risk; this is consistent with the very large APOE signal and risk-increasing TREM2 variants but the isoform-specific functional step remains to be tested directly.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "Q9NZC2",
+    "STRING:APOE-TREM2",
+    "rs429358",
+    "PMID:8346443",
+    "R-HSA-9029569"
+   ],
+   "title": "APOE4 makes TREM2-mediated lipid and amyloid handling less productive"
+  },
+  {
+   "chain": [
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "microglia"
+      },
+      "disease_state": {
+       "curie": "EFO:MONDO_0004975",
+       "grounding_evidence": "",
+       "kind": "disease",
+       "label": "Alzheimer's disease"
+      },
+      "tissue": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "tissue",
+       "label": "brain"
+      }
+     },
+     "evidence": [
+      "STRING:TREM2-PLCG2",
+      "R-HSA-2172127",
+      "R-HSA-2424491"
+     ],
+     "note": "",
+     "object": {
+      "curie": "UniProt:P16885",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "PLCG2"
+     },
+     "polarity": "positive",
+     "relation": "activates",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "TREM2–DAP12 receptor complex"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "microglia"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [
+      "P16885",
+      "R-HSA-1855204"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "DAG and IP3"
+     },
+     "polarity": "positive",
+     "relation": "increases_amount",
+     "subject": {
+      "curie": "UniProt:P16885",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "PLCG2"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "microglia"
+      },
+      "disease_state": {
+       "curie": "EFO:MONDO_0004975",
+       "grounding_evidence": "",
+       "kind": "disease",
+       "label": "Alzheimer's disease"
+      },
+      "tissue": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "tissue",
+       "label": "brain"
+      }
+     },
+     "evidence": [
+      "Q92835",
+      "HPA:ENSG00000168918"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "PI3K signaling"
+     },
+     "polarity": "negative",
+     "relation": "inhibits",
+     "subject": {
+      "curie": "UniProt:Q92835",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "INPP5D"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "microglia"
+      },
+      "disease_state": {
+       "curie": "EFO:MONDO_0004975",
+       "grounding_evidence": "",
+       "kind": "disease",
+       "label": "Alzheimer's disease"
+      },
+      "tissue": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "tissue",
+       "label": "brain"
+      }
+     },
+     "evidence": [
+      "AGR:MGI:97616:MP:0010740",
+      "AGR:MGI:97616:MP:0030951",
+      "AGR:MGI:1913150:MP:0003691"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "microglial chemotaxis and endocytosis"
+     },
+     "polarity": "positive",
+     "relation": "required_for",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "balanced PLCG2 activation and INPP5D inhibition"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "rs72824905",
+      "rs10933431",
+      "rs75932628",
+      "STRING:PMID:28714976"
+     ],
+     "note": "",
+     "object": {
+      "curie": "EFO:MONDO_0004975",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "Alzheimer's disease"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "deficient microglial chemotaxis and endocytosis"
+     }
+    }
+   ],
+   "confidence": "high",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "In an amyloid-bearing human microglia–neuron organoid, inhibit INPP5D while separately knocking out PLCG2. The hypothesis is falsified if INPP5D inhibition still improves microglial calcium responses, Aβ uptake, and plaque compaction when PLCG2 is absent, showing that the proposed signaling balance does not depend on PLCG2.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "UniProt:P16885",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "PLCG2"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "process",
+     "label": "improvement in Aβ uptake after INPP5D inhibition"
+    },
+    "system": "Amyloid-bearing human iPSC microglia–neuron organoid"
+   },
+   "genes": [
+    "TREM2",
+    "PLCG2",
+    "INPP5D"
+   ],
+   "hypothesis_id": "H2",
+   "mechanism": "TREM2–DAP12 signaling recruits a phosphoinositide signaling program in which PLCG2 generates DAG and IP3, while INPP5D/SHIP1 removes PIP3 and dampens PI3K signaling. Alzheimer risk reflects an improperly tuned signaling set point: insufficient PLCG2 output or excessive INPP5D braking reduces calcium-dependent chemotaxis, endocytosis, and plaque compaction, whereas the PLCG2 protective allele shifts the system toward a productive response.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "rs72824905",
+    "rs10933431",
+    "rs75932628",
+    "P16885",
+    "Q92835",
+    "R-HSA-2172127",
+    "R-HSA-1855204",
+    "AGR:MGI:97616:MP:0030951",
+    "STRING:PMID:28714976"
+   ],
+   "title": "PLCG2 and INPP5D set the gain of protective TREM2–DAP12 microglial signaling"
+  },
+  {
+   "chain": [
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "plaque-associated microglia"
+      },
+      "disease_state": {
+       "curie": "EFO:MONDO_0004975",
+       "grounding_evidence": "",
+       "kind": "disease",
+       "label": "Alzheimer's disease"
+      },
+      "tissue": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "tissue",
+       "label": "brain"
+      }
+     },
+     "evidence": [
+      "Q96JQ5",
+      "PMID:PMC12738020",
+      "STRING:MS4A4A-TREM2"
+     ],
+     "note": "The exact molecular action is unresolved; UniProt describes MS4A4A only as a possible component of a multimeric receptor complex.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "functional TREM2 signaling complexes"
+     },
+     "polarity": "positive",
+     "relation": "increases_amount",
+     "subject": {
+      "curie": "UniProt:Q96JQ5",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "MS4A4A"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "plaque-associated microglia"
+      },
+      "disease_state": {
+       "curie": "EFO:MONDO_0004975",
+       "grounding_evidence": "",
+       "kind": "disease",
+       "label": "Alzheimer's disease"
+      },
+      "tissue": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "tissue",
+       "label": "brain"
+      }
+     },
+     "evidence": [
+      "Q9NZC2",
+      "PMID:28602351"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "protective microglial plaque response"
+     },
+     "polarity": "positive",
+     "relation": "activates",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "functional TREM2 signaling complexes"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:PMC12738020",
+      "rs1582763"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "Alzheimer's disease pathology"
+     },
+     "polarity": "negative",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "protective microglial plaque response"
+     }
+    }
+   ],
+   "confidence": "medium",
+   "contradicting_evidence": [
+    "PMID:41435829"
+   ],
+   "falsification": {
+    "description": "Delete MS4A4A in isogenic human microglia and measure surface versus intracellular TREM2, TREM2-dependent signaling, and plaque compaction across early and late amyloid exposure. The hypothesis is falsified if deletion consistently increases functional surface TREM2 and plaque compaction at both stages.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "UniProt:Q96JQ5",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "MS4A4A"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "phenotype",
+     "label": "functional surface TREM2 and plaque compaction"
+    },
+    "system": "Human iPSC-derived microglia in amyloid organoids, tested at early and late pathology"
+   },
+   "genes": [
+    "MS4A4A",
+    "TREM2"
+   ],
+   "hypothesis_id": "H3",
+   "mechanism": "MS4A4A is proposed to promote TREM2 abundance or organization in a membrane receptor complex, enabling plaque-associated microglia to enter a protective phagocytic state. This direction is supported by one disease-model report but directly challenged by another report that MS4A4A and MS4A6A negatively regulate TREM2, suggesting that dosage, trafficking compartment, or disease stage may reverse the effect.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "PMID:PMC12738020",
+    "rs1582763",
+    "STRING:MS4A4A-TREM2",
+    "AGR:MGI:3643932:MP:0002451",
+    "Q96JQ5"
+   ],
+   "title": "MS4A4A controls the availability of a protective TREM2 microglial state"
+  },
+  {
+   "chain": [
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "microglia"
+      },
+      "disease_state": {
+       "curie": "EFO:MONDO_0004975",
+       "grounding_evidence": "",
+       "kind": "disease",
+       "label": "Alzheimer's disease"
+      },
+      "tissue": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "tissue",
+       "label": "brain"
+      }
+     },
+     "evidence": [
+      "STRING:ABI3-TREM2",
+      "STRING:ABI3-PLCG2",
+      "Q9P2A4"
+     ],
+     "note": "Network proximity supports this placement, but a direct biochemical TREM2/PLCG2-to-ABI3 step has not been demonstrated by the returned records.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "ABI3-dependent cytoskeletal remodeling"
+     },
+     "polarity": "positive",
+     "relation": "activates",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "TREM2–PLCG2 signaling"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "plaque-associated microglia"
+      },
+      "disease_state": {
+       "curie": "EFO:MONDO_0004975",
+       "grounding_evidence": "",
+       "kind": "disease",
+       "label": "Alzheimer's disease"
+      },
+      "tissue": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "tissue",
+       "label": "brain"
+      }
+     },
+     "evidence": [
+      "PMID:42092345"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "microglial plaque encasement and compaction"
+     },
+     "polarity": "positive",
+     "relation": "required_for",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "ABI3-dependent cytoskeletal remodeling"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:42092345",
+      "rs616338"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "Alzheimer's disease pathology"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "loss of plaque encasement and compaction"
+     }
+    }
+   ],
+   "confidence": "medium",
+   "contradicting_evidence": [
+    "AGR:MGI:1913860:no-phenotypes"
+   ],
+   "falsification": {
+    "description": "Introduce the ABI3 risk allele into isogenic human microglia in a 3D amyloid model and quantify actin polarization, migration to plaques, plaque circularity/compaction, and nearby synapse loss. The hypothesis is falsified if the allele changes none of these readouts despite matched ABI3 expression.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "UniProt:Q9P2A4",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "ABI3"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "phenotype",
+     "label": "microglial plaque encasement and compaction"
+    },
+    "system": "3D human neuron–astrocyte–microglia amyloid model"
+   },
+   "genes": [
+    "ABI3",
+    "TREM2",
+    "PLCG2"
+   ],
+   "hypothesis_id": "H4",
+   "mechanism": "ABI3 is an SH3-domain cytoplasmic protein linked genetically to Alzheimer disease and network-connected to TREM2 and PLCG2. The hypothesis is that ABI3 organizes cytoskeletal remodeling needed for microglial migration and tight plaque encasement; risk alleles weaken this response, producing less compact plaques and greater synaptic exposure to toxic Aβ species.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "PMID:42092345",
+    "rs616338",
+    "STRING:ABI3-TREM2",
+    "STRING:ABI3-PLCG2",
+    "Q9P2A4"
+   ],
+   "title": "ABI3 enables actin-dependent microglial plaque encasement downstream of the TREM2 network"
+  },
+  {
+   "chain": [
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "microglia"
+      },
+      "disease_state": null,
+      "tissue": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "tissue",
+       "label": "brain"
+      }
+     },
+     "evidence": [
+      "Q92539",
+      "HPA:ENSG00000101577"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "biosynthetic DAG"
+     },
+     "polarity": "positive",
+     "relation": "increases_amount",
+     "subject": {
+      "curie": "UniProt:Q92539",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "LPIN2"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "microglia"
+      },
+      "disease_state": {
+       "curie": "EFO:MONDO_0004975",
+       "grounding_evidence": "",
+       "kind": "disease",
+       "label": "Alzheimer's disease"
+      },
+      "tissue": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "tissue",
+       "label": "brain"
+      }
+     },
+     "evidence": [
+      "Q92539",
+      "P16885",
+      "AGR:MGI:1891341:MP:0002702",
+      "AGR:MGI:1891341:MP:0002644"
+     ],
+     "note": "This is speculative: LPIN2-generated DAG is biosynthetic, whereas PLCG2 generates signaling DAG and IP3 from phosphoinositides.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "sustained TREM2–PLCG2 microglial response"
+     },
+     "polarity": "positive",
+     "relation": "required_for",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "LPIN2-dependent phospholipid remodeling"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "Q9NZC2"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "Aβ clearance"
+     },
+     "polarity": "negative",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "failure of sustained microglial lipid remodeling"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [
+    "GWAS:LPIN2:no-association"
+   ],
+   "falsification": {
+    "description": "Knock down LPIN2 in human microglia under chronic TREM2 stimulation and measure membrane phospholipid flux, calcium/DAG signaling, metabolic fitness, and repeated-pulse Aβ uptake. The hypothesis is falsified if LPIN2 loss alters bulk lipids but leaves sustained TREM2–PLCG2 signaling and Aβ uptake intact.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "knockdown",
+     "target": {
+      "curie": "UniProt:Q92539",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "LPIN2"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "process",
+     "label": "sustained repeated-pulse Aβ uptake"
+    },
+    "system": "Human iPSC-derived microglia under chronic TREM2 stimulation"
+   },
+   "genes": [
+    "LPIN2",
+    "TREM2",
+    "PLCG2"
+   ],
+   "hypothesis_id": "H5",
+   "mechanism": "LPIN2 converts phosphatidate to DAG and is expressed in microglia, creating a plausible link between membrane-lipid remodeling and the DAG-dependent signaling environment used by PLCG2. The hypothesis is that reduced LPIN2 limits membrane remodeling and metabolic fitness during TREM2 activation, impairing sustained Aβ phagocytosis; however, LPIN2 has no curated Alzheimer GWAS association, and its biosynthetic DAG pool may be distinct from PLCG2-generated signaling DAG.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "Q92539",
+    "HPA:ENSG00000101577",
+    "AGR:MGI:1891341:MP:0002702",
+    "AGR:MGI:1891341:MP:0002644"
+   ],
+   "title": "LPIN2 is a non-genetic lipid-metabolic modifier of microglial TREM2–PLCG2 responses"
+  }
+ ],
+ "unexplained_genes": [
+  "RNPS1"
+ ]
+}

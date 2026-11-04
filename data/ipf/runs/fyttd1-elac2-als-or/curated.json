@@ -1,0 +1,951 @@
+{
+ "run_id": "fyttd1-elac2-als-or",
+ "curated_by": "Claude Opus 5.5, 2026-10-30",
+ "entities": {
+  "c9Hre": {
+   "kind": "variant",
+   "curie": "BLN:C9orf72-G4C2RepeatExpansion",
+   "label": "C9orf72 GGGGCC hexanucleotide repeat expansion (expanded allele)",
+   "why_no_term": "searched 'repeat expansion', 'hexanucleotide repeat', 'C9orf72': SO has only the generic short_tandem_repeat_expansion (SO:0002162); no record for this expansion",
+   "run_labels": [
+    "C9orf72 repeat expansion / TDP-43 pathology"
+   ]
+  },
+  "tdp43Proteinopathy": {
+   "kind": "disease",
+   "curie": "MONDO:0700038",
+   "run_labels": [
+    "C9orf72 repeat expansion / TDP-43 pathology"
+   ]
+  },
+  "nct": {
+   "kind": "process",
+   "curie": "GO:0006913",
+   "run_labels": [
+    "nucleocytoplasmic transport"
+   ]
+  },
+  "FYTTD1": {
+   "kind": "protein",
+   "curie": "UniProt:Q96QD9",
+   "run_labels": [
+    "FYTTD1 (UIF)",
+    "loss of mRNA export adapter function"
+   ]
+  },
+  "mrnaExport": {
+   "kind": "process",
+   "curie": "GO:0006406",
+   "run_labels": [
+    "mRNA export from nucleus to cytoplasm"
+   ]
+  },
+  "mnDegeneration": {
+   "kind": "phenotype",
+   "curie": "UPHENO:0079518",
+   "run_labels": [
+    "motor neuron degeneration"
+   ]
+  },
+  "als": {
+   "kind": "disease",
+   "curie": "MONDO:0004976",
+   "run_labels": [
+    "amyotrophic lateral sclerosis"
+   ]
+  },
+  "ELAC2": {
+   "kind": "protein",
+   "curie": "UniProt:Q9BQ52",
+   "run_labels": [
+    "ELAC2 (tRNase Z)",
+    "ELAC2",
+    "Elac2 conditional deletion"
+   ]
+  },
+  "trna3End": {
+   "kind": "process",
+   "curie": "GO:0042780",
+   "run_labels": [
+    "pre-tRNA 3'-end maturation"
+   ]
+  },
+  "trfProcessing": {
+   "kind": "process",
+   "curie": "GO:0140891",
+   "run_labels": [
+    "tRNA-derived fragment (tsRNA/tRF) biogenesis"
+   ]
+  },
+  "tiRna": {
+   "kind": "chemical",
+   "curie": "BLN:AngiogeninTiRNA",
+   "label": "tRNA-derived stress-induced small RNAs (tiRNAs) made by angiogenin cleavage",
+   "why_no_term": "searched 'tRNA fragment', 'tRNA-derived', 'tRNA-derived small RNA', 'tiRNA', 'tRNA half', 'small RNA': CHEBI has only transfer RNA (CHEBI:17843); GO:0140891 is the processing, not the molecule",
+   "run_labels": [
+    "angiogenin-generated tRNA fragments"
+   ]
+  },
+  "translation": {
+   "kind": "process",
+   "curie": "GO:0006412",
+   "run_labels": [
+    "stress-induced protein translation"
+   ]
+  },
+  "trnaProcessing": {
+   "kind": "process",
+   "curie": "GO:0008033",
+   "run_labels": [
+    "disordered tRNA maturation"
+   ]
+  },
+  "neurodegeneration": {
+   "kind": "phenotype",
+   "curie": "HP:0002180",
+   "run_labels": [
+    "neurodegeneration"
+   ]
+  },
+  "mtRnaProcessing": {
+   "kind": "process",
+   "curie": "GO:0000963",
+   "run_labels": [
+    "mitochondrial RNA processing and ribosome assembly"
+   ]
+  },
+  "mtRibosomeAssembly": {
+   "kind": "process",
+   "curie": "GO:0061668",
+   "run_labels": [
+    "mitochondrial RNA processing and ribosome assembly"
+   ]
+  },
+  "oxphos": {
+   "kind": "process",
+   "curie": "GO:0006119",
+   "run_labels": [
+    "oxidative phosphorylation capacity",
+    "impaired mitochondrial ATP production"
+   ]
+  },
+  "striatedMuscle": {
+   "kind": "anatomy",
+   "curie": "UBERON:0002036",
+   "run_labels": [
+    "striated muscle (Ckmm-cre)"
+   ]
+  },
+  "oxphosStriatedMuscle": {
+   "kind": "process",
+   "refines": {
+    "base": "oxphos",
+    "ctx": {
+     "anatomy": "striatedMuscle"
+    }
+   },
+   "run_labels": [
+    "oxidative phosphorylation capacity"
+   ]
+  }
+ },
+ "statements": [
+  {
+   "id": "S1",
+   "step": "H1.1",
+   "text": "the C9orf72 repeat expansion inhibits nucleocytoplasmic transport",
+   "claim": {
+    "effect": {
+     "subject": "c9Hre",
+     "sign": "neg",
+     "target": {
+      "process": "nct"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "PMID:26308891",
+     "kind": "inVitro",
+     "quote": "Nuclear import is impaired as a result of HRE expression in the fly model and in C9orf72 iPSC-derived neurons"
+    },
+    {
+     "ref": "PMID:26308899",
+     "kind": "mechanistic",
+     "taxon": "fly",
+     "quote": "a primary consequence of G4C2 repeat expansion is the compromise of nucleocytoplasmic transport through the nuclear pore"
+    },
+    {
+     "ref": "PMID:29628143",
+     "kind": "review",
+     "quote": "Defects in nucleocytoplasmic transport have been identified as a key pathogenic event in amyotrophic lateral sclerosis (ALS) and frontotemporal dementia (FTD) mediated by a GGGGCC hexanucleotide repeat expansion in C9ORF72"
+    }
+   ],
+   "excluded": []
+  },
+  {
+   "id": "S2",
+   "step": "H1.1",
+   "text": "TDP-43 pathology inhibits nucleocytoplasmic transport",
+   "claim": {
+    "effect": {
+     "subject": "tdp43Proteinopathy",
+     "sign": "neg",
+     "target": {
+      "process": "nct"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "PMID:29311743",
+     "kind": "inVitro",
+     "quote": "Aggregated and disease-linked mutant TDP-43 triggered the sequestration and/or mislocalization of nucleoporins and transport factors, and interfered with nuclear protein import and RNA export"
+    }
+   ],
+   "excluded": []
+  },
+  {
+   "id": "S3",
+   "step": "H1.2",
+   "text": "FYTTD1 is required for mRNA export from the nucleus (losing FYTTD1 lowers mRNA export)",
+   "claim": {
+    "effect": {
+     "subject": "FYTTD1",
+     "sign": "pos",
+     "target": {
+      "process": "mrnaExport"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "Q96QD9",
+     "kind": "curatedDb",
+     "quote": "Required for mRNA export from the nucleus to the cytoplasm"
+    }
+   ],
+   "excluded": [
+    {
+     "ref": "R-HSA-72202",
+     "category": "enrichment",
+     "reason": "an over-representation result (1 of 90 entities matched); names neither FYTTD1 nor a direction"
+    }
+   ]
+  },
+  {
+   "id": "S4",
+   "step": "H1.3",
+   "text": "loss of FYTTD1's mRNA export adapter function leads to motor neuron degeneration",
+   "sign_note": "inverted: the run's subject is loss of mRNA export adapter function, read as FYTTD1's own function (the run calls FYTTD1 the adapter)",
+   "claim": {
+    "effect": {
+     "subject": "FYTTD1",
+     "sign": "neg",
+     "target": {
+      "phenotype": "mnDegeneration"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "PMID:38331934",
+     "category": "not_this_entity",
+     "reason": "THOC2 (a TREX subunit), not FYTTD1; reports neurodevelopmental deficits, R-loops and cell death in mouse brain, not motor neuron degeneration"
+    },
+    {
+     "ref": "PMID:27679854",
+     "category": "not_in_text",
+     "reason": "review naming TREX activity in ALS with no direction; names neither FYTTD1 nor motor neuron degeneration"
+    },
+    {
+     "ref": "GWAS:FYTTD1:no-association",
+     "category": "other",
+     "reason": "a null GWAS result for FYTTD1 and ALS; no statement links FYTTD1 to ALS, and H1 itself says FYTTD1 is not a risk gene"
+    },
+    {
+     "ref": "HPA:ENSG00000122068",
+     "category": "no_direction",
+     "reason": "expression level and subcellular location only"
+    },
+    {
+     "ref": "AGR:MGI:1917955:MP:0000367",
+     "category": "not_in_text",
+     "reason": "Fyttd1 knockout coat/hair phenotype, not motor neuron degeneration"
+    },
+    {
+     "ref": "AGR:MGI:1917955:MP:0005562",
+     "category": "not_in_text",
+     "reason": "Fyttd1 knockout haematology phenotype, not motor neuron degeneration"
+    },
+    {
+     "ref": "AGR:MGI:1917955:MP:0005553",
+     "category": "not_in_text",
+     "reason": "Fyttd1 knockout creatinine phenotype, not motor neuron degeneration"
+    },
+    {
+     "ref": "AGR:MGI:1917955:MP:0010024",
+     "category": "not_in_text",
+     "reason": "Fyttd1 knockout adiposity phenotype, not motor neuron degeneration"
+    }
+   ]
+  },
+  {
+   "id": "S5",
+   "step": "H2.1",
+   "text": "ELAC2 is required for pre-tRNA 3'-end processing (losing ELAC2 lowers it)",
+   "claim": {
+    "effect": {
+     "subject": "ELAC2",
+     "sign": "pos",
+     "target": {
+      "process": "trna3End"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "Q9BQ52",
+     "kind": "curatedDb",
+     "quote": "Involved in tRNA maturation, by removing a 3'-trailer from precursor tRNA"
+    }
+   ],
+   "excluded": [
+    {
+     "ref": "R-HSA-72306",
+     "category": "enrichment",
+     "reason": "an over-representation result (1 of 189 entities matched); names neither ELAC2 nor a direction"
+    },
+    {
+     "ref": "GWAS:ELAC2:no-association",
+     "category": "other",
+     "reason": "a null GWAS result for ELAC2 and ALS; no statement links ELAC2 to ALS, and H2 itself frames ELAC2 as a modifier, not a risk gene"
+    },
+    {
+     "ref": "HPA:ENSG00000006744",
+     "category": "no_direction",
+     "reason": "expression level and subcellular location only"
+    },
+    {
+     "ref": "AGR:MGI:1890496:phenotype-count",
+     "category": "other",
+     "reason": "a count of phenotype annotations; states no phenotype and no direction"
+    }
+   ]
+  },
+  {
+   "id": "S6",
+   "step": "H2.2",
+   "text": "pre-tRNA 3'-end processing goes with tRNA-derived fragment biogenesis (direction not given)",
+   "claim": {
+    "assoc": {
+     "subject": "trna3End",
+     "direction": "none",
+     "target": {
+      "process": "trfProcessing"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "R-HSA-9708296",
+     "category": "enrichment",
+     "reason": "an over-representation result (1 of 4 entities matched); names neither 3'-end maturation nor ELAC2"
+    },
+    {
+     "ref": "PMID:25220675",
+     "category": "not_in_text",
+     "reason": "says tRNA fragments vary in biogenesis; does not name 3'-end maturation"
+    }
+   ]
+  },
+  {
+   "id": "S7",
+   "step": "H2.3",
+   "text": "angiogenin-generated tRNA fragments (tiRNAs) inhibit translation",
+   "claim": {
+    "effect": {
+     "subject": "tiRna",
+     "sign": "neg",
+     "target": {
+      "process": "translation"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "PMID:19332886",
+     "kind": "inVitro",
+     "quote": "transfection of angiogenin-induced tiRNAs promotes phospho-eIF2alpha-independent translational arrest"
+    }
+   ],
+   "excluded": []
+  },
+  {
+   "id": "S8",
+   "step": "H2.4",
+   "text": "impaired tRNA maturation leads to neurodegeneration",
+   "sign_note": "inverted: the run's subject is 'disordered tRNA maturation', which carries no direction; read as impaired maturation, as the run's mechanism (partial ELAC2 loss of function) and PMID:24766810 (defective CLP1, impaired pre-tRNA cleavage) give it",
+   "claim": {
+    "effect": {
+     "subject": "trnaProcessing",
+     "sign": "neg",
+     "target": {
+      "phenotype": "neurodegeneration"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "PMID:24766810",
+     "kind": "observational",
+     "quote": "Our data link tRNA maturation to neuronal development and neurodegeneration through defective CLP1 function in humans"
+    }
+   ],
+   "excluded": [
+    {
+     "ref": "PMID:41320876",
+     "category": "not_in_text",
+     "reason": "review: tsRNAs implicated in neurodegenerative disease; the subject is tsRNAs, not tRNA maturation, and no direction"
+    }
+   ]
+  },
+  {
+   "id": "B1",
+   "step": "bridge",
+   "for": [
+    "H2"
+   ],
+   "text": "ELAC2 is involved in tRNA maturation (bridge from the run's own UniProt citation)",
+   "claim": {
+    "effect": {
+     "subject": "ELAC2",
+     "sign": "pos",
+     "target": {
+      "process": "trnaProcessing"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "Q9BQ52",
+     "kind": "curatedDb",
+     "quote": "Involved in tRNA maturation",
+     "moved_from": "H2.1"
+    }
+   ],
+   "excluded": []
+  },
+  {
+   "id": "S9",
+   "step": "H3.1",
+   "text": "ELAC2 is required for mitochondrial RNA processing",
+   "claim": {
+    "effect": {
+     "subject": "ELAC2",
+     "sign": "pos",
+     "target": {
+      "process": "mtRnaProcessing"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "Q9BQ52",
+     "kind": "curatedDb",
+     "quote": "Associates with mitochondrial DNA complexes at the nucleoids to initiate RNA processing and ribosome assembly"
+    }
+   ],
+   "excluded": [
+    {
+     "ref": "R-HSA-6785470",
+     "category": "enrichment",
+     "reason": "an over-representation result (1 of 45 entities matched); names neither ELAC2 nor a direction"
+    }
+   ]
+  },
+  {
+   "id": "S10",
+   "step": "H3.1",
+   "text": "ELAC2 is required for mitochondrial ribosome assembly",
+   "claim": {
+    "effect": {
+     "subject": "ELAC2",
+     "sign": "pos",
+     "target": {
+      "process": "mtRibosomeAssembly"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "Q9BQ52",
+     "kind": "curatedDb",
+     "quote": "Associates with mitochondrial DNA complexes at the nucleoids to initiate RNA processing and ribosome assembly"
+    }
+   ],
+   "excluded": []
+  },
+  {
+   "id": "S11",
+   "step": "H3.2",
+   "text": "loss of ELAC2 lowers oxidative phosphorylation in striated muscle",
+   "sign_note": "inverted: the run's subject is Elac2 conditional deletion; the step's context and note limit the result to striated muscle (Ckmm-cre), so the target is refined",
+   "claim": {
+    "effect": {
+     "subject": "ELAC2",
+     "sign": "pos",
+     "target": {
+      "process": "oxphosStriatedMuscle"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "AGR:MGI:1890496:MP:0010959",
+     "category": "no_direction",
+     "reason": "an MGI 'abnormal oxidative phosphorylation' annotation (mouse); carries no direction"
+    },
+    {
+     "ref": "AGR:MGI:1890496:MP:0010956",
+     "category": "no_direction",
+     "reason": "an MGI 'abnormal mitochondrial ATP synthesis coupled electron transport' annotation (mouse); carries no direction"
+    },
+    {
+     "ref": "GWAS:ELAC2:no-association",
+     "category": "other",
+     "reason": "a null GWAS result for ELAC2 and ALS; no statement links ELAC2 to ALS, and H3 frames ELAC2 as a modifier"
+    },
+    {
+     "ref": "HPA:ENSG00000006744",
+     "category": "no_direction",
+     "reason": "expression level and subcellular location only"
+    },
+    {
+     "ref": "AGR:MGI:1890496:phenotype-count",
+     "category": "other",
+     "reason": "a count of phenotype annotations; states no phenotype and no direction"
+    },
+    {
+     "ref": "AGR:MGI:1890496:MP:0009381",
+     "category": "not_in_text",
+     "reason": "Elac2 mutant prostate morphology, not oxidative phosphorylation"
+    },
+    {
+     "ref": "AGR:MGI:1890496:MP:0031369",
+     "category": "not_in_text",
+     "reason": "Elac2 mutant prostate hyperplasia, not oxidative phosphorylation"
+    }
+   ]
+  },
+  {
+   "id": "S12",
+   "step": "H3.3",
+   "text": "impaired mitochondrial ATP production leads to motor neuron degeneration",
+   "sign_note": "inverted: the run's subject is impaired mitochondrial ATP production, merged with oxidative phosphorylation (the run's mechanism names OXPHOS for this node)",
+   "claim": {
+    "effect": {
+     "subject": "oxphos",
+     "sign": "neg",
+     "target": {
+      "phenotype": "mnDegeneration"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "AGR:MGI:1890496:MP:0006036",
+     "category": "not_in_text",
+     "reason": "Elac2 muscle knockout shows abnormal mitochondrial physiology; names neither ATP production as a cause nor motor neuron degeneration"
+    },
+    {
+     "ref": "AGR:MGI:1890496:MP:0005621",
+     "category": "not_in_text",
+     "reason": "Elac2 muscle knockout shows abnormal cell physiology; names neither ATP production as a cause nor motor neuron degeneration"
+    }
+   ]
+  }
+ ],
+ "unexpressed": [],
+ "hypotheses": {
+  "H1": {
+   "claims": [
+    {
+     "subject": "FYTTD1",
+     "sign": "neg",
+     "target": {
+      "disease": "als",
+      "aspect": "severity"
+     }
+    },
+    {
+     "subject": "FYTTD1",
+     "sign": "neg",
+     "target": {
+      "phenotype": "mnDegeneration"
+     }
+    }
+   ],
+   "note": "the title says FYTTD1 is an effector, not a risk gene, and its loss 'would aggravate' the export block: severity. The chain ends at motor neuron degeneration, not ALS"
+  },
+  "H2": {
+   "claims": [
+    {
+     "subject": "ELAC2",
+     "sign": "neg",
+     "target": {
+      "disease": "als",
+      "aspect": "progression"
+     }
+    },
+    {
+     "subject": "ELAC2",
+     "sign": "neg",
+     "target": {
+      "phenotype": "neurodegeneration"
+     }
+    }
+   ],
+   "note": "'partial ELAC2 loss of function ... acting as a modifier rather than a primary cause': neg, and 'modifier' read as progression. The chain ends at neurodegeneration, not ALS"
+  },
+  "H3": {
+   "claims": [
+    {
+     "subject": "ELAC2",
+     "sign": "neg",
+     "target": {
+      "disease": "als",
+      "aspect": "progression"
+     }
+    },
+    {
+     "subject": "ELAC2",
+     "sign": "neg",
+     "target": {
+      "phenotype": "mnDegeneration"
+     }
+    }
+   ],
+   "note": "'ELAC2 loss as a mitochondrial-bioenergetic modifier': neg, 'modifier' read as progression. The chain ends at motor neuron degeneration, not ALS"
+  }
+ },
+ "findings": [
+  {
+   "project": "hypothesis-agent",
+   "category": "chain_not_connected",
+   "steps": [
+    "H1.1",
+    "H1.2"
+   ],
+   "detail": "H1.1 ends at nucleocytoplasmic transport and H1.2 starts at FYTTD1; no step says the C9orf72 or TDP-43 insults reduce or mislocalise FYTTD1, which is the hypothesis's central claim ('predicted to be lost or mislocalised in ALS motor neurons as a consequence of these insults')."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "chain_not_connected",
+   "steps": [
+    "H1.2",
+    "H1.3"
+   ],
+   "detail": "H1.2 ends at mRNA export, H1.3 starts at 'loss of mRNA export adapter function', which is FYTTD1's own function; the chain forks from FYTTD1 and never uses mRNA export as a link, so the arm FYTTD1 -> motor neuron degeneration is the bare H1.3 step."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "ungrounded_label",
+   "steps": [
+    "H1.3"
+   ],
+   "detail": "'mRNA export adapter function' is a generic class (the note says it is inferred by analogy from THOC2); curated as FYTTD1 because the run calls FYTTD1 the adapter, but the run never says so in the step."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_does_not_state_step",
+   "steps": [
+    "H1.3"
+   ],
+   "detail": "PMID:38331934 is about THOC2 (neurodevelopment, R-loops, brain cell death in a hypomorphic mouse) and PMID:27679854 is a TREX review naming ALS without direction; neither names FYTTD1 or motor neuron degeneration, so H1.3, the step that carries H1 to its phenotype, has no support."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_states_opposite",
+   "hypothesis": "H1",
+   "detail": "The run cites PMID:24866055 as support, but its second proposed mechanism is that mRNA export adaptors license nuclear export of the expanded C9orf72 RNA, leading to toxic RAN translation: adaptor activity harmful, the opposite of H1's 'loss aggravates' direction; it names ALYREF, not FYTTD1, so it attaches to no statement."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_at_no_step",
+   "hypothesis": "H1",
+   "detail": "Supporting citations no step cites: PMID:29628143 (attached to S1 as a background sentence; its own result is stress granules -> NCT, not a step), PMID:24866055 (C9orf72 RNA foci sequester ALYREF and other RRM proteins in motor neurons; no FYTTD1, no NCT effect), PMID:27768896 (DPRs bind nuclear pore and membrane-less organelle proteins; does not state an NCT effect), R-HSA-159236 (enrichment)."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_does_not_state_step",
+   "steps": [
+    "H1.2",
+    "H2.1",
+    "H2.2",
+    "H3.1"
+   ],
+   "detail": "Every Reactome citation is an over-representation result for the run's two-gene set ('1 of N entities matched', FDR ~0.01), which names neither gene and no direction; the run treats them as pathway evidence."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "chain_ends_at_phenotype",
+   "hypothesis": "H1",
+   "detail": "The chain ends at motor neuron degeneration and never reaches ALS; claimed as a second, phenotype claim."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "context_unsupported",
+   "steps": [
+    "H1.1"
+   ],
+   "detail": "H1.1's context is ALS spinal cord, but its citations test flies, iPSC-derived neurons, mouse cortical neurons and fibroblasts; the context was dropped rather than refined, since no cited text is about spinal cord."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "chain_not_connected",
+   "steps": [
+    "H2.2",
+    "H2.3"
+   ],
+   "detail": "H2.2 ends at tRF biogenesis (a process, all tRFs), H2.3 starts at angiogenin-generated tRNA fragments (molecules made by a different nuclease); the run's own mechanism says this arm 'is established without ELAC2'."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "chain_not_connected",
+   "steps": [
+    "H2.3",
+    "H2.4"
+   ],
+   "detail": "H2.3 ends at translation (repressed by tiRNAs), H2.4 starts at disordered tRNA maturation; no step links translational repression to tRNA maturation or to neurodegeneration."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "no_sign",
+   "steps": [
+    "H2.2"
+   ],
+   "detail": "The step that would carry ELAC2 into the tRF pool is an unsigned association, so even with connected nodes the title's mechanism ('ELAC2 loss shifts the tRF pool') could not get a sign; neither cited text names 3'-end maturation."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "route_bypasses_mechanism",
+   "hypothesis": "H2",
+   "detail": "H2's only route is the bridge ELAC2 -> tRNA maturation (from the run's own UniProt citation) then H2.4 (CLP1 evidence), which skips the tRF and angiogenin steps the title is about; the arm tests 'ELAC2 loss impairs tRNA maturation, which causes neurodegeneration', not the tRF mechanism."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "unsupported_assertion",
+   "hypothesis": "H2",
+   "detail": "The mechanism calls angiogenin 'a bona fide ALS gene' citing PMID:19332886, which does not mention ALS; no cited text links angiogenin or tiRNAs to ALS or motor neurons."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "ungrounded_label",
+   "steps": [
+    "H2.3"
+   ],
+   "detail": "'stress-induced protein translation' is an odd object for 'inhibits': the cited paper shows tiRNAs repress translation, even without exogenous stress; grounded as translation (GO:0006412), keeping the run's sign."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "undirected_label",
+   "steps": [
+    "H2.4"
+   ],
+   "detail": "'disordered tRNA maturation' carries no direction; read as impaired maturation from the run's mechanism and the CLP1 text. The kept evidence is CLP1 (tRNA splicing, childhood cerebellar neurodegeneration), not ELAC2 and not motor neurons, as the run's note admits."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_at_no_step",
+   "hypothesis": "H2",
+   "detail": "Supporting citations no step cites: PMID:40294208 ('defects in tRNA processing may lead to neurological disorders': broader than neurodegeneration, a review, so not attached) and R-HSA-6784531 (enrichment)."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "chain_ends_at_phenotype",
+   "hypothesis": "H2",
+   "detail": "The chain ends at neurodegeneration and never reaches ALS or motor neurons; claimed as a second, phenotype claim."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "chain_not_connected",
+   "steps": [
+    "H3.1",
+    "H3.2"
+   ],
+   "detail": "H3.1 ends at mitochondrial RNA processing and ribosome assembly, H3.2 starts at Elac2 deletion; no step links mitochondrial RNA processing or translation to oxidative phosphorylation."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "chain_not_connected",
+   "steps": [
+    "H3.2",
+    "H3.3"
+   ],
+   "detail": "H3.2's result is limited to striated muscle (Ckmm-cre), H3.3 is about motor neurons; the refinement breaks the chain exactly where the run's own note says the extrapolation is untested."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_does_not_state_step",
+   "steps": [
+    "H3.2"
+   ],
+   "detail": "The 'decreases' in H3.2 is in no text the run saw: both MGI annotations are 'abnormal' (undirected), and the paper behind them (PMID:30126926) was not fetched."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_does_not_state_step",
+   "steps": [
+    "H3.3"
+   ],
+   "detail": "H3.3 cites MGI 'abnormal mitochondrial physiology' and 'abnormal cell physiology' in a muscle knockout as support for 'impaired ATP production leads to motor neuron degeneration'; neither names ATP production as a cause or any neuronal phenotype."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_at_no_step",
+   "hypothesis": "H3",
+   "detail": "AGR:MGI:1890496:MP:0011925 (abnormal heart echocardiography in the muscle knockout) supports no step."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "chain_ends_at_phenotype",
+   "hypothesis": "H3",
+   "detail": "The chain ends at motor neuron degeneration and never reaches ALS; claimed as a second, phenotype claim."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "evidence_sampling",
+   "hypothesis": "H3",
+   "detail": "AGR holds 21 Elac2 phenotype annotations and the run reports 8, chosen by word overlap with 'amyotrophic lateral sclerosis'; the selection is lexical, so the curated phenotype picture is partial."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "source_conflict_unnoted",
+   "hypothesis": "H3",
+   "detail": "HPA places ELAC2 in the nucleoplasm only, while the UniProt text the run quotes says mainly mitochondrial; H3 rests on the mitochondrial role and does not mention the conflict."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "contradicting_mislabelled",
+   "hypothesis": "H1",
+   "detail": "Most 'contradicting' citations contradict nothing the hypotheses claim: the GWAS nulls agree with H1's 'not a risk gene' and H2/H3's 'modifier' framing, and HPA expression and prostate or coat phenotypes bear on no step; only the absence of any neuromuscular phenotype in Fyttd1 and Elac2 mutants bears on the phenotype claims."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "confidence_unjustified",
+   "hypothesis": "H1",
+   "detail": "All three hypotheses say support 'grounded' with confidence 'low'; 'low' fits, 'grounded' does not: no hypothesis has a route from its gene to ALS, and the only gene-specific kept evidence is UniProt function text."
+  },
+  {
+   "project": "both",
+   "category": "no_disease_evidence",
+   "hypothesis": "H1",
+   "detail": "No kept citation in the run links FYTTD1 or ELAC2, or any step downstream of them, to ALS or to motor neurons; every disease-specific citation is about C9orf72, TDP-43 or angiogenin."
+  },
+  {
+   "project": "biolean",
+   "category": "missing_term",
+   "detail": "BLN:C9orf72-G4C2RepeatExpansion: no corpus record for the C9orf72 GGGGCC expansion (SO has only the generic short_tandem_repeat_expansion)."
+  },
+  {
+   "project": "biolean",
+   "category": "missing_term",
+   "detail": "BLN:AngiogeninTiRNA: no term for tRNA-derived small RNAs as molecules (CHEBI has only transfer RNA; GO:0140891 is the processing)."
+  },
+  {
+   "project": "biolean",
+   "category": "rule_conflict",
+   "detail": "The guide maps 'Reactome pathway membership' to curatedDb but excludes 'pathway over-representation'; the sources give Reactome only as over-representation results that never name the gene, so every Reactome citation was excluded as enrichment."
+  },
+  {
+   "project": "biolean",
+   "category": "evidence_kind_missing",
+   "steps": [
+    "H1.1",
+    "H2.4"
+   ],
+   "detail": "A paper's conclusion sentence that summarises several designs (fly in vivo plus human iPSC neurons in PMID:26308891 and PMID:26308899; zebrafish null plus patient pedigrees plus patient neurons in PMID:24766810) must take one kind; I chose inVitro, mechanistic (fly) and observational."
+  },
+  {
+   "project": "biolean",
+   "category": "no_form_for",
+   "hypothesis": "H1",
+   "detail": "No form for hypothesis-level contradicting evidence: a GWAS null for gene and disease, or a knockout with no neuromuscular phenotype, can only refute a statement with that subject and target, and these chains never reach ALS, so all such citations are excluded and Lean never sees them."
+  },
+  {
+   "project": "biolean",
+   "category": "no_form_for",
+   "hypothesis": "H1",
+   "detail": "No form for absence of a phenotype as weak negative evidence: the Fyttd1 homozygous knockout is phenotyped (coat, blood, creatinine, fat) with no neuromuscular annotation, which bears on 'FYTTD1 loss leads to motor neuron degeneration' but cannot be recorded."
+  },
+  {
+   "project": "biolean",
+   "category": "rule_missing",
+   "steps": [
+    "H2.4"
+   ],
+   "detail": "The undirected-change rule covers only objects ('leads to abnormal X'); for an undirected subject ('disordered X leads to Y') the guide has no rule. I read it as loss using the run's mechanism and a cited text, which is close to the unknown-polarity rule but not stated."
+  },
+  {
+   "project": "biolean",
+   "category": "kind_mismatch",
+   "steps": [
+    "H3.2"
+   ],
+   "detail": "The run's decreases_amount maps to an amount target, which must be a chemical, protein or gene, but the object is a process (oxidative phosphorylation capacity); used a process target."
+  },
+  {
+   "project": "biolean",
+   "category": "kind_mismatch",
+   "steps": [
+    "H1.1"
+   ],
+   "detail": "'TDP-43 pathology' is best grounded as MONDO:0700038 TDP-43 proteinopathy, a disease, used here as an effect subject; the guide does not say whether a disease may be a statement subject (render.py allows it)."
+  },
+  {
+   "project": "biolean",
+   "category": "prefix_not_in_guide",
+   "steps": [
+    "H1.3",
+    "H3.3"
+   ],
+   "detail": "HP has no 'motor neuron degeneration' (only anterior horn cell degeneration and motor neuron atrophy); used UPHENO:0079518, which the guide's prefix table does not list, rather than the mouse MP:0000938."
+  },
+  {
+   "project": "biolean",
+   "category": "rule_missing",
+   "hypothesis": "H2",
+   "detail": "'Modifier rather than a primary cause' does not say of what; the aspect table lists 'modifier of course' under progression, so H2 and H3 were claimed on progression, but severity is as defensible."
+  },
+  {
+   "project": "biolean",
+   "category": "composition_semantics",
+   "hypothesis": "H2",
+   "detail": "A bridge allowed by the guide (cited text states ELAC2 -> tRNA maturation) gives H2 a route that skips its stated mechanism; the report cannot tell 'some route exists' from 'the hypothesis's mechanism composes'."
+  },
+  {
+   "project": "biolean",
+   "category": "evidence_weighting",
+   "steps": [
+    "H1.2",
+    "H2.1",
+    "H3.1"
+   ],
+   "detail": "One UniProt function line (curatedDb) alone gives belief 4/5 and 'established' (S3, S5, S9, S10, B1), while a primary in vitro experiment alone gives 1/2 (S2, S7); the gene-specific steps of this run look strongest only because they rest on database summaries."
+  },
+  {
+   "project": "biolean",
+   "category": "refinement_worked",
+   "steps": [
+    "H3.2"
+   ],
+   "detail": "The anatomy refinement on H3.2's object records the run's own caveat ('muscle and heart only') and breaks the chain at exactly the extrapolation the run flags."
+  }
+ ],
+ "audit": []
+}

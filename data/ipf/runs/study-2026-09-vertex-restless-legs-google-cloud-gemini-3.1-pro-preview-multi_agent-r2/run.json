@@ -1,0 +1,428 @@
+{
+ "run_id": "study-2026-09-vertex-restless-legs-google-cloud-gemini-3.1-pro-preview-multi_agent-r2",
+ "model": "google-cloud:gemini-3.1-pro-preview",
+ "question": {
+  "arm": "multi_agent",
+  "budget": {
+   "max_delegations": 22,
+   "max_model_requests": 80,
+   "max_specialist_requests": 8,
+   "min_evidence_per_hypothesis": 2,
+   "min_hypotheses": 3,
+   "min_sources_per_hypothesis": 2,
+   "output_retries": 3
+  },
+  "data_policy": {
+   "max_age_seconds": 1209600.0,
+   "mode": "cache-preferred",
+   "snapshot_run_id": null
+  },
+  "disease": "restless legs syndrome",
+  "formalise": false,
+  "genes": [
+   "ACO1",
+   "MEIS1",
+   "GLIPR1",
+   "PTPRD",
+   "GABARAPL2",
+   "BTBD9"
+  ],
+  "model": "google-cloud:gemini-3.1-pro-preview",
+  "specialist_model": "google-cloud:gemini-3.1-pro-preview",
+  "specialists": [
+   "chembl",
+   "expression",
+   "gwas",
+   "interactions",
+   "literature",
+   "model_organism",
+   "open_targets",
+   "pathways",
+   "single_cell",
+   "trials",
+   "uniprot"
+  ],
+  "tissue": {
+   "artifact_id": "sha256:9083451a13b7e45058362501bb03fd93944d7aa79ffc0248bc2cf8b1520b9652",
+   "label": "brain",
+   "uberon": "UBERON:0000955"
+  },
+  "use_network": true
+ },
+ "abstention": null,
+ "disease": "restless legs syndrome",
+ "genes_considered": [
+  "ACO1",
+  "MEIS1",
+  "GLIPR1",
+  "PTPRD",
+  "GABARAPL2",
+  "BTBD9"
+ ],
+ "hypotheses": [
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "AGR:MGI:104717:MP:0020478"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "phenotype",
+      "label": "sleep behavior"
+     },
+     "polarity": "positive",
+     "relation": "required_for",
+     "subject": {
+      "curie": "UniProtKB:O00470",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "MEIS1"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:42309051"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "cerebellar output"
+     },
+     "polarity": "negative",
+     "relation": "inhibits",
+     "subject": {
+      "curie": "UniProtKB:O00470",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "MEIS1"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "AGR:MGI:1916625:MP:0000877"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "phenotype",
+      "label": "Purkinje cell morphology"
+     },
+     "polarity": "positive",
+     "relation": "required_for",
+     "subject": {
+      "curie": "UniProtKB:Q96Q07",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "BTBD9"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "AGR:MGI:1916625:MP:0011396"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "phenotype",
+      "label": "sleep behavior"
+     },
+     "polarity": "positive",
+     "relation": "required_for",
+     "subject": {
+      "curie": "UniProtKB:Q96Q07",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "BTBD9"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "rs113851554",
+      "rs1820989"
+     ],
+     "note": "",
+     "object": {
+      "curie": "MONDO:0005391",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "Restless Legs Syndrome"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "UniProtKB:O00470",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "MEIS1"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "rs10947738",
+      "rs61192259"
+     ],
+     "note": "",
+     "object": {
+      "curie": "MONDO:0005391",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "Restless Legs Syndrome"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "UniProtKB:Q96Q07",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "BTBD9"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Knockout of MEIS1 in a human cerebellar organoid or mouse model, followed by electrophysiological measurement of Purkinje cell firing rates to detect disinhibition of cerebellar output.",
+    "expected": "positive",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "UniProtKB:O00470",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "MEIS1"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "process",
+     "label": "cerebellar output"
+    },
+    "system": ""
+   },
+   "genes": [
+    "MEIS1",
+    "BTBD9"
+   ],
+   "hypothesis_id": "H1",
+   "mechanism": "GWAS firmly establish MEIS1 and BTBD9 as major risk genes for Restless Legs Syndrome. In mouse models, disruption of either gene results in profound sleep/wake cycle abnormalities and altered sleep behavior. Crucially, loss of MEIS1 leads to a disinhibition of cerebellar output, and loss of BTBD9 results in abnormal morphology of Purkinje cells, the primary output neurons of the cerebellar cortex. These converging phenotypes suggest that MEIS1 and BTBD9 risk variants disrupt normal Purkinje cell function and cerebellar output, driving the involuntary motor manifestations and sleep disturbances of the disorder.",
+   "support": "speculative",
+   "supporting_evidence": [],
+   "title": "MEIS1 and BTBD9 risk variants disrupt cerebellar Purkinje cell morphology and output, driving motor and sleep phenotypes in Restless Legs Syndrome."
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "P23468"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "synaptic differentiation"
+     },
+     "polarity": "positive",
+     "relation": "activates",
+     "subject": {
+      "curie": "UniProtKB:P23468",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "PTPRD"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "AGR:MGI:97812:MP:0001522",
+      "AGR:MGI:97812:MP:0010053"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "phenotype",
+      "label": "motor behavior"
+     },
+     "polarity": "positive",
+     "relation": "required_for",
+     "subject": {
+      "curie": "UniProtKB:P23468",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "PTPRD"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "rs34602324",
+      "rs1836229"
+     ],
+     "note": "",
+     "object": {
+      "curie": "MONDO:0005391",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "Restless Legs Syndrome"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "UniProtKB:P23468",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "PTPRD"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Knockdown of PTPRD in human induced pluripotent stem cell-derived neurons, measuring the formation of pre- and post-synaptic markers to quantify synaptic differentiation.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "knockdown",
+     "target": {
+      "curie": "UniProtKB:P23468",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "PTPRD"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "process",
+     "label": "synaptic differentiation"
+    },
+    "system": ""
+   },
+   "genes": [
+    "PTPRD"
+   ],
+   "hypothesis_id": "H2",
+   "mechanism": "PTPRD is a membrane-bound phosphatase that plays a critical role in bidirectionally inducing pre- and post-synaptic differentiation in neurons. In animal models, loss of the PTPRD orthologue causes significant motor impairments, including decreased grip strength and impaired swimming. The significant GWAS risk variants in PTPRD associated with Restless Legs Syndrome likely confer a loss of function that impairs synaptic connectivity in descending motor pathways, thereby contributing to the abnormal motor symptoms characteristic of the disease.",
+   "support": "speculative",
+   "supporting_evidence": [],
+   "title": "PTPRD loss of function impairs synaptic differentiation and drives motor deficits in Restless Legs Syndrome."
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "STRING:ACO1-BTBD9"
+     ],
+     "note": "",
+     "object": {
+      "curie": "UniProtKB:P21399",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "ACO1"
+     },
+     "polarity": "unknown",
+     "relation": "binds",
+     "subject": {
+      "curie": "UniProtKB:Q96Q07",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "BTBD9"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "P21399"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "iron uptake"
+     },
+     "polarity": "positive",
+     "relation": "activates",
+     "subject": {
+      "curie": "UniProtKB:P21399",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "ACO1"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:30363981"
+     ],
+     "note": "",
+     "object": {
+      "curie": "MONDO:0005391",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "Restless Legs Syndrome"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "iron uptake"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Knockout of BTBD9 in a human neuronal cell line, followed by quantification of ACO1 protein stability and intracellular iron concentrations.",
+    "expected": "unknown",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "UniProtKB:Q96Q07",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "BTBD9"
+     }
+    },
+    "readout": {
+     "curie": "UniProtKB:P21399",
+     "grounding_evidence": "",
+     "kind": "protein",
+     "label": "ACO1"
+    },
+    "system": ""
+   },
+   "genes": [
+    "ACO1",
+    "BTBD9"
+   ],
+   "hypothesis_id": "H3",
+   "mechanism": "Altered iron homeostasis in the central nervous system is a core pathophysiological feature of Restless Legs Syndrome. ACO1 is a cytoplasmic sensor that modulates the translation of genes responsible for iron uptake, sequestration, and utilization. The strong Restless Legs Syndrome risk gene BTBD9 is known to physically and functionally interact with ACO1. Given that BTBD9 contains BTB domains often found in ubiquitin ligase adaptors, it likely regulates the turnover or function of the ACO1 sensor, linking the genetic risk of BTBD9 directly to the disrupted iron metabolism seen in patients.",
+   "support": "speculative",
+   "supporting_evidence": [],
+   "title": "BTBD9 interaction with the iron sensor ACO1 links genetic risk to altered iron homeostasis in Restless Legs Syndrome."
+  }
+ ],
+ "unexplained_genes": [
+  "GLIPR1",
+  "GABARAPL2"
+ ]
+}

@@ -1,0 +1,572 @@
+{
+ "run_id": "study-2026-09-vertex-ipf-google-cloud-gemini-3.1-pro-preview-multi_agent-r2",
+ "model": "google-cloud:gemini-3.1-pro-preview",
+ "question": {
+  "arm": "multi_agent",
+  "budget": {
+   "max_delegations": 22,
+   "max_model_requests": 80,
+   "max_specialist_requests": 8,
+   "min_evidence_per_hypothesis": 2,
+   "min_hypotheses": 3,
+   "min_sources_per_hypothesis": 2,
+   "output_retries": 3
+  },
+  "data_policy": {
+   "max_age_seconds": 1209600.0,
+   "mode": "cache-preferred",
+   "snapshot_run_id": null
+  },
+  "disease": "idiopathic pulmonary fibrosis",
+  "formalise": false,
+  "genes": [
+   "MUC5B",
+   "TERT",
+   "SFTPC",
+   "TOLLIP",
+   "DSP",
+   "FAM13A"
+  ],
+  "model": "google-cloud:gemini-3.1-pro-preview",
+  "specialist_model": "google-cloud:gemini-3.1-pro-preview",
+  "specialists": [
+   "chembl",
+   "expression",
+   "gwas",
+   "interactions",
+   "literature",
+   "model_organism",
+   "open_targets",
+   "pathways",
+   "single_cell",
+   "trials",
+   "uniprot"
+  ],
+  "tissue": {
+   "artifact_id": "sha256:b60166c2e7c764626dc8c52ea5c533f337e6565d01db16e75436369428752338",
+   "label": "lung",
+   "uberon": "UBERON:0002048"
+  },
+  "use_network": true
+ },
+ "abstention": null,
+ "disease": "idiopathic pulmonary fibrosis",
+ "genes_considered": [
+  "MUC5B",
+  "TERT",
+  "SFTPC",
+  "TOLLIP",
+  "DSP",
+  "FAM13A"
+ ],
+ "hypotheses": [
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "rs35705950",
+      "PMID:21506741",
+      "CXG:ENSG00000117983:CL_0002063:MONDO_0002771"
+     ],
+     "note": "The rs35705950 promoter variant is strongly associated with IPF and drives MUC5B overexpression in lung epithelial cells, including type II pneumocytes.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "MUC5B"
+     },
+     "polarity": "positive",
+     "relation": "increases_amount",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "MUC5B"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "alveolar type 2 cell"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [
+      "PMID:21506741"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "mucociliary clearance"
+     },
+     "polarity": "negative",
+     "relation": "inhibits",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "MUC5B"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "rs35705950",
+      "CXG:ENSG00000078902:CL_0000623:MONDO_0015925",
+      "STRING:TOLLIP-MUC5B"
+     ],
+     "note": "TOLLIP is linked to the same risk locus and is expressed in immune cells like natural killer cells, potentially modulating the localized immune and fibrotic response in concert with MUC5B.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "immune response"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "TOLLIP"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "rs35705950",
+      "PMID:21506741"
+     ],
+     "note": "",
+     "object": {
+      "curie": "EFO:0000768",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "idiopathic pulmonary fibrosis"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "mucociliary clearance"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Knockdown MUC5B expression in alveolar type II cells or airway epithelium and observe if mucociliary clearance is restored and fibrotic signaling is attenuated.",
+    "expected": "positive",
+    "perturbation": {
+     "action": "knockdown",
+     "target": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "MUC5B"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "process",
+     "label": "mucociliary clearance"
+    },
+    "system": "lung organoids"
+   },
+   "genes": [
+    "MUC5B",
+    "TOLLIP"
+   ],
+   "hypothesis_id": "hyp_muc5b_tollip",
+   "mechanism": "The major genetic risk locus rs35705950 drives overexpression of MUC5B in lung epithelial cells, including AT2 cells, resulting in mucociliary impairment. In parallel, TOLLIP, mapping to the same locus, acts in lung-resident immune cells such as natural killer cells to modulate the immune response, creating a combined profibrotic environment.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "rs35705950",
+    "PMID:21506741",
+    "CXG:ENSG00000117983:CL_0002063:MONDO_0002771",
+    "CXG:ENSG00000078902:CL_0000623:MONDO_0015925",
+    "STRING:TOLLIP-MUC5B"
+   ],
+   "title": "MUC5B overexpression impairs mucociliary clearance while TOLLIP modulates localized immune responses."
+  },
+  {
+   "chain": [
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "alveolar type 2 cell"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [
+      "PMID:42658012",
+      "CXG:ENSG00000168484:CL_0002063:MONDO_0002771"
+     ],
+     "note": "SFTPC accumulates in the endosomes of alveolar type II (AT2) cells.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "endosomal accumulation"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "SFTPC"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:42658012"
+     ],
+     "note": "The endosomal accumulation of SFTPC causes dysfunction in AT2 cells.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "phenotype",
+      "label": "AT2 cell dysfunction"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "endosomal accumulation"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:42658012",
+      "OT:SFTPC-EFO_0000768"
+     ],
+     "note": "",
+     "object": {
+      "curie": "EFO:0000768",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "idiopathic pulmonary fibrosis"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "phenotype",
+      "label": "AT2 cell dysfunction"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Restore normal SFTPC endosomal trafficking and clearance in alveolar organoids to see if AT2 cell dysfunction and subsequent fibrotic signaling are prevented.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "restore",
+     "target": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "endosomal accumulation"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "phenotype",
+     "label": "AT2 cell dysfunction"
+    },
+    "system": "alveolar organoids"
+   },
+   "genes": [
+    "SFTPC"
+   ],
+   "hypothesis_id": "hyp_sftpc_at2",
+   "mechanism": "Accumulation of Surfactant Protein C (SFTPC) in the endosomes of alveolar type II (AT2) cells leads to severe cellular stress and dysfunction. This failure of AT2 cells compromises alveolar integrity and triggers downstream fibrotic remodeling characteristic of idiopathic pulmonary fibrosis.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "PMID:42658012",
+    "CXG:ENSG00000168484:CL_0002063:MONDO_0002771",
+    "OT:SFTPC-EFO_0000768"
+   ],
+   "title": "Endosomal accumulation of SFTPC drives AT2 cell dysfunction and fibrosis."
+  },
+  {
+   "chain": [
+    {
+     "context": {
+      "cell_type": null,
+      "disease_state": null,
+      "tissue": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "tissue",
+       "label": "alveolar epithelium"
+      }
+     },
+     "evidence": [
+      "PMID:42690534",
+      "rs2076295",
+      "CXG:ENSG00000096696:CL_0002145:MONDO_0002771"
+     ],
+     "note": "Loss or downregulation of DSP in the alveolar and ciliated epithelium occurs in IPF.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "Wnt signaling pathway"
+     },
+     "polarity": "negative",
+     "relation": "inhibits",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "DSP"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:42690534"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "extracellular matrix remodeling"
+     },
+     "polarity": "positive",
+     "relation": "activates",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "Wnt signaling pathway"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "ciliated columnar cell of tracheobronchial tree"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [
+      "PMID:42083809",
+      "CXG:ENSG00000138640:CL_0002145:MONDO_0002771",
+      "rs2609259"
+     ],
+     "note": "FAM13A is upregulated in IPF and orchestrates lung epithelial development, contributing to aberrant epithelial states.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "epithelial cell differentiation"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "FAM13A"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:42690534",
+      "OT:DSP-EFO_0000768"
+     ],
+     "note": "",
+     "object": {
+      "curie": "EFO:0000768",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "idiopathic pulmonary fibrosis"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "extracellular matrix remodeling"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Overexpress DSP in alveolar epithelial cells to determine if Wnt/beta-catenin mediated extracellular matrix remodeling is suppressed.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "overexpress",
+     "target": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "DSP"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "process",
+     "label": "extracellular matrix remodeling"
+    },
+    "system": "in vitro alveolar epithelium"
+   },
+   "genes": [
+    "DSP",
+    "FAM13A"
+   ],
+   "hypothesis_id": "hyp_dsp_fam13a_epithelium",
+   "mechanism": "Abnormalities in the lung epithelium drive fibrotic matrix remodeling. The loss of Desmoplakin (DSP) in alveolar epithelial cells lifts its inhibition on Wnt/β-Catenin signaling, directly activating extracellular matrix remodeling. Simultaneously, increased expression of FAM13A in ciliated cells orchestrates aberrant epithelial development, further disrupting lung architecture.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "PMID:42690534",
+    "rs2076295",
+    "CXG:ENSG00000096696:CL_0002145:MONDO_0002771",
+    "PMID:42083809",
+    "CXG:ENSG00000138640:CL_0002145:MONDO_0002771",
+    "rs2609259",
+    "OT:DSP-EFO_0000768"
+   ],
+   "title": "Epithelial DSP loss and FAM13A upregulation drive Wnt-mediated ECM remodeling."
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "PMID:42532628",
+      "rs776981958",
+      "rs2736100"
+     ],
+     "note": "TERT mutations and deficiency cause rapid telomere shortening.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "telomere maintenance"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "TERT"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:42532628"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "phenotype",
+      "label": "cellular senescence"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "telomere maintenance"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:42532628",
+      "OT:TERT-EFO_0000768"
+     ],
+     "note": "",
+     "object": {
+      "curie": "EFO:0000768",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "idiopathic pulmonary fibrosis"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "phenotype",
+      "label": "cellular senescence"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Activate TERT in lung progenitor cells to determine if telomere maintenance is restored and cellular senescence is averted.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "activate",
+     "target": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "TERT"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "phenotype",
+     "label": "cellular senescence"
+    },
+    "system": "lung progenitor cells"
+   },
+   "genes": [
+    "TERT"
+   ],
+   "hypothesis_id": "hyp_tert_telomeres",
+   "mechanism": "Impairment of TERT function leads to a failure in telomere maintenance and subsequent telomere dysfunction. This triggers premature cellular senescence in lung progenitor cells, crippling the regenerative capacity of the lung and heavily driving susceptibility to idiopathic pulmonary fibrosis.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "PMID:42532628",
+    "rs776981958",
+    "rs2736100",
+    "OT:TERT-EFO_0000768",
+    "CXG:ENSG00000164362:CL_0000861:MONDO_0002771:not-detected"
+   ],
+   "title": "TERT deficiency causes telomere dysfunction and cellular senescence, driving IPF susceptibility."
+  }
+ ],
+ "unexplained_genes": []
+}

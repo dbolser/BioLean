@@ -1,0 +1,975 @@
+{
+ "run_id": "rab40al-als-fable-5-1",
+ "curated_by": "Claude Opus 5.5, 2026-10-30",
+ "audit": [],
+ "entities": {
+  "RAB40AL": {
+   "kind": "protein",
+   "curie": "UniProt:P0C0E4",
+   "run_labels": [
+    "RAB40AL",
+    "ECS(RAB40AL) Cul5-RING ubiquitin ligase"
+   ]
+  },
+  "CUL5": {
+   "kind": "protein",
+   "curie": "UniProt:Q93034",
+   "run_labels": [
+    "CUL5"
+   ]
+  },
+  "ISCA1": {
+   "kind": "protein",
+   "curie": "UniProt:Q9BUE6",
+   "run_labels": [
+    "ISCA1"
+   ]
+  },
+  "FYCO1": {
+   "kind": "protein",
+   "curie": "UniProt:Q9BQS8",
+   "run_labels": [
+    "FYCO1"
+   ]
+  },
+  "SQSTM1": {
+   "kind": "protein",
+   "curie": "UniProt:Q13501",
+   "run_labels": [
+    "p62"
+   ]
+  },
+  "TARDBP": {
+   "kind": "protein",
+   "curie": "UniProt:Q13148",
+   "run_labels": [
+    "TDP-43"
+   ]
+  },
+  "mitochondrion": {
+   "kind": "component",
+   "curie": "GO:0005739",
+   "run_labels": [
+    "mitochondrion"
+   ]
+  },
+  "endosome": {
+   "kind": "component",
+   "curie": "GO:0005768",
+   "run_labels": [
+    "endosome and synaptic-vesicle compartments"
+   ]
+  },
+  "synapticVesicle": {
+   "kind": "component",
+   "curie": "GO:0008021",
+   "run_labels": [
+    "endosome and synaptic-vesicle compartments"
+   ]
+  },
+  "growthCone": {
+   "kind": "component",
+   "curie": "GO:0030426"
+  },
+  "axon": {
+   "kind": "component",
+   "curie": "GO:0030424"
+  },
+  "distalAxon": {
+   "kind": "component",
+   "curie": "GO:0150034"
+  },
+  "motorNeuron": {
+   "kind": "cellType",
+   "curie": "CL:0000100",
+   "run_labels": [
+    "motor neuron"
+   ]
+  },
+  "ubProteinCatabolism": {
+   "kind": "process",
+   "curie": "GO:0006511",
+   "run_labels": [
+    "ubiquitin-dependent turnover of focal-adhesion and RhoA regulators"
+   ]
+  },
+  "abnormalActinCytoskeleton": {
+   "kind": "phenotype",
+   "curie": "MP:0020849"
+  },
+  "growthConeActinAbnormal": {
+   "kind": "phenotype",
+   "refines": {
+    "base": "abnormalActinCytoskeleton",
+    "ctx": {
+     "component": "growthCone"
+    }
+   },
+   "run_labels": [
+    "RhoA/actin imbalance at the growth cone"
+   ]
+  },
+  "axonalDegeneration": {
+   "kind": "phenotype",
+   "curie": "HP:0040078"
+  },
+  "motorAxonDegeneration": {
+   "kind": "phenotype",
+   "refines": {
+    "base": "axonalDegeneration",
+    "ctx": {
+     "cellType": "motorNeuron"
+    }
+   },
+   "run_labels": [
+    "distal motor axon retraction"
+   ]
+  },
+  "fe4s4ClusterAssembly": {
+   "kind": "process",
+   "curie": "GO:0044572",
+   "run_labels": [
+    "[4Fe-4S] cluster assembly for respiratory complexes and aconitase"
+   ]
+  },
+  "ironSulfurCluster": {
+   "kind": "chemical",
+   "curie": "CHEBI:30408",
+   "run_labels": [
+    "mitochondrial Fe-S cluster deficiency"
+   ]
+  },
+  "oxidativeStress": {
+   "kind": "phenotype",
+   "curie": "MP:0003674"
+  },
+  "mnOxidativeStress": {
+   "kind": "phenotype",
+   "refines": {
+    "base": "oxidativeStress",
+    "ctx": {
+     "cellType": "motorNeuron"
+    }
+   },
+   "run_labels": [
+    "oxidative stress in motor neurons"
+   ]
+  },
+  "autophagosomeLocalization": {
+   "kind": "process",
+   "curie": "GO:0061906"
+  },
+  "axonalAutophagosomeTransport": {
+   "kind": "process",
+   "refines": {
+    "base": "autophagosomeLocalization",
+    "ctx": {
+     "component": "axon"
+    }
+   },
+   "run_labels": [
+    "kinesin-dependent axonal autophagosome transport",
+    "stalled autophagosomes in the distal axon"
+   ]
+  },
+  "distalAxonSQSTM1": {
+   "kind": "protein",
+   "refines": {
+    "base": "SQSTM1",
+    "ctx": {
+     "cellType": "motorNeuron",
+     "component": "distalAxon"
+    }
+   },
+   "run_labels": [
+    "clearance of p62 and TDP-43 cargo from the distal axon"
+   ]
+  },
+  "distalAxonTARDBP": {
+   "kind": "protein",
+   "refines": {
+    "base": "TARDBP",
+    "ctx": {
+     "cellType": "motorNeuron",
+     "component": "distalAxon"
+    }
+   },
+   "run_labels": [
+    "clearance of p62 and TDP-43 cargo from the distal axon"
+   ]
+  },
+  "als": {
+   "kind": "disease",
+   "curie": "MONDO:0004976",
+   "run_labels": [
+    "amyotrophic lateral sclerosis"
+   ]
+  }
+ },
+ "statements": [
+  {
+   "id": "S1",
+   "step": "H1.1",
+   "text": "RAB40AL binds CUL5",
+   "claim": {
+    "rel": {
+     "relation": "RO:0002436",
+     "a": "RAB40AL",
+     "b": "CUL5"
+    }
+   },
+   "evidence": [
+    {
+     "ref": "STRING:RAB40AL-CUL5",
+     "kind": "curatedDb",
+     "quote": "STRING links RAB40AL and CUL5 with combined score 0.99 (experimental 0.98, database 0.00, text-mining 0.22)."
+    }
+   ],
+   "excluded": [
+    {
+     "ref": "STRING:RAB40AL-ELOC",
+     "category": "not_this_entity",
+     "reason": "a RAB40AL-ELOC edge; the step's object is CUL5 (ELOC is named only in the note)"
+    },
+    {
+     "ref": "STRING:GO:0031466",
+     "category": "enrichment",
+     "reason": "Cul5-RING ligase complex enriched in the neighbourhood; its input genes are RAB40C, RAB40A, CUL5, ELOC, not RAB40AL"
+    },
+    {
+     "ref": "CXG:ENSG00000102128:CL_0002453:MONDO_0004976:not-detected",
+     "category": "other",
+     "reason": "contradicting record (H1-H3): no RAB40AL transcript in 6,442 ALS-donor brain OPCs vs 0.024% of normal; bears on an unstated expression premise, not on any step"
+    },
+    {
+     "ref": "GWAS:RAB40AL:no-association",
+     "category": "other",
+     "reason": "contradicting record (H1): no GWAS Catalog ALS variant mapped to RAB40AL; a null for RAB40AL and ALS, but no step links RAB40AL to ALS directly, and absence from the catalogue is not a tested null"
+    }
+   ]
+  },
+  {
+   "id": "S2",
+   "step": "H1.2",
+   "text": "RAB40AL, as substrate receptor of the ECS(RAB40AL) Cul5 ligase, is required for ubiquitin-dependent protein catabolism (of its substrates)",
+   "claim": {
+    "effect": {
+     "subject": "RAB40AL",
+     "sign": "pos",
+     "target": {
+      "process": "ubProteinCatabolism"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "P0C0E4",
+     "kind": "crossSpecies",
+     "quote": "May act as substrate-recognition component of the ECS(RAB40) E3 ubiquitin ligase complex which mediates the ubiquitination and subsequent proteasomal degradation of target proteins (By similarity)"
+    }
+   ],
+   "excluded": [
+    {
+     "ref": "STRING:GO:0043161",
+     "category": "enrichment",
+     "reason": "proteasomal catabolism enriched in the neighbourhood; input genes RAB40C, RAB40A, CUL5, RAB40B, ELOC, not RAB40AL"
+    },
+    {
+     "ref": "OT:RAB40AL-tractability",
+     "category": "other",
+     "reason": "supporting citation at no step; its functionDescriptions repeat the UniProt P0C0E4 text verbatim, so keeping it would count one assertion twice; tractability buckets state no step"
+    }
+   ]
+  },
+  {
+   "id": "S3",
+   "step": "H1.4",
+   "text": "abnormal actin cytoskeleton at the growth cone (the run: RhoA/actin imbalance) leads to motor axon degeneration (the run: distal motor axon retraction)",
+   "claim": {
+    "effect": {
+     "subject": "growthConeActinAbnormal",
+     "sign": "pos",
+     "target": {
+      "phenotype": "motorAxonDegeneration"
+     }
+    }
+   },
+   "sign_note": "the run's subject 'RhoA/actin imbalance' is an undirected change, grounded as the 'abnormal actin cytoskeleton morphology' phenotype",
+   "evidence": [],
+   "excluded": []
+  },
+  {
+   "id": "S4",
+   "step": "H1.5",
+   "text": "motor axon degeneration (the run: distal motor axon retraction) leads to ALS",
+   "claim": {
+    "effect": {
+     "subject": "motorAxonDegeneration",
+     "sign": "pos",
+     "target": {
+      "disease": "als",
+      "aspect": "risk"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": []
+  },
+  {
+   "id": "S5",
+   "step": "H2.1",
+   "text": "RAB40AL binds ISCA1",
+   "claim": {
+    "rel": {
+     "relation": "RO:0002436",
+     "a": "RAB40AL",
+     "b": "ISCA1"
+    }
+   },
+   "evidence": [
+    {
+     "ref": "STRING:RAB40AL-ISCA1",
+     "kind": "curatedDb",
+     "quote": "STRING links RAB40AL and ISCA1 with combined score 0.96 (experimental 0.96, database 0.00, text-mining 0.00)."
+    }
+   ],
+   "excluded": [
+    {
+     "ref": "STRING:RAB40A-ISCA1",
+     "category": "not_this_entity",
+     "reason": "the paralogue RAB40A binding ISCA1, not RAB40AL"
+    },
+    {
+     "ref": "STRING:ISCA1-RAB40B",
+     "category": "not_this_entity",
+     "reason": "the paralogue RAB40B binding ISCA1, not RAB40AL"
+    }
+   ]
+  },
+  {
+   "id": "S6",
+   "step": "H2.1",
+   "text": "RAB40AL is located in the mitochondrion (the step's context)",
+   "claim": {
+    "rel": {
+     "relation": "RO:0001025",
+     "a": "RAB40AL",
+     "b": "mitochondrion"
+    }
+   },
+   "evidence": [
+    {
+     "ref": "P0C0E4",
+     "kind": "curatedDb",
+     "quote": "Location: Membrane, Cytoplasm, Mitochondrion"
+    }
+   ],
+   "excluded": []
+  },
+  {
+   "id": "S7",
+   "step": "H2.2",
+   "text": "RAB40AL, as the ECS(RAB40AL) Cul5 ligase, lowers ISCA1",
+   "claim": {
+    "effect": {
+     "subject": "RAB40AL",
+     "sign": "neg",
+     "target": {
+      "amount": "ISCA1"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "STRING:GO:0016567",
+     "category": "enrichment",
+     "reason": "protein ubiquitination enriched among RAB40AL, its paralogues, CUL5 and ELOC; ISCA1 is not in the set and nothing says ISCA1 is a substrate"
+    },
+    {
+     "ref": "STRING:RAB40AL-CUL5",
+     "category": "not_in_text",
+     "reason": "RAB40AL-CUL5 binding; says nothing about ISCA1"
+    },
+    {
+     "ref": "AGR:MGI:2183451:MP:0005642",
+     "category": "not_in_text",
+     "reason": "contradicting record (H2): mouse Rab40b knockout with decreased MCHC; no step concerns red-cell haemoglobin, ISCA1 or Fe-S clusters"
+    }
+   ]
+  },
+  {
+   "id": "S8",
+   "step": "H2.3",
+   "text": "ISCA1 is required for [4Fe-4S] cluster assembly",
+   "claim": {
+    "effect": {
+     "subject": "ISCA1",
+     "sign": "pos",
+     "target": {
+      "process": "fe4s4ClusterAssembly"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": []
+  },
+  {
+   "id": "S9",
+   "step": "bridge",
+   "for": [
+    "H2"
+   ],
+   "text": "[4Fe-4S] cluster assembly makes iron-sulfur clusters",
+   "claim": {
+    "effect": {
+     "subject": "fe4s4ClusterAssembly",
+     "sign": "pos",
+     "target": {
+      "amount": "ironSulfurCluster"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "GO:0044572",
+     "kind": "textbook",
+     "quote": "The incorporation of four iron atoms and four sulfur atoms into an iron-sulfur cluster."
+    }
+   ],
+   "excluded": []
+  },
+  {
+   "id": "S10",
+   "step": "H2.4",
+   "text": "Fe-S cluster deficiency leads to oxidative stress in motor neurons",
+   "claim": {
+    "effect": {
+     "subject": "ironSulfurCluster",
+     "sign": "neg",
+     "target": {
+      "phenotype": "mnOxidativeStress"
+     }
+    }
+   },
+   "sign_note": "inverted: the run's subject is Fe-S cluster deficiency",
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "CHEMBL:CHEMBL290916-MONDO_0004976",
+     "category": "not_in_text",
+     "reason": "a phase 4 ALS indication for CHEMBL290916; names neither Fe-S clusters nor oxidative stress, nor the compound's mechanism"
+    }
+   ]
+  },
+  {
+   "id": "S11",
+   "step": "H2.5",
+   "text": "oxidative stress in motor neurons leads to ALS",
+   "claim": {
+    "effect": {
+     "subject": "mnOxidativeStress",
+     "sign": "pos",
+     "target": {
+      "disease": "als",
+      "aspect": "risk"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": []
+  },
+  {
+   "id": "S12",
+   "step": "H3.1",
+   "text": "RAB40AL is located in the endosome (the run: associated with endosome compartments)",
+   "claim": {
+    "rel": {
+     "relation": "RO:0001025",
+     "a": "RAB40AL",
+     "b": "endosome"
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "STRING:GO:0005768",
+     "category": "enrichment",
+     "reason": "endosome enriched in the STRING neighbourhood (6 of 1096); a set result, not RAB40AL's location"
+    },
+    {
+     "ref": "P0C0E4",
+     "category": "not_in_text",
+     "reason": "UniProt locates RAB40AL to membrane, cytoplasm and mitochondrion, not endosome or synaptic vesicle; the Rab trafficking role is a generic subfamily sentence (By similarity)"
+    },
+    {
+     "ref": "HPA:ENSG00000102128",
+     "category": "other",
+     "reason": "contradicting record (H1-H3): 'Subcellular location: Vesicles' is broader than endosome or synaptic vesicle; 'RNA tissue specificity: Not detected' bears on an unstated expression premise, not on any step"
+    },
+    {
+     "ref": "reactome:coverage",
+     "category": "other",
+     "reason": "contradicting record (H3): RAB40AL is absent from Reactome; an absence of annotation states no step"
+    }
+   ]
+  },
+  {
+   "id": "S13",
+   "step": "H3.1",
+   "text": "RAB40AL is located in synaptic vesicles (the run: associated with synaptic-vesicle compartments)",
+   "claim": {
+    "rel": {
+     "relation": "RO:0001025",
+     "a": "RAB40AL",
+     "b": "synapticVesicle"
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "STRING:GO:0008021",
+     "category": "enrichment",
+     "reason": "synaptic vesicle enriched among RAB40AL and its paralogues (4 of 231); a set result"
+    },
+    {
+     "ref": "STRING:GO:0006887",
+     "category": "enrichment",
+     "reason": "exocytosis enriched among RAB40AL and its paralogues; a process, and a set result"
+    }
+   ]
+  },
+  {
+   "id": "S14",
+   "step": "H3.2",
+   "text": "RAB40AL binds FYCO1",
+   "claim": {
+    "rel": {
+     "relation": "RO:0002436",
+     "a": "RAB40AL",
+     "b": "FYCO1"
+    }
+   },
+   "evidence": [
+    {
+     "ref": "STRING:RAB40AL-FYCO1",
+     "kind": "textMined",
+     "quote": "STRING links RAB40AL and FYCO1 with combined score 0.85 (experimental 0.00, database 0.00, text-mining 0.85)."
+    }
+   ],
+   "excluded": []
+  },
+  {
+   "id": "S15",
+   "step": "H3.3",
+   "text": "FYCO1 is required for axonal autophagosome transport",
+   "claim": {
+    "effect": {
+     "subject": "FYCO1",
+     "sign": "pos",
+     "target": {
+      "process": "axonalAutophagosomeTransport"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": []
+  },
+  {
+   "id": "S16",
+   "step": "H3.4",
+   "text": "axonal autophagosome transport is required to clear p62 (SQSTM1) from the distal axon of motor neurons",
+   "claim": {
+    "effect": {
+     "subject": "axonalAutophagosomeTransport",
+     "sign": "neg",
+     "target": {
+      "amount": "distalAxonSQSTM1"
+     }
+    }
+   },
+   "sign_note": "the run's object is clearance of p62 (required_for, +); clearing p62 lowers its amount, so the effect on the amount is -",
+   "evidence": [],
+   "excluded": []
+  },
+  {
+   "id": "S17",
+   "step": "H3.4",
+   "text": "axonal autophagosome transport is required to clear TDP-43 (TARDBP) from the distal axon of motor neurons",
+   "claim": {
+    "effect": {
+     "subject": "axonalAutophagosomeTransport",
+     "sign": "neg",
+     "target": {
+      "amount": "distalAxonTARDBP"
+     }
+    }
+   },
+   "sign_note": "the run's object is clearance of TDP-43 (required_for, +); clearing TDP-43 lowers its amount, so the effect on the amount is -",
+   "evidence": [],
+   "excluded": []
+  },
+  {
+   "id": "S18",
+   "step": "H3.5",
+   "text": "stalled autophagosomes in the distal axon (loss of axonal autophagosome transport) lead to ALS",
+   "claim": {
+    "effect": {
+     "subject": "axonalAutophagosomeTransport",
+     "sign": "neg",
+     "target": {
+      "disease": "als",
+      "aspect": "risk"
+     }
+    }
+   },
+   "sign_note": "inverted: the run's subject is stalled autophagosomes, i.e. loss of their axonal transport",
+   "evidence": [],
+   "excluded": []
+  }
+ ],
+ "unexpressed": [
+  {
+   "step": "H1.2",
+   "category": "ungroundable",
+   "reason": "the substrate part, 'of focal-adhesion and RhoA regulators': an unidentified class (the note: inferred from RAB40B/C, none in the ledger; could be a RhoGAP or a RhoGEF); S2 states only the generic catabolism",
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "STRING:GO:0120184",
+     "category": "enrichment",
+     "reason": "negative regulation of focal adhesion disassembly enriched for RAB40A and CUL5; not RAB40AL, and names no substrate"
+    },
+    {
+     "ref": "STRING:GO:0150118",
+     "category": "enrichment",
+     "reason": "negative regulation of cell-substrate junction organization enriched for RAB40C, RAB40A, CUL5; not RAB40AL"
+    },
+    {
+     "ref": "STRING:GO:0001953",
+     "category": "enrichment",
+     "reason": "supporting citation at no step: negative regulation of cell-matrix adhesion enriched for RAB40C, RASA1, CUL5; not RAB40AL"
+    }
+   ]
+  },
+  {
+   "step": "H1.3",
+   "category": "ungroundable",
+   "reason": "subject 'accumulated focal-adhesion and RhoA regulators' is an unidentified substrate set, and the note says the direction on RhoA depends on which one accumulates, so the step is also unsigned",
+   "evidence": [],
+   "excluded": []
+  }
+ ],
+ "hypotheses": {
+  "H1": {
+   "claims": [
+    {
+     "subject": "RAB40AL",
+     "sign": "neg",
+     "target": {
+      "disease": "als",
+      "aspect": "risk"
+     }
+    }
+   ],
+   "note": "title: loss of the ECS(RAB40AL) ligase causes the axonopathy; H1's own chain breaks at H1.3 (an unidentified substrate), so its only arm is H2's route S7-S11, borrowed, with the opposite sign"
+  },
+  "H2": {
+   "claims": [
+    {
+     "subject": "RAB40AL",
+     "sign": "neg",
+     "target": {
+      "disease": "als",
+      "aspect": "risk"
+     }
+    }
+   ],
+   "note": "mechanism: 'without RAB40AL ... Fe-S enzyme activity falls'; the chain as written (RAB40AL lowers ISCA1, ISCA1 makes Fe-S clusters) composes to the opposite sign; one GO-definition bridge (S9) joins H2.3 to H2.4"
+  },
+  "H3": {
+   "claims": [
+    {
+     "subject": "RAB40AL",
+     "sign": "neg",
+     "target": {
+      "disease": "als",
+      "aspect": "risk"
+     }
+    }
+   ],
+   "note": "title: its loss stalls cargo clearance; RAB40AL's own H3 steps are a localisation and an unsigned, text-mined binding to FYCO1, so its only arm is H2's route S7-S11, borrowed, with the opposite sign"
+  }
+ },
+ "findings": [
+  {
+   "project": "hypothesis-agent",
+   "category": "sign_flip",
+   "hypothesis": "H2",
+   "steps": [
+    "H2.2",
+    "H2.3",
+    "H2.4",
+    "H2.5"
+   ],
+   "detail": "the chain says the RAB40AL ligase lowers ISCA1 and ISCA1 is required for Fe-S assembly, so losing RAB40AL should raise ISCA1 and Fe-S clusters and protect; the arm composes RAB40AL ->+ ALS, while the mechanism claims loss of RAB40AL makes Fe-S activity fall (hidden behind 'ISCA1 is mis-set'); the falsification's expected 'negative' ISCA1 on overexpression agrees with H2.2, not with the claim; because all three hypotheses claim RAB40AL ->- ALS, this one route is the only arm for H1 and H3 as well, so the run's own statements, composed, contradict all three claimed directions"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "no_own_route",
+   "hypothesis": "H1",
+   "steps": [
+    "H1.2",
+    "H1.3"
+   ],
+   "detail": "H1's own chain has no route from RAB40AL to ALS: H1.2 ends at ubiquitin-dependent turnover, H1.3 starts at 'accumulated regulators' (a different, unidentified node, unsigned by the run's own note); the arm render.py finds is H2's route S7-S11, borrowed, and its sign differs from H1's claim"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "no_own_route",
+   "hypothesis": "H3",
+   "steps": [
+    "H3.1",
+    "H3.2"
+   ],
+   "detail": "H3's own chain has no route from RAB40AL to ALS: its only RAB40AL steps are a compartment association and 'binds FYCO1', and 'GTP-RAB40AL contributes to FYCO1 recruitment' is never a signed step; the arm render.py finds is H2's route S7-S11, borrowed, and its sign differs from H3's claim"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "chain_not_connected",
+   "steps": [
+    "H1.1",
+    "H1.2"
+   ],
+   "detail": "H1.1 ends at CUL5, H1.2 starts at the ECS(RAB40AL) ligase; the curator merged the ligase into RAB40AL"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "chain_not_connected",
+   "steps": [
+    "H2.1",
+    "H2.2"
+   ],
+   "detail": "H2.1 ends at ISCA1 and H2.2 also ends at ISCA1 (starting at the ligase): two parallel edges RAB40AL to ISCA1, not a chain"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "chain_not_connected",
+   "steps": [
+    "H2.3",
+    "H2.4"
+   ],
+   "detail": "H2.3 ends at '[4Fe-4S] cluster assembly', H2.4 starts at 'Fe-S cluster deficiency' (a process vs its product); joined only by the GO:0044572 definition bridge S9"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "chain_not_connected",
+   "steps": [
+    "H3.4",
+    "H3.5"
+   ],
+   "detail": "H3.4 ends at clearance of p62/TDP-43; H3.5 starts at 'stalled autophagosomes', which is H3.3's transport node inverted, so H3.4 is a dead-end branch"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "no_citation",
+   "steps": [
+    "H1.3",
+    "H1.4",
+    "H1.5",
+    "H2.3",
+    "H2.5",
+    "H3.3",
+    "H3.4",
+    "H3.5"
+   ],
+   "detail": "8 of 15 steps cite nothing, and the notes say so ('not in the ledger', 'textbook', 'from the literature'); every step into ALS is uncited"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_does_not_state_step",
+   "steps": [
+    "H1.1",
+    "H1.2",
+    "H2.2",
+    "H3.1"
+   ],
+   "detail": "eight STRING enrichment terms are used as 'receipts'; four of them (GO:0031466, GO:0043161, GO:0120184, GO:0150118) do not even include RAB40AL among their input genes, so they describe the paralogues' neighbourhood"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_does_not_state_step",
+   "steps": [
+    "H2.4"
+   ],
+   "detail": "the ChEMBL record gives only a phase 4 ALS indication for CHEMBL290916; 'edaravone, a radical scavenger' is the agent's knowledge, and an approved drug does not show that Fe-S deficiency causes oxidative stress"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_does_not_state_step",
+   "steps": [
+    "H2.2"
+   ],
+   "detail": "H2.2 (the ligase degrades ISCA1) cites a protein-ubiquitination enrichment and the RAB40AL-CUL5 edge; its own note concedes 'Not shown for any RAB40 member'"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "paralogue_as_support",
+   "steps": [
+    "H2.1",
+    "H1.2"
+   ],
+   "detail": "paralogue edges (RAB40A-ISCA1, ISCA1-RAB40B) are cited as corroborating RAB40AL, and H1's substrates are inferred from RAB40B/C; separate proteins, excluded as not_this_entity"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_does_not_state_step",
+   "steps": [
+    "H3.1"
+   ],
+   "detail": "H3.1 cites UniProt for an endosome / synaptic-vesicle association, but UniProt locates RAB40AL to membrane, cytoplasm and mitochondrion; the compartment claim rests on neighbourhood enrichments only"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "unstated_premise",
+   "hypothesis": "H1",
+   "detail": "all three chains assume RAB40AL acts in motor neurons, but no step states its expression there; HPA (not detected) and CELLxGENE (no transcript) bear on that premise, so they refute nothing in the chains; the falsification admits 'every source says the gene is off in the CNS'"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "confidence_unjustified",
+   "hypothesis": "H1",
+   "detail": "all three hypotheses carry support 'grounded' though most steps cite nothing and the kept evidence is two binding edges, a localisation and a by-similarity UniProt line; confidence 'low' is fair, 'grounded' is not"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "weak_contradicting_evidence",
+   "detail": "the CELLxGENE 'not detected' record is uninformative: at the normal rate (0.024%) about 1.5 of 6,442 ALS OPCs would be expected positive, so zero has probability about 0.21 by chance; and the cells are OPCs, not motor neurons"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "contradicting_evidence_inconsistent",
+   "hypothesis": "H2",
+   "detail": "the mouse Rab40b knockout (decreased MCHC) is listed as contradicting H2, yet the falsification calls it 'the one thin hint that the family touches iron biology'; MCHC is a red-cell index, not Fe-S cluster biology"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "orthology_questionable",
+   "hypothesis": "H2",
+   "detail": "the AGR record calls mouse Rab40b the orthologue of human RAB40AL; by name it is RAB40B's orthologue, so the mapping may be family-level; worth checking before using it as RAB40AL evidence"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_at_no_step",
+   "hypothesis": "H1",
+   "detail": "two supporting citations sit at no step: STRING:GO:0001953 (an enrichment without RAB40AL) and OT:RAB40AL-tractability, which repeats the UniProt function text and records 0 associated diseases, which is closer to contradicting than supporting"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "unsupported_claim_in_mechanism",
+   "hypothesis": "H1",
+   "detail": "the mechanism's 'X-linkage would make the effect hemizygous in men, who carry the excess ALS risk' is neither a step nor cited"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "ungrounded_label",
+   "detail": "only RAB40AL (as UniProtKB:P0C0E4) and ALS (MONDO:0004976) carry CURIEs; every other node, including CUL5, ISCA1 and FYCO1, has an empty curie"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "context_schema_misuse",
+   "steps": [
+    "H2.1"
+   ],
+   "detail": "H2.1 puts 'mitochondrion' (a cellular component) in context.cell_type with kind 'other'; the agent's context has no component slot"
+  },
+  {
+   "project": "biolean",
+   "category": "rule_missing",
+   "steps": [
+    "H1.2",
+    "H2.2"
+   ],
+   "detail": "no rule for a complex named by its substrate receptor ('ECS(RAB40AL) Cul5 ligase'); merged into RAB40AL as 'a mechanism named in passing'; a refinement with component GO:0031466 would be more exact but cuts every route from the gene"
+  },
+  {
+   "project": "biolean",
+   "category": "evidence_kind_missing",
+   "steps": [
+    "H1.2"
+   ],
+   "detail": "UniProt's 'By similarity' for RAB40AL is inferred from the human paralogues RAB40A (Q8WXH6) and RAB40C (Q96S21), not from another species; kept as crossSpecies because no paralogue kind exists"
+  },
+  {
+   "project": "biolean",
+   "category": "no_form_for",
+   "steps": [
+    "H3.1"
+   ],
+   "detail": "an associated_with step whose object is a cellular component: assoc has no component target, so it is a rel RO:0001025 (located in), which the guide's relation table does not list"
+  },
+  {
+   "project": "biolean",
+   "category": "no_form_for",
+   "steps": [
+    "H2.1"
+   ],
+   "detail": "the step's cited context (RAB40AL at the mitochondrion) has no slot on a rel statement; recorded as a second statement S6 (located in) so the UniProt location evidence is judged"
+  },
+  {
+   "project": "biolean",
+   "category": "no_form_for",
+   "hypothesis": "H1",
+   "detail": "contradicting evidence against the hypothesis-level claim (GWAS null for RAB40AL and ALS) or an unstated premise (expression in motor neurons) has nowhere to attach and is excluded as other; listed once though cited by several hypotheses"
+  },
+  {
+   "project": "biolean",
+   "category": "rule_missing",
+   "steps": [
+    "H3.4"
+   ],
+   "detail": "'required_for clearance of X' was turned into a minus effect on the amount of X; the guide has no rule for clearance or turnover objects"
+  },
+  {
+   "project": "biolean",
+   "category": "rule_missing",
+   "steps": [
+    "H1.4"
+   ],
+   "detail": "the undirected-change rule ('abnormal X' phenotype) is written for objects; applied here to a subject ('RhoA/actin imbalance' as abnormal actin cytoskeleton morphology)"
+  },
+  {
+   "project": "biolean",
+   "category": "rule_missing",
+   "hypothesis": "H1",
+   "detail": "no rule for mirrored records: the Open Targets functionDescriptions copy UniProt text verbatim; excluded to avoid counting one assertion twice"
+  },
+  {
+   "project": "biolean",
+   "category": "missing_term",
+   "steps": [
+    "H1.4",
+    "H1.5",
+    "H2.4",
+    "H2.5",
+    "H3.3"
+   ],
+   "detail": "no GO or HP 'axon retraction' (grounded to HP:0040078 Axonal degeneration, via the note's 'dying-back axonopathy'); no HP oxidative stress or abnormal actin cytoskeleton (MP:0003674, MP:0020849 used for human claims); no GO axonal autophagosome transport (GO:0061906 refined to the axon)"
+  },
+  {
+   "project": "biolean",
+   "category": "evidence_weighting",
+   "steps": [
+    "H2.3",
+    "H2.4"
+   ],
+   "detail": "the S9 bridge reads GO:0044572's 'incorporation of four iron atoms and four sulfur atoms into an iron-sulfur cluster' as assembly raising cluster amount; a definitional reading, flagged for review because it carries H2's sign flip into the arm"
+  },
+  {
+   "project": "biolean",
+   "category": "bridge_scope",
+   "hypothesis": "H2",
+   "detail": "the S9 bridge is marked for H2 only, but render.py composes it into the H1 and H3 arms too; 'for' is not enforced, so a bridge added for one hypothesis silently decides others' arms"
+  }
+ ]
+}

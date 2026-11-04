@@ -1,0 +1,307 @@
+{
+ "run_id": "study-2026-09-vertex-iga-nephropathy-vertex-openai-deepseek-aideepseek-v3.2-maas-single_agent-r1",
+ "model": "vertex-openai:deepseek-ai/deepseek-v3.2-maas",
+ "question": {
+  "arm": "single_agent",
+  "budget": {
+   "max_delegations": 22,
+   "max_model_requests": 80,
+   "max_specialist_requests": 8,
+   "min_evidence_per_hypothesis": 2,
+   "min_hypotheses": 3,
+   "min_sources_per_hypothesis": 2,
+   "output_retries": 3
+  },
+  "data_policy": {
+   "max_age_seconds": 1209600.0,
+   "mode": "cache-preferred",
+   "snapshot_run_id": null
+  },
+  "disease": "IgA glomerulonephritis",
+  "formalise": false,
+  "genes": [
+   "TNFSF13",
+   "ITGAX",
+   "DEFA4",
+   "CFH",
+   "CARD9",
+   "OR4X1",
+   "ZNF174"
+  ],
+  "model": "vertex-openai:deepseek-ai/deepseek-v3.2-maas",
+  "specialist_model": "",
+  "specialists": [
+   "chembl",
+   "expression",
+   "gwas",
+   "interactions",
+   "literature",
+   "model_organism",
+   "open_targets",
+   "pathways",
+   "single_cell",
+   "trials",
+   "uniprot"
+  ],
+  "tissue": {
+   "artifact_id": "sha256:9e1a3dbe284f9d27d8084643b44a06acf8cb32a68ab373cb3902387f5d069650",
+   "label": "kidney",
+   "uberon": "UBERON:0002113"
+  },
+  "use_network": true
+ },
+ "abstention": null,
+ "disease": "IgA glomerulonephritis",
+ "genes_considered": [
+  "TNFSF13",
+  "ITGAX",
+  "DEFA4",
+  "CFH",
+  "CARD9",
+  "OR4X1",
+  "ZNF174"
+ ],
+ "hypotheses": [
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [],
+     "note": "TNFSF13 (also known as APRIL) promotes IgA class switching and IgA production",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "IgA production"
+     },
+     "polarity": "unknown",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "TNFSF13"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [],
+     "note": "Excess polymeric IgA1 forms immune complexes that deposit in the glomerular mesangium, triggering inflammation",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "IgA glomerulonephritis"
+     },
+     "polarity": "unknown",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "IgA immune complex deposition"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "In a mouse model of IgA nephropathy, knockout of Tnfsf13 would be expected to reduce glomerular IgA deposition and ameliorate kidney injury. If knockout does not reduce IgA deposition or disease severity, the hypothesis is falsified.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "TNFSF13"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "phenotype",
+     "label": "glomerular IgA deposition"
+    },
+    "system": "mouse model of IgA nephropathy"
+   },
+   "genes": [
+    "TNFSF13"
+   ],
+   "hypothesis_id": "hypothesis_1",
+   "mechanism": "TNFSF13 (APRIL) is a cytokine that stimulates B cells to undergo class switch recombination to produce IgA. Overproduction of APRIL leads to excessive IgA1 synthesis, particularly the galactose-deficient IgA1 that is prone to form immune complexes. These complexes deposit in the glomerular mesangium, activating complement and mesangial cells, resulting in inflammation and kidney damage characteristic of IgA nephropathy.",
+   "support": "speculative",
+   "supporting_evidence": [],
+   "title": "TNFSF13 (APRIL) drives excessive IgA production leading to immune complex deposition in IgA nephropathy"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [],
+     "note": "CFH regulates the alternative complement pathway; loss-of-function variants impair complement regulation",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "complement activation"
+     },
+     "polarity": "unknown",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "CFH"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [],
+     "note": "Dysregulated complement activation on deposited IgA immune complexes exacerbates mesangial injury and inflammation",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "IgA glomerulonephritis"
+     },
+     "polarity": "unknown",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "complement-mediated glomerular injury"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "In vitro, mesangial cells exposed to IgA immune complexes from CFH-deficient patients should show increased complement activation (C3 deposition) compared to cells exposed to complexes from healthy controls. If complement activation is not increased, the hypothesis is falsified.",
+    "expected": "positive",
+    "perturbation": {
+     "action": "knockdown",
+     "target": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "CFH"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "process",
+     "label": "C3 deposition on mesangial cells"
+    },
+    "system": "human mesangial cell culture"
+   },
+   "genes": [
+    "CFH"
+   ],
+   "hypothesis_id": "hypothesis_2",
+   "mechanism": "Complement factor H (CFH) is a key regulator of the alternative complement pathway. Genetic variants that reduce CFH function lead to uncontrolled complement activation on glomerular IgA deposits. This excessive complement activation directly damages mesangial cells and recruits inflammatory cells, amplifying kidney injury in IgA nephropathy. CFH variants may explain the complement-driven component of disease progression.",
+   "support": "speculative",
+   "supporting_evidence": [],
+   "title": "CFH deficiency permits dysregulated complement activation on IgA deposits, exacerbating glomerular injury"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [],
+     "note": "CARD9 is an adaptor protein in innate immune signaling; gain-of-function variants enhance inflammatory responses",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "pro-inflammatory cytokine production"
+     },
+     "polarity": "unknown",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "CARD9"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [],
+     "note": "ITGAX (CD11c) is expressed on dendritic cells and macrophages; it may be involved in presenting antigens from IgA complexes",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "antigen presentation and T cell activation"
+     },
+     "polarity": "unknown",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "ITGAX"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [],
+     "note": "Enhanced innate and adaptive immune responses to glomerular IgA deposits drive progressive inflammation and fibrosis",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "IgA glomerulonephritis"
+     },
+     "polarity": "unknown",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "chronic glomerular inflammation"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "In a mouse model, simultaneous knockout of Card9 and Itgax should reduce renal infiltration of inflammatory cells and cytokine production compared to wild-type, when challenged with IgA immune complexes. If no reduction is observed, the hypothesis is falsified.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "CARD9 and ITGAX"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "phenotype",
+     "label": "renal inflammatory cell infiltration"
+    },
+    "system": "mouse model of IgA nephropathy"
+   },
+   "genes": [
+    "CARD9",
+    "ITGAX"
+   ],
+   "hypothesis_id": "hypothesis_3",
+   "mechanism": "CARD9 mediates signaling from pattern recognition receptors (e.g., dectin-1) that may recognize glycans on galactose-deficient IgA1. ITGAX (CD11c) is a marker of dendritic cells and macrophages that could present antigens from IgA complexes to T cells. Variants in CARD9 that enhance innate immune signaling, combined with ITGAX-mediated antigen presentation, could drive a hyper-inflammatory response to glomerular IgA deposits, promoting chronic inflammation and progression to kidney failure.",
+   "support": "speculative",
+   "supporting_evidence": [],
+   "title": "CARD9 and ITGAX amplify innate and adaptive immune responses to IgA deposits, driving progressive glomerulonephritis"
+  }
+ ],
+ "unexplained_genes": [
+  "DEFA4",
+  "OR4X1",
+  "ZNF174"
+ ]
+}

@@ -1,0 +1,831 @@
+{
+ "run_id": "20260824T202248Z-29d6aa",
+ "curated_by": "Claude Opus 5.5, 2026-10-30",
+ "entities": {
+  "MUC5B": {
+   "kind": "protein",
+   "curie": "UniProt:Q9HC84",
+   "run_labels": [
+    "MUC5B"
+   ]
+  },
+  "TOLLIP": {
+   "kind": "protein",
+   "curie": "UniProt:Q9H0E2",
+   "run_labels": [
+    "TOLLIP"
+   ]
+  },
+  "TERT": {
+   "kind": "protein",
+   "curie": "UniProt:O14746",
+   "run_labels": [
+    "TERT"
+   ]
+  },
+  "DSP": {
+   "kind": "protein",
+   "curie": "UniProt:P15924",
+   "run_labels": [
+    "DSP"
+   ]
+  },
+  "SFTPC": {
+   "kind": "protein",
+   "curie": "UniProt:P11686",
+   "run_labels": [
+    "SFTPC"
+   ]
+  },
+  "erStress": {
+   "kind": "process",
+   "curie": "GO:0034976",
+   "run_labels": [
+    "bronchiolar epithelial endoplasmic-reticulum stress"
+   ]
+  },
+  "aggrephagy": {
+   "kind": "process",
+   "curie": "GO:0035973",
+   "run_labels": [
+    "selective autophagic clearance of ubiquitinated cargo"
+   ]
+  },
+  "proteotoxicStress": {
+   "kind": "process",
+   "curie": "GO:0035966",
+   "run_labels": [
+    "persistent epithelial proteotoxic stress"
+   ]
+  },
+  "telomereExtension": {
+   "kind": "process",
+   "curie": "GO:0007004",
+   "run_labels": [
+    "telomere extension"
+   ]
+  },
+  "desmosomeOrg": {
+   "kind": "process",
+   "curie": "GO:0002934",
+   "run_labels": [
+    "desmosomal epithelial barrier and telomere protection"
+   ]
+  },
+  "telomereDamage": {
+   "kind": "process",
+   "curie": "BLN:TelomereDamage",
+   "label": "telomere damage",
+   "why_no_term": "searched GO/HP for 'telomere damage'; GO has only 'telomere maintenance in response to DNA damage' (GO:0043247, the repair), HP has 'Short telomere length' (HP:0031413) and 'Abnormal telomere morphology' (HP:0031412), neither is the damage event itself",
+   "run_labels": [
+    "telomere damage and epithelial repair failure"
+   ]
+  },
+  "epitheliumRegeneration": {
+   "kind": "process",
+   "curie": "GO:1990399",
+   "run_labels": [
+    "telomere damage and epithelial repair failure"
+   ]
+  },
+  "surfaceTension": {
+   "kind": "phenotype",
+   "curie": "PATO:0001461",
+   "run_labels": [
+    "low-tension alveolar surface film"
+   ]
+  },
+  "ipf": {
+   "kind": "disease",
+   "curie": "MONDO:0800504",
+   "run_labels": [
+    "idiopathic pulmonary fibrosis"
+   ]
+  },
+  "telomereCapping": {
+   "kind": "process",
+   "curie": "GO:0016233",
+   "run_labels": [
+    "desmosomal epithelial barrier and telomere protection"
+   ]
+  },
+  "at2": {
+   "kind": "cellType",
+   "curie": "CL:0002063"
+  },
+  "at2Injury": {
+   "kind": "phenotype",
+   "curie": "BLN:AT2Injury",
+   "label": "alveolar type II cell injury",
+   "why_no_term": "searched HP/MP/GO for type II pneumocyte / alveolar type II injury: only morphology, hyperplasia, hypertrophy (HP:0033245/0033328/0033246) and decreased or absent number (MP:0010811/0010812); none is injury, and GO has no cell-injury process",
+   "run_labels": [
+    "alveolar type II cell injury and failed repair"
+   ]
+  },
+  "at2Regeneration": {
+   "kind": "process",
+   "refines": {
+    "base": "epitheliumRegeneration",
+    "ctx": {
+     "cellType": "at2"
+    }
+   },
+   "run_labels": [
+    "alveolar type II cell injury and failed repair"
+   ]
+  },
+  "abnormalWoundHealing": {
+   "kind": "phenotype",
+   "curie": "MP:0005023",
+   "run_labels": [
+    "abnormal epithelial wound-repair signaling"
+   ]
+  }
+ },
+ "statements": [
+  {
+   "id": "S1",
+   "step": "H1.1",
+   "text": "ectopic MUC5B in the respiratory bronchiole initiates epithelial ER stress",
+   "claim": {
+    "effect": {
+     "subject": "MUC5B",
+     "sign": "pos",
+     "target": {
+      "process": "erStress"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "PMID:41091081",
+     "kind": "inVitro",
+     "quote": "Ectopic expression of MUC5B in the respiratory bronchiole initiates endoplasmic reticulum stress in the IPF lung"
+    }
+   ],
+   "excluded": []
+  },
+  {
+   "id": "S2",
+   "step": "H1.2",
+   "text": "TOLLIP is required for selective autophagic clearance of ubiquitinated cargo",
+   "claim": {
+    "effect": {
+     "subject": "TOLLIP",
+     "sign": "pos",
+     "target": {
+      "process": "aggrephagy"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "Q9H0E2",
+     "kind": "curatedDb",
+     "quote": "Connects the ubiquitin pathway to autophagy by functioning as a ubiquitin-ATG8 family adapter and thus mediating autophagic clearance of ubiquitin conjugates"
+    }
+   ],
+   "excluded": []
+  },
+  {
+   "id": "S3",
+   "step": "H1.3",
+   "text": "persistent epithelial proteotoxic stress leads to IPF",
+   "claim": {
+    "effect": {
+     "subject": "proteotoxicStress",
+     "sign": "pos",
+     "target": {
+      "disease": "ipf",
+      "aspect": "risk"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "OT:MUC5B-EFO_0000768",
+     "category": "not_this_entity",
+     "reason": "Open Targets MUC5B-IPF association score (gene-disease), not the proteotoxic-stress->IPF step"
+    },
+    {
+     "ref": "OT:TOLLIP-EFO_0000768",
+     "category": "not_this_entity",
+     "reason": "Open Targets TOLLIP-IPF association score (gene-disease), not the proteotoxic-stress->IPF step"
+    }
+   ]
+  },
+  {
+   "id": "S4",
+   "step": "H2.1",
+   "text": "TERT is required for telomere extension",
+   "claim": {
+    "effect": {
+     "subject": "TERT",
+     "sign": "pos",
+     "target": {
+      "process": "telomereExtension"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "O14746",
+     "kind": "curatedDb",
+     "quote": "the elongation of telomeres by acting as a reverse transcriptase that adds simple sequence repeats to chromosome ends"
+    }
+   ],
+   "excluded": [
+    {
+     "ref": "HPA:ENSG00000164362",
+     "category": "no_direction",
+     "reason": "run's contradicting citation: HPA expression record, TERT not detected / not enriched in lung; an expression level cannot state the causal step"
+    }
+   ]
+  },
+  {
+   "id": "S5",
+   "step": "H2.2",
+   "text": "DSP is required for desmosome organization (one half of a compound object)",
+   "claim": {
+    "effect": {
+     "subject": "DSP",
+     "sign": "pos",
+     "target": {
+      "process": "desmosomeOrg"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "P15924",
+     "kind": "curatedDb",
+     "quote": "Required for the maintenance of protein abundance of desmosome junction components DSG1, DSG2, DSC2, DSC3, PKP1, PKP2 and PKP3"
+    }
+   ],
+   "excluded": []
+  },
+  {
+   "id": "S6",
+   "step": "H2.2",
+   "text": "DSP is required for telomere protection (telomere capping; other half of the compound object)",
+   "claim": {
+    "effect": {
+     "subject": "DSP",
+     "sign": "pos",
+     "target": {
+      "process": "telomereCapping"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "P15924",
+     "kind": "curatedDb",
+     "quote": "Binds to telomere DNA (via C-terminus) and acts to prevent telomere damage and maintain telomere length via its interaction with TRF2"
+    }
+   ],
+   "excluded": []
+  },
+  {
+   "id": "S7",
+   "step": "H2.3",
+   "text": "telomere damage leads to IPF (one half of a compound subject)",
+   "claim": {
+    "effect": {
+     "subject": "telomereDamage",
+     "sign": "pos",
+     "target": {
+      "disease": "ipf",
+      "aspect": "risk"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "OT:TERT-EFO_0000768",
+     "category": "not_this_entity",
+     "reason": "Open Targets TERT-IPF association score (gene-disease), not telomere-damage->IPF"
+    },
+    {
+     "ref": "OT:DSP-EFO_0000768",
+     "category": "not_this_entity",
+     "reason": "Open Targets DSP-IPF association score (gene-disease), not telomere-damage->IPF"
+    },
+    {
+     "ref": "PMID:42120512",
+     "category": "not_in_text",
+     "reason": "reports SYISL->DSP degradation->Hippo/YAP->EMT->fibrosis; says nothing about telomere damage or repair failure causing IPF"
+    }
+   ]
+  },
+  {
+   "id": "S8",
+   "step": "H2.3",
+   "text": "epithelial regeneration protects against IPF (run's 'epithelial repair failure', loss-of-function inverted)",
+   "claim": {
+    "effect": {
+     "subject": "epitheliumRegeneration",
+     "sign": "neg",
+     "target": {
+      "disease": "ipf",
+      "aspect": "risk"
+     }
+    }
+   },
+   "sign_note": "inverted: the run's subject is 'epithelial repair failure' (loss of epithelial regeneration), stated as leading positively to IPF",
+   "evidence": [],
+   "excluded": []
+  },
+  {
+   "id": "S9",
+   "step": "H3.1",
+   "text": "SFTPC lowers alveolar surface tension (run's 'low-tension alveolar surface film')",
+   "claim": {
+    "effect": {
+     "subject": "SFTPC",
+     "sign": "neg",
+     "target": {
+      "phenotype": "surfaceTension"
+     }
+    }
+   },
+   "sign_note": "the run's object is the low-tension surface film; SFTPC lowers surface tension, so the effect on surface tension is negative",
+   "evidence": [
+    {
+     "ref": "P11686",
+     "kind": "curatedDb",
+     "quote": "promote alveolar stability by lowering the surface tension at the air-liquid interface in the peripheral air spaces"
+    }
+   ],
+   "excluded": [
+    {
+     "ref": "HPA:ENSG00000168484",
+     "category": "no_direction",
+     "reason": "HPA expression record (SFTPC enriched in lung AT2 cells); an expression level cannot state the causal step"
+    }
+   ]
+  },
+  {
+   "id": "S10",
+   "step": "H3.2",
+   "text": "SFTPC protects alveolar type II cells from injury (run's 'SFTPC dysfunction', loss-of-function inverted; one half of a compound object)",
+   "claim": {
+    "effect": {
+     "subject": "SFTPC",
+     "sign": "neg",
+     "target": {
+      "phenotype": "at2Injury"
+     }
+    }
+   },
+   "sign_note": "inverted: the run's subject is 'SFTPC dysfunction' (loss of function), stated as leading positively to AT2 injury",
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "OT:SFTPC-EFO_0000768",
+     "category": "not_this_entity",
+     "reason": "Open Targets SFTPC-IPF association score (gene-disease), not the SFTPC->AT2-injury step"
+    }
+   ]
+  },
+  {
+   "id": "S11",
+   "step": "H3.3",
+   "text": "alveolar type II cell injury leads to IPF (one half of a compound subject)",
+   "claim": {
+    "effect": {
+     "subject": "at2Injury",
+     "sign": "pos",
+     "target": {
+      "disease": "ipf",
+      "aspect": "risk"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "OT:SFTPC-EFO_0000768",
+     "category": "not_this_entity",
+     "reason": "Open Targets SFTPC-IPF association score (gene-disease), not the AT2-injury->IPF step"
+    }
+   ]
+  },
+  {
+   "id": "S12",
+   "step": "H3.2",
+   "text": "SFTPC is needed for alveolar type II cell repair (run's 'SFTPC dysfunction' leads to 'failed repair'; other half of the compound object)",
+   "claim": {
+    "effect": {
+     "subject": "SFTPC",
+     "sign": "pos",
+     "target": {
+      "process": "at2Regeneration"
+     }
+    }
+   },
+   "sign_note": "inverted twice: the run's subject is 'SFTPC dysfunction' (loss of SFTPC) and this half of its object is 'failed repair' (loss of AT2 epithelial regeneration); the run's + becomes SFTPC →+ regeneration",
+   "evidence": [],
+   "excluded": []
+  },
+  {
+   "id": "S13",
+   "step": "H3.3",
+   "text": "alveolar type II cell repair protects against IPF (run's 'failed repair' leads to IPF, loss-of-function inverted; other half of the compound subject)",
+   "claim": {
+    "effect": {
+     "subject": "at2Regeneration",
+     "sign": "neg",
+     "target": {
+      "disease": "ipf",
+      "aspect": "risk"
+     }
+    }
+   },
+   "sign_note": "inverted: this half of the run's subject is 'failed repair' (loss of AT2 epithelial regeneration), stated as leading positively to IPF",
+   "evidence": [],
+   "excluded": []
+  },
+  {
+   "id": "S14",
+   "step": "H4.2",
+   "text": "abnormal epithelial wound repair leads to IPF",
+   "claim": {
+    "effect": {
+     "subject": "abnormalWoundHealing",
+     "sign": "pos",
+     "target": {
+      "disease": "ipf",
+      "aspect": "risk"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "OT:FAM13A-EFO_0000768",
+     "category": "not_this_entity",
+     "reason": "Open Targets FAM13A-IPF association score (gene-disease), not the abnormal-wound-repair->IPF step"
+    },
+    {
+     "ref": "PMID:41618408",
+     "category": "not_in_text",
+     "reason": "Korean cohort reports IPF-associated SNP frequencies and pathway distribution; does not state that abnormal wound-repair signaling causes IPF"
+    }
+   ]
+  },
+  {
+   "id": "B1",
+   "step": "bridge",
+   "for": [
+    "H2"
+   ],
+   "text": "DSP prevents telomere damage (stated by the UniProt text the run cited for H2.2; the run's mechanism names this role but no step makes it)",
+   "claim": {
+    "effect": {
+     "subject": "DSP",
+     "sign": "neg",
+     "target": {
+      "process": "telomereDamage"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "P15924",
+     "kind": "curatedDb",
+     "moved_from": "H2.2",
+     "quote": "Binds to telomere DNA (via C-terminus) and acts to prevent telomere damage"
+    }
+   ],
+   "excluded": []
+  },
+  {
+   "id": "B2",
+   "step": "bridge",
+   "for": [
+    "H1"
+   ],
+   "text": "MUC5B injures alveolar epithelium with loss of AT2 cells (stated by the paper the run cited for H1.1; no step makes it)",
+   "claim": {
+    "effect": {
+     "subject": "MUC5B",
+     "sign": "pos",
+     "target": {
+      "phenotype": "at2Injury"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "PMID:41091081",
+     "kind": "observational",
+     "moved_from": "H1.1",
+     "quote": "MUC5B injures alveolar and bronchiolar epithelia that results in loss of AT2 cells"
+    }
+   ],
+   "excluded": []
+  }
+ ],
+ "unexpressed": [
+  {
+   "step": "H4.1",
+   "category": "no_sign",
+   "reason": "FAM13A -> Rho-dependent junctional/wound-repair signaling has run polarity 'unknown' and no cited text gives a direction",
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "O94988",
+     "category": "not_in_text",
+     "reason": "UniProt entry states 'No curated function statement. Domains: Rho-GAP' - a domain, not a functional claim with a direction"
+    },
+    {
+     "ref": "HPA:ENSG00000138640",
+     "category": "no_direction",
+     "reason": "HPA expression/localization record (cell junctions, cytosol); cannot state a signed functional step"
+    }
+   ]
+  }
+ ],
+ "hypotheses": {
+  "H1": {
+   "claims": [
+    {
+     "subject": "MUC5B",
+     "sign": "pos",
+     "target": {
+      "disease": "ipf",
+      "aspect": "risk"
+     }
+    },
+    {
+     "subject": "TOLLIP",
+     "sign": "neg",
+     "target": {
+      "disease": "ipf",
+      "aspect": "risk"
+     }
+    }
+   ],
+   "note": "two genes; MUC5B gain-of-function (pos), reduced TOLLIP (neg). The chain's three steps share no node. MUC5B reaches IPF only through bridge B2 (MUC5B injures AT2 cells, from the run's H1.1 citation) and H3's AT2-injury step; TOLLIP has no route."
+  },
+  "H2": {
+   "claims": [
+    {
+     "subject": "TERT",
+     "sign": "neg",
+     "target": {
+      "disease": "ipf",
+      "aspect": "risk"
+     }
+    },
+    {
+     "subject": "DSP",
+     "sign": "neg",
+     "target": {
+      "disease": "ipf",
+      "aspect": "risk"
+     }
+    }
+   ],
+   "note": "reduced TERT and impaired DSP (both loss-of-function, neg). The chain does not connect: telomere extension and telomere capping are different nodes from 'telomere damage'. DSP reaches IPF through bridge B1 (DSP prevents telomere damage, from the run's own UniProt citation); TERT has no route."
+  },
+  "H3": {
+   "claims": [
+    {
+     "subject": "SFTPC",
+     "sign": "neg",
+     "target": {
+      "disease": "ipf",
+      "aspect": "risk"
+     }
+    }
+   ],
+   "note": "SFTPC dysfunction/loss (neg). The chain connects by two routes after the compound split, SFTPC →− AT2 injury →+ IPF and SFTPC →+ AT2 regeneration →− IPF, but every disease-facing step cites only an Open Targets score, so neither arm has kept evidence."
+  },
+  "H4": {
+   "no_claim_reason": "the run states the direction of FAM13A's effect is unresolved (step polarity 'unknown', falsification expected 'unknown'); no overall sign to claim"
+  }
+ },
+ "findings": [
+  {
+   "project": "hypothesis-agent",
+   "category": "chain_not_connected",
+   "hypothesis": "H1",
+   "steps": [
+    "H1.1",
+    "H1.2",
+    "H1.3"
+   ],
+   "detail": "H1.1 ends at ER stress, H1.2 starts at TOLLIP (a new subject) and ends at autophagic clearance, H1.3 starts at 'proteotoxic stress'; no node is shared, so TOLLIP has no route to IPF and MUC5B reaches it only through a bridge from the run's own H1.1 paper (MUC5B injures AT2 cells) and H3's AT2-injury step."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "chain_not_connected",
+   "hypothesis": "H2",
+   "steps": [
+    "H2.1",
+    "H2.2",
+    "H2.3"
+   ],
+   "detail": "H2.1 ends at telomere extension, H2.2 at desmosome organization and telomere capping ('telomere protection'), H2.3 starts at 'telomere damage and epithelial repair failure'; TERT has no route, and DSP connects only through a bridge from the run's own UniProt citation (DSP 'acts to prevent telomere damage'), a link the mechanism states but no step makes."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "chain_not_connected",
+   "hypothesis": "H4",
+   "steps": [
+    "H4.1",
+    "H4.2"
+   ],
+   "detail": "H4.1 ends at Rho-dependent signaling, H4.2 starts at 'abnormal epithelial wound-repair signaling'; the nodes are not the same, and both steps are unexpressed anyway."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_does_not_state_step",
+   "steps": [
+    "H1.3",
+    "H2.3",
+    "H3.2",
+    "H3.3",
+    "H4.2"
+   ],
+   "detail": "Every disease-facing step grounds its 'process/phenotype -> IPF' claim on Open Targets gene-disease association scores (OT:MUC5B/TOLLIP/TERT/DSP/SFTPC/FAM13A-EFO_0000768); a gene-disease score states neither the step's subject (a process or phenotype) nor an effect, so all were excluded."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_does_not_state_step",
+   "steps": [
+    "H2.3"
+   ],
+   "detail": "PMID:42120512 (SYISL-DSP-Hippo/YAP driving EMT and fibrosis) was cited for 'telomere damage/repair failure -> IPF' but describes an unrelated DSP-degradation/EMT axis; it does state DSP loss promotes fibrosis, which would fit a DSP->IPF claim the run never made as a step."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_does_not_state_step",
+   "steps": [
+    "H4.2"
+   ],
+   "detail": "PMID:41618408 (Korean IPF cohort) was cited for 'abnormal wound-repair signaling -> IPF' but only reports IPF-associated SNP frequencies and pathway distribution, not a causal step."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "evidence_only_at_dead_ends",
+   "steps": [
+    "H1.1",
+    "H1.2",
+    "H2.1",
+    "H2.2",
+    "H3.1"
+   ],
+   "detail": "Every kept citation sits on a gene-function step (H1.1, H1.2, H2.1, H2.2, H3.1) whose end node is not the next step's subject; every step that reaches IPF (H1.3, H2.3, H3.3, H4.2) has no kept citation, so the gene-to-disease link rests on Open Targets scores."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "confidence_unjustified",
+   "hypothesis": "H1",
+   "detail": "H1 is rated 'medium' confidence though its chain is disconnected and its only disease-facing evidence is two Open Targets association scores."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "confidence_unjustified",
+   "hypothesis": "H2",
+   "detail": "H2 is rated 'medium' confidence though its chain is disconnected and its disease-facing evidence is Open Targets scores plus an unrelated EMT paper."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "contradicting_evidence_ignored",
+   "hypothesis": "H2",
+   "detail": "The run's own contradicting citation HPA:ENSG00000164362 shows TERT 'Not detected' and not enriched in lung, undercutting the premise that TERT acts in lung epithelial progenitors; it is an expression record so it cannot refute the causal step, but the hypothesis does not acknowledge it."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_at_no_step",
+   "detail": "Supporting citations Q9HC84 (MUC5B is a gel-forming salivary/cervical mucin, no ER-stress link), HPA:ENSG00000117983 (MUC5B RNA enriched in salivary gland, explicitly NOT lung), and PMID:40887773 (TERT/MUC5B/DSP SNP associations with IPF risk and prognosis) state no chain step; the SNP-association paper could have grounded gene->IPF association statements the run chose not to make."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "ungrounded_label",
+   "steps": [
+    "H1.3",
+    "H2.3",
+    "H3.2",
+    "H3.3"
+   ],
+   "detail": "Several free-text chain nodes are compound ('telomere damage and epithelial repair failure', 'alveolar type II cell injury and failed repair', 'desmosomal epithelial barrier and telomere protection'), forcing compound splits and a BLN term for AT2 injury."
+  },
+  {
+   "project": "biolean",
+   "category": "missing_term",
+   "detail": "BLN:TelomereDamage for 'telomere damage': GO/HP have telomere maintenance and short-telomere-length terms but no term for the damage event."
+  },
+  {
+   "project": "biolean",
+   "category": "missing_term",
+   "detail": "BLN:AT2Injury for the 'alveolar type II cell injury' half of 'alveolar type II cell injury and failed repair': HP/MP have AT2 morphology, hyperplasia and number terms but none for injury."
+  },
+  {
+   "project": "biolean",
+   "category": "evidence_kind_missing",
+   "detail": "PMID:41091081 states MUC5B->ER stress in one span that fuses spatial transcriptomics of IPF lung (observational) with an in-vitro demonstration ('direct relationship ... in bronchiolar epithelia in vitro'); classified inVitro because the causal 'initiates' rests on the in-vitro work, but a single quoted span can mix two designs."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "confidence_unjustified",
+   "hypothesis": "H3",
+   "detail": "H3 is rated 'medium' (support 'grounded') though its only disease-facing citation is one Open Targets association score, cited for both H3.2 and H3.3, and its own H3.2 note concedes the evidence does not resolve the mechanism."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "contradicting_evidence_ignored",
+   "hypothesis": "H4",
+   "steps": [
+    "H4.2"
+   ],
+   "detail": "PMID:41618408, cited as support at H4.2, reports 'significant depletion of IPF risk variants such as TERT rs2736100 and FAM13A rs2609255' in Korean IPF patients against reference populations, which weakens rather than supports a FAM13A (and TERT) role there; the run does not mention it."
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_does_not_state_step",
+   "steps": [
+    "H4.1"
+   ],
+   "detail": "H4.1 cites O94988 ('No curated function statement. Domains: Rho-GAP') and an HPA localisation record; neither states any effect of FAM13A, as the run's own note concedes."
+  },
+  {
+   "project": "biolean",
+   "category": "rule_missing",
+   "steps": [
+    "H3.1"
+   ],
+   "detail": "required_for maps to effect pos, but the run's object 'low-tension alveolar surface film' grounds to the quality surface tension (PATO:0001461), which SFTPC lowers; the sign had to be inverted with a sign_note, and the guide has no rule for objects named by a low or high value of a quality."
+  }
+ ],
+ "audit": [
+  {
+   "item": "entity proteotoxicStress (H1.3)",
+   "error": "wrong_grounding",
+   "before": "BLN:ProteotoxicStress, with a missing_term finding",
+   "after": "GO:0035966 response to topologically incorrect protein (synonym 'response to misfolded or unfolded protein'); missing_term finding removed",
+   "reason": "a BLN term is only for when nothing fits; the curator grounded ER stress to the GO response term GO:0034976 (the guide's own example) but rejected the matching response term for proteotoxic stress on the opposite principle ('response, not the state'). The why_no_term itself names GO:0035966."
+  },
+  {
+   "item": "S6 (H2.2) entity telomereMaintenance",
+   "error": "wrong_grounding",
+   "before": "GO:0000723 telomere maintenance",
+   "after": "GO:0016233 telomere capping (exact synonym 'telomere end protection')",
+   "reason": "the run's half-label is 'telomere protection'; GO has it as an exact synonym of telomere capping ('telomeres are protected from degradation and fusion'), while telomere maintenance is length and structure in general. The quote ('acts to prevent telomere damage and maintain telomere length') states both, so it stays."
+  },
+  {
+   "item": "S10, S11 (H3.2, H3.3) compound 'alveolar type II cell injury and failed repair'",
+   "error": "wrong_merge",
+   "before": "one BLN node BLN:AT2InjuryFailedRepair; S10 SFTPC →− it, S11 it →+ IPF; a no_form_for finding saying neither half has a term",
+   "after": "split per the compound rule: BLN:AT2Injury (S10 SFTPC →− injury, S11 injury →+ IPF) and at2Regeneration = epithelium regeneration GO:1990399 refined to CL:0002063 (S12 SFTPC →+ regeneration, S13 regeneration →− IPF); no_form_for finding removed, missing_term finding renamed",
+   "reason": "injury and failed repair are two events, and the 'failed repair' half has a term: the curator grounded the same wording ('epithelial repair failure', H2.3) to GO:1990399 with a loss-of-function inversion. The reason given for not splitting ('no term for either half') is false. Both H3 steps use the same phrase, so both split the same way and the chain still connects, now by two routes."
+  },
+  {
+   "item": "H4.2 unexpressed",
+   "error": "wrong_unexpressed",
+   "before": "unexpressed, ungroundable ('vague dysregulation with no ontology term')",
+   "after": "statement S14: abnormal wound healing (MP:0005023) →+ IPF risk, evidence [], same two exclusions",
+   "reason": "'abnormal epithelial wound-repair signaling' is an 'abnormal X' node and MP:0005023 'abnormal wound healing' ('aberrant process of repair of trauma to any tissues') exists; ungroundable is only for a node with no term. The signaling qualifier is a mechanism named in passing."
+  },
+  {
+   "item": "bridge B1 (H2, DSP)",
+   "error": "other",
+   "before": "no bridge; H2 claim DSP →− IPF had no route; finding said no route connects DSP to IPF",
+   "after": "bridge B1 DSP →− telomere damage from P15924 ('acts to prevent telomere damage', moved_from H2.2); route B1 → S7 composes neg, matching the claim",
+   "reason": "the guide allows a bridge stated by a text the run cited. P15924, cited by the run at H2.2, names both ends and the direction; the run's own H2 mechanism says DSP 'has a documented role in preventing telomere damage'. The chain broke only on the labels 'telomere protection' vs 'telomere damage'."
+  },
+  {
+   "item": "bridge B2 (H1, MUC5B)",
+   "error": "other",
+   "before": "no bridge; H1 claim MUC5B →+ IPF had no route",
+   "after": "bridge B2 MUC5B →+ AT2 injury from PMID:41091081 (observational conclusion, moved_from H1.1); route B2 → S11 composes pos, borrowing H3.3",
+   "reason": "PMID:41091081, cited by the run at H1.1, concludes 'MUC5B injures alveolar and bronchiolar epithelia that results in loss of AT2 cells': both ends and the direction. The design behind it is the spatial-transcriptomic AT2 loss with the risk variant, so observational. The route borrows H3's unsupported AT2-injury step, so the arm stays unsupported."
+  },
+  {
+   "item": "hypotheses H1, H2, H3 notes",
+   "error": "other",
+   "before": "notes said no statement links MUC5B or DSP to IPF and H3 has one route",
+   "after": "notes describe the bridged routes for MUC5B and DSP and H3's two routes",
+   "reason": "follows from the bridges and the H3 split."
+  },
+  {
+   "item": "findings",
+   "error": "missed_finding",
+   "before": "no confidence_unjustified for H3; no note that PMID:41618408 reports depletion of the FAM13A and TERT risk alleles; nothing on H4.1's citations; no biolean finding for the S9 sign inversion",
+   "after": "four findings added (hypothesis-agent x3, biolean x1)",
+   "reason": "H3 has the same Open-Targets-only disease evidence as H1 and H2, which were flagged; the Korean cohort result cuts against H4; O94988 literally says 'No curated function statement'; the S9 inversion was raised only as a guide problem."
+  },
+  {
+   "item": "findings no_citation, ungrounded_label, chain_not_connected, missing_term, no_form_for",
+   "error": "other",
+   "before": "'no_citation' listed H1.1, H2.1, H2.2, H3.1, which all keep citations; ungrounded_label called H4.2 ungroundable; missing_term for ProteotoxicStress and AT2InjuryFailedRepair; no_form_for on the unsplit AT2 compound",
+   "after": "re-slugged to evidence_only_at_dead_ends with the right steps; ungrounded_label limited to the compound labels; ProteotoxicStress missing_term and the no_form_for removed; AT2 missing_term renamed to BLN:AT2Injury; H1 and H2 chain details updated for the bridges",
+   "reason": "the findings must match the corrected curation, and 'no_citation' claimed something false of steps that have kept citations."
+  }
+ ]
+}

@@ -1,0 +1,107 @@
+{
+ "run_id": "psoriasis-ukbt-ukbt15-google-cloud-gemini-3.1-pro-preview-multi_agent-r3",
+ "curated_by": "Claude Opus 5.5, 2026-10-30",
+ "entities": {
+  "ADAR": {"kind": "protein", "curie": "UniProt:P55265", "run_labels": ["ADAR", "ADAR1"]},
+  "atoiEditing": {"kind": "process", "curie": "GO:0006382", "run_labels": ["A-to-I RNA editing"]},
+  "typeIIfnSignaling": {"kind": "process", "curie": "GO:0060337", "run_labels": ["type I interferon signaling pathway"]},
+  "psoriasis": {"kind": "disease", "curie": "MONDO:0005083", "run_labels": ["psoriasis", "interferon-dependent subtype of psoriasis"]}
+ },
+ "statements": [
+  {"id": "S1", "step": "hyp_ADAR_psoriasis.1",
+   "text": "ADAR is required for A-to-I RNA editing (losing ADAR lowers editing)",
+   "claim": {"effect": {"subject": "ADAR", "sign": "pos", "target": {"process": "atoiEditing"}}},
+   "evidence": [
+    {"ref": "P55265", "kind": "curatedDb",
+     "quote": "Catalyzes the hydrolytic deamination of adenosine to inosine in double-stranded RNA (dsRNA) referred to as A-to-I RNA editing"},
+    {"ref": "PMID:42424135", "kind": "inVitro", "moved_from": "hyp_ADAR_psoriasis.2",
+     "quote": "ADAR1 knockdown or expression of ADAR1G1119R and ADAR1P3A alleles pathogenic variants reduced adenosine-to-inosine RNA editing"}
+   ],
+   "excluded": []},
+  {"id": "S2", "step": "hyp_ADAR_psoriasis.2",
+   "text": "A-to-I RNA editing inhibits type I interferon signaling",
+   "claim": {"effect": {"subject": "atoiEditing", "sign": "neg", "target": {"process": "typeIIfnSignaling"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "PMID:42424135", "category": "not_in_text",
+     "reason": "reduced editing and raised IFN-stimulated genes are two parallel outcomes of perturbing ADAR1 ('ADAR1 knockdown or expression of ... alleles ... reduced adenosine-to-inosine RNA editing and increased IFN-stimulated genes'); the text never says editing restrains IFN signalling, and the perturbation is of ADAR (which UniProt P55265 says also acts editing-independently via EIF2AK2/PKR), not of editing"}
+   ]},
+  {"id": "S3", "step": "hyp_ADAR_psoriasis.3",
+   "text": "type I interferon signaling goes with psoriasis (higher IFN signalling in psoriasis)",
+   "sign_note": "the run's polarity is 'unknown'; the text it cited gives the direction: psoriasis families 'characterized by a strong IFN signature in skin and blood' (PMID:42424135)",
+   "claim": {"assoc": {"subject": "typeIIfnSignaling", "direction": "pos", "target": {"disease": "psoriasis", "aspect": "risk"}}},
+   "evidence": [
+    {"ref": "PMID:42424135", "kind": "observational",
+     "quote": "early-onset plaque psoriasis, with or without psoriatic arthritis, segregating as a monogenic trait and characterized by a strong IFN signature in skin and blood"}
+   ],
+   "excluded": []}
+ ],
+ "unexpressed": [],
+ "hypotheses": {
+  "hyp_ADAR_psoriasis": {
+   "claims": [{"subject": "ADAR", "sign": "neg", "target": {"disease": "psoriasis", "aspect": "risk"}}],
+   "note": "the title names ADAR loss-of-function variants, but the chain starts at the ADAR protein, so the claim is on ADAR with the sign inverted ('loss of ADAR drives psoriasis'). The title's 'interferon-dependent subtype of psoriasis' has no MONDO term; the chain ends at psoriasis (MONDO:0005083) and so does the claim."
+  }
+ },
+ "findings": [
+  {"project": "hypothesis-agent", "category": "confidence_unjustified", "hypothesis": "hyp_ADAR_psoriasis",
+   "detail": "Confidence 'low' and support 'speculative' understate the run's own citation: PMID:42424135 reports four heterozygous ADAR1 loss-of-function mutations cosegregating with psoriasis in four families, six more rare variants in 125 patients, and knockdown/allele experiments raising IFN-stimulated genes."},
+  {"project": "hypothesis-agent", "category": "hypothesis_restates_source", "hypothesis": "hyp_ADAR_psoriasis",
+   "detail": "The title ('ADAR loss-of-function drives an interferon-dependent subtype of psoriasis') paraphrases the title of the one paper cited (PMID:42424135, 2026); the hypothesis is a retrieved finding, not a new one."},
+  {"project": "hypothesis-agent", "category": "falsification_already_reported", "hypothesis": "hyp_ADAR_psoriasis",
+   "detail": "The proposed falsification (ADAR knockdown in keratinocytes, expect more type I IFN signalling) is essentially the experiment PMID:42424135 already reports ('ADAR1 knockdown ... increased IFN-stimulated genes'), so it would not test anything new."},
+  {"project": "hypothesis-agent", "category": "polarity_unknown_despite_source", "steps": ["hyp_ADAR_psoriasis.3"],
+   "detail": "The step gives polarity 'unknown' while the text it cites states the direction (a 'strong IFN signature in skin and blood', an 'IFN-dependent psoriasis subtype'); the curation takes the direction from the text."},
+  {"project": "hypothesis-agent", "category": "mechanism_not_in_chain", "hypothesis": "hyp_ADAR_psoriasis",
+   "detail": "The mechanism's key intermediate, accumulation of unedited endogenous dsRNA acting as an innate immune trigger, is neither a chain step nor stated by either cited text; the chain jumps from editing straight to IFN signalling."},
+  {"project": "hypothesis-agent", "category": "direct_evidence_not_in_chain", "hypothesis": "hyp_ADAR_psoriasis",
+   "detail": "The strongest evidence in the run, familial cosegregation of ADAR1 loss-of-function mutations with psoriasis (PMID:42424135), is not attached to any step: the chain only carries the mechanism, so the genetic link itself is never claimed as a step."},
+  {"project": "hypothesis-agent", "category": "abstention_ignores_shared_node", "hypothesis": "hyp_ADAR_psoriasis",
+   "detail": "The run abstains on IFNW1 ('not detected' in HPA) and ZBP1, although the corpus UniProt records annotate IFNW1 (P05000) to type I interferon-mediated signaling pathway (GO:0060337) and ZBP1 (Q9H171) to its positive regulation (GO:0060340), the very node its only hypothesis runs through; absence of tissue expression is used as evidence of no role."},
+  {"project": "hypothesis-agent", "category": "abstention_citations_unchecked",
+   "detail": "The abstention cites PMID:PPR1233591, GWAS:SP100:no-association, HPA:ENSG00000138472, HPA:ENSG00000138030 and HPA:ENSG00000177047; none is in sources.json, so its claims (e.g. PANoptosis in psoriasis is ZBP1-independent; zero GWAS variants for SP100) could not be checked."},
+  {"project": "biolean", "category": "no_form_for",
+   "detail": "Abstentions: the format has no place for a run's abstention statement or its citations, and sources.json omits them, although a GWAS null (SP100) or a ZBP1-independence result is exactly a refuting or 'none' association BioLean could hold."},
+  {"project": "biolean", "category": "no_form_for", "hypothesis": "hyp_ADAR_psoriasis",
+   "detail": "Hypothesis-level evidence: the cited cosegregation result states the claim itself (ADAR loss → psoriasis), and the knockdown result states ADAR →− IFN-stimulated genes, but no step carries either, and a bridge is allowed only when an arm needs one to compose, so the arm's belief rests on the mechanism alone and ignores the best evidence."},
+  {"project": "biolean", "category": "evidence_weighting", "hypothesis": "hyp_ADAR_psoriasis",
+   "detail": "The arm composes with the claimed sign (ADAR →− psoriasis risk) but gets belief 0, 'unsupported', because S2 (editing →− IFN signalling) has no evidence once the co-outcome span is excluded; even with it kept, steps at 5/6, 1/2 and 1/2 times the 1/5 fromAssoc weight give 1/24: the paper's end-to-end results (ADAR1 loss-of-function cosegregating with psoriasis; ADAR1 knockdown raising IFN-stimulated genes) cannot reach the arm."},
+  {"project": "biolean", "category": "rule_missing", "steps": ["hyp_ADAR_psoriasis.2"],
+   "detail": "PMID:42424135 reports two co-outcomes of one perturbation (ADAR1 knockdown 'reduced adenosine-to-inosine RNA editing and increased IFN-stimulated genes'); the guide does not say whether that states editing → IFN signalling. Excluded here (audit) under 'the text states the step': the perturbation is of ADAR, which UniProt P55265 says also acts editing-independently via suppression of EIF2AK2/PKR, so the span does not isolate editing."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["hyp_ADAR_psoriasis.2"],
+   "detail": "The only citation for 'A-to-I RNA editing inhibits type I IFN signalling' (PMID:42424135) reports reduced editing and raised IFN-stimulated genes as parallel outcomes of ADAR1 knockdown or pathogenic alleles; it states ADAR1 loss → more ISGs, a link that skips editing, but never that editing restrains IFN signalling."},
+  {"project": "hypothesis-agent", "category": "relation_weaker_than_mechanism", "steps": ["hyp_ADAR_psoriasis.3"],
+   "detail": "The mechanism says the type I IFN response 'drives' the psoriasis subtype, a causal, signed link, but the chain records the step as associated_with with polarity 'unknown', so the arm can only use it as an association (×1/5)."},
+  {"project": "biolean", "category": "evidence_kind_ambiguous", "steps": ["hyp_ADAR_psoriasis.1"],
+   "detail": "The span 'Functional studies showed that ADAR1 knockdown or expression of ... alleles' does not name its system; recorded as inVitro (knockdown, allele expression, drug reversal read as cell work), but the abstract does not say."},
+  {"project": "biolean", "category": "evidence_population_narrower", "steps": ["hyp_ADAR_psoriasis.3"],
+   "detail": "The only evidence for IFN signalling ↔ psoriasis comes from monogenic ADAR1-mutant families, a subtype; a refinement of psoriasis would break the chain, and evidence has no field to say its population is narrower than the claim's node."},
+  {"project": "biolean", "category": "missing_term", "hypothesis": "hyp_ADAR_psoriasis",
+   "detail": "No MONDO term for the 'interferon-dependent psoriasis subtype' the title names (MONDO has ADAR-related type 1 interferonopathy, MONDO:0700261, not a psoriasis subtype); no BLN term made because the chain ends at psoriasis."}
+ ],
+ "audit": [
+  {"item": "S2 evidence PMID:42424135", "error": "quote_does_not_state",
+   "before": "kept, inVitro: 'reduced adenosine-to-inosine RNA editing and increased IFN-stimulated genes'",
+   "after": "excluded, not_in_text; S2 evidence []",
+   "reason": "the quote cuts off its subject ('ADAR1 knockdown or expression of ... alleles'): reduced editing and raised ISGs are parallel outcomes of perturbing ADAR, not a statement that editing restrains IFN signalling; ADAR also acts editing-independently (UniProt P55265, EIF2AK2/PKR). Guide example S2 is not a precedent: there the perturbed thing (RIDD) is part of the step's subject and the outcome is its object."},
+  {"item": "finding citation_does_not_state_step (hyp_ADAR_psoriasis.2)", "error": "missed_finding",
+   "before": "absent", "after": "added",
+   "reason": "the step's only citation does not state it; that is a hypothesis-agent result"},
+  {"item": "finding relation_weaker_than_mechanism (hyp_ADAR_psoriasis.3)", "error": "missed_finding",
+   "before": "absent", "after": "added",
+   "reason": "the mechanism says the IFN response 'drives' psoriasis, but step 3 is associated_with/unknown, which costs the arm the 1/5 fromAssoc weight"},
+  {"item": "finding evidence_weighting", "error": "other",
+   "before": "belief 1/24 from steps at 5/6, 1/2 and 1/2",
+   "after": "belief 0 (S2 has no evidence); 1/24 explained as 5/6 x 1/2 x 1/2 x 1/5",
+   "reason": "follows the S2 exclusion; the curator read 'discounted by four fifths' as x4/5, but assocWeight in BioLean/Derivation.lean is 1/5 for non-variants, which gives exactly 1/24"},
+  {"item": "finding rule_missing (co-outcomes)", "error": "other",
+   "before": "says the span was kept", "after": "says the span was excluded",
+   "reason": "follows the S2 exclusion"},
+  {"item": "finding evidence_kind_ambiguous", "error": "other",
+   "before": "steps .1 and .2", "after": "step .1",
+   "reason": "the inVitro span now sits only under S1"},
+  {"item": "finding no_form_for (hypothesis-level evidence)", "error": "other",
+   "before": "names only the cosegregation result", "after": "also names the ADAR1 knockdown → ISG result",
+   "reason": "the excluded co-outcome span states ADAR →− IFN-stimulated genes, a second end-to-end result no step can hold"}
+ ]
+}

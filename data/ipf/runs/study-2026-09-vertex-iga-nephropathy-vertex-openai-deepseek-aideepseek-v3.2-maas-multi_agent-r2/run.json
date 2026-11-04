@@ -1,0 +1,326 @@
+{
+ "run_id": "study-2026-09-vertex-iga-nephropathy-vertex-openai-deepseek-aideepseek-v3.2-maas-multi_agent-r2",
+ "model": "vertex-openai:deepseek-ai/deepseek-v3.2-maas",
+ "question": {
+  "arm": "multi_agent",
+  "budget": {
+   "max_delegations": 22,
+   "max_model_requests": 80,
+   "max_specialist_requests": 8,
+   "min_evidence_per_hypothesis": 2,
+   "min_hypotheses": 3,
+   "min_sources_per_hypothesis": 2,
+   "output_retries": 3
+  },
+  "data_policy": {
+   "max_age_seconds": 1209600.0,
+   "mode": "cache-preferred",
+   "snapshot_run_id": null
+  },
+  "disease": "IgA glomerulonephritis",
+  "formalise": false,
+  "genes": [
+   "TNFSF13",
+   "ITGAX",
+   "DEFA4",
+   "CFH",
+   "CARD9",
+   "OR4X1",
+   "ZNF174"
+  ],
+  "model": "vertex-openai:deepseek-ai/deepseek-v3.2-maas",
+  "specialist_model": "vertex-openai:deepseek-ai/deepseek-v3.2-maas",
+  "specialists": [
+   "chembl",
+   "expression",
+   "gwas",
+   "interactions",
+   "literature",
+   "model_organism",
+   "open_targets",
+   "pathways",
+   "single_cell",
+   "trials",
+   "uniprot"
+  ],
+  "tissue": {
+   "artifact_id": "sha256:9e1a3dbe284f9d27d8084643b44a06acf8cb32a68ab373cb3902387f5d069650",
+   "label": "kidney",
+   "uberon": "UBERON:0002113"
+  },
+  "use_network": true
+ },
+ "abstention": null,
+ "disease": "IgA glomerulonephritis",
+ "genes_considered": [
+  "TNFSF13",
+  "ITGAX",
+  "DEFA4",
+  "CFH",
+  "CARD9",
+  "OR4X1",
+  "ZNF174"
+ ],
+ "hypotheses": [
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "TNFSF13"
+     },
+     "polarity": "positive",
+     "relation": "increases_amount",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "genetic variant"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "B cell activation"
+     },
+     "polarity": "positive",
+     "relation": "activates",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "TNFSF13"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "IgA production"
+     },
+     "polarity": "unknown",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "B cell activation"
+     }
+    }
+   ],
+   "confidence": "medium",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Knockout of TNFSF13 in a mouse model of IgA nephropathy should reduce mesangial IgA deposition if TNFSF13-mediated B cell activation drives IgA production.",
+    "expected": "positive",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "TNFSF13"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "phenotype",
+     "label": "mesangial IgA deposition"
+    },
+    "system": "mouse model of IgA nephropathy"
+   },
+   "genes": [
+    "TNFSF13"
+   ],
+   "hypothesis_id": "1",
+   "mechanism": "TNFSF13 (APRIL) genetic variants increase TNFSF13 expression, leading to enhanced B cell activation and IgA production through binding to receptors like TACI and BCMA. Overproduction of IgA antibodies results in immune complex formation and mesangial deposition in the kidney.",
+   "support": "speculative",
+   "supporting_evidence": [],
+   "title": "TNFSF13-mediated B cell activation drives IgA overproduction in IgA nephropathy"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "CFH"
+     },
+     "polarity": "negative",
+     "relation": "decreases_amount",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "genetic variant"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "complement activation"
+     },
+     "polarity": "negative",
+     "relation": "inhibits",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "CFH"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "phenotype",
+      "label": "renal inflammation"
+     },
+     "polarity": "unknown",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "complement activation"
+     }
+    }
+   ],
+   "confidence": "medium",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Administration of recombinant complement factor H protein should reduce glomerular inflammation and complement deposition in a mouse model of IgA nephropathy if CFH deficiency drives complement activation.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "activate",
+     "target": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "CFH"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "phenotype",
+     "label": "glomerular complement C3 deposition"
+    },
+    "system": "mouse model of IgA nephropathy"
+   },
+   "genes": [
+    "CFH"
+   ],
+   "hypothesis_id": "2",
+   "mechanism": "CFH genetic variants reduce complement factor H expression or function, impairing regulation of the alternative complement pathway. This leads to uncontrolled complement activation in the kidney, causing inflammation and tissue damage that exacerbates IgA-mediated glomerular injury.",
+   "support": "speculative",
+   "supporting_evidence": [],
+   "title": "CFH deficiency permits complement activation and renal inflammation in IgA nephropathy"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "neutrophil recruitment"
+     },
+     "polarity": "positive",
+     "relation": "activates",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "DEFA4"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "phenotype",
+      "label": "glomerular damage"
+     },
+     "polarity": "unknown",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "neutrophil degranulation"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "DEFA4 knockout mice with IgA nephropathy should show reduced neutrophil infiltration and less glomerular damage compared to wild-type if DEFA4 recruits neutrophils that cause tissue injury.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "DEFA4"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "phenotype",
+     "label": "glomerular neutrophil infiltration"
+    },
+    "system": "mouse model of IgA nephropathy"
+   },
+   "genes": [
+    "DEFA4"
+   ],
+   "hypothesis_id": "3",
+   "mechanism": "DEFA4 (alpha-defensin 4) genetic variants increase DEFA4 expression, enhancing neutrophil recruitment and activation in the glomerulus. Neutrophil degranulation releases proteases and reactive oxygen species that damage glomerular structures, worsening IgA-mediated injury.",
+   "support": "speculative",
+   "supporting_evidence": [],
+   "title": "DEFA4-mediated neutrophil activation exacerbates glomerular damage in IgA nephropathy"
+  }
+ ],
+ "unexplained_genes": [
+  "ITGAX",
+  "CARD9",
+  "OR4X1",
+  "ZNF174"
+ ]
+}

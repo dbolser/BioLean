@@ -1,0 +1,110 @@
+{
+ "run_id": "psoriasis-ukbt-ukbt15-google-cloud-gemini-3.1-pro-preview-multi_agent-r2",
+ "curated_by": "Claude Opus 5.5, 2026-10-30",
+ "entities": {
+  "ADAR": {"kind": "protein", "curie": "UniProt:P55265", "run_labels": ["ADAR"]},
+  "aToIEditing": {"kind": "process", "curie": "GO:0006382", "run_labels": ["mRNA Editing: A to I Conversion"]},
+  "ifnSignaling": {"kind": "process", "curie": "GO:0140888", "run_labels": ["Interferon Signaling"]},
+  "psoriasis": {"kind": "disease", "curie": "MONDO:0005083", "run_labels": ["psoriasis"]}
+ },
+ "statements": [
+  {"id": "S1", "step": "h1_adar_interferon.1",
+   "text": "ADAR is required for adenosine-to-inosine RNA editing (required_for: losing ADAR lowers editing)",
+   "claim": {"effect": {"subject": "ADAR", "sign": "pos", "target": {"process": "aToIEditing"}}},
+   "evidence": [
+    {"ref": "PMID:42424135", "kind": "inVitro", "moved_from": "h1_adar_interferon.2",
+     "quote": "ADAR1 knockdown or expression of ADAR1G1119R and ADAR1P3A alleles pathogenic variants reduced adenosine-to-inosine RNA editing"}
+   ],
+   "excluded": [
+    {"ref": "R-HSA-75064", "category": "enrichment",
+     "reason": "over-representation of 'mRNA Editing: A to I Conversion' in the 15-gene input set (1 of 4 entities); names neither ADAR nor a direction"},
+    {"ref": "R-HSA-77042", "category": "enrichment",
+     "reason": "over-representation of 'Formation of editosomes by ADAR proteins' (1 of 2 entities); does not say which gene matched or that ADAR is needed for A-to-I editing"}
+   ]},
+  {"id": "S2", "step": "h1_adar_interferon.2",
+   "text": "A-to-I RNA editing inhibits interferon signalling",
+   "claim": {"effect": {"subject": "aToIEditing", "sign": "neg", "target": {"process": "ifnSignaling"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "PMID:42424135", "category": "not_in_text",
+     "reason": "reduced A-to-I editing and raised IFN-stimulated genes are two parallel outcomes of ADAR1 knockdown or variant alleles; the text never says that editing restrains IFN signalling, and ADAR1 itself, not editing, is what was perturbed"},
+    {"ref": "R-HSA-913531", "category": "enrichment",
+     "reason": "over-representation of 'Interferon Signaling' in the input gene set (4 of 507 entities); says nothing about RNA editing"}
+   ]},
+  {"id": "S3", "step": "h1_adar_interferon.3",
+   "text": "interferon signalling raises the risk of psoriasis",
+   "sign_note": "the run gives this step 'unknown' polarity; the cited PMID:42424135 gives it as positive ('IFN-dependent psoriasis subtype')",
+   "claim": {"effect": {"subject": "ifnSignaling", "sign": "pos", "target": {"disease": "psoriasis", "aspect": "risk"}}},
+   "evidence": [
+    {"ref": "PMID:42424135", "kind": "observational",
+     "quote": "a novel IFN-dependent psoriasis subtype"}
+   ],
+   "excluded": [
+    {"ref": "R-HSA-913531", "category": "enrichment",
+     "reason": "over-representation of 'Interferon Signaling' in the input gene set (4 of 507 entities); says nothing about psoriasis"}
+   ]}
+ ],
+ "unexpressed": [],
+ "hypotheses": {
+  "h1_adar_interferon": {
+   "claims": [{"subject": "ADAR", "sign": "neg", "target": {"disease": "psoriasis", "aspect": "risk"}}],
+   "note": "the title and mechanism name ADAR loss-of-function variants, but the chain starts at the ADAR protein, so the claim is ADAR →− psoriasis risk; the title's 'interferon-dependent psoriasis subtype' has no MONDO term, so the target is psoriasis as a whole"
+  }
+ },
+ "findings": [
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["h1_adar_interferon.1"],
+   "detail": "step .1 cites only two Reactome over-representation rows (R-HSA-75064, R-HSA-77042) that name neither ADAR nor a direction; its only support is PMID:42424135, which the run cited at steps .2 and .3, not .1"},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["h1_adar_interferon.2", "h1_adar_interferon.3"],
+   "detail": "R-HSA-913531 is an over-representation of 'Interferon Signaling' in the whole 15-gene input set (4 of 507 entities, matched genes not named); it says nothing about RNA editing, ADAR or psoriasis, yet the run cites it for both steps"},
+  {"project": "hypothesis-agent", "category": "missing_polarity", "steps": ["h1_adar_interferon.3"],
+   "detail": "step .3 has 'unknown' polarity although the run's own title ('interferon-dependent psoriasis subtype'), its mechanism ('chronic interferon overproduction promotes skin inflammation') and its cited paper all give it as positive"},
+  {"project": "hypothesis-agent", "category": "ungrounded_label", "steps": ["h1_adar_interferon.1", "h1_adar_interferon.2", "h1_adar_interferon.3"],
+   "detail": "the editing and interferon nodes have empty CURIEs; the run used the Reactome pathway names as labels but left the IDs out, though GO:0006382 and GO:0140888 fit"},
+  {"project": "hypothesis-agent", "category": "strongest_evidence_not_a_step", "hypothesis": "h1_adar_interferon",
+   "detail": "the paper's main result (four rare heterozygous ADAR1 loss-of-function mutations cosegregating with psoriasis in four families, six more rare variants in 125 patients) is a direct ADAR → psoriasis link that no step states, so it carries no weight in the arm; likewise its functional result (ADAR1 knockdown increased IFN-stimulated genes) states ADAR →− interferon signalling, which no step states either; the chain instead routes through an editing → interferon step that no citation states. No bridge was added, because the arm composes without one"},
+  {"project": "hypothesis-agent", "category": "single_source", "hypothesis": "h1_adar_interferon",
+   "detail": "every kept citation is one 2026 abstract (PMID:42424135, cited once); the budget's min_sources_per_hypothesis of 2 is met only by counting three Reactome enrichment rows that state no step"},
+  {"project": "hypothesis-agent", "category": "budget_not_met",
+   "detail": "the budget asks for min_hypotheses 4; the run returns one hypothesis and abstains for the other 14 genes"},
+  {"project": "hypothesis-agent", "category": "falsification_incomplete", "hypothesis": "h1_adar_interferon",
+   "detail": "the falsification's 'system' is empty although its description names primary keratinocytes or neutrophils"},
+  {"project": "both", "category": "abstention_unchecked",
+   "detail": "the abstention for 14 genes cites six records (PMID:PPR1233591, GWAS:SP100:no-association, OT:SP100-MONDO_0005083, HPA:ENSG00000177047, CHEMBL:no-mechanism-KHK, CXG:MONDO_0005083:no-cohort); sources.py fetches only chain, supporting and contradicting citations, and the curation format has no place for an abstention, so none of it (e.g. the claim that ZBP1 acts independently of PANoptosis in psoriasis) can be checked"},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["h1_adar_interferon.2"],
+   "detail": "PMID:42424135 reports that ADAR1 knockdown or variant alleles 'reduced adenosine-to-inosine RNA editing and increased IFN-stimulated genes': two parallel outcomes of perturbing ADAR1, not that editing restrains IFN signalling, so step .2 (the hypothesis's central link) has no supporting citation and the arm's belief is 0"},
+  {"project": "hypothesis-agent", "category": "mechanism_not_in_chain_or_citations", "hypothesis": "h1_adar_interferon",
+   "detail": "the mechanism's middle (unedited double-stranded RNAs accumulate and trigger innate immune sensors) is in no chain step and no cited text; the chain jumps from editing straight to interferon signalling, which is the link no citation states"},
+  {"project": "hypothesis-agent", "category": "falsification_already_reported", "hypothesis": "h1_adar_interferon",
+   "detail": "the proposed falsification (knock down ADAR, read out interferon signalling) is the experiment PMID:42424135 already reports; it perturbs ADAR1 rather than editing, so it cannot test step .2, and it never reaches psoriasis, so it cannot test step .3; it also names neutrophils, which the paper does not (it names keratinocytes and melanocytes as the IFN sources)"},
+  {"project": "hypothesis-agent", "category": "abstention_ignores_own_evidence",
+   "detail": "the run's own row R-HSA-913531 puts 4 entities of the 15-gene input in 'Interferon Signaling', the pathway its one hypothesis rests on, yet the abstention says the other 14 genes lack any shared mechanism and never says which genes matched or why they were set aside"},
+  {"project": "biolean", "category": "rule_missing", "steps": ["h1_adar_interferon.2"],
+   "detail": "the guide does not say whether two parallel outcomes of one upstream perturbation (ADAR1 knockdown lowers editing and raises IFN-stimulated genes) state a step between those outcomes; the original curation kept this span for step .2 and the n3-r3 curation of the same paper excluded it, a difference that moves the arm's belief from 1/8 to 0"},
+  {"project": "biolean", "category": "evidence_kind_missing", "steps": ["h1_adar_interferon.3"],
+   "detail": "the S3 quote is the paper's conclusion ('IFN-dependent psoriasis subtype'), drawn from family co-segregation of an IFN signature plus in vitro JAK/TYK2-inhibitor reversal; the kind table has no row for a conclusion over mixed designs, so I chose observational (the design that reaches the disease end); hypothesis would also be defensible since IFN is never blocked in patients"},
+  {"project": "biolean", "category": "no_term_for_subtype", "hypothesis": "h1_adar_interferon",
+   "detail": "the hypothesis is about an ADAR1-defined interferon-dependent psoriasis subtype; MONDO has psoriasis and MONDO:0700261 'ADAR-related type 1 interferonopathy' (AGS, DSH) but no such subtype, so the claim and S3 target psoriasis as a whole, which overstates the paper's scope"},
+  {"project": "biolean", "category": "corpus_definition_mismatch",
+   "detail": "GO:0140888 'interferon-mediated signaling pathway' (synonym 'interferon signaling pathway') has a corpus definition that says 'initiated by type II interferon', which contradicts its general label; I used it for the run's general 'Interferon Signaling', although the paper's signal is type I"},
+  {"project": "both", "category": "enrichment_row_lacks_members",
+   "detail": "the Reactome over-representation rows give only counts (e.g. '1 of 4 pathway entities matched'), not the matched genes, so even pathway membership (which the guide would weigh as curatedDb) cannot be quoted for ADAR"}
+ ],
+ "audit": [
+  {"item": "S2 (h1_adar_interferon.2) evidence PMID:42424135", "error": "quote_does_not_state",
+   "before": "kept, kind inVitro, quote 'reduced adenosine-to-inosine RNA editing and increased IFN-stimulated genes'",
+   "after": "excluded, not_in_text; S2 evidence []",
+   "reason": "the step is 'A-to-I editing inhibits interferon signalling'. The sentence's subject is 'ADAR1 knockdown or expression of ... alleles': reduced editing and raised IFN-stimulated genes are two parallel outcomes of perturbing ADAR1, and nothing in the abstract says one causes the other (as 'knockdown reduced cell size and increased apoptosis' would not state 'size inhibits apoptosis'). The curator's own guide problem says editing alone was never perturbed. The n3-r3 curation of the same paper excluded the same span. The arm's belief drops from 1/8 to 0; the verdict stays unsupported; kept evidence 3 to 2, excluded 4 to 5"},
+  {"item": "findings: biolean evidence_weighting (h1_adar_interferon.2)", "error": "other",
+   "before": "biolean evidence_weighting: S2's evidence perturbs ADAR1, not editing, and the record cannot mark that, so it weighs as a direct test",
+   "after": "hypothesis-agent citation_does_not_state_step (h1_adar_interferon.2), plus biolean rule_missing (the guide is silent on parallel outcomes of one upstream perturbation)",
+   "reason": "follows the S2 exclusion: the span no longer weighs, so the problem is the run's uncited central link, and the guide's silence that let two curators of one paper differ"},
+  {"item": "findings: strongest_evidence_not_a_step (h1_adar_interferon)", "error": "other",
+   "before": "named only the family co-segregation (ADAR → psoriasis) as unused",
+   "after": "also names ADAR1 knockdown raising IFN-stimulated genes (ADAR →− interferon signalling), which no step states; notes no bridge was added because the arm composes",
+   "reason": "with S2 unsupported, the paper's direct ADAR → IFN result is the link the run should have made; a bridge is only for an arm that cannot compose, so it is recorded, not added"},
+  {"item": "findings (h1_adar_interferon)", "error": "missed_finding",
+   "before": "none",
+   "after": "mechanism_not_in_chain_or_citations; falsification_already_reported; abstention_ignores_own_evidence",
+   "reason": "the mechanism's dsRNA-accumulation and innate-sensor steps are neither chain steps nor in any cited text; the proposed falsification repeats the cited paper's ADAR1 knockdown, cannot isolate editing or reach psoriasis, and names neutrophils, which the paper does not; the run's own R-HSA-913531 row puts 4 input entities in 'Interferon Signaling' while the abstention says the other 14 genes share no mechanism"}
+ ]
+}

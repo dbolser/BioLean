@@ -1,0 +1,201 @@
+{
+ "run_id": "study-2026-09-vertex-restless-legs-google-cloud-gemini-3.1-pro-preview-multi_agent-r3",
+ "curated_by": "Claude Opus 5.5, 2026-10-30",
+ "entities": {
+  "meis1RiskAlleles": {"kind": "variant", "curie": "BLN:MEIS1-RLSRiskAlleles", "label": "RLS risk alleles at the MEIS1 locus",
+                       "run_labels": ["restless legs syndrome risk alleles"]},
+  "btbd9RiskAlleles": {"kind": "variant", "curie": "BLN:BTBD9-RLSRiskAlleles", "label": "RLS risk alleles at the BTBD9 locus",
+                       "run_labels": ["restless legs syndrome risk alleles"]},
+  "ptprdRiskAlleles": {"kind": "variant", "curie": "BLN:PTPRD-RLSRiskAlleles", "label": "RLS risk alleles at the PTPRD locus",
+                       "run_labels": ["restless legs syndrome risk alleles"]},
+  "MEIS1": {"kind": "protein", "curie": "UniProt:O00470", "run_labels": ["MEIS1"]},
+  "BTBD9": {"kind": "protein", "curie": "UniProt:Q96Q07", "run_labels": ["BTBD9"]},
+  "ACO1": {"kind": "protein", "curie": "UniProt:P21399", "run_labels": ["ACO1"]},
+  "PTPRD": {"kind": "protein", "curie": "UniProt:P23468", "run_labels": ["PTPRD"]},
+  "cerebellarOutput": {"kind": "process", "curie": "BLN:CerebellarOutput", "label": "cerebellar output (activity leaving the cerebellum)",
+                       "why_no_term": "searched 'cerebellar output', 'cerebellar' and 'cerebellum' under GO and MP, 'cerebellar nucle', 'deep cerebellar', 'purkinje cell firing', 'neuronal output': GO has cerebellum development and synapse terms, MP has cerebellar morphology, UBERON has the cerebellar nuclear complex, but nothing names the output activity of the cerebellum; GO:0019228 neuronal action potential refined to a cerebellar site would add a reading the run does not give",
+                       "run_labels": ["cerebellar output"]},
+  "ironHomeostasis": {"kind": "process", "curie": "GO:0006879", "run_labels": ["cellular iron homeostasis"]},
+  "synapseAssembly": {"kind": "process", "curie": "GO:0007416", "run_labels": ["trans-synaptic neuronal differentiation"]},
+  "rls": {"kind": "disease", "curie": "MONDO:0005391", "run_labels": ["restless legs syndrome"]}
+ },
+ "statements": [
+  {"id": "S1", "step": "MEIS1_cerebellar_disinhibition.1", "text": "RLS risk alleles at the MEIS1 locus lower MEIS1",
+   "claim": {"effect": {"subject": "meis1RiskAlleles", "sign": "neg", "target": {"amount": "MEIS1"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "rs113851554", "category": "not_in_text", "reason": "GWAS row: rs113851554-T raises RLS risk; MEIS1 is only the mapped gene, nothing on MEIS1 amount"},
+    {"ref": "rs2300478", "category": "not_in_text", "reason": "GWAS row: rs2300478-G raises RLS risk (OR 1.68); MEIS1 is only the author-reported gene, nothing on MEIS1 amount"},
+    {"ref": "OT:MEIS1-constraint", "category": "not_in_text", "reason": "gnomAD loss-of-function constraint of MEIS1; names no RLS allele and no effect on MEIS1 amount"},
+    {"ref": "OT:MEIS1-MONDO_0005391", "category": "not_in_text", "reason": "an Open Targets MEIS1-RLS gene-disease score; names neither the risk alleles nor any effect on MEIS1 amount (and an OT score carries no sign anyway)"}
+   ]},
+  {"id": "S2", "step": "MEIS1_cerebellar_disinhibition.2", "text": "MEIS1 inhibits cerebellar output (the run's context, cerebellum, is carried by the object)",
+   "claim": {"effect": {"subject": "MEIS1", "sign": "neg", "target": {"process": "cerebellarOutput"}}},
+   "evidence": [
+    {"ref": "PMID:42309051", "kind": "mechanistic", "taxon": "zebrafish",
+     "quote": "Disinhibition of cerebellar output by loss of restless legs syndrome-associated gene MEIS1"}
+   ],
+   "excluded": [
+    {"ref": "AGR:MGI:104717:MP:0020478", "category": "not_in_text", "reason": "Meis1 mutant mouse with abnormal circadian sleep/wake cycle; says nothing of cerebellar output"}
+   ]},
+  {"id": "S3", "step": "MEIS1_cerebellar_disinhibition.3", "text": "cerebellar output raises the risk of RLS",
+   "claim": {"effect": {"subject": "cerebellarOutput", "sign": "pos", "target": {"disease": "rls", "aspect": "risk"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "PMID:42309051", "category": "not_in_text", "reason": "abnormal cerebellar output perturbs zebrafish locomotion, 'reminiscent of' ataxia and dystonia; it does not say cerebellar output causes RLS"},
+    {"ref": "AGR:MGI:104717:MP:0020478", "category": "not_in_text", "reason": "Meis1 mutant mouse with abnormal circadian sleep/wake cycle; names neither cerebellar output nor RLS"}
+   ]},
+  {"id": "S4", "step": "BTBD9_ACO1_iron_homeostasis.1", "text": "RLS risk alleles at the BTBD9 locus lower BTBD9",
+   "claim": {"effect": {"subject": "btbd9RiskAlleles", "sign": "neg", "target": {"amount": "BTBD9"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "rs10947738", "category": "not_in_text", "reason": "GWAS row: rs10947738-A raises RLS risk; BTBD9 is only the mapped gene, nothing on BTBD9 amount"},
+    {"ref": "rs61192259", "category": "not_in_text", "reason": "GWAS row: rs61192259-A raises RLS risk (OR 1.26); author-reported genes BTBD9 and GLO1, nothing on BTBD9 amount"}
+   ]},
+  {"id": "S5", "step": "BTBD9_ACO1_iron_homeostasis.2", "text": "BTBD9 binds ACO1",
+   "claim": {"rel": {"relation": "RO:0002436", "a": "BTBD9", "b": "ACO1"}},
+   "evidence": [
+    {"ref": "STRING:ACO1-BTBD9", "kind": "curatedDb",
+     "quote": "STRING links ACO1 and BTBD9 with combined score 0.45 (experimental 0.41, database 0.00, text-mining 0.09)"}
+   ],
+   "excluded": [
+    {"ref": "PMID:30363981", "category": "not_in_text", "reason": "review of iron in RLS; names neither BTBD9 nor ACO1"},
+    {"ref": "PMID:42462324", "category": "not_in_text", "reason": "review of RLS mechanisms; names neither BTBD9 nor ACO1"}
+   ]},
+  {"id": "S6", "step": "BTBD9_ACO1_iron_homeostasis.3", "text": "ACO1 is required for cellular iron homeostasis",
+   "claim": {"effect": {"subject": "ACO1", "sign": "pos", "target": {"process": "ironHomeostasis"}}},
+   "evidence": [
+    {"ref": "P21399", "kind": "curatedDb",
+     "quote": "Iron deprivation, promotes its mRNA binding activity through which it regulates the expression of genes involved in iron uptake, sequestration and utilization"}
+   ],
+   "excluded": [
+    {"ref": "PMID:30363981", "category": "not_in_text", "reason": "review of iron in RLS; does not name ACO1"}
+   ]},
+  {"id": "S7", "step": "BTBD9_ACO1_iron_homeostasis.4", "text": "cellular iron homeostasis raises the risk of RLS",
+   "sign_note": "the run's sign: subject 'cellular iron homeostasis', polarity positive; the step's context names 'iron deficiency' as a disease state, and the mechanism says iron deficiency drives RLS, but the step's own subject and polarity say the opposite; not inverted",
+   "claim": {"effect": {"subject": "ironHomeostasis", "sign": "pos", "target": {"disease": "rls", "aspect": "risk"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "PMID:30363981", "category": "undirected", "reason": "'A link between restless legs syndrome (RLS) and iron', whose role 'is still a matter of debate'; no direction"},
+    {"ref": "PMID:42462324", "category": "undirected", "reason": "lists 'abnormalities in brain iron metabolism' among RLS mechanisms; no direction"},
+    {"ref": "AGR:MGI:1916625:MP:0011396", "category": "not_in_text", "reason": "Purkinje-cell (Pcp2-cre) Btbd9 knockout mouse with abnormal sleep behavior; nothing on iron homeostasis or RLS"}
+   ]},
+  {"id": "S8", "step": "PTPRD_synaptic_differentiation.1", "text": "RLS risk alleles at the PTPRD locus lower PTPRD",
+   "claim": {"effect": {"subject": "ptprdRiskAlleles", "sign": "neg", "target": {"amount": "PTPRD"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "rs34602324", "category": "not_in_text", "reason": "GWAS row: rs34602324-G raises RLS risk; PTPRD is only the mapped gene, nothing on PTPRD amount"},
+    {"ref": "rs1836229", "category": "not_in_text", "reason": "GWAS row: rs1836229-A raises RLS risk (OR 1.11); PTPRD is only the author-reported gene, nothing on PTPRD amount"}
+   ]},
+  {"id": "S9", "step": "PTPRD_synaptic_differentiation.2", "text": "PTPRD activates synapse assembly (pre- and post-synaptic differentiation)",
+   "claim": {"effect": {"subject": "PTPRD", "sign": "pos", "target": {"process": "synapseAssembly"}}},
+   "evidence": [
+    {"ref": "P23468", "kind": "crossSpecies",
+     "quote": "Can bidirectionally induce pre- and post-synaptic differentiation of neurons"}
+   ],
+   "excluded": []},
+  {"id": "S10", "step": "PTPRD_synaptic_differentiation.3", "text": "synapse assembly raises the risk of RLS",
+   "sign_note": "the run's sign: polarity positive, although its note says 'Altered synaptic differentiation', which has no direction, and the title says the risk variants impair it",
+   "claim": {"effect": {"subject": "synapseAssembly", "sign": "pos", "target": {"disease": "rls", "aspect": "risk"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "PMID:40561837", "category": "enrichment", "reason": "pleiotropic ADHD-RLS loci annotated to synaptic plasticity and neural development pathways; an annotation result, undirected, not synapse assembly causing RLS"},
+    {"ref": "AGR:MGI:97812:MP:0010053", "category": "not_in_text", "reason": "Ptprd mutant mouse with decreased grip strength; nothing on synapse assembly or RLS"}
+   ]}
+ ],
+ "unexpressed": [],
+ "hypotheses": {
+  "MEIS1_cerebellar_disinhibition": {
+   "claims": [{"subject": "meis1RiskAlleles", "sign": "pos", "target": {"disease": "rls", "aspect": "risk"}}],
+   "note": "the chain starts at the MEIS1 risk alleles, so the claim does; the title names MEIS1 loss of function. The title ends at circadian sleep/wake cycles, which no step reaches; the chain concludes RLS"},
+  "BTBD9_ACO1_iron_homeostasis": {
+   "claims": [{"subject": "btbd9RiskAlleles", "sign": "pos", "target": {"disease": "rls", "aspect": "risk"}},
+              {"subject": "ACO1", "sign": "neg", "target": {"disease": "rls", "aspect": "risk"}}],
+   "note": "two genes: BTBD9 through its risk alleles, where the chain starts; ACO1 with the sign of the title ('BTBD9 disrupts ACO1-mediated neuronal iron homeostasis, leading to restless legs syndrome') and mechanism ('This localized iron deficiency drives' RLS): losing ACO1-mediated homeostasis causes RLS"},
+  "PTPRD_synaptic_differentiation": {
+   "claims": [{"subject": "ptprdRiskAlleles", "sign": "pos", "target": {"disease": "rls", "aspect": "risk"}}],
+   "note": "the chain starts at the PTPRD risk alleles; the title ends at 'disrupting motor circuits', the chain at RLS"}
+ },
+ "findings": [
+  {"project": "hypothesis-agent", "category": "sign_flip", "steps": ["BTBD9_ACO1_iron_homeostasis.4"], "hypothesis": "BTBD9_ACO1_iron_homeostasis",
+   "detail": "H2.4 says cellular iron homeostasis leads to RLS with positive polarity while the mechanism says iron deficiency drives RLS; the deficiency sits only in the step's context (disease_state), so the ACO1 arm composes to ACO1 raising RLS risk against the title's direction"},
+  {"project": "hypothesis-agent", "category": "sign_flip", "steps": ["PTPRD_synaptic_differentiation.3"], "hypothesis": "PTPRD_synaptic_differentiation",
+   "detail": "H3.3 says synaptic differentiation leads to RLS with positive polarity while the title says the risk variants impair it, so the arm composes to the risk alleles lowering RLS risk; the step's note ('Altered synaptic differentiation') has no direction at all"},
+  {"project": "hypothesis-agent", "category": "chain_not_connected", "steps": ["BTBD9_ACO1_iron_homeostasis.2"], "hypothesis": "BTBD9_ACO1_iron_homeostasis",
+   "detail": "the only link from BTBD9 to ACO1 is a binds step with unknown polarity, so nothing says how the BTBD9 risk alleles change ACO1 or iron homeostasis and the BTBD9 claim has no route; the falsification test (expected negative for iron homeostasis) assumes a direction the chain never states"},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["MEIS1_cerebellar_disinhibition.1", "BTBD9_ACO1_iron_homeostasis.1", "PTPRD_synaptic_differentiation.1"],
+   "detail": "all three 'risk alleles decrease the gene' steps cite only GWAS rows (allele to RLS) and Open Targets scores; no cited text reports any effect of an RLS allele on MEIS1, BTBD9 or PTPRD amount, so the decreasing direction is the agent's assumption"},
+  {"project": "hypothesis-agent", "category": "evidence_misplaced", "steps": ["MEIS1_cerebellar_disinhibition.1", "BTBD9_ACO1_iron_homeostasis.1", "PTPRD_synaptic_differentiation.1"],
+   "detail": "the run's strongest evidence, six GWAS rows giving the risk allele and its direction for RLS (e.g. rs113851554-T, p = 1e-1371), states allele-to-disease links that no step makes; the run spent it on allele-to-expression steps it does not support"},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["MEIS1_cerebellar_disinhibition.3"],
+   "detail": "PMID:42309051 links abnormal cerebellar output to zebrafish locomotor defects and likens it to ataxia and dystonia; it does not say cerebellar output causes RLS, so the final MEIS1 step into the disease has no support"},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["MEIS1_cerebellar_disinhibition.2", "MEIS1_cerebellar_disinhibition.3"],
+   "detail": "AGR:MGI:104717:MP:0020478 (Meis1 mutant, abnormal circadian sleep/wake cycle) is cited for both cerebellar-output steps; sleep/wake is a node of the title and the H1.2 note but of no step"},
+  {"project": "hypothesis-agent", "category": "title_not_in_chain", "hypothesis": "MEIS1_cerebellar_disinhibition",
+   "detail": "the title concludes 'disrupting circadian sleep/wake cycles', but no step reaches sleep/wake; the chain jumps from cerebellar output to RLS"},
+  {"project": "hypothesis-agent", "category": "title_not_in_chain", "hypothesis": "PTPRD_synaptic_differentiation",
+   "detail": "the title concludes 'disrupting motor circuits', but no step reaches motor circuits; the chain jumps from synaptic differentiation to RLS"},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["BTBD9_ACO1_iron_homeostasis.2", "BTBD9_ACO1_iron_homeostasis.3"],
+   "detail": "two general reviews (PMID:30363981, PMID:42462324) are cited for BTBD9 binding ACO1 and for ACO1 in iron homeostasis; neither abstract names BTBD9 or ACO1"},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["BTBD9_ACO1_iron_homeostasis.4"],
+   "detail": "the iron-to-RLS step cites reviews that give only an undirected 'link' and 'abnormalities in brain iron metabolism', one adding that iron's role 'is still a matter of debate', and a Btbd9 mouse record with no iron in it"},
+  {"project": "hypothesis-agent", "category": "citation_at_wrong_hypothesis", "steps": ["BTBD9_ACO1_iron_homeostasis.4"],
+   "detail": "AGR:MGI:1916625:MP:0011396 is a Purkinje-cell (Pcp2-cre) Btbd9 knockout with abnormal sleep behavior: a cerebellar result like the MEIS1 hypothesis, cited for the brain-iron step it says nothing about"},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["PTPRD_synaptic_differentiation.3"],
+   "detail": "PMID:40561837 is ADHD-RLS genetic pleiotropy with a pathway annotation (synaptic plasticity, neural development) and AGR:MGI:97812:MP:0010053 is decreased grip strength in Ptprd mutant mice; neither says synaptic differentiation affects RLS"},
+  {"project": "hypothesis-agent", "category": "confidence_unjustified",
+   "detail": "all three hypotheses are 'high' confidence and 'grounded', yet 4 of 23 citations state their step, no step into RLS has a single supporting citation, and of the four claims two compose to the opposite sign, one (BTBD9) has no route, and the one that agrees (MEIS1) has belief 0; no hypothesis lists contradicting evidence"},
+  {"project": "hypothesis-agent", "category": "ungrounded_label", "steps": ["MEIS1_cerebellar_disinhibition.1", "BTBD9_ACO1_iron_homeostasis.1", "PTPRD_synaptic_differentiation.1"],
+   "detail": "'restless legs syndrome risk alleles' is one ungrounded label for three different loci and names no allele, though the run's own GWAS rows name them (rs113851554-T, rs2300478-G, rs10947738-A, rs61192259-A, rs34602324-G, rs1836229-A)"},
+  {"project": "hypothesis-agent", "category": "ungrounded_label", "steps": ["BTBD9_ACO1_iron_homeostasis.3", "PTPRD_synaptic_differentiation.2", "MEIS1_cerebellar_disinhibition.2"],
+   "detail": "every node other than the genes and RLS (MONDO:0005391) has an empty curie, even 'cellular iron homeostasis', an exact GO synonym of GO:0006879; 'trans-synaptic neuronal differentiation' mixes neuron differentiation with UniProt's synaptic differentiation and was grounded here as synapse assembly (GO:0007416)"},
+  {"project": "hypothesis-agent", "category": "context_misused", "steps": ["BTBD9_ACO1_iron_homeostasis.4"],
+   "detail": "the step's context field holds 'iron deficiency' as a disease state, which reads as the state of the subject (loss of iron homeostasis) rather than a background, and it is what carries the direction the polarity field gets wrong"},
+  {"project": "hypothesis-agent", "category": "cross_species_only", "steps": ["MEIS1_cerebellar_disinhibition.2", "PTPRD_synaptic_differentiation.2"],
+   "detail": "the only kept support for MEIS1 inhibiting cerebellar output is zebrafish meis1b (one of two zebrafish MEIS1 paralogs), and for PTPRD inducing synaptic differentiation a UniProt function inferred from mouse (ECO:0000250, Q64487)"},
+  {"project": "both", "category": "abstention_unverifiable",
+   "detail": "the abstention for GLIPR1 and GABARAPL2 cites GWAS:GLIPR1:no-association, GWAS:GABARAPL2:no-association and two HPA ids that are not in sources.json, so its claims (no GWAS hit, no brain enrichment, no interaction with the RLS genes) cannot be checked against any text"},
+  {"project": "biolean", "category": "missing_term",
+   "detail": "BLN:CerebellarOutput: no GO, MP, HP or UBERON term names the output activity of the cerebellum, which the MEIS1 chain turns on"},
+  {"project": "biolean", "category": "missing_term",
+   "detail": "BLN:MEIS1-RLSRiskAlleles, BLN:BTBD9-RLSRiskAlleles, BLN:PTPRD-RLSRiskAlleles: a locus's unnamed set of RLS risk alleles has no ID, so each is a BLN variant class as the guide prescribes"},
+  {"project": "biolean", "category": "no_form_for",
+   "detail": "a variant-to-disease association that the run cites but states at no step (here six signed GWAS rows) has nowhere to go: bridges are allowed only when an arm needs one to compose, so the H1 arm composes with no evidence on two of its three statements while signed GWAS evidence for its claim sits excluded"},
+  {"project": "biolean", "category": "no_form_for",
+   "detail": "a binding step that changes the partner's activity in an unknown direction (BTBD9 binds ACO1) can only be a rel, which never composes, so any hypothesis whose mechanism passes through a protein interaction gets no route"},
+  {"project": "biolean", "category": "no_form_for",
+   "detail": "a run context that names the subject's state ('iron deficiency' on a 'cellular iron homeostasis' step) fits neither a condition refinement (a background) nor the loss-of-function inversion (which reads the subject label); it was dropped and recorded in sign_note"},
+  {"project": "hypothesis-agent", "category": "falsification_inconsistent", "hypothesis": "PTPRD_synaptic_differentiation",
+   "detail": "the falsification knocks down PTPRD and says 'a failure to observe deficient synaptic differentiation would falsify the mechanism', yet sets expected to 'positive' (an increase); H1 and H2 use the field for the readout's direction (MEIS1 knockout raises cerebellar output: positive; BTBD9 knockdown lowers iron homeostasis: negative), and H3.2 has PTPRD activating the readout"},
+  {"project": "hypothesis-agent", "category": "title_contradicts_chain", "hypothesis": "BTBD9_ACO1_iron_homeostasis",
+   "detail": "the title makes BTBD9 the agent ('BTBD9 disrupts ACO1-mediated neuronal iron homeostasis'), which gives BTBD9 itself a harmful sign, while H2.1 has the risk alleles lowering BTBD9 and the mechanism blames 'Disruptions in BTBD9', a protective sign; the claims follow the chain and mechanism"},
+  {"project": "biolean", "category": "evidence_weighting", "steps": ["BTBD9_ACO1_iron_homeostasis.2", "MEIS1_cerebellar_disinhibition.2"],
+   "detail": "S5 (BTBD9 binds ACO1) is 'established' (b 4/5) on one STRING edge with experimental 0.41 and combined 0.45, while S2 (MEIS1 inhibits cerebellar output), backed by an in vivo zebrafish mutant study, stays 'unsupported' at b 7/10"}
+ ],
+ "audit": [
+  {"item": "S1 excluded OT:MEIS1-MONDO_0005391", "error": "wrong_exclusion",
+   "before": "category no_direction",
+   "after": "category not_in_text",
+   "reason": "the step is risk alleles lowering MEIS1 amount; an Open Targets MEIS1-RLS gene-disease score names neither the alleles nor MEIS1 amount, so it fails on its ends before any sign question arises; no_direction is for a record that names the step's ends but cannot carry a sign"},
+  {"item": "findings: confidence_unjustified", "error": "other",
+   "before": "two arms compose to the opposite sign and the third has no route",
+   "after": "of the four claims two compose to the opposite sign, one (BTBD9) has no route, and the one that agrees (MEIS1) has belief 0",
+   "reason": "render.py reports four claims; the MEIS1 claim composes S1 -> S2 -> S3 with the claim's sign (pos), so 'the third has no route' miscounted and hid the one arm that agrees"},
+  {"item": "findings: ungrounded_label (non-gene nodes)", "error": "other",
+   "before": "every non-gene node has an empty curie",
+   "after": "every node other than the genes and RLS (MONDO:0005391) has an empty curie",
+   "reason": "run.json gives the RLS object curie MONDO:0005391 at H1.3, H2.4 and H3.3; the original statement was false"},
+  {"item": "findings: PTPRD_synaptic_differentiation falsification", "error": "missed_finding",
+   "before": "none",
+   "after": "hypothesis-agent falsification_inconsistent",
+   "reason": "run.json H3 falsification: knockdown of PTPRD, readout trans-synaptic neuronal differentiation, expected 'positive', while its description expects 'deficient synaptic differentiation'; the curator read the same field as a direction for H2 but did not check H3"},
+  {"item": "findings: BTBD9_ACO1_iron_homeostasis title vs chain", "error": "missed_finding",
+   "before": "none",
+   "after": "hypothesis-agent title_contradicts_chain",
+   "reason": "the title 'BTBD9 disrupts ACO1-mediated neuronal iron homeostasis' makes BTBD9 harmful, but H2.1 (risk alleles decrease BTBD9) and the mechanism ('Disruptions in BTBD9 alter ACO1-mediated regulation') make loss of BTBD9 harmful; the curator took the ACO1 sign from this title without noting that it reads the other way for BTBD9"},
+  {"item": "findings: S5 STRING edge established", "error": "missed_finding",
+   "before": "none",
+   "after": "biolean evidence_weighting",
+   "reason": "report.jsonl: S5 verdict 'established', b 4/5, from a single STRING edge (escore 0.41, combined 0.449); S2, with an in vivo mutant study, is b 7/10 'unsupported'; the run's only established statements are database rows"}
+ ]
+}

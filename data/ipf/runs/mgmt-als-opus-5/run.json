@@ -1,0 +1,535 @@
+{
+ "run_id": "mgmt-als-opus-5",
+ "model": "scripted-offline:claude-opus-5",
+ "question": {
+  "arm": "multi_agent",
+  "budget": {
+   "max_delegations": 14,
+   "max_model_requests": 60,
+   "max_specialist_requests": 8,
+   "min_evidence_per_hypothesis": 2,
+   "min_hypotheses": 3,
+   "min_sources_per_hypothesis": 2,
+   "output_retries": 3
+  },
+  "data_policy": {
+   "max_age_seconds": 86400,
+   "mode": "cache-preferred",
+   "snapshot_run_id": null
+  },
+  "disease": "amyotrophic lateral sclerosis",
+  "formalise": false,
+  "genes": [
+   "MGMT"
+  ],
+  "model": "scripted-offline:claude-opus-5",
+  "specialist_model": "scripted-offline:claude-opus-5",
+  "specialists": [
+   "chembl",
+   "expression",
+   "gwas",
+   "interactions",
+   "literature",
+   "model_organism",
+   "open_targets",
+   "pathways",
+   "single_cell",
+   "trials",
+   "uniprot"
+  ],
+  "tissue": {
+   "artifact_id": "sha256:9083451a13b7e45058362501bb03fd93944d7aa79ffc0248bc2cf8b1520b9652",
+   "label": "brain",
+   "uberon": "UBERON:0000955"
+  },
+  "use_network": true
+ },
+ "abstention": null,
+ "disease": "amyotrophic lateral sclerosis",
+ "genes_considered": [
+  "MGMT"
+ ],
+ "hypotheses": [
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "P16455",
+      "R-HSA-5657655"
+     ],
+     "note": "Stoichiometric and suicidal: one lesion consumes one enzyme molecule irreversibly, so capacity equals synthesis rate.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "direct reversal of O6-methylguanine in DNA"
+     },
+     "polarity": "positive",
+     "relation": "required_for",
+     "subject": {
+      "curie": "UniProtKB:P16455",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "MGMT"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "motor neuron"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [
+      "R-HSA-5657655",
+      "R-HSA-73942",
+      "PMID:39518982"
+     ],
+     "note": "No redundancy: direct reversal is a two-protein pathway and no other human enzyme removes this adduct.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "transcriptional mutagenesis"
+     },
+     "polarity": "negative",
+     "relation": "inhibits",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "direct reversal of O6-methylguanine in DNA"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "motor neuron"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [
+      "CXG:ENSG00000170430:CL_4030059:MONDO_0004976",
+      "CXG:ENSG00000170430:CL_4023011:MONDO_0004976",
+      "CXG:ENSG00000170430:CL_0000115:MONDO_0004976"
+     ],
+     "note": "0.41-1.6% of neurons detect MGMT against 15.2% of endothelial cells in the same ALS brains.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "unrepaired O6-methylguanine burden in neurons"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "low neuronal MGMT expression"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:39518982"
+     ],
+     "note": "Genome intact, transcriptome corrupted: a lesion that bulk sequencing of the tissue would not see.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "accumulation of miscoded protein in post-mitotic neurons"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "transcriptional mutagenesis"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:19847258"
+     ],
+     "note": "Proteostasis collapse is an established ALS mechanism (SQSTM1, OPTN, TBK1, UBQLN2, VCP); the route to it here is novel, the endpoint is not.",
+     "object": {
+      "curie": "MONDO:0004976",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "amyotrophic lateral sclerosis"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "accumulation of miscoded protein in post-mitotic neurons"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [
+    "GWAS:MGMT:no-association",
+    "HPA:ENSG00000170430",
+    "AGR:MGI:96977:MP:0009142"
+   ],
+   "falsification": {
+    "description": "Deep RNA sequencing of laser-captured motor neurons from ALS and control spinal cord, counting G-to-A substitutions in transcripts against the matched genomic sequence from the same cell. Transcriptional mutagenesis predicts an excess of exactly that substitution class in transcripts with no corresponding genomic variant, and predicts it is higher in ALS than control and higher in neurons than in endothelium from the same tissue. If the transcript-only G-to-A rate is no different between ALS and control motor neurons, the hypothesis is dead. The MGMT-null mouse gives the positive control: the same signature should appear after alkylating challenge.",
+    "expected": "positive",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "UniProtKB:P16455",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "MGMT"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "process",
+     "label": "transcript-only G-to-A substitution rate in motor neurons"
+    },
+    "system": "laser-captured motor neurons from ALS and control spinal cord; MGMT-null mouse under alkylating challenge"
+   },
+   "genes": [
+    "MGMT"
+   ],
+   "hypothesis_id": "H1",
+   "mechanism": "MGMT repair is stoichiometric and suicidal: one O6-methylguanine lesion permanently consumes one enzyme molecule, so a cell's repair capacity is a budget set by its synthesis rate. In ALS brain the budget is distributed an order of magnitude against the vulnerable cells -- endothelium 15.2% and microglia 14.9% of cells detecting MGMT, against 1.1% for L2/3 glutamatergic neurons and 0.41% for lamp5 interneurons. The claim is that in a long-lived post-mitotic motor neuron, unrepaired O6-methylguanine is read through by RNA polymerase II as adenine, so every transcript from that allele carries a substitution. The genome is intact and sequencing of the tissue looks normal; the proteome accumulates miscoded protein for the life of the cell. This is the mechanism PMID:39518982 proposes for environmental genotoxins and neurodegeneration, applied to the one cell type with the least capacity to prevent it.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "P16455",
+    "R-HSA-5657655",
+    "R-HSA-73942",
+    "R-HSA-73894",
+    "PMID:39518982",
+    "PMID:19847258",
+    "CXG:ENSG00000170430:CL_4030059:MONDO_0004976",
+    "CXG:ENSG00000170430:CL_4023011:MONDO_0004976",
+    "CXG:ENSG00000170430:CL_0000115:MONDO_0004976",
+    "OT:MGMT-MONDO_0004976"
+   ],
+   "title": "Motor neurons carry almost no O6-methylguanine repair capacity, so transcriptional mutagenesis corrupts their proteome without touching their genome"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "AGR:MGI:96977:MP:0008873",
+      "AGR:MGI:96977:MP:0009763",
+      "AGR:MGI:96977:MP:0005165"
+     ],
+     "note": "Mgmt-null mice are baseline-normal but sensitised to xenobiotics and to induced injury.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "tolerance of environmental alkylating exposure"
+     },
+     "polarity": "positive",
+     "relation": "required_for",
+     "subject": {
+      "curie": "UniProtKB:P16455",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "MGMT"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "OT:MGMT-constraint",
+      "P16455"
+     ],
+     "note": "Moderate loss-of-function constraint (gnomAD bin 5 of 6) means reduced-capacity alleles are tolerated in the population -- a modifier can be common in a way a driver cannot.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "residual alkylation damage after a given exposure"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "reduced MGMT repair capacity"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "OT:MGMT-MONDO_0004976",
+      "PMID:39518982"
+     ],
+     "note": "A modifier claim, not a causal one: this changes when and how fast, not whether.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "earlier onset or faster progression of motor neuron loss"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "residual alkylation damage after a given exposure"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "OT:MGMT-MONDO_0004976"
+     ],
+     "note": "`associated_with` rather than a causal relation on purpose: the claim is modification of an existing disease process.",
+     "object": {
+      "curie": "MONDO:0004976",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "amyotrophic lateral sclerosis"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "earlier onset or faster progression of motor neuron loss"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [
+    "GWAS:MGMT:no-association",
+    "AGR:MGI:96977:MP:0009142"
+   ],
+   "falsification": {
+    "description": "A modifier hypothesis is tested on the distribution, not the diagnosis. In an ALS cohort with MGMT promoter methylation and genotype measured, ask whether lower MGMT capacity predicts earlier age at onset or faster ALSFRS-R decline after adjustment -- not whether it predicts case status, which the absent GWAS signal already argues it does not. The hypothesis dies if capacity is unrelated to onset age and progression rate in a cohort powered to detect it. Crossing an MGMT-null mouse onto SOD1-G93A and challenging with a low-dose alkylating agent is the animal version: if the null does not shorten survival relative to the Mgmt-wild-type SOD1 mouse under matched exposure, the hypothesis is dead.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "UniProtKB:P16455",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "MGMT"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "process",
+     "label": "age at onset and rate of motor decline"
+    },
+    "system": "SOD1-G93A x Mgmt-null mouse under low-dose alkylating challenge; ALS cohort with methylation and onset data"
+   },
+   "genes": [
+    "MGMT"
+   ],
+   "hypothesis_id": "H2",
+   "mechanism": "The mouse knockout is the tell. Losing Mgmt does not break the animal -- it is viable and baseline-normal -- but it is sensitised: increased physiological sensitivity to xenobiotics, increased susceptibility to induced morbidity and mortality, increased susceptibility to injury. That is the signature of a gene that sets a margin rather than running a process. The claim is that MGMT does the same job in human brain, and that it belongs in ALS not as a driver but as a modifier of exposure: the same alkylating dose produces more residual damage, earlier onset or faster progression in someone with less MGMT capacity. This fits the epidemiology that no driver gene fits -- 90-95% of ALS is sporadic, onset is late, and exposure history keeps appearing in the risk literature. It also fits the Open Targets score: 0.16, too weak for a driver, with the genetic component (0.26) above the literature component (0.06), and no mapped variant in the GWAS Catalogue -- which is what a modifier looks like from the outside.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "AGR:MGI:96977:MP:0008873",
+    "AGR:MGI:96977:MP:0009763",
+    "AGR:MGI:96977:MP:0005165",
+    "AGR:MGI:96977:MP:0002024",
+    "OT:MGMT-constraint",
+    "OT:MGMT-MONDO_0004976",
+    "P16455",
+    "PMID:39518982"
+   ],
+   "title": "MGMT is a margin gene: it sets how much environmental alkylation a sporadic ALS brain absorbs before anything shows"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "STRING:TP53-MGMT",
+      "STRING:MLH1-MGMT",
+      "STRING:GO:0006974"
+     ],
+     "note": "Via futile mismatch repair cycling; MLH1 is in the neighbourhood at 0.82.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "TP53"
+     },
+     "polarity": "positive",
+     "relation": "activates",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "unrepaired O6-methylguanine burden in neurons"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "STRING:TP53-CDKN1A",
+      "STRING:MGMT-CDKN1A",
+      "STRING:GOCC:0070557"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "CDKN1A"
+     },
+     "polarity": "positive",
+     "relation": "increases_amount",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "TP53"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "STRING:CDK2-MGMT",
+      "STRING:PCNA-CDKN1A",
+      "STRING:GO:0006275"
+     ],
+     "note": "The normal exit, and the one a post-mitotic neuron cannot take: there is no cycle to arrest.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "CDK2-dependent cell cycle progression"
+     },
+     "polarity": "negative",
+     "relation": "inhibits",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "CDKN1A"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "motor neuron"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [],
+     "note": "The inference the hypothesis rests on, and the step with no direct evidence in the ledger.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "senescence-like state in motor neurons"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "sustained p53-p21 signalling without a cell cycle to arrest"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "CXG:ENSG00000170430:CL_0000129:MONDO_0004976"
+     ],
+     "note": "Microglia carry an order of magnitude more MGMT than neurons in these same brains, so the two compartments meet this lesion with very different capacity.",
+     "object": {
+      "curie": "MONDO:0004976",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "amyotrophic lateral sclerosis"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "senescence-like state in motor neurons"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [
+    "GWAS:MGMT:no-association",
+    "CXG:ENSG00000170430:CL_4030059:MONDO_0004976",
+    "AGR:MGI:96977:MP:0009142"
+   ],
+   "falsification": {
+    "description": "Treat human iPSC-derived motor neurons with a low-dose alkylating agent, with and without MGMT knockout, and stain for the senescence programme: p21, p16, SA-beta-gal, lamin B1 loss, and a SASP cytokine panel in the medium. The hypothesis predicts the knockout reaches senescence at a dose the wild type tolerates, and predicts it in the absence of cell death. If p21 rises and the cells simply die, or if the knockout and wild type are indistinguishable, the hypothesis is dead. The discriminating detail against H1: this predicts a p53-p21 transcriptional signature, where H1 predicts corrupted transcripts with no damage-response signature at all.",
+    "expected": "positive",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "UniProtKB:P16455",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "MGMT"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "process",
+     "label": "senescence-like state in motor neurons"
+    },
+    "system": "human iPSC-derived motor neurons under low-dose alkylating challenge"
+   },
+   "genes": [
+    "MGMT"
+   ],
+   "hypothesis_id": "H3",
+   "mechanism": "MGMT's interaction neighbourhood is not repair in isolation -- it is the decision machinery: TP53 (0.86), PCNA (0.88, experimental), CDKN1A/p21 (0.87, experimental), MLH1 (0.82), CDK2 (0.85, experimental), with the PCNA-p21 complex enriched 2 of 2 and regulation of DNA replication enriched alongside DNA repair. In a dividing cell, an unrepaired O6-methylguanine is handled by futile mismatch repair cycling that signals through p53 to p21 and arrests the cell cycle, which is survivable. The claim is that in a post-mitotic neuron that exit does not exist: there is no cycle to arrest, so sustained p53-p21 signalling resolves instead into a senescence-like state with the secretory phenotype that goes with it. The neuron does not die of the lesion; it becomes a chronic inflammatory source in a tissue where microglia -- which carry ten times the MGMT capacity and are already primed -- respond to it. This is the weakest of the three: the p53-p21 edges are real but the post-mitotic asymmetry is an inference, and the single-cell data cannot distinguish a senescent neuron from a healthy one.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "STRING:TP53-MGMT",
+    "STRING:MGMT-CDKN1A",
+    "STRING:MGMT-PCNA",
+    "STRING:CDK2-MGMT",
+    "STRING:MLH1-MGMT",
+    "STRING:TP53-CDKN1A",
+    "STRING:PCNA-CDKN1A",
+    "STRING:GOCC:0070557",
+    "STRING:GO:0006974",
+    "STRING:GO:0006275",
+    "CXG:ENSG00000170430:CL_0000129:MONDO_0004976",
+    "PMID:19847258"
+   ],
+   "title": "The damage response MGMT feeds has no exit in a post-mitotic neuron, so an unrepaired lesion ends in p53-p21 senescence instead of arrest"
+  }
+ ],
+ "unexplained_genes": []
+}

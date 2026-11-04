@@ -1,0 +1,450 @@
+{
+ "run_id": "study-2026-09-vertex-amd-vertex-openai-deepseek-aideepseek-v3.2-maas-multi_agent-r2",
+ "model": "vertex-openai:deepseek-ai/deepseek-v3.2-maas",
+ "question": {
+  "arm": "multi_agent",
+  "budget": {
+   "max_delegations": 22,
+   "max_model_requests": 80,
+   "max_specialist_requests": 8,
+   "min_evidence_per_hypothesis": 2,
+   "min_hypotheses": 3,
+   "min_sources_per_hypothesis": 2,
+   "output_retries": 3
+  },
+  "data_policy": {
+   "max_age_seconds": 1209600.0,
+   "mode": "cache-preferred",
+   "snapshot_run_id": null
+  },
+  "disease": "age-related macular degeneration",
+  "formalise": false,
+  "genes": [
+   "LIPC",
+   "ARMS2",
+   "CETP",
+   "C3",
+   "TNFRSF10A",
+   "MCF2L2",
+   "CACNA1E"
+  ],
+  "model": "vertex-openai:deepseek-ai/deepseek-v3.2-maas",
+  "specialist_model": "vertex-openai:deepseek-ai/deepseek-v3.2-maas",
+  "specialists": [
+   "chembl",
+   "expression",
+   "gwas",
+   "interactions",
+   "literature",
+   "model_organism",
+   "open_targets",
+   "pathways",
+   "single_cell",
+   "trials",
+   "uniprot"
+  ],
+  "tissue": {
+   "artifact_id": "sha256:94beb62d860155713c5647523dafcd8660e8e6ec59c868baf1a98310a44233e3",
+   "label": "eye",
+   "uberon": "UBERON:0000970"
+  },
+  "use_network": true
+ },
+ "abstention": null,
+ "disease": "age-related macular degeneration",
+ "genes_considered": [
+  "LIPC",
+  "ARMS2",
+  "CETP",
+  "C3",
+  "TNFRSF10A",
+  "MCF2L2",
+  "CACNA1E"
+ ],
+ "hypotheses": [
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "rs2414577"
+     ],
+     "note": "LIPC is involved in lipid metabolism",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "lipid metabolism dysregulation"
+     },
+     "polarity": "unknown",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "LIPC"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "rs17231506"
+     ],
+     "note": "CETP is involved in cholesterol ester transfer",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "lipid metabolism dysregulation"
+     },
+     "polarity": "unknown",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "CETP"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [],
+     "note": "Lipid dysregulation contributes to drusen formation in AMD",
+     "object": {
+      "curie": "MONDO:0005150",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "age-related macular degeneration"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "lipid metabolism dysregulation"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Knock out both LIPC and CETP in retinal pigment epithelium cells and measure lipid accumulation and drusen-like deposits. If these genes contribute to AMD through lipid metabolism, double knockout should reduce lipid accumulation.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "LIPC"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "phenotype",
+     "label": "lipid accumulation"
+    },
+    "system": "retinal pigment epithelium cells"
+   },
+   "genes": [
+    "LIPC",
+    "CETP"
+   ],
+   "hypothesis_id": "hyp1",
+   "mechanism": "GWAS variants in LIPC and CETP alter lipid metabolism pathways, leading to abnormal lipid accumulation in Bruch's membrane and retinal pigment epithelium, contributing to drusen formation and AMD progression. These genes interact directly and share cholesterol metabolism pathways.",
+   "support": "partial",
+   "supporting_evidence": [
+    "rs2414577",
+    "rs17231506"
+   ],
+   "title": "Lipid metabolism dysregulation through LIPC and CETP contributes to AMD drusen formation"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "rs11569415",
+      "rs2230199"
+     ],
+     "note": "C3 is a key component of complement system",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "complement activation"
+     },
+     "polarity": "positive",
+     "relation": "activates",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "C3"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [],
+     "note": "Chronic complement activation causes inflammation and tissue damage",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "retinal inflammation and damage"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "complement activation"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [],
+     "note": "Retinal inflammation and damage leads to AMD",
+     "object": {
+      "curie": "MONDO:0005150",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "age-related macular degeneration"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "retinal inflammation and damage"
+     }
+    }
+   ],
+   "confidence": "medium",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Inhibit C3 complement activation in an AMD mouse model and measure retinal inflammation markers and photoreceptor survival. If C3 contributes to AMD through complement activation, inhibition should reduce inflammation and improve photoreceptor survival.",
+    "expected": "positive",
+    "perturbation": {
+     "action": "inhibit",
+     "target": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "C3"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "phenotype",
+     "label": "photoreceptor survival"
+    },
+    "system": "AMD mouse model"
+   },
+   "genes": [
+    "C3"
+   ],
+   "hypothesis_id": "hyp2",
+   "mechanism": "Genetic variants in C3 lead to dysregulated complement activation in the retina, causing chronic inflammation, damage to retinal pigment epithelium and photoreceptors, and progression of AMD through inflammatory pathways.",
+   "support": "partial",
+   "supporting_evidence": [
+    "rs11569415",
+    "rs2230199"
+   ],
+   "title": "Complement C3 activation drives inflammatory damage in AMD"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "rs13278062"
+     ],
+     "note": "TNFRSF10A is a death receptor involved in apoptosis",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "apoptosis signaling"
+     },
+     "polarity": "positive",
+     "relation": "activates",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "TNFRSF10A"
+     }
+    },
+    {
+     "context": {
+      "cell_type": null,
+      "disease_state": null,
+      "tissue": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "tissue",
+       "label": "retina"
+      }
+     },
+     "evidence": [],
+     "note": "Apoptosis of retinal cells occurs in AMD",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "phenotype",
+      "label": "retinal cell death"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "apoptosis signaling"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [],
+     "note": "Retinal cell death contributes to AMD pathology",
+     "object": {
+      "curie": "MONDO:0005150",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "age-related macular degeneration"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "phenotype",
+      "label": "retinal cell death"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Block TNFRSF10A signaling in retinal pigment epithelium cells exposed to oxidative stress and measure apoptosis markers. If TNFRSF10A contributes to AMD through apoptosis, blocking should reduce cell death.",
+    "expected": "positive",
+    "perturbation": {
+     "action": "inhibit",
+     "target": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "TNFRSF10A"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "phenotype",
+     "label": "apoptosis markers"
+    },
+    "system": "human retinal pigment epithelium cells"
+   },
+   "genes": [
+    "TNFRSF10A"
+   ],
+   "hypothesis_id": "hyp3",
+   "mechanism": "GWAS variants in TNFRSF10A increase apoptosis signaling in retinal cells under oxidative stress, contributing to the loss of retinal pigment epithelium and photoreceptors that characterizes AMD progression.",
+   "support": "partial",
+   "supporting_evidence": [
+    "rs13278062"
+   ],
+   "title": "TNFRSF10A-mediated apoptosis contributes to retinal cell loss in AMD"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "rs36212733",
+      "rs3750846",
+      "rs10490924"
+     ],
+     "note": "ARMS2 is strongly associated with AMD but mechanism unclear",
+     "object": {
+      "curie": "MONDO:0005150",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "age-related macular degeneration"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "ARMS2"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [],
+     "note": "ARMS2 may interact with complement system",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "complement activation"
+     },
+     "polarity": "unknown",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "ARMS2"
+     }
+    }
+   ],
+   "confidence": "medium",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Overexpress ARMS2 in retinal cells and measure complement activation markers. If ARMS2 contributes to AMD through complement interaction, overexpression should alter complement activation.",
+    "expected": "positive",
+    "perturbation": {
+     "action": "overexpress",
+     "target": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "ARMS2"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "process",
+     "label": "complement activation markers"
+    },
+    "system": "retinal pigment epithelium cells"
+   },
+   "genes": [
+    "ARMS2"
+   ],
+   "hypothesis_id": "hyp4",
+   "mechanism": "ARMS2 has the strongest GWAS associations with AMD but its molecular function is unknown. It may interact with complement pathways or function in retinal mitochondria, contributing to AMD susceptibility through unknown mechanisms.",
+   "support": "partial",
+   "supporting_evidence": [
+    "rs36212733",
+    "rs3750846",
+    "rs10490924"
+   ],
+   "title": "ARMS2 strongly associated with AMD but through unknown mechanism"
+  }
+ ],
+ "unexplained_genes": [
+  "MCF2L2",
+  "CACNA1E"
+ ]
+}

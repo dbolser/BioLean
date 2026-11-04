@@ -1,0 +1,389 @@
+{
+ "run_id": "study-2026-09-vertex-amd-google-cloud-gemini-3.1-pro-preview-multi_agent-r1",
+ "model": "google-cloud:gemini-3.1-pro-preview",
+ "question": {
+  "arm": "multi_agent",
+  "budget": {
+   "max_delegations": 22,
+   "max_model_requests": 80,
+   "max_specialist_requests": 8,
+   "min_evidence_per_hypothesis": 2,
+   "min_hypotheses": 3,
+   "min_sources_per_hypothesis": 2,
+   "output_retries": 3
+  },
+  "data_policy": {
+   "max_age_seconds": 1209600.0,
+   "mode": "cache-preferred",
+   "snapshot_run_id": null
+  },
+  "disease": "age-related macular degeneration",
+  "formalise": false,
+  "genes": [
+   "LIPC",
+   "ARMS2",
+   "CETP",
+   "C3",
+   "TNFRSF10A",
+   "MCF2L2",
+   "CACNA1E"
+  ],
+  "model": "google-cloud:gemini-3.1-pro-preview",
+  "specialist_model": "google-cloud:gemini-3.1-pro-preview",
+  "specialists": [
+   "chembl",
+   "expression",
+   "gwas",
+   "interactions",
+   "literature",
+   "model_organism",
+   "open_targets",
+   "pathways",
+   "single_cell",
+   "trials",
+   "uniprot"
+  ],
+  "tissue": {
+   "artifact_id": "sha256:94beb62d860155713c5647523dafcd8660e8e6ec59c868baf1a98310a44233e3",
+   "label": "eye",
+   "uberon": "UBERON:0000970"
+  },
+  "use_network": true
+ },
+ "abstention": {
+  "evidence": [
+   "GWAS:MCF2L2:no-association",
+   "GWAS:CACNA1E:no-association",
+   "OT:CACNA1E-MONDO_0005150"
+  ],
+  "genes_covered": [
+   "MCF2L2",
+   "CACNA1E"
+  ],
+  "reason": "insufficient_evidence",
+  "statement": "MCF2L2 and CACNA1E have no significant genetic association with age-related macular degeneration. The Open Targets genetic association score for CACNA1E is 0.00, and the GWAS Catalog reports no variants in either gene associated with the disease. Without further evidence of expression in disease-relevant tissues or functional links to AMD pathogenesis, there is insufficient evidence to formulate a causal hypothesis.",
+  "support": "grounded",
+  "what_would_change_this": "Genome-wide association study hits linking variants in these genes to AMD, or functional evidence demonstrating their roles in retinal pigment epithelium health or drusen formation."
+ },
+ "disease": "age-related macular degeneration",
+ "genes_considered": [
+  "LIPC",
+  "ARMS2",
+  "CETP",
+  "C3",
+  "TNFRSF10A",
+  "MCF2L2",
+  "CACNA1E"
+ ],
+ "hypotheses": [
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "P11597",
+      "STRING:hsa04979",
+      "STRING:CETP-LIPC"
+     ],
+     "note": "CETP regulates reverse cholesterol transport by transferring neutral lipids between lipoproteins",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "cholesterol metabolism"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "UniProtKB:P11597",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "CETP"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "P11150",
+      "STRING:hsa04979",
+      "STRING:CETP-LIPC"
+     ],
+     "note": "LIPC hydrolyzes triglycerides and phospholipids in circulating lipoproteins",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "cholesterol metabolism"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "UniProtKB:P11150",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "LIPC"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "rs17231506",
+      "rs2414577",
+      "STRING:DOID:10871"
+     ],
+     "note": "Dysregulation of systemic lipid handling leads to cholesterol accumulation and drusen formation in the macula",
+     "object": {
+      "curie": "MONDO:0005150",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "age-related macular degeneration"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "cholesterol metabolism"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Knockout of CETP in a high-cholesterol diet mouse model of AMD will reduce drusen-like deposits in the retina.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "UniProtKB:P11597",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "CETP"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "phenotype",
+     "label": "drusen formation"
+    },
+    "system": "mouse model of AMD"
+   },
+   "genes": [
+    "CETP",
+    "LIPC"
+   ],
+   "hypothesis_id": "h1_cholesterol",
+   "mechanism": "CETP and LIPC act together in systemic cholesterol and lipid metabolism, regulating the levels and composition of circulating high-density and low-density lipoproteins. Dysregulation of these lipid transport mechanisms leads to the aberrant accumulation of neutral lipids and cholesterol in the retina. This gradual buildup promotes the formation of drusen, the hallmark extracellular deposits that drive the pathogenesis of age-related macular degeneration.",
+   "support": "speculative",
+   "supporting_evidence": [],
+   "title": "CETP and LIPC drive macular degeneration through dysregulated systemic cholesterol metabolism and subsequent drusen formation"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "STRING:C3-ARMS2",
+      "rs36212733",
+      "rs10490924"
+     ],
+     "note": "ARMS2 functionally interacts with C3 and is strongly genetically associated with AMD",
+     "object": {
+      "curie": "UniProtKB:P01024",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "C3"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "UniProtKB:P0C7Q2",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "ARMS2"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "fibroblast"
+      },
+      "disease_state": {
+       "curie": "MONDO:0005150",
+       "grounding_evidence": "",
+       "kind": "disease",
+       "label": "age-related macular degeneration"
+      },
+      "tissue": null
+     },
+     "evidence": [
+      "P01024",
+      "CXG:ENSG00000125730:CL_0000057:MONDO_0012419"
+     ],
+     "note": "C3 is a central precursor of the complement cascade and is highly upregulated in eye fibroblasts during AMD",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "complement activation"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "UniProtKB:P01024",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "C3"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "CHEMBL:CHEMBL4298211",
+      "rs11569415",
+      "rs2230199"
+     ],
+     "note": "Overactivation of the complement system causes chronic retinal inflammation and breakdown of the extracellular matrix",
+     "object": {
+      "curie": "MONDO:0005150",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "age-related macular degeneration"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "complement activation"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Inhibition of C3 with pegcetacoplan in an ARMS2 risk-variant model will block pathological complement activation and rescue retinal tissue integrity.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "inhibit",
+     "target": {
+      "curie": "UniProtKB:P01024",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "C3"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "process",
+     "label": "complement activation"
+    },
+    "system": "ARMS2 risk-variant animal model"
+   },
+   "genes": [
+    "C3",
+    "ARMS2"
+   ],
+   "hypothesis_id": "h2_complement",
+   "mechanism": "C3 and ARMS2 function within the alternative complement pathway, a key innate immune defense mechanism in the eye. Genetic variants in ARMS2 and C3, along with C3's marked upregulation in ocular fibroblasts, lead to excessive local complement activation. This unchecked cascade drives chronic inflammation, uncontrolled phagocytosis, and destruction of the retinal pigment epithelium, culminating in macular degeneration.",
+   "support": "speculative",
+   "supporting_evidence": [],
+   "title": "ARMS2 and C3 promote macular degeneration via excessive localized activation of the alternative complement cascade"
+  },
+  {
+   "chain": [
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "retinal blood vessel endothelial cell"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [
+      "O00220",
+      "CXG:ENSG00000104689:CL_0002585:MONDO_0003004"
+     ],
+     "note": "TNFRSF10A is a TRAIL death receptor expressed in retinal endothelial cells that initiates caspase-8 mediated apoptosis",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "apoptosis"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "UniProtKB:O00220",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "TNFRSF10A"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:26691988",
+      "rs13278062"
+     ],
+     "note": "Increased cell death in the retinal vasculature or RPE contributes to macular tissue loss and AMD",
+     "object": {
+      "curie": "MONDO:0005150",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "age-related macular degeneration"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "apoptosis"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Knockout of TNFRSF10A in retinal blood vessel endothelial cells will reduce cell death when exposed to TRAIL or oxidative stress.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "UniProtKB:O00220",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "TNFRSF10A"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "process",
+     "label": "apoptosis"
+    },
+    "system": "retinal endothelial cell culture"
+   },
+   "genes": [
+    "TNFRSF10A"
+   ],
+   "hypothesis_id": "h3_apoptosis",
+   "mechanism": "TNFRSF10A serves as a death receptor for the cytotoxic ligand TRAIL and is expressed in the retinal vasculature. In response to local stress signals, TNFRSF10A recruits FADD and caspase-8 to initiate apoptosis of retinal blood vessel endothelial cells and the supporting pigment epithelium. The progressive loss of these vital supporting cells exacerbates tissue remodeling and drives the clinical progression of age-related macular degeneration.",
+   "support": "speculative",
+   "supporting_evidence": [],
+   "title": "TNFRSF10A exacerbates macular degeneration by mediating TRAIL-induced apoptosis of retinal endothelial cells"
+  }
+ ],
+ "unexplained_genes": []
+}

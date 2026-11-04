@@ -1,0 +1,262 @@
+{
+ "run_id": "study-2026-09-vertex-psoriasis-google-cloud-gemini-3.1-pro-preview-single_agent-r2",
+ "model": "google-cloud:gemini-3.1-pro-preview",
+ "question": {
+  "arm": "single_agent",
+  "budget": {
+   "max_delegations": 22,
+   "max_model_requests": 80,
+   "max_specialist_requests": 8,
+   "min_evidence_per_hypothesis": 2,
+   "min_hypotheses": 3,
+   "min_sources_per_hypothesis": 2,
+   "output_retries": 3
+  },
+  "data_policy": {
+   "max_age_seconds": 1209600.0,
+   "mode": "cache-preferred",
+   "snapshot_run_id": null
+  },
+  "disease": "psoriasis",
+  "formalise": false,
+  "genes": [
+   "IL12B",
+   "EGFL8",
+   "TRAF3IP2",
+   "TYK2",
+   "IL23R",
+   "GLE1",
+   "UHRF2"
+  ],
+  "model": "google-cloud:gemini-3.1-pro-preview",
+  "specialist_model": "",
+  "specialists": [
+   "chembl",
+   "expression",
+   "gwas",
+   "interactions",
+   "literature",
+   "model_organism",
+   "open_targets",
+   "pathways",
+   "single_cell",
+   "trials",
+   "uniprot"
+  ],
+  "tissue": {
+   "artifact_id": "sha256:f385590ff844b25a944f5da376243ab0b087745c3c64fa7c5e465db4f49ffa43",
+   "label": "skin of body",
+   "uberon": "UBERON:0002097"
+  },
+  "use_network": true
+ },
+ "abstention": {
+  "evidence": [
+   "GWAS:GLE1:no-association",
+   "GWAS:UHRF2:no-association",
+   "HPA:ENSG00000119392",
+   "HPA:ENSG00000147854",
+   "rs3117182"
+  ],
+  "genes_covered": [
+   "EGFL8",
+   "GLE1",
+   "UHRF2"
+  ],
+  "reason": "insufficient_evidence",
+  "statement": "GLE1 and UHRF2 are broadly expressed proteins with roles in mRNA export and DNA methylation, respectively, and have no genetic or mechanistic links to psoriasis. EGFL8 possesses strong GWAS associations with psoriasis, but it is located within the highly polymorphic MHC class III region on chromosome 6; its genetic association is a classic case of linkage disequilibrium with the major PSORS1 risk locus (HLA-C*06:02), and there is no evidence that EGFL8 itself plays a functional role in the disease mechanism.",
+  "support": "grounded",
+  "what_would_change_this": "An independent fine-mapping study or functional experiment demonstrating that EGFL8 variants directly alter skin inflammation independently of HLA-C, or the discovery of a novel pathway functionally connecting GLE1 or UHRF2 to Th17 cell dysregulation."
+ },
+ "disease": "psoriasis",
+ "genes_considered": [
+  "IL12B",
+  "EGFL8",
+  "TRAF3IP2",
+  "TYK2",
+  "IL23R",
+  "GLE1",
+  "UHRF2"
+ ],
+ "hypotheses": [
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "STRING:IL12B-IL23R"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "IL23R"
+     },
+     "polarity": "unknown",
+     "relation": "binds",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "IL12B"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "STRING:IL23R-TYK2"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "TYK2"
+     },
+     "polarity": "unknown",
+     "relation": "binds",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "IL23R"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "OT:TYK2-MONDO_0005083",
+      "rs34536443",
+      "CHEMBL:CHEMBL4435170"
+     ],
+     "note": "",
+     "object": {
+      "curie": "MONDO:0005083",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "psoriasis"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "TYK2"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Targeted deletion of TYK2 in CD4+ T cells would prevent IL-23-mediated Th17 expansion and suppress skin inflammation in an imiquimod-induced psoriasis mouse model.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "TYK2"
+     }
+    },
+    "readout": {
+     "curie": "MONDO:0005083",
+     "grounding_evidence": "",
+     "kind": "disease",
+     "label": "psoriasis"
+    },
+    "system": "imiquimod-induced psoriasis mouse model"
+   },
+   "genes": [
+    "IL12B",
+    "IL23R",
+    "TYK2"
+   ],
+   "hypothesis_id": "hyp1",
+   "mechanism": "IL12B forms the p40 subunit of the IL-23 cytokine, which directly interacts with IL23R on target T cells. This receptor binding recruits and activates the associated Janus kinase TYK2, initiating intracellular signaling that drives the expansion of pathogenic Th17 cells and the development of psoriatic plaques.",
+   "support": "speculative",
+   "supporting_evidence": [],
+   "title": "IL-23 receptor signaling via TYK2 drives Th17 expansion in psoriasis"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "AGR:MGI:2143599:MP:0003009"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "Cytokine"
+     },
+     "polarity": "positive",
+     "relation": "increases_amount",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "TRAF3IP2"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "rs33980500",
+      "OT:TRAF3IP2-MONDO_0005083"
+     ],
+     "note": "",
+     "object": {
+      "curie": "MONDO:0005083",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "psoriasis"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "TRAF3IP2"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Keratinocyte-specific knockout of TRAF3IP2 would block IL-17-dependent production of inflammatory cytokines and prevent epidermal hyperplasia in a psoriasis model.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "TRAF3IP2"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "protein",
+     "label": "Cytokine"
+    },
+    "system": "mouse skin epidermis"
+   },
+   "genes": [
+    "TRAF3IP2"
+   ],
+   "hypothesis_id": "hyp2",
+   "mechanism": "While the IL-23/TYK2 axis produces IL-17, TRAF3IP2 (Act1) serves as the essential intracellular adaptor for the IL-17 receptor on skin target cells like keratinocytes. Pathogenic genetic variants in TRAF3IP2 alter this signaling cascade, resulting in dysregulated inflammatory cytokine secretion and exacerbation of psoriatic skin inflammation.",
+   "support": "speculative",
+   "supporting_evidence": [],
+   "title": "TRAF3IP2 mediates downstream inflammatory signaling in target cells"
+  }
+ ],
+ "unexplained_genes": []
+}

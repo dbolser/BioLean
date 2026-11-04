@@ -1,0 +1,665 @@
+{
+ "run_id": "20260825T001904Z-3b7b5b",
+ "model": "anthropic:claude-opus-5",
+ "question": {
+  "budget": {
+   "max_delegations": 14,
+   "max_model_requests": 60,
+   "min_evidence_per_hypothesis": 2,
+   "min_hypotheses": 3,
+   "min_sources_per_hypothesis": 2,
+   "output_retries": 3
+  },
+  "disease": "schizophrenia",
+  "genes": [
+   "CSMD1",
+   "NXPH3",
+   "C4A",
+   "CX3CR1",
+   "CCDC136",
+   "C1QA",
+   "C4B"
+  ],
+  "model": "anthropic:claude-opus-5",
+  "specialist_model": "anthropic:claude-haiku-4-5",
+  "use_network": true
+ },
+ "disease": "schizophrenia",
+ "genes_considered": [
+  "CSMD1",
+  "NXPH3",
+  "C4A",
+  "CX3CR1",
+  "CCDC136",
+  "C1QA",
+  "C4B"
+ ],
+ "hypotheses": [
+  {
+   "chain": [
+    {
+     "context": {
+      "cell_type": null,
+      "disease_state": null,
+      "tissue": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "tissue",
+       "label": "cerebral cortex"
+      }
+     },
+     "evidence": [
+      "PMID:26814963",
+      "rs116633139"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "C4 protein at synapse"
+     },
+     "polarity": "positive",
+     "relation": "increases_amount",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "C4A"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "R-HSA-166663",
+      "STRING:GO:0006958"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "classical complement cascade"
+     },
+     "polarity": "positive",
+     "relation": "activates",
+     "subject": {
+      "curie": "ENSEMBL:ENSG00000173372",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "C1QA"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "astrocyte"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [
+      "PMID:40112933",
+      "Q96PZ7"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "classical complement cascade"
+     },
+     "polarity": "negative",
+     "relation": "inhibits",
+     "subject": {
+      "curie": "UniProt:Q96PZ7",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "CSMD1"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:22632727",
+      "PMID:35396580"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "excess synaptic pruning / cortical thinning"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "complement tagging of synapses"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:26814963"
+     ],
+     "note": "",
+     "object": {
+      "curie": "EFO:MONDO_0005090",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "schizophrenia"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "excess synaptic pruning"
+     }
+    }
+   ],
+   "confidence": "high",
+   "contradicting_evidence": [
+    "PMID:38301948",
+    "PMID:41903141",
+    "AGR:MGI:88228 C4b-null mice show only immune/kidney phenotypes, no synaptic or behavioural phenotype"
+   ],
+   "falsification": {
+    "description": "In mouse cortex or human iPSC-derived neuron/astrocyte/microglia co-culture, delete Csmd1 while measuring C4b/C3b deposition on synaptosomes and microglial engulfment of synaptic material; then rescue with soluble CSMD1 Sushi-domain protein. If CSMD1 loss does not increase synaptic complement deposition, and if C4A overexpression does not increase engulfment on a Csmd1-null background, the activator/inhibitor-ratio model fails.",
+    "expected": "positive",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "UniProt:Q96PZ7",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "CSMD1"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "process",
+     "label": "C3b/C4b deposition on synaptosomes and microglial synaptic engulfment"
+    },
+    "system": "mouse cortex / human iPSC tri-culture"
+   },
+   "genes": [
+    "C4A",
+    "C4B",
+    "C1QA",
+    "CSMD1"
+   ],
+   "hypothesis_id": "H1",
+   "mechanism": "The C4 structural locus is the strongest complement signal in schizophrenia genetics (rs116633139, p=6e-18, OR~1.16), and higher C4A copy number/expression increases C4 protein available to the classical cascade initiated by C1q. CSMD1, itself genome-wide significant (rs12541020, p=6e-9; Open Targets genetic score 0.81) and built from 28 Sushi/complement-control-protein domains, is a classical-pathway inhibitor expressed by astrocytes and at synapses. Risk therefore arises from the *ratio* of activator (C4A/C4B, C1QA) to inhibitor (CSMD1) at the synaptic surface: excess C4 deposition with insufficient CSMD1 restraint mis-tags synapses during adolescent pruning, thinning cortical connectivity. STRING confirms C1QA-C4A/C4B as a tight module enriched for classical complement activation, and Reactome scores 'Activation of C3 and C5' and 'Regulation of Complement cascade' as the set-level signal.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "PMID:26814963",
+    "PMID:40112933",
+    "PMID:35396580",
+    "rs116633139",
+    "rs12541020",
+    "R-HSA-174577",
+    "R-HSA-977606",
+    "STRING:C1QA-C4A",
+    "STRING:GO:0006958",
+    "OT:CSMD1-MONDO_0005090",
+    "Q96PZ7"
+   ],
+   "title": "Elevated C4A/C4B dosage tips C1q-initiated classical complement tagging of synapses, and CSMD1 loss removes the brake"
+  },
+  {
+   "chain": [
+    {
+     "context": {
+      "cell_type": null,
+      "disease_state": null,
+      "tissue": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "tissue",
+       "label": "hippocampus"
+      }
+     },
+     "evidence": [
+      "AGR:MGI:88223:MP:0002910",
+      "AGR:MGI:88223:MP:0002945"
+     ],
+     "note": "Mouse knockout phenotype, not a human observation.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "normal excitatory and inhibitory postsynaptic currents"
+     },
+     "polarity": "positive",
+     "relation": "required_for",
+     "subject": {
+      "curie": "ENSEMBL:ENSG00000173372",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "C1QA"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:38301948"
+     ],
+     "note": "Direction is a decrease in patients, opposite to the complement-excess prediction.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "first-episode psychosis"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "C1q protein level"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "microglia"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [
+      "HPA:ENSG00000168329",
+      "PMID:22632727",
+      "PMID:42276261"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "microglial synaptic surveillance"
+     },
+     "polarity": "positive",
+     "relation": "required_for",
+     "subject": {
+      "curie": "ENSEMBL:ENSG00000168329",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "CX3CR1"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:41903141",
+      "PMID:42276261"
+     ],
+     "note": "",
+     "object": {
+      "curie": "EFO:MONDO_0005090",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "schizophrenia"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "degraded microglial synaptic refinement"
+     }
+    }
+   ],
+   "confidence": "medium",
+   "contradicting_evidence": [
+    "PMID:26814963",
+    "PMID:22632727"
+   ],
+   "falsification": {
+    "description": "Quantify C1q/C3b deposition per synapse and microglial engulfment index in matched post-mortem prefrontal cortex from schizophrenia cases and controls, stratified by C4A copy number, using array tomography. The excess-pruning model (H1) predicts increased per-synapse complement deposition and increased engulfment in cases, particularly high-C4A cases; this hypothesis predicts reduced C1q deposition and reduced microglia-synapse contact. A finding of increased deposition falsifies H2.",
+    "expected": "negative",
+    "perturbation": null,
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "process",
+     "label": "per-synapse C1q deposition and microglia-synapse contact"
+    },
+    "system": "post-mortem human dorsolateral prefrontal cortex"
+   },
+   "genes": [
+    "C1QA",
+    "CX3CR1",
+    "C4A",
+    "C4B"
+   ],
+   "hypothesis_id": "H2",
+   "mechanism": "The dominant narrative is complement excess, but the direct measurements point the other way: C1q protein is *lower* in first-episode psychosis and schizophrenia (PMID:38301948), complement gene expression changes divergently across brain regions (PMID:39616737), and schizophrenia-associated C4 has been reported to *decrease* microglia-synapse interactions via CR3 (PMID:41903141). C1qa-null mice show abnormal excitatory and inhibitory postsynaptic currents, abnormal synaptic bouton morphology and absence seizures — a synaptic-refinement failure phenotype from loss, not gain. Combined with CX3CR1's microglia-restricted expression and its role in activity-dependent circuit sculpting, the hypothesis is that schizophrenia reflects degraded microglial surveillance/refinement — synapses that should be removed are retained and those that should be kept are lost — rather than a simple pruning excess.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "PMID:38301948",
+    "PMID:39616737",
+    "PMID:41903141",
+    "PMID:42276261",
+    "AGR:MGI:88223:MP:0002910",
+    "AGR:MGI:88223:MP:0002945",
+    "AGR:MGI:88223:MP:0008571",
+    "HPA:ENSG00000168329",
+    "HPA:ENSG00000173372"
+   ],
+   "title": "The complement change in schizophrenia is a loss of tonic C1q/CX3CR1 surveillance, not a gain — mistimed rather than excessive pruning"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "O95157"
+     ],
+     "note": "UniProt annotation is by similarity; the human binding event is inferred.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "alpha-neurexin"
+     },
+     "polarity": "unknown",
+     "relation": "binds",
+     "subject": {
+      "curie": "UniProt:O95157",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "NXPH3"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "cortical excitatory neuron"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [
+      "AGR:MGI:1336188:MP:0001488",
+      "AGR:MGI:1336188:MP:0001463"
+     ],
+     "note": "Mouse knockout phenotype.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "phenotype",
+      "label": "normal acoustic startle / sensorimotor gating"
+     },
+     "polarity": "positive",
+     "relation": "required_for",
+     "subject": {
+      "curie": "UniProt:O95157",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "NXPH3"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:35396580"
+     ],
+     "note": "The 2022 PGC paper implicates synaptic biology broadly; it does not name NXPH3.",
+     "object": {
+      "curie": "EFO:MONDO_0005090",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "schizophrenia"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "altered neurexin-complex synaptic signalling"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "GWAS:CCDC136:no-association",
+      "Q96JN2"
+     ],
+     "note": "Recorded as an explicit NEGATIVE: no GWAS association and only acrosomal function annotated. Included to state that CCDC136 is likely a positional passenger rather than causal.",
+     "object": {
+      "curie": "EFO:MONDO_0005090",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "schizophrenia"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "UniProt:Q96JN2",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "CCDC136"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [
+    "GWAS:NXPH3:no-association",
+    "GWAS:CCDC136:no-association"
+   ],
+   "falsification": {
+    "description": "Prepulse inhibition and cortical circuit recording in Nxph3 conditional knockouts restricted to deep-layer cortical excitatory neurons, alongside conditional Ccdc136 knockout. If deep-layer-restricted Nxph3 loss does not disrupt PPI/startle, the neuron-intrinsic arm collapses; if Ccdc136 knockout produces the same phenotype, the passenger-gene call is wrong.",
+    "expected": "positive",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "UniProt:O95157",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "NXPH3"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "phenotype",
+     "label": "prepulse inhibition of acoustic startle"
+    },
+    "system": "conditional knockout mouse, deep-layer cortical excitatory neurons"
+   },
+   "genes": [
+    "NXPH3",
+    "CCDC136"
+   ],
+   "hypothesis_id": "H3",
+   "mechanism": "NXPH3 and CCDC136 sit outside the complement module entirely — STRING places them with zero edges to C1QA/C4A/C4B or to each other, and Reactome cannot map them at all. NXPH3 is a secreted neuropeptide-like ligand for alpha-neurexins expressed in brain excitatory neurons; its mouse knockout produces increased startle reflex, abnormal spatial learning and abnormal locomotion — schizophrenia-relevant endophenotypes (sensorimotor gating, cognition, psychomotor activity). CSMD1-null mice show the mirror-image decreased startle, so these two genes plausibly act on the same behavioural axis from opposite directions and via different molecular routes. CCDC136 is annotated only for acrosome/spermatogenesis function and has no GWAS association with schizophrenia; the most likely reason both appear in this list is positional co-occurrence at the chromosome 7q32 locus, not shared biology. This hypothesis is therefore explicitly about neuronal neurexin-complex signalling (NXPH3) and flags CCDC136 as probably a linkage passenger.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "O95157",
+    "Q96JN2",
+    "AGR:MGI:1336188:MP:0001488",
+    "AGR:MGI:1336188:MP:0001463",
+    "AGR:MGI:1336188:MP:0001392",
+    "HPA:ENSG00000182575",
+    "GWAS:NXPH3:no-association",
+    "GWAS:CCDC136:no-association",
+    "STRING:GO:0006958",
+    "OT:CSMD1-MONDO_0005090"
+   ],
+   "title": "NXPH3 and CCDC136 mark a neuron-intrinsic, complement-independent arm: neurexin-ligand signalling in deep cortical neurons setting sensorimotor gating"
+  },
+  {
+   "chain": [
+    {
+     "context": {
+      "cell_type": null,
+      "disease_state": null,
+      "tissue": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "tissue",
+       "label": "liver"
+      }
+     },
+     "evidence": [
+      "HPA:ENSG00000173372",
+      "rs116633139"
+     ],
+     "note": "HPA localises C4A/C4B expression to liver and adrenal with minimal brain detection; the brain-intrinsic-expression premise of H1 is not supported by HPA.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "circulating C4 protein"
+     },
+     "polarity": "positive",
+     "relation": "increases_amount",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "C4A"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "HPA:ENSG00000173372"
+     ],
+     "note": "Inferred from choroid-plexus enrichment of C1QA; direct transport evidence was not returned.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "tissue",
+      "label": "CSF / choroid plexus compartment"
+     },
+     "polarity": "unknown",
+     "relation": "translocates",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "circulating C4 protein"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "microglia"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [
+      "STRING:CX3CR1-C1QA",
+      "PMID:42276261"
+     ],
+     "note": "STRING edge is text-mining only (0.61), not experimental.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "microglial response to complement-opsonised synapses"
+     },
+     "polarity": "positive",
+     "relation": "required_for",
+     "subject": {
+      "curie": "ENSEMBL:ENSG00000168329",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "CX3CR1"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "OT:CX3CR1-MONDO_0005090",
+      "PMID:42276261"
+     ],
+     "note": "",
+     "object": {
+      "curie": "EFO:MONDO_0005090",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "schizophrenia"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "ENSEMBL:ENSG00000168329",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "CX3CR1"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [
+    "PMID:26814963",
+    "PMID:41903141"
+   ],
+   "falsification": {
+    "description": "Liver-specific versus brain-specific conditional deletion of C4 (or C4A humanised transgene expression restricted to hepatocytes) in mice, measuring CSF and synaptic C4 deposition and PPI. If hepatocyte-restricted C4 expression fails to produce detectable synaptic C4 deposition while astrocyte/neuron-restricted expression does, the peripheral-source model is dead and H1's brain-intrinsic version stands.",
+    "expected": "positive",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "C4A"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "process",
+     "label": "synaptic C4 deposition in cortex"
+    },
+    "system": "hepatocyte-conditional C4 knockout mouse"
+   },
+   "genes": [
+    "C4A",
+    "C4B",
+    "CX3CR1",
+    "C1QA"
+   ],
+   "hypothesis_id": "H4",
+   "mechanism": "HPA finds C4A and C4B predominantly hepatic and adrenal with minimal brain detection, while C1QA and CX3CR1 are microglial and C1QA is markedly choroid-plexus enriched. If brain C4 is largely imported rather than locally transcribed, the C4 risk allele acts on the CNS through systemic complement load and barrier/choroid-plexus handling, with microglia as the effector reading the imported signal. This predicts that peripheral C4 levels, not brain C4 transcription, track risk, and it reframes the therapeutic target: C4 itself is a poor CNS target, whereas CX3CR1 is a druggable GPCR with ligand-bound structures and high-quality small-molecule chemistry, and no immunomodulatory agent has yet been registered in the schizophrenia trials returned. The set-level enrichment for 'Differentiation of Circulating Monocytes' is consistent with a peripheral-myeloid contribution.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "HPA:ENSG00000173372",
+    "HPA:ENSG00000168329",
+    "R-HSA-9968734",
+    "OT:CX3CR1-tractability",
+    "OT:C4A-MONDO_0005090",
+    "PMID:42276261",
+    "STRING:CX3CR1-C1QA"
+   ],
+   "title": "Peripheral, not brain-intrinsic: liver-derived C4 crossing a permeable barrier drives the association, making CX3CR1 the only tractable node"
+  }
+ ],
+ "unexplained_genes": []
+}

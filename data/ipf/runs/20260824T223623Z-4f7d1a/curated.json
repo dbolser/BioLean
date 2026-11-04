@@ -1,0 +1,445 @@
+{
+ "run_id": "20260824T223623Z-4f7d1a",
+ "curated_by": "Claude (Opus 5.5) by hand, 2026-10-28; converted to format 2 on 2026-10-30",
+ "upgraded_by": "Claude Opus 5.5 (v2 upgrade), 2026-10-30",
+ "entities": {
+  "ipf": {"kind": "disease", "curie": "MONDO:0800504", "run_labels": ["idiopathic pulmonary fibrosis", "IPF susceptibility and mortality"]},
+  "pulmonaryFibrosis": {"kind": "disease", "curie": "MONDO:0002771", "run_labels": ["pulmonary fibrosis"]},
+  "cpfe": {"kind": "disease", "curie": "MONDO:0017591", "run_labels": ["emphysema/CPFE"]},
+  "pulmonarySsc": {"kind": "disease", "curie": "MONDO:0002047", "run_labels": ["systemic sclerosis ILD"]},
+  "rs35705950": {"kind": "variant", "curie": "dbSNP:rs35705950", "label": "rs35705950 minor (risk) allele, MUC5B promoter",
+                 "run_labels": ["MUC5B promoter variant rs35705950"]},
+  "rs5743890": {"kind": "variant", "curie": "dbSNP:rs5743890", "label": "rs5743890 minor allele (TOLLIP)",
+                "run_labels": ["TOLLIP variants"]},
+  "rs2609255": {"kind": "variant", "curie": "dbSNP:rs2609255", "label": "rs2609255 minor allele, two copies (FAM13A)",
+                "run_labels": ["FAM13A variants"]},
+  "sftpcBrichos": {"kind": "variant", "curie": "BLN:SFTPC-BRICHOS-mutation", "label": "SFTPC BRICHOS-domain mutation (no public identifier for the class)",
+                   "run_labels": ["mutant pro-SFTPC (BRICHOS)"]},
+  "fam13aVariants": {"kind": "variant", "curie": "BLN:FAM13A-variants", "label": "FAM13A variants, unspecified (the run names no variant)",
+                     "run_labels": ["FAM13A variants"]},
+  "MUC5B": {"kind": "protein", "curie": "UniProt:Q9HC84", "run_labels": ["MUC5B mucin", "ectopic MUC5B expression", "MUC5B"]},
+  "DSP": {"kind": "protein", "curie": "UniProt:P15924", "run_labels": ["DSP (desmoplakin)", "DSP"]},
+  "TERT": {"kind": "protein", "curie": "UniProt:O14746", "run_labels": ["TERT"]},
+  "SFTPC": {"kind": "protein", "curie": "UniProt:P11686", "run_labels": ["SFTPC"]},
+  "TOLLIP": {"kind": "protein", "curie": "UniProt:Q9H0E2", "run_labels": ["TOLLIP"]},
+  "IRAK1": {"kind": "protein", "curie": "UniProt:P51617", "run_labels": ["IRAK1 phosphorylation / IL-1R-TLR signalling"]},
+  "FAM13A": {"kind": "protein", "curie": "UniProt:O94988", "run_labels": ["FAM13A"]},
+  "RHOA": {"kind": "protein", "curie": "UniProt:P61586", "run_labels": ["RhoA activity"]},
+  "erStress": {"kind": "process", "curie": "GO:0034976",
+               "run_labels": ["endoplasmic reticulum stress in bronchiolar epithelium", "alveolar epithelial ER stress", "EMT and ER stress in distal airway epithelium"]},
+  "emt": {"kind": "process", "curie": "GO:0001837",
+          "run_labels": ["epithelial-mesenchymal transition via Hippo/YAP", "EMT and ER stress in distal airway epithelium"]},
+  "telomereMaintenance": {"kind": "process", "curie": "GO:0000723", "run_labels": ["telomere maintenance"]},
+  "cellularSenescence": {"kind": "process", "curie": "GO:0090398"},
+  "aggrephagy": {"kind": "process", "curie": "GO:0035973", "run_labels": ["autophagic clearance of ubiquitin conjugates"]},
+  "epitheliumRegeneration": {"kind": "process", "curie": "GO:1990399"},
+  "at2": {"kind": "cellType", "curie": "CL:0002063", "run_labels": ["alveolar type II cell"]},
+  "lungAlveolus": {"kind": "anatomy", "curie": "UBERON:0002299"},
+  "shortTelomeres": {"kind": "phenotype", "curie": "HP:0031413", "run_labels": ["short telomere length"]},
+  "uip": {"kind": "phenotype", "curie": "HP:0031950"},
+  "emphysema": {"kind": "phenotype", "curie": "HP:0002097", "run_labels": ["emphysema/CPFE"]},
+  "at2Senescence": {"kind": "process", "refines": {"base": "cellularSenescence", "ctx": {"cellType": "at2"}},
+                    "run_labels": ["AT2 senescence / failed alveolar regeneration"]},
+  "alveolarRegeneration": {"kind": "process", "refines": {"base": "epitheliumRegeneration", "ctx": {"anatomy": "lungAlveolus"}},
+                           "run_labels": ["AT2 senescence / failed alveolar regeneration"]},
+  "uipInSscIld": {"kind": "phenotype", "refines": {"base": "uip", "ctx": {"condition": "pulmonarySsc"}},
+                  "run_labels": ["UIP pattern in systemic sclerosis ILD"]}
+ },
+ "statements": [
+  {"id": "I1", "step": "H1.1", "text": "rs35705950 raises MUC5B",
+   "claim": {"effect": {"subject": "rs35705950", "sign": "pos", "target": {"amount": "MUC5B"}}},
+   "evidence": [
+    {"ref": "PMID:27630174", "kind": "review", "quote": "a common gain-of-function promoter variant in MUC5B rs35705950"},
+    {"ref": "PMID:21506741", "kind": "observational",
+     "quote": "The variant allele of rs35705950 was associated with up-regulation in MUC5B expression in the lung in unaffected subjects",
+     "note": "v1 excluded this as not_in_text: the old fetch cut the text at 'P<0.001', before this sentence"},
+    {"ref": "PMID:41091081", "kind": "observational", "moved_from": "H1.2",
+     "quote": "MUC5B was ectopically expressed in AT2 cells in controls with the risk variant"},
+    {"ref": "PMID:30345907", "kind": "review", "quote": "the gain-of-function MUC5B promoter variant rs35705950",
+     "note": "cited as supporting; no step cites it. A background sentence"}
+   ],
+   "excluded": []},
+  {"id": "I2", "step": "H1.2", "text": "MUC5B raises ER stress",
+   "claim": {"effect": {"subject": "MUC5B", "sign": "pos", "target": {"process": "erStress"}}},
+   "evidence": [
+    {"ref": "PMID:41091081", "kind": "inVitro",
+     "quote": "we demonstrated a direct relationship between MUC5B expression and ER stress in bronchiolar epithelia in vitro"}
+   ],
+   "excluded": [
+    {"ref": "PMID:18635891", "category": "not_in_text", "reason": "ER stress in IPF type II cells; MUC5B not mentioned"}
+   ]},
+  {"id": "I3", "step": "H1.3", "text": "DSP restrains EMT",
+   "claim": {"effect": {"subject": "DSP", "sign": "neg", "target": {"process": "emt"}}},
+   "evidence": [
+    {"ref": "PMID:42120512", "kind": "inVitro",
+     "quote": "SYISL promotes DSP degradation, thereby relieving a key constraint on epithelial integrity. This event initiates a downstream signaling cascade, activating the PI3K-AKT pathway and promoting YAP1 dephosphorylation and nuclear translocation. Furthermore, we delineate how this axis reshapes the epigenetic landscape at the vimentin locus, enhancing H3K4me3 and H3K27ac marks to facilitate YAP1-driven transcription, which collectively promotes an EMT-associated state",
+     "note": "v1 quoted only the first sentence, which does not name EMT. The abstract does not say whether this axis was shown in cells or in mice; the span reports cell-level assays (protein degradation, YAP1 translocation, histone marks at one locus), and its only stated in vivo work is in mice, so it is not a human in vivo perturbation. Recorded as inVitro (audit)"}
+   ],
+   "excluded": [
+    {"ref": "P15924", "category": "not_in_text", "reason": "the UniProt entry says nothing about EMT (it records DSP raising TGFB1 in cardiomyocytes, by similarity)"}
+   ]},
+  {"id": "I4", "step": "H1.4", "text": "ER stress drives pulmonary fibrosis",
+   "claim": {"effect": {"subject": "erStress", "sign": "pos", "target": {"disease": "pulmonaryFibrosis", "aspect": "risk"}}},
+   "evidence": [
+    {"ref": "PMID:41090357", "kind": "mechanistic", "taxon": "mouse",
+     "quote": "selective inhibition of RIDD with PAIR2 reduced AT2 differentiation into profibrotic transitional cells and protected mice from bleomycin-induced pulmonary fibrosis"},
+    {"ref": "PMID:18635891", "kind": "hypothesis", "moved_from": "H1.2",
+     "quote": "Severe ER stress response in the AECIIs of patients with sporadic IPF may underlie the apoptosis of this cell type and development of fibrosis in this disease",
+     "note": "the authors propose it from marker levels in explanted lungs; not tested"}
+   ],
+   "excluded": [
+    {"ref": "PMID:24050627", "category": "not_in_text", "reason": "review abstract names neither ER stress nor EMT"}
+   ]},
+  {"id": "I5", "step": "H1.4", "text": "EMT drives pulmonary fibrosis",
+   "claim": {"effect": {"subject": "emt", "sign": "pos", "target": {"disease": "pulmonaryFibrosis", "aspect": "risk"}}},
+   "evidence": [
+    {"ref": "PMID:42120512", "kind": "inVitro", "moved_from": "H1.3",
+     "quote": "which collectively promotes an EMT-associated state and increased epithelial plasticity. The resultant aberrant epithelial-mesenchymal crosstalk contributes to pathological extracellular matrix (ECM) deposition",
+     "note": "v1 quoted only the second sentence, which names crosstalk, not EMT. The span states no design; the abstract's only in vivo work (AAV-shSYISL, ASOs) is SYISL in mice, not EMT, so it is not a human in vivo perturbation. Recorded as inVitro (audit)"}
+   ],
+   "excluded": [
+    {"ref": "PMID:24050627", "category": "not_in_text", "reason": "review abstract names neither ER stress nor EMT"},
+    {"ref": "PMID:41090357", "category": "not_in_text", "reason": "about IRE1α (RIDD)-driven AT2 plasticity, not EMT"}
+   ]},
+  {"id": "I6", "step": "H2.1", "text": "TERT is required for telomere maintenance (required_for)",
+   "claim": {"effect": {"subject": "TERT", "sign": "pos", "target": {"process": "telomereMaintenance"}}},
+   "evidence": [
+    {"ref": "O14746", "kind": "curatedDb", "quote": "main activity is the elongation of telomeres"}
+   ],
+   "excluded": [
+    {"ref": "STRING:GO:0000723", "category": "enrichment", "reason": "a STRING over-representation of 'Telomere maintenance' in the gene set"}
+   ]},
+  {"id": "I7", "step": "bridge", "for": ["H2"], "text": "telomere maintenance prevents short telomeres",
+   "claim": {"effect": {"subject": "telomereMaintenance", "sign": "neg", "target": {"phenotype": "shortTelomeres"}}},
+   "evidence": [
+    {"ref": "GO:0000723", "kind": "textbook", "quote": "maintenance of proper telomeric length", "note": "GO definition. The run never states this link."}
+   ],
+   "excluded": []},
+  {"id": "I8", "step": "H2.2", "text": "short telomeres go with IPF",
+   "claim": {"assoc": {"subject": "shortTelomeres", "direction": "pos", "target": {"disease": "ipf", "aspect": "risk"}}},
+   "sign_note": "the run's step is associated_with with unknown polarity; the direction is from the meta-analysis the run cited for the step (PMID:41728098)",
+   "evidence": [
+    {"ref": "PMID:41728098", "kind": "observational", "quote": "significant shorter telomere lengths in IPF patients compared to healthy controls",
+     "note": "a meta-analysis of case-control and cohort studies, so observational"},
+    {"ref": "PMID:42587125", "kind": "review", "moved_from": "H2.4",
+     "quote": "IPF patients frequently bear germline mutations in telomerase genes, critically short telomeres",
+     "note": "a background sentence stating that short telomeres go with IPF; excluded at H2.4, where it does not state the step (audit)"}
+   ],
+   "excluded": [
+    {"ref": "PMID:23535734", "category": "not_this_entity",
+     "reason": "the IPF association is for lead SNPs at TERC and TERT, without direction; the shorter-telomere risk score is for coronary artery disease. Moved to I22 (TERT and IPF)"}
+   ]},
+  {"id": "I9", "step": "H2.3", "text": "mutant pro-SFTPC raises ER stress",
+   "claim": {"effect": {"subject": "sftpcBrichos", "sign": "pos", "target": {"process": "erStress"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "R-HSA-5688354", "category": "enrichment", "reason": "Reactome over-representation of 'Defective pro-SFTPC causes SMDP2 and RDS' in the gene set; no ER stress"},
+    {"ref": "P11686", "category": "not_in_text", "reason": "the UniProt entry does not mention misfolding or ER stress"},
+    {"ref": "PMID:18635891", "category": "not_in_text", "reason": "ER stress in IPF type II cells; SFTPC not mentioned"}
+   ]},
+  {"id": "I10", "step": "H2.4", "text": "AT2 senescence drives IPF",
+   "claim": {"effect": {"subject": "at2Senescence", "sign": "pos", "target": {"disease": "ipf", "aspect": "risk"}}},
+   "evidence": [
+    {"ref": "PMID:42346293", "kind": "review",
+     "quote": "Senescent alveolar epithelial cells and fibroblasts contribute to impaired tissue repair and persistent fibrotic remodeling",
+     "note": "an IPF review. v1 quoted 'cellular senescence ... a central driver of disease progression', which is senescence in general and IPF progression, not risk"}
+   ],
+   "excluded": [
+    {"ref": "PMID:32661339", "category": "disease_feature",
+     "reason": "a senescence-enriched transitional AT2 state (PATS) accumulates in human fibrotic lungs: a feature of fibrosis, not a cause, and fibrosis broadly, not IPF (v1 kept it as observational)"},
+    {"ref": "PMID:32678092", "category": "disease_feature",
+     "reason": "a Krt8+ transitional state with senescence features persists in human lung fibrosis: a feature, not a cause (v1 kept it as observational)"},
+    {"ref": "PMID:42587125", "category": "not_in_text", "reason": "telomeric DNA damage response in telomerase-knockout mice; not AT2 senescence. Its background sentence on short telomeres in IPF moved to I8"}
+   ]},
+  {"id": "I14", "step": "H2.4", "text": "alveolar regeneration protects against IPF",
+   "claim": {"effect": {"subject": "alveolarRegeneration", "sign": "neg", "target": {"disease": "ipf", "aspect": "risk"}}},
+   "sign_note": "inverted: the run's subject is 'failed alveolar regeneration' (second part of 'AT2 senescence / failed alveolar regeneration')",
+   "evidence": [],
+   "excluded": [
+    {"ref": "PMID:32678092", "category": "not_in_text", "reason": "regeneration through a Krt8+ state that persists in fibrosis; does not say failed regeneration causes IPF"},
+    {"ref": "PMID:32661339", "category": "not_in_text", "reason": "a transitional state persists in fibrotic lungs; does not say failed regeneration causes IPF"},
+    {"ref": "PMID:42346293", "category": "not_in_text", "reason": "impaired tissue repair is named as an outcome of senescence beside fibrotic remodelling, not as a cause of IPF"},
+    {"ref": "PMID:42587125", "category": "not_in_text", "reason": "telomeric DNA damage response in telomerase-knockout mice; regeneration not named"}
+   ]},
+  {"id": "I11", "step": "H3.1", "text": "TOLLIP inhibits IRAK1",
+   "claim": {"effect": {"subject": "TOLLIP", "sign": "neg", "target": {"activity": "IRAK1"}}},
+   "evidence": [
+    {"ref": "Q9H0E2", "kind": "curatedDb", "quote": "Inhibits IRAK1 phosphorylation and kinase activity"}
+   ],
+   "excluded": []},
+  {"id": "I12", "step": "H3.2", "text": "TOLLIP is required for aggrephagy (required_for)",
+   "claim": {"effect": {"subject": "TOLLIP", "sign": "pos", "target": {"process": "aggrephagy"}}},
+   "evidence": [
+    {"ref": "Q9H0E2", "kind": "curatedDb", "quote": "mediating autophagic clearance of ubiquitin conjugates"}
+   ],
+   "excluded": []},
+  {"id": "I15", "step": "H3.3", "text": "the rs5743890 minor allele goes with lower IPF risk",
+   "claim": {"assoc": {"subject": "rs5743890", "direction": "neg", "target": {"disease": "ipf", "aspect": "risk"}}},
+   "sign_note": "the run's step is unsigned and names 'TOLLIP variants'; the GWAS it cites for the step calls the rs5743890 minor allele protective",
+   "evidence": [
+    {"ref": "PMID:24429156", "kind": "observational", "quote": "Individuals who developed IPF despite having the protective TOLLIP minor allele of rs5743890"}
+   ],
+   "excluded": [
+    {"ref": "PMID:23583980", "category": "not_in_text", "reason": "TOLLIP is not named (the loci listed are TERT, MUC5B, TERC, FAM13A, DSP and others)"},
+    {"ref": "OT:TOLLIP-EFO_0000768", "category": "no_direction", "reason": "a gene-level Open Targets score: no allele, no direction"}
+   ]},
+  {"id": "I16", "step": "H3.3", "text": "the rs5743890 minor allele goes with higher IPF mortality",
+   "claim": {"assoc": {"subject": "rs5743890", "direction": "pos", "target": {"disease": "ipf", "aspect": "progression"}}},
+   "sign_note": "the run's step is unsigned and names 'TOLLIP variants'; the GWAS it cites for the step gives a hazard ratio of 1.72 for mortality in IPF for the rs5743890 minor allele",
+   "evidence": [
+    {"ref": "PMID:24429156", "kind": "observational",
+     "quote": "Individuals who developed IPF despite having the protective TOLLIP minor allele of rs5743890 carried an increased mortality risk (meta-analysis with fixed-effect model: hazard ratio 1·72 [95% CI 1·24-2·38]; p=0·0012)"}
+   ],
+   "excluded": []},
+  {"id": "I13", "step": "H4.1", "text": "FAM13A inhibits RHOA",
+   "claim": {"effect": {"subject": "FAM13A", "sign": "neg", "target": {"activity": "RHOA"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "O94988", "category": "not_in_text", "reason": "no function recorded, only a Rho-GAP domain (the run says so itself)"},
+    {"ref": "PMID:42266412", "category": "undirected",
+     "reason": "says 'modulation of Rho and Wnt/β-catenin signaling' and that FAM13A has a RhoGAP domain; a domain is not a stated activity, and 'modulation' has no direction (v1 kept the domain sentence as review)"}
+   ]},
+  {"id": "I17", "step": "H4.2", "text": "FAM13A variants go with IPF (direction not given)",
+   "claim": {"assoc": {"subject": "fam13aVariants", "direction": "none", "target": {"disease": "ipf", "aspect": "risk"}}},
+   "evidence": [
+    {"ref": "OT:FAM13A-EFO_0000768", "kind": "observational",
+     "quote": "scores the FAM13A-idiopathic pulmonary fibrosis association at 0.56 (literature 0.45, genetic_association 0.72)",
+     "note": "the guide has no evidence kind for an Open Targets score; it states an unsigned association, so it is kept, as observational (an association score, mostly GWAS)"},
+    {"ref": "PMID:31900205", "kind": "review",
+     "quote": "Family with sequence similarity 13 member A (FAM13A) genetic variants have been associated with several chronic respiratory diseases including chronic obstructive pulmonary disease (COPD), cystic fibrosis (CF), idiopathic pulmonary fibrosis (IPF)",
+     "note": "cited as supporting; no step cites it. A background sentence"}
+   ],
+   "excluded": [
+    {"ref": "PMID:23583980", "category": "parent_disease", "reason": "FAM13A is a locus for fibrotic idiopathic interstitial pneumonias, a broader group than IPF"},
+    {"ref": "PMID:29066090", "category": "not_in_text", "reason": "FAM13A is not named (the signals listed are AKAP13, MUC5B and DSP). Moved to I21 and I25"},
+    {"ref": "PMID:31710517", "category": "not_in_text", "reason": "FAM13A is not named (new signals at KIF15, MAD1L1, DEPTOR)"}
+   ]},
+  {"id": "I18", "step": "H4.3", "text": "two copies of the rs2609255 minor allele go with a UIP pattern in systemic sclerosis ILD",
+   "claim": {"assoc": {"subject": "rs2609255", "direction": "pos", "target": {"phenotype": "uipInSscIld"}}},
+   "sign_note": "the run's step is unsigned and names 'FAM13A variants'; the study it cites for the step gives odds ratio 3.40 for two copies of the rs2609255 minor allele",
+   "evidence": [
+    {"ref": "PMID:39418199", "kind": "observational",
+     "quote": "patients carrying two copies of the IPF risk gene FAM13A minor allele rs2609255 had significantly higher odds of a definite UIP pattern compared with the other patterns (odds ratio 3.40, 95% CI 1.19-9.70)"}
+   ],
+   "excluded": []},
+  {"id": "I19", "step": "H4.3", "text": "FAM13A variants go with emphysema (direction not given)",
+   "claim": {"assoc": {"subject": "fam13aVariants", "direction": "none", "target": {"phenotype": "emphysema"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "STRING:PMID:34490311", "category": "enrichment", "reason": "a STRING co-citation enrichment of one paper's title (TERT, DSP and FAM13A in emphysema, IPF and CPFE)"}
+   ]},
+  {"id": "I20", "step": "H4.3", "text": "FAM13A variants go with combined pulmonary fibrosis and emphysema (direction not given)",
+   "claim": {"assoc": {"subject": "fam13aVariants", "direction": "none", "target": {"disease": "cpfe", "aspect": "risk"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "STRING:PMID:34490311", "category": "enrichment", "reason": "a STRING co-citation enrichment of one paper's title (TERT, DSP and FAM13A in emphysema, IPF and CPFE)"}
+   ]},
+  {"id": "I21", "step": "H5.1", "text": "MUC5B goes with IPF (direction not given)",
+   "claim": {"assoc": {"subject": "MUC5B", "direction": "none", "target": {"disease": "ipf", "aspect": "risk"}}},
+   "evidence": [
+    {"ref": "OT:MUC5B-EFO_0000768", "kind": "observational", "quote": "scores the MUC5B-idiopathic pulmonary fibrosis association at 0.60"},
+    {"ref": "PMID:21506741", "kind": "observational", "moved_from": "H1.1",
+     "quote": "A common polymorphism in the promoter of MUC5B is associated with familial interstitial pneumonia and idiopathic pulmonary fibrosis"},
+    {"ref": "PMID:29066090", "kind": "observational", "moved_from": "H4.2",
+     "quote": "signal of association with IPF susceptibility near A-kinase anchoring protein 13 (AKAP13; rs62025270, odds ratio [OR] 1·27 [95% CI 1·18-1·37], p=1·32 × 10-9) and confirmed previously reported signals, including in mucin 5B (MUC5B; rs35705950, OR 2·89 [2·56-3·26], p=1·12 × 10-66)"}
+   ],
+   "excluded": []},
+  {"id": "I22", "step": "H5.1", "text": "TERT goes with IPF (direction not given)",
+   "claim": {"assoc": {"subject": "TERT", "direction": "none", "target": {"disease": "ipf", "aspect": "risk"}}},
+   "evidence": [
+    {"ref": "OT:TERT-EFO_0000768", "kind": "observational", "quote": "scores the TERT-idiopathic pulmonary fibrosis association at 0.72"},
+    {"ref": "PMID:23535734", "kind": "observational", "moved_from": "H2.2",
+     "quote": "Lead SNPs at two loci (TERC and TERT) associate with several cancers and other diseases, including idiopathic pulmonary fibrosis"}
+   ],
+   "excluded": []},
+  {"id": "I23", "step": "H5.1", "text": "SFTPC goes with IPF (direction not given)",
+   "claim": {"assoc": {"subject": "SFTPC", "direction": "none", "target": {"disease": "ipf", "aspect": "risk"}}},
+   "evidence": [
+    {"ref": "OT:SFTPC-EFO_0000768", "kind": "observational", "quote": "scores the SFTPC-idiopathic pulmonary fibrosis association at 0.39"},
+    {"ref": "PMID:27630174", "kind": "review", "moved_from": "H1.1",
+     "quote": "Idiopathic pulmonary fibrosis (IPF) is an incurable complex genetic disorder that is associated with sequence changes in 7 genes (MUC5B, TERT, TERC, RTEL1, PARN, SFTPC, and SFTPA2)"}
+   ],
+   "excluded": []},
+  {"id": "I24", "step": "H5.1", "text": "TOLLIP goes with IPF (direction not given)",
+   "claim": {"assoc": {"subject": "TOLLIP", "direction": "none", "target": {"disease": "ipf", "aspect": "risk"}}},
+   "evidence": [
+    {"ref": "OT:TOLLIP-EFO_0000768", "kind": "observational", "quote": "scores the TOLLIP-idiopathic pulmonary fibrosis association at 0.38"},
+    {"ref": "PMID:24429156", "kind": "observational", "moved_from": "H3.3", "quote": "Novel variants in TOLLIP and SPPL2C are associated with IPF susceptibility"}
+   ],
+   "excluded": []},
+  {"id": "I25", "step": "H5.1", "text": "DSP goes with IPF (direction not given)",
+   "claim": {"assoc": {"subject": "DSP", "direction": "none", "target": {"disease": "ipf", "aspect": "risk"}}},
+   "evidence": [
+    {"ref": "OT:DSP-EFO_0000768", "kind": "observational", "quote": "scores the DSP-idiopathic pulmonary fibrosis association at 0.59"},
+    {"ref": "PMID:29066090", "kind": "observational", "moved_from": "H4.2",
+     "quote": "signal of association with IPF susceptibility near A-kinase anchoring protein 13 (AKAP13; rs62025270, odds ratio [OR] 1·27 [95% CI 1·18-1·37], p=1·32 × 10-9) and confirmed previously reported signals, including in mucin 5B (MUC5B; rs35705950, OR 2·89 [2·56-3·26], p=1·12 × 10-66) and desmoplakin (DSP; rs2076295, OR 1·44 [1·35-1·54], p=7·81 × 10-28)"}
+   ],
+   "excluded": []},
+  {"id": "I26", "step": "H5.1", "text": "FAM13A goes with IPF (direction not given)",
+   "claim": {"assoc": {"subject": "FAM13A", "direction": "none", "target": {"disease": "ipf", "aspect": "risk"}}},
+   "evidence": [
+    {"ref": "OT:FAM13A-EFO_0000768", "kind": "observational", "quote": "scores the FAM13A-idiopathic pulmonary fibrosis association at 0.56"}
+   ],
+   "excluded": []}
+ ],
+ "hypotheses": {
+  "H1": {"claims": [
+          {"subject": "rs35705950", "sign": "pos", "target": {"disease": "pulmonaryFibrosis", "aspect": "risk"}},
+          {"subject": "DSP", "sign": "neg", "target": {"disease": "pulmonaryFibrosis", "aspect": "risk"}}],
+         "note": "the chain ends at pulmonary fibrosis (its ER-stress evidence is a bleomycin mouse model), not IPF. The title names MUC5B over-expression; the chain starts at the variant"},
+  "H2": {"claims": [
+          {"subject": "TERT", "sign": "neg", "target": {"disease": "ipf", "aspect": "risk"}},
+          {"subject": "sftpcBrichos", "sign": "pos", "target": {"disease": "ipf", "aspect": "risk"}}],
+         "note": "the chain concludes at IPF (H2.4). H2.3 ends at ER stress and no step joins it to AT2 senescence or IPF, so the SFTPC claim has no route. v1 aimed the SFTPC claim at pulmonary fibrosis so it could borrow H1's ER stress statement; v2 targets the disease the chain concludes"},
+  "H3": {"claims": [
+          {"subject": "TOLLIP", "sign": "neg", "target": {"disease": "ipf", "aspect": "progression"}}],
+         "note": "the title says injury and treatment response, not baseline susceptibility, so the aspect is progression. The chain starts at the protein; its disease step (H3.3) is about variants"},
+  "H4": {"no_claim_reason": "the hypothesis gives FAM13A no direction: it 'sets the amplitude' of the fibrotic or emphysematous response"},
+  "H5": {"no_claim_reason": "the title's claim (the set is not a module) is not causal, and the mechanism's causal claim (each gene's 'lesion' raises the chance that injury resolves as fibrosis) gives no gene a direction: a lesion is a gain for MUC5B and a loss for TERT"}
+ },
+ "unexpressed": [
+  {"step": "H3.4", "category": "evidence_does_not_test_step",
+   "reason": "N-acetylcysteine → FVC decline in IPF, polarity unknown, and the run's note makes it a genotype-stratified claim; the cited trial says its NAC-alone comparison is not reported, so nothing gives a direction (also no_sign)",
+   "evidence": [],
+   "excluded": [
+    {"ref": "PMID:22607134", "category": "not_in_text",
+     "reason": "reports the prednisone, azathioprine and NAC combination arm only: 'Data from the ongoing comparison of the NAC-only group and the placebo group are not reported here'"}
+   ]},
+  {"step": "H5.1", "category": "set_valued",
+   "reason": "the set-level part: the step's note says the only set-level enrichment is co-citation and the disease term itself. Each gene's own association is a statement (I21 to I26)",
+   "evidence": [],
+   "excluded": [
+    {"ref": "STRING:DOID:0050156", "category": "enrichment", "reason": "a STRING DISEASES over-representation of 'Idiopathic pulmonary fibrosis' in the gene set"},
+    {"ref": "STRING:PMID:23583980", "category": "enrichment", "reason": "a STRING co-citation over-representation of one GWAS paper in the gene set"}
+   ]},
+  {"step": "H5.2", "category": "no_sign",
+   "reason": "subject is six 'independent epithelial lesions (secretion, junctions, proteostasis, replicative reserve, immune set point, tension)': split, each part is an undirected 'lesion' (gain for MUC5B, loss for TERT), so no part has a sign, and three parts are vague (replicative reserve, immune set point, tension). The object 'failed repair of repetitive distal lung injury' is also unsigned without its subject. The parts can be split out, so this is not compound_entity (audit)",
+   "evidence": [
+    {"ref": "PMID:27630174", "kind": "hypothesis",
+     "quote": "we hypothesize that excessive production of MUC5B either enhances injury due to reduced mucociliary clearance or impedes repair consequent to disruption of normal regenerative mechanisms in the distal lung",
+     "note": "states only the secretion (MUC5B) part, as a hypothesis"}
+   ],
+   "excluded": [
+    {"ref": "PMID:24050627", "category": "not_in_text", "reason": "says genetic changes in epithelial cells activate profibrotic pathways; not failed repair"},
+    {"ref": "R-HSA-5683826", "category": "enrichment", "reason": "Reactome over-representation of 'Surfactant metabolism' in the gene set"}
+   ]}
+ ],
+ "findings": [
+  {"project": "hypothesis-agent", "category": "chain_not_connected", "steps": ["H1.2", "H1.3"], "hypothesis": "H1",
+   "detail": "H1.2 ends at ER stress and H1.3 starts at DSP, so H1 is two arms (rs35705950 → MUC5B → ER stress, and DSP → EMT) that meet only in H1.4's compound subject; H1.1 → H1.2 connects only after merging 'MUC5B mucin' with 'ectopic MUC5B expression'."},
+  {"project": "hypothesis-agent", "category": "chain_not_connected", "steps": ["H2.1", "H2.2", "H2.3", "H2.4"], "hypothesis": "H2",
+   "detail": "H2.1 ends at telomere maintenance and H2.2 starts at short telomere length (only a GO-definition bridge joins them); H2.3 ends at ER stress and H2.4 starts at AT2 senescence, so the SFTPC arm never reaches IPF. No step leads into AT2 senescence at all (H2.2 goes from short telomeres straight to IPF), so the convergence on AT2 senescence that the title claims is never stated as a step."},
+  {"project": "hypothesis-agent", "category": "chain_not_connected", "steps": ["H3.2", "H3.3", "H3.4"], "hypothesis": "H3",
+   "detail": "H3.1 and H3.2 end at IRAK1 and aggrephagy, H3.3 starts at 'TOLLIP variants' and H3.4 at N-acetylcysteine, so the TOLLIP claim has no route to IPF."},
+  {"project": "hypothesis-agent", "category": "chain_not_connected", "steps": ["H4.1", "H4.2"], "hypothesis": "H4",
+   "detail": "H4.1 ends at RhoA activity, and H4.2 and H4.3 start at FAM13A variants; no step links RhoA to any lung outcome, though PMID:29066090 (cited at H4.2) says RhoA 'is known to be involved in profibrotic signalling pathways'."},
+  {"project": "hypothesis-agent", "category": "chain_not_connected", "steps": ["H5.1", "H5.2"], "hypothesis": "H5",
+   "detail": "H5.1 ends at IPF and H5.2 starts at 'independent epithelial lesions'; the two steps share no node."},
+  {"project": "hypothesis-agent", "category": "wrong_disease", "hypothesis": "H1",
+   "detail": "H1's chain concludes at pulmonary fibrosis, not IPF, and its only tested evidence for that step is bleomycin fibrosis in mice."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step",
+   "detail": "Of the 44 citations on run steps (counted once per step), 24 do not state their step and 20 do (6 of those are Open Targets scores for H5.1's unsigned associations); 4 of the 24 state another step and were moved (PMID:18635891, PMID:23535734, PMID:29066090, PMID:42587125), and 2 supporting citations no step cites state a step."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["H2.3"],
+   "detail": "No citation for H2.3 mentions misfolding or ER stress (a Reactome enrichment, the SFTPC UniProt entry, and an IPF ER-stress paper that does not name SFTPC); the run's own note says the step is not demonstrated."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["H2.4"],
+   "detail": "The two single-cell papers cited for H2.4 show a senescence-like transitional AT2 state persists in fibrotic lungs, a disease feature rather than a cause, and nothing cited says failed alveolar regeneration causes IPF."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["H4.1"],
+   "detail": "FAM13A → RhoA inhibition rests on a Rho-GAP domain annotation; the cited review says only 'modulation of Rho', so I13 has no evidence."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["H3.3", "H4.2", "H2.2"],
+   "detail": "PMID:23583980 (cited for TOLLIP variants) does not name TOLLIP; PMID:29066090 and PMID:31710517 (cited for FAM13A variants) do not name FAM13A; PMID:23535734 (cited for short telomeres and IPF) reports TERT/TERC SNPs, not telomere length."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["H3.4"],
+   "detail": "The PANTHER record says its NAC-alone comparison is not reported; what it does report (the NAC-containing combination raised death and hospitalisation) appears nowhere in the run."},
+  {"project": "hypothesis-agent", "category": "contradicting_evidence_ignored", "hypothesis": "H3",
+   "detail": "H3's title says TOLLIP sets treatment response 'not baseline susceptibility', but its own cited GWAS reports TOLLIP variants associated with susceptibility (rs5743890 minor allele protective) as well as mortality (the same allele harmful)."},
+  {"project": "both", "category": "allele_direction_split", "steps": ["H3.3"],
+   "detail": "The rs5743890 minor allele goes with lower IPF risk but higher mortality, and the GWAS says the TOLLIP minor alleles lower TOLLIP expression (20% for rs5743890, p=0.097); reduced TOLLIP fits the hypothesis for mortality and runs against it for risk, and BioLean can hold the two aspects only as two separate assoc statements."},
+  {"project": "hypothesis-agent", "category": "contradicting_evidence_ignored", "hypothesis": "H4",
+   "detail": "The review cited for H4.1 says FAM13A is 'linked to mitigated fibrotic remodeling in PF', a protective direction the hypothesis never states, and calls FAM13A lung-enriched where the run's own HPA record shows no lung enrichment."},
+  {"project": "hypothesis-agent", "category": "direction_not_drawn", "hypothesis": "H4", "steps": ["H4.1", "H4.2"],
+   "detail": "H4 calls FAM13A a Rho-GAP (a RhoA brake), and PMID:29066090, which it cites at H4.2, says RhoA activation is profibrotic and that the IPF risk allele at the RhoGEF AKAP13 raises AKAP13; with the review's 'mitigated fibrotic remodeling', the run's own texts point to FAM13A being protective, yet H4 gives FAM13A no direction ('sets the amplitude')."},
+  {"project": "hypothesis-agent", "category": "context_mismatch", "hypothesis": "H1", "steps": ["H1.2", "H1.3"],
+   "detail": "H1 places its one lesion in the distal airway (respiratory bronchiole) epithelium and says alveolar loss is not the driver, but its DSP-EMT evidence (PMID:42120512) is in alveolar epithelial cells, and its MUC5B paper (PMID:41091081) reports ectopic MUC5B in AT2 cells as well as bronchioles; the cited texts put the DSP arm in the alveolus, not the airway."},
+  {"project": "hypothesis-agent", "category": "contradicting_evidence_ignored", "steps": ["H4.3"],
+   "detail": "PMID:39418199, cited for H4.3, reports that MUC5B rs35705950 is not associated with a UIP pattern in SSc-ILD, a null for H1's variant outside IPF that the run does not use."},
+  {"project": "hypothesis-agent", "category": "unsigned_step_with_signed_source", "steps": ["H2.2", "H3.3", "H4.3"],
+   "detail": "The run leaves these associations unsigned though the texts it cites give directions (shorter telomeres in IPF; rs5743890 protective for risk, harmful for mortality; rs2609255 OR 3.40 for UIP in SSc-ILD)."},
+  {"project": "hypothesis-agent", "category": "contradicting_evidence_ignored",
+   "detail": "Every hypothesis's contradicting_evidence is prose about expression sites, STRING topology, constraint and missing records; none of the accessions it names refutes a chain step, and OT:MUC5B-constraint and OT:DSP-constraint are not in sources.json."},
+  {"project": "hypothesis-agent", "category": "citation_at_no_step",
+   "detail": "Supporting citations no step cites and that state no step: HPA:ENSG00000117983, HPA:ENSG00000096696, HPA:ENSG00000168484, HPA:ENSG00000078902, HPA:ENSG00000138640, HPA:ENSG00000164362, R-HSA-9825895, R-HSA-351906, OT:FAM13A-safety, STRING:SFTPC-MUC5B, STRING:TOLLIP-MUC5B, STRING:TERT-MUC5B, STRING:FAM13A-MUC5B. PMID:30345907 went to I1 and PMID:31900205 to I17."},
+  {"project": "hypothesis-agent", "category": "unused_mechanism", "hypothesis": "H5",
+   "detail": "P15924 (cited for H1.3) says DSP binds telomeric DNA and maintains telomere length via TRF2; the run raises it only as contradicting prose for H5, and no step links DSP to telomeres or to H2."},
+  {"project": "hypothesis-agent", "category": "set_valued", "steps": ["H5.1"],
+   "detail": "H5.1 reads distributively (each of six genes goes with IPF) and was split; at its own step each gene has only an Open Targets score, and the papers stating the associations are cited at other steps."},
+  {"project": "biolean", "category": "missing_term",
+   "detail": "BLN:SFTPC-BRICHOS-mutation and BLN:FAM13A-variants are variant classes with no public identifier; the FAM13A one is the run's unspecified 'FAM13A variants'."},
+  {"project": "biolean", "category": "evidence_kind_missing",
+   "detail": "The guide's kind table has no row for an Open Targets association score; the unsigned gene-IPF statements keep theirs as observational. Recorded as curatedDb on a first pass, one OT score alone made 'FAM13A goes with IPF' established (belief 4/5)."},
+  {"project": "biolean", "category": "evidence_weighting", "steps": ["H5.1"],
+   "detail": "Observational evidence weighs the same for an association as for an effect, so MUC5B-IPF, with two GWAS rows (p=2.5e-37, OR 2.89 at p=1e-66) and an Open Targets score, reaches only belief 3/4: an association claim cannot be established by the design that tests associations."},
+  {"project": "hypothesis-agent", "category": "confidence_unjustified", "hypothesis": "H1",
+   "detail": "H1 says confidence medium; both arms compose but Lean finds them unsupported (belief 7/24 for rs35705950 and 1/4 for DSP, against pulmonary fibrosis rather than IPF)."},
+  {"project": "hypothesis-agent", "category": "confidence_unjustified", "hypothesis": "H2",
+   "detail": "H2 says confidence medium; the TERT arm rests on a GO-definition bridge and a discounted association (belief 16/175, unsupported) and the SFTPC claim has no route."},
+  {"project": "hypothesis-agent", "category": "confidence_unjustified", "hypothesis": "H5",
+   "detail": "H5 says confidence medium for 'the set is not a module', but its only set-level records are STRING and Reactome enrichments, and the run's own cited UniProt text (DSP maintains telomere length) argues for a DSP-TERT link."},
+  {"project": "biolean", "category": "evidence_kind_missing", "steps": ["H1.3", "H1.4"],
+   "detail": "PMID:42120512's abstract reports the SYISL-DSP-YAP-EMT axis without saying whether it was shown in cells or mice, so neither inVitro nor mechanistic-with-taxon can be chosen from the span. v1's mechanistic with no taxon claimed a human in vivo perturbation, which the paper cannot have done; the audit records it as inVitro, the lower-weight of the two possible designs."},
+  {"project": "biolean", "category": "no_form_for", "steps": ["H4.3"],
+   "detail": "Allele dosage: the rs2609255 association is for two copies (recessive); a dbSNP entity names one allele, so the dosage sits only in the label."},
+  {"project": "biolean", "category": "no_form_for", "steps": ["H3.4"],
+   "detail": "A genotype-stratified drug response (NAC benefit confined to a TOLLIP genotype) could take a condition-refined subject, but the step has no sign and no record tests it, so it stays unexpressed."},
+  {"project": "biolean", "category": "evidence_weighting", "steps": ["H1.1"],
+   "detail": "An eQTL sentence ('the variant allele ... was associated with up-regulation in MUC5B expression') is kept as observational evidence for an effect, like v1's PMID:41091081; the line between observational evidence and the association_only exclusion is not drawn for a variant's effect on its own gene."},
+  {"project": "biolean", "category": "tool_artifact_fixed", "steps": ["H1.1"],
+   "detail": "v1 excluded PMID:21506741 as not stating expression by genotype because the old fetch cut the text at 'P<0.001'; the re-fetched text states it, so it is now evidence for I1."},
+  {"project": "biolean", "category": "tool_gap",
+   "detail": "sources.json marks no citation cited_as 'contradicting' for this run, because the run's contradicting_evidence is prose; the accessions it names are fetched only when also cited elsewhere."},
+  {"project": "biolean", "category": "no_set_valued_subject", "steps": ["H5.1"],
+   "detail": "v1: H5.1's subject is a list of six genes. v2 splits it into six unsigned gene statements, and keeps only the set-level enrichment as set_valued."},
+  {"project": "biolean", "category": "compound_label", "steps": ["H2.4", "H3.1"],
+   "detail": "Slash labels are ambiguous: 'AT2 senescence / failed alveolar regeneration' is split (the mechanism lists them separately), while 'IRAK1 phosphorylation / IL-1R-TLR signalling' stays one node, IRAK1 activity, because the UniProt text gives a direction only for IRAK1."}
+ ],
+ "audit": [
+  {"item": "I3 evidence PMID:42120512", "error": "wrong_evidence_kind",
+   "before": "kind mechanistic, no taxon",
+   "after": "kind inVitro",
+   "reason": "mechanistic with no taxon means an in vivo perturbation in the claim's organism (human), which this paper cannot have done. The span reports cell-level assays (DSP degradation, YAP1 nuclear translocation, histone marks at the vimentin locus) and the abstract's only in vivo work is SYISL knockdown in mice. inVitro is the lower-weight of the two possible designs. The DSP arm drops from belief 49/100 to 1/4 (still unsupported)."},
+  {"item": "I5 evidence PMID:42120512", "error": "wrong_evidence_kind",
+   "before": "kind mechanistic, no taxon",
+   "after": "kind inVitro",
+   "reason": "Same paper, same problem: the span ('promotes an EMT-associated state ... crosstalk contributes to pathological ECM deposition') states no design, and nothing in the abstract is a human in vivo perturbation. Its in vivo work (AAV-shSYISL, ASOs in mice) tests SYISL, not EMT."},
+  {"item": "I8 evidence PMID:42587125", "error": "wrong_exclusion",
+   "before": "excluded at H2.4 only (not_in_text); absent from I8",
+   "after": "kept under I8 as review, moved_from H2.4; the H2.4 exclusions stay",
+   "reason": "Its background sentence 'IPF patients frequently bear germline mutations in telomerase genes, critically short telomeres' says short telomeres go with IPF, with a direction. That is the H2.2 step. The guide lists a citation under every step it states, and the curator did this for PMID:18635891, 23535734 and 29066090. I8 goes from belief 1/2 to 5/7, and the TERT arm from 8/125 to 16/175 (still unsupported)."},
+  {"item": "unexpressed H5.2", "error": "wrong_unexpressed",
+   "before": "category compound_entity",
+   "after": "category no_sign (reason kept, with a note)",
+   "reason": "compound_entity means a part that cannot be split out. The curator's own reason says the six parts can be split, but each is an undirected 'lesion' (a gain for MUC5B, a loss for TERT), so no part has a sign. That makes it no_sign. Three parts are also vague."},
+  {"item": "hypotheses H5 no_claim_reason", "error": "wrong_hypothesis_claim",
+   "before": "a claim that the genes do not form a module, not a causal claim",
+   "after": "the title's claim is not causal, and the mechanism's causal claim (each gene's lesion raises the chance of fibrosis) gives no gene a direction",
+   "reason": "H5's mechanism does make a causal claim: independent lesions 'each raise the probability that repetitive distal-lung injury resolves as fibrosis'. The real reason for no claim is that no gene gets a direction, not that nothing causal is claimed. There is still no claim."},
+  {"item": "findings: H2 chain_not_connected", "error": "missed_finding",
+   "before": "says only that the SFTPC arm never reaches IPF",
+   "after": "adds that no step leads into AT2 senescence, so the convergence the title claims is never a step",
+   "reason": "H2.4's subject (AT2 senescence) is reached by no step: H2.2 goes from short telomeres straight to IPF. Neither gene is ever linked to the one node the title says they converge on."},
+  {"item": "findings: H4 chain_not_connected", "error": "other",
+   "before": "nothing links RhoA to any lung outcome",
+   "after": "no step links RhoA to any lung outcome, though PMID:29066090 (cited at H4.2) says RhoA is involved in profibrotic signalling",
+   "reason": "False as written. A text the run cited does link RhoA to fibrosis. Only the chain does not."},
+  {"item": "findings: direction_not_drawn (H4)", "error": "missed_finding",
+   "before": "absent",
+   "after": "hypothesis-agent finding: the run's own texts point to FAM13A being protective, yet H4 gives no direction",
+   "reason": "Three things in the run point the same way: H4 calls FAM13A a Rho-GAP, PMID:29066090 (cited at H4.2) says RhoA activation is profibrotic, and the H4.1 review says FAM13A mitigates fibrotic remodelling. Together they give a direction the hypothesis never draws."},
+  {"item": "findings: context_mismatch (H1)", "error": "missed_finding",
+   "before": "absent",
+   "after": "hypothesis-agent finding: H1's DSP-EMT evidence is in alveolar epithelial cells, not the distal airway the hypothesis names",
+   "reason": "PMID:42120512 studies alveolar epithelial cells, and PMID:41091081 places ectopic MUC5B in AT2 cells. Yet H1 says the lesion is in the respiratory bronchiole and that alveolar loss is not the driver."},
+  {"item": "findings: counts and beliefs", "error": "other",
+   "before": "'3 of the 24 ... moved'; H1 DSP belief 49/100; H2 belief 8/125; PMID:42120512 'v1's mechanistic is kept'",
+   "after": "'4 of the 24 ... moved' (adds PMID:42587125); 1/4; 16/175; recorded as inVitro",
+   "reason": "Updated to match the changes above and the re-rendered report."}
+ ]
+}

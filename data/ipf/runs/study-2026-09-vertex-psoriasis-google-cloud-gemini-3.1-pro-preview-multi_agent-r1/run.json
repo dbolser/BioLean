@@ -1,0 +1,227 @@
+{
+ "run_id": "study-2026-09-vertex-psoriasis-google-cloud-gemini-3.1-pro-preview-multi_agent-r1",
+ "model": "google-cloud:gemini-3.1-pro-preview",
+ "question": {
+  "arm": "multi_agent",
+  "budget": {
+   "max_delegations": 22,
+   "max_model_requests": 80,
+   "max_specialist_requests": 8,
+   "min_evidence_per_hypothesis": 2,
+   "min_hypotheses": 3,
+   "min_sources_per_hypothesis": 2,
+   "output_retries": 3
+  },
+  "data_policy": {
+   "max_age_seconds": 1209600.0,
+   "mode": "cache-preferred",
+   "snapshot_run_id": null
+  },
+  "disease": "psoriasis",
+  "formalise": false,
+  "genes": [
+   "IL12B",
+   "EGFL8",
+   "TRAF3IP2",
+   "TYK2",
+   "IL23R",
+   "GLE1",
+   "UHRF2"
+  ],
+  "model": "google-cloud:gemini-3.1-pro-preview",
+  "specialist_model": "google-cloud:gemini-3.1-pro-preview",
+  "specialists": [
+   "chembl",
+   "expression",
+   "gwas",
+   "interactions",
+   "literature",
+   "model_organism",
+   "open_targets",
+   "pathways",
+   "single_cell",
+   "trials",
+   "uniprot"
+  ],
+  "tissue": {
+   "artifact_id": "sha256:f385590ff844b25a944f5da376243ab0b087745c3c64fa7c5e465db4f49ffa43",
+   "label": "skin of body",
+   "uberon": "UBERON:0002097"
+  },
+  "use_network": true
+ },
+ "abstention": {
+  "evidence": [
+   "GWAS:GLE1:no-association",
+   "GWAS:UHRF2:no-association",
+   "OT:EGFL8-MONDO_0005083",
+   "rs3117182",
+   "PMID:34626176",
+   "AGR:MGI:1932094:MP:0002152"
+  ],
+  "genes_covered": [
+   "EGFL8",
+   "GLE1",
+   "UHRF2"
+  ],
+  "reason": "insufficient_evidence",
+  "statement": "While EGFL8 has a significant genome-wide association with psoriasis, there is insufficient literature or functional evidence to link it to the established IL-23/Th17 disease mechanism; available evidence instead ties it to brain phenotypes and angiogenesis. GLE1 and UHRF2 lack any genetic associations, interaction data, or therapeutic linkages to psoriasis. We therefore abstain from proposing a causal mechanism for these three genes.",
+  "support": "grounded",
+  "what_would_change_this": "Discovery of specific interactions between EGFL8, GLE1, or UHRF2 and the IL-23 signaling network, or functional evidence demonstrating their pathological role in psoriatic keratinocytes or T-cells."
+ },
+ "disease": "psoriasis",
+ "genes_considered": [
+  "IL12B",
+  "EGFL8",
+  "TRAF3IP2",
+  "TYK2",
+  "IL23R",
+  "GLE1",
+  "UHRF2"
+ ],
+ "hypotheses": [
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "STRING:IL12B-IL23R",
+      "R-HSA-9020933",
+      "rs918520",
+      "rs80174646"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "IL23R"
+     },
+     "polarity": "unknown",
+     "relation": "binds",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "IL12B"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "STRING:IL23R-TYK2",
+      "STRING:GOCC:0072536",
+      "CHEMBL:CHEMBL1201835-CHEMBL2364154-1838",
+      "CHEMBL:CHEMBL1201835-EFO_0000676"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "TYK2"
+     },
+     "polarity": "positive",
+     "relation": "activates",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "IL23R"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "STRING:TRAF3IP2-TYK2",
+      "STRING:GO:2000318",
+      "rs34536443",
+      "CHEMBL:CHEMBL4435170-CHEMBL3553-8904",
+      "CHEMBL:CHEMBL4435170-EFO_0000676"
+     ],
+     "note": "TYK2 activation promotes Th17 lineage commitment and IL-17 production, which subsequently engages TRAF3IP2-dependent inflammatory pathways in target cells.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "TRAF3IP2"
+     },
+     "polarity": "positive",
+     "relation": "activates",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "TYK2"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "rs33980500"
+     ],
+     "note": "",
+     "object": {
+      "curie": "MONDO:0005083",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "psoriasis"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "TRAF3IP2"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Knockout TYK2 in a human psoriatic skin organoid co-cultured with Th17 cells and measure TRAF3IP2 activation; in the absence of TYK2, IL-23 signaling will fail to induce the downstream activation of TRAF3IP2.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "TYK2"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "protein",
+     "label": "TRAF3IP2"
+    },
+    "system": "skin organoid co-culture"
+   },
+   "genes": [
+    "IL12B",
+    "IL23R",
+    "TYK2",
+    "TRAF3IP2"
+   ],
+   "hypothesis_id": "hyp_IL23_TRAF3IP2_psoriasis",
+   "mechanism": "IL12B acts as part of the IL-23 cytokine, which binds to the IL23R receptor complex. This interaction activates TYK2, propagating signals that induce Th17 cell commitment and IL-17 secretion. IL-17 in turn activates TRAF3IP2 within skin cells, causing the runaway inflammation seen in psoriasis. Each node is supported by strong genetic associations and validated therapeutic interventions.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "STRING:IL12B-IL23R",
+    "STRING:IL23R-TYK2",
+    "STRING:TRAF3IP2-TYK2",
+    "STRING:GO:2000318",
+    "R-HSA-9020933",
+    "rs80174646",
+    "rs918520",
+    "rs34536443",
+    "rs33980500",
+    "CHEMBL:CHEMBL4435170-CHEMBL3553-8904"
+   ],
+   "title": "The IL-23 receptor complex utilizes TYK2 signaling to drive TRAF3IP2-mediated psoriatic inflammation."
+  }
+ ],
+ "unexplained_genes": []
+}

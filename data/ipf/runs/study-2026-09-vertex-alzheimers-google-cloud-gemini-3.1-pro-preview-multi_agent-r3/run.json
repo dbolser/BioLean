@@ -1,0 +1,520 @@
+{
+ "run_id": "study-2026-09-vertex-alzheimers-google-cloud-gemini-3.1-pro-preview-multi_agent-r3",
+ "model": "google-cloud:gemini-3.1-pro-preview",
+ "question": {
+  "arm": "multi_agent",
+  "budget": {
+   "max_delegations": 22,
+   "max_model_requests": 80,
+   "max_specialist_requests": 8,
+   "min_evidence_per_hypothesis": 2,
+   "min_hypotheses": 3,
+   "min_sources_per_hypothesis": 2,
+   "output_retries": 3
+  },
+  "data_policy": {
+   "max_age_seconds": 1209600.0,
+   "mode": "cache-preferred",
+   "snapshot_run_id": null
+  },
+  "disease": "Alzheimer disease",
+  "formalise": false,
+  "genes": [
+   "TREM2",
+   "RNPS1",
+   "INPP5D",
+   "APOE",
+   "MS4A4A",
+   "LPIN2",
+   "PLCG2",
+   "ABI3"
+  ],
+  "model": "google-cloud:gemini-3.1-pro-preview",
+  "specialist_model": "google-cloud:gemini-3.1-pro-preview",
+  "specialists": [
+   "chembl",
+   "expression",
+   "gwas",
+   "interactions",
+   "literature",
+   "model_organism",
+   "open_targets",
+   "pathways",
+   "single_cell",
+   "trials",
+   "uniprot"
+  ],
+  "tissue": {
+   "artifact_id": "sha256:9083451a13b7e45058362501bb03fd93944d7aa79ffc0248bc2cf8b1520b9652",
+   "label": "brain",
+   "uberon": "UBERON:0000955"
+  },
+  "use_network": true
+ },
+ "abstention": {
+  "evidence": [
+   "OT:RNPS1-MONDO_0004975",
+   "PMID:21283692",
+   "PMID:41865408",
+   "PMID:41205924",
+   "PMID:39269833"
+  ],
+  "genes_covered": [
+   "RNPS1",
+   "LPIN2"
+  ],
+  "reason": "insufficient_evidence",
+  "statement": "Neither RNPS1 nor LPIN2 demonstrate sufficient functional or genetic evidence to causally link them to Alzheimer's disease pathology in this context. While LPIN2 has been observed in broad transcriptomic analyses of the AD brain and peripheral blood, it currently lacks any recorded genetic association with the disease. Similarly, RNPS1 appears only in high-throughput proteomic tau proximity assays or as a stable assay reference gene, and its Open Targets association score of 0.01 rests entirely on text-mining. Furthermore, STRING network analysis confirms that neither gene interacts with the core microglial and lipid-metabolism network formed by the other targets in this set.",
+  "support": "grounded",
+  "what_would_change_this": "Targeted in vivo mechanistic studies demonstrating that the disruption of RNPS1 or LPIN2 directly alters microglial behavior, myelination, or tau/amyloid pathology, alongside genome-wide significant associations linking coding variants in these genes to AD risk."
+ },
+ "disease": "Alzheimer disease",
+ "genes_considered": [
+  "TREM2",
+  "RNPS1",
+  "INPP5D",
+  "APOE",
+  "MS4A4A",
+  "LPIN2",
+  "PLCG2",
+  "ABI3"
+ ],
+ "hypotheses": [
+  {
+   "chain": [
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "microglia"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [
+      "PMID:41435829",
+      "rs7232"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "TREM2"
+     },
+     "polarity": "negative",
+     "relation": "decreases_amount",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "MS4A4A"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "microglia"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [
+      "PMID:28714976",
+      "rs75932628"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "innate immunity"
+     },
+     "polarity": "positive",
+     "relation": "activates",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "TREM2"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "microglia"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [
+      "PMID:28714976",
+      "PMID:42092345",
+      "rs616338"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "innate immunity"
+     },
+     "polarity": "positive",
+     "relation": "activates",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "ABI3"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "microglia"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [
+      "PMID:28714976",
+      "PMID:41620758",
+      "rs72824905"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "innate immunity"
+     },
+     "polarity": "positive",
+     "relation": "activates",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "PLCG2"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:28714976"
+     ],
+     "note": "",
+     "object": {
+      "curie": "MONDO:0004975",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "Alzheimer disease"
+     },
+     "polarity": "negative",
+     "relation": "inhibits",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "innate immunity"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Knockout MS4A4A in human iPSC-derived microglia and measure changes in TREM2 expression levels and downstream phagocytic activity.",
+    "expected": "positive",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "MS4A4A"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "protein",
+     "label": "TREM2"
+    },
+    "system": ""
+   },
+   "genes": [
+    "MS4A4A",
+    "TREM2",
+    "ABI3",
+    "PLCG2"
+   ],
+   "hypothesis_id": "H1",
+   "mechanism": "TREM2, ABI3, and PLCG2 are critical drivers of microglial-mediated innate immunity, which serves as a key defense mechanism against Alzheimer's disease pathology by clearing amyloid plaques. MS4A4A cooperates to negatively regulate TREM2 expression and modulate these microglial states. Genetic variants in these genes (such as the TREM2 R47H and ABI3 S212F mutations, or protective PLCG2 and MS4A4A alleles) disrupt or modulate this innate immune response, directly exacerbating or mitigating Alzheimer's disease risk.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "PMID:41435829",
+    "PMID:28714976",
+    "PMID:42092345",
+    "PMID:41620758",
+    "rs7232",
+    "rs72824905",
+    "rs75932628",
+    "rs616338"
+   ],
+   "title": "MS4A4A negatively regulates TREM2, ABI3, and PLCG2-mediated microglial innate immunity"
+  },
+  {
+   "chain": [
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "oligodendrocytes"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [
+      "PMID:36385529"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "cholesterol dysregulation"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "APOE"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "oligodendrocytes"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [
+      "PMID:36385529"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "myelination"
+     },
+     "polarity": "negative",
+     "relation": "inhibits",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "cholesterol dysregulation"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:36385529",
+      "rs2075650"
+     ],
+     "note": "",
+     "object": {
+      "curie": "MONDO:0004975",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "Alzheimer disease"
+     },
+     "polarity": "negative",
+     "relation": "inhibits",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "myelination"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Overexpress the APOE4 allele in human iPSC-derived oligodendrocytes co-cultured with neurons, and measure the resulting myelination efficiency.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "overexpress",
+     "target": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "APOE"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "process",
+     "label": "myelination"
+    },
+    "system": ""
+   },
+   "genes": [
+    "APOE"
+   ],
+   "hypothesis_id": "H2",
+   "mechanism": "APOE (specifically the APOE4 risk allele) causes localized cholesterol dysregulation within oligodendrocytes. This lipid metabolism imbalance significantly impairs the proper myelination of neurons. The resulting deficit in myelination contributes to Alzheimer's disease pathogenesis through a mechanism completely independent of microglial inflammation or direct amyloid-beta clearance.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "PMID:36385529",
+    "rs2075650",
+    "rs429358",
+    "PMID:8346443"
+   ],
+   "title": "APOE4 impairs oligodendrocyte myelination via cholesterol dysregulation"
+  },
+  {
+   "chain": [
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "microglia"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [
+      "PMID:41633359"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "RIPK1"
+     },
+     "polarity": "negative",
+     "relation": "inhibits",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "INPP5D"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "microglia"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [
+      "PMID:41633359"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "neuroinflammation"
+     },
+     "polarity": "positive",
+     "relation": "activates",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "RIPK1"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:41633359",
+      "rs10933431"
+     ],
+     "note": "",
+     "object": {
+      "curie": "MONDO:0004975",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "Alzheimer disease"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "neuroinflammation"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Knockout INPP5D in human microglia and measure the expression levels of RIPK1 kinase and downstream proinflammatory mediators.",
+    "expected": "positive",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "INPP5D"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "protein",
+     "label": "RIPK1"
+    },
+    "system": ""
+   },
+   "genes": [
+    "INPP5D"
+   ],
+   "hypothesis_id": "H3",
+   "mechanism": "INPP5D acts as a protective repressor in microglia by inhibiting the expression of RIPK1 kinase. By repressing RIPK1, INPP5D limits the production of diverse proinflammatory mediators that would otherwise drive neuroinflammation. Protective variants in INPP5D (such as rs10933431-G) may enhance this repression, thereby mitigating late-onset Alzheimer's disease risk factors and slowing disease progression.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "PMID:41633359",
+    "rs10933431",
+    "OT:INPP5D-MONDO_0004975",
+    "CHEMBL:CHEMBL3989954"
+   ],
+   "title": "INPP5D protects against AD by repressing RIPK1-driven neuroinflammation"
+  }
+ ],
+ "unexplained_genes": []
+}

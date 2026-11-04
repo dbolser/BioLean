@@ -1,0 +1,408 @@
+{
+ "run_id": "study-2026-09-crohn-openrouter-anthropicclaude-opus-5-single_agent-r1",
+ "curated_by": "Claude Opus 5.5, 2026-10-30",
+ "entities": {
+  "crohn": {"kind": "disease", "curie": "MONDO:0005011", "run_labels": ["Crohn disease"]},
+  "rs755374": {"kind": "variant", "curie": "dbSNP:rs755374",
+               "label": "rs755374 risk allele (allele not named in the cited GWAS Catalog row; IL12B locus)",
+               "run_labels": ["IL12B risk variant rs755374 / rs6556412"]},
+  "rs6556412": {"kind": "variant", "curie": "dbSNP:rs6556412", "label": "rs6556412 A allele (IL12B locus)",
+                "run_labels": ["IL12B risk variant rs755374 / rs6556412"]},
+  "il23": {"kind": "process", "curie": "GO:0032627",
+           "run_labels": ["IL-12p40-containing IL-23 heterodimer", "IL-23"]},
+  "IL23R": {"kind": "protein", "curie": "UniProt:Q5VWK5",
+            "run_labels": ["IL23R on mucosal CD4 T cells", "IL23R signalling", "IL23R"]},
+  "th17Commitment": {"kind": "process", "curie": "GO:0072540",
+                     "run_labels": ["Th17 lineage commitment and IL-17 production"]},
+  "il17Production": {"kind": "process", "curie": "GO:0032620",
+                     "run_labels": ["Th17 lineage commitment and IL-17 production", "Th17/IL-17 mucosal response"]},
+  "th17Response": {"kind": "process", "curie": "GO:0072538", "run_labels": ["Th17/IL-17 mucosal response"]},
+  "rs2066847": {"kind": "variant", "curie": "dbSNP:rs2066847", "label": "rs2066847 T allele (NOD2 frameshift)",
+                "run_labels": ["NOD2 frameshift/missense risk alleles (rs2066847, rs2066844, rs2066845)"]},
+  "rs2066844": {"kind": "variant", "curie": "dbSNP:rs2066844",
+                "label": "rs2066844 risk allele (allele not named in the cited GWAS Catalog row; NOD2 missense)",
+                "run_labels": ["NOD2 frameshift/missense risk alleles (rs2066847, rs2066844, rs2066845)"]},
+  "rs2066845": {"kind": "variant", "curie": "dbSNP:rs2066845",
+                "label": "rs2066845 risk allele (allele not named in the cited GWAS Catalog row; NOD2 missense)",
+                "run_labels": ["NOD2 frameshift/missense risk alleles (rs2066847, rs2066844, rs2066845)"]},
+  "nod2Signalling": {"kind": "process", "curie": "GO:0070431",
+                     "run_labels": ["MDP-triggered NOD2-RIPK2-NF-kB signalling"]},
+  "LACC1": {"kind": "protein", "curie": "UniProt:Q8IV20", "run_labels": ["LACC1/FAMIN"]},
+  "macrophage": {"kind": "cellType", "curie": "CL:0000235"},
+  "cytokineProduction": {"kind": "process", "curie": "GO:0001816",
+                         "run_labels": ["NOD2-induced cytokine secretion and bacterial clearance in macrophages"]},
+  "bacterialDefense": {"kind": "process", "curie": "GO:0042742",
+                       "run_labels": ["neutrophil recruitment and bacterial clearance at the mucosa"]},
+  "macCytokineProduction": {"kind": "process",
+                            "refines": {"base": "cytokineProduction", "ctx": {"cellType": "macrophage"}},
+                            "run_labels": ["NOD2-induced cytokine secretion and bacterial clearance in macrophages"]},
+  "macBacterialDefense": {"kind": "process",
+                          "refines": {"base": "bacterialDefense", "ctx": {"cellType": "macrophage"}},
+                          "run_labels": ["NOD2-induced cytokine secretion and bacterial clearance in macrophages",
+                                         "impaired macrophage clearance of mucosa-invading bacteria"]},
+  "purineInterconversion": {"kind": "process", "curie": "GO:0015950",
+                            "run_labels": ["LACC1 purine-nucleotide cycle / oxidative phosphorylation"]},
+  "oxphos": {"kind": "process", "curie": "GO:0006119",
+             "run_labels": ["LACC1 purine-nucleotide cycle / oxidative phosphorylation"]},
+  "macrophageActivation": {"kind": "process", "curie": "GO:0042116",
+                           "run_labels": ["macrophage effector state (IL-1beta, TNF output)"]},
+  "kynurenicAcid": {"kind": "chemical", "curie": "CHEBI:18344", "run_labels": ["kynurenic acid / 5-HIAA"]},
+  "hiaa": {"kind": "chemical", "curie": "CHEBI:27823", "run_labels": ["kynurenic acid / 5-HIAA"]},
+  "GPR35": {"kind": "protein", "curie": "UniProt:Q9HC97", "run_labels": ["GPR35"]},
+  "neutrophilMigration": {"kind": "process", "curie": "GO:1990266",
+                          "run_labels": ["neutrophil recruitment and bacterial clearance at the mucosa"]},
+  "rs34236350": {"kind": "variant", "curie": "dbSNP:rs34236350",
+                 "label": "rs34236350 (GPR35 locus; the cited GWAS Catalog row names no allele, so the association is unsigned)",
+                 "run_labels": ["GPR35 CD-associated variants"]},
+  "rs2975780": {"kind": "variant", "curie": "dbSNP:rs2975780", "label": "rs2975780 A allele (GPR35 locus)",
+                "run_labels": ["GPR35 CD-associated variants"]},
+  "rs3749172": {"kind": "variant", "curie": "dbSNP:rs3749172", "label": "rs3749172 A allele (GPR35 missense)",
+                "run_labels": ["GPR35 CD-associated variants"]},
+  "rs4676410": {"kind": "variant", "curie": "dbSNP:rs4676410", "label": "rs4676410 A allele (GPR35 locus)",
+                "run_labels": ["GPR35 CD-associated variants"]}
+ },
+ "statements": [
+  {"id": "S1", "step": "H1.1", "text": "the rs755374 risk allele raises IL-23 (p40-containing heterodimer), as IL-23 production (the run's increases_amount; no protein term exists for the heterodimer)",
+   "claim": {"effect": {"subject": "rs755374", "sign": "pos", "target": {"process": "il23"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "rs755374", "category": "not_in_text", "reason": "GWAS row: association of an unnamed allele with Crohn disease; nothing about p40 or IL-23 amount"},
+    {"ref": "STRING:GOCC:0070743", "category": "enrichment", "reason": "COMPARTMENTS over-representation of 'interleukin-23 complex' in the gene set; no variant, no direction"}
+   ]},
+  {"id": "S2", "step": "H1.1", "text": "the rs6556412 A allele raises IL-23 (p40-containing heterodimer), as IL-23 production",
+   "claim": {"effect": {"subject": "rs6556412", "sign": "pos", "target": {"process": "il23"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "rs6556412", "category": "not_in_text", "reason": "GWAS row: rs6556412-A associated with Crohn disease (OR 1.18); nothing about p40 or IL-23 amount"}
+   ]},
+  {"id": "S3", "step": "H1.2", "text": "IL-23 (production) activates IL23R",
+   "claim": {"effect": {"subject": "il23", "sign": "pos", "target": {"activity": "IL23R"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "OT:IL23R-safety", "category": "other", "reason": "run's contradicting citation (safety liabilities: adenoma, paradoxical psoriasiform reactions), which states nothing against any step; its copied UniProt function text ('Binds IL23 and mediates T-cells ... stimulation') would state H1.2, but the guide attaches a contradicting citation only as refutes, else excludes it: the run did not offer it as support"},
+    {"ref": "CXG:ENSG00000162594:CL_0000624:MONDO_0005011", "category": "not_in_text", "reason": "share of colonic CD4 T cells with IL23R detected, Crohn vs normal donors; says nothing about IL-23 activating IL23R"},
+    {"ref": "R-HSA-9020933", "category": "enrichment", "reason": "Reactome 'Interleukin-23 signaling' over-represented in the gene set (2 of 11 entities)"},
+    {"ref": "STRING:GOCC:0072536", "category": "enrichment", "reason": "supporting citation at no step: COMPARTMENTS over-representation of 'interleukin-23 receptor complex'"},
+    {"ref": "PMID:17068223", "category": "undirected", "reason": "supporting citation at no step: says IL23R encodes a subunit of the receptor for IL-23, but states no activation"}
+   ]},
+  {"id": "S4", "step": "H1.3", "text": "IL23R signalling promotes Th17 lineage commitment",
+   "claim": {"effect": {"subject": "IL23R", "sign": "pos", "target": {"process": "th17Commitment"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "STRING:GO:2000330", "category": "enrichment", "reason": "GO process over-representation ('positive regulation of Th17 lineage commitment') in the gene set"},
+    {"ref": "AGR:MGI:2181693:MP:0008076", "category": "no_direction", "reason": "MGI 'abnormal CD4-positive T cell differentiation' in Il23r knockouts: no direction, not Th17 named"}
+   ]},
+  {"id": "S5", "step": "H1.3", "text": "IL23R signalling promotes IL-17 production",
+   "claim": {"effect": {"subject": "IL23R", "sign": "pos", "target": {"process": "il17Production"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "STRING:GO:0032740", "category": "enrichment", "reason": "GO process over-representation ('positive regulation of IL-17 production') in a set of IL12B, NOD2, IL23R"}
+   ]},
+  {"id": "S6", "step": "H1.4", "text": "a Th17 mucosal response leads to Crohn disease",
+   "claim": {"effect": {"subject": "th17Response", "sign": "pos", "target": {"disease": "crohn", "aspect": "risk"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "AGR:MGI:2181693:MP:0008539", "category": "not_this_entity", "reason": "Il23r knockout mice have decreased susceptibility to induced colitis: a statement about IL23R and mouse induced colitis, not Th17 and Crohn disease"},
+    {"ref": "CHEMBL:CHEMBL1201835", "category": "not_in_text", "reason": "ustekinumab targets IL12B and is approved; no indication, no Th17, no Crohn disease"},
+    {"ref": "NCT06430801", "category": "not_in_text", "reason": "recruiting phase 3 trial of tulisokibart in Crohn disease; the record names no target and has no results"}
+   ]},
+  {"id": "S7", "step": "H1.4", "text": "IL-17 production leads to Crohn disease",
+   "claim": {"effect": {"subject": "il17Production", "sign": "pos", "target": {"disease": "crohn", "aspect": "risk"}}},
+   "evidence": [], "excluded": []},
+  {"id": "S8", "step": "H2.1", "text": "the rs2066847 T allele (NOD2 frameshift) reduces NOD2 (MDP-RIPK2-NF-kB) signalling",
+   "claim": {"effect": {"subject": "rs2066847", "sign": "neg", "target": {"process": "nod2Signalling"}}},
+   "evidence": [
+    {"ref": "PMID:11385576", "kind": "hypothesis", "polarity": "refutes", "moved_from": "H2.4",
+     "quote": "These observations suggest that the NOD2 gene product confers susceptibility to Crohn's disease by altering the recognition of these components and/or by over-activating NF-kB in monocytes"}
+   ],
+   "excluded": [
+    {"ref": "rs2066847", "category": "not_in_text", "reason": "GWAS row: rs2066847-T associated with Crohn disease (OR 3.103); nothing about NOD2 signalling"},
+    {"ref": "Q9HC29", "category": "not_this_entity", "reason": "UniProt NOD2 function text describes wild-type MDP-RIPK2-NF-kB signalling; no variant named"}
+   ]},
+  {"id": "S9", "step": "H2.1", "text": "the rs2066844 risk allele (NOD2 missense) reduces NOD2 signalling",
+   "claim": {"effect": {"subject": "rs2066844", "sign": "neg", "target": {"process": "nod2Signalling"}}},
+   "evidence": [
+    {"ref": "PMID:11385576", "kind": "hypothesis", "polarity": "refutes", "moved_from": "H2.4",
+     "quote": "These observations suggest that the NOD2 gene product confers susceptibility to Crohn's disease by altering the recognition of these components and/or by over-activating NF-kB in monocytes"}
+   ],
+   "excluded": [
+    {"ref": "rs2066844", "category": "not_in_text", "reason": "GWAS row: rs2066844 (allele unnamed, no effect size) associated with Crohn disease; nothing about signalling"}
+   ]},
+  {"id": "S10", "step": "H2.1", "text": "the rs2066845 risk allele (NOD2 missense) reduces NOD2 signalling",
+   "claim": {"effect": {"subject": "rs2066845", "sign": "neg", "target": {"process": "nod2Signalling"}}},
+   "evidence": [
+    {"ref": "PMID:11385576", "kind": "hypothesis", "polarity": "refutes", "moved_from": "H2.4",
+     "quote": "These observations suggest that the NOD2 gene product confers susceptibility to Crohn's disease by altering the recognition of these components and/or by over-activating NF-kB in monocytes"}
+   ],
+   "excluded": [
+    {"ref": "rs2066845", "category": "not_in_text", "reason": "supporting citation: GWAS row for a five-disease pleiotropy trait, allele unnamed, no effect size; nothing about signalling"}
+   ]},
+  {"id": "S11", "step": "H2.2", "text": "LACC1 is required for (promotes) cytokine secretion in macrophages",
+   "claim": {"effect": {"subject": "LACC1", "sign": "pos", "target": {"process": "macCytokineProduction"}}},
+   "evidence": [
+    {"ref": "Q8IV20", "kind": "curatedDb",
+     "quote": "Participates in pattern recognition receptor (PRR)-induced cytokines in macrophages: associates with the NOD2-signaling complex and promotes optimal NOD2-induced signaling, cytokine secretion and bacterial clearance"}
+   ],
+   "excluded": [
+    {"ref": "STRING:NOD2-LACC1", "category": "no_direction", "reason": "STRING edge, text-mining only (experimental 0, database 0): no direction, and not a binds step"},
+    {"ref": "AGR:MGI:2445077:MP:0002451", "category": "no_direction", "reason": "MGI 'abnormal macrophage physiology' in Lacc1 mutants"},
+    {"ref": "OT:LACC1-tractability", "category": "other", "reason": "run's contradicting citation: tractability buckets bear on no step; its functionDescriptions field copies the Q8IV20 text already kept, so keeping it would count one curated sentence twice"},
+    {"ref": "CHEMBL:no-target-LACC1", "category": "not_in_text", "reason": "run's contradicting citation: no ChEMBL target record; silent on LACC1 function"}
+   ]},
+  {"id": "S12", "step": "H2.2", "text": "LACC1 is required for (promotes) bacterial clearance by macrophages",
+   "claim": {"effect": {"subject": "LACC1", "sign": "pos", "target": {"process": "macBacterialDefense"}}},
+   "evidence": [
+    {"ref": "Q8IV20", "kind": "curatedDb",
+     "quote": "Participates in pattern recognition receptor (PRR)-induced cytokines in macrophages: associates with the NOD2-signaling complex and promotes optimal NOD2-induced signaling, cytokine secretion and bacterial clearance"}
+   ],
+   "excluded": [
+    {"ref": "PMID:27478939", "category": "undirected", "reason": "supporting citation at no step: 'FAMIN-dependent FAO controlled ... the bactericidal activity of macrophages' names both ends but 'controlled' gives no direction"}
+   ]},
+  {"id": "S13", "step": "H2.3", "text": "the purine nucleotide cycle is required for the macrophage effector state (IL-1beta, TNF output)",
+   "claim": {"effect": {"subject": "purineInterconversion", "sign": "pos", "target": {"process": "macrophageActivation"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "AGR:MGI:2445077:MP:0008642", "category": "not_this_entity", "reason": "Lacc1 mutant mice have decreased circulating IL-1beta: about the gene, not the purine cycle or OXPHOS, and circulating not macrophage output"}
+   ]},
+  {"id": "S14", "step": "H2.3", "text": "oxidative phosphorylation is required for the macrophage effector state (IL-1beta, TNF output)",
+   "claim": {"effect": {"subject": "oxphos", "sign": "pos", "target": {"process": "macrophageActivation"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "AGR:MGI:2445077:MP:0010959", "category": "not_in_text", "reason": "MGI 'abnormal oxidative phosphorylation' in Lacc1 mutants: LACC1 to OXPHOS, undirected, and no macrophage effector state"}
+   ]},
+  {"id": "S15", "step": "H2.4", "text": "impaired macrophage clearance of mucosa-invading bacteria leads to Crohn disease",
+   "sign_note": "inverted: the run's subject is impaired (loss of) macrophage bacterial clearance, with sign +",
+   "claim": {"effect": {"subject": "macBacterialDefense", "sign": "neg", "target": {"disease": "crohn", "aspect": "risk"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "PMID:11385576", "category": "not_in_text", "reason": "NOD2 variants associate with Crohn disease and may alter microbial recognition or over-activate NF-kB; no bacterial clearance"},
+    {"ref": "AGR:MGI:2429397:MP:0008260", "category": "not_in_text", "reason": "MGI 'abnormal autophagy' in Nod2 knockouts: neither clearance nor Crohn disease, and undirected"},
+    {"ref": "CXG:ENSG00000179630:CL_0000235:MONDO_0005011", "category": "not_in_text", "reason": "share of colonic macrophages with LACC1 detected, Crohn vs normal donors"}
+   ]},
+  {"id": "S16", "step": "H3.1", "text": "kynurenic acid activates GPR35",
+   "claim": {"effect": {"subject": "kynurenicAcid", "sign": "pos", "target": {"activity": "GPR35"}}},
+   "evidence": [
+    {"ref": "Q9HC97", "kind": "curatedDb",
+     "quote": "binds to several ligands including the tryptophan metabolite kynurenic acid (KYNA), lysophosphatidic acid (LPA) or 5-hydroxyindoleacetic acid (5-HIAA) with high affinity, leading to rapid and transient activation of numerous intracellular signaling pathways"},
+    {"ref": "PMID:40623474", "kind": "mechanistic", "taxon": "mouse",
+     "quote": "Mechanistically, KYNA induced MAT browning and regulated disease procession of CD via GPR35-ERK1/2-PGC-1α signaling pathway"}
+   ],
+   "excluded": [
+    {"ref": "HPA:ENSG00000178623", "category": "not_in_text", "reason": "HPA expression profile of GPR35 (intestine-enhanced, colonocytes); no ligand"},
+    {"ref": "OT:GPR35-tractability", "category": "other", "reason": "supporting citation at no step: tractability buckets, plus a copy of the Q9HC97 function text already kept (would count one sentence twice)"},
+    {"ref": "CHEMBL:no-mechanism-GPR35", "category": "not_in_text", "reason": "run's contradicting citation: ChEMBL holds no mechanism row for GPR35; silent on endogenous ligands"}
+   ]},
+  {"id": "S17", "step": "H3.1", "text": "5-HIAA activates GPR35",
+   "claim": {"effect": {"subject": "hiaa", "sign": "pos", "target": {"activity": "GPR35"}}},
+   "evidence": [
+    {"ref": "Q9HC97", "kind": "curatedDb",
+     "quote": "binds to several ligands including the tryptophan metabolite kynurenic acid (KYNA), lysophosphatidic acid (LPA) or 5-hydroxyindoleacetic acid (5-HIAA) with high affinity, leading to rapid and transient activation of numerous intracellular signaling pathways"}
+   ],
+   "excluded": [
+    {"ref": "PMID:40623474", "category": "not_this_entity", "reason": "about kynurenic acid only; 5-HIAA not named"}
+   ]},
+  {"id": "S18", "step": "H3.2", "text": "GPR35 leads to neutrophil recruitment at the mucosa",
+   "claim": {"effect": {"subject": "GPR35", "sign": "pos", "target": {"process": "neutrophilMigration"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "Q9HC97", "category": "undirected", "reason": "'Plays a role in neutrophil recruitment to sites of inflammation and bacterial clearance': both ends of both parts, no direction"},
+    {"ref": "AGR:MGI:1929509:MP:0008721", "category": "no_direction", "reason": "MGI 'abnormal chemokine level' in Gpr35 knockouts"}
+   ]},
+  {"id": "S19", "step": "H3.2", "text": "GPR35 leads to bacterial clearance at the mucosa",
+   "claim": {"effect": {"subject": "GPR35", "sign": "pos", "target": {"process": "bacterialDefense"}}},
+   "evidence": [], "excluded": []},
+  {"id": "S20", "step": "H3.3", "text": "rs34236350 is associated with Crohn disease risk (no allele named, so no direction)",
+   "sign_note": "the run gives polarity unknown; the cited GWAS row gives 'beta 0.1795 (increase)' for 'rs34236350-?', an allele it does not name. Some allele of any associated SNP raises risk, so a direction for an unnamed 'effect allele' says nothing beyond the association: direction none",
+   "claim": {"assoc": {"subject": "rs34236350", "direction": "none", "target": {"disease": "crohn", "aspect": "risk"}}},
+   "evidence": [
+    {"ref": "rs34236350", "kind": "observational",
+     "quote": "rs34236350-? is associated with 'Crohn's disease' at p = 1e-32, beta 0.1795 unit (increase)"}
+   ],
+   "excluded": [
+    {"ref": "OT:GPR35-MONDO_0005011", "category": "no_direction", "reason": "Open Targets gene-level score 0.53 (cited by the run as both supporting and contradicting); no variant, no direction"}
+   ]},
+  {"id": "S21", "step": "H3.3", "text": "the rs2975780 A allele goes with lower Crohn disease risk",
+   "sign_note": "the run gives polarity unknown; direction from the cited GWAS row (OR 0.71 for the A allele)",
+   "claim": {"assoc": {"subject": "rs2975780", "direction": "neg", "target": {"disease": "crohn", "aspect": "risk"}}},
+   "evidence": [
+    {"ref": "rs2975780", "kind": "observational",
+     "quote": "rs2975780-A is associated with 'Crohn's disease' at p = 6e-19, odds ratio 0.71 [0.66-0.77]"}
+   ], "excluded": []},
+  {"id": "S22", "step": "H3.3", "text": "the rs3749172 A allele goes with higher Crohn disease risk",
+   "sign_note": "the run gives polarity unknown; direction from the cited GWAS row (OR 1.45 for the A allele)",
+   "claim": {"assoc": {"subject": "rs3749172", "direction": "pos", "target": {"disease": "crohn", "aspect": "risk"}}},
+   "evidence": [
+    {"ref": "rs3749172", "kind": "observational",
+     "quote": "rs3749172-A is associated with 'Crohn's disease' at p = 6e-11, odds ratio 1.45"}
+   ],
+   "excluded": [
+    {"ref": "rs3749171", "category": "parent_disease", "reason": "supporting citation at no step: another GPR35 variant (a member of the step's 'GPR35 CD-associated variants', like rs4676410), but its row is for a five-disease pleiotropy trait (AS, CD, psoriasis, PSC, UC), not Crohn disease; allele unnamed, no effect size"}
+   ]},
+  {"id": "S23", "step": "H3.3", "text": "the rs4676410 A allele goes with higher Crohn disease risk",
+   "sign_note": "the run gives polarity unknown; direction from the GWAS row (OR 1.128 for the A allele); the run names this variant in its mechanism and cites it as supporting, not at the step",
+   "claim": {"assoc": {"subject": "rs4676410", "direction": "pos", "target": {"disease": "crohn", "aspect": "risk"}}},
+   "evidence": [
+    {"ref": "rs4676410", "kind": "observational",
+     "quote": "rs4676410-A is associated with 'Crohn's disease' at p = 1e-8, odds ratio 1.128 [1.082-1.175]"}
+   ], "excluded": []}
+ ],
+ "unexpressed": [
+  {"step": "H3.4", "category": "no_sign",
+   "reason": "the subject is an undirected change ('altered GPR35 signalling') and the run leaves the polarity unknown on purpose; the cited Gpr35 knockouts give opposite directions, so no single sign is the run's",
+   "evidence": [
+    {"ref": "AGR:MGI:1929509:MP:0008537", "kind": "curatedDb", "taxon": "mouse",
+     "quote": "Gpr35 -- the orthologue of human GPR35 -- shows increased susceptibility to induced colitis"},
+    {"ref": "AGR:MGI:1929509:MP:0013299", "kind": "curatedDb", "taxon": "mouse",
+     "quote": "Gpr35 -- the orthologue of human GPR35 -- shows decreased susceptibility to colitis induced morbidity/mortality"}
+   ],
+   "excluded": [
+    {"ref": "AGR:MGI:1929509:MP:0008539", "category": "other", "reason": "run's contradicting citation, not cited at any step: the same Gpr35 tm1(KOMP)Vlcg knockout shows decreased susceptibility to induced colitis; on an unsigned step it can neither refute nor be a null result, so the guide excludes it (MP:0013299, cited at the step, already carries this allele's direction)"},
+    {"ref": "CXG:ENSG00000178623:CL_0011108:MONDO_0005011", "category": "not_in_text", "reason": "share of colon epithelial cells with GPR35 detected, Crohn vs normal donors; no colitis or barrier"},
+    {"ref": "AGR:MGI:1929509:MP:0013956", "category": "not_in_text", "reason": "supporting citation at no step: decreased colon length in Gpr35 knockouts; not colitis susceptibility or barrier repair"}
+   ]}
+ ],
+ "hypotheses": {
+  "H1": {"claims": [
+          {"subject": "rs755374", "sign": "pos", "target": {"disease": "crohn", "aspect": "risk"}},
+          {"subject": "rs6556412", "sign": "pos", "target": {"disease": "crohn", "aspect": "risk"}},
+          {"subject": "IL23R", "sign": "pos", "target": {"disease": "crohn", "aspect": "risk"}}],
+         "note": "IL12B claims start from the chain's two variants (one claim each); IL23R enters the chain as the receptor node at H1.2, so its claim starts there. The protective IL23R variant rs11209026 that the mechanism leans on is in no step."},
+  "H2": {"claims": [
+          {"subject": "rs2066847", "sign": "pos", "target": {"disease": "crohn", "aspect": "risk"}},
+          {"subject": "rs2066844", "sign": "pos", "target": {"disease": "crohn", "aspect": "risk"}},
+          {"subject": "rs2066845", "sign": "pos", "target": {"disease": "crohn", "aspect": "risk"}},
+          {"subject": "LACC1", "sign": "neg", "target": {"disease": "crohn", "aspect": "risk"}}],
+         "note": "NOD2 claims start from the chain's three risk alleles; the LACC1 chain starts at the protein (the title names LACC1 risk alleles, but no step does), and 'risk alleles blunt clearance' makes LACC1's own sign negative"},
+  "H3": {"no_claim_reason": "the run states that the direction of GPR35's effect on Crohn disease is unresolved (opposite knockout phenotypes, a protective and risk alleles), and the title and mechanism give no sign"}
+ },
+ "findings": [
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["H1.1"],
+   "detail": "Neither IL12B GWAS row says anything about p40 or IL-23 amount, and the run's own note admits the direction on p40 is inferred; the first link of the H1 chain has no support."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["H1.3"],
+   "detail": "IL23R to Th17 commitment and IL-17 production is cited only to STRING over-representation results and an undirected MGI 'abnormal CD4 T cell differentiation' row."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["H1.4"],
+   "detail": "Th17/IL-17 to Crohn disease is cited to a mouse Il23r colitis row, a ChEMBL row that ustekinumab is approved (no indication), and a recruiting tulisokibart trial with no results; none mentions Th17 or IL-17."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["H1.4"],
+   "detail": "NCT06430801 is cited as validating the IL-23 axis, but the record names no target for tulisokibart; to the curator's knowledge (not in the text) tulisokibart is an anti-TL1A antibody, not an IL-12/IL-23 agent."},
+  {"project": "hypothesis-agent", "category": "chain_not_connected", "steps": ["H1.3", "H1.4"],
+   "detail": "H1.3 ends at 'Th17 lineage commitment and IL-17 production', H1.4 starts at 'Th17/IL-17 mucosal response'; the IL-17 production parts join, but Th17 lineage commitment (GO:0072540) is not a Th17 immune response (GO:0072538), so the Th17 half does not connect."},
+  {"project": "hypothesis-agent", "category": "citation_at_no_step", "hypothesis": "H1",
+   "detail": "rs11209026 (the protective IL23R coding variant the mechanism leans on), rs7517847, PMID:17068223, both OT association scores, CHEMBL3990029, STRING:GOCC:0072536 and the Treg CELLxGENE row support no step; no step starts from an IL23R variant."},
+  {"project": "hypothesis-agent", "category": "contradicting_citation_supports", "steps": ["H1.2"],
+   "detail": "OT:IL23R-safety is filed as contradicting (adenoma, paradoxical psoriasiform reactions), contradicts no step, and its copied UniProt function text is the only text the run saw that states H1.2 (IL23R binds IL-23 and mediates T-cell stimulation); it is excluded at H1.2 because the run did not offer it as support."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["H1.2"],
+   "detail": "IL-23 activating IL23R is cited only to a CELLxGENE detection-rate row and a Reactome over-representation result; neither names IL-23 acting on the receptor."},
+  {"project": "hypothesis-agent", "category": "confidence_unjustified", "hypothesis": "H1",
+   "detail": "Confidence 'high', but no H1 step has a text the run cited for it that states it; the therapeutic-validation argument rests on records that give neither indication nor efficacy."},
+  {"project": "both", "category": "source_record_suspect", "hypothesis": "H1",
+   "detail": "CHEMBL:CHEMBL3990029 says 'RISANKIZUMAB targets IL12B'; to the curator's knowledge (not in the text) risankizumab binds IL-23 p19 (IL23A), so this looks like a complex-to-gene mapping artefact in the source; the run's mechanism ('p40/p19 blockade') is consistent with either."},
+  {"project": "hypothesis-agent", "category": "chain_not_connected", "steps": ["H2.1", "H2.2"],
+   "detail": "H2.1 ends at NOD2 signalling and H2.2 starts at LACC1; no step links NOD2 signalling to cytokine output or bacterial clearance, so the three NOD2 alleles have no route to Crohn disease and the claimed NOD2-LACC1 convergence is never stated as a step."},
+  {"project": "hypothesis-agent", "category": "chain_not_connected", "steps": ["H2.2", "H2.3", "H2.4"],
+   "detail": "H2.2 ends at cytokine secretion / bacterial clearance, H2.3 starts at the purine nucleotide cycle / OXPHOS and ends at macrophage activation, H2.4 starts at bacterial clearance; the only route (LACC1 to clearance to Crohn) skips H2.3 entirely."},
+  {"project": "hypothesis-agent", "category": "citation_states_opposite", "steps": ["H2.1"],
+   "detail": "PMID:11385576, which the run cites at H2.4, proposes that the NOD2 frameshift and missense variants act by over-activating NF-kB, the opposite of H2.1's 'inhibits'; it is a hypothesis in a 2001 genetics abstract, so it carries no weight, but the run did not engage with it."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["H2.1"],
+   "detail": "No cited text says the NOD2 risk alleles reduce MDP-NOD2-RIPK2-NF-kB signalling: the GWAS rows are disease associations and UniProt Q9HC29 describes wild-type NOD2 with no variant."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["H2.3", "H2.4"],
+   "detail": "H2.3 and H2.4 have no supporting text: the MGI rows are about the Lacc1 or Nod2 gene with undirected or off-target phenotypes, and PMID:11385576 does not mention bacterial clearance."},
+  {"project": "hypothesis-agent", "category": "citation_role_inconsistent", "hypothesis": "H2",
+   "detail": "STRING:NOD2-LACC1 is cited as chain evidence, supporting and contradicting at once; it is a text-mining-only edge (experimental 0, database 0) and cannot back the 'physically associates' claim in the mechanism."},
+  {"project": "hypothesis-agent", "category": "citation_at_no_step", "hypothesis": "H2",
+   "detail": "The title says risk alleles at both loci act through the module, but the LACC1 variants rs3764147 and rs1373904 (and PMID:27478939 on p.I254V/p.C284R loss of function) are in no step; the LACC1 half starts at the protein."},
+  {"project": "hypothesis-agent", "category": "confidence_unjustified", "hypothesis": "H2",
+   "detail": "Confidence 'high', but the NOD2 half has no route to the disease and the LACC1 half rests on one UniProt sentence plus an unsupported H2.4."},
+  {"project": "hypothesis-agent", "category": "contradicting_not_contradicting", "hypothesis": "H2",
+   "detail": "OT:LACC1-tractability and CHEMBL:no-target-LACC1 are filed as contradicting, but the absence of drugs or tractability says nothing against a mechanism; the tractability record even repeats the supporting UniProt text."},
+  {"project": "hypothesis-agent", "category": "citation_role_inconsistent", "hypothesis": "H3",
+   "detail": "AGR:MGI:1929509:MP:0013299 is cited as chain evidence at H3.4 and as contradicting, and OT:GPR35-MONDO_0005011 as both supporting and contradicting."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["H3.2"],
+   "detail": "The only text for GPR35 to neutrophil recruitment and bacterial clearance is UniProt's 'plays a role in', which gives no direction; the other citation is an undirected MGI 'abnormal chemokine level' row."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["H3.1"],
+   "detail": "HPA:ENSG00000178623 (an expression profile) is cited for ligand activation of GPR35; the step is carried by UniProt and PMID:40623474 instead."},
+  {"project": "hypothesis-agent", "category": "evidence_not_used", "steps": ["H3.4"],
+   "detail": "PMID:40623474, cited at H3.1, reports that KYNA alleviated mesenteritis and colitis in two mouse models and acted via GPR35 signalling, which bears on the direction the run calls unresolved; the run used it only for ligand activation."},
+  {"project": "hypothesis-agent", "category": "inconsistent_evidence_standard", "hypothesis": "H1",
+   "detail": "The abstention says CELLxGENE Crohn-vs-normal detection rates are a cross-study comparison and 'not a differential-expression result', yet H1, H2 and H3 cite the same kind of row as mechanistic support ('IL23R detection rises ~3-fold', 'GPR35 roughly doubled')."},
+  {"project": "hypothesis-agent", "category": "allele_not_named", "steps": ["H1.1", "H2.1", "H3.3"],
+   "detail": "The GWAS rows for rs755374, rs2066844, rs2066845 and rs34236350 name no allele ('-?'), so 'risk allele' directions for these variants are fixed only by convention, not by the cited record; the rs34236350 association (S20) is therefore unsigned."},
+  {"project": "hypothesis-agent", "category": "source_record_suspect", "steps": ["H2.1"],
+   "detail": "The rs2066847 GWAS row gives odds ratio 3.103 with interval [1.497-1.618], which excludes its own point estimate; the run took the row at face value."},
+  {"project": "hypothesis-agent", "category": "wrong_trait", "steps": ["H2.1"],
+   "detail": "rs2066845 and rs3749171 rows are for a five-disease pleiotropy trait (AS, CD, psoriasis, PSC, UC), not Crohn disease specifically, but are cited as Crohn support."},
+  {"project": "both", "category": "abstention_unverifiable", "hypothesis": "abstention",
+   "detail": "The MEIS1/TRIM4 abstention cites 14 accessions, none of which is in sources.json, so the abstention cannot be checked against text; its reasoning reads as sound."},
+  {"project": "biolean", "category": "no_form_for", "steps": ["H1.1", "H1.2"],
+   "detail": "No target form for the amount of a protein complex: GO:0070743 'interleukin-23 complex' is a GO component, which amount targets reject, so the IL-23 heterodimer is grounded as the process GO:0032627 'interleukin-23 production' (the run's increases_amount becomes a process target, and H1.2's subject is IL-23 production)."},
+  {"project": "biolean", "category": "missing_term", "steps": ["H2.2", "H2.4", "H3.2"],
+   "detail": "No GO process for 'bacterial clearance'; grounded to the parent GO:0042742 'defense response to bacterium', which is broader than the run's node."},
+  {"project": "biolean", "category": "tool_gap", "steps": ["H3.1"],
+   "detail": "terms.py finds CHEBI:27823 only by its systematic name '(5-hydroxyindol-3-yl)acetic acid'; '5-hydroxyindoleacetic acid' and '5-HIAA' return only HP/NCIT/VT terms."},
+  {"project": "biolean", "category": "evidence_weighting", "hypothesis": "H2",
+   "detail": "Open Targets records (OT:LACC1-tractability, OT:GPR35-tractability, OT:IL23R-safety) copy UniProt function text, so one curated sentence can reach a run under two accessions; there is no dedup rule, and I excluded the copies as 'other' where the UniProt record was also cited."},
+  {"project": "biolean", "category": "no_form_for", "steps": ["H3.4"],
+   "detail": "No form for a step whose cited texts give opposite signs (two Gpr35 knockout alleles): it can only be 'no_sign', and the unexpressed entry's evidence cannot record which direction each text gives."},
+  {"project": "biolean", "category": "no_form_for", "hypothesis": "H3",
+   "detail": "A hypothesis that honestly declines a direction gets no claim, so its four signed GWAS associations and its ligand steps never compose into anything; there is no 'test without a sign' form."},
+  {"project": "biolean", "category": "evidence_kind_unclear", "steps": ["H3.1"],
+   "detail": "PMID:40623474's span does not say whether the GPR35 dependence came from the colitis mice or the cultured explants; recorded as mechanistic, mouse, because the same span reports disease course."},
+  {"project": "biolean", "category": "evidence_weighting", "steps": ["H2.2", "H3.1", "H3.3"],
+   "detail": "One curatedDb sentence gives belief 4/5 and verdict 'established' on its own: S11/S12 split one UniProt sentence into two established statements and S17 rests on one UniProt clause, while signed genome-wide GWAS rows (S21-S23, p down to 6e-19) stay at belief 1/2, 'unsupported'."},
+  {"project": "biolean", "category": "rule_missing", "steps": ["H1.2", "H2.2"],
+   "detail": "The guide does not say whether a populated run 'context' field limits a step; I dropped the CD4 T cell context at H1.2 (IL-23 activating IL23R is not specific to it) and refined bacterial clearance to macrophages at H2.2/H2.4, where the macrophage is the point of the hypothesis."},
+  {"project": "hypothesis-agent", "category": "citation_at_no_step", "hypothesis": "H2",
+   "detail": "OT:NOD2-MONDO_0005011 and OT:LACC1-MONDO_0005011 (gene-level Open Targets scores, no direction) are supporting citations that bear on no step."},
+  {"project": "hypothesis-agent", "category": "citation_at_no_step", "hypothesis": "H3",
+   "detail": "CHEMBL:target-CHEMBL1293267 only says ChEMBL has a target record for GPR35; it supports no step."},
+  {"project": "hypothesis-agent", "category": "no_citation", "hypothesis": "H1",
+   "detail": "The mechanism says IL23R detection rises ~3-fold in colonic CD4 T cells, Tregs and CD8 T cells, but only the CD4 (7.6% vs 2.5%) and Treg (3.6% vs 1.0%) CELLxGENE rows are cited; the CD8 T cell figure has no source."},
+  {"project": "hypothesis-agent", "category": "no_citation", "hypothesis": "H2",
+   "detail": "The mechanism says colonic macrophages show the highest LACC1 detection of any profiled cell type, but the run cites only the macrophage CELLxGENE row (17.3% vs 12.4%), so the comparison across cell types has no source."},
+  {"project": "biolean", "category": "rule_missing", "steps": ["H3.3"],
+   "detail": "For a GWAS row that names no allele ('rs34236350-?', beta increase), labelling the subject 'effect allele' and taking the row's direction is circular: some allele of any associated SNP raises risk. The guide should say such a row gives direction none."},
+  {"project": "both", "category": "scope_narrower_than_claim", "steps": ["H3.3"],
+   "detail": "The rs4676410 row comes from a sex-dimorphic IBD study run on women only (10,760 female cases, 22,345 female controls; p = 1e-8), but the run lists it as a general Crohn association; S23 states it unrestricted because a refinement has no sex field."}
+ ],
+ "audit": [
+  {"item": "entities.il23 (S1, S2, S3)", "error": "wrong_grounding",
+   "before": "il23 = BLN:IL23 (protein, run-local term); S1/S2 target {amount: il23}; missing_term finding for BLN:IL23",
+   "after": "il23 = GO:0032627 'interleukin-23 production' (process); S1/S2 target {process: il23}; missing_term finding removed, no_form_for finding reworded",
+   "reason": "the guide allows a BLN term only when nothing in any ontology fits. GO:0032627 is defined as the appearance of IL-23 'resulting in an increase in its intracellular or extracellular levels', so it is the run's 'increases_amount of IL-23' (production of X = X at BioLean's grain, as with 'MUC5B expression'). It was the first hit for 'interleukin-23', which the curator searched but did not list. A BLN term can never match the same node in another run; the multi_agent-r2 Crohn curation grounds IL-23 as GO:0032627 too. Routes unchanged."},
+  {"item": "S3 (H1.2) evidence OT:IL23R-safety", "error": "other",
+   "before": "kept as curatedDb support (quote: 'Binds IL23 and mediates T-cells ... Jak-Stat signaling cascade'); S3 verdict established (belief 4/5)",
+   "after": "excluded, category other; S3 has no evidence (unsupported)",
+   "reason": "the run filed this record only as contradicting H1, and the guide is explicit: a contradicting citation is attached as refutes, or as a null result, otherwise excluded. Keeping it credits H1.2 with support the run never offered (co-authoring). The curator knew it broke the rule. The fact that it would state H1.2 stays recorded in the contradicting_citation_supports finding."},
+  {"item": "unexpressed H3.4 evidence AGR:MGI:1929509:MP:0008539", "error": "other",
+   "before": "kept as curatedDb/mouse evidence on the unexpressed H3.4 entry",
+   "after": "excluded, category other",
+   "reason": "the run cites this only as contradicting H3, not at any step. On an unsigned step it can neither refute nor be a null result, so the guide excludes it. Its content (the tm1(KOMP)Vlcg knockout is less susceptible) is already carried by MP:0013299, which the run did cite at H3.4."},
+  {"item": "S20 (H3.3) rs34236350", "error": "wrong_sign",
+   "before": "assoc direction pos; entity label 'rs34236350 effect allele (allele not named ...)'; sign_note: direction from the row's beta increase",
+   "after": "assoc direction none; label says the row names no allele; sign_note explains",
+   "reason": "the GWAS row is 'rs34236350-?'. The guide takes a direction from a row that names an allele, and the step's polarity is unknown. 'The effect allele raises risk' is true by definition for any associated SNP, so it carries no direction for an identifiable allele. A dbSNP entity must name its allele. No arm changes (H3 has no claim)."},
+  {"item": "S22 excluded rs3749171", "error": "wrong_exclusion",
+   "before": "category not_this_entity ('a different GPR35 variant')",
+   "after": "category parent_disease",
+   "reason": "the step's subject is 'GPR35 CD-associated variants', and the curator itself treats another GPR35 variant cited only as supporting (rs4676410) as a member. What fails is the trait: the row is for a five-disease pleiotropy trait (AS, CD, psoriasis, PSC, UC), a broader disease than Crohn."},
+  {"item": "findings on H1/H1.2 and evidence weighting", "error": "other",
+   "before": "confidence_unjustified H1 said 'only H1.2 has a cited text that states it'; evidence_weighting cited S3 as established on an OT copy; allele_not_named did not say S20 is unsigned",
+   "after": "reworded to match the changes above; added citation_does_not_state_step for H1.2 (CXG detection row, Reactome enrichment)",
+   "reason": "the findings must agree with the curation after S3 lost its only kept text and S20 became unsigned."},
+  {"item": "findings: citation_at_no_step (H2, H3)", "error": "missed_finding",
+   "before": "OT:NOD2-MONDO_0005011, OT:LACC1-MONDO_0005011 and CHEMBL:target-CHEMBL1293267 were supporting citations at no step, attached nowhere and named in no finding",
+   "after": "two citation_at_no_step findings",
+   "reason": "the guide says supporting citations that state no step get a citation_at_no_step finding."},
+  {"item": "findings: no_citation (H1, H2 mechanisms)", "error": "missed_finding",
+   "before": "none",
+   "after": "H1: the CD8 T cell IL23R figure has no cited row; H2: 'highest LACC1 detection of any profiled cell type' rests on a single cited macrophage row",
+   "reason": "the mechanisms quote single-cell comparisons that the cited CELLxGENE rows do not contain (only the CD4 and Treg rows for IL23R; only the macrophage row for LACC1)."},
+  {"item": "findings: rs4676410 female-only association", "error": "missed_finding",
+   "before": "none (S23 attached as a general Crohn association)",
+   "after": "scope_narrower_than_claim finding (both projects)",
+   "reason": "the GWAS row's study is a sex-dimorphic analysis with only female cases and controls. The run presents it as a general association, and a BioLean refinement has no sex field to scope S23."},
+  {"item": "findings: unnamed-allele rule", "error": "missed_finding",
+   "before": "raised only in the curator's guide_problems",
+   "after": "biolean rule_missing finding: a row with no allele should give direction none",
+   "reason": "this records the gap that caused the S20 error, as a finding in the file."}
+ ]
+}

@@ -1,0 +1,109 @@
+{
+ "STRING:APOE-TREM2": {
+  "cited_as": "chain",
+  "in_ledger": true,
+  "source": "string",
+  "statement": "STRING links APOE and TREM2 with combined score 1.00 (experimental 0.58, database 0.00, text-mining 0.99).",
+  "url": "https://string-db.org/cgi/network?identifiers=APOE%0dTREM2&species=9606",
+  "text": "STRING links APOE and TREM2 with combined score 1.00 (experimental 0.58, database 0.00, text-mining 0.99).\nstringId_A: 9606.ENSP00000252486\nstringId_B: 9606.ENSP00000362205\npreferredName_A: APOE\npreferredName_B: TREM2\nncbiTaxonId: 9606\nscore: 0.997\nnscore: 0\nfscore: 0\npscore: 0\nascore: 0.181\nescore: 0.584\ndscore: 0\ntscore: 0.994"
+ },
+ "PMID:42689388": {
+  "cited_as": "chain",
+  "in_ledger": true,
+  "source": "europepmc",
+  "statement": "sAPPα acts as an endogenous ligand for TREM2 to regulate microglial survival and inflammatory responses in Alzheimer's disease. Neuroreport 2026; cited 0 times.",
+  "url": "https://europepmc.org/article/MED/42689388",
+  "text": "sAPPα acts as an endogenous ligand for TREM2 to regulate microglial survival and inflammatory responses in Alzheimer's disease.\n\nBackgroundTriggering receptor expressed on myeloid cells 2 (TREM2) regulates microglial functions in Alzheimer's disease, whereas soluble amyloid precursor protein alpha (sAPPα) has neuroprotective effects. Whether sAPPα directly interacts with TREM2 remains unclear.MethodsSingle-cell RNA sequencing data from wild-type and APP/PS1 mouse cortices and bulk RNA-seq data (GSE18309) were analyzed. Solid-phase binding, pull-down, and co-immunoprecipitation assays were used to examine TREM2-sAPPα binding and map the interacting regions. LPS-stimulated BV-2 cells were used to assess the effects of TREM2 knockdown and sAPPα supplementation on viability, apoptosis, invasion, phagocytosis, cytokine production, and polarization.ResultsA TREM2-positive microglial subpopulation was more abundant in the APP/PS1 dataset and showed relatively restrained inflammatory signaling. Cell-cell communication analysis predicted enhanced APP-(TREM2+TYROBP) signaling. Biochemical assays confirmed direct binding between TREM2 and sAPPα. The TREM2 51-71 amino acid region and the APP E1+Ac fragment contributed to this interaction, whereas TREM2 variants Y38C, R47H, R62H, and T66M reduced binding affinity. TREM2 knockdown aggravated LPS-induced loss of viability, apoptosis, inflammatory cytokine production, and M1-like polarization in BV-2 cells. Exogenous sAPPα reversed these changes.ConclusionsAPPα directly binds TREM2 and may limit excessive inflammatory activation of microglia under LPS stimulation. The TREM2-sAPPα interaction may represent a regulatory pathway relevant to Alzheimer's disease.",
+  "year": 2026,
+  "pubtypes": [
+   "Journal Article"
+  ]
+ },
+ "OT:TREM2-MONDO_0004975": {
+  "cited_as": "chain",
+  "in_ledger": true,
+  "source": "opentargets",
+  "statement": "Open Targets 2026.06 scores the TREM2-Alzheimer disease association at 0.55 (literature 0.99, genetic_association 0.86).",
+  "url": "https://platform.opentargets.org/target/ENSG00000095970",
+  "text": "Open Targets 2026.06 scores the TREM2-Alzheimer disease association at 0.55 (literature 0.99, genetic_association 0.86).\nscore: 0.5519421902839869\ndatatypeScores.id: literature\ndatatypeScores.score: 0.9937634437432915\ndatatypeScores.id: genetic_association\ndatatypeScores.score: 0.8582148201474947\ndisease.id: MONDO_0004975\ndisease.name: Alzheimer disease"
+ },
+ "PMID:28714976": {
+  "cited_as": "chain",
+  "in_ledger": true,
+  "source": "europepmc",
+  "statement": "Rare coding variants in PLCG2, ABI3, and TREM2 implicate microglial-mediated innate immunity in Alzheimer's disease. Nature genetics 2017; cited 889 times.",
+  "url": "https://europepmc.org/article/MED/28714976",
+  "text": "Rare coding variants in PLCG2, ABI3, and TREM2 implicate microglial-mediated innate immunity in Alzheimer's disease.\n\nWe identified rare coding variants associated with Alzheimer's disease in a three-stage case-control study of 85,133 subjects. In stage 1, we genotyped 34,174 samples using a whole-exome microarray. In stage 2, we tested associated variants (P < 1 × 10-4) in 35,962 independent samples using de novo genotyping and imputed genotypes. In stage 3, we used an additional 14,997 samples to test the most significant stage 2 associations (P < 5 × 10-8) using imputed genotypes. We observed three new genome-wide significant nonsynonymous variants associated with Alzheimer's disease: a protective variant in PLCG2 (rs72824905: p.Pro522Arg, P = 5.38 × 10-10, odds ratio (OR) = 0.68, minor allele frequency (MAF)cases = 0.0059, MAFcontrols = 0.0093), a risk variant in ABI3 (rs616338: p.Ser209Phe, P = 4.56 × 10-10, OR = 1.43, MAFcases = 0.011, MAFcontrols = 0.008), and a new genome-wide significant variant in TREM2 (rs143332484: p.Arg62His, P = 1.55 × 10-14, OR = 1.67, MAFcases = 0.0143, MAFcontrols = 0.0089), a known susceptibility gene for Alzheimer's disease. These protein-altering changes are in genes highly expressed in microglia and highlight an immune-related protein-protein interaction network enriched for previously identified risk genes in Alzheimer's disease. These genetic findings provide additional evidence that the microglia-mediated innate immune response contributes directly to the development of Alzheimer's disease.",
+  "year": 2017,
+  "pubtypes": [
+   "research-article",
+   "Journal Article"
+  ]
+ },
+ "PMID:41435829": {
+  "cited_as": "chain",
+  "in_ledger": true,
+  "source": "europepmc",
+  "statement": "The Alzheimer's disease risk genes MS4A4A and MS4A6A cooperate to negatively regulate TREM2 and microglia states. Neuron 2026; cited 2 times.",
+  "url": "https://europepmc.org/article/MED/41435829",
+  "text": "The Alzheimer's disease risk genes MS4A4A and MS4A6A cooperate to negatively regulate TREM2 and microglia states.\n\nGenetic variations in MS4A4A and MS4A6A Triggering receptor expressed on myeloid cells 2 (TREM2) are linked to the regulation of cerebrospinal-fluid-soluble TREM2 levels and are associated with Alzheimer's disease (AD) risk and progression. By modulating MS4A4A using knockout, overexpression, and degrading antibodies in macrophages, microglia, non-human primates (NHPs), and a mouse model of amyloid pathology, we provide evidence that MS4A4A and MS4A6A are negative regulators of both the transmembrane and soluble TREM2 proteins. Additionally, MS4A4A limits microglia viability, phagocytosis, and lysosomal function, processes that contribute to disease pathology. Mechanistically, we find that MS4A4A restrains TREM2 by an indirect mechanism: MS4A4A interacts with MS4A6A and protects it from degradation. MS4A6A, in turn, forms a complex with and blocks the co-receptor DNAX-activating protein of 12 kDa (DAP12), which modulates the levels of TREM2 and other receptors. Taken together, the data indicate that MS4A4A and MS4A6A are cooperative post-transcriptional negative regulators of TREM2 and microglial function as well as potential drug targets for AD.",
+  "year": 2026,
+  "pubtypes": [
+   "Journal Article"
+  ]
+ },
+ "OT:MS4A4A-MONDO_0004975": {
+  "cited_as": "chain",
+  "in_ledger": true,
+  "source": "opentargets",
+  "statement": "Open Targets 2026.06 scores the MS4A4A-Alzheimer disease association at 0.25 (literature 0.74, genetic_association 0.38).",
+  "url": "https://platform.opentargets.org/target/ENSG00000110079",
+  "text": "Open Targets 2026.06 scores the MS4A4A-Alzheimer disease association at 0.25 (literature 0.74, genetic_association 0.38).\nscore: 0.25312088396316196\ndatatypeScores.id: literature\ndatatypeScores.score: 0.7388955219645706\ndatatypeScores.id: genetic_association\ndatatypeScores.score: 0.37941985776733395\ndisease.id: MONDO_0004975\ndisease.name: Alzheimer disease"
+ },
+ "PMID:41633359": {
+  "cited_as": "chain",
+  "in_ledger": true,
+  "source": "europepmc",
+  "statement": "Repression of RIPK1 kinase by INPP5D inhibits expression of diverse proinflammatory mediators and late-onset Alzheimer's disease risk factors. Immunity 2026; cited 6 times.",
+  "url": "https://europepmc.org/article/MED/41633359",
+  "text": "Repression of RIPK1 kinase by INPP5D inhibits expression of diverse proinflammatory mediators and late-onset Alzheimer's disease risk factors.\n\nGenome-wide association studies strongly implicate neuroinflammation in late-onset Alzheimer's disease (LOAD). Genetic risk loci for LOAD are enriched for genes expressed in microglia, but the relationship among microglial LOAD risk genes has been unclear. We found that the N-terminal SH2 domain of INPP5D, an important LOAD risk gene, directly interacted with the cell death regulator RIPK1 at p-Y383 to suppress RIPK1 kinase activation. Microglial INPP5D deficiency cell-autonomously promoted RIPK1-mediated transcriptional induction of diverse LOAD risk genes, proinflammatory cytokines, complements, and ROS mediators, as well as proinflammatory signaling mediators such as Toll-like receptors (TLRs), MyD88, Nlrp3, gasdermin D, and Zbp1. RIPK1-regulated microglial transcriptomic signatures were found in microglial subtypes implicated in human Alzheimer's disease (AD) pathogenesis. Furthermore, microglial INPP5D deficiency promoted aging-dependent RIPK1-mediated development of neuronal TDP-43 pathology, neuronal loss, and motor dysfunction in a non-cell-autonomous manner. Our data suggest that INPP5D functions as an intracellular rheostat in regulating RIPK1-mediated neuroinflammation for promoting aging-related neurodegenerative diseases, including LOAD and AD-amyotrophic lateral sclerosis comorbidity.",
+  "year": 2026,
+  "pubtypes": [
+   "Journal Article"
+  ]
+ },
+ "PMID:42357928": {
+  "cited_as": "chain",
+  "in_ledger": true,
+  "source": "europepmc",
+  "statement": "Alzheimer's Protection by PLCγ2 Compacts Plaques, Redistributes Microglia, and Protects Synapses in App&lt;sup&gt;NL&lt;/sup&gt; &lt;sup&gt;-G-F&lt;/sup&gt; Mice. Glia 2026; cited 0 times.",
+  "url": "https://europepmc.org/article/MED/42357928",
+  "text": "Alzheimer's Protection by PLCγ2 Compacts Plaques, Redistributes Microglia, and Protects Synapses in App<sup>NL</sup> <sup>-G-F</sup> Mice.\n\nThe Alzheimer's disease protective P522R PLCG2 coding variant (rs72824905) is downstream of TREM2, but how it confers disease protection is poorly understood. Using a Plcg2-R522 knock-in mouse and Plcg2-P522 control on both wildtype and Alzheimer's disease-like AppNL-G-F amyloidosis mouse backgrounds, aged mice were assayed for amyloid load, microglial activity, and synaptic integrity. In the absence of Alzheimer's disease-like pathology, the R522 variant increased microglial coverage and was associated with reduced ramification complexity, fewer terminal points, and elevated lysosomal CD68 expression. On the AppNL-G-F background, total amyloid burden was unaffected, but expression of the R522 variant led to increased plaque compaction compared to the P522 common variant. The protective R522 variant was also associated with: enhanced microglial engagement with less compact amyloid plaques; reduced microglial localisation around highly compacted plaques; protection from amyloid-induced synapse loss; and decreased engulfment of synaptic material by microglia. Our data indicate a significant direct PLCγ2 role in controlling microglial-plaque interactions and synaptic protection downstream of amyloid deposition, prioritizing it as a therapeutic target, potentially as an adjunct to other approaches, such as those targeting amyloid.",
+  "year": 2026,
+  "pubtypes": [
+   "Research Support, Non-U.S. Gov't",
+   "Journal Article"
+  ]
+ },
+ "PMID:42092345": {
+  "cited_as": "chain",
+  "in_ledger": true,
+  "source": "europepmc",
+  "statement": "Abi3&lt;sup&gt;S212F&lt;/sup&gt; Alzheimer's disease variant alters plaque structure and disrupts microglia. Alzheimer's & dementia : the journal of the Alzheimer's Association 2026; cited 0 times.",
+  "url": "https://europepmc.org/article/MED/42092345",
+  "text": "Abi3<sup>S212F</sup> Alzheimer's disease variant alters plaque structure and disrupts microglia.\n\nBackgroundGenetic variants affecting microglial function can influence Alzheimer's disease (AD) risk, yet the underlying mechanisms remain unclear. The AD-associated ABI3S209F (Abi3S212F in mouse) variant regulates cytoskeletal dynamics, but its in vivo impact on pathology is unknown.MethodsAn Abi3S212F mouse was developed and crossed with two humanized amyloid beta (Aβ) models. Amyloid pathology, microglial survival, and remodeling were analyzed using confocal imaging, biochemical assays, spatial transcriptomics, and single-cell analyses across the lifespan.ResultsAbi3S212F produced a dysfunctional microglial state that reduced dense-core plaque compaction, selectively lowering dense-core burden without affecting diffuse or total Aβ. The variant also caused microglial loss via apoptosis and pyroptosis, requiring aging and human Aβ but occurring even without plaques, indicating plaque-independent vulnerability. Spatial transcriptomics revealed an age-dependent shift toward an Abi3-high state that predisposes microglia to degeneration.DiscussionAbi3S212F produces microglial dysfunction and vulnerability, highlighting cytoskeletal and cell death pathways as therapeutic targets.",
+  "year": 2026,
+  "pubtypes": [
+   "research-article",
+   "Journal Article"
+  ]
+ },
+ "OT:INPP5D-MONDO_0004975": {
+  "cited_as": "chain",
+  "in_ledger": true,
+  "source": "opentargets",
+  "statement": "Open Targets 2026.06 scores the INPP5D-Alzheimer disease association at 0.47 (literature 0.91, genetic_association 0.73).",
+  "url": "https://platform.opentargets.org/target/ENSG00000168918",
+  "text": "Open Targets 2026.06 scores the INPP5D-Alzheimer disease association at 0.47 (literature 0.91, genetic_association 0.73).\nscore: 0.4701717999615841\ndatatypeScores.id: literature\ndatatypeScores.score: 0.9095937736672335\ndatatypeScores.id: genetic_association\ndatatypeScores.score: 0.7279172206503141\ndisease.id: MONDO_0004975\ndisease.name: Alzheimer disease"
+ }
+}

@@ -1,0 +1,746 @@
+{
+ "run_id": "study-2026-09-vertex-alzheimers-google-cloud-gemini-3.1-pro-preview-multi_agent-r3",
+ "curated_by": "Claude Opus 5.5, 2026-10-30",
+ "entities": {
+  "MS4A4A": {
+   "kind": "protein",
+   "curie": "UniProt:Q96JQ5",
+   "run_labels": [
+    "MS4A4A"
+   ]
+  },
+  "TREM2": {
+   "kind": "protein",
+   "curie": "UniProt:Q9NZC2",
+   "run_labels": [
+    "TREM2"
+   ]
+  },
+  "ABI3": {
+   "kind": "protein",
+   "curie": "UniProt:Q9P2A4",
+   "run_labels": [
+    "ABI3"
+   ]
+  },
+  "PLCG2": {
+   "kind": "protein",
+   "curie": "UniProt:P16885",
+   "run_labels": [
+    "PLCG2"
+   ]
+  },
+  "INPP5D": {
+   "kind": "protein",
+   "curie": "UniProt:Q92835",
+   "run_labels": [
+    "INPP5D"
+   ]
+  },
+  "RIPK1": {
+   "kind": "protein",
+   "curie": "UniProt:Q13546",
+   "run_labels": [
+    "RIPK1",
+    "RIPK1 kinase"
+   ]
+  },
+  "apoe4": {
+   "kind": "variant",
+   "curie": "BLN:APOE-e4",
+   "label": "APOE ε4 allele",
+   "run_labels": [
+    "APOE",
+    "APOE4",
+    "the APOE4 risk allele"
+   ]
+  },
+  "innateImmunity": {
+   "kind": "process",
+   "curie": "GO:0045087",
+   "run_labels": [
+    "innate immunity",
+    "microglial-mediated innate immunity"
+   ]
+  },
+  "abnormalCholesterolHomeostasis": {
+   "kind": "phenotype",
+   "curie": "MP:0005278",
+   "run_labels": [
+    "cholesterol dysregulation"
+   ]
+  },
+  "myelination": {
+   "kind": "process",
+   "curie": "GO:0042552",
+   "run_labels": [
+    "myelination"
+   ]
+  },
+  "neuroinflammation": {
+   "kind": "process",
+   "curie": "GO:0150076",
+   "run_labels": [
+    "neuroinflammation"
+   ]
+  },
+  "alzheimers": {
+   "kind": "disease",
+   "curie": "MONDO:0004975",
+   "run_labels": [
+    "Alzheimer disease"
+   ]
+  }
+ },
+ "statements": [
+  {
+   "id": "S1",
+   "step": "H1.1",
+   "text": "MS4A4A lowers TREM2 protein",
+   "claim": {
+    "effect": {
+     "subject": "MS4A4A",
+     "sign": "neg",
+     "target": {
+      "amount": "TREM2"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "PMID:41435829",
+     "kind": "mechanistic",
+     "taxon": "mouse",
+     "quote": "MS4A4A and MS4A6A are negative regulators of both the transmembrane and soluble TREM2 proteins",
+     "note": "design pools knockout, overexpression and degrading antibodies in macrophages, microglia, non-human primates and an amyloid mouse model; mouse is the nearest taxon available"
+    }
+   ],
+   "excluded": [
+    {
+     "ref": "rs7232",
+     "category": "not_in_text",
+     "reason": "GWAS row: rs7232-A lowers risk of AD or related dementias (OR 0.9); TREM2 is not named"
+    }
+   ]
+  },
+  {
+   "id": "S2",
+   "step": "H1.2",
+   "text": "TREM2 activates the innate immune response",
+   "claim": {
+    "effect": {
+     "subject": "TREM2",
+     "sign": "pos",
+     "target": {
+      "process": "innateImmunity"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "PMID:28714976",
+     "category": "undirected",
+     "reason": "rare coding variants in TREM2 'implicate' microglial innate immunity in AD; no direction from TREM2 to innate immunity"
+    },
+    {
+     "ref": "rs75932628",
+     "category": "not_in_text",
+     "reason": "GWAS row: rs75932628-T (TREM2) raises AD risk (OR 2.22); innate immunity is not named"
+    }
+   ]
+  },
+  {
+   "id": "S3",
+   "step": "H1.3",
+   "text": "ABI3 activates the innate immune response",
+   "claim": {
+    "effect": {
+     "subject": "ABI3",
+     "sign": "pos",
+     "target": {
+      "process": "innateImmunity"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "PMID:28714976",
+     "category": "undirected",
+     "reason": "rare coding variants in ABI3 'implicate' microglial innate immunity in AD; no direction from ABI3 to innate immunity"
+    },
+    {
+     "ref": "PMID:42092345",
+     "category": "not_in_text",
+     "reason": "mouse Abi3 S212F variant disrupts microglia and causes their loss; innate immunity is not named and the text does not say whether the variant lowers or raises ABI3 function (an 'Abi3-high state' predisposes microglia to degeneration)"
+    },
+    {
+     "ref": "rs616338",
+     "category": "not_in_text",
+     "reason": "GWAS row: rs616338-T (ABI3) raises AD risk (OR 1.31); innate immunity is not named"
+    }
+   ]
+  },
+  {
+   "id": "S4",
+   "step": "H1.4",
+   "text": "PLCG2 activates the innate immune response",
+   "claim": {
+    "effect": {
+     "subject": "PLCG2",
+     "sign": "pos",
+     "target": {
+      "process": "innateImmunity"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "PMID:28714976",
+     "category": "undirected",
+     "reason": "rare coding variants in PLCG2 'implicate' microglial innate immunity in AD; no direction from PLCG2 to innate immunity"
+    },
+    {
+     "ref": "PMID:41620758",
+     "category": "not_in_text",
+     "reason": "the hyperactive PLCG2-P522R variant is protective against AD and delays onset: PLCG2 to AD, innate immunity not named"
+    },
+    {
+     "ref": "rs72824905",
+     "category": "not_in_text",
+     "reason": "GWAS row: rs72824905-G (PLCG2) lowers AD risk (OR 0.73); innate immunity is not named"
+    }
+   ]
+  },
+  {
+   "id": "S5",
+   "step": "H1.5",
+   "text": "the innate immune response lowers the risk of Alzheimer disease",
+   "claim": {
+    "effect": {
+     "subject": "innateImmunity",
+     "sign": "neg",
+     "target": {
+      "disease": "alzheimers",
+      "aspect": "risk"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "PMID:28714976",
+     "kind": "observational",
+     "polarity": "refutes",
+     "quote": "the microglia-mediated innate immune response contributes directly to the development of Alzheimer's disease",
+     "note": "the run's only citation for this step says innate immunity drives AD, the opposite sign; the conclusion of a case-control exome association study"
+    }
+   ],
+   "excluded": []
+  },
+  {
+   "id": "S6",
+   "step": "H2.1",
+   "text": "the APOE ε4 allele goes with abnormal cholesterol homeostasis",
+   "claim": {
+    "assoc": {
+     "subject": "apoe4",
+     "direction": "pos",
+     "target": {
+      "phenotype": "abnormalCholesterolHomeostasis"
+     }
+    }
+   },
+   "sign_note": "the run's polarity is 'unknown'; direction from the cited text, which says APOE4 alters cholesterol homeostasis (the target is the abnormal phenotype, so 'altered' is pos)",
+   "evidence": [
+    {
+     "ref": "PMID:36385529",
+     "kind": "observational",
+     "quote": "APOE4 significantly altered signalling pathways associated with cholesterol homeostasis and transport",
+     "note": "single-cell transcriptomics of post-mortem brains, APOE4 carriers against non-carriers"
+    }
+   ],
+   "excluded": []
+  },
+  {
+   "id": "S7",
+   "step": "H2.2",
+   "text": "abnormal cholesterol homeostasis lowers myelination",
+   "claim": {
+    "effect": {
+     "subject": "abnormalCholesterolHomeostasis",
+     "sign": "neg",
+     "target": {
+      "process": "myelination"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "PMID:36385529",
+     "kind": "mechanistic",
+     "taxon": "mouse",
+     "quote": "Pharmacologically facilitating cholesterol transport increases axonal myelination and improves learning and memory in APOE4 mice",
+     "note": "in vivo pharmacological perturbation in APOE4 mice; inverted: easing cholesterol transport raises myelination, so dysregulation lowers it"
+    }
+   ],
+   "excluded": []
+  },
+  {
+   "id": "S8",
+   "step": "H2.3",
+   "text": "myelination lowers the risk of Alzheimer disease",
+   "claim": {
+    "effect": {
+     "subject": "myelination",
+     "sign": "neg",
+     "target": {
+      "disease": "alzheimers",
+      "aspect": "risk"
+     }
+    }
+   },
+   "evidence": [],
+   "excluded": [
+    {
+     "ref": "PMID:36385529",
+     "category": "not_in_text",
+     "reason": "links myelination to learning and memory in APOE4 mice ('a functional link between APOE4, cholesterol, myelination and memory'); AD itself is named only as a therapeutic opportunity"
+    },
+    {
+     "ref": "rs2075650",
+     "category": "not_in_text",
+     "reason": "GWAS row: rs2075650-G (TOMM40 intron, author-reported APOE) raises AD risk (OR 2.53); myelination is not named"
+    }
+   ]
+  },
+  {
+   "id": "S9",
+   "step": "H3.1",
+   "text": "INPP5D inhibits RIPK1 kinase activity",
+   "claim": {
+    "effect": {
+     "subject": "INPP5D",
+     "sign": "neg",
+     "target": {
+      "activity": "RIPK1"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "PMID:41633359",
+     "kind": "inVitro",
+     "quote": "the N-terminal SH2 domain of INPP5D, an important LOAD risk gene, directly interacted with the cell death regulator RIPK1 at p-Y383 to suppress RIPK1 kinase activation",
+     "note": "a binding and kinase-activation result; the abstract does not name the organism of the proteins or cells"
+    }
+   ],
+   "excluded": []
+  },
+  {
+   "id": "S10",
+   "step": "H3.2",
+   "text": "RIPK1 drives the neuroinflammatory response",
+   "claim": {
+    "effect": {
+     "subject": "RIPK1",
+     "sign": "pos",
+     "target": {
+      "process": "neuroinflammation"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "PMID:41633359",
+     "kind": "mechanistic",
+     "taxon": "mouse",
+     "quote": "Microglial INPP5D deficiency cell-autonomously promoted RIPK1-mediated transcriptional induction of diverse LOAD risk genes, proinflammatory cytokines, complements, and ROS mediators",
+     "note": "the abstract never names the organism; a microglial INPP5D deletion followed through ageing to motor dysfunction is not a human experiment, so mouse is assumed"
+    }
+   ],
+   "excluded": []
+  },
+  {
+   "id": "S11",
+   "step": "H3.3",
+   "text": "the neuroinflammatory response raises the risk of Alzheimer disease",
+   "claim": {
+    "effect": {
+     "subject": "neuroinflammation",
+     "sign": "pos",
+     "target": {
+      "disease": "alzheimers",
+      "aspect": "risk"
+     }
+    }
+   },
+   "evidence": [
+    {
+     "ref": "PMID:41633359",
+     "kind": "hypothesis",
+     "quote": "RIPK1-mediated neuroinflammation for promoting aging-related neurodegenerative diseases, including LOAD",
+     "note": "'Our data suggest': the paper tested TDP-43 pathology, neuronal loss and motor dysfunction, not AD"
+    }
+   ],
+   "excluded": [
+    {
+     "ref": "rs10933431",
+     "category": "not_in_text",
+     "reason": "GWAS row: rs10933431-G (INPP5D intron) lowers AD risk (OR 0.93); neuroinflammation is not named"
+    }
+   ]
+  }
+ ],
+ "unexpressed": [],
+ "hypotheses": {
+  "H1": {
+   "claims": [
+    {
+     "subject": "MS4A4A",
+     "sign": "pos",
+     "target": {
+      "disease": "alzheimers",
+      "aspect": "risk"
+     }
+    },
+    {
+     "subject": "TREM2",
+     "sign": "neg",
+     "target": {
+      "disease": "alzheimers",
+      "aspect": "risk"
+     }
+    },
+    {
+     "subject": "ABI3",
+     "sign": "neg",
+     "target": {
+      "disease": "alzheimers",
+      "aspect": "risk"
+     }
+    },
+    {
+     "subject": "PLCG2",
+     "sign": "neg",
+     "target": {
+      "disease": "alzheimers",
+      "aspect": "risk"
+     }
+    }
+   ],
+   "note": "one claim per gene. The mechanism calls innate immunity 'a key defense mechanism against' AD and TREM2, ABI3 and PLCG2 its drivers (neg each); MS4A4A negatively regulates TREM2 and so this defence (pos). The run never states MS4A4A's net direction in words. The chains start at the proteins; the mechanism also names TREM2 R47H, ABI3 S212F and protective PLCG2 and MS4A4A alleles, which no step uses."
+  },
+  "H2": {
+   "claims": [
+    {
+     "subject": "apoe4",
+     "sign": "pos",
+     "target": {
+      "disease": "alzheimers",
+      "aspect": "risk"
+     }
+    }
+   ],
+   "note": "the chain's first subject is labelled 'APOE' (gene), but the title and mechanism ('APOE (specifically the APOE4 risk allele)') make it the ε4 allele, so the subject is the allele"
+  },
+  "H3": {
+   "claims": [
+    {
+     "subject": "INPP5D",
+     "sign": "neg",
+     "target": {
+      "disease": "alzheimers",
+      "aspect": "risk"
+     }
+    }
+   ],
+   "note": "title: INPP5D protects against AD. The mechanism also says it slows progression and names rs10933431-G as protective; no step carries either."
+  }
+ },
+ "findings": [
+  {
+   "project": "hypothesis-agent",
+   "category": "ungrounded_label",
+   "steps": [
+    "H1.1",
+    "H1.2",
+    "H1.3",
+    "H1.4",
+    "H1.5",
+    "H2.1",
+    "H2.2",
+    "H2.3",
+    "H3.1",
+    "H3.2",
+    "H3.3"
+   ],
+   "detail": "every subject, object and context in the run has an empty curie and grounding_evidence except Alzheimer disease, although every hypothesis is marked support 'grounded'"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "chain_not_connected",
+   "steps": [
+    "H1.2",
+    "H1.3",
+    "H1.4"
+   ],
+   "detail": "H1 is a fan-in written as a chain: H1.2 ends at innate immunity, H1.3 starts at ABI3 and H1.4 at PLCG2; it composes as a graph, one arm per gene"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "title_not_in_chain",
+   "hypothesis": "H1",
+   "detail": "the title says MS4A4A negatively regulates ABI3- and PLCG2-mediated innate immunity, but no step links MS4A4A to ABI3 or PLCG2, and the MS4A4A paper (PMID:41435829) speaks only of TREM2 (via MS4A6A and DAP12)"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_states_opposite",
+   "steps": [
+    "H1.5"
+   ],
+   "detail": "the only citation for 'innate immunity inhibits AD' (PMID:28714976) concludes that the innate immune response 'contributes directly to the development of Alzheimer's disease'; kept as refuting, so the H1 arms end on a refuted step"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "contradicting_evidence_ignored",
+   "hypothesis": "H1",
+   "detail": "H1 lists no contradicting evidence although its own H1.5 citation states the opposite sign; no hypothesis in the run lists any"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_does_not_state_step",
+   "steps": [
+    "H1.2",
+    "H1.3",
+    "H1.4"
+   ],
+   "detail": "nothing the run cites says TREM2, ABI3 or PLCG2 increases innate immunity: PMID:28714976 says only that their variants 'implicate' it, PMID:42092345 reports a mouse variant that disrupts microglia, PMID:41620758 reports PLCG2 to AD"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_does_not_state_step",
+   "steps": [
+    "H1.1",
+    "H1.2",
+    "H1.3",
+    "H1.4",
+    "H2.3",
+    "H3.3"
+   ],
+   "detail": "all six GWAS Catalog rows are cited for mechanistic protein or process steps they cannot state (variant to AD risk only); all excluded"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_supports_unmade_step",
+   "steps": [
+    "H1.4"
+   ],
+   "detail": "PMID:41620758 says the hyperactive PLCG2-P522R variant protects against AD, a PLCG2 to AD link (gain of PLCG2 activity lowers risk) that no step makes; it was cited instead for PLCG2 to innate immunity, which it does not state"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "wrong_variant_name",
+   "hypothesis": "H1",
+   "detail": "the mechanism names 'ABI3 S212F', the mouse Abi3 numbering (PMID:42092345: 'ABI3S209F (Abi3S212F in mouse)'); the human variant it cites (rs616338, PMID:28714976) is p.Ser209Phe"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "variant_gene_attribution",
+   "steps": [
+    "H1.1"
+   ],
+   "detail": "rs7232, presented as a protective MS4A4A allele, is a missense variant inside MS4A6A by the GWAS row's own genomic context (distance 0), with MS4A4A 12.5 kb away; the row's summary line still says 'mapped gene MS4A4A'"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "ungrounded_label",
+   "steps": [
+    "H2.1"
+   ],
+   "detail": "H2.1's subject is labelled 'APOE' (kind gene) while the title, mechanism and citation are about the APOE4 allele; curated as the ε4 allele"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_does_not_state_step",
+   "steps": [
+    "H2.3"
+   ],
+   "detail": "PMID:36385529 links myelination to learning and memory in APOE4 mice, never to AD; with the GWAS row excluded, 'myelination inhibits AD' has no support"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "claim_without_citation",
+   "hypothesis": "H2",
+   "detail": "the mechanism says the myelination route is 'completely independent of microglial inflammation or direct amyloid-beta clearance'; no cited text tests or states this"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_at_no_step",
+   "hypothesis": "H2",
+   "detail": "the supporting citations PMID:8346443 (APOE ε4 gene dose raises AD risk) and rs429358 (allele '?', AD age of onset, OR 3.32) state a direct APOE4 to AD link that no step makes; rs429358 cannot give a direction because the allele is unknown"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "variant_gene_attribution",
+   "steps": [
+    "H2.3"
+   ],
+   "detail": "rs2075650 is a TOMM40 intron variant (APOE is only the author-reported gene, 11 kb away) and is cited for 'myelination inhibits AD'"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "mechanism_misreads_citation",
+   "hypothesis": "H3",
+   "detail": "the mechanism and falsification test say INPP5D represses RIPK1 expression, but PMID:41633359 says INPP5D binds RIPK1 and suppresses its kinase activation; measuring RIPK1 expression after INPP5D knockout tests the wrong thing"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "claim_without_citation",
+   "hypothesis": "H3",
+   "detail": "'protective variants in INPP5D (such as rs10933431-G) may enhance this repression': no cited text links rs10933431 to INPP5D activity or expression, only to AD risk (OR 0.93)"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_suggests_only",
+   "steps": [
+    "H3.3"
+   ],
+   "detail": "PMID:41633359 tested TDP-43 pathology, neuronal loss and motor dysfunction, an ALS-like readout, and only 'suggests' its pathway promotes LOAD; kept as kind hypothesis, so H3.3 carries no weight"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_at_no_step",
+   "hypothesis": "H3",
+   "detail": "the supporting citations OT:INPP5D-MONDO_0004975 (association score, no direction) and CHEMBL:CHEMBL3989954 (ROSIPTOR 'targets INPP5D', phase 3, no disease or direction named) are cited by no step and state none"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "abstention_unverifiable",
+   "hypothesis": "abstention",
+   "detail": "the RNPS1/LPIN2 abstention cites OT:RNPS1-MONDO_0004975, PMID:21283692, PMID:41865408, PMID:41205924 and PMID:39269833 and a STRING analysis, none of which is in sources.json, so it cannot be checked"
+  },
+  {
+   "project": "biolean",
+   "category": "rule_missing",
+   "steps": [
+    "H1.1",
+    "H1.2",
+    "H1.3",
+    "H1.4",
+    "H2.1",
+    "H2.2",
+    "H3.1",
+    "H3.2"
+   ],
+   "detail": "every step but the last in each chain carries a structured cell_type context (microglia, oligodendrocytes) and the disease step has none; refining would cut every chain at its last step, so contexts were dropped as qualifiers; the guide's 'context limits the result' rule does not say which way to read a plain context field"
+  },
+  {
+   "project": "biolean",
+   "category": "missing_term",
+   "steps": [
+    "H2.1"
+   ],
+   "detail": "no term for the APOE ε4 allele; made BLN:APOE-e4. NCIT:C105364 'Apolipoprotein E4' is in the corpus but names the protein isoform, not the allele. The only 'APOE4' label in the table is a synonym of MONDO:0007089 (Alzheimer disease 2), a grounding trap"
+  },
+  {
+   "project": "biolean",
+   "category": "kind_mismatch",
+   "steps": [
+    "H2.1",
+    "H2.2"
+   ],
+   "detail": "'cholesterol dysregulation' is grounded to MP:0005278 (abnormal cholesterol homeostasis), a mouse phenotype term used for a human claim, because HP has only circulating-cholesterol concentration terms"
+  },
+  {
+   "project": "biolean",
+   "category": "no_form_for",
+   "steps": [
+    "H1.1"
+   ],
+   "detail": "PMID:41435829 pools macrophages, microglia, non-human primates and mice in one sentence: evidence carries one kind and one taxon, and there is no primate taxon; recorded as mechanistic, mouse"
+  },
+  {
+   "project": "biolean",
+   "category": "no_form_for",
+   "steps": [
+    "H3.1",
+    "H3.2"
+   ],
+   "detail": "PMID:41633359's abstract never names its organism or system; there is no way to say 'non-human, organism not stated', so H3.2 is marked mouse by inference and H3.1 has no taxon"
+  },
+  {
+   "project": "biolean",
+   "category": "no_form_for",
+   "hypothesis": "H2",
+   "detail": "no form for a claim of independence ('completely independent of microglial inflammation'): BioLean can say X acts through Y, not that it does not"
+  },
+  {
+   "project": "biolean",
+   "category": "rule_missing",
+   "hypothesis": "H2",
+   "detail": "a cited text stating a direct gene to disease link (PMID:8346443 for APOE4, PMID:41620758 for PLCG2) has no home when no step makes it: a bridge would bypass the hypothesis's mechanism rather than fill a gap in it, so it is only a finding"
+  },
+  {
+   "project": "biolean",
+   "category": "evidence_weighting",
+   "steps": [
+    "H1.5"
+   ],
+   "detail": "chain composition drops disbelief: S5 is refuted by the run's own citation (d 1/2), yet the four H1 arms read belief 0 'unsupported', the same as an arm whose link merely has no evidence"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "confidence_matches",
+   "hypothesis": "H1",
+   "detail": "all three hypotheses are rated 'low' and every arm composes with the run's own sign but is unsupported (H1: S2 to S4 empty, S5 refuted; H2: S8 empty; H3: S11 rests on a 'suggest' sentence); the low ratings are apt"
+  },
+  {
+   "project": "biolean",
+   "category": "rule_missing",
+   "steps": [
+    "H2.1"
+   ],
+   "detail": "NCIT terms are in the corpus (NCIT:C105364 Apolipoprotein E4) but neither the guide prefix table nor render.py PREFIX_KIND covers NCIT, so a curator cannot tell whether one may be used"
+  },
+  {
+   "project": "hypothesis-agent",
+   "category": "citation_supports_unmade_step",
+   "steps": [
+    "H1.2"
+   ],
+   "detail": "PMID:41620758 also reports that APOE ε4 carriers with TREM2-R62H have an earlier AD onset, a TREM2 to AD link no step makes"
+  }
+ ],
+ "audit": [
+  {
+   "item": "S7 PMID:36385529",
+   "error": "wrong_evidence_kind",
+   "before": "APOE4 impairs myelination via cholesterol dysregulation in oligodendrocytes",
+   "after": "Pharmacologically facilitating cholesterol transport increases axonal myelination and improves learning and memory in APOE4 mice",
+   "reason": "the title pools human observational, iPSC and mouse designs, so it cannot carry kind mechanistic, taxon mouse; the perturbation sentence states the same link and is the design the kind names"
+  },
+  {
+   "item": "finding missing_term H2.1",
+   "error": "other",
+   "before": "no term for the APOE ε4 allele or the apoE4 isoform (PR has only apolipoprotein E); made BLN:APOE-e4. The only 'APOE4' label in the table is a synonym of MONDO:0007089 (Alzheimer disease 2), a grounding trap",
+   "after": "no term for the APOE ε4 allele; made BLN:APOE-e4. NCIT:C105364 'Apolipoprotein E4' is in the corpus but names the protein isoform, not the allele. The only 'APOE4' label in the table is a synonym of MONDO:0007089 (Alzheimer disease 2), a grounding trap",
+   "reason": "terms.py 'apolipoprotein E4' finds NCIT:C105364; the finding said no isoform term exists"
+  },
+  {
+   "item": "findings",
+   "error": "missed_finding",
+   "before": "",
+   "after": "NCIT terms are in the corpus (NCIT:C105364 Apolipoprotein E4) but neither the guide prefix table nor render.py PREFIX_KIND covers NCIT, so a curator cannot tell whether one may be used",
+   "reason": "not recorded by the curator"
+  },
+  {
+   "item": "findings",
+   "error": "missed_finding",
+   "before": "",
+   "after": "PMID:41620758 also reports that APOE ε4 carriers with TREM2-R62H have an earlier AD onset, a TREM2 to AD link no step makes",
+   "reason": "not recorded by the curator"
+  }
+ ]
+}

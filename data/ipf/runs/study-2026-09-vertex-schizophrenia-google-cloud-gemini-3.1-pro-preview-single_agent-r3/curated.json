@@ -1,0 +1,172 @@
+{
+ "run_id": "study-2026-09-vertex-schizophrenia-google-cloud-gemini-3.1-pro-preview-single_agent-r3",
+ "curated_by": "Claude Opus 5.5, 2026-10-30",
+ "entities": {
+  "CSMD1": {"kind": "protein", "curie": "UniProt:Q96PZ7", "run_labels": ["CSMD1"]},
+  "C4A": {"kind": "protein", "curie": "UniProt:P0C0L4", "run_labels": ["C4A"]},
+  "C4B": {"kind": "protein", "curie": "UniProt:P0C0L5", "run_labels": ["C4B"]},
+  "C1QA": {"kind": "protein", "curie": "UniProt:P02745", "run_labels": ["C1QA"]},
+  "CX3CR1": {"kind": "protein", "curie": "UniProt:P49238", "run_labels": ["CX3CR1"]},
+  "complementActivation": {"kind": "process", "curie": "GO:0006956", "run_labels": ["complement activation"]},
+  "synapsePruning": {"kind": "process", "curie": "GO:0098883", "run_labels": ["synapse pruning"]},
+  "microglialActivation": {"kind": "process", "curie": "GO:0001774",
+                           "run_labels": ["microglia", "microglial activation (falsification text of hyp-2)"]},
+  "schizophrenia": {"kind": "disease", "curie": "MONDO:0005090", "run_labels": ["schizophrenia"]}
+ },
+ "statements": [
+  {"id": "S1", "step": "hyp-1.1", "text": "CSMD1 inhibits complement activation",
+   "claim": {"effect": {"subject": "CSMD1", "sign": "neg", "target": {"process": "complementActivation"}}},
+   "evidence": [
+    {"ref": "PMID:40112933", "kind": "inVitro",
+     "quote": "CSMD1 encodes a complement classical pathway inhibitor"}
+   ],
+   "excluded": [
+    {"ref": "OT:CSMD1-MONDO_0005090", "category": "not_in_text",
+     "reason": "an Open Targets CSMD1-schizophrenia association score; says nothing about complement"}
+   ]},
+  {"id": "S2", "step": ["hyp-1.2", "hyp-2.2"], "text": "C4A activates complement activation",
+   "claim": {"effect": {"subject": "C4A", "sign": "pos", "target": {"process": "complementActivation"}}},
+   "evidence": [
+    {"ref": "P0C0L4", "kind": "curatedDb",
+     "quote": "It then recruits the serine protease complement C2b to form the C3 and C5 convertases, which cleave and activate C3 and C5, respectively, the next components of the complement pathways"}
+   ],
+   "excluded": [
+    {"ref": "PMID:26814963", "category": "not_in_text",
+     "reason": "reports C4A expression tracking schizophrenia risk and C4 mediating synapse elimination in mice; does not say C4A activates complement"},
+    {"ref": "STRING:GO:0006958", "category": "enrichment",
+     "reason": "the run's own genes C1QA, C4A, C4B are enriched in the classical pathway term"}
+   ]},
+  {"id": "S3", "step": "hyp-1.3", "text": "C4B activates complement activation",
+   "claim": {"effect": {"subject": "C4B", "sign": "pos", "target": {"process": "complementActivation"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "rs116633139", "category": "not_in_text",
+     "reason": "GWAS row for an intergenic SNP near HLA-DQB1 and the trait 'autism spectrum disorder or schizophrenia', risk allele unknown; names neither C4B function nor complement"},
+    {"ref": "STRING:GO:0006958", "category": "enrichment",
+     "reason": "the run's own genes C1QA, C4A, C4B are enriched in the classical pathway term"}
+   ]},
+  {"id": "S4", "step": ["hyp-1.4", "hyp-2.3"], "text": "complement activation drives synapse pruning",
+   "claim": {"effect": {"subject": "complementActivation", "sign": "pos", "target": {"process": "synapsePruning"}}},
+   "evidence": [
+    {"ref": "PMID:22632727", "kind": "mechanistic", "taxon": "mouse",
+     "quote": "We show that microglia engulf presynaptic inputs during peak retinogeniculate pruning and that engulfment is dependent upon neural activity and the microglia-specific phagocytic signaling pathway, complement receptor 3(CR3)/C3"},
+    {"ref": "PMID:42276261", "kind": "review", "moved_from": "hyp-1.5",
+     "quote": "aberrant synaptic pruning mediated by excessive complement system activity"}
+   ],
+   "excluded": [
+    {"ref": "STRING:GO:0098883", "category": "enrichment",
+     "reason": "the run's own genes CX3CR1 and C1QA are enriched in the synapse pruning term"}
+   ]},
+  {"id": "S5", "step": ["hyp-1.5", "hyp-2.6"], "text": "synapse pruning leads to schizophrenia",
+   "claim": {"effect": {"subject": "synapsePruning", "sign": "pos", "target": {"disease": "schizophrenia", "aspect": "risk"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "PMID:26814963", "category": "disease_feature",
+     "reason": "links excessive complement activity (not pruning) to schizophrenia, and proposes C4-mediated synapse elimination may explain reduced synapse numbers, a feature of schizophrenia brains"},
+    {"ref": "PMID:42276261", "category": "undirected",
+     "reason": "'Schizophrenia pathogenesis may involve aberrant synaptic pruning': aberrant, not increased, pruning"}
+   ]},
+  {"id": "S6", "step": "hyp-2.1", "text": "C1QA activates complement activation (classical pathway)",
+   "claim": {"effect": {"subject": "C1QA", "sign": "pos", "target": {"process": "complementActivation"}}},
+   "evidence": [
+    {"ref": "P02745", "kind": "curatedDb",
+     "quote": "Core component of the complement C1 complex, a multiprotein complex that initiates the classical pathway of the complement system"}
+   ],
+   "excluded": [
+    {"ref": "STRING:GO:0006958", "category": "enrichment",
+     "reason": "the run's own genes C1QA, C4A, C4B are enriched in the classical pathway term"}
+   ]},
+  {"id": "S7", "step": "hyp-2.4", "text": "CX3CR1 activates microglia",
+   "claim": {"effect": {"subject": "CX3CR1", "sign": "pos", "target": {"process": "microglialActivation"}}},
+   "evidence": [
+    {"ref": "P49238", "kind": "crossSpecies", "polarity": "refutes",
+     "quote": "Required to restrain the microglial inflammatory response in the CNS"}
+   ],
+   "excluded": [
+    {"ref": "PMID:42276261", "category": "undirected",
+     "reason": "names CX3CR1 as a microglial counter-receptor among the neuro-immune regulators by which 'Microglia and CSA are tightly regulated', with no direction; its results are CX3CR1 expression differences in schizophrenia brain and blood"}
+   ]},
+  {"id": "S8", "step": "hyp-2.5", "text": "microglia (microglial activation) drive synapse pruning",
+   "claim": {"effect": {"subject": "microglialActivation", "sign": "pos", "target": {"process": "synapsePruning"}}},
+   "evidence": [
+    {"ref": "P49238", "kind": "crossSpecies",
+     "quote": "synaptic pruning, a natural process during which brain microglia eliminates extra synapses"},
+    {"ref": "PMID:22632727", "kind": "mechanistic", "taxon": "mouse",
+     "quote": "we demonstrate a role for microglia in activity-dependent synaptic pruning"}
+   ],
+   "excluded": []}
+ ],
+ "unexpressed": [],
+ "hypotheses": {
+  "hyp-1": {
+   "claims": [
+    {"subject": "CSMD1", "sign": "neg", "target": {"disease": "schizophrenia", "aspect": "risk"}},
+    {"subject": "C4A", "sign": "pos", "target": {"disease": "schizophrenia", "aspect": "risk"}},
+    {"subject": "C4B", "sign": "pos", "target": {"disease": "schizophrenia", "aspect": "risk"}}
+   ],
+   "note": "title: 'CSMD1 loss relieves inhibition on C4A/C4B-mediated complement activation, leading to excessive synaptic pruning in schizophrenia', so CSMD1 is neg and C4A, C4B pos; the chain is a fan-in of three genes onto complement activation"
+  },
+  "hyp-2": {
+   "claims": [
+    {"subject": "C1QA", "sign": "pos", "target": {"disease": "schizophrenia", "aspect": "risk"}},
+    {"subject": "C4A", "sign": "pos", "target": {"disease": "schizophrenia", "aspect": "risk"}},
+    {"subject": "CX3CR1", "sign": "pos", "target": {"disease": "schizophrenia", "aspect": "risk"}}
+   ],
+   "note": "the title names no disease; the mechanism ('Overactivity of this C1QA-C4A-CX3CR1 axis ... driving schizophrenia pathogenesis') and the chain end at schizophrenia, and give all three genes a positive sign"
+  }
+ },
+ "findings": [
+  {"project": "hypothesis-agent", "category": "unsupported_shared_step", "steps": ["hyp-1.5", "hyp-2.6"],
+   "detail": "every arm of both hypotheses ends with 'synapse pruning leads to schizophrenia', and neither citation states it: PMID:26814963 ties complement activity, not pruning, to schizophrenia and offers synapse elimination only as a possible explanation of reduced synapse numbers; PMID:42276261 says 'aberrant' pruning, with no direction."},
+  {"project": "both", "category": "direct_evidence_unused", "hypothesis": "hyp-1",
+   "detail": "PMID:26814963 states the C4A-schizophrenia link directly ('each common C4 allele associating with schizophrenia in proportion to its tendency to generate greater expression of C4A'), and PMID:42276261 reports C4 overexpression in schizophrenia brain, but no step of either hypothesis says C4A (or C4) goes with schizophrenia; the run cites the strongest source for the steps it does not support and routes C4A through the unsupported pruning step instead; under the bridge rule (only when an arm cannot compose) BioLean has no place to put it either."},
+  {"project": "hypothesis-agent", "category": "citation_states_opposite", "steps": ["hyp-2.4"],
+   "detail": "P49238 (UniProt CX3CR1), cited for 'CX3CR1 activates microglia', says CX3CR1 is 'Required to restrain the microglial inflammatory response in the CNS' (By similarity); kept as refuting, judging microglial inflammatory response and microglial activation the same node."},
+  {"project": "hypothesis-agent", "category": "contradicting_evidence_ignored", "hypothesis": "hyp-2",
+   "detail": "contradicting_evidence is empty, yet the run's own CX3CR1 citations cut against 'CX3CR1 overactivity drives schizophrenia': P49238 has CX3CR1 restraining microglial inflammation, and PMID:42276261 calls CX3CR1 the microglial counter-receptor of a 'don't eat me' signal and reports it underexpressed in schizophrenia blood (sex-specific in brain)."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["hyp-1.3"],
+   "detail": "the only specific citation for 'C4B activates complement activation' is a GWAS Catalog row for rs116633139, an intergenic SNP near HLA-DQB1, trait 'autism spectrum disorder or schizophrenia', risk allele '?', with C4A and C4B among about 70 author-reported MHC genes; no cited text supports any C4B step, so the C4B arm has no evidence at its first step."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["hyp-1.1"],
+   "detail": "OT:CSMD1-MONDO_0005090 is a CSMD1-schizophrenia association score, cited for 'CSMD1 inhibits complement activation'."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["hyp-1.2", "hyp-2.2"],
+   "detail": "PMID:26814963, cited for 'C4A activates complement activation', reports C4A expression tracking schizophrenia risk and C4 mediating synapse elimination in mice; it never says C4A activates complement (only that the results 'implicate excessive complement activity')."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["hyp-1.2", "hyp-1.3", "hyp-2.1", "hyp-1.4", "hyp-2.3"],
+   "detail": "STRING enrichments of the run's own input genes (GO:0006958 for C1QA, C4A, C4B; GO:0098883 for CX3CR1 and C1QA, 2 of 11) are cited as evidence for causal steps; an enrichment of the query set is circular and states no step."},
+  {"project": "hypothesis-agent", "category": "chain_not_connected", "steps": ["hyp-1.1", "hyp-1.2", "hyp-1.3", "hyp-1.4"],
+   "detail": "hyp-1 is written as a chain but is a fan-in: hyp-1.1, hyp-1.2 and hyp-1.3 each end at complement activation, and hyp-1.2 and hyp-1.3 start at C4A and C4B rather than at the previous step's object; read as a graph it connects each gene to schizophrenia."},
+  {"project": "hypothesis-agent", "category": "chain_not_connected", "steps": ["hyp-2.1", "hyp-2.2", "hyp-2.3", "hyp-2.4"],
+   "detail": "hyp-2 has two fan-ins: hyp-2.2 starts at C4A after hyp-2.1 ends at complement activation, and hyp-2.4 starts at CX3CR1 after hyp-2.3 ends at synapse pruning; read as a graph it connects each gene to schizophrenia."},
+  {"project": "hypothesis-agent", "category": "mechanism_chain_mismatch", "hypothesis": "hyp-1",
+   "detail": "the mechanism says uninhibited complement activation drives 'the deposition of C4A and C4B' (complement to C4), while the chain says C4A and C4B activate complement (C4 to complement)."},
+  {"project": "hypothesis-agent", "category": "mechanism_chain_mismatch", "hypothesis": "hyp-2",
+   "detail": "CX3CR1's role shifts across the hypothesis: a marker in the title ('CX3CR1-expressing microglia'), an undirected regulator in the mechanism ('a process regulated by the microglial receptor CX3CR1'), and an activator in the chain (hyp-2.4); the claim takes pos from the chain and 'Overactivity of this C1QA-C4A-CX3CR1 axis'."},
+  {"project": "hypothesis-agent", "category": "ungrounded_label", "steps": ["hyp-1.1", "hyp-1.4", "hyp-2.4", "hyp-2.5"],
+   "detail": "the run leaves the CURIE empty for complement activation, synapse pruning, microglia and the brain context, and grounding_evidence is empty for every node, though it cites STRING records naming GO:0006958 and GO:0098883."},
+  {"project": "biolean", "category": "no_form_for", "steps": ["hyp-2.4", "hyp-2.5"],
+   "detail": "an effect on a cell type ('CX3CR1 activates microglia'): Target has no cell-type kind, so the run's 'microglia' node (object of hyp-2.4, subject of hyp-2.5) is grounded as GO:0001774 microglial cell activation, following the run's falsification text ('preventing microglial activation halts excessive synaptic pruning'); the hyp-2.5 texts name microglia, not their activation, so S8 says slightly more than its quotes."},
+  {"project": "biolean", "category": "evidence_metadata", "steps": ["hyp-1.4", "hyp-2.3", "hyp-2.5"],
+   "detail": "the PMID:22632727 abstract never names its species; taxon mouse is set from the paper itself (postnatal retinogeniculate pruning with CR3/C3 disruption), not from the quoted text."},
+  {"project": "biolean", "category": "grain", "steps": ["hyp-1.1", "hyp-2.1"],
+   "detail": "the CSMD1 and C1QA texts speak of the classical pathway (GO:0006958); the statements use the run's 'complement activation' (GO:0006956), the parent, so the evidence is for a part of the node."},
+  {"project": "biolean", "category": "abstention_not_checkable",
+   "detail": "the run abstains on NXPH3 and CCDC136 citing GWAS:NXPH3:no-association, GWAS:CCDC136:no-association and OT:NXPH3-MONDO_0005090, none of which is in sources.json, and claims zero Open Targets scores for both genes while citing only NXPH3's; the abstention cannot be checked."},
+  {"project": "hypothesis-agent", "category": "citation_at_wrong_step", "steps": ["hyp-1.2", "hyp-2.2", "hyp-1.5", "hyp-2.6"],
+   "detail": "PMID:26814963 states a direct in vivo C4-to-pruning result ('In mice, C4 mediated synapse elimination during postnatal development'), but neither hypothesis has a C4A (or C4B) to synapse pruning step; the run cites the paper only for C4A activating complement and for pruning causing schizophrenia, neither of which it states."},
+  {"project": "hypothesis-agent", "category": "feature_as_cause", "steps": ["hyp-1.5", "hyp-2.6"],
+   "detail": "hyp-1's mechanism calls excessive pruning 'characteristic of schizophrenia' (a feature), and its cited PMID:26814963 offers synapse elimination only as an explanation of 'the reduced numbers of synapses in the brains of individuals with schizophrenia' (a feature), yet the chain step makes pruning a cause (synapse pruning leads_to schizophrenia)."}
+ ],
+ "audit": [
+  {"item": "S7 excluded PMID:42276261", "error": "wrong_exclusion",
+   "before": "category not_in_text: 'reports CX3CR1 expression differences in schizophrenia brain and blood; nothing on CX3CR1 activating microglia'",
+   "after": "category undirected",
+   "reason": "the text names both ends: CX3CR1 is one of the 'microglial counter-receptors' among the neuro-immune regulators by which 'Microglia and CSA are tightly regulated'; it gives no direction, which is the undirected case, not not_in_text (the two sibling schizophrenia curations judged the same text the same way)"},
+  {"item": "findings", "error": "missed_finding",
+   "before": "none",
+   "after": "citation_at_wrong_step (hyp-1.2, hyp-2.2, hyp-1.5, hyp-2.6): PMID:26814963 states 'In mice, C4 mediated synapse elimination', a C4-to-pruning link no step carries",
+   "reason": "the existing findings record only the unused C4A-schizophrenia association; the paper's in vivo C4-to-synapse-elimination result, which would bypass the complement-activation node, is cited at steps it does not state"},
+  {"item": "findings", "error": "missed_finding",
+   "before": "none",
+   "after": "feature_as_cause (hyp-1.5, hyp-2.6): mechanism calls excessive pruning 'characteristic of schizophrenia', chain makes it a cause",
+   "reason": "the run's own mechanism text and its cited source both frame pruning and synapse loss as a feature of schizophrenia, while the shared final step claims causation; this is why S5 has no support"}
+ ]
+}

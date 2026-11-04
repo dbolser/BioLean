@@ -1,0 +1,268 @@
+{
+ "run_id": "study-2026-09-vertex-nafld-google-cloud-gemini-3.1-pro-preview-single_agent-r3",
+ "curated_by": "Claude Opus 5.5, 2026-10-30",
+ "entities": {
+  "PNPLA3": {"kind": "protein", "curie": "UniProt:Q9NST1", "run_labels": ["PNPLA3"]},
+  "APOE": {"kind": "protein", "curie": "UniProt:P02649", "run_labels": ["APOE"]},
+  "APOA5": {"kind": "protein", "curie": "UniProt:Q6Q788", "run_labels": ["APOA5"]},
+  "LIPC": {"kind": "protein", "curie": "UniProt:P11150", "run_labels": ["LIPC"]},
+  "CMIP": {"kind": "protein", "curie": "UniProt:Q8IY22", "run_labels": ["CMIP"]},
+  "GBP2": {"kind": "protein", "curie": "UniProt:P32456", "run_labels": ["Gbp2-PPARγ-CD36 axis"]},
+  "PPARG": {"kind": "protein", "curie": "UniProt:P37231", "run_labels": ["Gbp2-PPARγ-CD36 axis"]},
+  "CD36": {"kind": "protein", "curie": "UniProt:P16671", "run_labels": ["Gbp2-PPARγ-CD36 axis"]},
+  "tgMetabolism": {"kind": "process", "curie": "GO:0006641", "run_labels": ["Triglyceride metabolic process"]},
+  "lipoproteinClearance": {"kind": "process", "curie": "GO:0034381", "run_labels": ["Plasma lipoprotein clearance"]},
+  "nafld": {"kind": "disease", "curie": "MONDO:0013209", "run_labels": ["non-alcoholic fatty liver disease"]}
+ },
+ "statements": [
+  {"id": "S1", "step": "hypothesis_1.1",
+   "text": "PNPLA3 is associated with NAFLD (the run writes it disease-first: NAFLD associated_with PNPLA3; unsigned)",
+   "claim": {"assoc": {"subject": "PNPLA3", "direction": "none", "target": {"disease": "nafld", "aspect": "risk"}}},
+   "sign_note": "the step is unsigned; the cited GWAS rows give directions for single alleles (rs738408-T up, rs3747207-G down), not for PNPLA3 amount or activity, so the gene-level direction stays none",
+   "evidence": [
+    {"ref": "rs738408", "kind": "observational",
+     "quote": "rs738408-T is associated with 'Nonalcoholic fatty liver disease' at p = 2e-271, beta 35.21 z score (increase) (mapped gene PNPLA3; study GCST90271622, PMID 37709864)"},
+    {"ref": "rs3747207", "kind": "observational",
+     "quote": "rs3747207-G is associated with 'Metabolic dysfunction-associated steatotic liver disease (MTAG)' at p = 5e-128, beta 0.2312531 unit (decrease) [0.21-0.25] (mapped gene PNPLA3; study GCST90728570, PMID 41686896)"}
+   ],
+   "excluded": [
+    {"ref": "rs738409", "category": "parent_disease", "reason": "the row's trait is 'Other chronic nonalcoholic liver disease (PheCode 571.5)', a broader category than NAFLD"}
+   ]},
+  {"id": "S2", "step": "hypothesis_1.2",
+   "text": "PNPLA3 activates triglyceride metabolic process (run context hepatocytes, liver: a setting, dropped)",
+   "claim": {"effect": {"subject": "PNPLA3", "sign": "pos", "target": {"process": "tgMetabolism"}}},
+   "evidence": [
+    {"ref": "Q9NST1", "kind": "curatedDb",
+     "quote": "Additionally possesses low triacylglycerol lipase and CoA-independent acylglycerol transacylase activities and thus may play a role in acyl-chain remodeling of triglycerides"}
+   ],
+   "excluded": [
+    {"ref": "HPA:ENSG00000100344", "category": "not_in_text", "reason": "RNA expression in liver and hepatocytes only; says nothing about triglyceride metabolism"}
+   ]},
+  {"id": "S3", "step": "hypothesis_1.3",
+   "text": "triglyceride metabolic process is associated with NAFLD (unsigned; run context liver dropped)",
+   "claim": {"assoc": {"subject": "tgMetabolism", "direction": "none", "target": {"disease": "nafld", "aspect": "risk"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "Q9NST1", "category": "not_in_text", "reason": "PNPLA3 enzyme function and location; no liver disease anywhere in the record"},
+    {"ref": "STRING:GO:0070328", "category": "enrichment", "reason": "'Triglyceride homeostasis' over-represented in the APOE/LIPC/APOA5 set; names neither PNPLA3 nor NAFLD"},
+    {"ref": "STRING:GO:0034372", "category": "enrichment", "reason": "'VLDL particle remodeling' over-represented in the APOE/LIPC/APOA5 set; names neither triglyceride metabolism nor NAFLD"}
+   ]},
+  {"id": "S4", "step": "hypothesis_2.1",
+   "text": "APOA5 activates plasma lipoprotein particle clearance",
+   "claim": {"effect": {"subject": "APOA5", "sign": "pos", "target": {"process": "lipoproteinClearance"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "Q6Q788", "category": "not_in_text", "reason": "APOA5 stimulates LPL triglyceride hydrolysis and inhibits hepatic VLDL-TG production (By similarity): lipolysis, not particle clearance"},
+    {"ref": "P02649", "category": "not_this_entity", "reason": "states lipoprotein clearance for APOE, not APOA5"},
+    {"ref": "P11150", "category": "not_in_text", "reason": "LIPC lipoprotein hydrolysis; names neither APOA5 nor clearance"},
+    {"ref": "STRING:APOE-APOA5", "category": "no_direction", "reason": "STRING edge (database and text-mining); no process, no sign"},
+    {"ref": "STRING:LIPC-APOA5", "category": "no_direction", "reason": "STRING edge; no process, no sign"},
+    {"ref": "R-HSA-174824", "category": "enrichment", "reason": "Reactome pathway over-representation in the gene set; no gene-level direction"}
+   ]},
+  {"id": "S5", "step": "hypothesis_2.2",
+   "text": "APOE activates plasma lipoprotein particle clearance",
+   "claim": {"effect": {"subject": "APOE", "sign": "pos", "target": {"process": "lipoproteinClearance"}}},
+   "evidence": [
+    {"ref": "P02649", "kind": "curatedDb",
+     "quote": "A main function of APOE is to mediate lipoprotein clearance through the uptake of chylomicrons, VLDLs, and HDLs by hepatocytes"}
+   ],
+   "excluded": [
+    {"ref": "Q6Q788", "category": "not_in_text", "reason": "APOA5 function text; names neither APOE nor clearance"},
+    {"ref": "P11150", "category": "not_in_text", "reason": "LIPC function text; names neither APOE nor clearance"},
+    {"ref": "STRING:APOE-APOA5", "category": "no_direction", "reason": "STRING edge; no process, no sign"},
+    {"ref": "STRING:LIPC-APOA5", "category": "not_in_text", "reason": "STRING edge between LIPC and APOA5; APOE absent"},
+    {"ref": "R-HSA-174824", "category": "enrichment", "reason": "Reactome pathway over-representation in the gene set; no gene-level direction"}
+   ]},
+  {"id": "S6", "step": "hypothesis_2.3",
+   "text": "LIPC activates plasma lipoprotein particle clearance",
+   "claim": {"effect": {"subject": "LIPC", "sign": "pos", "target": {"process": "lipoproteinClearance"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "P11150", "category": "not_in_text", "reason": "hydrolyses lipoprotein triglycerides and phospholipids 'releasing free fatty acids (FFA) and smaller lipoprotein particles': remodelling, not clearance"},
+    {"ref": "P02649", "category": "not_this_entity", "reason": "states lipoprotein clearance for APOE, not LIPC"},
+    {"ref": "Q6Q788", "category": "not_in_text", "reason": "APOA5 function text; names neither LIPC nor clearance"},
+    {"ref": "STRING:APOE-APOA5", "category": "not_in_text", "reason": "STRING edge between APOE and APOA5; LIPC absent"},
+    {"ref": "STRING:LIPC-APOA5", "category": "no_direction", "reason": "STRING edge; no process, no sign"},
+    {"ref": "R-HSA-174824", "category": "enrichment", "reason": "Reactome pathway over-representation in the gene set; no gene-level direction"}
+   ]},
+  {"id": "S7", "step": "hypothesis_2.4",
+   "text": "plasma lipoprotein particle clearance is associated with NAFLD (unsigned; run context liver dropped)",
+   "claim": {"assoc": {"subject": "lipoproteinClearance", "direction": "none", "target": {"disease": "nafld", "aspect": "risk"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "rs964184", "category": "not_this_entity", "reason": "an APOA5-mapped variant (rs964184-G) associated with MASLD; says nothing about lipoprotein clearance"},
+    {"ref": "rs429358", "category": "not_this_entity", "reason": "an APOE-mapped variant (rs429358-T) associated with NAFLD; says nothing about lipoprotein clearance"},
+    {"ref": "rs12908474", "category": "not_this_entity", "reason": "a LIPC-mapped intergenic variant (rs12908474-C) associated with MASLD; says nothing about lipoprotein clearance"}
+   ]},
+  {"id": "S8", "step": "hypothesis_3.1",
+   "text": "CMIP activates GBP2 (first part of the run's 'Gbp2-PPARγ-CD36 axis')",
+   "claim": {"effect": {"subject": "CMIP", "sign": "pos", "target": {"activity": "GBP2"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "PMID:36609599", "category": "undirected", "reason": "only 'RNA sequencing revealed that Gbp2 was involved' and that Cmip methylation 'regulates' the Gbp2-Pparγ-Cd36 pathway; no direction for Cmip on Gbp2"}
+   ]},
+  {"id": "S9", "step": "hypothesis_3.1",
+   "text": "CMIP activates PPARG (second part of the run's 'Gbp2-PPARγ-CD36 axis')",
+   "claim": {"effect": {"subject": "CMIP", "sign": "pos", "target": {"activity": "PPARG"}}},
+   "evidence": [
+    {"ref": "PMID:36609599", "kind": "mechanistic", "taxon": "mouse",
+     "quote": "Pparγ and Cd36 expression levels were dramatically decreased in the livers of ob/ob mice administered siCmip"}
+   ],
+   "excluded": []},
+  {"id": "S10", "step": "hypothesis_3.1",
+   "text": "CMIP activates CD36 (third part of the run's 'Gbp2-PPARγ-CD36 axis')",
+   "claim": {"effect": {"subject": "CMIP", "sign": "pos", "target": {"activity": "CD36"}}},
+   "evidence": [
+    {"ref": "PMID:36609599", "kind": "mechanistic", "taxon": "mouse",
+     "quote": "Pparγ and Cd36 expression levels were dramatically decreased in the livers of ob/ob mice administered siCmip"}
+   ],
+   "excluded": []},
+  {"id": "S11", "step": "hypothesis_3.2",
+   "text": "GBP2 is associated with NAFLD (higher in NAFLD liver)",
+   "claim": {"assoc": {"subject": "GBP2", "direction": "pos", "target": {"disease": "nafld", "aspect": "risk"}}},
+   "sign_note": "the step is unsigned; the direction is from PMID:36609599, cited for the step: Gbp2 expression is enhanced in human NAFLD liver",
+   "evidence": [
+    {"ref": "PMID:36609599", "kind": "observational",
+     "quote": "Cmip and Gbp2 expression levels are enhanced in human liver tissues bearing NAFLD features"}
+   ],
+   "excluded": [
+    {"ref": "rs2925979", "category": "not_this_entity", "reason": "a CMIP-mapped variant (rs2925979-T) associated with MASLD; not GBP2, PPARG or CD36 (judged once for the whole split step)"},
+    {"ref": "rs76424446", "category": "not_this_entity", "reason": "the row says 'mapped gene CMIP', but its genomic context puts the variant in a PLCG2 intron (distance 0, NCBI and Ensembl), 115 kb from CMIP; trait 'NAFLD or type 2 diabetes', no allele or effect size; not the axis (judged once for the whole split step)"}
+   ]},
+  {"id": "S12", "step": "hypothesis_3.2",
+   "text": "PPARG is associated with NAFLD (unsigned)",
+   "claim": {"assoc": {"subject": "PPARG", "direction": "none", "target": {"disease": "nafld", "aspect": "risk"}}},
+   "evidence": [
+    {"ref": "PMID:36609599", "kind": "mechanistic", "taxon": "mouse",
+     "quote": "regulate the development of nonalcoholic fatty liver disease by controlling the Gbp2-Pparγ-CD36 axis"}
+   ],
+   "excluded": []},
+  {"id": "S13", "step": "hypothesis_3.2",
+   "text": "CD36 is associated with NAFLD (unsigned)",
+   "claim": {"assoc": {"subject": "CD36", "direction": "none", "target": {"disease": "nafld", "aspect": "risk"}}},
+   "evidence": [
+    {"ref": "PMID:36609599", "kind": "mechanistic", "taxon": "mouse",
+     "quote": "regulate the development of nonalcoholic fatty liver disease by controlling the Gbp2-Pparγ-CD36 axis"}
+   ],
+   "excluded": []}
+ ],
+ "unexpressed": [],
+ "hypotheses": {
+  "hypothesis_1": {
+   "claims": [{"subject": "PNPLA3", "sign": "neg", "target": {"disease": "nafld", "aspect": "risk"}}],
+   "note": "the title names PNPLA3 variants (I148M), but the chain runs disease -> PNPLA3 -> triglyceride metabolism -> disease, so the subject is the protein; neg because the mechanism says PNPLA3 normally processes triglycerides and that variants impair this, causing accumulation"
+  },
+  "hypothesis_2": {
+   "claims": [
+    {"subject": "APOA5", "sign": "neg", "target": {"disease": "nafld", "aspect": "risk"}},
+    {"subject": "APOE", "sign": "neg", "target": {"disease": "nafld", "aspect": "risk"}},
+    {"subject": "LIPC", "sign": "neg", "target": {"disease": "nafld", "aspect": "risk"}}
+   ],
+   "note": "neg for each gene: the title says impaired clearance mediated by the three genes promotes NAFLD, and the falsification expects APOE knockdown to increase steatosis"
+  },
+  "hypothesis_3": {
+   "claims": [{"subject": "CMIP", "sign": "pos", "target": {"disease": "nafld", "aspect": "risk"}}],
+   "note": "the title says only that CMIP 'alters' the axis; pos from the mechanism ('Pathological activation of this axis due to aberrant CMIP levels drives the development of hepatic steatosis') and the falsification (CMIP knockdown expected to mitigate steatosis), not from step 3.1, so the arm's sign check still tests S11's text-derived direction; the title's Dnmt1/Tet2 epigenetic regulation has no step"
+  }
+ },
+ "findings": [
+  {"project": "hypothesis-agent", "category": "polarity_unknown_despite_mechanism", "steps": ["hypothesis_1.3", "hypothesis_2.4", "hypothesis_3.2"],
+   "detail": "Every link into the disease is associated_with with unknown polarity, although each mechanism states a direction (impaired triglyceride processing causes accumulation; impaired clearance forces lipid retention; axis activation drives steatosis), so only hypothesis_3 composes, and only through a direction read from its cited abstract."},
+  {"project": "hypothesis-agent", "category": "circular_chain", "hypothesis": "hypothesis_1", "steps": ["hypothesis_1.1", "hypothesis_1.3"],
+   "detail": "The chain starts at the disease (NAFLD associated_with PNPLA3) and ends at it again (triglyceride metabolic process associated_with NAFLD): a loop rather than a path from the gene to the disease."},
+  {"project": "hypothesis-agent", "category": "allele_inconsistent_with_citation", "hypothesis": "hypothesis_1",
+   "detail": "The falsification uses organoids 'with the rs738409-C genotype' as the steatotic background, but the run's own cited GWAS row reports rs738409-C with beta 0.3746 (decrease), the protective direction; the GWAS Catalog row also lists C as the 'riskAlleleName', which may have misled it."},
+  {"project": "hypothesis-agent", "category": "contradicting_evidence_ignored", "hypothesis": "hypothesis_1",
+   "detail": "The mechanism says PNPLA3 'normally exerts triglyceride lipase and transacylase activities', but its cited UniProt entry names LPA acyltransferase as the main activity and says the triacylglycerol hydrolase activity 'is controversial and may be very low'; contradicting_evidence is empty."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["hypothesis_1.1"],
+   "detail": "rs738409 (the I148M variant the mechanism names) is cited through a row whose trait is 'Other chronic nonalcoholic liver disease (PheCode 571.5)', broader than NAFLD; the two kept PNPLA3 rows are a synonymous and an intronic variant."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["hypothesis_1.2"],
+   "detail": "An HPA expression record (liver-enriched, high in hepatocytes) is cited for 'PNPLA3 activates triglyceride metabolic process'; it says nothing about triglycerides."},
+  {"project": "hypothesis-agent", "category": "citation_from_other_hypothesis", "steps": ["hypothesis_1.3"],
+   "detail": "STRING GO enrichments computed on APOE, LIPC and APOA5 (hypothesis_2's genes) are cited for PNPLA3's triglyceride metabolism -> NAFLD step; neither names PNPLA3 or NAFLD."},
+  {"project": "hypothesis-agent", "category": "chain_not_connected", "steps": ["hypothesis_2.1", "hypothesis_2.2", "hypothesis_2.3"],
+   "detail": "Steps 2.1 to 2.3 are three parallel gene -> clearance edges into one node, not a chain: 2.1 ends at clearance and 2.2 starts at APOE."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["hypothesis_2.1", "hypothesis_2.3"],
+   "detail": "The APOA5 and LIPC UniProt texts describe lipolysis and remodelling (stimulating LPL triglyceride hydrolysis; hydrolysing lipoprotein lipids into smaller particles), not particle clearance; the run's own STRING enrichment even names 'VLDL particle remodeling', so the shared 'clearance' node fits only APOE."},
+  {"project": "hypothesis-agent", "category": "mechanism_not_in_citation", "hypothesis": "hypothesis_2",
+   "detail": "The mechanism says 'APOA5 stimulates hepatic triglyceride hydrolysis via LIPC', but the cited APOA5 entry says it stimulates apo-CII lipoprotein lipase (LPL), and nothing cited links APOA5 to LIPC beyond a STRING edge with 0.10 experimental score."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["hypothesis_2.1", "hypothesis_2.2", "hypothesis_2.3"],
+   "detail": "The same six records are cited for all three 'activates' steps, including STRING edges and a Reactome over-representation result, which carry no direction and no gene-specific claim."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["hypothesis_2.4", "hypothesis_3.2"],
+   "detail": "GWAS rows for gene-mapped variants (APOA5, APOE, LIPC; CMIP) are cited for process -> disease steps they do not state; the mechanisms invoke these gene-level associations ('robust genetic associations mapping each gene to the disease', 'linking CMIP genetic variations such as rs2925979 directly to NAFLD') but no step says gene associated_with NAFLD."},
+  {"project": "hypothesis-agent", "category": "compound_node", "steps": ["hypothesis_3.1", "hypothesis_3.2"],
+   "detail": "'Gbp2-PPARγ-CD36 axis' is an ungrounded node naming an ordered three-gene cascade; its cited abstract states the internal steps (Gbp2 knockdown lowers Pparγ and Cd36 and fatty acid uptake) that the run collapsed into one node."},
+  {"project": "hypothesis-agent", "category": "single_source_cross_species", "hypothesis": "hypothesis_3",
+   "detail": "All mechanistic support is one mouse study (ob/ob mice, AML12 cells), whose only human datum is co-elevation of Cmip and Gbp2 in NAFLD livers; the human genetic support is one CMIP intronic row (rs2925979-T, beta 0.037 increase on MASLD), since rs76424446 lies in PLCG2 and its trait is the combined 'NAFLD or type 2 diabetes' with no allele or effect size."},
+  {"project": "hypothesis-agent", "category": "ungrounded_label",
+   "detail": "Process nodes ('Triglyceride metabolic process', 'Plasma lipoprotein clearance', the axis) and the hepatocyte and liver contexts carry empty CURIEs, and all three falsification readouts are labelled 'steatosis' (kind phenotype) while carrying the disease CURIE MONDO:0013209."},
+  {"project": "biolean", "category": "rule_missing", "steps": ["hypothesis_1.1"],
+   "detail": "The PNPLA3 GWAS rows give allele directions (rs738408-T up, rs3747207-G and rs738409-C down), but with no statement tying an allele to PNPLA3 activity BioLean cannot turn them into a gene-level sign, so the association stays unsigned."},
+  {"project": "biolean", "category": "no_form_for", "steps": ["hypothesis_3.1", "hypothesis_3.2"],
+   "detail": "No form for an ordered cascade as one node: splitting 'Gbp2-PPARγ-CD36 axis' distributively (CMIP activates each; each is associated with NAFLD) loses the order Gbp2 -> PPARγ -> CD36 the source states."},
+  {"project": "biolean", "category": "kind_mismatch", "steps": ["hypothesis_3.1"],
+   "detail": "The run says CMIP 'activates' the axis, so the targets are activity, but the kept evidence measures expression (amount) after siCmip; evidence has no field for the quantity actually measured."},
+  {"project": "biolean", "category": "evidence_weighting", "steps": ["hypothesis_1.2"],
+   "detail": "The kept UniProt span is hedged ('may play a role') and the same entry calls the TG hydrolase activity 'controversial and may be very low', yet it enters at full curatedDb weight; there is no way to mark hedged database text."},
+  {"project": "biolean", "category": "grounding_cross_species", "steps": ["hypothesis_3.1", "hypothesis_3.2"],
+   "detail": "The axis genes are named with mouse symbols (Gbp2, Cmip) from a mouse study; the label table has only human UniProt, so they are grounded to the same-symbol human proteins without an orthology check (the evidence taxon records the gap)."},
+  {"project": "biolean", "category": "abstention_not_checkable",
+   "detail": "The run abstains on RBM27 and SMIM32 citing six accessions (GWAS no-association, HPA, AGR no-phenotypes) that are not in sources.json, so the abstention cannot be checked; the format has no place to curate an abstention."},
+  {"project": "hypothesis-agent", "category": "variant_gene_attribution", "steps": ["hypothesis_2.4", "hypothesis_3.2"],
+   "detail": "By their own genomic contexts, three cited GWAS rows lie in other genes: rs76424446 (cited for CMIP) is in a PLCG2 intron, 115 kb from CMIP; rs964184 (APOA5) is a 3' UTR variant inside ZPR1, 11 kb from APOA5; rs12908474 (LIPC) is intergenic, 30-52 kb from LIPC and inside ALDH1A2 by Ensembl. So the mechanism's 'robust genetic associations mapping each gene to the disease' rests on the Catalog's mapped-gene field."},
+  {"project": "hypothesis-agent", "category": "contradicting_evidence_ignored", "hypothesis": "hypothesis_2", "steps": ["hypothesis_2.1"],
+   "detail": "The mechanism says dysfunction of the APOE/APOA5/LIPC complex 'impairs normal lipid efflux' and 'forces maladaptive lipid retention in the liver', but the cited APOA5 entry calls it 'an inhibitor of the hepatic VLDL-TG production rate' (By similarity) and says it 'does not enhance efflux of cholesterol from macrophages': by the run's own citation, losing APOA5 would raise the liver's triglyceride export, not retain it; contradicting_evidence is empty."},
+  {"project": "hypothesis-agent", "category": "title_not_in_chain", "hypothesis": "hypothesis_3",
+   "detail": "The title's subject is 'Epigenetic regulation of CMIP' and the mechanism opens with Dnmt1 and Tet2; the cited abstract gives both directions (Dnmt1 knockdown 'significantly increased Cmip expression', Tet2 knockdown 'decreased Cmip expression'), yet no step has Dnmt1, Tet2 or methylation."},
+  {"project": "hypothesis-agent", "category": "strongest_evidence_not_a_step", "hypothesis": "hypothesis_3",
+   "detail": "The cited abstract states CMIP -> NAFLD directly, with a direction ('Intravenous Cmip siRNA injection ameliorated NAFLD pathogenic features in ob/ob mice'), but the run made no CMIP -> NAFLD step; its only composing route goes through CMIP -> Gbp2, which the abstract leaves undirected ('Gbp2 was involved'), so the arm's belief is 0. No bridge, because the claim already has a route."},
+  {"project": "hypothesis-agent", "category": "falsification_already_reported", "hypothesis": "hypothesis_3",
+   "detail": "The proposed test (CMIP knockdown in a diet-induced mouse model, reading PPARγ-CD36 activation and steatosis) is nearly what PMID:36609599, the run's only literature citation, already reports: siCmip in ob/ob mice ameliorated NAFLD features and lowered Pparγ and Cd36; only the obesity model differs."},
+  {"project": "biolean", "category": "rule_missing", "steps": ["hypothesis_1.2", "hypothesis_1.3", "hypothesis_2.4"],
+   "detail": "Three steps carry a structured liver or hepatocyte context, dropped here as the question's own setting (question.tissue is liver); hypothesis_1's title ('hepatic triglyceride metabolism') and falsification (hepatocyte organoids) also name the liver, which other audits took as grounds to refine, so the guide does not settle whether a context equal to the run's tissue limits a step."},
+  {"project": "biolean", "category": "rule_missing", "steps": ["hypothesis_1.1"],
+   "detail": "The step is written disease-first ('NAFLD associated_with PNPLA3'); it was reoriented gene -> disease because association is symmetric and the target kinds only fit that way, but the guide has no rule allowing it."}
+ ],
+ "audit": [
+  {"item": "S11 (hypothesis_3.2) excluded rs76424446", "error": "other",
+   "before": "reason: 'a CMIP-mapped variant, trait NAFLD or type 2 diabetes, no allele or effect size; not the axis'",
+   "after": "reason says the row's genomic context puts the variant in a PLCG2 intron, 115 kb from CMIP",
+   "reason": "the record lists PLCG2 at distance 0 (NCBI and Ensembl, intron_variant) and CMIP at 114,834 bp; the reason repeated the Catalog's mapped-gene field as fact. Category (not_this_entity) and counts unchanged."},
+  {"item": "hypotheses.hypothesis_3 note", "error": "other",
+   "before": "pos read from step 3.1, the mechanism and the falsification",
+   "after": "pos read from the mechanism ('Pathological activation of this axis due to aberrant CMIP levels drives ... hepatic steatosis') and the falsification only",
+   "reason": "the guide takes a claim's sign from the title or mechanism, and the 20260825T112130Z-e77e3a audit removed a claim signed from a chain step because the check then tests nothing. Here the sign survives without step 3.1, and the arm's second link (S11) takes its sign from the cited text, so the check is not circular. Claim and arm unchanged."},
+  {"item": "finding single_source_cross_species (hypothesis_3)", "error": "other",
+   "before": "'the only human datum is co-elevation of Cmip and Gbp2 in NAFLD livers', with rs76424446 as the only genetic row named",
+   "after": "the paper's only human datum is the co-elevation; the genetic support is rs2925979 alone, since rs76424446 lies in PLCG2",
+   "reason": "false as written: rs2925979-T (beta 0.037 increase on MASLD, a CMIP intron variant) is human data the run cites for the same step."},
+  {"item": "findings: variant_gene_attribution (hypothesis_2.4, hypothesis_3.2)", "error": "missed_finding",
+   "before": "absent; exclusion reasons and findings called rs76424446, rs964184 and rs12908474 CMIP-, APOA5- and LIPC-mapped variants",
+   "after": "finding added",
+   "reason": "the rows' own genomic contexts put rs76424446 in PLCG2 (distance 0), rs964184 in the ZPR1 3' UTR (APOA5 10.8-11.2 kb away) and rs12908474 in intergenic sequence 30-52 kb from LIPC (inside ALDH1A2 by Ensembl)."},
+  {"item": "findings: contradicting_evidence_ignored (hypothesis_2, APOA5)", "error": "missed_finding",
+   "before": "absent",
+   "after": "finding added",
+   "reason": "Q6Q788, cited at hypothesis_2.1 to 2.3, says APOA5 inhibits the hepatic VLDL-TG production rate and does not enhance cholesterol efflux, against the mechanism's 'impairs normal lipid efflux ... lipid retention in the liver'."},
+  {"item": "findings: title_not_in_chain (hypothesis_3)", "error": "missed_finding",
+   "before": "noted only in the hypothesis_3 note",
+   "after": "finding added",
+   "reason": "notes are not counted; the title's epigenetic regulation is stated with directions in the cited abstract (Dnmt1 and Tet2 knockdowns) and has no step."},
+  {"item": "findings: strongest_evidence_not_a_step (hypothesis_3)", "error": "missed_finding",
+   "before": "absent",
+   "after": "finding added, no bridge",
+   "reason": "PMID:36609599 states 'Intravenous Cmip siRNA injection ameliorated NAFLD pathogenic features in ob/ob mice', a direct CMIP -> NAFLD result, while the run's only arm rests on the undirected CMIP -> Gbp2 link (belief 0). A bridge is only for an arm that cannot compose (precedent: psoriasis multi_agent-r2 audit), so it is recorded, not added."},
+  {"item": "findings: falsification_already_reported (hypothesis_3)", "error": "missed_finding",
+   "before": "absent",
+   "after": "finding added",
+   "reason": "the proposed CMIP knockdown in a diet-induced mouse model reading PPARγ-CD36 and steatosis is what the run's only paper reports with siCmip in ob/ob mice."},
+  {"item": "findings: biolean rule_missing (step contexts)", "error": "missed_finding",
+   "before": "raised only as a guide problem",
+   "after": "finding added",
+   "reason": "dropping the liver and hepatocyte contexts on hypothesis_1.2, 1.3 and 2.4 shaped the H1 chain (a refinement would strip S2's only evidence); precedent (crohn gemini single_agent-r2 audit) records such a gap as a finding."},
+  {"item": "findings: biolean rule_missing (disease-first association)", "error": "missed_finding",
+   "before": "raised only as a guide problem",
+   "after": "finding added",
+   "reason": "the reorientation of hypothesis_1.1 is a format gap that changed how the step was expressed; gaps in the format are findings."}
+ ]
+}

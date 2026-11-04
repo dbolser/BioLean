@@ -1,0 +1,467 @@
+{
+ "run_id": "20260825T112130Z-e77e3a",
+ "model": "openai:gpt-5.6-sol",
+ "question": {
+  "arm": "single_agent",
+  "budget": {
+   "max_delegations": 14,
+   "max_model_requests": 60,
+   "max_specialist_requests": 8,
+   "min_evidence_per_hypothesis": 2,
+   "min_hypotheses": 3,
+   "min_sources_per_hypothesis": 2,
+   "output_retries": 3
+  },
+  "disease": "restless legs syndrome",
+  "genes": [
+   "ACO1",
+   "MEIS1",
+   "GLIPR1",
+   "PTPRD",
+   "GABARAPL2",
+   "BTBD9"
+  ],
+  "model": "openai:gpt-5.6-sol",
+  "specialist_model": "",
+  "use_network": true
+ },
+ "disease": "restless legs syndrome",
+ "genes_considered": [
+  "ACO1",
+  "MEIS1",
+  "GLIPR1",
+  "PTPRD",
+  "GABARAPL2",
+  "BTBD9"
+ ],
+ "hypotheses": [
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "rs113851554",
+      "rs1820989",
+      "rs2300478"
+     ],
+     "note": "The GWAS establishes locus association but not the direction of MEIS1 expression change or proof that MEIS1 is the causal transcript.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "altered MEIS1 regulation"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "RLS-associated MEIS1 variation"
+     }
+    },
+    {
+     "context": {
+      "cell_type": null,
+      "disease_state": null,
+      "tissue": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "tissue",
+       "label": "brain"
+      }
+     },
+     "evidence": [
+      "O00470",
+      "AGR:MGI:104717:MP:0002152",
+      "AGR:MGI:104717:MP:0020478"
+     ],
+     "note": "UniProt establishes MEIS1 as a nuclear transcriptional regulator; mouse evidence links Meis1 perturbation to abnormal brain morphology and circadian sleep/wake cycling.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "normal neural and sleep–wake circuit development"
+     },
+     "polarity": "positive",
+     "relation": "required_for",
+     "subject": {
+      "curie": "UniProt:O00470",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "MEIS1"
+     }
+    },
+    {
+     "context": {
+      "cell_type": null,
+      "disease_state": null,
+      "tissue": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "tissue",
+       "label": "brain"
+      }
+     },
+     "evidence": [
+      "AGR:MGI:104717:DOID:0050425"
+     ],
+     "note": "This is the proposed causal bridge; the Alliance also curates a Meis1 genotype as an RLS model, although its model-list record lacks a supporting publication.",
+     "object": {
+      "curie": "EFO:MONDO_0005391",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "restless legs syndrome"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "abnormal sleep–motor circuit development"
+     }
+    }
+   ],
+   "confidence": "high",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Introduce the RLS risk haplotype into an isogenic human iPSC model differentiated through relevant neural developmental stages and compare it with CRISPR-corrected cells. The hypothesis would be falsified if the haplotype causes neither a reproducible change in MEIS1 regulation nor any downstream alteration in circadian/network activity or sensory–motor circuit maturation across those stages.",
+    "expected": "positive",
+    "perturbation": null,
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "phenotype",
+     "label": "MEIS1-dependent circadian and neural-network phenotype"
+    },
+    "system": "isogenic human iPSC-derived neural circuit model sampled across development"
+   },
+   "genes": [
+    "MEIS1"
+   ],
+   "hypothesis_id": "H1",
+   "mechanism": "RLS-associated variation at the MEIS1 locus may alter MEIS1 dosage or timing in developing neural circuits; the direction of that regulatory effect is not established by the association data. Because MEIS1 is a nuclear developmental regulator and Meis1 perturbation produces abnormal brain morphology and an abnormal circadian sleep/wake cycle in mice, altered circuit development could impair the state-dependent sensory–motor gating that normally suppresses leg-movement urges during rest.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "PMID:17637780",
+    "rs113851554",
+    "rs2300478",
+    "O00470",
+    "AGR:MGI:104717:MP:0020478",
+    "AGR:MGI:104717:DOID:0050425"
+   ],
+   "title": "MEIS1 risk variation perturbs the developmental programming of sleep–motor circuits"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "STRING:ACO1-BTBD9"
+     ],
+     "note": "STRING reports experimental evidence for an association, not a defined direct binding mechanism or direction of regulation.",
+     "object": {
+      "curie": "UniProt:P21399",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "ACO1"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "UniProt:Q96Q07",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "BTBD9"
+     }
+    },
+    {
+     "context": {
+      "cell_type": null,
+      "disease_state": null,
+      "tissue": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "tissue",
+       "label": "brain"
+      }
+     },
+     "evidence": [
+      "P21399",
+      "AGR:MGI:87879:MP:0005637"
+     ],
+     "note": "ACO1 switches between aconitase and iron-responsive-element binding activities according to iron availability; mouse Aco1 disruption causes abnormal iron homeostasis.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "cellular iron-responsive RNA regulation and iron homeostasis"
+     },
+     "polarity": "positive",
+     "relation": "required_for",
+     "subject": {
+      "curie": "UniProt:P21399",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "ACO1"
+     }
+    },
+    {
+     "context": {
+      "cell_type": null,
+      "disease_state": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "disease",
+       "label": "restless legs syndrome susceptibility"
+      },
+      "tissue": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "tissue",
+       "label": "brain"
+      }
+     },
+     "evidence": [
+      "AGR:MGI:1916625:MP:0002272",
+      "AGR:MGI:1916625:MP:0011396"
+     ],
+     "note": "Btbd9 mouse perturbation affects electrophysiology and sleep, but mediation by ACO1 remains to be tested.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "phenotype",
+      "label": "abnormal neuronal electrophysiology and sleep behavior"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "BTBD9–ACO1 pathway dysfunction"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "rs10947738",
+      "rs4714163",
+      "rs61192259",
+      "AGR:MGI:1916625:DOID:0050425"
+     ],
+     "note": "",
+     "object": {
+      "curie": "EFO:MONDO_0005391",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "restless legs syndrome"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "phenotype",
+      "label": "abnormal neuronal electrophysiology and sleep behavior"
+     }
+    }
+   ],
+   "confidence": "medium",
+   "contradicting_evidence": [
+    "GWAS:ACO1:no-association"
+   ],
+   "falsification": {
+    "description": "In a neuron-specific Btbd9-deficient mouse or neuronal culture, restore ACO1 iron-sensing activity while confirming normalization of iron-responsive transcripts. If neuronal electrophysiology and sleep/rest-phase motor behavior remain abnormal despite verified restoration of the ACO1 iron program, the proposed ACO1-mediated mechanism is falsified.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "restore",
+     "target": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "ACO1 iron-sensing activity"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "phenotype",
+     "label": "abnormal neuronal electrophysiology and rest-phase motor behavior"
+    },
+    "system": "neuron-specific Btbd9-deficient mouse with ex vivo electrophysiology and sleep/motor monitoring"
+   },
+   "genes": [
+    "BTBD9",
+    "ACO1"
+   ],
+   "hypothesis_id": "H2",
+   "mechanism": "BTBD9 is a strongly replicated RLS locus, and STRING reports an experimentally supported BTBD9–ACO1 link, although its molecular direction is unknown. The hypothesis is that BTBD9 dysfunction changes ACO1-dependent iron-responsive RNA control, producing a neuronal iron-utilization defect that shifts circuit electrophysiology and sleep behavior; this would connect the established iron biology of RLS to a major genetic locus.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "PMID:30363981",
+    "rs10947738",
+    "rs4714163",
+    "STRING:ACO1-BTBD9",
+    "P21399",
+    "AGR:MGI:87879:MP:0005637",
+    "AGR:MGI:1916625:MP:0002272",
+    "AGR:MGI:1916625:MP:0011396"
+   ],
+   "title": "BTBD9 risk acts through ACO1-dependent iron sensing to alter neuronal excitability"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "rs34602324",
+      "rs6477358",
+      "rs1836229",
+      "rs4626664"
+     ],
+     "note": "Association and gene mapping do not establish the causal variant, effector transcript, or direction of effect.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "altered PTPRD regulation or function"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "RLS-associated PTPRD variation"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "excitatory and inhibitory neurons"
+      },
+      "disease_state": null,
+      "tissue": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "tissue",
+       "label": "brain"
+      }
+     },
+     "evidence": [
+      "P23468",
+      "HPA:ENSG00000153707"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "trans-synaptic pre- and postsynaptic differentiation"
+     },
+     "polarity": "positive",
+     "relation": "required_for",
+     "subject": {
+      "curie": "UniProt:P23468",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "PTPRD"
+     }
+    },
+    {
+     "context": {
+      "cell_type": null,
+      "disease_state": null,
+      "tissue": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "tissue",
+       "label": "brain"
+      }
+     },
+     "evidence": [
+      "AGR:MGI:97812:MP:0003008",
+      "AGR:MGI:97812:MP:0002919",
+      "AGR:MGI:97812:MP:0001522"
+     ],
+     "note": "Mouse Ptprd loss enhances long-term potentiation and paired-pulse facilitation and impairs swimming, supporting altered plasticity and motor output but not an RLS-specific phenotype.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "phenotype",
+      "label": "abnormal sensorimotor circuit plasticity and gating"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "disrupted PTPRD-dependent synaptic differentiation"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "rs34602324",
+      "rs1836229"
+     ],
+     "note": "This is the proposed disease-specific causal bridge.",
+     "object": {
+      "curie": "EFO:MONDO_0005391",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "restless legs syndrome"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "phenotype",
+      "label": "abnormal sensorimotor circuit gating"
+     }
+    }
+   ],
+   "confidence": "high",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Engineer an RLS-associated PTPRD haplotype into isogenic human excitatory–inhibitory neuronal co-cultures and measure PTPRD expression, trans-synaptic differentiation, E/I balance, and stimulus gating. The mechanism is falsified if the risk haplotype has no reproducible effect on PTPRD or these synaptic readouts, or if correcting PTPRD fails to reverse an observed phenotype.",
+    "expected": "positive",
+    "perturbation": null,
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "phenotype",
+     "label": "PTPRD-dependent synaptic differentiation and network gating"
+    },
+    "system": "isogenic human iPSC-derived excitatory–inhibitory neuronal co-culture"
+   },
+   "genes": [
+    "PTPRD"
+   ],
+   "hypothesis_id": "H3",
+   "mechanism": "RLS-associated PTPRD variants may perturb PTPRD abundance or function in brain neurons, with direction still unresolved. PTPRD mediates trans-synaptic pre- and postsynaptic differentiation, is brain-enhanced in both excitatory and inhibitory neurons, and its loss alters synaptic plasticity and motor performance in mice; impaired excitatory/inhibitory organization could therefore create the rest-dependent sensorimotor disinhibition characteristic of RLS.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "rs34602324",
+    "rs6477358",
+    "rs1836229",
+    "P23468",
+    "HPA:ENSG00000153707",
+    "AGR:MGI:97812:MP:0003008",
+    "AGR:MGI:97812:MP:0002919"
+   ],
+   "title": "PTPRD risk disrupts trans-synaptic organization and sensorimotor gating"
+  }
+ ],
+ "unexplained_genes": [
+  "GLIPR1",
+  "GABARAPL2"
+ ]
+}

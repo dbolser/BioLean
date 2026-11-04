@@ -1,0 +1,314 @@
+{
+ "run_id": "study-2026-09-vertex-restless-legs-vertex-openai-deepseek-aideepseek-v3.2-maas-single_agent-r2",
+ "model": "vertex-openai:deepseek-ai/deepseek-v3.2-maas",
+ "question": {
+  "arm": "single_agent",
+  "budget": {
+   "max_delegations": 22,
+   "max_model_requests": 80,
+   "max_specialist_requests": 8,
+   "min_evidence_per_hypothesis": 2,
+   "min_hypotheses": 3,
+   "min_sources_per_hypothesis": 2,
+   "output_retries": 3
+  },
+  "data_policy": {
+   "max_age_seconds": 1209600.0,
+   "mode": "cache-preferred",
+   "snapshot_run_id": null
+  },
+  "disease": "restless legs syndrome",
+  "formalise": false,
+  "genes": [
+   "ACO1",
+   "MEIS1",
+   "GLIPR1",
+   "PTPRD",
+   "GABARAPL2",
+   "BTBD9"
+  ],
+  "model": "vertex-openai:deepseek-ai/deepseek-v3.2-maas",
+  "specialist_model": "",
+  "specialists": [
+   "chembl",
+   "expression",
+   "gwas",
+   "interactions",
+   "literature",
+   "model_organism",
+   "open_targets",
+   "pathways",
+   "single_cell",
+   "trials",
+   "uniprot"
+  ],
+  "tissue": {
+   "artifact_id": "sha256:9083451a13b7e45058362501bb03fd93944d7aa79ffc0248bc2cf8b1520b9652",
+   "label": "brain",
+   "uberon": "UBERON:0000955"
+  },
+  "use_network": true
+ },
+ "abstention": null,
+ "disease": "restless legs syndrome",
+ "genes_considered": [
+  "ACO1",
+  "MEIS1",
+  "GLIPR1",
+  "PTPRD",
+  "GABARAPL2",
+  "BTBD9"
+ ],
+ "hypotheses": [
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "OT:MEIS1-MONDO_0005391",
+      "PMID:42309051",
+      "AGR:MGI:104717:MP:0020478"
+     ],
+     "note": "MEIS1 is the strongest genetic risk factor for RLS (OT association score 0.55). MEIS1 loss disinhibits cerebellar output (PMID:42309051), and MEIS1 knockout mice show abnormal circadian sleep/wake cycles (AGR:MGI:104717:MP:0020478).",
+     "object": {
+      "curie": "UniProtKB:O00470",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "MEIS1"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "MONDO:0005391",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "restless legs syndrome"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "HPA:ENSG00000153707"
+     ],
+     "note": "MEIS1 is enriched in brain tissue and expressed in brain excitatory and inhibitory neurons.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "tissue",
+      "label": "brain"
+     },
+     "polarity": "unknown",
+     "relation": "translocates",
+     "subject": {
+      "curie": "UniProtKB:O00470",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "MEIS1"
+     }
+    }
+   ],
+   "confidence": "medium",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Generate MEIS1 heterozygous knockout mice and measure cerebellar inhibitory output via electrophysiology in cerebellar deep nuclei; if there is no increase in spontaneous firing during rest periods compared to wild-type, the hypothesis is falsified.",
+    "expected": "positive",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "UniProtKB:O00470",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "MEIS1"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "process",
+     "label": "cerebellar inhibitory output"
+    },
+    "system": "mouse"
+   },
+   "genes": [
+    "MEIS1"
+   ],
+   "hypothesis_id": "MEIS1-cerebellar-disinhibition",
+   "mechanism": "MEIS1 is a homeobox transcription factor that is the strongest genetic risk factor for RLS. Loss of MEIS1 leads to disinhibition of cerebellar output (Current Biology 2026), disrupting sensorimotor integration. MEIS1 knockout mice show abnormal circadian sleep/wake cycles, and the gene is highly constrained (LOF score 1). MEIS1 haploinsufficiency in cerebellar circuits could underlie the motor restlessness and sensory symptoms of RLS.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "OT:MEIS1-MONDO_0005391",
+    "PMID:42309051",
+    "AGR:MGI:104717:MP:0020478",
+    "HPA:ENSG00000153707"
+   ],
+   "title": "MEIS1 loss disinhibits cerebellar output, producing motor restlessness"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "OT:BTBD9-MONDO_0005391",
+      "AGR:MGI:1916625:MP:0011396"
+     ],
+     "note": "BTBD9 is a major RLS risk gene (OT association score 0.48). BTBD9 knockout mice show abnormal sleep behavior (AGR:MGI:1916625:MP:0011396).",
+     "object": {
+      "curie": "UniProtKB:Q96Q07",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "BTBD9"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "MONDO:0005391",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "restless legs syndrome"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "AGR:MGI:1916625:MP:0004753"
+     ],
+     "note": "BTBD9 knockout mice show abnormal miniature excitatory postsynaptic currents, suggesting synaptic dysfunction.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "synaptic transmission"
+     },
+     "polarity": "negative",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "UniProtKB:Q96Q07",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "BTBD9"
+     }
+    }
+   ],
+   "confidence": "medium",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Knock out BTBD9 in striatal medium spiny neurons and measure dopamine D2 receptor trafficking; if D2 receptor surface expression is unchanged, the hypothesis is falsified.",
+    "expected": "positive",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "UniProtKB:Q96Q07",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "BTBD9"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "protein",
+     "label": "dopamine D2 receptor surface expression"
+    },
+    "system": "striatal neuron culture"
+   },
+   "genes": [
+    "BTBD9"
+   ],
+   "hypothesis_id": "BTBD9-synaptic-dopamine",
+   "mechanism": "BTBD9, a BTB/POZ domain protein, is a major genetic risk factor for RLS. BTBD9 knockout mice exhibit abnormal sleep behavior and abnormal miniature excitatory postsynaptic currents, indicating synaptic dysfunction. BTBD9 may regulate dopamine D2 receptor trafficking or striatal synaptic plasticity. Loss of BTBD9 function could reduce striatal dopamine signaling, contributing to the sensory-motor symptoms of RLS.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "OT:BTBD9-MONDO_0005391",
+    "AGR:MGI:1916625:MP:0011396",
+    "AGR:MGI:1916625:MP:0004753"
+   ],
+   "title": "BTBD9 loss impairs synaptic transmission and dopamine signaling, causing sleep-related motor symptoms"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "OT:PTPRD-MONDO_0005391",
+      "P23468"
+     ],
+     "note": "PTPRD is a receptor tyrosine phosphatase associated with RLS (OT association score 0.39). PTPRD mediates trans-synaptic adhesion and synapse formation.",
+     "object": {
+      "curie": "UniProtKB:P23468",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "PTPRD"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "MONDO:0005391",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "restless legs syndrome"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "AGR:MGI:97812:MP:0003008"
+     ],
+     "note": "PTPRD knockout mice show enhanced long-term potentiation, suggesting altered synaptic plasticity.",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "synaptic plasticity"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "UniProtKB:P23468",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "PTPRD"
+     }
+    }
+   ],
+   "confidence": "medium",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Inhibit PTPRD in spinal cord dorsal horn neurons and measure excitatory synapse density; if synapse density is unchanged, the hypothesis is falsified.",
+    "expected": "positive",
+    "perturbation": {
+     "action": "inhibit",
+     "target": {
+      "curie": "UniProtKB:P23468",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "PTPRD"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "process",
+     "label": "excitatory synapse density"
+    },
+    "system": "spinal cord slice"
+   },
+   "genes": [
+    "PTPRD"
+   ],
+   "hypothesis_id": "PTPRD-synaptic-adhesion",
+   "mechanism": "PTPRD is a receptor-type tyrosine phosphatase that mediates trans-synaptic adhesion and regulates excitatory synapse formation. RLS-associated PTPRD variants may alter synaptic connectivity in spinal or thalamocortical circuits. PTPRD knockout mice show enhanced long-term potentiation, indicating altered synaptic plasticity. Disrupted PTPRD-mediated synaptic adhesion could lead to aberrant sensory processing and the motor urge characteristic of RLS.",
+   "support": "grounded",
+   "supporting_evidence": [
+    "OT:PTPRD-MONDO_0005391",
+    "P23468",
+    "AGR:MGI:97812:MP:0003008"
+   ],
+   "title": "PTPRD variants disrupt synaptic adhesion, leading to aberrant sensory-motor integration"
+  }
+ ],
+ "unexplained_genes": [
+  "ACO1",
+  "GLIPR1",
+  "GABARAPL2"
+ ]
+}

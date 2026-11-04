@@ -42,6 +42,7 @@ def enables    : Rel := ⟨.ro, 2327, false⟩
 def involvedIn : Rel := ⟨.ro, 2331, false⟩
 def produces   : Rel := ⟨.ro, 3000, false⟩
 def overlaps   : Rel := ⟨.ro, 2131, false⟩
+def characteristicOf : Rel := ⟨.ro, 52, false⟩
 -- context relations (M2, `Entity.inCtx`)
 def inTaxon       : Rel := ⟨.ro, 2162, false⟩
 def hasModifier   : Rel := ⟨.ro, 2573, false⟩

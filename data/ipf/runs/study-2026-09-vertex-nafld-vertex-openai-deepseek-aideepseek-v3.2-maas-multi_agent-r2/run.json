@@ -1,0 +1,294 @@
+{
+ "run_id": "study-2026-09-vertex-nafld-vertex-openai-deepseek-aideepseek-v3.2-maas-multi_agent-r2",
+ "model": "vertex-openai:deepseek-ai/deepseek-v3.2-maas",
+ "question": {
+  "arm": "multi_agent",
+  "budget": {
+   "max_delegations": 22,
+   "max_model_requests": 80,
+   "max_specialist_requests": 8,
+   "min_evidence_per_hypothesis": 2,
+   "min_hypotheses": 3,
+   "min_sources_per_hypothesis": 2,
+   "output_retries": 3
+  },
+  "data_policy": {
+   "max_age_seconds": 1209600.0,
+   "mode": "cache-preferred",
+   "snapshot_run_id": null
+  },
+  "disease": "non-alcoholic fatty liver disease",
+  "formalise": false,
+  "genes": [
+   "PNPLA3",
+   "APOE",
+   "APOA5",
+   "LIPC",
+   "CMIP",
+   "RBM27",
+   "SMIM32"
+  ],
+  "model": "vertex-openai:deepseek-ai/deepseek-v3.2-maas",
+  "specialist_model": "vertex-openai:deepseek-ai/deepseek-v3.2-maas",
+  "specialists": [
+   "chembl",
+   "expression",
+   "gwas",
+   "interactions",
+   "literature",
+   "model_organism",
+   "open_targets",
+   "pathways",
+   "single_cell",
+   "trials",
+   "uniprot"
+  ],
+  "tissue": {
+   "artifact_id": "sha256:9dcd5e4698d8e61dd9283ddf104eb3fd2f79e9045014571f9209be44d80d58b8",
+   "label": "liver",
+   "uberon": "UBERON:0002107"
+  },
+  "use_network": true
+ },
+ "abstention": null,
+ "disease": "non-alcoholic fatty liver disease",
+ "genes_considered": [
+  "PNPLA3",
+  "APOE",
+  "APOA5",
+  "LIPC",
+  "CMIP",
+  "RBM27",
+  "SMIM32"
+ ],
+ "hypotheses": [
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "Q9NST1"
+     ],
+     "note": "",
+     "object": {
+      "curie": "ENSG00000100344",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "PNPLA3"
+     },
+     "polarity": "positive",
+     "relation": "activates",
+     "subject": {
+      "curie": "EFO_0000384",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "NAFLD"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Knockout of PNPLA3 in a mouse model of NAFLD should reduce hepatic triglyceride accumulation and liver inflammation compared to wild-type mice.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "ENSG00000100344",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "PNPLA3"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "phenotype",
+     "label": "hepatic triglyceride accumulation"
+    },
+    "system": "high-fat diet mouse model"
+   },
+   "genes": [
+    "PNPLA3"
+   ],
+   "hypothesis_id": "hypo-1",
+   "mechanism": "PNPLA3 encodes a protein with triacylglycerol lipase activity. The I148M variant (rs738409-C) is strongly associated with NAFLD (p=1e-323) and impairs the enzyme's function, leading to reduced hydrolysis of triglycerides in hepatocytes and accumulation of lipid droplets. This loss-of-function variant directly causes hepatic steatosis.",
+   "support": "speculative",
+   "supporting_evidence": [],
+   "title": "PNPLA3 I148M variant causes triglyceride accumulation through impaired lipase activity"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "P02649",
+      "Q6Q788",
+      "P11150"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "hepatic triglyceride clearance"
+     },
+     "polarity": "positive",
+     "relation": "activates",
+     "subject": {
+      "curie": "ENSG00000130203",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "APOE"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "phenotype",
+      "label": "reduced VLDL uptake"
+     },
+     "polarity": "unknown",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "impaired lipoprotein clearance"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [],
+     "note": "",
+     "object": {
+      "curie": "EFO_0000384",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "NAFLD"
+     },
+     "polarity": "unknown",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "phenotype",
+      "label": "hepatic steatosis"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Restoring APOE expression in ApoE-/- mice should rescue high-fat diet-induced hepatic steatosis by improving VLDL clearance from circulation.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "overexpress",
+     "target": {
+      "curie": "ENSG00000130203",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "APOE"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "phenotype",
+     "label": "liver triglyceride content"
+    },
+    "system": "ApoE-/- mouse model"
+   },
+   "genes": [
+    "APOE"
+   ],
+   "hypothesis_id": "hypo-2",
+   "mechanism": "APOE facilitates clearance of triglyceride-rich lipoproteins (VLDL, chylomicrons) from circulation via receptor-mediated uptake by hepatocytes. APOE deficiency or variants impair this clearance, leading to increased circulating triglycerides that are taken up by the liver, contributing to hepatic steatosis. This is supported by APOE knockout mouse models showing NAFLD susceptibility.",
+   "support": "speculative",
+   "supporting_evidence": [],
+   "title": "APOE deficiency impairs hepatic clearance of triglyceride-rich lipoproteins"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "VLDL-TG hydrolysis"
+     },
+     "polarity": "positive",
+     "relation": "activates",
+     "subject": {
+      "curie": "ENSG00000143036",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "APOA5"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "VLDL production"
+     },
+     "polarity": "negative",
+     "relation": "inhibits",
+     "subject": {
+      "curie": "ENSG00000143036",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "APOA5"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "APOA5 overexpression in liver should reduce plasma triglycerides and prevent hepatic steatosis in diet-induced NAFLD models.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "overexpress",
+     "target": {
+      "curie": "ENSG00000143036",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "APOA5"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "phenotype",
+     "label": "hepatic triglyceride content"
+    },
+    "system": "high-fat diet mouse model"
+   },
+   "genes": [
+    "APOA5"
+   ],
+   "hypothesis_id": "hypo-3",
+   "mechanism": "APOA5 stimulates lipoprotein lipase-mediated hydrolysis of VLDL triglycerides and inhibits hepatic VLDL-TG production. Variants in APOA5 reduce its activity, leading to elevated plasma triglycerides that are taken up by the liver, contributing to steatosis.",
+   "support": "speculative",
+   "supporting_evidence": [],
+   "title": "APOA5 dysfunction reduces triglyceride clearance and increases hepatic VLDL production"
+  }
+ ],
+ "unexplained_genes": [
+  "LIPC",
+  "CMIP",
+  "RBM27",
+  "SMIM32"
+ ]
+}

@@ -1,0 +1,325 @@
+{
+ "run_id": "20260825T000740Z-8a3e43",
+ "curated_by": "Claude Opus 5.5, 2026-10-30",
+ "entities": {
+  "c4RiskVariation": {"kind": "variant", "curie": "BLN:C4-schizophrenia-associated-variation",
+                      "label": "schizophrenia risk alleles at the C4A/C4B (complement C4) locus, structural and SNP",
+                      "run_labels": ["schizophrenia-associated C4A/C4B variation", "C4A/C4B dosage"]},
+  "c4a": {"kind": "protein", "curie": "UniProt:P0C0L4",
+          "run_labels": ["synaptic C4 activity", "C1QA and C4A/C4B classical complement activity"]},
+  "c4b": {"kind": "protein", "curie": "UniProt:P0C0L5",
+          "run_labels": ["synaptic C4 activity", "C1QA and C4A/C4B classical complement activity"]},
+  "c1qa": {"kind": "protein", "curie": "UniProt:P02745",
+           "run_labels": ["C1QA and C4A/C4B classical complement activity", "reduced C1QA availability"]},
+  "cx3cr1": {"kind": "protein", "curie": "UniProt:P49238", "run_labels": ["CX3CR1 signaling"]},
+  "csmd1RiskVariation": {"kind": "variant", "curie": "BLN:CSMD1-schizophrenia-associated-variation",
+                         "label": "schizophrenia risk alleles in CSMD1",
+                         "run_labels": ["schizophrenia-associated CSMD1 variation"]},
+  "csmd1": {"kind": "protein", "curie": "UniProt:Q96PZ7",
+            "run_labels": ["CSMD1", "reduced CSMD1 function", "loss of CSMD1 complement restraint"]},
+  "nxph3": {"kind": "protein", "curie": "UniProt:O95157", "run_labels": ["NXPH3", "loss of NXPH3 signaling"]},
+  "nrxn1": {"kind": "protein", "curie": "UniProt:Q9ULB1", "run_labels": ["alpha-neurexins"]},
+  "nrxn2": {"kind": "protein", "curie": "UniProt:Q9P2S2", "run_labels": ["alpha-neurexins"]},
+  "nrxn3": {"kind": "protein", "curie": "UniProt:Q9Y4C0", "run_labels": ["alpha-neurexins"]},
+  "synapsePruning": {"kind": "process", "curie": "GO:0098883",
+                     "run_labels": ["microglial synapse elimination", "excessive developmental synapse elimination"]},
+  "classicalComplement": {"kind": "process", "curie": "GO:0006958", "run_labels": ["classical complement pathway"]},
+  "synapseMaturation": {"kind": "process", "curie": "GO:0060074",
+                        "run_labels": ["normal microglial physiology and synapse maturation"]},
+  "abnormalMicrogliaPhysiology": {"kind": "phenotype", "curie": "MP:0003691",
+                                  "run_labels": ["normal microglial physiology and synapse maturation"]},
+  "abnormalSpatialLearning": {"kind": "phenotype", "curie": "MP:0001463",
+                              "run_labels": ["abnormal spatial learning and startle processing"]},
+  "abnormalStartleReflex": {"kind": "phenotype", "curie": "MP:0001486",
+                            "run_labels": ["abnormal spatial learning and startle processing"]},
+  "abnormalSynapticTransmission": {"kind": "phenotype", "curie": "HP:0012535",
+                                   "run_labels": ["NXPH3-dependent synaptic circuit dysfunction"]},
+  "cognitiveImpairment": {"kind": "phenotype", "curie": "HP:0100543",
+                          "run_labels": ["schizophrenia-relevant cognitive and sensorimotor dysfunction"]},
+  "schizophrenia": {"kind": "disease", "curie": "MONDO:0005090", "run_labels": ["schizophrenia"]}
+ },
+ "statements": [
+  {"id": "S1", "step": "H1.1", "text": "schizophrenia-associated C4-locus variation raises C4A",
+   "claim": {"effect": {"subject": "c4RiskVariation", "sign": "pos", "target": {"amount": "c4a"}}},
+   "evidence": [
+    {"ref": "PMID:26814963", "kind": "observational",
+     "quote": "each common C4 allele associating with schizophrenia in proportion to its tendency to generate greater expression of C4A"}
+   ],
+   "excluded": [
+    {"ref": "rs116385615", "category": "not_in_text", "reason": "SNP association with 'autism spectrum disorder or schizophrenia'; says nothing of C4A expression, and the SNP lies in C2, 68 kb from C4A"},
+    {"ref": "rs142520578", "category": "not_in_text", "reason": "SNP association with 'autism spectrum disorder or schizophrenia'; no C4A expression; intronic in EHMT2, C4A not among its author-reported genes"},
+    {"ref": "rs1150754", "category": "not_in_text", "reason": "SNP association with schizophrenia; no C4A expression; lies in TNXB, its author-reported gene"},
+    {"ref": "P0C0L4", "category": "not_in_text", "reason": "C4A function and synaptic location; nothing on variation changing C4A amount"},
+    {"ref": "P0C0L5", "category": "not_this_entity", "reason": "C4B entry; nothing on variation or C4A"}
+   ]},
+  {"id": "S2", "step": "H1.1", "text": "schizophrenia-associated C4-locus variation raises C4B",
+   "claim": {"effect": {"subject": "c4RiskVariation", "sign": "pos", "target": {"amount": "c4b"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "PMID:26814963", "category": "undirected", "reason": "alleles give 'widely varying levels of C4A and C4B expression'; only C4A expression tracks risk"},
+    {"ref": "rs116385615", "category": "not_in_text", "reason": "SNP association with 'autism spectrum disorder or schizophrenia'; nothing on C4B expression; lies in C2"},
+    {"ref": "rs142520578", "category": "not_in_text", "reason": "SNP association with 'autism spectrum disorder or schizophrenia'; nothing on C4B; intronic in EHMT2"},
+    {"ref": "rs1150754", "category": "not_in_text", "reason": "SNP association with schizophrenia; nothing on C4B expression; lies in TNXB"},
+    {"ref": "P0C0L4", "category": "not_this_entity", "reason": "C4A entry"},
+    {"ref": "P0C0L5", "category": "not_in_text", "reason": "C4B function and synaptic location; nothing on variation changing C4B amount"}
+   ]},
+  {"id": "S3", "step": "H1.2", "text": "C1QA drives synapse elimination",
+   "claim": {"effect": {"subject": "c1qa", "sign": "pos", "target": {"process": "synapsePruning"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "PMID:22632727", "category": "not_this_entity", "reason": "microglial engulfment depends on CR3/C3, not C1q"},
+    {"ref": "STRING:GO:0006958", "category": "enrichment", "reason": "C1QA, C4A, C4B enriched for classical complement activation"},
+    {"ref": "STRING:GO:0098883", "category": "enrichment", "reason": "CX3CR1 and C1QA enriched for synapse pruning"},
+    {"ref": "P02745", "category": "not_in_text", "reason": "C1QA initiates the classical pathway; no mention of synapses"},
+    {"ref": "PMID:38301948", "category": "not_in_text", "reason": "run's contradicting citation for H1: lower C1QA mRNA and CSF C1qA in schizophrenia; nothing on C1QA driving synapse elimination"}
+   ]},
+  {"id": "S4", "step": "H1.2", "text": "C4A drives synapse elimination",
+   "claim": {"effect": {"subject": "c4a", "sign": "pos", "target": {"process": "synapsePruning"}}},
+   "evidence": [
+    {"ref": "PMID:26814963", "kind": "mechanistic", "taxon": "mouse", "moved_from": "H1.1",
+     "quote": "In mice, C4 mediated synapse elimination during postnatal development"},
+    {"ref": "PMID:38301948", "kind": "review", "moved_from": "H3.1",
+     "quote": "C4A is believed to contribute to physiological synapse removal"}
+   ],
+   "excluded": [
+    {"ref": "PMID:22632727", "category": "not_this_entity", "reason": "microglial engulfment depends on CR3/C3, not C4"},
+    {"ref": "STRING:GO:0006958", "category": "enrichment", "reason": "classical-pathway enrichment of C1QA, C4A, C4B"},
+    {"ref": "STRING:GO:0098883", "category": "enrichment", "reason": "synapse pruning enrichment of CX3CR1 and C1QA; C4A is not in it"},
+    {"ref": "P02745", "category": "not_this_entity", "reason": "C1QA entry; nothing on C4A or synapses"},
+    {"ref": "PMID:42000733", "category": "undirected", "reason": "run's contradicting citation: 'C4A ... is implicated in synaptic pruning' gives no direction"}
+   ]},
+  {"id": "S5", "step": "H1.2", "text": "C4B drives synapse elimination",
+   "claim": {"effect": {"subject": "c4b", "sign": "pos", "target": {"process": "synapsePruning"}}},
+   "evidence": [
+    {"ref": "PMID:26814963", "kind": "mechanistic", "taxon": "mouse", "moved_from": "H1.1",
+     "quote": "In mice, C4 mediated synapse elimination during postnatal development"},
+    {"ref": "PMID:42000733", "kind": "review", "polarity": "refutes",
+     "quote": "C4A, in contrast to C4B, is implicated in synaptic pruning"}
+   ],
+   "excluded": [
+    {"ref": "PMID:22632727", "category": "not_this_entity", "reason": "microglial engulfment depends on CR3/C3, not C4"},
+    {"ref": "STRING:GO:0006958", "category": "enrichment", "reason": "classical-pathway enrichment of C1QA, C4A, C4B"},
+    {"ref": "STRING:GO:0098883", "category": "enrichment", "reason": "synapse pruning enrichment of CX3CR1 and C1QA; C4B is not in it"},
+    {"ref": "P02745", "category": "not_this_entity", "reason": "C1QA entry; nothing on C4B or synapses"}
+   ]},
+  {"id": "S6", "step": "H1.3", "text": "excess synapse elimination raises schizophrenia risk",
+   "claim": {"effect": {"subject": "synapsePruning", "sign": "pos", "target": {"disease": "schizophrenia", "aspect": "risk"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "PMID:26814963", "category": "disease_feature", "reason": "fewer synapses in schizophrenia brains is a feature the C4 result 'may help explain'; no claim that elimination causes the disease"}
+   ]},
+  {"id": "S7", "step": "H2.1", "text": "schizophrenia-associated CSMD1 variation lowers CSMD1 function",
+   "sign_note": "inverted: the run's object is reduced CSMD1 function",
+   "claim": {"effect": {"subject": "csmd1RiskVariation", "sign": "neg", "target": {"activity": "csmd1"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "rs10503253", "category": "not_in_text", "reason": "rs10503253-A associates with schizophrenia (OR 1.073); nothing on CSMD1 function"},
+    {"ref": "rs6986895", "category": "not_in_text", "reason": "association with schizophrenia, risk allele unreported ('?'); nothing on CSMD1 function"}
+   ]},
+  {"id": "S8", "step": "H2.2", "text": "CSMD1 inhibits the classical complement pathway",
+   "claim": {"effect": {"subject": "csmd1", "sign": "neg", "target": {"process": "classicalComplement"}}},
+   "evidence": [
+    {"ref": "PMID:40112933", "kind": "inVitro", "quote": "CSMD1 encodes a complement classical pathway inhibitor"}
+   ],
+   "excluded": [
+    {"ref": "HPA:ENSG00000183117", "category": "no_direction", "reason": "run's contradicting citation for H2: CSMD1 RNA by cell type (neurons, OPCs); bears on which cell makes CSMD1, which no step states"}
+   ]},
+  {"id": "S9", "step": "H3.2", "text": "CX3CR1 is required for synapse maturation (losing CX3CR1 lowers it)",
+   "claim": {"effect": {"subject": "cx3cr1", "sign": "pos", "target": {"process": "synapseMaturation"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "P49238", "category": "undirected", "reason": "'regulating synapse maturation (By similarity)' gives no direction"},
+    {"ref": "AGR:MGI:1333815:MP:0000136", "category": "not_in_text", "reason": "Cx3cr1 knockout microglial morphology, not synapse maturation"},
+    {"ref": "AGR:MGI:1333815:MP:0003691", "category": "not_in_text", "reason": "Cx3cr1 knockout microglial physiology, not synapse maturation"}
+   ]},
+  {"id": "S10", "step": "H3.2", "text": "CX3CR1 is required for normal microglial physiology (losing CX3CR1 gives abnormal microglial physiology)",
+   "sign_note": "the run's 'required for normal microglial physiology' written as CX3CR1 lowering the 'abnormal microglial cell physiology' phenotype; same claim, not a sign change",
+   "claim": {"effect": {"subject": "cx3cr1", "sign": "neg", "target": {"phenotype": "abnormalMicrogliaPhysiology"}}},
+   "evidence": [
+    {"ref": "AGR:MGI:1333815:MP:0003691", "kind": "curatedDb", "taxon": "mouse",
+     "quote": "Cx3cr1 -- the orthologue of human CX3CR1 -- shows abnormal microglial cell physiology"},
+    {"ref": "P49238", "kind": "crossSpecies", "quote": "Required to restrain the microglial inflammatory response in the CNS"}
+   ],
+   "excluded": [
+    {"ref": "AGR:MGI:1333815:MP:0000136", "category": "not_in_text", "reason": "microglial cell morphology, not physiology"}
+   ]},
+  {"id": "S11", "step": "H4.1", "text": "NXPH3 binds neurexin-1-alpha",
+   "claim": {"rel": {"relation": "RO:0002436", "a": "nxph3", "b": "nrxn1"}},
+   "evidence": [{"ref": "O95157", "kind": "crossSpecies", "quote": "Ligand for alpha-neurexins (By similarity)"}],
+   "excluded": [{"ref": "HPA:ENSG00000182575", "category": "not_in_text", "reason": "NXPH3 RNA expression; nothing on binding"}]},
+  {"id": "S12", "step": "H4.1", "text": "NXPH3 binds neurexin-2-alpha",
+   "claim": {"rel": {"relation": "RO:0002436", "a": "nxph3", "b": "nrxn2"}},
+   "evidence": [{"ref": "O95157", "kind": "crossSpecies", "quote": "Ligand for alpha-neurexins (By similarity)"}],
+   "excluded": [{"ref": "HPA:ENSG00000182575", "category": "not_in_text", "reason": "NXPH3 RNA expression; nothing on binding"}]},
+  {"id": "S13", "step": "H4.1", "text": "NXPH3 binds neurexin-3-alpha",
+   "claim": {"rel": {"relation": "RO:0002436", "a": "nxph3", "b": "nrxn3"}},
+   "evidence": [{"ref": "O95157", "kind": "crossSpecies", "quote": "Ligand for alpha-neurexins (By similarity)"}],
+   "excluded": [{"ref": "HPA:ENSG00000182575", "category": "not_in_text", "reason": "NXPH3 RNA expression; nothing on binding"}]},
+  {"id": "S14", "step": "H4.2", "text": "losing NXPH3 gives abnormal spatial learning",
+   "sign_note": "inverted: the run's subject is loss of NXPH3 signaling",
+   "claim": {"effect": {"subject": "nxph3", "sign": "neg", "target": {"phenotype": "abnormalSpatialLearning"}}},
+   "evidence": [
+    {"ref": "AGR:MGI:1336188:MP:0001463", "kind": "curatedDb", "taxon": "mouse",
+     "quote": "Nxph3 -- the orthologue of human NXPH3 -- shows abnormal spatial learning"}
+   ],
+   "excluded": [
+    {"ref": "AGR:MGI:1336188:MP:0001488", "category": "not_in_text", "reason": "startle reflex, not spatial learning"}
+   ]},
+  {"id": "S15", "step": "H4.2", "text": "losing NXPH3 gives an abnormal startle reflex",
+   "sign_note": "inverted: the run's subject is loss of NXPH3 signaling",
+   "claim": {"effect": {"subject": "nxph3", "sign": "neg", "target": {"phenotype": "abnormalStartleReflex"}}},
+   "evidence": [
+    {"ref": "AGR:MGI:1336188:MP:0001488", "kind": "curatedDb", "taxon": "mouse",
+     "quote": "Nxph3 -- the orthologue of human NXPH3 -- shows increased startle reflex"}
+   ],
+   "excluded": [
+    {"ref": "AGR:MGI:1336188:MP:0001463", "category": "not_in_text", "reason": "spatial learning, not startle"}
+   ]},
+  {"id": "S16", "step": "H4.3", "text": "synaptic circuit dysfunction leads to cognitive impairment",
+   "claim": {"effect": {"subject": "abnormalSynapticTransmission", "sign": "pos", "target": {"phenotype": "cognitiveImpairment"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "O95157", "category": "not_in_text", "reason": "NXPH3 as neurexin ligand; nothing on circuit dysfunction or cognition"},
+    {"ref": "AGR:MGI:1336188:MP:0001463", "category": "not_in_text", "reason": "Nxph3 knockout learning phenotype; the subject is the gene, not synaptic dysfunction"},
+    {"ref": "AGR:MGI:1336188:MP:0001488", "category": "not_in_text", "reason": "Nxph3 knockout startle phenotype; not synaptic dysfunction, not cognition"},
+    {"ref": "GWAS:NXPH3:no-association", "category": "not_in_text", "reason": "run's contradicting citation for H4: no NXPH3 variant associates with schizophrenia; no H4 step reaches schizophrenia, so no statement for it to refute"}
+   ]}
+ ],
+ "unexpressed": [
+  {"step": "H2.3", "category": "no_sign",
+   "reason": "'abnormal complement-dependent synapse elimination' has no direction, no HP or MP 'abnormal synapse pruning' term exists, and neither cited text gives a direction",
+   "evidence": [],
+   "excluded": [
+    {"ref": "PMID:40112933", "category": "not_in_text", "reason": "CSMD1 inhibits the classical C3 convertase in vitro; nothing on synapse elimination"},
+    {"ref": "PMID:22632727", "category": "not_this_entity", "reason": "CR3/C3-dependent microglial engulfment; nothing on CSMD1"}
+   ]},
+  {"step": "H3.1", "category": "no_sign",
+   "reason": "'abnormal synaptic maturation' has no direction and no HP or MP term (only zebrafish ZP:0009310); no cited text gives a direction",
+   "evidence": [],
+   "excluded": [
+    {"ref": "PMID:38301948", "category": "not_in_text", "reason": "lower C1QA mRNA and CSF C1qA in schizophrenia and FEP; nothing on synaptic maturation"},
+    {"ref": "AGR:MGI:88223:MP:0008571", "category": "not_in_text", "reason": "C1qa knockout abnormal synaptic bouton morphology, not synaptic maturation"},
+    {"ref": "AGR:MGI:88223:MP:0002910", "category": "not_in_text", "reason": "C1qa knockout abnormal excitatory postsynaptic currents, not synaptic maturation"},
+    {"ref": "AGR:MGI:88223:MP:0002945", "category": "not_in_text", "reason": "C1qa knockout abnormal inhibitory postsynaptic currents, not synaptic maturation"}
+   ]},
+  {"step": "H3.3", "category": "ungroundable",
+   "reason": "the step is signed (+: the condition raises risk, as S16 has an 'abnormal' subject); what fails is the subject: 'mistimed microglial circuit maturation' ('delayed or spatially inappropriate' pruning, per the mechanism) has no GO, HP or MP term and is a vague disjunction, not a missing entity, so a BLN term would not help",
+   "evidence": [],
+   "excluded": [
+    {"ref": "STRING:GO:0098883", "category": "enrichment", "reason": "CX3CR1 and C1QA enriched for synapse pruning"},
+    {"ref": "STRING:GO:0001774", "category": "enrichment", "reason": "CX3CR1 and C1QA enriched for microglial cell activation"},
+    {"ref": "PMID:26814963", "category": "not_in_text", "reason": "run's contradicting citation for H3: implicates excessive complement activity in schizophrenia; nothing on mistimed maturation"}
+   ]},
+  {"step": "H4.3", "category": "ungroundable",
+   "reason": "the 'sensorimotor dysfunction' half of the object is vague and has no HP term (MP:0002634 abnormal sensorimotor gating is narrower and murine); citations judged under S16",
+   "evidence": [], "excluded": []}
+ ],
+ "hypotheses": {
+  "H1": {"claims": [
+          {"subject": "c4RiskVariation", "sign": "pos", "target": {"disease": "schizophrenia", "aspect": "risk"}},
+          {"subject": "c1qa", "sign": "pos", "target": {"disease": "schizophrenia", "aspect": "risk"}}],
+         "note": "chain starts at C4-locus variation; the C1QA claim is the mechanism's ('C1QA supplies the classical-pathway initiation machinery'); CX3CR1 is listed but is in no H1 step and the mechanism gives it no direction ('regulates')"},
+  "H2": {"claims": [
+          {"subject": "csmd1RiskVariation", "sign": "pos", "target": {"disease": "schizophrenia", "aspect": "risk"}},
+          {"subject": "csmd1RiskVariation", "sign": "pos", "target": {"process": "synapsePruning"}}],
+         "note": "the chain ends at 'abnormal complement-dependent synapse elimination', never schizophrenia, so the second claim targets that end node. The step H2.3 is unsigned, but the claim's sign comes from the mechanism ('permits excessive C1Q/C4-dependent synapse handling'; the falsification expects CSMD1 loss to increase synapse loss). 'Complement-dependent' is the mechanism named in passing, so the node is synapse pruning (GO:0098883, as in H1; GO:0150062 complement-mediated synapse pruning is its child)"},
+  "H3": {"claims": [
+          {"subject": "c1qa", "sign": "neg", "target": {"disease": "schizophrenia", "aspect": "risk"}},
+          {"subject": "cx3cr1", "sign": "neg", "target": {"disease": "schizophrenia", "aspect": "risk"}}],
+         "note": "'low C1QA or impaired CX3CR1 ... causes' the disease: both neg"},
+  "H4": {"claims": [
+          {"subject": "nxph3", "sign": "neg", "target": {"disease": "schizophrenia", "aspect": "risk"}},
+          {"subject": "nxph3", "sign": "neg", "target": {"phenotype": "cognitiveImpairment"}}],
+         "note": "'NXPH3 disruption' is loss: neg. The chain ends at cognitive and sensorimotor dysfunction, never schizophrenia; second claim targets the expressible end node"}
+ },
+ "findings": [
+  {"project": "hypothesis-agent", "category": "sign_flip", "hypothesis": "H3",
+   "detail": "H3 claims low C1QA raises schizophrenia risk, while H1.2 and H1.3 of the same run say C1QA drives synapse elimination which raises risk; H3's C1QA claim composes only through H1's statements, with the opposite sign"},
+  {"project": "hypothesis-agent", "category": "chain_not_connected", "steps": ["H2.2", "H2.3"],
+   "detail": "H2.2 ends at the classical complement pathway, H2.3 starts again at CSMD1 ('loss of CSMD1 complement restraint'); the complement-to-synapse-elimination link H2 needs is never stated"},
+  {"project": "hypothesis-agent", "category": "chain_not_connected", "steps": ["H3.1", "H3.2", "H3.3"],
+   "detail": "H3 is three disjoint fragments: C1QA to abnormal synaptic maturation, CX3CR1 to microglial physiology and synapse maturation, mistimed microglial circuit maturation to schizophrenia; no step's object is the next step's subject"},
+  {"project": "hypothesis-agent", "category": "chain_not_connected", "steps": ["H4.1", "H4.2", "H4.3"],
+   "detail": "H4.1 ends at alpha-neurexins, H4.2 starts at loss of NXPH3 signaling; H4.2 ends at abnormal spatial learning and startle, H4.3 starts at 'NXPH3-dependent synaptic circuit dysfunction'"},
+  {"project": "hypothesis-agent", "category": "chain_ends_at_phenotype", "hypothesis": "H4",
+   "detail": "H4 ends at 'schizophrenia-relevant cognitive and sensorimotor dysfunction' and never reaches schizophrenia; its title does not name the disease"},
+  {"project": "hypothesis-agent", "category": "chain_ends_at_phenotype", "hypothesis": "H2",
+   "detail": "H2 ends at 'abnormal complement-dependent synapse elimination' and never reaches schizophrenia"},
+  {"project": "hypothesis-agent", "category": "undirected_step", "steps": ["H2.3", "H3.1"],
+   "detail": "these steps lead to 'abnormal' nodes although the mechanisms state a direction (excessive synapse handling for H2, delayed pruning for H3), so the chains carry no sign where the text does"},
+  {"project": "hypothesis-agent", "category": "ungrounded_label", "steps": ["H3.3"],
+   "detail": "H3.3's subject 'mistimed microglial circuit maturation' is a vague disjunction ('delayed or spatially inappropriate' pruning) with no term, so the only H3 step that reaches schizophrenia cannot be stated"},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["H1.1"],
+   "detail": "the three GWAS rows report SNP-disease association, not C4 expression; the SNPs sit in C2 (rs116385615), EHMT2 (rs142520578) and TNXB (rs1150754), not in C4A or C4B, and none of the rows gives the step's direction"},
+  {"project": "hypothesis-agent", "category": "source_summary_wrong", "steps": ["H1.1"],
+   "detail": "the sources summary says rs142520578 has 'mapped gene C4A' and rs1150754 'mapped gene C4A, C4B', but the records' author-reported genes omit C4A (rs142520578, intronic in EHMT2, C4A 88 kb away) or are TNXB alone (rs1150754)"},
+  {"project": "hypothesis-agent", "category": "citation_wrong_trait", "steps": ["H1.1"],
+   "detail": "rs116385615 and rs142520578 are associations with the cross-disorder trait 'Autism spectrum disorder or schizophrenia', not schizophrenia"},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["H1.2", "H2.3"],
+   "detail": "PMID:22632727 shows microglial engulfment depends on CR3/C3 in the retinogeniculate system; it names neither C1q, C4 nor CSMD1"},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["H1.3"],
+   "detail": "PMID:26814963 implicates excessive complement activity in schizophrenia and notes fewer synapses in patients ('may help explain'); it never states that synapse elimination causes the disease, so H1.3 has no support"},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["H2.1"],
+   "detail": "the CSMD1 GWAS rows give association only; the run's own note admits the SNP-to-loss-of-function direction is untested; rs6986895's risk allele is unreported ('?')"},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["H3.1"],
+   "detail": "PMID:38301948, H3's central source, reports lower C1QA in schizophrenia (an association) but is cited for C1QA loss causing abnormal synaptic maturation; no H3 step carries the C1QA-schizophrenia association it actually reports"},
+  {"project": "hypothesis-agent", "category": "contradicting_citation_supports", "hypothesis": "H1",
+   "detail": "PMID:38301948, cited as contradicting H1, says in its background that C4A contributes to synapse removal, which supports H1.2 for C4A; it is attached as support there"},
+  {"project": "hypothesis-agent", "category": "contradicting_evidence_ignored", "steps": ["H1.2"],
+   "detail": "PMID:42000733 (listed as contradicting) says C4A, in contrast to C4B, is implicated in pruning, refuting the C4B half of H1.2; H1 still lumps C4A/C4B (its note admits paralogue specificity is unresolved)"},
+  {"project": "hypothesis-agent", "category": "citation_at_no_step", "hypothesis": "H1",
+   "detail": "HPA:ENSG00000168329 (CX3CR1, microglia) and HPA:ENSG00000173372 (C1QA, microglia) are supporting citations for H1 and H3 that no step uses"},
+  {"project": "hypothesis-agent", "category": "citation_at_no_step", "hypothesis": "H2",
+   "detail": "Q96PZ7 (CSMD1 UniProt: 'Potential suppressor of squamous cell carcinomas') and HPA:ENSG00000183117 support no step; the CSMD1 UniProt text does not mention complement"},
+  {"project": "hypothesis-agent", "category": "citation_both_ways", "hypothesis": "H2",
+   "detail": "HPA:ENSG00000183117 is listed as both supporting and contradicting evidence for H2"},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["H4.1"],
+   "detail": "the mechanism says NXPH3 is 'expressed in human excitatory neurons', but HPA gives 6.6 nCPM there against 29.8 in smooth muscle cells, and tissue enrichment in blood vessel above brain"},
+  {"project": "hypothesis-agent", "category": "confidence_unjustified", "hypothesis": "H1",
+   "detail": "rated high, but only the C4A half of H1.1 has a cited text that states it, H1.2 for C4A rests on a mouse result cited for another step, H1.3 has no support, and C1QA's role has none"},
+  {"project": "hypothesis-agent", "category": "confidence_unjustified", "hypothesis": "H3",
+   "detail": "rated medium, but no cited text states any step on a route to either H3 claim: S9 has no support, H3.1 and H3.3 are unexpressed, the C1QA route borrows H1's unsupported S3 and S6 with the opposite sign, and S10 (the only supported H3 statement) is on no route; its central paper PMID:38301948 reports only lower C1q in patients, finds C1QA co-expression networks not enriched for risk variants beyond C4A, and says the functional implications are unknown"},
+  {"project": "hypothesis-agent", "category": "ungrounded_label", "hypothesis": "H1",
+   "detail": "almost every run entity has an empty CURIE; schizophrenia is given as 'EFO:MONDO_0005090', an EFO prefix on a MONDO id; yet every hypothesis says support 'grounded'"},
+  {"project": "hypothesis-agent", "category": "gene_unexplained",
+   "detail": "CCDC136 is in the question's gene list and in no hypothesis; the run reports it as unexplained"},
+  {"project": "biolean", "category": "missing_term", "steps": ["H1.1"],
+   "detail": "BLN:C4-schizophrenia-associated-variation stands for the run's class of C4-locus risk alleles (structural and SNP), which has no single dbSNP or ClinVar id"},
+  {"project": "biolean", "category": "missing_term", "steps": ["H2.1"],
+   "detail": "BLN:CSMD1-schizophrenia-associated-variation stands for the run's class of CSMD1 risk alleles; the two cited SNPs are instances, one with an unreported allele"},
+  {"project": "biolean", "category": "missing_term", "steps": ["H2.3", "H3.1"],
+   "detail": "HP and MP have no 'abnormal synapse maturation' or 'abnormal synapse pruning' term (only zebrafish ZP:0009310), so two steps fall to no_sign under the undirected-change rule"},
+  {"project": "biolean", "category": "no_form_for", "hypothesis": "H4",
+   "detail": "a null result against a hypothesis claim (GWAS:NXPH3:no-association, no NXPH3 variant associated with schizophrenia) has no statement to refute when no step reaches the disease, so it can only be excluded and never weighs against H4"},
+  {"project": "biolean", "category": "no_form_for", "steps": ["H3.2"],
+   "detail": "'X is required for normal Y' has no direct form; written as X lowering the MP 'abnormal Y' phenotype"},
+  {"project": "biolean", "category": "rule_missing", "steps": ["H3.2", "H4.2"],
+   "detail": "the exclusion table lists an MGI 'abnormal X' annotation as no_direction, but when the statement's target is the 'abnormal X' phenotype itself (undirected-change rule) the knockout annotation does state the step; kept as curatedDb"},
+  {"project": "biolean", "category": "kind_mismatch", "steps": ["H4.2", "H3.2"],
+   "detail": "claims about human NXPH3 and CX3CR1 target MP (mouse) phenotypes because HP has no spatial-learning, startle-reflex or microglial-physiology abnormality term"},
+  {"project": "biolean", "category": "evidence_weighting", "steps": ["H1.2"],
+   "detail": "one mouse C4 result supports both human C4A and C4B statements; the taxon flag cannot say the mouse gene is the ortholog of both paralogues, so the same quote counts twice"},
+  {"project": "biolean", "category": "evidence_weighting", "steps": ["H4.2", "H3.2"],
+   "detail": "one MGI knockout annotation (curatedDb, taxon mouse) makes S14 and S15 'established' (belief 0.8) for human NXPH3, and S10 too with a 'By similarity' line, while S1, a human expression-by-allele result in Nature, gets 0.5; the mouse-to-human gap does not discount the annotation"},
+  {"project": "both", "category": "bridge_not_added", "hypothesis": "H2",
+   "detail": "PMID:38301948's background sentence has C4A acting 'through signaling within the C1q initiated classical activation axis', which could bridge classical complement to synapse removal for H2, but its subject is C4A and H2 never signs that link; not added"}
+ ],
+ "audit": [
+  {"item": "unexpressed H3.3", "error": "wrong_unexpressed",
+   "before": "category no_sign: 'subject is an undirected change ... so the step has no sign'",
+   "after": "category ungroundable: the step is signed (+); its subject 'mistimed microglial circuit maturation' has no term and is a vague disjunction",
+   "reason": "no_sign means a causal step with no direction anywhere, but H3.3 is 'leads_to, positive'; an 'abnormal' or 'mistimed' subject still carries a signed effect (the curator wrote S16 with an 'abnormal synaptic transmission' subject). What fails is the node, not the sign"},
+  {"item": "hypotheses.H2", "error": "wrong_hypothesis_claim",
+   "before": "one claim (csmd1RiskVariation →+ schizophrenia risk); note: end node 'has no sign and no term, so no phenotype claim can be written'",
+   "after": "second claim added: csmd1RiskVariation →+ process synapsePruning (GO:0098883); note rewritten",
+   "reason": "the guide asks for an end-node claim when the chain never reaches the disease. A claim's sign comes from the title and mechanism, not the step: the mechanism says the alleles 'permit excessive C1Q/C4-dependent synapse handling'. A term exists: synapse pruning, with 'complement-dependent' as the mechanism named in passing (GO:0150062 complement-mediated synapse pruning is its child). The claim has no route, like claim 1"},
+  {"item": "findings undirected_step and missing_term (H2.3, H3.1, H3.3)", "error": "other",
+   "before": "both findings counted H3.3 as an undirected step falling to no_sign",
+   "after": "H3.3 removed from both; new ungrounded_label finding for H3.3's vague subject",
+   "reason": "follows the H3.3 recategorisation: H3.3 leads from a 'mistimed' node, not to an 'abnormal' one, and its step is signed"},
+  {"item": "findings", "error": "missed_finding",
+   "before": "confidence_unjustified recorded for H1 only",
+   "after": "confidence_unjustified added for H3",
+   "reason": "H3 is rated medium, but no cited text states any step on a route to either claim. Its C1QA route borrows H1's unsupported S3 and S6 with the opposite sign. Its central paper, PMID:38301948, reports only lower C1q in patients and finds no risk-variant enrichment for C1QA networks beyond C4A"}
+ ]
+}

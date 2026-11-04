@@ -1,0 +1,439 @@
+{
+ "run_id": "study-2026-09-vertex-crohn-vertex-openai-deepseek-aideepseek-v3.2-maas-multi_agent-r3",
+ "model": "vertex-openai:deepseek-ai/deepseek-v3.2-maas",
+ "question": {
+  "arm": "multi_agent",
+  "budget": {
+   "max_delegations": 22,
+   "max_model_requests": 80,
+   "max_specialist_requests": 8,
+   "min_evidence_per_hypothesis": 2,
+   "min_hypotheses": 3,
+   "min_sources_per_hypothesis": 2,
+   "output_retries": 3
+  },
+  "data_policy": {
+   "max_age_seconds": 1209600.0,
+   "mode": "cache-preferred",
+   "snapshot_run_id": null
+  },
+  "disease": "Crohn disease",
+  "formalise": false,
+  "genes": [
+   "IL12B",
+   "IL23R",
+   "NOD2",
+   "LACC1",
+   "GPR35",
+   "MEIS1",
+   "TRIM4"
+  ],
+  "model": "vertex-openai:deepseek-ai/deepseek-v3.2-maas",
+  "specialist_model": "vertex-openai:deepseek-ai/deepseek-v3.2-maas",
+  "specialists": [
+   "chembl",
+   "expression",
+   "gwas",
+   "interactions",
+   "literature",
+   "model_organism",
+   "open_targets",
+   "pathways",
+   "single_cell",
+   "trials",
+   "uniprot"
+  ],
+  "tissue": {
+   "artifact_id": "sha256:2ae293c5c9c86e431f18191576a5cfddb9903117c31c2687c8a4b0abe5211411",
+   "label": "colon",
+   "uberon": "UBERON:0001155"
+  },
+  "use_network": true
+ },
+ "abstention": null,
+ "disease": "Crohn disease",
+ "genes_considered": [
+  "IL12B",
+  "IL23R",
+  "NOD2",
+  "LACC1",
+  "GPR35",
+  "MEIS1",
+  "TRIM4"
+ ],
+ "hypotheses": [
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "PMID:11385576"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "Impaired bacterial sensing and clearance"
+     },
+     "polarity": "unknown",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "NOD2 variant"
+     }
+    },
+    {
+     "context": {
+      "cell_type": null,
+      "disease_state": null,
+      "tissue": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "other",
+       "label": "intestinal mucosa"
+      }
+     },
+     "evidence": [
+      "PMID:11385576"
+     ],
+     "note": "NOD2 mutations compromise intracellular recognition of bacterial muramyl dipeptide, leading to defective antibacterial responses",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "dysregulated intestinal inflammation"
+     },
+     "polarity": "unknown",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "Impaired bacterial sensing and clearance"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:11385576"
+     ],
+     "note": "",
+     "object": {
+      "curie": "MONDO:0005011",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "Crohn disease"
+     },
+     "polarity": "unknown",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "dysregulated intestinal inflammation"
+     }
+    }
+   ],
+   "confidence": "medium",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Generate a mouse model with the exact NOD2 Crohn-associated variants and challenge with intestinal bacteria; if the mutant mice do not show increased intestinal inflammation or altered bacterial clearance compared to wild-type, the hypothesis is falsified.",
+    "expected": "positive",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "NOD2"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "other",
+     "label": "intestinal inflammation"
+    },
+    "system": "mouse model"
+   },
+   "genes": [
+    "NOD2"
+   ],
+   "hypothesis_id": "hypothesis_1",
+   "mechanism": "NOD2 encodes an intracellular pattern recognition receptor that detects bacterial muramyl dipeptide. Crohn-associated NOD2 variants impair bacterial sensing and clearance in intestinal epithelial cells and macrophages, leading to dysregulated intestinal immune responses, chronic inflammation, and ultimately Crohn disease development.",
+   "support": "partial",
+   "supporting_evidence": [
+    "PMID:11385576"
+   ],
+   "title": "NOD2 variants impair bacterial sensing leading to dysregulated intestinal inflammation in Crohn disease"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "PMID:17068223"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "enhanced Th17 cell differentiation"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "IL23R variant"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:17068223"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "increased IL-12 production"
+     },
+     "polarity": "positive",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "IL12B variant"
+     }
+    },
+    {
+     "context": {
+      "cell_type": null,
+      "disease_state": null,
+      "tissue": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "other",
+       "label": "intestinal mucosa"
+      }
+     },
+     "evidence": [
+      "PMID:17068223"
+     ],
+     "note": "Both IL-12 and IL-23 signaling pathways converge on promoting pro-inflammatory T cell responses in the gut",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "excessive Th1/Th17 immune responses"
+     },
+     "polarity": "unknown",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "enhanced Th17 cell differentiation"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:17068223"
+     ],
+     "note": "",
+     "object": {
+      "curie": "MONDO:0005011",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "Crohn disease"
+     },
+     "polarity": "unknown",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "excessive Th1/Th17 immune responses"
+     }
+    }
+   ],
+   "confidence": "medium",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Block IL-23 signaling in patients with Crohn-associated IL23R variants using an anti-IL-23 antibody; if patients show no clinical improvement compared to those without the variants, the hypothesis is falsified.",
+    "expected": "positive",
+    "perturbation": {
+     "action": "inhibit",
+     "target": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "IL23R"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "other",
+     "label": "clinical disease activity"
+    },
+    "system": "human patients"
+   },
+   "genes": [
+    "IL23R",
+    "IL12B"
+   ],
+   "hypothesis_id": "hypothesis_2",
+   "mechanism": "IL23R encodes a receptor for IL-23, while IL12B encodes the p40 subunit shared by both IL-12 and IL-23. Crohn-associated variants in these genes enhance IL-23 signaling and IL-12 production, respectively, leading to excessive differentiation and maintenance of pro-inflammatory Th17 and Th1 cells in the intestinal mucosa, driving chronic inflammation characteristic of Crohn disease.",
+   "support": "partial",
+   "supporting_evidence": [
+    "PMID:17068223"
+   ],
+   "title": "IL23R and IL12B variants promote excessive Th1/Th17 responses driving intestinal inflammation in Crohn disease"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "PMID:40089498"
+     ],
+     "note": "LACC1 encodes a laccase domain-containing protein involved in immunometabolism",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "altered T cell metabolism"
+     },
+     "polarity": "unknown",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "LACC1 variant"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:40089498"
+     ],
+     "note": "LACC1 variants modulate T cell gene expression and function",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "dysregulated T cell responses"
+     },
+     "polarity": "unknown",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "altered T cell metabolism"
+     }
+    },
+    {
+     "context": {
+      "cell_type": null,
+      "disease_state": null,
+      "tissue": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "other",
+       "label": "intestinal mucosa"
+      }
+     },
+     "evidence": [
+      "PMID:40089498"
+     ],
+     "note": "GPR35 variants may modulate intestinal inflammation through chemokine signaling",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "intestinal inflammation"
+     },
+     "polarity": "unknown",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "dysregulated T cell responses"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:28658209"
+     ],
+     "note": "",
+     "object": {
+      "curie": "MONDO:0005011",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "Crohn disease"
+     },
+     "polarity": "unknown",
+     "relation": "leads_to",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "other",
+      "label": "intestinal inflammation"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Generate LACC1 knockout T cells and assess their metabolic profile and inflammatory cytokine production; if they do not show altered immunometabolic function compared to wild-type, the hypothesis is falsified.",
+    "expected": "positive",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "LACC1"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "other",
+     "label": "T cell metabolic function"
+    },
+    "system": "human T cells"
+   },
+   "genes": [
+    "LACC1"
+   ],
+   "hypothesis_id": "hypothesis_3",
+   "mechanism": "LACC1 encodes an immunometabolic regulator that modulates T cell function and metabolism. Crohn-associated LACC1 variants alter T cell immunometabolic programming, leading to dysregulated T cell responses in the intestinal mucosa that contribute to chronic inflammation in Crohn disease.",
+   "support": "partial",
+   "supporting_evidence": [
+    "PMID:40089498",
+    "PMID:28658209"
+   ],
+   "title": "LACC1 variants alter T cell immunometabolism contributing to dysregulated intestinal immunity in Crohn disease"
+  }
+ ],
+ "unexplained_genes": [
+  "GPR35",
+  "MEIS1",
+  "TRIM4"
+ ]
+}

@@ -1,0 +1,400 @@
+{
+ "run_id": "study-2026-09-vertex-alzheimers-google-cloud-gemini-3.1-pro-preview-multi_agent-r1",
+ "model": "google-cloud:gemini-3.1-pro-preview",
+ "question": {
+  "arm": "multi_agent",
+  "budget": {
+   "max_delegations": 22,
+   "max_model_requests": 80,
+   "max_specialist_requests": 8,
+   "min_evidence_per_hypothesis": 2,
+   "min_hypotheses": 3,
+   "min_sources_per_hypothesis": 2,
+   "output_retries": 3
+  },
+  "data_policy": {
+   "max_age_seconds": 1209600.0,
+   "mode": "cache-preferred",
+   "snapshot_run_id": null
+  },
+  "disease": "Alzheimer disease",
+  "formalise": false,
+  "genes": [
+   "TREM2",
+   "RNPS1",
+   "INPP5D",
+   "APOE",
+   "MS4A4A",
+   "LPIN2",
+   "PLCG2",
+   "ABI3"
+  ],
+  "model": "google-cloud:gemini-3.1-pro-preview",
+  "specialist_model": "google-cloud:gemini-3.1-pro-preview",
+  "specialists": [
+   "chembl",
+   "expression",
+   "gwas",
+   "interactions",
+   "literature",
+   "model_organism",
+   "open_targets",
+   "pathways",
+   "single_cell",
+   "trials",
+   "uniprot"
+  ],
+  "tissue": {
+   "artifact_id": "sha256:9083451a13b7e45058362501bb03fd93944d7aa79ffc0248bc2cf8b1520b9652",
+   "label": "brain",
+   "uberon": "UBERON:0000955"
+  },
+  "use_network": true
+ },
+ "abstention": {
+  "evidence": [
+   "OT:RNPS1-MONDO_0004975",
+   "PMID:41865408",
+   "PMID:21283692",
+   "CXG:ENSG00000205937:CL_0002629:MONDO_0004975",
+   "CXG:ENSG00000101577:CL_0002629:MONDO_0004975"
+  ],
+  "genes_covered": [
+   "RNPS1",
+   "LPIN2"
+  ],
+  "reason": "insufficient_evidence",
+  "statement": "RNPS1 and LPIN2 lack specific evidence linking them to the pathogenesis of Alzheimer's disease. Open Targets reports no disease association score for LPIN2 and a minimal score for RNPS1. While single-cell data shows they are expressed in mature microglial cells, primary literature identifies them merely in broad transcriptomic screens or as reference genes, without demonstrating a shared mechanism or causal role in the disease alongside the other microglial risk genes.",
+  "support": "grounded",
+  "what_would_change_this": "A genome-wide association study or targeted functional screen demonstrating a specific mechanism linking RNPS1 or LPIN2 to Alzheimer's disease pathogenesis, distinct from general background expression."
+ },
+ "disease": "Alzheimer disease",
+ "genes_considered": [
+  "TREM2",
+  "RNPS1",
+  "INPP5D",
+  "APOE",
+  "MS4A4A",
+  "LPIN2",
+  "PLCG2",
+  "ABI3"
+ ],
+ "hypotheses": [
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "STRING:APOE-TREM2"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "TREM2"
+     },
+     "polarity": "unknown",
+     "relation": "binds",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "APOE"
+     }
+    },
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "mature microglial cell"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [
+      "PMID:42689388"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "process",
+      "label": "microglial survival"
+     },
+     "polarity": "positive",
+     "relation": "activates",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "TREM2"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "OT:TREM2-MONDO_0004975",
+      "PMID:28714976"
+     ],
+     "note": "",
+     "object": {
+      "curie": "MONDO:0004975",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "Alzheimer disease"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "TREM2"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Knockout Apoe in a microglial cell culture model and measure changes in Trem2-dependent microglial survival.",
+    "expected": "negative",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "APOE"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "process",
+     "label": "microglial survival"
+    },
+    "system": ""
+   },
+   "genes": [
+    "APOE",
+    "TREM2"
+   ],
+   "hypothesis_id": "h1",
+   "mechanism": "APOE binds directly to TREM2, a microglial receptor essential for the brain's innate immune response. TREM2 regulates microglial survival and inflammatory states. The physical interaction between APOE and TREM2 ties two major genetic risk factors to Alzheimer's disease pathology.",
+   "support": "speculative",
+   "supporting_evidence": [],
+   "title": "APOE physically interacts with the microglial receptor TREM2"
+  },
+  {
+   "chain": [
+    {
+     "context": {
+      "cell_type": {
+       "curie": "",
+       "grounding_evidence": "",
+       "kind": "cell_type",
+       "label": "mature microglial cell"
+      },
+      "disease_state": null,
+      "tissue": null
+     },
+     "evidence": [
+      "PMID:41435829"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "TREM2"
+     },
+     "polarity": "negative",
+     "relation": "decreases_amount",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "MS4A4A"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "OT:MS4A4A-MONDO_0004975",
+      "PMID:41435829"
+     ],
+     "note": "",
+     "object": {
+      "curie": "MONDO:0004975",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "Alzheimer disease"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "MS4A4A"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Knockout Ms4a4a in human induced pluripotent stem cell-derived microglia and measure TREM2 protein levels.",
+    "expected": "positive",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "MS4A4A"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "protein",
+     "label": "TREM2"
+    },
+    "system": ""
+   },
+   "genes": [
+    "MS4A4A",
+    "TREM2"
+   ],
+   "hypothesis_id": "h2",
+   "mechanism": "The Alzheimer's risk gene MS4A4A functions as a negative regulator of TREM2 in microglia. By decreasing the amount of TREM2, MS4A4A cooperates to alter microglial states, thereby modulating the innate immune response and contributing to disease risk.",
+   "support": "speculative",
+   "supporting_evidence": [],
+   "title": "MS4A4A negatively regulates TREM2 expression in microglia"
+  },
+  {
+   "chain": [
+    {
+     "context": null,
+     "evidence": [
+      "PMID:41633359"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "RIPK1"
+     },
+     "polarity": "negative",
+     "relation": "inhibits",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "INPP5D"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:42357928"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "phenotype",
+      "label": "amyloid plaques"
+     },
+     "polarity": "negative",
+     "relation": "decreases_amount",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "PLCG2"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "PMID:42092345"
+     ],
+     "note": "",
+     "object": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "phenotype",
+      "label": "amyloid plaques"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "ABI3"
+     }
+    },
+    {
+     "context": null,
+     "evidence": [
+      "OT:INPP5D-MONDO_0004975"
+     ],
+     "note": "",
+     "object": {
+      "curie": "MONDO:0004975",
+      "grounding_evidence": "",
+      "kind": "disease",
+      "label": "Alzheimer disease"
+     },
+     "polarity": "unknown",
+     "relation": "associated_with",
+     "subject": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "protein",
+      "label": "INPP5D"
+     }
+    }
+   ],
+   "confidence": "low",
+   "contradicting_evidence": [],
+   "falsification": {
+    "description": "Knockout Plcg2 in an App knock-in mouse model and quantify the compaction and size of amyloid plaques.",
+    "expected": "positive",
+    "perturbation": {
+     "action": "knockout",
+     "target": {
+      "curie": "",
+      "grounding_evidence": "",
+      "kind": "gene",
+      "label": "PLCG2"
+     }
+    },
+    "readout": {
+     "curie": "",
+     "grounding_evidence": "",
+     "kind": "phenotype",
+     "label": "amyloid plaques"
+    },
+    "system": ""
+   },
+   "genes": [
+    "INPP5D",
+    "PLCG2",
+    "ABI3"
+   ],
+   "hypothesis_id": "h3",
+   "mechanism": "INPP5D, PLCG2, and ABI3 act to mediate microglial function and neuroinflammation in Alzheimer's disease. INPP5D represses pro-inflammatory mediators by inhibiting RIPK1. Concurrently, PLCG2 and ABI3 modulate amyloid plaque structure and microglial redistribution, with rare variants in these genes strongly associating with disease risk.",
+   "support": "speculative",
+   "supporting_evidence": [],
+   "title": "INPP5D, PLCG2, and ABI3 coordinate the microglial response and plaque compaction"
+  }
+ ],
+ "unexplained_genes": []
+}

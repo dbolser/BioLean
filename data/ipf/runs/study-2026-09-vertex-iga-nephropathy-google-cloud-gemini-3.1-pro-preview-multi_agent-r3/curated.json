@@ -1,0 +1,201 @@
+{
+ "run_id": "study-2026-09-vertex-iga-nephropathy-google-cloud-gemini-3.1-pro-preview-multi_agent-r3",
+ "curated_by": "Claude Opus 5.5, 2026-10-30",
+ "entities": {
+  "ITGAX": {"kind": "protein", "curie": "UniProt:P20702", "run_labels": ["ITGAX"]},
+  "CARD9": {"kind": "protein", "curie": "UniProt:Q9H257", "run_labels": ["CARD9"]},
+  "TNFSF13": {"kind": "protein", "curie": "UniProt:O75888", "run_labels": ["TNFSF13"]},
+  "CFH": {"kind": "protein", "curie": "UniProt:P08603", "run_labels": ["CFH"]},
+  "DEFA4": {"kind": "protein", "curie": "UniProt:P12838", "run_labels": ["DEFA4"]},
+  "iC3b": {"kind": "protein", "curie": "PR:000019178", "run_labels": ["iC3b"],
+           "note": "PR:000019178 'complement C3 proteolytic cleavage product' (terms.py \"complement C3\" lists it). The corpus has no term for iC3b itself, only this parent, and the run's mechanism calls iC3b one of the 'complement cleavage fragments'. Intact C3 (UniProt:P01024) cannot stand in: complement activation raises its cleavage products while consuming C3"},
+  "complementActivation": {"kind": "process", "curie": "GO:0006956", "run_labels": ["Complement cascade"]},
+  "neutrophilDegranulation": {"kind": "process", "curie": "GO:0043312", "run_labels": ["neutrophil degranulation"]},
+  "glomerularInjury": {"kind": "phenotype", "curie": "HP:0100820", "run_labels": ["glomerular injury"]},
+  "iga": {"kind": "disease", "curie": "MONDO:0005342", "run_labels": ["IgA glomerulonephritis"]},
+  "intestine": {"kind": "anatomy", "curie": "UBERON:0000160", "run_labels": ["gut"]},
+  "kidney": {"kind": "anatomy", "curie": "UBERON:0002113", "run_labels": ["kidney"]},
+  "macrophage": {"kind": "cellType", "curie": "CL:0000235", "run_labels": ["macrophage"]},
+  "tnfsf13Intestine": {"kind": "protein", "refines": {"base": "TNFSF13", "ctx": {"anatomy": "intestine"}},
+                       "run_labels": ["TNFSF13 (step context: gut)"]}
+ },
+ "statements": [
+  {"id": "S1", "step": "h1_card9_itgax_tnfsf13.1", "text": "ITGAX activates CARD9",
+   "claim": {"effect": {"subject": "ITGAX", "sign": "pos", "target": {"activity": "CARD9"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "PMID:38716725", "category": "not_in_text", "reason": "names integrin alpha X only in an inferred mesangial cell-macrophage ITGAX/ITGAM/C3 interaction axis; CARD9 is not mentioned"},
+    {"ref": "rs11574637", "category": "not_in_text", "reason": "GWAS row: rs11574637-T (intronic in ITGAX; author-reported genes ITGAM and ITGAX) associated with IgA nephropathy; says nothing about CARD9"}
+   ]},
+  {"id": "S2", "step": "h1_card9_itgax_tnfsf13.2", "text": "CARD9 raises the amount of TNFSF13 (APRIL) in the gut",
+   "claim": {"effect": {"subject": "CARD9", "sign": "pos", "target": {"amount": "tnfsf13Intestine"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "PMID:33052226", "category": "not_in_text", "reason": "review abstract on infections, gut microbiome and IgA in IgAN; names neither CARD9 nor TNFSF13/APRIL"},
+    {"ref": "rs4077515", "category": "not_in_text", "reason": "GWAS row: CARD9 missense rs4077515-T associated with IgA nephropathy; says nothing about TNFSF13"}
+   ]},
+  {"id": "S3", "step": "h2_cfh_itgax.1", "text": "CFH inhibits complement activation",
+   "claim": {"effect": {"subject": "CFH", "sign": "neg", "target": {"process": "complementActivation"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "OT:CFH-MONDO_0005342", "category": "not_in_text", "reason": "Open Targets CFH-IgA glomerulonephritis association score; complement activation is not mentioned"},
+    {"ref": "rs6677604", "category": "not_in_text", "reason": "GWAS row: CFH intronic rs6677604-G associated with IgA nephropathy; says nothing about complement"},
+    {"ref": "PMID:36316518", "category": "not_in_text", "reason": "retinal drusen in IgAN read as 'consistent with complement activation'; CFH is not mentioned"}
+   ]},
+  {"id": "S4", "step": "h2_cfh_itgax.2", "text": "complement activation raises the amount of iC3b",
+   "claim": {"effect": {"subject": "complementActivation", "sign": "pos", "target": {"amount": "iC3b"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "R-HSA-166658", "category": "enrichment", "reason": "over-representation of 'Complement cascade' in the run's own gene set (2 of 163 entities); does not mention iC3b or say the cascade generates it"}
+   ]},
+  {"id": "S5", "step": "h2_cfh_itgax.3", "text": "iC3b binds ITGAX (CR4)",
+   "claim": {"rel": {"relation": "RO:0002436", "a": "iC3b", "b": "ITGAX"}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "PMID:38716725", "category": "not_this_entity", "reason": "a scRNA-seq inferred mesangial cell-macrophage interaction 'via the ... integrin subunit alpha X/integrin subunit alpha M/complement C3 (C3) axes': names C3, not iC3b, and reports no binding"}
+   ]},
+  {"id": "S6", "step": "h3_defa4.1", "text": "neutrophil degranulation raises the amount of DEFA4",
+   "claim": {"effect": {"subject": "neutrophilDegranulation", "sign": "pos", "target": {"amount": "DEFA4"}}},
+   "evidence": [],
+   "excluded": [
+    {"ref": "HPA:ENSG00000164821", "category": "not_in_text", "reason": "HPA expression record: DEFA4 RNA enriched in bone marrow and neutrophil progenitors; nothing about degranulation or release"}
+   ]},
+  {"id": "S7", "step": "h3_defa4.2", "text": "DEFA4 leads to glomerular injury (glomerulopathy; the step's 'kidney' context is implied by the glomerulus)",
+   "claim": {"effect": {"subject": "DEFA4", "sign": "pos", "target": {"phenotype": "glomerularInjury"}}},
+   "sign_note": "the run's polarity is unknown, but 'leads to glomerular injury' is an undirected change to an abnormal state that has an HP term, so the guide's undirected-change rule makes it pos on that phenotype",
+   "evidence": [],
+   "excluded": [
+    {"ref": "rs2738058", "category": "not_in_text", "reason": "GWAS row: intergenic rs2738058-T (25.8 kb from DEFA4, author-reported gene 'DEFA') associated with IgA nephropathy; glomerular injury is not mentioned"},
+    {"ref": "OT:DEFA4-MONDO_0005342", "category": "not_in_text", "reason": "Open Targets DEFA4-IgA glomerulonephritis genetic association score; glomerular injury is not mentioned"}
+   ]}
+ ],
+ "unexpressed": [
+  {"step": "h1_card9_itgax_tnfsf13.3", "category": "no_sign",
+   "reason": "TNFSF13 leads_to IgA glomerulonephritis with polarity unknown, and no cited text gives TNFSF13's direction (the GWAS row gives it for the rs3803800-A allele only)",
+   "evidence": [],
+   "excluded": [
+    {"ref": "rs3803800", "category": "association_only", "reason": "GWAS row: TNFSF13 missense rs3803800-A associated with IgA nephropathy (OR 1.21); a variant association, not an effect of TNFSF13, and no direction for TNFSF13 itself"},
+    {"ref": "PMID:33052226", "category": "not_in_text", "reason": "review abstract on mucosal immunity and microbiome in IgAN; does not mention TNFSF13/APRIL"}
+   ]},
+  {"step": "h2_cfh_itgax.4", "category": "no_sign",
+   "reason": "ITGAX leads_to IgA glomerulonephritis (in macrophages) with polarity unknown, and no cited text gives ITGAX's direction",
+   "evidence": [],
+   "excluded": [
+    {"ref": "rs11574637", "category": "association_only", "reason": "GWAS row: rs11574637-T associated with IgA nephropathy (OR 1.32), author-reported genes ITGAM and ITGAX; a variant association with no direction for ITGAX"}
+   ]},
+  {"step": "h3_defa4.3", "category": "no_sign",
+   "reason": "glomerular injury leads_to IgA glomerulonephritis with polarity unknown; it also makes a defining feature of the glomerulonephritis its cause",
+   "evidence": [],
+   "excluded": [
+    {"ref": "rs2738058", "category": "not_in_text", "reason": "GWAS row for a variant near the DEFA cluster and IgA nephropathy; glomerular injury is not mentioned"}
+   ]}
+ ],
+ "hypotheses": {
+  "h1_card9_itgax_tnfsf13": {
+   "claims": [
+    {"subject": "ITGAX", "sign": "pos", "target": {"disease": "iga", "aspect": "risk"}},
+    {"subject": "CARD9", "sign": "pos", "target": {"disease": "iga", "aspect": "risk"}},
+    {"subject": "TNFSF13", "sign": "pos", "target": {"disease": "iga", "aspect": "risk"}}
+   ],
+   "note": "one claim per gene (CARD9, ITGAX, TNFSF13); signs from the mechanism ('drives B-cell class switching ... primary systemic driver'). The last step, TNFSF13 -> IgAN, is unsigned, and H1.2's object is TNFSF13 in the gut (step context), so even a signed H1.3 would not connect"},
+  "h2_cfh_itgax": {
+   "claims": [
+    {"subject": "CFH", "sign": "neg", "target": {"disease": "iga", "aspect": "progression"}},
+    {"subject": "ITGAX", "sign": "pos", "target": {"disease": "iga", "aspect": "progression"}}
+   ],
+   "note": "CFH neg from 'CFH defects unleash complement'; aspect progression from 'exacerbating IgA glomerulonephritis' (the guide's table lists 'exacerbation' under progression; the object is the disease itself, not a feature), after IgA deposition has already triggered complement, though the chain's last step says leads_to (risk). The arm stops at iC3b binds ITGAX, a rel that cannot compose; ITGAX -> IgAN is unsigned"},
+  "h3_defa4": {
+   "claims": [
+    {"subject": "DEFA4", "sign": "pos", "target": {"disease": "iga", "aspect": "progression"}}
+   ],
+   "note": "aspect from 'accelerating the progression of IgA glomerulonephritis'; the chain starts at neutrophil degranulation. DEFA4 -> glomerular injury (S7) is pos on glomerulopathy by the undirected-change rule, but glomerular injury -> IgAN is unsigned, so no route. The chain reaches the disease, so no phenotype claim was added; the title's 'DEFA4 exacerbates glomerular injury' is S7"}
+ },
+ "findings": [
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["h1_card9_itgax_tnfsf13.1"],
+   "detail": "Neither citation mentions CARD9: PMID:38716725 names integrin alpha X only in an inferred mesangial cell-macrophage ligand-receptor axis, and rs11574637 is a variant-IgAN GWAS row."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["h1_card9_itgax_tnfsf13.2"],
+   "detail": "PMID:33052226 (review abstract on mucosal immunity and gut microbiome in IgAN) names neither CARD9 nor TNFSF13/APRIL, and rs4077515 is a CARD9 missense-IgAN GWAS row that says nothing about TNFSF13."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["h2_cfh_itgax.1"],
+   "detail": "None of the three citations says CFH inhibits complement: the Open Targets score and the rs6677604 GWAS row tie CFH to IgAN only, and PMID:36316518 infers complement activation from retinal drusen without mentioning CFH."},
+  {"project": "hypothesis-agent", "category": "circular_evidence", "steps": ["h2_cfh_itgax.2"],
+   "detail": "The only citation for 'complement cascade increases iC3b' is a Reactome over-representation of 'Complement cascade' in the run's own input gene list (2 of 163 entities, FDR 0.03), which is circular and never mentions iC3b."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["h2_cfh_itgax.3"],
+   "detail": "PMID:38716725 reports a scRNA-seq inferred ITGAX/ITGAM/C3 interaction axis between mesangial cells and macrophages; it names C3, not iC3b, and reports no binding."},
+  {"project": "hypothesis-agent", "category": "citation_does_not_state_step", "steps": ["h3_defa4.1"],
+   "detail": "The HPA record (DEFA4 RNA enriched in bone marrow and neutrophil progenitors) is cited for 'neutrophil degranulation increases DEFA4'; expression in progenitors says nothing about release by degranulation."},
+  {"project": "hypothesis-agent", "category": "no_kept_evidence", "hypothesis": "all",
+   "detail": "Not one of the run's 16 citation slots states its step, so every statement has empty evidence."},
+  {"project": "hypothesis-agent", "category": "polarity_unknown_despite_mechanism", "steps": ["h1_card9_itgax_tnfsf13.3", "h2_cfh_itgax.4", "h3_defa4.2", "h3_defa4.3"],
+   "detail": "Every step that reaches the disease or glomerular injury has polarity 'unknown', though the mechanisms state a direction ('drives', 'exacerbating', 'promotes ... accelerating the progression'), so no hypothesis composes from gene to disease."},
+  {"project": "hypothesis-agent", "category": "gwas_row_for_mechanism_step", "steps": ["h1_card9_itgax_tnfsf13.1", "h1_card9_itgax_tnfsf13.2", "h1_card9_itgax_tnfsf13.3", "h2_cfh_itgax.1", "h2_cfh_itgax.4", "h3_defa4.2", "h3_defa4.3"],
+   "detail": "Seven of the 16 citation slots are GWAS Catalog variant-IgAN rows used for gene-level mechanism steps; each names an allele and the disease, never the step's other end or the gene's direction."},
+  {"project": "hypothesis-agent", "category": "locus_gene_attribution", "steps": ["h3_defa4.2", "h3_defa4.3"],
+   "detail": "rs2738058 is intergenic, 25.8 kb from DEFA4 with DEFA9P/DEFA10P closest, and the study's author-reported gene is 'DEFA' (the cluster), yet the run attributes the signal to DEFA4."},
+  {"project": "hypothesis-agent", "category": "locus_gene_attribution", "steps": ["h1_card9_itgax_tnfsf13.1", "h2_cfh_itgax.4"],
+   "detail": "rs11574637 lies in an ITGAX intron, but the study reports the locus for both ITGAM and ITGAX (ITGAM starts 24.7 kb away), so the signal is not ITGAX's alone; the run reads it as ITGAX only."},
+  {"project": "hypothesis-agent", "category": "feature_as_cause", "steps": ["h3_defa4.3"],
+   "detail": "'Glomerular injury leads_to IgA glomerulonephritis' makes a defining feature of a glomerulonephritis (MONDO: inflammation of glomeruli) its cause."},
+  {"project": "hypothesis-agent", "category": "chain_skips_mechanism", "hypothesis": "h1_card9_itgax_tnfsf13",
+   "detail": "The mechanism runs TNFSF13 -> IgA class switching -> poorly O-galactosylated IgA1 -> IgAN, but the chain jumps from TNFSF13 straight to IgAN; the intermediate nodes are never steps."},
+  {"project": "hypothesis-agent", "category": "chain_skips_mechanism", "hypothesis": "h2_cfh_itgax",
+   "detail": "The mechanism puts ITGAX on infiltrating glomerular macrophages driving local inflammation, but the chain has no inflammation or macrophage-activation node between 'iC3b binds ITGAX' and IgAN."},
+  {"project": "hypothesis-agent", "category": "no_contradicting_evidence", "hypothesis": "all",
+   "detail": "supporting_evidence and contradicting_evidence are empty for all three hypotheses, and sources.json has no 'supporting' or 'contradicting' citation, so no counter-evidence was sought."},
+  {"project": "hypothesis-agent", "category": "abstention_evidence_unchecked", "hypothesis": "abstention",
+   "detail": "The OR4X1/ZNF174 abstention cites 'GWAS:OR4X1:no-association', 'GWAS:ZNF174:no-association' and 'STRING:no-edges', none of which is in sources.json, and says Open Targets found no association without citing any OT record."},
+  {"project": "hypothesis-agent", "category": "ungrounded_label", "hypothesis": "all",
+   "detail": "The run gave CURIEs for 3 of its 10 chain nodes (CARD9 as ENSEMBL, DEFA4 as UniProtKB, IgAN as MONDO:0005342); ITGAX, TNFSF13, CFH, complement cascade, iC3b, neutrophil degranulation, glomerular injury and the gut, macrophage and kidney contexts had empty CURIEs."},
+  {"project": "hypothesis-agent", "category": "confidence_consistent", "hypothesis": "all",
+   "detail": "All three hypotheses are labelled low confidence and 'speculative', which matches the curation: no citation states any step."},
+  {"project": "biolean", "category": "approximate_term", "steps": ["h2_cfh_itgax.2", "h2_cfh_itgax.3"],
+   "detail": "The corpus has no term for iC3b itself (GO has only the functions 'iC3b binding' and 'iC3b receptor activity'), so iC3b is grounded to its parent, PR:000019178 complement C3 proteolytic cleavage product; intact C3 cannot stand in because complement activation raises its fragments while consuming C3."},
+  {"project": "biolean", "category": "approximate_term", "steps": ["h3_defa4.2", "h3_defa4.3"],
+   "detail": "'Glomerular injury' has no exact term; HP:0100820 Glomerulopathy, defined as 'diseases affecting the glomeruli', is the nearest and is S7's target."},
+  {"project": "biolean", "category": "no_form_for", "steps": ["h1_card9_itgax_tnfsf13.2", "h1_card9_itgax_tnfsf13.3", "h2_cfh_itgax.1", "h2_cfh_itgax.4"],
+   "detail": "A variant-to-gene link (rs4077515 and rs3803800 are missense in CARD9 and TNFSF13, rs6677604 intronic in CFH): with no such form, the run's only genetic support for each gene is excluded whole and leaves no trace in the arms."},
+  {"project": "biolean", "category": "no_form_for", "hypothesis": "abstention",
+   "detail": "The run's abstention (OR4X1 and ZNF174: no shared mechanism, 'grounded') is a claim of absence with its own evidence, and curated.json has no place for it."},
+  {"project": "biolean", "category": "rule_missing", "steps": ["h1_card9_itgax_tnfsf13.3", "h2_cfh_itgax.4", "h3_defa4.2", "h3_defa4.3"],
+   "detail": "For leads_to with polarity unknown, the guide lets only a cited text supply the sign, not the run's own mechanism, and 'leads to glomerular injury' sits between that rule and the 'undirected change' rule; the audit applied the undirected-change rule to h3_defa4.2 (pos on glomerulopathy, S7) and no_sign to the three steps that end at the disease."},
+  {"project": "biolean", "category": "rule_missing", "steps": ["h1_card9_itgax_tnfsf13.2", "h1_card9_itgax_tnfsf13.3"],
+   "detail": "H1.2 has context gut and H1.3 has none, so the refinement the guide asks for makes H1.2's object (TNFSF13 in intestine) a different node from H1.3's subject, a break the run did not intend."},
+  {"project": "biolean", "category": "rule_missing", "hypothesis": "h2_cfh_itgax",
+   "detail": "'Exacerbating IgA glomerulonephritis' fits both severity ('aggravates') and progression ('exacerbation') in the aspect table; the curator chose severity, the audit progression, because the table names 'exacerbation' and the object is the disease, not a feature."},
+  {"project": "hypothesis-agent", "category": "marker_as_actor", "steps": ["h1_card9_itgax_tnfsf13.1"], "hypothesis": "h1_card9_itgax_tnfsf13",
+   "detail": "The title ('Intestinal ITGAX+ antigen-presenting cells'), mechanism ('ITGAX (CD11c) positive dendritic cells') and falsification ('Itgax+ dendritic cells') use ITGAX as a cell marker, but H1.1 makes the ITGAX gene the activator of CARD9, a molecular step nothing in the run states."},
+  {"project": "hypothesis-agent", "category": "relation_weaker_than_claim", "steps": ["h2_cfh_itgax.3"], "hypothesis": "h2_cfh_itgax",
+   "detail": "The title says iC3b 'hyperactivates ITGAX+ myeloid cells', but H2.3 is 'iC3b binds ITGAX' with polarity unknown; a binding carries no direction, so even a signed H2.4 would leave CFH with no route to IgAN."},
+  {"project": "hypothesis-agent", "category": "source_summary_misleading", "steps": ["h1_card9_itgax_tnfsf13.1", "h2_cfh_itgax.4", "h3_defa4.2", "h3_defa4.3"],
+   "detail": "The one-line GWAS summaries the agent saw name a single gene ('mapped gene DEFA4' for rs2738058, 'author-reported gene ITGAX' for rs11574637), while the records show an intergenic variant whose nearest genes are DEFA9P/DEFA10P (DEFA1 13.6 kb, DEFA4 25.8 kb; author gene 'DEFA') and a locus reported for ITGAM and ITGAX."}
+ ],
+ "audit": [
+  {"item": "entities.iC3b", "error": "wrong_grounding",
+   "before": "BLN:iC3b, why_no_term: only PR:000004900 complement C3 and GO:0001852 exist; missing_term finding",
+   "after": "PR:000019178 complement C3 proteolytic cleavage product (with a note); the missing_term finding becomes an approximate_term finding",
+   "reason": "terms.py \"complement C3\" lists PR:000019178, so the why_no_term was wrong and a BLN term was not needed. The run's mechanism itself calls iC3b one of the 'complement cleavage fragments', and the term keeps it apart from intact C3, which was the curator's reason for not using C3"},
+  {"item": "h3_defa4.2", "error": "wrong_unexpressed",
+   "before": "unexpressed, no_sign (DEFA4 leads_to glomerular injury, polarity unknown)",
+   "after": "statement S7: DEFA4 →+ phenotype glomerularInjury (HP:0100820), sign_note, evidence [], same two exclusions; H3 note and the approximate_term and rule_missing findings updated",
+   "reason": "the guide's undirected-change rule covers 'leads to abnormal X' with no sign: if an HP/MP term for the abnormal state exists, the step is an effect, pos, on it. Glomerular injury is an abnormal state and the curator had already grounded it to HP:0100820. The leads_to-unknown rule still governs the steps that end at the disease (H1.3, H2.4, H3.3). No route changes: H3.3 stays unsigned"},
+  {"item": "hypotheses.h2_cfh_itgax.claims", "error": "wrong_hypothesis_claim",
+   "before": "CFH →− severity of IgAN; ITGAX →+ severity of IgAN",
+   "after": "CFH →− progression of IgAN; ITGAX →+ progression of IgAN; note and the aspect rule_missing finding updated",
+   "reason": "the mechanism's only disease wording is 'exacerbating IgA glomerulonephritis'. The aspect table lists 'exacerbation' under progression, while severity's words are 'aggravates, worsens a feature', and here the object is the disease itself, not a feature. No route either way"},
+  {"item": "findings.locus_gene_attribution (rs11574637); S1 exclusion reason", "error": "other",
+   "before": "'its author-reported genes are ITGAM and ITGAX and the flagged closest gene is ITGAM'; S1 reason '(intronic in ITGAX, closest gene ITGAM)'",
+   "after": "the variant lies in an ITGAX intron, and the study reports the locus for both ITGAM and ITGAX (ITGAM starts 24.7 kb away)",
+   "reason": "the record gives ITGAX at distance 0 (intron_variant). GWAS Catalog's isClosestGene flag marks only the nearest intergenic up- and downstream genes (ITGAM upstream, LOC100422479 and ITGAD downstream), so 'closest gene ITGAM' misreads it. The real point is that the authors name both genes"},
+  {"item": "findings (new): marker_as_actor, h1_card9_itgax_tnfsf13.1", "error": "missed_finding",
+   "before": "none",
+   "after": "hypothesis-agent finding: ITGAX is a cell marker in the title, mechanism and falsification, but H1.1 makes the ITGAX gene activate CARD9",
+   "reason": "'Intestinal ITGAX+ antigen-presenting cells', 'ITGAX (CD11c) positive dendritic cells' and 'Itgax+ dendritic cells' name a cell population, not a molecular actor, and no cited text links ITGAX to CARD9"},
+  {"item": "findings (new): relation_weaker_than_claim, h2_cfh_itgax.3", "error": "missed_finding",
+   "before": "mentioned only in the H2 note ('the arm stops at iC3b binds ITGAX')",
+   "after": "hypothesis-agent finding: the title says iC3b 'hyperactivates' ITGAX+ cells, but the chain says 'binds' with polarity unknown, so CFH can never reach IgAN through it",
+   "reason": "render.py composes only effects and signed associations. A binds rel cannot carry a direction, so H2's CFH claim has no route even if H2.4 were signed. That is a structural fault of the chain, separate from its missing evidence"},
+  {"item": "findings (new): source_summary_misleading, rs2738058 and rs11574637", "error": "missed_finding",
+   "before": "the locus findings blamed the run's reading only",
+   "after": "hypothesis-agent finding: the one-line GWAS summaries the agent was given say 'mapped gene DEFA4' and 'author-reported gene ITGAX', which the full records contradict or narrow",
+   "reason": "the source statement for rs2738058 names DEFA4 as mapped gene, though the variant is intergenic with DEFA9P/DEFA10P nearest, DEFA1 at 13.6 kb and DEFA4 at 25.8 kb, and the author gene is 'DEFA'. For rs11574637 the summary drops ITGAM. The misattribution starts in the agent's tool output, which is fixable on the hypothesis-agent side"}
+ ]
+}
