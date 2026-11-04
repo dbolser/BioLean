@@ -110,9 +110,12 @@ end Evidence
 
 namespace Statement
 
-/-- The evidence with repeated papers and records removed: one paper is one piece of evidence. -/
+/-- The evidence with repeated papers and records removed: one paper is one piece of evidence
+per polarity. A record that both supports and refutes keeps one item of each. -/
 def distinctEvidence (s : Statement) : List Evidence :=
-  (s.evidence.foldl (fun acc e => if e.key != "" && acc.any (·.key == e.key) then acc else acc ++ [e]) [])
+  (s.evidence.foldl (fun acc e =>
+    if e.key != "" && acc.any (fun a => a.key == e.key && a.polarity == e.polarity) then acc
+    else acc ++ [e]) [])
 
 /-- Fuse the evidence for a statement into one opinion. Fusion assumes the items are
 independent, so repeated PMIDs are dropped first. Shared findings cited by several
